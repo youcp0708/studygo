@@ -1,0 +1,75 @@
+{# templates/base.html — 所有頁面的基底模板 #}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}StudyGo Taiwan{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'users/css/users.css' %}" />
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+  {# ── Toast Container ── #}
+  <div class="toast-container" id="toastContainer"></div>
+
+  {# ── Confirm Modal ── #}
+  <div class="modal-overlay hidden" id="confirmModal">
+    <div class="modal-box">
+      <div class="modal-icon" id="modalIcon">⚠️</div>
+      <h3 id="modalTitle">確認操作</h3>
+      <p id="modalMsg">您確定要執行此操作嗎？</p>
+      <div class="modal-actions">
+        <button class="btn-outline-sm" onclick="closeModal()">取消</button>
+        <button class="btn-danger-sm" id="modalConfirmBtn">確認</button>
+      </div>
+    </div>
+  </div>
+
+  {# ── Django Messages（後端 flash messages）── #}
+  {% if messages %}
+  <div id="djangoMessages" style="display:none;">
+    {% for message in messages %}
+    <span data-type="{{ message.tags }}" data-msg="{{ message }}"></span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {# ── NavBar ── #}
+  <nav class="navbar">
+    <div class="brand">
+      <div class="brand-icon">🌎</div>
+      <div class="brand-text">
+        <h1>StudyGo Taiwan</h1>
+        <p>來臺就學小幫手</p>
+      </div>
+    </div>
+
+    {% if user.is_authenticated %}
+    {# 已登入 NavBar #}
+    <div id="navAuth" style="display:flex;gap:12px;align-items:center;">
+      <span id="navGreeting" style="font-weight:800;color:var(--primary-dark);font-size:15px;">
+        {{ user.name }} 同學
+      </span>
+      <a href="{% url 'edit_profile' %}" class="btn-outline-sm">我的帳戶</a>
+      <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;">登出</a>
+    </div>
+    <div id="navGuest" style="display:none;"></div>
+    {% endif %}
+  </nav>
+
+  {# ── Page Content ── #}
+  {% block content %}{% endblock %}
+
+  {# ── Scripts ── #}
+  <script src="{% static 'users/js/users.js' %}"></script>
+
+
+
+  {% block extra_js %}{% endblock %}
+</body>
+
+</html>

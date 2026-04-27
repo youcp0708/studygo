@@ -1,0 +1,173 @@
+{# users/templates/users/edit_profile.html — 編輯個人資料 #}
+{% extends "base.html" %}
+{% load static %}
+{% block title %}編輯個人資料 — StudyGo Taiwan{% endblock %}
+
+{% block content %}
+<section id="editProfilePage" class="page" style="padding:28px 38px 48px;">
+  <div style="max-width:900px;margin:0 auto;">
+
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+      <a href="{% url 'dashboard' %}" class="back-link">← 返回儀表板</a>
+      <h2 style="font-size:28px;font-weight:900;">編輯個人資料</h2>
+    </div>
+
+    <div class="edit-panel">
+      <div class="edit-tabs">
+        <button class="edit-tab active" onclick="switchEditTab('basic',this)">基本資訊</button>
+        <button class="edit-tab" onclick="switchEditTab('password',this)">修改密碼</button>
+        <button class="edit-tab" onclick="switchEditTab('account',this)">帳號安全</button>
+      </div>
+
+      {# ── Tab 1: 基本資訊 ── #}
+      <div id="editBasic">
+        <form id="editBasicForm" onsubmit="handleEditBasic(event)">
+          {% csrf_token %}
+          <div class="field-row">
+            <div class="field">
+              <label>姓名</label>
+              <input type="text" name="name" id="editName" value="{{ user.name }}" placeholder="Full Name" required />
+            </div>
+            <div class="field">
+              <label>電子郵件（不可修改）</label>
+              <input type="email" id="editEmailDisp" value="{{ user.email }}" disabled
+                style="background:#f5f5f5;color:var(--muted);" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label>國籍</label>
+              <select name="nationality" id="editNationality">
+                <option value="Indonesia" {% if profile.nationality=="Indonesia" %}selected{% endif %}>🇮🇩 印尼</option>
+                <option value="Malaysia" {% if profile.nationality=="Malaysia" %}selected{% endif %}>🇲🇾 馬來西亞</option>
+                <option value="Vietnam" {% if profile.nationality=="Vietnam" %}selected{% endif %}>🇻🇳 越南</option>
+                <option value="Thailand" {% if profile.nationality=="Thailand" %}selected{% endif %}>🇹🇭 泰國</option>
+                <option value="Philippines" {% if profile.nationality=="Philippines" %}selected{% endif %}>🇵🇭 菲律賓
+                </option>
+                <option value="Cambodia" {% if profile.nationality=="Cambodia" %}selected{% endif %}>🇰🇭 柬埔寨</option>
+                <option value="Myanmar" {% if profile.nationality=="Myanmar" %}selected{% endif %}>🇲🇲 緬甸</option>
+                <option value="Japan" {% if profile.nationality=="Japan" %}selected{% endif %}>🇯🇵 日本</option>
+                <option value="Korea" {% if profile.nationality=="Korea" %}selected{% endif %}>🇰🇷 韓國</option>
+                <option value="Other" {% if profile.nationality=="Other" %}selected{% endif %}>🌍 其他</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>身份別</label>
+              <select name="identity_type" id="editIdentity">
+                <option value="overseas_chinese" {% if profile.identity_type=="overseas_chinese" %}selected{% endif %}>
+                  僑生</option>
+                <option value="foreign_student" {% if profile.identity_type=="foreign_student" %}selected{% endif %}>外籍生
+                </option>
+                <option value="exchange" {% if profile.identity_type=="exchange" %}selected{% endif %}>交換生</option>
+                <option value="preparatory" {% if profile.identity_type=="preparatory" %}selected{% endif %}>僑大先修生
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label>就讀學校</label>
+              <input type="text" name="university" id="editUniversity" value="{{ profile.university|default:'' }}"
+                placeholder="例如：國立臺灣大學" />
+            </div>
+            <div class="field">
+              <label>系所</label>
+              <input type="text" name="department" id="editDept" value="{{ profile.department|default:'' }}"
+                placeholder="例如：資訊工程學系" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label>入學狀態</label>
+              <select name="admission_status" id="editStatus">
+                <option value="applied" {% if profile.admission_status=="applied" %}selected{% endif %}>已提出申請</option>
+                <option value="admitted" {% if profile.admission_status=="admitted" %}selected{% endif %}>已收到錄取通知
+                </option>
+                <option value="pre_arrival" {% if profile.admission_status=="pre_arrival" %}selected{% endif %}>入境前準備中
+                </option>
+                <option value="arrived" {% if profile.admission_status=="arrived" %}selected{% endif %}>已抵臺就學中</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>預計抵台日期</label>
+              <input type="date" name="expected_arrival" id="editArrival"
+                value="{{ profile.expected_arrival|default:'' }}" />
+            </div>
+          </div>
+          <div style="display:flex;gap:14px;margin-top:8px;">
+            <a href="{% url 'dashboard' %}" class="btn-outline-sm" style="padding:13px 24px;border-radius:10px;">取消</a>
+            <button type="submit" class="btn-primary" style="flex:1;" id="editBasicBtn">儲存變更</button>
+          </div>
+        </form>
+      </div>
+
+      {# ── Tab 2: 修改密碼 ── #}
+      <div id="editPassword" class="hidden">
+        <form id="changePwForm" onsubmit="handleChangePw(event)">
+          {% csrf_token %}
+          <div class="field">
+            <label>目前密碼</label>
+            <input type="password" name="old_password" id="oldPw" placeholder="輸入目前密碼" required />
+            <div class="field-error hidden" id="oldPwErr"></div>
+          </div>
+          <div class="field">
+            <label>新密碼</label>
+            <input type="password" name="new_password1" id="newPw1" placeholder="至少 8 字元，含大小寫與數字"
+              oninput="checkPwStrength(this.value,'pwFill2',null)" required />
+            <div class="pw-strength-bar">
+              <div class="pw-strength-fill" id="pwFill2"></div>
+            </div>
+            <div class="field-error hidden" id="newPw1Err"></div>
+          </div>
+          <div class="field">
+            <label>確認新密碼</label>
+            <input type="password" name="new_password2" id="newPw2" placeholder="再次輸入新密碼" required />
+            <div class="field-error hidden" id="newPw2Err"></div>
+          </div>
+          <button type="submit" class="btn-primary" id="changePwBtn">更新密碼</button>
+        </form>
+      </div>
+
+      {# ── Tab 3: 帳號安全 ── #}
+      <div id="editAccount" class="hidden">
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <div style="background:var(--bg);border-radius:16px;padding:22px 24px;
+                      display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <div style="font-size:17px;font-weight:900;">電子郵件驗證</div>
+              <div style="font-size:13px;color:var(--muted);margin-top:4px;" id="emailVerifiedStatus">
+                {% if user.email_verified %}已驗證 ✅{% else %}未驗證（請至信箱確認）{% endif %}
+              </div>
+            </div>
+            {% if not user.email_verified %}
+            <button class="btn-outline-sm" onclick="resendVerification()">重新寄送驗證信</button>
+            {% endif %}
+          </div>
+          <div style="background:var(--bg);border-radius:16px;padding:22px 24px;
+                      display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <div style="font-size:17px;font-weight:900;">登入紀錄</div>
+              <div style="font-size:13px;color:var(--muted);margin-top:4px;">
+                最近一次登入：<span id="lastLogin">{{ user.last_login|date:"Y-m-d H:i"|default:"—" }}</span>
+              </div>
+            </div>
+            <button class="btn-outline-sm" onclick="showToast('登入紀錄功能開發中','info')">查看紀錄</button>
+          </div>
+          <div style="background:var(--danger-soft);border-radius:16px;padding:22px 24px;
+                      display:flex;justify-content:space-between;align-items:center;
+                      border:1px solid #f7c4af;">
+            <div>
+              <div style="font-size:17px;font-weight:900;color:var(--danger);">刪除帳號</div>
+              <div style="font-size:13px;color:var(--muted);margin-top:4px;">此操作不可撤銷</div>
+            </div>
+            <button class="btn-danger-sm" onclick="confirmAction('delete','確定刪除帳號？',
+                             '此操作無法復原，您的所有資料將永久刪除。','deleteAccount')">
+              刪除帳號
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
