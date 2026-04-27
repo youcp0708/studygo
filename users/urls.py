@@ -7,14 +7,13 @@ users/urls.py
 from django.urls import path
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout as auth_logout
-from django.contrib.auth.decorators import login_required
 
 
 def index_view(request):
     """
     根路由：
     - 未登入 → 顯示登入/註冊頁 (login.html)
-    - 已登入 → 重定向到儀表板
+    - 已登入（session）→ 重定向到儀表板
     """
     if request.user.is_authenticated:
         return redirect('dashboard')
@@ -22,10 +21,14 @@ def index_view(request):
 
 
 def login_page(request):
+    if request.user.is_authenticated:
+        return redirect('dashboard')
     return render(request, 'users/login.html')
 
 
 def register_page(request):
+    if request.user.is_authenticated:
+        return redirect('dashboard')
     return render(request, 'users/login.html', {'show_register': True})
 
 
@@ -44,27 +47,29 @@ def logout_page(request):
     return render(request, 'users/logout_redirect.html')
 
 
-@login_required(login_url='/login/')
 def profile_setup_page(request):
     """填寫個人資料頁（Step 2）"""
-    # 若已有 profile，直接跳儀表板
+    if not request.user.is_authenticated:
+        return redirect('login_page')
     if hasattr(request.user, 'student_profile'):
         return redirect('dashboard')
     return render(request, 'users/profile_setup.html', {'user': request.user})
 
 
-@login_required(login_url='/login/')
 def dashboard_page(request):
-    """儀表板首頁"""
+    """儀表板首頁 — 需要 session 登入"""
+    if not request.user.is_authenticated:
+        return redirect('login_page')
     context = {'user': request.user}
     if hasattr(request.user, 'student_profile'):
         context['profile'] = request.user.student_profile
     return render(request, 'users/dashboard.html', context)
 
 
-@login_required(login_url='/login/')
 def edit_profile_page(request):
-    """編輯個人資料頁"""
+    """編輯個人資料頁 — 需要 session 登入"""
+    if not request.user.is_authenticated:
+        return redirect('login_page')
     context = {'user': request.user}
     if hasattr(request.user, 'student_profile'):
         context['profile'] = request.user.student_profile

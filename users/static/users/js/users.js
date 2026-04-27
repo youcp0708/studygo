@@ -201,16 +201,13 @@ async function handleLogin(e) {
 
   showToast(`歡迎回來，${data.data.user.name}！`, 'success');
 
-  if (data.data.has_profile) {
-    populateDashboard(data.data.user, data.data.user.student_profile);
-    updateNavAuth(data.data.user);
-    showPage('profileDash');
-  } else {
-    // 沒有 profile → 導向填寫資料頁
-    window._tempUser = data.data.user;
-    _prefillSetupPreview(data.data.user);
-    showPage('profileSetupPage');
-  }
+  setTimeout(() => {
+    if (data.data.has_profile) {
+      window.location.href = '/dashboard/';
+    } else {
+      window.location.href = '/profile/setup/';
+    }
+  }, 600);
 }
 
 /* ════════════════════════════════════════
@@ -253,10 +250,8 @@ async function handleRegister(e) {
   }
 
   localStorage.setItem('authToken', data.token);
-  window._tempUser = data.user;
-  _prefillSetupPreview(data.user);
   showToast('帳號建立成功！請填寫個人資料', 'success');
-  showPage('profileSetupPage');
+  setTimeout(() => { window.location.href = '/profile/setup/'; }, 800);
 }
 
 /* ════════════════════════════════════════
@@ -303,14 +298,8 @@ async function handleProfileSetup(e) {
     return;
   }
 
-  // 取得完整使用者資料
-  const { data: meData } = await apiFetch('/api/users/me/');
-  if (meData?.data) {
-    populateDashboard(meData.data, meData.data.student_profile);
-    updateNavAuth(meData.data);
-  }
   showToast('資料已儲存！個人化流程已生成 🎉', 'success');
-  showPage('profileDash');
+  setTimeout(() => { window.location.href = '/dashboard/'; }, 800);
 }
 
 /* ════════════════════════════════════════
@@ -340,10 +329,8 @@ async function handleEditBasic(e) {
     return;
   }
 
-  populateDashboard(data.data, data.data.student_profile);
-  updateNavAuth(data.data);
   showToast('個人資料已更新', 'success');
-  showPage('profileDash');
+  setTimeout(() => { window.location.href = '/dashboard/'; }, 800);
 }
 
 /* ════════════════════════════════════════
@@ -648,9 +635,16 @@ async function initApp() {
     startLoginSlider();
   }
 
+  // 在 login 頁面：表示 server 已確認 session 失效，清掉 localStorage 讓使用者重新登入
+  if (document.getElementById('loginPage')) {
+    localStorage.removeItem('authToken');
+    return;
+  }
+
+  // 其他受保護頁面：沒有 token 就跳回登入
   const token = localStorage.getItem('authToken');
   if (!token) {
-    showPage('loginPage');
+    window.location.href = '/login/';
     return;
   }
 
@@ -658,7 +652,7 @@ async function initApp() {
   const { ok, data } = await apiFetch('/api/users/me/');
   if (!ok) {
     localStorage.removeItem('authToken');
-    showPage('loginPage');
+    window.location.href = '/login/';
     return;
   }
 
@@ -668,11 +662,19 @@ async function initApp() {
   updateNavAuth(user);
 
   if (!profile) {
-    _prefillSetupPreview(user);
-    showPage('profileSetupPage');
+    if (document.getElementById('profileSetupPage')) {
+      _prefillSetupPreview(user);
+      showPage('profileSetupPage');
+    } else {
+      window.location.href = '/profile/setup/';
+    }
   } else {
-    populateDashboard(user, profile);
-    showPage('profileDash');
+    if (document.getElementById('profileDash')) {
+      populateDashboard(user, profile);
+      showPage('profileDash');
+    } else {
+      window.location.href = '/dashboard/';
+    }
   }
 }
 

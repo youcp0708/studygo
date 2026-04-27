@@ -73,6 +73,9 @@ def register_view(request):
     # 產生 Auth Token
     token, _ = Token.objects.get_or_create(user=user)
 
+    # 建立 Django session
+    login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+
     # 寄送 Email 驗證信（可改為 Celery 非同步）
     _send_verification_email(user, request)
 
@@ -111,6 +114,9 @@ def login_view(request):
 
     user  = serializer.validated_data['user']
     token, _ = Token.objects.get_or_create(user=user)
+
+    # 建立 Django session，讓模板的 user.is_authenticated 與 @login_required 正常運作
+    login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
     # 更新最後登入 IP
     ip = get_client_ip(request)
