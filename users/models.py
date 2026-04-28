@@ -188,6 +188,9 @@ class EmailVerificationToken(models.Model):
     class Meta:
         db_table = 'users_emailverificationtoken'
 
+    def __str__(self):
+        return f'{self.user.email} - {self.token[:8]}...'
+
     def is_expired(self):
         from datetime import timedelta
         return timezone.now() > self.created_at + timedelta(hours=24)

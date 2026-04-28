@@ -63,8 +63,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'studygo_db',   # 剛才在 pgAdmin 建立的名稱
-        'USER': 'user',     # pgAdmin 的登入帳號
-        'PASSWORD': 'wichai123456', # pgAdmin 的登入密碼
+        'USER': 'postgres',     # pgAdmin 的登入帳號
+        'PASSWORD': 'wichai123456-', # pgAdmin 的登入密碼
         'HOST': 'localhost',
         'PORT': '5432',
     }
