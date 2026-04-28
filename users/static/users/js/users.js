@@ -636,6 +636,8 @@ async function initApp() {
       showLoginSlide(0);
       startLoginSlider();
     }
+    // 啟動 Google 登入按鈕（GSI 可能尚未載入，用輪詢等待）
+    initGoogleSignIn();
     // 顯示 Email 驗證結果通知
     const params = new URLSearchParams(window.location.search);
     const verified = params.get('verified');
@@ -681,9 +683,13 @@ async function initApp() {
    21. Google OAuth 登入
 ════════════════════════════════════════ */
 
-/** Google Identity Services 初始化（由 GSI script onload 觸發）*/
+/** Google Identity Services 初始化：輪詢直到 google 物件就緒 */
 function initGoogleSignIn() {
-  if (typeof google === 'undefined' || !window.GOOGLE_CLIENT_ID) return;
+  if (!window.GOOGLE_CLIENT_ID) return;
+  if (typeof google === 'undefined' || !google.accounts) {
+    setTimeout(initGoogleSignIn, 100);
+    return;
+  }
   google.accounts.id.initialize({
     client_id: window.GOOGLE_CLIENT_ID,
     callback: handleGoogleLogin,
@@ -695,7 +701,7 @@ function initGoogleSignIn() {
     google.accounts.id.renderButton(container, {
       theme: 'outline',
       size: 'large',
-      width: container.offsetWidth || 300,
+      width: 300,
       text: 'signin_with',
       logo_alignment: 'center',
     });
