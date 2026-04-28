@@ -155,3 +155,7 @@ SESSION_COOKIE_HTTPONLY= True
 
 # ── CSRF ──
 CSRF_COOKIE_SAMESITE = 'Lax'
+
+# ── Google Sign-In 彈窗修復 ──
+# Django 5.x 預設 COOP: same-origin 會阻擋 GSI popup 回傳 credential
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
