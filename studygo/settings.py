@@ -61,18 +61,13 @@ WSGI_APPLICATION = 'studygo.wsgi.application'
 # ── 資料庫（開發用 SQLite，上線換 PostgreSQL）──
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'studygo_db',   # 剛才在 pgAdmin 建立的名稱
+        'USER': 'user',     # pgAdmin 的登入帳號
+        'PASSWORD': 'wichai123456', # pgAdmin 的登入密碼
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
-    # 上線 PostgreSQL 範例：
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'studygo_db',
-    #     'USER': 'studygo_user',
-    #     'PASSWORD': 'yourpassword',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
-    # }
 }
 
 # ── 密碼驗證 ──
