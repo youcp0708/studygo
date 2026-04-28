@@ -7,6 +7,7 @@ import secrets
 from django.contrib.auth import login, logout
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.conf import settings
@@ -334,24 +335,84 @@ def password_reset_confirm_view(request):
 # ══════════════════════════════════════════
 # 10. Email 驗證
 # GET /api/users/verify-email/<token>/
+# 點擊信件連結後重導至登入頁（瀏覽器友善）
 # ══════════════════════════════════════════
-@api_view(['GET'])
-@permission_classes([AllowAny])
 def verify_email_view(request, token):
     try:
         ev_token = EmailVerificationToken.objects.get(token=token, is_used=False)
     except EmailVerificationToken.DoesNotExist:
-        return error_response('無效或已使用的驗證連結')
+        return HttpResponseRedirect('/login/?verified=fail')
 
     if ev_token.is_expired():
-        return error_response('驗證連結已過期，請重新申請')
+        return HttpResponseRedirect('/login/?verified=expired')
 
     ev_token.user.email_verified = True
     ev_token.user.save(update_fields=['email_verified'])
     ev_token.is_used = True
     ev_token.save(update_fields=['is_used'])
 
-    return success_response(message='Email 驗證成功')
+    return HttpResponseRedirect('/login/?verified=1')
+
+
+# ══════════════════════════════════════════
+# 10b. Google OAuth 登入
+# POST /api/users/google-login/
+# ══════════════════════════════════════════
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def google_login_view(request):
+    """
+    Request Body: { "credential": "<Google ID Token>" }
+    驗證 Google ID Token，自動建立或取得對應帳號，回傳 Auth Token。
+    """
+    credential = request.data.get('credential')
+    if not credential:
+        return error_response('缺少 Google 憑證')
+
+    if not settings.GOOGLE_CLIENT_ID:
+        return error_response('伺服器尚未設定 Google OAuth', status_code=503)
+
+    try:
+        from google.oauth2 import id_token
+        from google.auth.transport import requests as google_requests
+        idinfo = id_token.verify_oauth2_token(
+            credential,
+            google_requests.Request(),
+            settings.GOOGLE_CLIENT_ID,
+        )
+    except ValueError:
+        return error_response('Google 憑證無效或已過期', status_code=401)
+
+    email = idinfo.get('email')
+    name  = idinfo.get('name') or email.split('@')[0]
+
+    user, created = CustomUser.objects.get_or_create(
+        email=email,
+        defaults={'name': name, 'email_verified': True, 'is_active': True},
+    )
+
+    if not created:
+        if not user.is_active:
+            return error_response('此帳號已停用', status_code=403)
+        # 若 Google 已驗證 email，同步更新
+        if not user.email_verified:
+            user.email_verified = True
+            user.save(update_fields=['email_verified'])
+
+    if created:
+        user.set_unusable_password()
+        user.save()
+
+    token, _ = Token.objects.get_or_create(user=user)
+    login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+
+    has_profile = hasattr(user, 'student_profile') and user.student_profile is not None
+    return success_response({
+        'token':       token.key,
+        'user':        UserDetailSerializer(user).data,
+        'has_profile': has_profile,
+        'is_new_user': created,
+    }, '登入成功')
 
 
 # ══════════════════════════════════════════

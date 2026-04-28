@@ -7,6 +7,7 @@ users/urls.py
 from django.urls import path
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout as auth_logout
+from django.conf import settings
 
 
 def index_view(request):
@@ -23,7 +24,9 @@ def index_view(request):
 def login_page(request):
     if request.user.is_authenticated:
         return redirect('dashboard')
-    return render(request, 'users/login.html')
+    return render(request, 'users/login.html', {
+        'google_client_id': settings.GOOGLE_CLIENT_ID,
+    })
 
 
 def register_page(request):

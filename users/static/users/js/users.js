@@ -636,6 +636,18 @@ async function initApp() {
       showLoginSlide(0);
       startLoginSlider();
     }
+    // 顯示 Email 驗證結果通知
+    const params = new URLSearchParams(window.location.search);
+    const verified = params.get('verified');
+    if (verified === '1')        showToast('Email 驗證成功！請登入您的帳號', 'success');
+    else if (verified === 'fail')    showToast('驗證連結無效或已使用', 'error');
+    else if (verified === 'expired') showToast('驗證連結已過期，請重新申請', 'error');
+    return;
+  }
+
+  // ── 公開頁面（忘記密碼、重設密碼）：不需要登入，直接結束 ──
+  const publicPaths = ['/forgot-password/', '/reset-password/'];
+  if (publicPaths.some(p => window.location.pathname.startsWith(p))) {
     return;
   }
 
@@ -663,6 +675,55 @@ async function initApp() {
     showPage('profileSetupPage');
   }
   // editProfilePage、forgotPage 等：Django 已渲染好，只需更新 navbar
+}
+
+/* ════════════════════════════════════════
+   21. Google OAuth 登入
+════════════════════════════════════════ */
+
+/** Google Identity Services 初始化（由 GSI script onload 觸發）*/
+function initGoogleSignIn() {
+  if (typeof google === 'undefined' || !window.GOOGLE_CLIENT_ID) return;
+  google.accounts.id.initialize({
+    client_id: window.GOOGLE_CLIENT_ID,
+    callback: handleGoogleLogin,
+    auto_select: false,
+    cancel_on_tap_outside: true,
+  });
+  const container = document.getElementById('googleBtnContainer');
+  if (container) {
+    google.accounts.id.renderButton(container, {
+      theme: 'outline',
+      size: 'large',
+      width: container.offsetWidth || 300,
+      text: 'signin_with',
+      logo_alignment: 'center',
+    });
+  }
+}
+
+/** 收到 Google ID Token 後送往後端換取系統 Token */
+async function handleGoogleLogin(response) {
+  const credential = response.credential;
+  if (!credential) {
+    showToast('Google 登入失敗，未取得憑證', 'error');
+    return;
+  }
+
+  const { ok, data } = await apiFetch('/api/users/google-login/', 'POST', { credential });
+
+  if (!ok) {
+    showToast(data?.message || 'Google 登入失敗', 'error');
+    return;
+  }
+
+  localStorage.setItem('authToken', data.data.token);
+  const isNew = data.data.is_new_user;
+  showToast(isNew ? `帳號已建立，歡迎 ${data.data.user.name}！` : `歡迎回來，${data.data.user.name}！`, 'success');
+
+  setTimeout(() => {
+    window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
+  }, 600);
 }
 
 // 啟動
