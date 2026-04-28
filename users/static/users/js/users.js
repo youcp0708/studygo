@@ -629,19 +629,17 @@ function startLoginSlider() {
    20. 頁面初始化：檢查是否已登入
 ════════════════════════════════════════ */
 async function initApp() {
-  // 啟動登入頁幻燈片輪播
-  if (document.querySelectorAll('.login-slide').length > 0) {
-    showLoginSlide(0);
-    startLoginSlider();
-  }
-
-  // 在 login 頁面：表示 server 已確認 session 失效，清掉 localStorage 讓使用者重新登入
+  // ── Login 頁面：清掉舊 token，啟動輪播後直接結束 ──
   if (document.getElementById('loginPage')) {
     localStorage.removeItem('authToken');
+    if (document.querySelectorAll('.login-slide').length > 0) {
+      showLoginSlide(0);
+      startLoginSlider();
+    }
     return;
   }
 
-  // 驗證 Token 或 Django Session 是否有效
+  // ── 受保護頁面：驗證 Session（Token 或 Django Session Cookie）──
   const { ok, data } = await apiFetch('/api/users/me/');
   if (!ok) {
     localStorage.removeItem('authToken');
@@ -654,21 +652,17 @@ async function initApp() {
 
   updateNavAuth(user);
 
-  if (!profile) {
-    if (document.getElementById('profileSetupPage')) {
-      _prefillSetupPreview(user);
-      showPage('profileSetupPage');
-    } else {
-      window.location.href = '/profile/setup/';
-    }
-  } else {
-    if (document.getElementById('profileDash')) {
-      populateDashboard(user, profile);
-      showPage('profileDash');
-    } else {
-      window.location.href = '/dashboard/';
-    }
+  // ── 依當前頁面 ID 決定要做什麼，不做跨頁跳轉 ──
+  if (document.getElementById('profileDash')) {
+    // Dashboard 頁
+    populateDashboard(user, profile);
+    showPage('profileDash');
+  } else if (document.getElementById('profileSetupPage')) {
+    // 個人資料設定頁
+    _prefillSetupPreview(user);
+    showPage('profileSetupPage');
   }
+  // editProfilePage、forgotPage 等：Django 已渲染好，只需更新 navbar
 }
 
 // 啟動
