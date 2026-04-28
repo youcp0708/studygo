@@ -38,28 +38,28 @@
             <div class="field">
               <label>國籍</label>
               <select name="nationality" id="editNationality">
-                <option value="Indonesia" {% if profile.nationality=="Indonesia" %}selected{% endif %}>🇮🇩 印尼</option>
-                <option value="Malaysia" {% if profile.nationality=="Malaysia" %}selected{% endif %}>🇲🇾 馬來西亞</option>
-                <option value="Vietnam" {% if profile.nationality=="Vietnam" %}selected{% endif %}>🇻🇳 越南</option>
-                <option value="Thailand" {% if profile.nationality=="Thailand" %}selected{% endif %}>🇹🇭 泰國</option>
-                <option value="Philippines" {% if profile.nationality=="Philippines" %}selected{% endif %}>🇵🇭 菲律賓
+                <option value="Indonesia" {% if profile.nationality == "Indonesia" %}selected{% endif %}>🇮🇩 印尼</option>
+                <option value="Malaysia" {% if profile.nationality == "Malaysia" %}selected{% endif %}>🇲🇾 馬來西亞</option>
+                <option value="Vietnam" {% if profile.nationality == "Vietnam" %}selected{% endif %}>🇻🇳 越南</option>
+                <option value="Thailand" {% if profile.nationality == "Thailand" %}selected{% endif %}>🇹🇭 泰國</option>
+                <option value="Philippines" {% if profile.nationality == "Philippines" %}selected{% endif %}>🇵🇭 菲律賓
                 </option>
-                <option value="Cambodia" {% if profile.nationality=="Cambodia" %}selected{% endif %}>🇰🇭 柬埔寨</option>
-                <option value="Myanmar" {% if profile.nationality=="Myanmar" %}selected{% endif %}>🇲🇲 緬甸</option>
-                <option value="Japan" {% if profile.nationality=="Japan" %}selected{% endif %}>🇯🇵 日本</option>
-                <option value="Korea" {% if profile.nationality=="Korea" %}selected{% endif %}>🇰🇷 韓國</option>
-                <option value="Other" {% if profile.nationality=="Other" %}selected{% endif %}>🌍 其他</option>
+                <option value="Cambodia" {% if profile.nationality == "Cambodia" %}selected{% endif %}>🇰🇭 柬埔寨</option>
+                <option value="Myanmar" {% if profile.nationality == "Myanmar" %}selected{% endif %}>🇲🇲 緬甸</option>
+                <option value="Japan" {% if profile.nationality == "Japan" %}selected{% endif %}>🇯🇵 日本</option>
+                <option value="Korea" {% if profile.nationality == "Korea" %}selected{% endif %}>🇰🇷 韓國</option>
+                <option value="Other" {% if profile.nationality == "Other" %}selected{% endif %}>🌍 其他</option>
               </select>
             </div>
             <div class="field">
               <label>身份別</label>
               <select name="identity_type" id="editIdentity">
-                <option value="overseas_chinese" {% if profile.identity_type=="overseas_chinese" %}selected{% endif %}>
+                <option value="overseas_chinese" {% if profile.identity_type == "overseas_chinese" %}selected{% endif %}>
                   僑生</option>
-                <option value="foreign_student" {% if profile.identity_type=="foreign_student" %}selected{% endif %}>外籍生
+                <option value="foreign_student" {% if profile.identity_type == "foreign_student" %}selected{% endif %}>外籍生
                 </option>
-                <option value="exchange" {% if profile.identity_type=="exchange" %}selected{% endif %}>交換生</option>
-                <option value="preparatory" {% if profile.identity_type=="preparatory" %}selected{% endif %}>僑大先修生
+                <option value="exchange" {% if profile.identity_type == "exchange" %}selected{% endif %}>交換生</option>
+                <option value="preparatory" {% if profile.identity_type == "preparatory" %}selected{% endif %}>僑大先修生
                 </option>
               </select>
             </div>
@@ -80,12 +80,12 @@
             <div class="field">
               <label>入學狀態</label>
               <select name="admission_status" id="editStatus">
-                <option value="applied" {% if profile.admission_status=="applied" %}selected{% endif %}>已提出申請</option>
-                <option value="admitted" {% if profile.admission_status=="admitted" %}selected{% endif %}>已收到錄取通知
+                <option value="applied" {% if profile.admission_status == "applied" %}selected{% endif %}>已提出申請</option>
+                <option value="admitted" {% if profile.admission_status == "admitted" %}selected{% endif %}>已收到錄取通知
                 </option>
-                <option value="pre_arrival" {% if profile.admission_status=="pre_arrival" %}selected{% endif %}>入境前準備中
+                <option value="pre_arrival" {% if profile.admission_status == "pre_arrival" %}selected{% endif %}>入境前準備中
                 </option>
-                <option value="arrived" {% if profile.admission_status=="arrived" %}selected{% endif %}>已抵臺就學中</option>
+                <option value="arrived" {% if profile.admission_status == "arrived" %}selected{% endif %}>已抵臺就學中</option>
               </select>
             </div>
             <div class="field">

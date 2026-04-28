@@ -122,9 +122,7 @@
               <button type="submit" class="btn-primary" id="loginSubmitBtn">登入</button>
             </form>
             <div class="auth-divider">或</div>
-            <button class="google-btn" onclick="showToast('Google 登入需後端 OAuth 設定','info')">
-              <span>G</span> 使用 Google 帳號登入
-            </button>
+            <div id="googleBtnContainer" style="display:flex;justify-content:center;min-height:44px;"></div>
             <p style="text-align:center;margin-top:16px;font-size:13px;color:var(--muted);">
               還沒有帳號？
               <button class="btn-link" onclick="switchAuth('register')">立即免費註冊</button>
@@ -199,4 +197,13 @@
     </div>
   </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  window.GOOGLE_CLIENT_ID = '{{ google_client_id }}';
+</script>
+{% if google_client_id %}
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+{% endif %}
 {% endblock %}
