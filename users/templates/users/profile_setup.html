@@ -163,6 +163,127 @@
 </section>
 
 <script>
+
   window._tempUser = { name: "{{ user.name|escapejs }}", email: "{{ user.email|escapejs }}" };
+
+  // ── 選擇入學狀態 ──
+  function selectStatus(card) {
+    document.querySelectorAll('.status-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    document.getElementById('admissionStatusVal').value = card.dataset.val;
+    updatePreview();
+  }
+
+  // ── 即時預覽更新 ──
+  const nationalityMap = {
+    Indonesia: '🇮🇩 印尼', Malaysia: '🇲🇾 馬來西亞', Vietnam: '🇻🇳 越南',
+    Thailand: '🇹🇭 泰國', Philippines: '🇵🇭 菲律賓', Cambodia: '🇰🇭 柬埔寨',
+    Myanmar: '🇲🇲 緬甸', Japan: '🇯🇵 日本', Korea: '🇰🇷 韓國', Other: '🌍 其他'
+  };
+  const identityMap = {
+    overseas_chinese: '🏮 僑生', foreign_student: '🌐 外籍生',
+    exchange: '🔄 交換生', preparatory: '📚 僑大先修生'
+  };
+  const statusMap = {
+    applied: '📩 已申請', admitted: '🎉 已錄取',
+    pre_arrival: '✈️ 入境前', arrived: '🏫 已抵臺'
+  };
+
+  function updatePreview() {
+    const nat = document.getElementById('setupNationality').value;
+    const univ = document.getElementById('setupUniversity').value;
+    const id = document.getElementById('setupIdentity').value;
+    const stat = document.getElementById('admissionStatusVal').value;
+    const arr = document.getElementById('setupArrival').value;
+    const dept = document.getElementById('setupDept').value;
+
+    document.getElementById('prevNationality').textContent = nationalityMap[nat] || '國籍未選';
+    document.getElementById('prevIdentity').textContent = identityMap[id] || '身份別未選';
+    document.getElementById('prevStatus').textContent = statusMap[stat] || '狀態未選';
+    document.getElementById('prevUniv').textContent = univ || '—';
+    document.getElementById('prevDept').textContent = dept || '—';
+    document.getElementById('prevArrival').textContent = arr || '—';
+  }
+
+  // ── 取得 CSRF Token ──
+  function getCookie(name) {
+    const val = `; ${document.cookie}`;
+    const parts = val.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+
+  // ── 送出表單 ──
+  async function handleProfileSetup(event) {
+    event.preventDefault();
+
+    // 驗證必填
+    const nationality = document.getElementById('setupNationality').value;
+    const university = document.getElementById('setupUniversity').value;
+    const identity_type = document.getElementById('setupIdentity').value;
+    const admission_status = document.getElementById('admissionStatusVal').value;
+
+    let hasError = false;
+    if (!nationality) { showErr('nationalityErr', '請選擇國籍'); hasError = true; }
+    if (!university) { showErr('universityErr', '請填寫學校'); hasError = true; }
+    if (!identity_type) { showErr('identityErr', '請選擇身份別'); hasError = true; }
+    if (!admission_status) { showErr('statusErr', '請選擇入學狀態'); hasError = true; }
+    if (hasError) return;
+
+    // 組資料
+    const payload = {
+      nationality,
+      university,
+      identity_type,
+      admission_status,
+      department: document.getElementById('setupDept').value || '',
+      expected_arrival: document.getElementById('setupArrival').value || null,
+    };
+
+    // 送出
+    const btn = document.getElementById('setupSubmitBtn');
+    btn.disabled = true;
+    btn.textContent = '儲存中...';
+
+    try {
+      const token = localStorage.getItem('auth_token'); // 登入時存的
+
+      const res = await fetch('/api/users/profile/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCookie('csrftoken'),
+          ...(token ? { 'Authorization': `Token ${token}` } : {}),
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        window.location.href = '/dashboard/'; // 成功 → 跳儀表板
+      } else {
+        // 顯示後端回傳的錯誤
+        const errs = data.errors || {};
+        if (errs.nationality) showErr('nationalityErr', errs.nationality);
+        if (errs.university) showErr('universityErr', errs.university);
+        if (errs.identity_type) showErr('identityErr', errs.identity_type);
+        if (errs.admission_status) showErr('statusErr', errs.admission_status);
+        if (!Object.keys(errs).length) alert(data.message || '儲存失敗，請稍後再試');
+      }
+    } catch (e) {
+      alert('網路錯誤，請稍後再試');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '儲存資料並開始使用 →';
+    }
+  }
+
+  function showErr(id, msg) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.remove('hidden');
+    setTimeout(() => el.classList.add('hidden'), 4000);
+  }
 </script>
 {% endblock %}

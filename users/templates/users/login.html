@@ -199,4 +199,182 @@
     </div>
   </div>
 </section>
+
+<script>
+  // ── 切換登入/註冊 ──
+  function switchAuth(mode) {
+    const isRegister = mode === 'register';
+    document.getElementById('signInPanel').classList.toggle('hidden', isRegister);
+    document.getElementById('registerPanel').classList.toggle('hidden', !isRegister);
+  }
+
+  // ── 顯示密碼切換 ──
+  function togglePw(id, btn) {
+    const input = document.getElementById(id);
+    input.type = input.type === 'password' ? 'text' : 'password';
+    btn.textContent = input.type === 'password' ? '👁' : '🙈';
+  }
+
+  // ── 密碼強度 ──
+  function checkPwStrength(pw) {
+    const fill = document.getElementById('pwFill');
+    const hint = document.getElementById('pwHint');
+    let score = 0;
+    if (pw.length >= 8) score++;
+    if (/[A-Z]/.test(pw)) score++;
+    if (/[0-9]/.test(pw)) score++;
+    if (/[^A-Za-z0-9]/.test(pw)) score++;
+    const colors = ['#e74c3c', '#e67e22', '#f1c40f', '#2ecc71'];
+    const hints = ['太短', '還需大寫或數字', '還不錯', '強度良好 ✓'];
+    fill.style.width = (score * 25) + '%';
+    fill.style.background = colors[score - 1] || '#ddd';
+    hint.textContent = score ? hints[score - 1] : '請輸入密碼';
+  }
+
+  // ── 取得 CSRF Token ──
+  function getCookie(name) {
+    const val = `; ${document.cookie}`;
+    const parts = val.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+
+  // ── 登入 ──
+  async function handleLogin(event) {
+    event.preventDefault();
+    const btn = document.getElementById('loginSubmitBtn');
+    btn.disabled = true;
+    btn.textContent = '登入中...';
+
+    // 清除舊錯誤
+    ['loginEmailErr', 'loginPwErr', 'loginGlobalErr'].forEach(id => {
+      document.getElementById(id).classList.add('hidden');
+    });
+
+    try {
+      const res = await fetch('/api/users/login/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCookie('csrftoken'),
+        },
+        body: JSON.stringify({
+          email: document.getElementById('loginEmail').value,
+          password: document.getElementById('loginPw').value,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        // 存 token
+        localStorage.setItem('auth_token', data.data.token);
+        // 有沒有填過資料決定跳哪裡
+        if (data.data.has_profile) {
+          window.location.href = '/dashboard/';
+        } else {
+          window.location.href = '/profile/setup/';
+        }
+      } else {
+        const err = document.getElementById('loginGlobalErr');
+        err.textContent = data.message || '電子郵件或密碼錯誤';
+        err.classList.remove('hidden');
+      }
+    } catch (e) {
+      const err = document.getElementById('loginGlobalErr');
+      err.textContent = '網路錯誤，請稍後再試';
+      err.classList.remove('hidden');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '登入';
+    }
+  }
+
+  // ── 註冊 ──
+  async function handleRegister(event) {
+    event.preventDefault();
+    const btn = document.getElementById('regSubmitBtn');
+    btn.disabled = true;
+    btn.textContent = '建立中...';
+
+    ['regNameErr', 'regEmailErr', 'regPwErr', 'regPw2Err', 'regGlobalErr'].forEach(id => {
+      document.getElementById(id).classList.add('hidden');
+    });
+
+    // 前端驗證密碼一致
+    const pw = document.getElementById('regPw').value;
+    const pw2 = document.getElementById('regPw2').value;
+    if (pw !== pw2) {
+      const el = document.getElementById('regPw2Err');
+      el.textContent = '兩次密碼不一致';
+      el.classList.remove('hidden');
+      btn.disabled = false;
+      btn.textContent = '建立帳號並繼續設定資料';
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/users/register/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCookie('csrftoken'),
+        },
+        body: JSON.stringify({
+          name: document.getElementById('regName').value,
+          email: document.getElementById('regEmail').value,
+          password: pw,
+          password2: pw2,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        // 存 token，跳到填資料頁
+        localStorage.setItem('auth_token', data.token);
+        window.location.href = '/profile/setup/';
+      } else {
+        // 顯示欄位錯誤
+        const errs = data.errors || {};
+        if (errs.name) showFieldErr('regNameErr', errs.name);
+        if (errs.email) showFieldErr('regEmailErr', errs.email);
+        if (errs.password) showFieldErr('regPwErr', errs.password);
+        if (errs.password2) showFieldErr('regPw2Err', errs.password2);
+        if (!Object.keys(errs).length) showFieldErr('regGlobalErr', data.message || '註冊失敗');
+      }
+    } catch (e) {
+      showFieldErr('regGlobalErr', '網路錯誤，請稍後再試');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '建立帳號並繼續設定資料';
+    }
+  }
+
+  function showFieldErr(id, msg) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = Array.isArray(msg) ? msg[0] : msg;
+    el.classList.remove('hidden');
+  }
+
+  // ── 幻燈片 ──
+  let slideTimer;
+  function showLoginSlide(index) {
+    document.querySelectorAll('.login-slide').forEach((s, i) => {
+      s.classList.toggle('active', i === index);
+    });
+    document.querySelectorAll('.slide-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === index);
+    });
+  }
+  function startSlideAuto() {
+    let cur = 0;
+    slideTimer = setInterval(() => {
+      cur = (cur + 1) % 3;
+      showLoginSlide(cur);
+    }, 4000);
+  }
+  startSlideAuto();
+</script>
+
 {% endblock %}
