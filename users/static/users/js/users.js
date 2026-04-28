@@ -641,14 +641,7 @@ async function initApp() {
     return;
   }
 
-  // 其他受保護頁面：沒有 token 就跳回登入
-  const token = localStorage.getItem('authToken');
-  if (!token) {
-    window.location.href = '/login/';
-    return;
-  }
-
-  // 驗證 Token 是否有效
+  // 驗證 Token 或 Django Session 是否有效
   const { ok, data } = await apiFetch('/api/users/me/');
   if (!ok) {
     localStorage.removeItem('authToken');
