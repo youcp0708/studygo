@@ -71,9 +71,6 @@ DATABASES = {
         'PASSWORD': '5y42QKajAF3szCxN',
         'HOST':     'db.nzartmugmyljymqwqxuc.supabase.co',  
         'PORT':     '5432',
-        'OPTIONS': {
-            'sslmode': 'require',
-        },
     }
 }
 
