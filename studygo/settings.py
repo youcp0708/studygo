@@ -72,9 +72,9 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'studygo_db',
-        'USER': 'studygo_user',
-        'PASSWORD': 'yourpassword',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '112403046',
         'HOST': 'localhost',
         'PORT': '5432',
     }
