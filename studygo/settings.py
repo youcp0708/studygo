@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'rest_framework',           # pip install djangorestframework
     'rest_framework.authtoken',
     'corsheaders',              # pip install django-cors-headers
-    'users',                    # 使用者管理模塊（模塊一）
+    'users',
+    'flow',                    # 使用者管理模塊（模塊一）
 ]
 
 MIDDLEWARE = [
