@@ -1,7 +1,10 @@
 # requirements.txt
 # pip install -r requirements.txt
 
-Django>=4.2,<5.0
+Django>=5.1
 djangorestframework>=3.14
 django-cors-headers>=4.0
 Pillow>=10.0           # 頭像上傳用
+google-auth>=2.0       # 驗證 Google OAuth ID Token
+requests>=2.31         # google-auth transport 依賴
+python-dotenv>=1.0     # 從 .env 自動載入環境變數
