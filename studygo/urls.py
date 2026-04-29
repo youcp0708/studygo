@@ -16,6 +16,7 @@ urlpatterns = [
     # API 路由：   /api/users/
     path('',        include('users.urls')),
     path('api/',    include('users.api_urls')),
+    path('chatbot/', include('chatbot.urls')),
 ]
 
 # 開發模式下提供媒體檔案

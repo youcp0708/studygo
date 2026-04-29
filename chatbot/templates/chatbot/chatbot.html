@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}AI 聊天機器人 — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="chatbot-page" data-session-id="{% if active_session %}{{ active_session.id }}{% endif %}">
+  <div class="chatbot-layout">
+
+    <aside class="chatbot-sidebar">
+      <a class="back-link" href="{% url 'dashboard' %}">← 回到儀表板</a>
+
+      <div class="bot-profile-card">
+        <div class="bot-avatar">🤖</div>
+        <h2>AI 來臺就學小幫手</h2>
+        <p>依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。</p>
+      </div>
+
+      <div class="student-context-card">
+        <h3>我的資料</h3>
+        <div class="context-row">
+          <span>姓名</span>
+          <strong>{{ user.name }}</strong>
+        </div>
+        <div class="context-row">
+          <span>身份</span>
+          <strong>{% if profile %}{{ profile.get_identity_type_display }}{% else %}未填寫{% endif %}</strong>
+        </div>
+        <div class="context-row">
+          <span>國籍</span>
+          <strong>{% if profile %}{{ profile.get_nationality_display }}{% else %}未填寫{% endif %}</strong>
+        </div>
+        <div class="context-row">
+          <span>入學狀態</span>
+          <strong>{% if profile %}{{ profile.get_admission_status_display }}{% else %}未填寫{% endif %}</strong>
+        </div>
+        <div class="context-row">
+          <span>學校</span>
+          <strong>{% if profile %}{{ profile.university }}{% else %}未填寫{% endif %}</strong>
+        </div>
+        {% if not profile %}
+        <a class="context-setup-link" href="{% url 'profile_setup' %}">先填寫個人資料 →</a>
+        {% endif %}
+      </div>
+
+      <div class="quick-card">
+        <h3>可以直接問</h3>
+        <button class="quick-question" data-question="我收到錄取通知後，下一步要做什麼？">收到錄取後下一步</button>
+        <button class="quick-question" data-question="簽證申請需要準備哪些文件？">簽證文件</button>
+        <button class="quick-question" data-question="抵臺後要怎麼申請居留證 ARC？">居留證 ARC</button>
+        <button class="quick-question" data-question="境外生健保什麼時候可以加保？">健保加保</button>
+        <button class="quick-question" data-question="我需要如何準備住宿和入境前行李？">住宿與行李</button>
+      </div>
+    </aside>
+
+    <main class="chatbot-main">
+      <div class="chat-header">
+        <div>
+          <h1>AI 聊天機器人</h1>
+          <p>輸入你的問題，系統會根據你的身份與狀態整理建議。</p>
+        </div>
+        <button id="clearChatBtn" class="clear-chat-btn" type="button">清除紀錄</button>
+      </div>
+
+      <div class="chat-alert">
+        <strong>提醒：</strong>AI 回覆適合做流程整理與準備方向，簽證、居留、健保、學校規定仍需以官方公告或學校國際處為準。
+      </div>
+
+      <div id="chatMessages" class="chat-messages" aria-live="polite">
+        <div class="message-row assistant">
+          <div class="message-avatar">🤖</div>
+          <div class="message-bubble">
+            <div class="message-name">StudyGo AI 小幫手</div>
+            <div class="message-content">你好，{{ user.name }}。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼。</div>
+          </div>
+        </div>
+      </div>
+
+      <form id="chatForm" class="chat-input-area">
+        {% csrf_token %}
+        <textarea id="chatInput" rows="2" maxlength="1200" placeholder="例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"></textarea>
+        <div class="input-footer">
+          <span id="charCount">0 / 1200</span>
+          <button id="sendChatBtn" type="submit">送出</button>
+        </div>
+      </form>
+    </main>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  window.CHATBOT_ENDPOINTS = {
+    message: "{% url 'chatbot:message_api' %}",
+    history: "{% url 'chatbot:history_api' %}",
+    clear: "{% url 'chatbot:clear_history_api' %}",
+  };
+</script>
+<script src="{% static 'chatbot/js/chatbot.js' %}"></script>
+{% endblock %}

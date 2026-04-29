@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'rest_framework',           # pip install djangorestframework
     'rest_framework.authtoken',
     'corsheaders',              # pip install django-cors-headers
-    'users',                    # 使用者管理模塊（模塊一）
+    'users',   
+    'chatbot',                 # 使用者管理模塊（模塊一）
 ]
 
 MIDDLEWARE = [
@@ -159,3 +160,5 @@ CSRF_COOKIE_SAMESITE = 'Lax'
 # ── Google Sign-In 彈窗修復 ──
 # Django 5.x 預設 COOP: same-origin 會阻擋 GSI popup 回傳 credential
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
+OPENAI_MODEL = os.environ.get('OPENAI_MODEL', 'gpt-5.4-mini')
