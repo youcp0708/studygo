@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',              # pip install django-cors-headers
     'users',                    # 使用者管理模塊（模塊一）
+    'flows',                    # 流程模塊(模塊二)
 ]
 
 MIDDLEWARE = [
@@ -60,19 +61,19 @@ WSGI_APPLICATION = 'studygo.wsgi.application'
 
 # ── 資料庫（開發用 SQLite，上線換 PostgreSQL）──
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-    # 上線 PostgreSQL 範例：
     # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'studygo_db',
-    #     'USER': 'studygo_user',
-    #     'PASSWORD': 'yourpassword',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
+
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'studygo_db',
+        'USER': 'studygo_user',
+        'PASSWORD': 'yourpassword',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 # ── 密碼驗證 ──

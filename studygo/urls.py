@@ -16,6 +16,10 @@ urlpatterns = [
     # API 路由：   /api/users/
     path('',        include('users.urls')),
     path('api/',    include('users.api_urls')),
+
+    # 流程模塊（模塊二）
+    # API 路由：   /api/flows/
+    path('api/',    include('flows.api_urls')),
 ]
 
 # 開發模式下提供媒體檔案
