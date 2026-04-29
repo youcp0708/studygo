@@ -207,9 +207,12 @@ def profile_setup_view(request):
 
     profile = serializer.save(user=user)
 
-    # ── 觸發模塊二：生成個人化流程（預留接口）──
-    # from flow.tasks import generate_personalized_flow
-    # generate_personalized_flow.delay(user.id)
+    # ── 觸發模塊二：生成個人化流程 ──
+    try:
+        from flow.views import generate_flow_for_user
+        generate_flow_for_user(user)
+    except Exception as e:
+        logger.warning('flow 生成失敗（不影響 profile 建立）: %s', e)
 
     return Response({
         'success': True,

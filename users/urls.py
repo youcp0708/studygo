@@ -66,6 +66,14 @@ def dashboard_page(request):
     context = {'user': request.user}
     if hasattr(request.user, 'student_profile'):
         context['profile'] = request.user.student_profile
+    try:
+        from flow.models import ProcessFlow
+        flow = ProcessFlow.objects.prefetch_related('tasks').get(user=request.user)
+        context['flow']         = flow
+        context['recent_tasks'] = flow.tasks.exclude(status='done').order_by('due_date')[:5]
+    except Exception:
+        context['flow']         = None
+        context['recent_tasks'] = []
     return render(request, 'users/dashboard.html', context)
 
 

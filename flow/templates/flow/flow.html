@@ -1,0 +1,449 @@
+{# flow/templates/flow/flow.html — 個人化學習流程頁 #}
+{% extends "base.html" %}
+{% load static %}
+{% block title %}我的來臺流程 — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  /* ── 頁面容器 ── */
+  .flow-wrap { max-width:1100px; margin:0 auto; padding:0 32px 64px; }
+
+  /* ── Hero ── */
+  .flow-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #1a3a6b 100%);
+    color:#fff; padding:40px 48px 32px; border-radius:20px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .flow-hero .tw-bg {
+    position:absolute; right:32px; top:50%; transform:translateY(-50%);
+    font-size:96px; font-weight:900; opacity:.08; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .flow-hero h2 { font-size:26px; margin-bottom:8px; }
+  .flow-hero p  { opacity:.85; font-size:15px; margin-bottom:24px; }
+
+  /* ── 進度條 ── */
+  .progress-bar-wrap { background:rgba(255,255,255,.2); border-radius:99px; height:10px; }
+  .progress-bar-fill {
+    background:#fff; border-radius:99px; height:10px;
+    transition:width .6s ease;
+  }
+  .progress-label {
+    display:flex; justify-content:space-between;
+    font-size:13px; margin-top:6px; opacity:.9;
+  }
+
+  /* ── 統計卡 ── */
+  .stat-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+              gap:16px; margin-bottom:32px; }
+  .stat-card {
+    background:#fff; border:1.5px solid var(--border); border-radius:16px;
+    padding:20px 22px; text-align:center;
+  }
+  .stat-card .s-icon { font-size:30px; margin-bottom:8px; }
+  .stat-card .s-val  { font-size:28px; font-weight:900; color:var(--primary-dark); }
+  .stat-card .s-lbl  { font-size:13px; color:var(--muted); margin-top:4px; }
+
+  /* ── 篩選列 ── */
+  .filter-bar {
+    display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px;
+    align-items:center;
+  }
+  .filter-btn {
+    padding:6px 16px; border-radius:99px; border:1.5px solid var(--border);
+    background:#fff; font-size:13px; font-weight:700; cursor:pointer;
+    transition:all .2s;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background:var(--primary); color:#fff; border-color:var(--primary);
+  }
+
+  /* ── 任務卡 ── */
+  .task-group { margin-bottom:32px; }
+  .task-group-title {
+    font-size:15px; font-weight:800; color:var(--primary-dark);
+    margin-bottom:12px; padding-bottom:8px;
+    border-bottom:2px solid var(--border);
+  }
+  .task-card {
+    background:#fff; border:1.5px solid var(--border); border-radius:14px;
+    padding:16px 20px; margin-bottom:10px; display:flex;
+    align-items:flex-start; gap:14px; transition:box-shadow .2s;
+  }
+  .task-card:hover { box-shadow:0 4px 16px rgba(0,0,0,.08); }
+  .task-card.done  { opacity:.6; }
+  .task-card.overdue { border-color:#f87171; background:#fff7f7; }
+
+  .task-checkbox {
+    width:22px; height:22px; border-radius:6px;
+    border:2px solid var(--border); cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; margin-top:2px; transition:all .2s;
+  }
+  .task-card.done .task-checkbox {
+    background:var(--success); border-color:var(--success); color:#fff;
+  }
+  .task-card.in_progress .task-checkbox {
+    background:var(--warning); border-color:var(--warning); color:#fff;
+  }
+
+  .task-body { flex:1; }
+  .task-title {
+    font-weight:800; font-size:15px; color:var(--dark);
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+  }
+  .task-card.done .task-title { text-decoration:line-through; color:var(--muted); }
+  .task-desc  { font-size:13px; color:var(--muted); margin-top:4px; }
+  .task-meta  { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+  .task-tag {
+    padding:2px 10px; border-radius:99px; font-size:11px; font-weight:700;
+    background:var(--bg); color:var(--muted);
+  }
+  .task-tag.overdue  { background:#fee2e2; color:#dc2626; }
+  .task-tag.required { background:#eff6ff; color:#1d4ed8; }
+  .task-tag.done     { background:#dcfce7; color:#166534; }
+  .task-tag.in_progress { background:#fef9c3; color:#92400e; }
+
+  .task-actions { display:flex; gap:8px; flex-shrink:0; align-items:flex-start; }
+  .task-action-btn {
+    padding:4px 12px; border-radius:8px; font-size:12px; font-weight:700;
+    border:1.5px solid var(--border); background:#fff; cursor:pointer;
+    transition:all .2s;
+  }
+  .task-action-btn:hover { background:var(--bg); }
+  .task-action-btn.btn-done:hover {
+    background:#dcfce7; border-color:#16a34a; color:#166534;
+  }
+  .task-action-btn.btn-inprog:hover {
+    background:#fef9c3; border-color:#ca8a04; color:#92400e;
+  }
+
+  /* ── 空狀態 ── */
+  .empty-state {
+    text-align:center; padding:60px 20px; color:var(--muted);
+  }
+  .empty-state .e-icon { font-size:56px; margin-bottom:16px; }
+  .empty-state h3      { font-size:18px; font-weight:800; margin-bottom:8px; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="flow-wrap" style="padding-top:32px;">
+
+  {# ── Hero / 進度 ── #}
+  <div class="flow-hero">
+    <div class="tw-bg">FLOW</div>
+    <h2>📋 我的來臺就學流程</h2>
+    <p>
+      {% if profile %}{{ profile.get_identity_type_display }}{% else %}境外生{% endif %}
+      ・入學狀態：{% if profile %}{{ profile.get_admission_status_display }}{% else %}未設定{% endif %}
+    </p>
+    {% if flow %}
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressFill"
+           style="width:{{ flow.completion_rate }}%;"></div>
+    </div>
+    <div class="progress-label">
+      <span>整體完成進度</span>
+      <span id="progressPct">{{ flow.completion_rate }}%</span>
+    </div>
+    {% endif %}
+  </div>
+
+  {# ── 統計卡 ── #}
+  {% if flow %}
+  <div class="stat-row" id="statRow">
+    <div class="stat-card">
+      <div class="s-icon">📋</div>
+      <div class="s-val" id="statTotal">{{ tasks|length }}</div>
+      <div class="s-lbl">全部任務</div>
+    </div>
+    <div class="stat-card">
+      <div class="s-icon">✅</div>
+      <div class="s-val" id="statDone" style="color:#16a34a;">
+        {{ flow.done_count }}
+      </div>
+      <div class="s-lbl">已完成</div>
+    </div>
+    <div class="stat-card">
+      <div class="s-icon">⏰</div>
+      <div class="s-val" id="statOverdue" style="color:{% if flow.overdue_count > 0 %}#dc2626{% else %}var(--primary-dark){% endif %};">
+        {{ flow.overdue_count }}
+      </div>
+      <div class="s-lbl">已逾期</div>
+    </div>
+    <div class="stat-card">
+      <div class="s-icon">🔄</div>
+      <div class="s-val" id="statPending">{{ flow.pending_count }}</div>
+      <div class="s-lbl">待辦中</div>
+    </div>
+  </div>
+  {% endif %}
+
+  {# ── 篩選列 ── #}
+  <div class="filter-bar" id="filterBar">
+    <span style="font-size:13px;font-weight:800;color:var(--muted);">篩選：</span>
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="todo">待辦</button>
+    <button class="filter-btn" data-filter="in_progress">進行中</button>
+    <button class="filter-btn" data-filter="done">已完成</button>
+    <button class="filter-btn" data-filter="overdue" style="color:#dc2626;border-color:#fca5a5;">逾期</button>
+    {% if flow %}
+    <button class="filter-btn" style="margin-left:auto;"
+            onclick="refreshFlow()">🔄 重新生成流程</button>
+    {% endif %}
+  </div>
+
+  {# ── 任務列表 ── #}
+  {% if not profile %}
+  <div class="empty-state">
+    <div class="e-icon">📝</div>
+    <h3>請先完成個人資料設定</h3>
+    <p>填寫身份別與入學狀態後，系統將自動生成您的個人化來臺流程。</p>
+    <a href="{% url 'profile_setup' %}" class="dash-btn dash-btn-primary"
+       style="display:inline-block;margin-top:16px;">前往設定個人資料</a>
+  </div>
+
+  {% elif not flow %}
+  <div class="empty-state">
+    <div class="e-icon">⚙️</div>
+    <h3>流程尚未生成</h3>
+    <p>點擊下方按鈕，系統將根據您的個人資料生成專屬來臺就學清單。</p>
+    <button class="dash-btn dash-btn-primary" style="margin-top:16px;"
+            onclick="generateFlow()">✨ 生成我的個人化流程</button>
+  </div>
+
+  {% else %}
+  {# 依分類分群顯示 #}
+  <div id="taskContainer">
+
+    {% regroup tasks|dictsort:"category" by category as category_groups %}
+    {% for group in category_groups %}
+    <div class="task-group" data-category="{{ group.grouper }}">
+      <div class="task-group-title">
+        {% if group.grouper == 'visa' %}🛂 簽證辦理
+        {% elif group.grouper == 'enrollment' %}🎓 入學手續
+        {% elif group.grouper == 'housing' %}🏠 住宿安排
+        {% elif group.grouper == 'health' %}🏥 健保醫療
+        {% elif group.grouper == 'finance' %}💳 財務銀行
+        {% elif group.grouper == 'language' %}📚 語言學習
+        {% elif group.grouper == 'culture' %}🌏 生活適應
+        {% else %}📌 其他事項
+        {% endif %}
+        <span style="font-weight:400;font-size:13px;color:var(--muted);">
+          （{{ group.list|length }} 項）
+        </span>
+      </div>
+
+      {% for task in group.list %}
+      <div class="task-card {% if task.status == 'done' %}done{% elif task.is_overdue %}overdue{% else %}{{ task.status }}{% endif %}"
+           id="task-{{ task.id }}" data-status="{{ task.status }}" data-overdue="{{ task.is_overdue|lower }}">
+        <div class="task-checkbox" onclick="cycleStatus({{ task.id }}, this)">
+          {% if task.status == 'done' %}✓
+          {% elif task.status == 'in_progress' %}→
+          {% endif %}
+        </div>
+        <div class="task-body">
+          <div class="task-title">
+            {{ task.title }}
+            {% if task.is_required %}
+            <span class="task-tag required">必要</span>
+            {% endif %}
+            {% if task.status == 'done' %}
+            <span class="task-tag done">已完成</span>
+            {% elif task.status == 'in_progress' %}
+            <span class="task-tag in_progress">進行中</span>
+            {% endif %}
+            {% if task.is_overdue %}
+            <span class="task-tag overdue">⚠️ 逾期</span>
+            {% endif %}
+          </div>
+          {% if task.description %}
+          <div class="task-desc">{{ task.description }}</div>
+          {% endif %}
+          <div class="task-meta">
+            {% if task.due_date %}
+            <span class="task-tag {% if task.is_overdue %}overdue{% endif %}">
+              📅 {{ task.due_date }}
+            </span>
+            {% endif %}
+            {% if task.completed_at %}
+            <span class="task-tag done">完成於 {{ task.completed_at|date:"m/d" }}</span>
+            {% endif %}
+          </div>
+        </div>
+        <div class="task-actions">
+          {% if task.status != 'done' %}
+          <button class="task-action-btn btn-inprog"
+                  onclick="updateTask({{ task.id }}, 'in_progress')">進行中</button>
+          <button class="task-action-btn btn-done"
+                  onclick="updateTask({{ task.id }}, 'done')">✓ 完成</button>
+          {% else %}
+          <button class="task-action-btn"
+                  onclick="updateTask({{ task.id }}, 'todo')">↩ 重設</button>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+  </div>
+  {% endif %}
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const API_BASE = '/api';
+
+function getToken() {
+  return localStorage.getItem('studygo_token') || '';
+}
+
+function authHeaders() {
+  return {
+    'Content-Type': 'application/json',
+    'Authorization': `Token ${getToken()}`,
+    'X-CSRFToken': getCsrfToken(),
+  };
+}
+
+function getCsrfToken() {
+  const m = document.cookie.match(/csrftoken=([^;]+)/);
+  return m ? m[1] : '';
+}
+
+// ── 生成個人化流程 ──
+async function generateFlow() {
+  showToast('正在生成您的個人化流程…', 'info');
+  try {
+    const res = await fetch(`${API_BASE}/flow/generate/`, {
+      method: 'POST', headers: authHeaders(),
+    });
+    const json = await res.json();
+    if (json.success) {
+      showToast('流程已生成！', 'success');
+      setTimeout(() => location.reload(), 800);
+    } else {
+      showToast(json.message || '生成失敗', 'error');
+    }
+  } catch {
+    showToast('網路錯誤，請稍後再試', 'error');
+  }
+}
+
+// ── 重新生成流程 ──
+async function refreshFlow() {
+  showConfirm('重新生成流程', '這將根據您最新的個人資料重新掃描並新增任務（已完成任務不受影響）。', async () => {
+    await generateFlow();
+  });
+}
+
+// ── 更新任務狀態 ──
+async function updateTask(taskId, newStatus) {
+  try {
+    const res = await fetch(`${API_BASE}/flow/tasks/${taskId}/`, {
+      method: 'PATCH',
+      headers: authHeaders(),
+      body: JSON.stringify({ status: newStatus }),
+    });
+    const json = await res.json();
+    if (json.success) {
+      updateCardUI(taskId, newStatus, json.data);
+      updateStats();
+    } else {
+      showToast(json.message || '更新失敗', 'error');
+    }
+  } catch {
+    showToast('網路錯誤', 'error');
+  }
+}
+
+// ── 點擊 checkbox 循環切換狀態 ──
+function cycleStatus(taskId, el) {
+  const card = document.getElementById(`task-${taskId}`);
+  const cur  = card.dataset.status;
+  const next = cur === 'todo' ? 'in_progress'
+             : cur === 'in_progress' ? 'done'
+             : 'todo';
+  updateTask(taskId, next);
+}
+
+// ── 更新單張任務卡的外觀 ──
+function updateCardUI(taskId, newStatus, taskData) {
+  const card = document.getElementById(`task-${taskId}`);
+  if (!card) return;
+
+  card.dataset.status = newStatus;
+  card.className = `task-card ${newStatus === 'done' ? 'done' : newStatus}`;
+
+  const checkbox = card.querySelector('.task-checkbox');
+  checkbox.innerHTML = newStatus === 'done' ? '✓' : newStatus === 'in_progress' ? '→' : '';
+
+  const actions = card.querySelector('.task-actions');
+  if (newStatus === 'done') {
+    actions.innerHTML = `<button class="task-action-btn" onclick="updateTask(${taskId}, 'todo')">↩ 重設</button>`;
+  } else {
+    actions.innerHTML = `
+      <button class="task-action-btn btn-inprog" onclick="updateTask(${taskId}, 'in_progress')">進行中</button>
+      <button class="task-action-btn btn-done" onclick="updateTask(${taskId}, 'done')">✓ 完成</button>
+    `;
+  }
+
+  // 移除/更新狀態標籤
+  const titleEl = card.querySelector('.task-title');
+  titleEl.querySelectorAll('.task-tag.done, .task-tag.in_progress').forEach(t => t.remove());
+  if (newStatus === 'done') {
+    titleEl.insertAdjacentHTML('beforeend', '<span class="task-tag done">已完成</span>');
+  } else if (newStatus === 'in_progress') {
+    titleEl.insertAdjacentHTML('beforeend', '<span class="task-tag in_progress">進行中</span>');
+  }
+
+  showToast(newStatus === 'done' ? '✅ 任務已完成！' : '任務狀態已更新', 'success');
+}
+
+// ── 重新計算統計數字 ──
+async function updateStats() {
+  try {
+    const res  = await fetch(`${API_BASE}/flow/stats/`, { headers: authHeaders() });
+    const json = await res.json();
+    if (!json.success) return;
+    const d = json.data;
+    document.getElementById('statTotal')?.setAttribute('innerText',d.total);
+    document.getElementById('statDone').textContent       = d.done;
+    document.getElementById('progressFill').style.width   = `${d.completion_rate}%`;
+    document.getElementById('progressPct').textContent    = `${d.completion_rate}%`;
+    document.getElementById('statOverdue').textContent    = d.overdue_count;
+    document.getElementById('statPending').textContent    = d.todo + d.in_progress;
+  } catch {}
+}
+
+// ── 篩選按鈕 ──
+document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+
+    document.querySelectorAll('.task-card').forEach(card => {
+      const status  = card.dataset.status;
+      const overdue = card.dataset.overdue === 'true';
+      let show = false;
+      if (filter === 'all')         show = true;
+      else if (filter === 'overdue') show = overdue;
+      else                           show = status === filter;
+      card.style.display = show ? 'flex' : 'none';
+    });
+
+    // 隱藏空分類
+    document.querySelectorAll('.task-group').forEach(group => {
+      const visible = [...group.querySelectorAll('.task-card')]
+                        .some(c => c.style.display !== 'none');
+      group.style.display = visible ? '' : 'none';
+    });
+  });
+});
+</script>
+{% endblock %}
