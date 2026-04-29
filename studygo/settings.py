@@ -67,10 +67,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':     'postgres',
-        'USER':     'postgres.hpszxboxqzmvisydcnhz',
+        'USER':     'postgres',
         'PASSWORD': 'uq6pUJAfP8wGIlCZ',
-        'HOST':     'aws-1-ap-southeast-1.pooler.supabase.com',  # 你的 Supabase host
-        'PORT':     '6543',
+        'HOST':     'db.hpszxboxqzmvisydcnhz.supabase.co',  # 你的 Supabase host
+        'PORT':     '5432',
     }
 }
 # ── 密碼驗證 ──
