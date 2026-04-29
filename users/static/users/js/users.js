@@ -128,7 +128,7 @@ function switchAuth(type) {
 /* ════════════════════════════════════════
    2. Confirm Modal
 ════════════════════════════════════════ */
-function confirmAction(type, title, msg, cbName) {
+function confirmAction(_type, title, msg, cbName) {
   document.getElementById('modalTitle').textContent = title;
   document.getElementById('modalMsg').textContent = msg;
   document.getElementById('confirmModal').classList.remove('hidden');
@@ -382,7 +382,7 @@ async function handleForgot(e) {
 
   setLoading('forgotBtn', true);
 
-  const { ok, data } = await apiFetch('/api/users/password-reset/', 'POST', { email });
+  await apiFetch('/api/users/password-reset/', 'POST', { email });
 
   setLoading('forgotBtn', false);
 
@@ -409,8 +409,8 @@ async function deleteAccount() {
   const { ok, data } = await apiFetch('/api/users/delete/', 'DELETE');
   if (ok) {
     localStorage.removeItem('authToken');
-    showToast('帳號已刪除', 'info');
-    showPage('loginPage');
+    showToast('帳號已停用，感謝您使用 StudyGo Taiwan', 'info', 2000);
+    setTimeout(() => { window.location.href = '/login/?deleted=1'; }, 2000);
   } else {
     showToast(data?.message || '刪除失敗', 'error');
   }
@@ -644,6 +644,7 @@ async function initApp() {
     if (verified === '1')        showToast('Email 驗證成功！請登入您的帳號', 'success');
     else if (verified === 'fail')    showToast('驗證連結無效或已使用', 'error');
     else if (verified === 'expired') showToast('驗證連結已過期，請重新申請', 'error');
+    if (params.get('deleted') === '1') showToast('帳號已停用，感謝您使用 StudyGo Taiwan', 'info', 5000);
     return;
   }
 

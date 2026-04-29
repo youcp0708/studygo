@@ -80,7 +80,6 @@
             <div class="field">
               <label>入學狀態</label>
               <select name="admission_status" id="editStatus">
-                <option value="applied" {% if profile.admission_status == "applied" %}selected{% endif %}>已提出申請</option>
                 <option value="admitted" {% if profile.admission_status == "admitted" %}selected{% endif %}>已收到錄取通知
                 </option>
                 <option value="pre_arrival" {% if profile.admission_status == "pre_arrival" %}selected{% endif %}>入境前準備中

@@ -69,7 +69,6 @@
               <option value="">請選擇身份別</option>
               <option value="overseas_chinese">🏮 僑生（海外華裔）</option>
               <option value="foreign_student">🌐 外籍生</option>
-              <option value="exchange">🔄 交換生</option>
               <option value="preparatory">📚 僑大先修生</option>
             </select>
             <div class="field-hint">身份別將影響您的流程任務內容</div>
@@ -78,31 +77,24 @@
 
           <div class="setup-section-title">入學狀態</div>
           <div class="status-cards-grid">
-            <div class="status-card" data-val="applied" onclick="selectStatus(this)">
-              <div class="radio-dot"></div>
-              <div>
-                <div style="font-size:15px;font-weight:900;">📩 已提出申請</div>
-                <div style="font-size:12px;color:var(--muted);margin-top:2px;">等待錄取通知中</div>
-              </div>
-            </div>
             <div class="status-card" data-val="admitted" onclick="selectStatus(this)">
               <div class="radio-dot"></div>
               <div>
-                <div style="font-size:15px;font-weight:900;">🎉 已收到錄取通知</div>
+                <div style="font-size:14px;font-weight:900;">🎉 已收到錄取通知</div>
                 <div style="font-size:12px;color:var(--muted);margin-top:2px;">準備來臺流程</div>
               </div>
             </div>
             <div class="status-card" data-val="pre_arrival" onclick="selectStatus(this)">
               <div class="radio-dot"></div>
               <div>
-                <div style="font-size:15px;font-weight:900;">✈️ 入境前準備中</div>
+                <div style="font-size:14px;font-weight:900;">✈️ 入境前準備中</div>
                 <div style="font-size:12px;color:var(--muted);margin-top:2px;">辦理簽證等手續</div>
               </div>
             </div>
             <div class="status-card" data-val="arrived" onclick="selectStatus(this)">
               <div class="radio-dot"></div>
               <div>
-                <div style="font-size:15px;font-weight:900;">🏫 已抵臺就學中</div>
+                <div style="font-size:14px;font-weight:900;">🏫 已抵臺就學中</div>
                 <div style="font-size:12px;color:var(--muted);margin-top:2px;">辦理 ARC 等後續</div>
               </div>
             </div>
