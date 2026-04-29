@@ -4,6 +4,7 @@ API Views — 對應 Activity Diagram 與 Sequence Diagram 的後端邏輯
 """
 
 import secrets
+import logging
 from django.contrib.auth import login, logout
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
@@ -20,6 +21,8 @@ from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 
 from .models import CustomUser, StudentProfile, EmailVerificationToken, LoginLog
+
+logger = logging.getLogger(__name__)
 from .serializers import (
     RegisterSerializer, LoginSerializer,
     StudentProfileSerializer, UserDetailSerializer,
@@ -379,9 +382,11 @@ def google_login_view(request):
             credential,
             google_requests.Request(),
             settings.GOOGLE_CLIENT_ID,
+            clock_skew_in_seconds=10,
         )
-    except ValueError:
-        return error_response('Google 憑證無效或已過期', status_code=401)
+    except ValueError as e:
+        logger.warning('Google ID Token 驗證失敗: %s', e)
+        return error_response(f'Google 憑證無效或已過期：{e}', status_code=401)
 
     email = idinfo.get('email')
     name  = idinfo.get('name') or email.split('@')[0]
@@ -427,14 +432,13 @@ def delete_account_view(request):
     或硬刪除：user.delete()
     """
     user = request.user
-    # 軟刪除（推薦）
     user.is_active = False
     user.save(update_fields=['is_active'])
-    # 清除 Token
     try:
         user.auth_token.delete()
     except Exception:
         pass
+    logout(request)  # 同步清除 Django session
     return success_response(message='帳號已停用')
 
 
