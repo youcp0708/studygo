@@ -24,7 +24,8 @@ INSTALLED_APPS = [
     'rest_framework',           # pip install djangorestframework
     'rest_framework.authtoken',
     'corsheaders',              # pip install django-cors-headers
-    'users',                    # 使用者管理模塊（模塊一）
+    'users',       
+    'chatbot',             # 使用者管理模塊（模塊一）
 ]
 
 MIDDLEWARE = [
@@ -61,18 +62,13 @@ WSGI_APPLICATION = 'studygo.wsgi.application'
 # ── 資料庫（開發用 SQLite，上線換 PostgreSQL）──
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':     'postgres',
+        'USER':     'postgres',
+        'PASSWORD': 'uq6pUJAfP8wGIlCZ',
+        'HOST':     'db.hpszxboxqzmvisydcnhz.supabase.co',  # 你的 Supabase host
+        'PORT':     '5432',
     }
-    # 上線 PostgreSQL 範例：
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'studygo_db',
-    #     'USER': 'studygo_user',
-    #     'PASSWORD': 'yourpassword',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
-    # }
 }
 
 # ── 密碼驗證 ──
@@ -138,3 +134,5 @@ SESSION_COOKIE_HTTPONLY= True
 
 # ── CSRF ──
 CSRF_COOKIE_SAMESITE = 'Lax'
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
+OPENAI_MODEL = os.environ.get('OPENAI_MODEL', 'gpt-5.4-mini')
