@@ -67,11 +67,11 @@ WSGI_APPLICATION = 'studygo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'studygo_db',   # 剛才在 pgAdmin 建立的名稱
-        'USER': 'postgres',     # pgAdmin 的登入帳號
-        'PASSWORD': 'wichai123456-', # pgAdmin 的登入密碼
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME':     'postgres',
+        'USER':     'postgres',
+        'PASSWORD': 'uq6pUJAfP8wGIlCZ',
+        'HOST':     'db.hpszxboxqzmvisydcnhz.supabase.co',  # 你的 Supabase host
+        'PORT':     '5432',
     }
 }
 
