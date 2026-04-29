@@ -320,15 +320,16 @@
       {% if profile %}{{ profile.get_identity_type_display }}{% else %}境外生{% endif %}
       ・入學狀態：{% if profile %}{{ profile.get_admission_status_display }}{% else %}未設定{% endif %}
     </p>
-    {% if flow %}
+    {% if flow %}{% with rate=flow.completion_rate %}
     <div class="progress-bar-wrap">
-      <div class="progress-bar-fill" id="progressFill" style="width:{{ flow.completion_rate }}%;"></div>
+      <div class="progress-bar-fill" id="progressFill" data-rate="{{ rate }}"></div>
+      <script>document.getElementById('progressFill').style.width = document.getElementById('progressFill').dataset.rate + '%';</script>
     </div>
     <div class="progress-label">
       <span>整體完成進度</span>
-      <span id="progressPct">{{ flow.completion_rate }}%</span>
+      <span id="progressPct">{{ rate }}%</span>
     </div>
-    {% endif %}
+    {% endwith %}{% endif %}
   </div>
 
   {# ── 統計卡 ── #}
@@ -348,10 +349,10 @@
     </div>
     <div class="stat-card">
       <div class="s-icon">⏰</div>
-      <div class="s-val" id="statOverdue"
-        style="color:{% if flow.overdue_count > 0 %}#dc2626{% else %}var(--primary-dark){% endif %};">
-        {{ flow.overdue_count }}
-      </div>
+      {% with overdue=flow.overdue_count %}
+      <div class="s-val" id="statOverdue" data-overdue="{{ overdue }}">{{ overdue }}</div>
+      <script>if (+document.getElementById('statOverdue').dataset.overdue > 0) document.getElementById('statOverdue').style.color = '#dc2626';</script>
+      {% endwith %}
       <div class="s-lbl">已逾期</div>
     </div>
     <div class="stat-card">
@@ -417,9 +418,10 @@
 
       {% for task in group.list %}
       <div
-        class="task-card {% if task.status == 'done' %}done{% elif task.is_overdue %}overdue{% else %}{{ task.status }}{% endif %}"
-        id="task-{{ task.id }}" data-status="{{ task.status }}" data-overdue="{{ task.is_overdue|lower }}">
-        <div class="task-checkbox" onclick="cycleStatus({{ task.id }}, this)">
+        class="task-card {% if task.status == 'done' %}done{% else %}{{ task.status }}{% if task.is_overdue %} overdue{% endif %}{% endif %}"
+        id="task-{{ task.id }}" data-task-id="{{ task.id }}" data-status="{{ task.status }}"
+        data-overdue="{{ task.is_overdue|lower }}">
+        <div class="task-checkbox">
           {% if task.status == 'done' %}✓
           {% elif task.status == 'in_progress' %}→
           {% endif %}
@@ -454,11 +456,14 @@
           </div>
         </div>
         <div class="task-actions">
-          {% if task.status != 'done' %}
-          <button class="task-action-btn btn-inprog" onclick="updateTask({{ task.id }}, 'in_progress')">進行中</button>
-          <button class="task-action-btn btn-done" onclick="updateTask({{ task.id }}, 'done')">✓ 完成</button>
+          {% if task.status == 'todo' %}
+          <button class="task-action-btn btn-inprog" data-action="in_progress">進行中</button>
+          <button class="task-action-btn btn-done" data-action="done">✓ 完成</button>
+          {% elif task.status == 'in_progress' %}
+          <button class="task-action-btn" data-action="todo">↩ 待辦</button>
+          <button class="task-action-btn btn-done" data-action="done">✓ 完成</button>
           {% else %}
-          <button class="task-action-btn" onclick="updateTask({{ task.id }}, 'todo')">↩ 重設</button>
+          <button class="task-action-btn" data-action="todo">↩ 重設</button>
           {% endif %}
         </div>
       </div>
@@ -539,15 +544,23 @@
     }
   }
 
-  // ── 點擊 checkbox 循環切換狀態 ──
-  function cycleStatus(taskId, el) {
-    const card = document.getElementById(`task-${taskId}`);
-    const cur = card.dataset.status;
-    const next = cur === 'todo' ? 'in_progress'
-      : cur === 'in_progress' ? 'done'
-        : 'todo';
-    updateTask(taskId, next);
-  }
+  // ── Event delegation：checkbox + action buttons ──
+  document.addEventListener('click', e => {
+    const checkbox = e.target.closest('.task-checkbox');
+    if (checkbox) {
+      const card = checkbox.closest('.task-card');
+      if (!card) return;
+      const cur = card.dataset.status;
+      const next = cur === 'todo' ? 'in_progress' : cur === 'in_progress' ? 'done' : 'todo';
+      updateTask(card.dataset.taskId, next);
+      return;
+    }
+    const btn = e.target.closest('.task-action-btn[data-action]');
+    if (btn) {
+      const card = btn.closest('.task-card');
+      if (card) updateTask(card.dataset.taskId, btn.dataset.action);
+    }
+  });
 
   // ── 更新單張任務卡的外觀 ──
   function updateCardUI(taskId, newStatus, taskData) {
@@ -555,19 +568,23 @@
     if (!card) return;
 
     card.dataset.status = newStatus;
-    card.className = `task-card ${newStatus === 'done' ? 'done' : newStatus}`;
+    const isOverdue = card.dataset.overdue === 'true';
+    card.className = `task-card ${newStatus === 'done' ? 'done' : newStatus}${isOverdue && newStatus !== 'done' ? ' overdue' : ''}`;
 
     const checkbox = card.querySelector('.task-checkbox');
     checkbox.innerHTML = newStatus === 'done' ? '✓' : newStatus === 'in_progress' ? '→' : '';
 
     const actions = card.querySelector('.task-actions');
-    if (newStatus === 'done') {
-      actions.innerHTML = `<button class="task-action-btn" onclick="updateTask(${taskId}, 'todo')">↩ 重設</button>`;
-    } else {
+    if (newStatus === 'todo') {
       actions.innerHTML = `
-      <button class="task-action-btn btn-inprog" onclick="updateTask(${taskId}, 'in_progress')">進行中</button>
-      <button class="task-action-btn btn-done" onclick="updateTask(${taskId}, 'done')">✓ 完成</button>
-    `;
+      <button class="task-action-btn btn-inprog" data-action="in_progress">進行中</button>
+      <button class="task-action-btn btn-done" data-action="done">✓ 完成</button>`;
+    } else if (newStatus === 'in_progress') {
+      actions.innerHTML = `
+      <button class="task-action-btn" data-action="todo">↩ 待辦</button>
+      <button class="task-action-btn btn-done" data-action="done">✓ 完成</button>`;
+    } else {
+      actions.innerHTML = `<button class="task-action-btn" data-action="todo">↩ 重設</button>`;
     }
 
     // 移除/更新狀態標籤
@@ -589,7 +606,7 @@
       const json = await res.json();
       if (!json.success) return;
       const d = json.data;
-      document.getElementById('statTotal')?.setAttribute('innerText', d.total);
+      document.getElementById('statTotal').textContent = d.total;
       document.getElementById('statDone').textContent = d.done;
       document.getElementById('progressFill').style.width = `${d.completion_rate}%`;
       document.getElementById('progressPct').textContent = `${d.completion_rate}%`;
