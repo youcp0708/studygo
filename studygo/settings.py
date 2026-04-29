@@ -65,18 +65,13 @@ WSGI_APPLICATION = 'studygo.wsgi.application'
 
 # ── 資料庫（開發用 SQLite，上線換 PostgreSQL）──
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'NAME':     'postgres',
+        'USER':     'postgres',
         'PASSWORD': '112403046',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'HOST':     'localhost',  # 你的 Supabase host
+        'PORT':     '5432',
     }
 }
 
