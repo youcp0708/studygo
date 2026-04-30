@@ -291,7 +291,7 @@ async function handleProfileSetup(e) {
   setLoading('setupSubmitBtn', false);
 
   if (!apiOk) {
-    const msg = data?.errors
+    const msg = (data?.errors && Object.keys(data.errors).length > 0)
       ? Object.values(data.errors).flat().join('、')
       : (data?.message || '儲存失敗，請稍後再試');
     showToast(msg, 'error');
@@ -357,7 +357,8 @@ async function handleChangePw(e) {
   setLoading('changePwBtn', false);
 
   if (!ok) {
-    const msg = data?.errors ? Object.values(data.errors).flat().join('、') : data?.message;
+    const hasErrors = data?.errors && Object.keys(data.errors).length > 0;
+    const msg = hasErrors ? Object.values(data.errors).flat().join('、') : data?.message;
     showToast(msg || '修改失敗', 'error');
     return;
   }

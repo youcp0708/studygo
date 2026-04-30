@@ -26,15 +26,15 @@ async function initUserTasks() {
 async function renderDashboardProgress() {
   const dashCompletion = document.getElementById('dashCompletionRate');
   const dashRecentTasks = document.getElementById('dashRecentTasks');
-  
+
   if (!dashCompletion && !dashRecentTasks) return; // 不在 dashboard
-  
+
   const { ok, data } = await apiFetch('/api/flows/progress/');
   if (!ok) return;
 
   // 更新完成率
   if (dashCompletion) {
-    dashCompletion.textContent = `${data.data.completion_rate}%`;
+    dashCompletion.textContent = `${data.data.overall_percent}%`;
   }
 
   // 取得近期未完成的任務 (可以從 progress 裡面挖，或是直接呼叫 my-tasks API)
@@ -44,7 +44,7 @@ async function renderDashboardProgress() {
     dashRecentTasks.innerHTML = '';
     const allStages = tasksRes.data.data.stages;
     const pendingTasks = [];
-    
+
     // 攤平找出未完成的任務
     allStages.forEach(stage => {
       stage.tasks.forEach(task => {
@@ -143,13 +143,13 @@ async function renderMyTasks() {
 ════════════════════════════════════════ */
 async function toggleTaskStatus(studentTaskId, element) {
   const isCurrentlyDone = element.classList.contains('completed');
-  const newStatus = isCurrentlyDone ? 'pending' : 'completed';
+  const newStatus = isCurrentlyDone ? 'not_started' : 'completed';
 
   // Optimistic UI update
   element.classList.toggle('completed');
 
   const { ok } = await apiFetch(`/api/flows/my-tasks/${studentTaskId}/update/`, 'PATCH', { status: newStatus });
-  
+
   if (!ok) {
     // Revert on failure
     showToast('更新失敗', 'error');
@@ -158,9 +158,9 @@ async function toggleTaskStatus(studentTaskId, element) {
   }
 
   showToast(newStatus === 'completed' ? '任務已完成！' : '任務已取消完成', 'success');
-  
+
   // 重新計算進度標籤 (Optional: 或是直接重 call renderMyTasks)
-  renderMyTasks(); 
+  renderMyTasks();
 }
 
 
