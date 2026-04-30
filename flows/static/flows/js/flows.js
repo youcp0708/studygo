@@ -33,8 +33,23 @@ async function renderDashboardProgress() {
   if (!ok) return;
 
   // 更新完成率
+  // if (dashCompletion) {
+  //   dashCompletion.textContent = `${data.data.overall_percent}%`;
+  // }
+
   if (dashCompletion) {
-    dashCompletion.textContent = `${data.data.overall_percent}%`;
+    const stages = data.data.stages || [];
+
+    const total = stages.reduce((sum, stage) => sum + stage.total, 0);
+    const completed = stages.reduce((sum, stage) => sum + stage.completed, 0);
+    const percent = data.data.overall_percent || 0;
+
+    dashCompletion.innerHTML = `
+    ${percent}%<br>
+    <span style="font-size:16px;font-weight:600;color:var(--muted);">
+      已完成 ${completed} / ${total} 項
+    </span>
+  `;
   }
 
   // 取得近期未完成的任務 (可以從 progress 裡面挖，或是直接呼叫 my-tasks API)
