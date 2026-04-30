@@ -63,9 +63,13 @@ def dashboard_page(request):
     """儀表板首頁 — 需要 session 登入"""
     if not request.user.is_authenticated:
         return redirect('login_page')
-    context = {'user': request.user}
-    if hasattr(request.user, 'student_profile'):
-        context['profile'] = request.user.student_profile
+    if not hasattr(request.user, 'student_profile'):
+        return redirect('profile_setup')
+        
+    context = {
+        'user': request.user,
+        'profile': request.user.student_profile
+    }
     return render(request, 'users/dashboard.html', context)
 
 

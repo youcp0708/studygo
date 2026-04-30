@@ -91,16 +91,12 @@ class StudentProfile(models.Model):
 
     # ── 身份別選項 (identityType) ──
     IDENTITY_CHOICES = [
-        ('overseas_chinese', '僑生（海外華裔）'),
-        ('foreign_student',  '外籍生（一般外國學生）'),
-        ('exchange',         '交換生'),
-        ('preparatory',      '僑大先修生'),
+        ('overseas_chinese_student', '僑生（海外華裔）'),
+        ('foreign_student',          '外籍生（一般外國學生）')
     ]
 
     # ── 入學狀態選項 (admissionStatus) ──
     ADMISSION_STATUS_CHOICES = [
-        ('applied',     '已提出申請'),
-        ('admitted',    '已收到錄取通知'),
         ('pre_arrival', '入境前準備中'),
         ('arrived',     '已抵臺就學中'),
     ]

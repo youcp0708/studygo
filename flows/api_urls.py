@@ -27,14 +27,5 @@ urlpatterns = [
     # GET   /api/flows/progress/            → 取得進度總覽（依階段分組）
     path('flows/progress/',             views.progress_overview_view,   name='api_progress'),
 
-    # ── 提醒 ─────────────────────────────────────────
-    # GET   /api/flows/reminders/           → 取得我的提醒列表
-    path('flows/reminders/',            views.reminder_list_view,       name='api_reminders'),
 
-    # POST  /api/flows/reminders/           → 新增提醒
-    path('flows/reminders/create/',     views.create_reminder_view,     name='api_create_reminder'),
-
-    # PATCH /api/flows/reminders/<id>/read/ → 標記提醒為已讀
-    path('flows/reminders/<int:reminder_id>/read/',
-         views.mark_reminder_read_view,  name='api_reminder_read'),
 ]

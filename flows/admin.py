@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import FlowStage, Task, StudentTask, Reminder
+from .models import FlowStage, Task, StudentTask
 
 @admin.register(FlowStage)
 class FlowStageAdmin(admin.ModelAdmin):
@@ -18,7 +18,4 @@ class StudentTaskAdmin(admin.ModelAdmin):
     list_filter = ('status', 'task__stage')
     search_fields = ('student__user__name', 'student__user__email', 'task__title')
 
-@admin.register(Reminder)
-class ReminderAdmin(admin.ModelAdmin):
-    list_display = ('student_task', 'remind_date', 'is_read')
-    list_filter = ('is_read',)
+

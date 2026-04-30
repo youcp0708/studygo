@@ -111,25 +111,4 @@ class StudentTask(models.Model):
     def __str__(self):
         return f"{self.student.user.name} - {self.task.title} - {self.status}"
 
-
-# 提醒資料
-class Reminder(models.Model):
-    student_task = models.ForeignKey(
-        StudentTask,
-        on_delete=models.CASCADE,
-        related_name="reminders",
-        verbose_name="學生任務"
-    )
-
-    message = models.TextField(verbose_name="提醒內容")
-    remind_date = models.DateField(null=True, blank=True, verbose_name="提醒日期")
-    is_read = models.BooleanField(default=False, verbose_name="是否已讀")
-
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name="建立時間")
-
-    class Meta:
-        db_table = "flows_reminder"
-        ordering = ["remind_date"]
-
-    def __str__(self):
-        return self.message
+

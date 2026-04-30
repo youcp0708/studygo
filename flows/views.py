@@ -4,18 +4,39 @@ flows/views.py
 """
 
 from django.utils import timezone
+from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from users.models import StudentProfile
-from .models import FlowStage, Task, StudentTask, Reminder
+
+# ==========================================
+# 前端網頁視圖 (Web Views)
+# ==========================================
+
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
+
+@login_required(login_url='/login/')
+def my_flows_page(request):
+    """
+    渲染個人的「任務清單」頁面
+    """
+    if not hasattr(request.user, 'student_profile'):
+        return redirect('profile_setup')
+    return render(request, 'flows/my_flows.html')
+
+
+# ==========================================
+# REST API 視圖 (DRF)
+# ==========================================
+from .models import FlowStage, Task, StudentTask
 from .serializers import (
     FlowStageSerializer,
     TaskSerializer,
     StudentTaskSerializer,
-    ReminderSerializer,
 )
 
 
@@ -140,10 +161,9 @@ def my_tasks_view(request):
     Response (200):
       { "success": true,
         "data": {
-          "tasks": [ { "id": 1, "status": "not_started",
-                       "status_display": "未開始",
-                       "task_detail": { "title": "申請簽證", ... },
-                       "reminders": [...] }, ... ],
+          "stages": [
+             { "stage_id": 1, "stage_name": "來台前", "tasks": [ ...StudentTaskSerializer... ] }
+          ],
           "summary": { "total": 12, "completed": 3, "progress_percent": 25 }
         } }
     """
@@ -154,24 +174,30 @@ def my_tasks_view(request):
     except StudentProfile.DoesNotExist:
         return error_response('請先建立學生資料', status_code=400)
 
-    # 基本查詢
-    qs = StudentTask.objects.filter(student=profile) \
-        .select_related('task', 'task__stage') \
-        .prefetch_related('reminders')
-
     # ── 篩選功能 ──
     status_filter = request.query_params.get('status')
-    if status_filter:
-        qs = qs.filter(status=status_filter)
-
     stage_filter = request.query_params.get('stage')
+
+    stages = FlowStage.objects.all().order_by('order')
     if stage_filter:
-        qs = qs.filter(task__stage_id=stage_filter)
+        stages = stages.filter(id=stage_filter)
 
-    # 依照流程階段排序 → 任務排序
-    qs = qs.order_by('task__stage__order', 'task__order')
-
-    serializer = StudentTaskSerializer(qs, many=True)
+    stages_data = []
+    
+    for stage in stages:
+        qs = StudentTask.objects.filter(student=profile, task__stage=stage) \
+            .select_related('task') \
+            .order_by('task__order')
+            
+        if status_filter:
+            qs = qs.filter(status=status_filter)
+            
+        if qs.exists():
+            stages_data.append({
+                'stage_id': stage.id,
+                'stage_name': stage.name,
+                'tasks': StudentTaskSerializer(qs, many=True).data
+            })
 
     # ── 計算進度摘要 ──
     all_tasks = StudentTask.objects.filter(student=profile)
@@ -180,7 +206,7 @@ def my_tasks_view(request):
     progress = round((completed / total * 100), 1) if total > 0 else 0
 
     return success_response({
-        'tasks': serializer.data,
+        'stages': stages_data,
         'summary': {
             'total': total,
             'completed': completed,
@@ -246,122 +272,7 @@ def update_task_status_view(request, task_id):
     )
 
 
-# ══════════════════════════════════════════
-# 5. 取得學生的提醒列表
-# GET /api/flows/reminders/
-#
-# 功能說明：
-#   回傳這位學生所有任務的提醒通知。
-#   支援篩選：
-#   - ?unread=true  → 只看未讀的提醒
-# ══════════════════════════════════════════
-@api_view(['GET'])
-@permission_classes([IsAuthenticated])
-def reminder_list_view(request):
-    """
-    Response (200):
-      { "success": true,
-        "data": { "reminders": [...], "unread_count": 3 } }
-    """
-    user = request.user
 
-    try:
-        profile = user.student_profile
-    except StudentProfile.DoesNotExist:
-        return error_response('請先建立學生資料', status_code=400)
-
-    qs = Reminder.objects.filter(student_task__student=profile) \
-        .select_related('student_task', 'student_task__task')
-
-    # 篩選未讀
-    if request.query_params.get('unread') == 'true':
-        qs = qs.filter(is_read=False)
-
-    serializer = ReminderSerializer(qs, many=True)
-    unread_count = Reminder.objects.filter(
-        student_task__student=profile, is_read=False
-    ).count()
-
-    return success_response({
-        'reminders': serializer.data,
-        'unread_count': unread_count,
-    })
-
-
-# ══════════════════════════════════════════
-# 6. 新增提醒
-# POST /api/flows/reminders/
-#
-# 功能說明：
-#   為某個學生任務新增一筆提醒。
-#   例如：「記得在 5/15 前去辦理居留證」。
-# ══════════════════════════════════════════
-@api_view(['POST'])
-@permission_classes([IsAuthenticated])
-def create_reminder_view(request):
-    """
-    Request Body:
-      { "student_task": 1, "message": "5/15 前辦理居留證",
-        "remind_date": "2026-05-15" }
-
-    Response (201):
-      { "success": true, "message": "提醒建立成功" }
-    """
-    user = request.user
-
-    try:
-        profile = user.student_profile
-    except StudentProfile.DoesNotExist:
-        return error_response('請先建立學生資料', status_code=400)
-
-    # 確認這個 student_task 是屬於當前學生的
-    student_task_id = request.data.get('student_task')
-    try:
-        student_task = StudentTask.objects.get(id=student_task_id, student=profile)
-    except StudentTask.DoesNotExist:
-        return error_response('找不到此任務或無權限操作', status_code=404)
-
-    serializer = ReminderSerializer(data=request.data)
-    if not serializer.is_valid():
-        return error_response('資料驗證失敗', serializer.errors)
-
-    serializer.save()
-    return success_response(serializer.data, '提醒建立成功', status_code=201)
-
-
-# ══════════════════════════════════════════
-# 7. 標記提醒為已讀
-# PATCH /api/flows/reminders/<id>/read/
-#
-# 功能說明：
-#   學生點擊提醒後，把它標記為「已讀」。
-# ══════════════════════════════════════════
-@api_view(['PATCH'])
-@permission_classes([IsAuthenticated])
-def mark_reminder_read_view(request, reminder_id):
-    """
-    Response (200):
-      { "success": true, "message": "已標記為已讀" }
-    """
-    user = request.user
-
-    try:
-        profile = user.student_profile
-    except StudentProfile.DoesNotExist:
-        return error_response('請先建立學生資料', status_code=400)
-
-    try:
-        reminder = Reminder.objects.get(
-            id=reminder_id,
-            student_task__student=profile
-        )
-    except Reminder.DoesNotExist:
-        return error_response('找不到此提醒或無權限操作', status_code=404)
-
-    reminder.is_read = True
-    reminder.save(update_fields=['is_read'])
-
-    return success_response(message='已標記為已讀')
 
 
 # ══════════════════════════════════════════
