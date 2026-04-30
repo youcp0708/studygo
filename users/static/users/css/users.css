@@ -1614,3 +1614,11 @@ button {
     font-size: 32px;
   }
 }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+}
