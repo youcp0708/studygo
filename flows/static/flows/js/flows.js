@@ -46,10 +46,21 @@ async function renderDashboardProgress() {
     const pendingTasks = [];
 
     // 攤平找出未完成的任務
+    // allStages.forEach(stage => {
+    //   stage.tasks.forEach(task => {
+    //     if (task.status !== 'completed') {
+    //       pendingTasks.push(task);
+    //     }
+    //   });
+    // });
+
     allStages.forEach(stage => {
       stage.tasks.forEach(task => {
         if (task.status !== 'completed') {
-          pendingTasks.push(task);
+          pendingTasks.push({
+            ...task,
+            stage_name: stage.stage_name
+          });
         }
       });
     });
@@ -70,7 +81,7 @@ async function renderDashboardProgress() {
           <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
           <div style="flex:1;">
             <div style="font-weight:700;font-size:14px;">${task.task_detail.title}</div>
-            <div style="font-size:12px;color:var(--muted);">${stage.stage_name || '流程階段'}</div>
+            <div style="font-size:12px;color:var(--muted);">${task.stage_name || '流程階段'}</div>
           </div>
         </div>
       `;
