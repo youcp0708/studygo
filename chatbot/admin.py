@@ -4,7 +4,18 @@ chatbot/admin.py
 """
 
 from django.contrib import admin
-from .models import ChatSession, ChatMessage
+from .models import ChatSession, ChatMessage, ChatAttachment
+
+
+class ChatAttachmentInline(admin.TabularInline):
+    model = ChatAttachment
+    extra = 0
+    readonly_fields = ('file', 'attachment_type', 'original_name', 'created_at')
+    can_delete = False
+    show_change_link = True
+
+    def has_add_permission(self, request, obj=None):
+        return False
 
 
 class ChatMessageInline(admin.TabularInline):
@@ -19,9 +30,9 @@ class ChatMessageInline(admin.TabularInline):
 
 @admin.register(ChatSession)
 class ChatSessionAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'title', 'created_at', 'updated_at')
+    list_display = ('id', 'user', 'title', 'is_pinned', 'created_at', 'updated_at')
+    list_filter = ('is_pinned', 'created_at', 'updated_at')
     search_fields = ('user__email', 'user__name', 'title')
-    list_filter = ('created_at', 'updated_at')
     readonly_fields = ('created_at', 'updated_at')
     inlines = [ChatMessageInline]
 
@@ -30,7 +41,7 @@ class ChatSessionAdmin(admin.ModelAdmin):
 class ChatMessageAdmin(admin.ModelAdmin):
     list_display = ('id', 'session', 'role', 'short_content', 'created_at')
     list_filter = ('role', 'created_at')
-    search_fields = ('content', 'session__user__email', 'session__user__name')
+    search_fields = ('content', 'session__title', 'session__user__email', 'session__user__name')
     readonly_fields = ('session', 'role', 'content', 'created_at')
 
     def short_content(self, obj):

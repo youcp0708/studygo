@@ -1,8 +1,3 @@
-"""
-chatbot/views.py
-AI 聊天機器人頁面與 API。
-"""
-
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.views.decorators.csrf import ensure_csrf_cookie
@@ -11,20 +6,44 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from .models import ChatSession, ChatMessage
+from .models import ChatSession, ChatMessage, ChatAttachment
 from .services import generate_ai_reply
 
 
 @login_required(login_url='/login/')
 @ensure_csrf_cookie
 def chatbot_page(request):
-    """前端聊天頁面。"""
-    session = ChatSession.objects.filter(user=request.user).first()
+    """
+    聊天頁面：
+    - 左邊顯示所有聊天記錄
+    - 有 ?session=xx 時載入該對話
+    - 沒有 session 時只顯示歡迎訊息
+    """
+    sessions = ChatSession.objects.filter(
+        user=request.user
+    ).order_by('-is_pinned', '-updated_at')
+
+    session_id = request.GET.get('session')
+    active_session = None
+    messages = []
+
+    if session_id:
+        active_session = ChatSession.objects.filter(
+            id=session_id,
+            user=request.user
+        ).first()
+
+        if active_session:
+            messages = active_session.messages.all()
+
     context = {
         'user': request.user,
         'profile': getattr(request.user, 'student_profile', None),
-        'active_session': session,
+        'sessions': sessions,
+        'active_session': active_session,
+        'messages': messages,
     }
+
     return render(request, 'chatbot/chatbot.html', context)
 
 
@@ -32,36 +51,43 @@ def chatbot_page(request):
 @permission_classes([IsAuthenticated])
 def chat_message_api(request):
     """
-    POST /api/chatbot/message/
-    Body: { "message": "簽證要準備什麼？", "session_id": 1 }
+    POST /chatbot/api/message/
     """
     message = (request.data.get('message') or '').strip()
     session_id = request.data.get('session_id')
 
-    if not message:
+    attachments = request.FILES.getlist('attachments')
+    attachment_types = request.data.getlist('attachment_types')
+
+    if not message and not attachments:
         return Response({
             'success': False,
-            'message': '請輸入問題',
-            'errors': {'message': 'message 不可為空'},
+            'message': '請輸入問題或上傳附件',
         }, status=status.HTTP_400_BAD_REQUEST)
 
     if len(message) > 1200:
         return Response({
             'success': False,
             'message': '問題太長，請縮短到 1200 字以內',
-            'errors': {'message': 'too_long'},
         }, status=status.HTTP_400_BAD_REQUEST)
 
+    if not message:
+        message = '已上傳附件'
+
+    session = None
+
     if session_id:
-        session = ChatSession.objects.filter(id=session_id, user=request.user).first()
-        if not session:
-            return Response({
-                'success': False,
-                'message': '找不到此對話',
-            }, status=status.HTTP_404_NOT_FOUND)
-    else:
+        session = ChatSession.objects.filter(
+            id=session_id,
+            user=request.user
+        ).first()
+
+    if not session:
         title = message[:24] + ('…' if len(message) > 24 else '')
-        session = ChatSession.objects.create(user=request.user, title=title)
+        session = ChatSession.objects.create(
+            user=request.user,
+            title=title,
+        )
 
     recent_messages = list(session.messages.order_by('-created_at')[:10])
     recent_messages.reverse()
@@ -71,6 +97,19 @@ def chat_message_api(request):
         role='user',
         content=message,
     )
+
+    for index, uploaded_file in enumerate(attachments):
+        attachment_type = 'file'
+
+        if index < len(attachment_types):
+            attachment_type = attachment_types[index]
+
+        ChatAttachment.objects.create(
+            message=user_msg,
+            file=uploaded_file,
+            attachment_type=attachment_type,
+            original_name=uploaded_file.name,
+        )
 
     ai_result = generate_ai_reply(
         user=request.user,
@@ -84,7 +123,6 @@ def chat_message_api(request):
         content=ai_result['reply'],
     )
 
-    # 第一次提問時，用問題作為標題；後續更新 updated_at
     session.save(update_fields=['updated_at'])
 
     return Response({
@@ -92,6 +130,8 @@ def chat_message_api(request):
         'message': 'AI 回覆成功',
         'data': {
             'session_id': session.id,
+            'session_title': session.title,
+            'is_pinned': session.is_pinned,
             'user_message': {
                 'id': user_msg.id,
                 'role': user_msg.role,
@@ -104,62 +144,117 @@ def chat_message_api(request):
                 'content': assistant_msg.content,
                 'created_at': assistant_msg.created_at.strftime('%Y-%m-%d %H:%M'),
             },
-            'source': ai_result['source'],
-            'model': ai_result['model'],
         },
     })
 
 
-@api_view(['GET'])
+@api_view(['POST'])
 @permission_classes([IsAuthenticated])
-def chat_history_api(request):
-    """GET /api/chatbot/history/?session_id=1"""
-    session_id = request.GET.get('session_id')
-    session = None
-
-    if session_id:
-        session = ChatSession.objects.filter(id=session_id, user=request.user).first()
-    else:
-        session = ChatSession.objects.filter(user=request.user).first()
-
-    if not session:
-        return Response({
-            'success': True,
-            'message': '目前沒有聊天紀錄',
-            'data': {
-                'session_id': None,
-                'messages': [],
-            },
-        })
-
-    messages = [
-        {
-            'id': msg.id,
-            'role': msg.role,
-            'content': msg.content,
-            'created_at': msg.created_at.strftime('%Y-%m-%d %H:%M'),
-        }
-        for msg in session.messages.all()
-    ]
+def create_session_api(request):
+    session = ChatSession.objects.create(
+        user=request.user,
+        title='新的聊天'
+    )
 
     return Response({
         'success': True,
-        'message': '取得聊天紀錄成功',
+        'message': '建立新聊天成功',
         'data': {
             'session_id': session.id,
             'title': session.title,
-            'messages': messages,
-        },
+        }
+    })
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def rename_session_api(request):
+    session_id = request.data.get('session_id')
+    title = (request.data.get('title') or '').strip()
+
+    if not title:
+        return Response({
+            'success': False,
+            'message': '請輸入新的聊天名稱',
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+    session = ChatSession.objects.filter(
+        id=session_id,
+        user=request.user
+    ).first()
+
+    if not session:
+        return Response({
+            'success': False,
+            'message': '找不到此聊天紀錄',
+        }, status=status.HTTP_404_NOT_FOUND)
+
+    session.title = title
+    session.save(update_fields=['title', 'updated_at'])
+
+    return Response({
+        'success': True,
+        'message': '重新命名成功',
+        'data': {
+            'title': session.title,
+        }
+    })
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def pin_session_api(request):
+    session_id = request.data.get('session_id')
+
+    session = ChatSession.objects.filter(
+        id=session_id,
+        user=request.user
+    ).first()
+
+    if not session:
+        return Response({
+            'success': False,
+            'message': '找不到此聊天紀錄',
+        }, status=status.HTTP_404_NOT_FOUND)
+
+    session.is_pinned = not session.is_pinned
+    session.save(update_fields=['is_pinned', 'updated_at'])
+
+    return Response({
+        'success': True,
+        'message': '更新釘選成功',
+        'data': {
+            'is_pinned': session.is_pinned,
+        }
     })
 
 
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
-def clear_history_api(request):
-    """DELETE /api/chatbot/history/clear/"""
-    ChatSession.objects.filter(user=request.user).delete()
+def delete_session_api(request):
+    session_id = request.data.get('session_id')
+
+    session = ChatSession.objects.filter(
+        id=session_id,
+        user=request.user
+    ).first()
+
+    if not session:
+        return Response({
+            'success': False,
+            'message': '找不到此聊天紀錄',
+        }, status=status.HTTP_404_NOT_FOUND)
+
+    session.delete()
+
+    next_session = ChatSession.objects.filter(
+        user=request.user
+    ).order_by('-is_pinned', '-updated_at').first()
+
     return Response({
         'success': True,
-        'message': '聊天紀錄已清除',
-        'data': {},
+        'message': '刪除成功',
+        'data': {
+            'next_session_id': next_session.id if next_session else None
+        }
     })

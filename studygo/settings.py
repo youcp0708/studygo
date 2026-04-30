@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'corsheaders.middleware.CorsMiddleware',   # 必須在 CommonMiddleware 之前
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -155,5 +156,28 @@ CSRF_COOKIE_SAMESITE = 'Lax'
 # ── Google Sign-In 彈窗修復 ──
 # Django 5.x 預設 COOP: same-origin 會阻擋 GSI popup 回傳 credential
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
+
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
 OPENAI_MODEL = os.environ.get('OPENAI_MODEL', 'gpt-5.4-mini')
+
+from django.utils.translation import gettext_lazy as _
+
+LANGUAGE_CODE = 'zh-hant'
+
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
+LANGUAGES = [
+    ('zh-hant', _('繁體中文')),
+    ('en', _('English')),
+    ('ja', _('日本語')),
+    ('my', _('မြန်မာဘာသာ')),
+    ('id', _('Bahasa Indonesia')),
+    ('th', _('ภาษาไทย')),
+    ('ms', _('Bahasa Melayu')),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
