@@ -7,6 +7,8 @@
   let activeSessionId = page.dataset.sessionId || null;
 
   const endpoints = window.CHATBOT_ENDPOINTS || {};
+  const i18n = window.CHATBOT_I18N || {};
+
   const messagesEl = document.getElementById('chatMessages');
   const form = document.getElementById('chatForm');
   const input = document.getElementById('chatInput');
@@ -24,6 +26,10 @@
   const attachmentPreview = document.getElementById('attachmentPreview');
 
   let selectedAttachments = [];
+
+  function t(key, fallback) {
+    return i18n[key] || fallback;
+  }
 
   function getCookie(name) {
     for (const cookie of document.cookie.split(';')) {
@@ -69,6 +75,8 @@
   }
 
   function clearWelcomeIfNeeded() {
+    if (!messagesEl) return;
+
     const welcome = messagesEl.querySelector('.welcome-message');
     if (welcome) {
       welcome.remove();
@@ -90,7 +98,9 @@
 
     const name = document.createElement('div');
     name.className = 'message-name';
-    name.textContent = role === 'user' ? '我' : 'StudyGo AI 小幫手';
+    name.textContent = role === 'user'
+      ? t('me', '我')
+      : t('assistantName', 'StudyGo AI 小幫手');
 
     const body = document.createElement('div');
     body.className = 'message-content';
@@ -123,7 +133,7 @@
     row.innerHTML = `
       <div class="message-avatar">🤖</div>
       <div class="message-bubble">
-        <div class="message-name">StudyGo AI 小幫手</div>
+        <div class="message-name">${t('assistantName', 'StudyGo AI 小幫手')}</div>
         <div class="typing-dots">
           <span></span>
           <span></span>
@@ -148,7 +158,9 @@
 
     sendBtn.disabled = isBusy;
     input.disabled = isBusy;
-    sendBtn.textContent = isBusy ? '回覆中…' : '送出';
+    sendBtn.textContent = isBusy
+      ? t('replyLoading', '回覆中…')
+      : t('send', '送出');
   }
 
   function renderAttachmentPreview() {
@@ -292,16 +304,16 @@
         <span class="history-text"></span>
       </a>
 
-      <button class="history-more-btn" type="button" aria-label="聊天記錄選單">⋯</button>
+      <button class="history-more-btn" type="button" aria-label="chat menu">⋯</button>
 
       <div class="history-menu">
-        <button type="button" class="pin-chat">${isPinned ? '取消釘選' : '釘選'}</button>
-        <button type="button" class="rename-chat">重新命名</button>
-        <button type="button" class="delete-chat">刪除</button>
+        <button type="button" class="pin-chat">${isPinned ? t('unpin', '取消釘選') : t('pin', '釘選')}</button>
+        <button type="button" class="rename-chat">${t('rename', '重新命名')}</button>
+        <button type="button" class="delete-chat">${t('delete', '刪除')}</button>
       </div>
     `;
 
-    item.querySelector('.history-text').textContent = title || '新的聊天';
+    item.querySelector('.history-text').textContent = title || t('newChat', '新的聊天');
     return item;
   }
 
@@ -322,9 +334,12 @@
       historyList.prepend(item);
     }
 
-    item.querySelector('.history-text').textContent = title || '新的聊天';
+    item.querySelector('.history-text').textContent = title || t('newChat', '新的聊天');
     item.querySelector('.pin-mark').textContent = isPinned ? '📌' : '';
-    item.querySelector('.pin-chat').textContent = isPinned ? '取消釘選' : '釘選';
+    item.querySelector('.pin-chat').textContent = isPinned
+      ? t('unpin', '取消釘選')
+      : t('pin', '釘選');
+
     item.classList.toggle('pinned', Boolean(isPinned));
 
     if (isPinned) {
@@ -342,7 +357,7 @@
     }
 
     if (!endpoints.message) {
-      alert('找不到 message API');
+      alert(t('missingMessageApi', '找不到 message API'));
       return;
     }
 
@@ -353,7 +368,7 @@
     if (message) {
       addMessage('user', message);
     } else {
-      addMessage('user', '已上傳附件');
+      addMessage('user', t('uploadedAttachment', '已上傳附件'));
     }
 
     input.value = '';
@@ -365,7 +380,7 @@
     try {
       const formData = new FormData();
 
-      formData.append('message', message || '已上傳附件');
+      formData.append('message', message || t('uploadedAttachment', '已上傳附件'));
 
       if (activeSessionId) {
         formData.append('session_id', activeSessionId);
@@ -390,7 +405,7 @@
       removeTyping();
 
       if (!response.ok || !data.success) {
-        addMessage('assistant', data.message || '送出失敗，請稍後再試。');
+        addMessage('assistant', data.message || t('sendFailed', '送出失敗，請稍後再試。'));
         return;
       }
 
@@ -422,7 +437,7 @@
 
     } catch (error) {
       removeTyping();
-      addMessage('assistant', '網路或伺服器發生錯誤，請稍後再試。');
+      addMessage('assistant', t('networkError', '網路或伺服器發生錯誤，請稍後再試。'));
     } finally {
       setBusy(false);
       input.focus();
@@ -443,7 +458,7 @@
     const result = await requestJSON(endpoints.createSession, 'POST');
 
     if (!result.ok || !result.data.success) {
-      alert(result.data.message || '建立新聊天失敗');
+      alert(result.data.message || t('createChatFailed', '建立新聊天失敗'));
       return;
     }
 
@@ -455,7 +470,7 @@
     const titleEl = item.querySelector('.history-text');
     const oldTitle = titleEl.textContent.trim();
 
-    const newTitle = prompt('請輸入新的聊天名稱', oldTitle);
+    const newTitle = prompt(t('renamePrompt', '請輸入新的聊天名稱'), oldTitle);
 
     if (!newTitle || !newTitle.trim()) {
       item.classList.remove('menu-open');
@@ -468,7 +483,7 @@
     });
 
     if (!result.ok || !result.data.success) {
-      alert(result.data.message || '重新命名失敗');
+      alert(result.data.message || t('renameFailed', '重新命名失敗'));
       return;
     }
 
@@ -484,7 +499,7 @@
     });
 
     if (!result.ok || !result.data.success) {
-      alert(result.data.message || '釘選失敗');
+      alert(result.data.message || t('pinFailed', '釘選失敗'));
       return;
     }
 
@@ -492,7 +507,9 @@
 
     item.classList.toggle('pinned', isPinned);
     item.querySelector('.pin-mark').textContent = isPinned ? '📌' : '';
-    item.querySelector('.pin-chat').textContent = isPinned ? '取消釘選' : '釘選';
+    item.querySelector('.pin-chat').textContent = isPinned
+      ? t('unpin', '取消釘選')
+      : t('pin', '釘選');
 
     if (isPinned && historyList) {
       historyList.prepend(item);
@@ -509,7 +526,7 @@
     });
 
     if (!result.ok || !result.data.success) {
-      alert(result.data.message || '刪除失敗');
+      alert(result.data.message || t('deleteFailed', '刪除失敗'));
       return;
     }
 

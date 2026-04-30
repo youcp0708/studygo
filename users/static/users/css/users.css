@@ -1,3 +1,4 @@
+/* ===== Language Selector ===== */
 /*
  * users/static/users/css/users.css
  * 使用者管理模塊專屬樣式
@@ -1614,11 +1615,56 @@ button {
     font-size: 32px;
   }
 }
+.nav-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 99999;
+.nav-greeting {
+  font-weight: 800;
+  color: var(--primary-dark);
+  font-size: 15px;
+}
+
+.language-form {
+  margin: 0;
+}
+
+.language-select {
+  height: 40px;
+  padding: 0 14px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  color: var(--primary-dark);
   background: #fff;
-  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+  font-weight: 900;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.language-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(87, 152, 132, .12);
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    height: auto;
+    min-height: 88px;
+    padding: 14px 18px;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .language-select {
+    height: 38px;
+  }
 }

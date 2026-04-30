@@ -720,3 +720,177 @@ body {
     padding: 16px 20px 20px;
   }
 }
+/* ===== 多語言版面修正：避免英文 / 其他語言文字變長爆版 ===== */
+
+.history-header {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.history-actions {
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.history-search-input {
+  flex: 1 1 92px;
+  min-width: 82px;
+  max-width: 150px;
+}
+
+.new-chat-btn {
+  white-space: nowrap;
+}
+
+.quick-card .history-menu {
+  width: max-content;
+  min-width: 132px;
+  max-width: 220px;
+}
+
+.history-menu button {
+  white-space: nowrap;
+}
+
+.chatbot-layout {
+  grid-template-columns: clamp(320px, 24vw, 420px) minmax(0, 1fr);
+}
+
+.message-bubble {
+  overflow-wrap: anywhere;
+}
+
+.chat-input-box {
+  min-width: 0;
+}
+
+.chat-input-box textarea {
+  min-width: 0;
+}
+
+#sendChatBtn {
+  white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+  .chatbot-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .history-actions {
+    justify-content: flex-start;
+  }
+
+  .history-search-input {
+    max-width: none;
+  }
+}
+/* ===== 多語言跑版修正：緬文、泰文、英文、馬來文等長文字 ===== */
+
+/* 讓緬文有比較合適的字體 */
+html[lang="my"] body,
+html[lang="my"] .chatbot-page {
+  font-family: "Myanmar Text", "Noto Sans Myanmar", "Padauk", "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+}
+
+/* 左側不要把內容硬壓到固定高度內 */
+.chatbot-sidebar {
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto minmax(220px, auto) minmax(0, 1fr);
+  gap: 14px;
+}
+
+/* AI 小幫手卡片：讓多語言文字不會溢出 */
+.bot-profile-card {
+  flex: none !important;
+  min-height: 220px;
+  max-height: none;
+  padding: 20px 22px !important;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 緬文 / 泰文標題不要太大，不然會超出 */
+html[lang="my"] .bot-profile-card h2,
+html[lang="th"] .bot-profile-card h2,
+html[lang="ms"] .bot-profile-card h2,
+html[lang="id"] .bot-profile-card h2,
+html[lang="en"] .bot-profile-card h2,
+html[lang="ja"] .bot-profile-card h2 {
+  font-size: 18px !important;
+  line-height: 1.45 !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* 說明文字允許換行，不要蓋到下面 */
+.bot-profile-card p {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+/* 緬文行高再放大一點，避免字母上下被切到 */
+html[lang="my"] .bot-profile-card p {
+  line-height: 1.9 !important;
+}
+
+/* 聊天記錄區吃剩下高度，可自己滾動 */
+.quick-card {
+  flex: none !important;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 聊天紀錄列表可滑動 */
+.chat-history-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* 返回按鈕遇到長翻譯也要換行 */
+.back-link {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.5;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* 左側欄寬度稍微放寬，避免多語言太擠 */
+.chatbot-layout {
+  grid-template-columns: clamp(380px, 27vw, 460px) minmax(0, 1fr);
+}
+
+/* 螢幕比較小時仍然可以正常顯示 */
+@media (max-width: 960px) {
+  .chatbot-sidebar {
+    display: flex;
+    height: auto;
+    overflow: visible;
+  }
+
+  .bot-profile-card {
+    min-height: auto;
+  }
+
+  .quick-card {
+    min-height: 320px;
+  }
+
+  .chatbot-layout {
+    grid-template-columns: 1fr;
+  }
+}

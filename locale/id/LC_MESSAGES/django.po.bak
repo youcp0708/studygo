@@ -1,0 +1,995 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-30 23:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\chatbot\templates\chatbot\chatbot.html:3
+#: .\chatbot\templates\chatbot\chatbot.html:71
+#: .\users\templates\users\login.html:61
+msgid "AI 聊天機器人"
+msgstr "Chatbot AI"
+
+#: .\chatbot\templates\chatbot\chatbot.html:14
+msgid "回到儀表板"
+msgstr "Kembali ke Dasbor"
+
+#: .\chatbot\templates\chatbot\chatbot.html:18
+msgid "AI 來臺就學小幫手"
+msgstr "Asisten AI untuk Studi di Taiwan"
+
+#: .\chatbot\templates\chatbot\chatbot.html:19
+msgid ""
+"依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
+msgstr "Berdasarkan data pribadi Anda, sistem membantu mengatur informasi sebelum kedatangan, setelah kedatangan, visa, ARC, asuransi kesehatan, dan kehidupan sehari-hari."
+
+#: .\chatbot\templates\chatbot\chatbot.html:24
+msgid "聊天記錄"
+msgstr "Riwayat Obrolan"
+
+#: .\chatbot\templates\chatbot\chatbot.html:31
+msgid "搜尋"
+msgstr "Cari"
+
+#: .\chatbot\templates\chatbot\chatbot.html:34
+msgid "新聊天"
+msgstr "Obrolan Baru"
+
+#: .\chatbot\templates\chatbot\chatbot.html:50
+msgid "聊天記錄選單"
+msgstr "Menu Riwayat Obrolan"
+
+#: .\chatbot\templates\chatbot\chatbot.html:54
+#: .\chatbot\templates\chatbot\chatbot.html:173
+msgid "取消釘選"
+msgstr "Lepas Sematan"
+
+#: .\chatbot\templates\chatbot\chatbot.html:54
+#: .\chatbot\templates\chatbot\chatbot.html:172
+msgid "釘選"
+msgstr "Sematkan"
+
+#: .\chatbot\templates\chatbot\chatbot.html:56
+#: .\chatbot\templates\chatbot\chatbot.html:174
+msgid "重新命名"
+msgstr "Ganti Nama"
+
+#: .\chatbot\templates\chatbot\chatbot.html:57
+#: .\chatbot\templates\chatbot\chatbot.html:175
+msgid "刪除"
+msgstr "Hapus"
+
+#: .\chatbot\templates\chatbot\chatbot.html:62
+msgid "目前沒有聊天記錄"
+msgstr "Saat ini belum ada riwayat obrolan"
+
+#: .\chatbot\templates\chatbot\chatbot.html:72
+msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
+msgstr "Masukkan pertanyaan Anda. Sistem akan menyusun saran berdasarkan identitas dan status Anda."
+
+#: .\chatbot\templates\chatbot\chatbot.html:87
+#: .\chatbot\templates\chatbot\chatbot.html:158
+msgid "我"
+msgstr "Saya"
+
+#: .\chatbot\templates\chatbot\chatbot.html:89
+#: .\chatbot\templates\chatbot\chatbot.html:101
+#: .\chatbot\templates\chatbot\chatbot.html:159
+msgid "StudyGo AI 小幫手"
+msgstr "Asisten AI StudyGo"
+
+#: .\chatbot\templates\chatbot\chatbot.html:103
+msgid "你好，"
+msgstr "Halo, "
+
+#: .\chatbot\templates\chatbot\chatbot.html:109 .\templates\base.html:70
+msgid "同學"
+msgstr "Mahasiswa"
+
+#: .\chatbot\templates\chatbot\chatbot.html:111
+msgid ""
+"。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什"
+"麼。"
+msgstr ". Anda dapat bertanya kepada saya tentang proses studi di Taiwan, seperti visa, ARC, asuransi kesehatan, tempat tinggal, registrasi, atau apa yang harus dilakukan setelah tiba di Taiwan."
+
+#: .\chatbot\templates\chatbot\chatbot.html:124
+msgid "新增附件"
+msgstr "Tambahkan Lampiran"
+
+#: .\chatbot\templates\chatbot\chatbot.html:129
+msgid "上傳檔案"
+msgstr "Unggah File"
+
+#: .\chatbot\templates\chatbot\chatbot.html:130
+msgid "上傳圖片"
+msgstr "Unggah Gambar"
+
+#: .\chatbot\templates\chatbot\chatbot.html:131
+msgid "拍照"
+msgstr "Ambil Foto"
+
+#: .\chatbot\templates\chatbot\chatbot.html:138
+msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
+msgstr "Contoh: Saya datang dari Myanmar ke Taiwan untuk studi sarjana. Apa yang harus saya persiapkan terlebih dahulu untuk visa?"
+
+#: .\chatbot\templates\chatbot\chatbot.html:140
+#: .\chatbot\templates\chatbot\chatbot.html:171
+msgid "送出"
+msgstr "Kirim"
+
+#: .\chatbot\templates\chatbot\chatbot.html:160
+msgid "已上傳附件"
+msgstr "Lampiran telah diunggah"
+
+#: .\chatbot\templates\chatbot\chatbot.html:161
+msgid "找不到 message API"
+msgstr "Message API tidak ditemukan"
+
+#: .\chatbot\templates\chatbot\chatbot.html:162
+msgid "送出失敗，請稍後再試。"
+msgstr "Gagal mengirim. Silakan coba lagi nanti."
+
+#: .\chatbot\templates\chatbot\chatbot.html:163
+msgid "網路或伺服器發生錯誤，請稍後再試。"
+msgstr "Terjadi kesalahan jaringan atau server. Silakan coba lagi nanti."
+
+#: .\chatbot\templates\chatbot\chatbot.html:164
+msgid "新的聊天"
+msgstr "Obrolan Baru"
+
+#: .\chatbot\templates\chatbot\chatbot.html:165
+msgid "請輸入新的聊天名稱"
+msgstr "Masukkan nama obrolan baru"
+
+#: .\chatbot\templates\chatbot\chatbot.html:166
+msgid "建立新聊天失敗"
+msgstr "Gagal membuat obrolan baru"
+
+#: .\chatbot\templates\chatbot\chatbot.html:167
+msgid "重新命名失敗"
+msgstr "Gagal mengganti nama"
+
+#: .\chatbot\templates\chatbot\chatbot.html:168
+msgid "釘選失敗"
+msgstr "Gagal menyematkan"
+
+#: .\chatbot\templates\chatbot\chatbot.html:169
+msgid "刪除失敗"
+msgstr "Gagal menghapus"
+
+#: .\chatbot\templates\chatbot\chatbot.html:170
+msgid "回覆中…"
+msgstr "Sedang membalas..."
+
+#: .\studygo\settings.py:172
+msgid "繁體中文"
+msgstr "Bahasa Mandarin Tradisional"
+
+#: .\studygo\settings.py:173
+msgid "English"
+msgstr "Bahasa Inggris"
+
+#: .\studygo\settings.py:174
+msgid "日本語"
+msgstr "Bahasa Jepang"
+
+#: .\studygo\settings.py:175
+msgid "မြန်မာဘာသာ"
+msgstr "Bahasa Myanmar"
+
+#: .\studygo\settings.py:176
+msgid "Bahasa Indonesia"
+msgstr "Bahasa Indonesia"
+
+#: .\studygo\settings.py:177
+msgid "ภาษาไทย"
+msgstr "Bahasa Thailand"
+
+#: .\studygo\settings.py:178
+msgid "Bahasa Melayu"
+msgstr "Bahasa Melayu"
+
+#: .\templates\base.html:26
+msgid "確認操作"
+msgstr "Konfirmasi Tindakan"
+
+#: .\templates\base.html:27
+msgid "您確定要執行此操作嗎？"
+msgstr "Apakah Anda yakin ingin melakukan tindakan ini?"
+
+#: .\templates\base.html:29 .\users\templates\users\edit_profile.html:144
+msgid "取消"
+msgstr "Batal"
+
+#: .\templates\base.html:30
+msgid "確認"
+msgstr "Konfirmasi"
+
+#: .\templates\base.html:50
+msgid "來臺就學小幫手"
+msgstr "Asisten Studi di Taiwan"
+
+#: .\templates\base.html:72
+msgid "我的帳戶"
+msgstr "Akun Saya"
+
+#: .\templates\base.html:74 .\users\templates\users\dashboard.html:132
+msgid "登出"
+msgstr "Keluar"
+
+#: .\users\templates\users\dashboard.html:4
+msgid "儀表板"
+msgstr "Dasbor"
+
+#: .\users\templates\users\dashboard.html:14
+#, python-format
+msgid "你好，%(name)s 👋"
+msgstr "Halo, %(name)s 👋"
+
+#: .\users\templates\users\dashboard.html:21
+msgid "境外生"
+msgstr "Mahasiswa Internasional"
+
+#: .\users\templates\users\dashboard.html:23
+msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+msgstr ", selamat datang di StudyGo Taiwan. Proses studi di Taiwan yang dipersonalisasi untuk Anda sudah siap."
+
+#: .\users\templates\users\dashboard.html:28
+#: .\users\templates\users\edit_profile.html:4
+#: .\users\templates\users\edit_profile.html:12
+msgid "編輯個人資料"
+msgstr "Edit Profil"
+
+#: .\users\templates\users\dashboard.html:31
+msgid "查看任務清單"
+msgstr "Lihat Daftar Tugas"
+
+#: .\users\templates\users\dashboard.html:34
+msgid "詢問 AI 小幫手"
+msgstr "Tanya Asisten AI"
+
+#: .\users\templates\users\dashboard.html:45
+msgid "任務完成率"
+msgstr "Tingkat Penyelesaian Tugas"
+
+#: .\users\templates\users\dashboard.html:47
+msgid "個人化流程生成後顯示"
+msgstr "Ditampilkan setelah proses personalisasi dibuat"
+
+#: .\users\templates\users\dashboard.html:52
+msgid "即將到期任務"
+msgstr "Tugas yang Segera Jatuh Tempo"
+
+#: .\users\templates\users\dashboard.html:54
+msgid "連接模塊三後顯示"
+msgstr "Ditampilkan setelah Modul 3 terhubung"
+
+#: .\users\templates\users\dashboard.html:59
+msgid "目前入學狀態"
+msgstr "Status Penerimaan Saat Ini"
+
+#: .\users\templates\users\dashboard.html:64
+msgid "未設定"
+msgstr "Belum Diatur"
+
+#: .\users\templates\users\dashboard.html:88
+msgid "信箱已驗證"
+msgstr "Email Telah Diverifikasi"
+
+#: .\users\templates\users\dashboard.html:91
+msgid "信箱未驗證"
+msgstr "Email Belum Diverifikasi"
+
+#: .\users\templates\users\dashboard.html:98
+#: .\users\templates\users\edit_profile.html:104
+#: .\users\templates\users\profile_setup.html:122
+#: .\users\templates\users\profile_setup.html:159
+msgid "系所"
+msgstr "Jurusan"
+
+#: .\users\templates\users\dashboard.html:109
+#: .\users\templates\users\profile_setup.html:164
+msgid "預計抵台"
+msgstr "Perkiraan Tiba di Taiwan"
+
+#: .\users\templates\users\dashboard.html:120
+msgid "帳號建立"
+msgstr "Akun Dibuat"
+
+#: .\users\templates\users\dashboard.html:127
+msgid "編輯資料"
+msgstr "Edit Data"
+
+#: .\users\templates\users\dashboard.html:139
+msgid "近期待辦任務"
+msgstr "Tugas Mendatang"
+
+#: .\users\templates\users\dashboard.html:144
+msgid "任務清單由模塊二提供"
+msgstr "Daftar tugas disediakan oleh Modul 2"
+
+#: .\users\templates\users\dashboard.html:147
+msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
+msgstr "Setelah Modul 2 (Manajemen Proses dan Tugas) selesai, daftar tugas personal Anda akan ditampilkan di sini."
+
+#: .\users\templates\users\dashboard.html:153
+msgid "查看全部任務清單"
+msgstr "Lihat Semua Tugas"
+
+#: .\users\templates\users\edit_profile.html:11
+msgid "返回儀表板"
+msgstr "Kembali ke Dasbor"
+
+#: .\users\templates\users\edit_profile.html:18
+#: .\users\templates\users\profile_setup.html:39
+msgid "基本資訊"
+msgstr "Informasi Dasar"
+
+#: .\users\templates\users\edit_profile.html:21
+msgid "修改密碼"
+msgstr "Ubah Kata Sandi"
+
+#: .\users\templates\users\edit_profile.html:24
+msgid "帳號安全"
+msgstr "Keamanan Akun"
+
+#: .\users\templates\users\edit_profile.html:35
+#: .\users\templates\users\login.html:162
+msgid "姓名"
+msgstr "Nama"
+
+#: .\users\templates\users\edit_profile.html:47
+msgid "電子郵件（不可修改）"
+msgstr "Email (tidak dapat diubah)"
+
+#: .\users\templates\users\edit_profile.html:60
+#: .\users\templates\users\profile_setup.html:43
+msgid "國籍"
+msgstr "Kewarganegaraan"
+
+#: .\users\templates\users\edit_profile.html:62
+#: .\users\templates\users\profile_setup.html:46
+msgid "印尼"
+msgstr "Indonesia"
+
+#: .\users\templates\users\edit_profile.html:63
+#: .\users\templates\users\profile_setup.html:47
+msgid "馬來西亞"
+msgstr "Malaysia"
+
+#: .\users\templates\users\edit_profile.html:64
+#: .\users\templates\users\profile_setup.html:48
+msgid "越南"
+msgstr "Vietnam"
+
+#: .\users\templates\users\edit_profile.html:65
+#: .\users\templates\users\profile_setup.html:49
+msgid "泰國"
+msgstr "Thailand"
+
+#: .\users\templates\users\edit_profile.html:66
+#: .\users\templates\users\profile_setup.html:50
+msgid "菲律賓"
+msgstr "Filipina"
+
+#: .\users\templates\users\edit_profile.html:67
+#: .\users\templates\users\profile_setup.html:51
+msgid "柬埔寨"
+msgstr "Kamboja"
+
+#: .\users\templates\users\edit_profile.html:68
+#: .\users\templates\users\profile_setup.html:52
+msgid "緬甸"
+msgstr "Myanmar"
+
+#: .\users\templates\users\edit_profile.html:69
+#: .\users\templates\users\profile_setup.html:53
+msgid "日本"
+msgstr "Jepang"
+
+#: .\users\templates\users\edit_profile.html:70
+#: .\users\templates\users\profile_setup.html:54
+msgid "韓國"
+msgstr "Korea Selatan"
+
+#: .\users\templates\users\edit_profile.html:71
+#: .\users\templates\users\profile_setup.html:55
+msgid "其他"
+msgstr "Lainnya"
+
+#: .\users\templates\users\edit_profile.html:76
+#: .\users\templates\users\profile_setup.html:68
+msgid "身份別"
+msgstr "Jenis Identitas"
+
+#: .\users\templates\users\edit_profile.html:79
+msgid "僑生"
+msgstr "Mahasiswa Tionghoa Perantauan"
+
+#: .\users\templates\users\edit_profile.html:82
+#: .\users\templates\users\profile_setup.html:74
+msgid "外籍生"
+msgstr "Mahasiswa Asing"
+
+#: .\users\templates\users\edit_profile.html:85
+#: .\users\templates\users\profile_setup.html:75
+msgid "僑大先修生"
+msgstr "Mahasiswa Program Persiapan Tionghoa Perantauan"
+
+#: .\users\templates\users\edit_profile.html:93
+#: .\users\templates\users\profile_setup.html:61
+#: .\users\templates\users\profile_setup.html:154
+msgid "就讀學校"
+msgstr "Sekolah / Universitas"
+
+#: .\users\templates\users\edit_profile.html:99
+#: .\users\templates\users\profile_setup.html:62
+msgid "例如：國立臺灣大學"
+msgstr "Contoh: National Taiwan University"
+
+#: .\users\templates\users\edit_profile.html:110
+#: .\users\templates\users\profile_setup.html:123
+msgid "例如：資訊工程學系"
+msgstr "Contoh: Jurusan Teknik Informatika"
+
+#: .\users\templates\users\edit_profile.html:117
+#: .\users\templates\users\profile_setup.html:81
+msgid "入學狀態"
+msgstr "Status Penerimaan"
+
+#: .\users\templates\users\edit_profile.html:120
+#: .\users\templates\users\profile_setup.html:87
+msgid "已收到錄取通知"
+msgstr "Sudah menerima surat penerimaan"
+
+#: .\users\templates\users\edit_profile.html:123
+#: .\users\templates\users\profile_setup.html:95
+msgid "入境前準備中"
+msgstr "Sedang mempersiapkan sebelum kedatangan"
+
+#: .\users\templates\users\edit_profile.html:126
+#: .\users\templates\users\profile_setup.html:103
+msgid "已抵臺就學中"
+msgstr "Sudah tiba dan sedang belajar di Taiwan"
+
+#: .\users\templates\users\edit_profile.html:132
+#: .\users\templates\users\profile_setup.html:116
+msgid "預計抵台日期"
+msgstr "Tanggal Perkiraan Tiba di Taiwan"
+
+#: .\users\templates\users\edit_profile.html:147
+msgid "儲存變更"
+msgstr "Simpan Perubahan"
+
+#: .\users\templates\users\edit_profile.html:159
+msgid "目前密碼"
+msgstr "Kata Sandi Saat Ini"
+
+#: .\users\templates\users\edit_profile.html:164
+msgid "輸入目前密碼"
+msgstr "Masukkan kata sandi saat ini"
+
+#: .\users\templates\users\edit_profile.html:171
+#: .\users\templates\users\reset_password.html:20
+msgid "新密碼"
+msgstr "Kata Sandi Baru"
+
+#: .\users\templates\users\edit_profile.html:176
+#: .\users\templates\users\login.html:176
+msgid "至少 8 字元，含大小寫與數字"
+msgstr "Minimal 8 karakter, termasuk huruf besar, huruf kecil, dan angka"
+
+#: .\users\templates\users\edit_profile.html:187
+#: .\users\templates\users\reset_password.html:29
+msgid "確認新密碼"
+msgstr "Konfirmasi Kata Sandi Baru"
+
+#: .\users\templates\users\edit_profile.html:192
+#: .\users\templates\users\reset_password.html:30
+msgid "再次輸入新密碼"
+msgstr "Masukkan kembali kata sandi baru"
+
+#: .\users\templates\users\edit_profile.html:199
+msgid "更新密碼"
+msgstr "Perbarui Kata Sandi"
+
+#: .\users\templates\users\edit_profile.html:211
+msgid "電子郵件驗證"
+msgstr "Verifikasi Email"
+
+#: .\users\templates\users\edit_profile.html:214
+msgid "已驗證"
+msgstr "Terverifikasi"
+
+#: .\users\templates\users\edit_profile.html:216
+msgid "未驗證（請至信箱確認）"
+msgstr "Belum diverifikasi (silakan periksa email Anda)"
+
+#: .\users\templates\users\edit_profile.html:223
+msgid "重新寄送驗證信"
+msgstr "Kirim Ulang Email Verifikasi"
+
+#: .\users\templates\users\edit_profile.html:231
+msgid "登入紀錄"
+msgstr "Riwayat Login"
+
+#: .\users\templates\users\edit_profile.html:233
+msgid "最近一次登入："
+msgstr "Login terakhir: "
+
+#: .\users\templates\users\edit_profile.html:239
+msgid "查看紀錄"
+msgstr "Lihat Riwayat"
+
+#: .\users\templates\users\edit_profile.html:248
+msgid "刪除帳號"
+msgstr "Hapus Akun"
+
+#: .\users\templates\users\edit_profile.html:251
+msgid "此操作不可撤銷"
+msgstr "Tindakan ini tidak dapat dibatalkan"
+
+#: .\users\templates\users\forgot_password.html:4
+#: .\users\templates\users\forgot_password.html:15
+msgid "忘記密碼"
+msgstr "Lupa Kata Sandi"
+
+#: .\users\templates\users\forgot_password.html:9
+msgid "返回登入"
+msgstr "Kembali ke Login"
+
+#: .\users\templates\users\forgot_password.html:16
+msgid "輸入您的電子郵件，我們將寄送重設密碼連結。"
+msgstr "Masukkan email Anda, dan kami akan mengirimkan tautan untuk mengatur ulang kata sandi."
+
+#: .\users\templates\users\forgot_password.html:21
+#: .\users\templates\users\login.html:105
+#: .\users\templates\users\login.html:168
+msgid "電子郵件"
+msgstr "Email"
+
+#: .\users\templates\users\forgot_password.html:27
+msgid "寄送重設連結"
+msgstr "Kirim Tautan Reset"
+
+#: .\users\templates\users\forgot_password.html:34
+msgid "郵件已寄出！"
+msgstr "Email telah dikirim!"
+
+#: .\users\templates\users\forgot_password.html:36
+msgid "重設連結已寄至"
+msgstr "Tautan reset telah dikirim ke"
+
+#: .\users\templates\users\forgot_password.html:36
+msgid "請至信箱點擊連結。"
+msgstr "Silakan buka email Anda dan klik tautannya."
+
+#: .\users\templates\users\forgot_password.html:40
+msgid "返回登入頁面"
+msgstr "Kembali ke halaman login"
+
+#: .\users\templates\users\login.html:5
+msgid "登入 / 註冊"
+msgstr "Login / Daftar"
+
+#: .\users\templates\users\login.html:19
+msgid "流程提醒"
+msgstr "Pengingat Proses"
+
+#: .\users\templates\users\login.html:20
+msgid ""
+"系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任"
+"務，並以進度方式提醒你一步一步完成。"
+msgstr "Sistem akan secara otomatis membuat tugas penting untuk pengajuan visa, sebelum kedatangan, dan setelah kedatangan berdasarkan kewarganegaraan, jenis identitas, dan status Anda saat ini. Sistem juga akan mengingatkan Anda langkah demi langkah melalui progres tugas."
+
+#: .\users\templates\users\login.html:38
+msgid "資訊管理"
+msgstr "Manajemen Informasi"
+
+#: .\users\templates\users\login.html:39
+msgid ""
+"把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
+"確資料，不再被零散資訊搞混。"
+msgstr "Mengintegrasikan informasi visa, ARC, asuransi kesehatan, tempat tinggal, dan registrasi sekolah ke dalam satu halaman terpadu, sehingga mahasiswa lebih mudah menemukan informasi yang benar dan tidak bingung oleh informasi yang tersebar."
+
+#: .\users\templates\users\login.html:62
+msgid ""
+"當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 "
+"AI 小幫手快速獲得協助。"
+msgstr "Saat Anda tidak tahu langkah pertama yang harus dilakukan, dokumen apa yang perlu disiapkan, atau siapa yang harus ditanya, Anda dapat langsung memperoleh bantuan cepat melalui asisten AI."
+
+#: .\users\templates\users\login.html:78
+msgid "顯示第一張介紹"
+msgstr "Tampilkan slide pengenalan pertama"
+
+#: .\users\templates\users\login.html:79
+msgid "顯示第二張介紹"
+msgstr "Tampilkan slide pengenalan kedua"
+
+#: .\users\templates\users\login.html:80
+msgid "顯示第三張介紹"
+msgstr "Tampilkan slide pengenalan ketiga"
+
+#: .\users\templates\users\login.html:92 .\users\templates\users\login.html:131
+#: .\users\templates\users\login.html:149
+msgid "登入"
+msgstr "Login"
+
+#: .\users\templates\users\login.html:94 .\users\templates\users\login.html:151
+msgid "註冊帳號"
+msgstr "Daftar Akun"
+
+#: .\users\templates\users\login.html:98
+msgid "歡迎回來"
+msgstr "Selamat Datang Kembali"
+
+#: .\users\templates\users\login.html:99
+msgid "請登入您的 StudyGo 帳戶"
+msgstr "Silakan login ke akun StudyGo Anda"
+
+#: .\users\templates\users\login.html:112
+#: .\users\templates\users\login.html:174
+msgid "密碼"
+msgstr "Kata Sandi"
+
+#: .\users\templates\users\login.html:114
+msgid "輸入密碼"
+msgstr "Masukkan kata sandi"
+
+#: .\users\templates\users\login.html:118
+#: .\users\templates\users\login.html:180
+msgid "顯示或隱藏密碼"
+msgstr "Tampilkan atau sembunyikan kata sandi"
+
+#: .\users\templates\users\login.html:124
+msgid "忘記密碼？"
+msgstr "Lupa kata sandi?"
+
+#: .\users\templates\users\login.html:135
+msgid "或"
+msgstr "atau"
+
+#: .\users\templates\users\login.html:139
+msgid "還沒有帳號？"
+msgstr "Belum punya akun?"
+
+#: .\users\templates\users\login.html:140
+msgid "立即免費註冊"
+msgstr "Daftar gratis sekarang"
+
+#: .\users\templates\users\login.html:155
+#: .\users\templates\users\profile_setup.html:15
+msgid "建立帳號"
+msgstr "Buat Akun"
+
+#: .\users\templates\users\login.html:156
+msgid "填寫基本資料，開始使用 StudyGo Taiwan"
+msgstr "Isi informasi dasar untuk mulai menggunakan StudyGo Taiwan"
+
+#: .\users\templates\users\login.html:185
+msgid "請輸入密碼"
+msgstr "Silakan masukkan kata sandi"
+
+#: .\users\templates\users\login.html:190
+msgid "確認密碼"
+msgstr "Konfirmasi Kata Sandi"
+
+#: .\users\templates\users\login.html:191
+msgid "再次輸入密碼"
+msgstr "Masukkan kata sandi lagi"
+
+#: .\users\templates\users\login.html:200
+msgid "我同意"
+msgstr "Saya setuju dengan"
+
+#: .\users\templates\users\login.html:201
+msgid "服務條款"
+msgstr "Ketentuan Layanan"
+
+#: .\users\templates\users\login.html:202
+msgid "與"
+msgstr "dan"
+
+#: .\users\templates\users\login.html:203
+msgid "隱私政策"
+msgstr "Kebijakan Privasi"
+
+#: .\users\templates\users\login.html:210
+msgid "建立帳號並繼續設定資料"
+msgstr "Buat Akun dan Lanjutkan Pengaturan Profil"
+
+#: .\users\templates\users\login.html:215
+msgid "已有帳號？"
+msgstr "Sudah punya akun?"
+
+#: .\users\templates\users\login.html:216
+msgid "立即登入"
+msgstr "Login sekarang"
+
+#: .\users\templates\users\logout_redirect.html:10
+msgid "登出中…"
+msgstr "Sedang keluar..."
+
+#: .\users\templates\users\logout_redirect.html:25
+msgid "登出成功，"
+msgstr "Berhasil keluar, "
+
+#: .\users\templates\users\logout_redirect.html:26
+msgid "點此返回登入頁面"
+msgstr "klik di sini untuk kembali ke halaman login"
+
+#: .\users\templates\users\profile_setup.html:4
+#: .\users\templates\users\profile_setup.html:33
+msgid "填寫個人資料"
+msgstr "Isi Data Pribadi"
+
+#: .\users\templates\users\profile_setup.html:20
+msgid "填寫資料"
+msgstr "Isi Data"
+
+#: .\users\templates\users\profile_setup.html:25
+msgid "開始使用"
+msgstr "Mulai Menggunakan"
+
+#: .\users\templates\users\profile_setup.html:34
+msgid ""
+"這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
+msgstr "Informasi ini akan digunakan untuk membuat proses kedatangan dan studi di Taiwan yang dipersonalisasi. Harap isi dengan benar agar Anda mendapatkan panduan langkah yang paling akurat."
+
+#: .\users\templates\users\profile_setup.html:45
+msgid "請選擇國籍"
+msgstr "Silakan pilih kewarganegaraan"
+
+#: .\users\templates\users\profile_setup.html:72
+msgid "請選擇身份別"
+msgstr "Silakan pilih jenis identitas"
+
+#: .\users\templates\users\profile_setup.html:73
+msgid "僑生（海外華裔）"
+msgstr "Mahasiswa Tionghoa Perantauan"
+
+#: .\users\templates\users\profile_setup.html:77
+msgid "身份別將影響您的流程任務內容"
+msgstr "Jenis identitas akan memengaruhi isi tugas proses Anda"
+
+#: .\users\templates\users\profile_setup.html:88
+msgid "準備來臺流程"
+msgstr "Menyiapkan proses kedatangan ke Taiwan"
+
+#: .\users\templates\users\profile_setup.html:96
+msgid "辦理簽證等手續"
+msgstr "Mengurus visa dan prosedur terkait"
+
+#: .\users\templates\users\profile_setup.html:104
+msgid "辦理 ARC 等後續"
+msgstr "Mengurus ARC dan prosedur lanjutan"
+
+#: .\users\templates\users\profile_setup.html:112
+msgid "時間規劃"
+msgstr "Perencanaan Waktu"
+
+#: .\users\templates\users\profile_setup.html:118
+msgid "非必填"
+msgstr "Opsional"
+
+#: .\users\templates\users\profile_setup.html:129
+msgid "返回"
+msgstr "Kembali"
+
+#: .\users\templates\users\profile_setup.html:131
+msgid "儲存資料並開始使用"
+msgstr "Simpan Data dan Mulai Menggunakan"
+
+#: .\users\templates\users\profile_setup.html:140
+msgid "帳號資料預覽"
+msgstr "Pratinjau Data Akun"
+
+#: .\users\templates\users\profile_setup.html:146
+msgid "國籍未選"
+msgstr "Kewarganegaraan belum dipilih"
+
+#: .\users\templates\users\profile_setup.html:147
+msgid "身份別未選"
+msgstr "Jenis identitas belum dipilih"
+
+#: .\users\templates\users\profile_setup.html:148
+msgid "狀態未選"
+msgstr "Status belum dipilih"
+
+#: .\users\templates\users\profile_setup.html:171
+msgid ""
+"\n"
+"            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與\n"
+"            <b>入學狀態</b> 自動生成個人化任務流程。\n"
+"            "
+msgstr ""
+"\n"
+"            Setelah data disimpan, sistem akan secara otomatis membuat proses tugas personal berdasarkan <b>kewarganegaraan</b>, <b>jenis identitas</b>, dan\n"
+"            <b>status penerimaan</b> Anda.\n"
+"            "
+
+#: .\users\templates\users\reset_password.html:4
+#: .\users\templates\users\reset_password.html:11
+msgid "重設密碼"
+msgstr "Atur Ulang Kata Sandi"
+
+#: .\users\templates\users\reset_password.html:12
+msgid "請輸入您的新密碼。"
+msgstr "Silakan masukkan kata sandi baru Anda."
+
+#: .\users\templates\users\reset_password.html:21
+msgid "至少 8 字元"
+msgstr "Minimal 8 karakter"
+
+#: .\users\templates\users\reset_password.html:35
+msgid "確認重設密碼"
+msgstr "Konfirmasi Reset Kata Sandi"
+
+#: .\users\templates\users\reset_password.html:55
+msgid "兩次密碼不一致"
+msgstr "Kedua kata sandi tidak sama"
+
+#: .\users\templates\users\reset_password.html:70
+msgid "密碼重設成功，請重新登入"
+msgstr "Kata sandi berhasil diatur ulang. Silakan login kembali."
+
+#: .\users\templates\users\reset_password.html:75
+msgid "重設失敗，連結可能已過期"
+msgstr "Reset gagal. Tautan mungkin sudah kedaluwarsa."
+
+msgid "電子郵件為必填欄位"
+msgstr "Email wajib diisi"
+
+msgid "境外學生"
+msgstr "Mahasiswa internasional"
+
+msgid "系統管理員"
+msgstr "Administrator sistem"
+
+msgid "電子郵件"
+msgstr "Email"
+
+msgid "姓名"
+msgstr "Nama"
+
+msgid "角色"
+msgstr "Peran"
+
+msgid "啟用狀態"
+msgstr "Status aktif"
+
+msgid "工作人員狀態"
+msgstr "Status staf"
+
+msgid "建立時間"
+msgstr "Waktu dibuat"
+
+msgid "最後登入IP"
+msgstr "IP login terakhir"
+
+msgid "Email 已驗證"
+msgstr "Email telah diverifikasi"
+
+msgid "使用者"
+msgstr "Pengguna"
+
+msgid "僑生（海外華裔）"
+msgstr "Mahasiswa Tionghoa perantauan"
+
+msgid "外籍生（一般外國學生）"
+msgstr "Mahasiswa internasional"
+
+msgid "交換生"
+msgstr "Mahasiswa pertukaran"
+
+msgid "僑大先修生"
+msgstr "Mahasiswa program persiapan universitas"
+
+msgid "已收到錄取通知"
+msgstr "Sudah menerima surat penerimaan"
+
+msgid "入境前準備中"
+msgstr "Sedang mempersiapkan sebelum kedatangan"
+
+msgid "已抵臺就學中"
+msgstr "Sudah tiba dan sedang belajar di Taiwan"
+
+msgid "印尼"
+msgstr "Indonesia"
+
+msgid "馬來西亞"
+msgstr "Malaysia"
+
+msgid "越南"
+msgstr "Vietnam"
+
+msgid "泰國"
+msgstr "Thailand"
+
+msgid "菲律賓"
+msgstr "Filipina"
+
+msgid "柬埔寨"
+msgstr "Kamboja"
+
+msgid "緬甸"
+msgstr "Myanmar"
+
+msgid "日本"
+msgstr "Jepang"
+
+msgid "韓國"
+msgstr "Korea"
+
+msgid "其他"
+msgstr "Lainnya"
+
+msgid "使用者帳號"
+msgstr "Akun pengguna"
+
+msgid "國籍"
+msgstr "Kewarganegaraan"
+
+msgid "就讀學校"
+msgstr "Universitas"
+
+msgid "身份別"
+msgstr "Jenis identitas"
+
+msgid "入學狀態"
+msgstr "Status penerimaan"
+
+msgid "系所"
+msgstr "Departemen"
+
+msgid "預計抵台日期"
+msgstr "Tanggal perkiraan tiba di Taiwan"
+
+msgid "頭像"
+msgstr "Avatar"
+
+msgid "慣用語言"
+msgstr "Bahasa pilihan"
+
+msgid "更新時間"
+msgstr "Waktu diperbarui"
+
+msgid "學生資料"
+msgstr "Profil mahasiswa"
+
+msgid "驗證 Token"
+msgstr "Token verifikasi"
+
+msgid "是否已使用"
+msgstr "Sudah digunakan"
+
+msgid "Email 驗證 Token"
+msgstr "Token verifikasi email"
+
+msgid "IP 位址"
+msgstr "Alamat IP"
+
+msgid "使用者代理"
+msgstr "User agent"
+
+msgid "登入時間"
+msgstr "Waktu login"
+
+msgid "是否成功"
+msgstr "Berhasil"
+
+msgid "登入紀錄"
+msgstr "Riwayat login"

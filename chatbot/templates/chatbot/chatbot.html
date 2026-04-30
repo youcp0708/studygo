@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% load static %}
-{% block title %}AI 聊天機器人 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "AI 聊天機器人" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}">
@@ -11,67 +11,28 @@
   <div class="chatbot-layout">
 
     <aside class="chatbot-sidebar">
-      <a class="back-link" href="{% url 'dashboard' %}">← 回到儀表板</a>
+      <a class="back-link" href="{% url 'dashboard' %}">← {% trans "回到儀表板" %}</a>
 
       <div class="bot-profile-card">
         <div class="bot-avatar">🤖</div>
-        <h2>AI 來臺就學小幫手</h2>
-        <p>依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。</p>
-      </div>
-
-      <div class="student-context-card">
-        <h3>我的資料</h3>
-
-        <div class="context-row">
-          <span>姓名</span>
-          <strong>
-            {% if user.name %}
-              {{ user.name }}
-            {% elif user.email %}
-              {{ user.email }}
-            {% else %}
-              未填寫
-            {% endif %}
-          </strong>
-        </div>
-
-        <div class="context-row">
-          <span>身份</span>
-          <strong>{% if profile %}{{ profile.get_identity_type_display }}{% else %}未填寫{% endif %}</strong>
-        </div>
-
-        <div class="context-row">
-          <span>國籍</span>
-          <strong>{% if profile %}{{ profile.get_nationality_display }}{% else %}未填寫{% endif %}</strong>
-        </div>
-
-        <div class="context-row">
-          <span>入學狀態</span>
-          <strong>{% if profile %}{{ profile.get_admission_status_display }}{% else %}未填寫{% endif %}</strong>
-        </div>
-
-        <div class="context-row">
-          <span>學校</span>
-          <strong>{% if profile %}{{ profile.university }}{% else %}未填寫{% endif %}</strong>
-        </div>
-
-        {% if not profile %}
-        <a class="context-setup-link" href="{% url 'profile_setup' %}">先填寫個人資料 →</a>
-        {% endif %}
+        <h2>{% trans "AI 來臺就學小幫手" %}</h2>
+        <p>{% trans "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。" %}</p>
       </div>
 
       <div class="quick-card">
         <div class="history-header">
-          <h3>聊天記錄</h3>
+          <h3>{% trans "聊天記錄" %}</h3>
 
           <div class="history-actions">
             <input
               id="historySearchInput"
               type="text"
               class="history-search-input"
-              placeholder="搜尋"
+              placeholder="{% trans '搜尋' %}"
             >
-            <button id="newChatBtn" type="button" class="new-chat-btn">＋ 新聊天</button>
+            <button id="newChatBtn" type="button" class="new-chat-btn">
+              ＋ {% trans "新聊天" %}
+            </button>
           </div>
         </div>
 
@@ -86,19 +47,19 @@
                   <span class="history-text">{{ session.title }}</span>
                 </a>
 
-                <button class="history-more-btn" type="button" aria-label="聊天記錄選單">⋯</button>
+                <button class="history-more-btn" type="button" aria-label="{% trans '聊天記錄選單' %}">⋯</button>
 
                 <div class="history-menu">
                   <button type="button" class="pin-chat">
-                    {% if session.is_pinned %}取消釘選{% else %}釘選{% endif %}
+                    {% if session.is_pinned %}{% trans "取消釘選" %}{% else %}{% trans "釘選" %}{% endif %}
                   </button>
-                  <button type="button" class="rename-chat">重新命名</button>
-                  <button type="button" class="delete-chat">刪除</button>
+                  <button type="button" class="rename-chat">{% trans "重新命名" %}</button>
+                  <button type="button" class="delete-chat">{% trans "刪除" %}</button>
                 </div>
               </div>
             {% endfor %}
           {% else %}
-            <div class="history-empty">目前沒有聊天記錄</div>
+            <div class="history-empty">{% trans "目前沒有聊天記錄" %}</div>
           {% endif %}
         </div>
       </div>
@@ -107,8 +68,8 @@
     <main class="chatbot-main">
       <div class="chat-header">
         <div>
-          <h1>AI 聊天機器人</h1>
-          <p>輸入你的問題，系統會根據你的身份與狀態整理建議。</p>
+          <h1>{% trans "AI 聊天機器人" %}</h1>
+          <p>{% trans "輸入你的問題，系統會根據你的身份與狀態整理建議。" %}</p>
         </div>
       </div>
 
@@ -122,7 +83,11 @@
 
               <div class="message-bubble">
                 <div class="message-name">
-                  {% if message.role == 'user' %}我{% else %}StudyGo AI 小幫手{% endif %}
+                  {% if message.role == 'user' %}
+                    {% trans "我" %}
+                  {% else %}
+                    {% trans "StudyGo AI 小幫手" %}
+                  {% endif %}
                 </div>
                 <div class="message-content">{{ message.content }}</div>
                 <div class="message-time">{{ message.created_at|date:"Y-m-d H:i" }}</div>
@@ -133,10 +98,17 @@
           <div class="message-row assistant welcome-message">
             <div class="message-avatar">🤖</div>
             <div class="message-bubble">
-              <div class="message-name">StudyGo AI 小幫手</div>
+              <div class="message-name">{% trans "StudyGo AI 小幫手" %}</div>
               <div class="message-content">
-                你好，{% if user.name %}{{ user.name }}{% elif user.email %}{{ user.email }}{% else %}同學{% endif %}。
-                你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼。
+                {% trans "你好，" %}
+                {% if user.name %}
+                  {{ user.name }}
+                {% elif user.email %}
+                  {{ user.email }}
+                {% else %}
+                  {% trans "同學" %}
+                {% endif %}
+                {% trans "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼。" %}
               </div>
             </div>
           </div>
@@ -149,23 +121,23 @@
         <div id="attachmentPreview" class="attachment-preview"></div>
 
         <div class="chat-input-box">
-          <button id="attachToggleBtn" class="attach-toggle-btn" type="button" aria-label="新增附件">
+          <button id="attachToggleBtn" class="attach-toggle-btn" type="button" aria-label="{% trans '新增附件' %}">
             ＋
           </button>
 
           <div id="attachMenu" class="attach-menu">
-            <button type="button" data-upload-type="file">📎 上傳檔案</button>
-            <button type="button" data-upload-type="image">🖼️ 上傳圖片</button>
-            <button type="button" data-upload-type="camera">📷 拍照</button>
+            <button type="button" data-upload-type="file">📎 {% trans "上傳檔案" %}</button>
+            <button type="button" data-upload-type="image">🖼️ {% trans "上傳圖片" %}</button>
+            <button type="button" data-upload-type="camera">📷 {% trans "拍照" %}</button>
           </div>
 
           <textarea
             id="chatInput"
             rows="2"
             maxlength="1200"
-            placeholder="例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"></textarea>
+            placeholder="{% trans '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？' %}"></textarea>
 
-          <button id="sendChatBtn" type="submit">送出</button>
+          <button id="sendChatBtn" type="submit">{% trans "送出" %}</button>
         </div>
 
         <div class="input-footer">
@@ -183,7 +155,47 @@
 {% endblock %}
 
 {% block extra_js %}
+{% trans "我" as txt_me %}
+{% trans "StudyGo AI 小幫手" as txt_assistant_name %}
+{% trans "已上傳附件" as txt_uploaded_attachment %}
+{% trans "找不到 message API" as txt_missing_message_api %}
+{% trans "送出失敗，請稍後再試。" as txt_send_failed %}
+{% trans "網路或伺服器發生錯誤，請稍後再試。" as txt_network_error %}
+{% trans "新的聊天" as txt_new_chat %}
+{% trans "請輸入新的聊天名稱" as txt_rename_prompt %}
+{% trans "建立新聊天失敗" as txt_create_chat_failed %}
+{% trans "重新命名失敗" as txt_rename_failed %}
+{% trans "釘選失敗" as txt_pin_failed %}
+{% trans "刪除失敗" as txt_delete_failed %}
+{% trans "回覆中…" as txt_reply_loading %}
+{% trans "送出" as txt_send %}
+{% trans "釘選" as txt_pin %}
+{% trans "取消釘選" as txt_unpin %}
+{% trans "重新命名" as txt_rename %}
+{% trans "刪除" as txt_delete %}
+
 <script>
+  window.CHATBOT_I18N = {
+    me: "{{ txt_me|escapejs }}",
+    assistantName: "{{ txt_assistant_name|escapejs }}",
+    uploadedAttachment: "{{ txt_uploaded_attachment|escapejs }}",
+    missingMessageApi: "{{ txt_missing_message_api|escapejs }}",
+    sendFailed: "{{ txt_send_failed|escapejs }}",
+    networkError: "{{ txt_network_error|escapejs }}",
+    newChat: "{{ txt_new_chat|escapejs }}",
+    renamePrompt: "{{ txt_rename_prompt|escapejs }}",
+    createChatFailed: "{{ txt_create_chat_failed|escapejs }}",
+    renameFailed: "{{ txt_rename_failed|escapejs }}",
+    pinFailed: "{{ txt_pin_failed|escapejs }}",
+    deleteFailed: "{{ txt_delete_failed|escapejs }}",
+    replyLoading: "{{ txt_reply_loading|escapejs }}",
+    send: "{{ txt_send|escapejs }}",
+    pin: "{{ txt_pin|escapejs }}",
+    unpin: "{{ txt_unpin|escapejs }}",
+    rename: "{{ txt_rename|escapejs }}",
+    delete: "{{ txt_delete|escapejs }}"
+  };
+
   window.CHATBOT_ENDPOINTS = {
     page: "{% url 'chatbot:page' %}",
     message: "{% url 'chatbot:message_api' %}",
