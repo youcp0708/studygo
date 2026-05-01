@@ -38,10 +38,10 @@ body {
 
 .chatbot-sidebar {
   height: 100%;
-  padding: 10px 24px 24px;
+  padding: 6px 24px 24px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
   box-sizing: border-box;
   overflow: hidden;
   border-right: 1px solid rgba(214, 228, 223, .95);
@@ -413,8 +413,8 @@ body {
 
 .message-content {
   font-size: 15px;
-  line-height: 1.85;
-  white-space: pre-wrap;
+  line-height: 1.45;
+  white-space: pre-line;
   word-break: break-word;
 }
 
@@ -893,4 +893,263 @@ html[lang="my"] .bot-profile-card p {
   .chatbot-layout {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* ===== Final fix: chatbot message layout and scroll behavior ===== */
+
+.chatbot-main {
+  overflow: hidden !important;
+}
+
+.chat-messages {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  padding: 24px 28px 150px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+  scroll-behavior: auto !important;
+  box-sizing: border-box !important;
+}
+
+.message-row {
+  width: 100% !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+
+.message-row.assistant {
+  justify-content: flex-start !important;
+}
+
+.message-row.user {
+  justify-content: flex-end !important;
+}
+
+.message-row.user .message-avatar {
+  order: 2 !important;
+}
+
+.message-avatar {
+  flex: 0 0 42px !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 16px !important;
+  display: grid !important;
+  place-items: center !important;
+  align-self: flex-start !important;
+}
+
+.message-bubble {
+  display: block !important;
+  width: auto !important;
+  max-width: min(680px, 82%) !important;
+  min-width: 0 !important;
+  padding: 15px 17px !important;
+  border-radius: 20px !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+
+.message-row.assistant .message-bubble {
+  background: var(--bg) !important;
+  border: 1px solid var(--line) !important;
+  color: var(--primary-dark) !important;
+}
+
+.message-row.user .message-bubble {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+
+.message-name {
+  display: block !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  text-align: left !important;
+  font-size: 13px !important;
+  font-weight: 950 !important;
+  line-height: 1.4 !important;
+}
+
+.message-content {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  white-space: pre-line !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  text-indent: 0 !important;
+}
+
+.message-content::first-line {
+  text-indent: 0 !important;
+}
+
+.message-time {
+  display: block !important;
+  margin-top: 8px !important;
+  padding: 0 !important;
+  text-align: left !important;
+  font-size: 12px !important;
+  color: var(--muted) !important;
+}
+
+.message-row.user .message-time {
+  color: rgba(255, 255, 255, .76) !important;
+}
+
+@media (max-width: 640px) {
+  .chat-messages {
+    padding: 20px 20px 150px !important;
+  }
+
+  .message-bubble {
+    max-width: 86% !important;
+  }
+}
+
+.chat-header {
+  display: none !important;
+}
+
+/* ===== 回到底部按鈕 ===== */
+
+.scroll-bottom-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 132px;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 30;
+  box-shadow: 0 10px 26px rgba(23, 83, 77, .18);
+  display: none;
+}
+
+.scroll-bottom-btn.show {
+  display: grid;
+  place-items: center;
+}
+
+.scroll-bottom-btn:hover {
+  background: #f3f8f6;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+/* ===== Back link inside AI profile card ===== */
+
+.chatbot-sidebar > .back-link {
+  display: none;
+}
+
+.bot-profile-card {
+  position: relative;
+  padding-top: 72px !important;
+}
+
+.bot-card-back-link {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(23, 83, 77, .12);
+}
+
+.bot-card-back-link:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* 左側只保留 AI 卡片 + 聊天記錄，不再為外部返回按鈕預留空間 */
+.chatbot-sidebar {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 18px;
+}
+
+/* 手機版避免按鈕和內容擠在一起 */
+@media (max-width: 760px) {
+  .bot-profile-card {
+    padding-top: 68px !important;
+  }
+
+  .bot-card-back-link {
+    top: 16px;
+    left: 16px;
+    font-size: 13px;
+    padding: 0 14px;
+  }
+}
+
+/* ===== Daily Taiwan Tip inside bot card ===== */
+
+.bot-tip-text {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.75;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ===== AI 小幫手卡片內容往上移 ===== */
+
+.bot-profile-card {
+  justify-content: flex-start !important;
+  padding-top: 62px !important;
+  padding-bottom: 24px !important;
+  min-height: 260px;
+}
+
+/* 頭像往上，放在卡片上方三分之一附近 */
+.bot-profile-card .bot-avatar {
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+  transform: translateY(-8px);
+}
+
+/* 標題跟著往上 */
+.bot-profile-card h2 {
+  margin-top: -6px !important;
+  margin-bottom: 8px !important;
+  line-height: 1.3;
+}
+
+/* 每日小知識文字跟著收緊 */
+.bot-tip-text {
+  margin-top: 6px !important;
+  line-height: 1.55 !important;
 }

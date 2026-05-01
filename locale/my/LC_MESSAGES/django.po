@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-30 23:21+0800\n"
+"POT-Creation-Date: 2026-05-01 17:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,20 +23,16 @@ msgstr ""
 msgid "AI 聊天機器人"
 msgstr "AI စကားပြောစက်ရုပ်"
 
-#: .\chatbot\templates\chatbot\chatbot.html:14
-msgid "回到儀表板"
-msgstr "ဒက်ရှ်ဘုတ်သို့ ပြန်သွားရန်"
+#: .\chatbot\templates\chatbot\chatbot.html:17
+#: .\users\templates\users\profile_setup.html:129
+msgid "返回"
+msgstr "ပြန်သွားရန်"
 
-#: .\chatbot\templates\chatbot\chatbot.html:18
+#: .\chatbot\templates\chatbot\chatbot.html:21
 msgid "AI 來臺就學小幫手"
 msgstr "ထိုင်ဝမ်တွင် ပညာသင်ရန် AI အကူအညီ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:19
-msgid ""
-"依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
-msgstr "သင့်ကိုယ်ရေးအချက်အလက်အပေါ်မူတည်၍ ထိုင်ဝမ်မရောက်မီ၊ ရောက်ရှိပြီးနောက်၊ ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံနှင့် နေထိုင်မှုဆိုင်ရာ အချက်အလက်များကို စီစဉ်ကူညီပေးပါသည်။"
-
-#: .\chatbot\templates\chatbot\chatbot.html:24
+#: .\chatbot\templates\chatbot\chatbot.html:28
 msgid "聊天記錄"
 msgstr "စကားပြောမှတ်တမ်း"
 
@@ -44,7 +40,7 @@ msgstr "စကားပြောမှတ်တမ်း"
 msgid "搜尋"
 msgstr "ရှာဖွေရန်"
 
-#: .\chatbot\templates\chatbot\chatbot.html:34
+#: .\chatbot\templates\chatbot\chatbot.html:33
 msgid "新聊天"
 msgstr "စကားပြောအသစ်"
 
@@ -53,22 +49,22 @@ msgid "聊天記錄選單"
 msgstr "စကားပြောမှတ်တမ်း မီနူး"
 
 #: .\chatbot\templates\chatbot\chatbot.html:54
-#: .\chatbot\templates\chatbot\chatbot.html:173
+#: .\chatbot\templates\chatbot\chatbot.html:168
 msgid "取消釘選"
 msgstr "ပင်ဖြုတ်ရန်"
 
 #: .\chatbot\templates\chatbot\chatbot.html:54
-#: .\chatbot\templates\chatbot\chatbot.html:172
+#: .\chatbot\templates\chatbot\chatbot.html:167
 msgid "釘選"
 msgstr "ပင်ရန်"
 
 #: .\chatbot\templates\chatbot\chatbot.html:56
-#: .\chatbot\templates\chatbot\chatbot.html:174
+#: .\chatbot\templates\chatbot\chatbot.html:169
 msgid "重新命名"
 msgstr "အမည်ပြန်ပြောင်းရန်"
 
 #: .\chatbot\templates\chatbot\chatbot.html:57
-#: .\chatbot\templates\chatbot\chatbot.html:175
+#: .\chatbot\templates\chatbot\chatbot.html:170
 msgid "刪除"
 msgstr "ဖျက်ရန်"
 
@@ -78,101 +74,150 @@ msgstr "လက်ရှိ စကားပြောမှတ်တမ်း မ�
 
 #: .\chatbot\templates\chatbot\chatbot.html:72
 msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
-msgstr "သင့်မေးခွန်းကို ရိုက်ထည့်ပါ။ စနစ်သည် သင့်အထောက်အထားနှင့် အခြေအနေအပေါ်မူတည်၍ အကြံပြုချက်များကို စီစဉ်ပေးပါမည်။"
+msgstr ""
+"သင့်မေးခွန်းကို ရိုက်ထည့်ပါ။ စနစ်သည် သင့်အထောက်အထားနှင့် အခြေအနေအပေါ်မူတည်၍ အကြံပြုချက်များကို "
+"စီစဉ်ပေးပါမည်။"
 
-#: .\chatbot\templates\chatbot\chatbot.html:87
-#: .\chatbot\templates\chatbot\chatbot.html:158
-msgid "我"
-msgstr "ကျွန်ုပ်"
-
-#: .\chatbot\templates\chatbot\chatbot.html:89
+#: .\chatbot\templates\chatbot\chatbot.html:88
 #: .\chatbot\templates\chatbot\chatbot.html:101
-#: .\chatbot\templates\chatbot\chatbot.html:159
+#: .\chatbot\templates\chatbot\chatbot.html:154
 msgid "StudyGo AI 小幫手"
 msgstr "StudyGo AI အကူအညီ"
 
 #: .\chatbot\templates\chatbot\chatbot.html:103
-msgid "你好，"
-msgstr "မင်္ဂလာပါ၊ "
+msgid "你好 !"
+msgstr ""
 
-#: .\chatbot\templates\chatbot\chatbot.html:109 .\templates\base.html:70
-msgid "同學"
+#: .\chatbot\templates\chatbot\chatbot.html:104
+#, fuzzy
+#| msgid "同學"
+msgid " 同學"
 msgstr "ကျောင်းသား/ကျောင်းသူ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:111
+#: .\chatbot\templates\chatbot\chatbot.html:105
+#, fuzzy
+#| msgid ""
+#| "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做"
+#| "什麼。"
 msgid ""
-"。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什"
-"麼。"
-msgstr "။ ထိုင်ဝမ်တွင် ပညာသင်ရန် လုပ်ငန်းစဉ်များကို မေးနိုင်ပါသည်။ ဥပမာ ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံ၊ နေထိုင်ရာ၊ မှတ်ပုံတင်ခြင်း သို့မဟုတ် ထိုင်ဝမ်ရောက်ပြီးနောက် လုပ်ရမည့်အရာများ။"
+"你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
+msgstr ""
+"။ ထိုင်ဝမ်တွင် ပညာသင်ရန် လုပ်ငန်းစဉ်များကို မေးနိုင်ပါသည်။ ဥပမာ ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံ၊ "
+"နေထိုင်ရာ၊ မှတ်ပုံတင်ခြင်း သို့မဟုတ် ထိုင်ဝမ်ရောက်ပြီးနောက် လုပ်ရမည့်အရာများ။"
 
-#: .\chatbot\templates\chatbot\chatbot.html:124
+#: .\chatbot\templates\chatbot\chatbot.html:122
 msgid "新增附件"
 msgstr "ဖိုင်တွဲထည့်ရန်"
 
-#: .\chatbot\templates\chatbot\chatbot.html:129
+#: .\chatbot\templates\chatbot\chatbot.html:127
 msgid "上傳檔案"
 msgstr "ဖိုင်တင်ရန်"
 
-#: .\chatbot\templates\chatbot\chatbot.html:130
+#: .\chatbot\templates\chatbot\chatbot.html:128
 msgid "上傳圖片"
 msgstr "ပုံတင်ရန်"
 
-#: .\chatbot\templates\chatbot\chatbot.html:131
+#: .\chatbot\templates\chatbot\chatbot.html:129
 msgid "拍照"
 msgstr "ဓာတ်ပုံရိုက်ရန်"
 
-#: .\chatbot\templates\chatbot\chatbot.html:138
+#: .\chatbot\templates\chatbot\chatbot.html:133
 msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
-msgstr "ဥပမာ - ကျွန်ုပ်သည် မြန်မာနိုင်ငံမှ ထိုင်ဝမ်သို့ ဘွဲ့သင်တန်းတက်ရန် လာမည်ဆိုလျှင် ဗီဇာအတွက် ဘာတွေ အရင်ပြင်ဆင်ရမလဲ။"
+msgstr ""
+"ဥပမာ - ကျွန်ုပ်သည် မြန်မာနိုင်ငံမှ ထိုင်ဝမ်သို့ ဘွဲ့သင်တန်းတက်ရန် လာမည်ဆိုလျှင် ဗီဇာအတွက် ဘာတွေ အရင်ပြင်ဆင်ရမလဲ။"
 
-#: .\chatbot\templates\chatbot\chatbot.html:140
-#: .\chatbot\templates\chatbot\chatbot.html:171
+#: .\chatbot\templates\chatbot\chatbot.html:135
+#: .\chatbot\templates\chatbot\chatbot.html:166
 msgid "送出"
 msgstr "ပို့ရန်"
 
-#: .\chatbot\templates\chatbot\chatbot.html:160
+#: .\chatbot\templates\chatbot\chatbot.html:153
+msgid "我"
+msgstr "ကျွန်ုပ်"
+
+#: .\chatbot\templates\chatbot\chatbot.html:155
 msgid "已上傳附件"
 msgstr "ဖိုင်တွဲ တင်ပြီးပါပြီ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:161
+#: .\chatbot\templates\chatbot\chatbot.html:156
 msgid "找不到 message API"
 msgstr "message API ကို ရှာမတွေ့ပါ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:162
+#: .\chatbot\templates\chatbot\chatbot.html:157
 msgid "送出失敗，請稍後再試。"
 msgstr "ပို့ရန် မအောင်မြင်ပါ။ နောက်မှ ထပ်မံကြိုးစားပါ။"
 
-#: .\chatbot\templates\chatbot\chatbot.html:163
+#: .\chatbot\templates\chatbot\chatbot.html:158
 msgid "網路或伺服器發生錯誤，請稍後再試。"
 msgstr "ကွန်ရက် သို့မဟုတ် ဆာဗာ အမှား ဖြစ်ပွားခဲ့သည်။ နောက်မှ ထပ်မံကြိုးစားပါ။"
 
-#: .\chatbot\templates\chatbot\chatbot.html:164
+#: .\chatbot\templates\chatbot\chatbot.html:159
 msgid "新的聊天"
 msgstr "စကားပြောအသစ်"
 
-#: .\chatbot\templates\chatbot\chatbot.html:165
+#: .\chatbot\templates\chatbot\chatbot.html:160
 msgid "請輸入新的聊天名稱"
 msgstr "စကားပြောအမည်အသစ်ကို ထည့်ပါ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:166
+#: .\chatbot\templates\chatbot\chatbot.html:161
 msgid "建立新聊天失敗"
 msgstr "စကားပြောအသစ် ဖန်တီးမှု မအောင်မြင်ပါ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:167
+#: .\chatbot\templates\chatbot\chatbot.html:162
 msgid "重新命名失敗"
 msgstr "အမည်ပြန်ပြောင်းမှု မအောင်မြင်ပါ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:168
+#: .\chatbot\templates\chatbot\chatbot.html:163
 msgid "釘選失敗"
 msgstr "ပင်ရန် မအောင်မြင်ပါ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:169
+#: .\chatbot\templates\chatbot\chatbot.html:164
 msgid "刪除失敗"
 msgstr "ဖျက်ရန် မအောင်မြင်ပါ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:170
+#: .\chatbot\templates\chatbot\chatbot.html:165
 msgid "回覆中…"
 msgstr "ပြန်ဖြေနေသည်…"
+
+#: .\chatbot\views.py:16
+msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
+msgstr "ထိုင်ဝမ်ရှိ convenience store များတွင် ငွေပေးချေခြင်း၊ ပစ္စည်းယူခြင်း၊ မိတ္တူကူးခြင်းများ ပြုလုပ်နိုင်ပြီး နေ့စဉ်သုံးပစ္စည်းများလည်း ဝယ်ယူနိုင်သည်။"
+
+#: .\chatbot\views.py:17
+msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
+msgstr "ထိုင်ဝမ်တွင် MRT သို့မဟုတ် ဘတ်စ်ကားစီးရာတွင် EasyCard သို့မဟုတ် iPASS ကို မကြာခဏ အသုံးပြုကြသည်။"
+
+#: .\chatbot\views.py:18
+msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
+msgstr "ထိုင်ဝမ်ရှိ ကျောင်းများစွာတွင် နိုင်ငံတကာရေးရာရုံးရှိပြီး နိုင်ငံခြားကျောင်းသားများ၏ ဝင်ခွင့်နှင့် နေထိုင်မှုဆိုင်ရာ ကိစ္စများကို ကူညီနိုင်သည်။"
+
+#: .\chatbot\views.py:19
+msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
+msgstr "ထိုင်ဝမ်တွင် အိမ်ငှားမီ ငှားရမ်းခ၊ စပေါ်ငွေ၊ ရေမီးခနှင့် စာချုပ်ကာလကို အရင်စစ်ဆေးသင့်သည်။"
+
+#: .\chatbot\views.py:20
+msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
+msgstr "ထိုင်ဝမ်တွင် ဆရာဝန်ပြသရာတွင် NHI ကျန်းမာရေးအာမခံဝင်ထားပါက ကုသစရိတ်သည် ကိုယ်တိုင်ပေးချေခြင်းထက် ပိုသက်သာနိုင်သည်။"
+
+#: .\chatbot\views.py:21
+msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
+msgstr "ထိုင်ဝမ်တွင် အမှိုက်ကားများသည် အမှိုက်ပစ်ရန် သတိပေးသော ဂီတကို ဖွင့်လေ့ရှိပြီး ဒေသအလိုက် အချိန်ကွာခြားသည်။"
+
+#: .\chatbot\views.py:22
+msgid "台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"
+msgstr "ထိုင်ဝမ်၏ နွေရာသီသည် ပူပြီး စိုထိုင်းသောကြောင့် အပြင်သွားရာတွင် ရေဘူး၊ နေရောင်ကာကွယ်ပစ္စည်းနှင့် မိုးကာပစ္စည်းများ ပြင်ဆင်ထားနိုင်သည်။"
+
+#: .\chatbot\views.py:23
+msgid "如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"
+msgstr "ထိုင်ဝမ်တွင် လိပ်စာပြောင်းပါက အချို့စာရွက်စာတမ်းများ သို့မဟုတ် ကျောင်းမှတ်တမ်းများကိုပါ အတူတကွ အပ်ဒိတ်လုပ်ရန် လိုနိုင်သည်။"
+
+#: .\chatbot\views.py:24
+msgid "台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"
+msgstr "ထိုင်ဝမ်ကျောင်းများတွင် အရေးကြီးသတင်းများကို Email သို့မဟုတ် ကျောင်းစနစ်မှတစ်ဆင့် ကြေညာလေ့ရှိသောကြောင့် ပုံမှန်စစ်ဆေးသင့်သည်။"
+
+#: .\chatbot\views.py:25
+msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
+msgstr "ထိုင်ဝမ်ရောက်ပြီးနောက် ဖုန်းနံပါတ်လျှောက်ရာတွင် များသောအားဖြင့် ပတ်စ်ပို့၊ ARC နေထိုင်ခွင့်ကတ် သို့မဟုတ် အခြားအထောက်အထားစာရွက်စာတမ်းများ လိုအပ်သည်။"
 
 #: .\studygo\settings.py:172
 msgid "繁體中文"
@@ -222,13 +267,233 @@ msgstr "အတည်ပြုရန်"
 msgid "來臺就學小幫手"
 msgstr "ထိုင်ဝမ်ပညာသင်ရေး အကူအညီ"
 
-#: .\templates\base.html:72
-msgid "我的帳戶"
-msgstr "ကျွန်ုပ်၏ အကောင့်"
+#: .\templates\base.html:71
+msgid "   同學"
+msgstr ""
 
-#: .\templates\base.html:74 .\users\templates\users\dashboard.html:132
+#: .\templates\base.html:78 .\users\templates\users\dashboard.html:132
 msgid "登出"
 msgstr "ထွက်ရန်"
+
+#: .\users\models.py:20
+msgid "電子郵件為必填欄位"
+msgstr "အီးမေးလ်သည် မဖြည့်မနေရ အချက်အလက်ဖြစ်သည်"
+
+#: .\users\models.py:46
+msgid "境外學生"
+msgstr "နိုင်ငံခြားကျောင်းသား"
+
+#: .\users\models.py:47
+msgid "系統管理員"
+msgstr "စနစ်စီမံခန့်ခွဲသူ"
+
+#: .\users\models.py:50 .\users\templates\users\forgot_password.html:21
+#: .\users\templates\users\login.html:105
+#: .\users\templates\users\login.html:168
+msgid "電子郵件"
+msgstr "အီးမေးလ်"
+
+#: .\users\models.py:51 .\users\templates\users\edit_profile.html:35
+#: .\users\templates\users\login.html:162
+msgid "姓名"
+msgstr "အမည်"
+
+#: .\users\models.py:56
+msgid "角色"
+msgstr "အခန်းကဏ္ဍ"
+
+#: .\users\models.py:58
+msgid "啟用狀態"
+msgstr "အသုံးပြုနိုင်မှု အခြေအနေ"
+
+#: .\users\models.py:59
+msgid "工作人員狀態"
+msgstr "ဝန်ထမ်းအခြေအနေ"
+
+#: .\users\models.py:60 .\users\models.py:177 .\users\models.py:219
+msgid "建立時間"
+msgstr "ဖန်တီးချိန်"
+
+#: .\users\models.py:61
+msgid "最後登入IP"
+msgstr "နောက်ဆုံးဝင်ရောက်သည့် IP"
+
+#: .\users\models.py:62
+msgid "Email 已驗證"
+msgstr "အီးမေးလ် အတည်ပြုပြီး"
+
+#: .\users\models.py:70 .\users\models.py:71 .\users\models.py:216
+#: .\users\models.py:241
+msgid "使用者"
+msgstr "အသုံးပြုသူ"
+
+#: .\users\models.py:99 .\users\templates\users\profile_setup.html:73
+msgid "僑生（海外華裔）"
+msgstr "ပြည်ပတရုတ်ကျောင်းသား/ကျောင်းသူ"
+
+#: .\users\models.py:100
+msgid "外籍生（一般外國學生）"
+msgstr "နိုင်ငံခြားကျောင်းသား"
+
+#: .\users\models.py:101
+msgid "交換生"
+msgstr "လဲလှယ်ကျောင်းသား"
+
+#: .\users\models.py:102 .\users\templates\users\edit_profile.html:85
+#: .\users\templates\users\profile_setup.html:75
+msgid "僑大先修生"
+msgstr "ပြည်ပတရုတ် ကြိုတင်ပြင်ဆင်ရေးကျောင်းသား/ကျောင်းသူ"
+
+#: .\users\models.py:107 .\users\templates\users\edit_profile.html:120
+#: .\users\templates\users\profile_setup.html:87
+msgid "已收到錄取通知"
+msgstr "ဝင်ခွင့်လက်ခံစာ ရရှိပြီး"
+
+#: .\users\models.py:108 .\users\templates\users\edit_profile.html:123
+#: .\users\templates\users\profile_setup.html:95
+msgid "入境前準備中"
+msgstr "ဝင်ရောက်မလာမီ ပြင်ဆင်နေသည်"
+
+#: .\users\models.py:109 .\users\templates\users\edit_profile.html:126
+#: .\users\templates\users\profile_setup.html:103
+msgid "已抵臺就學中"
+msgstr "ထိုင်ဝမ်သို့ ရောက်ရှိပြီး ပညာသင်ကြားနေသည်"
+
+#: .\users\models.py:114 .\users\templates\users\edit_profile.html:62
+#: .\users\templates\users\profile_setup.html:46
+msgid "印尼"
+msgstr "အင်ဒိုနီးရှား"
+
+#: .\users\models.py:115 .\users\templates\users\edit_profile.html:63
+#: .\users\templates\users\profile_setup.html:47
+msgid "馬來西亞"
+msgstr "မလေးရှား"
+
+#: .\users\models.py:116 .\users\templates\users\edit_profile.html:64
+#: .\users\templates\users\profile_setup.html:48
+msgid "越南"
+msgstr "ဗီယက်နမ်"
+
+#: .\users\models.py:117 .\users\templates\users\edit_profile.html:65
+#: .\users\templates\users\profile_setup.html:49
+msgid "泰國"
+msgstr "ထိုင်း"
+
+#: .\users\models.py:118 .\users\templates\users\edit_profile.html:66
+#: .\users\templates\users\profile_setup.html:50
+msgid "菲律賓"
+msgstr "ဖိလစ်ပိုင်"
+
+#: .\users\models.py:119 .\users\templates\users\edit_profile.html:67
+#: .\users\templates\users\profile_setup.html:51
+msgid "柬埔寨"
+msgstr "ကမ္ဘောဒီးယား"
+
+#: .\users\models.py:120 .\users\templates\users\edit_profile.html:68
+#: .\users\templates\users\profile_setup.html:52
+msgid "緬甸"
+msgstr "မြန်မာ"
+
+#: .\users\models.py:121 .\users\templates\users\edit_profile.html:69
+#: .\users\templates\users\profile_setup.html:53
+msgid "日本"
+msgstr "ဂျပန်"
+
+#: .\users\models.py:122 .\users\templates\users\edit_profile.html:70
+#: .\users\templates\users\profile_setup.html:54
+msgid "韓國"
+msgstr "တောင်ကိုရီးယား"
+
+#: .\users\models.py:123 .\users\templates\users\edit_profile.html:71
+#: .\users\templates\users\profile_setup.html:55
+msgid "其他"
+msgstr "အခြား"
+
+#: .\users\models.py:131
+msgid "使用者帳號"
+msgstr "အသုံးပြုသူအကောင့်"
+
+#: .\users\models.py:138 .\users\templates\users\edit_profile.html:60
+#: .\users\templates\users\profile_setup.html:43
+msgid "國籍"
+msgstr "နိုင်ငံသား"
+
+#: .\users\models.py:145 .\users\templates\users\edit_profile.html:93
+#: .\users\templates\users\profile_setup.html:61
+#: .\users\templates\users\profile_setup.html:154
+msgid "就讀學校"
+msgstr "တက်ရောက်မည့် ကျောင်း / တက္ကသိုလ်"
+
+#: .\users\models.py:151 .\users\templates\users\edit_profile.html:76
+#: .\users\templates\users\profile_setup.html:68
+msgid "身份別"
+msgstr "အထောက်အထားအမျိုးအစား"
+
+#: .\users\models.py:158 .\users\templates\users\edit_profile.html:117
+#: .\users\templates\users\profile_setup.html:81
+msgid "入學狀態"
+msgstr "ဝင်ခွင့်အခြေအနေ"
+
+#: .\users\models.py:162 .\users\templates\users\dashboard.html:98
+#: .\users\templates\users\edit_profile.html:104
+#: .\users\templates\users\profile_setup.html:122
+#: .\users\templates\users\profile_setup.html:159
+msgid "系所"
+msgstr "ဌာန / ဘာသာရပ်ဌာန"
+
+#: .\users\models.py:163 .\users\templates\users\edit_profile.html:132
+#: .\users\templates\users\profile_setup.html:116
+msgid "預計抵台日期"
+msgstr "ထိုင်ဝမ်သို့ ရောက်ရှိမည့် ခန့်မှန်းရက်စွဲ"
+
+#: .\users\models.py:168
+msgid "頭像"
+msgstr "ပရိုဖိုင်ပုံ"
+
+#: .\users\models.py:173
+msgid "慣用語言"
+msgstr "ဦးစားပေးဘာသာစကား"
+
+#: .\users\models.py:178
+msgid "更新時間"
+msgstr "နောက်ဆုံးပြင်ဆင်ချိန်"
+
+#: .\users\models.py:181 .\users\models.py:182
+msgid "學生資料"
+msgstr "ကျောင်းသားအချက်အလက်"
+
+#: .\users\models.py:218
+msgid "驗證 Token"
+msgstr "အတည်ပြု Token"
+
+#: .\users\models.py:220
+msgid "是否已使用"
+msgstr "အသုံးပြုပြီး"
+
+#: .\users\models.py:224 .\users\models.py:225
+msgid "Email 驗證 Token"
+msgstr "အီးမေးလ်အတည်ပြု Token"
+
+#: .\users\models.py:243
+msgid "IP 位址"
+msgstr "IP လိပ်စာ"
+
+#: .\users\models.py:244
+msgid "使用者代理"
+msgstr "အသုံးပြုသူအေးဂျင့်"
+
+#: .\users\models.py:245
+msgid "登入時間"
+msgstr "ဝင်ရောက်ချိန်"
+
+#: .\users\models.py:246
+msgid "是否成功"
+msgstr "အောင်မြင်မှု"
+
+#: .\users\models.py:251 .\users\models.py:252
+#: .\users\templates\users\edit_profile.html:231
+msgid "登入紀錄"
+msgstr "ဝင်ရောက်မှုမှတ်တမ်း"
 
 #: .\users\templates\users\dashboard.html:4
 msgid "儀表板"
@@ -245,7 +510,9 @@ msgstr "နိုင်ငံတကာကျောင်းသား/ကျေ�
 
 #: .\users\templates\users\dashboard.html:23
 msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
-msgstr "၊ StudyGo Taiwan မှ ကြိုဆိုပါသည်။ သင့်အတွက် ကိုယ်ပိုင်ပြင်ဆင်ထားသော ထိုင်ဝမ်ပညာသင် လုပ်ငန်းစဉ် အသင့်ဖြစ်ပါပြီ။"
+msgstr ""
+"၊ StudyGo Taiwan မှ ကြိုဆိုပါသည်။ သင့်အတွက် ကိုယ်ပိုင်ပြင်ဆင်ထားသော ထိုင်ဝမ်ပညာသင် လုပ်ငန်းစဉ် "
+"အသင့်ဖြစ်ပါပြီ။"
 
 #: .\users\templates\users\dashboard.html:28
 #: .\users\templates\users\edit_profile.html:4
@@ -293,13 +560,6 @@ msgstr "အီးမေးလ် အတည်ပြုပြီး"
 msgid "信箱未驗證"
 msgstr "အီးမေးလ် အတည်မပြုရသေးပါ"
 
-#: .\users\templates\users\dashboard.html:98
-#: .\users\templates\users\edit_profile.html:104
-#: .\users\templates\users\profile_setup.html:122
-#: .\users\templates\users\profile_setup.html:159
-msgid "系所"
-msgstr "ဌာန / ဘာသာရပ်ဌာန"
-
 #: .\users\templates\users\dashboard.html:109
 #: .\users\templates\users\profile_setup.html:164
 msgid "預計抵台"
@@ -323,7 +583,9 @@ msgstr "တာဝန်စာရင်းကို မော်ဂျူး ၂ 
 
 #: .\users\templates\users\dashboard.html:147
 msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
-msgstr "မော်ဂျူး ၂ (လုပ်ငန်းစဉ်နှင့် တာဝန်စီမံခန့်ခွဲမှု) ပြီးစီးပြီးနောက် သင့်ကိုယ်ပိုင် တာဝန်စာရင်းကို ဤနေရာတွင် ပြသပါမည်။"
+msgstr ""
+"မော်ဂျူး ၂ (လုပ်ငန်းစဉ်နှင့် တာဝန်စီမံခန့်ခွဲမှု) ပြီးစီးပြီးနောက် သင့်ကိုယ်ပိုင် တာဝန်စာရင်းကို ဤနေရာတွင် "
+"ပြသပါမည်။"
 
 #: .\users\templates\users\dashboard.html:153
 msgid "查看全部任務清單"
@@ -346,74 +608,9 @@ msgstr "စကားဝှက် ပြင်ရန်"
 msgid "帳號安全"
 msgstr "အကောင့်လုံခြုံရေး"
 
-#: .\users\templates\users\edit_profile.html:35
-#: .\users\templates\users\login.html:162
-msgid "姓名"
-msgstr "အမည်"
-
 #: .\users\templates\users\edit_profile.html:47
 msgid "電子郵件（不可修改）"
 msgstr "အီးမေးလ် (ပြင်၍မရပါ)"
-
-#: .\users\templates\users\edit_profile.html:60
-#: .\users\templates\users\profile_setup.html:43
-msgid "國籍"
-msgstr "နိုင်ငံသား"
-
-#: .\users\templates\users\edit_profile.html:62
-#: .\users\templates\users\profile_setup.html:46
-msgid "印尼"
-msgstr "အင်ဒိုနီးရှား"
-
-#: .\users\templates\users\edit_profile.html:63
-#: .\users\templates\users\profile_setup.html:47
-msgid "馬來西亞"
-msgstr "မလေးရှား"
-
-#: .\users\templates\users\edit_profile.html:64
-#: .\users\templates\users\profile_setup.html:48
-msgid "越南"
-msgstr "ဗီယက်နမ်"
-
-#: .\users\templates\users\edit_profile.html:65
-#: .\users\templates\users\profile_setup.html:49
-msgid "泰國"
-msgstr "ထိုင်း"
-
-#: .\users\templates\users\edit_profile.html:66
-#: .\users\templates\users\profile_setup.html:50
-msgid "菲律賓"
-msgstr "ဖိလစ်ပိုင်"
-
-#: .\users\templates\users\edit_profile.html:67
-#: .\users\templates\users\profile_setup.html:51
-msgid "柬埔寨"
-msgstr "ကမ္ဘောဒီးယား"
-
-#: .\users\templates\users\edit_profile.html:68
-#: .\users\templates\users\profile_setup.html:52
-msgid "緬甸"
-msgstr "မြန်မာ"
-
-#: .\users\templates\users\edit_profile.html:69
-#: .\users\templates\users\profile_setup.html:53
-msgid "日本"
-msgstr "ဂျပန်"
-
-#: .\users\templates\users\edit_profile.html:70
-#: .\users\templates\users\profile_setup.html:54
-msgid "韓國"
-msgstr "တောင်ကိုရီးယား"
-
-#: .\users\templates\users\edit_profile.html:71
-#: .\users\templates\users\profile_setup.html:55
-msgid "其他"
-msgstr "အခြား"
-
-#: .\users\templates\users\edit_profile.html:76
-#: .\users\templates\users\profile_setup.html:68
-msgid "身份別"
-msgstr "အထောက်အထားအမျိုးအစား"
 
 #: .\users\templates\users\edit_profile.html:79
 msgid "僑生"
@@ -424,17 +621,6 @@ msgstr "ပြည်ပတရုတ်ကျောင်းသား/ကျေ�
 msgid "外籍生"
 msgstr "နိုင်ငံခြားသားကျောင်းသား/ကျောင်းသူ"
 
-#: .\users\templates\users\edit_profile.html:85
-#: .\users\templates\users\profile_setup.html:75
-msgid "僑大先修生"
-msgstr "ပြည်ပတရုတ် ကြိုတင်ပြင်ဆင်ရေးကျောင်းသား/ကျောင်းသူ"
-
-#: .\users\templates\users\edit_profile.html:93
-#: .\users\templates\users\profile_setup.html:61
-#: .\users\templates\users\profile_setup.html:154
-msgid "就讀學校"
-msgstr "တက်ရောက်မည့် ကျောင်း / တက္ကသိုလ်"
-
 #: .\users\templates\users\edit_profile.html:99
 #: .\users\templates\users\profile_setup.html:62
 msgid "例如：國立臺灣大學"
@@ -444,31 +630,6 @@ msgstr "ဥပမာ - National Taiwan University"
 #: .\users\templates\users\profile_setup.html:123
 msgid "例如：資訊工程學系"
 msgstr "ဥပမာ - ကွန်ပျူတာသိပ္ပံနှင့် သတင်းအချက်အလက်အင်ဂျင်နီယာဌာန"
-
-#: .\users\templates\users\edit_profile.html:117
-#: .\users\templates\users\profile_setup.html:81
-msgid "入學狀態"
-msgstr "ဝင်ခွင့်အခြေအနေ"
-
-#: .\users\templates\users\edit_profile.html:120
-#: .\users\templates\users\profile_setup.html:87
-msgid "已收到錄取通知"
-msgstr "ဝင်ခွင့်လက်ခံစာ ရရှိပြီး"
-
-#: .\users\templates\users\edit_profile.html:123
-#: .\users\templates\users\profile_setup.html:95
-msgid "入境前準備中"
-msgstr "ဝင်ရောက်မလာမီ ပြင်ဆင်နေသည်"
-
-#: .\users\templates\users\edit_profile.html:126
-#: .\users\templates\users\profile_setup.html:103
-msgid "已抵臺就學中"
-msgstr "ထိုင်ဝမ်သို့ ရောက်ရှိပြီး ပညာသင်ကြားနေသည်"
-
-#: .\users\templates\users\edit_profile.html:132
-#: .\users\templates\users\profile_setup.html:116
-msgid "預計抵台日期"
-msgstr "ထိုင်ဝမ်သို့ ရောက်ရှိမည့် ခန့်မှန်းရက်စွဲ"
 
 #: .\users\templates\users\edit_profile.html:147
 msgid "儲存變更"
@@ -522,10 +683,6 @@ msgstr "အတည်မပြုရသေးပါ (အီးမေးလ်က�
 msgid "重新寄送驗證信"
 msgstr "အတည်ပြုအီးမေးလ် ပြန်ပို့ရန်"
 
-#: .\users\templates\users\edit_profile.html:231
-msgid "登入紀錄"
-msgstr "ဝင်ရောက်မှုမှတ်တမ်း"
-
 #: .\users\templates\users\edit_profile.html:233
 msgid "最近一次登入："
 msgstr "နောက်ဆုံးဝင်ရောက်ချိန် - "
@@ -554,12 +711,6 @@ msgstr "ဝင်ရောက်ရန် ပြန်သွားရန်"
 #: .\users\templates\users\forgot_password.html:16
 msgid "輸入您的電子郵件，我們將寄送重設密碼連結。"
 msgstr "သင့်အီးမေးလ်ကို ထည့်ပါ။ စကားဝှက်ပြန်လည်သတ်မှတ်ရန် လင့်ခ်ကို ပို့ပေးပါမည်။"
-
-#: .\users\templates\users\forgot_password.html:21
-#: .\users\templates\users\login.html:105
-#: .\users\templates\users\login.html:168
-msgid "電子郵件"
-msgstr "အီးမေးလ်"
 
 #: .\users\templates\users\forgot_password.html:27
 msgid "寄送重設連結"
@@ -593,7 +744,10 @@ msgstr "လုပ်ငန်းစဉ် သတိပေးချက်"
 msgid ""
 "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任"
 "務，並以進度方式提醒你一步一步完成。"
-msgstr "စနစ်သည် သင့်နိုင်ငံသား၊ အထောက်အထားအမျိုးအစားနှင့် လက်ရှိအခြေအနေအပေါ်မူတည်၍ ဗီဇာလျှောက်ထားခြင်း၊ ထိုင်ဝမ်မရောက်မီနှင့် ရောက်ရှိပြီးနောက် လုပ်ဆောင်ရမည့် အရေးကြီးတာဝန်များကို အလိုအလျောက် ဖန်တီးပေးပြီး တိုးတက်မှုအခြေအနေဖြင့် တစ်ဆင့်ချင်း သတိပေးပါမည်။"
+msgstr ""
+"စနစ်သည် သင့်နိုင်ငံသား၊ အထောက်အထားအမျိုးအစားနှင့် လက်ရှိအခြေအနေအပေါ်မူတည်၍ ဗီဇာလျှောက်ထားခြင်း၊ "
+"ထိုင်ဝမ်မရောက်မီနှင့် ရောက်ရှိပြီးနောက် လုပ်ဆောင်ရမည့် အရေးကြီးတာဝန်များကို အလိုအလျောက် ဖန်တီးပေးပြီး "
+"တိုးတက်မှုအခြေအနေဖြင့် တစ်ဆင့်ချင်း သတိပေးပါမည်။"
 
 #: .\users\templates\users\login.html:38
 msgid "資訊管理"
@@ -603,13 +757,18 @@ msgstr "သတင်းအချက်အလက် စီမံခန့်ခ�
 msgid ""
 "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
 "確資料，不再被零散資訊搞混。"
-msgstr "ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံ၊ နေထိုင်ရာနှင့် ကျောင်းမှတ်ပုံတင်ခြင်းဆိုင်ရာ အချက်အလက်များကို တစ်နေရာတည်းတွင် စုစည်းပေး၍ ကျောင်းသား/ကျောင်းသူများသည် မှန်ကန်သောအချက်အလက်များကို ပိုမိုလွယ်ကူစွာ ရှာနိုင်ပြီး ပြန့်ကျဲနေသောအချက်အလက်များကြောင့် မရှုပ်ထွေးတော့ပါ။"
+msgstr ""
+"ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံ၊ နေထိုင်ရာနှင့် ကျောင်းမှတ်ပုံတင်ခြင်းဆိုင်ရာ အချက်အလက်များကို "
+"တစ်နေရာတည်းတွင် စုစည်းပေး၍ ကျောင်းသား/ကျောင်းသူများသည် မှန်ကန်သောအချက်အလက်များကို ပိုမိုလွယ်ကူစွာ "
+"ရှာနိုင်ပြီး ပြန့်ကျဲနေသောအချက်အလက်များကြောင့် မရှုပ်ထွေးတော့ပါ။"
 
 #: .\users\templates\users\login.html:62
 msgid ""
 "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 "
 "AI 小幫手快速獲得協助。"
-msgstr "ပထမဆုံး ဘာလုပ်ရမည်၊ မည်သည့်စာရွက်စာတမ်းများ ပြင်ဆင်ရမည် သို့မဟုတ် မည်သူ့ကို မေးရမည် မသိသည့်အခါ AI အကူအညီမှတစ်ဆင့် မြန်မြန်ဆန်ဆန် အကူအညီရနိုင်ပါသည်။"
+msgstr ""
+"ပထမဆုံး ဘာလုပ်ရမည်၊ မည်သည့်စာရွက်စာတမ်းများ ပြင်ဆင်ရမည် သို့မဟုတ် မည်သူ့ကို မေးရမည် မသိသည့်အခါ AI "
+"အကူအညီမှတစ်ဆင့် မြန်မြန်ဆန်ဆန် အကူအညီရနိုင်ပါသည်။"
 
 #: .\users\templates\users\login.html:78
 msgid "顯示第一張介紹"
@@ -747,7 +906,9 @@ msgstr "စတင်အသုံးပြုရန်"
 #: .\users\templates\users\profile_setup.html:34
 msgid ""
 "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
-msgstr "ဤအချက်အလက်များကို သင့်ကိုယ်ပိုင် ထိုင်ဝမ်သို့လာရောက်ပညာသင်ရေး လုပ်ငန်းစဉ် ဖန်တီးရန် အသုံးပြုပါမည်။ အတိကျဆုံး အဆင့်လိုက်လမ်းညွှန်မှုရရန် မှန်ကန်စွာ ဖြည့်ပါ။"
+msgstr ""
+"ဤအချက်အလက်များကို သင့်ကိုယ်ပိုင် ထိုင်ဝမ်သို့လာရောက်ပညာသင်ရေး လုပ်ငန်းစဉ် ဖန်တီးရန် အသုံးပြုပါမည်။ အတိကျဆုံး "
+"အဆင့်လိုက်လမ်းညွှန်မှုရရန် မှန်ကန်စွာ ဖြည့်ပါ။"
 
 #: .\users\templates\users\profile_setup.html:45
 msgid "請選擇國籍"
@@ -756,10 +917,6 @@ msgstr "နိုင်ငံသားကို ရွေးချယ်ပါ"
 #: .\users\templates\users\profile_setup.html:72
 msgid "請選擇身份別"
 msgstr "အထောက်အထားအမျိုးအစားကို ရွေးချယ်ပါ"
-
-#: .\users\templates\users\profile_setup.html:73
-msgid "僑生（海外華裔）"
-msgstr "ပြည်ပတရုတ်ကျောင်းသား/ကျောင်းသူ"
 
 #: .\users\templates\users\profile_setup.html:77
 msgid "身份別將影響您的流程任務內容"
@@ -784,10 +941,6 @@ msgstr "အချိန်စီမံကိန်း"
 #: .\users\templates\users\profile_setup.html:118
 msgid "非必填"
 msgstr "မဖြည့်လည်းရသည်"
-
-#: .\users\templates\users\profile_setup.html:129
-msgid "返回"
-msgstr "ပြန်သွားရန်"
 
 #: .\users\templates\users\profile_setup.html:131
 msgid "儲存資料並開始使用"
@@ -817,7 +970,8 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"            အချက်အလက် သိမ်းပြီးနောက် စနစ်သည် သင့် <b>နိုင်ငံသား</b>၊ <b>အထောက်အထားအမျိုးအစား</b> နှင့်\n"
+"            အချက်အလက် သိမ်းပြီးနောက် စနစ်သည် သင့် <b>နိုင်ငံသား</b>၊ <b>အထောက်အထားအမျိုးအစား</"
+"b> နှင့်\n"
 "            <b>ဝင်ခွင့်အခြေအနေ</b> အပေါ်မူတည်၍ ကိုယ်ပိုင်တာဝန်လုပ်ငန်းစဉ်ကို အလိုအလျောက် ဖန်တီးပါမည်။\n"
 "            "
 
@@ -850,74 +1004,17 @@ msgstr "စကားဝှက် ပြန်လည်သတ်မှတ်မ�
 msgid "重設失敗，連結可能已過期"
 msgstr "ပြန်လည်သတ်မှတ်မှု မအောင်မြင်ပါ။ လင့်ခ်သည် သက်တမ်းကုန်နေနိုင်ပါသည်။"
 
-msgid "電子郵件為必填欄位"
-msgstr "အီးမေးလ်သည် မဖြည့်မနေရ အချက်အလက်ဖြစ်သည်"
+#~ msgid "回到儀表板"
+#~ msgstr "ဒက်ရှ်ဘုတ်သို့ ပြန်သွားရန်"
 
-msgid "境外學生"
-msgstr "နိုင်ငံခြားကျောင်းသား"
+#~ msgid ""
+#~ "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
+#~ msgstr ""
+#~ "သင့်ကိုယ်ရေးအချက်အလက်အပေါ်မူတည်၍ ထိုင်ဝမ်မရောက်မီ၊ ရောက်ရှိပြီးနောက်၊ ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ "
+#~ "ကျန်းမာရေးအာမခံနှင့် နေထိုင်မှုဆိုင်ရာ အချက်အလက်များကို စီစဉ်ကူညီပေးပါသည်။"
 
-msgid "系統管理員"
-msgstr "စနစ်စီမံခန့်ခွဲသူ"
+#~ msgid "你好，"
+#~ msgstr "မင်္ဂလာပါ၊ "
 
-msgid "角色"
-msgstr "အခန်းကဏ္ဍ"
-
-msgid "啟用狀態"
-msgstr "အသုံးပြုနိုင်မှု အခြေအနေ"
-
-msgid "工作人員狀態"
-msgstr "ဝန်ထမ်းအခြေအနေ"
-
-msgid "建立時間"
-msgstr "ဖန်တီးချိန်"
-
-msgid "最後登入IP"
-msgstr "နောက်ဆုံးဝင်ရောက်သည့် IP"
-
-msgid "Email 已驗證"
-msgstr "အီးမေးလ် အတည်ပြုပြီး"
-
-msgid "使用者"
-msgstr "အသုံးပြုသူ"
-
-msgid "外籍生（一般外國學生）"
-msgstr "နိုင်ငံခြားကျောင်းသား"
-
-msgid "交換生"
-msgstr "လဲလှယ်ကျောင်းသား"
-
-msgid "使用者帳號"
-msgstr "အသုံးပြုသူအကောင့်"
-
-msgid "頭像"
-msgstr "ပရိုဖိုင်ပုံ"
-
-msgid "慣用語言"
-msgstr "ဦးစားပေးဘာသာစကား"
-
-msgid "更新時間"
-msgstr "နောက်ဆုံးပြင်ဆင်ချိန်"
-
-msgid "學生資料"
-msgstr "ကျောင်းသားအချက်အလက်"
-
-msgid "驗證 Token"
-msgstr "အတည်ပြု Token"
-
-msgid "是否已使用"
-msgstr "အသုံးပြုပြီး"
-
-msgid "Email 驗證 Token"
-msgstr "အီးမေးလ်အတည်ပြု Token"
-
-msgid "IP 位址"
-msgstr "IP လိပ်စာ"
-
-msgid "使用者代理"
-msgstr "အသုံးပြုသူအေးဂျင့်"
-
-msgid "登入時間"
-msgstr "ဝင်ရောက်ချိန်"
-
-msgid "是否成功"
-msgstr "အောင်မြင်မှု"
+#~ msgid "我的帳戶"
+#~ msgstr "ကျွန်ုပ်၏ အကောင့်"

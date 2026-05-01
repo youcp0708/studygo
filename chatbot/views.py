@@ -8,7 +8,29 @@ from rest_framework.response import Response
 
 from .models import ChatSession, ChatMessage, ChatAttachment
 from .services import generate_ai_reply
+from django.utils import timezone
+from django.utils.translation import gettext as _
 
+def get_taiwan_tips():
+    return [
+        _("台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"),
+        _("在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"),
+        _("台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"),
+        _("在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"),
+        _("台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"),
+        _("台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"),
+        _("台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"),
+        _("如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"),
+        _("台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"),
+        _("來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"),
+    ]
+
+
+def get_daily_taiwan_tip():
+    tips = get_taiwan_tips()
+    today = timezone.localdate()
+    index = today.toordinal() % len(tips)
+    return tips[index]
 
 @login_required(login_url='/login/')
 @ensure_csrf_cookie
@@ -42,6 +64,8 @@ def chatbot_page(request):
         'sessions': sessions,
         'active_session': active_session,
         'messages': messages,
+        "taiwan_tip": get_daily_taiwan_tip(),
+        "taiwan_tips": get_taiwan_tips()
     }
 
     return render(request, 'chatbot/chatbot.html', context)

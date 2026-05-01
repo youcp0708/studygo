@@ -10,6 +10,7 @@
   const i18n = window.CHATBOT_I18N || {};
 
   const messagesEl = document.getElementById('chatMessages');
+  const scrollBottomBtn = document.getElementById('scrollBottomBtn');
   const form = document.getElementById('chatForm');
   const input = document.getElementById('chatInput');
   const sendBtn = document.getElementById('sendChatBtn');
@@ -65,8 +66,51 @@
   }
 
   function scrollToBottom() {
-    if (!messagesEl) return;
-    messagesEl.scrollTop = messagesEl.scrollHeight;
+  if (!messagesEl) return;
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+/* 放在這裡 ↓ */
+
+function isNearBottom() {
+  if (!messagesEl) return true;
+
+  const distanceFromBottom =
+    messagesEl.scrollHeight - messagesEl.scrollTop - messagesEl.clientHeight;
+
+  return distanceFromBottom < 120;
+}
+
+function updateScrollBottomButton() {
+  if (!messagesEl || !scrollBottomBtn) return;
+
+  if (isNearBottom()) {
+    scrollBottomBtn.classList.remove('show');
+  } else {
+    scrollBottomBtn.classList.add('show');
+  }
+}
+
+  function isNearBottom() {
+    if (!messagesEl) return true;
+
+    return (
+      messagesEl.scrollHeight -
+      messagesEl.scrollTop -
+      messagesEl.clientHeight
+    ) < 120;
+  }
+
+  function normalizeMessageContent(content) {
+    if (!content) return '';
+
+    return String(content)
+      .replace(/\r\n/g, '\n')
+      .split('\n')
+      .map((line) => line.trim())
+      .join('\n')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
   }
 
   function updateCount() {
@@ -83,7 +127,7 @@
     }
   }
 
-  function addMessage(role, content, time) {
+  function addMessage(role, content, time, shouldScroll = true) {
     if (!messagesEl) return;
 
     const row = document.createElement('div');
@@ -96,17 +140,23 @@
     const bubble = document.createElement('div');
     bubble.className = 'message-bubble';
 
-    const name = document.createElement('div');
-    name.className = 'message-name';
-    name.textContent = role === 'user'
-      ? t('me', '我')
-      : t('assistantName', 'StudyGo AI 小幫手');
+    //const name = document.createElement('div');
+    //name.className = 'message-name';
+    //name.textContent = role === 'user'
+      //? t('me', '我')
+      //: t('assistantName', 'StudyGo AI 小幫手');
+    if (role !== 'user') {
+      const name = document.createElement('div');
+      name.className = 'message-name';
+      name.textContent = t('assistantName', 'StudyGo AI 小幫手');
+      bubble.appendChild(name);
+    }
 
     const body = document.createElement('div');
     body.className = 'message-content';
-    body.textContent = content;
+    body.textContent = normalizeMessageContent(content);
 
-    bubble.appendChild(name);
+    //bubble.appendChild(name);
     bubble.appendChild(body);
 
     if (time) {
@@ -120,7 +170,13 @@
     row.appendChild(bubble);
     messagesEl.appendChild(row);
 
-    scrollToBottom();
+    
+    if (role === 'user') {
+        scrollToBottom();
+    } else {
+         updateScrollBottomButton();
+    }
+    
   }
 
   function addTyping() {
@@ -133,7 +189,7 @@
     row.innerHTML = `
       <div class="message-avatar">🤖</div>
       <div class="message-bubble">
-        <div class="message-name">${t('assistantName', 'StudyGo AI 小幫手')}</div>
+       <!--<div class="message-name">${t('assistantName', 'StudyGo AI 小幫手')}</div>-->
         <div class="typing-dots">
           <span></span>
           <span></span>
@@ -143,7 +199,15 @@
     `;
 
     messagesEl.appendChild(row);
-    scrollToBottom();
+
+    if (isNearBottom()) {
+        scrollToBottom();
+    }
+
+    updateScrollBottomButton();
+
+    // 不在這裡自動捲到底，避免你正在看前面訊息時被拉走
+    // scrollToBottom();
   }
 
   function removeTyping() {
@@ -366,9 +430,9 @@
     clearWelcomeIfNeeded();
 
     if (message) {
-      addMessage('user', message);
+      addMessage('user', message, null, true);
     } else {
-      addMessage('user', t('uploadedAttachment', '已上傳附件'));
+      addMessage('user', t('uploadedAttachment', '已上傳附件'), null, true);
     }
 
     input.value = '';
@@ -402,10 +466,17 @@
 
       const data = await response.json().catch(() => ({}));
 
+      const shouldAutoScrollAfterReply = isNearBottom();
+
       removeTyping();
 
       if (!response.ok || !data.success) {
-        addMessage('assistant', data.message || t('sendFailed', '送出失敗，請稍後再試。'));
+        addMessage(
+          'assistant',
+          data.message || t('sendFailed', '送出失敗，請稍後再試。'),
+          null,
+          shouldAutoScrollAfterReply
+        );
         return;
       }
 
@@ -429,18 +500,29 @@
       addMessage(
         'assistant',
         data.data.assistant_message.content,
-        data.data.assistant_message.created_at
+        data.data.assistant_message.created_at,
+        shouldAutoScrollAfterReply
       );
 
       selectedAttachments = [];
       renderAttachmentPreview();
 
     } catch (error) {
+      const shouldAutoScrollAfterReply = isNearBottom();
+
       removeTyping();
-      addMessage('assistant', t('networkError', '網路或伺服器發生錯誤，請稍後再試。'));
+
+      addMessage(
+        'assistant',
+        t('networkError', '網路或伺服器發生錯誤，請稍後再試。'),
+        null,
+        shouldAutoScrollAfterReply
+      );
     } finally {
       setBusy(false);
-      input.focus();
+
+      // 不自動 focus，避免 AI 回答完成後畫面被拉到輸入框
+      // input.focus();
     }
   }
 
@@ -499,7 +581,7 @@
     });
 
     if (!result.ok || !result.data.success) {
-      alert(result.data.message || t('pinFailed', '釘選失敗'));
+      alert(t('pinFailed', '釘選失敗'));
       return;
     }
 
@@ -594,6 +676,30 @@
     });
   }
 
+  function setupTaiwanTipRotator() {
+  const tipText = document.getElementById('botTipText');
+  const tipsData = document.getElementById('taiwanTipsData');
+
+  if (!tipText || !tipsData) return;
+
+  let tips = [];
+
+  try {
+    tips = JSON.parse(tipsData.textContent);
+  } catch (error) {
+    tips = [];
+  }
+
+  if (!Array.isArray(tips) || tips.length <= 1) return;
+
+  let index = 0;
+
+  setInterval(function () {
+    index = (index + 1) % tips.length;
+    tipText.textContent = tips[index];
+  }, 15000);
+}
+
   if (form) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -627,9 +733,22 @@
     newChatBtn.addEventListener('click', createNewSession);
   }
 
-  setupHistoryMenu();
-  setupAttachmentButtons();
-  setupHistorySearch();
-  updateCount();
-  scrollToBottom();
+ if (scrollBottomBtn) {
+  scrollBottomBtn.addEventListener('click', function () {
+    scrollToBottom();
+    updateScrollBottomButton();
+  });
+}
+
+if (messagesEl) {
+  messagesEl.addEventListener('scroll', updateScrollBottomButton);
+}
+
+setupHistoryMenu();
+setupAttachmentButtons();
+setupHistorySearch();
+setupTaiwanTipRotator();
+updateCount();
+scrollToBottom();
+updateScrollBottomButton();
 })();
