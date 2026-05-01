@@ -1,0 +1,1155 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.chatbot-page {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  height: calc(100vh - 88px);
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(159, 209, 230, .28), transparent 34%),
+    radial-gradient(circle at 95% 15%, rgba(231, 190, 103, .24), transparent 30%),
+    linear-gradient(180deg, #f4f8f6 0%, #ffffff 100%);
+}
+
+.chatbot-layout {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.chatbot-sidebar {
+  height: 100%;
+  padding: 6px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-right: 1px solid rgba(214, 228, 223, .95);
+}
+
+.chatbot-main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .94);
+  border-left: 1px solid rgba(214, 228, 223, .95);
+  box-sizing: border-box;
+}
+
+.back-link {
+  width: fit-content;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-dark);
+  font-size: 14px;
+  font-weight: 900;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .82);
+  border: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.bot-profile-card,
+.quick-card {
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid rgba(214, 228, 223, .95);
+  box-shadow: var(--shadow);
+  border-radius: 26px;
+  box-sizing: border-box;
+}
+
+/* 我的資料框已從 HTML 移除；保險起見也隱藏 */
+.student-context-card {
+  display: none !important;
+}
+
+/* 上方 AI 卡片約佔左側 1/3 */
+.bot-profile-card {
+  flex: 1 1 33%;
+  min-height: 0;
+  padding: 18px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bot-avatar {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  font-size: 34px;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  box-shadow: 0 16px 34px rgba(23, 83, 77, .24);
+}
+
+.bot-profile-card h2,
+.quick-card h3 {
+  font-size: 20px;
+  font-weight: 950;
+  margin: 0 0 10px;
+  color: var(--primary-dark);
+}
+
+.bot-profile-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* 下方聊天記錄約佔左側 2/3 */
+.quick-card {
+  flex: 2 1 67%;
+  min-height: 0;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-header {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.history-header h3 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.history-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.history-search-input {
+  width: 92px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 10px;
+  font-size: 13px;
+  color: var(--primary-dark);
+  background: #fff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.history-search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(87, 152, 132, .12);
+}
+
+.new-chat-btn {
+  flex: 0 0 auto;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 11px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(23, 83, 77, .16);
+}
+
+.new-chat-btn:hover {
+  transform: translateY(-1px);
+}
+
+.chat-history-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.history-empty {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.chat-history-item {
+  position: relative;
+  flex: 0 0 42px;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+.chat-history-item:hover {
+  background: #f3f4f6;
+}
+
+.chat-history-item.active {
+  background: rgba(87, 152, 132, .12);
+  border-color: rgba(87, 152, 132, .24);
+}
+
+.history-title {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--primary-dark);
+  font-size: 14px;
+  font-weight: 850;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+.history-title:hover {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.pin-mark {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.history-text {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.history-more-btn {
+  flex: 0 0 auto;
+  opacity: 0;
+  visibility: hidden;
+  border: none;
+  background: transparent;
+  color: var(--primary-dark);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 7px;
+  border-radius: 8px;
+}
+
+.chat-history-item:hover .history-more-btn,
+.chat-history-item.menu-open .history-more-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.history-more-btn:hover {
+  background: #e5e7eb;
+}
+
+.quick-card .history-menu {
+  display: none !important;
+  position: absolute;
+  right: 8px;
+  top: 42px;
+  width: 124px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .16);
+  padding: 6px;
+  z-index: 9999;
+}
+
+.quick-card .chat-history-item.menu-open .history-menu {
+  display: block !important;
+}
+
+.history-menu button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--primary-dark);
+  padding: 9px 10px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.history-menu button:hover {
+  background: #f3f4f6;
+}
+
+/* 右側標題 */
+.chat-header {
+  flex: 0 0 auto;
+  padding: 26px 28px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  box-sizing: border-box;
+}
+
+.chat-header h1 {
+  font-size: 30px;
+  font-weight: 950;
+  margin: 0 0 6px;
+  color: var(--primary-dark);
+}
+
+.chat-header p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 聊天訊息區 */
+.chat-messages {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 24px 28px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.message-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.message-row.user .message-avatar {
+  order: 2;
+  background: var(--yellow-soft);
+}
+
+.message-avatar {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: var(--primary-soft);
+  font-size: 20px;
+}
+
+.message-bubble {
+  max-width: min(680px, 82%);
+  padding: 15px 17px;
+  border-radius: 20px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+
+.message-row.user .message-bubble {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border: 0;
+}
+
+.message-name {
+  font-size: 13px;
+  font-weight: 950;
+  margin-bottom: 8px;
+  color: var(--primary-dark);
+}
+
+.message-row.user .message-name {
+  color: rgba(255, 255, 255, .9);
+}
+
+.message-content {
+  font-size: 15px;
+  line-height: 1.45;
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+.message-time {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.message-row.user .message-time {
+  color: rgba(255, 255, 255, .76);
+}
+
+/* AI 回覆中動畫 */
+.typing-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 22px;
+}
+
+.typing-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: typingBounce .9s infinite ease-in-out;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: .15s;
+}
+
+.typing-dots span:nth-child(3) {
+  animation-delay: .3s;
+}
+
+@keyframes typingBounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+    opacity: .45;
+  }
+
+  40% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+/* 輸入區固定在底部 */
+.chat-input-area {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  flex: 0 0 auto;
+  padding: 18px 28px 24px;
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, .98);
+  box-sizing: border-box;
+}
+
+.chat-input-box {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+.chat-input-area textarea {
+  width: 100%;
+  min-height: 72px;
+  max-height: 170px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px 16px;
+  outline: none;
+  color: var(--primary-dark);
+  background: #fff;
+  line-height: 1.65;
+  box-sizing: border-box;
+}
+
+.chat-input-area textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 5px rgba(87, 152, 132, .14);
+}
+
+.chat-input-box textarea {
+  flex: 1;
+}
+
+.input-footer {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+#charCount {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+#sendChatBtn {
+  min-width: 112px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  font-weight: 950;
+  box-shadow: 0 12px 24px rgba(23, 83, 77, .2);
+  cursor: pointer;
+}
+
+#sendChatBtn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* 附件按鈕 */
+.attach-toggle-btn {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+.attach-toggle-btn:hover {
+  background: #f3f6f5;
+}
+
+.attach-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 58px;
+  width: 170px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+  z-index: 9999;
+}
+
+.attach-menu.open {
+  display: block;
+}
+
+.attach-menu button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--primary-dark);
+  padding: 11px 12px;
+  text-align: left;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.attach-menu button:hover {
+  background: #f3f4f6;
+}
+
+.attachment-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.attachment-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 260px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: #eef6f2;
+  border: 1px solid var(--line);
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.attachment-chip span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.attachment-chip button {
+  border: none;
+  background: transparent;
+  color: #b91c1c;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+/* 平板 */
+@media (max-width: 960px) {
+  .chatbot-page {
+    height: auto;
+    min-height: calc(100vh - 88px);
+    overflow: visible;
+  }
+
+  .chatbot-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .chatbot-sidebar {
+    height: auto;
+    min-height: auto;
+    padding: 20px 18px;
+    overflow: visible;
+  }
+
+  .bot-profile-card,
+  .quick-card {
+    flex: none;
+  }
+
+  .quick-card {
+    min-height: 320px;
+  }
+
+  .chat-history-list {
+    max-height: 240px;
+  }
+
+  .chatbot-main {
+    min-height: calc(100vh - 88px);
+    border-left: 0;
+    border-top: 1px solid rgba(214, 228, 223, .95);
+  }
+}
+
+/* 手機 */
+@media (max-width: 640px) {
+  .chatbot-page {
+    min-height: calc(100vh - 72px);
+  }
+
+  .chatbot-sidebar {
+    padding: 16px;
+  }
+
+  .bot-profile-card,
+  .quick-card {
+    border-radius: 20px;
+  }
+
+  .history-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .history-actions {
+    width: 100%;
+  }
+
+  .history-search-input {
+    flex: 1;
+    width: auto;
+  }
+
+  .chat-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px 20px 16px;
+  }
+
+  .chat-header h1 {
+    font-size: 26px;
+  }
+
+  .chat-messages {
+    padding: 20px 20px 150px;
+  }
+
+  .message-bubble {
+    max-width: 86%;
+  }
+
+  .chat-input-area {
+    padding: 16px 20px 20px;
+  }
+}
+/* ===== 多語言版面修正：避免英文 / 其他語言文字變長爆版 ===== */
+
+.history-header {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.history-actions {
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.history-search-input {
+  flex: 1 1 92px;
+  min-width: 82px;
+  max-width: 150px;
+}
+
+.new-chat-btn {
+  white-space: nowrap;
+}
+
+.quick-card .history-menu {
+  width: max-content;
+  min-width: 132px;
+  max-width: 220px;
+}
+
+.history-menu button {
+  white-space: nowrap;
+}
+
+.chatbot-layout {
+  grid-template-columns: clamp(320px, 24vw, 420px) minmax(0, 1fr);
+}
+
+.message-bubble {
+  overflow-wrap: anywhere;
+}
+
+.chat-input-box {
+  min-width: 0;
+}
+
+.chat-input-box textarea {
+  min-width: 0;
+}
+
+#sendChatBtn {
+  white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+  .chatbot-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .history-actions {
+    justify-content: flex-start;
+  }
+
+  .history-search-input {
+    max-width: none;
+  }
+}
+/* ===== 多語言跑版修正：緬文、泰文、英文、馬來文等長文字 ===== */
+
+/* 讓緬文有比較合適的字體 */
+html[lang="my"] body,
+html[lang="my"] .chatbot-page {
+  font-family: "Myanmar Text", "Noto Sans Myanmar", "Padauk", "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+}
+
+/* 左側不要把內容硬壓到固定高度內 */
+.chatbot-sidebar {
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto minmax(220px, auto) minmax(0, 1fr);
+  gap: 14px;
+}
+
+/* AI 小幫手卡片：讓多語言文字不會溢出 */
+.bot-profile-card {
+  flex: none !important;
+  min-height: 220px;
+  max-height: none;
+  padding: 20px 22px !important;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 緬文 / 泰文標題不要太大，不然會超出 */
+html[lang="my"] .bot-profile-card h2,
+html[lang="th"] .bot-profile-card h2,
+html[lang="ms"] .bot-profile-card h2,
+html[lang="id"] .bot-profile-card h2,
+html[lang="en"] .bot-profile-card h2,
+html[lang="ja"] .bot-profile-card h2 {
+  font-size: 18px !important;
+  line-height: 1.45 !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* 說明文字允許換行，不要蓋到下面 */
+.bot-profile-card p {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+/* 緬文行高再放大一點，避免字母上下被切到 */
+html[lang="my"] .bot-profile-card p {
+  line-height: 1.9 !important;
+}
+
+/* 聊天記錄區吃剩下高度，可自己滾動 */
+.quick-card {
+  flex: none !important;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 聊天紀錄列表可滑動 */
+.chat-history-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* 返回按鈕遇到長翻譯也要換行 */
+.back-link {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.5;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* 左側欄寬度稍微放寬，避免多語言太擠 */
+.chatbot-layout {
+  grid-template-columns: clamp(380px, 27vw, 460px) minmax(0, 1fr);
+}
+
+/* 螢幕比較小時仍然可以正常顯示 */
+@media (max-width: 960px) {
+  .chatbot-sidebar {
+    display: flex;
+    height: auto;
+    overflow: visible;
+  }
+
+  .bot-profile-card {
+    min-height: auto;
+  }
+
+  .quick-card {
+    min-height: 320px;
+  }
+
+  .chatbot-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== Final fix: chatbot message layout and scroll behavior ===== */
+
+.chatbot-main {
+  overflow: hidden !important;
+}
+
+.chat-messages {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  padding: 24px 28px 150px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+  scroll-behavior: auto !important;
+  box-sizing: border-box !important;
+}
+
+.message-row {
+  width: 100% !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+
+.message-row.assistant {
+  justify-content: flex-start !important;
+}
+
+.message-row.user {
+  justify-content: flex-end !important;
+}
+
+.message-row.user .message-avatar {
+  order: 2 !important;
+}
+
+.message-avatar {
+  flex: 0 0 42px !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 16px !important;
+  display: grid !important;
+  place-items: center !important;
+  align-self: flex-start !important;
+}
+
+.message-bubble {
+  display: block !important;
+  width: auto !important;
+  max-width: min(680px, 82%) !important;
+  min-width: 0 !important;
+  padding: 15px 17px !important;
+  border-radius: 20px !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+
+.message-row.assistant .message-bubble {
+  background: var(--bg) !important;
+  border: 1px solid var(--line) !important;
+  color: var(--primary-dark) !important;
+}
+
+.message-row.user .message-bubble {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+
+.message-name {
+  display: block !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  text-align: left !important;
+  font-size: 13px !important;
+  font-weight: 950 !important;
+  line-height: 1.4 !important;
+}
+
+.message-content {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  white-space: pre-line !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  text-indent: 0 !important;
+}
+
+.message-content::first-line {
+  text-indent: 0 !important;
+}
+
+.message-time {
+  display: block !important;
+  margin-top: 8px !important;
+  padding: 0 !important;
+  text-align: left !important;
+  font-size: 12px !important;
+  color: var(--muted) !important;
+}
+
+.message-row.user .message-time {
+  color: rgba(255, 255, 255, .76) !important;
+}
+
+@media (max-width: 640px) {
+  .chat-messages {
+    padding: 20px 20px 150px !important;
+  }
+
+  .message-bubble {
+    max-width: 86% !important;
+  }
+}
+
+.chat-header {
+  display: none !important;
+}
+
+/* ===== 回到底部按鈕 ===== */
+
+.scroll-bottom-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 132px;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 30;
+  box-shadow: 0 10px 26px rgba(23, 83, 77, .18);
+  display: none;
+}
+
+.scroll-bottom-btn.show {
+  display: grid;
+  place-items: center;
+}
+
+.scroll-bottom-btn:hover {
+  background: #f3f8f6;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+/* ===== Back link inside AI profile card ===== */
+
+.chatbot-sidebar > .back-link {
+  display: none;
+}
+
+.bot-profile-card {
+  position: relative;
+  padding-top: 72px !important;
+}
+
+.bot-card-back-link {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(23, 83, 77, .12);
+}
+
+.bot-card-back-link:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* 左側只保留 AI 卡片 + 聊天記錄，不再為外部返回按鈕預留空間 */
+.chatbot-sidebar {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 18px;
+}
+
+/* 手機版避免按鈕和內容擠在一起 */
+@media (max-width: 760px) {
+  .bot-profile-card {
+    padding-top: 68px !important;
+  }
+
+  .bot-card-back-link {
+    top: 16px;
+    left: 16px;
+    font-size: 13px;
+    padding: 0 14px;
+  }
+}
+
+/* ===== Daily Taiwan Tip inside bot card ===== */
+
+.bot-tip-text {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.75;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ===== AI 小幫手卡片內容往上移 ===== */
+
+.bot-profile-card {
+  justify-content: flex-start !important;
+  padding-top: 62px !important;
+  padding-bottom: 24px !important;
+  min-height: 260px;
+}
+
+/* 頭像往上，放在卡片上方三分之一附近 */
+.bot-profile-card .bot-avatar {
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+  transform: translateY(-8px);
+}
+
+/* 標題跟著往上 */
+.bot-profile-card h2 {
+  margin-top: -6px !important;
+  margin-bottom: 8px !important;
+  line-height: 1.3;
+}
+
+/* 每日小知識文字跟著收緊 */
+.bot-tip-text {
+  margin-top: 6px !important;
+  line-height: 1.55 !important;
+}
