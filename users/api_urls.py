@@ -42,12 +42,16 @@ urlpatterns = [
          name='api_password_reset_confirm'),
 
     # ── Email 驗證 ──────────────────────────────────────
-    # GET   /api/users/verify-email/<token>/   → 驗證 Email
+    # GET   /api/users/verify-email/<token>/   → 驗證 Email（重導至登入頁）
     path('users/verify-email/<str:token>/', views.verify_email_view, name='api_verify_email'),
 
     # POST  /api/users/resend-verification/    → 重新寄送驗證信
     path('users/resend-verification/', views.resend_verification_view,
          name='api_resend_verification'),
+
+    # ── Google OAuth ────────────────────────────────────
+    # POST  /api/users/google-login/           → Google ID Token 換取系統 Token
+    path('users/google-login/', views.google_login_view, name='api_google_login'),
 
     # ── 帳號安全 ───────────────────────────────────────
     # GET   /api/users/login-logs/          → 登入紀錄

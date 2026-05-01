@@ -3,9 +3,13 @@ studygo/settings.py
 Django 專案主設定檔
 """
 
+import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(BASE_DIR / '.env')
 
 SECRET_KEY = 'django-insecure-請替換成隨機字串-production-key-here'
 
@@ -24,12 +28,14 @@ INSTALLED_APPS = [
     'rest_framework',           # pip install djangorestframework
     'rest_framework.authtoken',
     'corsheaders',              # pip install django-cors-headers
-    'users',                    # 使用者管理模塊（模塊一）
+    'users',   
+    'chatbot',                 # 使用者管理模塊（模塊一）
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'corsheaders.middleware.CorsMiddleware',   # 必須在 CommonMiddleware 之前
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -61,18 +67,13 @@ WSGI_APPLICATION = 'studygo.wsgi.application'
 # ── 資料庫（開發用 SQLite，上線換 PostgreSQL）──
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':     'postgres',
+        'USER':     'postgres.hpszxboxqzmvisydcnhz',
+        'PASSWORD': 'uq6pUJAfP8wGIlCZ',
+        'HOST':     'aws-1-ap-southeast-1.pooler.supabase.com',
+        'PORT':     '5432',
     }
-    # 上線 PostgreSQL 範例：
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'studygo_db',
-    #     'USER': 'studygo_user',
-    #     'PASSWORD': 'yourpassword',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
-    # }
 }
 
 # ── 密碼驗證 ──
@@ -121,15 +122,28 @@ CORS_ALLOWED_ORIGINS = [
 ]
 CORS_ALLOW_CREDENTIALS = True
 
-# ── Email 設定（忘記密碼用）──
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # 開發用，印到 console
-# 上線 SMTP 範例：
-# EMAIL_BACKEND   = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST      = 'smtp.gmail.com'
-# EMAIL_PORT      = 587
-# EMAIL_USE_TLS   = True
-# EMAIL_HOST_USER = 'your@gmail.com'
-# EMAIL_HOST_PASSWORD = 'app_password'
+# ── Email 設定 ──
+# 使用環境變數設定 SMTP（Gmail 範例）：
+#   $env:EMAIL_HOST_USER="your@gmail.com"
+#   $env:EMAIL_HOST_PASSWORD="your_app_password"   ← Gmail 應用程式密碼（非帳號密碼）
+# 若未設定 EMAIL_HOST_USER，自動退回 console 模式（印到終端機）
+_email_user = os.environ.get('EMAIL_HOST_USER', '')
+if _email_user:
+    EMAIL_BACKEND       = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST          = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+    EMAIL_PORT          = int(os.environ.get('EMAIL_PORT', 587))
+    EMAIL_USE_TLS       = True
+    EMAIL_HOST_USER     = _email_user
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+    DEFAULT_FROM_EMAIL  = os.environ.get('DEFAULT_FROM_EMAIL', _email_user)
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'noreply@studygo.tw'
+
+# ── Google OAuth ──
+# 在 Google Cloud Console 建立 OAuth 2.0 用戶端 ID 後填入：
+#   $env:GOOGLE_CLIENT_ID="xxxx.apps.googleusercontent.com"
+GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID', '')
 
 # ── Session 設定 ──
 SESSION_COOKIE_AGE     = 60 * 60 * 24 * 7  # 7 天
@@ -138,3 +152,32 @@ SESSION_COOKIE_HTTPONLY= True
 
 # ── CSRF ──
 CSRF_COOKIE_SAMESITE = 'Lax'
+
+# ── Google Sign-In 彈窗修復 ──
+# Django 5.x 預設 COOP: same-origin 會阻擋 GSI popup 回傳 credential
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
+
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
+OPENAI_MODEL = os.environ.get('OPENAI_MODEL', 'gpt-5.4-mini')
+
+from django.utils.translation import gettext_lazy as _
+
+LANGUAGE_CODE = 'zh-hant'
+
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
+LANGUAGES = [
+    ('zh-hant', _('繁體中文')),
+    ('en', _('English')),
+    ('ja', _('日本語')),
+    ('my', _('မြန်မာဘာသာ')),
+    ('id', _('Bahasa Indonesia')),
+    ('th', _('ภาษาไทย')),
+    ('ms', _('Bahasa Melayu')),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]

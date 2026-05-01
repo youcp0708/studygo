@@ -128,7 +128,7 @@ function switchAuth(type) {
 /* ════════════════════════════════════════
    2. Confirm Modal
 ════════════════════════════════════════ */
-function confirmAction(type, title, msg, cbName) {
+function confirmAction(_type, title, msg, cbName) {
   document.getElementById('modalTitle').textContent = title;
   document.getElementById('modalMsg').textContent = msg;
   document.getElementById('confirmModal').classList.remove('hidden');
@@ -382,7 +382,7 @@ async function handleForgot(e) {
 
   setLoading('forgotBtn', true);
 
-  const { ok, data } = await apiFetch('/api/users/password-reset/', 'POST', { email });
+  await apiFetch('/api/users/password-reset/', 'POST', { email });
 
   setLoading('forgotBtn', false);
 
@@ -409,8 +409,8 @@ async function deleteAccount() {
   const { ok, data } = await apiFetch('/api/users/delete/', 'DELETE');
   if (ok) {
     localStorage.removeItem('authToken');
-    showToast('帳號已刪除', 'info');
-    showPage('loginPage');
+    showToast('帳號已停用，感謝您使用 StudyGo Taiwan', 'info', 2000);
+    setTimeout(() => { window.location.href = '/login/?deleted=1'; }, 2000);
   } else {
     showToast(data?.message || '刪除失敗', 'error');
   }
@@ -629,26 +629,32 @@ function startLoginSlider() {
    20. 頁面初始化：檢查是否已登入
 ════════════════════════════════════════ */
 async function initApp() {
-  // 啟動登入頁幻燈片輪播
-  if (document.querySelectorAll('.login-slide').length > 0) {
-    showLoginSlide(0);
-    startLoginSlider();
-  }
-
-  // 在 login 頁面：表示 server 已確認 session 失效，清掉 localStorage 讓使用者重新登入
+  // ── Login 頁面：清掉舊 token，啟動輪播後直接結束 ──
   if (document.getElementById('loginPage')) {
     localStorage.removeItem('authToken');
+    if (document.querySelectorAll('.login-slide').length > 0) {
+      showLoginSlide(0);
+      startLoginSlider();
+    }
+    // 啟動 Google 登入按鈕（GSI 可能尚未載入，用輪詢等待）
+    initGoogleSignIn();
+    // 顯示 Email 驗證結果通知
+    const params = new URLSearchParams(window.location.search);
+    const verified = params.get('verified');
+    if (verified === '1')        showToast('Email 驗證成功！請登入您的帳號', 'success');
+    else if (verified === 'fail')    showToast('驗證連結無效或已使用', 'error');
+    else if (verified === 'expired') showToast('驗證連結已過期，請重新申請', 'error');
+    if (params.get('deleted') === '1') showToast('帳號已停用，感謝您使用 StudyGo Taiwan', 'info', 5000);
     return;
   }
 
-  // 其他受保護頁面：沒有 token 就跳回登入
-  const token = localStorage.getItem('authToken');
-  if (!token) {
-    window.location.href = '/login/';
+  // ── 公開頁面（忘記密碼、重設密碼）：不需要登入，直接結束 ──
+  const publicPaths = ['/forgot-password/', '/reset-password/'];
+  if (publicPaths.some(p => window.location.pathname.startsWith(p))) {
     return;
   }
 
-  // 驗證 Token 是否有效
+  // ── 受保護頁面：驗證 Session（Token 或 Django Session Cookie）──
   const { ok, data } = await apiFetch('/api/users/me/');
   if (!ok) {
     localStorage.removeItem('authToken');
@@ -661,21 +667,70 @@ async function initApp() {
 
   updateNavAuth(user);
 
-  if (!profile) {
-    if (document.getElementById('profileSetupPage')) {
-      _prefillSetupPreview(user);
-      showPage('profileSetupPage');
-    } else {
-      window.location.href = '/profile/setup/';
-    }
-  } else {
-    if (document.getElementById('profileDash')) {
-      populateDashboard(user, profile);
-      showPage('profileDash');
-    } else {
-      window.location.href = '/dashboard/';
-    }
+  // ── 依當前頁面 ID 決定要做什麼，不做跨頁跳轉 ──
+  if (document.getElementById('profileDash')) {
+    // Dashboard 頁
+    populateDashboard(user, profile);
+    showPage('profileDash');
+  } else if (document.getElementById('profileSetupPage')) {
+    // 個人資料設定頁
+    _prefillSetupPreview(user);
+    showPage('profileSetupPage');
   }
+  // editProfilePage、forgotPage 等：Django 已渲染好，只需更新 navbar
+}
+
+/* ════════════════════════════════════════
+   21. Google OAuth 登入
+════════════════════════════════════════ */
+
+/** Google Identity Services 初始化：輪詢直到 google 物件就緒 */
+function initGoogleSignIn() {
+  if (!window.GOOGLE_CLIENT_ID) return;
+  if (typeof google === 'undefined' || !google.accounts) {
+    setTimeout(initGoogleSignIn, 100);
+    return;
+  }
+  google.accounts.id.initialize({
+    client_id: window.GOOGLE_CLIENT_ID,
+    callback: handleGoogleLogin,
+    auto_select: false,
+    cancel_on_tap_outside: true,
+  });
+  const container = document.getElementById('googleBtnContainer');
+  if (container) {
+    google.accounts.id.renderButton(container, {
+      theme: 'outline',
+      size: 'large',
+      width: 300,
+      text: 'signin_with',
+      logo_alignment: 'center',
+    });
+  }
+}
+
+/** 收到 Google ID Token 後送往後端換取系統 Token */
+async function handleGoogleLogin(response) {
+  const credential = response.credential;
+  if (!credential) {
+    showToast('Google 登入失敗，未取得憑證', 'error');
+    return;
+  }
+
+  const { ok, data } = await apiFetch('/api/users/google-login/', 'POST', { credential });
+
+  if (!ok) {
+    showToast(data?.message || 'Google 登入失敗', 'error');
+    return;
+  }
+
+  localStorage.setItem('authToken', data.data.token);
+  const isNew = data.data.is_new_user;
+  showToast(isNew ? `帳號已建立，歡迎 ${data.data.user.name}！` : `歡迎回來，${data.data.user.name}！`, 'success');
+
+  setTimeout(() => {
+    window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
+  }, 600);
 }
 
 // 啟動

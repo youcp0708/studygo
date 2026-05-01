@@ -1,3 +1,4 @@
+/* ===== Language Selector ===== */
 /*
  * users/static/users/css/users.css
  * 使用者管理模塊專屬樣式
@@ -1091,7 +1092,7 @@ button {
 /* Admission Status Cards */
 .status-cards-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-top: 6px;
 }
@@ -1612,5 +1613,58 @@ button {
 
   .profile-left h2 {
     font-size: 32px;
+  }
+}
+.nav-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-greeting {
+  font-weight: 800;
+  color: var(--primary-dark);
+  font-size: 15px;
+}
+
+.language-form {
+  margin: 0;
+}
+
+.language-select {
+  height: 40px;
+  padding: 0 14px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  color: var(--primary-dark);
+  background: #fff;
+  font-weight: 900;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.language-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(87, 152, 132, .12);
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    height: auto;
+    min-height: 88px;
+    padding: 14px 18px;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .language-select {
+    height: 38px;
   }
 }

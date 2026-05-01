@@ -1,7 +1,7 @@
 {# users/templates/users/profile_setup.html — Step 2 填寫個人資料 #}
 {% extends "base.html" %}
-{% load static %}
-{% block title %}填寫個人資料 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "填寫個人資料" %} — StudyGo Taiwan{% endblock %}
 
 {% block content %}
 <section id="profileSetupPage" class="page" style="padding:0;">
@@ -12,17 +12,17 @@
     <div class="step-indicator">
       <div class="si-step">
         <div class="si-circle done">✓</div>
-        <div class="si-label">建立帳號</div>
+        <div class="si-label">{% trans "建立帳號" %}</div>
       </div>
       <div class="si-line done"></div>
       <div class="si-step">
         <div class="si-circle active">2</div>
-        <div class="si-label active">填寫資料</div>
+        <div class="si-label active">{% trans "填寫資料" %}</div>
       </div>
       <div class="si-line"></div>
       <div class="si-step">
         <div class="si-circle">3</div>
-        <div class="si-label">開始使用</div>
+        <div class="si-label">{% trans "開始使用" %}</div>
       </div>
     </div>
 
@@ -30,104 +30,105 @@
 
       {# 左：標題 + 表單 #}
       <div class="profile-left">
-        <h2>填寫個人資料</h2>
-        <p>這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。</p>
+        <h2>{% trans "填寫個人資料" %}</h2>
+        <p>{% trans "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。" %}</p>
 
         <form id="profileSetupForm" onsubmit="handleProfileSetup(event)">
           {% csrf_token %}
 
-          <div class="setup-section-title">基本資訊</div>
+          <div class="setup-section-title">{% trans "基本資訊" %}</div>
+
           <div class="field-row">
             <div class="field">
-              <label>國籍 Nationality</label>
+              <label>{% trans "國籍" %} Nationality</label>
               <select name="nationality" id="setupNationality" required onchange="updatePreview()">
-                <option value="">請選擇國籍</option>
-                <option value="Indonesia">🇮🇩 印尼</option>
-                <option value="Malaysia">🇲🇾 馬來西亞</option>
-                <option value="Vietnam">🇻🇳 越南</option>
-                <option value="Thailand">🇹🇭 泰國</option>
-                <option value="Philippines">🇵🇭 菲律賓</option>
-                <option value="Cambodia">🇰🇭 柬埔寨</option>
-                <option value="Myanmar">🇲🇲 緬甸</option>
-                <option value="Japan">🇯🇵 日本</option>
-                <option value="Korea">🇰🇷 韓國</option>
-                <option value="Other">🌍 其他</option>
+                <option value="">{% trans "請選擇國籍" %}</option>
+                <option value="Indonesia">🇮🇩 {% trans "印尼" %}</option>
+                <option value="Malaysia">🇲🇾 {% trans "馬來西亞" %}</option>
+                <option value="Vietnam">🇻🇳 {% trans "越南" %}</option>
+                <option value="Thailand">🇹🇭 {% trans "泰國" %}</option>
+                <option value="Philippines">🇵🇭 {% trans "菲律賓" %}</option>
+                <option value="Cambodia">🇰🇭 {% trans "柬埔寨" %}</option>
+                <option value="Myanmar">🇲🇲 {% trans "緬甸" %}</option>
+                <option value="Japan">🇯🇵 {% trans "日本" %}</option>
+                <option value="Korea">🇰🇷 {% trans "韓國" %}</option>
+                <option value="Other">🌍 {% trans "其他" %}</option>
               </select>
               <div class="field-error hidden" id="nationalityErr"></div>
             </div>
+
             <div class="field">
-              <label>就讀學校</label>
-              <input type="text" name="university" id="setupUniversity" placeholder="例如：國立臺灣大學" required
+              <label>{% trans "就讀學校" %}</label>
+              <input type="text" name="university" id="setupUniversity" placeholder="{% trans '例如：國立臺灣大學' %}" required
                 oninput="updatePreview()" />
               <div class="field-error hidden" id="universityErr"></div>
             </div>
           </div>
 
-          <div class="setup-section-title">身份別</div>
+          <div class="setup-section-title">{% trans "身份別" %}</div>
+
           <div class="field">
             <select name="identity_type" id="setupIdentity" required onchange="updatePreview()">
-              <option value="">請選擇身份別</option>
-              <option value="overseas_chinese">🏮 僑生（海外華裔）</option>
-              <option value="foreign_student">🌐 外籍生</option>
-              <option value="exchange">🔄 交換生</option>
-              <option value="preparatory">📚 僑大先修生</option>
+              <option value="">{% trans "請選擇身份別" %}</option>
+              <option value="overseas_chinese">🏮 {% trans "僑生（海外華裔）" %}</option>
+              <option value="foreign_student">🌐 {% trans "外籍生" %}</option>
+              <option value="preparatory">📚 {% trans "僑大先修生" %}</option>
             </select>
-            <div class="field-hint">身份別將影響您的流程任務內容</div>
+            <div class="field-hint">{% trans "身份別將影響您的流程任務內容" %}</div>
             <div class="field-error hidden" id="identityErr"></div>
           </div>
 
-          <div class="setup-section-title">入學狀態</div>
+          <div class="setup-section-title">{% trans "入學狀態" %}</div>
+
           <div class="status-cards-grid">
-            <div class="status-card" data-val="applied" onclick="selectStatus(this)">
-              <div class="radio-dot"></div>
-              <div>
-                <div style="font-size:15px;font-weight:900;">📩 已提出申請</div>
-                <div style="font-size:12px;color:var(--muted);margin-top:2px;">等待錄取通知中</div>
-              </div>
-            </div>
             <div class="status-card" data-val="admitted" onclick="selectStatus(this)">
               <div class="radio-dot"></div>
               <div>
-                <div style="font-size:15px;font-weight:900;">🎉 已收到錄取通知</div>
-                <div style="font-size:12px;color:var(--muted);margin-top:2px;">準備來臺流程</div>
+                <div style="font-size:14px;font-weight:900;">🎉 {% trans "已收到錄取通知" %}</div>
+                <div style="font-size:12px;color:var(--muted);margin-top:2px;">{% trans "準備來臺流程" %}</div>
               </div>
             </div>
+
             <div class="status-card" data-val="pre_arrival" onclick="selectStatus(this)">
               <div class="radio-dot"></div>
               <div>
-                <div style="font-size:15px;font-weight:900;">✈️ 入境前準備中</div>
-                <div style="font-size:12px;color:var(--muted);margin-top:2px;">辦理簽證等手續</div>
+                <div style="font-size:14px;font-weight:900;">✈️ {% trans "入境前準備中" %}</div>
+                <div style="font-size:12px;color:var(--muted);margin-top:2px;">{% trans "辦理簽證等手續" %}</div>
               </div>
             </div>
+
             <div class="status-card" data-val="arrived" onclick="selectStatus(this)">
               <div class="radio-dot"></div>
               <div>
-                <div style="font-size:15px;font-weight:900;">🏫 已抵臺就學中</div>
-                <div style="font-size:12px;color:var(--muted);margin-top:2px;">辦理 ARC 等後續</div>
+                <div style="font-size:14px;font-weight:900;">🏫 {% trans "已抵臺就學中" %}</div>
+                <div style="font-size:12px;color:var(--muted);margin-top:2px;">{% trans "辦理 ARC 等後續" %}</div>
               </div>
             </div>
           </div>
+
           <input type="hidden" name="admission_status" id="admissionStatusVal" />
           <div class="field-error hidden" id="statusErr" style="margin-top:6px;"></div>
 
-          <div class="setup-section-title">時間規劃</div>
+          <div class="setup-section-title">{% trans "時間規劃" %}</div>
+
           <div class="field-row">
             <div class="field">
-              <label>預計抵台日期</label>
+              <label>{% trans "預計抵台日期" %}</label>
               <input type="date" name="expected_arrival" id="setupArrival" onchange="updatePreview()" />
-              <div class="field-hint">非必填</div>
+              <div class="field-hint">{% trans "非必填" %}</div>
             </div>
+
             <div class="field">
-              <label>系所</label>
-              <input type="text" name="department" id="setupDept" placeholder="例如：資訊工程學系" oninput="updatePreview()" />
+              <label>{% trans "系所" %}</label>
+              <input type="text" name="department" id="setupDept" placeholder="{% trans '例如：資訊工程學系' %}" oninput="updatePreview()" />
             </div>
           </div>
 
           <div style="display:flex;gap:14px;margin-top:24px;">
             <a href="{% url 'login_page' %}" class="btn-outline-sm"
-              style="padding:13px 24px;border-radius:10px;font-size:15px;">← 返回</a>
+              style="padding:13px 24px;border-radius:10px;font-size:15px;">← {% trans "返回" %}</a>
             <button type="submit" class="btn-primary" style="flex:1;" id="setupSubmitBtn">
-              儲存資料並開始使用 →
+              {% trans "儲存資料並開始使用" %} →
             </button>
           </div>
         </form>
@@ -136,23 +137,41 @@
       {# 右：即時預覽 #}
       <div class="profile-side">
         <div class="preview-card">
-          <h3>帳號資料預覽</h3>
+          <h3>{% trans "帳號資料預覽" %}</h3>
           <div class="preview-avatar" id="prevAvatar">{{ user.name|first|upper }}</div>
           <div class="preview-name" id="prevName">{{ user.name }}</div>
           <div class="preview-meta" id="prevEmail">{{ user.email }}</div>
+
           <div class="preview-tags">
-            <span class="preview-tag" id="prevNationality">國籍未選</span>
-            <span class="preview-tag identity" id="prevIdentity">身份別未選</span>
-            <span class="preview-tag status" id="prevStatus">狀態未選</span>
+            <span class="preview-tag" id="prevNationality">{% trans "國籍未選" %}</span>
+            <span class="preview-tag identity" id="prevIdentity">{% trans "身份別未選" %}</span>
+            <span class="preview-tag status" id="prevStatus">{% trans "狀態未選" %}</span>
           </div>
+
           <div class="preview-divider"></div>
-          <div class="preview-row"><span>就讀學校</span><span id="prevUniv">—</span></div>
-          <div class="preview-row"><span>系所</span><span id="prevDept">—</span></div>
-          <div class="preview-row"><span>預計抵台</span><span id="prevArrival">—</span></div>
+
+          <div class="preview-row">
+            <span>{% trans "就讀學校" %}</span>
+            <span id="prevUniv">—</span>
+          </div>
+
+          <div class="preview-row">
+            <span>{% trans "系所" %}</span>
+            <span id="prevDept">—</span>
+          </div>
+
+          <div class="preview-row">
+            <span>{% trans "預計抵台" %}</span>
+            <span id="prevArrival">—</span>
+          </div>
+
           <div style="margin-top:20px;padding:14px;background:rgba(87,152,132,.08);
                       border-radius:14px;font-size:13px;color:#3a6b62;line-height:1.7;">
-            💡 資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與
+            💡
+            {% blocktrans %}
+            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與
             <b>入學狀態</b> 自動生成個人化任務流程。
+            {% endblocktrans %}
           </div>
         </div>
       </div>
@@ -163,6 +182,9 @@
 </section>
 
 <script>
-  window._tempUser = { name: "{{ user.name|escapejs }}", email: "{{ user.email|escapejs }}" };
+  window._tempUser = {
+    name: "{{ user.name|escapejs }}",
+    email: "{{ user.email|escapejs }}"
+  };
 </script>
 {% endblock %}

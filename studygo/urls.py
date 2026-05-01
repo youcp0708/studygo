@@ -14,8 +14,10 @@ urlpatterns = [
     # 使用者管理模塊（模塊一）
     # 前端頁面路由：/users/
     # API 路由：   /api/users/
-    path('',        include('users.urls')),
-    path('api/',    include('users.api_urls')),
+    path('', include('users.urls')),
+    path('api/', include('users.api_urls')),
+    path('chatbot/', include('chatbot.urls')),
+    path('i18n/', include('django.conf.urls.i18n')),
 ]
 
 # 開發模式下提供媒體檔案
