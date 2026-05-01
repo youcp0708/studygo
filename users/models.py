@@ -91,8 +91,9 @@ class StudentProfile(models.Model):
 
     # ── 身份別選項 (identityType) ──
     IDENTITY_CHOICES = [
-        ('overseas_chinese_student', '僑生（海外華裔）'),
-        ('foreign_student',          '外籍生（一般外國學生）')
+        ('overseas_chinese','僑生（海外華裔）'),
+        ('foreign_student','外籍生（一般外國學生）'),
+        ('hong_kong_macau', '港澳生'),
     ]
 
     # ── 入學狀態選項 (admissionStatus) ──
@@ -130,7 +131,7 @@ class StudentProfile(models.Model):
     identity_type    = models.CharField(max_length=30, choices=IDENTITY_CHOICES,
                                         verbose_name='身份別')
     admission_status = models.CharField(max_length=20, choices=ADMISSION_STATUS_CHOICES,
-                                        default='applied', verbose_name='入學狀態')
+                                        default='pre_arrival', verbose_name='入學狀態')
 
     # ── 額外資料 ──
     department       = models.CharField(max_length=200, blank=True, verbose_name='系所')
@@ -139,6 +140,9 @@ class StudentProfile(models.Model):
                                          verbose_name='頭像')
     preferred_language = models.CharField(max_length=10, default='zh-hant',
                                           verbose_name='慣用語言')
+
+
+    
 
     # ── 時間戳 ──
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')
