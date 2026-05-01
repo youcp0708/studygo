@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'corsheaders',              # pip install django-cors-headers
     'users',                    # 使用者管理模塊（模塊一）
     'flows',                    # 流程模塊(模塊二)
+    'chatbot',                  # AI 聊天機器人
 ]
 
 MIDDLEWARE = [
@@ -41,6 +42,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'studygo.urls'
