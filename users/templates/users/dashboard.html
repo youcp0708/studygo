@@ -17,7 +17,7 @@
     <div class="dash-actions">
       <a href="{% url 'edit_profile' %}" class="dash-btn dash-btn-primary">✏️ 編輯個人資料</a>
       <a href="{% url 'my_flows' %}" class="dash-btn dash-btn-outline">📋 查看任務清單</a>
-      <a href="#" class="dash-btn dash-btn-outline" onclick="showToast('AI 小幫手開發中...','info')">🤖 詢問 AI 小幫手</a>
+      <a href="/chatbot/" class="dash-btn dash-btn-outline">🤖 詢問 AI 小幫手</a>
     </div>
   </div>
 
@@ -74,7 +74,8 @@
           </div>
           <div class="preview-row">
             <span>預計抵台</span>
-            <span>{% if profile and profile.expected_arrival %}{{ profile.expected_arrival }}{% else %}—{% endif %}</span>
+            <span>{% if profile and profile.expected_arrival %}{{ profile.expected_arrival }}{% else %}—{% endif
+              %}</span>
           </div>
           <div class="preview-row">
             <span>帳號建立</span>
