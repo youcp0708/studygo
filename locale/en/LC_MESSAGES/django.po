@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-01 17:33+0800\n"
+"POT-Creation-Date: 2026-05-01 23:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,22 +49,22 @@ msgid "聊天記錄選單"
 msgstr "Chat History Menu"
 
 #: .\chatbot\templates\chatbot\chatbot.html:54
-#: .\chatbot\templates\chatbot\chatbot.html:168
+#: .\chatbot\templates\chatbot\chatbot.html:172
 msgid "取消釘選"
 msgstr "Unpin"
 
 #: .\chatbot\templates\chatbot\chatbot.html:54
-#: .\chatbot\templates\chatbot\chatbot.html:167
+#: .\chatbot\templates\chatbot\chatbot.html:171
 msgid "釘選"
 msgstr "Pin"
 
 #: .\chatbot\templates\chatbot\chatbot.html:56
-#: .\chatbot\templates\chatbot\chatbot.html:169
+#: .\chatbot\templates\chatbot\chatbot.html:173
 msgid "重新命名"
 msgstr "Rename"
 
 #: .\chatbot\templates\chatbot\chatbot.html:57
-#: .\chatbot\templates\chatbot\chatbot.html:170
+#: .\chatbot\templates\chatbot\chatbot.html:174
 msgid "刪除"
 msgstr "Delete"
 
@@ -80,145 +80,151 @@ msgstr ""
 
 #: .\chatbot\templates\chatbot\chatbot.html:88
 #: .\chatbot\templates\chatbot\chatbot.html:101
-#: .\chatbot\templates\chatbot\chatbot.html:154
+#: .\chatbot\templates\chatbot\chatbot.html:158
 msgid "StudyGo AI 小幫手"
 msgstr "StudyGo AI Assistant"
 
 #: .\chatbot\templates\chatbot\chatbot.html:103
-msgid "你好 !"
-msgstr ""
-
-#: .\chatbot\templates\chatbot\chatbot.html:104
-#, fuzzy
-#| msgid "同學"
-msgid " 同學"
+msgid "同學"
 msgstr "Student"
 
-#: .\chatbot\templates\chatbot\chatbot.html:105
-#, fuzzy
-#| msgid ""
-#| "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做"
-#| "什麼。"
-msgid ""
-"你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
-msgstr ""
-". You can ask me about the study-in-Taiwan process, such as visas, ARC, "
-"health insurance, accommodation, registration, or what to do after arrival."
+#: .\chatbot\templates\chatbot\chatbot.html:107
+msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼。"
+msgstr "You can ask me about the study-in-Taiwan process, such as visas, ARC, health insurance, accommodation, registration, or what to do after arrival."
 
-#: .\chatbot\templates\chatbot\chatbot.html:122
+#: .\chatbot\templates\chatbot\chatbot.html:126
 msgid "新增附件"
 msgstr "Add Attachment"
 
-#: .\chatbot\templates\chatbot\chatbot.html:127
+#: .\chatbot\templates\chatbot\chatbot.html:131
 msgid "上傳檔案"
 msgstr "Upload File"
 
-#: .\chatbot\templates\chatbot\chatbot.html:128
+#: .\chatbot\templates\chatbot\chatbot.html:132
 msgid "上傳圖片"
 msgstr "Upload Image"
 
-#: .\chatbot\templates\chatbot\chatbot.html:129
+#: .\chatbot\templates\chatbot\chatbot.html:133
 msgid "拍照"
 msgstr "Take Photo"
 
-#: .\chatbot\templates\chatbot\chatbot.html:133
+#: .\chatbot\templates\chatbot\chatbot.html:137
 msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
 msgstr ""
 "For example: I am coming from Myanmar to study for a bachelor's degree in "
 "Taiwan. What should I prepare first for the visa?"
 
-#: .\chatbot\templates\chatbot\chatbot.html:135
-#: .\chatbot\templates\chatbot\chatbot.html:166
+#: .\chatbot\templates\chatbot\chatbot.html:139
+#: .\chatbot\templates\chatbot\chatbot.html:170
 msgid "送出"
 msgstr "Send"
 
-#: .\chatbot\templates\chatbot\chatbot.html:153
+#: .\chatbot\templates\chatbot\chatbot.html:157
 msgid "我"
 msgstr "Me"
 
-#: .\chatbot\templates\chatbot\chatbot.html:155
+#: .\chatbot\templates\chatbot\chatbot.html:159
 msgid "已上傳附件"
 msgstr "Attachment uploaded"
 
-#: .\chatbot\templates\chatbot\chatbot.html:156
+#: .\chatbot\templates\chatbot\chatbot.html:160
 msgid "找不到 message API"
 msgstr "Message API not found"
 
-#: .\chatbot\templates\chatbot\chatbot.html:157
+#: .\chatbot\templates\chatbot\chatbot.html:161
 msgid "送出失敗，請稍後再試。"
 msgstr "Failed to send. Please try again later."
 
-#: .\chatbot\templates\chatbot\chatbot.html:158
+#: .\chatbot\templates\chatbot\chatbot.html:162
 msgid "網路或伺服器發生錯誤，請稍後再試。"
 msgstr "A network or server error occurred. Please try again later."
 
-#: .\chatbot\templates\chatbot\chatbot.html:159
+#: .\chatbot\templates\chatbot\chatbot.html:163
 msgid "新的聊天"
 msgstr "New Chat"
 
-#: .\chatbot\templates\chatbot\chatbot.html:160
+#: .\chatbot\templates\chatbot\chatbot.html:164
 msgid "請輸入新的聊天名稱"
 msgstr "Please enter a new chat name"
 
-#: .\chatbot\templates\chatbot\chatbot.html:161
+#: .\chatbot\templates\chatbot\chatbot.html:165
 msgid "建立新聊天失敗"
 msgstr "Failed to create new chat"
 
-#: .\chatbot\templates\chatbot\chatbot.html:162
+#: .\chatbot\templates\chatbot\chatbot.html:166
 msgid "重新命名失敗"
 msgstr "Failed to rename"
 
-#: .\chatbot\templates\chatbot\chatbot.html:163
+#: .\chatbot\templates\chatbot\chatbot.html:167
 msgid "釘選失敗"
 msgstr "Failed to pin"
 
-#: .\chatbot\templates\chatbot\chatbot.html:164
+#: .\chatbot\templates\chatbot\chatbot.html:168
 msgid "刪除失敗"
 msgstr "Failed to delete"
 
-#: .\chatbot\templates\chatbot\chatbot.html:165
+#: .\chatbot\templates\chatbot\chatbot.html:169
 msgid "回覆中…"
 msgstr "Replying..."
 
 #: .\chatbot\views.py:16
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
-msgstr "Convenience stores in Taiwan can be used for bill payment, parcel pickup, printing, and buying many daily necessities."
+msgstr ""
+"Convenience stores in Taiwan can be used for bill payment, parcel pickup, "
+"printing, and buying many daily necessities."
 
 #: .\chatbot\views.py:17
 msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
-msgstr "In Taiwan, people often use an EasyCard or iPASS to take the MRT and buses."
+msgstr ""
+"In Taiwan, people often use an EasyCard or iPASS to take the MRT and buses."
 
 #: .\chatbot\views.py:18
 msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
-msgstr "Many schools in Taiwan have an international affairs office that helps international students with admission and daily life issues."
+msgstr ""
+"Many schools in Taiwan have an international affairs office that helps "
+"international students with admission and daily life issues."
 
 #: .\chatbot\views.py:19
 msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
-msgstr "Before renting in Taiwan, check the rent, deposit, utility fees, and lease period."
+msgstr ""
+"Before renting in Taiwan, check the rent, deposit, utility fees, and lease "
+"period."
 
 #: .\chatbot\views.py:20
 msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
-msgstr "When seeing a doctor in Taiwan, medical costs are usually lower if you are enrolled in National Health Insurance."
+msgstr ""
+"When seeing a doctor in Taiwan, medical costs are usually lower if you are "
+"enrolled in National Health Insurance."
 
 #: .\chatbot\views.py:21
 msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
-msgstr "Garbage trucks in Taiwan often play music to remind residents to take out trash. The schedule differs by area."
+msgstr ""
+"Garbage trucks in Taiwan often play music to remind residents to take out "
+"trash. The schedule differs by area."
 
 #: .\chatbot\views.py:22
 msgid "台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"
-msgstr "Taiwan’s summers are hot and humid, so it is useful to carry water, sun protection, and rain gear."
+msgstr ""
+"Taiwan’s summers are hot and humid, so it is useful to carry water, sun "
+"protection, and rain gear."
 
 #: .\chatbot\views.py:23
 msgid "如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"
-msgstr "If you change your address in Taiwan, some documents or school records may need to be updated."
+msgstr ""
+"If you change your address in Taiwan, some documents or school records may "
+"need to be updated."
 
 #: .\chatbot\views.py:24
 msgid "台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"
-msgstr "Taiwanese schools often use email or school systems to announce important information, so check them regularly."
+msgstr ""
+"Taiwanese schools often use email or school systems to announce important "
+"information, so check them regularly."
 
 #: .\chatbot\views.py:25
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
-msgstr "When applying for a mobile number after arriving in Taiwan, you usually need a passport, ARC, or other identity documents."
+msgstr ""
+"When applying for a mobile number after arriving in Taiwan, you usually need "
+"a passport, ARC, or other identity documents."
 
 #: .\studygo\settings.py:172
 msgid "繁體中文"
@@ -1009,6 +1015,9 @@ msgstr "Password reset successful. Please log in again."
 msgid "重設失敗，連結可能已過期"
 msgstr "Reset failed. The link may have expired."
 
+#~ msgid "你好!"
+#~ msgstr "hello!"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Back to Dashboard"
 
@@ -1023,3 +1032,5 @@ msgstr "Reset failed. The link may have expired."
 
 #~ msgid "我的帳戶"
 #~ msgstr "My Account"
+
+

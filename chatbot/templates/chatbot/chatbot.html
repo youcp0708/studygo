@@ -100,9 +100,8 @@
           <div class="message-bubble">
             <div class="message-name">{% trans "StudyGo AI 小幫手" %}</div>
             <div class="message-content">
-              {% trans "你好 !" %}
-              {% if user.name %}{{ user.name }}{% elif user.email %}{{ user.email }}{% else %}{% trans " 同學" %}{% endif %}
-              {% trans "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼" %}
+              {% trans "Hello! " %}{% if user.name %}{{ user.name }}{% elif user.email %}{{ user.email }}{% else %}{% trans " 同學" %}{% endif %}
+              <!-- {% trans "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼" %} -->
             </div>
           </div>
         </div>

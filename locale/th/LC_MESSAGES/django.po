@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-01 17:33+0800\n"
+"POT-Creation-Date: 2026-05-01 23:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,22 +49,22 @@ msgid "聊天記錄選單"
 msgstr "เมนูประวัติการสนทนา"
 
 #: .\chatbot\templates\chatbot\chatbot.html:54
-#: .\chatbot\templates\chatbot\chatbot.html:168
+#: .\chatbot\templates\chatbot\chatbot.html:172
 msgid "取消釘選"
 msgstr "ยกเลิกการปักหมุด"
 
 #: .\chatbot\templates\chatbot\chatbot.html:54
-#: .\chatbot\templates\chatbot\chatbot.html:167
+#: .\chatbot\templates\chatbot\chatbot.html:171
 msgid "釘選"
 msgstr "ปักหมุด"
 
 #: .\chatbot\templates\chatbot\chatbot.html:56
-#: .\chatbot\templates\chatbot\chatbot.html:169
+#: .\chatbot\templates\chatbot\chatbot.html:173
 msgid "重新命名"
 msgstr "เปลี่ยนชื่อ"
 
 #: .\chatbot\templates\chatbot\chatbot.html:57
-#: .\chatbot\templates\chatbot\chatbot.html:170
+#: .\chatbot\templates\chatbot\chatbot.html:174
 msgid "刪除"
 msgstr "ลบ"
 
@@ -78,107 +78,105 @@ msgstr "กรอกคำถามของคุณ ระบบจะจั�
 
 #: .\chatbot\templates\chatbot\chatbot.html:88
 #: .\chatbot\templates\chatbot\chatbot.html:101
-#: .\chatbot\templates\chatbot\chatbot.html:154
+#: .\chatbot\templates\chatbot\chatbot.html:158
 msgid "StudyGo AI 小幫手"
 msgstr "ผู้ช่วย AI StudyGo"
 
 #: .\chatbot\templates\chatbot\chatbot.html:103
-msgid "你好 !"
-msgstr ""
-
-#: .\chatbot\templates\chatbot\chatbot.html:104
 #, fuzzy
 #| msgid "同學"
-msgid " 同學"
+msgid "同學"
 msgstr "นักศึกษา"
 
-#: .\chatbot\templates\chatbot\chatbot.html:105
-#, fuzzy
+#: .\chatbot\templates\chatbot\chatbot.html:107
+#, fuzzy, python-format
 #| msgid ""
 #| "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做"
 #| "什麼。"
 msgid ""
-"你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
+"你好，%(user_display)s你可以問我來臺就學的流程，例如簽證、居留證、健保、住"
+"宿、註冊或入境後要做什麼。"
 msgstr ""
 "คุณสามารถถามฉันเกี่ยวกับขั้นตอนการมาเรียนที่ไต้หวัน เช่น วีซ่า ใบถิ่นที่อยู่ ประกันสุขภาพ ที่พัก "
 "การลงทะเบียน หรือสิ่งที่ต้องทำหลังเดินทางมาถึงไต้หวัน"
 
-#: .\chatbot\templates\chatbot\chatbot.html:122
+#: .\chatbot\templates\chatbot\chatbot.html:126
 msgid "新增附件"
 msgstr "เพิ่มไฟล์แนบ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:127
+#: .\chatbot\templates\chatbot\chatbot.html:131
 msgid "上傳檔案"
 msgstr "อัปโหลดไฟล์"
 
-#: .\chatbot\templates\chatbot\chatbot.html:128
+#: .\chatbot\templates\chatbot\chatbot.html:132
 msgid "上傳圖片"
 msgstr "อัปโหลดรูปภาพ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:129
+#: .\chatbot\templates\chatbot\chatbot.html:133
 msgid "拍照"
 msgstr "ถ่ายภาพ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:133
+#: .\chatbot\templates\chatbot\chatbot.html:137
 msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
 msgstr "ตัวอย่าง: ฉันมาจากเมียนมาเพื่อเรียนปริญญาตรีที่ไต้หวัน ต้องเตรียมอะไรสำหรับวีซ่าก่อน?"
 
-#: .\chatbot\templates\chatbot\chatbot.html:135
-#: .\chatbot\templates\chatbot\chatbot.html:166
+#: .\chatbot\templates\chatbot\chatbot.html:139
+#: .\chatbot\templates\chatbot\chatbot.html:170
 msgid "送出"
 msgstr "ส่ง"
 
-#: .\chatbot\templates\chatbot\chatbot.html:153
+#: .\chatbot\templates\chatbot\chatbot.html:157
 msgid "我"
 msgstr "ฉัน"
 
-#: .\chatbot\templates\chatbot\chatbot.html:155
+#: .\chatbot\templates\chatbot\chatbot.html:159
 msgid "已上傳附件"
 msgstr "อัปโหลดไฟล์แนบแล้ว"
 
-#: .\chatbot\templates\chatbot\chatbot.html:156
+#: .\chatbot\templates\chatbot\chatbot.html:160
 msgid "找不到 message API"
 msgstr "ไม่พบ message API"
 
-#: .\chatbot\templates\chatbot\chatbot.html:157
+#: .\chatbot\templates\chatbot\chatbot.html:161
 msgid "送出失敗，請稍後再試。"
 msgstr "ส่งไม่สำเร็จ กรุณาลองใหม่ภายหลัง"
 
-#: .\chatbot\templates\chatbot\chatbot.html:158
+#: .\chatbot\templates\chatbot\chatbot.html:162
 msgid "網路或伺服器發生錯誤，請稍後再試。"
 msgstr "เกิดข้อผิดพลาดของเครือข่ายหรือเซิร์ฟเวอร์ กรุณาลองใหม่ภายหลัง"
 
-#: .\chatbot\templates\chatbot\chatbot.html:159
+#: .\chatbot\templates\chatbot\chatbot.html:163
 msgid "新的聊天"
 msgstr "แชตใหม่"
 
-#: .\chatbot\templates\chatbot\chatbot.html:160
+#: .\chatbot\templates\chatbot\chatbot.html:164
 msgid "請輸入新的聊天名稱"
 msgstr "กรุณากรอกชื่อแชตใหม่"
 
-#: .\chatbot\templates\chatbot\chatbot.html:161
+#: .\chatbot\templates\chatbot\chatbot.html:165
 msgid "建立新聊天失敗"
 msgstr "สร้างแชตใหม่ไม่สำเร็จ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:162
+#: .\chatbot\templates\chatbot\chatbot.html:166
 msgid "重新命名失敗"
 msgstr "เปลี่ยนชื่อไม่สำเร็จ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:163
+#: .\chatbot\templates\chatbot\chatbot.html:167
 msgid "釘選失敗"
 msgstr "ปักหมุดไม่สำเร็จ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:164
+#: .\chatbot\templates\chatbot\chatbot.html:168
 msgid "刪除失敗"
 msgstr "ลบไม่สำเร็จ"
 
-#: .\chatbot\templates\chatbot\chatbot.html:165
+#: .\chatbot\templates\chatbot\chatbot.html:169
 msgid "回覆中…"
 msgstr "กำลังตอบกลับ..."
 
 #: .\chatbot\views.py:16
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
-msgstr "ร้านสะดวกซื้อในไต้หวันสามารถใช้ชำระเงิน รับพัสดุ ถ่ายเอกสาร และซื้อของใช้ประจำวันได้หลายอย่าง"
+msgstr ""
+"ร้านสะดวกซื้อในไต้หวันสามารถใช้ชำระเงิน รับพัสดุ ถ่ายเอกสาร และซื้อของใช้ประจำวันได้หลายอย่าง"
 
 #: .\chatbot\views.py:17
 msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
@@ -194,15 +192,21 @@ msgstr "ก่อนเช่าที่พักในไต้หวัน �
 
 #: .\chatbot\views.py:20
 msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
-msgstr "เมื่อไปพบแพทย์ในไต้หวัน หากเข้าร่วมประกันสุขภาพ NHI แล้ว ค่าใช้จ่ายทางการแพทย์มักจะถูกกว่าการจ่ายเอง"
+msgstr ""
+"เมื่อไปพบแพทย์ในไต้หวัน หากเข้าร่วมประกันสุขภาพ NHI แล้ว "
+"ค่าใช้จ่ายทางการแพทย์มักจะถูกกว่าการจ่ายเอง"
 
 #: .\chatbot\views.py:21
 msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
-msgstr "รถขยะในไต้หวันมักเปิดเพลงเพื่อเตือนให้ประชาชนนำขยะออกมาทิ้ง เวลาเก็บขยะจะแตกต่างกันไปในแต่ละพื้นที่"
+msgstr ""
+"รถขยะในไต้หวันมักเปิดเพลงเพื่อเตือนให้ประชาชนนำขยะออกมาทิ้ง "
+"เวลาเก็บขยะจะแตกต่างกันไปในแต่ละพื้นที่"
 
 #: .\chatbot\views.py:22
 msgid "台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"
-msgstr "ฤดูร้อนในไต้หวันค่อนข้างร้อนและชื้น เวลาออกไปข้างนอกควรเตรียมน้ำดื่ม อุปกรณ์กันแดด และอุปกรณ์กันฝน"
+msgstr ""
+"ฤดูร้อนในไต้หวันค่อนข้างร้อนและชื้น เวลาออกไปข้างนอกควรเตรียมน้ำดื่ม อุปกรณ์กันแดด "
+"และอุปกรณ์กันฝน"
 
 #: .\chatbot\views.py:23
 msgid "如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"
@@ -210,11 +214,15 @@ msgstr "หากเปลี่ยนที่อยู่ในไต้หว
 
 #: .\chatbot\views.py:24
 msgid "台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"
-msgstr "สถานศึกษาในไต้หวันมักใช้อีเมลหรือระบบของโรงเรียนในการประกาศข้อมูลสำคัญ จึงควรตรวจสอบเป็นประจำ"
+msgstr ""
+"สถานศึกษาในไต้หวันมักใช้อีเมลหรือระบบของโรงเรียนในการประกาศข้อมูลสำคัญ "
+"จึงควรตรวจสอบเป็นประจำ"
 
 #: .\chatbot\views.py:25
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
-msgstr "เมื่อขอหมายเลขโทรศัพท์มือถือหลังมาถึงไต้หวัน โดยทั่วไปต้องใช้หนังสือเดินทาง ARC หรือเอกสารยืนยันตัวตนอื่น ๆ"
+msgstr ""
+"เมื่อขอหมายเลขโทรศัพท์มือถือหลังมาถึงไต้หวัน โดยทั่วไปต้องใช้หนังสือเดินทาง ARC "
+"หรือเอกสารยืนยันตัวตนอื่น ๆ"
 
 #: .\studygo\settings.py:172
 msgid "繁體中文"
