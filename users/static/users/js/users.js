@@ -250,8 +250,26 @@ async function handleRegister(e) {
   }
 
   localStorage.setItem('authToken', data.token);
-  showToast('帳號建立成功！請填寫個人資料', 'success');
-  setTimeout(() => { window.location.href = '/profile/setup/'; }, 800);
+  localStorage.setItem('pendingVerifyEmail', email);
+  showToast('帳號建立成功！驗證信已寄出，請至信箱完成驗證', 'success');
+  showVerifyEmailPanel(email);
+}
+
+/** 顯示 Email 驗證等待面板 */
+function showVerifyEmailPanel(email) {
+  document.getElementById('signInPanel')?.classList.add('hidden');
+  document.getElementById('registerPanel')?.classList.add('hidden');
+  const emailEl = document.getElementById('verifyEmailDisplay');
+  if (emailEl) emailEl.textContent = email;
+  document.getElementById('verifyEmailPanel')?.classList.remove('hidden');
+}
+
+/** 返回登入（從驗證等待面板） */
+function backToLogin() {
+  localStorage.removeItem('pendingVerifyEmail');
+  localStorage.removeItem('authToken');
+  document.getElementById('verifyEmailPanel')?.classList.add('hidden');
+  switchAuth('signin');
 }
 
 /* ════════════════════════════════════════
@@ -476,8 +494,6 @@ function populateDashboard(user, profile) {
   const lastLoginEl = document.getElementById('lastLogin');
   if (lastLoginEl) lastLoginEl.textContent = new Date().toLocaleString('zh-TW');
 
-  const emailVerEl = document.getElementById('emailVerifiedStatus');
-  if (emailVerEl) emailVerEl.textContent = user.email_verified ? '已驗證 ✅' : '未驗證（請至信箱確認）';
 }
 
 /* ════════════════════════════════════════
@@ -629,22 +645,40 @@ function startLoginSlider() {
    20. 頁面初始化：檢查是否已登入
 ════════════════════════════════════════ */
 async function initApp() {
-  // ── Login 頁面：清掉舊 token，啟動輪播後直接結束 ──
+  // ── Login 頁面 ──
   if (document.getElementById('loginPage')) {
-    localStorage.removeItem('authToken');
+    const params = new URLSearchParams(window.location.search);
+    const verified = params.get('verified');
+    const pendingEmail = localStorage.getItem('pendingVerifyEmail');
+
+    // 啟動輪播與 Google 登入
     if (document.querySelectorAll('.login-slide').length > 0) {
       showLoginSlide(0);
       startLoginSlider();
     }
-    // 啟動 Google 登入按鈕（GSI 可能尚未載入，用輪詢等待）
     initGoogleSignIn();
-    // 顯示 Email 驗證結果通知
-    const params = new URLSearchParams(window.location.search);
-    const verified = params.get('verified');
-    if (verified === '1')        showToast('Email 驗證成功！請登入您的帳號', 'success');
-    else if (verified === 'fail')    showToast('驗證連結無效或已使用', 'error');
-    else if (verified === 'expired') showToast('驗證連結已過期，請重新申請', 'error');
+
+    // 處理驗證結果通知
+    if (verified === '1') {
+      localStorage.removeItem('pendingVerifyEmail');
+      localStorage.removeItem('authToken');
+      showToast('Email 驗證成功！請登入您的帳號', 'success');
+    } else if (verified === 'fail') {
+      showToast('驗證連結無效或已使用', 'error');
+    } else if (verified === 'expired') {
+      showToast('驗證連結已過期，請重新申請', 'error');
+    }
     if (params.get('deleted') === '1') showToast('帳號已停用，感謝您使用 StudyGo Taiwan', 'info', 5000);
+    if (params.get('need_verify') === '1') showToast('請先驗證電子信箱才能繼續', 'error');
+
+    // 若有待驗證狀態（且非剛完成驗證），顯示驗證等待面板
+    if (pendingEmail && verified !== '1') {
+      showVerifyEmailPanel(pendingEmail);
+      return;
+    }
+
+    // 一般登入頁：清除舊 token
+    localStorage.removeItem('authToken');
     return;
   }
 
@@ -661,6 +695,7 @@ async function initApp() {
     window.location.href = '/login/';
     return;
   }
+  localStorage.removeItem('pendingVerifyEmail');
 
   const user = data.data;
   const profile = user.student_profile;

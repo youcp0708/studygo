@@ -54,6 +54,8 @@ def profile_setup_page(request):
     """填寫個人資料頁（Step 2）"""
     if not request.user.is_authenticated:
         return redirect('login_page')
+    if not request.user.email_verified:
+        return redirect('/login/?need_verify=1')
     if hasattr(request.user, 'student_profile'):
         return redirect('dashboard')
     return render(request, 'users/profile_setup.html', {'user': request.user})

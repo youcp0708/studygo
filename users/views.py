@@ -198,6 +198,9 @@ def profile_setup_view(request):
         return error_response('尚未建立學生資料', status_code=404)
 
     # POST: 建立
+    if not user.email_verified:
+        return error_response('請先驗證您的電子信箱才能填寫個人資料', status_code=403)
+
     if hasattr(user, 'student_profile'):
         return error_response('學生資料已存在，請使用 PATCH /api/users/profile/update/ 更新')
 
@@ -349,10 +352,16 @@ def verify_email_view(request, token):
     if ev_token.is_expired():
         return HttpResponseRedirect('/login/?verified=expired')
 
-    ev_token.user.email_verified = True
-    ev_token.user.save(update_fields=['email_verified'])
+    user = ev_token.user
+    user.email_verified = True
+    user.save(update_fields=['email_verified'])
     ev_token.is_used = True
     ev_token.save(update_fields=['is_used'])
+
+    # 若使用者的 session 仍有效，直接跳轉到下一步
+    if request.user.is_authenticated and request.user.pk == user.pk:
+        has_profile = hasattr(user, 'student_profile') and user.student_profile is not None
+        return HttpResponseRedirect('/profile/setup/' if not has_profile else '/dashboard/')
 
     return HttpResponseRedirect('/login/?verified=1')
 

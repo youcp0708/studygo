@@ -84,13 +84,6 @@
           <span class="ptag ptag-blue">{{ profile.university }}</span>
           {% endif %}
 
-          {% if user.email_verified %}
-          <span class="ptag ptag-green">✅ {% trans "信箱已驗證" %}</span>
-          {% else %}
-          <span class="ptag" style="background:#fdf0eb;color:#db6b47;">
-            ⚠️ {% trans "信箱未驗證" %}
-          </span>
-          {% endif %}
         </div>
 
         <div style="margin-top:18px;padding:14px;background:var(--bg);border-radius:14px;text-align:left;">
