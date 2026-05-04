@@ -1023,3 +1023,13 @@ msgstr "Reset failed. The link may have expired."
 
 #~ msgid "我的帳戶"
 #~ msgstr "My Account"
+
+#: users/models.py
+#: users/templates/users/edit_profile.html
+msgid "入臺前準備"
+msgstr "ထိုင်ဝမ်မရောက်မီ ပြင်ဆင်ခြင်း"
+
+#: users/models.py
+#: users/templates/users/edit_profile.html
+msgid "抵臺後"
+msgstr "ထိုင်ဝမ်ရောက်ရှိပြီးနောက်"

@@ -33,25 +33,13 @@
           <div class="field-row">
             <div class="field">
               <label>{% trans "姓名" %}</label>
-              <input
-                type="text"
-                name="name"
-                id="editName"
-                value="{{ user.name }}"
-                placeholder="Full Name"
-                required
-              />
+              <input type="text" name="name" id="editName" value="{{ user.name }}" placeholder="Full Name" required />
             </div>
 
             <div class="field">
               <label>{% trans "電子郵件（不可修改）" %}</label>
-              <input
-                type="email"
-                id="editEmailDisp"
-                value="{{ user.email }}"
-                disabled
-                style="background:#f5f5f5;color:var(--muted);"
-              />
+              <input type="email" id="editEmailDisp" value="{{ user.email }}" disabled
+                style="background:#f5f5f5;color:var(--muted);" />
             </div>
           </div>
 
@@ -59,16 +47,35 @@
             <div class="field">
               <label>{% trans "國籍" %}</label>
               <select name="nationality" id="editNationality">
-                <option value="Indonesia" {% if profile.nationality == "Indonesia" %}selected{% endif %}>🇮🇩 {% trans "印尼" %}</option>
-                <option value="Malaysia" {% if profile.nationality == "Malaysia" %}selected{% endif %}>🇲🇾 {% trans "馬來西亞" %}</option>
-                <option value="Vietnam" {% if profile.nationality == "Vietnam" %}selected{% endif %}>🇻🇳 {% trans "越南" %}</option>
-                <option value="Thailand" {% if profile.nationality == "Thailand" %}selected{% endif %}>🇹🇭 {% trans "泰國" %}</option>
-                <option value="Philippines" {% if profile.nationality == "Philippines" %}selected{% endif %}>🇵🇭 {% trans "菲律賓" %}</option>
-                <option value="Cambodia" {% if profile.nationality == "Cambodia" %}selected{% endif %}>🇰🇭 {% trans "柬埔寨" %}</option>
-                <option value="Myanmar" {% if profile.nationality == "Myanmar" %}selected{% endif %}>🇲🇲 {% trans "緬甸" %}</option>
-                <option value="Japan" {% if profile.nationality == "Japan" %}selected{% endif %}>🇯🇵 {% trans "日本" %}</option>
-                <option value="Korea" {% if profile.nationality == "Korea" %}selected{% endif %}>🇰🇷 {% trans "韓國" %}</option>
-                <option value="Other" {% if profile.nationality == "Other" %}selected{% endif %}>🌍 {% trans "其他" %}</option>
+                <option value="Indonesia" {% if profile.nationality == "Indonesia" %} selected {% endif %}>
+                  🇮🇩 {% trans "印尼" %}
+                </option>
+                <option value="Malaysia" {% if profile.nationality == "Malaysia" %} selected {% endif %}>
+                  🇲🇾 {% trans "馬來西亞" %}
+                </option>
+                <option value="Vietnam" {% if profile.nationality == "Vietnam" %} selected {% endif %}>
+                  🇻🇳 {% trans "越南" %}
+                </option>
+                <option value="Thailand" {% if profile.nationality == "Thailand" %} selected{% endif %}>
+                  🇹🇭 {% trans "泰國" %}
+                </option>
+                <option value="Philippines" {% if profile.nationality == "Philippines" %} selected{% endif %}>
+                  🇵🇭 {% trans "菲律賓" %}
+                </option>
+                <option value="Cambodia" {% if profile.nationality == "Cambodia" %} selected {% endif %}>
+                  🇰🇭 {% trans "柬埔寨" %}</option>
+                <option value="Myanmar" {% if profile.nationality == "Myanmar" %} selected{% endif %}>
+                  🇲🇲 {% trans "緬甸" %}
+                </option>
+                <option value="Japan" {% if profile.nationality == "Japan" %}selected{% endif %}>
+                  🇯🇵 {% trans "日本" %}
+                </option>
+                <option value="Korea" {% if profile.nationality == "Korea" %}selected{% endif %}>
+                  🇰🇷 {% trans "韓國" %}
+                </option>
+                <option value="Other" {% if profile.nationality == "Other" %}selected{% endif %}>
+                  🌍 {% trans "其他" %}
+                </option>
               </select>
             </div>
 
@@ -81,8 +88,8 @@
                 <option value="foreign_student" {% if profile.identity_type == "foreign_student" %}selected{% endif %}>
                   {% trans "外籍生" %}
                 </option>
-                <option value="preparatory" {% if profile.identity_type == "preparatory" %}selected{% endif %}>
-                  {% trans "僑大先修生" %}
+                <option value="hong_kong_macau" {% if profile.identity_type == "hong_kong_macau" %}selected{% endif %}>
+                  {% trans "港澳生" %}
                 </option>
               </select>
             </div>
@@ -91,51 +98,35 @@
           <div class="field-row">
             <div class="field">
               <label>{% trans "就讀學校" %}</label>
-              <input
-                type="text"
-                name="university"
-                id="editUniversity"
-                value="{{ profile.university|default:'' }}"
-                placeholder="{% trans '例如：國立臺灣大學' %}"
-              />
+              <input type="text" name="university" id="editUniversity" value="{{ profile.university|default:'' }}"
+                placeholder="{% trans '例如：國立臺灣大學' %}" />
             </div>
 
             <div class="field">
               <label>{% trans "系所" %}</label>
-              <input
-                type="text"
-                name="department"
-                id="editDept"
-                value="{{ profile.department|default:'' }}"
-                placeholder="{% trans '例如：資訊工程學系' %}"
-              />
+              <input type="text" name="department" id="editDept" value="{{ profile.department|default:'' }}"
+                placeholder="{% trans '例如：資訊工程學系' %}" />
             </div>
           </div>
 
           <div class="field-row">
             <div class="field">
               <label>{% trans "入學狀態" %}</label>
-              <select name="admission_status" id="editStatus">
-                <option value="admitted" {% if profile.admission_status == "admitted" %}selected{% endif %}>
-                  {% trans "已收到錄取通知" %}
-                </option>
-                <option value="pre_arrival" {% if profile.admission_status == "pre_arrival" %}selected{% endif %}>
-                  {% trans "入境前準備中" %}
-                </option>
-                <option value="arrived" {% if profile.admission_status == "arrived" %}selected{% endif %}>
-                  {% trans "已抵臺就學中" %}
-                </option>
-              </select>
+
+                <select name="admission_status" id="editAdmissionStatus">
+                    <option value="pre_arrival" {% if profile.admission_status == "pre_arrival" %}selected{% endif %}>
+                        {% trans "入臺前準備" %}
+                    </option>
+                     <option value="arrived" {% if profile.admission_status == "arrived" %}selected{% endif %}>
+                        {% trans "抵臺後" %}
+                    </option>
+                </select>
             </div>
 
             <div class="field">
               <label>{% trans "預計抵台日期" %}</label>
-              <input
-                type="date"
-                name="expected_arrival"
-                id="editArrival"
-                value="{{ profile.expected_arrival|default:'' }}"
-              />
+              <input type="date" name="expected_arrival" id="editArrival"
+                value="{{ profile.expected_arrival|default:'' }}" />
             </div>
           </div>
 
@@ -157,26 +148,14 @@
 
           <div class="field">
             <label>{% trans "目前密碼" %}</label>
-            <input
-              type="password"
-              name="old_password"
-              id="oldPw"
-              placeholder="{% trans '輸入目前密碼' %}"
-              required
-            />
+            <input type="password" name="old_password" id="oldPw" placeholder="{% trans '輸入目前密碼' %}" required />
             <div class="field-error hidden" id="oldPwErr"></div>
           </div>
 
           <div class="field">
             <label>{% trans "新密碼" %}</label>
-            <input
-              type="password"
-              name="new_password1"
-              id="newPw1"
-              placeholder="{% trans '至少 8 字元，含大小寫與數字' %}"
-              oninput="checkPwStrength(this.value,'pwFill2',null)"
-              required
-            />
+            <input type="password" name="new_password1" id="newPw1" placeholder="{% trans '至少 8 字元，含大小寫與數字' %}"
+              oninput="checkPwStrength(this.value,'pwFill2',null)" required />
             <div class="pw-strength-bar">
               <div class="pw-strength-fill" id="pwFill2"></div>
             </div>
@@ -185,13 +164,7 @@
 
           <div class="field">
             <label>{% trans "確認新密碼" %}</label>
-            <input
-              type="password"
-              name="new_password2"
-              id="newPw2"
-              placeholder="{% trans '再次輸入新密碼' %}"
-              required
-            />
+            <input type="password" name="new_password2" id="newPw2" placeholder="{% trans '再次輸入新密碼' %}" required />
             <div class="field-error hidden" id="newPw2Err"></div>
           </div>
 
@@ -211,9 +184,9 @@
               <div style="font-size:17px;font-weight:900;">{% trans "電子郵件驗證" %}</div>
               <div style="font-size:13px;color:var(--muted);margin-top:4px;" id="emailVerifiedStatus">
                 {% if user.email_verified %}
-                  {% trans "已驗證" %} ✅
+                {% trans "已驗證" %} ✅
                 {% else %}
-                  {% trans "未驗證（請至信箱確認）" %}
+                {% trans "未驗證（請至信箱確認）" %}
                 {% endif %}
               </div>
             </div>

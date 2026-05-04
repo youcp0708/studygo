@@ -99,10 +99,9 @@ class StudentProfile(models.Model):
 
     # ── 入學狀態選項 (admissionStatus) ──
     ADMISSION_STATUS_CHOICES = [
-    ('pre_arrival', _('入境前準備中')),
-    ('arrived',     _('已抵臺就學中')),
-]
-
+    ('pre_arrival', _('入臺前準備')),
+    ('arrived', _('抵臺後')),
+]   
     # ── 國籍選項 (nationality) ──
     NATIONALITY_CHOICES = [
     ('Indonesia',   _('印尼')),
