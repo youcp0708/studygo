@@ -1,11 +1,16 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 from users.models import StudentProfile
 
 
 # 流程階段：例如 來台前、抵台後、入學報到
 class FlowStage(models.Model):
     name = models.CharField(max_length=100, verbose_name="流程階段名稱")
+    name_my = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱-緬文")
+
     description = models.TextField(blank=True, verbose_name="階段說明")
+    description_my = models.TextField(blank=True, verbose_name="階段說明-緬文")
+
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
 
     class Meta:
@@ -26,7 +31,10 @@ class Task(models.Model):
     )
 
     title = models.CharField(max_length=200, verbose_name="任務名稱")
+    title_my = models.CharField(max_length=200, blank=True, verbose_name="任務名稱-緬文")
+
     description = models.TextField(blank=True, verbose_name="任務說明")
+    description_my = models.TextField(blank=True, verbose_name="任務說明-緬文")
 
     # 用來判斷這個任務適合哪種學生
     identity_type = models.CharField(
@@ -69,9 +77,9 @@ class Task(models.Model):
 # 學生自己的任務進度
 class StudentTask(models.Model):
     STATUS_CHOICES = [
-        ("not_started", "未開始"),
-        ("in_progress", "進行中"),
-        ("completed", "已完成"),
+        ("not_started", _("未開始")),
+        ("in_progress", _("進行中")),
+        ("completed", _("已完成")),
     ]
 
     student = models.ForeignKey(
@@ -111,4 +119,4 @@ class StudentTask(models.Model):
     def __str__(self):
         return f"{self.student.user.name} - {self.task.title} - {self.status}"
 
-
+

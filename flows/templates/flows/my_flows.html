@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% load static %}
-{% block title %}我的任務 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "我的任務" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -177,11 +177,11 @@
 {% block content %}
 <section class="flows-page">
 
-  <a href="/dashboard/" class="flows-back-link">← 返回</a>
+  <a href="/dashboard/" class="flows-back-link">← {% trans "返回" %}</a>
 
   <div class="flows-header">
-    <h2>📋 我的個人化任務清單</h2>
-    <p>完成這些任務，為你在台灣的學習生活做好準備！</p>
+    <h2>📋 {% trans "我的個人化任務清單" %}</h2>
+    <p>{% trans "完成這些任務，為你在台灣的學習生活做好準備！" %}</p>
   </div>
 
   <div id="flowsContainer">

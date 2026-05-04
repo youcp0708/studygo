@@ -36,13 +36,13 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',   # 必須在 CommonMiddleware 之前
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'studygo.urls'
@@ -90,6 +90,20 @@ LANGUAGE_CODE = 'zh-hant'
 TIME_ZONE     = 'Asia/Taipei'
 USE_I18N      = True
 USE_TZ        = True
+
+LANGUAGES = [
+    ('zh-hant', '繁體中文'),
+    ('en', 'English'),
+    ('my', 'မြန်မာဘာသာ'),
+    ('id', 'Bahasa Indonesia'),
+    ('ms', 'Bahasa Melayu'),
+    ('th', 'ไทย'),
+    ('ja', '日本語'),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 # ── 靜態檔案 ──
 STATIC_URL  = '/static/'
