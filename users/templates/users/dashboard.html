@@ -9,30 +9,15 @@
   {# Hero #}
   <div class="dashboard-hero">
     <div class="tw-bg">TAIWAN</div>
-
-    <h2>
-      {% blocktrans with name=user.name %}你好，{{ name }} 👋{% endblocktrans %}
-    </h2>
-
+    <h2>{% trans "你好" %}，{{ user.name }} 👋</h2>
     <p>
-      {% if profile %}
-        {{ profile.get_identity_type_display }}
-      {% else %}
-        {% trans "境外生" %}
-      {% endif %}
-      {% trans "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。" %}
+      {% if profile %}{{ profile.get_identity_type_display }}{% else %}{% trans "境外生" %}{% endif %}
+      {% trans "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。" %}
     </p>
-
     <div class="dash-actions">
-      <a href="{% url 'edit_profile' %}" class="dash-btn dash-btn-primary">
-        ✏️ {% trans "編輯個人資料" %}
-      </a>
-      <a href="#" class="dash-btn dash-btn-outline">
-        📋 {% trans "查看任務清單" %}
-      </a>
-      <a href="{% url 'chatbot:page' %}" class="dash-btn dash-btn-outline">
-        🤖 {% trans "詢問 AI 小幫手" %}
-      </a>
+      <a href="{% url 'edit_profile' %}" class="dash-btn dash-btn-primary">✏️ {% trans "編輯個人資料" %}</a>
+      <a href="{% url 'my_flows' %}" class="dash-btn dash-btn-outline">📋 {% trans "查看任務清單" %}</a>
+      <a href="/chatbot/" class="dash-btn dash-btn-outline">🤖 {% trans "詢問 AI 小幫手" %}</a>
     </div>
   </div>
 
@@ -43,26 +28,20 @@
       <div class="dash-info-card">
         <div class="dic-icon dic-green">📋</div>
         <h4>{% trans "任務完成率" %}</h4>
-        <div class="val">—%</div>
-        <div class="sub">{% trans "個人化流程生成後顯示" %}</div>
+        <div class="val" id="dashCompletionRate">—%</div>
+        <div class="sub">{% trans "目前完成進度" %}</div>
       </div>
-
       <div class="dash-info-card">
         <div class="dic-icon dic-yellow">⏰</div>
-        <h4>{% trans "即將到期任務" %}</h4>
-        <div class="val" style="color:var(--danger);">—</div>
-        <div class="sub">{% trans "連接模塊三後顯示" %}</div>
+        <h4>{% trans "即將到期 / 提醒" %}</h4>
+        <div class="val" id="dashReminderCount" style="color:var(--danger);">—</div>
+        <div class="sub">{% trans "未讀的通知" %}</div>
       </div>
-
       <div class="dash-info-card">
         <div class="dic-icon dic-blue">🪪</div>
         <h4>{% trans "目前入學狀態" %}</h4>
         <div class="val" style="font-size:20px;">
-          {% if profile %}
-            {{ profile.get_admission_status_display }}
-          {% else %}
-            {% trans "未設定" %}
-          {% endif %}
+          {% if profile %}{{ profile.get_admission_status_display }}{% else %}{% trans "未設定" %}{% endif %}
         </div>
         <div class="sub">{% if profile %}{{ profile.university }}{% endif %}</div>
       </div>
@@ -76,59 +55,55 @@
         <div class="profile-card-avatar">{{ user.name|first|upper }}</div>
         <h3>{{ user.name }}</h3>
         <div class="email">{{ user.email }}</div>
-
         <div class="profile-tags">
           {% if profile %}
           <span class="ptag ptag-green">🌏 {{ profile.get_nationality_display }}</span>
           <span class="ptag ptag-yellow">{{ profile.get_identity_type_display }}</span>
           <span class="ptag ptag-blue">{{ profile.university }}</span>
           {% endif %}
-
           {% if user.email_verified %}
           <span class="ptag ptag-green">✅ {% trans "信箱已驗證" %}</span>
           {% else %}
-          <span class="ptag" style="background:#fdf0eb;color:#db6b47;">
-            ⚠️ {% trans "信箱未驗證" %}
-          </span>
+          <span class="ptag" style="background:#fdf0eb;color:#db6b47;">⚠️ {% trans "信箱未驗證" %}</span>
           {% endif %}
         </div>
-
         <div style="margin-top:18px;padding:14px;background:var(--bg);border-radius:14px;text-align:left;">
           <div class="preview-row">
             <span>{% trans "系所" %}</span>
             <span>
               {% if profile %}
-                {{ profile.department|default:"—" }}
+              {{ profile.department|default:"—" }}
               {% else %}
-                —
+              —
               {% endif %}
             </span>
           </div>
-
           <div class="preview-row">
             <span>{% trans "預計抵台" %}</span>
             <span>
               {% if profile and profile.expected_arrival %}
-                {{ profile.expected_arrival }}
+              {{ profile.expected_arrival }}
               {% else %}
-                —
+              —
               {% endif %}
             </span>
           </div>
-
           <div class="preview-row">
             <span>{% trans "帳號建立" %}</span>
-            <span>{{ user.date_joined|date:"Y-m-d" }}</span>
+            <span>
+              {% if user.date_joined %}
+              {{ user.date_joined|date:"Y-m-d" }}
+              {% else %}
+              —
+              {% endif %}
+            </span>
           </div>
         </div>
-
         <div class="profile-actions">
-          <a href="{% url 'edit_profile' %}" class="btn-outline-sm">
-            ✏️ {% trans "編輯資料" %}
-          </a>
-
+          <a href="{% url 'edit_profile' %}" class="btn-outline-sm">✏️ {% trans "編輯資料" %}</a>
+          {% trans "確定要登出嗎？登出後將返回登入頁面。" as logout_confirm %}
           <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;"
-             onclick="return confirm('確定要登出？登出後將返回登入頁面')">
+            onclick="return confirm('{{ logout_confirm }}')">
             🚪 {% trans "登出" %}
           </a>
         </div>
@@ -138,23 +113,25 @@
       <div class="edit-panel">
         <h3>📌 {% trans "近期待辦任務" %}</h3>
 
-        <div style="text-align:center;padding:32px 0;color:var(--muted);">
-          <div style="font-size:48px;margin-bottom:12px;">📋</div>
-          <div style="font-weight:800;font-size:17px;margin-bottom:8px;">
-            {% trans "任務清單由模塊二提供" %}
-          </div>
-          <div style="font-size:14px;">
-            {% trans "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。" %}
+        <div id="dashRecentTasks" style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <!-- JS 動態插入近期任務 -->
+          <div style="text-align:center;padding:32px 0;color:var(--muted);">
+            <div class="spinner" style="border-color: var(--primary) transparent var(--primary) transparent;"></div>
+            <div style="margin-top: 12px;">{% trans "載入任務中..." %}</div>
           </div>
         </div>
 
-        <button class="btn-outline-sm" style="margin-top:16px;width:100%;padding:12px;"
-          onclick="showToast('請完成模塊二的串接', 'info')">
+        <a href="{% url 'my_flows' %}" class="btn-outline-sm"
+          style="margin-top:16px;width:100%;padding:12px;text-align:center;display:block;text-decoration:none;">
           {% trans "查看全部任務清單" %} →
-        </button>
+        </a>
       </div>
     </div>
 
   </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'flows/js/flows.js' %}"></script>
 {% endblock %}

@@ -28,15 +28,16 @@ INSTALLED_APPS = [
     'rest_framework',           # pip install djangorestframework
     'rest_framework.authtoken',
     'corsheaders',              # pip install django-cors-headers
-    'users',   
-    'chatbot',                 # 使用者管理模塊（模塊一）
+    'users',                    # 使用者管理模塊（模塊一）
+    'flows',                    # 流程模塊(模塊二)
+    'chatbot',                  # AI 聊天機器人
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'corsheaders.middleware.CorsMiddleware',   # 必須在 CommonMiddleware 之前
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -71,7 +72,7 @@ DATABASES = {
         'NAME':     'postgres',
         'USER':     'postgres.hpszxboxqzmvisydcnhz',
         'PASSWORD': 'uq6pUJAfP8wGIlCZ',
-        'HOST':     'aws-1-ap-southeast-1.pooler.supabase.com',
+        'HOST':     'aws-1-ap-southeast-1.pooler.supabase.com',  # 你的 Supabase host
         'PORT':     '5432',
     }
 }
@@ -89,6 +90,20 @@ LANGUAGE_CODE = 'zh-hant'
 TIME_ZONE     = 'Asia/Taipei'
 USE_I18N      = True
 USE_TZ        = True
+
+LANGUAGES = [
+    ('zh-hant', '繁體中文'),
+    ('en', 'English'),
+    ('my', 'မြန်မာဘာသာ'),
+    ('id', 'Bahasa Indonesia'),
+    ('ms', 'Bahasa Melayu'),
+    ('th', 'ไทย'),
+    ('ja', '日本語'),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 # ── 靜態檔案 ──
 STATIC_URL  = '/static/'
@@ -156,28 +171,3 @@ CSRF_COOKIE_SAMESITE = 'Lax'
 # ── Google Sign-In 彈窗修復 ──
 # Django 5.x 預設 COOP: same-origin 會阻擋 GSI popup 回傳 credential
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
-
-OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
-OPENAI_MODEL = os.environ.get('OPENAI_MODEL', 'gpt-5.4-mini')
-
-from django.utils.translation import gettext_lazy as _
-
-LANGUAGE_CODE = 'zh-hant'
-
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-
-LANGUAGES = [
-    ('zh-hant', _('繁體中文')),
-    ('en', _('English')),
-    ('ja', _('日本語')),
-    ('my', _('မြန်မာဘာသာ')),
-    ('id', _('Bahasa Indonesia')),
-    ('th', _('ภาษาไทย')),
-    ('ms', _('Bahasa Melayu')),
-]
-
-LOCALE_PATHS = [
-    BASE_DIR / 'locale',
-]
