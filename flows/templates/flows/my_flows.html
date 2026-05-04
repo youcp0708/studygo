@@ -9,26 +9,55 @@
     margin: 0 auto;
     padding: 32px 24px 64px;
   }
+
+  .flows-back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0 16px;
+    margin-bottom: 22px;
+    border: 1px solid var(--primary);
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(23, 83, 77, .12);
+  }
+
+  .flows-back-link:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
   .flows-header {
     text-align: center;
     margin-bottom: 48px;
   }
+
   .flows-header h2 {
     font-size: 32px;
     color: var(--text-dark);
     margin-bottom: 12px;
   }
+
   .flows-header p {
     font-size: 16px;
     color: var(--muted);
   }
+
   .stage-section {
     background: var(--bg);
     border-radius: 16px;
     padding: 32px;
     margin-bottom: 32px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   }
+
   .stage-header {
     display: flex;
     justify-content: space-between;
@@ -37,11 +66,13 @@
     border-bottom: 2px solid var(--border);
     padding-bottom: 16px;
   }
+
   .stage-title {
     font-size: 22px;
     font-weight: 800;
     color: var(--primary-dark);
   }
+
   .stage-progress {
     font-size: 14px;
     font-weight: 600;
@@ -50,11 +81,13 @@
     padding: 6px 12px;
     border-radius: 20px;
   }
+
   .task-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
+
   .task-item {
     display: flex;
     align-items: center;
@@ -65,15 +98,18 @@
     transition: all 0.2s ease;
     cursor: pointer;
   }
+
   .task-item:hover {
     border-color: var(--primary);
     box-shadow: 0 4px 12px rgba(46, 168, 94, 0.1);
   }
+
   .task-item.completed {
     background: #f8fbf9;
     border-color: #d1e7dd;
     opacity: 0.8;
   }
+
   .task-checkbox {
     width: 24px;
     height: 24px;
@@ -87,31 +123,37 @@
     color: white;
     transition: all 0.2s;
   }
+
   .task-item.completed .task-checkbox {
     background: var(--primary);
     border-color: var(--primary);
   }
+
   .task-item.completed .task-checkbox::after {
     content: "✓";
   }
+
   .task-content {
     flex: 1;
   }
+
   .task-title {
     font-size: 16px;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 4px;
   }
+
   .task-item.completed .task-title {
     text-decoration: line-through;
     color: var(--muted);
   }
+
   .task-desc {
     font-size: 14px;
     color: var(--muted);
   }
-  
+
   /* Loading State */
   .skeleton {
     background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
@@ -119,15 +161,24 @@
     animation: loading 1.5s infinite;
     border-radius: 8px;
   }
+
   @keyframes loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+    0% {
+      background-position: 200% 0;
+    }
+
+    100% {
+      background-position: -200% 0;
+    }
   }
 </style>
 {% endblock %}
 
 {% block content %}
 <section class="flows-page">
+
+  <a href="/dashboard/" class="flows-back-link">← 返回</a>
+
   <div class="flows-header">
     <h2>📋 我的個人化任務清單</h2>
     <p>完成這些任務，為你在台灣的學習生活做好準備！</p>
@@ -139,4 +190,8 @@
     <div class="stage-section skeleton" style="height: 200px; margin-top: 20px;"></div>
   </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'flows/js/flows.js' %}"></script>
 {% endblock %}

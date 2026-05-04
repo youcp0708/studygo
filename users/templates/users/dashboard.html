@@ -70,16 +70,33 @@
         <div style="margin-top:18px;padding:14px;background:var(--bg);border-radius:14px;text-align:left;">
           <div class="preview-row">
             <span>系所</span>
-            <span>{% if profile %}{{ profile.department|default:"—" }}{% else %}—{% endif %}</span>
+            <span>
+              {% if profile %}
+              {{ profile.department|default:"—" }}
+              {% else %}
+              —
+              {% endif %}
+            </span>
           </div>
           <div class="preview-row">
             <span>預計抵台</span>
-            <span>{% if profile and profile.expected_arrival %}{{ profile.expected_arrival }}{% else %}—{% endif
-              %}</span>
+            <span>
+              {% if profile and profile.expected_arrival %}
+              {{ profile.expected_arrival }}
+              {% else %}
+              —
+              {% endif %}
+            </span>
           </div>
           <div class="preview-row">
             <span>帳號建立</span>
-            <span>{{ user.date_joined|date:"Y-m-d" }}</span>
+            <span>
+              {% if user.date_joined %}
+              {{ user.date_joined|date:"Y-m-d" }}
+              {% else %}
+              —
+              {% endif %}
+            </span>
           </div>
         </div>
         <div class="profile-actions">
@@ -112,4 +129,8 @@
 
   </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'flows/js/flows.js' %}"></script>
 {% endblock %}
