@@ -114,8 +114,9 @@
           <div class="field">
             <select name="identity_type" id="setupIdentity" required onchange="updatePreview()">
               <option value="">請選擇身份別</option>
-              <option value="overseas_chinese_student">🏮 僑生（海外華裔）</option>
-              <option value="foreign_student">🌐 外籍生（一般外國學生）</option>
+              <option value="overseas_chinese_student">僑生</option>
+              <option value="foreign_student">外籍生</option>
+              <option value="hong_kong_macau">港澳生</option>
             </select>
             <div class="field-hint">身份別將影響您的流程任務內容</div>
             <div class="field-error hidden" id="identityErr"></div>
@@ -126,14 +127,14 @@
             <div class="status-card" data-val="pre_arrival" onclick="selectStatus(this)">
               <div class="radio-dot"></div>
               <div>
-                <div style="font-size:14px;font-weight:900;">✈️ 入境前準備中</div>
+                <div style="font-size:14px;font-weight:900;">入臺前準備</div>
                 <div style="font-size:12px;color:var(--muted);margin-top:2px;">辦理簽證等手續</div>
               </div>
             </div>
             <div class="status-card" data-val="arrived" onclick="selectStatus(this)">
               <div class="radio-dot"></div>
               <div>
-                <div style="font-size:14px;font-weight:900;">🏫 已抵臺就學中</div>
+                <div style="font-size:14px;font-weight:900;">入臺後</div>
                 <div style="font-size:12px;color:var(--muted);margin-top:2px;">辦理 ARC 等後續</div>
               </div>
             </div>
