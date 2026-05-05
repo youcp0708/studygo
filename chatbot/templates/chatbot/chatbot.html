@@ -12,20 +12,20 @@
 
     <aside class="chatbot-sidebar">
 
-    <div class="bot-profile-card">
-      <a class="bot-card-back-link" href="{% url 'dashboard' %}">
-        ← {% trans "返回" %}
-      </a>
+      <div class="bot-profile-card">
+        <a class="bot-card-back-link" href="{% url 'dashboard' %}">
+          ← {% trans "返回" %}
+        </a>
 
-      <div class="bot-avatar">🤖</div>
-      <h2>{% trans "AI 來臺就學小幫手" %}</h2>
-     <p id="botTipText" class="bot-tip-text">{{ taiwan_tip }}</p>
-        {{ taiwan_tips|json_script:"taiwanTipsData" }} 
-    </div>
+        <div class="bot-avatar">🤖</div>
+        <h2>{% trans "AI 來臺就學小幫手" %}</h2>
+        <p id="botTipText" class="bot-tip-text">{{ taiwan_tip }}</p>
+        {{ taiwan_tips|json_script:"taiwanTipsData" }}
+      </div>
 
-    <div class="quick-card">
-      <div class="history-header">
-        <h3>{% trans "聊天記錄" %}</h3>
+      <div class="quick-card">
+        <div class="history-header">
+          <h3>{% trans "聊天記錄" %}</h3>
 
           <div class="history-actions">
             <input id="historySearchInput" type="text" class="history-search-input" placeholder="{% trans '搜尋' %}">
@@ -66,12 +66,6 @@
     </aside>
 
     <main class="chatbot-main">
-      <!-- <div class="chat-header"> -->
-      <!-- <div> -->
-      <!-- <h1>{% trans "AI 聊天機器人" %}</h1> -->
-      <!-- <p>{% trans "輸入你的問題，系統會根據你的身份與狀態整理建議。" %}</p> -->
-      <!-- </div> -->
-      <!-- </div> -->
 
       <div id="chatMessages" class="chat-messages" aria-live="polite">
         {% if active_session and messages %}
@@ -82,13 +76,12 @@
           </div>
 
           <div class="message-bubble">
+            {% if message.role != 'user' %}
             <div class="message-name">
-              {% if message.role != 'user' %}
-              <div class="message-name">
-                {% trans "StudyGo AI 小幫手" %}
-              </div>
-              {% endif %}
+              {% trans "StudyGo AI 小幫手" %}
             </div>
+            {% endif %}
+
             <div class="message-content">{{ message.content }}</div>
             <div class="message-time">{{ message.created_at|date:"Y-m-d H:i" }}</div>
           </div>
@@ -101,15 +94,14 @@
             <div class="message-name">{% trans "StudyGo AI 小幫手" %}</div>
             <div class="message-content">
               {% trans "你好 !" %}
-              {% if user.name %}{{ user.name }}{% elif user.email %}{{ user.email }}{% else %}{% trans " 同學" %}{% endif %}
-              {% trans "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼" %}
+              {% firstof user.name user.email "同學" %}
             </div>
           </div>
         </div>
         {% endif %}
       </div>
 
-      <button id="scrollBottomBtn" class="scroll-bottom-btn" type="button" aria-label="回到底部">
+      <button id="scrollBottomBtn" class="scroll-bottom-btn" type="button" aria-label="{% trans '回到底部' %}">
         ↓
       </button>
 

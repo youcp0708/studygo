@@ -94,9 +94,8 @@ msgstr "Hello !"
 msgid " 同學"
 msgstr "Student"
 
-#: .\chatbot\templates\chatbot\chatbot.html:105
-#, fuzzy
-#| msgid "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼。"
+#: \chatbot\templates\chatbot\chatbot.html:105
+#| msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
 msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
 msgstr ""
 ". You can ask me about the study-in-Taiwan process, such as visas, ARC, "

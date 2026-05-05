@@ -21,6 +21,7 @@ from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 
 from .models import CustomUser, StudentProfile, EmailVerificationToken, LoginLog
+from flows.models import Reminder
 
 logger = logging.getLogger(__name__)
 from .serializers import (

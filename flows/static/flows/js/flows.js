@@ -255,7 +255,7 @@ async function renderReminders() {
   const reminders = data.data.reminders || [];
 
   const badge = document.getElementById('reminderBadge');
-  const dashCount = document.getElementById('dashReminderCount'); // dashboard card
+  const dashCount = document.getElementById('dashUnreadCount'); // dashboard card
   const list = document.getElementById('reminderList');
   const dropdown = document.getElementById('reminderDropdown');
 
