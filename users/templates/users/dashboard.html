@@ -16,7 +16,7 @@
   {# Hero #}
   <div class="dashboard-hero">
     <div class="tw-bg">TAIWAN</div>
-    <h2>你好，{{ user.name }} 👋</h2>
+    <h2>你好，<span style="white-space:nowrap;">{{ user.name }} 👋</span></h2>
     <p>
       {% if profile %}{{ profile.get_identity_type_display }}{% else %}境外生{% endif %}，
       歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。
