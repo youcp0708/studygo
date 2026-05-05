@@ -86,7 +86,7 @@ msgstr "StudyGo AI Assistant"
 
 #: .\chatbot\templates\chatbot\chatbot.html:103
 msgid "你好 !"
-msgstr ""
+msgstr "Hello !"
 
 #: .\chatbot\templates\chatbot\chatbot.html:104
 #, fuzzy
@@ -96,11 +96,8 @@ msgstr "Student"
 
 #: .\chatbot\templates\chatbot\chatbot.html:105
 #, fuzzy
-#| msgid ""
-#| "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做"
-#| "什麼。"
-msgid ""
-"你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
+#| msgid "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼。"
+msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
 msgstr ""
 ". You can ask me about the study-in-Taiwan process, such as visas, ARC, "
 "health insurance, accommodation, registration, or what to do after arrival."
@@ -182,43 +179,62 @@ msgstr "Replying..."
 
 #: .\chatbot\views.py:16
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
-msgstr "Convenience stores in Taiwan can be used for bill payment, parcel pickup, printing, and buying many daily necessities."
+msgstr ""
+"Convenience stores in Taiwan can be used for bill payment, parcel pickup, "
+"printing, and buying many daily necessities."
 
 #: .\chatbot\views.py:17
 msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
-msgstr "In Taiwan, people often use an EasyCard or iPASS to take the MRT and buses."
+msgstr ""
+"In Taiwan, people often use an EasyCard or iPASS to take the MRT and buses."
 
 #: .\chatbot\views.py:18
 msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
-msgstr "Many schools in Taiwan have an international affairs office that helps international students with admission and daily life issues."
+msgstr ""
+"Many schools in Taiwan have an international affairs office that helps "
+"international students with admission and daily life issues."
 
 #: .\chatbot\views.py:19
 msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
-msgstr "Before renting in Taiwan, check the rent, deposit, utility fees, and lease period."
+msgstr ""
+"Before renting in Taiwan, check the rent, deposit, utility fees, and lease "
+"period."
 
 #: .\chatbot\views.py:20
 msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
-msgstr "When seeing a doctor in Taiwan, medical costs are usually lower if you are enrolled in National Health Insurance."
+msgstr ""
+"When seeing a doctor in Taiwan, medical costs are usually lower if you are "
+"enrolled in National Health Insurance."
 
 #: .\chatbot\views.py:21
 msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
-msgstr "Garbage trucks in Taiwan often play music to remind residents to take out trash. The schedule differs by area."
+msgstr ""
+"Garbage trucks in Taiwan often play music to remind residents to take out "
+"trash. The schedule differs by area."
 
 #: .\chatbot\views.py:22
 msgid "台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"
-msgstr "Taiwan’s summers are hot and humid, so it is useful to carry water, sun protection, and rain gear."
+msgstr ""
+"Taiwan’s summers are hot and humid, so it is useful to carry water, sun "
+"protection, and rain gear."
 
 #: .\chatbot\views.py:23
 msgid "如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"
-msgstr "If you change your address in Taiwan, some documents or school records may need to be updated."
+msgstr ""
+"If you change your address in Taiwan, some documents or school records may "
+"need to be updated."
 
 #: .\chatbot\views.py:24
 msgid "台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"
-msgstr "Taiwanese schools often use email or school systems to announce important information, so check them regularly."
+msgstr ""
+"Taiwanese schools often use email or school systems to announce important "
+"information, so check them regularly."
 
 #: .\chatbot\views.py:25
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
-msgstr "When applying for a mobile number after arriving in Taiwan, you usually need a passport, ARC, or other identity documents."
+msgstr ""
+"When applying for a mobile number after arriving in Taiwan, you usually need"
+" a passport, ARC, or other identity documents."
 
 #: .\studygo\settings.py:172
 msgid "繁體中文"
@@ -270,7 +286,7 @@ msgstr "Study-in-Taiwan Assistant"
 
 #: .\templates\base.html:71
 msgid "   同學"
-msgstr ""
+msgstr "classmate"
 
 #: .\templates\base.html:78 .\users\templates\users\dashboard.html:132
 msgid "登出"
@@ -585,8 +601,8 @@ msgstr "The task list is provided by Module 2"
 #: .\users\templates\users\dashboard.html:147
 msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
 msgstr ""
-"After Module 2 (Process and Task Management) is completed, your personalized "
-"task list will be shown here."
+"After Module 2 (Process and Task Management) is completed, your personalized"
+" task list will be shown here."
 
 #: .\users\templates\users\dashboard.html:153
 msgid "查看全部任務清單"
@@ -744,12 +760,10 @@ msgid "流程提醒"
 msgstr "Process Reminders"
 
 #: .\users\templates\users\login.html:20
-msgid ""
-"系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任"
-"務，並以進度方式提醒你一步一步完成。"
+msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
 msgstr ""
-"The system automatically generates important tasks for visa application, pre-"
-"arrival, and post-arrival based on your nationality, identity type, and "
+"The system automatically generates important tasks for visa application, "
+"pre-arrival, and post-arrival based on your nationality, identity type, and "
 "current status, and reminds you step by step through progress tracking."
 
 #: .\users\templates\users\login.html:38
@@ -757,21 +771,17 @@ msgid "資訊管理"
 msgstr "Information Management"
 
 #: .\users\templates\users\login.html:39
-msgid ""
-"把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
-"確資料，不再被零散資訊搞混。"
+msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
 msgstr ""
 "It integrates visa, ARC, health insurance, accommodation, and school "
-"registration information into a one-stop page, helping students find correct "
-"information more easily without being confused by scattered sources."
+"registration information into a one-stop page, helping students find correct"
+" information more easily without being confused by scattered sources."
 
 #: .\users\templates\users\login.html:62
-msgid ""
-"當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 "
-"AI 小幫手快速獲得協助。"
+msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
 msgstr ""
-"When you do not know what to do first, which documents to prepare, or who to "
-"ask, you can get quick help directly through the AI assistant."
+"When you do not know what to do first, which documents to prepare, or who to"
+" ask, you can get quick help directly through the AI assistant."
 
 #: .\users\templates\users\login.html:78
 msgid "顯示第一張介紹"
@@ -785,12 +795,14 @@ msgstr "Show the second introduction slide"
 msgid "顯示第三張介紹"
 msgstr "Show the third introduction slide"
 
-#: .\users\templates\users\login.html:92 .\users\templates\users\login.html:131
+#: .\users\templates\users\login.html:92
+#: .\users\templates\users\login.html:131
 #: .\users\templates\users\login.html:149
 msgid "登入"
 msgstr "Log In"
 
-#: .\users\templates\users\login.html:94 .\users\templates\users\login.html:151
+#: .\users\templates\users\login.html:94
+#: .\users\templates\users\login.html:151
 msgid "註冊帳號"
 msgstr "Register Account"
 
@@ -907,8 +919,7 @@ msgid "開始使用"
 msgstr "Start Using"
 
 #: .\users\templates\users\profile_setup.html:34
-msgid ""
-"這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
+msgid "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
 msgstr ""
 "This information will be used to generate your personalized study-in-Taiwan "
 "process. Please fill it in accurately to receive the most suitable step-by-"
@@ -974,9 +985,7 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"            After the information is saved, the system will automatically "
-"generate a personalized task process based on your <b>nationality</b>, "
-"<b>identity type</b>, and\n"
+"            After the information is saved, the system will automatically generate a personalized task process based on your <b>nationality</b>, <b>identity type</b>, and\n"
 "            <b>admission status</b>.\n"
 "            "
 
@@ -1009,11 +1018,80 @@ msgstr "Password reset successful. Please log in again."
 msgid "重設失敗，連結可能已過期"
 msgstr "Reset failed. The link may have expired."
 
+#: users/models.py users/templates/users/edit_profile.html
+msgid "入臺前準備"
+msgstr "Preparing before arrival"
+
+#: users/models.py users/templates/users/edit_profile.html
+msgid "抵臺後"
+msgstr "Arrived in Taiwan"
+
+msgid "已完成"
+msgstr "Completed"
+
+msgid "項"
+msgstr "items"
+
+msgid "通知"
+msgstr "Notifications"
+
+msgid "載入中..."
+msgstr "Loading..."
+
+msgid "沒有未讀通知 🎉"
+msgstr "No unread notifications 🎉"
+
+msgid "太棒了！您目前沒有待辦任務。"
+msgstr "🎉 Awesome! You have no pending tasks."
+
+msgid "標記為已讀"
+msgstr "Mark as read"
+
+msgid "..."
+msgstr ""
+
+msgid "載入任務中..."
+msgstr "Loading tasks..."
+
+msgid "目前完成進度"
+msgstr "Current completion progress"
+
+msgid "我的任務"
+msgstr "my task"
+
+msgid "我的個人化任務清單"
+msgstr "My personalized to-do list"
+
+msgid "未開始"
+msgstr "Not started"
+
+msgid "未讀的通知"
+msgstr "unread notifications"
+
+msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+msgstr ""
+"Welcome to StudyGo Taiwan, your personalized process for studying in Taiwan "
+"is ready."
+
+msgid "即將到期 / 提醒"
+msgstr "Expiring soon/reminder"
+
+msgid "你好"
+msgstr "Hello"
+
+msgid "完成這些任務，為你在台灣的學習生活做好準備！"
+msgstr "Complete these tasks and prepare for your study life in Taiwan!"
+
+msgid "港澳生"
+msgstr "Students from Hong Kong and Macao"
+
+msgid "進行中"
+msgstr "in progress"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Back to Dashboard"
 
-#~ msgid ""
-#~ "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
+#~ msgid "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
 #~ msgstr ""
 #~ "Based on your profile, it helps organize pre-arrival, post-arrival, visa, "
 #~ "ARC, health insurance, and daily life information."
@@ -1023,13 +1101,3 @@ msgstr "Reset failed. The link may have expired."
 
 #~ msgid "我的帳戶"
 #~ msgstr "My Account"
-
-#: users/models.py
-#: users/templates/users/edit_profile.html
-msgid "入臺前準備"
-msgstr "ထိုင်ဝမ်မရောက်မီ ပြင်ဆင်ခြင်း"
-
-#: users/models.py
-#: users/templates/users/edit_profile.html
-msgid "抵臺後"
-msgstr "ထိုင်ဝမ်ရောက်ရှိပြီးနောက်"

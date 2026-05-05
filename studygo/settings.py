@@ -65,7 +65,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'studygo.wsgi.application'
 
-# ── 資料庫（開發用 SQLite，上線換 PostgreSQL）──
+# ── 資料庫 ──
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

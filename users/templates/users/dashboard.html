@@ -28,14 +28,24 @@
       <div class="dash-info-card">
         <div class="dic-icon dic-green">📋</div>
         <h4>{% trans "任務完成率" %}</h4>
-        <div class="val" id="dashCompletionRate">—%</div>
+        <div class="val" id="dashCompletionRate" data-completed-text="{% trans '已完成' %}"
+          data-items-text="{% trans '項' %}">—%</div>
         <div class="sub">{% trans "目前完成進度" %}</div>
       </div>
       <div class="dash-info-card">
         <div class="dic-icon dic-yellow">⏰</div>
         <h4>{% trans "即將到期 / 提醒" %}</h4>
-        <div class="val" id="dashReminderCount" style="color:var(--danger);">—</div>
-        <div class="sub">{% trans "未讀的通知" %}</div>
+        <div style="display:flex; gap:16px; align-items:center; margin: 6px 0;">
+          <div>
+            <div class="val" id="dashOverdueCount" style="color:var(--danger);">—</div>
+            <div class="sub">{% trans "即將到期任務" %}</div>
+          </div>
+          <div style="width:1px; height:40px; background:var(--border);"></div>
+          <div>
+            <div class="val" id="dashUnreadCount" style="color:var(--warning);">—</div>
+            <div class="sub">{% trans "未讀通知" %}</div>
+          </div>
+        </div>
       </div>
       <div class="dash-info-card">
         <div class="dic-icon dic-blue">🪪</div>
@@ -113,7 +123,8 @@
       <div class="edit-panel">
         <h3>📌 {% trans "近期待辦任務" %}</h3>
 
-        <div id="dashRecentTasks" style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+        <div id="dashRecentTasks" data-no-tasks="🎉 {% trans '太棒了！您目前沒有待辦任務。' %}"
+          style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
           <!-- JS 動態插入近期任務 -->
           <div style="text-align:center;padding:32px 0;color:var(--muted);">
             <div class="spinner" style="border-color: var(--primary) transparent var(--primary) transparent;"></div>

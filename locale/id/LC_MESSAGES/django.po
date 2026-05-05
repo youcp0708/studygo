@@ -86,7 +86,7 @@ msgstr "Asisten AI StudyGo"
 
 #: .\chatbot\templates\chatbot\chatbot.html:103
 msgid "你好 !"
-msgstr ""
+msgstr "Halo !"
 
 #: .\chatbot\templates\chatbot\chatbot.html:104
 #, fuzzy
@@ -96,11 +96,8 @@ msgstr "Mahasiswa"
 
 #: .\chatbot\templates\chatbot\chatbot.html:105
 #, fuzzy
-#| msgid ""
-#| "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做"
-#| "什麼。"
-msgid ""
-"你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
+#| msgid "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼。"
+msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
 msgstr ""
 ". Anda dapat bertanya kepada saya tentang proses studi di Taiwan, seperti "
 "visa, ARC, asuransi kesehatan, tempat tinggal, registrasi, atau apa yang "
@@ -183,43 +180,64 @@ msgstr "Sedang membalas..."
 
 #: .\chatbot\views.py:16
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
-msgstr "Minimarket di Taiwan dapat digunakan untuk membayar tagihan, mengambil paket, fotokopi, dan membeli berbagai kebutuhan sehari-hari."
+msgstr ""
+"Minimarket di Taiwan dapat digunakan untuk membayar tagihan, mengambil "
+"paket, fotokopi, dan membeli berbagai kebutuhan sehari-hari."
 
 #: .\chatbot\views.py:17
 msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
-msgstr "Di Taiwan, orang sering menggunakan EasyCard atau iPASS untuk naik MRT dan bus."
+msgstr ""
+"Di Taiwan, orang sering menggunakan EasyCard atau iPASS untuk naik MRT dan "
+"bus."
 
 #: .\chatbot\views.py:18
 msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
-msgstr "Banyak sekolah di Taiwan memiliki kantor urusan internasional yang membantu mahasiswa internasional mengurus masalah pendaftaran dan kehidupan sehari-hari."
+msgstr ""
+"Banyak sekolah di Taiwan memiliki kantor urusan internasional yang membantu "
+"mahasiswa internasional mengurus masalah pendaftaran dan kehidupan sehari-"
+"hari."
 
 #: .\chatbot\views.py:19
 msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
-msgstr "Sebelum menyewa tempat tinggal di Taiwan, sebaiknya periksa biaya sewa, deposit, biaya air dan listrik, serta masa kontrak."
+msgstr ""
+"Sebelum menyewa tempat tinggal di Taiwan, sebaiknya periksa biaya sewa, "
+"deposit, biaya air dan listrik, serta masa kontrak."
 
 #: .\chatbot\views.py:20
 msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
-msgstr "Saat berobat di Taiwan, biaya medis biasanya lebih murah jika Anda sudah terdaftar dalam NHI."
+msgstr ""
+"Saat berobat di Taiwan, biaya medis biasanya lebih murah jika Anda sudah "
+"terdaftar dalam NHI."
 
 #: .\chatbot\views.py:21
 msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
-msgstr "Truk sampah di Taiwan biasanya memutar musik untuk mengingatkan warga membuang sampah. Jadwalnya berbeda di setiap daerah."
+msgstr ""
+"Truk sampah di Taiwan biasanya memutar musik untuk mengingatkan warga "
+"membuang sampah. Jadwalnya berbeda di setiap daerah."
 
 #: .\chatbot\views.py:22
 msgid "台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"
-msgstr "Musim panas di Taiwan cukup panas dan lembap, jadi saat keluar sebaiknya membawa botol air, pelindung matahari, dan perlengkapan hujan."
+msgstr ""
+"Musim panas di Taiwan cukup panas dan lembap, jadi saat keluar sebaiknya "
+"membawa botol air, pelindung matahari, dan perlengkapan hujan."
 
 #: .\chatbot\views.py:23
 msgid "如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"
-msgstr "Jika Anda mengganti alamat di Taiwan, beberapa dokumen atau data sekolah mungkin juga perlu diperbarui."
+msgstr ""
+"Jika Anda mengganti alamat di Taiwan, beberapa dokumen atau data sekolah "
+"mungkin juga perlu diperbarui."
 
 #: .\chatbot\views.py:24
 msgid "台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"
-msgstr "Kampus di Taiwan sering menggunakan email atau sistem sekolah untuk mengumumkan informasi penting, jadi sebaiknya diperiksa secara rutin."
+msgstr ""
+"Kampus di Taiwan sering menggunakan email atau sistem sekolah untuk "
+"mengumumkan informasi penting, jadi sebaiknya diperiksa secara rutin."
 
 #: .\chatbot\views.py:25
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
-msgstr "Saat mengurus nomor ponsel setelah tiba di Taiwan, biasanya diperlukan paspor, ARC, atau dokumen identitas lainnya."
+msgstr ""
+"Saat mengurus nomor ponsel setelah tiba di Taiwan, biasanya diperlukan "
+"paspor, ARC, atau dokumen identitas lainnya."
 
 #: .\studygo\settings.py:172
 msgid "繁體中文"
@@ -271,7 +289,7 @@ msgstr "Asisten Studi di Taiwan"
 
 #: .\templates\base.html:71
 msgid "   同學"
-msgstr ""
+msgstr "teman sekelas"
 
 #: .\templates\base.html:78 .\users\templates\users\dashboard.html:132
 msgid "登出"
@@ -745,9 +763,7 @@ msgid "流程提醒"
 msgstr "Pengingat Proses"
 
 #: .\users\templates\users\login.html:20
-msgid ""
-"系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任"
-"務，並以進度方式提醒你一步一步完成。"
+msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
 msgstr ""
 "Sistem akan secara otomatis membuat tugas penting untuk pengajuan visa, "
 "sebelum kedatangan, dan setelah kedatangan berdasarkan kewarganegaraan, "
@@ -759,9 +775,7 @@ msgid "資訊管理"
 msgstr "Manajemen Informasi"
 
 #: .\users\templates\users\login.html:39
-msgid ""
-"把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
-"確資料，不再被零散資訊搞混。"
+msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
 msgstr ""
 "Mengintegrasikan informasi visa, ARC, asuransi kesehatan, tempat tinggal, "
 "dan registrasi sekolah ke dalam satu halaman terpadu, sehingga mahasiswa "
@@ -769,9 +783,7 @@ msgstr ""
 "yang tersebar."
 
 #: .\users\templates\users\login.html:62
-msgid ""
-"當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 "
-"AI 小幫手快速獲得協助。"
+msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
 msgstr ""
 "Saat Anda tidak tahu langkah pertama yang harus dilakukan, dokumen apa yang "
 "perlu disiapkan, atau siapa yang harus ditanya, Anda dapat langsung "
@@ -789,12 +801,14 @@ msgstr "Tampilkan slide pengenalan kedua"
 msgid "顯示第三張介紹"
 msgstr "Tampilkan slide pengenalan ketiga"
 
-#: .\users\templates\users\login.html:92 .\users\templates\users\login.html:131
+#: .\users\templates\users\login.html:92
+#: .\users\templates\users\login.html:131
 #: .\users\templates\users\login.html:149
 msgid "登入"
 msgstr "Login"
 
-#: .\users\templates\users\login.html:94 .\users\templates\users\login.html:151
+#: .\users\templates\users\login.html:94
+#: .\users\templates\users\login.html:151
 msgid "註冊帳號"
 msgstr "Daftar Akun"
 
@@ -911,8 +925,7 @@ msgid "開始使用"
 msgstr "Mulai Menggunakan"
 
 #: .\users\templates\users\profile_setup.html:34
-msgid ""
-"這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
+msgid "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
 msgstr ""
 "Informasi ini akan digunakan untuk membuat proses kedatangan dan studi di "
 "Taiwan yang dipersonalisasi. Harap isi dengan benar agar Anda mendapatkan "
@@ -978,9 +991,7 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"            Setelah data disimpan, sistem akan secara otomatis membuat "
-"proses tugas personal berdasarkan <b>kewarganegaraan</b>, <b>jenis "
-"identitas</b>, dan\n"
+"            Setelah data disimpan, sistem akan secara otomatis membuat proses tugas personal berdasarkan <b>kewarganegaraan</b>, <b>jenis identitas</b>, dan\n"
 "            <b>status penerimaan</b> Anda.\n"
 "            "
 
@@ -1013,15 +1024,83 @@ msgstr "Kata sandi berhasil diatur ulang. Silakan login kembali."
 msgid "重設失敗，連結可能已過期"
 msgstr "Reset gagal. Tautan mungkin sudah kedaluwarsa."
 
+msgid "已完成"
+msgstr "Selesai"
+
+msgid "項"
+msgstr "item"
+
+msgid "通知"
+msgstr "Pemberitahuan"
+
+msgid "載入中..."
+msgstr "Memuat..."
+
+msgid "沒有未讀通知 🎉"
+msgstr "Tidak ada pemberitahuan belum dibaca 🎉"
+
+msgid "太棒了！您目前沒有待辦任務。"
+msgstr "🎉 Hebat! Anda tidak memiliki tugas tertunda."
+
+msgid "標記為已讀"
+msgstr "Tandai sudah dibaca"
+
+msgid "..."
+msgstr ""
+
+msgid "載入任務中..."
+msgstr "Memuat tugas..."
+
+msgid "目前完成進度"
+msgstr "Kemajuan penyelesaian saat ini"
+
+msgid "我的任務"
+msgstr "tugas saya"
+
+msgid "我的個人化任務清單"
+msgstr "Daftar tugas pribadi saya"
+
+msgid "未開始"
+msgstr "Belum dimulai"
+
+msgid "未讀的通知"
+msgstr "notifikasi yang belum dibaca"
+
+msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+msgstr ""
+"Selamat datang di StudyGo Taiwan, proses pribadi Anda untuk belajar di "
+"Taiwan sudah siap."
+
+msgid "抵臺後"
+msgstr "Setelah tiba di Taiwan"
+
+msgid "即將到期 / 提醒"
+msgstr "Segera kedaluwarsa/pengingat"
+
+msgid "你好"
+msgstr "Halo"
+
+msgid "入臺前準備"
+msgstr "Persiapan sebelum memasuki panggung"
+
+msgid "完成這些任務，為你在台灣的學習生活做好準備！"
+msgstr ""
+"Selesaikan tugas-tugas ini dan persiapkan kehidupan belajar Anda di Taiwan!"
+
+msgid "港澳生"
+msgstr "Pelajar dari Hong Kong dan Makau"
+
+msgid "進行中"
+msgstr "sedang berlangsung"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Kembali ke Dasbor"
 
-#~ msgid ""
-#~ "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
+#~ msgid "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
 #~ msgstr ""
 #~ "Berdasarkan data pribadi Anda, sistem membantu mengatur informasi sebelum "
-#~ "kedatangan, setelah kedatangan, visa, ARC, asuransi kesehatan, dan "
-#~ "kehidupan sehari-hari."
+#~ "kedatangan, setelah kedatangan, visa, ARC, asuransi kesehatan, dan kehidupan"
+#~ " sehari-hari."
 
 #~ msgid "你好，"
 #~ msgstr "Halo, "

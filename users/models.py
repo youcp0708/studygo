@@ -154,7 +154,7 @@ class StudentProfile(models.Model):
         db_table            = 'users_studentprofile'
 
     def __str__(self):
-        return f'{self.user.name} - {self.get_nationality_display()} - {self.get_identity_type_display()}'
+        return self.user.name if self.user.name else self.user.email
 
     # ── Class Diagram 方法對應 ──
     def store_info(self):

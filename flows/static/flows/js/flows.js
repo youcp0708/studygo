@@ -44,10 +44,13 @@ async function renderDashboardProgress() {
     const completed = stages.reduce((sum, stage) => sum + stage.completed, 0);
     const percent = data.data.overall_percent || 0;
 
+    const completedText = dashCompletion.getAttribute('data-completed-text') || '已完成';
+    const itemsText = dashCompletion.getAttribute('data-items-text') || '項';
+
     dashCompletion.innerHTML = `
     ${percent}%<br>
     <span style="font-size:16px;font-weight:600;color:var(--muted);">
-      已完成 ${completed} / ${total} 項
+      ${completedText} ${completed} / ${total} ${itemsText}
     </span>
   `;
   }
@@ -79,11 +82,30 @@ async function renderDashboardProgress() {
         }
       });
     });
+    const dashOverdueCount = document.getElementById('dashOverdueCount');
+    if (dashOverdueCount) {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const threeDaysLater = new Date(today);
+      threeDaysLater.setDate(today.getDate() + 3);
 
+      let overdueCount = 0;
+      allStages.forEach(stage => {
+        stage.tasks.forEach(task => {
+          if (task.due_date && task.status !== 'completed') {
+            const due = new Date(task.due_date);
+            due.setHours(0, 0, 0, 0);
+            if (due <= threeDaysLater) overdueCount++;
+          }
+        });
+      });
+      dashOverdueCount.textContent = overdueCount;
+    }
     if (pendingTasks.length === 0) {
+      const noTasksText = dashRecentTasks.getAttribute('data-no-tasks') || '🎉 太棒了！您目前沒有待辦任務。';
       dashRecentTasks.innerHTML = `
         <div style="text-align:center;padding:16px 0;color:var(--muted);">
-          🎉 太棒了！您目前沒有待辦任務。
+          ${noTasksText}
         </div>
       `;
       return;
@@ -199,13 +221,84 @@ document.addEventListener('DOMContentLoaded', async () => {
     await initUserTasks();
   }
 
-  // 渲染 Dashboard 資料
   if (document.getElementById('profileDash')) {
     renderDashboardProgress();
   }
 
-  // 渲染我的任務頁面
   if (document.getElementById('flowsContainer')) {
     renderMyTasks();
   }
+
+  if (document.getElementById('reminderBtn') || document.getElementById('profileDash')) {
+    renderReminders();
+  }
 });
+
+/* ════════════════════════════════════════
+   5. 讀取並渲染通知
+   GET /api/flows/reminders/
+════════════════════════════════════════ */
+window.toggleReminderDropdown = function () {
+  const dropdown = document.getElementById('reminderDropdown');
+  if (dropdown.style.display === 'none') {
+    dropdown.style.display = 'block';
+  } else {
+    dropdown.style.display = 'none';
+  }
+};
+
+async function renderReminders() {
+  const { ok, data } = await apiFetch('/api/flows/reminders/?unread_only=true');
+  if (!ok) return;
+
+  const count = data.data.unread_count || 0;
+  const reminders = data.data.reminders || [];
+
+  const badge = document.getElementById('reminderBadge');
+  const dashCount = document.getElementById('dashReminderCount'); // dashboard card
+  const list = document.getElementById('reminderList');
+  const dropdown = document.getElementById('reminderDropdown');
+
+  // 取得翻譯字串 (如果有的話)
+  const noRemindersText = dropdown ? dropdown.getAttribute('data-no-reminders') : '沒有未讀通知 🎉';
+  const markReadText = dropdown ? dropdown.getAttribute('data-mark-read') : '標記為已讀';
+
+  if (dashCount) dashCount.textContent = count;
+
+  if (badge) {
+    if (count > 0) {
+      badge.style.display = 'inline-block';
+      badge.textContent = count;
+    } else {
+      badge.style.display = 'none';
+    }
+  }
+
+  if (reminders.length === 0) {
+    list.innerHTML = `<div style="padding:16px; text-align:center; color:var(--muted);">${noRemindersText}</div>`;
+    return;
+  }
+
+  list.innerHTML = '';
+  reminders.forEach(r => {
+    list.innerHTML += `
+      <div id="reminder-${r.id}" style="padding:12px 16px; border-bottom:1px solid var(--border, #eee); display:flex; flex-direction:column; gap:4px; font-size:14px;">
+        <div style="color:var(--text); line-height:1.4;">${r.message}</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
+          <span style="font-size:12px; color:var(--muted);">${new Date(r.created_at).toLocaleDateString()}</span>
+          <button onclick="markReminderRead(${r.id})" style="background:none; border:none; color:var(--primary, #007bff); cursor:pointer; font-size:12px; padding:0;">${markReadText}</button>
+        </div>
+      </div>
+    `;
+  });
+}
+
+window.markReminderRead = async function (id) {
+  const { ok } = await apiFetch(`/api/flows/reminders/${id}/read/`, 'PATCH');
+  if (ok) {
+    document.getElementById(`reminder-${id}`).style.opacity = '0.5';
+    setTimeout(() => {
+      renderReminders();
+    }, 500);
+  }
+};
