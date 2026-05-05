@@ -196,18 +196,13 @@ async function handleLogin(e) {
     return;
   }
 
-  // 儲存 Token
   localStorage.setItem('authToken', data.data.token);
+  // 快取 user 資料，讓下一頁 initApp() 跳過重複的 /api/users/me/ 請求
+  sessionStorage.setItem('_userCache', JSON.stringify({ d: data.data, ts: Date.now() }));
 
   showToast(`歡迎回來，${data.data.user.name}！`, 'success');
 
-  setTimeout(() => {
-    if (data.data.has_profile) {
-      window.location.href = '/dashboard/';
-    } else {
-      window.location.href = '/profile/setup/';
-    }
-  }, 600);
+  window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
 }
 
 /* ════════════════════════════════════════
@@ -688,16 +683,31 @@ async function initApp() {
     return;
   }
 
-  // ── 受保護頁面：驗證 Session（Token 或 Django Session Cookie）──
-  const { ok, data } = await apiFetch('/api/users/me/');
-  if (!ok) {
-    localStorage.removeItem('authToken');
-    window.location.href = '/login/';
-    return;
+  // ── 受保護頁面：優先使用登入時快取的 user 資料（30 秒內有效）──
+  let userData;
+  const _cache = sessionStorage.getItem('_userCache');
+  if (_cache) {
+    try {
+      const parsed = JSON.parse(_cache);
+      if (Date.now() - parsed.ts < 30000) {
+        userData = parsed.d;
+      }
+    } catch (_) {}
+    sessionStorage.removeItem('_userCache');
+  }
+
+  if (!userData) {
+    const { ok, data } = await apiFetch('/api/users/me/');
+    if (!ok) {
+      localStorage.removeItem('authToken');
+      window.location.href = '/login/';
+      return;
+    }
+    userData = data.data;
   }
   localStorage.removeItem('pendingVerifyEmail');
 
-  const user = data.data;
+  const user = userData;
   const profile = user.student_profile;
 
   updateNavAuth(user);
@@ -760,12 +770,11 @@ async function handleGoogleLogin(response) {
   }
 
   localStorage.setItem('authToken', data.data.token);
+  sessionStorage.setItem('_userCache', JSON.stringify({ d: data.data, ts: Date.now() }));
   const isNew = data.data.is_new_user;
   showToast(isNew ? `帳號已建立，歡迎 ${data.data.user.name}！` : `歡迎回來，${data.data.user.name}！`, 'success');
 
-  setTimeout(() => {
-    window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
-  }, 600);
+  window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
 }
 
 // 啟動
