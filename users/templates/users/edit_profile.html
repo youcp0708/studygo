@@ -134,7 +134,7 @@
             <div class="field">
               <label>{% trans "預計抵台日期" %}</label>
               <input type="date" name="expected_arrival" id="editArrival"
-                value="{{ profile.expected_arrival|default:'' }}" />
+                value="{{ profile.expected_arrival|date:"Y-m-d"|default:'' }}" />
             </div>
           </div>
 

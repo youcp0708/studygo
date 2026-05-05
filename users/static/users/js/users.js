@@ -328,7 +328,7 @@ async function handleEditBasic(e) {
     nationality: document.getElementById('editNationality').value,
     department: document.getElementById('editDept').value.trim(),
     identity_type: document.getElementById('editIdentity').value,
-    admission_status: document.getElementById('editStatus').value,
+    admission_status: document.getElementById('editAdmissionStatus').value,
     expected_arrival: document.getElementById('editArrival').value || null,
   };
 
