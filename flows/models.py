@@ -5,8 +5,25 @@ from users.models import StudentProfile
 
 # 流程階段：申請來台、抵台、辦理入學報到
 class FlowStage(models.Model):
+    # 中文欄位：原本欄位保留，當作繁體中文
     name = models.CharField(max_length=100, verbose_name="流程階段名稱")
     description = models.TextField(blank=True, verbose_name="階段說明")
+
+    # 多語言欄位：給 admin 手動填
+    name_en = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 English")
+    name_my = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Burmese")
+    name_id = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Indonesian")
+    name_ms = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Malay")
+    name_th = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Thai")
+    name_ja = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Japanese")
+
+    description_en = models.TextField(blank=True, verbose_name="階段說明 English")
+    description_my = models.TextField(blank=True, verbose_name="階段說明 Burmese")
+    description_id = models.TextField(blank=True, verbose_name="階段說明 Indonesian")
+    description_ms = models.TextField(blank=True, verbose_name="階段說明 Malay")
+    description_th = models.TextField(blank=True, verbose_name="階段說明 Thai")
+    description_ja = models.TextField(blank=True, verbose_name="階段說明 Japanese")
+
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
 
     class Meta:
@@ -16,37 +33,35 @@ class FlowStage(models.Model):
     def __str__(self):
         return self.name
 
-    def save(self, *args, **kwargs):
-        from django.conf import settings
-        try:
-            from deep_translator import GoogleTranslator
-            src_name = getattr(self, 'name_zh_hant', self.name)
-            src_desc = getattr(self, 'description_zh_hant', self.description)
-            if src_name:
-                for lang_code, _ in settings.LANGUAGES:
-                    if lang_code == 'zh-hant':
-                        continue
-                    attr_name = f"name_{lang_code.replace('-', '_')}"
-                    if not getattr(self, attr_name, None):
-                        try:
-                            translated = GoogleTranslator(source='auto', target=lang_code).translate(src_name)
-                            setattr(self, attr_name, translated)
-                        except Exception as e:
-                            print(f"Name translation error for {lang_code}: {e}")
-            if src_desc:
-                for lang_code, _ in settings.LANGUAGES:
-                    if lang_code == 'zh-hant':
-                        continue
-                    attr_name = f"description_{lang_code.replace('-', '_')}"
-                    if not getattr(self, attr_name, None):
-                        try:
-                            translated = GoogleTranslator(source='auto', target=lang_code).translate(src_desc)
-                            setattr(self, attr_name, translated)
-                        except Exception as e:
-                            print(f"Desc translation error for {lang_code}: {e}")
-        except ImportError:
-            pass
-        super().save(*args, **kwargs)
+    def get_name_by_lang(self, lang_code):
+        """
+        依照目前語言取得流程階段名稱。
+        如果該語言沒有填資料，就回傳中文 name。
+        """
+        lang_map = {
+            "en": self.name_en,
+            "my": self.name_my,
+            "id": self.name_id,
+            "ms": self.name_ms,
+            "th": self.name_th,
+            "ja": self.name_ja,
+        }
+        return lang_map.get(lang_code, "") or self.name
+
+    def get_description_by_lang(self, lang_code):
+        """
+        依照目前語言取得流程階段說明。
+        如果該語言沒有填資料，就回傳中文 description。
+        """
+        lang_map = {
+            "en": self.description_en,
+            "my": self.description_my,
+            "id": self.description_id,
+            "ms": self.description_ms,
+            "th": self.description_th,
+            "ja": self.description_ja,
+        }
+        return lang_map.get(lang_code, "") or self.description
 
 
 # 任務模板：系統預設的流程任務
@@ -57,8 +72,25 @@ class Task(models.Model):
         related_name="tasks",
         verbose_name="所屬流程階段"
     )
+
+    # 中文欄位：原本欄位保留，當作繁體中文
     title = models.CharField(max_length=200, verbose_name="任務名稱")
     description = models.TextField(blank=True, verbose_name="任務說明")
+
+    # 多語言欄位：給 admin 手動填
+    title_en = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 English")
+    title_my = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Burmese")
+    title_id = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Indonesian")
+    title_ms = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Malay")
+    title_th = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Thai")
+    title_ja = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Japanese")
+
+    description_en = models.TextField(blank=True, verbose_name="任務說明 English")
+    description_my = models.TextField(blank=True, verbose_name="任務說明 Burmese")
+    description_id = models.TextField(blank=True, verbose_name="任務說明 Indonesian")
+    description_ms = models.TextField(blank=True, verbose_name="任務說明 Malay")
+    description_th = models.TextField(blank=True, verbose_name="任務說明 Thai")
+    description_ja = models.TextField(blank=True, verbose_name="任務說明 Japanese")
 
     # 用來判斷這個任務適合哪種學生
     identity_type = models.CharField(
@@ -93,37 +125,35 @@ class Task(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs):
-        from django.conf import settings
-        try:
-            from deep_translator import GoogleTranslator
-            src_title = getattr(self, 'title_zh_hant', self.title)
-            src_desc = getattr(self, 'description_zh_hant', self.description)
-            if src_title:
-                for lang_code, _ in settings.LANGUAGES:
-                    if lang_code == 'zh-hant':
-                        continue
-                    attr_name = f"title_{lang_code.replace('-', '_')}"
-                    if not getattr(self, attr_name, None):
-                        try:
-                            translated = GoogleTranslator(source='auto', target=lang_code).translate(src_title)
-                            setattr(self, attr_name, translated)
-                        except Exception as e:
-                            print(f"Title translation error for {lang_code}: {e}")
-            if src_desc:
-                for lang_code, _ in settings.LANGUAGES:
-                    if lang_code == 'zh-hant':
-                        continue
-                    attr_name = f"description_{lang_code.replace('-', '_')}"
-                    if not getattr(self, attr_name, None):
-                        try:
-                            translated = GoogleTranslator(source='auto', target=lang_code).translate(src_desc)
-                            setattr(self, attr_name, translated)
-                        except Exception as e:
-                            print(f"Desc translation error for {lang_code}: {e}")
-        except ImportError:
-            pass
-        super().save(*args, **kwargs)
+    def get_title_by_lang(self, lang_code):
+        """
+        依照目前語言取得任務名稱。
+        如果該語言沒有填資料，就回傳中文 title。
+        """
+        lang_map = {
+            "en": self.title_en,
+            "my": self.title_my,
+            "id": self.title_id,
+            "ms": self.title_ms,
+            "th": self.title_th,
+            "ja": self.title_ja,
+        }
+        return lang_map.get(lang_code, "") or self.title
+
+    def get_description_by_lang(self, lang_code):
+        """
+        依照目前語言取得任務說明。
+        如果該語言沒有填資料，就回傳中文 description。
+        """
+        lang_map = {
+            "en": self.description_en,
+            "my": self.description_my,
+            "id": self.description_id,
+            "ms": self.description_ms,
+            "th": self.description_th,
+            "ja": self.description_ja,
+        }
+        return lang_map.get(lang_code, "") or self.description
 
 
 # 學生自己的任務進度
@@ -208,20 +238,21 @@ from django.dispatch import receiver
 from django.utils import timezone
 from datetime import timedelta
 
+
 @receiver(post_save, sender=StudentTask)
 def auto_create_reminder_on_task_update(sender, instance, **kwargs):
-    if instance.status in ['not_started', 'in_progress'] and instance.due_date:
+    if instance.status in ["not_started", "in_progress"] and instance.due_date:
         today = timezone.now().date()
         target_date = today + timedelta(days=3)
 
         if instance.due_date <= target_date:
             if instance.due_date < today:
-                message = f'您的任務「{instance.task.title}」已經逾期（截止日：{instance.due_date}），請盡快完成！'
+                message = f"您的任務「{instance.task.title}」已經逾期（截止日：{instance.due_date}），請盡快完成！"
             elif instance.due_date == today:
-                message = f'您的任務「{instance.task.title}」今天到期，請記得完成！'
+                message = f"您的任務「{instance.task.title}」今天到期，請記得完成！"
             else:
                 days_left = (instance.due_date - today).days
-                message = f'您的任務「{instance.task.title}」還有 {days_left} 天到期（{instance.due_date}）。'
+                message = f"您的任務「{instance.task.title}」還有 {days_left} 天到期（{instance.due_date}）。"
 
             exists = Reminder.objects.filter(
                 student_task=instance,
