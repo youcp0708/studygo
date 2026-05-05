@@ -196,18 +196,13 @@ async function handleLogin(e) {
     return;
   }
 
-  // 儲存 Token
   localStorage.setItem('authToken', data.data.token);
+  // 快取 user 資料，讓下一頁 initApp() 跳過重複的 /api/users/me/ 請求
+  sessionStorage.setItem('_userCache', JSON.stringify({ d: data.data, ts: Date.now() }));
 
   showToast(`歡迎回來，${data.data.user.name}！`, 'success');
 
-  setTimeout(() => {
-    if (data.data.has_profile) {
-      window.location.href = '/dashboard/';
-    } else {
-      window.location.href = '/profile/setup/';
-    }
-  }, 600);
+  window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
 }
 
 /* ════════════════════════════════════════
@@ -250,8 +245,26 @@ async function handleRegister(e) {
   }
 
   localStorage.setItem('authToken', data.token);
-  showToast('帳號建立成功！請填寫個人資料', 'success');
-  setTimeout(() => { window.location.href = '/profile/setup/'; }, 800);
+  localStorage.setItem('pendingVerifyEmail', email);
+  showToast('帳號建立成功！驗證信已寄出，請至信箱完成驗證', 'success');
+  showVerifyEmailPanel(email);
+}
+
+/** 顯示 Email 驗證等待面板 */
+function showVerifyEmailPanel(email) {
+  document.getElementById('signInPanel')?.classList.add('hidden');
+  document.getElementById('registerPanel')?.classList.add('hidden');
+  const emailEl = document.getElementById('verifyEmailDisplay');
+  if (emailEl) emailEl.textContent = email;
+  document.getElementById('verifyEmailPanel')?.classList.remove('hidden');
+}
+
+/** 返回登入（從驗證等待面板） */
+function backToLogin() {
+  localStorage.removeItem('pendingVerifyEmail');
+  localStorage.removeItem('authToken');
+  document.getElementById('verifyEmailPanel')?.classList.add('hidden');
+  switchAuth('signin');
 }
 
 /* ════════════════════════════════════════
@@ -270,7 +283,7 @@ async function handleProfileSetup(e) {
 
   let ok = true;
   if (!nationality) { showError('nationalityErr', '請選擇國籍'); ok = false; }
-  if (!university) { showError('universityErr', '請輸入學校名稱'); ok = false; }
+  if (!university) { showError('universityErr', '請選擇就讀學校'); ok = false; }
   if (!identity) { showError('identityErr', '請選擇身份別'); ok = false; }
   if (!status) { showError('statusErr', '請選擇入學狀態'); ok = false; }
   if (!ok) return;
@@ -313,7 +326,6 @@ async function handleEditBasic(e) {
   const body = {
     name: document.getElementById('editName').value.trim(),
     nationality: document.getElementById('editNationality').value,
-    university: document.getElementById('editUniversity').value.trim(),
     department: document.getElementById('editDept').value.trim(),
     identity_type: document.getElementById('editIdentity').value,
     admission_status: document.getElementById('editStatus').value,
@@ -477,8 +489,6 @@ function populateDashboard(user, profile) {
   const lastLoginEl = document.getElementById('lastLogin');
   if (lastLoginEl) lastLoginEl.textContent = new Date().toLocaleString('zh-TW');
 
-  const emailVerEl = document.getElementById('emailVerifiedStatus');
-  if (emailVerEl) emailVerEl.textContent = user.email_verified ? '已驗證 ✅' : '未驗證（請至信箱確認）';
 }
 
 /* ════════════════════════════════════════
@@ -630,22 +640,40 @@ function startLoginSlider() {
    20. 頁面初始化：檢查是否已登入
 ════════════════════════════════════════ */
 async function initApp() {
-  // ── Login 頁面：清掉舊 token，啟動輪播後直接結束 ──
+  // ── Login 頁面 ──
   if (document.getElementById('loginPage')) {
-    localStorage.removeItem('authToken');
+    const params = new URLSearchParams(window.location.search);
+    const verified = params.get('verified');
+    const pendingEmail = localStorage.getItem('pendingVerifyEmail');
+
+    // 啟動輪播與 Google 登入
     if (document.querySelectorAll('.login-slide').length > 0) {
       showLoginSlide(0);
       startLoginSlider();
     }
-    // 啟動 Google 登入按鈕（GSI 可能尚未載入，用輪詢等待）
     initGoogleSignIn();
-    // 顯示 Email 驗證結果通知
-    const params = new URLSearchParams(window.location.search);
-    const verified = params.get('verified');
-    if (verified === '1')        showToast('Email 驗證成功！請登入您的帳號', 'success');
-    else if (verified === 'fail')    showToast('驗證連結無效或已使用', 'error');
-    else if (verified === 'expired') showToast('驗證連結已過期，請重新申請', 'error');
+
+    // 處理驗證結果通知
+    if (verified === '1') {
+      localStorage.removeItem('pendingVerifyEmail');
+      localStorage.removeItem('authToken');
+      showToast('Email 驗證成功！請登入您的帳號', 'success');
+    } else if (verified === 'fail') {
+      showToast('驗證連結無效或已使用', 'error');
+    } else if (verified === 'expired') {
+      showToast('驗證連結已過期，請重新申請', 'error');
+    }
     if (params.get('deleted') === '1') showToast('帳號已停用，感謝您使用 StudyGo Taiwan', 'info', 5000);
+    if (params.get('need_verify') === '1') showToast('請先驗證電子信箱才能繼續', 'error');
+
+    // 若有待驗證狀態（且非剛完成驗證），顯示驗證等待面板
+    if (pendingEmail && verified !== '1') {
+      showVerifyEmailPanel(pendingEmail);
+      return;
+    }
+
+    // 一般登入頁：清除舊 token
+    localStorage.removeItem('authToken');
     return;
   }
 
@@ -655,15 +683,31 @@ async function initApp() {
     return;
   }
 
-  // ── 受保護頁面：驗證 Session（Token 或 Django Session Cookie）──
-  const { ok, data } = await apiFetch('/api/users/me/');
-  if (!ok) {
-    localStorage.removeItem('authToken');
-    window.location.href = '/login/';
-    return;
+  // ── 受保護頁面：優先使用登入時快取的 user 資料（30 秒內有效）──
+  let userData;
+  const _cache = sessionStorage.getItem('_userCache');
+  if (_cache) {
+    try {
+      const parsed = JSON.parse(_cache);
+      if (Date.now() - parsed.ts < 30000) {
+        userData = parsed.d;
+      }
+    } catch (_) {}
+    sessionStorage.removeItem('_userCache');
   }
 
-  const user = data.data;
+  if (!userData) {
+    const { ok, data } = await apiFetch('/api/users/me/');
+    if (!ok) {
+      localStorage.removeItem('authToken');
+      window.location.href = '/login/';
+      return;
+    }
+    userData = data.data;
+  }
+  localStorage.removeItem('pendingVerifyEmail');
+
+  const user = userData;
   const profile = user.student_profile;
 
   updateNavAuth(user);
@@ -726,12 +770,11 @@ async function handleGoogleLogin(response) {
   }
 
   localStorage.setItem('authToken', data.data.token);
+  sessionStorage.setItem('_userCache', JSON.stringify({ d: data.data, ts: Date.now() }));
   const isNew = data.data.is_new_user;
   showToast(isNew ? `帳號已建立，歡迎 ${data.data.user.name}！` : `歡迎回來，${data.data.user.name}！`, 'success');
 
-  setTimeout(() => {
-    window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
-  }, 600);
+  window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
 }
 
 // 啟動
