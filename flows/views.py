@@ -36,6 +36,31 @@ def my_flows_page(request):
     })
 
 
+@login_required(login_url='/login/')
+def admissions_guide(request):
+    return render(request, 'flows/admissions_guide.html')
+
+@login_required(login_url='/login/')
+def guide_arc_exchange(request):
+    return render(request, 'flows/guide_arc_exchange.html')
+
+@login_required(login_url='/login/')
+def guide_arc_foreign(request):
+    return render(request, 'flows/guide_arc_foreign.html')
+
+@login_required(login_url='/login/')
+def guide_arc_overseas(request):
+    return render(request, 'flows/guide_arc_overseas.html')
+
+@login_required(login_url='/login/')
+def guide_bus_ncu(request):
+    return render(request, 'flows/guide_bus_ncu.html')
+
+@login_required(login_url='/login/')
+def guide_housing_ncu(request):
+    return render(request, 'flows/guide_housing_ncu.html')
+
+
 # ==========================================
 # REST API 視圖 (DRF)
 # ==========================================

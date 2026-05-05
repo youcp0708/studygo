@@ -1,4 +1,4 @@
-/* ===== Language Selector ===== */
+  /* ===== Language Selector ===== */
 /*
  * users/static/users/css/users.css
  * 使用者管理模塊專屬樣式
@@ -1668,3 +1668,202 @@ button {
     height: 38px;
   }
 }
+
+/* ── 儀表板：生活指南 accordion ── */
+.guide-section {
+  padding-bottom: 16px;
+}
+.guide-section-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color .2s, box-shadow .2s;
+  font-family: inherit;
+}
+.guide-section-head:hover,
+.guide-section-head.open {
+  border-color: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+.gsh-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.gsh-icon { font-size: 24px; flex-shrink: 0; }
+.gsh-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+.gsh-sub {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.gsh-arrow {
+  font-size: 12px;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: transform .25s;
+}
+.guide-section-head.open .gsh-arrow { transform: rotate(180deg); }
+.guide-panel {
+  overflow: hidden;
+  max-height: none;
+  opacity: 1;
+  transition: max-height .35s ease, opacity .3s ease;
+}
+.guide-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  padding-top: 14px;
+}
+.guide-card {
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  transition: border-color .2s, box-shadow .2s, transform .15s;
+}
+.guide-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(0,0,0,.07);
+  transform: translateY(-1px);
+}
+.gc-icon { font-size: 28px; flex-shrink: 0; }
+.gc-body { flex: 1; }
+.gc-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 3px;
+}
+.gc-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.gc-arrow {
+  font-size: 16px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* ── Navbar 在台指南下拉選單 ── */
+.nav-guide-wrap {
+  position: relative;
+}
+.nav-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 16px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color .2s, background .2s;
+  font-family: inherit;
+}
+.nav-guide-btn:hover,
+.nav-guide-btn[aria-expanded="true"] {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+.nav-guide-arrow {
+  font-size: 10px;
+  color: var(--muted);
+  transition: transform .25s;
+}
+.nav-guide-btn[aria-expanded="true"] .nav-guide-arrow {
+  transform: rotate(180deg);
+}
+.nav-guide-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 260px;
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.10);
+  padding: 8px;
+  z-index: 999;
+}
+.ngd-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background .15s;
+}
+.ngd-item:hover { background: var(--bg); }
+.ngd-icon { font-size: 20px; flex-shrink: 0; }
+.ngd-text { display: flex; flex-direction: column; gap: 1px; }
+.ngd-title { font-size: 13px; font-weight: 800; color: var(--primary-dark); }
+.ngd-sub   { font-size: 11px; color: var(--muted); }
+.ngd-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 6px 4px;
+}
+
+/* ════════════════════════════════════
+   NAVBAR 右側區塊 (nav-right)
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.language-form {
+  margin: 0;
+  padding: 0;
+}
+
+.language-select {
+  height: 38px;
+  padding: 0 12px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color .2s, background .2s;
+  appearance: auto;
+}
+
+.language-select:hover,
+.language-select:focus {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+════════════════════════════════════ */
