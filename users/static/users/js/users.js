@@ -283,7 +283,7 @@ async function handleProfileSetup(e) {
 
   let ok = true;
   if (!nationality) { showError('nationalityErr', '請選擇國籍'); ok = false; }
-  if (!university) { showError('universityErr', '請輸入學校名稱'); ok = false; }
+  if (!university) { showError('universityErr', '請選擇就讀學校'); ok = false; }
   if (!identity) { showError('identityErr', '請選擇身份別'); ok = false; }
   if (!status) { showError('statusErr', '請選擇入學狀態'); ok = false; }
   if (!ok) return;

@@ -59,8 +59,55 @@
 
             <div class="field">
               <label>{% trans "就讀學校" %}</label>
-              <input type="text" name="university" id="setupUniversity" placeholder="{% trans '例如：國立臺灣大學' %}" required
-                oninput="updatePreview()" />
+              <select name="university" id="setupUniversity" required onchange="updatePreview()">
+                <option value="">{% trans "請選擇就讀學校" %}</option>
+                <optgroup label="{% trans '綜合大學' %}">
+                  <option value="" disabled>🏫 國立臺灣大學（NTU）</option>
+                  <option value="" disabled>🏫 國立政治大學（NCCU）</option>
+                  <option value="" disabled>🏫 國立清華大學（NTHU）</option>
+                  <option value="" disabled>🏫 國立陽明交通大學（NYCU）</option>
+                  <option value="" disabled>🏫 國立成功大學（NCKU）</option>
+                  <option value="" disabled>🏫 國立中興大學（NCHU）</option>
+                  <option value="國立中央大學">🏫 國立中央大學（NCU）</option>
+                  <option value="" disabled>🏫 國立中山大學（NSYSU）</option>
+                  <option value="" disabled>🏫 國立臺灣師範大學（NTNU）</option>
+                  <option value="" disabled>🏫 國立臺北大學（NTPU）</option>
+                  <option value="" disabled>🏫 國立臺南大學（NUTN）</option>
+                  <option value="" disabled>🏫 國立嘉義大學（NCYU）</option>
+                  <option value="" disabled>🏫 國立東華大學（NDHU）</option>
+                  <option value="" disabled>🏫 國立暨南國際大學（NCNU）</option>
+                  <option value="" disabled>🏫 國立宜蘭大學（NIU）</option>
+                  <option value="" disabled>🏫 國立聯合大學（NUU）</option>
+                  <option value="" disabled>🏫 國立臺東大學（NTTU）</option>
+                  <option value="" disabled>🏫 國立金門大學（NQU）</option>
+                  <option value="" disabled>🏫 國立澎湖科技大學（NPU）</option>
+                </optgroup>
+                <optgroup label="{% trans '科技大學' %}">
+                  <option value="" disabled>🔧 國立臺灣科技大學（NTUST）</option>
+                  <option value="" disabled>🔧 國立臺北科技大學（NTUT）</option>
+                  <option value="" disabled>🔧 國立高雄科技大學（NKUST）</option>
+                  <option value="" disabled>🔧 國立雲林科技大學（YunTech）</option>
+                  <option value="" disabled>🔧 國立屏東科技大學（NPUST）</option>
+                  <option value="" disabled>🔧 國立臺中科技大學（NTCUST）</option>
+                  <option value="" disabled>🔧 國立虎尾科技大學（NFU）</option>
+                  <option value="" disabled>🔧 國立高雄餐旅大學（NKUHT）</option>
+                </optgroup>
+                <optgroup label="{% trans '師範／教育大學' %}">
+                  <option value="" disabled>📖 國立高雄師範大學（NKNU）</option>
+                  <option value="" disabled>📖 國立彰化師範大學（NCUE）</option>
+                  <option value="" disabled>📖 國立臺北教育大學（NTUE）</option>
+                  <option value="" disabled>📖 國立臺中教育大學（NTCU）</option>
+                  <option value="" disabled>📖 國立屏東大學（NPTU）</option>
+                  <option value="" disabled>📖 國立臺灣體育運動大學（NTUS）</option>
+                </optgroup>
+                <optgroup label="{% trans '其他' %}">
+                  <option value="" disabled>🎓 國立臺北商業大學（NTUB）</option>
+                  <option value="" disabled>🎓 國立空中大學（NOU）</option>
+                </optgroup>
+              </select>
+              <div class="field-hint" style="font-size:12px;color:var(--muted);margin-top:4px;">
+                ⚠️ {% trans "目前僅開放國立中央大學（NCU）的個人化流程" %}
+              </div>
               <div class="field-error hidden" id="universityErr"></div>
             </div>
           </div>
