@@ -1087,6 +1087,56 @@ msgstr "Students from Hong Kong and Macao"
 msgid "進行中"
 msgstr "in progress"
 
+msgid "資訊中心"
+msgstr "Info Center"
+
+msgid "居留證辦理・住宿・交通等常用說明"
+msgstr "ARC Application, Housing, Transportation and More"
+
+msgid "外籍生 ARC 辦理"
+msgstr "Foreign Student ARC Application"
+
+msgid "外國護照入學者的居留證申請流程與文件清單"
+msgstr ""
+"ARC application process and document checklist for foreign passport holders"
+
+msgid "僑生 ARC 辦理"
+msgstr "Overseas Chinese Student ARC Application"
+
+msgid "持外國護照入台的僑生居留證申請說明"
+msgstr ""
+"ARC application guide for overseas Chinese students entering Taiwan with a "
+"foreign passport"
+
+msgid "交換生居留說明"
+msgstr "Exchange Student Residency Guide"
+
+msgid "短期觀光簽 vs 長期居留簽，ARC 辦理判斷指南"
+msgstr ""
+"Short-term Tourist Visa vs. Long-term Residency Visa — ARC Application Guide"
+
+msgid "中央大學住宿申請"
+msgstr "NCU Dormitory Application"
+
+msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
+msgstr ""
+"Dormitory zones, facilities, application process, and priority guarantee for"
+" foreign students"
+
+msgid "中央大學公車指南"
+msgstr "NCU Bus Guide"
+
+msgid "主要路線、常見目的地與即時查詢連結"
+msgstr "Main routes, common destinations, and real-time query links"
+
+msgid "來臺就學相關法規"
+msgstr "Taiwan Study-Related Regulations"
+
+msgid "入學・居留・健保・工讀・學籍等重要法規說明"
+msgstr ""
+"Key regulations on admission, residency, health insurance, work, and "
+"academic status"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Back to Dashboard"
 

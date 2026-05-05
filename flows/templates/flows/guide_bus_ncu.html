@@ -190,15 +190,15 @@
 {% block content %}
 <div class="guide-wrap" style="padding-top:32px;">
 
-  <a class="back-link" href="{% url 'dashboard' %}">← 返回儀表板</a>
+  <a class="back-link" href="{% url 'guide_index' %}">← 返回資訊中心</a>
 
   <div class="guide-hero">
     <div class="bg-text">BUS</div>
     <div class="hero-badge">中央大學 × 公共交通</div>
-    <h2>🚌 從中央大學搭公車去哪裡</h2>
+    <h2>🚌 中央大學公車指南</h2>
     <p>
-      整理中央大學校外在週主要公車路線、常去目的地的搭乘方式，
-      以及即時查詢公車到站的官方連結，幫你輕鬆掌握通勤資訊。
+      整理中央大學對外主要公車路線，包含從中壢車站、高鐵桃園站、機場及台北的搭乘方式，
+      以及即時查詢公車到站的官方連結。
     </p>
     <div class="hero-meta">
       <div class="hero-meta-item">📍 主站點：中央大學</div>
@@ -215,93 +215,105 @@
     </div>
   </div>
 
-  <div class="section-title">🗺 可以去哪裡？</div>
+  <!-- 簡易總覽 -->
+  <div class="section-title">⚡ 快速總覽</div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;">
+    <div style="background:var(--primary-soft);border-radius:12px;padding:12px 18px;font-size:14px;font-weight:700;color:var(--primary-dark);">
+      🚉 中壢車站出發 → 搭 <strong>132</strong> 或 <strong>133</strong>
+    </div>
+    <div style="background:#f0fdf4;border-radius:12px;padding:12px 18px;font-size:14px;font-weight:700;color:#15803d;">
+      🚄 高鐵桃園站出發 → 搭 <strong>172</strong> 或 <strong>173</strong>
+    </div>
+    <div style="background:#fff7ed;border-radius:12px;padding:12px 18px;font-size:14px;font-weight:700;color:#c2410c;">
+      🏙 台北出發 → 搭 <strong>9025A</strong>
+    </div>
+    <div style="background:#eff6ff;border-radius:12px;padding:12px 18px;font-size:14px;font-weight:700;color:#1d4ed8;">
+      🚌 市區出發（後門）→ 搭 <strong>5035</strong>（雙連坡站下車步行）
+    </div>
+  </div>
+
+  <div class="section-title">🗺 各出發地搭乘方式</div>
   <div class="dest-grid">
 
     <div class="dest-card">
       <div class="dc-top">
         <div class="dest-icon">🚉</div>
-        <span class="dest-time time-near">約 15 分鐘</span>
+        <span class="dest-time time-near">約 20～30 分鐘</span>
       </div>
-      <div class="dest-name">中壢火車站</div>
-      <div class="dest-sub">台鐵中壢站，可轉乘台北、新竹等地，週邊有大型購物中心和美食街。</div>
+      <div class="dest-name">從中壢車站出發</div>
+      <div class="dest-sub">市區公車行駛於中壢市區及中央大學之間。票價一段票全票 18 元，可用悠遊卡。</div>
       <div class="dest-routes">
-        <span class="route-tag rt-green">🚌 135</span>
-        <span class="route-tag rt-green">🚌 117</span>
-        <span class="route-tag rt-green">🚌 中大快線</span>
+        <span class="route-tag rt-green">🚌 132</span>
+        <span class="route-tag rt-green">🚌 133</span>
       </div>
-      <div class="dc-note">🚶 步行可達（SOGO 中壢站、中央大廟）約 10 分鐘）</div>
-    </div>
-
-    <div class="dest-card">
-      <div class="dc-top">
-        <div class="dest-icon">🚉</div>
-        <span class="dest-time time-mid">約 30 分鐘</span>
+      <div class="dc-note">
+        校園站牌：前門警衛室、中大湖、依仁堂、後門、觀景台<br>
+        <a href="https://taiwanhelper.com/bus/TAO/TAO3220" target="_blank" rel="noopener" style="color:var(--primary);font-weight:700;">即時動態 ↗</a>
+        ／
+        <a href="https://ebus.tycg.gov.tw/ebus/fare/3220" target="_blank" rel="noopener" style="color:var(--primary);font-weight:700;">桃園公車動態 ↗</a>
       </div>
-      <div class="dest-name">桃園火車站</div>
-      <div class="dest-sub">台鐵桃園站，桃園市中心商業區，有百貨公司、電影院。</div>
-      <div class="dest-routes">
-        <span class="route-tag rt-orange">🚌 5009</span>
-        <span class="route-tag rt-gray">🚌 中壢轉乘</span>
-      </div>
-      <div class="dc-note">💡 建議：先搭車至中壢火車站，再轉台鐵或公車前往桃園站</div>
     </div>
 
     <div class="dest-card">
       <div class="dc-top">
         <div class="dest-icon">🚄</div>
-        <span class="dest-time time-mid">約 25 分鐘</span>
+        <span class="dest-time time-near">約 15～20 分鐘</span>
       </div>
-      <div class="dest-name">高鐵桃園站</div>
-      <div class="dest-sub">台灣高鐵桃園站，可快速前往台北（15分）、台中（30分）、台南/高雄。</div>
+      <div class="dest-name">從高鐵桃園站出發</div>
+      <div class="dest-sub">市區公車直達中央大學，約每半小時一班。</div>
       <div class="dest-routes">
-        <span class="route-tag rt-purple">🚌 桃園客運</span>
-        <span class="route-tag rt-gray">🚌 中壢轉接駁</span>
+        <span class="route-tag rt-purple">🚌 172</span>
+        <span class="route-tag rt-purple">🚌 173</span>
       </div>
-      <div class="dc-note">✈️ 高鐵桃園站內設機場捷運（Airport MRT），可直達桃園機場 T1/T2</div>
+      <div class="dc-note">
+        💡 高鐵桃園站設有機場捷運，可直達桃園機場 T1/T2<br>
+        <a href="https://www.ncu.edu.tw/tw/pages/show.php?top=1&num=56" target="_blank" rel="noopener" style="color:var(--primary);font-weight:700;">中大校園公車時刻表 ↗</a>
+      </div>
     </div>
 
     <div class="dest-card">
       <div class="dc-top">
         <div class="dest-icon">✈️</div>
-        <span class="dest-time time-far">約 50～70 分鐘</span>
+        <span class="dest-time time-mid">約 35～40 分鐘</span>
       </div>
-      <div class="dest-name">桃園國際機場</div>
-      <div class="dest-sub">第一、第二航廈，出入境，接機、購物。</div>
+      <div class="dest-name">從桃園機場出發</div>
+      <div class="dest-sub">搭「桃園機場捷運」至桃園高鐵站，再轉搭 172 或 173 公車直達中央大學。</div>
       <div class="dest-routes">
-        <span class="route-tag rt-blue">🚌 機場客運</span>
-        <span class="route-tag rt-purple">🚌 機場捷運</span>
+        <span class="route-tag rt-blue">🚇 機場捷運</span>
+        <span class="route-tag rt-purple">🚌 172 / 173</span>
       </div>
-      <div class="dc-note">路線 A：搭公車至 <strong>高鐵桃園站</strong>，轉機場捷運直達（約 15 分）<br>
-        路線 B：搭公車至 <strong>中壢火車站</strong>，轉機場客運（台灣好行等各客運）</div>
+      <div class="dc-note">機場捷運至高鐵桃園站約 15 分鐘，轉車後再約 15～20 分鐘</div>
     </div>
 
     <div class="dest-card">
       <div class="dc-top">
         <div class="dest-icon">🏙</div>
-        <span class="dest-time time-far">約 60～90 分鐘</span>
+        <span class="dest-time time-mid">約 30～40 分鐘</span>
       </div>
-      <div class="dest-name">台北</div>
-      <div class="dest-sub">台北車站、忠孝武昌、信義等商圈，博物館、夜市、政府機關。</div>
+      <div class="dest-name">從台北出發</div>
+      <div class="dest-sub">國道客運 9025A 繞經中央大學，路線為松山機場－中山高－中央大學－中壢。</div>
       <div class="dest-routes">
-        <span class="route-tag rt-orange">🚌 台北客運直達</span>
-        <span class="route-tag rt-gray">🚌 中壢搭台鐵</span>
+        <span class="route-tag rt-orange">🚌 9025A</span>
       </div>
-      <div class="dc-note">台鐵自強號中壢→台北 約 45 分鐘；客運直達台北西站（Z棟）約 60 分鐘</div>
+      <div class="dc-note">
+        搭至「中央大學」站下車即可，不需轉乘<br>
+        <a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=9025A&rn=1713338108231&lan=C" target="_blank" rel="noopener" style="color:var(--primary);font-weight:700;">公路客運查詢 ↗</a>
+        ／
+        <a href="https://yunbus.tw/lite/en/route.php?id=THB9025A" target="_blank" rel="noopener" style="color:var(--primary);font-weight:700;">即時動態 ↗</a>
+      </div>
     </div>
 
     <div class="dest-card">
       <div class="dc-top">
-        <div class="dest-icon">🛒</div>
-        <span class="dest-time time-near">約 10～20 分鐘</span>
+        <div class="dest-icon">🚶</div>
+        <span class="dest-time time-near">下車步行至後門</span>
       </div>
-      <div class="dest-name">中原大學附近 / 龍岡</div>
-      <div class="dest-sub">中原夜市、龍岡米干街，平價美食、宵夜、生活百貨，是學生最常去的地方。</div>
+      <div class="dest-name">市區出發（後門入口）</div>
+      <div class="dest-sub">搭 5035 至「雙連坡」站下車，步行即可進入中央大學後門。</div>
       <div class="dest-routes">
-        <span class="route-tag rt-green">🚌 135</span>
-        <span class="route-tag rt-green">🚌 117</span>
+        <span class="route-tag rt-blue">🚌 5035</span>
       </div>
-      <div class="dc-note">🏆 龍岡米干街是全台最大緬甸族裔美食聚集地，異國美食豐富</div>
+      <div class="dc-note">🚪 下車後步行至後門，無需轉乘</div>
     </div>
 
   </div>
@@ -320,78 +332,102 @@
         <tr>
           <th>路線</th>
           <th>行駛方向</th>
-          <th>主要停靠站（NCU 鄰近）</th>
+          <th>中大校園站牌</th>
           <th>票價</th>
           <th>備註</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="rn-badge rt-green">135</span></td>
-          <td>中央大學 → 中壢火車站</td>
+          <td><span class="rn-badge rt-green">132</span></td>
+          <td>中壢市區 ⟷ 中央大學</td>
+          <td>
+            <div class="stop-list">
+              <span class="stop-chip highlight">前門警衛室</span>
+              <span class="stop-chip highlight">中大湖</span>
+              <span class="stop-chip highlight">依仁堂</span>
+              <span class="stop-chip highlight">後門</span>
+              <span class="stop-chip highlight">觀景台</span>
+            </div>
+          </td>
+          <td>NT$18（一段票）</td>
+          <td>可用悠遊卡，車程約 20～30 分鐘<br>
+            <a href="https://taiwanhelper.com/bus/TAO/TAO3220" target="_blank" rel="noopener" style="color:var(--primary);font-size:11px;font-weight:700;">即時動態 ↗</a>
+            ／
+            <a href="https://ebus.tycg.gov.tw/ebus/fare/3220" target="_blank" rel="noopener" style="color:var(--primary);font-size:11px;font-weight:700;">桃園公車 ↗</a>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="rn-badge rt-green">133</span></td>
+          <td>中壢市區 ⟷ 中央大學</td>
+          <td>
+            <div class="stop-list">
+              <span class="stop-chip highlight">前門警衛室</span>
+              <span class="stop-chip highlight">中大湖</span>
+              <span class="stop-chip highlight">依仁堂</span>
+              <span class="stop-chip highlight">後門</span>
+              <span class="stop-chip highlight">觀景台</span>
+            </div>
+          </td>
+          <td>NT$18（一段票）</td>
+          <td>可用悠遊卡，車程約 20～30 分鐘<br>
+            <a href="https://taiwanhelper.com/bus/TAO/TAO3220" target="_blank" rel="noopener" style="color:var(--primary);font-size:11px;font-weight:700;">即時動態 ↗</a>
+            ／
+            <a href="https://ebus.tycg.gov.tw/ebus/fare/3220" target="_blank" rel="noopener" style="color:var(--primary);font-size:11px;font-weight:700;">桃園公車 ↗</a>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="rn-badge rt-purple">172</span></td>
+          <td>高鐵桃園站 ⟷ 中央大學</td>
           <td>
             <div class="stop-list">
               <span class="stop-chip highlight">中央大學</span>
-              <span class="stop-chip">大學路口</span>
-              <span class="stop-chip">中大路</span>
-              <span class="stop-chip highlight">中壢火車站</span>
             </div>
           </td>
-          <td>約 NT$15～25</td>
-          <td>班次較密，是最常往中壢最便捷的路線之一</td>
+          <td>—</td>
+          <td>約每半小時一班，車程 15～20 分鐘<br>
+            <a href="https://www.ncu.edu.tw/tw/pages/show.php?top=1&num=56" target="_blank" rel="noopener" style="color:var(--primary);font-size:11px;font-weight:700;">中大時刻表 ↗</a>
+          </td>
         </tr>
         <tr>
-          <td><span class="rn-badge rt-green">117</span></td>
-          <td>中央大學 → 中壢</td>
+          <td><span class="rn-badge rt-purple">173</span></td>
+          <td>高鐵桃園站 ⟷ 中央大學</td>
           <td>
             <div class="stop-list">
               <span class="stop-chip highlight">中央大學</span>
-              <span class="stop-chip">中原大學</span>
-              <span class="stop-chip highlight">中壢火車站</span>
             </div>
           </td>
-          <td>約 NT$15～25</td>
-          <td>經過中原大學，可中途下至中原夜市</td>
+          <td>—</td>
+          <td>約每半小時一班，車程 15～20 分鐘<br>
+            <a href="https://www.ncu.edu.tw/tw/pages/show.php?top=1&num=56" target="_blank" rel="noopener" style="color:var(--primary);font-size:11px;font-weight:700;">中大時刻表 ↗</a>
+          </td>
         </tr>
         <tr>
-          <td><span class="rn-badge rt-orange">5009</span></td>
-          <td>中壢 → 桃園</td>
+          <td><span class="rn-badge rt-orange">9025A</span></td>
+          <td>松山機場 ⟷ 中壢（繞中央大學）</td>
           <td>
             <div class="stop-list">
-              <span class="stop-chip highlight">中壢火車站</span>
-              <span class="stop-chip">和平路</span>
-              <span class="stop-chip highlight">桃園火車站</span>
+              <span class="stop-chip highlight">中央大學</span>
             </div>
           </td>
-          <td>約 NT$25～35</td>
-          <td>由中壢搭乘前往桃園市中心，在中壢轉乘</td>
+          <td>—</td>
+          <td>國道客運，車程約 30～40 分鐘（松山機場出發）<br>
+            <a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=9025A&rn=1713338108231&lan=C" target="_blank" rel="noopener" style="color:var(--primary);font-size:11px;font-weight:700;">公路客運查詢 ↗</a>
+            ／
+            <a href="https://yunbus.tw/lite/en/route.php?id=THB9025A" target="_blank" rel="noopener" style="color:var(--primary);font-size:11px;font-weight:700;">即時動態 ↗</a>
+          </td>
         </tr>
         <tr>
-          <td><span class="rn-badge rt-purple">機場客運</span></td>
-          <td>中壢 → 桃園機場</td>
+          <td><span class="rn-badge rt-blue">5035</span></td>
+          <td>市區 ⟷ 雙連坡（步行至後門）</td>
           <td>
             <div class="stop-list">
-              <span class="stop-chip highlight">中壢火車站</span>
-              <span class="stop-chip">南崁</span>
-              <span class="stop-chip highlight">機場 T1</span>
-              <span class="stop-chip highlight">機場 T2</span>
+              <span class="stop-chip highlight">雙連坡</span>
+              <span class="stop-chip">（步行至後門）</span>
             </div>
           </td>
-          <td>約 NT$40～60</td>
-          <td>各家客運、台灣好行等，在中壢站搭乘，班次間隔約 20～30 分</td>
-        </tr>
-        <tr>
-          <td><span class="rn-badge rt-blue">台北客運</span></td>
-          <td>中壢 → 台北西站</td>
-          <td>
-            <div class="stop-list">
-              <span class="stop-chip highlight">中壢火車站</span>
-              <span class="stop-chip">林口</span>
-              <span class="stop-chip highlight">台北西站 Z棟</span>
-            </div>
-          </td>
-          <td>約 NT$80～110</td>
-          <td>各家客運 1800 / 首都客運等，在中壢轉乘，尖峰時段約 60 分</td>
+          <td>—</td>
+          <td>🚪 雙連坡站下車後步行可進入中大後門</td>
         </tr>
       </tbody>
     </table>
@@ -400,12 +436,12 @@
   <div class="section-title">🔍 即時查詢到站時間</div>
   <div class="lookup-grid">
 
-    <a class="lookup-card" href="https://ebus.tyc.gov.tw" target="_blank" rel="noopener">
+    <a class="lookup-card" href="https://ebus.tycg.gov.tw/ebus/" target="_blank" rel="noopener">
       <div class="lookup-icon">🌐</div>
       <span class="lookup-badge badge-official">官方</span>
       <div class="lookup-name">桃園市公車即時查詢</div>
       <div class="lookup-desc">桃園市政府官方公車即時到站資訊，輸入站點名稱或路線號查詢。</div>
-      <div class="lookup-url">ebus.tyc.gov.tw</div>
+      <div class="lookup-url">ebus.tycg.gov.tw</div>
     </a>
 
     <a class="lookup-card" href="https://www.taiwanbus.tw" target="_blank" rel="noopener">
@@ -434,39 +470,7 @@
 
   </div>
 
-  <div class="section-title">📱 推薦 App</div>
-  <div class="app-row">
-    <div class="app-chip">
-      <div class="app-icon">🚌</div>
-      <div>
-        <div>Bus+（搭公車）</div>
-        <div class="app-sub">iOS / Android — 即時到站、GPS 公車位置</div>
-      </div>
-    </div>
-    <div class="app-chip">
-      <div class="app-icon">🗺</div>
-      <div>
-        <div>Google Maps</div>
-        <div class="app-sub">大眾運輸路線規劃 + 即時延誤資訊</div>
-      </div>
-    </div>
-    <div class="app-chip">
-      <div class="app-icon">🚌</div>
-      <div>
-        <div>台灣智慧公車</div>
-        <div class="app-sub">交通部官方 App — 全台公車整合</div>
-      </div>
-    </div>
-    <div class="app-chip">
-      <div class="app-icon">🚄</div>
-      <div>
-        <div>台鐵 e訂通</div>
-        <div class="app-sub">搭台鐵至台北、新竹班次、訂票</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-title">💡 搭車小技巧</div>
+<div class="section-title">💡 搭車小技巧</div>
   <div class="alert alert-info" style="margin-bottom:12px;">
     <div class="alert-icon">💳</div>
     <div>

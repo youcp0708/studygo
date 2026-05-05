@@ -1,0 +1,252 @@
+{# flows/templates/flows/guide_regulations.html — 來臺就學相關法規 #}
+{% extends "base.html" %}
+{% load static %}
+{% block title %}來臺就學相關法規 — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  :root { --border: var(--line); --dark: var(--primary-dark); }
+
+  .guide-wrap { width:min(860px,96%); margin:0 auto; padding:0 0 72px; }
+
+  .guide-hero {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%);
+    color:#fff; padding:36px 44px 32px; border-radius:20px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .guide-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .guide-hero .hero-badge {
+    display:inline-block; background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.35); border-radius:99px;
+    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
+  }
+  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
+  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:520px; margin:0; }
+
+  .reg-section { margin-bottom:28px; }
+  .reg-section-title {
+    font-size:15px; font-weight:900; color:var(--primary-dark);
+    margin-bottom:10px; padding:8px 14px;
+    background:var(--primary-soft); border-radius:10px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .reg-item {
+    display:flex; align-items:center; gap:10px;
+    padding:11px 16px; border-radius:10px; border:1.5px solid var(--border);
+    background:#fff; margin-bottom:6px;
+    text-decoration:none; color:var(--dark);
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .reg-item:hover {
+    border-color:var(--primary); box-shadow:0 2px 8px rgba(0,80,160,.08);
+    color:var(--primary-dark);
+  }
+  .reg-item-icon { font-size:16px; flex-shrink:0; }
+  .reg-item-name { flex:1; font-size:14px; font-weight:600; line-height:1.4; }
+  .reg-item-ext  { font-size:11px; color:var(--muted); flex-shrink:0; }
+
+  .ref-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:12px; margin-top:12px;
+  }
+  .ref-card {
+    display:flex; align-items:center; gap:12px;
+    padding:14px 18px; border-radius:12px; border:1.5px solid var(--border);
+    background:#fff; text-decoration:none; color:var(--dark);
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .ref-card:hover {
+    border-color:var(--primary); box-shadow:0 2px 8px rgba(0,80,160,.08);
+  }
+  .ref-card-icon { font-size:26px; flex-shrink:0; }
+  .ref-card-name { font-size:13px; font-weight:800; color:var(--dark); margin-bottom:2px; }
+  .ref-card-url  { font-size:11px; color:var(--muted); font-family:monospace; }
+
+  .back-link {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px;
+    padding:6px 0; text-decoration:none;
+  }
+  .back-link:hover { color:var(--primary-dark); }
+  .section-title {
+    font-size:18px; font-weight:900; color:var(--primary-dark);
+    margin:28px 0 14px; padding-bottom:10px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="guide-wrap" style="padding-top:32px;">
+
+  <a class="back-link" href="{% url 'guide_index' %}">← 返回資訊中心</a>
+
+  <div class="guide-hero">
+    <div class="bg-text">LAW</div>
+    <div class="hero-badge">僑生・外籍生必讀</div>
+    <h2>⚖️ 來臺就學相關法規</h2>
+    <p>整理來台就學的相關法律法規，包含就學辦法、助學金、醫療保險、社團輔助等，點選名稱即可查看原文。</p>
+  </div>
+
+  <!-- ── 就學辦法 ── -->
+  <div class="reg-section">
+    <div class="reg-section-title">📋 就學辦法</div>
+
+    <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0100001" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">僑生回國就學及輔導辦法</span>
+      <span class="reg-item-ext">全國法規資料庫 ↗</span>
+    </a>
+
+    <a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=FL016605" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">香港澳門地區居民來臺就學辦法</span>
+      <span class="reg-item-ext">教育部法規 ↗</span>
+    </a>
+
+    <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030032" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">入學大學同等學力認定標準</span>
+      <span class="reg-item-ext">全國法規資料庫 ↗</span>
+    </a>
+  </div>
+
+  <!-- ── 助學金 ── -->
+  <div class="reg-section">
+    <div class="reg-section-title">💰 助學金</div>
+
+    <a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=FL009271" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">教育部補助高級中等以上學校僑生輔導工作實施要點</span>
+      <span class="reg-item-ext">教育部法規 ↗</span>
+    </a>
+
+    <a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=FL029880" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">教育部核發高級中等以上學校清寒僑生助學金要點</span>
+      <span class="reg-item-ext">教育部法規 ↗</span>
+    </a>
+
+    <a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=FL047281" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">教育部補助大學校院設置研究所優秀僑生獎學金作業要點</span>
+      <span class="reg-item-ext">教育部法規 ↗</span>
+    </a>
+
+    <a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=FL022010" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">教育部獎勵海外優秀僑生回國就讀大學校院獎學金核發要點</span>
+      <span class="reg-item-ext">教育部法規 ↗</span>
+    </a>
+
+    <a href="https://law.ocac.gov.tw/law/LawContent.aspx?id=FL027423" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">僑務委員會補助僑生工讀金及學習扶助金要點</span>
+      <span class="reg-item-ext">僑委會法規 ↗</span>
+    </a>
+
+    <a href="https://law.ocac.gov.tw/law/LawContent.aspx?id=FL027428" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">僑務委員會獎勵學行優良僑生獎學金核發要點</span>
+      <span class="reg-item-ext">僑委會法規 ↗</span>
+    </a>
+  </div>
+
+  <!-- ── 醫療保險 ── -->
+  <div class="reg-section">
+    <div class="reg-section-title">🏥 醫療保險</div>
+
+    <a href="https://law.ocac.gov.tw/law/LawContent.aspx?id=GL000156" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">僑生傷病醫療保險作業要點</span>
+      <span class="reg-item-ext">僑委會法規 ↗</span>
+    </a>
+
+    <a href="https://law.ocac.gov.tw/law/NewsContent.aspx?id=92" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">海外回國就學僑生醫療急難及喪葬慰問金發給要點</span>
+      <span class="reg-item-ext">僑委會法規 ↗</span>
+    </a>
+  </div>
+
+  <!-- ── 社團活動輔助 ── -->
+  <div class="reg-section">
+    <div class="reg-section-title">🎭 社團活動輔助</div>
+
+    <a href="https://law.ocac.gov.tw/law/NewsContent.aspx?id=84" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">僑務委員會補助在學僑生社團舉辦活動要點</span>
+      <span class="reg-item-ext">僑委會法規 ↗</span>
+    </a>
+
+    <a href="https://law.ocac.gov.tw/law/NewsContent.aspx?id=3" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">在學僑生社團組設及輔導要點</span>
+      <span class="reg-item-ext">僑委會法規 ↗</span>
+    </a>
+  </div>
+
+  <!-- ── 其他 ── -->
+  <div class="reg-section">
+    <div class="reg-section-title">📌 其他</div>
+
+    <a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=GL001218" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">僑生輔導工作績優學校及人員甄選要點</span>
+      <span class="reg-item-ext">教育部法規 ↗</span>
+    </a>
+
+    <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">就業服務法</span>
+      <span class="reg-item-ext">全國法規資料庫 ↗</span>
+    </a>
+
+    <a href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/application-information/" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">海外聯合招生規定</span>
+      <span class="reg-item-ext">海外聯招 ↗</span>
+    </a>
+
+    <a href="https://www.edu.tw/News_Content.aspx?n=9E7AC85F1954DDA8&sms=169B8E91BB75571F&s=F2B74BC8B48E31EF" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📄</span>
+      <span class="reg-item-name">臺灣工程及科技教育學歷受新加坡政府認證</span>
+      <span class="reg-item-ext">教育部 ↗</span>
+    </a>
+
+    <a href="https://www.ocac.gov.tw/OCAC/Pages/List.aspx?nodeid=437" target="_blank" rel="noopener" class="reg-item">
+      <span class="reg-item-icon">📂</span>
+      <span class="reg-item-name">更多僑教法規</span>
+      <span class="reg-item-ext">僑委會法規專區 ↗</span>
+    </a>
+  </div>
+
+  <!-- ── 參考網站 ── -->
+  <div class="section-title">🔗 參考網站</div>
+  <div class="ref-grid">
+
+    <a href="https://www.ocac.gov.tw/" target="_blank" rel="noopener" class="ref-card">
+      <div class="ref-card-icon">🏛</div>
+      <div>
+        <div class="ref-card-name">行政院僑務委員會</div>
+        <div class="ref-card-url">www.ocac.gov.tw</div>
+      </div>
+    </a>
+
+    <a href="https://edu.law.moe.gov.tw/" target="_blank" rel="noopener" class="ref-card">
+      <div class="ref-card-icon">📚</div>
+      <div>
+        <div class="ref-card-name">教育部－主管法規查詢系統</div>
+        <div class="ref-card-url">edu.law.moe.gov.tw</div>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+{% endblock %}

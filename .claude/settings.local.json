@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:cmn-hant.overseas.ncnu.edu.tw)",
-      "Bash(python manage.py check)"
+      "Bash(python manage.py check)",
+      "Bash(python -c \"import polib; print\\('ok'\\)\")"
     ]
   }
 }

@@ -1093,6 +1093,56 @@ msgstr "Pelajar dari Hong Kong dan Macao"
 msgid "進行中"
 msgstr "sedang berjalan"
 
+msgid "資訊中心"
+msgstr "Pusat Maklumat"
+
+msgid "居留證辦理・住宿・交通等常用說明"
+msgstr "Panduan ARC, Penginapan, Pengangkutan dan Lain-lain"
+
+msgid "外籍生 ARC 辦理"
+msgstr "Permohonan ARC Pelajar Asing"
+
+msgid "外國護照入學者的居留證申請流程與文件清單"
+msgstr "Proses permohonan ARC dan senarai dokumen bagi pemegang pasport asing"
+
+msgid "僑生 ARC 辦理"
+msgstr "Permohonan ARC Pelajar Cina Perantau"
+
+msgid "持外國護照入台的僑生居留證申請說明"
+msgstr ""
+"Panduan permohonan ARC bagi pelajar Cina perantau yang masuk Taiwan dengan "
+"pasport asing"
+
+msgid "交換生居留說明"
+msgstr "Panduan Pemastautinan Pelajar Pertukaran"
+
+msgid "短期觀光簽 vs 長期居留簽，ARC 辦理判斷指南"
+msgstr ""
+"Visa Pelancong Jangka Pendek vs. Visa Pemastautinan Jangka Panjang — Panduan"
+" Permohonan ARC"
+
+msgid "中央大學住宿申請"
+msgstr "Permohonan Asrama NCU"
+
+msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
+msgstr ""
+"Zon asrama, kemudahan, proses permohonan, dan jaminan keutamaan untuk "
+"pelajar asing"
+
+msgid "中央大學公車指南"
+msgstr "Panduan Bas NCU"
+
+msgid "主要路線、常見目的地與即時查詢連結"
+msgstr "Laluan utama, destinasi lazim, dan pautan pertanyaan masa nyata"
+
+msgid "來臺就學相關法規"
+msgstr "Peraturan Berkaitan Pengajian di Taiwan"
+
+msgid "入學・居留・健保・工讀・學籍等重要法規說明"
+msgstr ""
+"Peraturan penting tentang kemasukan, pemastautinan, insurans kesihatan, "
+"bekerja, dan status akademik"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Kembali ke Papan Pemuka"
 

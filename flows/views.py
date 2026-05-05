@@ -37,6 +37,14 @@ def my_flows_page(request):
 
 
 @login_required(login_url='/login/')
+def guide_index(request):
+    return render(request, 'flows/guide_index.html')
+
+@login_required(login_url='/login/')
+def guide_regulations(request):
+    return render(request, 'flows/guide_regulations.html')
+
+@login_required(login_url='/login/')
 def admissions_guide(request):
     return render(request, 'flows/admissions_guide.html')
 

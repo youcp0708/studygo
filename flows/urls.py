@@ -6,6 +6,8 @@ urlpatterns = [
     path('my-tasks/', views.my_flows_page, name='my_flows'),
 
     # 指南頁面
+    path('guides/', views.guide_index, name='guide_index'),
+    path('guides/regulations/', views.guide_regulations, name='guide_regulations'),
     path('guides/arc-exchange/',  views.guide_arc_exchange,  name='guide_arc_exchange'),
     path('guides/arc-foreign/',   views.guide_arc_foreign,   name='guide_arc_foreign'),
     path('guides/arc-overseas/',  views.guide_arc_overseas,  name='guide_arc_overseas'),

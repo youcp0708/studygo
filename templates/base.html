@@ -53,58 +53,11 @@
 
     <div class="nav-right">
 
-      {# ── 指南下拉選單（子模板可覆寫此 block 以隱藏）── #}
+      {# ── 資訊中心直連（子模板可覆寫此 block 以隱藏）── #}
       {% block navbar_guide %}
-      <div class="nav-guide-wrap">
-        <button class="nav-guide-btn" id="navGuideBtn" aria-expanded="false">
-          📚 {% trans "在台指南" %} <span class="nav-guide-arrow">▼</span>
-        </button>
-        <div class="nav-guide-dropdown" id="navGuideDropdown" hidden>
-          <a href="{% url 'admissions_guide' %}" class="ngd-item">
-            <span class="ngd-icon">🎓</span>
-            <span class="ngd-text">
-              <span class="ngd-title">{% trans "招生簡章" %}</span>
-              <span class="ngd-sub">{% trans "入學申請、資格、費用說明" %}</span>
-            </span>
-          </a>
-          <div class="ngd-divider"></div>
-          <a href="{% url 'guide_arc_foreign' %}" class="ngd-item">
-            <span class="ngd-icon">🪪</span>
-            <span class="ngd-text">
-              <span class="ngd-title">{% trans "外籍生 ARC 辦理" %}</span>
-              <span class="ngd-sub">{% trans "居留證申請流程與文件" %}</span>
-            </span>
-          </a>
-          <a href="{% url 'guide_arc_overseas' %}" class="ngd-item">
-            <span class="ngd-icon">🌏</span>
-            <span class="ngd-text">
-              <span class="ngd-title">{% trans "僑生 ARC 辦理" %}</span>
-              <span class="ngd-sub">{% trans "僑生居留證申請說明" %}</span>
-            </span>
-          </a>
-          <a href="{% url 'guide_arc_exchange' %}" class="ngd-item">
-            <span class="ngd-icon">✈️</span>
-            <span class="ngd-text">
-              <span class="ngd-title">{% trans "交換生居留說明" %}</span>
-              <span class="ngd-sub">{% trans "觀光簽 vs 居留簽判斷指南" %}</span>
-            </span>
-          </a>
-          <a href="{% url 'guide_housing_ncu' %}" class="ngd-item">
-            <span class="ngd-icon">🏠</span>
-            <span class="ngd-text">
-              <span class="ngd-title">{% trans "中央大學住宿申請" %}</span>
-              <span class="ngd-sub">{% trans "宿舍分區、申請流程說明" %}</span>
-            </span>
-          </a>
-          <a href="{% url 'guide_bus_ncu' %}" class="ngd-item">
-            <span class="ngd-icon">🚌</span>
-            <span class="ngd-text">
-              <span class="ngd-title">{% trans "中央大學公車指南" %}</span>
-              <span class="ngd-sub">{% trans "路線、目的地與即時查詢" %}</span>
-            </span>
-          </a>
-        </div>
-      </div>
+      <a href="{% url 'guide_index' %}" class="nav-guide-btn">
+        📚 {% trans "資訊中心" %}
+      </a>
       {% endblock navbar_guide %}
 
       <form action="{% url 'set_language' %}" method="post" class="language-form">
@@ -139,24 +92,6 @@
   {# ── Scripts ── #}
   <script src="{% static 'users/js/users.js' %}"></script>
   {% block extra_js %}{% endblock %}
-  <script>
-    (function () {
-      const btn      = document.getElementById('navGuideBtn');
-      const dropdown = document.getElementById('navGuideDropdown');
-      if (!btn || !dropdown) return;
-      btn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        dropdown.hidden = open;
-      });
-      document.addEventListener('click', function () {
-        btn.setAttribute('aria-expanded', 'false');
-        dropdown.hidden = true;
-      });
-      dropdown.addEventListener('click', function (e) { e.stopPropagation(); });
-    })();
-  </script>
 </body>
 
 </html>
