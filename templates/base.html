@@ -52,18 +52,23 @@
     </div>
 
     <div class="nav-right">
-      <form action="{% url 'set_language' %}" method="post" class="language-form">
-        {% csrf_token %}
-        <input name="next" type="hidden" value="{{ request.get_full_path }}">
-        <select name="language" onchange="this.form.submit()" class="language-select">
-          {% get_available_languages as LANGUAGES %}
-          {% for lang_code, lang_name in LANGUAGES %}
-          <option value="{{ lang_code }}" {% if lang_code == CURRENT_LANGUAGE %}selected{% endif %}>
-            {{ lang_name }}
-          </option>
-          {% endfor %}
-        </select>
-      </form>
+      <div class="nav-right">
+  <form action="{% url 'set_language' %}" method="post" class="language-form">
+    {% csrf_token %}
+    {% get_current_language as CURRENT_LANGUAGE %}
+    <input name="next" type="hidden" value="{{ request.get_full_path }}">
+
+    <select name="language" class="language-select" onchange="this.form.submit()">
+      <option value="zh-hant" {% if CURRENT_LANGUAGE == 'zh-hant' %}selected{% endif %}>繁體中文</option>
+      <option value="en" {% if CURRENT_LANGUAGE == 'en' %}selected{% endif %}>英語</option>
+      <option value="my" {% if CURRENT_LANGUAGE == 'my' %}selected{% endif %}>မြန်မာဘာသာ</option>
+      <option value="id" {% if CURRENT_LANGUAGE == 'id' %}selected{% endif %}>Bahasa Indonesia</option>
+      <option value="ms" {% if CURRENT_LANGUAGE == 'ms' %}selected{% endif %}>Bahasa Melayu</option>
+      <option value="th" {% if CURRENT_LANGUAGE == 'th' %}selected{% endif %}>ไทย</option>
+      <option value="ja" {% if CURRENT_LANGUAGE == 'ja' %}selected{% endif %}>日本語</option>
+    </select>
+  </form>
+</div>
 
       {% if user.is_authenticated %}
         <a href="{% url 'edit_profile' %}" class="btn-outline-sm">

@@ -66,30 +66,30 @@
   }
 
   function scrollToBottom() {
-  if (!messagesEl) return;
-  messagesEl.scrollTop = messagesEl.scrollHeight;
-}
-
-/* 放在這裡 ↓ */
-
-function isNearBottom() {
-  if (!messagesEl) return true;
-
-  const distanceFromBottom =
-    messagesEl.scrollHeight - messagesEl.scrollTop - messagesEl.clientHeight;
-
-  return distanceFromBottom < 120;
-}
-
-function updateScrollBottomButton() {
-  if (!messagesEl || !scrollBottomBtn) return;
-
-  if (isNearBottom()) {
-    scrollBottomBtn.classList.remove('show');
-  } else {
-    scrollBottomBtn.classList.add('show');
+    if (!messagesEl) return;
+    messagesEl.scrollTop = messagesEl.scrollHeight;
   }
-}
+
+  /* 放在這裡 ↓ */
+
+  function isNearBottom() {
+    if (!messagesEl) return true;
+
+    const distanceFromBottom =
+      messagesEl.scrollHeight - messagesEl.scrollTop - messagesEl.clientHeight;
+
+    return distanceFromBottom < 120;
+  }
+
+  function updateScrollBottomButton() {
+    if (!messagesEl || !scrollBottomBtn) return;
+
+    if (isNearBottom()) {
+      scrollBottomBtn.classList.remove('show');
+    } else {
+      scrollBottomBtn.classList.add('show');
+    }
+  }
 
   function isNearBottom() {
     if (!messagesEl) return true;
@@ -143,8 +143,8 @@ function updateScrollBottomButton() {
     //const name = document.createElement('div');
     //name.className = 'message-name';
     //name.textContent = role === 'user'
-      //? t('me', '我')
-      //: t('assistantName', 'StudyGo AI 小幫手');
+    //? t('me', '我')
+    //: t('assistantName', 'StudyGo AI 小幫手');
     if (role !== 'user') {
       const name = document.createElement('div');
       name.className = 'message-name';
@@ -170,13 +170,13 @@ function updateScrollBottomButton() {
     row.appendChild(bubble);
     messagesEl.appendChild(row);
 
-    
+
     if (role === 'user') {
-        scrollToBottom();
+      scrollToBottom();
     } else {
-         updateScrollBottomButton();
+      updateScrollBottomButton();
     }
-    
+
   }
 
   function addTyping() {
@@ -201,7 +201,7 @@ function updateScrollBottomButton() {
     messagesEl.appendChild(row);
 
     if (isNearBottom()) {
-        scrollToBottom();
+      scrollToBottom();
     }
 
     updateScrollBottomButton();
@@ -677,28 +677,28 @@ function updateScrollBottomButton() {
   }
 
   function setupTaiwanTipRotator() {
-  const tipText = document.getElementById('botTipText');
-  const tipsData = document.getElementById('taiwanTipsData');
+    const tipText = document.getElementById('botTipText');
+    const tipsData = document.getElementById('taiwanTipsData');
 
-  if (!tipText || !tipsData) return;
+    if (!tipText || !tipsData) return;
 
-  let tips = [];
+    let tips = [];
 
-  try {
-    tips = JSON.parse(tipsData.textContent);
-  } catch (error) {
-    tips = [];
+    try {
+      tips = JSON.parse(tipsData.textContent);
+    } catch (error) {
+      tips = [];
+    }
+
+    if (!Array.isArray(tips) || tips.length <= 1) return;
+
+    let index = 0;
+
+    setInterval(function () {
+      index = (index + 1) % tips.length;
+      tipText.textContent = tips[index];
+    }, 9000);
   }
-
-  if (!Array.isArray(tips) || tips.length <= 1) return;
-
-  let index = 0;
-
-  setInterval(function () {
-    index = (index + 1) % tips.length;
-    tipText.textContent = tips[index];
-  }, 15000);
-}
 
   if (form) {
     form.addEventListener('submit', function (event) {
@@ -733,22 +733,22 @@ function updateScrollBottomButton() {
     newChatBtn.addEventListener('click', createNewSession);
   }
 
- if (scrollBottomBtn) {
-  scrollBottomBtn.addEventListener('click', function () {
-    scrollToBottom();
-    updateScrollBottomButton();
-  });
-}
+  if (scrollBottomBtn) {
+    scrollBottomBtn.addEventListener('click', function () {
+      scrollToBottom();
+      updateScrollBottomButton();
+    });
+  }
 
-if (messagesEl) {
-  messagesEl.addEventListener('scroll', updateScrollBottomButton);
-}
+  if (messagesEl) {
+    messagesEl.addEventListener('scroll', updateScrollBottomButton);
+  }
 
-setupHistoryMenu();
-setupAttachmentButtons();
-setupHistorySearch();
-setupTaiwanTipRotator();
-updateCount();
-scrollToBottom();
-updateScrollBottomButton();
+  setupHistoryMenu();
+  setupAttachmentButtons();
+  setupHistorySearch();
+  setupTaiwanTipRotator();
+  updateCount();
+  scrollToBottom();
+  updateScrollBottomButton();
 })();
