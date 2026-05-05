@@ -1,0 +1,508 @@
+{# flow/templates/flow/guide_bus_ncu.html — 中央大學公車指南 #}
+{% extends "base.html" %}
+{% load static %}
+{% block title %}中央大學公車指南 — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  :root {
+    --border: var(--line);
+    --dark:   var(--primary-dark);
+    --warning: #ca8a04;
+    --warning-soft: #fef9c3;
+    --bus-green: #15803d;
+    --bus-green-soft: #f0fdf4;
+    --bus-orange: #c2410c;
+    --bus-orange-soft: #fff7ed;
+    --bus-purple: #6d28d9;
+    --bus-purple-soft: #f5f3ff;
+    --bus-blue: #1d4ed8;
+    --bus-blue-soft: #eff6ff;
+  }
+  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
+
+  /* ── Hero ── */
+  .guide-hero {
+    background: linear-gradient(135deg, #1e3a5f 0%, #065f46 100%);
+    color:#fff; padding:40px 48px 36px; border-radius:20px;
+    margin-bottom:36px; position:relative; overflow:hidden;
+  }
+  .guide-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:100px; font-weight:900; opacity:.06; letter-spacing:-6px;
+    pointer-events:none; user-select:none;
+  }
+  .guide-hero .hero-badge {
+    display:inline-block; background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.35); border-radius:99px;
+    padding:4px 14px; font-size:12px; font-weight:700; letter-spacing:.5px; margin-bottom:14px;
+  }
+  .guide-hero h2 { font-size:28px; font-weight:900; margin-bottom:10px; }
+  .guide-hero p  { opacity:.88; font-size:15px; line-height:1.7; max-width:580px; }
+  .hero-meta { display:flex; gap:14px; flex-wrap:wrap; margin-top:22px; }
+  .hero-meta-item {
+    display:flex; align-items:center; gap:6px; font-size:13px; opacity:.9;
+    background:rgba(255,255,255,.13); padding:6px 14px; border-radius:99px;
+  }
+
+  /* ── Section title ── */
+  .section-title {
+    font-size:18px; font-weight:900; color:var(--primary-dark);
+    margin-bottom:16px; padding-bottom:10px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  /* ── Alert ── */
+  .alert {
+    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
+    margin-bottom:20px; display:flex; gap:12px; align-items:flex-start;
+  }
+  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+  .alert-info    { background:var(--blue-soft);    border:1.5px solid #bae6fd; }
+  .alert-info strong { color:#0369a1; }
+  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
+  .alert-warning strong { color:var(--warning); }
+
+  /* ── Destination cards ── */
+  .dest-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap:16px;
+    margin-bottom:36px;
+  }
+  .dest-card {
+    background:#fff;
+    border:1.5px solid var(--border);
+    border-radius:16px;
+    padding:20px;
+    position:relative;
+    overflow:hidden;
+    transition:box-shadow .2s;
+  }
+  .dest-card:hover { box-shadow:0 4px 20px rgba(0,0,0,.08); }
+  .dest-card .dc-top {
+    display:flex; align-items:flex-start; justify-content:space-between; gap:8px; margin-bottom:10px;
+  }
+  .dest-icon { font-size:32px; flex-shrink:0; }
+  .dest-time {
+    font-size:12px; font-weight:800; padding:3px 10px; border-radius:99px; flex-shrink:0;
+    white-space:nowrap;
+  }
+  .time-near   { background:#dcfce7; color:#15803d; }
+  .time-mid    { background:#fef9c3; color:#a16207; }
+  .time-far    { background:#fee2e2; color:#b91c1c; }
+  .dest-name   { font-size:17px; font-weight:900; color:var(--dark); margin-bottom:4px; }
+  .dest-sub    { font-size:12px; color:var(--muted); margin-bottom:12px; line-height:1.5; }
+  .dest-routes { display:flex; flex-wrap:wrap; gap:6px; }
+  .route-tag {
+    display:inline-flex; align-items:center; gap:4px;
+    font-size:11px; font-weight:800; padding:3px 10px; border-radius:99px;
+    text-decoration:none; cursor:default;
+  }
+  .rt-green  { background:var(--bus-green-soft);  color:var(--bus-green); }
+  .rt-orange { background:var(--bus-orange-soft); color:var(--bus-orange); }
+  .rt-purple { background:var(--bus-purple-soft); color:var(--bus-purple); }
+  .rt-blue   { background:var(--bus-blue-soft);   color:var(--bus-blue); }
+  .rt-gray   { background:var(--bg);              color:var(--muted); }
+  .dest-card .dc-note {
+    margin-top:10px; padding-top:10px; border-top:1px solid var(--border);
+    font-size:12px; color:var(--muted); line-height:1.5;
+  }
+
+  /* ── Bus route detail table ── */
+  .route-table-wrap { margin-bottom:36px; overflow-x:auto; }
+  .route-table {
+    width:100%; border-collapse:collapse; font-size:14px;
+  }
+  .route-table th {
+    background:var(--primary-soft); color:var(--primary-dark);
+    padding:10px 14px; text-align:left; font-weight:800; font-size:13px;
+    border-bottom:2px solid var(--primary);
+  }
+  .route-table td {
+    padding:12px 14px; border-bottom:1px solid var(--border); vertical-align:top;
+  }
+  .route-table tr:last-child td { border-bottom:none; }
+  .route-table tr:hover td { background:var(--bg); }
+  .rn-badge {
+    display:inline-block; font-weight:900; font-size:13px;
+    padding:3px 12px; border-radius:8px; white-space:nowrap;
+  }
+  .stop-list { display:flex; flex-wrap:wrap; gap:4px; margin-top:4px; }
+  .stop-chip {
+    font-size:11px; padding:2px 8px; border-radius:99px;
+    background:var(--bg); color:var(--muted); border:1px solid var(--border);
+  }
+  .stop-chip.highlight { background:var(--primary-soft); color:var(--primary-dark); font-weight:700; border-color:var(--primary); }
+
+  /* ── Lookup section ── */
+  .lookup-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap:14px;
+    margin-bottom:36px;
+  }
+  .lookup-card {
+    background:#fff;
+    border:1.5px solid var(--border);
+    border-radius:14px;
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    text-decoration:none;
+    transition:box-shadow .2s, border-color .2s;
+  }
+  .lookup-card:hover { box-shadow:0 4px 16px rgba(0,0,0,.08); border-color:var(--primary); }
+  .lookup-icon { font-size:28px; }
+  .lookup-name { font-size:14px; font-weight:800; color:var(--dark); }
+  .lookup-desc { font-size:12px; color:var(--muted); line-height:1.5; }
+  .lookup-url  { font-size:11px; color:var(--primary); font-family:monospace; margin-top:auto; }
+  .lookup-badge {
+    display:inline-block; font-size:10px; font-weight:700;
+    padding:1px 8px; border-radius:99px; width:fit-content;
+  }
+  .badge-official { background:var(--primary-soft); color:var(--primary-dark); }
+  .badge-app      { background:#f3e8ff; color:#7c3aed; }
+  .badge-map      { background:#dcfce7; color:#15803d; }
+
+  /* ── App chips ── */
+  .app-row { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:36px; }
+  .app-chip {
+    display:flex; align-items:center; gap:10px;
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:14px; padding:12px 16px;
+    font-size:13px; font-weight:700; color:var(--dark);
+    text-decoration:none; transition:border-color .2s;
+  }
+  .app-chip:hover { border-color:var(--primary); }
+  .app-chip .app-icon { font-size:22px; }
+  .app-chip .app-sub { font-size:11px; color:var(--muted); font-weight:400; }
+
+  /* ── Back link ── */
+  .back-link {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px;
+    padding:6px 0; text-decoration:none;
+  }
+  .back-link:hover { color:var(--primary-dark); }
+
+  @media (max-width:600px) {
+    .guide-hero { padding:28px 24px 24px; }
+    .guide-hero h2 { font-size:22px; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="guide-wrap" style="padding-top:32px;">
+
+  <a class="back-link" href="{% url 'flow_page' %}">← 返回我的任務清單</a>
+
+  {# ── Hero ── #}
+  <div class="guide-hero">
+    <div class="bg-text">BUS</div>
+    <div class="hero-badge">中央大學 × 公共交通</div>
+    <h2>🚌 從中央大學搭公車去哪裡</h2>
+    <p>
+      整理中央大學校園周邊主要公車路線、常去目的地的搭乘方式，
+      以及即時查詢公車到站的官方連結，幫你輕鬆掌握通勤資訊。
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">📍 主站牌：中央大學</div>
+      <div class="hero-meta-item">🗺 地區：桃園市中壢區</div>
+      <div class="hero-meta-item">⚡ 即時查詢 → 見下方連結</div>
+    </div>
+  </div>
+
+  <div class="alert alert-info" style="margin-bottom:28px;">
+    <div class="alert-icon">ℹ️</div>
+    <div>
+      公車班次與路線會隨季節、假日調整。以下為常見路線說明，
+      <strong>實際到站時間請使用下方即時查詢連結或 App 確認。</strong>
+    </div>
+  </div>
+
+  {# ── 目的地總覽 ── #}
+  <div class="section-title">🗺 可以去哪裡？</div>
+  <div class="dest-grid">
+
+    <div class="dest-card">
+      <div class="dc-top">
+        <div class="dest-icon">🚉</div>
+        <span class="dest-time time-near">約 15 分鐘</span>
+      </div>
+      <div class="dest-name">中壢火車站</div>
+      <div class="dest-sub">台鐵中壢站，可轉乘台北、新竹等地；附近有大型購物中心及美食街。</div>
+      <div class="dest-routes">
+        <span class="route-tag rt-green">🚌 135</span>
+        <span class="route-tag rt-green">🚌 117</span>
+        <span class="route-tag rt-green">🚌 中大快線</span>
+      </div>
+      <div class="dc-note">🛒 步行可達：SOGO 中壢站、中原夜市（約 10 分鐘）</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dc-top">
+        <div class="dest-icon">🏙</div>
+        <span class="dest-time time-mid">約 30 分鐘</span>
+      </div>
+      <div class="dest-name">桃園火車站</div>
+      <div class="dest-sub">台鐵桃園站，桃園市中心商圈，有百貨公司、電影院。</div>
+      <div class="dest-routes">
+        <span class="route-tag rt-orange">🚌 5009</span>
+        <span class="route-tag rt-gray">🔄 中壢轉乘</span>
+      </div>
+      <div class="dc-note">💡 建議：先搭車至中壢火車站，再轉台鐵或公車前往桃園站</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dc-top">
+        <div class="dest-icon">🚄</div>
+        <span class="dest-time time-mid">約 25 分鐘</span>
+      </div>
+      <div class="dest-name">高鐵桃園站</div>
+      <div class="dest-sub">台灣高鐵桃園站，可快速前往台北（15分）、台中（30分）、台南/高雄。</div>
+      <div class="dest-routes">
+        <span class="route-tag rt-purple">🚌 桃園客運</span>
+        <span class="route-tag rt-gray">🔄 中壢轉接駁</span>
+      </div>
+      <div class="dc-note">✈️ 高鐵桃園站內有機場捷運（Airport MRT），可直達桃園機場 T1/T2</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dc-top">
+        <div class="dest-icon">✈️</div>
+        <span class="dest-time time-far">約 50～70 分鐘</span>
+      </div>
+      <div class="dest-name">桃園國際機場</div>
+      <div class="dest-sub">第一、第二航廈。出入境、接送機、免稅購物。</div>
+      <div class="dest-routes">
+        <span class="route-tag rt-blue">🚌 機場客運</span>
+        <span class="route-tag rt-purple">🚇 機場捷運</span>
+      </div>
+      <div class="dc-note">路線 A：搭公車至 <strong>高鐵桃園站</strong>，轉機場捷運直達航廈（約 15 分）<br>
+        路線 B：搭公車至 <strong>中壢火車站</strong>，轉機場客運（台灣好行或國光客運）</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dc-top">
+        <div class="dest-icon">🏙</div>
+        <span class="dest-time time-far">約 60～90 分鐘</span>
+      </div>
+      <div class="dest-name">台北</div>
+      <div class="dest-sub">台北車站、忠孝敦化、信義等商圈，博物館、夜市、政府機關。</div>
+      <div class="dest-routes">
+        <span class="route-tag rt-orange">🚌 台北客運直達</span>
+        <span class="route-tag rt-gray">🔄 中壢搭台鐵</span>
+      </div>
+      <div class="dc-note">台鐵自強號 中壢→台北 約 45 分鐘；客運直達台北西站（Z棟）約 60 分鐘</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dc-top">
+        <div class="dest-icon">🛍</div>
+        <span class="dest-time time-near">約 10～20 分鐘</span>
+      </div>
+      <div class="dest-name">中原大學商圈 / 龍岡</div>
+      <div class="dest-sub">中原夜市、龍岡米干街，平價美食、宵夜、生活百貨，是學生最常去的地方。</div>
+      <div class="dest-routes">
+        <span class="route-tag rt-green">🚌 135</span>
+        <span class="route-tag rt-green">🚌 117</span>
+      </div>
+      <div class="dc-note">🍜 龍岡米干街是全台最大緬甸族裔聚集地，異國美食豐富</div>
+    </div>
+
+  </div>
+
+  {# ── 主要路線說明 ── #}
+  <div class="section-title">🚌 主要公車路線</div>
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div>
+      路線資訊以現況為準，建議使用下方連結查詢 <strong>即時班次與到站時間</strong>，
+      尤其假日、深夜班次可能有調整。
+    </div>
+  </div>
+  <div class="route-table-wrap">
+    <table class="route-table">
+      <thead>
+        <tr>
+          <th>路線</th>
+          <th>行駛方向</th>
+          <th>主要停靠站（NCU 附近）</th>
+          <th>票價</th>
+          <th>備註</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="rn-badge rt-green">135</span></td>
+          <td>中央大學 ↔ 中壢火車站</td>
+          <td>
+            <div class="stop-list">
+              <span class="stop-chip highlight">中央大學</span>
+              <span class="stop-chip">大學路口</span>
+              <span class="stop-chip">中大路</span>
+              <span class="stop-chip highlight">中壢火車站</span>
+            </div>
+          </td>
+          <td>約 NT$15～25</td>
+          <td>班次較密集，是去中壢最便捷的路線之一</td>
+        </tr>
+        <tr>
+          <td><span class="rn-badge rt-green">117</span></td>
+          <td>中央大學 ↔ 中壢</td>
+          <td>
+            <div class="stop-list">
+              <span class="stop-chip highlight">中央大學</span>
+              <span class="stop-chip">中原大學</span>
+              <span class="stop-chip highlight">中壢火車站</span>
+            </div>
+          </td>
+          <td>約 NT$15～25</td>
+          <td>途經中原大學，可順道至中原夜市</td>
+        </tr>
+        <tr>
+          <td><span class="rn-badge rt-orange">5009</span></td>
+          <td>中壢 ↔ 桃園</td>
+          <td>
+            <div class="stop-list">
+              <span class="stop-chip highlight">中壢火車站</span>
+              <span class="stop-chip">南平路</span>
+              <span class="stop-chip highlight">桃園火車站</span>
+            </div>
+          </td>
+          <td>約 NT$25～35</td>
+          <td>由中壢搭乘前往桃園市中心，在中壢轉乘</td>
+        </tr>
+        <tr>
+          <td><span class="rn-badge rt-purple">機場客運</span></td>
+          <td>中壢 ↔ 桃園機場</td>
+          <td>
+            <div class="stop-list">
+              <span class="stop-chip highlight">中壢火車站</span>
+              <span class="stop-chip">南崁</span>
+              <span class="stop-chip highlight">機場 T1</span>
+              <span class="stop-chip highlight">機場 T2</span>
+            </div>
+          </td>
+          <td>約 NT$40～60</td>
+          <td>國光客運、台灣好行等；在中壢站搭乘，班次間隔約 20～30 分</td>
+        </tr>
+        <tr>
+          <td><span class="rn-badge rt-blue">台北客運</span></td>
+          <td>中壢 ↔ 台北西站</td>
+          <td>
+            <div class="stop-list">
+              <span class="stop-chip highlight">中壢火車站</span>
+              <span class="stop-chip">板橋</span>
+              <span class="stop-chip highlight">台北西站 Z棟</span>
+            </div>
+          </td>
+          <td>約 NT$80～110</td>
+          <td>國光客運 1800 / 首都客運等；在中壢轉乘，尖峰時段約 60 分</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  {# ── 即時查詢 ── #}
+  <div class="section-title">🔍 即時查詢到站時間</div>
+  <div class="lookup-grid">
+
+    <a class="lookup-card" href="https://ebus.tyc.gov.tw" target="_blank" rel="noopener">
+      <div class="lookup-icon">🏛</div>
+      <span class="lookup-badge badge-official">官方</span>
+      <div class="lookup-name">桃園市公車動態查詢</div>
+      <div class="lookup-desc">桃園市政府官方公車即時到站資訊，輸入站牌名稱或路線號查詢。</div>
+      <div class="lookup-url">ebus.tyc.gov.tw</div>
+    </a>
+
+    <a class="lookup-card" href="https://www.taiwanbus.tw" target="_blank" rel="noopener">
+      <div class="lookup-icon">🚍</div>
+      <span class="lookup-badge badge-official">官方</span>
+      <div class="lookup-name">台灣公車通（全台）</div>
+      <div class="lookup-desc">交通部公路總局整合平台，支援全台縣市公車即時動態查詢。</div>
+      <div class="lookup-url">www.taiwanbus.tw</div>
+    </a>
+
+    <a class="lookup-card" href="https://ebus.gov.tw" target="_blank" rel="noopener">
+      <div class="lookup-icon">📡</div>
+      <span class="lookup-badge badge-official">官方</span>
+      <div class="lookup-name">公路客運查詢（ebus）</div>
+      <div class="lookup-desc">政府整合公路客運班次查詢，可搜尋中長途客運（台北←→中壢等）。</div>
+      <div class="lookup-url">ebus.gov.tw</div>
+    </a>
+
+    <a class="lookup-card" href="https://maps.google.com" target="_blank" rel="noopener">
+      <div class="lookup-icon">🗺</div>
+      <span class="lookup-badge badge-map">地圖</span>
+      <div class="lookup-name">Google Maps</div>
+      <div class="lookup-desc">搜尋「中央大學」出發，直接規劃大眾運輸路徑，顯示即時班次。</div>
+      <div class="lookup-url">maps.google.com</div>
+    </a>
+
+  </div>
+
+  {# ── App 推薦 ── #}
+  <div class="section-title">📱 推薦 App</div>
+  <div class="app-row">
+    <div class="app-chip">
+      <div class="app-icon">🚌</div>
+      <div>
+        <div>Bus+（搭公車）</div>
+        <div class="app-sub">iOS / Android — 即時到站、GPS 公車位置</div>
+      </div>
+    </div>
+    <div class="app-chip">
+      <div class="app-icon">🗺</div>
+      <div>
+        <div>Google Maps</div>
+        <div class="app-sub">大眾運輸路線規劃 + 即時延誤資訊</div>
+      </div>
+    </div>
+    <div class="app-chip">
+      <div class="app-icon">🚇</div>
+      <div>
+        <div>台灣智慧公車</div>
+        <div class="app-sub">交通部官方 App — 全台公車動態</div>
+      </div>
+    </div>
+    <div class="app-chip">
+      <div class="app-icon">🚄</div>
+      <div>
+        <div>台鐵 e訂通</div>
+        <div class="app-sub">搭台鐵至台北、新竹時查班次、訂票</div>
+      </div>
+    </div>
+  </div>
+
+  {# ── 小提示 ── #}
+  <div class="section-title">💡 搭車小技巧</div>
+  <div class="alert alert-info" style="margin-bottom:12px;">
+    <div class="alert-icon">💳</div>
+    <div>
+      <strong>建議使用悠遊卡（EasyCard）：</strong>
+      刷卡搭車享八折優惠，不需備零錢，且轉乘台鐵、高鐵、機場捷運皆通用。
+      可在中壢火車站或便利商店購買加值。
+    </div>
+  </div>
+  <div class="alert alert-info" style="margin-bottom:12px;">
+    <div class="alert-icon">⏰</div>
+    <div>
+      <strong>尖峰時段（08:00–09:00 / 17:00–19:00）</strong> 公車較擁擠且可能誤點，
+      建議提前 10 分鐘至站牌等候，或使用 App 提前確認車輛位置。
+    </div>
+  </div>
+  <div class="alert alert-info" style="margin-bottom:0;">
+    <div class="alert-icon">🌙</div>
+    <div>
+      <strong>深夜或假日班次較少：</strong>
+      晚上 10 點後部分路線停駛，建議提早確認末班車時間，或改搭計程車（推薦使用 LINE TAXI / Uber）。
+    </div>
+  </div>
+
+</div>
+{% endblock %}

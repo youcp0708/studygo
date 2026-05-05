@@ -1,0 +1,23 @@
+{# users/templates/users/logout_redirect.html — 登出後清除前端狀態並跳轉 #}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>登出中… — StudyGo Taiwan</title>
+</head>
+
+<body>
+  <script>
+    // 清除前端 Token
+    localStorage.removeItem('authToken');
+    // 跳轉到登入頁面
+    window.location.href = '/login/';
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/login/" />
+    <p>登出成功，<a href="/login/">點此返回登入頁面</a></p>
+  </noscript>
+</body>
+
+</html>
