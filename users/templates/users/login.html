@@ -1,8 +1,8 @@
 {# users/templates/users/login.html — 登入 / 註冊頁 #}
 {% extends "base.html" %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}登入 / 註冊 — StudyGo Taiwan{% endblock %}
+{% block title %}{% trans "登入 / 註冊" %} — StudyGo Taiwan{% endblock %}
 
 {% block content %}
 <section id="loginPage" class="page" style="padding:0 38px 48px;">
@@ -16,8 +16,8 @@
         <div class="login-slide active" data-slide="0">
           <div class="slide-copy">
             <div class="login-kicker">StudyGo Taiwan</div>
-            <h2>流程提醒</h2>
-            <p>系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。</p>
+            <h2>{% trans "流程提醒" %}</h2>
+            <p>{% trans "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。" %}</p>
           </div>
           <div class="abstract-illustration flow-abstract art-style">
             <div class="progress-line"></div>
@@ -35,8 +35,8 @@
         <div class="login-slide" data-slide="1">
           <div class="slide-copy">
             <div class="login-kicker">StudyGo Taiwan</div>
-            <h2>資訊管理</h2>
-            <p>把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。</p>
+            <h2>{% trans "資訊管理" %}</h2>
+            <p>{% trans "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。" %}</p>
           </div>
           <div class="abstract-illustration info-abstract art-style">
             <div class="abstract-board large"></div>
@@ -58,8 +58,8 @@
         <div class="login-slide" data-slide="2">
           <div class="slide-copy">
             <div class="login-kicker">StudyGo Taiwan</div>
-            <h2>AI 聊天機器人</h2>
-            <p>當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。</p>
+            <h2>{% trans "AI 聊天機器人" %}</h2>
+            <p>{% trans "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。" %}</p>
           </div>
           <div class="abstract-illustration ai-abstract art-style">
             <div class="robot-core">🤖</div>
@@ -75,9 +75,9 @@
       </div>
 
       <div class="slide-dots">
-        <button class="slide-dot active" onclick="showLoginSlide(0)"></button>
-        <button class="slide-dot" onclick="showLoginSlide(1)"></button>
-        <button class="slide-dot" onclick="showLoginSlide(2)"></button>
+        <button class="slide-dot active" onclick="showLoginSlide(0)" aria-label="{% trans '顯示第一張介紹' %}"></button>
+        <button class="slide-dot" onclick="showLoginSlide(1)" aria-label="{% trans '顯示第二張介紹' %}"></button>
+        <button class="slide-dot" onclick="showLoginSlide(2)" aria-label="{% trans '顯示第三張介紹' %}"></button>
       </div>
     </div>
 
@@ -89,45 +89,55 @@
         <div id="signInPanel" class="auth-card {% if show_register %}hidden{% endif %}">
           <div class="auth-tabs">
             <button class="auth-tab {% if not show_register %}active{% endif %}" id="tabSignIn"
-              onclick="switchAuth('signin')">登入</button>
+              onclick="switchAuth('signin')">{% trans "登入" %}</button>
             <button class="auth-tab {% if show_register %}active{% endif %}" id="tabRegister"
-              onclick="switchAuth('register')">註冊帳號</button>
+              onclick="switchAuth('register')">{% trans "註冊帳號" %}</button>
           </div>
+
           <div class="auth-body">
-            <div class="auth-title">歡迎回來 👋</div>
-            <div class="auth-sub">請登入您的 StudyGo 帳戶</div>
+            <div class="auth-title">{% trans "歡迎回來" %} 👋</div>
+            <div class="auth-sub">{% trans "請登入您的 StudyGo 帳戶" %}</div>
+
             <form id="loginForm" onsubmit="handleLogin(event)">
               {% csrf_token %}
+
               <div class="field">
-                <label>電子郵件 Email</label>
+                <label>{% trans "電子郵件" %} Email</label>
                 <input type="email" name="email" id="loginEmail" placeholder="your@email.com" required
                   autocomplete="email" />
                 <div class="field-error hidden" id="loginEmailErr"></div>
               </div>
+
               <div class="field">
-                <label>密碼 Password</label>
+                <label>{% trans "密碼" %} Password</label>
                 <div style="position:relative;">
-                  <input type="password" name="password" id="loginPw" placeholder="輸入密碼" required
+                  <input type="password" name="password" id="loginPw" placeholder="{% trans '輸入密碼' %}" required
                     autocomplete="current-password" />
                   <button type="button" onclick="togglePw('loginPw', this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);
-                           background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;">👁</button>
+                           background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;"
+                    aria-label="{% trans '顯示或隱藏密碼' %}">👁</button>
                 </div>
                 <div class="field-error hidden" id="loginPwErr"></div>
               </div>
+
               <div style="display:flex;justify-content:flex-end;margin:-6px 0 10px;">
-                <a href="{% url 'forgot_password' %}" class="btn-link">忘記密碼？</a>
+                <a href="{% url 'forgot_password' %}" class="btn-link">{% trans "忘記密碼？" %}</a>
               </div>
+
               <div class="field-error hidden" id="loginGlobalErr"
                 style="margin-bottom:10px;text-align:center;font-size:13px;"></div>
-              <button type="submit" class="btn-primary" id="loginSubmitBtn">登入</button>
+
+              <button type="submit" class="btn-primary" id="loginSubmitBtn">
+                {% trans "登入" %}
+              </button>
             </form>
-            <div class="auth-divider">或</div>
-            <button class="google-btn" onclick="showToast('Google 登入需後端 OAuth 設定','info')">
-              <span>G</span> 使用 Google 帳號登入
-            </button>
+
+            <div class="auth-divider">{% trans "或" %}</div>
+            <div id="googleBtnContainer" style="display:flex;justify-content:center;min-height:44px;"></div>
+
             <p style="text-align:center;margin-top:16px;font-size:13px;color:var(--muted);">
-              還沒有帳號？
-              <button class="btn-link" onclick="switchAuth('register')">立即免費註冊</button>
+              {% trans "還沒有帳號？" %}
+              <button class="btn-link" onclick="switchAuth('register')">{% trans "立即免費註冊" %}</button>
             </p>
           </div>
         </div>
@@ -136,61 +146,74 @@
         <div id="registerPanel" class="auth-card {% if not show_register %}hidden{% endif %}">
           <div class="auth-tabs">
             <button class="auth-tab {% if show_register %}{% else %}active{% endif %}" id="tabSignIn2"
-              onclick="switchAuth('signin')">登入</button>
+              onclick="switchAuth('signin')">{% trans "登入" %}</button>
             <button class="auth-tab {% if show_register %}active{% endif %}" id="tabReg2"
-              onclick="switchAuth('register')">註冊帳號</button>
+              onclick="switchAuth('register')">{% trans "註冊帳號" %}</button>
           </div>
+
           <div class="auth-body">
-            <div class="auth-title">建立帳號 🎓</div>
-            <div class="auth-sub">填寫基本資料，開始使用 StudyGo Taiwan</div>
+            <div class="auth-title">{% trans "建立帳號" %} 🎓</div>
+            <div class="auth-sub">{% trans "填寫基本資料，開始使用 StudyGo Taiwan" %}</div>
+
             <form id="registerForm" onsubmit="handleRegister(event)">
               {% csrf_token %}
+
               <div class="field">
-                <label>姓名 Name</label>
+                <label>{% trans "姓名" %} Name</label>
                 <input type="text" name="name" id="regName" placeholder="Full Name" required />
                 <div class="field-error hidden" id="regNameErr"></div>
               </div>
+
               <div class="field">
-                <label>電子郵件</label>
+                <label>{% trans "電子郵件" %}</label>
                 <input type="email" name="email" id="regEmail" placeholder="your@email.com" required />
                 <div class="field-error hidden" id="regEmailErr"></div>
               </div>
+
               <div class="field">
-                <label>密碼 Password</label>
+                <label>{% trans "密碼" %} Password</label>
                 <div style="position:relative;">
-                  <input type="password" name="password" id="regPw" placeholder="至少 8 字元，含大小寫與數字"
+                  <input type="password" name="password" id="regPw" placeholder="{% trans '至少 8 字元，含大小寫與數字' %}"
                     oninput="checkPwStrength(this.value)" required autocomplete="new-password" />
                   <button type="button" onclick="togglePw('regPw', this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);
-                           background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;">👁</button>
+                           background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;"
+                    aria-label="{% trans '顯示或隱藏密碼' %}">👁</button>
                 </div>
                 <div class="pw-strength-bar">
                   <div class="pw-strength-fill" id="pwFill"></div>
                 </div>
-                <div class="field-hint" id="pwHint">請輸入密碼</div>
+                <div class="field-hint" id="pwHint">{% trans "請輸入密碼" %}</div>
                 <div class="field-error hidden" id="regPwErr"></div>
               </div>
+
               <div class="field">
-                <label>確認密碼</label>
-                <input type="password" name="password2" id="regPw2" placeholder="再次輸入密碼" required
+                <label>{% trans "確認密碼" %}</label>
+                <input type="password" name="password2" id="regPw2" placeholder="{% trans '再次輸入密碼' %}" required
                   autocomplete="new-password" />
                 <div class="field-error hidden" id="regPw2Err"></div>
               </div>
+
               <div style="display:flex;align-items:flex-start;gap:10px;margin:10px 0 4px;">
                 <input type="checkbox" id="agreeTerms" name="agree"
                   style="margin-top:3px;width:16px;height:16px;flex-shrink:0;" required />
                 <label for="agreeTerms" style="font-size:13px;color:var(--muted);cursor:pointer;">
-                  我同意
-                  <a href="#" style="color:var(--primary);font-weight:800;">服務條款</a> 與
-                  <a href="#" style="color:var(--primary);font-weight:800;">隱私政策</a>
+                  {% trans "我同意" %}
+                  <a href="#" style="color:var(--primary);font-weight:800;">{% trans "服務條款" %}</a>
+                  {% trans "與" %}
+                  <a href="#" style="color:var(--primary);font-weight:800;">{% trans "隱私政策" %}</a>
                 </label>
               </div>
+
               <div class="field-error hidden" id="regGlobalErr" style="margin-bottom:8px;font-size:13px;"></div>
+
               <button type="submit" class="btn-primary" id="regSubmitBtn">
-                建立帳號並繼續設定資料
+                {% trans "建立帳號並繼續設定資料" %}
               </button>
             </form>
+
             <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--muted);">
-              已有帳號？<button class="btn-link" onclick="switchAuth('signin')">立即登入</button>
+              {% trans "已有帳號？" %}
+              <button class="btn-link" onclick="switchAuth('signin')">{% trans "立即登入" %}</button>
             </p>
           </div>
         </div>
@@ -199,4 +222,13 @@
     </div>
   </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  window.GOOGLE_CLIENT_ID = '{{ google_client_id }}';
+</script>
+{% if google_client_id %}
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+{% endif %}
 {% endblock %}

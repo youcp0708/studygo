@@ -7,29 +7,32 @@ users/urls.py
 from django.urls import path
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout as auth_logout
+from django.conf import settings
+
+
+def _login_context(extra=None):
+    ctx = {'google_client_id': settings.GOOGLE_CLIENT_ID}
+    if extra:
+        ctx.update(extra)
+    return ctx
 
 
 def index_view(request):
-    """
-    根路由：
-    - 未登入 → 顯示登入/註冊頁 (login.html)
-    - 已登入（session）→ 重定向到儀表板
-    """
     if request.user.is_authenticated:
         return redirect('dashboard')
-    return render(request, 'users/login.html')
+    return render(request, 'users/login.html', _login_context())
 
 
 def login_page(request):
     if request.user.is_authenticated:
         return redirect('dashboard')
-    return render(request, 'users/login.html')
+    return render(request, 'users/login.html', _login_context())
 
 
 def register_page(request):
     if request.user.is_authenticated:
         return redirect('dashboard')
-    return render(request, 'users/login.html', {'show_register': True})
+    return render(request, 'users/login.html', _login_context({'show_register': True}))
 
 
 def logout_page(request):
@@ -60,9 +63,13 @@ def dashboard_page(request):
     """儀表板首頁 — 需要 session 登入"""
     if not request.user.is_authenticated:
         return redirect('login_page')
-    context = {'user': request.user}
-    if hasattr(request.user, 'student_profile'):
-        context['profile'] = request.user.student_profile
+    if not hasattr(request.user, 'student_profile'):
+        return redirect('profile_setup')
+        
+    context = {
+        'user': request.user,
+        'profile': request.user.student_profile
+    }
     return render(request, 'users/dashboard.html', context)
 
 

@@ -6,6 +6,7 @@ users/models.py
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 
 # ══════════════════════════════════════════
@@ -91,32 +92,28 @@ class StudentProfile(models.Model):
 
     # ── 身份別選項 (identityType) ──
     IDENTITY_CHOICES = [
-        ('overseas_chinese', '僑生（海外華裔）'),
-        ('foreign_student',  '外籍生（一般外國學生）'),
-        ('exchange',         '交換生'),
-        ('preparatory',      '僑大先修生'),
-    ]
+    ('overseas_chinese', _('僑生（海外華裔）')),
+    ('foreign_student', _('外籍生（一般外國學生）')),
+    ('hong_kong_macau', _('港澳生')),
+]
 
     # ── 入學狀態選項 (admissionStatus) ──
     ADMISSION_STATUS_CHOICES = [
-        ('applied',     '已提出申請'),
-        ('admitted',    '已收到錄取通知'),
-        ('pre_arrival', '入境前準備中'),
-        ('arrived',     '已抵臺就學中'),
-    ]
-
+    ('pre_arrival', _('入臺前準備')),
+    ('arrived', _('抵臺後')),
+]   
     # ── 國籍選項 (nationality) ──
     NATIONALITY_CHOICES = [
-        ('Indonesia',    '印尼'),
-        ('Malaysia',     '馬來西亞'),
-        ('Vietnam',      '越南'),
-        ('Thailand',     '泰國'),
-        ('Philippines',  '菲律賓'),
-        ('Cambodia',     '柬埔寨'),
-        ('Myanmar',      '緬甸'),
-        ('Japan',        '日本'),
-        ('Korea',        '韓國'),
-        ('Other',        '其他'),
+    ('Indonesia',   _('印尼')),
+    ('Malaysia',    _('馬來西亞')),
+    ('Vietnam',     _('越南')),
+    ('Thailand',    _('泰國')),
+    ('Philippines', _('菲律賓')),
+    ('Cambodia',    _('柬埔寨')),
+    ('Myanmar',     _('緬甸')),
+    ('Japan',       _('日本')),
+    ('Korea',       _('韓國')),
+    ('Other',       _('其他')),
     ]
 
     # ── 關聯 CustomUser（一對一）──
@@ -134,7 +131,7 @@ class StudentProfile(models.Model):
     identity_type    = models.CharField(max_length=30, choices=IDENTITY_CHOICES,
                                         verbose_name='身份別')
     admission_status = models.CharField(max_length=20, choices=ADMISSION_STATUS_CHOICES,
-                                        default='applied', verbose_name='入學狀態')
+                                        default='pre_arrival', verbose_name='入學狀態')
 
     # ── 額外資料 ──
     department       = models.CharField(max_length=200, blank=True, verbose_name='系所')
@@ -143,6 +140,9 @@ class StudentProfile(models.Model):
                                          verbose_name='頭像')
     preferred_language = models.CharField(max_length=10, default='zh-hant',
                                           verbose_name='慣用語言')
+
+
+    
 
     # ── 時間戳 ──
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')

@@ -1,0 +1,19 @@
+# 環境變數（含密碼，絕對不能上傳）
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Django
+db.sqlite3
+staticfiles/
+media/
+
+# IDE
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+db.sqlite3
