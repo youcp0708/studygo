@@ -93,11 +93,14 @@
               <label>{% trans "就讀學校" %}</label>
               <input
                 type="text"
-                name="university"
                 id="editUniversity"
-                value="{{ profile.university|default:'' }}"
-                placeholder="{% trans '例如：國立臺灣大學' %}"
+                value="{{ profile.university|default:'—' }}"
+                disabled
+                style="background:#f5f5f5;color:var(--muted);cursor:not-allowed;"
               />
+              <div class="field-hint" style="font-size:12px;color:var(--muted);margin-top:4px;">
+                🔒 {% trans "就讀學校於註冊完成後即與帳號永久綁定，無法修改" %}
+              </div>
             </div>
 
             <div class="field">

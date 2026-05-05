@@ -326,7 +326,6 @@ async function handleEditBasic(e) {
   const body = {
     name: document.getElementById('editName').value.trim(),
     nationality: document.getElementById('editNationality').value,
-    university: document.getElementById('editUniversity').value.trim(),
     department: document.getElementById('editDept').value.trim(),
     identity_type: document.getElementById('editIdentity').value,
     admission_status: document.getElementById('editStatus').value,

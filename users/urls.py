@@ -17,15 +17,26 @@ def _login_context(extra=None):
     return ctx
 
 
+def _authenticated_redirect(request):
+    """已登入使用者的跳轉邏輯（抽出共用）"""
+    user = request.user
+    if not user.email_verified:
+        # 未驗證信箱：顯示登入頁（JS 端會依 localStorage 決定是否顯示驗證等待面板）
+        return render(request, 'users/login.html', _login_context())
+    if not hasattr(user, 'student_profile') or user.student_profile is None:
+        return redirect('profile_setup')
+    return redirect('dashboard')
+
+
 def index_view(request):
     if request.user.is_authenticated:
-        return redirect('dashboard')
+        return _authenticated_redirect(request)
     return render(request, 'users/login.html', _login_context())
 
 
 def login_page(request):
     if request.user.is_authenticated:
-        return redirect('dashboard')
+        return _authenticated_redirect(request)
     return render(request, 'users/login.html', _login_context())
 
 
@@ -65,9 +76,11 @@ def dashboard_page(request):
     """儀表板首頁 — 需要 session 登入"""
     if not request.user.is_authenticated:
         return redirect('login_page')
-    context = {'user': request.user}
-    if hasattr(request.user, 'student_profile'):
-        context['profile'] = request.user.student_profile
+    if not request.user.email_verified:
+        return redirect('login_page')
+    if not hasattr(request.user, 'student_profile') or request.user.student_profile is None:
+        return redirect('profile_setup')
+    context = {'user': request.user, 'profile': request.user.student_profile}
     return render(request, 'users/dashboard.html', context)
 
 

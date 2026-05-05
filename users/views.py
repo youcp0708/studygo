@@ -237,6 +237,7 @@ def profile_update_view(request):
         return error_response('資料驗證失敗', serializer.errors)
 
     data = serializer.validated_data
+    data.pop('university', None)  # 學校與帳號永久綁定，不允許修改
 
     # 更新 CustomUser.name
     if 'name' in data:
