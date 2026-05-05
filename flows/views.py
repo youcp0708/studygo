@@ -68,6 +68,18 @@ def guide_bus_ncu(request):
 def guide_housing_ncu(request):
     return render(request, 'flows/guide_housing_ncu.html')
 
+@login_required(login_url='/login/')
+def guide_nhi(request):
+    return render(request, 'flows/guide_nhi.html')
+
+@login_required(login_url='/login/')
+def guide_bank(request):
+    return render(request, 'flows/guide_bank.html')
+
+@login_required(login_url='/login/')
+def guide_sim(request):
+    return render(request, 'flows/guide_sim.html')
+
 
 # ==========================================
 # REST API 視圖 (DRF)

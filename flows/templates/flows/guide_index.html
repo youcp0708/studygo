@@ -14,6 +14,10 @@
 
   <div style="display:flex;flex-direction:column;gap:14px;">
 
+    <div style="font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.5px;padding:4px 0 2px;">
+      證件・住宿・交通
+    </div>
+
     <a href="{% url 'guide_arc_foreign' %}" class="guide-card" style="text-decoration:none;">
       <div class="gc-icon">🪪</div>
       <div class="gc-body">
@@ -64,6 +68,37 @@
       <div class="gc-body">
         <div class="gc-title">{% trans "來臺就學相關法規" %}</div>
         <div class="gc-desc">{% trans "入學・居留・健保・工讀・學籍等重要法規說明" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <div style="font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.5px;padding:12px 0 2px;">
+      生活類
+    </div>
+
+    <a href="{% url 'guide_nhi' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">🏥</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "全民健保申請" %}</div>
+        <div class="gc-desc">{% trans "ARC 核發後即可加保，門診費用大幅降低" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <a href="{% url 'guide_bank' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">🏦</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "台灣銀行開戶" %}</div>
+        <div class="gc-desc">{% trans "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <a href="{% url 'guide_sim' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">📱</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "台灣門號申辦" %}</div>
+        <div class="gc-desc">{% trans "預付卡 vs 月租方案，各大電信業者說明" %}</div>
       </div>
       <div class="gc-arrow">→</div>
     </a>
