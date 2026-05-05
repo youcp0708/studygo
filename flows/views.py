@@ -37,6 +37,7 @@ from .serializers import (
     FlowStageSerializer,
     TaskSerializer,
     StudentTaskSerializer,
+    ReminderSerializer,
 )
 
 
@@ -337,3 +338,52 @@ def progress_overview_view(request):
         'overall_percent': overall_percent,
         'stages': stage_data,
     })
+
+
+# ══════════════════════════════════════════
+# 9. 取得使用者的提醒列表
+# GET /api/flows/reminders/
+# ══════════════════════════════════════════
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_reminders_view(request):
+    user = request.user
+    try:
+        profile = user.student_profile
+    except StudentProfile.DoesNotExist:
+        return error_response('請先建立學生資料', status_code=400)
+        
+    reminders = profile.reminders.all()
+    
+    # 可支援只抓未讀
+    if request.query_params.get('unread_only') == 'true':
+        reminders = reminders.filter(is_read=False)
+        
+    serializer = ReminderSerializer(reminders, many=True)
+    return success_response({
+        'reminders': serializer.data,
+        'unread_count': profile.reminders.filter(is_read=False).count()
+    })
+
+# ══════════════════════════════════════════
+# 10. 標記提醒為已讀
+# PATCH /api/flows/reminders/<id>/read/
+# ══════════════════════════════════════════
+@api_view(['PATCH'])
+@permission_classes([IsAuthenticated])
+def read_reminder_view(request, reminder_id):
+    user = request.user
+    try:
+        profile = user.student_profile
+    except StudentProfile.DoesNotExist:
+        return error_response('請先建立學生資料', status_code=400)
+        
+    try:
+        reminder = profile.reminders.get(id=reminder_id)
+    except Exception:
+        return error_response('找不到此提醒', status_code=404)
+        
+    reminder.is_read = True
+    reminder.save()
+    
+    return success_response({}, '已標記為已讀')
