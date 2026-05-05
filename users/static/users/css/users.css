@@ -1,4 +1,4 @@
-/* ===== Language Selector ===== */
+  /* ===== Language Selector ===== */
 /*
  * users/static/users/css/users.css
  * 使用者管理模塊專屬樣式
@@ -1833,14 +1833,14 @@ button {
 
 /* ════════════════════════════════════
    NAVBAR 右側區塊 (nav-right)
-════════════════════════════════════ */
+
 .nav-right {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* ── 語言切換表單 ── */
+
 .language-form {
   margin: 0;
   padding: 0;
@@ -1866,3 +1866,4 @@ button {
   border-color: var(--primary);
   background: var(--primary-soft);
 }
+════════════════════════════════════ */
