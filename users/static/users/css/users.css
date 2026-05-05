@@ -1831,6 +1831,52 @@ button {
   margin: 6px 4px;
 }
 
+/* 修正右上角在台指南下拉選單跑版 */
+.nav-guide,
+.guide-select,
+.language-select {
+  height: 40px;
+  min-width: 132px;
+  max-width: 160px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 40px;
+}
+
+/* 如果在台指南是 select */
+select.nav-guide,
+select.guide-select,
+select.language-select {
+  padding: 0 34px 0 14px;
+  border: 1px solid var(--border, #dce7e2);
+  border-radius: 999px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text, #233);
+  appearance: auto;
+}
+
+/* 如果在台指南外面有包一層 */
+.nav-right,
+.header-actions,
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+/* 防止 icon 和文字擠壓 */
+.nav-guide *,
+.guide-select *,
+.language-select * {
+  box-sizing: border-box;
+}
+
 /* ════════════════════════════════════
    NAVBAR 右側區塊 (nav-right)
 
