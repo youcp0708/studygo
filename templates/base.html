@@ -53,7 +53,8 @@
 
     <div class="nav-right">
 
-      {# ── 指南下拉選單 ── #}
+      {# ── 指南下拉選單（子模板可覆寫此 block 以隱藏）── #}
+      {% block navbar_guide %}
       <div class="nav-guide-wrap">
         <button class="nav-guide-btn" id="navGuideBtn" aria-expanded="false">
           📚 {% trans "在台指南" %} <span class="nav-guide-arrow">▼</span>
@@ -104,6 +105,7 @@
           </a>
         </div>
       </div>
+      {% endblock navbar_guide %}
 
       <form action="{% url 'set_language' %}" method="post" class="language-form">
         {% csrf_token %}
