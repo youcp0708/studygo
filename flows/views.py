@@ -12,12 +12,13 @@ from rest_framework.response import Response
 
 from users.models import StudentProfile
 
+
 # ==========================================
 # 前端網頁視圖 (Web Views)
 # ==========================================
 
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect
+from django.shortcuts import render,redirect
 
 @login_required(login_url='/login/')
 def my_flows_page(request):
@@ -26,13 +27,19 @@ def my_flows_page(request):
     """
     if not hasattr(request.user, 'student_profile'):
         return redirect('profile_setup')
-    return render(request, 'flows/my_flows.html')
+    profile = request.user.student_profile
+    unread_count = profile.reminders.filter(
+        is_read=False
+    ).count()
+    return render(request, 'flows/my_flows.html', {
+        'unread_count': unread_count,
+    })
 
 
 # ==========================================
 # REST API 視圖 (DRF)
 # ==========================================
-from .models import FlowStage, Task, StudentTask
+from .models import FlowStage, Task, StudentTask, Reminder
 from .serializers import (
     FlowStageSerializer,
     TaskSerializer,

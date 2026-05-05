@@ -42,7 +42,7 @@
           </div>
           <div style="width:1px; height:40px; background:var(--border);"></div>
           <div>
-            <div class="val" id="dashUnreadCount" style="color:var(--warning);">—</div>
+            <div class="val" id="dashUnreadCount" style="color:var(--warning);">{{ unread_count|default:0 }}</div>
             <div class="sub">{% trans "未讀通知" %}</div>
           </div>
         </div>
