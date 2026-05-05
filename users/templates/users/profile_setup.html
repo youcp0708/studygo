@@ -121,7 +121,7 @@
           <div class="field">
             <select name="identity_type" id="setupIdentity" required onchange="updatePreview()">
               <option value="">{% trans "請選擇身份別" %}</option>
-              <option value="overseas_chinese_student">{% trans "僑生" %}</option>
+              <option value="overseas_chinese">{% trans "僑生" %}</option>
               <option value="foreign_student">{% trans "外籍生" %}</option>
               <option value="hong_kong_macau">{% trans "港澳生" %}</option>
             </select>
@@ -215,7 +215,7 @@
                       border-radius:14px;font-size:13px;color:#3a6b62;line-height:1.7;">
             💡 {% trans "資料儲存後，系統將根據您的" %}
             <b>{% trans "國籍" %}</b>、<b>{% trans "身份別" %}</b>
-            {% trans "與" %} <b>{% trans "入學狀態" %}</b>
+            {% trans "與" %}<b>{% trans "入學狀態" %}</b>
             {% trans "自動生成個人化任務流程。" %}
           </div>
         </div>

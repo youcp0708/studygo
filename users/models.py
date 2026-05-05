@@ -92,8 +92,8 @@ class StudentProfile(models.Model):
 
     # ── 身份別選項 (identityType) ──
     IDENTITY_CHOICES = [
-    ('overseas_chinese', _('僑生（海外華裔）')),
-    ('foreign_student', _('外籍生（一般外國學生）')),
+    ('overseas_chinese', _('僑生')),
+    ('foreign_student', _('外籍生')),
     ('hong_kong_macau', _('港澳生')),
 ]
 
