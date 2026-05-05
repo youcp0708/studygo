@@ -218,6 +218,31 @@ def flow_stats_view(request):
 
 
 # ══════════════════════════════════════════
+# GUIDE: 僑生辦理居留證指南
+# GET /flow/guide/arc-overseas/
+# ══════════════════════════════════════════
+def guide_arc_overseas(request):
+    from django.shortcuts import render, redirect
+    if not request.user.is_authenticated:
+        return redirect('login_page')
+    return render(request, 'flow/guide_arc_overseas.html')
+
+
+def guide_arc_foreign(request):
+    from django.shortcuts import render, redirect
+    if not request.user.is_authenticated:
+        return redirect('login_page')
+    return render(request, 'flow/guide_arc_foreign.html')
+
+
+def guide_arc_exchange(request):
+    from django.shortcuts import render, redirect
+    if not request.user.is_authenticated:
+        return redirect('login_page')
+    return render(request, 'flow/guide_arc_exchange.html')
+
+
+# ══════════════════════════════════════════
 # PAGE VIEW（返回 HTML 模板）
 # GET /flow/
 # ══════════════════════════════════════════

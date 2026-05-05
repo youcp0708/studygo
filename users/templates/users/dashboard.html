@@ -17,6 +17,15 @@
     <div class="dash-actions">
       <a href="{% url 'edit_profile' %}" class="dash-btn dash-btn-primary">✏️ 編輯個人資料</a>
       <a href="{% url 'flow_page' %}" class="dash-btn dash-btn-outline">📋 查看任務清單</a>
+      {% if profile %}
+        {% if profile.identity_type == 'overseas_chinese' %}
+        <a href="{% url 'guide_arc_overseas' %}" class="dash-btn dash-btn-outline">🪪 僑生居留證指南</a>
+        {% elif profile.identity_type == 'foreign_student' %}
+        <a href="{% url 'guide_arc_foreign' %}" class="dash-btn dash-btn-outline">🪪 外籍生居留證指南</a>
+        {% elif profile.identity_type == 'exchange' %}
+        <a href="{% url 'guide_arc_exchange' %}" class="dash-btn dash-btn-outline">✈️ 交換生居留說明</a>
+        {% endif %}
+      {% endif %}
       <a href="#" class="dash-btn dash-btn-outline">🤖 詢問 AI 小幫手</a>
     </div>
   </div>
@@ -137,6 +146,27 @@
            style="margin-top:16px;width:100%;padding:12px;display:block;text-align:center;">
           查看全部任務清單 →
         </a>
+        {% if profile %}
+          {% if profile.identity_type == 'overseas_chinese' %}
+          <a href="{% url 'guide_arc_overseas' %}" class="btn-outline-sm"
+             style="margin-top:8px;width:100%;padding:12px;display:block;text-align:center;
+                    background:#eff6ff;border-color:#1d4ed8;color:#1d4ed8;">
+            🪪 僑生申辦居留證指南 →
+          </a>
+          {% elif profile.identity_type == 'foreign_student' %}
+          <a href="{% url 'guide_arc_foreign' %}" class="btn-outline-sm"
+             style="margin-top:8px;width:100%;padding:12px;display:block;text-align:center;
+                    background:#eff6ff;border-color:#1d4ed8;color:#1d4ed8;">
+            🪪 外籍生申辦居留證指南 →
+          </a>
+          {% elif profile.identity_type == 'exchange' %}
+          <a href="{% url 'guide_arc_exchange' %}" class="btn-outline-sm"
+             style="margin-top:8px;width:100%;padding:12px;display:block;text-align:center;
+                    background:#f0fdf4;border-color:#16a34a;color:#15803d;">
+            ✈️ 交換生在台居留說明 →
+          </a>
+          {% endif %}
+        {% endif %}
       </div>
     </div>
 
