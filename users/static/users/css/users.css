@@ -1830,3 +1830,39 @@ button {
   background: var(--line);
   margin: 6px 4px;
 }
+
+/* ════════════════════════════════════
+   NAVBAR 右側區塊 (nav-right)
+════════════════════════════════════ */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ── 語言切換表單 ── */
+.language-form {
+  margin: 0;
+  padding: 0;
+}
+
+.language-select {
+  height: 38px;
+  padding: 0 12px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color .2s, background .2s;
+  appearance: auto;
+}
+
+.language-select:hover,
+.language-select:focus {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
