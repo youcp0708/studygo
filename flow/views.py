@@ -242,6 +242,20 @@ def guide_arc_exchange(request):
     return render(request, 'flow/guide_arc_exchange.html')
 
 
+def guide_bus_ncu(request):
+    from django.shortcuts import render, redirect
+    if not request.user.is_authenticated:
+        return redirect('login_page')
+    return render(request, 'flow/guide_bus_ncu.html')
+
+
+def guide_housing_ncu(request):
+    from django.shortcuts import render, redirect
+    if not request.user.is_authenticated:
+        return redirect('login_page')
+    return render(request, 'flow/guide_housing_ncu.html')
+
+
 # ══════════════════════════════════════════
 # PAGE VIEW（返回 HTML 模板）
 # GET /flow/

@@ -3,6 +3,13 @@
 {% load static %}
 {% block title %}儀表板 — StudyGo Taiwan{% endblock %}
 
+{% block extra_css %}
+<style>
+  .task-due { font-size:12px; color:var(--muted); margin-top:2px; }
+  .task-due-overdue { color:var(--danger); }
+</style>
+{% endblock %}
+
 {% block content %}
 <section id="profileDash" class="page" style="padding:0 0 48px;">
 
@@ -17,15 +24,6 @@
     <div class="dash-actions">
       <a href="{% url 'edit_profile' %}" class="dash-btn dash-btn-primary">✏️ 編輯個人資料</a>
       <a href="{% url 'flow_page' %}" class="dash-btn dash-btn-outline">📋 查看任務清單</a>
-      {% if profile %}
-        {% if profile.identity_type == 'overseas_chinese' %}
-        <a href="{% url 'guide_arc_overseas' %}" class="dash-btn dash-btn-outline">🪪 僑生居留證指南</a>
-        {% elif profile.identity_type == 'foreign_student' %}
-        <a href="{% url 'guide_arc_foreign' %}" class="dash-btn dash-btn-outline">🪪 外籍生居留證指南</a>
-        {% elif profile.identity_type == 'exchange' %}
-        <a href="{% url 'guide_arc_exchange' %}" class="dash-btn dash-btn-outline">✈️ 交換生居留說明</a>
-        {% endif %}
-      {% endif %}
       <a href="#" class="dash-btn dash-btn-outline">🤖 詢問 AI 小幫手</a>
     </div>
   </div>
@@ -103,73 +101,52 @@
       <div class="edit-panel">
         <h3>📌 近期待辦任務</h3>
         {% if recent_tasks %}
-          {% for task in recent_tasks %}
-          <div style="display:flex;align-items:flex-start;gap:12px;padding:12px 0;
+        {% for task in recent_tasks %}
+        <div style="display:flex;align-items:flex-start;gap:12px;padding:12px 0;
                       border-bottom:1px solid var(--border);">
-            <div style="font-size:20px;flex-shrink:0;">
-              {% if task.category == 'visa' %}🛂
-              {% elif task.category == 'enrollment' %}🎓
-              {% elif task.category == 'housing' %}🏠
-              {% elif task.category == 'health' %}🏥
-              {% elif task.category == 'finance' %}💳
-              {% elif task.category == 'language' %}📚
-              {% elif task.category == 'culture' %}🌏
-              {% else %}📌{% endif %}
+          <div style="font-size:20px;flex-shrink:0;">
+            {% if task.category == 'visa' %}🛂
+            {% elif task.category == 'enrollment' %}🎓
+            {% elif task.category == 'housing' %}🏠
+            {% elif task.category == 'health' %}🏥
+            {% elif task.category == 'finance' %}💳
+            {% elif task.category == 'language' %}📚
+            {% elif task.category == 'culture' %}🌏
+            {% else %}📌{% endif %}
+          </div>
+          <div style="flex:1;">
+            <div style="font-weight:800;font-size:14px;">{{ task.title }}</div>
+            {% if task.due_date %}
+            <div class="task-due{% if task.is_overdue %} task-due-overdue{% endif %}">
+              📅 {{ task.due_date }}{% if task.is_overdue %} ⚠️ 逾期{% endif %}
             </div>
-            <div style="flex:1;">
-              <div style="font-weight:800;font-size:14px;">{{ task.title }}</div>
-              {% if task.due_date %}
-              <div style="font-size:12px;color:{% if task.is_overdue %}var(--danger){% else %}var(--muted){% endif %};margin-top:2px;">
-                📅 {{ task.due_date }}{% if task.is_overdue %} ⚠️ 逾期{% endif %}
-              </div>
-              {% endif %}
-            </div>
-            {% if task.is_required %}
-            <span style="font-size:11px;padding:2px 8px;border-radius:99px;
-                         background:#eff6ff;color:#1d4ed8;font-weight:700;flex-shrink:0;">必要</span>
             {% endif %}
           </div>
-          {% endfor %}
+          {% if task.is_required %}
+          <span style="font-size:11px;padding:2px 8px;border-radius:99px;
+                         background:#eff6ff;color:#1d4ed8;font-weight:700;flex-shrink:0;">必要</span>
+          {% endif %}
+        </div>
+        {% endfor %}
         {% elif flow %}
-          <div style="text-align:center;padding:32px 0;color:var(--muted);">
-            <div style="font-size:40px;margin-bottom:8px;">🎉</div>
-            <div style="font-weight:800;">所有任務已完成！</div>
-          </div>
+        <div style="text-align:center;padding:32px 0;color:var(--muted);">
+          <div style="font-size:40px;margin-bottom:8px;">🎉</div>
+          <div style="font-weight:800;">所有任務已完成！</div>
+        </div>
         {% else %}
-          <div style="text-align:center;padding:32px 0;color:var(--muted);">
-            <div style="font-size:40px;margin-bottom:8px;">📋</div>
-            <div style="font-weight:800;font-size:15px;margin-bottom:6px;">尚未生成個人化流程</div>
-            <div style="font-size:13px;">完成個人資料設定後自動生成</div>
-          </div>
+        <div style="text-align:center;padding:32px 0;color:var(--muted);">
+          <div style="font-size:40px;margin-bottom:8px;">📋</div>
+          <div style="font-weight:800;font-size:15px;margin-bottom:6px;">尚未生成個人化流程</div>
+          <div style="font-size:13px;">完成個人資料設定後自動生成</div>
+        </div>
         {% endif %}
         <a href="{% url 'flow_page' %}" class="btn-outline-sm"
-           style="margin-top:16px;width:100%;padding:12px;display:block;text-align:center;">
+          style="margin-top:16px;width:100%;padding:12px;display:block;text-align:center;">
           查看全部任務清單 →
         </a>
-        {% if profile %}
-          {% if profile.identity_type == 'overseas_chinese' %}
-          <a href="{% url 'guide_arc_overseas' %}" class="btn-outline-sm"
-             style="margin-top:8px;width:100%;padding:12px;display:block;text-align:center;
-                    background:#eff6ff;border-color:#1d4ed8;color:#1d4ed8;">
-            🪪 僑生申辦居留證指南 →
-          </a>
-          {% elif profile.identity_type == 'foreign_student' %}
-          <a href="{% url 'guide_arc_foreign' %}" class="btn-outline-sm"
-             style="margin-top:8px;width:100%;padding:12px;display:block;text-align:center;
-                    background:#eff6ff;border-color:#1d4ed8;color:#1d4ed8;">
-            🪪 外籍生申辦居留證指南 →
-          </a>
-          {% elif profile.identity_type == 'exchange' %}
-          <a href="{% url 'guide_arc_exchange' %}" class="btn-outline-sm"
-             style="margin-top:8px;width:100%;padding:12px;display:block;text-align:center;
-                    background:#f0fdf4;border-color:#16a34a;color:#15803d;">
-            ✈️ 交換生在台居留說明 →
-          </a>
-          {% endif %}
-        {% endif %}
       </div>
     </div>
 
-  </div>  
+  </div>
 </section>
 {% endblock %}

@@ -8,6 +8,81 @@
   <title>{% block title %}StudyGo Taiwan{% endblock %}</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'users/css/users.css' %}" />
+  <style>
+    .nav-guide-menu {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+    .nav-guide-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 15px;
+      border-radius: 99px;
+      border: 1.5px solid var(--border);
+      background: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: border-color .2s, background .2s;
+      user-select: none;
+    }
+    .nav-guide-btn:hover,
+    .nav-guide-menu.open .nav-guide-btn {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+    .nav-guide-arrow {
+      font-size: 9px;
+      opacity: .6;
+      transition: transform .2s;
+    }
+    .nav-guide-menu.open .nav-guide-arrow { transform: rotate(180deg); }
+
+    .nav-guide-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.12);
+      min-width: 210px;
+      z-index: 999;
+      overflow: hidden;
+      padding: 6px;
+    }
+    .nav-guide-menu.open .nav-guide-dropdown { display: block; }
+    .nav-guide-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dark);
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background .15s;
+    }
+    .nav-guide-dropdown a:hover { background: var(--primary-soft); color: var(--primary-dark); }
+    .nav-guide-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 4px 0;
+    }
+    .nav-guide-section-label {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--muted);
+      letter-spacing: .5px;
+      padding: 6px 14px 2px;
+    }
+  </style>
   {% block extra_css %}{% endblock %}
 </head>
 
@@ -50,7 +125,33 @@
 
     {% if user.is_authenticated %}
     {# 已登入 NavBar #}
-    <div id="navAuth" style="display:flex;gap:12px;align-items:center;">
+    <div id="navAuth" style="display:flex;gap:10px;align-items:center;">
+
+      {# ── 指南下拉選單 ── #}
+      <div class="nav-guide-menu">
+        <button class="nav-guide-btn">
+          📖 指南 <span class="nav-guide-arrow">▼</span>
+        </button>
+        <div class="nav-guide-dropdown">
+          <div class="nav-guide-section-label">居留 &amp; 簽證</div>
+          {% if user.student_profile.identity_type == 'overseas_chinese' %}
+          <a href="{% url 'guide_arc_overseas' %}">🪪 僑生申辦居留證</a>
+          {% elif user.student_profile.identity_type == 'foreign_student' %}
+          <a href="{% url 'guide_arc_foreign' %}">🪪 外籍生申辦居留證</a>
+          {% elif user.student_profile.identity_type == 'exchange' %}
+          <a href="{% url 'guide_arc_exchange' %}">✈️ 交換生在台居留說明</a>
+          {% else %}
+          <a href="{% url 'guide_arc_overseas' %}">🪪 僑生申辦居留證</a>
+          <a href="{% url 'guide_arc_foreign' %}">🪪 外籍生申辦居留證</a>
+          <a href="{% url 'guide_arc_exchange' %}">✈️ 交換生在台居留說明</a>
+          {% endif %}
+          <div class="nav-guide-divider"></div>
+          <div class="nav-guide-section-label">生活資訊</div>
+          <a href="{% url 'guide_housing_ncu' %}">🏠 中央大學住宿指南</a>
+          <a href="{% url 'guide_bus_ncu' %}">🚌 中央大學公車指南</a>
+        </div>
+      </div>
+
       <span id="navGreeting" style="font-weight:800;color:var(--primary-dark);font-size:15px;">
         {{ user.name }} 同學
       </span>
@@ -66,9 +167,20 @@
 
   {# ── Scripts ── #}
   <script src="{% static 'users/js/users.js' %}"></script>
-
-
-
+  <script>
+    (function () {
+      const menu = document.querySelector('.nav-guide-menu');
+      if (!menu) return;
+      const btn = menu.querySelector('.nav-guide-btn');
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        menu.classList.toggle('open');
+      });
+      document.addEventListener('click', function () {
+        menu.classList.remove('open');
+      });
+    })();
+  </script>
   {% block extra_js %}{% endblock %}
 </body>
 

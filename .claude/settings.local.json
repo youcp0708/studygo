@@ -7,7 +7,8 @@
       "Bash(python manage.py shell -c \"from flow.models import FlowStepTemplate; print\\('FlowStepTemplate count:', FlowStepTemplate.objects.count\\(\\)\\)\")",
       "Bash(python manage.py shell -c \"from users.models import CustomUser; u = CustomUser.objects.first\\(\\); print\\(u, hasattr\\(u, 'student_profile'\\) if u else 'no user'\\)\")",
       "Bash(python manage.py shell -c \"from users.models import StudentProfile; print\\(StudentProfile._meta.get_field\\('identity_type'\\).choices\\); print\\(StudentProfile._meta.get_field\\('admission_status'\\).choices\\)\")",
-      "PowerShell(cd d:\\\\studyGo\\\\studygo; $env:PYTHONIOENCODING=\"utf-8\"; python manage.py shell -c \"from flow.models import FlowStepTemplate; print\\('Total:', FlowStepTemplate.objects.count\\(\\)\\); [print\\(t.category, '-', t.title\\) for t in FlowStepTemplate.objects.order_by\\('category','order'\\)]\")"
+      "PowerShell(cd d:\\\\studyGo\\\\studygo; $env:PYTHONIOENCODING=\"utf-8\"; python manage.py shell -c \"from flow.models import FlowStepTemplate; print\\('Total:', FlowStepTemplate.objects.count\\(\\)\\); [print\\(t.category, '-', t.title\\) for t in FlowStepTemplate.objects.order_by\\('category','order'\\)]\")",
+      "WebFetch(domain:shsd.ncu.edu.tw)"
     ]
   }
 }
