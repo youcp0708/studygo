@@ -13,6 +13,7 @@ class FlowStageAdmin(admin.ModelAdmin):
         'name_ms',
         'name_th',
         'name_ja',
+        'name_ko',
         'order',
     )
 
@@ -60,6 +61,12 @@ class FlowStageAdmin(admin.ModelAdmin):
                 'description_ja',
             )
         }),
+        ('韓語 Korean', {
+            'fields': (
+                'name_ko',
+                'description_ko',
+            )
+        }),
     )
 
     search_fields = (
@@ -70,6 +77,7 @@ class FlowStageAdmin(admin.ModelAdmin):
         'name_ms',
         'name_th',
         'name_ja',
+        'name_ko',
     )
 
     ordering = ('order',)
@@ -86,6 +94,7 @@ class TaskAdmin(admin.ModelAdmin):
         'title_ms',
         'title_th',
         'title_ja',
+        'title_ko',
         'stage',
         'identity_type',
         'nationality',
@@ -144,6 +153,12 @@ class TaskAdmin(admin.ModelAdmin):
                 'description_ja',
             )
         }),
+        ('韓語 Korean', {
+            'fields': (
+                'title_ko',
+                'description_ko',
+            )
+        }),
     )
 
     list_filter = (
@@ -162,6 +177,7 @@ class TaskAdmin(admin.ModelAdmin):
         'title_ms',
         'title_th',
         'title_ja',
+        'title_ko',
         'description',
     )
 
