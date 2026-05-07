@@ -165,6 +165,30 @@ async function renderDashboardProgress() {
    3. 渲染獨立的 my_flows.html
    GET /api/flows/my-tasks/
 ════════════════════════════════════════ */
+let currentActiveTabIndex = 0;
+
+window.switchFlowTab = function(activeIndex) {
+  currentActiveTabIndex = activeIndex;
+  
+  const buttons = document.querySelectorAll('.flow-tab-btn:not(.skeleton)');
+  buttons.forEach((btn, idx) => {
+    if (idx === activeIndex) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  const sections = document.querySelectorAll('.stage-section:not(.skeleton)');
+  sections.forEach((sec, idx) => {
+    if (idx === activeIndex) {
+      sec.classList.add('active');
+    } else {
+      sec.classList.remove('active');
+    }
+  });
+};
+
 async function renderMyTasks() {
   const container = document.getElementById('flowsContainer');
   if (!container) return;
@@ -189,16 +213,25 @@ async function renderMyTasks() {
     return;
   }
 
-  stages.forEach(stage => {
+  if (currentActiveTabIndex >= stages.length) {
+    currentActiveTabIndex = 0;
+  }
+
+  let tabsHtml = `<div class="flows-tabs">`;
+  let contentHtml = ``;
+
+  stages.forEach((stage, index) => {
+    const isActive = index === currentActiveTabIndex ? 'active' : '';
+    tabsHtml += `<button class="flow-tab-btn ${isActive}" onclick="switchFlowTab(${index})">${stage.stage_name}</button>`;
+    
     const tasks = stage.tasks || [];
     const total = tasks.length;
     const completed = tasks.filter(t => t.status === 'completed').length;
     const progressText = `${completed} / ${total} 完成`;
 
-    let html = `
-      <div class="stage-section">
-        <div class="stage-header">
-          <div class="stage-title">${stage.stage_name}</div>
+    contentHtml += `
+      <div class="stage-section ${isActive}">
+        <div class="stage-header" style="justify-content: flex-end; border-bottom: none; padding-bottom: 0; margin-bottom: 16px;">
           <div class="stage-progress">${progressText}</div>
         </div>
         <div class="task-list">
@@ -206,7 +239,7 @@ async function renderMyTasks() {
 
     tasks.forEach(task => {
       const isDone = task.status === 'completed';
-      html += `
+      contentHtml += `
         <div class="task-item ${isDone ? 'completed' : ''}" onclick="toggleTaskStatus(${task.id}, this)">
           <div class="task-checkbox"></div>
           <div class="task-content">
@@ -217,9 +250,11 @@ async function renderMyTasks() {
       `;
     });
 
-    html += `</div></div>`;
-    container.innerHTML += html;
+    contentHtml += `</div></div>`;
   });
+
+  tabsHtml += `</div>`;
+  container.innerHTML = tabsHtml + contentHtml;
 }
 
 /* ════════════════════════════════════════

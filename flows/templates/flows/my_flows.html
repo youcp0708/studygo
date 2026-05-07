@@ -50,12 +50,50 @@
     color: var(--muted);
   }
 
+  .flows-tabs {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .flow-tab-btn {
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+
+  .flow-tab-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .flow-tab-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(46, 168, 94, 0.2);
+  }
+
   .stage-section {
+    display: none;
     background: var(--bg);
     border-radius: 16px;
     padding: 32px;
     margin-bottom: 32px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  }
+
+  .stage-section.active {
+    display: block;
   }
 
   .stage-header {
@@ -206,8 +244,11 @@
 
   <div id="flowsContainer">
     <!-- Skeleton Loading -->
-    <div class="stage-section skeleton" style="height: 200px;"></div>
-    <div class="stage-section skeleton" style="height: 200px; margin-top: 20px;"></div>
+    <div class="flows-tabs">
+      <div class="flow-tab-btn skeleton" style="width: 100px; height: 40px; color: transparent;">Tab</div>
+      <div class="flow-tab-btn skeleton" style="width: 100px; height: 40px; color: transparent;">Tab</div>
+    </div>
+    <div class="stage-section skeleton active" style="height: 200px;"></div>
   </div>
 </section>
 {% endblock %}
