@@ -70,17 +70,6 @@
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
-  /* 放在這裡 ↓ */
-
-  function isNearBottom() {
-    if (!messagesEl) return true;
-
-    const distanceFromBottom =
-      messagesEl.scrollHeight - messagesEl.scrollTop - messagesEl.clientHeight;
-
-    return distanceFromBottom < 120;
-  }
-
   function updateScrollBottomButton() {
     if (!messagesEl || !scrollBottomBtn) return;
 

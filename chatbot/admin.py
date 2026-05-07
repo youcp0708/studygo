@@ -4,7 +4,7 @@ chatbot/admin.py
 """
 
 from django.contrib import admin
-from .models import ChatSession, ChatMessage, ChatAttachment
+from .models import ChatSession, ChatMessage, ChatAttachment, ChatKnowledge
 
 
 class ChatAttachmentInline(admin.TabularInline):
@@ -50,3 +50,16 @@ class ChatMessageAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request):
         return False
+
+
+@admin.register(ChatKnowledge)
+class ChatKnowledgeAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'category', 'is_active', 'updated_at')
+    list_filter = ('category', 'is_active', 'updated_at')
+    search_fields = (
+        'title', 'title_en', 'title_my', 'title_id', 'title_ms', 'title_th', 'title_ja',
+        'keywords',
+        'content', 'content_en', 'content_my', 'content_id', 'content_ms', 'content_th', 'content_ja',
+    )
+    readonly_fields = ('created_at', 'updated_at')
+
