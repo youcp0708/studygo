@@ -47,26 +47,6 @@ class ChatSession(models.Model):
 
     def __str__(self):
         return f'{self.user} - {self.title}'
-    """一位使用者可有多個聊天對話。"""
-
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        related_name='chat_sessions',
-        verbose_name='使用者',
-    )
-    title = models.CharField(max_length=120, default='新的對話', verbose_name='對話標題')
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')
-    updated_at = models.DateTimeField(auto_now=True, verbose_name='更新時間')
-
-    class Meta:
-        db_table = 'chatbot_chatsession'
-        ordering = ['-updated_at']
-        verbose_name = '聊天對話'
-        verbose_name_plural = '聊天對話'
-
-    def __str__(self):
-        return f'{self.user} - {self.title}'
 
 
 class ChatMessage(models.Model):
@@ -144,3 +124,81 @@ class ChatAttachment(models.Model):
 
     def __str__(self):
         return self.original_name or str(self.file)
+
+class ChatKnowledge(models.Model):
+    """聊天機器人知識庫 / FAQ：給 AI 一般回答參考，可支援多語言。"""
+
+    CATEGORY_CHOICES = [
+        ('visa', '簽證'),
+        ('arc', '居留證 ARC'),
+        ('nhi', '健保'),
+        ('school', '學校行政'),
+        ('housing', '住宿'),
+        ('life', '生活'),
+        ('other', '其他'),
+    ]
+
+    category = models.CharField(
+        max_length=50,
+        choices=CATEGORY_CHOICES,
+        default='other',
+        verbose_name='分類',
+    )
+
+    title = models.CharField(max_length=200, verbose_name='繁體中文標題')
+    title_en = models.CharField(max_length=200, blank=True, verbose_name='英文標題')
+    title_my = models.CharField(max_length=200, blank=True, verbose_name='緬文標題')
+    title_id = models.CharField(max_length=200, blank=True, verbose_name='印尼文標題')
+    title_ms = models.CharField(max_length=200, blank=True, verbose_name='馬來文標題')
+    title_th = models.CharField(max_length=200, blank=True, verbose_name='泰文標題')
+    title_ja = models.CharField(max_length=200, blank=True, verbose_name='日文標題')
+
+    keywords = models.CharField(
+        max_length=500,
+        blank=True,
+        verbose_name='關鍵字，建議放中文與英文，例如：居留證, ARC, residence permit',
+    )
+
+    content = models.TextField(verbose_name='繁體中文內容')
+    content_en = models.TextField(blank=True, verbose_name='英文內容')
+    content_my = models.TextField(blank=True, verbose_name='緬文內容')
+    content_id = models.TextField(blank=True, verbose_name='印尼文內容')
+    content_ms = models.TextField(blank=True, verbose_name='馬來文內容')
+    content_th = models.TextField(blank=True, verbose_name='泰文內容')
+    content_ja = models.TextField(blank=True, verbose_name='日文內容')
+
+    is_active = models.BooleanField(default=True, verbose_name='是否啟用')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='更新時間')
+
+    class Meta:
+        db_table = 'chatbot_knowledge'
+        ordering = ['category', '-updated_at']
+        verbose_name = 'Chatbot 知識庫 / FAQ'
+        verbose_name_plural = 'Chatbot 知識庫 / FAQ'
+
+    def __str__(self):
+        return self.title
+
+    def get_title_by_lang(self, lang_code):
+        lang_map = {
+            'en': self.title_en,
+            'my': self.title_my,
+            'id': self.title_id,
+            'ms': self.title_ms,
+            'th': self.title_th,
+            'ja': self.title_ja,
+        }
+        return lang_map.get((lang_code or '').lower(), '') or self.title
+
+    def get_content_by_lang(self, lang_code):
+        lang_map = {
+            'en': self.content_en,
+            'my': self.content_my,
+            'id': self.content_id,
+            'ms': self.content_ms,
+            'th': self.content_th,
+            'ja': self.content_ja,
+        }
+        return lang_map.get((lang_code or '').lower(), '') or self.content
+
