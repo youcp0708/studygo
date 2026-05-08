@@ -1,0 +1,1092 @@
+# Korean translation for StudyGo Taiwan
+# Copyright (C) 2026
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-07 00:00+0800\n"
+"PO-Revision-Date: 2026-05-07 00:00+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\chatbot\templates\chatbot\chatbot.html:3
+#: .\chatbot\templates\chatbot\chatbot.html:71
+#: .\users\templates\users\login.html:61
+msgid "AI 聊天機器人"
+msgstr "AI 챗봇"
+
+#: .\chatbot\templates\chatbot\chatbot.html:17
+#: .\users\templates\users\profile_setup.html:129
+msgid "返回"
+msgstr "돌아가기"
+
+#: .\chatbot\templates\chatbot\chatbot.html:21
+msgid "AI 來臺就學小幫手"
+msgstr "AI 대만 유학 도우미"
+
+#: .\chatbot\templates\chatbot\chatbot.html:28
+msgid "聊天記錄"
+msgstr "채팅 기록"
+
+#: .\chatbot\templates\chatbot\chatbot.html:31
+msgid "搜尋"
+msgstr "검색"
+
+#: .\chatbot\templates\chatbot\chatbot.html:33
+msgid "新聊天"
+msgstr "새 채팅"
+
+#: .\chatbot\templates\chatbot\chatbot.html:50
+msgid "聊天記錄選單"
+msgstr "채팅 기록 메뉴"
+
+#: .\chatbot\templates\chatbot\chatbot.html:54
+#: .\chatbot\templates\chatbot\chatbot.html:168
+msgid "取消釘選"
+msgstr "고정 해제"
+
+#: .\chatbot\templates\chatbot\chatbot.html:54
+#: .\chatbot\templates\chatbot\chatbot.html:167
+msgid "釘選"
+msgstr "고정"
+
+#: .\chatbot\templates\chatbot\chatbot.html:56
+#: .\chatbot\templates\chatbot\chatbot.html:169
+msgid "重新命名"
+msgstr "이름 바꾸기"
+
+#: .\chatbot\templates\chatbot\chatbot.html:57
+#: .\chatbot\templates\chatbot\chatbot.html:170
+msgid "刪除"
+msgstr "삭제"
+
+#: .\chatbot\templates\chatbot\chatbot.html:62
+msgid "目前沒有聊天記錄"
+msgstr "채팅 기록이 없습니다"
+
+#: .\chatbot\templates\chatbot\chatbot.html:72
+msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
+msgstr "질문을 입력하시면 신분과 상태에 따라 맞춤 조언을 정리해 드립니다."
+
+#: .\chatbot\templates\chatbot\chatbot.html:88
+#: .\chatbot\templates\chatbot\chatbot.html:101
+#: .\chatbot\templates\chatbot\chatbot.html:154
+msgid "StudyGo AI 小幫手"
+msgstr "StudyGo AI 도우미"
+
+#: .\chatbot\templates\chatbot\chatbot.html:103
+msgid "你好 !"
+msgstr "안녕하세요 !"
+
+#: .\chatbot\templates\chatbot\chatbot.html:104
+msgid " 同學"
+msgstr " 학생"
+
+#: \chatbot\templates\chatbot\chatbot.html:105
+msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
+msgstr "대만 유학 절차에 대해 질문하실 수 있습니다. 비자, 외국인등록증, 건강보험, 숙소, 등록 또는 입국 후 할 일 등을 물어보세요."
+
+#: .\chatbot\templates\chatbot\chatbot.html:122
+msgid "新增附件"
+msgstr "첨부파일 추가"
+
+#: .\chatbot\templates\chatbot\chatbot.html:127
+msgid "上傳檔案"
+msgstr "파일 업로드"
+
+#: .\chatbot\templates\chatbot\chatbot.html:128
+msgid "上傳圖片"
+msgstr "이미지 업로드"
+
+#: .\chatbot\templates\chatbot\chatbot.html:129
+msgid "拍照"
+msgstr "사진 촬영"
+
+#: .\chatbot\templates\chatbot\chatbot.html:133
+msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
+msgstr "예: 저는 미얀마에서 대만으로 학사 과정을 공부하러 왔습니다. 비자를 위해 먼저 무엇을 준비해야 하나요?"
+
+#: .\chatbot\templates\chatbot\chatbot.html:135
+#: .\chatbot\templates\chatbot\chatbot.html:166
+msgid "送出"
+msgstr "전송"
+
+#: .\chatbot\templates\chatbot\chatbot.html:153
+msgid "我"
+msgstr "나"
+
+#: .\chatbot\templates\chatbot\chatbot.html:155
+msgid "已上傳附件"
+msgstr "첨부파일 업로드 완료"
+
+#: .\chatbot\templates\chatbot\chatbot.html:156
+msgid "找不到 message API"
+msgstr "메시지 API를 찾을 수 없습니다"
+
+#: .\chatbot\templates\chatbot\chatbot.html:157
+msgid "送出失敗，請稍後再試。"
+msgstr "전송 실패. 나중에 다시 시도해 주세요."
+
+#: .\chatbot\templates\chatbot\chatbot.html:158
+msgid "網路或伺服器發生錯誤，請稍後再試。"
+msgstr "네트워크 또는 서버 오류가 발생했습니다. 나중에 다시 시도해 주세요."
+
+#: .\chatbot\templates\chatbot\chatbot.html:159
+msgid "新的聊天"
+msgstr "새 채팅"
+
+#: .\chatbot\templates\chatbot\chatbot.html:160
+msgid "請輸入新的聊天名稱"
+msgstr "새 채팅 이름을 입력해 주세요"
+
+#: .\chatbot\templates\chatbot\chatbot.html:161
+msgid "建立新聊天失敗"
+msgstr "새 채팅 만들기 실패"
+
+#: .\chatbot\templates\chatbot\chatbot.html:162
+msgid "重新命名失敗"
+msgstr "이름 바꾸기 실패"
+
+#: .\chatbot\templates\chatbot\chatbot.html:163
+msgid "釘選失敗"
+msgstr "고정 실패"
+
+#: .\chatbot\templates\chatbot\chatbot.html:164
+msgid "刪除失敗"
+msgstr "삭제 실패"
+
+#: .\chatbot\templates\chatbot\chatbot.html:165
+msgid "回覆中…"
+msgstr "답장 중…"
+
+#: .\chatbot\views.py:16
+msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
+msgstr "대만의 편의점에서는 요금 납부, 택배 수령, 복사, 그리고 다양한 생활용품을 구매할 수 있습니다."
+
+#: .\chatbot\views.py:17
+msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
+msgstr "대만에서 지하철과 버스를 이용할 때는 주로 이지카드(悠遊卡) 또는 아이패스(一卡通)를 사용합니다."
+
+#: .\chatbot\views.py:18
+msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
+msgstr "대만의 많은 학교에는 국제처가 있어 외국 학생의 입학 및 생활 문제를 지원합니다."
+
+#: .\chatbot\views.py:19
+msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
+msgstr "대만에서 집을 빌리기 전에 임대료, 보증금, 공과금, 임대 기간을 확인하는 것이 좋습니다."
+
+#: .\chatbot\views.py:20
+msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
+msgstr "대만에서 병원을 갈 때 건강보험에 가입되어 있으면 의료비가 자비보다 저렴합니다."
+
+#: .\chatbot\views.py:21
+msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
+msgstr "대만의 쓰레기차는 보통 음악을 틀어 주민들에게 쓰레기를 내놓을 시간임을 알립니다. 지역마다 시간이 다릅니다."
+
+#: .\chatbot\views.py:22
+msgid "台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"
+msgstr "대만의 여름은 덥고 습합니다. 외출 시 물병, 자외선차단제, 우산을 준비하는 것이 좋습니다."
+
+#: .\chatbot\views.py:23
+msgid "如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"
+msgstr "대만에서 주소를 변경하면 일부 서류나 학교 정보도 함께 업데이트해야 할 수 있습니다."
+
+#: .\chatbot\views.py:24
+msgid "台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"
+msgstr "대만 학교에서는 이메일이나 학교 시스템으로 중요한 정보를 공지하므로 정기적으로 확인하는 것이 좋습니다."
+
+#: .\chatbot\views.py:25
+msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
+msgstr "대만에 도착 후 휴대폰 번호를 신청할 때는 보통 여권, 외국인등록증 또는 기타 신분 서류가 필요합니다."
+
+#: .\studygo\settings.py:172
+msgid "繁體中文"
+msgstr "번체 중국어"
+
+#: .\studygo\settings.py:173
+msgid "English"
+msgstr "영어"
+
+#: .\studygo\settings.py:174
+msgid "日本語"
+msgstr "일본어"
+
+#: .\studygo\settings.py:175
+msgid "မြန်မာဘာသာ"
+msgstr "버마어"
+
+#: .\studygo\settings.py:176
+msgid "Bahasa Indonesia"
+msgstr "인도네시아어"
+
+#: .\studygo\settings.py:177
+msgid "ภาษาไทย"
+msgstr "태국어"
+
+#: .\studygo\settings.py:178
+msgid "Bahasa Melayu"
+msgstr "말레이어"
+
+#: .\templates\base.html:26
+msgid "確認操作"
+msgstr "작업 확인"
+
+#: .\templates\base.html:27
+msgid "您確定要執行此操作嗎？"
+msgstr "이 작업을 실행하시겠습니까?"
+
+#: .\templates\base.html:29 .\users\templates\users\edit_profile.html:144
+msgid "取消"
+msgstr "취소"
+
+#: .\templates\base.html:30
+msgid "確認"
+msgstr "확인"
+
+#: .\templates\base.html:50
+msgid "來臺就學小幫手"
+msgstr "대만 유학 도우미"
+
+#: .\templates\base.html:71
+msgid "   同學"
+msgstr "   학생"
+
+#: .\templates\base.html:78 .\users\templates\users\dashboard.html:132
+msgid "登出"
+msgstr "로그아웃"
+
+msgid "在台指南"
+msgstr "대만 생활 가이드"
+
+msgid "招生簡章"
+msgstr "입학 안내"
+
+msgid "入學申請、資格、費用說明"
+msgstr "입학 신청, 자격, 비용 안내"
+
+msgid "外籍生 ARC 辦理"
+msgstr "외국 유학생 외국인등록증 신청"
+
+msgid "居留證申請流程與文件"
+msgstr "거주증 신청 절차 및 서류"
+
+msgid "僑生 ARC 辦理"
+msgstr "재외 화교 외국인등록증 신청"
+
+msgid "僑生居留證申請說明"
+msgstr "재외 화교 거주증 신청 안내"
+
+msgid "交換生居留說明"
+msgstr "교환 학생 체류 안내"
+
+msgid "觀光簽 vs 居留簽判斷指南"
+msgstr "관광 비자 vs 거주 비자 판별 가이드"
+
+msgid "中央大學住宿申請"
+msgstr "중앙대학교 기숙사 신청"
+
+msgid "宿舍分區、申請流程說明"
+msgstr "기숙사 구역, 신청 절차 안내"
+
+msgid "中央大學公車指南"
+msgstr "중앙대학교 버스 가이드"
+
+msgid "路線、目的地與即時查詢"
+msgstr "노선, 목적지 및 실시간 조회"
+
+#: .\users\models.py:20
+msgid "電子郵件為必填欄位"
+msgstr "이메일은 필수 항목입니다"
+
+#: .\users\models.py:46
+msgid "境外學生"
+msgstr "해외 유학생"
+
+#: .\users\models.py:47
+msgid "系統管理員"
+msgstr "시스템 관리자"
+
+#: .\users\models.py:50 .\users\templates\users\forgot_password.html:21
+#: .\users\templates\users\login.html:105
+#: .\users\templates\users\login.html:168
+msgid "電子郵件"
+msgstr "이메일"
+
+#: .\users\models.py:51 .\users\templates\users\edit_profile.html:35
+#: .\users\templates\users\login.html:162
+msgid "姓名"
+msgstr "이름"
+
+#: .\users\models.py:56
+msgid "角色"
+msgstr "역할"
+
+#: .\users\models.py:58
+msgid "啟用狀態"
+msgstr "활성 상태"
+
+#: .\users\models.py:59
+msgid "工作人員狀態"
+msgstr "직원 상태"
+
+#: .\users\models.py:60 .\users\models.py:177 .\users\models.py:219
+msgid "建立時間"
+msgstr "생성 시간"
+
+#: .\users\models.py:61
+msgid "最後登入IP"
+msgstr "마지막 로그인 IP"
+
+#: .\users\models.py:62
+msgid "Email 已驗證"
+msgstr "이메일 인증 완료"
+
+#: .\users\models.py:70 .\users\models.py:71 .\users\models.py:216
+#: .\users\models.py:241
+msgid "使用者"
+msgstr "사용자"
+
+#: .\users\models.py:99 .\users\templates\users\profile_setup.html:73
+msgid "僑生（海外華裔）"
+msgstr "재외 화교 학생"
+
+#: .\users\models.py:100
+msgid "外籍生（一般外國學生）"
+msgstr "외국 유학생"
+
+#: .\users\models.py:101
+msgid "交換生"
+msgstr "교환 학생"
+
+#: .\users\models.py:102 .\users\templates\users\edit_profile.html:85
+#: .\users\templates\users\profile_setup.html:75
+msgid "僑大先修生"
+msgstr "화교 예비 과정 학생"
+
+#: .\users\models.py:107 .\users\templates\users\edit_profile.html:120
+#: .\users\templates\users\profile_setup.html:87
+msgid "已收到錄取通知"
+msgstr "합격 통지 수령"
+
+#: .\users\models.py:108 .\users\templates\users\edit_profile.html:123
+#: .\users\templates\users\profile_setup.html:95
+msgid "入境前準備中"
+msgstr "입국 전 준비 중"
+
+#: .\users\models.py:109 .\users\templates\users\edit_profile.html:126
+#: .\users\templates\users\profile_setup.html:103
+msgid "已抵臺就學中"
+msgstr "대만에서 이미 공부 중"
+
+#: .\users\models.py:114 .\users\templates\users\edit_profile.html:62
+#: .\users\templates\users\profile_setup.html:46
+msgid "印尼"
+msgstr "인도네시아"
+
+#: .\users\models.py:115 .\users\templates\users\edit_profile.html:63
+#: .\users\templates\users\profile_setup.html:47
+msgid "馬來西亞"
+msgstr "말레이시아"
+
+#: .\users\models.py:116 .\users\templates\users\edit_profile.html:64
+#: .\users\templates\users\profile_setup.html:48
+msgid "越南"
+msgstr "베트남"
+
+#: .\users\models.py:117 .\users\templates\users\edit_profile.html:65
+#: .\users\templates\users\profile_setup.html:49
+msgid "泰國"
+msgstr "태국"
+
+#: .\users\models.py:118 .\users\templates\users\edit_profile.html:66
+#: .\users\templates\users\profile_setup.html:50
+msgid "菲律賓"
+msgstr "필리핀"
+
+#: .\users\models.py:119 .\users\templates\users\edit_profile.html:67
+#: .\users\templates\users\profile_setup.html:51
+msgid "柬埔寨"
+msgstr "캄보디아"
+
+#: .\users\models.py:120 .\users\templates\users\edit_profile.html:68
+#: .\users\templates\users\profile_setup.html:52
+msgid "緬甸"
+msgstr "미얀마"
+
+#: .\users\models.py:121 .\users\templates\users\edit_profile.html:69
+#: .\users\templates\users\profile_setup.html:53
+msgid "日本"
+msgstr "일본"
+
+#: .\users\models.py:122 .\users\templates\users\edit_profile.html:70
+#: .\users\templates\users\profile_setup.html:54
+msgid "韓國"
+msgstr "한국"
+
+#: .\users\models.py:123 .\users\templates\users\edit_profile.html:71
+#: .\users\templates\users\profile_setup.html:55
+msgid "其他"
+msgstr "기타"
+
+#: .\users\models.py:131
+msgid "使用者帳號"
+msgstr "사용자 계정"
+
+#: .\users\models.py:138 .\users\templates\users\edit_profile.html:60
+#: .\users\templates\users\profile_setup.html:43
+msgid "國籍"
+msgstr "국적"
+
+#: .\users\models.py:145 .\users\templates\users\edit_profile.html:93
+#: .\users\templates\users\profile_setup.html:61
+#: .\users\templates\users\profile_setup.html:154
+msgid "就讀學校"
+msgstr "재학 학교"
+
+#: .\users\models.py:151 .\users\templates\users\edit_profile.html:76
+#: .\users\templates\users\profile_setup.html:68
+msgid "身份別"
+msgstr "신분 유형"
+
+#: .\users\models.py:158 .\users\templates\users\edit_profile.html:117
+#: .\users\templates\users\profile_setup.html:81
+msgid "入學狀態"
+msgstr "입학 상태"
+
+#: .\users\models.py:162 .\users\templates\users\dashboard.html:98
+#: .\users\templates\users\edit_profile.html:104
+#: .\users\templates\users\profile_setup.html:122
+#: .\users\templates\users\profile_setup.html:159
+msgid "系所"
+msgstr "학과"
+
+#: .\users\models.py:163 .\users\templates\users\edit_profile.html:132
+#: .\users\templates\users\profile_setup.html:116
+msgid "預計抵台日期"
+msgstr "대만 도착 예정일"
+
+#: .\users\models.py:168
+msgid "頭像"
+msgstr "프로필 사진"
+
+#: .\users\models.py:173
+msgid "慣用語言"
+msgstr "선호 언어"
+
+#: .\users\models.py:178
+msgid "更新時間"
+msgstr "수정 시간"
+
+#: .\users\models.py:181 .\users\models.py:182
+msgid "學生資料"
+msgstr "학생 정보"
+
+#: .\users\models.py:218
+msgid "驗證 Token"
+msgstr "인증 토큰"
+
+#: .\users\models.py:220
+msgid "是否已使用"
+msgstr "사용 여부"
+
+#: .\users\models.py:224 .\users\models.py:225
+msgid "Email 驗證 Token"
+msgstr "이메일 인증 토큰"
+
+#: .\users\models.py:243
+msgid "IP 位址"
+msgstr "IP 주소"
+
+#: .\users\models.py:244
+msgid "使用者代理"
+msgstr "사용자 에이전트"
+
+#: .\users\models.py:245
+msgid "登入時間"
+msgstr "로그인 시간"
+
+#: .\users\models.py:246
+msgid "是否成功"
+msgstr "성공 여부"
+
+#: .\users\models.py:251 .\users\models.py:252
+#: .\users\templates\users\edit_profile.html:231
+msgid "登入紀錄"
+msgstr "로그인 기록"
+
+#: .\users\templates\users\dashboard.html:4
+msgid "儀表板"
+msgstr "대시보드"
+
+#: .\users\templates\users\dashboard.html:14
+#, python-format
+msgid "你好，%(name)s 👋"
+msgstr "안녕하세요, %(name)s 👋"
+
+#: .\users\templates\users\dashboard.html:21
+msgid "境外生"
+msgstr "해외 유학생"
+
+#: .\users\templates\users\dashboard.html:23
+msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+msgstr ", StudyGo Taiwan에 오신 것을 환영합니다. 개인화된 대만 유학 프로세스가 준비되었습니다."
+
+#: .\users\templates\users\dashboard.html:28
+#: .\users\templates\users\edit_profile.html:4
+#: .\users\templates\users\edit_profile.html:12
+msgid "編輯個人資料"
+msgstr "프로필 편집"
+
+#: .\users\templates\users\dashboard.html:31
+msgid "查看任務清單"
+msgstr "할 일 목록 보기"
+
+#: .\users\templates\users\dashboard.html:34
+msgid "詢問 AI 小幫手"
+msgstr "AI 도우미에게 묻기"
+
+#: .\users\templates\users\dashboard.html:45
+msgid "任務完成率"
+msgstr "작업 완료율"
+
+#: .\users\templates\users\dashboard.html:47
+msgid "個人化流程生成後顯示"
+msgstr "개인화 프로세스 생성 후 표시"
+
+#: .\users\templates\users\dashboard.html:52
+msgid "即將到期任務"
+msgstr "곧 만료되는 작업"
+
+#: .\users\templates\users\dashboard.html:54
+msgid "連接模塊三後顯示"
+msgstr "모듈 3 연결 후 표시"
+
+#: .\users\templates\users\dashboard.html:59
+msgid "目前入學狀態"
+msgstr "현재 입학 상태"
+
+#: .\users\templates\users\dashboard.html:64
+msgid "未設定"
+msgstr "설정되지 않음"
+
+#: .\users\templates\users\dashboard.html:88
+msgid "信箱已驗證"
+msgstr "이메일 인증 완료"
+
+#: .\users\templates\users\dashboard.html:91
+msgid "信箱未驗證"
+msgstr "이메일 미인증"
+
+#: .\users\templates\users\dashboard.html:109
+#: .\users\templates\users\profile_setup.html:164
+msgid "預計抵台"
+msgstr "대만 도착 예정"
+
+#: .\users\templates\users\dashboard.html:120
+msgid "帳號建立"
+msgstr "계정 생성"
+
+#: .\users\templates\users\dashboard.html:127
+msgid "編輯資料"
+msgstr "정보 편집"
+
+#: .\users\templates\users\dashboard.html:139
+msgid "近期待辦任務"
+msgstr "최근 할 일"
+
+#: .\users\templates\users\dashboard.html:144
+msgid "任務清單由模塊二提供"
+msgstr "모듈 2에서 제공하는 할 일 목록"
+
+#: .\users\templates\users\dashboard.html:147
+msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
+msgstr "모듈 2(프로세스 및 작업 관리)를 완료하면 여기에 개인화된 할 일 목록이 표시됩니다."
+
+#: .\users\templates\users\dashboard.html:153
+msgid "查看全部任務清單"
+msgstr "전체 할 일 목록 보기"
+
+#: .\users\templates\users\edit_profile.html:11
+msgid "返回儀表板"
+msgstr "대시보드로 돌아가기"
+
+#: .\users\templates\users\edit_profile.html:18
+#: .\users\templates\users\profile_setup.html:39
+msgid "基本資訊"
+msgstr "기본 정보"
+
+#: .\users\templates\users\edit_profile.html:21
+msgid "修改密碼"
+msgstr "비밀번호 변경"
+
+#: .\users\templates\users\edit_profile.html:24
+msgid "帳號安全"
+msgstr "계정 보안"
+
+#: .\users\templates\users\edit_profile.html:47
+msgid "電子郵件（不可修改）"
+msgstr "이메일 (변경 불가)"
+
+#: .\users\templates\users\edit_profile.html:79
+msgid "僑生"
+msgstr "재외 화교 학생"
+
+#: .\users\templates\users\edit_profile.html:82
+#: .\users\templates\users\profile_setup.html:74
+msgid "外籍生"
+msgstr "외국 유학생"
+
+#: .\users\templates\users\edit_profile.html:99
+#: .\users\templates\users\profile_setup.html:62
+msgid "例如：國立臺灣大學"
+msgstr "예: 국립대만대학교"
+
+#: .\users\templates\users\edit_profile.html:110
+#: .\users\templates\users\profile_setup.html:123
+msgid "例如：資訊工程學系"
+msgstr "예: 컴퓨터공학과"
+
+#: .\users\templates\users\edit_profile.html:147
+msgid "儲存變更"
+msgstr "변경사항 저장"
+
+#: .\users\templates\users\edit_profile.html:159
+msgid "目前密碼"
+msgstr "현재 비밀번호"
+
+#: .\users\templates\users\edit_profile.html:164
+msgid "輸入目前密碼"
+msgstr "현재 비밀번호 입력"
+
+#: .\users\templates\users\edit_profile.html:171
+#: .\users\templates\users\reset_password.html:20
+msgid "新密碼"
+msgstr "새 비밀번호"
+
+#: .\users\templates\users\edit_profile.html:176
+#: .\users\templates\users\login.html:176
+msgid "至少 8 字元，含大小寫與數字"
+msgstr "대소문자와 숫자를 포함하여 8자 이상"
+
+#: .\users\templates\users\edit_profile.html:187
+#: .\users\templates\users\reset_password.html:29
+msgid "確認新密碼"
+msgstr "새 비밀번호 확인"
+
+#: .\users\templates\users\edit_profile.html:192
+#: .\users\templates\users\reset_password.html:30
+msgid "再次輸入新密碼"
+msgstr "새 비밀번호 다시 입력"
+
+#: .\users\templates\users\edit_profile.html:199
+msgid "更新密碼"
+msgstr "비밀번호 업데이트"
+
+#: .\users\templates\users\edit_profile.html:211
+msgid "電子郵件驗證"
+msgstr "이메일 인증"
+
+#: .\users\templates\users\edit_profile.html:214
+msgid "已驗證"
+msgstr "인증 완료"
+
+#: .\users\templates\users\edit_profile.html:216
+msgid "未驗證（請至信箱確認）"
+msgstr "미인증 (이메일을 확인해 주세요)"
+
+#: .\users\templates\users\edit_profile.html:223
+msgid "重新寄送驗證信"
+msgstr "인증 이메일 다시 보내기"
+
+#: .\users\templates\users\edit_profile.html:233
+msgid "最近一次登入："
+msgstr "마지막 로그인: "
+
+#: .\users\templates\users\edit_profile.html:239
+msgid "查看紀錄"
+msgstr "기록 보기"
+
+#: .\users\templates\users\edit_profile.html:248
+msgid "刪除帳號"
+msgstr "계정 삭제"
+
+#: .\users\templates\users\edit_profile.html:251
+msgid "此操作不可撤銷"
+msgstr "이 작업은 되돌릴 수 없습니다"
+
+#: .\users\templates\users\forgot_password.html:4
+#: .\users\templates\users\forgot_password.html:15
+msgid "忘記密碼"
+msgstr "비밀번호 찾기"
+
+#: .\users\templates\users\forgot_password.html:9
+msgid "返回登入"
+msgstr "로그인으로 돌아가기"
+
+#: .\users\templates\users\forgot_password.html:16
+msgid "輸入您的電子郵件，我們將寄送重設密碼連結。"
+msgstr "이메일 주소를 입력하시면 비밀번호 재설정 링크를 보내드립니다."
+
+#: .\users\templates\users\forgot_password.html:27
+msgid "寄送重設連結"
+msgstr "재설정 링크 보내기"
+
+#: .\users\templates\users\forgot_password.html:34
+msgid "郵件已寄出！"
+msgstr "이메일이 전송되었습니다!"
+
+#: .\users\templates\users\forgot_password.html:36
+msgid "重設連結已寄至"
+msgstr "재설정 링크가 전송되었습니다"
+
+#: .\users\templates\users\forgot_password.html:36
+msgid "請至信箱點擊連結。"
+msgstr "이메일에서 링크를 클릭해 주세요."
+
+#: .\users\templates\users\forgot_password.html:40
+msgid "返回登入頁面"
+msgstr "로그인 페이지로 돌아가기"
+
+#: .\users\templates\users\login.html:5
+msgid "登入 / 註冊"
+msgstr "로그인 / 회원가입"
+
+#: .\users\templates\users\login.html:19
+msgid "流程提醒"
+msgstr "프로세스 알림"
+
+#: .\users\templates\users\login.html:20
+msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
+msgstr "시스템이 국적, 신분 유형 및 현재 상태에 따라 비자 신청, 입국 전, 입국 후의 중요한 작업을 자동으로 생성하고 진행 상황으로 단계별로 완료를 알려드립니다."
+
+#: .\users\templates\users\login.html:38
+msgid "資訊管理"
+msgstr "정보 관리"
+
+#: .\users\templates\users\login.html:39
+msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
+msgstr "비자, 외국인등록증, 건강보험, 숙소, 입학 등록 정보를 원스톱 페이지로 통합하여 학생들이 올바른 정보를 더 쉽게 찾을 수 있고 흩어진 정보에 혼란스러워하지 않도록 합니다."
+
+#: .\users\templates\users\login.html:62
+msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
+msgstr "첫 번째 단계가 무엇인지, 어떤 서류를 준비해야 하는지, 또는 누구에게 물어야 할지 모를 때 AI 도우미를 통해 빠른 도움을 받을 수 있습니다."
+
+#: .\users\templates\users\login.html:78
+msgid "顯示第一張介紹"
+msgstr "첫 번째 소개 슬라이드 표시"
+
+#: .\users\templates\users\login.html:79
+msgid "顯示第二張介紹"
+msgstr "두 번째 소개 슬라이드 표시"
+
+#: .\users\templates\users\login.html:80
+msgid "顯示第三張介紹"
+msgstr "세 번째 소개 슬라이드 표시"
+
+#: .\users\templates\users\login.html:92
+#: .\users\templates\users\login.html:131
+#: .\users\templates\users\login.html:149
+msgid "登入"
+msgstr "로그인"
+
+#: .\users\templates\users\login.html:94
+#: .\users\templates\users\login.html:151
+msgid "註冊帳號"
+msgstr "회원가입"
+
+#: .\users\templates\users\login.html:98
+msgid "歡迎回來"
+msgstr "다시 오신 것을 환영합니다"
+
+#: .\users\templates\users\login.html:99
+msgid "請登入您的 StudyGo 帳戶"
+msgstr "StudyGo 계정에 로그인해 주세요"
+
+#: .\users\templates\users\login.html:112
+#: .\users\templates\users\login.html:174
+msgid "密碼"
+msgstr "비밀번호"
+
+#: .\users\templates\users\login.html:114
+msgid "輸入密碼"
+msgstr "비밀번호 입력"
+
+#: .\users\templates\users\login.html:118
+#: .\users\templates\users\login.html:180
+msgid "顯示或隱藏密碼"
+msgstr "비밀번호 표시 또는 숨기기"
+
+#: .\users\templates\users\login.html:124
+msgid "忘記密碼？"
+msgstr "비밀번호를 잊으셨나요?"
+
+#: .\users\templates\users\login.html:135
+msgid "或"
+msgstr "또는"
+
+#: .\users\templates\users\login.html:139
+msgid "還沒有帳號？"
+msgstr "아직 계정이 없으신가요?"
+
+#: .\users\templates\users\login.html:140
+msgid "立即免費註冊"
+msgstr "지금 무료로 회원가입"
+
+#: .\users\templates\users\login.html:155
+#: .\users\templates\users\profile_setup.html:15
+msgid "建立帳號"
+msgstr "계정 만들기"
+
+#: .\users\templates\users\login.html:156
+msgid "填寫基本資料，開始使用 StudyGo Taiwan"
+msgstr "기본 정보를 입력하고 StudyGo Taiwan 사용을 시작하세요"
+
+#: .\users\templates\users\login.html:185
+msgid "請輸入密碼"
+msgstr "비밀번호를 입력해 주세요"
+
+#: .\users\templates\users\login.html:190
+msgid "確認密碼"
+msgstr "비밀번호 확인"
+
+#: .\users\templates\users\login.html:191
+msgid "再次輸入密碼"
+msgstr "비밀번호를 다시 입력하세요"
+
+#: .\users\templates\users\login.html:200
+msgid "我同意"
+msgstr "동의합니다"
+
+#: .\users\templates\users\login.html:201
+msgid "服務條款"
+msgstr "서비스 이용약관"
+
+#: .\users\templates\users\login.html:202
+msgid "與"
+msgstr "및"
+
+#: .\users\templates\users\login.html:203
+msgid "隱私政策"
+msgstr "개인정보 처리방침"
+
+#: .\users\templates\users\login.html:210
+msgid "建立帳號並繼續設定資料"
+msgstr "계정을 만들고 프로필 설정을 계속하세요"
+
+#: .\users\templates\users\login.html:215
+msgid "已有帳號？"
+msgstr "이미 계정이 있으신가요?"
+
+#: .\users\templates\users\login.html:216
+msgid "立即登入"
+msgstr "지금 로그인"
+
+#: .\users\templates\users\logout_redirect.html:10
+msgid "登出中…"
+msgstr "로그아웃 중…"
+
+#: .\users\templates\users\logout_redirect.html:25
+msgid "登出成功，"
+msgstr "로그아웃 성공, "
+
+#: .\users\templates\users\logout_redirect.html:26
+msgid "點此返回登入頁面"
+msgstr "여기를 클릭하여 로그인 페이지로 돌아가세요"
+
+#: .\users\templates\users\profile_setup.html:4
+#: .\users\templates\users\profile_setup.html:33
+msgid "填寫個人資料"
+msgstr "프로필 정보 입력"
+
+#: .\users\templates\users\profile_setup.html:20
+msgid "填寫資料"
+msgstr "정보 입력"
+
+#: .\users\templates\users\profile_setup.html:25
+msgid "開始使用"
+msgstr "사용 시작"
+
+#: .\users\templates\users\profile_setup.html:34
+msgid "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
+msgstr "이 정보는 개인화된 대만 유학 프로세스를 생성하는 데 사용됩니다. 가장 정확한 단계별 안내를 받으려면 정확하게 입력해 주세요."
+
+#: .\users\templates\users\profile_setup.html:45
+msgid "請選擇國籍"
+msgstr "국적을 선택해 주세요"
+
+#: .\users\templates\users\profile_setup.html:72
+msgid "請選擇身份別"
+msgstr "신분 유형을 선택해 주세요"
+
+#: .\users\templates\users\profile_setup.html:77
+msgid "身份別將影響您的流程任務內容"
+msgstr "신분 유형은 프로세스 작업 내용에 영향을 미칩니다"
+
+#: .\users\templates\users\profile_setup.html:88
+msgid "準備來臺流程"
+msgstr "대만 도착 프로세스 준비"
+
+#: .\users\templates\users\profile_setup.html:96
+msgid "辦理簽證等手續"
+msgstr "비자 및 관련 절차 처리"
+
+#: .\users\templates\users\profile_setup.html:104
+msgid "辦理 ARC 等後續"
+msgstr "외국인등록증 및 후속 절차 처리"
+
+#: .\users\templates\users\profile_setup.html:112
+msgid "時間規劃"
+msgstr "시간 계획"
+
+#: .\users\templates\users\profile_setup.html:118
+msgid "非必填"
+msgstr "선택 사항"
+
+#: .\users\templates\users\profile_setup.html:131
+msgid "儲存資料並開始使用"
+msgstr "정보를 저장하고 사용 시작"
+
+#: .\users\templates\users\profile_setup.html:140
+msgid "帳號資料預覽"
+msgstr "계정 정보 미리보기"
+
+#: .\users\templates\users\profile_setup.html:146
+msgid "國籍未選"
+msgstr "국적 미선택"
+
+#: .\users\templates\users\profile_setup.html:147
+msgid "身份別未選"
+msgstr "신분 유형 미선택"
+
+#: .\users\templates\users\profile_setup.html:148
+msgid "狀態未選"
+msgstr "상태 미선택"
+
+#: .\users\templates\users\profile_setup.html:171
+msgid ""
+"\n"
+"            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與\n"
+"            <b>入學狀態</b> 自動生成個人化任務流程。\n"
+"            "
+msgstr ""
+"\n"
+"            정보를 저장하면 시스템이 귀하의 <b>국적</b>, <b>신분 유형</b> 및\n"
+"            <b>입학 상태</b>에 따라 개인화된 작업 프로세스를 자동으로 생성합니다.\n"
+"            "
+
+#: .\users\templates\users\reset_password.html:4
+#: .\users\templates\users\reset_password.html:11
+msgid "重設密碼"
+msgstr "비밀번호 재설정"
+
+#: .\users\templates\users\reset_password.html:12
+msgid "請輸入您的新密碼。"
+msgstr "새 비밀번호를 입력해 주세요."
+
+#: .\users\templates\users\reset_password.html:21
+msgid "至少 8 字元"
+msgstr "8자 이상"
+
+#: .\users\templates\users\reset_password.html:35
+msgid "確認重設密碼"
+msgstr "비밀번호 재설정 확인"
+
+#: .\users\templates\users\reset_password.html:55
+msgid "兩次密碼不一致"
+msgstr "두 비밀번호가 일치하지 않습니다"
+
+#: .\users\templates\users\reset_password.html:70
+msgid "密碼重設成功，請重新登入"
+msgstr "비밀번호 재설정 성공. 다시 로그인해 주세요."
+
+#: .\users\templates\users\reset_password.html:75
+msgid "重設失敗，連結可能已過期"
+msgstr "재설정 실패. 링크가 만료되었을 수 있습니다."
+
+#: users/models.py users/templates/users/edit_profile.html
+msgid "入臺前準備"
+msgstr "입국 전 준비"
+
+#: users/models.py users/templates/users/edit_profile.html
+msgid "抵臺後"
+msgstr "대만 도착 후"
+
+msgid "已完成"
+msgstr "완료"
+
+msgid "項"
+msgstr "개"
+
+msgid "通知"
+msgstr "알림"
+
+msgid "載入中..."
+msgstr "로딩 중..."
+
+msgid "沒有未讀通知 🎉"
+msgstr "읽지 않은 알림이 없습니다 🎉"
+
+msgid "太棒了！您目前沒有待辦任務。"
+msgstr "🎉 훌륭합니다! 현재 대기 중인 작업이 없습니다."
+
+msgid "標記為已讀"
+msgstr "읽음으로 표시"
+
+msgid "..."
+msgstr ""
+
+#: .\flows\templates\flows\guide_index.html:4
+#: .\flows\templates\flows\guide_index.html:11
+#: .\users\templates\users\dashboard.html:20
+msgid "資訊中心"
+msgstr "정보센터"
+
+#: .\flows\templates\flows\guide_index.html:12
+msgid "居留證辦理・住宿・交通等常用說明"
+msgstr "외국인등록증 처리・숙소・교통 등 일반 안내"
+
+#: .\flows\templates\flows\guide_index.html:18
+msgid "證件・住宿・交通"
+msgstr "증서・숙소・교통"
+
+msgid "載入任務中..."
+msgstr "작업 로딩 중..."
+
+msgid "目前完成進度"
+msgstr "현재 완료 진행 상황"
+
+msgid "我的任務"
+msgstr "내 작업"
+
+msgid "我的個人化任務清單"
+msgstr "나의 개인화된 할 일 목록"
+
+msgid "未開始"
+msgstr "시작되지 않음"
+
+msgid "未讀的通知"
+msgstr "읽지 않은 알림"
+
+msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+msgstr "StudyGo Taiwan에 오신 것을 환영합니다. 개인화된 대만 유학 프로세스가 준비되었습니다."
+
+msgid "即將到期 / 提醒"
+msgstr "곧 만료 / 알림"
+
+msgid "你好"
+msgstr "안녕하세요"
+
+msgid "完成這些任務，為你在台灣的學習生活做好準備！"
+msgstr "이 작업을 완료하여 대만에서의 학습 생활을 준비하세요!"
+
+msgid "港澳生"
+msgstr "홍콩·마카오 학생"
+
+msgid "進行中"
+msgstr "진행 중"

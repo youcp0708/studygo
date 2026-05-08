@@ -24,6 +24,7 @@ LANGUAGE_LABELS = {
     'id': 'Bahasa Indonesia',
     'th': 'ภาษาไทย',
     'ms': 'Bahasa Melayu',
+    'ko': '한국어',
 }
 
 
@@ -56,6 +57,8 @@ def normalize_language_code(language_code):
         return 'th'
     if code.startswith('ms'):
         return 'ms'
+    if code.startswith('ko'):
+        return 'ko'
 
     return 'zh-hant'
 
