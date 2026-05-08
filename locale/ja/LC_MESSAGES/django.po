@@ -1097,3 +1097,111 @@ msgstr "入学・居留・健保・工讀・学籍等の重要法規説明"
 
 #~ msgid "我的帳戶"
 #~ msgstr "マイアカウント"
+
+msgid "地圖導覽"
+msgstr "マップ＆ナビ"
+
+msgid "學校・醫院・交通"
+msgstr "大学・病院・交通"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "NCU周辺の重要スポット — タップしてナビ"
+
+msgid "快速定位"
+msgstr "クイックアクセス"
+
+msgid "中央大學"
+msgstr "国立中央大学"
+
+msgid "壢新醫院"
+msgstr "壢新病院"
+
+msgid "中壢火車站"
+msgstr "中壢駅"
+
+msgid "高鐵桃園站"
+msgstr "台湾高鐵桃園駅"
+
+msgid "桃園國際機場"
+msgstr "桃園国際空港"
+
+msgid "大江購物中心"
+msgstr "大江ショッピングモール"
+
+msgid "開啟導航"
+msgstr "ナビを開く"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "大学・病院・駅・空港の位置 — ワンタップでナビ"
+
+msgid "全民健保申請"
+msgstr "全民健保加入手続き"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "ARC取得後すぐ加入でき、外来費用が大幅に低下"
+
+msgid "台灣銀行開戶"
+msgstr "台湾の銀行口座開設"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "奨学金受取に必須 — 郵便局・台湾銀行・玉山銀行を比較"
+
+msgid "台灣門號申辦"
+msgstr "台湾SIMカード申込み"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "プリペイドvs月額プラン — 主要キャリアを解説"
+
+msgid "地圖導覽"
+msgstr "マップ＆ナビ"
+
+msgid "學校・醫院・交通"
+msgstr "大学・病院・交通"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "NCU周辺の重要スポット — タップしてナビ"
+
+msgid "快速定位"
+msgstr "クイックアクセス"
+
+msgid "中央大學"
+msgstr "国立中央大学"
+
+msgid "壢新醫院"
+msgstr "壢新病院"
+
+msgid "中壢火車站"
+msgstr "中壢駅"
+
+msgid "高鐵桃園站"
+msgstr "台湾高鐵桃園駅"
+
+msgid "桃園國際機場"
+msgstr "桃園国際空港"
+
+msgid "大江購物中心"
+msgstr "大江ショッピングモール"
+
+msgid "開啟導航"
+msgstr "ナビを開く"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "大学・病院・駅・空港の位置 — ワンタップでナビ"
+
+msgid "全民健保申請"
+msgstr "全民健保加入手続き"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "ARC取得後すぐ加入でき、外来費用が大幅に低下"
+
+msgid "台灣銀行開戶"
+msgstr "台湾の銀行口座開設"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "奨学金受取に必須 — 郵便局・台湾銀行・玉山銀行を比較"
+
+msgid "台灣門號申辦"
+msgstr "台湾SIMカード申込み"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "プリペイドvs月額プラン — 主要キャリアを解説"

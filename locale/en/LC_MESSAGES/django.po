@@ -1150,3 +1150,111 @@ msgstr ""
 
 #~ msgid "我的帳戶"
 #~ msgstr "My Account"
+
+msgid "地圖導覽"
+msgstr "Map & Navigation"
+
+msgid "學校・醫院・交通"
+msgstr "Campus · Hospital · Transport"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Key locations around NCU — click to navigate"
+
+msgid "快速定位"
+msgstr "Quick Locate"
+
+msgid "中央大學"
+msgstr "National Central University"
+
+msgid "壢新醫院"
+msgstr "Lixin Hospital"
+
+msgid "中壢火車站"
+msgstr "Zhongli Train Station"
+
+msgid "高鐵桃園站"
+msgstr "Taoyuan HSR Station"
+
+msgid "桃園國際機場"
+msgstr "Taoyuan International Airport"
+
+msgid "大江購物中心"
+msgstr "Dayeh Zhongli Shopping Center"
+
+msgid "開啟導航"
+msgstr "Get Directions"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "School, hospital, station, airport — one-tap navigation"
+
+msgid "全民健保申請"
+msgstr "National Health Insurance"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Enroll after ARC approval and reduce clinic costs"
+
+msgid "台灣銀行開戶"
+msgstr "Open a Bank Account in Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "Essential for scholarships — Post Office, Bank of Taiwan, E.Sun compared"
+
+msgid "台灣門號申辦"
+msgstr "Get a Taiwan SIM Card"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Prepaid vs monthly plans — major carriers explained"
+
+msgid "地圖導覽"
+msgstr "Map & Navigation"
+
+msgid "學校・醫院・交通"
+msgstr "Campus · Hospital · Transport"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Key locations around NCU — click to navigate"
+
+msgid "快速定位"
+msgstr "Quick Locate"
+
+msgid "中央大學"
+msgstr "National Central University"
+
+msgid "壢新醫院"
+msgstr "Lixin Hospital"
+
+msgid "中壢火車站"
+msgstr "Zhongli Train Station"
+
+msgid "高鐵桃園站"
+msgstr "Taoyuan HSR Station"
+
+msgid "桃園國際機場"
+msgstr "Taoyuan International Airport"
+
+msgid "大江購物中心"
+msgstr "Dayeh Zhongli Shopping Center"
+
+msgid "開啟導航"
+msgstr "Get Directions"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "School, hospital, station, airport — one-tap navigation"
+
+msgid "全民健保申請"
+msgstr "National Health Insurance"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Enroll after ARC approval and reduce clinic costs"
+
+msgid "台灣銀行開戶"
+msgstr "Open a Bank Account in Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "Essential for scholarships — Post Office, Bank of Taiwan, E.Sun compared"
+
+msgid "台灣門號申辦"
+msgstr "Get a Taiwan SIM Card"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Prepaid vs monthly plans — major carriers explained"

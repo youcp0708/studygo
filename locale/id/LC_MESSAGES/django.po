@@ -1157,3 +1157,111 @@ msgstr ""
 
 #~ msgid "我的帳戶"
 #~ msgstr "Akun Saya"
+
+msgid "地圖導覽"
+msgstr "Peta & Navigasi"
+
+msgid "學校・醫院・交通"
+msgstr "Kampus · Rumah Sakit · Transportasi"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
+
+msgid "快速定位"
+msgstr "Lokasi Cepat"
+
+msgid "中央大學"
+msgstr "Universitas Pusat Nasional"
+
+msgid "壢新醫院"
+msgstr "Rumah Sakit Lixin"
+
+msgid "中壢火車站"
+msgstr "Stasiun Kereta Zhongli"
+
+msgid "高鐵桃園站"
+msgstr "Stasiun HSR Taoyuan"
+
+msgid "桃園國際機場"
+msgstr "Bandara Internasional Taoyuan"
+
+msgid "大江購物中心"
+msgstr "Pusat Perbelanjaan Dayeh"
+
+msgid "開啟導航"
+msgstr "Buka Navigasi"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "Sekolah, rumah sakit, stasiun, bandara — navigasi satu ketuk"
+
+msgid "全民健保申請"
+msgstr "Pendaftaran Asuransi Kesehatan Nasional"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Daftar setelah ARC diterbitkan, biaya klinik jauh berkurang"
+
+msgid "台灣銀行開戶"
+msgstr "Buka Rekening Bank di Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "Wajib untuk beasiswa — Kantor Pos, Bank of Taiwan, E.Sun dibandingkan"
+
+msgid "台灣門號申辦"
+msgstr "Daftar Nomor Telepon Taiwan"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Kartu prabayar vs bulanan — penjelasan operator utama"
+
+msgid "地圖導覽"
+msgstr "Peta & Navigasi"
+
+msgid "學校・醫院・交通"
+msgstr "Kampus · Rumah Sakit · Transportasi"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
+
+msgid "快速定位"
+msgstr "Lokasi Cepat"
+
+msgid "中央大學"
+msgstr "Universitas Pusat Nasional"
+
+msgid "壢新醫院"
+msgstr "Rumah Sakit Lixin"
+
+msgid "中壢火車站"
+msgstr "Stasiun Kereta Zhongli"
+
+msgid "高鐵桃園站"
+msgstr "Stasiun HSR Taoyuan"
+
+msgid "桃園國際機場"
+msgstr "Bandara Internasional Taoyuan"
+
+msgid "大江購物中心"
+msgstr "Pusat Perbelanjaan Dayeh"
+
+msgid "開啟導航"
+msgstr "Buka Navigasi"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "Sekolah, rumah sakit, stasiun, bandara — navigasi satu ketuk"
+
+msgid "全民健保申請"
+msgstr "Pendaftaran Asuransi Kesehatan Nasional"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Daftar setelah ARC diterbitkan, biaya klinik jauh berkurang"
+
+msgid "台灣銀行開戶"
+msgstr "Buka Rekening Bank di Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "Wajib untuk beasiswa — Kantor Pos, Bank of Taiwan, E.Sun dibandingkan"
+
+msgid "台灣門號申辦"
+msgstr "Daftar Nomor Telepon Taiwan"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Kartu prabayar vs bulanan — penjelasan operator utama"

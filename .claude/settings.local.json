@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:cmn-hant.overseas.ncnu.edu.tw)",
       "Bash(python manage.py check)",
-      "Bash(python -c \"import polib; print\\('ok'\\)\")"
+      "Bash(python -c \"import polib; print\\('ok'\\)\")",
+      "Bash(python add_translations.py)"
     ]
   }
 }

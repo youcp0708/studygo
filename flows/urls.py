@@ -17,4 +17,5 @@ urlpatterns = [
     path('guides/nhi/',           views.guide_nhi,           name='guide_nhi'),
     path('guides/bank/',          views.guide_bank,          name='guide_bank'),
     path('guides/sim/',           views.guide_sim,           name='guide_sim'),
+    path('guides/map/',           views.guide_map,           name='guide_map'),
 ]

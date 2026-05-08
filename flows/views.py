@@ -80,6 +80,20 @@ def guide_bank(request):
 def guide_sim(request):
     return render(request, 'flows/guide_sim.html')
 
+@login_required(login_url='/login/')
+def guide_map(request):
+    from django.conf import settings
+    from django.utils import translation
+    lang_map = {
+        'zh-hant': 'zh-TW', 'en': 'en', 'id': 'id',
+        'ja': 'ja', 'ms': 'ms', 'my': 'my', 'th': 'th',
+    }
+    current_lang = (translation.get_language() or 'zh-hant').lower()
+    return render(request, 'flows/guide_map.html', {
+        'maps_api_key': getattr(settings, 'GOOGLE_MAPS_API_KEY', ''),
+        'maps_lang': lang_map.get(current_lang, 'zh-TW'),
+    })
+
 
 # ==========================================
 # REST API 視圖 (DRF)
