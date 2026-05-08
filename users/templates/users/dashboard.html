@@ -18,6 +18,7 @@
       <a href="{% url 'edit_profile' %}" class="dash-btn dash-btn-primary">✏️ {% trans "編輯個人資料" %}</a>
       <a href="{% url 'my_flows' %}" class="dash-btn dash-btn-outline">📋 {% trans "查看任務清單" %}</a>
       <a href="/chatbot/" class="dash-btn dash-btn-outline">🤖 {% trans "詢問 AI 小幫手" %}</a>
+      <a href="{% url 'guide_index' %}" class="dash-btn dash-btn-outline">📚 {% trans "資訊中心" %}</a>
     </div>
   </div>
 
@@ -134,119 +135,11 @@
       </div>
     </div>
 
-    {# 生活指南 #}
-    <div class="guide-section" style="margin-top:32px;">
-
-      <button class="guide-section-head" id="guideToggle" aria-expanded="false" aria-controls="guidePanel">
-        <span class="gsh-left">
-          <span class="gsh-icon">📚</span>
-          <span>
-            <span class="gsh-title">{% trans "在台生活指南" %}</span>
-            <span class="gsh-sub">{% trans "居留證辦理・住宿・交通等常用說明" %}</span>
-          </span>
-        </span>
-        <span class="gsh-arrow" aria-hidden="true">▼</span>
-      </button>
-
-      <div class="guide-panel" id="guidePanel" hidden>
-        <div class="guide-cards">
-
-          <a href="{% url 'guide_arc_foreign' %}" class="guide-card">
-            <div class="gc-icon">🪪</div>
-            <div class="gc-body">
-              <div class="gc-title">{% trans "外籍生 ARC 辦理" %}</div>
-              <div class="gc-desc">{% trans "外國護照入學者的居留證申請流程與文件清單" %}</div>
-            </div>
-            <div class="gc-arrow">→</div>
-          </a>
-
-          <a href="{% url 'guide_arc_overseas' %}" class="guide-card">
-            <div class="gc-icon">🌏</div>
-            <div class="gc-body">
-              <div class="gc-title">{% trans "僑生 ARC 辦理" %}</div>
-              <div class="gc-desc">{% trans "持外國護照入台的僑生居留證申請說明" %}</div>
-            </div>
-            <div class="gc-arrow">→</div>
-          </a>
-
-          <a href="{% url 'guide_arc_exchange' %}" class="guide-card">
-            <div class="gc-icon">✈️</div>
-            <div class="gc-body">
-              <div class="gc-title">{% trans "交換生居留說明" %}</div>
-              <div class="gc-desc">{% trans "短期觀光簽 vs 長期居留簽，ARC 辦理判斷指南" %}</div>
-            </div>
-            <div class="gc-arrow">→</div>
-          </a>
-
-          <a href="{% url 'guide_housing_ncu' %}" class="guide-card">
-            <div class="gc-icon">🏠</div>
-            <div class="gc-body">
-              <div class="gc-title">{% trans "中央大學住宿申請" %}</div>
-              <div class="gc-desc">{% trans "宿舍分區、設備、申請流程與外僑優先保證說明" %}</div>
-            </div>
-            <div class="gc-arrow">→</div>
-          </a>
-
-          <a href="{% url 'guide_bus_ncu' %}" class="guide-card">
-            <div class="gc-icon">🚌</div>
-            <div class="gc-body">
-              <div class="gc-title">{% trans "中央大學公車指南" %}</div>
-              <div class="gc-desc">{% trans "主要路線、常見目的地與即時查詢連結" %}</div>
-            </div>
-            <div class="gc-arrow">→</div>
-          </a>
-
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
 {% endblock %}
 
 {% block extra_js %}
-<script src="{% static 'flows/js/flows.js' %}?v=20260505"></script>
-<script>
-  (function () {
-    const btn = document.getElementById('guideToggle');
-    const panel = document.getElementById('guidePanel');
-    if (!btn || !panel) return;
-
-    btn.addEventListener('click', function () {
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!isOpen));
-      btn.classList.toggle('open', !isOpen);
-
-      if (isOpen) {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-
-        requestAnimationFrame(() => {
-          panel.style.maxHeight = '0';
-          panel.style.opacity = '0';
-        });
-
-        panel.addEventListener('transitionend', function hide() {
-          panel.hidden = true;
-          panel.style.maxHeight = '';
-          panel.style.opacity = '';
-          panel.removeEventListener('transitionend', hide);
-        });
-      } else {
-        panel.hidden = false;
-        panel.style.maxHeight = '0';
-        panel.style.opacity = '0';
-
-        requestAnimationFrame(() => {
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-          panel.style.opacity = '1';
-        });
-
-        panel.addEventListener('transitionend', function show() {
-          panel.style.maxHeight = 'none';
-          panel.removeEventListener('transitionend', show);
-        });
-      }
-    });
-  })();
-</script>
+<script src="{% static 'flows/js/flows.js' %}"></script>
 {% endblock %}

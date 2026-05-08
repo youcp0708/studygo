@@ -1,0 +1,108 @@
+{# flows/templates/flows/guide_index.html — 資訊中心 #}
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "資訊中心" %} — StudyGo Taiwan{% endblock %}
+
+{% block content %}
+<section style="max-width:900px;margin:0 auto;padding:40px 24px 72px;">
+
+  <div style="margin-bottom:32px;">
+    <a href="{% url 'dashboard' %}" style="color:var(--muted);font-size:14px;text-decoration:none;">← {% trans "返回儀表板" %}</a>
+    <h2 style="margin:16px 0 6px;font-size:28px;font-weight:800;">📚 {% trans "資訊中心" %}</h2>
+    <p style="color:var(--muted);margin:0;">{% trans "居留證辦理・住宿・交通等常用說明" %}</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px;">
+
+    <div style="font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.5px;padding:4px 0 2px;">
+      證件・住宿・交通
+    </div>
+
+    <a href="{% url 'guide_arc_foreign' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">🪪</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "外籍生 ARC 辦理" %}</div>
+        <div class="gc-desc">{% trans "外國護照入學者的居留證申請流程與文件清單" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <a href="{% url 'guide_arc_overseas' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">🌏</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "僑生 ARC 辦理" %}</div>
+        <div class="gc-desc">{% trans "持外國護照入台的僑生居留證申請說明" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <a href="{% url 'guide_arc_exchange' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">✈️</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "交換生居留說明" %}</div>
+        <div class="gc-desc">{% trans "短期觀光簽 vs 長期居留簽，ARC 辦理判斷指南" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <a href="{% url 'guide_housing_ncu' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">🏠</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "中央大學住宿申請" %}</div>
+        <div class="gc-desc">{% trans "宿舍分區、設備、申請流程與外僑優先保證說明" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <a href="{% url 'guide_bus_ncu' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">🚌</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "中央大學公車指南" %}</div>
+        <div class="gc-desc">{% trans "主要路線、常見目的地與即時查詢連結" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <a href="{% url 'guide_regulations' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">⚖️</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "來臺就學相關法規" %}</div>
+        <div class="gc-desc">{% trans "入學・居留・健保・工讀・學籍等重要法規說明" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <div style="font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.5px;padding:12px 0 2px;">
+      生活類
+    </div>
+
+    <a href="{% url 'guide_nhi' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">🏥</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "全民健保申請" %}</div>
+        <div class="gc-desc">{% trans "ARC 核發後即可加保，門診費用大幅降低" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <a href="{% url 'guide_bank' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">🏦</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "台灣銀行開戶" %}</div>
+        <div class="gc-desc">{% trans "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+    <a href="{% url 'guide_sim' %}" class="guide-card" style="text-decoration:none;">
+      <div class="gc-icon">📱</div>
+      <div class="gc-body">
+        <div class="gc-title">{% trans "台灣門號申辦" %}</div>
+        <div class="gc-desc">{% trans "預付卡 vs 月租方案，各大電信業者說明" %}</div>
+      </div>
+      <div class="gc-arrow">→</div>
+    </a>
+
+  </div>
+</section>
+{% endblock %}

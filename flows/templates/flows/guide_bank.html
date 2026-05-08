@@ -1,0 +1,239 @@
+{# flows/templates/flows/guide_bank.html — 台灣銀行開戶 #}
+{% extends "base.html" %}
+{% load static %}
+{% block title %}台灣銀行開戶 — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  :root { --border: var(--line); --dark: var(--primary-dark); --warning: #ca8a04; --warning-soft: #fef9c3; }
+  .guide-wrap { width:min(860px,96%); margin:0 auto; padding:0 0 72px; }
+
+  .guide-hero {
+    background: linear-gradient(135deg, #1e3a5f 0%, #065f46 100%);
+    color:#fff; padding:36px 44px 32px; border-radius:20px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .guide-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .guide-hero .hero-badge {
+    display:inline-block; background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.35); border-radius:99px;
+    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
+  }
+  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
+  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:520px; margin:0; }
+
+  .section-title {
+    font-size:17px; font-weight:900; color:var(--primary-dark);
+    margin:28px 0 14px; padding-bottom:10px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  .alert {
+    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
+    margin-bottom:14px; display:flex; gap:12px; align-items:flex-start;
+  }
+  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+  .alert-info    { background:#eff6ff; border:1.5px solid #bae6fd; }
+  .alert-info strong { color:#0369a1; }
+  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
+  .alert-warning strong { color:var(--warning); }
+  .alert-success { background:#f0fdf4; border:1.5px solid #86efac; }
+  .alert-success strong { color:#15803d; }
+
+  .bank-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; margin-bottom:28px; }
+  .bank-card {
+    background:#fff; border:1.5px solid var(--border); border-radius:14px; padding:18px;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .bank-card.recommended { border-color:var(--primary); }
+  .bank-name { font-size:15px; font-weight:900; color:var(--dark); display:flex; align-items:center; gap:8px; }
+  .bank-tag {
+    font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px;
+    background:var(--primary-soft); color:var(--primary-dark); flex-shrink:0;
+  }
+  .bank-tag-green { background:#dcfce7; color:#15803d; }
+  .bank-desc { font-size:13px; color:var(--muted); line-height:1.6; }
+
+  .doc-list { display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
+  .doc-item {
+    display:flex; align-items:center; gap:10px;
+    padding:12px 16px; border-radius:10px; border:1.5px solid var(--border);
+    background:#fff; font-size:14px; font-weight:600; color:var(--dark);
+  }
+  .doc-icon { font-size:18px; flex-shrink:0; }
+  .doc-badge {
+    font-size:11px; font-weight:700; padding:1px 8px; border-radius:99px;
+    margin-left:auto; flex-shrink:0;
+  }
+  .badge-req { background:var(--primary-soft); color:var(--primary-dark); }
+  .badge-opt { background:var(--bg); color:var(--muted); }
+
+  .step-list { list-style:none; padding:0; margin:0 0 28px; }
+  .step-item { display:flex; gap:16px; margin-bottom:20px; position:relative; }
+  .step-item:not(:last-child)::after {
+    content:''; position:absolute; left:19px; top:42px; bottom:-20px;
+    width:2px; background:var(--primary-soft);
+  }
+  .step-num {
+    width:40px; height:40px; border-radius:50%; background:var(--primary);
+    color:#fff; font-size:16px; font-weight:900;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; z-index:1; position:relative;
+  }
+  .step-body { flex:1; padding-top:4px; }
+  .step-title { font-size:15px; font-weight:800; color:var(--dark); margin-bottom:4px; }
+  .step-desc  { font-size:14px; color:var(--muted); line-height:1.7; }
+
+  .back-link {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
+  }
+  .back-link:hover { color:var(--primary-dark); }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="guide-wrap" style="padding-top:32px;">
+
+  <a class="back-link" href="{% url 'guide_index' %}">← 返回資訊中心</a>
+
+  <div class="guide-hero">
+    <div class="bg-text">BANK</div>
+    <div class="hero-badge">領獎學金・生活必備</div>
+    <h2>🏦 台灣銀行開戶指南</h2>
+    <p>在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。</p>
+  </div>
+
+  <div class="alert alert-success">
+    <div class="alert-icon">✅</div>
+    <div>
+      <strong>建議抵台後儘早辦理：</strong>開戶需持居留證（ARC），部分銀行要求 ARC 效期剩餘 6 個月以上。
+      趁辦完 ARC 後盡快前往銀行，避免影響後續獎學金匯入。
+    </div>
+  </div>
+
+  <!-- ── 推薦銀行 ── -->
+  <div class="section-title">🏦 推薦銀行選擇</div>
+  <div class="bank-grid">
+
+    <div class="bank-card recommended">
+      <div class="bank-name">📮 中華郵政（郵局）<span class="bank-tag bank-tag-green">最易辦</span></div>
+      <div class="bank-desc">全台門市最多，分行遍佈各鄉鎮，外籍生辦理友善度最高。ATM 密度高，提款方便。基本功能完整。</div>
+    </div>
+
+    <div class="bank-card recommended">
+      <div class="bank-name">🏛 台灣銀行<span class="bank-tag">獎學金首選</span></div>
+      <div class="bank-desc">政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。</div>
+    </div>
+
+    <div class="bank-card">
+      <div class="bank-name">💳 玉山銀行</div>
+      <div class="bank-desc">線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。</div>
+    </div>
+
+    <div class="bank-card">
+      <div class="bank-name">🏢 國泰世華銀行</div>
+      <div class="bank-desc">ATM 據點多，與多家電商合作，網路銀行功能完整，學生使用廣泛。</div>
+    </div>
+
+  </div>
+
+  <!-- ── 所需文件 ── -->
+  <div class="section-title">📋 所需文件</div>
+  <div class="doc-list">
+    <div class="doc-item"><span class="doc-icon">🪪</span>居留證（ARC）正本<span class="doc-badge badge-req">必備</span></div>
+    <div class="doc-item"><span class="doc-icon">🛂</span>護照正本<span class="doc-badge badge-req">必備</span></div>
+    <div class="doc-item"><span class="doc-icon">🎓</span>學生證 或 在學證明書<span class="doc-badge badge-req">必備</span></div>
+    <div class="doc-item"><span class="doc-icon">💵</span>開戶存款（通常 NT$1,000 起）<span class="doc-badge badge-req">必備</span></div>
+    <div class="doc-item"><span class="doc-icon">🖊</span>印章（部分銀行接受簽名）<span class="doc-badge badge-opt">視銀行</span></div>
+  </div>
+
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div>
+      <strong>部分銀行要求 ARC 效期剩餘 6 個月以上</strong>才受理開戶，建議攜帶文件前先電話確認分行政策，或優先前往對外籍生較友善的郵局辦理。
+    </div>
+  </div>
+
+  <!-- ── 開戶流程 ── -->
+  <div class="section-title">🪜 開戶步驟</div>
+  <ul class="step-list">
+    <li class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-title">選擇銀行並前往分行（建議非尖峰時間）</div>
+        <div class="step-desc">
+          週一至週五 09:00～15:30（各行略有不同）。
+          尖峰時段（12:00 前後）等候較長，建議下午前往。
+          中壢附近可前往中壢郵局、台灣銀行中壢分行、或校區附近的ATM廣場分行。
+        </div>
+      </div>
+    </li>
+    <li class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-title">取號碼牌，等候服務窗口</div>
+        <div class="step-desc">
+          入行後直接取「存款開戶」號碼牌。等候時可先填寫開戶申請書，服務台通常提供中英文對照表單。
+        </div>
+      </div>
+    </li>
+    <li class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-title">提交文件，完成身份核驗</div>
+        <div class="step-desc">
+          遞交 ARC、護照、學生證。行員會核對資料並詢問開戶用途（填「個人使用」即可）。
+        </div>
+      </div>
+    </li>
+    <li class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-title">存入開戶金額，設定提款密碼</div>
+        <div class="step-desc">
+          存入開戶金（NT$1,000 起），設定 ATM 提款密碼（4～6 位數）。
+          同時申請存摺、金融卡（Debit Card）。
+        </div>
+      </div>
+    </li>
+    <li class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <div class="step-title">開通網路銀行（建議）</div>
+        <div class="step-desc">
+          辦理當日或事後可申請網路銀行，方便線上轉帳、繳費。
+          玉山、國泰世華、台灣銀行均提供 App，操作較直覺。
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- ── 小提醒 ── -->
+  <div class="section-title">💡 注意事項</div>
+  <div class="alert alert-info">
+    <div class="alert-icon">📱</div>
+    <div>
+      <strong>網路銀行需要台灣手機門號驗證碼</strong>，建議先辦好 SIM 卡再申請網路銀行，可一次完成。
+    </div>
+  </div>
+  <div class="alert alert-info">
+    <div class="alert-icon">💳</div>
+    <div>
+      <strong>金融卡（Debit Card）可直接刷卡消費</strong>，在全家、7-Eleven、超市、網購均可使用，等同現金但不需帶大量現鈔。
+    </div>
+  </div>
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div>
+      <strong>ARC 到期前記得更新帳戶資料：</strong>ARC 換新後需至銀行更新證件資料，避免帳戶被凍結。
+    </div>
+  </div>
+
+</div>
+{% endblock %}

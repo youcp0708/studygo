@@ -37,6 +37,14 @@ def my_flows_page(request):
 
 
 @login_required(login_url='/login/')
+def guide_index(request):
+    return render(request, 'flows/guide_index.html')
+
+@login_required(login_url='/login/')
+def guide_regulations(request):
+    return render(request, 'flows/guide_regulations.html')
+
+@login_required(login_url='/login/')
 def admissions_guide(request):
     return render(request, 'flows/admissions_guide.html')
 
@@ -59,6 +67,18 @@ def guide_bus_ncu(request):
 @login_required(login_url='/login/')
 def guide_housing_ncu(request):
     return render(request, 'flows/guide_housing_ncu.html')
+
+@login_required(login_url='/login/')
+def guide_nhi(request):
+    return render(request, 'flows/guide_nhi.html')
+
+@login_required(login_url='/login/')
+def guide_bank(request):
+    return render(request, 'flows/guide_bank.html')
+
+@login_required(login_url='/login/')
+def guide_sim(request):
+    return render(request, 'flows/guide_sim.html')
 
 
 # ==========================================
