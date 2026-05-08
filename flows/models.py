@@ -16,6 +16,7 @@ class FlowStage(models.Model):
     name_ms = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Malay")
     name_th = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Thai")
     name_ja = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Japanese")
+    name_ko = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Korean")
 
     description_en = models.TextField(blank=True, verbose_name="階段說明 English")
     description_my = models.TextField(blank=True, verbose_name="階段說明 Burmese")
@@ -23,6 +24,7 @@ class FlowStage(models.Model):
     description_ms = models.TextField(blank=True, verbose_name="階段說明 Malay")
     description_th = models.TextField(blank=True, verbose_name="階段說明 Thai")
     description_ja = models.TextField(blank=True, verbose_name="階段說明 Japanese")
+    description_ko = models.TextField(blank=True, verbose_name="階段說明 Korean")
 
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
 
@@ -45,6 +47,7 @@ class FlowStage(models.Model):
             "ms": self.name_ms,
             "th": self.name_th,
             "ja": self.name_ja,
+            "ko": self.name_ko,
         }
         return lang_map.get(lang_code, "") or self.name
 
@@ -60,6 +63,7 @@ class FlowStage(models.Model):
             "ms": self.description_ms,
             "th": self.description_th,
             "ja": self.description_ja,
+            "ko": self.description_ko,
         }
         return lang_map.get(lang_code, "") or self.description
 
@@ -84,6 +88,7 @@ class Task(models.Model):
     title_ms = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Malay")
     title_th = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Thai")
     title_ja = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Japanese")
+    title_ko = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Korean")
 
     description_en = models.TextField(blank=True, verbose_name="任務說明 English")
     description_my = models.TextField(blank=True, verbose_name="任務說明 Burmese")
@@ -91,6 +96,7 @@ class Task(models.Model):
     description_ms = models.TextField(blank=True, verbose_name="任務說明 Malay")
     description_th = models.TextField(blank=True, verbose_name="任務說明 Thai")
     description_ja = models.TextField(blank=True, verbose_name="任務說明 Japanese")
+    description_ko = models.TextField(blank=True, verbose_name="任務說明 Korean")
 
     # 用來判斷這個任務適合哪種學生
     identity_type = models.CharField(
@@ -189,6 +195,7 @@ class Task(models.Model):
             "ms": self.title_ms,
             "th": self.title_th,
             "ja": self.title_ja,
+            "ko": self.title_ko,
         }
         return lang_map.get(lang_code, "") or self.title
 
@@ -201,6 +208,7 @@ class Task(models.Model):
         suffix_map = {
             'en': '_en', 'my': '_my', 'id': '_id',
             'ms': '_ms', 'th': '_th', 'ja': '_ja',
+            'ko': '_ko',
         }
         s = suffix_map.get(lang_code)  # None if not supported (= Chinese default)
 
@@ -316,29 +324,71 @@ from django.utils import timezone
 from datetime import timedelta
 
 
+# @receiver(post_save, sender=StudentTask)
+# def auto_create_reminder_on_task_update(sender, instance, **kwargs):
+#     if instance.status in ["not_started", "in_progress"] and instance.due_date:
+#         today = timezone.now().date()
+#         target_date = today + timedelta(days=3)
+
+#         if instance.due_date <= target_date:
+#             if instance.due_date < today:
+#                 message = f"您的任務「{instance.task.title}」已經逾期（截止日：{instance.due_date}），請盡快完成！"
+#             elif instance.due_date == today:
+#                 message = f"您的任務「{instance.task.title}」今天到期，請記得完成！"
+#             else:
+#                 days_left = (instance.due_date - today).days
+#                 message = f"您的任務「{instance.task.title}」還有 {days_left} 天到期（{instance.due_date}）。"
+
+#             exists = Reminder.objects.filter(
+#                 student_task=instance,
+#                 is_read=False
+#             ).exists()
+
+#             if not exists:
+#                 Reminder.objects.create(
+#                     student=instance.student,
+#                     student_task=instance,
+#                     message=message
+#                 )
+
 @receiver(post_save, sender=StudentTask)
 def auto_create_reminder_on_task_update(sender, instance, **kwargs):
-    if instance.status in ["not_started", "in_progress"] and instance.due_date:
-        today = timezone.now().date()
-        target_date = today + timedelta(days=3)
+    # 只有當任務尚未完成時，才檢查是否需要提醒
+    if instance.status in ["not_started", "in_progress"]:
+        t = instance.task
+        
+        # 1. 判斷任務是否需要計算截止日
+        calculated_due_date = None
+        if t.deadline_type == 'from_arrival' and t.deadline_days is not None:
+            if instance.student.expected_arrival:
+                # 算出真正的截止日期
+                calculated_due_date = instance.student.expected_arrival + timedelta(days=t.deadline_days)
+        
+        # 2. 如果有算出截止日，才進行快到期/逾期的檢查
+        if calculated_due_date:
+            today = timezone.now().date()
+            target_date = today + timedelta(days=3)  # 3天內到期就提醒
 
-        if instance.due_date <= target_date:
-            if instance.due_date < today:
-                message = f"您的任務「{instance.task.title}」已經逾期（截止日：{instance.due_date}），請盡快完成！"
-            elif instance.due_date == today:
-                message = f"您的任務「{instance.task.title}」今天到期，請記得完成！"
-            else:
-                days_left = (instance.due_date - today).days
-                message = f"您的任務「{instance.task.title}」還有 {days_left} 天到期（{instance.due_date}）。"
+            if calculated_due_date <= target_date:
+                formatted_date = calculated_due_date.strftime('%Y/%m/%d')
+                
+                if calculated_due_date < today:
+                    message = f"您的任務「{t.title}」已經逾期（截止日：{formatted_date}），請盡快完成！"
+                elif calculated_due_date == today:
+                    message = f"您的任務「{t.title}」今天到期，請記得完成！"
+                else:
+                    days_left = (calculated_due_date - today).days
+                    message = f"您的任務「{t.title}」還有 {days_left} 天到期（{formatted_date}）。"
 
-            exists = Reminder.objects.filter(
-                student_task=instance,
-                is_read=False
-            ).exists()
-
-            if not exists:
-                Reminder.objects.create(
-                    student=instance.student,
+                # 檢查是否已經有未讀的相同提醒，避免重複發送
+                exists = Reminder.objects.filter(
                     student_task=instance,
-                    message=message
-                )
+                    is_read=False
+                ).exists()
+
+                if not exists:
+                    Reminder.objects.create(
+                        student=instance.student,
+                        student_task=instance,
+                        message=message
+                    )

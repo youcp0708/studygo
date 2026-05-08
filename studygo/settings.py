@@ -100,6 +100,7 @@ LANGUAGES = [
     ('ms', 'Bahasa Melayu'),
     ('th', 'ไทย'),
     ('ja', '日本語'),
+    ('ko', '한국어'),
 ]
 
 LOCALE_PATHS = [
