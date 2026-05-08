@@ -58,6 +58,8 @@ class LoginSerializer(serializers.Serializer):
             raise serializers.ValidationError('電子郵件或密碼錯誤')
         if not user.is_active:
             raise serializers.ValidationError('此帳號已被停用')
+        if not user.email_verified:
+            raise serializers.ValidationError('請先至信箱完成 Email 驗證後再登入')
         attrs['user'] = user
         return attrs
 

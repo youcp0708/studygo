@@ -78,9 +78,6 @@ def register_view(request):
     # 產生 Auth Token
     token, _ = Token.objects.get_or_create(user=user)
 
-    # 建立 Django session
-    login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-
     # 寄送 Email 驗證信（可改為 Celery 非同步）
     _send_verification_email(user, request)
 
@@ -359,11 +356,6 @@ def verify_email_view(request, token):
     user.save(update_fields=['email_verified'])
     ev_token.is_used = True
     ev_token.save(update_fields=['is_used'])
-
-    # 若使用者的 session 仍有效，直接跳轉到下一步
-    if request.user.is_authenticated and request.user.pk == user.pk:
-        has_profile = hasattr(user, 'student_profile') and user.student_profile is not None
-        return HttpResponseRedirect('/profile/setup/' if not has_profile else '/dashboard/')
 
     return HttpResponseRedirect('/login/?verified=1')
 
