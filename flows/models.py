@@ -190,6 +190,7 @@ class StudentTask(models.Model):
         default="not_started",
         verbose_name="完成狀態"
     )
+    note = models.TextField(blank=True, default='', verbose_name="備註")
     due_date = models.DateField(
         null=True,
         blank=True,
