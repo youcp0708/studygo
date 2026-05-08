@@ -52,14 +52,6 @@
     </div>
 
     <div class="nav-right">
-
-      {# ── 資訊中心直連（子模板可覆寫此 block 以隱藏）── #}
-      {% block navbar_guide %}
-      <a href="{% url 'guide_index' %}" class="nav-guide-btn">
-        📚 {% trans "資訊中心" %}
-      </a>
-      {% endblock navbar_guide %}
-
       <form action="{% url 'set_language' %}" method="post" class="language-form">
         {% csrf_token %}
         {% get_current_language as CURRENT_LANGUAGE %}
