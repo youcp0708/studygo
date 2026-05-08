@@ -4,6 +4,7 @@ flows/views.py
 """
 
 from django.utils import timezone
+from django.utils.translation import get_language
 from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
@@ -246,10 +247,52 @@ def my_tasks_view(request):
             qs = qs.filter(status=status_filter)
             
         if qs.exists():
+            tasks_data = []
+            # ── 取得目前請求的語言（Django 語言切換 cookie），優先於資料庫欄位 ──
+            active_lang = get_language() or ''  # e.g. 'my', 'en', 'zh-hant'
+            # 取短代碼：'zh-hant' → 'zh', 'my' → 'my'
+            short_lang = active_lang.split('-')[0] if '-' in active_lang else active_lang
+            # get_localized 支援 en/my/id/ms/th/ja，其他回退中文
+            SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja'}
+            if short_lang not in SUPPORTED:
+                short_lang = ''  # 空字串 = 使用中文預設
+            print(f"[DEBUG] get_language()={active_lang!r}, short_lang={short_lang!r}")
+
+            for st in qs:
+                task_data = StudentTaskSerializer(st).data
+                t = st.task
+
+                # ── 本地化的文字欄位 ──
+                localized = t.get_localized(short_lang)
+
+                # ── 期限資訊（使用本地化的 deadline_text）──
+                dl_type = t.deadline_type
+                dl_text = localized['deadline_text']
+                calculated_due_date = None
+                arrival_missing = False
+
+                if dl_type == 'from_arrival':
+                    if profile.expected_arrival and t.deadline_days is not None:
+                        from datetime import timedelta
+                        calculated_due_date = (
+                            profile.expected_arrival + timedelta(days=t.deadline_days)
+                        ).strftime('%Y/%m/%d')
+                    else:
+                        arrival_missing = True
+
+                task_data['localized'] = localized
+                task_data['deadline_info'] = {
+                    'type': dl_type,
+                    'text': dl_text,
+                    'calculated_due_date': calculated_due_date,
+                    'arrival_missing': arrival_missing,
+                }
+                tasks_data.append(task_data)
+
             stages_data.append({
                 'stage_id': stage.id,
                 'stage_name': stage.name,
-                'tasks': StudentTaskSerializer(qs, many=True).data
+                'tasks': tasks_data
             })
 
     # ── 計算進度摘要 ──
@@ -301,27 +344,80 @@ def update_task_status_view(request, task_id):
     except StudentTask.DoesNotExist:
         return error_response('找不到此任務或無權限操作', status_code=404)
 
-    new_status = request.data.get('status')
-    valid_statuses = [c[0] for c in StudentTask.STATUS_CHOICES]
-    if new_status not in valid_statuses:
-        return error_response(
-            f'無效的狀態，可選值：{", ".join(valid_statuses)}',
-            status_code=400
-        )
+    if 'status' in request.data:
+        new_status = request.data.get('status')
+        valid_statuses = [c[0] for c in StudentTask.STATUS_CHOICES]
+        if new_status in valid_statuses:
+            student_task.status = new_status
+            if new_status == 'completed':
+                student_task.completed_at = timezone.now()
+            else:
+                student_task.completed_at = None
 
-    student_task.status = new_status
-
-    # 如果標記為「已完成」，自動記錄完成時間
-    if new_status == 'completed':
-        student_task.completed_at = timezone.now()
-    else:
-        student_task.completed_at = None  # 取消完成時清除時間
+    if 'note' in request.data:
+        student_task.note = request.data.get('note')
 
     student_task.save()
 
     return success_response(
         StudentTaskSerializer(student_task).data,
-        '任務狀態更新成功'
+        '任務更新成功'
+    )
+
+
+# ══════════════════════════════════════════
+# 5. 批量更新任務狀態
+# PATCH /api/flows/my-tasks/bulk/
+# ══════════════════════════════════════════
+@api_view(['PATCH'])
+@permission_classes([IsAuthenticated])
+def bulk_update_task_status_view(request):
+    """
+    Request Body:
+      {
+        "task_ids": [1, 2, 3],
+        "action": "complete"  # or "not_started", "in_progress"
+      }
+    """
+    user = request.user
+
+    try:
+        profile = user.student_profile
+    except StudentProfile.DoesNotExist:
+        return error_response('請先建立學生資料', status_code=400)
+
+    task_ids = request.data.get('task_ids', [])
+    action = request.data.get('action')
+
+    if not task_ids or not isinstance(task_ids, list):
+        return error_response('請提供 task_ids 陣列', status_code=400)
+
+    if action not in ['complete', 'not_started', 'in_progress']:
+        return error_response('無效的操作', status_code=400)
+
+    status_map = {
+        'complete': 'completed',
+        'not_started': 'not_started',
+        'in_progress': 'in_progress'
+    }
+    
+    new_status = status_map[action]
+
+    tasks = StudentTask.objects.filter(id__in=task_ids, student=profile)
+    updated_count = 0
+
+    for task in tasks:
+        task.status = new_status
+        if new_status == 'completed':
+            task.completed_at = timezone.now()
+        else:
+            task.completed_at = None
+        task.save()
+        updated_count += 1
+
+    return success_response(
+        {'updated_count': updated_count},
+        f'成功更新 {updated_count} 筆任務'
     )
 
 

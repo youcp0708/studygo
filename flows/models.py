@@ -115,6 +115,58 @@ class Task(models.Model):
         blank=True,
         verbose_name="官方資源連結"
     )
+
+    # ── 需要的文件（多語言）──
+    required_documents    = models.TextField(blank=True, verbose_name="需要的文件")
+    required_documents_en = models.TextField(blank=True, verbose_name="需要的文件 English")
+    required_documents_my = models.TextField(blank=True, verbose_name="需要的文件 Burmese")
+    required_documents_id = models.TextField(blank=True, verbose_name="需要的文件 Indonesian")
+    required_documents_ms = models.TextField(blank=True, verbose_name="需要的文件 Malay")
+    required_documents_th = models.TextField(blank=True, verbose_name="需要的文件 Thai")
+    required_documents_ja = models.TextField(blank=True, verbose_name="需要的文件 Japanese")
+
+    # ── 辦理地點（多語言）──
+    apply_location    = models.CharField(max_length=200, blank=True, verbose_name="辦理地點")
+    apply_location_en = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 English")
+    apply_location_my = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Burmese")
+    apply_location_id = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Indonesian")
+    apply_location_ms = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Malay")
+    apply_location_th = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Thai")
+    apply_location_ja = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Japanese")
+
+    apply_address = models.CharField(max_length=200, blank=True, verbose_name="辦理地址")
+    apply_map_url = models.URLField(
+        blank=True,
+        verbose_name="辦理地點地圖連結",
+        help_text="Google Maps 或其他地圖連結"
+    )
+
+    # ── 期限設定 ──
+    DEADLINE_TYPE_CHOICES = [
+        ('none',         '無截止日期'),
+        ('text_only',    '只顯示文字說明'),
+        ('from_arrival', '依抵台日期自動計算'),
+    ]
+    deadline_type = models.CharField(
+        max_length=20,
+        choices=DEADLINE_TYPE_CHOICES,
+        default='none',
+        verbose_name="期限類型"
+    )
+    deadline_days = models.PositiveIntegerField(
+        null=True, blank=True,
+        verbose_name="計算天數（僅限 from_arrival 使用）",
+        help_text="抵台後幾天內必須完成"
+    )
+    # ── 辦理時程文字（多語言）──
+    deadline_text    = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字")
+    deadline_text_en = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 English")
+    deadline_text_my = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Burmese")
+    deadline_text_id = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Indonesian")
+    deadline_text_ms = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Malay")
+    deadline_text_th = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Thai")
+    deadline_text_ja = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Japanese")
+
     is_required = models.BooleanField(default=True, verbose_name="是否必做")
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
 
@@ -140,20 +192,46 @@ class Task(models.Model):
         }
         return lang_map.get(lang_code, "") or self.title
 
-    def get_description_by_lang(self, lang_code):
+    def get_localized(self, lang_code):
         """
-        依照目前語言取得任務說明。
-        如果該語言沒有填資料，就回傳中文 description。
+        依語言代碼回傳本任務的所有需要本地化的文字欄位。
+        若該語言沒有填就回联中文預設。
         """
-        lang_map = {
-            "en": self.description_en,
-            "my": self.description_my,
-            "id": self.description_id,
-            "ms": self.description_ms,
-            "th": self.description_th,
-            "ja": self.description_ja,
+        # Map lang_code to field suffix
+        suffix_map = {
+            'en': '_en', 'my': '_my', 'id': '_id',
+            'ms': '_ms', 'th': '_th', 'ja': '_ja',
         }
-        return lang_map.get(lang_code, "") or self.description
+        s = suffix_map.get(lang_code)  # None if not supported (= Chinese default)
+
+        if s is None:
+            # No translation needed — return Chinese defaults directly
+            return {
+                'title':              self.title,
+                'description':        self.description,
+                'required_documents': self.required_documents,
+                'apply_location':     self.apply_location,
+                'apply_address':      self.apply_address,
+                'apply_map_url':      self.apply_map_url,
+                'official_url':       self.official_url,
+                'deadline_text':      self.deadline_text,
+            }
+
+        # Return translated field, falling back to Chinese if the translated field is empty
+        def pick(base_val, field_name):
+            translated = getattr(self, field_name, '') or ''
+            return translated if translated.strip() else (base_val or '')
+
+        return {
+            'title':              pick(self.title,              f'title{s}'),
+            'description':        pick(self.description,        f'description{s}'),
+            'required_documents': pick(self.required_documents, f'required_documents{s}'),
+            'apply_location':     pick(self.apply_location,     f'apply_location{s}'),
+            'apply_address':      self.apply_address,   # 地址不翻譯（台灣地址）
+            'apply_map_url':      self.apply_map_url,
+            'official_url':       self.official_url,
+            'deadline_text':      pick(self.deadline_text,      f'deadline_text{s}'),
+        }
 
 
 # 學生自己的任務進度
@@ -182,10 +260,9 @@ class StudentTask(models.Model):
         default="not_started",
         verbose_name="完成狀態"
     )
-    due_date = models.DateField(
-        null=True,
+    note = models.TextField(
         blank=True,
-        verbose_name="預計完成日期"
+        verbose_name="任務備註"
     )
     completed_at = models.DateTimeField(
         null=True,

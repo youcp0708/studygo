@@ -23,6 +23,10 @@ urlpatterns = [
     path('flows/my-tasks/<int:task_id>/update/',
          views.update_task_status_view,  name='api_update_task'),
 
+    # PATCH /api/flows/my-tasks/bulk/ → 批量更新任務狀態
+    path('flows/my-tasks/bulk/',
+         views.bulk_update_task_status_view, name='api_bulk_update_task'),
+
     # ── 進度總覽 ──────────────────────────────────────
     # GET   /api/flows/progress/            → 取得進度總覽（依階段分組）
     path('flows/progress/',             views.progress_overview_view,   name='api_progress'),

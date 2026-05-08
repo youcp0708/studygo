@@ -81,15 +81,12 @@ class TaskAdmin(admin.ModelAdmin):
         'id',
         'title',
         'title_en',
-        'title_my',
-        'title_id',
-        'title_ms',
-        'title_th',
-        'title_ja',
         'stage',
         'identity_type',
         'nationality',
         'admission_status',
+        'deadline_type',
+        'deadline_days',
         'is_required',
         'order',
     )
@@ -104,44 +101,74 @@ class TaskAdmin(admin.ModelAdmin):
                 'nationality',
                 'admission_status',
                 'official_url',
+                'required_documents',
+                'apply_location',
+                'apply_address',
+                'apply_map_url',
                 'is_required',
                 'order',
             )
+        }),
+        ('期限設定', {
+            'fields': (
+                'deadline_type',
+                'deadline_days',
+                'deadline_text',
+            ),
+            'description': '「期限類型」選擇：無截止日期 / 只顯示文字說明 / 依抵台日期自動計算。若選擇「依抵台日期自動計算」，請填入「計算天數」。'
         }),
         ('英文 English', {
             'fields': (
                 'title_en',
                 'description_en',
+                'required_documents_en',
+                'apply_location_en',
+                'deadline_text_en',
             )
         }),
         ('緬甸語 Burmese', {
             'fields': (
                 'title_my',
                 'description_my',
+                'required_documents_my',
+                'apply_location_my',
+                'deadline_text_my',
             )
         }),
         ('印尼語 Indonesian', {
             'fields': (
                 'title_id',
                 'description_id',
+                'required_documents_id',
+                'apply_location_id',
+                'deadline_text_id',
             )
         }),
         ('馬來語 Malay', {
             'fields': (
                 'title_ms',
                 'description_ms',
+                'required_documents_ms',
+                'apply_location_ms',
+                'deadline_text_ms',
             )
         }),
         ('泰語 Thai', {
             'fields': (
                 'title_th',
                 'description_th',
+                'required_documents_th',
+                'apply_location_th',
+                'deadline_text_th',
             )
         }),
         ('日語 Japanese', {
             'fields': (
                 'title_ja',
                 'description_ja',
+                'required_documents_ja',
+                'apply_location_ja',
+                'deadline_text_ja',
             )
         }),
     )
@@ -151,6 +178,7 @@ class TaskAdmin(admin.ModelAdmin):
         'identity_type',
         'nationality',
         'admission_status',
+        'deadline_type',
         'is_required',
     )
 
@@ -175,7 +203,6 @@ class StudentTaskAdmin(admin.ModelAdmin):
         'student',
         'task',
         'status',
-        'due_date',
         'completed_at',
         'created_at',
         'updated_at',
@@ -184,7 +211,6 @@ class StudentTaskAdmin(admin.ModelAdmin):
     list_filter = (
         'status',
         'task__stage',
-        'due_date',
     )
 
     search_fields = (

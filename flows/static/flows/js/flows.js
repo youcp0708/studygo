@@ -189,9 +189,110 @@ window.switchFlowTab = function(activeIndex) {
   });
 };
 
+let progressChartInstance = null;
+
+async function renderProgressChart() {
+  const chartContainer = document.getElementById('chartContainer');
+  const canvas = document.getElementById('progressChart');
+  if (!chartContainer || !canvas) return;
+
+  try {
+    const { ok, data } = await apiFetch('/api/flows/progress/');
+    if (!ok || !data || !data.data) return;
+
+    chartContainer.style.display = 'flex';
+
+    const stages = data.data.stages || [];
+    let totalCompleted = 0;
+    let totalPending = 0;
+    stages.forEach(s => {
+      totalCompleted += s.completed;
+      totalPending += (s.total - s.completed);
+    });
+
+    if (progressChartInstance) {
+      progressChartInstance.destroy();
+    }
+
+    progressChartInstance = new Chart(canvas, {
+      type: 'doughnut',
+      data: {
+        labels: ['已完成', '未完成'],
+        datasets: [{
+          data: [totalCompleted, totalPending],
+          backgroundColor: ['#059669', '#e5e7eb'],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top',
+          }
+        }
+      }
+    });
+  } catch (err) {
+    console.error('Chart error', err);
+  }
+}
+
+window.toggleTaskCompletion = async function(taskId, event) {
+  event.stopPropagation();
+  const checkbox = event.target;
+  const newStatus = checkbox.checked ? 'completed' : 'not_started';
+  
+  const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { status: newStatus });
+  if (ok) {
+    showToast(newStatus === 'completed' ? '任務已完成' : '已取消完成', 'success');
+    renderMyTasks();
+    renderDashboardProgress();
+  } else {
+    showToast('狀態更新失敗', 'error');
+    checkbox.checked = !checkbox.checked; // revert
+  }
+};
+
+window.changeTaskStatus = async function(taskId, status, event) {
+  event.stopPropagation();
+  const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { status });
+  if (ok) {
+    showToast('狀態更新成功', 'success');
+    renderMyTasks();
+    renderDashboardProgress();
+  }
+};
+
+window.toggleTaskDetails = function(taskId) {
+  const details = document.getElementById(`details-${taskId}`);
+  if (details) {
+    details.classList.toggle('active');
+  }
+};
+
+window.saveTaskNote = async function(taskId, event) {
+  event.stopPropagation();
+  const noteInput = document.getElementById(`note-${taskId}`);
+  const note = noteInput ? noteInput.value : '';
+  const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { note });
+  if (ok) showToast('備註已儲存', 'success');
+};
+
+window.saveTaskDate = async function(taskId, event) {
+  event.stopPropagation();
+  const dateInput = document.getElementById(`date-${taskId}`);
+  const due_date = dateInput ? dateInput.value : '';
+  const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { due_date });
+  if (ok) showToast('日期已儲存', 'success');
+};
+
 async function renderMyTasks() {
   const container = document.getElementById('flowsContainer');
   if (!container) return;
+  
+  await renderProgressChart();
 
   const { ok, data } = await apiFetch('/api/flows/my-tasks/');
 
@@ -227,7 +328,7 @@ async function renderMyTasks() {
     const tasks = stage.tasks || [];
     const total = tasks.length;
     const completed = tasks.filter(t => t.status === 'completed').length;
-    const progressText = `${completed} / ${total} 完成`;
+    const progressText = `${completed} / ${total} ${window.UI_STRINGS.completedProgress}`;
 
     contentHtml += `
       <div class="stage-section ${isActive}">
@@ -239,53 +340,102 @@ async function renderMyTasks() {
 
     tasks.forEach(task => {
       const isDone = task.status === 'completed';
+      // ── 使用後端已本地化的文字欄位 ──
+      const loc = task.localized || task.task_detail || {};
+      const deadlineInfo = task.deadline_info || {};
+      
+      const reqDocs = loc.required_documents ? loc.required_documents.replace(/\n/g, '<br>') : null;
+      const applyLoc = loc.apply_location || null;
+      const applyAddr = loc.apply_address || null;
+      const officialUrl = loc.official_url
+        ? `<a href="${loc.official_url}" target="_blank" style="color:var(--primary);text-decoration:underline;">${window.UI_STRINGS.visitOfficialWebsite}</a>`
+        : null;
+      const noteVal = task.note || '';
+
+      // ── 期限資訊區塊（deadline_text 已在後端本地化）──
+      let deadlineHtml = '';
+      if (deadlineInfo.type === 'text_only' && deadlineInfo.text) {
+        deadlineHtml = `
+          <div class="detail-row" style="margin-top:12px; background:#f0fdf4; padding:10px 14px; border-radius:8px; border-left:3px solid #059669;">
+            <div class="detail-label" style="color:#059669;">${window.UI_STRINGS.taskSchedule}</div>
+            <div class="detail-value">${deadlineInfo.text}</div>
+          </div>`;
+      } else if (deadlineInfo.type === 'from_arrival') {
+        if (deadlineInfo.arrival_missing) {
+          deadlineHtml = `
+            <div class="detail-row" style="margin-top:12px; background:#fef9c3; padding:10px 14px; border-radius:8px; border-left:3px solid #ca8a04;">
+              <div class="detail-label" style="color:#ca8a04;">${window.UI_STRINGS.deadlineWarning}</div>
+              <div class="detail-value">${window.UI_STRINGS.fillArrivalDatePrompt}</div>
+              ${deadlineInfo.text ? `<div style="margin-top:6px;color:#555;">${deadlineInfo.text}</div>` : ''}
+            </div>`;
+        } else {
+          deadlineHtml = `
+            <div class="detail-row" style="margin-top:12px; background:#f0fdf4; padding:10px 14px; border-radius:8px; border-left:3px solid #059669;">
+              <div class="detail-label" style="color:#059669;">${window.UI_STRINGS.deadline}</div>
+              <div class="detail-value" style="font-size:16px; font-weight:700; color:#059669;">${deadlineInfo.calculated_due_date}</div>
+              ${deadlineInfo.text ? `<div style="margin-top:4px; font-size:13px; color:#555;">${deadlineInfo.text}</div>` : ''}
+            </div>`;
+        }
+      }
+
+      // ── 只顯示有資料的欄位 ──
+      const applyMapUrl = loc.apply_map_url || null;
+
+      const detailRows = [
+        reqDocs ? `
+          <div class="detail-row">
+            <div class="detail-label">${window.UI_STRINGS.requiredDocs}</div>
+            <div class="detail-value">${reqDocs}</div>
+          </div>` : '',
+
+        (applyLoc || applyAddr || applyMapUrl) ? `
+          <div class="detail-row">
+            <div class="detail-label">${window.UI_STRINGS.applyLocation}</div>
+            <div class="detail-value">
+              ${applyLoc ? `<div>${applyLoc}</div>` : ''}
+              ${applyAddr ? `<div style="color:var(--muted);font-size:13px;">${applyAddr}</div>` : ''}
+              ${applyMapUrl ? `<a href="${applyMapUrl}" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;color:var(--primary);font-weight:600;text-decoration:none;font-size:13px;">${window.UI_STRINGS.viewOnMap}</a>` : ''}
+            </div>
+          </div>` : '',
+
+        officialUrl ? `
+          <div class="detail-row">
+            <div class="detail-label">${window.UI_STRINGS.officialWebsite}</div>
+            <div class="detail-value">${officialUrl}</div>
+          </div>` : '',
+      ].join('');
+
       contentHtml += `
-        <div class="task-item ${isDone ? 'completed' : ''}" onclick="toggleTaskStatus(${task.id}, this)">
-          <div class="task-checkbox"></div>
-          <div class="task-content">
-            <div class="task-title">${task.task_detail ? task.task_detail.title : '未命名任務'}</div>
-            <div class="task-desc">${task.task_detail && task.task_detail.description ? task.task_detail.description : '無詳細說明'}</div>
+        <div class="task-item ${isDone ? 'completed' : ''}" style="display:flex; flex-direction:column; align-items:stretch; padding:0;">
+          <div style="display:flex; align-items:center; width:100%; padding:16px 20px; cursor:pointer;" onclick="toggleTaskDetails(${task.id})">
+            <input type="checkbox" id="chk-${task.id}" style="width:20px; height:20px; margin-right:16px; cursor:pointer;" onclick="toggleTaskCompletion(${task.id}, event)" ${isDone ? 'checked' : ''}>
+            <div class="task-content">
+              <div class="task-title">${loc.title || window.UI_STRINGS.unnamedTask}</div>
+              <div class="task-desc">${loc.description || ''}</div>
+            </div>
+            <div class="status-pills" onclick="event.stopPropagation()">
+              ${isDone ? `<span style="color:#059669; font-weight:bold; font-size:14px; background:#d1fae5; padding:4px 12px; border-radius:999px;">${window.UI_STRINGS.completedBadge}</span>` : ''}
+            </div>
+          </div>
+          <div id="details-${task.id}" class="task-details" onclick="event.stopPropagation()">
+            ${detailRows || `<div style="color:var(--muted);font-size:13px;">${window.UI_STRINGS.noDetails}</div>`}
+            ${deadlineHtml}
+            <div class="detail-row" style="margin-top:12px;">
+              <div class="detail-label">${window.UI_STRINGS.taskNotes}</div>
+              <textarea id="note-${task.id}" class="task-note-input" rows="3" placeholder="${window.UI_STRINGS.enterNotesPlaceholder}">${noteVal}</textarea>
+              <button class="btn-save-note" onclick="saveTaskNote(${task.id}, event)">${window.UI_STRINGS.saveNotesBtn}</button>
+            </div>
           </div>
         </div>
       `;
     });
+
 
     contentHtml += `</div></div>`;
   });
 
   tabsHtml += `</div>`;
   container.innerHTML = tabsHtml + contentHtml;
-}
-
-/* ════════════════════════════════════════
-   4. 切換任務狀態
-   PATCH /api/flows/my-tasks/<id>/update/
-════════════════════════════════════════ */
-async function toggleTaskStatus(studentTaskId, element) {
-  const isCurrentlyDone = element.classList.contains('completed');
-  const newStatus = isCurrentlyDone ? 'not_started' : 'completed';
-
-  // 先讓畫面即時變化
-  element.classList.toggle('completed');
-
-  const { ok } = await apiFetch(`/api/flows/my-tasks/${studentTaskId}/update/`, 'PATCH', {
-    status: newStatus
-  });
-
-  if (!ok) {
-    // 失敗就還原
-    showToast('更新失敗', 'error');
-    element.classList.toggle('completed');
-    return;
-  }
-
-  showToast(newStatus === 'completed' ? '任務已完成！' : '任務已取消完成', 'success');
-
-  // 重新渲染任務頁
-  renderMyTasks();
-
-  // 如果 dashboard 也有相關數字，順便重新更新
-  renderDashboardProgress();
 }
 
 /* ════════════════════════════════════════
