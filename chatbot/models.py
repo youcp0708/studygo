@@ -152,6 +152,7 @@ class ChatKnowledge(models.Model):
     title_ms = models.CharField(max_length=200, blank=True, verbose_name='馬來文標題')
     title_th = models.CharField(max_length=200, blank=True, verbose_name='泰文標題')
     title_ja = models.CharField(max_length=200, blank=True, verbose_name='日文標題')
+    title_ko = models.CharField(max_length=200, blank=True, verbose_name='韓文標題')
 
     keywords = models.CharField(
         max_length=500,
@@ -166,6 +167,7 @@ class ChatKnowledge(models.Model):
     content_ms = models.TextField(blank=True, verbose_name='馬來文內容')
     content_th = models.TextField(blank=True, verbose_name='泰文內容')
     content_ja = models.TextField(blank=True, verbose_name='日文內容')
+    content_ko = models.TextField(blank=True, verbose_name='韓文內容')
 
     is_active = models.BooleanField(default=True, verbose_name='是否啟用')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')
@@ -188,6 +190,7 @@ class ChatKnowledge(models.Model):
             'ms': self.title_ms,
             'th': self.title_th,
             'ja': self.title_ja,
+            'ko': self.title_ko,
         }
         return lang_map.get((lang_code or '').lower(), '') or self.title
 
@@ -199,6 +202,7 @@ class ChatKnowledge(models.Model):
             'ms': self.content_ms,
             'th': self.content_th,
             'ja': self.content_ja,
+            'ko': self.content_ko,
         }
         return lang_map.get((lang_code or '').lower(), '') or self.content
 

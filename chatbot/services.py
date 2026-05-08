@@ -36,6 +36,7 @@ ANSWER_LABELS = {
     'id': ('Jawaban personal', 'Jawaban umum'),
     'th': ('คำตอบเฉพาะบุคคล', 'คำตอบทั่วไป'),
     'ms': ('Jawapan peribadi', 'Jawapan umum'),
+    'ko': ('개인 맞춤 답변', '일반 답변'),
 }
 
 
@@ -89,6 +90,7 @@ def detect_question_language(text):
         ('id', ['gunakan bahasa indonesia', 'jawab dalam bahasa indonesia', '用印尼文回答', '請用印尼文']),
         ('th', ['ตอบเป็นภาษาไทย', 'ภาษาไทย', '用泰文回答', '請用泰文']),
         ('ms', ['gunakan bahasa melayu', 'jawab dalam bahasa melayu', '用馬來文回答', '請用馬來文']),
+        ('ko', ['한국어로 대답해줘', '한국어로 대답해', '한국어로', '한국어로 답해', '한국어로 답해줘', '한국어로 대답해']),
     ]
 
     for code, markers in explicit_rules:
@@ -136,6 +138,10 @@ def detect_question_language(text):
     english_letters = [ch for ch in text if ch.isalpha()]
     if english_letters and len(english_letters) >= 8:
         return 'en'
+
+    korean_markers = ['안녕하세요', '감사합니다', '학생', '유학', '비자', '타이완', '대만']
+    if any(marker in text for marker in korean_markers):
+        return 'ko'
 
     return None
 
@@ -371,6 +377,8 @@ def search_knowledge_base(question, language_code='zh-hant', limit=3):
         query |= Q(content_th__icontains=term)
         query |= Q(title_ja__icontains=term)
         query |= Q(content_ja__icontains=term)
+        query |= Q(title_ko__icontains=term)
+        query |= Q(content_ko__icontains=term)
 
     results = list(
         ChatKnowledge.objects
@@ -442,6 +450,7 @@ def remove_trailing_language_name(reply):
         'Bahasa Indonesia',
         'ภาษาไทย',
         'Bahasa Melayu',
+        '한국어',
     ]
 
     cleaned_reply = reply.strip()
@@ -486,6 +495,10 @@ def local_fallback_reply(question, user, language_code='zh-hant'):
             f'Jawapan peribadi:\n{name or "Pelajar"}, kunci AI belum ditetapkan, jadi saya belum dapat menjana jawapan peribadi yang lengkap.\n\n'
             'Jawapan umum:\nAnda boleh bertanya tentang visa, ARC, NHI, asrama, pendaftaran, dan proses belajar di Taiwan.'
         ),
+        'ko': (
+            f'개인 맞춤 답변:\n{name or "학생"}, AI 키가 설정되지 않았으므로 개인 맞춤 답변을 생성할 수 없습니다.\n\n'
+            '일반 답변:\n비자, ARC, NHI, 기숙사, 등록, 대만 유학 절차에 대해 질문할 수 있습니다.'
+        ),
     }
 
     return fallback_replies.get(language_code, fallback_replies['zh-hant'])
@@ -516,6 +529,7 @@ def generate_ai_reply(*, user, question, recent_messages):
             'id': 'Jawaban personal:\nPaket openai belum terpasang di backend.\n\nJawaban umum:\nJalankan: pip install -r requirements.txt',
             'th': 'คำตอบเฉพาะบุคคล:\nยังไม่ได้ติดตั้งแพ็กเกจ openai ใน backend\n\nคำตอบทั่วไป:\nโปรดรัน: pip install -r requirements.txt',
             'ms': 'Jawapan peribadi:\nPakej openai belum dipasang pada backend.\n\nJawapan umum:\nSila jalankan: pip install -r requirements.txt',
+            'ko': '개인 맞춤 답변:\n백엔드에 openai 패키지가 설치되지 않았습니다.\n\n일반 답변:\npip install -r requirements.txt 를 실행하세요.',
         }
 
         return {
@@ -578,6 +592,7 @@ def generate_ai_reply(*, user, question, recent_messages):
                 'id': 'Jawaban personal:\nSaya belum dapat menghasilkan jawaban lengkap saat ini.\n\nJawaban umum:\nAnda dapat bertanya tentang visa, ARC, NHI, asrama, registrasi, dan proses studi di Taiwan.',
                 'th': 'คำตอบเฉพาะบุคคล:\nขณะนี้ฉันยังไม่สามารถสร้างคำตอบที่สมบูรณ์ได้\n\nคำตอบทั่วไป:\nคุณสามารถถามเรื่องวีซ่า ARC NHI หอพัก การลงทะเบียน และขั้นตอนการมาเรียนที่ไต้หวันได้',
                 'ms': 'Jawapan peribadi:\nSaya belum dapat menghasilkan jawapan lengkap buat masa ini.\n\nJawapan umum:\nAnda boleh bertanya tentang visa, ARC, NHI, asrama, pendaftaran, dan proses belajar di Taiwan.',
+                'ko': '개인 맞춤 답변:\n현재 완전한 답변을 생성할 수 없습니다. 다른 표현으로 다시 질문해 주세요.\n\n일반 답변:\n비자, ARC, NHI, 기숙사, 등록, 대만 유학 절차에 대해 질문할 수 있습니다.',
             }
             reply = empty_messages.get(language_code, empty_messages['zh-hant'])
 
@@ -596,6 +611,7 @@ def generate_ai_reply(*, user, question, recent_messages):
             'id': 'Jawaban personal:\nLayanan AI sementara tidak dapat terhubung.\n\nJawaban umum:\nSilakan coba lagi nanti. Ringkasan error: ',
             'th': 'คำตอบเฉพาะบุคคล:\nไม่สามารถเชื่อมต่อบริการ AI ได้ชั่วคราว\n\nคำตอบทั่วไป:\nกรุณาลองใหม่ภายหลัง สรุปข้อผิดพลาด: ',
             'ms': 'Jawapan peribadi:\nPerkhidmatan AI tidak dapat disambungkan buat sementara waktu.\n\nJawapan umum:\nSila cuba lagi kemudian. Ringkasan ralat: ',
+            'ko': '개인 맞춤 답변:\nAI 서비스에 일시적으로 연결할 수 없습니다.\n\n일반 답변:\n나중에 다시 시도해 주세요. 오류 요약: ',
         }
 
         return {
