@@ -205,4 +205,3 @@ class ChatKnowledge(models.Model):
             'ko': self.content_ko,
         }
         return lang_map.get((lang_code or '').lower(), '') or self.content
-
