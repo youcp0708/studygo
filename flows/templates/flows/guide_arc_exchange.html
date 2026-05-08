@@ -112,6 +112,8 @@
   .doc-badge { font-size:10px; font-weight:700; padding:1px 8px; border-radius:99px; margin-top:6px; display:inline-block; }
   .badge-req { background:var(--primary-soft); color:var(--primary-dark); }
   .badge-opt { background:var(--bg); color:var(--muted); }
+  a.doc-card { text-decoration:none; color:inherit; transition:border-color .2s, box-shadow .2s, transform .15s; }
+  a.doc-card:hover { border-color:var(--primary); box-shadow:0 4px 14px rgba(0,0,0,.09); transform:translateY(-2px); }
 
   .faq-list { margin-bottom:36px; }
   .faq-item { background:#fff; border:1.5px solid var(--border); border-radius:14px; margin-bottom:10px; overflow:hidden; }
@@ -214,8 +216,8 @@
     <div class="info-card">
       <div class="i-icon">💳</div>
       <div class="i-label">申請規費</div>
-      <div class="i-val">NT$1,000</div>
-      <div class="i-sub">現場繳費</div>
+      <div class="i-val">NT$1,000 起</div>
+      <div class="i-sub">1年$1,000 / 2年$2,000 / 3年$3,000</div>
     </div>
     <div class="info-card">
       <div class="i-icon">📄</div>
@@ -226,8 +228,8 @@
     <div class="info-card">
       <div class="i-icon">⏳</div>
       <div class="i-label">核發時間</div>
-      <div class="i-val">約 14 天</div>
-      <div class="i-sub">預約可加快</div>
+      <div class="i-val">10 個工作天</div>
+      <div class="i-sub">不含退補件；預約可加快</div>
     </div>
   </div>
 
@@ -360,18 +362,18 @@
         </div>
         <span class="step-tag tag-time">📅 抵台 15 天內</span>
         <span class="step-tag tag-place">📍 移民署辦事處</span>
-        <span class="step-tag tag-fee">💰 NT$1,000</span>
+        <span class="step-tag tag-fee">💰 NT$1,000 / $2,000 / $3,000</span>
       </div>
     </li>
     <li class="timeline-item">
       <div class="step-num">6</div>
       <div class="step-body">
-        <div class="step-title">等待審核（約 14 天）</div>
+        <div class="step-title">等待審核（約 10 個工作天）</div>
         <div class="step-desc">
-          申請後約 14 個工作天製卡完成，移民署以簡訊通知領件。
+          申請後約 <strong>10 個工作天</strong>製卡完成（不含退補件），移民署以簡訊通知領件。
           等待期間持入境許可證（或護照）及申請收據可作為合法居留暫時證明。
         </div>
-        <span class="step-tag tag-time">⏳ 約 14 天</span>
+        <span class="step-tag tag-time">⏳ 約 10 個工作天</span>
       </div>
     </li>
     <li class="timeline-item">
@@ -425,9 +427,9 @@
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          居留證通常每年更新一次，到期前 <strong>2 個月內</strong> 即可申請延期。
+          居留證通常每年更新一次，到期前 <strong>30 天內</strong> 即可申請延期。
           延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），
-          無需再繳健康檢查費。規費 NT$1,000。建議提早辦理以避免逾期。
+          無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。
         </div>
       </div>
     </div>
@@ -475,14 +477,14 @@
   <!-- ── 相關資源 ── -->
   <div class="section-title">🔗 相關資源</div>
   <div class="doc-grid" style="margin-bottom:0;">
-    <div class="doc-card required">
+    <a class="doc-card required" href="https://www.immigration.gov.tw" target="_blank" rel="noopener">
       <div class="doc-icon">🏛</div>
       <div class="doc-info">
         <div class="doc-name">內政部移民署</div>
         <div class="doc-note">辦事處查詢、線上預約、進度查詢、申請書下載。</div>
-        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;">www.immigration.gov.tw</div>
+        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.immigration.gov.tw ↗</div>
       </div>
-    </div>
+    </a>
     <div class="doc-card required">
       <div class="doc-icon">🏫</div>
       <div class="doc-info">
@@ -490,14 +492,14 @@
         <div class="doc-note">居留說明、在學證明書申請、健康檢查指定醫院清單。</div>
       </div>
     </div>
-    <div class="doc-card optional">
+    <a class="doc-card optional" href="https://www.nhi.gov.tw" target="_blank" rel="noopener">
       <div class="doc-icon">🏥</div>
       <div class="doc-info">
         <div class="doc-name">全民健康保險署</div>
         <div class="doc-note">取得居留證後可辦理加保，享有完整醫療保障。</div>
-        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;">www.nhi.gov.tw</div>
+        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.nhi.gov.tw ↗</div>
       </div>
-    </div>
+    </a>
     <div class="doc-card optional">
       <div class="doc-icon">📞</div>
       <div class="doc-info">
