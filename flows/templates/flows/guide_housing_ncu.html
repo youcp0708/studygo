@@ -1,7 +1,7 @@
 {# flow/templates/flow/guide_housing_ncu.html — 中央大學住宿服務 #}
 {% extends "base.html" %}
-{% load static %}
-{% block title %}中央大學住宿服務 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "中央大學住宿服務" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -178,12 +178,12 @@
 {% block content %}
 <div class="guide-wrap" style="padding-top:32px;">
 
-  <a class="back-link" href="{% url 'dashboard' %}">← 返回儀表板</a>
+  <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
   <div class="guide-hero">
     <div class="bg-text">DORM</div>
     <div class="hero-badge">中央大學住宿服務</div>
-    <h2>🏠 中央大學校內住宿服務</h2>
+    <h2>🏠 {% trans "中央大學校內住宿服務" %}</h2>
     <p>
       整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，
       幫助外籍生、僑生及交換學生預先申請校內住宿。
@@ -204,7 +204,7 @@
     </div>
   </div>
 
-  <div class="section-title">📊 住宿重點一覽</div>
+  <div class="section-title">📊 {% trans "住宿重點一覽" %}</div>
   <div class="info-row">
     <div class="info-card">
       <div class="i-icon">🏠</div>
@@ -232,7 +232,7 @@
     </div>
   </div>
 
-  <div class="section-title">⭐ 申請優先順位</div>
+  <div class="section-title">⭐ {% trans "申請優先順位" %}</div>
   <div class="priority-row">
     <div class="priority-card first">
       <span class="priority-label label-first">第一順位 ── 優先保證</span>
@@ -257,7 +257,7 @@
     </div>
   </div>
 
-  <div class="section-title">🏠 各宿舍棟次總覽</div>
+  <div class="section-title">🏠 {% trans "各宿舍棟次總覽" %}</div>
 
   <div style="margin-bottom:16px;">
     <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
@@ -367,7 +367,7 @@
     </div>
   </div>
 
-  <div class="section-title">🛏 房間設備</div>
+  <div class="section-title">🛏 {% trans "房間設備" %}</div>
   <div class="alert alert-warning">
     <div class="alert-icon">⚠️</div>
     <div>
@@ -401,7 +401,7 @@
     </div>
   </div>
 
-  <div class="section-title">🪜 申請流程</div>
+  <div class="section-title">🪜 {% trans "申請流程" %}</div>
   <ul class="timeline">
     <li class="timeline-item">
       <div class="step-num">1</div>
@@ -461,7 +461,7 @@
     </li>
   </ul>
 
-  <div class="section-title">❓ 常見問題</div>
+  <div class="section-title">❓ {% trans "常見問題" %}</div>
   <div class="faq-list">
     <div class="faq-item">
       <div class="faq-q">
@@ -542,7 +542,7 @@
     </div>
   </div>
 
-  <div class="section-title">📞 聯繫住宿服務組</div>
+  <div class="section-title">📞 {% trans "聯絡資訊" %}</div>
   <div class="contact-grid">
     <div class="contact-card">
       <div class="contact-icon">📞</div>

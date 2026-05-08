@@ -1,7 +1,7 @@
 {# flow/templates/flow/guide_bus_ncu.html — 中央大學公車服務 #}
 {% extends "base.html" %}
-{% load static %}
-{% block title %}中央大學公車服務 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "中央大學公車服務" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -190,12 +190,12 @@
 {% block content %}
 <div class="guide-wrap" style="padding-top:32px;">
 
-  <a class="back-link" href="{% url 'guide_index' %}">← 返回資訊中心</a>
+  <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
   <div class="guide-hero">
     <div class="bg-text">BUS</div>
     <div class="hero-badge">中央大學 × 公共交通</div>
-    <h2>🚌 中央大學公車指南</h2>
+    <h2>🚌 {% trans "中央大學公車指南" %}</h2>
     <p>
       整理中央大學對外主要公車路線，包含從中壢車站、高鐵桃園站、機場及台北的搭乘方式，
       以及即時查詢公車到站的官方連結。
@@ -216,7 +216,7 @@
   </div>
 
   <!-- 簡易總覽 -->
-  <div class="section-title">⚡ 快速總覽</div>
+  <div class="section-title">⚡ {% trans "快速總覽" %}</div>
   <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;">
     <div style="background:var(--primary-soft);border-radius:12px;padding:12px 18px;font-size:14px;font-weight:700;color:var(--primary-dark);">
       🚉 中壢車站出發 → 搭 <strong>132</strong> 或 <strong>133</strong>
@@ -232,7 +232,7 @@
     </div>
   </div>
 
-  <div class="section-title">🗺 各出發地搭乘方式</div>
+  <div class="section-title">🗺 {% trans "各出發地搭乘方式" %}</div>
   <div class="dest-grid">
 
     <div class="dest-card">
@@ -318,7 +318,7 @@
 
   </div>
 
-  <div class="section-title">🗒 主要公車路線</div>
+  <div class="section-title">🗒 {% trans "主要公車路線" %}</div>
   <div class="alert alert-warning">
     <div class="alert-icon">⚠️</div>
     <div>
@@ -433,7 +433,7 @@
     </table>
   </div>
 
-  <div class="section-title">🔍 即時查詢到站時間</div>
+  <div class="section-title">🔍 {% trans "即時查詢到站時間" %}</div>
   <div class="lookup-grid">
 
     <a class="lookup-card" href="https://ebus.tycg.gov.tw/ebus/" target="_blank" rel="noopener">

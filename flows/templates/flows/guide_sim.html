@@ -1,7 +1,7 @@
 {# flows/templates/flows/guide_sim.html — 台灣門號申辦 #}
 {% extends "base.html" %}
-{% load static %}
-{% block title %}台灣門號申辦 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "台灣門號申辦" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -113,12 +113,12 @@
 {% block content %}
 <div class="guide-wrap" style="padding-top:32px;">
 
-  <a class="back-link" href="{% url 'guide_index' %}">← 返回資訊中心</a>
+  <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
   <div class="guide-hero">
     <div class="bg-text">SIM</div>
     <div class="hero-badge">抵台第一件事</div>
-    <h2>📱 台灣門號申辦指南</h2>
+    <h2>📱 {% trans "台灣門號申辦指南" %}</h2>
     <p>台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。</p>
   </div>
 
@@ -130,7 +130,7 @@
   </div>
 
   <!-- ── 方案比較 ── -->
-  <div class="section-title">📊 預付卡 vs 月租方案</div>
+  <div class="section-title">📊 {% trans "預付卡 vs 月租方案" %}</div>
   <div class="plan-grid">
 
     <div class="plan-card">
@@ -164,7 +164,7 @@
   </div>
 
   <!-- ── 主要電信業者 ── -->
-  <div class="section-title">📡 主要電信業者</div>
+  <div class="section-title">📡 {% trans "主要電信業者" %}</div>
   <div class="carrier-grid">
     <div class="carrier-card">
       <div class="carrier-icon">📶</div>
@@ -197,7 +197,7 @@
   </div>
 
   <!-- ── 月租方案所需文件 ── -->
-  <div class="section-title">📋 月租方案所需文件</div>
+  <div class="section-title">📋 {% trans "月租方案所需文件" %}</div>
   <div class="doc-list">
     <div class="doc-item"><span class="doc-icon">🪪</span>居留證（ARC）正本<span class="doc-badge badge-req">必備</span></div>
     <div class="doc-item"><span class="doc-icon">🛂</span>護照正本<span class="doc-badge badge-req">必備</span></div>
@@ -206,7 +206,7 @@
   </div>
 
   <!-- ── 辦理步驟 ── -->
-  <div class="section-title">🪜 月租方案辦理步驟</div>
+  <div class="section-title">🪜 {% trans "月租方案辦理步驟" %}</div>
   <ul class="step-list">
     <li class="step-item">
       <div class="step-num">1</div>

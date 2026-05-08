@@ -1143,6 +1143,273 @@ msgstr ""
 "Peraturan penting tentang penerimaan, tinggal, asuransi kesehatan, kerja, "
 "dan status akademik"
 
+msgid "地圖導覽"
+msgstr "Peta & Navigasi"
+
+msgid "學校・醫院・交通"
+msgstr "Kampus · Rumah Sakit · Transportasi"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
+
+msgid "快速定位"
+msgstr "Lokasi Cepat"
+
+msgid "中央大學"
+msgstr "Universitas Pusat Nasional"
+
+msgid "壢新醫院"
+msgstr "Rumah Sakit Lixin"
+
+msgid "中壢火車站"
+msgstr "Stasiun Kereta Zhongli"
+
+msgid "高鐵桃園站"
+msgstr "Stasiun HSR Taoyuan"
+
+msgid "桃園國際機場"
+msgstr "Bandara Internasional Taoyuan"
+
+msgid "大江購物中心"
+msgstr "Pusat Perbelanjaan Dayeh"
+
+msgid "開啟導航"
+msgstr "Buka Navigasi"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "Sekolah, rumah sakit, stasiun, bandara — navigasi satu ketuk"
+
+msgid "全民健保申請"
+msgstr "Pendaftaran Asuransi Kesehatan Nasional"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Daftar setelah ARC diterbitkan, biaya klinik jauh berkurang"
+
+msgid "台灣銀行開戶"
+msgstr "Buka Rekening Bank di Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "Wajib untuk beasiswa — Kantor Pos, Bank of Taiwan, E.Sun dibandingkan"
+
+msgid "台灣門號申辦"
+msgstr "Daftar Nomor Telepon Taiwan"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Kartu prabayar vs bulanan — penjelasan operator utama"
+
+msgid "地圖導覽"
+msgstr "Peta & Navigasi"
+
+msgid "學校・醫院・交通"
+msgstr "Kampus · Rumah Sakit · Transportasi"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
+
+msgid "快速定位"
+msgstr "Lokasi Cepat"
+
+msgid "中央大學"
+msgstr "Universitas Pusat Nasional"
+
+msgid "壢新醫院"
+msgstr "Rumah Sakit Lixin"
+
+msgid "中壢火車站"
+msgstr "Stasiun Kereta Zhongli"
+
+msgid "高鐵桃園站"
+msgstr "Stasiun HSR Taoyuan"
+
+msgid "桃園國際機場"
+msgstr "Bandara Internasional Taoyuan"
+
+msgid "大江購物中心"
+msgstr "Pusat Perbelanjaan Dayeh"
+
+msgid "開啟導航"
+msgstr "Buka Navigasi"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "Sekolah, rumah sakit, stasiun, bandara — navigasi satu ketuk"
+
+msgid "全民健保申請"
+msgstr "Pendaftaran Asuransi Kesehatan Nasional"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Daftar setelah ARC diterbitkan, biaya klinik jauh berkurang"
+
+msgid "台灣銀行開戶"
+msgstr "Buka Rekening Bank di Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "Wajib untuk beasiswa — Kantor Pos, Bank of Taiwan, E.Sun dibandingkan"
+
+msgid "台灣門號申辦"
+msgstr "Daftar Nomor Telepon Taiwan"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Kartu prabayar vs bulanan — penjelasan operator utama"
+
+msgid "港澳生居留說明"
+msgstr "Panduan Tinggal Mahasiswa HK & Makau"
+
+msgid "入出境許可證、居留申請流程與健保工讀說明"
+msgstr "Izin Masuk/Keluar, Proses Izin Tinggal, JKN & Hak Kerja"
+
+msgid "證件・住宿・交通"
+msgstr "Dokumen・Hunian・Transportasi"
+
+msgid "生活類"
+msgstr "Kehidupan Sehari-hari"
+
+msgid "實用工具"
+msgstr "Alat Berguna"
+
+msgid "外籍生辦理居留證服務"
+msgstr "Layanan Aplikasi ARC Mahasiswa Asing"
+
+msgid "僑生辦理居留證服務"
+msgstr "Layanan ARC Mahasiswa Tionghoa Perantauan"
+
+msgid "港澳生在台居留說明"
+msgstr "Panduan Tinggal di Taiwan untuk Pelajar HK & Makau"
+
+msgid "中央大學公車服務"
+msgstr "Layanan Bus NCU"
+
+msgid "中央大學住宿服務"
+msgstr "Layanan Asrama NCU"
+
+msgid "辦理外僑居留證（ARC）"
+msgstr "Mengajukan ARC (Izin Tinggal Orang Asing)"
+
+msgid "辦理居留證（ARC）"
+msgstr "Mengajukan ARC (Izin Tinggal Orang Asing)"
+
+msgid "台灣銀行開戶指南"
+msgstr "Panduan Membuka Rekening Bank di Taiwan"
+
+msgid "中央大學校內住宿服務"
+msgstr "Layanan Asrama Dalam Kampus NCU"
+
+msgid "全民健康保險申請指南"
+msgstr "Panduan Pendaftaran Asuransi Kesehatan Nasional"
+
+msgid "台灣門號申辦指南"
+msgstr "Panduan Mendapatkan Nomor SIM Taiwan"
+
+msgid "返回資訊中心"
+msgstr "Kembali ke Pusat Info"
+
+msgid "辦理重點一覽"
+msgstr "Ikhtisar Aplikasi"
+
+msgid "居留申請重點一覽"
+msgstr "Ikhtisar Aplikasi Izin Tinggal"
+
+msgid "申請應備文件"
+msgstr "Dokumen yang Diperlukan"
+
+msgid "辦理流程（Step by Step）"
+msgstr "Panduan Langkah demi Langkah"
+
+msgid "居留申請流程"
+msgstr "Proses Aplikasi Izin Tinggal"
+
+msgid "重要注意事項"
+msgstr "Catatan Penting"
+
+msgid "常見問題"
+msgstr "Pertanyaan Umum (FAQ)"
+
+msgid "相關資源"
+msgstr "Sumber Daya Terkait"
+
+msgid "推薦銀行選擇"
+msgstr "Rekomendasi Bank"
+
+msgid "所需文件"
+msgstr "Dokumen yang Diperlukan"
+
+msgid "開戶步驟"
+msgstr "Langkah Pembukaan Rekening"
+
+msgid "注意事項"
+msgstr "Catatan Penting"
+
+msgid "快速總覽"
+msgstr "Ringkasan Cepat"
+
+msgid "各出發地搭乘方式"
+msgstr "Bus Berdasarkan Titik Keberangkatan"
+
+msgid "主要公車路線"
+msgstr "Rute Bus Utama"
+
+msgid "即時查詢到站時間"
+msgstr "Cek Kedatangan Bus Real-Time"
+
+msgid "住宿重點一覽"
+msgstr "Ikhtisar Asrama"
+
+msgid "申請優先順位"
+msgstr "Prioritas Aplikasi"
+
+msgid "各宿舍棟次總覽"
+msgstr "Ikhtisar Gedung Asrama"
+
+msgid "房間設備"
+msgstr "Fasilitas Kamar"
+
+msgid "申請流程"
+msgstr "Proses Aplikasi"
+
+msgid "聯絡資訊"
+msgstr "Informasi Kontak"
+
+msgid "哪些人可以申請？"
+msgstr "Siapa yang Bisa Mendaftar?"
+
+msgid "申請步驟"
+msgstr "Langkah Pendaftaran"
+
+msgid "就醫小提醒"
+msgstr "Tips Berobat"
+
+msgid "參考網站"
+msgstr "Situs Referensi"
+
+msgid "預付卡 vs 月租方案"
+msgstr "Kartu Prabayar vs Paket Bulanan"
+
+msgid "主要電信業者"
+msgstr "Operator Utama"
+
+msgid "月租方案所需文件"
+msgstr "Dokumen untuk Paket Bulanan"
+
+msgid "月租方案辦理步驟"
+msgstr "Langkah Mendapatkan Paket Bulanan"
+
+msgid "辦理期限"
+msgstr "Batas Waktu Aplikasi"
+
+msgid "申請規費"
+msgstr "Biaya Aplikasi"
+
+msgid "效期時間"
+msgstr "Masa Berlaku"
+
+msgid "核發時間"
+msgstr "Waktu Pemrosesan"
+
+msgid "居留證效期"
+msgstr "Masa Berlaku Izin Tinggal"
+
+msgid "兩種入台方式"
+msgstr "Dua Cara Masuk ke Taiwan"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Kembali ke Dasbor"
 
@@ -1157,111 +1424,3 @@ msgstr ""
 
 #~ msgid "我的帳戶"
 #~ msgstr "Akun Saya"
-
-msgid "地圖導覽"
-msgstr "Peta & Navigasi"
-
-msgid "學校・醫院・交通"
-msgstr "Kampus · Rumah Sakit · Transportasi"
-
-msgid "中央大學周邊重要地點，點選快速定位及導航"
-msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
-
-msgid "快速定位"
-msgstr "Lokasi Cepat"
-
-msgid "中央大學"
-msgstr "Universitas Pusat Nasional"
-
-msgid "壢新醫院"
-msgstr "Rumah Sakit Lixin"
-
-msgid "中壢火車站"
-msgstr "Stasiun Kereta Zhongli"
-
-msgid "高鐵桃園站"
-msgstr "Stasiun HSR Taoyuan"
-
-msgid "桃園國際機場"
-msgstr "Bandara Internasional Taoyuan"
-
-msgid "大江購物中心"
-msgstr "Pusat Perbelanjaan Dayeh"
-
-msgid "開啟導航"
-msgstr "Buka Navigasi"
-
-msgid "學校・醫院・車站・機場位置，一鍵導航"
-msgstr "Sekolah, rumah sakit, stasiun, bandara — navigasi satu ketuk"
-
-msgid "全民健保申請"
-msgstr "Pendaftaran Asuransi Kesehatan Nasional"
-
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr "Daftar setelah ARC diterbitkan, biaya klinik jauh berkurang"
-
-msgid "台灣銀行開戶"
-msgstr "Buka Rekening Bank di Taiwan"
-
-msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-msgstr "Wajib untuk beasiswa — Kantor Pos, Bank of Taiwan, E.Sun dibandingkan"
-
-msgid "台灣門號申辦"
-msgstr "Daftar Nomor Telepon Taiwan"
-
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr "Kartu prabayar vs bulanan — penjelasan operator utama"
-
-msgid "地圖導覽"
-msgstr "Peta & Navigasi"
-
-msgid "學校・醫院・交通"
-msgstr "Kampus · Rumah Sakit · Transportasi"
-
-msgid "中央大學周邊重要地點，點選快速定位及導航"
-msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
-
-msgid "快速定位"
-msgstr "Lokasi Cepat"
-
-msgid "中央大學"
-msgstr "Universitas Pusat Nasional"
-
-msgid "壢新醫院"
-msgstr "Rumah Sakit Lixin"
-
-msgid "中壢火車站"
-msgstr "Stasiun Kereta Zhongli"
-
-msgid "高鐵桃園站"
-msgstr "Stasiun HSR Taoyuan"
-
-msgid "桃園國際機場"
-msgstr "Bandara Internasional Taoyuan"
-
-msgid "大江購物中心"
-msgstr "Pusat Perbelanjaan Dayeh"
-
-msgid "開啟導航"
-msgstr "Buka Navigasi"
-
-msgid "學校・醫院・車站・機場位置，一鍵導航"
-msgstr "Sekolah, rumah sakit, stasiun, bandara — navigasi satu ketuk"
-
-msgid "全民健保申請"
-msgstr "Pendaftaran Asuransi Kesehatan Nasional"
-
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr "Daftar setelah ARC diterbitkan, biaya klinik jauh berkurang"
-
-msgid "台灣銀行開戶"
-msgstr "Buka Rekening Bank di Taiwan"
-
-msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-msgstr "Wajib untuk beasiswa — Kantor Pos, Bank of Taiwan, E.Sun dibandingkan"
-
-msgid "台灣門號申辦"
-msgstr "Daftar Nomor Telepon Taiwan"
-
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr "Kartu prabayar vs bulanan — penjelasan operator utama"

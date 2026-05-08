@@ -7,7 +7,9 @@
       "Bash(python add_translations.py)",
       "WebFetch(domain:www.immigration.gov.tw)",
       "WebFetch(domain:coa.immigration.gov.tw)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(python add_i18n.py)",
+      "Bash(del \"C:\\\\Users\\\\User\\\\Downloads\\\\studygo\\\\add_i18n.py\")"
     ]
   }
 }

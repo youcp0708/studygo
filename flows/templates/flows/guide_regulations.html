@@ -1,7 +1,7 @@
 {# flows/templates/flows/guide_regulations.html — 來臺就學相關法規 #}
 {% extends "base.html" %}
-{% load static %}
-{% block title %}來臺就學相關法規 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "來臺就學相關法規" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -84,12 +84,12 @@
 {% block content %}
 <div class="guide-wrap" style="padding-top:32px;">
 
-  <a class="back-link" href="{% url 'guide_index' %}">← 返回資訊中心</a>
+  <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
   <div class="guide-hero">
     <div class="bg-text">LAW</div>
     <div class="hero-badge">僑生・外籍生必讀</div>
-    <h2>⚖️ 來臺就學相關法規</h2>
+    <h2>⚖️ {% trans "來臺就學相關法規" %}</h2>
     <p>整理來台就學的相關法律法規，包含就學辦法、助學金、醫療保險、社團輔助等，點選名稱即可查看原文。</p>
   </div>
 
@@ -227,7 +227,7 @@
   </div>
 
   <!-- ── 參考網站 ── -->
-  <div class="section-title">🔗 參考網站</div>
+  <div class="section-title">🔗 {% trans "參考網站" %}</div>
   <div class="ref-grid">
 
     <a href="https://www.ocac.gov.tw/" target="_blank" rel="noopener" class="ref-card">

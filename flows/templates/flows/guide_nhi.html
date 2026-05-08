@@ -1,7 +1,7 @@
 {# flows/templates/flows/guide_nhi.html — 全民健保申請 #}
 {% extends "base.html" %}
-{% load static %}
-{% block title %}全民健保申請 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "全民健保申請" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -103,12 +103,12 @@
 {% block content %}
 <div class="guide-wrap" style="padding-top:32px;">
 
-  <a class="back-link" href="{% url 'guide_index' %}">← 返回資訊中心</a>
+  <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
   <div class="guide-hero">
     <div class="bg-text">NHI</div>
     <div class="hero-badge">外籍生・僑生必辦</div>
-    <h2>🏥 全民健康保險申請指南</h2>
+    <h2>🏥 {% trans "全民健康保險申請指南" %}</h2>
     <p>取得居留證（ARC）後即可加入全民健保，享有台灣完整醫療保障，門診費用大幅降低。</p>
   </div>
 
@@ -147,7 +147,7 @@
   </div>
 
   <!-- ── 誰可以申請 ── -->
-  <div class="section-title">❓ 哪些人可以申請？</div>
+  <div class="section-title">❓ {% trans "哪些人可以申請？" %}</div>
   <div class="doc-list">
     <div class="doc-item"><span class="doc-icon">🪪</span>持有效居留證（ARC）的在學外籍生<span class="doc-badge badge-req">符合資格</span></div>
     <div class="doc-item"><span class="doc-icon">🌏</span>持有效居留證的僑生（含港澳生）<span class="doc-badge badge-req">符合資格</span></div>
@@ -162,7 +162,7 @@
   </div>
 
   <!-- ── 所需文件 ── -->
-  <div class="section-title">📋 所需文件</div>
+  <div class="section-title">📋 {% trans "所需文件" %}</div>
   <div class="doc-list">
     <div class="doc-item"><span class="doc-icon">🪪</span>居留證（ARC）正本<span class="doc-badge badge-req">必備</span></div>
     <div class="doc-item"><span class="doc-icon">🛂</span>護照正本<span class="doc-badge badge-req">必備</span></div>
@@ -172,7 +172,7 @@
   </div>
 
   <!-- ── 申請步驟 ── -->
-  <div class="section-title">🪜 申請步驟</div>
+  <div class="section-title">🪜 {% trans "申請步驟" %}</div>
   <ul class="step-list">
     <li class="step-item">
       <div class="step-num">1</div>
@@ -213,7 +213,7 @@
   </ul>
 
   <!-- ── 就醫提醒 ── -->
-  <div class="section-title">💡 就醫小提醒</div>
+  <div class="section-title">💡 {% trans "就醫小提醒" %}</div>
   <div class="alert alert-info">
     <div class="alert-icon">🏥</div>
     <div>

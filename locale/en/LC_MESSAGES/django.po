@@ -1137,6 +1137,275 @@ msgstr ""
 "Key regulations on admission, residency, health insurance, work, and "
 "academic status"
 
+msgid "地圖導覽"
+msgstr "Map & Navigation"
+
+msgid "學校・醫院・交通"
+msgstr "Campus · Hospital · Transport"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Key locations around NCU — click to navigate"
+
+msgid "快速定位"
+msgstr "Quick Locate"
+
+msgid "中央大學"
+msgstr "National Central University"
+
+msgid "壢新醫院"
+msgstr "Lixin Hospital"
+
+msgid "中壢火車站"
+msgstr "Zhongli Train Station"
+
+msgid "高鐵桃園站"
+msgstr "Taoyuan HSR Station"
+
+msgid "桃園國際機場"
+msgstr "Taoyuan International Airport"
+
+msgid "大江購物中心"
+msgstr "Dayeh Zhongli Shopping Center"
+
+msgid "開啟導航"
+msgstr "Get Directions"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "School, hospital, station, airport — one-tap navigation"
+
+msgid "全民健保申請"
+msgstr "National Health Insurance"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Enroll after ARC approval and reduce clinic costs"
+
+msgid "台灣銀行開戶"
+msgstr "Open a Bank Account in Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr ""
+"Essential for scholarships — Post Office, Bank of Taiwan, E.Sun compared"
+
+msgid "台灣門號申辦"
+msgstr "Get a Taiwan SIM Card"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Prepaid vs monthly plans — major carriers explained"
+
+msgid "地圖導覽"
+msgstr "Map & Navigation"
+
+msgid "學校・醫院・交通"
+msgstr "Campus · Hospital · Transport"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Key locations around NCU — click to navigate"
+
+msgid "快速定位"
+msgstr "Quick Locate"
+
+msgid "中央大學"
+msgstr "National Central University"
+
+msgid "壢新醫院"
+msgstr "Lixin Hospital"
+
+msgid "中壢火車站"
+msgstr "Zhongli Train Station"
+
+msgid "高鐵桃園站"
+msgstr "Taoyuan HSR Station"
+
+msgid "桃園國際機場"
+msgstr "Taoyuan International Airport"
+
+msgid "大江購物中心"
+msgstr "Dayeh Zhongli Shopping Center"
+
+msgid "開啟導航"
+msgstr "Get Directions"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "School, hospital, station, airport — one-tap navigation"
+
+msgid "全民健保申請"
+msgstr "National Health Insurance"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Enroll after ARC approval and reduce clinic costs"
+
+msgid "台灣銀行開戶"
+msgstr "Open a Bank Account in Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr ""
+"Essential for scholarships — Post Office, Bank of Taiwan, E.Sun compared"
+
+msgid "台灣門號申辦"
+msgstr "Get a Taiwan SIM Card"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Prepaid vs monthly plans — major carriers explained"
+
+msgid "港澳生居留說明"
+msgstr "HK & Macau Student Residency Guide"
+
+msgid "入出境許可證、居留申請流程與健保工讀說明"
+msgstr "Entry Permit, Residency Process, NHI & Work Rights Explained"
+
+msgid "證件・住宿・交通"
+msgstr "Documents・Housing・Transport"
+
+msgid "生活類"
+msgstr "Daily Life"
+
+msgid "實用工具"
+msgstr "Useful Tools"
+
+msgid "外籍生辦理居留證服務"
+msgstr "Foreign Student ARC Application Service"
+
+msgid "僑生辦理居留證服務"
+msgstr "Overseas Chinese Student ARC Service"
+
+msgid "港澳生在台居留說明"
+msgstr "HK & Macau Student Residency in Taiwan"
+
+msgid "中央大學公車服務"
+msgstr "NCU Bus Service"
+
+msgid "中央大學住宿服務"
+msgstr "NCU Dormitory Service"
+
+msgid "辦理外僑居留證（ARC）"
+msgstr "Apply for ARC (Alien Resident Certificate)"
+
+msgid "辦理居留證（ARC）"
+msgstr "Apply for ARC (Alien Resident Certificate)"
+
+msgid "台灣銀行開戶指南"
+msgstr "Taiwan Bank Account Opening Guide"
+
+msgid "中央大學校內住宿服務"
+msgstr "NCU On-Campus Dormitory Service"
+
+msgid "全民健康保險申請指南"
+msgstr "National Health Insurance Application Guide"
+
+msgid "台灣門號申辦指南"
+msgstr "Taiwan SIM Card Application Guide"
+
+msgid "返回資訊中心"
+msgstr "Back to Info Center"
+
+msgid "辦理重點一覽"
+msgstr "Application Overview"
+
+msgid "居留申請重點一覽"
+msgstr "Residency Application Overview"
+
+msgid "申請應備文件"
+msgstr "Required Documents"
+
+msgid "辦理流程（Step by Step）"
+msgstr "Step-by-Step Process"
+
+msgid "居留申請流程"
+msgstr "Residency Application Process"
+
+msgid "重要注意事項"
+msgstr "Important Notes"
+
+msgid "常見問題"
+msgstr "FAQ"
+
+msgid "相關資源"
+msgstr "Related Resources"
+
+msgid "推薦銀行選擇"
+msgstr "Recommended Banks"
+
+msgid "所需文件"
+msgstr "Required Documents"
+
+msgid "開戶步驟"
+msgstr "Account Opening Steps"
+
+msgid "注意事項"
+msgstr "Important Notes"
+
+msgid "快速總覽"
+msgstr "Quick Overview"
+
+msgid "各出發地搭乘方式"
+msgstr "Buses by Departure Point"
+
+msgid "主要公車路線"
+msgstr "Main Bus Routes"
+
+msgid "即時查詢到站時間"
+msgstr "Real-Time Bus Arrival Check"
+
+msgid "住宿重點一覽"
+msgstr "Dormitory Overview"
+
+msgid "申請優先順位"
+msgstr "Application Priority Order"
+
+msgid "各宿舍棟次總覽"
+msgstr "Dormitory Buildings Overview"
+
+msgid "房間設備"
+msgstr "Room Facilities"
+
+msgid "申請流程"
+msgstr "Application Process"
+
+msgid "聯絡資訊"
+msgstr "Contact Information"
+
+msgid "哪些人可以申請？"
+msgstr "Who Can Apply?"
+
+msgid "申請步驟"
+msgstr "Application Steps"
+
+msgid "就醫小提醒"
+msgstr "Medical Tips"
+
+msgid "參考網站"
+msgstr "Reference Websites"
+
+msgid "預付卡 vs 月租方案"
+msgstr "Prepaid Card vs Monthly Plan"
+
+msgid "主要電信業者"
+msgstr "Major Carriers"
+
+msgid "月租方案所需文件"
+msgstr "Documents for Monthly Plan"
+
+msgid "月租方案辦理步驟"
+msgstr "Steps to Get a Monthly Plan"
+
+msgid "辦理期限"
+msgstr "Application Deadline"
+
+msgid "申請規費"
+msgstr "Application Fee"
+
+msgid "效期時間"
+msgstr "Validity Period"
+
+msgid "核發時間"
+msgstr "Processing Time"
+
+msgid "居留證效期"
+msgstr "Residency Permit Validity"
+
+msgid "兩種入台方式"
+msgstr "Two Ways to Enter Taiwan"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Back to Dashboard"
 
@@ -1150,111 +1419,3 @@ msgstr ""
 
 #~ msgid "我的帳戶"
 #~ msgstr "My Account"
-
-msgid "地圖導覽"
-msgstr "Map & Navigation"
-
-msgid "學校・醫院・交通"
-msgstr "Campus · Hospital · Transport"
-
-msgid "中央大學周邊重要地點，點選快速定位及導航"
-msgstr "Key locations around NCU — click to navigate"
-
-msgid "快速定位"
-msgstr "Quick Locate"
-
-msgid "中央大學"
-msgstr "National Central University"
-
-msgid "壢新醫院"
-msgstr "Lixin Hospital"
-
-msgid "中壢火車站"
-msgstr "Zhongli Train Station"
-
-msgid "高鐵桃園站"
-msgstr "Taoyuan HSR Station"
-
-msgid "桃園國際機場"
-msgstr "Taoyuan International Airport"
-
-msgid "大江購物中心"
-msgstr "Dayeh Zhongli Shopping Center"
-
-msgid "開啟導航"
-msgstr "Get Directions"
-
-msgid "學校・醫院・車站・機場位置，一鍵導航"
-msgstr "School, hospital, station, airport — one-tap navigation"
-
-msgid "全民健保申請"
-msgstr "National Health Insurance"
-
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr "Enroll after ARC approval and reduce clinic costs"
-
-msgid "台灣銀行開戶"
-msgstr "Open a Bank Account in Taiwan"
-
-msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-msgstr "Essential for scholarships — Post Office, Bank of Taiwan, E.Sun compared"
-
-msgid "台灣門號申辦"
-msgstr "Get a Taiwan SIM Card"
-
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr "Prepaid vs monthly plans — major carriers explained"
-
-msgid "地圖導覽"
-msgstr "Map & Navigation"
-
-msgid "學校・醫院・交通"
-msgstr "Campus · Hospital · Transport"
-
-msgid "中央大學周邊重要地點，點選快速定位及導航"
-msgstr "Key locations around NCU — click to navigate"
-
-msgid "快速定位"
-msgstr "Quick Locate"
-
-msgid "中央大學"
-msgstr "National Central University"
-
-msgid "壢新醫院"
-msgstr "Lixin Hospital"
-
-msgid "中壢火車站"
-msgstr "Zhongli Train Station"
-
-msgid "高鐵桃園站"
-msgstr "Taoyuan HSR Station"
-
-msgid "桃園國際機場"
-msgstr "Taoyuan International Airport"
-
-msgid "大江購物中心"
-msgstr "Dayeh Zhongli Shopping Center"
-
-msgid "開啟導航"
-msgstr "Get Directions"
-
-msgid "學校・醫院・車站・機場位置，一鍵導航"
-msgstr "School, hospital, station, airport — one-tap navigation"
-
-msgid "全民健保申請"
-msgstr "National Health Insurance"
-
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr "Enroll after ARC approval and reduce clinic costs"
-
-msgid "台灣銀行開戶"
-msgstr "Open a Bank Account in Taiwan"
-
-msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-msgstr "Essential for scholarships — Post Office, Bank of Taiwan, E.Sun compared"
-
-msgid "台灣門號申辦"
-msgstr "Get a Taiwan SIM Card"
-
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr "Prepaid vs monthly plans — major carriers explained"
