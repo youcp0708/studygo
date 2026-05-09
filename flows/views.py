@@ -253,7 +253,7 @@ def my_tasks_view(request):
             # 取短代碼：'zh-hant' → 'zh', 'my' → 'my'
             short_lang = active_lang.split('-')[0] if '-' in active_lang else active_lang
             # get_localized 支援 en/my/id/ms/th/ja，其他回退中文
-            SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja'}
+            SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko'}
             if short_lang not in SUPPORTED:
                 short_lang = ''  # 空字串 = 使用中文預設
             print(f"[DEBUG] get_language()={active_lang!r}, short_lang={short_lang!r}")
@@ -291,7 +291,7 @@ def my_tasks_view(request):
 
             stages_data.append({
                 'stage_id': stage.id,
-                'stage_name': stage.name,
+                'stage_name': stage.get_name_by_lang(short_lang),
                 'tasks': tasks_data
             })
 
@@ -455,6 +455,13 @@ def progress_overview_view(request):
         return error_response('請先建立學生資料', status_code=400)
 
     stages = FlowStage.objects.all().order_by('order')
+
+    active_lang = get_language() or ''
+    short_lang = active_lang.split('-')[0] if '-' in active_lang else active_lang
+    SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko'}
+    if short_lang not in SUPPORTED:
+        short_lang = ''
+        
     stage_data = []
     overall_total = 0
     overall_completed = 0
@@ -472,7 +479,7 @@ def progress_overview_view(request):
 
         stage_data.append({
             'stage_id': stage.id,
-            'stage_name': stage.name,
+            'stage_name': stage.get_name_by_lang(short_lang),
             'total': total,
             'completed': completed,
             'percent': percent,
