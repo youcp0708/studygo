@@ -16,8 +16,8 @@
     </p>
     <div class="dash-actions">
       <a href="{% url 'my_flows' %}" class="dash-btn dash-btn-outline">📋 {% trans "查看任務清單" %}</a>
-      <a href="/chatbot/" class="dash-btn dash-btn-outline">🤖 {% trans "詢問 AI 小幫手" %}</a>
       <a href="{% url 'guide_index' %}" class="dash-btn dash-btn-outline">📚 {% trans "資訊中心" %}</a>
+      <a href="/chatbot/" class="dash-btn dash-btn-outline">🤖 {% trans "詢問 AI 小幫手" %}</a>
     </div>
   </div>
 
@@ -140,5 +140,5 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="{% static 'flows/js/flows.js' %}"></script>
+<script src="{% static 'flows/js/flows.js' %}?v={% now 'U' %}"></script>
 {% endblock %}
