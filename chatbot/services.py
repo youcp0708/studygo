@@ -27,6 +27,18 @@ LANGUAGE_LABELS = {
     'ko': '한국어',
 }
 
+LANGUAGE_LABELS_EN = {
+    'zh-hant': 'Traditional Chinese',
+    'zh': 'Traditional Chinese',
+    'en': 'English',
+    'ja': 'Japanese',
+    'my': 'Burmese',
+    'id': 'Indonesian',
+    'th': 'Thai',
+    'ms': 'Malay',
+    'ko': 'Korean',
+}
+
 
 ANSWER_LABELS = {
     'zh-hant': ('個人化回答', '一般回答'),
@@ -36,6 +48,7 @@ ANSWER_LABELS = {
     'id': ('Jawaban personal', 'Jawaban umum'),
     'th': ('คำตอบเฉพาะบุคคล', 'คำตอบทั่วไป'),
     'ms': ('Jawapan peribadi', 'Jawapan umum'),
+    'ko': ('개인 맞춤 답변', '일반 답변'),
 }
 
 
@@ -89,6 +102,7 @@ def detect_question_language(text):
         ('id', ['gunakan bahasa indonesia', 'jawab dalam bahasa indonesia', '用印尼文回答', '請用印尼文']),
         ('th', ['ตอบเป็นภาษาไทย', 'ภาษาไทย', '用泰文回答', '請用泰文']),
         ('ms', ['gunakan bahasa melayu', 'jawab dalam bahasa melayu', '用馬來文回答', '請用馬來文']),
+        ('ko', ['한국어로 대답해줘', '한국어로 대답해', '한국어로', '한국어로 답해', '한국어로 답해줘', '한국어로 대답해']),
     ]
 
     for code, markers in explicit_rules:
@@ -110,6 +124,13 @@ def detect_question_language(text):
 
     if any('\u4E00' <= ch <= '\u9FFF' for ch in text):
         return 'zh-hant'
+
+    korean_markers = ['안녕하세요', '감사합니다', '학생', '유학', '비자', '타이완', '대만']
+    if any(marker in text for marker in korean_markers):
+        return 'ko'
+
+    if any('가' <= ch <= '힯' for ch in text):
+        return 'ko'
 
     indonesian_markers = [
         'saya', 'anda', 'bagaimana', 'kapan', 'dokumen', 'kuliah',
@@ -158,17 +179,10 @@ def choose_reply_language(question):
 def build_system_instructions(language_code, language_source):
     """建立 AI 指令：固定輸出「個人化回答 + 一般回答」，且盡量精簡。"""
     personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
+    language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
 
-    if language_source == 'question_language':
-        language_rule = """
-請使用學生最新問題的主要語言回答。
-不要因為學生資料、任務資料、知識庫資料或歷史對話是中文，就改用中文回答。
-不要在答案中輸出語言名稱。
-"""
-    else:
-        language_rule = """
-請使用目前網站介面語言回答。
-不要在答案中輸出語言名稱。
+    language_rule = f"""
+You MUST write your entire response in {language_en} only. No other language is allowed, regardless of what language the student data or knowledge base is in.
 """
 
     return f"""
@@ -371,6 +385,8 @@ def search_knowledge_base(question, language_code='zh-hant', limit=3):
         query |= Q(content_th__icontains=term)
         query |= Q(title_ja__icontains=term)
         query |= Q(content_ja__icontains=term)
+        query |= Q(title_ko__icontains=term)
+        query |= Q(content_ko__icontains=term)
 
     results = list(
         ChatKnowledge.objects
@@ -442,6 +458,7 @@ def remove_trailing_language_name(reply):
         'Bahasa Indonesia',
         'ภาษาไทย',
         'Bahasa Melayu',
+        '한국어',
     ]
 
     cleaned_reply = reply.strip()
@@ -486,6 +503,10 @@ def local_fallback_reply(question, user, language_code='zh-hant'):
             f'Jawapan peribadi:\n{name or "Pelajar"}, kunci AI belum ditetapkan, jadi saya belum dapat menjana jawapan peribadi yang lengkap.\n\n'
             'Jawapan umum:\nAnda boleh bertanya tentang visa, ARC, NHI, asrama, pendaftaran, dan proses belajar di Taiwan.'
         ),
+        'ko': (
+            f'개인 맞춤 답변:\n{name or "학생"}, AI 키가 설정되지 않았으므로 개인 맞춤 답변을 생성할 수 없습니다.\n\n'
+            '일반 답변:\n비자, ARC, NHI, 기숙사, 등록, 대만 유학 절차에 대해 질문할 수 있습니다.'
+        ),
     }
 
     return fallback_replies.get(language_code, fallback_replies['zh-hant'])
@@ -516,6 +537,7 @@ def generate_ai_reply(*, user, question, recent_messages):
             'id': 'Jawaban personal:\nPaket openai belum terpasang di backend.\n\nJawaban umum:\nJalankan: pip install -r requirements.txt',
             'th': 'คำตอบเฉพาะบุคคล:\nยังไม่ได้ติดตั้งแพ็กเกจ openai ใน backend\n\nคำตอบทั่วไป:\nโปรดรัน: pip install -r requirements.txt',
             'ms': 'Jawapan peribadi:\nPakej openai belum dipasang pada backend.\n\nJawapan umum:\nSila jalankan: pip install -r requirements.txt',
+            'ko': '개인 맞춤 답변:\n백엔드에 openai 패키지가 설치되지 않았습니다.\n\n일반 답변:\npip install -r requirements.txt 를 실행하세요.',
         }
 
         return {
@@ -530,9 +552,10 @@ def generate_ai_reply(*, user, question, recent_messages):
     history_text = build_history_text(recent_messages)
     personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
 
+    language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
+
     input_text = f"""
-請依照系統指令指定的語言回答。
-不要在答案中輸出語言名稱。
+[LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only. Do not use any other language, even if all the data below is in Chinese.
 
 以下是學生自己的基本資料，僅供「{personal_label}」使用，不代表回答語言：
 {profile_context}
@@ -540,8 +563,10 @@ def generate_ai_reply(*, user, question, recent_messages):
 以下是學生目前的流程任務與提醒資料，僅供「{personal_label}」使用：
 {flow_context}
 
-以下是系統 FAQ / 知識庫搜尋結果，僅供「{general_label}」參考：
+以下是系統 FAQ / 知識庫搜尋結果，僅供「{general_label}」參考（內容可能是中文，你必須把它翻譯成 {language_en} 後再回答）：
 {knowledge_context}
+
+[CRITICAL] The knowledge base above may be in Chinese. You MUST write the {general_label} section in {language_en}, not Chinese.
 
 以下是最近對話紀錄，僅供上下文參考，不代表回答語言：
 {history_text}
@@ -549,7 +574,7 @@ def generate_ai_reply(*, user, question, recent_messages):
 學生最新問題：
 {question}
 
-請務必用固定格式回答：
+[REMINDER] Write your answer in {language_en} only. Use this exact format:
 {personal_label}：
 ...
 
@@ -578,6 +603,7 @@ def generate_ai_reply(*, user, question, recent_messages):
                 'id': 'Jawaban personal:\nSaya belum dapat menghasilkan jawaban lengkap saat ini.\n\nJawaban umum:\nAnda dapat bertanya tentang visa, ARC, NHI, asrama, registrasi, dan proses studi di Taiwan.',
                 'th': 'คำตอบเฉพาะบุคคล:\nขณะนี้ฉันยังไม่สามารถสร้างคำตอบที่สมบูรณ์ได้\n\nคำตอบทั่วไป:\nคุณสามารถถามเรื่องวีซ่า ARC NHI หอพัก การลงทะเบียน และขั้นตอนการมาเรียนที่ไต้หวันได้',
                 'ms': 'Jawapan peribadi:\nSaya belum dapat menghasilkan jawapan lengkap buat masa ini.\n\nJawapan umum:\nAnda boleh bertanya tentang visa, ARC, NHI, asrama, pendaftaran, dan proses belajar di Taiwan.',
+                'ko': '개인 맞춤 답변:\n현재 완전한 답변을 생성할 수 없습니다. 다른 표현으로 다시 질문해 주세요.\n\n일반 답변:\n비자, ARC, NHI, 기숙사, 등록, 대만 유학 절차에 대해 질문할 수 있습니다.',
             }
             reply = empty_messages.get(language_code, empty_messages['zh-hant'])
 
@@ -596,6 +622,7 @@ def generate_ai_reply(*, user, question, recent_messages):
             'id': 'Jawaban personal:\nLayanan AI sementara tidak dapat terhubung.\n\nJawaban umum:\nSilakan coba lagi nanti. Ringkasan error: ',
             'th': 'คำตอบเฉพาะบุคคล:\nไม่สามารถเชื่อมต่อบริการ AI ได้ชั่วคราว\n\nคำตอบทั่วไป:\nกรุณาลองใหม่ภายหลัง สรุปข้อผิดพลาด: ',
             'ms': 'Jawapan peribadi:\nPerkhidmatan AI tidak dapat disambungkan buat sementara waktu.\n\nJawapan umum:\nSila cuba lagi kemudian. Ringkasan ralat: ',
+            'ko': '개인 맞춤 답변:\nAI 서비스에 일시적으로 연결할 수 없습니다.\n\n일반 답변:\n나중에 다시 시도해 주세요. 오류 요약: ',
         }
 
         return {
