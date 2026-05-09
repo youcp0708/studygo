@@ -27,6 +27,18 @@ LANGUAGE_LABELS = {
     'ko': '한국어',
 }
 
+LANGUAGE_LABELS_EN = {
+    'zh-hant': 'Traditional Chinese',
+    'zh': 'Traditional Chinese',
+    'en': 'English',
+    'ja': 'Japanese',
+    'my': 'Burmese',
+    'id': 'Indonesian',
+    'th': 'Thai',
+    'ms': 'Malay',
+    'ko': 'Korean',
+}
+
 
 ANSWER_LABELS = {
     'zh-hant': ('個人化回答', '一般回答'),
@@ -113,6 +125,13 @@ def detect_question_language(text):
     if any('\u4E00' <= ch <= '\u9FFF' for ch in text):
         return 'zh-hant'
 
+    korean_markers = ['안녕하세요', '감사합니다', '학생', '유학', '비자', '타이완', '대만']
+    if any(marker in text for marker in korean_markers):
+        return 'ko'
+
+    if any('가' <= ch <= '힯' for ch in text):
+        return 'ko'
+
     indonesian_markers = [
         'saya', 'anda', 'bagaimana', 'kapan', 'dokumen', 'kuliah',
         'kesehatan', 'asrama', 'indonesia', 'imigrasi', 'beasiswa'
@@ -139,10 +158,6 @@ def detect_question_language(text):
     if english_letters and len(english_letters) >= 8:
         return 'en'
 
-    korean_markers = ['안녕하세요', '감사합니다', '학생', '유학', '비자', '타이완', '대만']
-    if any(marker in text for marker in korean_markers):
-        return 'ko'
-
     return None
 
 
@@ -164,17 +179,10 @@ def choose_reply_language(question):
 def build_system_instructions(language_code, language_source):
     """建立 AI 指令：固定輸出「個人化回答 + 一般回答」，且盡量精簡。"""
     personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
+    language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
 
-    if language_source == 'question_language':
-        language_rule = """
-請使用學生最新問題的主要語言回答。
-不要因為學生資料、任務資料、知識庫資料或歷史對話是中文，就改用中文回答。
-不要在答案中輸出語言名稱。
-"""
-    else:
-        language_rule = """
-請使用目前網站介面語言回答。
-不要在答案中輸出語言名稱。
+    language_rule = f"""
+You MUST write your entire response in {language_en} only. No other language is allowed, regardless of what language the student data or knowledge base is in.
 """
 
     return f"""
@@ -544,9 +552,10 @@ def generate_ai_reply(*, user, question, recent_messages):
     history_text = build_history_text(recent_messages)
     personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
 
+    language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
+
     input_text = f"""
-請依照系統指令指定的語言回答。
-不要在答案中輸出語言名稱。
+[LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only. Do not use any other language, even if all the data below is in Chinese.
 
 以下是學生自己的基本資料，僅供「{personal_label}」使用，不代表回答語言：
 {profile_context}
@@ -554,8 +563,10 @@ def generate_ai_reply(*, user, question, recent_messages):
 以下是學生目前的流程任務與提醒資料，僅供「{personal_label}」使用：
 {flow_context}
 
-以下是系統 FAQ / 知識庫搜尋結果，僅供「{general_label}」參考：
+以下是系統 FAQ / 知識庫搜尋結果，僅供「{general_label}」參考（內容可能是中文，你必須把它翻譯成 {language_en} 後再回答）：
 {knowledge_context}
+
+[CRITICAL] The knowledge base above may be in Chinese. You MUST write the {general_label} section in {language_en}, not Chinese.
 
 以下是最近對話紀錄，僅供上下文參考，不代表回答語言：
 {history_text}
@@ -563,7 +574,7 @@ def generate_ai_reply(*, user, question, recent_messages):
 學生最新問題：
 {question}
 
-請務必用固定格式回答：
+[REMINDER] Write your answer in {language_en} only. Use this exact format:
 {personal_label}：
 ...
 
