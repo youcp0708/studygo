@@ -102,6 +102,51 @@
       .trim();
   }
 
+  function escapeHtml(text) {
+    return String(text || '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+  }
+
+  function renderMessageContent(content) {
+    const normalized =
+      typeof normalizeMessageContent === 'function'
+        ? normalizeMessageContent(content)
+        : String(content || '');
+
+    const safeText = escapeHtml(normalized);
+
+    return safeText
+      // 標準 Markdown 連結：[文字](網址)
+      .replace(
+        /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g,
+        '<a href="$2" class="chat-link">$1</a>'
+      )
+      .replace(/\n/g, '<br>');
+  }
+
+  function renderExistingMessageLinks() {
+    if (!messagesEl) return;
+
+    const contents = messagesEl.querySelectorAll('.message-content, .message-bubble');
+
+    contents.forEach((el) => {
+      if (el.dataset.renderedLinks === 'true') return;
+      if (el.classList.contains('message-name')) return;
+      if (el.classList.contains('message-time')) return;
+
+      const rawText = el.textContent || '';
+
+      if (!rawText.includes('](')) return;
+
+      el.innerHTML = renderMessageContent(rawText);
+      el.dataset.renderedLinks = 'true';
+    });
+  }
+
   function updateCount() {
     if (!charCount || !input) return;
     charCount.textContent = `${input.value.length} / 1200`;
@@ -129,11 +174,6 @@
     const bubble = document.createElement('div');
     bubble.className = 'message-bubble';
 
-    //const name = document.createElement('div');
-    //name.className = 'message-name';
-    //name.textContent = role === 'user'
-    //? t('me', '我')
-    //: t('assistantName', 'StudyGo AI 小幫手');
     if (role !== 'user') {
       const name = document.createElement('div');
       name.className = 'message-name';
@@ -143,9 +183,8 @@
 
     const body = document.createElement('div');
     body.className = 'message-content';
-    body.textContent = normalizeMessageContent(content);
-
-    //bubble.appendChild(name);
+    body.innerHTML = renderMessageContent(content);
+    body.dataset.renderedLinks = 'true';
     bubble.appendChild(body);
 
     if (time) {
@@ -159,13 +198,11 @@
     row.appendChild(bubble);
     messagesEl.appendChild(row);
 
-
     if (role === 'user') {
       scrollToBottom();
     } else {
       updateScrollBottomButton();
     }
-
   }
 
   function addTyping() {
@@ -178,7 +215,6 @@
     row.innerHTML = `
       <div class="message-avatar">🤖</div>
       <div class="message-bubble">
-       <!--<div class="message-name">${t('assistantName', 'StudyGo AI 小幫手')}</div>-->
         <div class="typing-dots">
           <span></span>
           <span></span>
@@ -194,9 +230,6 @@
     }
 
     updateScrollBottomButton();
-
-    // 不在這裡自動捲到底，避免你正在看前面訊息時被拉走
-    // scrollToBottom();
   }
 
   function removeTyping() {
@@ -509,9 +542,6 @@
       );
     } finally {
       setBusy(false);
-
-      // 不自動 focus，避免 AI 回答完成後畫面被拉到輸入框
-      // input.focus();
     }
   }
 
@@ -737,7 +767,12 @@
   setupAttachmentButtons();
   setupHistorySearch();
   setupTaiwanTipRotator();
+  renderExistingMessageLinks();
   updateCount();
   scrollToBottom();
   updateScrollBottomButton();
 })();
+
+renderExistingMessageLinks();
+setTimeout(renderExistingMessageLinks, 300);
+setTimeout(renderExistingMessageLinks, 1000);

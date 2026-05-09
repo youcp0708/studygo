@@ -3,7 +3,7 @@
 {% block title %}{% trans "AI 聊天機器人" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}">
+<link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}?v={% now 'U' %}">
 {% endblock %}
 
 {% block content %}
@@ -192,5 +192,5 @@
     deleteSession: "{% url 'chatbot:delete_session_api' %}"
   };
 </script>
-<script src="{% static 'chatbot/js/chatbot.js' %}"></script>
+<script src="{% static 'chatbot/js/chatbot.js' %}?v={% now 'U' %}"></script>
 {% endblock %}

@@ -453,7 +453,10 @@ body {
 }
 
 @keyframes typingBounce {
-  0%, 80%, 100% {
+
+  0%,
+  80%,
+  100% {
     transform: translateY(0);
     opacity: .45;
   }
@@ -720,6 +723,7 @@ body {
     padding: 16px 20px 20px;
   }
 }
+
 /* ===== 多語言版面修正：避免英文 / 其他語言文字變長爆版 ===== */
 
 .history-header {
@@ -787,6 +791,7 @@ body {
     max-width: none;
   }
 }
+
 /* ===== 多語言跑版修正：緬文、泰文、英文、馬來文等長文字 ===== */
 
 /* 讓緬文有比較合適的字體 */
@@ -1056,7 +1061,7 @@ html[lang="my"] .bot-profile-card p {
 
 /* ===== Back link inside AI profile card ===== */
 
-.chatbot-sidebar > .back-link {
+.chatbot-sidebar>.back-link {
   display: none;
 }
 
@@ -1152,4 +1157,15 @@ html[lang="my"] .bot-profile-card p {
 .bot-tip-text {
   margin-top: 6px !important;
   line-height: 1.55 !important;
+}
+
+.chat-link {
+  color: #2563eb !important;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.chat-link:hover {
+  color: #1d4ed8 !important;
 }

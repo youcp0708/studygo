@@ -125,6 +125,7 @@ class ChatAttachment(models.Model):
     def __str__(self):
         return self.original_name or str(self.file)
 
+
 class ChatKnowledge(models.Model):
     """聊天機器人知識庫 / FAQ：給 AI 一般回答參考，可支援多語言。"""
 
