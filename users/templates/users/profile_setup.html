@@ -154,9 +154,10 @@
           <div class="setup-section-title">{% trans "時間規劃" %}</div>
           <div class="field-row">
             <div class="field">
-              <label>{% trans "預計抵台日期" %}</label>
-              <input type="date" name="expected_arrival" id="setupArrival" onchange="updatePreview()" />
-              <div class="field-hint">{% trans "非必填" %}</div>
+              <label>{% trans "預計抵台日期" %} <span style="color:red;">*</span></label>
+              <input type="date" name="expected_arrival" id="setupArrival" onchange="updatePreview()" required />
+              <div class="field-hint">{% trans "必填" %}</div>
+              <div class="field-error hidden" id="arrivalErr"></div>
             </div>
 
             <div class="field">
