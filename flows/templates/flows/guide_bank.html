@@ -1,12 +1,12 @@
 {# flows/templates/flows/guide_bank.html — 台灣銀行開戶 #}
 {% extends "base.html" %}
-{% load static %}
-{% block title %}台灣銀行開戶 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "台灣銀行開戶" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
   :root { --border: var(--line); --dark: var(--primary-dark); --warning: #ca8a04; --warning-soft: #fef9c3; }
-  .guide-wrap { width:min(860px,96%); margin:0 auto; padding:0 0 72px; }
+  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
 
   .guide-hero {
     background: linear-gradient(135deg, #1e3a5f 0%, #065f46 100%);
@@ -100,12 +100,12 @@
 {% block content %}
 <div class="guide-wrap" style="padding-top:32px;">
 
-  <a class="back-link" href="{% url 'guide_index' %}">← 返回資訊中心</a>
+  <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
   <div class="guide-hero">
     <div class="bg-text">BANK</div>
     <div class="hero-badge">領獎學金・生活必備</div>
-    <h2>🏦 台灣銀行開戶指南</h2>
+    <h2>🏦 {% trans "台灣銀行開戶指南" %}</h2>
     <p>在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。</p>
   </div>
 
@@ -118,7 +118,7 @@
   </div>
 
   <!-- ── 推薦銀行 ── -->
-  <div class="section-title">🏦 推薦銀行選擇</div>
+  <div class="section-title">🏦 {% trans "推薦銀行選擇" %}</div>
   <div class="bank-grid">
 
     <div class="bank-card recommended">
@@ -144,7 +144,7 @@
   </div>
 
   <!-- ── 所需文件 ── -->
-  <div class="section-title">📋 所需文件</div>
+  <div class="section-title">📋 {% trans "所需文件" %}</div>
   <div class="doc-list">
     <div class="doc-item"><span class="doc-icon">🪪</span>居留證（ARC）正本<span class="doc-badge badge-req">必備</span></div>
     <div class="doc-item"><span class="doc-icon">🛂</span>護照正本<span class="doc-badge badge-req">必備</span></div>
@@ -161,7 +161,7 @@
   </div>
 
   <!-- ── 開戶流程 ── -->
-  <div class="section-title">🪜 開戶步驟</div>
+  <div class="section-title">🪜 {% trans "開戶步驟" %}</div>
   <ul class="step-list">
     <li class="step-item">
       <div class="step-num">1</div>
@@ -215,7 +215,7 @@
   </ul>
 
   <!-- ── 小提醒 ── -->
-  <div class="section-title">💡 注意事項</div>
+  <div class="section-title">💡 {% trans "注意事項" %}</div>
   <div class="alert alert-info">
     <div class="alert-icon">📱</div>
     <div>

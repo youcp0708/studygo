@@ -1,7 +1,7 @@
 {# flow/templates/flow/guide_arc_overseas.html — 僑生辦理居留證服務 #}
 {% extends "base.html" %}
-{% load static %}
-{% block title %}僑生辦理居留證服務 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "僑生辦理居留證服務" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -94,6 +94,8 @@
   .doc-badge { font-size:10px; font-weight:700; padding:1px 8px; border-radius:99px; margin-top:6px; display:inline-block; }
   .badge-req { background:var(--primary-soft); color:var(--primary-dark); }
   .badge-opt { background:var(--bg); color:var(--muted); }
+  a.doc-card { text-decoration:none; color:inherit; transition:border-color .2s, box-shadow .2s, transform .15s; }
+  a.doc-card:hover { border-color:var(--primary); box-shadow:0 4px 14px rgba(0,0,0,.09); transform:translateY(-2px); }
 
   .faq-list { margin-bottom:36px; }
   .faq-item { background:#fff; border:1.5px solid var(--border); border-radius:14px; margin-bottom:10px; overflow:hidden; }
@@ -129,19 +131,19 @@
 {% block content %}
 <div class="guide-wrap" style="padding-top:32px;">
 
-  <a class="back-link" href="{% url 'dashboard' %}">← 返回儀表板</a>
+  <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
   <div class="guide-hero">
     <div class="bg-text">ARC</div>
     <div class="hero-badge">僑生專屬服務</div>
-    <h2>🪪 辦理居留證（ARC）</h2>
+    <h2>🪪 {% trans "辦理居留證（ARC）" %}</h2>
     <p>
       持外國護照入台就讀的僑生，必須在抵台後 <strong>15 天內</strong> 向
       內政部移民署辦理外僑居留證（ARC），方能在台合法居留及就讀。
     </p>
     <div class="hero-meta">
       <div class="hero-meta-item">⏱ 辦理期限：抵台後 15 天內</div>
-      <div class="hero-meta-item">💰 規費：NT$ 1,000</div>
+      <div class="hero-meta-item">💰 規費：NT$500（僑生1年）</div>
       <div class="hero-meta-item">📍 地點：移民署各地服務站</div>
     </div>
   </div>
@@ -155,35 +157,35 @@
     </div>
   </div>
 
-  <div class="section-title">📊 辦理重點一覽</div>
+  <div class="section-title">📊 {% trans "辦理重點一覽" %}</div>
   <div class="info-row">
     <div class="info-card">
       <div class="i-icon">📅</div>
-      <div class="i-label">辦理期限</div>
+      <div class="i-label">{% trans "辦理期限" %}</div>
       <div class="i-val">15 天</div>
       <div class="i-sub">抵台後起算</div>
     </div>
     <div class="info-card">
       <div class="i-icon">💳</div>
-      <div class="i-label">申請規費</div>
-      <div class="i-val">NT$1,000</div>
-      <div class="i-sub">現場繳費</div>
+      <div class="i-label">{% trans "申請規費" %}</div>
+      <div class="i-val">NT$500</div>
+      <div class="i-sub">僑生1年居留證（線上繳費）</div>
     </div>
     <div class="info-card">
       <div class="i-icon">📄</div>
-      <div class="i-label">效期時間</div>
+      <div class="i-label">{% trans "效期時間" %}</div>
       <div class="i-val">1 年</div>
       <div class="i-sub">每年需延期</div>
     </div>
     <div class="info-card">
       <div class="i-icon">⏳</div>
-      <div class="i-label">核發時間</div>
-      <div class="i-val">約 14 天</div>
-      <div class="i-sub">預約可加快</div>
+      <div class="i-label">{% trans "核發時間" %}</div>
+      <div class="i-val">10 個工作天</div>
+      <div class="i-sub">不含退補件；預約可加快</div>
     </div>
   </div>
 
-  <div class="section-title">📋 申請應備文件</div>
+  <div class="section-title">📋 {% trans "申請應備文件" %}</div>
   <div class="alert alert-info">
     <div class="alert-icon">ℹ️</div>
     <div>
@@ -258,7 +260,7 @@
     </div>
   </div>
 
-  <div class="section-title">🪜 辦理流程（Step by Step）</div>
+  <div class="section-title">🪜 {% trans "辦理流程（Step by Step）" %}</div>
   <ul class="timeline">
     <li class="timeline-item">
       <div class="step-num">1</div>
@@ -300,10 +302,10 @@
       <div class="step-body">
         <div class="step-title">繳納申請規費</div>
         <div class="step-desc">
-          繳交規費 NT$1,000（首次申請）。費用可使用現金或信用卡（依辦事處設備而異）。
-          繳費後保存收據以備查。
+          繳交規費 NT$500（僑生1年居留證）。可使用信用卡或 ATM 線上繳費，
+          亦可至台灣銀行窗口或四大超商繳費，繳費後保存收據以備查。
         </div>
-        <span class="step-tag tag-fee">💰 NT$1,000</span>
+        <span class="step-tag tag-fee">💰 NT$500</span>
       </div>
     </li>
     <li class="timeline-item">
@@ -311,11 +313,11 @@
       <div class="step-body">
         <div class="step-title">等待審核與製證</div>
         <div class="step-desc">
-          申請提交後通常需 <strong>14 個工作天</strong> 製卡完成。
+          申請提交後通常需 <strong>10 個工作天</strong> 製卡完成（不含退補件及面談時間）。
           辦事處將以簡訊或電話通知領件，亦可至移民署線上查詢申請進度。
           等待期間請保留入境章及申請收據，作為合法居留的暫時證明。
         </div>
-        <span class="step-tag tag-time">⏳ 約 14 天</span>
+        <span class="step-tag tag-time">⏳ 約 10 個工作天</span>
         <span class="step-tag tag-tip">💡 可線上查詢進度</span>
       </div>
     </li>
@@ -332,7 +334,7 @@
     </li>
   </ul>
 
-  <div class="section-title">💡 重要注意事項</div>
+  <div class="section-title">💡 {% trans "重要注意事項" %}</div>
   <div class="alert alert-success" style="margin-bottom:12px;">
     <div class="alert-icon">✅</div>
     <div>
@@ -355,7 +357,7 @@
     </div>
   </div>
 
-  <div class="section-title">❓ 常見問題</div>
+  <div class="section-title">❓ {% trans "常見問題" %}</div>
   <div class="faq-list">
     <div class="faq-item">
       <div class="faq-q">
@@ -421,24 +423,24 @@
     </div>
   </div>
 
-  <div class="section-title">🔗 相關資源</div>
+  <div class="section-title">🔗 {% trans "相關資源" %}</div>
   <div class="doc-grid" style="margin-bottom:0;">
-    <div class="doc-card required">
+    <a class="doc-card required" href="https://www.immigration.gov.tw" target="_blank" rel="noopener">
       <div class="doc-icon">🏛</div>
       <div class="doc-info">
         <div class="doc-name">內政部移民署</div>
         <div class="doc-note">辦事處查詢、線上預約、申請進度查詢、外僑居留申請書下載。</div>
-        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;">www.immigration.gov.tw</div>
+        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.immigration.gov.tw ↗</div>
       </div>
-    </div>
-    <div class="doc-card required">
+    </a>
+    <a class="doc-card required" href="https://www.ocac.gov.tw" target="_blank" rel="noopener">
       <div class="doc-icon">🏛</div>
       <div class="doc-info">
         <div class="doc-name">僑務委員會（OCAC）</div>
         <div class="doc-note">僑生身份確認函申請、僑生相關權益說明、海外服務諮詢。</div>
-        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;">www.ocac.gov.tw</div>
+        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.ocac.gov.tw ↗</div>
       </div>
-    </div>
+    </a>
     <div class="doc-card optional">
       <div class="doc-icon">🏫</div>
       <div class="doc-info">

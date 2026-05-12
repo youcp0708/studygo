@@ -2315,6 +2315,341 @@ msgstr "Tetapan semula gagal. Pautan mungkin telah tamat tempoh."
 #~ msgid "未讀的通知"
 #~ msgstr "pemberitahuan yang belum dibaca"
 
+msgid "地圖導覽"
+msgstr "Peta & Navigasi"
+
+msgid "學校・醫院・交通"
+msgstr "Kampus · Hospital · Pengangkutan"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
+
+msgid "快速定位"
+msgstr "Lokasi Cepat"
+
+msgid "中央大學"
+msgstr "Universiti Pusat Kebangsaan"
+
+msgid "壢新醫院"
+msgstr "Hospital Lixin"
+
+msgid "中壢火車站"
+msgstr "Stesen Kereta Zhongli"
+
+msgid "高鐵桃園站"
+msgstr "Stesen HSR Taoyuan"
+
+msgid "桃園國際機場"
+msgstr "Lapangan Terbang Antarabangsa Taoyuan"
+
+msgid "大江購物中心"
+msgstr "Pusat Membeli-belah Dayeh"
+
+msgid "開啟導航"
+msgstr "Buka Navigasi"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr ""
+"Lokasi sekolah, hospital, stesen, lapangan terbang — navigasi satu ketik"
+
+msgid "全民健保申請"
+msgstr "Permohonan Insurans Kesihatan Kebangsaan"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Daftar selepas ARC diluluskan, kos klinik berkurangan"
+
+msgid "台灣銀行開戶"
+msgstr "Buka Akaun Bank di Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "Wajib untuk biasiswa — Pejabat Pos, Bank Taiwan, E.Sun dibandingkan"
+
+msgid "台灣門號申辦"
+msgstr "Dapatkan Nombor Telefon Taiwan"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Kad prabayar vs bulanan — penjelasan pengendali utama"
+
+msgid "地圖導覽"
+msgstr "Peta & Navigasi"
+
+msgid "學校・醫院・交通"
+msgstr "Kampus · Hospital · Pengangkutan"
+
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
+
+msgid "快速定位"
+msgstr "Lokasi Cepat"
+
+msgid "中央大學"
+msgstr "Universiti Pusat Kebangsaan"
+
+msgid "壢新醫院"
+msgstr "Hospital Lixin"
+
+msgid "中壢火車站"
+msgstr "Stesen Kereta Zhongli"
+
+msgid "高鐵桃園站"
+msgstr "Stesen HSR Taoyuan"
+
+msgid "桃園國際機場"
+msgstr "Lapangan Terbang Antarabangsa Taoyuan"
+
+msgid "大江購物中心"
+msgstr "Pusat Membeli-belah Dayeh"
+
+msgid "開啟導航"
+msgstr "Buka Navigasi"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr ""
+"Lokasi sekolah, hospital, stesen, lapangan terbang — navigasi satu ketik"
+
+msgid "全民健保申請"
+msgstr "Permohonan Insurans Kesihatan Kebangsaan"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Daftar selepas ARC diluluskan, kos klinik berkurangan"
+
+msgid "台灣銀行開戶"
+msgstr "Buka Akaun Bank di Taiwan"
+
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "Wajib untuk biasiswa — Pejabat Pos, Bank Taiwan, E.Sun dibandingkan"
+
+msgid "台灣門號申辦"
+msgstr "Dapatkan Nombor Telefon Taiwan"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Kad prabayar vs bulanan — penjelasan pengendali utama"
+
+msgid "港澳生居留說明"
+msgstr "Panduan Pemastautin Pelajar HK & Macao"
+
+msgid "入出境許可證、居留申請流程與健保工讀說明"
+msgstr "Permit Masuk/Keluar, Proses Pemastautin, NHI & Hak Bekerja"
+
+msgid "證件・住宿・交通"
+msgstr "Dokumen・Penginapan・Pengangkutan"
+
+msgid "生活類"
+msgstr "Kehidupan Harian"
+
+msgid "實用工具"
+msgstr "Alat Berguna"
+
+msgid "外籍生辦理居留證服務"
+msgstr "Perkhidmatan Permohonan ARC Pelajar Asing"
+
+msgid "僑生辦理居留證服務"
+msgstr "Perkhidmatan ARC Pelajar Cina Perantau"
+
+msgid "港澳生在台居留說明"
+msgstr "Panduan Pemastautin di Taiwan untuk Pelajar HK & Macao"
+
+msgid "中央大學公車服務"
+msgstr "Perkhidmatan Bas NCU"
+
+msgid "中央大學住宿服務"
+msgstr "Perkhidmatan Asrama NCU"
+
+msgid "辦理外僑居留證（ARC）"
+msgstr "Mohon ARC (Sijil Pemastautin Orang Asing)"
+
+msgid "辦理居留證（ARC）"
+msgstr "Mohon ARC (Sijil Pemastautin Orang Asing)"
+
+msgid "台灣銀行開戶指南"
+msgstr "Panduan Membuka Akaun Bank di Taiwan"
+
+msgid "中央大學校內住宿服務"
+msgstr "Perkhidmatan Asrama Dalam Kampus NCU"
+
+msgid "全民健康保險申請指南"
+msgstr "Panduan Permohonan Insurans Kesihatan Nasional"
+
+msgid "台灣門號申辦指南"
+msgstr "Panduan Mendapatkan Nombor SIM Taiwan"
+
+msgid "返回資訊中心"
+msgstr "Kembali ke Pusat Maklumat"
+
+msgid "辦理重點一覽"
+msgstr "Gambaran Keseluruhan Permohonan"
+
+msgid "居留申請重點一覽"
+msgstr "Gambaran Permohonan Pemastautin"
+
+msgid "申請應備文件"
+msgstr "Dokumen yang Diperlukan"
+
+msgid "辦理流程（Step by Step）"
+msgstr "Panduan Langkah demi Langkah"
+
+msgid "居留申請流程"
+msgstr "Proses Permohonan Pemastautin"
+
+msgid "重要注意事項"
+msgstr "Nota Penting"
+
+msgid "常見問題"
+msgstr "Soalan Lazim"
+
+msgid "相關資源"
+msgstr "Sumber Berkaitan"
+
+msgid "推薦銀行選擇"
+msgstr "Bank Disyorkan"
+
+msgid "所需文件"
+msgstr "Dokumen yang Diperlukan"
+
+msgid "開戶步驟"
+msgstr "Langkah Membuka Akaun"
+
+msgid "注意事項"
+msgstr "Nota Penting"
+
+msgid "快速總覽"
+msgstr "Gambaran Pantas"
+
+msgid "各出發地搭乘方式"
+msgstr "Bas Mengikut Titik Berlepas"
+
+msgid "主要公車路線"
+msgstr "Laluan Bas Utama"
+
+msgid "即時查詢到站時間"
+msgstr "Cek Masa Ketibaan Bas"
+
+msgid "住宿重點一覽"
+msgstr "Gambaran Asrama"
+
+msgid "申請優先順位"
+msgstr "Keutamaan Permohonan"
+
+msgid "各宿舍棟次總覽"
+msgstr "Gambaran Bangunan Asrama"
+
+msgid "房間設備"
+msgstr "Kemudahan Bilik"
+
+msgid "申請流程"
+msgstr "Proses Permohonan"
+
+msgid "聯絡資訊"
+msgstr "Maklumat Hubungan"
+
+msgid "哪些人可以申請？"
+msgstr "Siapa Boleh Memohon?"
+
+msgid "申請步驟"
+msgstr "Langkah Permohonan"
+
+msgid "就醫小提醒"
+msgstr "Tips Perubatan"
+
+msgid "參考網站"
+msgstr "Laman Web Rujukan"
+
+msgid "預付卡 vs 月租方案"
+msgstr "Prabayar vs Pelan Bulanan"
+
+msgid "主要電信業者"
+msgstr "Pengendali Utama"
+
+msgid "月租方案所需文件"
+msgstr "Dokumen untuk Pelan Bulanan"
+
+msgid "月租方案辦理步驟"
+msgstr "Langkah Mendapatkan Pelan Bulanan"
+
+msgid "辦理期限"
+msgstr "Tarikh Akhir Permohonan"
+
+msgid "申請規費"
+msgstr "Bayaran Permohonan"
+
+msgid "效期時間"
+msgstr "Tempoh Sah"
+
+msgid "核發時間"
+msgstr "Masa Pemprosesan"
+
+msgid "居留證效期"
+msgstr "Tempoh Sah Permit Pemastautin"
+
+msgid "兩種入台方式"
+msgstr "Dua Cara Masuk ke Taiwan"
+
+msgid "搜尋指南..."
+msgstr "Cari panduan..."
+
+msgid "各國專區"
+msgstr "Kawasan Negara"
+
+msgid "各地區申請資訊"
+msgstr "Maklumat Permohonan Mengikut Kawasan"
+
+msgid "依所在地選擇對應的申請說明，直接連結至海外聯招會官方網站。"
+msgstr ""
+"Pilih kawasan anda untuk melihat panduan permohonan yang berkaitan, pautan "
+"terus ke laman web rasmi."
+
+msgid "以下連結將跳轉至"
+msgstr "Pautan berikut akan mengarahkan ke "
+
+msgid "海外聯招會官方網站"
+msgstr "Laman Web Rasmi Majlis Hal Ehwal Cina Luar Negara"
+
+msgid "，請選擇你的所在地區查看對應的申請辦法與說明。"
+msgstr ""
+". Sila pilih kawasan anda untuk melihat prosedur dan arahan permohonan yang "
+"berkaitan."
+
+msgid "選擇你的地區"
+msgstr "Pilih Kawasan Anda"
+
+msgid "香港"
+msgstr "Hong Kong"
+
+msgid "澳門"
+msgstr "Macau"
+
+msgid "美國／加拿大"
+msgstr "Amerika / Kanada"
+
+msgid "新加坡"
+msgstr "Singapura"
+
+msgid "其他地區"
+msgstr "Kawasan Lain"
+
+msgid "研究所"
+msgstr "Sekolah Siswazah"
+
+msgid "在臺僑生"
+msgstr "Warga Cina Perantauan di Taiwan"
+
+msgid "海外臺校"
+msgstr "Sekolah Taiwan di Luar Negara"
+
+msgid "入學申請"
+msgstr "Kemasukan"
+
+msgid "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等"
+msgstr ""
+"Lihat panduan permohonan mengikut kawasan: Hong Kong, Malaysia, Thailand, "
+"dll."
+
+msgid "入學申請指南"
+msgstr "Panduan Kemasukan"
+
+msgid "申請資格、時程、所需文件與注意事項整理"
+msgstr "Kelayakan, jadual, dokumen yang diperlukan, dan nota penting"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Kembali ke Papan Pemuka"
 

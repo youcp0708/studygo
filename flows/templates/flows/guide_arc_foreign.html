@@ -1,7 +1,7 @@
 {# flow/templates/flow/guide_arc_foreign.html — 外籍生辦理居留證服務 #}
 {% extends "base.html" %}
-{% load static %}
-{% block title %}外籍生辦理居留證服務 — StudyGo Taiwan{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "外籍生辦理居留證服務" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -94,6 +94,8 @@
   .doc-badge { font-size:10px; font-weight:700; padding:1px 8px; border-radius:99px; margin-top:6px; display:inline-block; }
   .badge-req { background:var(--primary-soft); color:var(--primary-dark); }
   .badge-opt { background:var(--bg); color:var(--muted); }
+  a.doc-card { text-decoration:none; color:inherit; transition:border-color .2s, box-shadow .2s, transform .15s; }
+  a.doc-card:hover { border-color:var(--primary); box-shadow:0 4px 14px rgba(0,0,0,.09); transform:translateY(-2px); }
 
   .faq-list { margin-bottom:36px; }
   .faq-item { background:#fff; border:1.5px solid var(--border); border-radius:14px; margin-bottom:10px; overflow:hidden; }
@@ -129,19 +131,20 @@
 {% block content %}
 <div class="guide-wrap" style="padding-top:32px;">
 
-  <a class="back-link" href="{% url 'dashboard' %}">← 返回儀表板</a>
+  <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
   <div class="guide-hero">
     <div class="bg-text">ARC</div>
     <div class="hero-badge">外籍生專屬服務</div>
-    <h2>🪪 辦理外僑居留證（ARC）</h2>
+    <h2>🪪 {% trans "辦理外僑居留證（ARC）" %}</h2>
     <p>
       持外國護照以正式學籍入台就讀的外籍生，須在抵台後 <strong>15 天內</strong>
       向內政部移民署辦理外僑居留證（ARC），方能在台合法居留及完成就學程序。
     </p>
     <div class="hero-meta">
       <div class="hero-meta-item">⏱ 辦理期限：抵台後 15 天內</div>
-      <div class="hero-meta-item">💰 規費：NT$ 1,000</div>
+      <div class="hero-meta-item">💰 規費：1年 $1,000 / 2年 $2,000 / 3年 $3,000</div>
+      <div class="hero-meta-item">💰 觀光簽／免簽入台：另加 NT$2,200</div>
       <div class="hero-meta-item">📍 地點：移民署各地服務站</div>
     </div>
   </div>
@@ -154,36 +157,43 @@
       請抵台後儘快辦理。
     </div>
   </div>
+  <div class="alert alert-warning">
+    <div class="alert-icon">✈️</div>
+    <div>
+      <strong>申請審核中請勿出境：</strong>
+      申請送件後若本人出境台灣，申請案將自動作廢，需重新申請。等待 ARC 期間請避免出境。
+    </div>
+  </div>
 
-  <div class="section-title">📊 辦理重點一覽</div>
+  <div class="section-title">📊 {% trans "辦理重點一覽" %}</div>
   <div class="info-row">
     <div class="info-card">
       <div class="i-icon">📅</div>
-      <div class="i-label">辦理期限</div>
+      <div class="i-label">{% trans "辦理期限" %}</div>
       <div class="i-val">15 天</div>
       <div class="i-sub">抵台後起算</div>
     </div>
     <div class="info-card">
       <div class="i-icon">💳</div>
-      <div class="i-label">申請規費</div>
-      <div class="i-val">NT$1,000</div>
-      <div class="i-sub">現場繳費</div>
+      <div class="i-label">{% trans "申請規費" %}</div>
+      <div class="i-val">NT$1,000 起</div>
+      <div class="i-sub">1年 $1,000 / 2年 $2,000 / 3年 $3,000<br>觀光簽／免簽入台者另加 NT$2,200</div>
     </div>
     <div class="info-card">
       <div class="i-icon">📄</div>
-      <div class="i-label">效期時間</div>
-      <div class="i-val">1 年</div>
-      <div class="i-sub">每年需延期</div>
+      <div class="i-label">{% trans "效期時間" %}</div>
+      <div class="i-val">1–3 年</div>
+      <div class="i-sub">依申請年數核發</div>
     </div>
     <div class="info-card">
       <div class="i-icon">⏳</div>
-      <div class="i-label">核發時間</div>
-      <div class="i-val">約 14 天</div>
-      <div class="i-sub">預約可加快</div>
+      <div class="i-label">{% trans "核發時間" %}</div>
+      <div class="i-val">10 個工作天</div>
+      <div class="i-sub">不含退補件及面談；預約可加快</div>
     </div>
   </div>
 
-  <div class="section-title">📋 申請應備文件</div>
+  <div class="section-title">📋 {% trans "申請應備文件" %}</div>
   <div class="alert alert-info">
     <div class="alert-icon">ℹ️</div>
     <div>
@@ -220,7 +230,15 @@
       <div class="doc-icon">🏥</div>
       <div class="doc-info">
         <div class="doc-name">健康檢查合格證明</div>
-        <div class="doc-note">於台灣認可醫院完成之健康檢查報告，含胸部 X 光及肺結核篩檢結果。</div>
+        <div class="doc-note">於台灣認可醫院完成，<strong>3 個月內</strong>有效。含胸部 X 光及肺結核篩檢。</div>
+        <span class="doc-badge badge-req">必要</span>
+      </div>
+    </div>
+    <div class="doc-card required">
+      <div class="doc-icon">📜</div>
+      <div class="doc-info">
+        <div class="doc-name">本國警察紀錄證明（刑事紀錄）</div>
+        <div class="doc-note">由母國警察或司法機關出具，<strong>1 年內</strong>有效。外文文件須經我國駐外館處驗證或在台公證。</div>
         <span class="doc-badge badge-req">必要</span>
       </div>
     </div>
@@ -258,7 +276,7 @@
     </div>
   </div>
 
-  <div class="section-title">🪜 辦理流程（Step by Step）</div>
+  <div class="section-title">🪜 {% trans "辦理流程（Step by Step）" %}</div>
   <ul class="timeline">
     <li class="timeline-item">
       <div class="step-num">1</div>
@@ -312,10 +330,10 @@
       <div class="step-body">
         <div class="step-title">繳納申請規費</div>
         <div class="step-desc">
-          繳交規費 NT$1,000（首次申請）。費用依辦事處設備可使用現金或信用卡。
-          請妥善保存繳費收據以備查。
+          依申請年數繳交規費：1年 NT$1,000、2年 NT$2,000、3年 NT$3,000。
+          費用依辦事處設備可使用現金或信用卡，請妥善保存繳費收據以備查。
         </div>
-        <span class="step-tag tag-fee">💰 NT$1,000</span>
+        <span class="step-tag tag-fee">💰 NT$1,000 / $2,000 / $3,000</span>
       </div>
     </li>
     <li class="timeline-item">
@@ -343,7 +361,7 @@
     </li>
   </ul>
 
-  <div class="section-title">💡 重要注意事項</div>
+  <div class="section-title">💡 {% trans "重要注意事項" %}</div>
   <div class="alert alert-success" style="margin-bottom:12px;">
     <div class="alert-icon">✅</div>
     <div>
@@ -366,17 +384,21 @@
     </div>
   </div>
 
-  <div class="section-title">❓ 常見問題</div>
+  <div class="section-title">❓ {% trans "常見問題" %}</div>
   <div class="faq-list">
     <div class="faq-item">
       <div class="faq-q">
-        <span>持觀光簽（Visitor Visa）入台的外籍生也需辦居留證嗎？</span>
+        <span>持觀光簽或免簽入台，規費會不同嗎？</span>
         <span class="faq-arrow">▼</span>
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          觀光簽一般效期 60～90 天且不可申請居留證。正式就讀的外籍生必須持學生居留簽（Resident Visa）入台，
-          方可辦理 ARC。如持觀光簽入台，請立即聯繫學校國際事務處協助處理簽證轉換。
+          規費依兩個因素決定：<br><br>
+          <strong>① 申請年數</strong>：1年 NT$1,000 / 2年 NT$2,000 / 3年 NT$3,000（依系統操作手冊規定）<br>
+          <strong>② 入台簽證類型</strong>：以觀光停留簽證或免簽方式入台者，需在上述規費外額外繳交 NT$2,200。<br><br>
+          例如：持觀光簽入台、申請1年居留證 → NT$1,000 + NT$2,200 = <strong>NT$3,200</strong><br>
+          持學生居留簽入台、申請1年居留證 → <strong>NT$1,000</strong>（不加收）<br><br>
+          建議出發前向台灣駐外辦事處申請居留簽入台，可省下 NT$2,200。
         </div>
       </div>
     </div>
@@ -431,16 +453,16 @@
     </div>
   </div>
 
-  <div class="section-title">🔗 相關資源</div>
+  <div class="section-title">🔗 {% trans "相關資源" %}</div>
   <div class="doc-grid" style="margin-bottom:0;">
-    <div class="doc-card required">
+    <a class="doc-card required" href="https://www.immigration.gov.tw" target="_blank" rel="noopener">
       <div class="doc-icon">🏛</div>
       <div class="doc-info">
         <div class="doc-name">內政部移民署</div>
         <div class="doc-note">辦事處查詢、線上預約、進度查詢、申請書下載。</div>
-        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;">www.immigration.gov.tw</div>
+        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.immigration.gov.tw ↗</div>
       </div>
-    </div>
+    </a>
     <div class="doc-card required">
       <div class="doc-icon">🏫</div>
       <div class="doc-info">
@@ -448,14 +470,14 @@
         <div class="doc-note">在學證明申請、指定合作醫院確認、ARC 辦理協助。</div>
       </div>
     </div>
-    <div class="doc-card optional">
+    <a class="doc-card optional" href="https://www.nhi.gov.tw" target="_blank" rel="noopener">
       <div class="doc-icon">🏥</div>
       <div class="doc-info">
         <div class="doc-name">全民健康保險署</div>
         <div class="doc-note">領取 ARC 後，持 ARC 和學校加保公文辦理加保程序。</div>
-        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;">www.nhi.gov.tw</div>
+        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.nhi.gov.tw ↗</div>
       </div>
-    </div>
+    </a>
     <div class="doc-card optional">
       <div class="doc-icon">📞</div>
       <div class="doc-info">

@@ -1,0 +1,174 @@
+{# flows/templates/flows/guide_national_area.html — 各國專區 #}
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "各國專區" %} — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
+
+  .guide-hero {
+    background: linear-gradient(135deg, #1d4ed8 0%, #0e7490 100%);
+    color:#fff; padding:36px 44px 32px; border-radius:20px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .guide-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .guide-hero .hero-badge {
+    display:inline-block; background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.35); border-radius:99px;
+    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
+  }
+  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
+  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:520px; margin:0; }
+
+  .section-title {
+    font-size:17px; font-weight:900; color:var(--primary-dark);
+    margin:28px 0 14px; padding-bottom:10px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  .country-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(160px, 1fr));
+    gap:16px;
+    margin-bottom:32px;
+  }
+  .country-card {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:10px; padding:24px 12px; text-align:center;
+    background:#fff; border:1.5px solid var(--line); border-radius:16px;
+    text-decoration:none; color:var(--dark);
+    transition:border-color .15s, box-shadow .15s, transform .15s;
+  }
+  .country-card:hover {
+    border-color:var(--primary); box-shadow:0 4px 16px rgba(99,102,241,.12);
+    transform:translateY(-2px); color:var(--primary);
+  }
+  .country-flag { font-size:40px; line-height:1; }
+  .country-name { font-size:15px; font-weight:700; }
+  .country-arrow { font-size:11px; color:var(--muted); margin-top:-4px; }
+
+  .info-note {
+    background:#eff6ff; border:1.5px solid #bae6fd; border-radius:12px;
+    padding:14px 18px; font-size:14px; line-height:1.7; color:#0369a1;
+    margin-bottom:28px; display:flex; gap:12px; align-items:flex-start;
+  }
+  .info-note-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+
+  .back-link {
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:14px; color:var(--muted); text-decoration:none;
+    margin-bottom:24px; transition:color .15s;
+  }
+  .back-link:hover { color:var(--primary); }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="guide-wrap">
+  <a href="{% url 'guide_index' %}" class="back-link">← {% trans "返回資訊中心" %}</a>
+
+  <div class="guide-hero">
+    <div class="bg-text">🌏</div>
+    <div class="hero-badge">🌏 {% trans "各國專區" %}</div>
+    <h2>{% trans "各地區申請資訊" %}</h2>
+    <p>{% trans "依所在地選擇對應的申請說明，直接連結至海外聯招會官方網站。" %}</p>
+  </div>
+
+  <div class="info-note">
+    <span class="info-note-icon">ℹ️</span>
+    <span>{% trans "以下連結將跳轉至" %} <strong>{% trans "海外聯招會官方網站" %}</strong>{% trans "，請選擇你的所在地區查看對應的申請辦法與說明。" %}</span>
+  </div>
+
+  <div class="section-title">🗺️ {% trans "選擇你的地區" %}</div>
+
+  <div class="country-grid">
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/hong-kong-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇭🇰</span>
+      <span class="country-name">{% trans "香港" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/myanmar-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇲🇲</span>
+      <span class="country-name">{% trans "緬甸" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/macau-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇲🇴</span>
+      <span class="country-name">{% trans "澳門" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/malaysia-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇲🇾</span>
+      <span class="country-name">{% trans "馬來西亞" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/indonesia-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇮🇩</span>
+      <span class="country-name">{% trans "印尼" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/philippines-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇵🇭</span>
+      <span class="country-name">{% trans "菲律賓" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/korea-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇰🇷</span>
+      <span class="country-name">{% trans "韓國" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/america-and-canada-area/" target="_blank" rel="noopener">
+      <span class="country-flag">US,CA</span>
+      <span class="country-name">{% trans "美國／加拿大" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/thailand-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇹🇭</span>
+      <span class="country-name">{% trans "泰國" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/vietnam-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇻🇳</span>
+      <span class="country-name">{% trans "越南" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/japan-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇯🇵</span>
+      <span class="country-name">{% trans "日本" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/singapore-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇸🇬</span>
+      <span class="country-name">{% trans "新加坡" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/other-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🌍</span>
+      <span class="country-name">{% trans "其他地區" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/graduate-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🎓</span>
+      <span class="country-name">{% trans "研究所" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/in-taiwan-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🇹🇼</span>
+      <span class="country-name">{% trans "在臺僑生" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+    <a class="country-card" href="https://cmn-hant.overseas.ncnu.edu.tw/further-study-area/national-area/oversea-school-area/" target="_blank" rel="noopener">
+      <span class="country-flag">🏫</span>
+      <span class="country-name">{% trans "海外臺校" %}</span>
+      <span class="country-arrow">↗</span>
+    </a>
+  </div>
+
+</div>
+{% endblock %}

@@ -4,7 +4,13 @@
       "WebFetch(domain:cmn-hant.overseas.ncnu.edu.tw)",
       "Bash(python manage.py check)",
       "Bash(python -c \"import polib; print\\('ok'\\)\")",
-      "PowerShell(py manage.py showmigrations *)"
+      "Bash(python add_translations.py)",
+      "WebFetch(domain:www.immigration.gov.tw)",
+      "WebFetch(domain:coa.immigration.gov.tw)",
+      "Bash(python -c ' *)",
+      "Bash(python add_i18n.py)",
+      "Bash(del \"C:\\\\Users\\\\User\\\\Downloads\\\\studygo\\\\add_i18n.py\")",
+      "Bash(python -)"
     ]
   }
 }
