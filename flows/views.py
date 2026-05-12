@@ -49,6 +49,10 @@ def admissions_guide(request):
     return render(request, 'flows/admissions_guide.html')
 
 @login_required(login_url='/login/')
+def guide_national_area(request):
+    return render(request, 'flows/guide_national_area.html')
+
+@login_required(login_url='/login/')
 def guide_arc_exchange(request):
     return render(request, 'flows/guide_arc_exchange.html')
 

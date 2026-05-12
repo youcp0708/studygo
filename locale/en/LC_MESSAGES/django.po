@@ -1409,6 +1409,68 @@ msgstr "Two Ways to Enter Taiwan"
 msgid "搜尋指南..."
 msgstr "Search guides..."
 
+msgid "各國專區"
+msgstr "National Area"
+
+msgid "各地區申請資訊"
+msgstr "Application Info by Region"
+
+msgid "依所在地選擇對應的申請說明，直接連結至海外聯招會官方網站。"
+msgstr ""
+"Select your region to view the relevant application guide, linked directly "
+"to the official overseas admissions site."
+
+msgid "以下連結將跳轉至"
+msgstr "The links below will redirect you to the "
+
+msgid "海外聯招會官方網站"
+msgstr "Overseas Chinese Affairs Council Official Website"
+
+msgid "，請選擇你的所在地區查看對應的申請辦法與說明。"
+msgstr ""
+". Please select your region to view the corresponding application procedures"
+" and instructions."
+
+msgid "選擇你的地區"
+msgstr "Select Your Region"
+
+msgid "香港"
+msgstr "Hong Kong"
+
+msgid "澳門"
+msgstr "Macau"
+
+msgid "美國／加拿大"
+msgstr "USA / Canada"
+
+msgid "新加坡"
+msgstr "Singapore"
+
+msgid "其他地區"
+msgstr "Other Regions"
+
+msgid "研究所"
+msgstr "Graduate School"
+
+msgid "在臺僑生"
+msgstr "Overseas Chinese in Taiwan"
+
+msgid "海外臺校"
+msgstr "Overseas Taiwan Schools"
+
+msgid "入學申請"
+msgstr "Admissions"
+
+msgid "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等"
+msgstr ""
+"View application guides by region: Hong Kong, Malaysia, Thailand, and more"
+
+msgid "入學申請指南"
+msgstr "Admissions Guide"
+
+msgid "申請資格、時程、所需文件與注意事項整理"
+msgstr "Eligibility, timeline, required documents, and important notes"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Back to Dashboard"
 

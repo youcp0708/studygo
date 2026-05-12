@@ -1413,6 +1413,68 @@ msgstr "Dua Cara Masuk ke Taiwan"
 msgid "搜尋指南..."
 msgstr "Cari panduan..."
 
+msgid "各國專區"
+msgstr "Area Nasional"
+
+msgid "各地區申請資訊"
+msgstr "Info Pendaftaran per Wilayah"
+
+msgid "依所在地選擇對應的申請說明，直接連結至海外聯招會官方網站。"
+msgstr ""
+"Pilih wilayah Anda untuk melihat panduan pendaftaran yang sesuai, terhubung "
+"langsung ke situs resmi."
+
+msgid "以下連結將跳轉至"
+msgstr "Tautan berikut akan mengarahkan ke "
+
+msgid "海外聯招會官方網站"
+msgstr "Website Resmi Dewan Urusan Tionghoa Perantauan"
+
+msgid "，請選擇你的所在地區查看對應的申請辦法與說明。"
+msgstr ""
+". Silakan pilih wilayah Anda untuk melihat prosedur dan instruksi "
+"pendaftaran yang sesuai."
+
+msgid "選擇你的地區"
+msgstr "Pilih Wilayah Anda"
+
+msgid "香港"
+msgstr "Hong Kong"
+
+msgid "澳門"
+msgstr "Makau"
+
+msgid "美國／加拿大"
+msgstr "Amerika / Kanada"
+
+msgid "新加坡"
+msgstr "Singapura"
+
+msgid "其他地區"
+msgstr "Wilayah Lainnya"
+
+msgid "研究所"
+msgstr "Program Pascasarjana"
+
+msgid "在臺僑生"
+msgstr "Diaspora Tionghoa di Taiwan"
+
+msgid "海外臺校"
+msgstr "Sekolah Taiwan di Luar Negeri"
+
+msgid "入學申請"
+msgstr "Pendaftaran Masuk"
+
+msgid "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等"
+msgstr ""
+"Lihat panduan pendaftaran per wilayah: Hong Kong, Malaysia, Thailand, dll."
+
+msgid "入學申請指南"
+msgstr "Panduan Penerimaan"
+
+msgid "申請資格、時程、所需文件與注意事項整理"
+msgstr "Kelayakan, jadwal, dokumen yang diperlukan, dan catatan penting"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Kembali ke Dasbor"
 

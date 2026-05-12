@@ -111,6 +111,24 @@
     <p>{% trans "居留證辦理・住宿・交通等常用說明" %}</p>
   </div>
 
+  <!-- 入學申請 -->
+  <div class="gi-section-label">🌏 {% trans "入學申請" %}</div>
+  <div class="gi-grid">
+
+    <a href="{% url 'guide_national_area' %}" class="gi-card">
+      <div class="gi-icon">🌏</div>
+      <div class="gi-title">{% trans "各國專區" %}</div>
+      <div class="gi-desc">{% trans "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等" %}</div>
+    </a>
+
+    <a href="{% url 'admissions_guide' %}" class="gi-card">
+      <div class="gi-icon">📋</div>
+      <div class="gi-title">{% trans "入學申請指南" %}</div>
+      <div class="gi-desc">{% trans "申請資格、時程、所需文件與注意事項整理" %}</div>
+    </a>
+
+  </div>
+
   <!-- 證件・住宿・交通 -->
   <div class="gi-section-label">🪪 {% trans "證件・住宿・交通" %}</div>
   <div class="gi-grid">
