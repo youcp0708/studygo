@@ -1410,6 +1410,9 @@ msgstr "Masa Berlaku Izin Tinggal"
 msgid "兩種入台方式"
 msgstr "Dua Cara Masuk ke Taiwan"
 
+msgid "搜尋指南..."
+msgstr "Cari panduan..."
+
 #~ msgid "回到儀表板"
 #~ msgstr "Kembali ke Dasbor"
 

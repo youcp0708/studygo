@@ -1406,6 +1406,9 @@ msgstr "Residency Permit Validity"
 msgid "兩種入台方式"
 msgstr "Two Ways to Enter Taiwan"
 
+msgid "搜尋指南..."
+msgstr "Search guides..."
+
 #~ msgid "回到儀表板"
 #~ msgstr "Back to Dashboard"
 
