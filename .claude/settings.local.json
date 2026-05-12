@@ -2,6 +2,7 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:cmn-hant.overseas.ncnu.edu.tw)",
+      "PowerShell(py manage.py showmigrations *)",
       "Bash(python manage.py check)",
       "Bash(python -c \"import polib; print\\('ok'\\)\")",
       "Bash(python add_translations.py)",
