@@ -177,6 +177,9 @@ def init_student_tasks_view(request):
         if task.nationality and task.nationality != profile.nationality:
             skipped_count += 1
             continue
+        if task.university and task.university != profile.university:
+            skipped_count += 1
+            continue
         if task.admission_status and task.admission_status != profile.admission_status:
             skipped_count += 1
             continue
