@@ -1,7 +1,7 @@
 {# flow/templates/flow/guide_arc_foreign.html — 外籍生辦理居留證服務 #}
 {% extends "base.html" %}
 {% load static i18n %}
-{% block title %}{% trans "外籍生辦理居留證服務" %} — StudyGo Taiwan{% endblock %}
+{% block title %}{% trans "外籍生辦理居留證（ARC）" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -30,7 +30,7 @@
   }
   .guide-hero h2 { font-size:28px; font-weight:900; margin-bottom:10px; }
   .guide-hero p  { opacity:.88; font-size:15px; line-height:1.7; max-width:560px; }
-  .hero-meta { display:flex; gap:20px; flex-wrap:wrap; margin-top:22px; }
+  .hero-meta { display:flex; gap:12px; flex-wrap:wrap; margin-top:22px; }
   .hero-meta-item {
     display:flex; align-items:center; gap:6px; font-size:13px; opacity:.9;
     background:rgba(255,255,255,.12); padding:6px 14px; border-radius:99px;
@@ -38,7 +38,7 @@
 
   .alert {
     border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
-    margin-bottom:24px; display:flex; gap:12px; align-items:flex-start;
+    margin-bottom:20px; display:flex; gap:12px; align-items:flex-start;
   }
   .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
   .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
@@ -55,69 +55,144 @@
     display:flex; align-items:center; gap:8px;
   }
 
-  .timeline { position:relative; padding-left:0; list-style:none; margin-bottom:36px; }
-  .timeline-item { display:flex; gap:20px; margin-bottom:24px; position:relative; }
-  .timeline-item:not(:last-child)::before {
-    content:''; position:absolute; left:23px; top:48px; bottom:-24px;
-    width:2px; background:var(--primary-soft);
-  }
-  .step-num {
-    width:48px; height:48px; border-radius:50%; background:var(--primary);
-    color:#fff; font-size:18px; font-weight:900;
-    display:flex; align-items:center; justify-content:center;
-    flex-shrink:0; position:relative; z-index:1;
-  }
-  .step-num.done { background:var(--success); }
-  .step-body { flex:1; padding-top:6px; }
-  .step-title { font-size:16px; font-weight:800; color:var(--dark); margin-bottom:4px; }
-  .step-desc  { font-size:14px; color:var(--muted); line-height:1.7; }
-  .step-tag {
-    display:inline-block; margin-top:6px; padding:2px 10px;
-    border-radius:99px; font-size:11px; font-weight:700;
-  }
-  .tag-time  { background:var(--warning-soft); color:var(--warning); }
-  .tag-place { background:var(--blue-soft);    color:#0369a1; }
-  .tag-fee   { background:var(--danger-soft);  color:var(--danger); }
-  .tag-tip   { background:var(--success-soft); color:var(--success); }
-
-  .doc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-bottom:36px; }
-  .doc-card {
-    background:#fff; border:1.5px solid var(--border); border-radius:14px;
-    padding:16px 18px; display:flex; gap:14px; align-items:flex-start;
-  }
-  .doc-card.required { border-left:4px solid var(--primary); }
-  .doc-card.optional { border-left:4px solid var(--muted); opacity:.8; }
-  .doc-icon { font-size:26px; flex-shrink:0; }
-  .doc-info { flex:1; }
-  .doc-name { font-size:14px; font-weight:800; color:var(--dark); margin-bottom:3px; }
-  .doc-note { font-size:12px; color:var(--muted); line-height:1.5; }
-  .doc-badge { font-size:10px; font-weight:700; padding:1px 8px; border-radius:99px; margin-top:6px; display:inline-block; }
-  .badge-req { background:var(--primary-soft); color:var(--primary-dark); }
-  .badge-opt { background:var(--bg); color:var(--muted); }
-  a.doc-card { text-decoration:none; color:inherit; transition:border-color .2s, box-shadow .2s, transform .15s; }
-  a.doc-card:hover { border-color:var(--primary); box-shadow:0 4px 14px rgba(0,0,0,.09); transform:translateY(-2px); }
-
-  .faq-list { margin-bottom:36px; }
-  .faq-item { background:#fff; border:1.5px solid var(--border); border-radius:14px; margin-bottom:10px; overflow:hidden; }
-  .faq-q {
-    padding:16px 20px; font-size:14px; font-weight:800; color:var(--dark);
-    cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none;
-  }
-  .faq-q:hover { background:var(--bg); }
-  .faq-arrow { transition:transform .25s; font-size:12px; color:var(--muted); }
-  .faq-item.open .faq-arrow { transform:rotate(180deg); }
-  .faq-a { max-height:0; overflow:hidden; transition:max-height .3s ease; }
-  .faq-a-inner {
-    padding:0 20px 16px; font-size:14px; color:var(--muted); line-height:1.8;
-    border-top:1px solid var(--border); padding-top:14px;
-  }
-
+  /* ── Info Cards ── */
   .info-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-bottom:36px; }
   .info-card { background:#fff; border:1.5px solid var(--border); border-radius:14px; padding:20px; text-align:center; }
   .info-card .i-icon  { font-size:28px; margin-bottom:8px; }
   .info-card .i-label { font-size:12px; color:var(--muted); font-weight:700; margin-bottom:4px; }
   .info-card .i-val   { font-size:20px; font-weight:900; color:var(--primary-dark); }
-  .info-card .i-sub   { font-size:12px; color:var(--muted); margin-top:4px; }
+  .info-card .i-sub   { font-size:12px; color:var(--muted); margin-top:4px; line-height:1.5; }
+
+  /* ── Category Select Cards ── */
+  .cat-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:14px;
+    margin-bottom:24px;
+  }
+  .cat-btn {
+    background:#fff; border:2px solid var(--line); border-radius:16px;
+    padding:20px 16px; cursor:pointer; text-align:center;
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+    transition:border-color .15s, box-shadow .15s, transform .1s;
+    user-select:none;
+  }
+  .cat-btn:hover {
+    border-color:var(--primary); box-shadow:0 4px 14px rgba(99,102,241,.12);
+    transform:translateY(-2px);
+  }
+  .cat-btn.active {
+    border-color:var(--primary); background:var(--primary-soft);
+    box-shadow:0 4px 14px rgba(99,102,241,.15);
+  }
+  .cat-btn-icon  { font-size:32px; line-height:1; }
+  .cat-btn-label { font-size:14px; font-weight:800; color:var(--primary-dark); }
+  .cat-btn-sub   { font-size:11px; color:var(--muted); }
+
+  /* ── Document Panel ── */
+  .doc-panel { display:none; animation:fadeIn .2s ease; }
+  .doc-panel.active { display:block; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(6px);} to{opacity:1;transform:none;} }
+
+  .doc-list { list-style:none; padding:0; margin:0 0 8px; }
+  .doc-list li {
+    display:flex; gap:12px; align-items:flex-start;
+    padding:12px 16px; border-bottom:1px solid var(--line);
+    font-size:14px; line-height:1.6;
+  }
+  .doc-list li:last-child { border-bottom:none; }
+  .doc-list li .doc-num {
+    min-width:24px; height:24px; border-radius:50%;
+    background:var(--primary); color:#fff;
+    font-size:12px; font-weight:900;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; margin-top:1px;
+  }
+  .doc-list li .doc-num.optional {
+    background:var(--line); color:var(--muted);
+  }
+  .doc-text { flex:1; }
+  .doc-title { font-weight:800; color:var(--dark); }
+  .doc-note  { font-size:12px; color:var(--muted); margin-top:2px; }
+  .doc-badge {
+    display:inline-block; font-size:10px; font-weight:700;
+    padding:1px 8px; border-radius:99px; margin-top:4px;
+  }
+  .badge-req { background:var(--primary-soft); color:var(--primary-dark); }
+  .badge-opt { background:var(--bg); color:var(--muted); }
+  .badge-fee { background:#fef9c3; color:#92400e; }
+
+  .doc-panel-box {
+    background:#fff; border:1.5px solid var(--line); border-radius:16px;
+    overflow:hidden; margin-bottom:28px;
+  }
+  .doc-panel-head {
+    background:var(--primary); color:#fff;
+    padding:14px 20px; display:flex; align-items:center; gap:10px;
+    font-size:15px; font-weight:900;
+  }
+  .doc-panel-head-icon { font-size:22px; }
+
+  /* ── Notice List ── */
+  .notice-box {
+    background:#fff; border:1.5px solid var(--line); border-radius:16px;
+    overflow:hidden; margin-bottom:28px;
+  }
+  .notice-box-head {
+    background:var(--warning-soft); border-bottom:1.5px solid #fde68a;
+    padding:12px 20px; font-size:13px; font-weight:800; color:var(--warning);
+    display:flex; align-items:center; gap:8px;
+  }
+  .notice-list { list-style:none; padding:0; margin:0; }
+  .notice-list li {
+    padding:12px 20px; border-bottom:1px solid var(--line);
+    font-size:13px; line-height:1.8; color:var(--muted);
+    display:flex; gap:12px; align-items:flex-start;
+  }
+  .notice-list li:last-child { border-bottom:none; }
+  .notice-num {
+    min-width:22px; height:22px; border-radius:50%;
+    background:var(--warning-soft); color:var(--warning);
+    font-size:11px; font-weight:900;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; margin-top:2px;
+  }
+
+  /* ── Downloads ── */
+  .dl-section { margin-bottom:28px; }
+  .dl-row {
+    background:#fff; border:1.5px solid var(--line); border-radius:14px;
+    padding:14px 18px; display:flex; align-items:center; gap:14px;
+    margin-bottom:10px;
+  }
+  .dl-icon { font-size:24px; flex-shrink:0; }
+  .dl-name { font-size:14px; font-weight:800; color:var(--dark); flex:1; }
+  .dl-links { display:flex; gap:8px; flex-wrap:wrap; }
+  .dl-btn {
+    display:inline-flex; align-items:center; gap:5px;
+    padding:5px 12px; border-radius:99px; font-size:12px; font-weight:700;
+    text-decoration:none; transition:opacity .15s;
+  }
+  .dl-btn:hover { opacity:.8; }
+  .dl-btn.pdf  { background:#fee2e2; color:#b91c1c; }
+  .dl-btn.docx { background:#dbeafe; color:#1d4ed8; }
+  .dl-btn.doc  { background:#dbeafe; color:#1d4ed8; }
+  .dl-btn.odt  { background:#d1fae5; color:#065f46; }
+
+  /* ── Resource cards ── */
+  .res-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-bottom:0; }
+  .res-card {
+    background:#fff; border:1.5px solid var(--border); border-radius:14px;
+    padding:16px 18px; display:flex; gap:14px; align-items:flex-start;
+    text-decoration:none; color:inherit;
+    transition:border-color .2s, box-shadow .2s, transform .15s;
+  }
+  .res-card:hover { border-color:var(--primary); box-shadow:0 4px 14px rgba(0,0,0,.09); transform:translateY(-2px); }
+  .res-icon { font-size:26px; flex-shrink:0; }
+  .res-info { flex:1; }
+  .res-name { font-size:14px; font-weight:800; color:var(--dark); margin-bottom:3px; }
+  .res-note { font-size:12px; color:var(--muted); line-height:1.5; }
+  .res-url  { font-size:11px; font-family:monospace; color:var(--primary); margin-top:4px; }
 
   .back-link {
     display:inline-flex; align-items:center; gap:6px; color:var(--primary);
@@ -125,6 +200,11 @@
     padding:6px 0; cursor:pointer; text-decoration:none;
   }
   .back-link:hover { color:var(--primary-dark); }
+
+  @media (max-width:640px) {
+    .guide-hero { padding:28px 22px 24px; }
+    .guide-hero h2 { font-size:22px; }
+  }
 </style>
 {% endblock %}
 
@@ -133,357 +213,471 @@
 
   <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
+  <!-- Hero -->
   <div class="guide-hero">
     <div class="bg-text">ARC</div>
-    <div class="hero-badge">外籍生專屬服務</div>
+    <div class="hero-badge">🪪 外籍生專屬</div>
     <h2>🪪 {% trans "辦理外僑居留證（ARC）" %}</h2>
     <p>
       持外國護照以正式學籍入台就讀的外籍生，須在抵台後 <strong>15 天內</strong>
       向內政部移民署辦理外僑居留證（ARC），方能在台合法居留及完成就學程序。
     </p>
     <div class="hero-meta">
-      <div class="hero-meta-item">⏱ 辦理期限：抵台後 15 天內</div>
-      <div class="hero-meta-item">💰 規費：1年 $1,000 / 2年 $2,000 / 3年 $3,000</div>
-      <div class="hero-meta-item">💰 觀光簽／免簽入台：另加 NT$2,200</div>
-      <div class="hero-meta-item">📍 地點：移民署各地服務站</div>
+      <div class="hero-meta-item">⏱ 抵台後 15 天內辦理</div>
+      <div class="hero-meta-item">💳 規費 NT$1,000 起</div>
+      <div class="hero-meta-item">⏳ 核發約 10 個工作天</div>
+      <div class="hero-meta-item">📍 移民署各地服務站</div>
     </div>
   </div>
 
-  <div class="alert alert-warning">
-    <div class="alert-icon">⚠️</div>
-    <div>
-      <strong>請注意：</strong>
-      超過 15 天未辦理將依法被處罰鍰。ARC 是後續辦理加保、開戶、電話等必要身份證明，
-      請抵台後儘快辦理。
-    </div>
-  </div>
-  <div class="alert alert-warning">
-    <div class="alert-icon">✈️</div>
-    <div>
-      <strong>申請審核中請勿出境：</strong>
-      申請送件後若本人出境台灣，申請案將自動作廢，需重新申請。等待 ARC 期間請避免出境。
-    </div>
-  </div>
-
+  <!-- 辦理重點一覽 -->
   <div class="section-title">📊 {% trans "辦理重點一覽" %}</div>
   <div class="info-row">
     <div class="info-card">
       <div class="i-icon">📅</div>
-      <div class="i-label">{% trans "辦理期限" %}</div>
+      <div class="i-label">辦理期限</div>
       <div class="i-val">15 天</div>
       <div class="i-sub">抵台後起算</div>
     </div>
     <div class="info-card">
       <div class="i-icon">💳</div>
-      <div class="i-label">{% trans "申請規費" %}</div>
+      <div class="i-label">首次申請規費</div>
       <div class="i-val">NT$1,000 起</div>
-      <div class="i-sub">1年 $1,000 / 2年 $2,000 / 3年 $3,000<br>觀光簽／免簽入台者另加 NT$2,200</div>
+      <div class="i-sub">1年$1,000／2年$2,000／3年$3,000<br>觀光簽或免簽入台另加 NT$2,200</div>
     </div>
     <div class="info-card">
       <div class="i-icon">📄</div>
-      <div class="i-label">{% trans "效期時間" %}</div>
+      <div class="i-label">效期</div>
       <div class="i-val">1–3 年</div>
       <div class="i-sub">依申請年數核發</div>
     </div>
     <div class="info-card">
       <div class="i-icon">⏳</div>
-      <div class="i-label">{% trans "核發時間" %}</div>
+      <div class="i-label">核發時間</div>
       <div class="i-val">10 個工作天</div>
-      <div class="i-sub">不含退補件及面談；預約可加快</div>
+      <div class="i-sub">不含退補件及面談</div>
     </div>
   </div>
 
-  <div class="section-title">📋 {% trans "申請應備文件" %}</div>
-  <div class="alert alert-info">
-    <div class="alert-icon">ℹ️</div>
-    <div>
-      以下為一般應備文件，各移民署辦事處可能略有差異。
-      建議事前電洽當地辦事處或至移民署官網確認最新清單。
+  <!-- 申請應備文件 — 4 categories -->
+  <div class="section-title">📋 申請應備文件</div>
+
+  <div class="cat-grid">
+    <div class="cat-btn active" data-panel="initial">
+      <div class="cat-btn-icon">🆕</div>
+      <div class="cat-btn-label">首次申請居留</div>
+      <div class="cat-btn-sub">剛入台的外籍生</div>
+    </div>
+    <div class="cat-btn" data-panel="extend">
+      <div class="cat-btn-icon">🔄</div>
+      <div class="cat-btn-label">居留延期</div>
+      <div class="cat-btn-sub">ARC 到期前續辦</div>
+    </div>
+    <div class="cat-btn" data-panel="change">
+      <div class="cat-btn-icon">🔀</div>
+      <div class="cat-btn-label">變更居留事由</div>
+      <div class="cat-btn-sub">更換居留原因</div>
+    </div>
+    <div class="cat-btn" data-panel="replace">
+      <div class="cat-btn-icon">🔁</div>
+      <div class="cat-btn-label">補換發</div>
+      <div class="cat-btn-sub">遺失或毀損補發</div>
     </div>
   </div>
-  <div class="doc-grid">
-    <div class="doc-card required">
-      <div class="doc-icon">📘</div>
-      <div class="doc-info">
-        <div class="doc-name">外國護照</div>
-        <div class="doc-note">正本及影本各 1 份，效期須超過居留期間 6 個月以上。</div>
-        <span class="doc-badge badge-req">必要</span>
+
+  <!-- Panel 1: 首次申請 -->
+  <div class="doc-panel active" id="panel-initial">
+    <div class="doc-panel-box">
+      <div class="doc-panel-head">
+        <span class="doc-panel-head-icon">🆕</span>
+        首次申請居留 — 應備文件
+      </div>
+      <ul class="doc-list">
+        <li>
+          <div class="doc-num">1</div>
+          <div class="doc-text">
+            <div class="doc-title">外國人居（停）留案件申請書</div>
+            <div class="doc-note">可至移民署官網下載或現場索取，請事先填妥。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">2</div>
+          <div class="doc-text">
+            <div class="doc-title">近期彩色照片 2 張</div>
+            <div class="doc-note">2 年內拍攝，2 吋白底（寬 3.5 cm × 高 4.5 cm）。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">3</div>
+          <div class="doc-text">
+            <div class="doc-title">有效護照及居留簽證</div>
+            <div class="doc-note">正本（審核後當場歸還）。護照效期須超過居留期限 6 個月以上。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">4</div>
+          <div class="doc-text">
+            <div class="doc-title">居留事由證明文件 — 在學證明書 / 清冊及通知書</div>
+            <div class="doc-note">由就讀學校國際事務處（OIA）出具，含入學日期及就讀系所，正本及影本各 1 份。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">5</div>
+          <div class="doc-text">
+            <div class="doc-title">健康檢查合格證明</div>
+            <div class="doc-note">於台灣認可醫院完成，<strong>3 個月內</strong>有效。含胸部 X 光及肺結核篩檢。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">6</div>
+          <div class="doc-text">
+            <div class="doc-title">本國警察刑事紀錄證明</div>
+            <div class="doc-note">由母國警察或司法機關出具，<strong>1 年內</strong>有效。外文文件須經我國駐外館處驗證或在台公證。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">7</div>
+          <div class="doc-text">
+            <div class="doc-title">住居所證明文件</div>
+            <div class="doc-note">宿舍住宿證明或租屋合約書。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num optional">8</div>
+          <div class="doc-text">
+            <div class="doc-title">財力證明</div>
+            <div class="doc-note">銀行存款證明或獎學金核定文件，部分辦事處要求提供。</div>
+            <span class="doc-badge badge-opt">視情況</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num optional">—</div>
+          <div class="doc-text">
+            <div class="doc-title">規費</div>
+            <div class="doc-note">1年 NT$1,000 / 2年 NT$2,000 / 3年 NT$3,000<br>以觀光簽或免簽入台者，另加 NT$2,200。</div>
+            <span class="doc-badge badge-fee">規費</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Panel 2: 居留延期 -->
+  <div class="doc-panel" id="panel-extend">
+    <div class="doc-panel-box">
+      <div class="doc-panel-head">
+        <span class="doc-panel-head-icon">🔄</span>
+        居留延期 — 應備文件
+      </div>
+      <ul class="doc-list">
+        <li>
+          <div class="doc-num">1</div>
+          <div class="doc-text">
+            <div class="doc-title">外國人居（停）留案件申請書</div>
+            <div class="doc-note">請事先填妥，移民署官網可下載。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">2</div>
+          <div class="doc-text">
+            <div class="doc-title">近期彩色照片 2 張</div>
+            <div class="doc-note">2 年內拍攝，2 吋白底。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">3</div>
+          <div class="doc-text">
+            <div class="doc-title">有效護照</div>
+            <div class="doc-note">正本（審核後歸還）。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">4</div>
+          <div class="doc-text">
+            <div class="doc-title">居留證正本及影本</div>
+            <div class="doc-note">現有的 ARC 卡，正本及影本各 1 份。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">5</div>
+          <div class="doc-text">
+            <div class="doc-title">在學證明書（最新）</div>
+            <div class="doc-note">由學校 OIA 出具，證明居留事由（就學）仍持續存在。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num optional">6</div>
+          <div class="doc-text">
+            <div class="doc-title">住居所證明文件</div>
+            <div class="doc-note">地址未變更者免附。</div>
+            <span class="doc-badge badge-opt">地址變更才需要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num optional">—</div>
+          <div class="doc-text">
+            <div class="doc-title">規費</div>
+            <div class="doc-note">延期 NT$500。<br>請於 ARC 到期前 <strong>30 天內</strong>辦理。</div>
+            <span class="doc-badge badge-fee">規費</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Panel 3: 變更居留事由 -->
+  <div class="doc-panel" id="panel-change">
+    <div class="doc-panel-box">
+      <div class="doc-panel-head">
+        <span class="doc-panel-head-icon">🔀</span>
+        變更居留事由 — 應備文件
+      </div>
+      <ul class="doc-list">
+        <li>
+          <div class="doc-num">1</div>
+          <div class="doc-text">
+            <div class="doc-title">外國人居（停）留案件申請書</div>
+            <div class="doc-note">請事先填妥。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">2</div>
+          <div class="doc-text">
+            <div class="doc-title">近期彩色照片 2 張</div>
+            <div class="doc-note">2 年內拍攝，2 吋白底。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">3</div>
+          <div class="doc-text">
+            <div class="doc-title">有效護照及現有居留證</div>
+            <div class="doc-note">護照及居留證正本及影本各 1 份。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">4</div>
+          <div class="doc-text">
+            <div class="doc-title">新居留事由證明文件</div>
+            <div class="doc-note">例如：從就學改為工作，需提供工作許可文件及聘僱合約。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num optional">5</div>
+          <div class="doc-text">
+            <div class="doc-title">住居所證明文件</div>
+            <div class="doc-note">地址未變更者免附。</div>
+            <span class="doc-badge badge-opt">地址變更才需要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num optional">—</div>
+          <div class="doc-text">
+            <div class="doc-title">規費</div>
+            <div class="doc-note">變更事由 NT$500。</div>
+            <span class="doc-badge badge-fee">規費</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Panel 4: 補換發 -->
+  <div class="doc-panel" id="panel-replace">
+    <div class="doc-panel-box">
+      <div class="doc-panel-head">
+        <span class="doc-panel-head-icon">🔁</span>
+        補換發（遺失 / 毀損）— 應備文件
+      </div>
+      <ul class="doc-list">
+        <li>
+          <div class="doc-num">1</div>
+          <div class="doc-text">
+            <div class="doc-title">外國人居（停）留案件申請書</div>
+            <div class="doc-note">請事先填妥。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">2</div>
+          <div class="doc-text">
+            <div class="doc-title">近期彩色照片 2 張</div>
+            <div class="doc-note">2 年內拍攝，2 吋白底。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">3</div>
+          <div class="doc-text">
+            <div class="doc-title">有效護照</div>
+            <div class="doc-note">正本及影本各 1 份。</div>
+            <span class="doc-badge badge-req">必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">4</div>
+          <div class="doc-text">
+            <div class="doc-title">遺失：警察機關報案遺失報告書或具結書</div>
+            <div class="doc-note">ARC 遺失時，請先至警察局報案，取得報案文件。</div>
+            <span class="doc-badge badge-req">遺失時必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num">5</div>
+          <div class="doc-text">
+            <div class="doc-title">毀損：被損壞之居留證正本</div>
+            <div class="doc-note">ARC 卡片毀損時，需攜帶損壞的原卡辦理換發。</div>
+            <span class="doc-badge badge-req">毀損時必要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num optional">6</div>
+          <div class="doc-text">
+            <div class="doc-title">住居所證明文件</div>
+            <div class="doc-note">地址未變更者免附。</div>
+            <span class="doc-badge badge-opt">地址變更才需要</span>
+          </div>
+        </li>
+        <li>
+          <div class="doc-num optional">—</div>
+          <div class="doc-text">
+            <div class="doc-title">規費</div>
+            <div class="doc-note">補換發 NT$500。</div>
+            <span class="doc-badge badge-fee">規費</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 申請須知 -->
+  <div class="section-title">📋 申請須知 / 注意事項</div>
+  <div class="notice-box">
+    <div class="notice-box-head">⚠️ 以下為內政部移民署官方申請須知（節錄自官方網站）</div>
+    <ul class="notice-list">
+      <li>
+        <div class="notice-num">一</div>
+        <div>在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駐外館處驗證，並檢附經駐外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。</div>
+      </li>
+      <li>
+        <div class="notice-num">二</div>
+        <div>居留一定期間之計算方式：自定居申請日往前推算，在臺連續居留滿一年（一年內得出境三十日，出境次數不予限制）或連續居留滿二年且每年在臺居住二百七十日以上。</div>
+      </li>
+      <li>
+        <div class="notice-num">三</div>
+        <div>經許可居留，在臺灣地區居留一定期間，仍具備原居留條件者（親屬關係因結婚或收養發生者，應存續三年以上。但婚姻關係存續期間已生產子女者，不在此限），得申請在臺灣地區定居。</div>
+      </li>
+      <li>
+        <div class="notice-num">四</div>
+        <div>經中央目的事業主管機關核准來臺就學者畢業後（HF168），依第十六條第一項第八款規定經許可居留連續滿五年，每年在臺灣地區居住一百八十三日以上，且最近一年於臺灣地區平均每月收入達中央勞動主管機關公告基本工資二倍以上者，得申請在臺灣地區定居。</div>
+      </li>
+      <li>
+        <div class="notice-num">五</div>
+        <div>臺灣地區居留證有效期間屆滿前三十日內，原申請居留原因仍繼續存在者，得申請延期，每次不得逾二年；學生申請畢業延期居留者，自畢業當日起算六個月，延期居留期間屆滿前，得再申請延期一次，總延期居留期間最長為一年。（應備文件：1.申請書、2.臺灣地區居留證、3.其他相關證明文件）</div>
+      </li>
+      <li>
+        <div class="notice-num">六</div>
+        <div>依外國人才專法第二十四條規定經許可居留，原申請居留原因仍繼續存在者，得申請延期居留：1.準用同法第八條規定者：每次最長為五年。2.準用同法第五條至第七條、第九條及第十條規定者：每次最長為三年。</div>
+      </li>
+      <li>
+        <div class="notice-num">七</div>
+        <div>曾逾停留期限超過三十日未滿一年者，不予許可期間自其出境之日起算一年；逾期停留一年以上未滿二年者，起算二年；逾期停留二年以上者，起算三年。</div>
+      </li>
+      <li>
+        <div class="notice-num">八</div>
+        <div>申請案件資料不符或欠缺者，應於書面通知送達之翌日起三個月內補正；未於規定期間補正或補正仍不合規定者，駁回其申請。</div>
+      </li>
+      <li>
+        <div class="notice-num">九</div>
+        <div>香港澳門居民以依親事由及其隨同申請之未成年子女申請在臺灣地區居留，其親屬關係因收養發生者，應存續二年以上。</div>
+      </li>
+      <li>
+        <div class="notice-num">十</div>
+        <div>港澳居民逾期居留未滿三十日，原申請居留原因仍繼續存在者，經依相關規定處罰、繳清罰鍰後，得向本署重新申請居留；港澳居民未於居留期間屆滿前經許可延期居留，且逾期居留三十日以上者，應繳清罰款，並申請出境證出境。</div>
+      </li>
+      <li>
+        <div class="notice-num">十一</div>
+        <div>港澳居民依外國人才專法第二十四條規定準用同法第九條規定以網路申請平臺申請就業金卡者，相關規定請參考「外國特定專業人才申請就業金卡送件須知」。</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 申請須知下載 -->
+  <div class="section-title">📥 申請須知 &amp; 相關文件下載</div>
+  <div class="dl-section">
+    <div class="dl-row">
+      <div class="dl-icon">📄</div>
+      <div class="dl-name">0902－外國人申請居留及延期居留或變更居留原因送件須知（20260116）</div>
+      <div class="dl-links">
+        <a class="dl-btn pdf" href="https://www.immigration.gov.tw/media/117097/0902-%E5%A4%96%E5%9C%8B%E4%BA%BA%E7%94%B3%E8%AB%8B%E5%B1%85%E7%95%99%E5%8F%8A%E5%BB%B6%E6%9C%9F%E5%B1%85%E7%95%99%E6%88%96%E8%AE%8A%E6%9B%B4%E5%B1%85%E7%95%99%E5%8E%9F%E5%9B%A0%E9%80%81%E4%BB%B6%E9%A0%88%E7%9F%A5%E4%BF%AE%E6%AD%A3%E8%A6%8F%E5%AE%9A-20260116.pdf" target="_blank" rel="noopener">⬇ PDF</a>
       </div>
     </div>
-    <div class="doc-card required">
-      <div class="doc-icon">📄</div>
-      <div class="doc-info">
-        <div class="doc-name">學生居留簽證（Resident Visa）</div>
-        <div class="doc-note">入台時持有的學生居留簽證（非觀光簽），影本 1 份。</div>
-        <span class="doc-badge badge-req">必要</span>
+    <div class="dl-row">
+      <div class="dl-icon">📝</div>
+      <div class="dl-name">外國人居（停）留案件申請表（20220801 版）</div>
+      <div class="dl-links">
+        <a class="dl-btn docx" href="https://www.immigration.gov.tw/media/109405/%E5%A4%96%E5%9C%8B%E4%BA%BA%E5%B1%85-%E5%81%9C-%E7%95%99%E6%A1%88%E4%BB%B6%E7%94%B3%E8%AB%8B%E8%A1%A8_20220801%E7%89%88.docx" target="_blank" rel="noopener">⬇ DOCX</a>
+        <a class="dl-btn pdf"  href="https://www.immigration.gov.tw/media/109406/%E5%A4%96%E5%9C%8B%E4%BA%BA%E5%B1%85-%E5%81%9C-%E7%95%99%E6%A1%88%E4%BB%B6%E7%94%B3%E8%AB%8B%E8%A1%A8_20220801%E7%89%88.pdf"  target="_blank" rel="noopener">⬇ PDF</a>
       </div>
     </div>
-    <div class="doc-card required">
-      <div class="doc-icon">📋</div>
-      <div class="doc-info">
-        <div class="doc-name">在學證明書 / 清冊及通知書</div>
-        <div class="doc-note">由就讀學校國際事務處出具，需含入學日期及就讀系所，正本及影本。</div>
-        <span class="doc-badge badge-req">必要</span>
-      </div>
-    </div>
-    <div class="doc-card required">
-      <div class="doc-icon">🏥</div>
-      <div class="doc-info">
-        <div class="doc-name">健康檢查合格證明</div>
-        <div class="doc-note">於台灣認可醫院完成，<strong>3 個月內</strong>有效。含胸部 X 光及肺結核篩檢。</div>
-        <span class="doc-badge badge-req">必要</span>
-      </div>
-    </div>
-    <div class="doc-card required">
-      <div class="doc-icon">📜</div>
-      <div class="doc-info">
-        <div class="doc-name">本國警察紀錄證明（刑事紀錄）</div>
-        <div class="doc-note">由母國警察或司法機關出具，<strong>1 年內</strong>有效。外文文件須經我國駐外館處驗證或在台公證。</div>
-        <span class="doc-badge badge-req">必要</span>
-      </div>
-    </div>
-    <div class="doc-card required">
-      <div class="doc-icon">📸</div>
-      <div class="doc-info">
-        <div class="doc-name">照片 2 張</div>
-        <div class="doc-note">近 6 個月內拍攝之 2 吋白底彩色照片（寬 3.5 cm × 高 4.5 cm）。</div>
-        <span class="doc-badge badge-req">必要</span>
-      </div>
-    </div>
-    <div class="doc-card required">
-      <div class="doc-icon">📝</div>
-      <div class="doc-info">
-        <div class="doc-name">外僑居留申請書</div>
-        <div class="doc-note">可至移民署官網下載或現場索取，請事先填妥。</div>
-        <span class="doc-badge badge-req">必要</span>
-      </div>
-    </div>
-    <div class="doc-card optional">
-      <div class="doc-icon">💰</div>
-      <div class="doc-info">
-        <div class="doc-name">財力證明</div>
-        <div class="doc-note">部分辦事處或要求提供銀行存款證明或獎學金核定文件，建議事先備妥。</div>
-        <span class="doc-badge badge-opt">視情況</span>
-      </div>
-    </div>
-    <div class="doc-card optional">
-      <div class="doc-icon">🏠</div>
-      <div class="doc-info">
-        <div class="doc-name">住宿地址證明</div>
-        <div class="doc-note">宿舍住宿證或租屋合約書，部分辦事處要求提供。</div>
-        <span class="doc-badge badge-opt">視情況</span>
+    <div class="dl-row">
+      <div class="dl-icon">📋</div>
+      <div class="dl-name">在職證明書</div>
+      <div class="dl-links">
+        <a class="dl-btn doc"  href="https://www.immigration.gov.tw/media/5095/%E5%9C%A8%E8%81%B7%E8%AD%89%E6%98%8E%E6%9B%B8.doc"  target="_blank" rel="noopener">⬇ DOC</a>
+        <a class="dl-btn odt"  href="https://www.immigration.gov.tw/media/21466/%E5%9C%A8%E8%81%B7%E8%AD%89%E6%98%8E%E6%9B%B8.odt"  target="_blank" rel="noopener">⬇ ODT</a>
+        <a class="dl-btn pdf"  href="https://www.immigration.gov.tw/media/5096/%E5%9C%A8%E8%81%B7%E8%AD%89%E6%98%8E%E6%9B%B8.pdf"  target="_blank" rel="noopener">⬇ PDF</a>
       </div>
     </div>
   </div>
 
-  <div class="section-title">🪜 {% trans "辦理流程（Step by Step）" %}</div>
-  <ul class="timeline">
-    <li class="timeline-item">
-      <div class="step-num">1</div>
-      <div class="step-body">
-        <div class="step-title">抵台後確認文件齊全</div>
-        <div class="step-desc">
-          將各項文件整理妥，確認護照、學生居留簽、學校在學證明、健康檢查等均已備妥。
-          若健康檢查尚未完成，請立即聯繫學校國際事務處，瞭解學校指定的合作醫院。
-        </div>
-        <span class="step-tag tag-time">📅 抵台當天</span>
-      </div>
-    </li>
-    <li class="timeline-item">
-      <div class="step-num">2</div>
-      <div class="step-body">
-        <div class="step-title">向學校國際事務處取得在學證明</div>
-        <div class="step-desc">
-          前往學校 OIA（Office of International Affairs / 國際事務處）辦理，
-          通常需 1～3 個工作日，請儘早申請。部分學校迎新當天即可領取。
-        </div>
-        <span class="step-tag tag-time">📅 抵台後 1～2 天</span>
-        <span class="step-tag tag-tip">💡 可事先聯繫 OIA 預約</span>
-      </div>
-    </li>
-    <li class="timeline-item">
-      <div class="step-num">3</div>
-      <div class="step-body">
-        <div class="step-title">查詢並預約就近移民署辦事處</div>
-        <div class="step-desc">
-          至內政部移民署官網查詢離學校最近的服務站，建議利用線上預約系統，
-          可大幅縮短現場等待時間。
-        </div>
-        <span class="step-tag tag-time">📅 抵台後 2～3 天</span>
-        <span class="step-tag tag-tip">💡 建議事先預約</span>
-      </div>
-    </li>
-    <li class="timeline-item">
-      <div class="step-num">4</div>
-      <div class="step-body">
-        <div class="step-title">親赴移民署辦事處提交申請</div>
-        <div class="step-desc">
-          攜帶所有文件正本及影本，依預約時間至移民署。
-          現場填寫申請書後，工作人員將核對文件並採集指紋，約需 30 分鐘。
-        </div>
-        <span class="step-tag tag-time">📅 抵台後 15 天內</span>
-        <span class="step-tag tag-place">📍 移民署辦事處</span>
-      </div>
-    </li>
-    <li class="timeline-item">
-      <div class="step-num">5</div>
-      <div class="step-body">
-        <div class="step-title">繳納申請規費</div>
-        <div class="step-desc">
-          依申請年數繳交規費：1年 NT$1,000、2年 NT$2,000、3年 NT$3,000。
-          費用依辦事處設備可使用現金或信用卡，請妥善保存繳費收據以備查。
-        </div>
-        <span class="step-tag tag-fee">💰 NT$1,000 / $2,000 / $3,000</span>
-      </div>
-    </li>
-    <li class="timeline-item">
-      <div class="step-num">6</div>
-      <div class="step-body">
-        <div class="step-title">等待審核與製證（約 14 天）</div>
-        <div class="step-desc">
-          申請後約需 14 個工作天製卡完成，辦事處將以簡訊或電話通知領件。
-          等待期間請保留入境章及申請收據，可作為合法居留暫時證明。
-        </div>
-        <span class="step-tag tag-time">⏳ 約 14 天</span>
-        <span class="step-tag tag-tip">💡 可至移民署網站查詢進度</span>
-      </div>
-    </li>
-    <li class="timeline-item">
-      <div class="step-num done">✓</div>
-      <div class="step-body">
-        <div class="step-title">領取居留證</div>
-        <div class="step-desc">
-          收到通知後攜帶護照和收據，親赴辦事處領取。
-          領取 ARC 後即可辦理加入健保、設立銀行帳戶申辦手機電話等。
-        </div>
-        <span class="step-tag tag-tip">✅ 完成！</span>
-      </div>
-    </li>
-  </ul>
-
-  <div class="section-title">💡 {% trans "重要注意事項" %}</div>
-  <div class="alert alert-success" style="margin-bottom:12px;">
-    <div class="alert-icon">✅</div>
-    <div>
-      居留證到期前 <strong>30 天內</strong> 可申請延期，規費 NT$500。
-      每學年結束後記得辦理延期，確保居留資格連續有效。
-    </div>
-  </div>
-  <div class="alert alert-warning" style="margin-bottom:12px;">
-    <div class="alert-icon">⚠️</div>
-    <div>
-      <strong>需本人親自辦理：</strong>
-      申請過程需採集指紋，不得委託他人代辦，請務必本人親自出席。
-    </div>
-  </div>
-  <div class="alert alert-info" style="margin-bottom:28px;">
-    <div class="alert-icon">ℹ️</div>
-    <div>
-      居留證遺失請立即至警局報案，持報案證明至移民署申請補發（規費 NT$500）。
-      補發時需隨身攜帶護照及報案證明以備查。
-    </div>
-  </div>
-
-  <div class="section-title">❓ {% trans "常見問題" %}</div>
-  <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>持觀光簽或免簽入台，規費會不同嗎？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          規費依兩個因素決定：<br><br>
-          <strong>① 申請年數</strong>：1年 NT$1,000 / 2年 NT$2,000 / 3年 NT$3,000（依系統操作手冊規定）<br>
-          <strong>② 入台簽證類型</strong>：以觀光停留簽證或免簽方式入台者，需在上述規費外額外繳交 NT$2,200。<br><br>
-          例如：持觀光簽入台、申請1年居留證 → NT$1,000 + NT$2,200 = <strong>NT$3,200</strong><br>
-          持學生居留簽入台、申請1年居留證 → <strong>NT$1,000</strong>（不加收）<br><br>
-          建議出發前向台灣駐外辦事處申請居留簽入台，可省下 NT$2,200。
-        </div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>健康檢查可以在抵台後才做嗎？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          可以，但注意檢查結果通常需要 3～5 個工作天才能取得報告。
-          請抵台後立即前往學校推薦醫院完成檢查，以避免超過 15 天辦理期限。
-        </div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>辦理期間（等待 ARC 製作）可以合法居留嗎？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          可以。申請提交後持護照入境章及申請收據，即為合法居留暫時證明。
-          建議隨身攜帶此兩份文件，遇到需要時可出示。
-        </div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>ARC 需要每年更新嗎？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          是的，外籍生居留證效期通常為 1 年，到期前 30 天內需至移民署辦理延期（規費 NT$500）。
-          每次延期需提供最新的在學證明，請記得提早準備。
-        </div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>畢業後若想繼續留台找工作，居留資格如何維持？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          在學期間以「就讀」為居留事由。畢業後如需繼續留台求職，可在畢業後 30 天內
-          申請「留台」居留（部分情況），或在找到合法工作並取得工作許可後申請變更為「工作」居留事由。
-          建議畢業前盡早諮詢學校 OIA 或移民署。
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!-- 相關資源 -->
   <div class="section-title">🔗 {% trans "相關資源" %}</div>
-  <div class="doc-grid" style="margin-bottom:0;">
-    <a class="doc-card required" href="https://www.immigration.gov.tw" target="_blank" rel="noopener">
-      <div class="doc-icon">🏛</div>
-      <div class="doc-info">
-        <div class="doc-name">內政部移民署</div>
-        <div class="doc-note">辦事處查詢、線上預約、進度查詢、申請書下載。</div>
-        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.immigration.gov.tw ↗</div>
+  <div class="res-grid">
+    <a class="res-card" href="https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/" target="_blank" rel="noopener">
+      <div class="res-icon">🏛</div>
+      <div class="res-info">
+        <div class="res-name">內政部移民署 — 居留申請說明</div>
+        <div class="res-note">應備文件官方說明、辦事處查詢、線上預約、申請書下載。</div>
+        <div class="res-url">www.immigration.gov.tw ↗</div>
       </div>
     </a>
-    <div class="doc-card required">
-      <div class="doc-icon">🏫</div>
-      <div class="doc-info">
-        <div class="doc-name">學校國際事務處（OIA）</div>
-        <div class="doc-note">在學證明申請、指定合作醫院確認、ARC 辦理協助。</div>
+    <div class="res-card">
+      <div class="res-icon">🏫</div>
+      <div class="res-info">
+        <div class="res-name">學校國際事務處（OIA）</div>
+        <div class="res-note">在學證明申請、指定合作醫院確認、ARC 辦理協助。</div>
       </div>
     </div>
-    <a class="doc-card optional" href="https://www.nhi.gov.tw" target="_blank" rel="noopener">
-      <div class="doc-icon">🏥</div>
-      <div class="doc-info">
-        <div class="doc-name">全民健康保險署</div>
-        <div class="doc-note">領取 ARC 後，持 ARC 和學校加保公文辦理加保程序。</div>
-        <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.nhi.gov.tw ↗</div>
+    <a class="res-card" href="https://www.nhi.gov.tw" target="_blank" rel="noopener">
+      <div class="res-icon">🏥</div>
+      <div class="res-info">
+        <div class="res-name">全民健康保險署</div>
+        <div class="res-note">領取 ARC 後，持 ARC 和學校加保公文辦理加保程序。</div>
+        <div class="res-url">www.nhi.gov.tw ↗</div>
       </div>
     </a>
-    <div class="doc-card optional">
-      <div class="doc-icon">📞</div>
-      <div class="doc-info">
-        <div class="doc-name">外來人士在台生活諮詢</div>
-        <div class="doc-note">提供多語言諮詢服務，解答居留、就業、生活等問題。</div>
-        <div class="doc-note" style="margin-top:4px;font-weight:700;color:var(--primary-dark);">免費電話：1925</div>
+    <div class="res-card">
+      <div class="res-icon">📞</div>
+      <div class="res-info">
+        <div class="res-name">外來人士在台生活諮詢</div>
+        <div class="res-note">提供多語言諮詢服務，解答居留、就業、生活等問題。</div>
+        <div class="res-note" style="margin-top:4px;font-weight:700;color:var(--primary-dark);">免費電話：1925</div>
       </div>
     </div>
   </div>
@@ -493,13 +687,16 @@
 
 {% block extra_js %}
 <script>
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.closest('.faq-item');
-      const ans  = item.querySelector('.faq-a');
-      const isOpen = item.classList.toggle('open');
-      ans.style.maxHeight = isOpen ? ans.scrollHeight + 'px' : '0';
+  // Category card switching
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.panel;
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.doc-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-' + target).classList.add('active');
     });
   });
+
 </script>
 {% endblock %}
