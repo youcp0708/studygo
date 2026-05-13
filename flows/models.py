@@ -136,7 +136,7 @@ class Task(models.Model):
     required_documents_ms = models.TextField(blank=True, verbose_name="需要的文件 Malay")
     required_documents_th = models.TextField(blank=True, verbose_name="需要的文件 Thai")
     required_documents_ja = models.TextField(blank=True, verbose_name="需要的文件 Japanese")
-
+    required_documents_ko = models.TextField(blank=True, verbose_name="需要的文件 Korean")
     # ── 辦理地點（多語言）──
     apply_location    = models.CharField(max_length=200, blank=True, verbose_name="辦理地點")
     apply_location_en = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 English")
@@ -145,6 +145,7 @@ class Task(models.Model):
     apply_location_ms = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Malay")
     apply_location_th = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Thai")
     apply_location_ja = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Japanese")
+    apply_location_ko = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Korean")
 
     apply_address = models.CharField(max_length=200, blank=True, verbose_name="辦理地址")
     apply_map_url = models.URLField(
@@ -178,6 +179,7 @@ class Task(models.Model):
     deadline_text_ms = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Malay")
     deadline_text_th = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Thai")
     deadline_text_ja = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Japanese")
+    deadline_text_ko = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Korean")
 
     is_required = models.BooleanField(default=True, verbose_name="是否必做")
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
