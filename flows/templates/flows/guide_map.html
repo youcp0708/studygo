@@ -28,20 +28,36 @@
 
   .section-title {
     font-size:17px; font-weight:900; color:var(--primary-dark);
-    margin:20px 0 12px; padding-bottom:10px;
+    margin:20px 0 10px; padding-bottom:10px;
     border-bottom:2.5px solid var(--primary-soft);
     display:flex; align-items:center; gap:8px;
   }
 
-  .chip-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+  /* ── Chip groups ── */
+  .chip-group { margin-bottom:20px; }
+  .chip-group-label {
+    font-size:12px; font-weight:800; color:var(--muted);
+    text-transform:uppercase; letter-spacing:.6px;
+    margin-bottom:8px;
+  }
+  .chip-row { display:flex; flex-wrap:wrap; gap:8px; }
   .loc-chip {
     display:inline-flex; align-items:center; gap:6px;
     padding:8px 16px; border-radius:99px; border:1.5px solid var(--border);
     background:#fff; font-size:13px; font-weight:700; color:var(--dark);
-    cursor:pointer; transition:border-color .15s, background .15s;
+    cursor:pointer; transition:border-color .15s, background .15s, color .15s;
   }
   .loc-chip:hover  { border-color:var(--primary); background:var(--primary-soft); }
-  .loc-chip.active { border-color:var(--primary); background:var(--primary-soft); color:var(--primary-dark); }
+  .loc-chip.active { border-color:var(--primary); background:var(--primary); color:#fff; }
+
+  /* ── Map hint ── */
+  .map-hint {
+    display:flex; align-items:center; gap:8px;
+    background:var(--bg); border:1.5px solid var(--line); border-radius:10px;
+    padding:10px 16px; font-size:13px; color:var(--muted);
+    margin-bottom:12px;
+  }
+  .map-hint.hidden { display:none; }
 
   #map {
     width:100%; height:500px; border-radius:16px;
@@ -74,24 +90,66 @@
 
   <div class="guide-hero">
     <div class="bg-text">MAP</div>
-    <div class="hero-badge">{% trans "學校・醫院・交通" %}</div>
+    <div class="hero-badge">{% trans "學校・美食・醫院・交通" %}</div>
     <h2>🗺 {% trans "地圖導覽" %}</h2>
-    <p>{% trans "中央大學周邊重要地點，點選快速定位及導航" %}</p>
+    <p>{% trans "中央大學周邊重要地點，點選按鈕即可在地圖上定位" %}</p>
   </div>
 
-  <!-- ── 快速定位 chips ── -->
+  <!-- ── 快速定位 ── -->
   <div class="section-title">📍 {% trans "快速定位" %}</div>
-  <div class="chip-row">
-    <button class="loc-chip active" onclick="goTo('ncu')">🏫 {% trans "中央大學" %}</button>
-    <button class="loc-chip" onclick="goTo('hospital')">🏥 {% trans "壢新醫院" %}</button>
-    <button class="loc-chip" onclick="goTo('station')">🚉 {% trans "中壢火車站" %}</button>
-    <button class="loc-chip" onclick="goTo('hsr')">🚄 {% trans "高鐵桃園站" %}</button>
-    <button class="loc-chip" onclick="goTo('airport')">✈️ {% trans "桃園國際機場" %}</button>
-    <button class="loc-chip" onclick="goTo('mall')">🛒 {% trans "大江購物中心" %}</button>
+
+  <!-- 學校設施 -->
+  <div class="chip-group">
+    <div class="chip-group-label">🏫 學校設施</div>
+    <div class="chip-row">
+      <button class="loc-chip" onclick="goTo('ncu')">🏫 中央大學（正門）</button>
+      <button class="loc-chip" onclick="goTo('oia')">🌐 國際事務處（OIA）</button>
+      <button class="loc-chip" onclick="goTo('library')">📚 中央圖書館</button>
+      <button class="loc-chip" onclick="goTo('dorm')">🏠 外籍生宿舍</button>
+    </div>
+  </div>
+
+  <!-- 校內美食 -->
+  <div class="chip-group">
+    <div class="chip-group-label">🍜 校內美食</div>
+    <div class="chip-row">
+      <button class="loc-chip" onclick="goTo('cafeteria1')">🍱 松苑餐廳</button>
+      <button class="loc-chip" onclick="goTo('cafeteria2')">🍱 松果餐廳</button>
+      <button class="loc-chip" onclick="goTo('waffle')">🧇 小木屋鬆餅</button>
+      <button class="loc-chip" onclick="goTo('convenience')">🏪 校內超商</button>
+    </div>
+  </div>
+
+  <!-- 校外美食 -->
+  <div class="chip-group">
+    <div class="chip-group-label">🍽️ 校外美食</div>
+    <div class="chip-row">
+      <button class="loc-chip" onclick="goTo('backgate')">🚪 後門商圈</button>
+      <button class="loc-chip" onclick="goTo('snack_street')">🌙 宵夜街</button>
+      <button class="loc-chip" onclick="goTo('zhongda_night')">🥘 中大夜市商圈</button>
+      <button class="loc-chip" onclick="goTo('longgang')">🥩 龍岡美食廣場</button>
+      <button class="loc-chip" onclick="goTo('mall_food')">🛍️ 大江美食街</button>
+      <button class="loc-chip" onclick="goTo('zhongli_market')">🥬 中壢市場</button>
+    </div>
+  </div>
+
+  <!-- 醫療・交通 -->
+  <div class="chip-group">
+    <div class="chip-group-label">🏥 醫療・交通</div>
+    <div class="chip-row">
+      <button class="loc-chip" onclick="goTo('hospital')">🏥 壢新醫院</button>
+      <button class="loc-chip" onclick="goTo('station')">🚉 中壢火車站</button>
+      <button class="loc-chip" onclick="goTo('hsr')">🚄 高鐵桃園站</button>
+      <button class="loc-chip" onclick="goTo('airport')">✈️ 桃園國際機場</button>
+      <button class="loc-chip" onclick="goTo('mall')">🛒 大江購物中心</button>
+    </div>
   </div>
 
   <!-- ── 地圖 ── -->
   {% if maps_api_key %}
+  <div class="map-hint" id="mapHint">
+    📍 點選上方按鈕，即可在地圖上顯示位置
+  </div>
   <div id="map"></div>
   {% else %}
   <div class="no-key-box">
@@ -115,41 +173,75 @@
 const NAV_LABEL = "{% trans '開啟導航' %}";
 
 const LOCS = {
-  ncu:      { lat: 24.9682, lng: 121.1942, name: "{% trans '中央大學' %}",     nav: "國立中央大學,桃園市中壢區" },
-  hospital: { lat: 24.9490, lng: 121.2298, name: "{% trans '壢新醫院' %}",     nav: "壢新醫院" },
-  station:  { lat: 24.9518, lng: 121.2258, name: "{% trans '中壢火車站' %}",   nav: "中壢車站" },
-  hsr:      { lat: 24.9779, lng: 121.2165, name: "{% trans '高鐵桃園站' %}",   nav: "高鐵桃園站" },
-  airport:  { lat: 25.0773, lng: 121.2322, name: "{% trans '桃園國際機場' %}", nav: "桃園國際機場第一航廈" },
-  mall:     { lat: 24.9668, lng: 121.2159, name: "{% trans '大江購物中心' %}", nav: "大江購物中心" },
+  /* ── 學校設施 ── */
+  ncu:         { lat: 24.96820, lng: 121.19420, name: "國立中央大學（正門）",   nav: "國立中央大學,桃園市中壢區中大路300號" },
+  oia:         { lat: 24.96870, lng: 121.19350, name: "國際事務處（OIA）",      nav: "國立中央大學國際事務處" },
+  library:     { lat: 24.96740, lng: 121.19410, name: "中央圖書館",             nav: "國立中央大學圖書館" },
+  dorm:        { lat: 24.96950, lng: 121.19550, name: "外籍生宿舍",             nav: "國立中央大學國際學生宿舍" },
+
+  /* ── 校內美食 ── */
+  cafeteria1:  { lat: 24.96840, lng: 121.19280, name: "松苑餐廳",              nav: "國立中央大學松苑餐廳" },
+  cafeteria2:  { lat: 24.96630, lng: 121.19560, name: "松果餐廳",              nav: "國立中央大學松果餐廳" },
+  waffle:      { lat: 24.96710, lng: 121.19430, name: "小木屋鬆餅（圖書館旁）",nav: "小木屋鬆餅 中央大學" },
+  convenience: { lat: 24.96900, lng: 121.19460, name: "校內超商（7-ELEVEN）",  nav: "7-ELEVEN 中央大學店" },
+
+  /* ── 校外美食 ── */
+  backgate:    { lat: 24.96540, lng: 121.19120, name: "後門商圈",              nav: "國立中央大學後門,桃園市中壢區" },
+  snack_street:{ lat: 24.96450, lng: 121.19200, name: "宵夜街",                nav: "中央大學宵夜街,桃園市中壢區" },
+  zhongda_night:{ lat: 24.96280, lng: 121.19960, name: "中大夜市商圈",         nav: "中大夜市,桃園市中壢區" },
+  longgang:    { lat: 24.95410, lng: 121.20530, name: "龍岡美食廣場",          nav: "龍岡美食廣場,桃園市中壢區" },
+  mall_food:   { lat: 24.96680, lng: 121.21590, name: "大江美食街",            nav: "大江購物中心美食街" },
+  zhongli_market:{ lat: 24.95030, lng: 121.22490, name: "中壢市場",            nav: "中壢市場,桃園市中壢區" },
+
+  /* ── 醫療・交通 ── */
+  hospital:    { lat: 24.94900, lng: 121.22980, name: "壢新醫院",              nav: "壢新醫院" },
+  station:     { lat: 24.95180, lng: 121.22580, name: "中壢火車站",            nav: "中壢車站" },
+  hsr:         { lat: 24.97790, lng: 121.21650, name: "高鐵桃園站",            nav: "高鐵桃園站" },
+  airport:     { lat: 25.07730, lng: 121.23220, name: "桃園國際機場（第一航廈）",nav: "桃園國際機場第一航廈" },
+  mall:        { lat: 24.96680, lng: 121.21590, name: "大江購物中心",          nav: "大江購物中心" },
 };
 
-let map, markers = {}, infoWindow;
+let map, markers = {}, infoWindow, activeId = null;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: LOCS.ncu,
-    zoom: 13,
+    center: { lat: 24.9682, lng: 121.1942 },
+    zoom: 14,
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: true,
   });
   infoWindow = new google.maps.InfoWindow();
 
+  /* 建立所有 marker，但不放到地圖上（map: null） */
   Object.entries(LOCS).forEach(([id, loc]) => {
     const marker = new google.maps.Marker({
       position: { lat: loc.lat, lng: loc.lng },
-      map,
+      map: null,
       title: loc.name,
     });
     markers[id] = marker;
     marker.addListener('click', () => openInfo(id));
   });
-
-  openInfo('ncu');
 }
 
 function openInfo(id) {
   const loc = LOCS[id];
+
+  /* 隱藏前一個 marker */
+  if (activeId && markers[activeId]) {
+    markers[activeId].setMap(null);
+  }
+
+  /* 顯示新的 marker */
+  markers[id].setMap(map);
+  activeId = id;
+
+  /* 隱藏提示文字 */
+  const hint = document.getElementById('mapHint');
+  if (hint) hint.classList.add('hidden');
+
+  /* infoWindow 內容 */
   const navUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(loc.nav)}`;
   infoWindow.setContent(`
     <div style="font-family:sans-serif;padding:4px 2px;min-width:160px;">
@@ -164,8 +256,10 @@ function openInfo(id) {
   infoWindow.open(map, markers[id]);
   map.panTo({ lat: loc.lat, lng: loc.lng });
 
+  /* 更新 chip 樣式 */
   document.querySelectorAll('.loc-chip').forEach(c => c.classList.remove('active'));
-  document.querySelector(`[onclick="goTo('${id}')"]`).classList.add('active');
+  const btn = document.querySelector(`[onclick="goTo('${id}')"]`);
+  if (btn) btn.classList.add('active');
 }
 
 function goTo(id) { openInfo(id); }
