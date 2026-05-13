@@ -8,6 +8,7 @@ new_strings = {
         'ms': 'Kawasan Negara',
         'my': 'နိုင်ငံဒေသများ',
         'th': 'พื้นที่แต่ละประเทศ',
+        'ko': '국가별 구역',
     },
     '各地區申請資訊': {
         'en': 'Application Info by Region',
@@ -16,6 +17,7 @@ new_strings = {
         'ms': 'Maklumat Permohonan Mengikut Kawasan',
         'my': 'ဒေသအလိုက် လျှောက်ထားမှု သတင်းအချက်အလက်',
         'th': 'ข้อมูลการสมัครตามภูมิภาค',
+        'ko': '지역별 신청 정보',
     },
     '依所在地選擇對應的申請說明，直接連結至海外聯招會官方網站。': {
         'en': 'Select your region to view the relevant application guide, linked directly to the official overseas admissions site.',
@@ -24,6 +26,7 @@ new_strings = {
         'ms': 'Pilih kawasan anda untuk melihat panduan permohonan yang berkaitan, pautan terus ke laman web rasmi.',
         'my': 'သင်၏တည်နေရာကို ရွေးချယ်ပြီး ကိုက်ညီသောလျှောက်ထားမှုလမ်းညွှန်ကို ကြည့်ပါ။',
         'th': 'เลือกภูมิภาคของคุณเพื่อดูคำแนะนำการสมัคร เชื่อมต่อโดยตรงไปยังเว็บไซต์ทางการ',
+        'ko': '관련 신청 안내를 확인하려면 지역을 선택하세요. 공식 입학 사이트로 바로 연결됩니다.',
     },
     '以下連結將跳轉至': {
         'en': 'The links below will redirect you to the ',
@@ -32,6 +35,7 @@ new_strings = {
         'ms': 'Pautan berikut akan mengarahkan ke ',
         'my': 'အောက်ပါ လင့်ခ်များသည် ',
         'th': 'ลิงก์ด้านล่างจะนำคุณไปยัง ',
+        'ko': '아래 링크는 다음으로 연결됩니다 ',
     },
     '海外聯招會官方網站': {
         'en': 'Overseas Chinese Affairs Council Official Website',
@@ -40,6 +44,7 @@ new_strings = {
         'ms': 'Laman Web Rasmi Majlis Hal Ehwal Cina Luar Negara',
         'my': 'နိုင်ငံရပ်ခြား တရုတ်ကျောင်းသားများ ဝင်ခွင့်ကော်မတီ တရားဝင်ဝဘ်ဆိုဒ်',
         'th': 'เว็บไซต์ทางการของสภากิจการชาวจีนโพ้นทะเล',
+        'ko': '해외 화교 사무국 공식 웹사이트',
     },
     '，請選擇你的所在地區查看對應的申請辦法與說明。': {
         'en': '. Please select your region to view the corresponding application procedures and instructions.',
@@ -48,6 +53,7 @@ new_strings = {
         'ms': '. Sila pilih kawasan anda untuk melihat prosedur dan arahan permohonan yang berkaitan.',
         'my': '။ သင်၏တည်နေရာကို ရွေးချယ်ပြီး ကိုက်ညီသောလျှောက်ထားမှုနည်းလမ်းများနှင့် ညွှန်ကြားချက်များကို ကြည့်ပါ။',
         'th': ' กรุณาเลือกภูมิภาคของคุณเพื่อดูขั้นตอนและคำแนะนำในการสมัครที่เกี่ยวข้อง',
+        'ko': '. 해당 지역을 선택하여 관련 신청 절차와 안내 사항을 확인하세요.',
     },
     '選擇你的地區': {
         'en': 'Select Your Region',
@@ -56,6 +62,7 @@ new_strings = {
         'ms': 'Pilih Kawasan Anda',
         'my': 'သင်၏ဒေသကို ရွေးချယ်ပါ',
         'th': 'เลือกภูมิภาคของคุณ',
+        'ko': '지역 선택하기',
     },
     '香港': {
         'en': 'Hong Kong',
@@ -64,6 +71,7 @@ new_strings = {
         'ms': 'Hong Kong',
         'my': 'ဟောင်ကောင်',
         'th': 'ฮ่องกง',
+        'ko': '홍콩',
     },
     '緬甸': {
         'en': 'Myanmar',
@@ -72,6 +80,7 @@ new_strings = {
         'ms': 'Myanmar',
         'my': 'မြန်မာ',
         'th': 'เมียนมา',
+        'ko': '미얀마',
     },
     '澳門': {
         'en': 'Macau',
@@ -80,6 +89,7 @@ new_strings = {
         'ms': 'Macau',
         'my': 'မကာအို',
         'th': 'มาเก๊า',
+        'ko': '마카오',
     },
     '馬來西亞': {
         'en': 'Malaysia',
@@ -88,6 +98,7 @@ new_strings = {
         'ms': 'Malaysia',
         'my': 'မလေးရှား',
         'th': 'มาเลเซีย',
+        'ko': '말레이시아',
     },
     '印尼': {
         'en': 'Indonesia',
@@ -96,6 +107,7 @@ new_strings = {
         'ms': 'Indonesia',
         'my': 'အင်ဒိုနီးရှား',
         'th': 'อินโดนีเซีย',
+        'ko': '인도네시아',
     },
     '菲律賓': {
         'en': 'Philippines',
@@ -104,6 +116,7 @@ new_strings = {
         'ms': 'Filipina',
         'my': 'ဖိလစ်ပိုင်',
         'th': 'ฟิลิปปินส์',
+        'ko': '필리핀',
     },
     '韓國': {
         'en': 'South Korea',
@@ -112,6 +125,7 @@ new_strings = {
         'ms': 'Korea Selatan',
         'my': 'တောင်ကိုရီးယား',
         'th': 'เกาหลีใต้',
+        'ko': '대한민국',
     },
     '美國／加拿大': {
         'en': 'USA / Canada',
@@ -120,6 +134,7 @@ new_strings = {
         'ms': 'Amerika / Kanada',
         'my': 'အမေရိကန် / ကနေဒါ',
         'th': 'สหรัฐฯ / แคนาดา',
+        'ko': '미국 / 캐나다',
     },
     '泰國': {
         'en': 'Thailand',
@@ -128,6 +143,7 @@ new_strings = {
         'ms': 'Thailand',
         'my': 'ထိုင်းနိုင်ငံ',
         'th': 'ไทย',
+        'ko': '태국',
     },
     '越南': {
         'en': 'Vietnam',
@@ -136,6 +152,7 @@ new_strings = {
         'ms': 'Vietnam',
         'my': 'ဗီယက်နမ်',
         'th': 'เวียดนาม',
+        'ko': '베트남',
     },
     '日本': {
         'en': 'Japan',
@@ -144,6 +161,7 @@ new_strings = {
         'ms': 'Jepun',
         'my': 'ဂျပန်',
         'th': 'ญี่ปุ่น',
+        'ko': '일본',
     },
     '新加坡': {
         'en': 'Singapore',
@@ -152,6 +170,7 @@ new_strings = {
         'ms': 'Singapura',
         'my': 'စင်ကာပူ',
         'th': 'สิงคโปร์',
+        'ko': '싱가포르',
     },
     '其他地區': {
         'en': 'Other Regions',
@@ -160,6 +179,7 @@ new_strings = {
         'ms': 'Kawasan Lain',
         'my': 'အခြားဒေသများ',
         'th': 'ภูมิภาคอื่นๆ',
+        'ko': '기타지역',
     },
     '研究所': {
         'en': 'Graduate School',
@@ -168,6 +188,7 @@ new_strings = {
         'ms': 'Sekolah Siswazah',
         'my': 'မဟာဘွဲ့ပညာရေး',
         'th': 'บัณฑิตศึกษา',
+        'ko': '대학원',
     },
     '在臺僑生': {
         'en': 'Overseas Chinese in Taiwan',
@@ -176,6 +197,7 @@ new_strings = {
         'ms': 'Warga Cina Perantauan di Taiwan',
         'my': 'တိုင်ဝမ်တွင်ရှိသော နိုင်ငံရပ်ခြားတရုတ်ကျောင်းသားများ',
         'th': 'นักเรียนจีนโพ้นทะเลในไต้หวัน',
+        'ko': '대만 거주 해외화교',
     },
     '海外臺校': {
         'en': 'Overseas Taiwan Schools',
@@ -184,6 +206,7 @@ new_strings = {
         'ms': 'Sekolah Taiwan di Luar Negara',
         'my': 'နိုင်ငံရပ်ခြားရှိ တိုင်ဝမ်ကျောင်းများ',
         'th': 'โรงเรียนไต้หวันในต่างประเทศ',
+        'ko': '해외 타이완 학교',
     },
     '入學申請': {
         'en': 'Admissions',
@@ -192,6 +215,7 @@ new_strings = {
         'ms': 'Kemasukan',
         'my': 'ဝင်ခွင့်လျှောက်ထားမှု',
         'th': 'การสมัครเข้าเรียน',
+        'ko': '입학 신청',
     },
     '依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等': {
         'en': 'View application guides by region: Hong Kong, Malaysia, Thailand, and more',
@@ -200,6 +224,7 @@ new_strings = {
         'ms': 'Lihat panduan permohonan mengikut kawasan: Hong Kong, Malaysia, Thailand, dll.',
         'my': 'ဒေသအလိုက် လျှောက်ထားမှုလမ်းညွှန်ကို ကြည့်ရှုပါ: ဟောင်ကောင်၊ မလေးရှား၊ ထိုင်း စသည်',
         'th': 'ดูคำแนะนำการสมัครตามภูมิภาค: ฮ่องกง มาเลเซีย ไทย และอื่นๆ',
+        'ko': '홍콩, 말레이시아, 태국 등의 지역별 신청 안내 확인하기',
     },
     '入學申請指南': {
         'en': 'Admissions Guide',
@@ -208,6 +233,7 @@ new_strings = {
         'ms': 'Panduan Kemasukan',
         'my': 'ဝင်ခွင့်လမ်းညွှန်',
         'th': 'คู่มือการสมัครเข้าเรียน',
+        'ko': '입학 신청 안내서',
     },
     '申請資格、時程、所需文件與注意事項整理': {
         'en': 'Eligibility, timeline, required documents, and important notes',
@@ -216,10 +242,29 @@ new_strings = {
         'ms': 'Kelayakan, jadual, dokumen yang diperlukan, dan nota penting',
         'my': 'အရည်အချင်းများ၊ အချိန်ဇယား၊ လိုအပ်သောစာရွက်စာတမ်းများနှင့် အရေးကြီးသောမှတ်ချက်များ',
         'th': 'คุณสมบัติ กำหนดการ เอกสารที่ต้องใช้ และข้อควรระวัง',
+        'ko': '자격, 일정, 필요 서류 및 주의 사항 정리',
+    },
+    '申請流程': {
+        'en': 'Application Process',
+        'id': 'Proses Pendaftaran',
+        'ja': '申請フロー',
+        'ms': 'Proses Permohonan',
+        'my': 'လျှောက်ထားမှုလုပ်ငန်းစဉ်',
+        'th': 'กระบวนการสมัครเข้าเรียน',
+        'ko': '신청 절차',
+    },
+    '依申請身分（境外生／僑生／海外臺校）查看對應的申請流程與時程': {
+        'en': 'View application processes and timelines by applicant status (overseas student / overseas Chinese / overseas Taiwan school)',
+        'id': 'Lihat proses dan jadwal pendaftaran mengikut status pemohon (pelajar luar negeri / diaspora Tionghoa / sekolah Taiwan di luar negeri)',
+        'ja': '申請者区分（留学生／僑生／海外台湾学校）ごとに申請フローとスケジュールを確認できます',
+        'ms': 'Lihat proses dan jadual permohonan mengikut status pemohon (pelajar luar negara / warga Cina Perantauan / sekolah Taiwan di luar negara)',
+        'my': 'လျှောက်ထားသူအမျိုးအစား (နိုင်ငံရပ်ခြားကျောင်းသား / နိုင်ငံရပ်ခြားတရုတ်ကျောင်းသား / နိုင်ငံရပ်ခြားရှိ တိုင်ဝမ်ကျောင်းများ) အလိုက် လျှောက်ထားမှုလုပ်ငန်းစဉ်နှင့် အချိန်ဇယားကို ကြည့်ရှုပါ',
+        'th': 'ดูขั้นตอนและกำหนดการสมัครตามสถานะผู้สมัคร (นักเรียนต่างชาติ / นักเรียนจีนโพ้นทะเล / โรงเรียนไต้หวันในต่างประเทศ)',
+        'ko': '신청자 신분(유학생 / 해외화교 / 해외 타이완 학교)별 신청 절차 및 일정 확인하기',
     },
 }
 
-langs = ['en', 'id', 'ja', 'ms', 'my', 'th']
+langs = ['en', 'id', 'ja', 'ms', 'my', 'th', 'ko']
 for lang in langs:
     po_path = f'locale/{lang}/LC_MESSAGES/django.po'
     po = polib.pofile(po_path)
