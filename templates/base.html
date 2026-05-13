@@ -55,6 +55,7 @@
 
       
 
+      {% if user.is_authenticated and user.student_profile %}
       <div class="search-wrap" id="searchWrap">
         <div class="search-box" id="searchBox">
           <span class="search-icon">🔍</span>
@@ -63,6 +64,7 @@
         </div>
         <div class="search-dropdown" id="searchDropdown"></div>
       </div>
+      {% endif %}
 
       <form action="{% url 'set_language' %}" method="post" class="language-form">
         {% csrf_token %}
