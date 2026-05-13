@@ -191,6 +191,9 @@ class TaskAdmin(admin.ModelAdmin):
             'fields': (
                 'title_ko',
                 'description_ko',
+                'required_documents_ko',
+                'apply_location_ko',
+                'deadline_text_ko',
             )
         }),
     )
