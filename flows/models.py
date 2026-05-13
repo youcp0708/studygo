@@ -111,6 +111,12 @@ class Task(models.Model):
         blank=True,
         verbose_name="適用國籍"
     )
+    university = models.CharField(
+        max_length=200,
+        choices=StudentProfile.UNIVERSITY_CHOICES,
+        blank=True,
+        verbose_name="適用學校"
+    )
     admission_status = models.CharField(
         max_length=20,
         choices=StudentProfile.ADMISSION_STATUS_CHOICES,
@@ -322,34 +328,6 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
 from datetime import timedelta
-
-
-# @receiver(post_save, sender=StudentTask)
-# def auto_create_reminder_on_task_update(sender, instance, **kwargs):
-#     if instance.status in ["not_started", "in_progress"] and instance.due_date:
-#         today = timezone.now().date()
-#         target_date = today + timedelta(days=3)
-
-#         if instance.due_date <= target_date:
-#             if instance.due_date < today:
-#                 message = f"您的任務「{instance.task.title}」已經逾期（截止日：{instance.due_date}），請盡快完成！"
-#             elif instance.due_date == today:
-#                 message = f"您的任務「{instance.task.title}」今天到期，請記得完成！"
-#             else:
-#                 days_left = (instance.due_date - today).days
-#                 message = f"您的任務「{instance.task.title}」還有 {days_left} 天到期（{instance.due_date}）。"
-
-#             exists = Reminder.objects.filter(
-#                 student_task=instance,
-#                 is_read=False
-#             ).exists()
-
-#             if not exists:
-#                 Reminder.objects.create(
-#                     student=instance.student,
-#                     student_task=instance,
-#                     message=message
-#                 )
 
 @receiver(post_save, sender=StudentTask)
 def auto_create_reminder_on_task_update(sender, instance, **kwargs):

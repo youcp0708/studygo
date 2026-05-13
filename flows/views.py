@@ -169,9 +169,13 @@ def stage_list_view(request):
 @permission_classes([IsAuthenticated])
 def init_student_tasks_view(request):
     """
+    同步學生的個人化任務清單：
+    - 新增符合條件但尚未建立的任務
+    - 刪除不再符合條件的舊任務（例如 admin 更新了任務的限定條件）
+
     Response (201):
-      { "success": true, "message": "已為您生成 12 項個人化任務",
-        "data": { "created_count": 12, "skipped_count": 3 } }
+      { "success": true, "message": "同步完成：新增 3 項，移除 1 項",
+        "data": { "created_count": 3, "removed_count": 1 } }
     """
     user = request.user
 
@@ -181,36 +185,44 @@ def init_student_tasks_view(request):
     except StudentProfile.DoesNotExist:
         return error_response('請先建立學生資料（POST /api/users/profile/）', status_code=400)
 
-    # 取得所有任務模板
     all_tasks = Task.objects.all()
 
-    created_count = 0
-    skipped_count = 0
-
+    # ── 計算哪些任務符合此學生的條件 ──
+    eligible_task_ids = set()
     for task in all_tasks:
-        # ── 篩選邏輯：欄位為空代表「不限」，全部適用 ──
         if task.identity_type and task.identity_type != profile.identity_type:
-            skipped_count += 1
             continue
         if task.nationality and task.nationality != profile.nationality:
-            skipped_count += 1
+            continue
+        if task.university and task.university != profile.university:
             continue
         if task.admission_status and task.admission_status != profile.admission_status:
-            skipped_count += 1
             continue
+        eligible_task_ids.add(task.id)
 
-        # 避免重複建立（unique_together: student + task）
-        _, created = StudentTask.objects.get_or_create(
-            student=profile,
-            task=task,
-        )
-        if created:
-            created_count += 1
+    # ── 取得目前學生已有的任務 ──
+    existing_student_tasks = StudentTask.objects.filter(student=profile)
+    existing_task_ids = set(existing_student_tasks.values_list('task_id', flat=True))
+
+    # ── 1. 移除不再符合條件的舊任務 ──
+    to_remove_ids = existing_task_ids - eligible_task_ids
+    removed_count = 0
+    if to_remove_ids:
+        removed_count, _ = StudentTask.objects.filter(
+            student=profile, task_id__in=to_remove_ids
+        ).delete()
+
+    # ── 2. 新增符合條件但尚未建立的任務 ──
+    to_create_ids = eligible_task_ids - existing_task_ids
+    created_count = 0
+    for task_id in to_create_ids:
+        StudentTask.objects.create(student=profile, task_id=task_id)
+        created_count += 1
 
     return success_response({
         'created_count': created_count,
-        'skipped_count': skipped_count,
-    }, f'已為您生成 {created_count} 項個人化任務', status_code=201)
+        'removed_count': removed_count,
+    }, f'同步完成：新增 {created_count} 項，移除 {removed_count} 項', status_code=201)
 
 
 # ══════════════════════════════════════════

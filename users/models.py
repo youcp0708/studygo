@@ -116,6 +116,46 @@ class StudentProfile(models.Model):
     ('Other',       _('其他')),
     ]
 
+    # ── 學校選項 (university) ──
+    UNIVERSITY_CHOICES = [
+        ('NTU', _('國立臺灣大學（NTU）')),
+        ('NCCU', _('國立政治大學（NCCU）')),
+        ('NTHU', _('國立清華大學（NTHU）')),
+        ('NYCU', _('國立陽明交通大學（NYCU）')),
+        ('NCKU', _('國立成功大學（NCKU）')),
+        ('NCHU', _('國立中興大學（NCHU）')),
+        ('NCU', _('國立中央大學（NCU）')),
+        ('NSYSU', _('國立中山大學（NSYSU）')),
+        ('NTNU', _('國立臺灣師範大學（NTNU）')),
+        ('NTPU', _('國立臺北大學（NTPU）')),
+        ('NUTN', _('國立臺南大學（NUTN）')),
+        ('NCYU', _('國立嘉義大學（NCYU）')),
+        ('NDHU', _('國立東華大學（NDHU）')),
+        ('NCNU', _('國立暨南國際大學（NCNU）')),
+        ('NIU', _('國立宜蘭大學（NIU）')),
+        ('NUU', _('國立聯合大學（NUU）')),
+        ('NTTU', _('國立臺東大學（NTTU）')),
+        ('NQU', _('國立金門大學（NQU）')),
+        ('NPU', _('國立澎湖科技大學（NPU）')),
+        ('NTUST', _('國立臺灣科技大學（NTUST）')),
+        ('NTUT', _('國立臺北科技大學（NTUT）')),
+        ('NKUST', _('國立高雄科技大學（NKUST）')),
+        ('YunTech', _('國立雲林科技大學（YunTech）')),
+        ('NPUST', _('國立屏東科技大學（NPUST）')),
+        ('NTCUST', _('國立臺中科技大學（NTCUST）')),
+        ('NFU', _('國立虎尾科技大學（NFU）')),
+        ('NKUHT', _('國立高雄餐旅大學（NKUHT）')),
+        ('NKNU', _('國立高雄師範大學（NKNU）')),
+        ('NCUE', _('國立彰化師範大學（NCUE）')),
+        ('NTUE', _('國立臺北教育大學（NTUE）')),
+        ('NTCU', _('國立臺中教育大學（NTCU）')),
+        ('NPTU', _('國立屏東大學（NPTU）')),
+        ('NTUS', _('國立臺灣體育運動大學（NTUS）')),
+        ('NTUB', _('國立臺北商業大學（NTUB）')),
+        ('NOU', _('國立空中大學（NOU）')),
+        ('Other', _('其他（Other）')),
+    ]
+
     # ── 關聯 CustomUser（一對一）──
     user = models.OneToOneField(
         CustomUser,
@@ -127,7 +167,7 @@ class StudentProfile(models.Model):
     # ── Class Diagram 欄位 ──
     nationality      = models.CharField(max_length=50, choices=NATIONALITY_CHOICES,
                                         verbose_name='國籍')
-    university       = models.CharField(max_length=200, verbose_name='就讀學校')
+    university       = models.CharField(max_length=200, choices=UNIVERSITY_CHOICES, verbose_name='就讀學校')
     identity_type    = models.CharField(max_length=30, choices=IDENTITY_CHOICES,
                                         verbose_name='身份別')
     admission_status = models.CharField(max_length=20, choices=ADMISSION_STATUS_CHOICES,
