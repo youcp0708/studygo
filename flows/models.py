@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from multiselectfield import MultiSelectField
 from users.models import StudentProfile
 
 
@@ -99,16 +100,16 @@ class Task(models.Model):
     description_ko = models.TextField(blank=True, verbose_name="任務說明 Korean")
 
     # 用來判斷這個任務適合哪種學生
-    identity_type = models.CharField(
-        max_length=30,
+    identity_type = MultiSelectField(
         choices=StudentProfile.IDENTITY_CHOICES,
         blank=True,
+        null=True,
         verbose_name="適用身份類型"
     )
-    nationality = models.CharField(
-        max_length=50,
+    nationality = MultiSelectField(
         choices=StudentProfile.NATIONALITY_CHOICES,
         blank=True,
+        null=True,
         verbose_name="適用國籍"
     )
     university = models.CharField(
