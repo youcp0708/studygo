@@ -272,7 +272,7 @@
     <button class="prog-tab" data-tab="undergrad">🎓 {% trans "學士班" %}</button>
     <button class="prog-tab" data-tab="grad">🔬 {% trans "研究所" %}</button>
     <button class="prog-tab" data-tab="foreign">🌏 {% trans "外籍生" %}</button>
-    <button class="prog-tab" data-tab="exchange">✈️ {% trans "交換生" %}</button>
+    <button class="prog-tab" data-tab="exchange">🇭🇰 {% trans "港澳生" %}</button>
   </div>
 
   <!-- 僑先部 -->
@@ -491,53 +491,55 @@
     </div>
   </div>
 
-  <!-- 交換生 -->
+  <!-- 港澳生 -->
   <div class="prog-panel" id="tab-exchange">
     <div class="alert alert-info">
       <div class="alert-icon">ℹ️</div>
       <div>
-        <strong>{% trans "交換生" %}</strong>{% trans "：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依協議返校抵免，通常免繳台灣學雜費。" %}
+        <strong>{% trans "港澳生" %}</strong>{% trans "：持香港或澳門居民身份、曾在港澳接受教育的學生，可透過海外聯合招生委員會（海聯會）港澳組申請來台就讀，享有與僑生相近的申請管道與優惠。" %}
       </div>
     </div>
     <div class="cat-grid">
       <div class="cat-card">
         <div class="cat-card-accent accent-teal"></div>
-        <div class="cat-icon">✈️</div>
-        <div class="cat-title">{% trans "申請流程" %}</div>
-        <div class="cat-desc">{% trans "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申請，須先確認原校有締結交換協議。" %}</div>
+        <div class="cat-icon">📋</div>
+        <div class="cat-title">{% trans "申請資格" %}</div>
+        <div class="cat-desc">{% trans "持香港或澳門永久居民身份證，在港澳接受正規高中教育（香港 DSE 或澳門高中文憑），且非具中華民國國籍並在台設有戶籍者。" %}</div>
         <div class="cat-tags">
-          <span class="cat-tag hl">{% trans "原校提名" %}</span>
-          <span class="cat-tag">{% trans "需締結協議" %}</span>
+          <span class="cat-tag hl">{% trans "港澳居民身份" %}</span>
+          <span class="cat-tag">{% trans "高中畢業" %}</span>
+          <span class="cat-tag">{% trans "HKDSE / 澳門高中" %}</span>
         </div>
       </div>
       <div class="cat-card">
         <div class="cat-card-accent accent-blue"></div>
-        <div class="cat-icon">📅</div>
-        <div class="cat-title">{% trans "期程與截止" %}</div>
-        <div class="cat-desc">{% trans "上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月截止。依各校締約條件而有不同。" %}</div>
+        <div class="cat-icon">📍</div>
+        <div class="cat-title">{% trans "申請管道" %}</div>
+        <div class="cat-desc">{% trans "透過海外聯合招生委員會（海聯會）港澳組統一辦理，可申請學士班及研究所。部分學校亦設有港澳生獨立招生管道，請查閱各校公告。" %}</div>
         <div class="cat-tags">
-          <span class="cat-tag hl">{% trans "上學期：3～4 月" %}</span>
-          <span class="cat-tag">{% trans "下學期：10～11 月" %}</span>
-        </div>
-      </div>
-      <div class="cat-card">
-        <div class="cat-card-accent accent-purple"></div>
-        <div class="cat-icon">🪪</div>
-        <div class="cat-title">{% trans "簽證與居留" %}</div>
-        <div class="cat-desc">{% trans "短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入台，並辦理外僑居留證。" %}</div>
-        <div class="cat-tags">
-          <span class="cat-tag hl">{% trans "≤6 月：觀光簽" %}</span>
-          <span class="cat-tag">{% trans ">6 月：需 ARC" %}</span>
+          <span class="cat-tag hl">{% trans "海聯會港澳組" %}</span>
+          <span class="cat-tag">{% trans "統一報名" %}</span>
         </div>
       </div>
       <div class="cat-card">
         <div class="cat-card-accent accent-orange"></div>
-        <div class="cat-icon">💡</div>
-        <div class="cat-title">{% trans "費用說明" %}</div>
-        <div class="cat-desc">{% trans "依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行負擔，每月約 NT$10,000～15,000。" %}</div>
+        <div class="cat-icon">📅</div>
+        <div class="cat-title">{% trans "申請時程" %}</div>
+        <div class="cat-desc">{% trans "海聯會港澳組通常於每年 1～2 月開放網路報名，截止日期約為 2 月底。錄取結果約 5～6 月公告，9 月初入學報到。" %}</div>
         <div class="cat-tags">
-          <span class="cat-tag hl">{% trans "學雜費全免" %}</span>
-          <span class="cat-tag">{% trans "生活費自理" %}</span>
+          <span class="cat-tag hl">{% trans "1～2 月報名" %}</span>
+          <span class="cat-tag">{% trans "5～6 月放榜" %}</span>
+          <span class="cat-tag">{% trans "9 月入學" %}</span>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-accent accent-purple"></div>
+        <div class="cat-icon">💰</div>
+        <div class="cat-title">{% trans "獎助學金" %}</div>
+        <div class="cat-desc">{% trans "港澳生可申請教育部僑生獎學金（每月約 NT$5,000～8,000），另有各校設立的港澳生入學獎學金及學校獎助學金，請向各校國際處查詢。" %}</div>
+        <div class="cat-tags">
+          <span class="cat-tag hl">{% trans "教育部僑生獎學金" %}</span>
+          <span class="cat-tag">{% trans "學校獎助" %}</span>
         </div>
       </div>
     </div>
@@ -701,77 +703,6 @@
     </div>
   </div>
 
-  <!-- 常見問題 -->
-  <div class="section-title">❓ {% trans "常見問題" %}</div>
-  <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>{% trans "我是外籍生（非僑生），可以透過海聯會申請嗎？" %}</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          {% trans "不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。" %}
-        </div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>{% trans "僑生與外籍生有什麼不同？" %}</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          {% trans "「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。" %}
-        </div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>{% trans "可以同時申請多所學校嗎？" %}</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          {% trans "海聯會管道可填寫多個志願（學校 + 系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。" %}
-        </div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>{% trans "中文不夠好，可以申請中文授課的系所嗎？" %}</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          {% trans "各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。" %}
-        </div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>{% trans "申請獎學金需要另外申請嗎？" %}</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          {% trans "教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。" %}
-        </div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>{% trans "我已在台灣就讀，可以轉學嗎？" %}</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        <div class="faq-a-inner">
-          {% trans "可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。" %}
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- 聯絡資訊 -->
   <div class="section-title">🔗 {% trans "重要聯絡與資源" %}</div>
   <div class="contact-grid">
@@ -853,14 +784,5 @@
     });
   });
 
-  // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.closest('.faq-item');
-      const ans  = item.querySelector('.faq-a');
-      const isOpen = item.classList.toggle('open');
-      ans.style.maxHeight = isOpen ? ans.scrollHeight + 'px' : '0';
-    });
-  });
 </script>
 {% endblock %}

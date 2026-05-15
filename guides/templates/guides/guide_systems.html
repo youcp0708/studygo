@@ -1,0 +1,396 @@
+{# guides/templates/guides/guide_systems.html — 校內系統 #}
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "校內系統" %} — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  .gs-wrap { width:min(860px,96%); margin:0 auto; padding:32px 24px 72px; }
+
+  /* Hero */
+  .gs-hero {
+    background:linear-gradient(135deg,#1e3a5f 0%,#0369a1 100%);
+    color:#fff; border-radius:20px; padding:36px 44px 32px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .gs-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:88px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none; line-height:1;
+  }
+  .gs-hero h2 { font-size:26px; font-weight:900; margin:0 0 8px; }
+  .gs-hero p  { opacity:.85; font-size:15px; margin:0; }
+  .gs-back {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
+  }
+  .gs-back:hover { color:var(--primary-dark); }
+
+  /* Section label */
+  .gs-label {
+    font-size:15px; font-weight:900; color:var(--primary-dark);
+    padding:0 0 10px; margin:32px 0 16px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  /* Alert boxes */
+  .gs-alert {
+    border-radius:12px; padding:14px 18px; font-size:14px;
+    line-height:1.7; margin-bottom:20px;
+  }
+  .gs-alert.info  { background:#eff6ff; border-left:4px solid #3b82f6; color:#1e40af; }
+  .gs-alert.warn  { background:#fff7ed; border-left:4px solid #f59e0b; color:#92400e; }
+  .gs-alert.green { background:#f0fdf4; border-left:4px solid #22c55e; color:#166534; }
+
+  /* 快速入口卡片 */
+  .gs-portal-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px; margin-bottom:8px;
+  }
+  .gs-portal-card {
+    border-radius:16px; padding:22px 18px 18px;
+    text-decoration:none; color:inherit;
+    display:flex; flex-direction:column; gap:8px;
+    border:1.5px solid var(--border);
+    transition:box-shadow .2s, transform .15s;
+  }
+  .gs-portal-card:hover { box-shadow:0 6px 20px rgba(0,0,0,.1); transform:translateY(-3px); }
+  .gs-portal-card .pc-icon { font-size:32px; line-height:1; }
+  .gs-portal-card .pc-name { font-size:15px; font-weight:800; color:var(--primary-dark); }
+  .gs-portal-card .pc-url  { font-size:11px; color:var(--muted); word-break:break-all; }
+  .gs-portal-card .pc-desc { font-size:12px; color:#555; line-height:1.6; }
+  .gs-portal-card.blue  { background:#eff6ff; border-color:#bfdbfe; }
+  .gs-portal-card.teal  { background:#f0fdfa; border-color:#99f6e4; }
+  .gs-portal-card.amber { background:#fffbeb; border-color:#fde68a; }
+
+  /* 系統區塊 */
+  .gs-sys-card {
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:16px; padding:24px 24px 20px; margin-bottom:24px;
+  }
+  .gs-sys-card h3 {
+    font-size:17px; font-weight:900; color:var(--primary-dark);
+    margin:0 0 16px; display:flex; align-items:center; gap:8px;
+  }
+
+  /* info-row */
+  .gs-info-row {
+    display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;
+  }
+  .gs-info-chip {
+    display:flex; flex-direction:column;
+    background:var(--bg); border:1px solid var(--border);
+    border-radius:10px; padding:10px 14px; flex:1; min-width:130px;
+  }
+  .gs-info-chip .ic-label { font-size:11px; color:var(--muted); margin-bottom:3px; }
+  .gs-info-chip .ic-val   { font-size:14px; font-weight:700; color:var(--primary-dark); }
+
+  /* 步驟條 */
+  .gs-steps { display:flex; flex-direction:column; gap:0; margin-bottom:12px; }
+  .gs-step  {
+    display:flex; gap:14px; align-items:flex-start;
+    padding:14px 0; border-bottom:1px solid #f0f0f0;
+  }
+  .gs-step:last-child { border-bottom:none; }
+  .gs-step-num {
+    width:28px; height:28px; border-radius:50%; flex-shrink:0;
+    background:var(--primary); color:#fff;
+    font-size:13px; font-weight:800;
+    display:flex; align-items:center; justify-content:center; margin-top:1px;
+  }
+  .gs-step-body { flex:1; }
+  .gs-step-title { font-size:14px; font-weight:700; color:var(--primary-dark); margin-bottom:4px; }
+  .gs-step-desc  { font-size:13px; color:#555; line-height:1.7; }
+  .gs-step-desc code {
+    background:#f1f5f9; border-radius:4px; padding:1px 6px;
+    font-size:12px; color:#1e40af; font-weight:700;
+  }
+
+  /* 功能列表 */
+  .gs-func-list { list-style:none; padding:0; margin:0; }
+  .gs-func-list li {
+    padding:8px 0; border-bottom:1px solid #f0f0f0;
+    font-size:14px; color:#444; line-height:1.6;
+    display:flex; gap:8px; align-items:flex-start;
+  }
+  .gs-func-list li:last-child { border-bottom:none; }
+  .gs-func-list li::before { content:'•'; color:var(--primary); font-weight:900; flex-shrink:0; }
+
+  /* 表格 */
+  .gs-table-wrap { overflow-x:auto; margin-bottom:4px; }
+  .gs-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .gs-table th {
+    background:var(--primary); color:#fff;
+    padding:10px 14px; text-align:left; font-weight:700; font-size:12px;
+  }
+  .gs-table td { padding:10px 14px; border-bottom:1px solid #f0f0f0; vertical-align:top; }
+  .gs-table tr:last-child td { border-bottom:none; }
+  .gs-table tr:nth-child(even) td { background:#f8fafc; }
+
+  /* 聯絡表 */
+  .gs-contact-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:4px;
+  }
+  .gs-contact-card {
+    background:var(--bg); border:1px solid var(--border);
+    border-radius:10px; padding:14px 16px;
+  }
+  .gs-contact-card .cc-name { font-size:13px; font-weight:700; color:var(--primary-dark); margin-bottom:4px; }
+  .gs-contact-card .cc-info { font-size:12px; color:#555; line-height:1.7; }
+
+  @media(max-width:600px){
+    .gs-portal-grid  { grid-template-columns:1fr; }
+    .gs-contact-grid { grid-template-columns:1fr; }
+    .gs-info-row     { flex-direction:column; }
+    .gs-hero         { padding:28px 20px 24px; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="gs-wrap">
+
+  <a class="gs-back" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
+
+  <div class="gs-hero">
+    <div class="bg-text">SYSTEM</div>
+    <h2>🖥️ {% trans "校內系統" %}</h2>
+    <p>{% trans "Portal 帳號啟用、ee-class 課程平台、學生信箱設定" %}</p>
+  </div>
+
+  <!-- 快速入口 -->
+  <div class="gs-label">🔗 {% trans "三大系統快速入口" %}</div>
+  <div class="gs-portal-grid">
+    <a href="https://portal.ncu.edu.tw" target="_blank" rel="noopener" class="gs-portal-card blue">
+      <div class="pc-icon">🌐</div>
+      <div class="pc-name">NCU Portal</div>
+      <div class="pc-url">portal.ncu.edu.tw</div>
+      <div class="pc-desc">{% trans "統一登入入口，選課、成績、各系統 SSO" %}</div>
+    </a>
+    <a href="https://ncueeclass.ncu.edu.tw" target="_blank" rel="noopener" class="gs-portal-card teal">
+      <div class="pc-icon">📖</div>
+      <div class="pc-name">ee-class</div>
+      <div class="pc-url">ncueeclass.ncu.edu.tw</div>
+      <div class="pc-desc">{% trans "課程平台：講義、作業、公告、成績查詢" %}</div>
+    </a>
+    <a href="https://mail.ncu.edu.tw" target="_blank" rel="noopener" class="gs-portal-card amber">
+      <div class="pc-icon">✉️</div>
+      <div class="pc-name">{% trans "學生信箱" %}</div>
+      <div class="pc-url">mail.ncu.edu.tw</div>
+      <div class="pc-desc">{% trans "學號@cc.ncu.edu.tw，重要公告必看" %}</div>
+    </a>
+  </div>
+
+  <!-- 帳號啟用 -->
+  <div class="gs-label">🔑 {% trans "第一步：帳號啟用" %}</div>
+
+  <div class="gs-alert warn">
+    ⚠️ {% trans "Portal 帳號預設未啟用，入學後請先完成啟用，才能使用所有校內系統。" %}
+  </div>
+
+  <div class="gs-sys-card">
+    <h3>📋 {% trans "啟用步驟" %}</h3>
+    <div class="gs-steps">
+      <div class="gs-step">
+        <div class="gs-step-num">1</div>
+        <div class="gs-step-body">
+          <div class="gs-step-title">{% trans "前往啟用頁面" %}</div>
+          <div class="gs-step-desc">
+            <a href="https://tarn.cc.ncu.edu.tw/enableaccount" target="_blank" rel="noopener">
+              https://tarn.cc.ncu.edu.tw/enableaccount
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="gs-step">
+        <div class="gs-step-num">2</div>
+        <div class="gs-step-body">
+          <div class="gs-step-title">{% trans "填寫資料" %}</div>
+          <div class="gs-step-desc">
+            {% trans "學號、出生年月日，外籍生填護照號碼（非台灣身分證）" %}
+          </div>
+        </div>
+      </div>
+      <div class="gs-step">
+        <div class="gs-step-num">3</div>
+        <div class="gs-step-body">
+          <div class="gs-step-title">{% trans "等待約 10 分鐘" %}</div>
+          <div class="gs-step-desc">{% trans "啟用完成後即可以學號 + 預設密碼（出生年月日，YYYYMMDD）登入 Portal。" %}</div>
+        </div>
+      </div>
+      <div class="gs-step">
+        <div class="gs-step-num">4</div>
+        <div class="gs-step-body">
+          <div class="gs-step-title">{% trans "登入後立即更改密碼" %}</div>
+          <div class="gs-step-desc">{% trans "預設密碼為生日，請馬上改成強密碼，並設定信箱或手機號碼以便之後找回密碼。" %}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gs-alert info" style="margin-top:4px; margin-bottom:0;">
+      💡 {% trans "若瀏覽器顯示「Cookie 未被接受」，請換瀏覽器（建議 Chrome / Firefox）。聯絡計算機中心：分機 57771。" %}
+    </div>
+  </div>
+
+  <!-- Portal -->
+  <div class="gs-label">🌐 NCU Portal</div>
+
+  <div class="gs-sys-card">
+    <h3>🌐 Portal <span style="font-size:13px; font-weight:500; color:var(--muted);">portal.ncu.edu.tw</span></h3>
+
+    <div class="gs-info-row">
+      <div class="gs-info-chip">
+        <div class="ic-label">{% trans "登入帳號" %}</div>
+        <div class="ic-val">{% trans "學號" %}</div>
+      </div>
+      <div class="gs-info-chip">
+        <div class="ic-label">{% trans "預設密碼" %}</div>
+        <div class="ic-val">YYYYMMDD</div>
+      </div>
+      <div class="gs-info-chip">
+        <div class="ic-label">{% trans "功能" %}</div>
+        <div class="ic-val">SSO / {% trans "選課 / 成績" %}</div>
+      </div>
+    </div>
+
+    <ul class="gs-func-list">
+      <li>{% trans "單一登入（SSO）：一組帳密進入 ee-class、信箱、圖書館等所有校內系統" %}</li>
+      <li>{% trans "選課系統（cis.ncu.edu.tw/Course/）：透過 Portal 帳號登入" %}</li>
+      <li>{% trans "成績查詢、修課記錄" %}</li>
+      <li>{% trans "QR Code 登入：在公用電腦可用手機掃碼，不需輸入密碼" %}</li>
+      <li>{% trans "忘記密碼：透過已綁定的信箱或手機號碼重設" %}</li>
+    </ul>
+  </div>
+
+  <!-- ee-class -->
+  <div class="gs-label">📖 ee-class {% trans "課程平台" %}</div>
+
+  <div class="gs-sys-card">
+    <h3>📖 ee-class <span style="font-size:13px; font-weight:500; color:var(--muted);">ncueeclass.ncu.edu.tw</span></h3>
+
+    <div class="gs-alert warn" style="margin-bottom:16px;">
+      ⚠️ {% trans "請勿在 ee-class 自行「註冊」新帳號！一般生直接用 Portal 帳號（學號）登入即可。" %}
+    </div>
+
+    <div class="gs-info-row">
+      <div class="gs-info-chip">
+        <div class="ic-label">{% trans "登入帳號" %}</div>
+        <div class="ic-val">{% trans "學號（同 Portal）" %}</div>
+      </div>
+      <div class="gs-info-chip">
+        <div class="ic-label">{% trans "密碼" %}</div>
+        <div class="ic-val">{% trans "同 Portal 密碼" %}</div>
+      </div>
+    </div>
+
+    <ul class="gs-func-list">
+      <li>{% trans "查看課程講義、教材、教授公告" %}</li>
+      <li>{% trans "繳交作業、查看作業批改結果" %}</li>
+      <li>{% trans "課程成績查詢（部分老師使用）" %}</li>
+      <li>{% trans "NCUx 雲端課程：選修免費線上課程（不計學分）" %}</li>
+    </ul>
+
+    <div class="gs-label" style="margin-top:16px; margin-bottom:12px; font-size:13px;">{% trans "特殊身份登入方式" %}</div>
+    <div class="gs-table-wrap">
+      <table class="gs-table">
+        <thead>
+          <tr>
+            <th>{% trans "身份" %}</th>
+            <th>{% trans "帳號" %}</th>
+            <th>{% trans "密碼" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{% trans "一般生／教職員" %}</td>
+            <td>{% trans "學號" %}</td>
+            <td>{% trans "Portal 密碼" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "跨校交換生" %}</td>
+            <td>{% trans "Z 開頭臨時帳號" %}</td>
+            <td>{% trans "原校學號" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "旁聽生／推廣教育" %}</td>
+            <td>{% trans "Y 開頭臨時帳號" %}</td>
+            <td>{% trans "台灣身分證號" %}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="gs-alert info" style="margin-top:16px; margin-bottom:0;">
+      📞 {% trans "ee-class 問題聯絡：eeclass@ncu.edu.tw｜分機 57132 / 57169" %}
+    </div>
+  </div>
+
+  <!-- 信箱 -->
+  <div class="gs-label">✉️ {% trans "學生信箱" %}</div>
+
+  <div class="gs-sys-card">
+    <h3>✉️ {% trans "學生信箱" %} <span style="font-size:13px; font-weight:500; color:var(--muted);">mail.ncu.edu.tw</span></h3>
+
+    <div class="gs-info-row">
+      <div class="gs-info-chip">
+        <div class="ic-label">{% trans "信箱格式" %}</div>
+        <div class="ic-val">{% trans "學號@cc.ncu.edu.tw" %}</div>
+      </div>
+      <div class="gs-info-chip">
+        <div class="ic-label">{% trans "容量" %}</div>
+        <div class="ic-val">2 GB</div>
+      </div>
+      <div class="gs-info-chip">
+        <div class="ic-label">{% trans "有效期限" %}</div>
+        <div class="ic-val">{% trans "畢業後 5 年" %}</div>
+      </div>
+    </div>
+
+    <ul class="gs-func-list">
+      <li>{% trans "學校重要公告（選課結果、成績、繳費通知）均寄到此信箱，請定期查收" %}</li>
+      <li>{% trans "登入帳號：學號；密碼：同 Portal 密碼" %}</li>
+      <li>{% trans "非 Gmail 帳號，無法直接存取 Google 服務" %}</li>
+    </ul>
+
+    <div class="gs-label" style="margin-top:16px; margin-bottom:12px; font-size:13px;">📱 {% trans "手機 / 電腦設定" %}</div>
+    <ul class="gs-func-list">
+      <li>
+        <span>
+          <strong>iOS（iPhone）</strong>：{% trans "前往「設定 → 郵件 → 帳號 → 新增帳號」，選「其他」，輸入信箱與密碼，詳細步驟：" %}
+          <a href="https://support.mail.ncu.edu.tw" target="_blank" rel="noopener">support.mail.ncu.edu.tw</a>
+        </span>
+      </li>
+      <li>
+        <span>
+          <strong>Outlook 2021/2024</strong>：{% trans "帳號設定頁面 → 手動設定 → IMAP，詳細步驟見同上連結" %}
+        </span>
+      </li>
+      <li>{% trans "忘記密碼：透過 Portal 重設，不需另行聯絡信箱管理員" %}</li>
+    </ul>
+
+    <div class="gs-alert info" style="margin-top:16px; margin-bottom:0;">
+      📞 {% trans "信箱問題聯絡：ncucc@cc.ncu.edu.tw｜分機 57555 / 57566" %}
+    </div>
+  </div>
+
+  <!-- 聯絡資訊 -->
+  <div class="gs-label">📞 {% trans "計算機中心聯絡" %}</div>
+  <div class="gs-contact-grid">
+    <div class="gs-contact-card">
+      <div class="cc-name">{% trans "帳號 / Portal 問題" %}</div>
+      <div class="cc-info">{% trans "分機" %} 57771</div>
+    </div>
+    <div class="gs-contact-card">
+      <div class="cc-name">ee-class {% trans "問題" %}</div>
+      <div class="cc-info">eeclass@ncu.edu.tw<br>{% trans "分機" %} 57132 / 57169</div>
+    </div>
+    <div class="gs-contact-card">
+      <div class="cc-name">{% trans "信箱問題" %}</div>
+      <div class="cc-info">ncucc@cc.ncu.edu.tw<br>{% trans "分機" %} 57555 / 57566</div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
