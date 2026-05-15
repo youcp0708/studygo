@@ -26,13 +26,6 @@
   .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
   .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:520px; margin:0; }
 
-  .info-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-bottom:28px; }
-  .info-card { background:#fff; border:1.5px solid var(--border); border-radius:14px; padding:18px; text-align:center; }
-  .info-card .i-icon  { font-size:26px; margin-bottom:8px; }
-  .info-card .i-label { font-size:13px; color:var(--muted); font-weight:700; margin-bottom:4px; }
-  .info-card .i-val   { font-size:16px; font-weight:900; color:var(--primary-dark); line-height:1.3; }
-  .info-card .i-sub   { font-size:12px; color:var(--muted); margin-top:4px; line-height:1.4; }
-
   .section-title {
     font-size:17px; font-weight:900; color:var(--primary-dark);
     margin:28px 0 14px; padding-bottom:10px;
@@ -49,9 +42,54 @@
   .alert-info strong { color:#0369a1; }
   .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
   .alert-warning strong { color:var(--warning); }
-  .alert-success { background:#f0fdf4; border:1.5px solid #86efac; }
-  .alert-success strong { color:#15803d; }
 
+  /* ── 規定說明表 ── */
+  .nhi-table-wrap { overflow-x:auto; margin-bottom:28px; }
+  .nhi-table {
+    width:100%; border-collapse:collapse; font-size:14px; min-width:520px;
+  }
+  .nhi-table th {
+    background:var(--primary); color:#fff;
+    padding:12px 16px; text-align:center; font-weight:800; font-size:13px;
+  }
+  .nhi-table th:first-child { border-radius:12px 0 0 0; }
+  .nhi-table th:last-child  { border-radius:0 12px 0 0; }
+  .nhi-table td {
+    padding:13px 16px; border-bottom:1px solid var(--border);
+    vertical-align:top; line-height:1.7;
+  }
+  .nhi-table tr:last-child td { border-bottom:none; }
+  .nhi-table tr:nth-child(even) td { background:#fafafa; }
+  .nhi-table .row-label {
+    font-weight:800; color:var(--primary-dark); white-space:nowrap;
+    font-size:13px;
+  }
+  .nhi-table .col-study { color:#0369a1; }
+  .nhi-table .col-work  { color:#059669; }
+
+  /* ── 注意事項清單 ── */
+  .notice-list { list-style:none; padding:0; margin:0 0 28px; display:flex; flex-direction:column; gap:10px; }
+  .notice-item {
+    display:flex; gap:12px; align-items:flex-start;
+    background:#fff; border:1.5px solid var(--border); border-radius:12px;
+    padding:14px 16px; font-size:14px; line-height:1.7; color:var(--dark);
+  }
+  .notice-num {
+    width:26px; height:26px; border-radius:50%; background:var(--primary);
+    color:#fff; font-size:12px; font-weight:900;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; margin-top:1px;
+  }
+
+  /* ── 例題 box ── */
+  .example-box {
+    background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px;
+    padding:14px 18px; font-size:13px; line-height:1.8; color:#14532d;
+    margin-bottom:24px;
+  }
+  .example-box strong { color:#15803d; }
+
+  /* ── 文件下載 ── */
   .doc-list { display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
   .doc-item {
     display:flex; align-items:center; gap:10px;
@@ -66,21 +104,15 @@
   .badge-req { background:var(--primary-soft); color:var(--primary-dark); }
   .badge-opt { background:var(--bg); color:var(--muted); }
 
-  .step-list { list-style:none; padding:0; margin:0 0 28px; }
-  .step-item { display:flex; gap:16px; margin-bottom:20px; position:relative; }
-  .step-item:not(:last-child)::after {
-    content:''; position:absolute; left:19px; top:42px; bottom:-20px;
-    width:2px; background:var(--primary-soft);
+  .dl-row { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; }
+  .dl-btn {
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 20px; border-radius:10px; font-size:14px; font-weight:700;
+    text-decoration:none; transition:box-shadow .15s, filter .15s;
+    border:none; cursor:pointer;
   }
-  .step-num {
-    width:40px; height:40px; border-radius:50%; background:var(--primary);
-    color:#fff; font-size:16px; font-weight:900;
-    display:flex; align-items:center; justify-content:center;
-    flex-shrink:0; z-index:1; position:relative;
-  }
-  .step-body { flex:1; padding-top:4px; }
-  .step-title { font-size:15px; font-weight:800; color:var(--dark); margin-bottom:4px; }
-  .step-desc  { font-size:14px; color:var(--muted); line-height:1.7; }
+  .dl-btn:hover { filter:brightness(.92); box-shadow:0 3px 10px rgba(0,0,0,.12); }
+  .dl-pdf  { background:#dc2626; color:#fff; }
 
   .link-row { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px; }
   .ext-link {
@@ -109,60 +141,113 @@
     <div class="bg-text">NHI</div>
     <div class="hero-badge">外籍生・僑生必辦</div>
     <h2>🏥 {% trans "全民健康保險申請指南" %}</h2>
-    <p>取得居留證（ARC）後即可加入全民健保，享有台灣完整醫療保障，門診費用大幅降低。</p>
+    <p>僑生、外籍生（僑外生）取得居留證明文件來臺就學，自合於投保資格之日起，依法應參加全民健康保險。</p>
   </div>
 
-  <div class="info-row">
-    <div class="info-card">
-      <div class="i-icon">📅</div>
-      <div class="i-label">加保資格</div>
-      <div class="i-val">持有效 ARC</div>
-      <div class="i-sub">居留未滿 6 個月者，部分情況需等候</div>
-    </div>
-    <div class="info-card">
-      <div class="i-icon">🏫</div>
-      <div class="i-label">申請管道</div>
-      <div class="i-val">透過學校辦理</div>
-      <div class="i-sub">至衛生保健組 / 國際事務處</div>
-    </div>
-    <div class="info-card">
-      <div class="i-icon">💰</div>
-      <div class="i-label">學生保費</div>
-      <div class="i-val">依年度費率</div>
-      <div class="i-sub">學生費率由學校代扣，比一般低</div>
-    </div>
-    <div class="info-card">
-      <div class="i-icon">🏥</div>
-      <div class="i-label">診所門診負擔</div>
-      <div class="i-val">NT$150 起</div>
-      <div class="i-sub">未加保前動輒數千元</div>
-    </div>
-  </div>
-
-  <div class="alert alert-success">
-    <div class="alert-icon">✅</div>
-    <div>
-      <strong>多數學校在報到時會統一協助辦理健保加保</strong>，請確認報到包是否已含健保申辦說明。有疑問可直接詢問衛生保健組或國際事務處。
-    </div>
-  </div>
-
-  <!-- ── 誰可以申請 ── -->
-  <div class="section-title">❓ {% trans "哪些人可以申請？" %}</div>
-  <div class="doc-list">
-    <div class="doc-item"><span class="doc-icon">🪪</span>持有效居留證（ARC）的在學外籍生<span class="doc-badge badge-req">符合資格</span></div>
-    <div class="doc-item"><span class="doc-icon">🌏</span>持有效居留證的僑生（含港澳生）<span class="doc-badge badge-req">符合資格</span></div>
-    <div class="doc-item"><span class="doc-icon">✈️</span>交換生：居留期間超過 6 個月者<span class="doc-badge badge-opt">視情況</span></div>
-  </div>
+  <!-- ── 新生第一學期保險（在達到健保資格前）── -->
+  <div class="section-title">🆕 新生第一學期保險（未達健保資格前）</div>
   <div class="alert alert-warning">
-    <div class="alert-icon">⚠️</div>
+    <div class="alert-icon">📌</div>
     <div>
-      <strong>短期交換生（觀光停留或未滿 6 個月）無法加入全民健保。</strong>
-      建議出發前購買旅遊平安險或海外留學險，確保就醫保障。
+      <strong>重要：</strong>剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保險：
     </div>
   </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;">
+    <div style="background:#eff6ff;border:1.5px solid #bae6fd;border-radius:12px;padding:16px 18px;">
+      <div style="font-size:15px;font-weight:900;color:#0369a1;margin-bottom:6px;">🛡 僑保（海外華人保險）</div>
+      <div style="font-size:13px;line-height:1.8;color:var(--dark);">
+        • 適用對象：<strong>首次入台</strong>的大一僑生新生（只能加保一次）<br>
+        • 保費：自費 <strong>NT$600</strong>（僑委會補助 NT$600，合計 NT$1,200）<br>
+        • 保障期間：<strong>6 個月</strong>（一學期）<br>
+        • 由國際事務處協助辦理
+      </div>
+    </div>
+    <div style="background:#f0fdf4;border:1.5px solid #86efac;border-radius:12px;padding:16px 18px;">
+      <div style="font-size:15px;font-weight:900;color:#15803d;margin-bottom:6px;">🛡 國泰人壽保險</div>
+      <div style="font-size:13px;line-height:1.8;color:var(--dark);">
+        • 適用對象：第二學期起或不符合僑保資格者<br>
+        • 保費：<strong>NT$3,000</strong> / 學期（最長六個月）<br>
+        • 由國際事務處協助加保<br>
+        • 理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影本、郵局存簿影本及個資同意書
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 投保規定說明表 ── -->
+  <div class="section-title">📊 全民健保投保規定</div>
+  <div class="nhi-table-wrap">
+    <table class="nhi-table">
+      <thead>
+        <tr>
+          <th style="width:22%;">項目</th>
+          <th class="col-study">僑外生就學期間</th>
+          <th class="col-work">僑外生經許可工作期間</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label">投保資格</td>
+          <td>自在臺居留滿 <strong>6 個月</strong>之日投保</td>
+          <td>自<strong>受僱當日</strong>投保（無等待期）</td>
+        </tr>
+        <tr>
+          <td class="row-label">投保身分</td>
+          <td>第 6 類第 2 目被保險人</td>
+          <td>第 1 類被保險人（受僱者）</td>
+        </tr>
+        <tr>
+          <td class="row-label">投保方式</td>
+          <td>以<strong>就讀學校</strong>為投保單位辦理</td>
+          <td>以<strong>工作單位</strong>為投保單位辦理<br>
+            <span style="font-size:12px;color:var(--muted);">※ 短期性工作未逾 3 個月者，可選擇以原投保資格繼續投保</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── 「居留滿 6 個月」認定 ── -->
+  <div class="section-title">📅「在臺居留滿 6 個月」認定方式</div>
+  <p style="font-size:14px;color:var(--dark);line-height:1.8;margin-bottom:12px;">
+    指進入臺灣地區<strong>連續居住達 6 個月</strong>，或曾出境 1 次且<strong>未逾 30 日</strong>，
+    實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 30 天，則從重新抵台當天起算，<strong>6 個月重新計算</strong>。
+  </p>
+  <div class="example-box">
+    <strong>📌 計算範例：</strong><br>
+    • 入境日：113/9/1 → 未曾出境 → 投保日：<strong>114/3/1</strong><br>
+    • 入境日：113/9/1 → 曾出境 1 次（114/1/1–1/5，共 4 天）→ 投保日：<strong>114/3/5</strong>
+  </div>
+
+  <!-- ── 加保注意事項 ── -->
+  <div class="section-title">📋 在臺參加健保注意事項</div>
+  <ol class="notice-list">
+    <li class="notice-item">
+      <div class="notice-num">1</div>
+      <div>僑外生在臺就學並符合投保資格期間，應以<strong>就讀學校</strong>為投保單位辦理投保。</div>
+    </li>
+    <li class="notice-item">
+      <div class="notice-num">2</div>
+      <div>僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 <strong>3 日內</strong>，向健保署辦理投保。</div>
+    </li>
+    <li class="notice-item">
+      <div class="notice-num">3</div>
+      <div>於受僱單位投保時，應先至<strong>學校辦理轉出</strong>，避免重複投保。</div>
+    </li>
+    <li class="notice-item">
+      <div class="notice-num">4</div>
+      <div>與工作單位終止僱傭關係後，應另以<strong>適法身分投保</strong>：
+        若已受新單位聘僱，於新單位投保；未受聘僱期間則應回學校辦理投保。</div>
+    </li>
+    <li class="notice-item">
+      <div class="notice-num">5</div>
+      <div>符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，
+        應以<strong>眷屬身分</strong>依附其投保單位加保。</div>
+    </li>
+  </ol>
 
   <!-- ── 所需文件 ── -->
-  <div class="section-title">📋 {% trans "所需文件" %}</div>
+  <div class="section-title">📂 所需文件</div>
   <div class="doc-list">
     <div class="doc-item"><span class="doc-icon">🪪</span>居留證（ARC）正本<span class="doc-badge badge-req">必備</span></div>
     <div class="doc-item"><span class="doc-icon">🛂</span>護照正本<span class="doc-badge badge-req">必備</span></div>
@@ -171,49 +256,26 @@
     <div class="doc-item"><span class="doc-icon">📸</span>1 吋照片（部分單位需要）<span class="doc-badge badge-opt">視情況</span></div>
   </div>
 
-  <!-- ── 申請步驟 ── -->
-  <div class="section-title">🪜 {% trans "申請步驟" %}</div>
-  <ul class="step-list">
-    <li class="step-item">
-      <div class="step-num">1</div>
-      <div class="step-body">
-        <div class="step-title">先完成 ARC 辦理</div>
-        <div class="step-desc">健保加保以持有有效居留證為前提。確認 ARC 已核發後，再進行健保申請。</div>
-      </div>
-    </li>
-    <li class="step-item">
-      <div class="step-num">2</div>
-      <div class="step-body">
-        <div class="step-title">前往學校衛生保健組 / 國際處</div>
-        <div class="step-desc">
-          攜帶 ARC、護照、學生證，填寫加保申請書即可。
-          通常會在新生說明會或報到日統一辦理，請留意學校公告。
-        </div>
-      </div>
-    </li>
-    <li class="step-item">
-      <div class="step-num">3</div>
-      <div class="step-body">
-        <div class="step-title">等待健保卡寄發</div>
-        <div class="step-desc">
-          申請送出後約 7～14 個工作天，健保卡將寄到登記地址。
-          等待期間可向承辦單位索取「就醫憑證」，或使用「健保快易通 App」顯示保卡資料就醫。
-        </div>
-      </div>
-    </li>
-    <li class="step-item">
-      <div class="step-num">4</div>
-      <div class="step-body">
-        <div class="step-title">確認保費扣繳方式</div>
-        <div class="step-desc">
-          學生保費通常由學校代為扣繳（含在每學期費用中）。請向學校確認扣費方式，以免漏繳導致停保。
-        </div>
-      </div>
-    </li>
-  </ul>
+  <!-- ── 健保費補助 ── -->
+  <div class="alert alert-info" style="margin-bottom:28px;">
+    <div class="alert-icon">💰</div>
+    <div>
+      <strong>清寒僑生健保費補助：</strong>符合清寒資格加入健保者，可向國際事務處申請每月 <strong>NT$413</strong> 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 NT$826。詳情請洽國際事務處。
+    </div>
+  </div>
+
+  <!-- ── 下載 ── -->
+  <div class="section-title">⬇️ 相關文件下載</div>
+  <div class="dl-row">
+    <a class="dl-btn dl-pdf"
+       href="https://www.nhi.gov.tw/ch/dl-72718-2f56651c5a814b4cae4b8176333914e7-1.pdf"
+       target="_blank" rel="noopener" download>
+      📄 在臺僑生、外籍生參加全民健康保險須知（PDF）↓
+    </a>
+  </div>
 
   <!-- ── 就醫提醒 ── -->
-  <div class="section-title">💡 {% trans "就醫小提醒" %}</div>
+  <div class="section-title">💡 就醫小提醒</div>
   <div class="alert alert-info">
     <div class="alert-icon">🏥</div>
     <div>
@@ -237,7 +299,7 @@
   <div class="section-title">🔗 相關連結</div>
   <div class="link-row">
     <a href="https://www.nhi.gov.tw/" target="_blank" rel="noopener" class="ext-link">🌐 全民健康保險署官網 ↗</a>
-    <a href="https://www.nhi.gov.tw/Content_List.aspx?n=6EB3C72AF36DCD28&topn=5FE8C9FEAE863B46" target="_blank" rel="noopener" class="ext-link">📄 外籍人士加保說明 ↗</a>
+    <a href="https://www.nhi.gov.tw/ch/cp-4533-93c67-2616-1.html" target="_blank" rel="noopener" class="ext-link">📄 非本國籍人士加保說明 ↗</a>
   </div>
 
 </div>

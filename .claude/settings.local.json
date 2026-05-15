@@ -11,7 +11,9 @@
       "Bash(python -c ' *)",
       "Bash(python add_i18n.py)",
       "Bash(del \"C:\\\\Users\\\\User\\\\Downloads\\\\studygo\\\\add_i18n.py\")",
-      "Bash(python -)"
+      "Bash(python -)",
+      "WebFetch(domain:www.nhi.gov.tw)",
+      "WebFetch(domain:law77600.com)"
     ]
   }
 }
