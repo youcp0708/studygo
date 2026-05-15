@@ -103,6 +103,12 @@ class StudentProfileSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('無效的身份別選項')
         return value
 
+    def validate_university(self, value):
+        valid = [c[0] for c in StudentProfile.UNIVERSITY_CHOICES]
+        if value not in valid:
+            raise serializers.ValidationError('無效的學校選項')
+        return value
+
 
 # ══════════════════════════════════════════
 # 4. 使用者完整資料（含 Profile）Serializer
@@ -138,6 +144,13 @@ class UpdateBasicInfoSerializer(serializers.Serializer):
         choices=[c[0] for c in StudentProfile.ADMISSION_STATUS_CHOICES], required=False)
     expected_arrival = serializers.DateField(required=False, allow_null=True)
     preferred_language = serializers.CharField(max_length=10, required=False)
+
+    def validate_university(self, value):
+        if value:
+            valid = [c[0] for c in StudentProfile.UNIVERSITY_CHOICES]
+            if value not in valid:
+                raise serializers.ValidationError('無效的學校選項')
+        return value
 
 
 # ══════════════════════════════════════════

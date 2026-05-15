@@ -102,7 +102,7 @@
               <input
                 type="text"
                 id="editUniversity"
-                value="{{ profile.university|default:'—' }}"
+                value="{{ profile.get_university_display|default:'—' }}"
                 disabled
                 style="background:#f5f5f5;color:var(--muted);cursor:not-allowed;"
               />
