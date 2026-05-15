@@ -13,7 +13,20 @@
       "Bash(del \"C:\\\\Users\\\\User\\\\Downloads\\\\studygo\\\\add_i18n.py\")",
       "Bash(python -)",
       "WebFetch(domain:www.nhi.gov.tw)",
-      "WebFetch(domain:law77600.com)"
+      "WebFetch(domain:law77600.com)",
+      "WebFetch(domain:pdc.adm.ncu.edu.tw)",
+      "WebFetch(domain:in.ncu.edu.tw)",
+      "WebFetch(domain:lc.ncu.edu.tw)",
+      "WebFetch(domain:reurl.cc)",
+      "WebFetch(domain:www.lc.ncu.edu.tw)",
+      "WebFetch(domain:www.scribd.com)",
+      "WebSearch",
+      "WebFetch(domain:www.phy.ncu.edu.tw)",
+      "WebFetch(domain:beta.lc.ncu.edu.tw)",
+      "WebFetch(domain:junsang.pixnet.net)",
+      "WebFetch(domain:www.dcard.tw)",
+      "WebFetch(domain:www.nextschool.com.tw)",
+      "WebFetch(domain:info.todohealth.com)"
     ]
   }
 }

@@ -169,11 +169,23 @@
       <div class="gi-desc">{% trans "入學・居留・健保・工讀・學籍等重要法規說明" %}</div>
     </a>
 
+    <a href="{% url 'guide_work_permit' %}" class="gi-card">
+      <div class="gi-icon">💼</div>
+      <div class="gi-title">{% trans "工作許可證" %}</div>
+      <div class="gi-desc">{% trans "申請流程、每週工時上限、違規罰則說明" %}</div>
+    </a>
+
   </div>
 
   <!-- 生活類 -->
   <div class="gi-section-label">🏡 {% trans "生活類" %}</div>
   <div class="gi-grid">
+
+    <a href="{% url 'guide_medical' %}" class="gi-card">
+      <div class="gi-icon">🏥</div>
+      <div class="gi-title">{% trans "醫療資訊" %}</div>
+      <div class="gi-desc">{% trans "衛保組、校外診所、周邊醫院、急診與緊急電話" %}</div>
+    </a>
 
     <a href="{% url 'guide_nhi' %}" class="gi-card">
       <div class="gi-icon">🏥</div>
@@ -191,6 +203,24 @@
       <div class="gi-icon">📱</div>
       <div class="gi-title">{% trans "台灣門號申辦" %}</div>
       <div class="gi-desc">{% trans "預付卡 vs 月租方案，各大電信業者說明" %}</div>
+    </a>
+
+  </div>
+
+  <!-- 學業類 -->
+  <div class="gi-section-label">📚 {% trans "學業類" %}</div>
+  <div class="gi-grid">
+
+    <a href="{% url 'guide_course' %}" class="gi-card">
+      <div class="gi-icon">📚</div>
+      <div class="gi-title">{% trans "課務資訊" %}</div>
+      <div class="gi-desc">{% trans "選課、加退選、人工加退選、停修流程與日程" %}</div>
+    </a>
+
+    <a href="{% url 'guide_graduation' %}" class="gi-card">
+      <div class="gi-icon">🎓</div>
+      <div class="gi-title">{% trans "成績與畢業門檻" %}</div>
+      <div class="gi-desc">{% trans "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準" %}</div>
     </a>
 
   </div>

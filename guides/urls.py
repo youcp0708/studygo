@@ -1,0 +1,22 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('guides/',                    views.guide_index,        name='guide_index'),
+    path('guides/regulations/',        views.guide_regulations,  name='guide_regulations'),
+    path('guides/arc-exchange/',       views.guide_arc_exchange, name='guide_arc_exchange'),
+    path('guides/arc-foreign/',        views.guide_arc_foreign,  name='guide_arc_foreign'),
+    path('guides/arc-overseas/',       views.guide_arc_overseas, name='guide_arc_overseas'),
+    path('guides/bus-ncu/',            views.guide_bus_ncu,      name='guide_bus_ncu'),
+    path('guides/housing-ncu/',        views.guide_housing_ncu,  name='guide_housing_ncu'),
+    path('guides/admissions/',         views.admissions_guide,   name='admissions_guide'),
+    path('guides/national-area/',      views.guide_national_area,name='guide_national_area'),
+    path('guides/nhi/',                views.guide_nhi,          name='guide_nhi'),
+    path('guides/bank/',               views.guide_bank,         name='guide_bank'),
+    path('guides/sim/',                views.guide_sim,          name='guide_sim'),
+    path('guides/map/',                views.guide_map,          name='guide_map'),
+    path('guides/work-permit/',        views.guide_work_permit,  name='guide_work_permit'),
+    path('guides/medical/',            views.guide_medical,      name='guide_medical'),
+    path('guides/course/',             views.guide_course,       name='guide_course'),
+    path('guides/graduation/',         views.guide_graduation,   name='guide_graduation'),
+]
