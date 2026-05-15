@@ -34,7 +34,7 @@
         <h2>{% trans "填寫個人資料" %}</h2>
         <p>{% trans "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。" %}</p>
 
-        <form id="profileSetupForm" onsubmit="handleProfileSetup(event)">
+        <form id="profileSetupForm" onsubmit="startProfileQuiz(event)">
           {% csrf_token %}
 
           <div class="setup-section-title">{% trans "基本資訊" %}</div>
@@ -71,7 +71,7 @@
                   <option value="" disabled>🏫 國立陽明交通大學（NYCU）</option>
                   <option value="" disabled>🏫 國立成功大學（NCKU）</option>
                   <option value="" disabled>🏫 國立中興大學（NCHU）</option>
-                  <option value="國立中央大學">🏫 國立中央大學（NCU）</option>
+                  <option value="NCU">🏫 國立中央大學（NCU）</option>
                   <option value="" disabled>🏫 國立中山大學（NSYSU）</option>
                   <option value="" disabled>🏫 國立臺灣師範大學（NTNU）</option>
                   <option value="" disabled>🏫 國立臺北大學（NTPU）</option>
@@ -176,7 +176,7 @@
             </a>
 
             <button type="submit" class="btn-primary" style="flex:1;" id="setupSubmitBtn">
-              {% trans "儲存資料並開始使用" %} →
+              {% trans "下一步" %} →
             </button>
           </div>
         </form>
@@ -228,6 +228,88 @@
   </div>
 
 </section>
+
+{# ── 問答覆蓋層 ── #}
+<div id="quizOverlay" class="quiz-overlay">
+  <div class="quiz-container">
+
+    {# 進度指示器 #}
+    <div class="quiz-progress" id="quizProgress">
+      <div class="quiz-dot active" data-dot="0"></div>
+      <div class="quiz-line" data-line="0"></div>
+      <div class="quiz-dot" data-dot="1"></div>
+      <div class="quiz-line" data-line="1"></div>
+      <div class="quiz-dot" data-dot="2"></div>
+    </div>
+
+    {# 卡片堆疊區（absolute 疊放，只有 .visible 顯示） #}
+    <div class="quiz-cards-wrap">
+
+      {# Q1: 台灣身份證 #}
+      <div class="quiz-card" id="quizQ1">
+        <span class="quiz-icon">🪪</span>
+        <span class="quiz-question-number">QUESTION 1</span>
+        <h3>{% trans "您是否擁有台灣身份證？" %}</h3>
+        <p class="quiz-subtitle">{% trans "此資訊將影響後續的居留證申辦流程與相關步驟" %}</p>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" onclick="answerQuiz('has_taiwan_id', true)">
+            <span class="opt-icon">✅</span>
+            <span class="opt-label">{% trans "是" %}</span>
+            <span class="opt-desc">{% trans "我有台灣身份證" %}</span>
+          </button>
+          <button type="button" class="quiz-option" onclick="answerQuiz('has_taiwan_id', false)">
+            <span class="opt-icon">❌</span>
+            <span class="opt-label">{% trans "否" %}</span>
+            <span class="opt-desc">{% trans "我沒有台灣身份證" %}</span>
+          </button>
+        </div>
+      </div>
+
+      {# Q2: 延遲入學 #}
+      <div class="quiz-card" id="quizQ2">
+        <span class="quiz-icon">📅</span>
+        <span class="quiz-question-number">QUESTION 2</span>
+        <h3>{% trans "您是否為延遲入學？" %}</h3>
+        <p class="quiz-subtitle">{% trans "延遲入學生可能有不同的報到與註冊時程安排" %}</p>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" onclick="answerQuiz('is_deferred', true)">
+            <span class="opt-icon">✅</span>
+            <span class="opt-label">{% trans "是" %}</span>
+            <span class="opt-desc">{% trans "我是延遲入學" %}</span>
+          </button>
+          <button type="button" class="quiz-option" onclick="answerQuiz('is_deferred', false)">
+            <span class="opt-icon">❌</span>
+            <span class="opt-label">{% trans "否" %}</span>
+            <span class="opt-desc">{% trans "我不是延遲入學" %}</span>
+          </button>
+        </div>
+      </div>
+
+      {# Q3: 印輔班（僅印尼學生） #}
+      <div class="quiz-card" id="quizQ3">
+        <span class="quiz-icon">🇮🇩</span>
+        <span class="quiz-question-number">QUESTION 3</span>
+        <h3>{% trans "您是否有上印輔班？" %}</h3>
+        <p class="quiz-subtitle">{% trans "印尼學生若參加過印尼語輔導班（印輔班），流程會有些許不同" %}</p>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" onclick="answerQuiz('has_indo_prep', true)">
+            <span class="opt-icon">✅</span>
+            <span class="opt-label">{% trans "是" %}</span>
+            <span class="opt-desc">{% trans "我有上印輔班" %}</span>
+          </button>
+          <button type="button" class="quiz-option" onclick="answerQuiz('has_indo_prep', false)">
+            <span class="opt-icon">❌</span>
+            <span class="opt-label">{% trans "否" %}</span>
+            <span class="opt-desc">{% trans "我沒有上印輔班" %}</span>
+          </button>
+        </div>
+      </div>
+
+    </div>{# end .quiz-cards-wrap #}
+
+    <div class="quiz-brand">StudyGo Taiwan</div>
+  </div>
+</div>
 
 <script>
   window._tempUser = {
