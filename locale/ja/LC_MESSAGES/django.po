@@ -84,7 +84,7 @@ msgstr "こんにちは ！"
 
 #: .\chatbot\templates\chatbot\chatbot.html:104
 msgid "回到底部"
-msgstr ""
+msgstr "一番下に戻る"
 
 #: .\chatbot\templates\chatbot\chatbot.html:114
 msgid "新增附件"
@@ -104,9 +104,7 @@ msgstr "写真を撮る"
 
 #: .\chatbot\templates\chatbot\chatbot.html:125
 msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
-msgstr ""
-"例：ミャンマーから台湾に学士課程で留学します。ビザのためにまず何を準備すれば"
-"よいですか？"
+msgstr "例：ミャンマーから台湾に学士課程で留学します。ビザのためにまず何を準備すればよいですか？"
 
 #: .\chatbot\templates\chatbot\chatbot.html:127
 #: .\chatbot\templates\chatbot\chatbot.html:158
@@ -131,9 +129,7 @@ msgstr "送信に失敗しました。後でもう一度お試しください。
 
 #: .\chatbot\templates\chatbot\chatbot.html:150
 msgid "網路或伺服器發生錯誤，請稍後再試。"
-msgstr ""
-"ネットワークまたはサーバーでエラーが発生しました。後でもう一度お試しくださ"
-"い。"
+msgstr "ネットワークまたはサーバーでエラーが発生しました。後でもう一度お試しください。"
 
 #: .\chatbot\templates\chatbot\chatbot.html:151
 msgid "新的聊天"
@@ -165,9 +161,7 @@ msgstr "返信中…"
 
 #: .\chatbot\views.py:16
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
-msgstr ""
-"台湾のコンビニでは、料金の支払い、荷物の受け取り、コピー、日用品の購入などが"
-"できます。"
+msgstr "台湾のコンビニでは、料金の支払い、荷物の受け取り、コピー、日用品の購入などができます。"
 
 #: .\chatbot\views.py:17
 msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
@@ -175,51 +169,35 @@ msgstr "台湾でMRTやバスに乗るときは、悠遊カードや一卡通を
 
 #: .\chatbot\views.py:18
 msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
-msgstr ""
-"台湾の多くの学校には国際事務処があり、留学生の入学手続きや生活上の問題をサ"
-"ポートしています。"
+msgstr "台湾の多くの学校には国際事務処があり、留学生の入学手続きや生活上の問題をサポートしています。"
 
 #: .\chatbot\views.py:19
 msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
-msgstr ""
-"台湾で部屋を借りる前に、家賃、保証金、水道光熱費、契約期間を確認することをお"
-"すすめします。"
+msgstr "台湾で部屋を借りる前に、家賃、保証金、水道光熱費、契約期間を確認することをおすすめします。"
 
 #: .\chatbot\views.py:20
 msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
-msgstr ""
-"台湾で病院に行く場合、健康保険に加入していれば、医療費は自費より安くなること"
-"が多いです。"
+msgstr "台湾で病院に行く場合、健康保険に加入していれば、医療費は自費より安くなることが多いです。"
 
 #: .\chatbot\views.py:21
 msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
-msgstr ""
-"台湾のごみ収集車は音楽を流して住民にごみ出しを知らせます。時間は地域によって"
-"異なります。"
+msgstr "台湾のごみ収集車は音楽を流して住民にごみ出しを知らせます。時間は地域によって異なります。"
 
 #: .\chatbot\views.py:22
 msgid "台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"
-msgstr ""
-"台湾の夏は暑く湿度も高いため、外出時は水筒、日焼け対策、雨具を用意すると便利"
-"です。"
+msgstr "台湾の夏は暑く湿度も高いため、外出時は水筒、日焼け対策、雨具を用意すると便利です。"
 
 #: .\chatbot\views.py:23
 msgid "如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"
-msgstr ""
-"台湾で住所を変更した場合、一部の証明書や学校の登録情報も更新する必要がある場"
-"合があります。"
+msgstr "台湾で住所を変更した場合、一部の証明書や学校の登録情報も更新する必要がある場合があります。"
 
 #: .\chatbot\views.py:24
 msgid "台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"
-msgstr ""
-"台湾の学校では、重要なお知らせをメールや学校システムで通知することが多いた"
-"め、定期的に確認しましょう。"
+msgstr "台湾の学校では、重要なお知らせをメールや学校システムで通知することが多いため、定期的に確認しましょう。"
 
 #: .\chatbot\views.py:25
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
-msgstr ""
-"台湾到着後に携帯番号を申し込む際は、通常、パスポート、居留証、またはその他の"
-"身分証明書が必要です。"
+msgstr "台湾到着後に携帯番号を申し込む際は、通常、パスポート、居留証、またはその他の身分証明書が必要です。"
 
 #: .\flows\models.py:240
 msgid "未開始"
@@ -237,7 +215,7 @@ msgstr "完了"
 #: .\flows\templates\flows\admissions_guide.html:4
 #: .\flows\templates\flows\admissions_guide.html:218
 msgid "招生簡章"
-msgstr ""
+msgstr "入学パンフレット"
 
 #: .\flows\templates\flows\admissions_guide.html:212
 #: .\flows\templates\flows\guide_index.html:10
@@ -246,119 +224,115 @@ msgid "返回儀表板"
 msgstr "ダッシュボードに戻る"
 
 #: .\flows\templates\flows\admissions_guide.html:217
-#, fuzzy
 #| msgid "境外學生"
 msgid "境外學生招生資訊"
-msgstr "外国人留学生"
+msgstr "外国人留学生の入学案内"
 
 #: .\flows\templates\flows\admissions_guide.html:220
-msgid ""
-"本頁彙整境外學生（僑生、外籍生、交換生）來臺就讀相關招生資訊，包含各學制申請"
-"資格、招生管道、獎學金及申請時程，助您順利規劃來臺求學之路。"
+msgid "本頁彙整境外學生（僑生、外籍生、交換生）來臺就讀相關招生資訊，包含各學制申請資格、招生管道、獎學金及申請時程，助您順利規劃來臺求學之路。"
 msgstr ""
+"このページでは、台湾への留学をスムーズに計画できるよう、各学制別の出願資格、入学経路、奨学金、出願スケジュールなど、台湾へ留学する外国人学生（留学生、外国人留学生、交換留学生）の入学関連情報をまとめています。"
 
 #: .\flows\templates\flows\admissions_guide.html:223
 msgid "多學制招生"
-msgstr ""
+msgstr "複数研究の登録"
 
 #: .\flows\templates\flows\admissions_guide.html:224
 msgid "多國籍適用"
-msgstr ""
+msgstr "多国籍にも適用可能"
 
 #: .\flows\templates\flows\admissions_guide.html:225
 msgid "獎學金機會"
-msgstr ""
+msgstr "奨学金の機会"
 
 #: .\flows\templates\flows\admissions_guide.html:226
 msgid "分期申請時程"
-msgstr ""
+msgstr "分割払いお申込みスケジュール"
 
 #: .\flows\templates\flows\admissions_guide.html:234
 msgid "重要提醒："
-msgstr ""
+msgstr "重要な注意事項:"
 
 #: .\flows\templates\flows\admissions_guide.html:235
-msgid ""
-"各學制招生截止日期每年均可能調整，本頁資訊僅供參考，請務必以各校最新公告或海"
-"外聯招會官網為準。"
+msgid "各學制招生截止日期每年均可能調整，本頁資訊僅供參考，請務必以各校最新公告或海外聯招會官網為準。"
 msgstr ""
+"各教育システムの入学締め切りは毎年調整される場合があります。このページの情報は参考用です。各学校の最新のお知らせや海外共同入学協会の公式ホームページを必ずご確認ください。"
 
 #: .\flows\templates\flows\admissions_guide.html:240
 msgid "學制快速一覽"
-msgstr ""
+msgstr "学術システムの概要"
 
 #: .\flows\templates\flows\admissions_guide.html:244
 msgid "學制種類"
-msgstr ""
+msgstr "学制の種類"
 
 #: .\flows\templates\flows\admissions_guide.html:245
 msgid "類"
-msgstr ""
+msgstr "親切"
 
 #: .\flows\templates\flows\admissions_guide.html:246
 #: .\flows\templates\flows\admissions_guide.html:561
 #: .\flows\templates\flows\admissions_guide.html:611
 msgid "僑先部 / 學士班 / 研究所"
-msgstr ""
+msgstr "華僑学科・学士課程・研究所"
 
 #: .\flows\templates\flows\admissions_guide.html:250
 msgid "適用身份"
-msgstr ""
+msgstr "該当ステータス"
 
 #: .\flows\templates\flows\admissions_guide.html:251
 msgid "種"
-msgstr ""
+msgstr "親切"
 
 #: .\flows\templates\flows\admissions_guide.html:252
 msgid "僑生 / 外籍生 / 交換生"
-msgstr ""
+msgstr "華僑学生・留学生・交換留学生"
 
 #: .\flows\templates\flows\admissions_guide.html:256
 msgid "可申請獎學金"
-msgstr ""
+msgstr "奨学金あり"
 
 #: .\flows\templates\flows\admissions_guide.html:257
-#, fuzzy
 #| msgid "項"
 msgid "多項"
-msgstr "件"
+msgstr "複数"
 
 #: .\flows\templates\flows\admissions_guide.html:258
 msgid "教育部、學校、地方政府"
-msgstr ""
+msgstr "文科省、学校、地方自治体"
 
 #: .\flows\templates\flows\admissions_guide.html:262
 msgid "申請截止"
-msgstr ""
+msgstr "応募締め切り"
 
 #: .\flows\templates\flows\admissions_guide.html:263
 #: .\flows\templates\flows\admissions_guide.html:569
 #: .\flows\templates\flows\admissions_guide.html:619
 msgid "約每年 3 月"
-msgstr ""
+msgstr "毎年3月頃"
 
 #: .\flows\templates\flows\admissions_guide.html:264
 msgid "各管道略有差異"
-msgstr ""
+msgstr "各パイプラインは若干異なります"
 
 #: .\flows\templates\flows\admissions_guide.html:269
 msgid "招生學制說明"
-msgstr ""
+msgstr "入学と学術システムの説明"
 
 #: .\flows\templates\flows\admissions_guide.html:271
 #: .\flows\templates\flows\admissions_guide.html:283
 msgid "僑先部（預科）"
-msgstr ""
+msgstr "華僑学科（予科）"
 
 #: .\flows\templates\flows\admissions_guide.html:272
 #: .\flows\templates\flows\admissions_guide.html:337
 msgid "學士班"
-msgstr ""
+msgstr "学士号"
 
 #: .\flows\templates\flows\admissions_guide.html:273
 #: .\flows\templates\flows\admissions_guide.html:391
 msgid "研究所"
-msgstr ""
+msgstr "大学院"
 
 #: .\flows\templates\flows\admissions_guide.html:274
 #: .\flows\templates\flows\admissions_guide.html:445 .\users\models.py:96
@@ -373,406 +347,388 @@ msgid "交換生"
 msgstr "交換留学生"
 
 #: .\flows\templates\flows\admissions_guide.html:283
-msgid ""
-"：針對僑生設立的一年制預備課程，修畢成績合格後可直升大學學士班，無需再參加大"
-"學入學考試。適合剛完成高中學業的僑生。"
+msgid "：針對僑生設立的一年制預備課程，修畢成績合格後可直升大學學士班，無需再參加大學入學考試。適合剛完成高中學業的僑生。"
 msgstr ""
+": "
+"華僑留学生のための1年間の準備コース。コースに合格すると、大学入学試験を受けることなく、直接学士課程に入学することができます。高校卒業直後の留学生向け。"
 
 #: .\flows\templates\flows\admissions_guide.html:290
 #: .\flows\templates\flows\admissions_guide.html:452
 msgid "申請資格"
-msgstr ""
+msgstr "資格"
 
 #: .\flows\templates\flows\admissions_guide.html:291
-msgid ""
-"具僑生身份、完成相當於我國高中一至三年級學業（高中畢業），成績達一定標準。年"
-"齡通常不超過 25 歲。"
+msgid "具僑生身份、完成相當於我國高中一至三年級學業（高中畢業），成績達一定標準。年齡通常不超過 25 歲。"
 msgstr ""
+"申請者は華僑の資格を有し、我が国の高校1年生から3年生に相当する学業（高校卒業）を修了し、一定の学力基準に達している必要があります。通常は25歳以下です。"
 
 #: .\flows\templates\flows\admissions_guide.html:293
 #: .\flows\templates\flows\admissions_guide.html:348
 msgid "高中畢業"
-msgstr ""
+msgstr "高校卒業"
 
 #: .\flows\templates\flows\admissions_guide.html:294
 msgid "僑生身份"
-msgstr ""
+msgstr "華僑のアイデンティティ"
 
 #: .\flows\templates\flows\admissions_guide.html:295
 msgid "25 歲以下"
-msgstr ""
+msgstr "25歳未満"
 
 #: .\flows\templates\flows\admissions_guide.html:301
 msgid "申請管道"
-msgstr ""
+msgstr "アプリケーションパイプライン"
 
 #: .\flows\templates\flows\admissions_guide.html:302
-msgid ""
-"透過海外聯合招生委員會（海聯會）統一分發。馬來西亞、緬甸、印尼、港澳及其他地"
-"區各有獨立招生窗口。"
+msgid "透過海外聯合招生委員會（海聯會）統一分發。馬來西亞、緬甸、印尼、港澳及其他地區各有獨立招生窗口。"
 msgstr ""
+"海外共同入学委員会（海外共同入学委員会）を通じて一律に配布します。マレーシア、ミャンマー、インドネシア、香港、マカオ、その他の地域にはそれぞれ独立した登録窓口があります。"
 
 #: .\flows\templates\flows\admissions_guide.html:304
 msgid "海聯會"
-msgstr ""
+msgstr "アラッツ"
 
 #: .\flows\templates\flows\admissions_guide.html:305
 msgid "統一分發"
-msgstr ""
+msgstr "統合配信"
 
 #: .\flows\templates\flows\admissions_guide.html:311
 #: .\flows\templates\flows\admissions_guide.html:365
 #: .\flows\templates\flows\admissions_guide.html:420
 msgid "申請時程"
-msgstr ""
+msgstr "申請スケジュール"
 
 #: .\flows\templates\flows\admissions_guide.html:312
-msgid ""
-"通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公"
-"告，8 月底至 9 月初入學報到。"
+msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
 msgstr ""
+"オンライン登録は通常、毎年 1 月から 3 "
+"月まで受け付けられますが、締め切りは地域ごとに若干異なります。合格発表は5月～6月頃、登録は8月下旬～9月上旬となります。"
 
 #: .\flows\templates\flows\admissions_guide.html:314
 msgid "1～3 月報名"
-msgstr ""
+msgstr "1月から3月までの登録"
 
 #: .\flows\templates\flows\admissions_guide.html:315
 msgid "5～6 月放榜"
-msgstr ""
+msgstr "5月～6月のランキングを発表"
 
 #: .\flows\templates\flows\admissions_guide.html:316
 msgid "9 月入學"
-msgstr ""
+msgstr "9月入学"
 
 #: .\flows\templates\flows\admissions_guide.html:322
 #: .\flows\templates\flows\admissions_guide.html:375
 #: .\flows\templates\flows\admissions_guide.html:430
 msgid "獎助學金"
-msgstr ""
+msgstr "奨学金と奨学金"
 
 #: .\flows\templates\flows\admissions_guide.html:323
-msgid ""
-"教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎"
-"學金或特定區域補助。"
+msgid "教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎學金或特定區域補助。"
 msgstr ""
+"教育省は華僑学生に奨学金を提供しているほか、さまざまな学校や地方自治体から補助金も出している。優秀な学業成績を収めた留学生は、教育省の中国奨学金や特定の地域補助金に申請することができます。"
 
 #: .\flows\templates\flows\admissions_guide.html:325
 #: .\flows\templates\flows\admissions_guide.html:378
 msgid "教育部獎學金"
-msgstr ""
+msgstr "文部省奨学金"
 
 #: .\flows\templates\flows\admissions_guide.html:326
 msgid "學校補助"
-msgstr ""
+msgstr "学校補助金"
 
 #: .\flows\templates\flows\admissions_guide.html:337
-msgid ""
-"：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生"
-"管道。修業成績合格者授予學士學位。"
+msgid "：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生管道。修業成績合格者授予學士學位。"
 msgstr ""
+"：大学の4年制課程（一部の学部は5年制）の場合、留学生は華僑連盟を通じて申請し、留学生は学校ごとに独自の入学経路を設けています。学科試験に合格した者には学士の学位が授与されます。"
 
 #: .\flows\templates\flows\admissions_guide.html:344
 msgid "僑生申請資格"
-msgstr ""
+msgstr "華僑学生の出願資格"
 
 #: .\flows\templates\flows\admissions_guide.html:345
-msgid ""
-"具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西"
-"亞 SPM 成績、緬甸高中畢業等均可申請。"
+msgid "具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西亞 SPM 成績、緬甸高中畢業等均可申請。"
 msgstr ""
+"申請者は華僑の資格を有し、高等学校（高等学校）を良好な成績で卒業した、または同等の学力証明書を所持している必要があります。マレーシアのSPM成績、ミャンマーの高校卒業などで応募可能。"
 
 #: .\flows\templates\flows\admissions_guide.html:347
 msgid "海聯會管道"
-msgstr ""
+msgstr "海外提携パイプライン"
 
 #: .\flows\templates\flows\admissions_guide.html:349
 msgid "同等學力"
-msgstr ""
+msgstr "同等の学力レベル"
 
 #: .\flows\templates\flows\admissions_guide.html:355
 msgid "外籍生申請資格"
-msgstr ""
+msgstr "外国人留学生の応募資格"
 
 #: .\flows\templates\flows\admissions_guide.html:356
-msgid ""
-"持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力"
-"證明（HSK、TOCFL、TOEFL、IELTS 等）。"
+msgid "持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力證明（HSK、TOCFL、TOEFL、IELTS 等）。"
 msgstr ""
+"外国籍を有し、各学校の最低基準を満たす高等学校卒業（または同等の）学業成績を有すること。一部の学校や学部では、中国語または英語能力の証明 "
+"(HSK、TOCFL、TOEFL、IELTS など) が必要です。"
 
 #: .\flows\templates\flows\admissions_guide.html:358
 msgid "各校獨立招生"
-msgstr ""
+msgstr "各学校が独自に生徒を募集します"
 
 #: .\flows\templates\flows\admissions_guide.html:359
 #: .\flows\templates\flows\admissions_guide.html:403
 #: .\flows\templates\flows\admissions_guide.html:456
 msgid "語言能力"
-msgstr ""
+msgstr "語学力"
 
 #: .\flows\templates\flows\admissions_guide.html:366
-msgid ""
-"海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確"
-"認目標校系公告。"
+msgid "海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確認目標校系公告。"
 msgstr ""
+"AIS パイプラインの登録は通常、1 月から 3 "
+"月に行われます。各学校の独自入学には別の日程（主に3月から5月）があります。対象校・学科の発表を事前に確認することをおすすめします。"
 
 #: .\flows\templates\flows\admissions_guide.html:368
 msgid "1～3 月（海聯會）"
-msgstr ""
+msgstr "1月～3月（海外提携）"
 
 #: .\flows\templates\flows\admissions_guide.html:369
 msgid "3～5 月（各校）"
-msgstr ""
+msgstr "3月～5月（各学校）"
 
 #: .\flows\templates\flows\admissions_guide.html:376
-msgid ""
-"教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎"
-"助。外籍生可申請教育部臺灣獎學金。"
+msgid "教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎助。外籍生可申請教育部臺灣獎學金。"
 msgstr ""
+"教育省の華僑奨学金（月額約5,000～8,000台湾ドル）。各学校には入学奨学金や業績賞がある場合もあります。外国人学生は教育部台湾奨学金に応募できます。"
 
 #: .\flows\templates\flows\admissions_guide.html:379
 #: .\flows\templates\flows\admissions_guide.html:433
 msgid "臺灣獎學金"
-msgstr ""
+msgstr "台湾奨学金"
 
 #: .\flows\templates\flows\admissions_guide.html:380
 msgid "學校獎助"
-msgstr ""
+msgstr "学校の奨学金"
 
 #: .\flows\templates\flows\admissions_guide.html:391
-msgid ""
-"：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有"
-"英文授課專班。"
+msgid "：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有英文授課專班。"
 msgstr ""
+"：各学部の研究機関を通じて独自に募集する修士課程（2年）、博士課程（3～5年）を含みます。学校によっては、英語で行われる特別授業を行っている学校もあります。"
 
 #: .\flows\templates\flows\admissions_guide.html:398
 msgid "碩士班申請資格"
-msgstr ""
+msgstr "修士学位申請資格"
 
 #: .\flows\templates\flows\admissions_guide.html:399
-msgid ""
-"大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言"
-"能力證明（中文 / 英文）。"
-msgstr ""
+msgid "大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言能力證明（中文 / 英文）。"
+msgstr "各学部・学科の最低基準を満たした成績で大学を卒業（学士）。一部の学部では、関連分野の背景や語学力（中国語/英語）の証明が必要です。"
 
 #: .\flows\templates\flows\admissions_guide.html:401
 msgid "學士畢業"
-msgstr ""
+msgstr "学士号卒業"
 
 #: .\flows\templates\flows\admissions_guide.html:402
 msgid "相關領域"
-msgstr ""
+msgstr "関連分野"
 
 #: .\flows\templates\flows\admissions_guide.html:409
 msgid "博士班申請資格"
-msgstr ""
+msgstr "博士課程の出願資格"
 
 #: .\flows\templates\flows\admissions_guide.html:410
-msgid ""
-"碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部"
-"分系所接受優秀碩士生直攻博士。"
+msgid "碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部分系所接受優秀碩士生直攻博士。"
 msgstr ""
+"研究の可能性のある修士号（または同等の学位）。通常、研究提案書と関連する推薦状が必要です。一部の学部では、優秀な修士課程の学生を受け入れて、博士号取得のために直接勉強します。"
 
 #: .\flows\templates\flows\admissions_guide.html:412
 msgid "碩士畢業"
-msgstr ""
+msgstr "修士号"
 
 #: .\flows\templates\flows\admissions_guide.html:413
 msgid "研究計畫"
-msgstr ""
+msgstr "研究プロジェクト"
 
 #: .\flows\templates\flows\admissions_guide.html:414
 msgid "推薦信"
-msgstr ""
+msgstr "推薦状"
 
 #: .\flows\templates\flows\admissions_guide.html:421
-msgid ""
-"各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截"
-"止日期及備審資料需求。"
+msgid "各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截止日期及備審資料需求。"
 msgstr ""
+"各学部の大学院の入学時期は異なりますが、主に10月から3月です。締切日や審査資料の要件については、対象学部の公式ウェブサイトで直接確認することをお勧めします。"
 
 #: .\flows\templates\flows\admissions_guide.html:423
 msgid "依各所公告"
-msgstr ""
+msgstr "各事務所の発表によると"
 
 #: .\flows\templates\flows\admissions_guide.html:424
 msgid "10 月～3 月"
-msgstr ""
+msgstr "10月から3月まで"
 
 #: .\flows\templates\flows\admissions_guide.html:431
-msgid ""
-"教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）"
-"薪資，及科技部研究計畫補助。"
+msgid "教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）薪資，及科技部研究計畫補助。"
 msgstr ""
+"教育省の台湾奨学金（外国人大学院生）。教育省の華僑奨学金（留学生）。各学校の研究助手（RA）の給与と科学技術省からの研究プロジェクト補助金。"
 
 #: .\flows\templates\flows\admissions_guide.html:434
 msgid "研究助理薪資"
-msgstr ""
+msgstr "研究助手の給与"
 
 #: .\flows\templates\flows\admissions_guide.html:445
-msgid ""
-"：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外"
-"僑居留證（ARC）。"
-msgstr ""
+msgid "：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外僑居留證（ARC）。"
+msgstr "：外国人留学生として申請しない外国籍の学生。各大学独自の入学手続きにより、入学後に外国人在留証明書（ARC）を申請する必要があります。"
 
 #: .\flows\templates\flows\admissions_guide.html:453
 msgid ""
-"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
-"或英文（IELTS / TOEFL）能力證明，依各校系規定。"
+"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"外国籍を有し、当該学制の前提となる学力資格（高等学校卒業または大学卒業）を修了していること。通常、各学校および学部の規定に従って、中国語 (TOCFL)"
+" または英語 (IELTS/TOEFL) の能力証明が必要です。"
 
 #: .\flows\templates\flows\admissions_guide.html:455
 msgid "外國國籍"
-msgstr ""
+msgstr "外国籍"
 
 #: .\flows\templates\flows\admissions_guide.html:457
 msgid "前置學歷"
-msgstr ""
+msgstr "前提となる学歴"
 
 #: .\flows\templates\flows\admissions_guide.html:463
 msgid "所需備審文件"
-msgstr ""
+msgstr "審査に必要な書類"
 
 #: .\flows\templates\flows\admissions_guide.html:464
-msgid ""
-"護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書"
-"計畫）、推薦信（研究所）、體檢報告。"
+msgid "護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書計畫）、推薦信（研究所）、體檢報告。"
 msgstr ""
+"パスポート、最高学業成績証明書および卒業証明書（中国語と英語の公証を含む）、語学能力証明書、個人声明（学習計画書）、推薦状（研究機関）、身体検査成績書。"
 
 #: .\flows\templates\flows\admissions_guide.html:466
 msgid "學歷公證"
-msgstr ""
+msgstr "学歴の公証"
 
 #: .\flows\templates\flows\admissions_guide.html:467
 msgid "讀書計畫"
-msgstr ""
+msgstr "読書計画"
 
 #: .\flows\templates\flows\admissions_guide.html:473
 msgid "教育部臺灣獎學金"
-msgstr ""
+msgstr "台湾教育省奨学金"
 
 #: .\flows\templates\flows\admissions_guide.html:474
-msgid ""
-"每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，"
-"需透過台灣駐外機構或各大學推薦申請。"
+msgid "每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，需透過台灣駐外機構或各大學推薦申請。"
 msgstr ""
+"月々の生活費は NT$15,000 ～ NT$25,000 です "
+"(教育制度により異なります)。授業料や諸費用は免除されます。申請期間は1年から4年まで可能です。場所は限られています。申請には台湾の海外機関または大学の推薦が必要です。"
 
 #: .\flows\templates\flows\admissions_guide.html:476
 msgid "NT$15,000~/月"
-msgstr ""
+msgstr "NT$15,000~/月"
 
 #: .\flows\templates\flows\admissions_guide.html:477
 msgid "免學雜費"
-msgstr ""
+msgstr "授業料も手数料も無料"
 
 #: .\flows\templates\flows\admissions_guide.html:478
 msgid "名額有限"
-msgstr ""
+msgstr "限られた場所"
 
 #: .\flows\templates\flows\admissions_guide.html:484
 msgid "入台後必辦事項"
-msgstr ""
+msgstr "台湾に到着してからやるべきこと"
 
 #: .\flows\templates\flows\admissions_guide.html:485
-msgid ""
-"持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
-"立銀行帳戶等。"
+msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
 msgstr ""
+"学生滞在許可証でチェックイン後、15 日以内に外国人居住証明書 (ARC) を申請し、その後、健康保険の申請、銀行口座の開設などを行う必要があります。"
 
 #: .\flows\templates\flows\admissions_guide.html:487
 msgid "15 天內辦 ARC"
-msgstr ""
+msgstr "15日以内にARCを申請してください"
 
 #: .\flows\templates\flows\admissions_guide.html:488
 msgid "健保加保"
-msgstr ""
+msgstr "健康保険の補足"
 
 #: .\flows\templates\flows\admissions_guide.html:499
-msgid ""
-"：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依"
-"協議返校抵免，通常免繳台灣學雜費。"
+msgid "：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依協議返校抵免，通常免繳台灣學雜費。"
 msgstr ""
+"： "
+"本校が台湾の大学と交換協定を締結し、短期（半年または1学年）で留学します。単位は協定により復学時に単位として使用でき、台湾の授業料や諸費用は通常免除されます。"
 
 #: .\flows\templates\flows\admissions_guide.html:506
 msgid "申請流程"
-msgstr ""
+msgstr "申請の流れ"
 
 #: .\flows\templates\flows\admissions_guide.html:507
-msgid ""
-"透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申"
-"請，須先確認原校有締結交換協議。"
+msgid "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申請，須先確認原校有締結交換協議。"
 msgstr ""
+"元の学校の交流協力局を通じて推薦され、国立台湾大学によって審査されます。国立台湾大学に直接応募できない場合は、まず元の学校が交換協定を締結していることを確認する必要があります。"
 
 #: .\flows\templates\flows\admissions_guide.html:509
 msgid "原校提名"
-msgstr ""
+msgstr "元の学校からの推薦"
 
 #: .\flows\templates\flows\admissions_guide.html:510
 msgid "需締結協議"
-msgstr ""
+msgstr "同意が必要です"
 
 #: .\flows\templates\flows\admissions_guide.html:516
 msgid "期程與截止"
-msgstr ""
+msgstr "スケジュールと締め切り"
 
 #: .\flows\templates\flows\admissions_guide.html:517
-msgid ""
-"上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月"
-"截止。依各校締約條件而有不同。"
+msgid "上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月截止。依各校締約條件而有不同。"
 msgstr ""
+"前学期（9月）に入学した志願者の推薦締め切りは通常3月から4月です。次の学期（2 月）に入学する志願者の推薦締め切りは通常 10 月から 11 "
+"月です。契約条件は学校によって異なります。"
 
 #: .\flows\templates\flows\admissions_guide.html:519
 msgid "上學期：3～4 月"
-msgstr ""
+msgstr "最終学期：3月～4月"
 
 #: .\flows\templates\flows\admissions_guide.html:520
 msgid "下學期：10～11 月"
-msgstr ""
+msgstr "次学期：10月～11月"
 
 #: .\flows\templates\flows\admissions_guide.html:526
 msgid "簽證與居留"
-msgstr ""
+msgstr "ビザと居住地"
 
 #: .\flows\templates\flows\admissions_guide.html:527
-msgid ""
-"短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入"
-"台，並辦理外僑居留證。"
+msgid "短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入台，並辦理外僑居留證。"
 msgstr ""
+"短期滞在（6か月以内）の場合は観光ビザで台湾に入国でき、ARCを申請する必要はありません。 6 "
+"か月を超えて滞在する場合は、学生居留許可を持って台湾に入国し、外国人居留許可を申請する必要があります。"
 
 #: .\flows\templates\flows\admissions_guide.html:529
 msgid "≤6 月：觀光簽"
-msgstr ""
+msgstr "6か月以内：観光ビザ"
 
 #: .\flows\templates\flows\admissions_guide.html:530
 msgid ">6 月：需 ARC"
-msgstr ""
+msgstr "6 か月以上: ARC が必要です"
 
 #: .\flows\templates\flows\admissions_guide.html:536
 msgid "費用說明"
-msgstr ""
+msgstr "料金の説明"
 
 #: .\flows\templates\flows\admissions_guide.html:537
-msgid ""
-"依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行"
-"負擔，每月約 NT$10,000～15,000。"
+msgid "依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行負擔，每月約 NT$10,000～15,000。"
 msgstr ""
+"ほとんどの交換協定に基づき、国立台湾大学は交換留学生の授業料と手数料を免除します。生活費（寮費、食費、交通費など）は月10,000～15,000台湾ドル程度が自己負担となります。"
 
 #: .\flows\templates\flows\admissions_guide.html:539
 msgid "學雜費全免"
-msgstr ""
+msgstr "授業料・手数料は無料です"
 
 #: .\flows\templates\flows\admissions_guide.html:540
 msgid "生活費自理"
-msgstr ""
+msgstr "生活費は自分で賄う"
 
 #: .\flows\templates\flows\admissions_guide.html:547
 msgid "各地區僑生申請資訊"
-msgstr ""
+msgstr "各地の華僑留学生募集情報"
 
 #: .\flows\templates\flows\admissions_guide.html:550
-msgid ""
-"以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申"
-"請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
+msgid "以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
 msgstr ""
+"海外共同入学委員会（海外共同入学委員会）の各地域の入学事務局についてご案内します。地域によって学制が異なるため、出願資格や締切が異なる場合があります。海外アライアンスからの最新の発表をご参照ください。"
 
 #: .\flows\templates\flows\admissions_guide.html:556 .\users\models.py:108
 #: .\users\templates\users\edit_profile.html:54
@@ -787,7 +743,7 @@ msgstr "マレーシア"
 #: .\flows\templates\flows\admissions_guide.html:660
 #: .\flows\templates\flows\admissions_guide.html:685
 msgid "招生學制"
-msgstr ""
+msgstr "入学と学力制度"
 
 #: .\flows\templates\flows\admissions_guide.html:564
 #: .\flows\templates\flows\admissions_guide.html:589
@@ -796,11 +752,11 @@ msgstr ""
 #: .\flows\templates\flows\admissions_guide.html:664
 #: .\flows\templates\flows\admissions_guide.html:689
 msgid "主要學歷要求"
-msgstr ""
+msgstr "主な学力要件"
 
 #: .\flows\templates\flows\admissions_guide.html:565
 msgid "SPM / STPM / UEC / A-Level"
-msgstr ""
+msgstr "SPM/STPM/UEC/A レベル"
 
 #: .\flows\templates\flows\admissions_guide.html:568
 #: .\flows\templates\flows\admissions_guide.html:593
@@ -809,7 +765,7 @@ msgstr ""
 #: .\flows\templates\flows\admissions_guide.html:668
 #: .\flows\templates\flows\admissions_guide.html:693
 msgid "報名截止（參考）"
-msgstr ""
+msgstr "登録期限（参考）"
 
 #: .\flows\templates\flows\admissions_guide.html:572
 #: .\flows\templates\flows\admissions_guide.html:597
@@ -818,13 +774,12 @@ msgstr ""
 #: .\flows\templates\flows\admissions_guide.html:672
 #: .\flows\templates\flows\admissions_guide.html:697
 msgid "承辦窗口"
-msgstr ""
+msgstr "引き受けられたウィンドウ"
 
 #: .\flows\templates\flows\admissions_guide.html:573
-#, fuzzy
 #| msgid "馬來西亞"
 msgid "馬來西亞留台同學會"
-msgstr "マレーシア"
+msgstr "在台湾マレーシア学生協会"
 
 #: .\flows\templates\flows\admissions_guide.html:581 .\users\models.py:113
 #: .\users\templates\users\edit_profile.html:68
@@ -835,21 +790,21 @@ msgstr "ミャンマー"
 #: .\flows\templates\flows\admissions_guide.html:586
 #: .\flows\templates\flows\admissions_guide.html:661
 msgid "僑先部 / 學士班"
-msgstr ""
+msgstr "華僑学科・学士課程"
 
 #: .\flows\templates\flows\admissions_guide.html:590
 msgid "緬甸高中畢業（Matriculation）"
-msgstr ""
+msgstr "ミャンマー高校卒業（入学）"
 
 #: .\flows\templates\flows\admissions_guide.html:594
 #: .\flows\templates\flows\admissions_guide.html:669
 #: .\flows\templates\flows\admissions_guide.html:694
 msgid "約每年 2～3 月"
-msgstr ""
+msgstr "毎年2月～3月頃"
 
 #: .\flows\templates\flows\admissions_guide.html:598
 msgid "緬甸華校教師會"
-msgstr ""
+msgstr "ミャンマー中国語学校教師協会"
 
 #: .\flows\templates\flows\admissions_guide.html:606 .\users\models.py:107
 #: .\users\templates\users\edit_profile.html:51
@@ -859,401 +814,396 @@ msgstr "インドネシア"
 
 #: .\flows\templates\flows\admissions_guide.html:615
 msgid "SMA / SMK 高中畢業"
-msgstr ""
+msgstr "SMA/SMK高校卒業"
 
 #: .\flows\templates\flows\admissions_guide.html:623
 msgid "印尼留台校友會"
-msgstr ""
+msgstr "台湾インドネシア同窓会"
 
 #: .\flows\templates\flows\admissions_guide.html:631
 msgid "香港 / 澳門"
-msgstr ""
+msgstr "香港・マカオ"
 
 #: .\flows\templates\flows\admissions_guide.html:636
 #: .\flows\templates\flows\admissions_guide.html:686
 msgid "學士班 / 研究所"
-msgstr ""
+msgstr "学士号/大学院研究"
 
 #: .\flows\templates\flows\admissions_guide.html:640
 msgid "HKDSE / 澳門高中畢業"
-msgstr ""
+msgstr "HKDSE / マカオ高校卒業"
 
 #: .\flows\templates\flows\admissions_guide.html:644
 msgid "約每年 2 月"
-msgstr ""
+msgstr "およそ毎年2月に"
 
 #: .\flows\templates\flows\admissions_guide.html:648
 msgid "海聯會港澳組"
-msgstr ""
+msgstr "海事連盟の香港・マカオグループ"
 
 #: .\flows\templates\flows\admissions_guide.html:656
 msgid "泰北（北泰）"
-msgstr ""
+msgstr "タイ北部 (タイ北部)"
 
 #: .\flows\templates\flows\admissions_guide.html:665
 msgid "泰北僑校高中畢業"
-msgstr ""
+msgstr "タイ北部の高校卒業"
 
 #: .\flows\templates\flows\admissions_guide.html:673
 msgid "泰北各僑校教師會"
-msgstr ""
+msgstr "タイ北部華僑学校教師協会"
 
 #: .\flows\templates\flows\admissions_guide.html:681
 msgid "日本 / 韓國 / 新加坡 / 菲律賓"
-msgstr ""
+msgstr "日本 / 韓国 / シンガポール / フィリピン"
 
 #: .\flows\templates\flows\admissions_guide.html:690
 msgid "各國高中 / 大學畢業"
-msgstr ""
+msgstr "各国の高校・大学卒業生"
 
 #: .\flows\templates\flows\admissions_guide.html:698
 msgid "海聯會或各地台灣辦事處"
-msgstr ""
+msgstr "ALATSまたは台湾の各事務所"
 
 #: .\flows\templates\flows\admissions_guide.html:705
 msgid "學費與生活費參考"
-msgstr ""
+msgstr "学費と生活費の目安"
 
 #: .\flows\templates\flows\admissions_guide.html:708
-msgid ""
-"以下費用資料為概略參考，實際金額依各校、各系所及入學年度公告為準。請務必向目"
-"標學校確認最新收費標準。"
+msgid "以下費用資料為概略參考，實際金額依各校、各系所及入學年度公告為準。請務必向目標學校確認最新收費標準。"
 msgstr ""
+"以下の料金情報はおおよその目安です。実際の金額は各学部・学科・入学年度の発表により異なります。最新の料金表については、必ず留学先の学校に確認してください。"
 
 #: .\flows\templates\flows\admissions_guide.html:713
 msgid "費用項目"
-msgstr ""
+msgstr "経費項目"
 
 #: .\flows\templates\flows\admissions_guide.html:714
 msgid "金額（新臺幣）"
-msgstr ""
+msgstr "金額（NTD）"
 
 #: .\flows\templates\flows\admissions_guide.html:715
 msgid "備註"
-msgstr ""
+msgstr "述べる"
 
 #: .\flows\templates\flows\admissions_guide.html:721
 msgid "學士班學雜費（文法商）"
-msgstr ""
+msgstr "学士号取得のための授業料と諸費用（文法およびビジネス）"
 
 #: .\flows\templates\flows\admissions_guide.html:722
 #: .\flows\templates\flows\admissions_guide.html:730
 #: .\flows\templates\flows\admissions_guide.html:738
 #: .\flows\templates\flows\admissions_guide.html:746
 msgid "每學期"
-msgstr ""
+msgstr "学期ごとに"
 
 #: .\flows\templates\flows\admissions_guide.html:724
 msgid "約 NT$28,000 ～ 35,000"
-msgstr ""
+msgstr "約NT$28,000～35,000"
 
 #: .\flows\templates\flows\admissions_guide.html:725
 msgid "僑生與本地生同標準"
-msgstr ""
+msgstr "留学生も現地学生も同じ基準"
 
 #: .\flows\templates\flows\admissions_guide.html:729
 msgid "學士班學雜費（理工醫）"
-msgstr ""
+msgstr "学士号取得のための授業料および諸費用（科学、工学、医学）"
 
 #: .\flows\templates\flows\admissions_guide.html:732
 msgid "約 NT$35,000 ～ 45,000"
-msgstr ""
+msgstr "約NT$35,000～45,000"
 
 #: .\flows\templates\flows\admissions_guide.html:733
 msgid "部分系所有額外實習費"
-msgstr ""
+msgstr "一部の学部では追加のインターンシップ費用がかかります"
 
 #: .\flows\templates\flows\admissions_guide.html:737
 msgid "研究所學雜費（碩士）"
-msgstr ""
+msgstr "大学院の授業料と諸費用（修士課程）"
 
 #: .\flows\templates\flows\admissions_guide.html:740
 msgid "約 NT$30,000 ～ 48,000"
-msgstr ""
+msgstr "約NT$30,000～48,000"
 
 #: .\flows\templates\flows\admissions_guide.html:741
 msgid "英語授課專班費用較高"
-msgstr ""
+msgstr "英語の特別クラスは高価です"
 
 #: .\flows\templates\flows\admissions_guide.html:745
 msgid "宿舍費（學校宿舍）"
-msgstr ""
+msgstr "寮費（学校寮）"
 
 #: .\flows\templates\flows\admissions_guide.html:748
 msgid "約 NT$8,000 ～ 18,000"
-msgstr ""
+msgstr "約NT$8,000～18,000"
 
 #: .\flows\templates\flows\admissions_guide.html:749
 msgid "依房型，境外生享優先保障"
-msgstr ""
+msgstr "部屋タイプによっては留学生を優先的に保護"
 
 #: .\flows\templates\flows\admissions_guide.html:753
 msgid "生活費（餐飲 / 交通 / 日用）"
-msgstr ""
+msgstr "生活費（食費・交通費・日用品）"
 
 #: .\flows\templates\flows\admissions_guide.html:754
 msgid "每月"
-msgstr ""
+msgstr "月あたり"
 
 #: .\flows\templates\flows\admissions_guide.html:756
 msgid "約 NT$8,000 ～ 15,000"
-msgstr ""
+msgstr "約NT$8,000～15,000"
 
 #: .\flows\templates\flows\admissions_guide.html:757
 msgid "視個人消費習慣而異"
-msgstr ""
+msgstr "個人の消費習慣によって異なります"
 
 #: .\flows\templates\flows\admissions_guide.html:761
 msgid "全民健康保險費"
-msgstr ""
+msgstr "国民健康保険料"
 
 #: .\flows\templates\flows\admissions_guide.html:762
 msgid "每月（持 ARC 加保後）"
-msgstr ""
+msgstr "毎月（ARCで保険を追加した後）"
 
 #: .\flows\templates\flows\admissions_guide.html:764
 msgid "約 NT$749"
-msgstr ""
+msgstr "約NT$749"
 
 #: .\flows\templates\flows\admissions_guide.html:765
 msgid "在台超過 4 個月須加保"
-msgstr ""
+msgstr "台湾に4ヶ月以上滞在する場合は保険に加入する必要があります"
 
 #: .\flows\templates\flows\admissions_guide.html:771
 msgid "申請時程建議（學士班僑生為例）"
-msgstr ""
+msgstr "出願スケジュールの目安（学士課程の華僑学生の場合を例に）"
 
 #: .\flows\templates\flows\admissions_guide.html:776
 msgid "了解申請資訊與準備文件"
-msgstr ""
+msgstr "申請内容の把握と書類作成"
 
 #: .\flows\templates\flows\admissions_guide.html:777
-msgid ""
-"前往海聯會官網確認當年度招生簡章，了解各學制申請資格、需備文件及時程。同時確"
-"認學歷文件（成績單、畢業證書）是否需要公認證。"
+msgid "前往海聯會官網確認當年度招生簡章，了解各學制申請資格、需備文件及時程。同時確認學歷文件（成績單、畢業證書）是否需要公認證。"
 msgstr ""
+"海外同盟の公式サイトで今年度の入学案内を確認し、各学制の出願資格や必要書類、日程などを確認してください。学術書類（成績証明書、卒業証明書）に公証が必要かどうかも確認してください。"
 
 #: .\flows\templates\flows\admissions_guide.html:778
 msgid "每年 10 月～12 月"
-msgstr ""
+msgstr "毎年10月から12月まで"
 
 #: .\flows\templates\flows\admissions_guide.html:779
 msgid "準備學歷文件"
-msgstr ""
+msgstr "学術文書の準備"
 
 #: .\flows\templates\flows\admissions_guide.html:785
 msgid "向當地承辦窗口取得申請表"
-msgstr ""
+msgstr "ローカルホスティングウィンドウから申請フォームを取得します"
 
 #: .\flows\templates\flows\admissions_guide.html:786
-msgid ""
-"聯繫所在地區的海聯會承辦窗口（如馬來西亞留台同學會、緬甸華校教師會等），取得"
-"當年度申請表及相關說明，確認繳件方式（線上 / 郵寄）。"
+msgid "聯繫所在地區的海聯會承辦窗口（如馬來西亞留台同學會、緬甸華校教師會等），取得當年度申請表及相關說明，確認繳件方式（線上 / 郵寄）。"
 msgstr ""
+"お住まいの地域の海外同盟の主催者（台湾マレーシア同窓会、ミャンマー中国語学校教師協会など）に問い合わせて、今年度の申請書と関連説明書を入手し、支払い方法（オンライン/郵送）を確認してください。"
 
 #: .\flows\templates\flows\admissions_guide.html:787
 msgid "每年 1 月"
-msgstr ""
+msgstr "毎年1月"
 
 #: .\flows\templates\flows\admissions_guide.html:788
 msgid "提早聯繫避免遺漏"
-msgstr ""
+msgstr "見逃さないように早めにお問い合わせください"
 
 #: .\flows\templates\flows\admissions_guide.html:794
 msgid "線上報名並繳交備審資料"
-msgstr ""
+msgstr "オンライン登録と申請書類の提出"
 
 #: .\flows\templates\flows\admissions_guide.html:795
-msgid ""
-"至海聯會網路報名系統填寫志願序（可填多個志願），並上傳或郵寄所需文件（成績"
-"單、護照、照片等）。確認申請費繳納方式。"
+msgid "至海聯會網路報名系統填寫志願序（可填多個志願），並上傳或郵寄所需文件（成績單、護照、照片等）。確認申請費繳納方式。"
 msgstr ""
+"オーバーシーズ・アライアンス・オンライン登録システムの申請フォーム（複数記入可能）に記入し、必要書類（成績証明書、パスポート、写真など）をアップロードまたは郵送してください。受験料の支払い方法を確認してください。"
 
 #: .\flows\templates\flows\admissions_guide.html:796
 msgid "每年 1 月～3 月"
-msgstr ""
+msgstr "毎年1月から3月まで"
 
 #: .\flows\templates\flows\admissions_guide.html:797
 msgid "備審文件繳交"
-msgstr ""
+msgstr "審査のための書類の提出"
 
 #: .\flows\templates\flows\admissions_guide.html:803
 msgid "等待審查結果與放榜"
-msgstr ""
+msgstr "審査結果とランキングの発表待ち"
 
 #: .\flows\templates\flows\admissions_guide.html:804
-msgid ""
-"申請截止後由海聯會及各校審查。通常於每年 5～6 月公告錄取結果。請密切注意海聯"
-"會官網及承辦窗口通知。"
+msgid "申請截止後由海聯會及各校審查。通常於每年 5～6 月公告錄取結果。請密切注意海聯會官網及承辦窗口通知。"
 msgstr ""
+"申請書は締め切り後にAISと各学校によって審査されます。合格発表は例年5月から6月にかけて行われます。海外連合公式サイトおよび主催窓口からのお知らせに十分ご注意ください。"
 
 #: .\flows\templates\flows\admissions_guide.html:805
 msgid "每年 5 月～6 月"
-msgstr ""
+msgstr "毎年5月から6月まで"
 
 #: .\flows\templates\flows\admissions_guide.html:811
 msgid "確認志願並辦理赴台簽證"
-msgstr ""
+msgstr "意思を確認し、台湾へのビザを申請する"
 
 #: .\flows\templates\flows\admissions_guide.html:812
-msgid ""
-"收到錄取通知後，依指定期限確認接受錄取。向台灣駐外機構（如台北經濟文化辦事"
-"處）申請學生居留簽證（Resident Visa）。"
+msgid "收到錄取通知後，依指定期限確認接受錄取。向台灣駐外機構（如台北經濟文化辦事處）申請學生居留簽證（Resident Visa）。"
 msgstr ""
+"入学通知書到着後、指定の期限までに入学許可を確認してください。台湾の在外公館（台北経済文化代表処など）に学生居住ビザ（居留ビザ）を申請します。"
 
 #: .\flows\templates\flows\admissions_guide.html:813
 msgid "每年 6 月～7 月"
-msgstr ""
+msgstr "毎年6月から7月まで"
 
 #: .\flows\templates\flows\admissions_guide.html:814
 msgid "辦理學生居留簽"
-msgstr ""
+msgstr "学生滞在ビザを申請する"
 
 #: .\flows\templates\flows\admissions_guide.html:820
 msgid "抵台入學報到"
-msgstr ""
+msgstr "台湾に到着して入国登録をする"
 
 #: .\flows\templates\flows\admissions_guide.html:821
-msgid ""
-"抵台後按學校通知時程辦理入學報到，並在 15 天內至移民署辦理外僑居留證（ARC）。"
-"同時參加學校國際事務處的新生說明會。"
+msgid "抵台後按學校通知時程辦理入學報到，並在 15 天內至移民署辦理外僑居留證（ARC）。同時參加學校國際事務處的新生說明會。"
 msgstr ""
+"台湾到着後は、学校から通知されたスケジュールに従って入学登録をし、15日以内に入国管理局に行って外国人居留証明書（ARC）を申請しなければなりません。同時に、本校国際部主催の新入生説明会に出席してください。"
 
 #: .\flows\templates\flows\admissions_guide.html:822
 msgid "每年 8 月底～9 月初"
-msgstr ""
+msgstr "毎年8月下旬から9月上旬にかけて"
 
 #: .\flows\templates\flows\admissions_guide.html:823
 msgid "完成入學！"
-msgstr ""
+msgstr "登録完了しました！"
 
 #: .\flows\templates\flows\admissions_guide.html:829
 msgid "常見問題"
-msgstr ""
+msgstr "よくある質問"
 
 #: .\flows\templates\flows\admissions_guide.html:833
 msgid "我是外籍生（非僑生），可以透過海聯會申請嗎？"
-msgstr ""
+msgstr "私は留学生（華僑ではない）ですが、海外同盟を通じて申請できますか?"
 
 #: .\flows\templates\flows\admissions_guide.html:838
 msgid ""
-"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認"
-"定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
+"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
 msgstr ""
+"できません。海外アライアンス "
+"チャンネルは、華僑のステータスを持つ応募者のみに適用されます。外国人留学生（外国籍を保持しているが留学生に該当しない者）は、各大学の国際アドミッション・オフィスに直接申請してください。各学校の入学スケジュールや必要書類については、各学校の公式ホームページをご覧ください。"
 
 #: .\flows\templates\flows\admissions_guide.html:844
 msgid "僑生與外籍生有什麼不同？"
-msgstr ""
+msgstr "中国人留学生と留学生の違いは何ですか？"
 
 #: .\flows\templates\flows\admissions_guide.html:849
 msgid ""
-"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教"
-"育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國"
-"籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份"
-"認定不同，適用的招生管道與優惠也不同。"
+"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。"
 msgstr ""
+"「華僑学生」とは、中華民国国籍または中国系の祖先を持ち、海外に長期間居住し、現地で教育を受けた者を指します。彼らは教育省の規定に従って認定されており、華僑学生奨学金や華僑優先部門などの特別なチャンネルを利用することができます。"
+" "
+"「外国人学生」とは、中華民国以外の国籍のパスポートを保有し、通常は各学校の独立した入学ルートを通じて申請する学生です。彼らは教育部台湾奨学金に応募することができます。"
+" 2 つの ID は異なり、適用される登録チャネルと割引も異なります。"
 
 #: .\flows\templates\flows\admissions_guide.html:855
 msgid "可以同時申請多所學校嗎？"
-msgstr ""
+msgstr "同時に複数の学校に出願することはできますか?"
 
 #: .\flows\templates\flows\admissions_guide.html:860
 msgid ""
-"海聯會管道可填寫多個志願（學校 + 系所），系統依志願序分發，通常一個申請可含多"
-"個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但"
-"需留意各校的申請費及文件要求可能不同。"
+"海聯會管道可填寫多個志願（學校 + "
+"系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。"
 msgstr ""
+"海外アライアンスパイプラインでは複数の申請書（学校＋学部）を記入することができ、申請順に配布されます。通常、1 "
+"つのアプリケーションに複数のアプリケーションを含めることができます。外国人留学生が各学校に独自に申請する場合は、締切までに各学校に申請書を提出するだけで済みます。ただし、各学校によって申請料や必要書類が異なる場合がありますのでご注意ください。"
 
 #: .\flows\templates\flows\admissions_guide.html:866
 msgid "中文不夠好，可以申請中文授課的系所嗎？"
-msgstr ""
+msgstr "中国語が十分ではない場合、中国語で教える学科に応募することはできますか?"
 
 #: .\flows\templates\flows\admissions_guide.html:871
 msgid ""
-"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 以上），"
-"部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確"
-"認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所"
-"或語言先修課程。"
+"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 "
+"以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。"
 msgstr ""
+"学部ごとに中国語能力に対する要件が異なります。学部によっては中国語能力試験の最低基準（TOCFL B1 "
+"以上など）が設定されている場合や、入学後の補足として中国語コースを受け入れている学部もあります。対象学部の最新の入学案内を確認するか、学校の国際交流室に問い合わせることをお勧めします。あなたの中国語スキルが標準に達していない場合は、完全に英語で教えられる学部や語学準備コースへの応募を検討することもできます。"
 
 #: .\flows\templates\flows\admissions_guide.html:877
 msgid "申請獎學金需要另外申請嗎？"
-msgstr ""
+msgstr "奨学金を申請するには別途申請する必要がありますか?"
 
 #: .\flows\templates\flows\admissions_guide.html:882
 msgid ""
-"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直"
-"接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部"
-"分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
+"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
 msgstr ""
+"教育省の台湾奨学金は入学時または入学後に別途申請する必要があります。通常、台湾の海外機関を通じて申請するか、学校に直接申請します。出場枠は限られており、競争は熾烈です。華僑学生向けの奨学金の中には、華僑協会または学校によって自動的に審査されるものもありますが、追加の申請書に記入する必要があるものもあります。学校独自の入学奨学金や奨学金は通常、入学通知に記載されています。"
 
 #: .\flows\templates\flows\admissions_guide.html:888
 msgid "我已在台灣就讀，可以轉學嗎？"
-msgstr ""
+msgstr "すでに台湾に留学していますが、転校できますか?"
 
 #: .\flows\templates\flows\admissions_guide.html:893
 msgid ""
-"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及"
-"放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標"
-"校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
+"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
 msgstr ""
+"はい。ただし、転校申請には通常、学年制限 (主に 2 年生と 3 年生) "
+"があり、元の学校の成績証明書と学生資格の放棄の証明を提出する必要があることに注意してください。編入入学のプロセスは学校によって異なり、通常は各学年の終わり頃に処理されます。詳細は対象校の編入試験要項をご確認ください。大学院生の編入は各研究機関の規定に従って行う必要があります。"
 
 #: .\flows\templates\flows\admissions_guide.html:900
 msgid "重要聯絡與資源"
-msgstr ""
+msgstr "重要な連絡先とリソース"
 
 #: .\flows\templates\flows\admissions_guide.html:905
 msgid "海外聯合招生委員會（海聯會）"
-msgstr ""
+msgstr "海外共同入学委員会（海外共同入学委員会）"
 
 #: .\flows\templates\flows\admissions_guide.html:907
 msgid "僑生申請主要管道，提供報名、志願填寫、成績查詢。"
-msgstr ""
+msgstr "華僑の学生向けの主な申請チャネルであり、登録、ボランティアの記入、スコアの照会が提供されます。"
 
 #: .\flows\templates\flows\admissions_guide.html:915
 msgid "教育部學生事務及特教司"
-msgstr ""
+msgstr "教育省学生・特殊教育局"
 
 #: .\flows\templates\flows\admissions_guide.html:917
 msgid "僑生獎學金、臺灣獎學金主管機關，提供獎助學金申請辦法。"
-msgstr ""
+msgstr "華僑奨学金および台湾奨学金局は、奨学金および奨学金の申請手続きを提供しています。"
 
 #: .\flows\templates\flows\admissions_guide.html:925
 msgid "學校國際事務處（OIA）"
-msgstr ""
+msgstr "学校国際交流室（OIA）"
 
 #: .\flows\templates\flows\admissions_guide.html:927
 msgid "入學後主要聯繫窗口，提供簽證協助、ARC 辦理、生活輔導、獎學金申請。"
-msgstr ""
+msgstr "入学後のメイン窓口では、ビザのサポート、ARCの手続き、生活指導、奨学金の申請などを行っています。"
 
 #: .\flows\templates\flows\admissions_guide.html:934
 msgid "台灣駐外機構（辦理學生簽證）"
-msgstr ""
+msgstr "台湾の海外使節団（学生ビザ申請）"
 
 #: .\flows\templates\flows\admissions_guide.html:936
 msgid "確認錄取後，向所在地台灣駐外辦事處申請學生居留簽證（Resident Visa）。"
-msgstr ""
+msgstr "入学確認後、所在地の台湾海外事務所に学生居留ビザ（居留ビザ）を申請してください。"
 
 #: .\flows\templates\flows\admissions_guide.html:944
 msgid "外來人士在台生活諮詢專線"
-msgstr ""
+msgstr "台湾在住外国人向け相談ホットライン"
 
 #: .\flows\templates\flows\admissions_guide.html:946
-msgid ""
-"提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
+msgid "提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
 msgstr ""
+"台湾での生活や留学に関する疑問に多言語（英語、日本語、韓国語、ベトナム語、タイ語、インドネシア語など）でお答えするコンサルティングサービスを提供します。"
 
 #: .\flows\templates\flows\admissions_guide.html:947
 msgid "免費電話：1925"
-msgstr ""
+msgstr "フリーダイヤル: 1925"
 
 #: .\flows\templates\flows\admissions_guide.html:954
 msgid "全民健康保險署"
-msgstr ""
+msgstr "国民健康保険庁"
 
 #: .\flows\templates\flows\admissions_guide.html:956
 msgid "持 ARC 在台居留超過 4 個月者須加入全民健保，由學校協助辦理加保手續。"
-msgstr ""
+msgstr "台湾に4か月以上滞在するARC患者は国民健康保険に加入する必要があり、学校が保険加入手続きをお手伝いします。"
 
 #: .\flows\templates\flows\guide_index.html:4
 #: .\flows\templates\flows\guide_index.html:11
@@ -1315,27 +1265,27 @@ msgstr "入学・居留・健保・工讀・学籍等の重要法規説明"
 
 #: .\flows\templates\flows\guide_index.html:82
 msgid "全民健保申請"
-msgstr ""
+msgstr "国民健康保険の申請"
 
 #: .\flows\templates\flows\guide_index.html:83
 msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr ""
+msgstr "ARC発行後に保険を追加することができ、外来費用が大幅に削減されます。"
 
 #: .\flows\templates\flows\guide_index.html:91
 msgid "台灣銀行開戶"
-msgstr ""
+msgstr "台湾の銀行口座開設"
 
 #: .\flows\templates\flows\guide_index.html:92
 msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-msgstr ""
+msgstr "奨学金受給の必需品、郵便局、台湾銀行、玉山銀行おすすめ比較"
 
 #: .\flows\templates\flows\guide_index.html:100
 msgid "台灣門號申辦"
-msgstr ""
+msgstr "台湾の電話番号アプリ"
 
 #: .\flows\templates\flows\guide_index.html:101
 msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr ""
+msgstr "大手通信事業者が解説するプリペイドカードと月額レンタルプラン"
 
 #: .\flows\templates\flows\my_flows.html:3
 msgid "我的任務"
@@ -1367,79 +1317,77 @@ msgstr "これらのタスクを完了して、台湾での留学生活の準備
 
 #: .\flows\templates\flows\my_flows.html:376
 msgid "📋 需要的文件"
-msgstr ""
+msgstr "📋必要書類"
 
 #: .\flows\templates\flows\my_flows.html:377
 msgid "📍 辦理地點"
-msgstr ""
+msgstr "📍 申請場所"
 
 #: .\flows\templates\flows\my_flows.html:378
 msgid "🗺️ 在地圖上查看"
-msgstr ""
+msgstr "🗺️ 地図で見る"
 
 #: .\flows\templates\flows\my_flows.html:379
 msgid "🌐 官方網站"
-msgstr ""
+msgstr "🌐 公式ウェブサイト"
 
 #: .\flows\templates\flows\my_flows.html:380
 msgid "點此前往官方網站"
-msgstr ""
+msgstr "公式ウェブサイトへはここをクリックしてください"
 
 #: .\flows\templates\flows\my_flows.html:381
 msgid "📅 辦理時程"
-msgstr ""
+msgstr "📅 処理スケジュール"
 
 #: .\flows\templates\flows\my_flows.html:382
 msgid "⚠️ 截止日期"
-msgstr ""
+msgstr "⚠️締切"
 
 #: .\flows\templates\flows\my_flows.html:383
-msgid ""
-"請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的"
-"截止日期。"
+msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
 msgstr ""
+"システムがこのタスクの期限を自動的に計算できるように、最初に「個人情報」 に<strong>台湾への到着予定日</strong>を入力してください。"
 
 #: .\flows\templates\flows\my_flows.html:384
 msgid "📅 截止日期"
-msgstr ""
+msgstr "📅 締め切り"
 
 #: .\flows\templates\flows\my_flows.html:385
 msgid "任務備註"
-msgstr ""
+msgstr "タスクメモ"
 
 #: .\flows\templates\flows\my_flows.html:386
 msgid "在這裡輸入您的備註..."
-msgstr ""
+msgstr "ここにメモを入力してください..."
 
 #: .\flows\templates\flows\my_flows.html:387
 msgid "儲存備註"
-msgstr ""
+msgstr "メモを保存する"
 
 #: .\flows\templates\flows\my_flows.html:389
 msgid "未命名任務"
-msgstr ""
+msgstr "名前のないタスク"
 
 #: .\flows\templates\flows\my_flows.html:390
 msgid "無詳細說明"
-msgstr ""
+msgstr "詳細な説明はありません"
 
 #: .\flows\templates\flows\my_flows.html:391
 msgid "暫無詳細資料"
-msgstr ""
+msgstr "詳細はまだありません"
 
 #: .\flows\templates\flows\my_flows.html:392
-#, fuzzy
 #| msgid "已完成"
 msgid "完成"
-msgstr "完了"
+msgstr "仕上げる"
 
 #: .\flows\templates\flows\my_flows.html:393
 msgid "已完成任務"
-msgstr ""
+msgstr "タスクが完了しました"
 
 #: .\flows\templates\flows\my_flows.html:394
 msgid "未完成任務"
-msgstr ""
+msgstr "未完了のタスク"
 
 #: .\templates\base.html:26
 msgid "確認操作"
@@ -1462,10 +1410,9 @@ msgid "來臺就學小幫手"
 msgstr "台湾留学アシスタント"
 
 #: .\templates\base.html:72
-#, fuzzy
 #| msgid "同學"
 msgid " 同學"
-msgstr "学生"
+msgstr "同級生"
 
 #: .\templates\base.html:75 .\users\templates\users\dashboard.html:112
 msgid "登出"
@@ -1540,8 +1487,7 @@ msgstr "外国人学生"
 
 #: .\users\templates\users\dashboard.html:15
 msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
-msgstr ""
-"StudyGo 台湾へようこそ。あなたに合わせた台湾留学プロセスが準備できています。"
+msgstr "StudyGo 台湾へようこそ。あなたに合わせた台湾留学プロセスが準備できています。"
 
 #: .\users\templates\users\dashboard.html:18
 msgid "查看任務清單"
@@ -1572,10 +1518,9 @@ msgid "即將到期任務"
 msgstr "期限が近いタスク"
 
 #: .\users\templates\users\dashboard.html:46
-#, fuzzy
 #| msgid "沒有未讀通知 🎉"
 msgid "未讀通知"
-msgstr "未読の通知はありません 🎉"
+msgstr "未読の通知"
 
 #: .\users\templates\users\dashboard.html:52
 msgid "目前入學狀態"
@@ -1607,7 +1552,7 @@ msgstr "情報を編集"
 
 #: .\users\templates\users\dashboard.html:109
 msgid "確定要登出嗎？登出後將返回登入頁面。"
-msgstr ""
+msgstr "ログアウトしてもよろしいですか?ログアウトすると、ログインページに戻ります。"
 
 #: .\users\templates\users\dashboard.html:119
 msgid "近期待辦任務"
@@ -1672,7 +1617,7 @@ msgstr "在籍学校"
 
 #: .\users\templates\users\edit_profile.html:109
 msgid "就讀學校於註冊完成後即與帳號永久綁定，無法修改"
-msgstr ""
+msgstr "登録が完了すると、通っている学校はアカウントに永久に関連付けられ、変更することはできません。"
 
 #: .\users\templates\users\edit_profile.html:116
 #: .\users\templates\users\profile_setup.html:164
@@ -1810,33 +1755,22 @@ msgid "流程提醒"
 msgstr "手続きリマインダー"
 
 #: .\users\templates\users\login.html:23
-msgid ""
-"系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任"
-"務，並以進度方式提醒你一步一步完成。"
+msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
 msgstr ""
-"システムは、あなたの国籍、身分種別、現在の状況に基づいて、ビザ申請、入国前、"
-"入国後の重要なタスクを自動生成し、進捗状況で一歩ずつ完了できるように通知しま"
-"す。"
+"システムは、あなたの国籍、身分種別、現在の状況に基づいて、ビザ申請、入国前、入国後の重要なタスクを自動生成し、進捗状況で一歩ずつ完了できるように通知します。"
 
 #: .\users\templates\users\login.html:41
 msgid "資訊管理"
 msgstr "情報管理"
 
 #: .\users\templates\users\login.html:42
-msgid ""
-"把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
-"確資料，不再被零散資訊搞混。"
-msgstr ""
-"ビザ、居留証、健康保険、宿泊、入学登録情報を一つのページにまとめ、学生が正し"
-"い情報を見つけやすくし、分散した情報で混乱しないようにします。"
+msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
+msgstr "ビザ、居留証、健康保険、宿泊、入学登録情報を一つのページにまとめ、学生が正しい情報を見つけやすくし、分散した情報で混乱しないようにします。"
 
 #: .\users\templates\users\login.html:65
-msgid ""
-"當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 "
-"AI 小幫手快速獲得協助。"
+msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
 msgstr ""
-"最初に何をすればよいか、どの書類を準備すればよいか、誰に聞けばよいかわからな"
-"いときは、AIアシスタントを通じてすぐにサポートを受けられます。"
+"最初に何をすればよいか、どの書類を準備すればよいか、誰に聞けばよいかわからないときは、AIアシスタントを通じてすぐにサポートを受けられます。"
 
 #: .\users\templates\users\login.html:81
 msgid "顯示第一張介紹"
@@ -1850,12 +1784,14 @@ msgstr "2枚目の紹介を表示"
 msgid "顯示第三張介紹"
 msgstr "3枚目の紹介を表示"
 
-#: .\users\templates\users\login.html:95 .\users\templates\users\login.html:134
+#: .\users\templates\users\login.html:95
+#: .\users\templates\users\login.html:134
 #: .\users\templates\users\login.html:152
 msgid "登入"
 msgstr "ログイン"
 
-#: .\users\templates\users\login.html:97 .\users\templates\users\login.html:154
+#: .\users\templates\users\login.html:97
+#: .\users\templates\users\login.html:154
 msgid "註冊帳號"
 msgstr "アカウント登録"
 
@@ -1949,35 +1885,33 @@ msgstr "今すぐログイン"
 
 #: .\users\templates\users\login.html:228
 msgid "請確認您的電子信箱"
-msgstr ""
+msgstr "メールをご確認ください"
 
 #: .\users\templates\users\login.html:230
 msgid "驗證信已寄至"
-msgstr ""
+msgstr "確認レターは次の宛先に送信されました"
 
 #: .\users\templates\users\login.html:237
 msgid "請至信箱點擊驗證連結，完成驗證後系統將自動引導您填寫個人資料。"
-msgstr ""
+msgstr "メールボックスに移動し、確認リンクをクリックしてください。認証が完了すると、システムは自動的に個人情報を入力するよう案内します。"
 
 #: .\users\templates\users\login.html:238
 msgid "驗證連結有效期限為"
-msgstr ""
+msgstr "確認リンクは次の期間有効です"
 
 #: .\users\templates\users\login.html:238
 msgid "24 小時"
-msgstr ""
+msgstr "24時間"
 
 #: .\users\templates\users\login.html:242
-#, fuzzy
 #| msgid "重新寄送驗證信"
 msgid "重新發送驗證信"
-msgstr "認証メールを再送信"
+msgstr "確認レターを再送信する"
 
 #: .\users\templates\users\login.html:246
-#, fuzzy
 #| msgid "返回登入"
 msgid "已驗證？返回登入"
-msgstr "ログインに戻る"
+msgstr "検証済みですか?ログインに戻る"
 
 #: .\users\templates\users\logout_redirect.html:10
 msgid "登出中…"
@@ -2005,37 +1939,33 @@ msgid "開始使用"
 msgstr "利用開始"
 
 #: .\users\templates\users\profile_setup.html:35
-msgid ""
-"這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
-msgstr ""
-"これらの情報は、あなた専用の台湾留学プロセスを生成するために使用されます。最"
-"も正確な手順案内を受けるため、正確に入力してください。"
+msgid "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
+msgstr "これらの情報は、あなた専用の台湾留学プロセスを生成するために使用されます。最も正確な手順案内を受けるため、正確に入力してください。"
 
 #: .\users\templates\users\profile_setup.html:45
 msgid "請選擇國籍"
 msgstr "国籍を選択してください"
 
 #: .\users\templates\users\profile_setup.html:63
-#, fuzzy
 #| msgid "就讀學校"
 msgid "請選擇就讀學校"
-msgstr "在籍学校"
+msgstr "学校を選択してください"
 
 #: .\users\templates\users\profile_setup.html:65
 msgid "綜合大學"
-msgstr ""
+msgstr "総合大学"
 
 #: .\users\templates\users\profile_setup.html:87
 msgid "科技大學"
-msgstr ""
+msgstr "科学技術大学"
 
 #: .\users\templates\users\profile_setup.html:98
 msgid "師範／教育大學"
-msgstr ""
+msgstr "師範大学・教育大学"
 
 #: .\users\templates\users\profile_setup.html:114
 msgid "目前僅開放國立中央大學（NCU）的個人化流程"
-msgstr ""
+msgstr "現在、国立中央大学 (NCU) の個人化プロセスのみが公開されています"
 
 #: .\users\templates\users\profile_setup.html:123
 msgid "請選擇身份別"
@@ -2050,10 +1980,9 @@ msgid "辦理簽證等手續"
 msgstr "ビザなどの手続きを行う"
 
 #: .\users\templates\users\profile_setup.html:145
-#, fuzzy
 #| msgid "抵臺後"
 msgid "入臺後"
-msgstr "台湾到着後"
+msgstr "台湾入国後"
 
 #: .\users\templates\users\profile_setup.html:146
 msgid "辦理 ARC 等後續"
@@ -2089,11 +2018,11 @@ msgstr "状態未選択"
 
 #: .\users\templates\users\profile_setup.html:216
 msgid "資料儲存後，系統將根據您的"
-msgstr ""
+msgstr "データが保存されると、システムはあなたのデータを使用します。"
 
 #: .\users\templates\users\profile_setup.html:219
 msgid "自動生成個人化任務流程。"
-msgstr ""
+msgstr "パーソナライズされたタスクプロセスを自動的に生成します。"
 
 #: .\users\templates\users\reset_password.html:4
 #: .\users\templates\users\reset_password.html:11
@@ -2123,177 +2052,6 @@ msgstr "パスワードの再設定が完了しました。再度ログインし
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "再設定に失敗しました。リンクの有効期限が切れている可能性があります。"
-
-#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
-#~ msgstr ""
-#~ "質問を入力してください。システムがあなたの身分と状態に基づいて提案を整理し"
-#~ "ます。"
-
-#, fuzzy
-#~| msgid ""
-#~| "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要"
-#~| "做什麼。"
-#~ msgid ""
-#~ "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什"
-#~ "麼"
-#~ msgstr ""
-#~ "。台湾留学の手続きについて質問できます。例えば、ビザ、居留証、健康保険、宿"
-#~ "泊、登録、または入国後に何をするべきかなどです。"
-
-#~ msgid "繁體中文"
-#~ msgstr "繁体字中国語"
-
-#~ msgid "English"
-#~ msgstr "英語"
-
-#~ msgid "日本語"
-#~ msgstr "日本語"
-
-#~ msgid "မြန်မာဘာသာ"
-#~ msgstr "ミャンマー語"
-
-#~ msgid "Bahasa Indonesia"
-#~ msgstr "インドネシア語"
-
-#~ msgid "ภาษาไทย"
-#~ msgstr "タイ語"
-
-#~ msgid "Bahasa Melayu"
-#~ msgstr "マレー語"
-
-#~ msgid "   同學"
-#~ msgstr "同級生"
-
-#~ msgid "電子郵件為必填欄位"
-#~ msgstr "メールアドレスは必須項目です"
-
-#~ msgid "系統管理員"
-#~ msgstr "システム管理者"
-
-#~ msgid "角色"
-#~ msgstr "役割"
-
-#~ msgid "啟用狀態"
-#~ msgstr "有効状態"
-
-#~ msgid "工作人員狀態"
-#~ msgstr "スタッフ状態"
-
-#~ msgid "建立時間"
-#~ msgstr "作成日時"
-
-#~ msgid "最後登入IP"
-#~ msgstr "最終ログインIP"
-
-#~ msgid "Email 已驗證"
-#~ msgstr "メール認証済み"
-
-#~ msgid "使用者"
-#~ msgstr "ユーザー"
-
-#~ msgid "僑生（海外華裔）"
-#~ msgstr "華僑学生（海外華人）"
-
-#~ msgid "外籍生（一般外國學生）"
-#~ msgstr "外国人留学生"
-
-#~ msgid "僑大先修生"
-#~ msgstr "華僑大学予科生"
-
-#~ msgid "已收到錄取通知"
-#~ msgstr "合格通知を受け取り済み"
-
-#~ msgid "入境前準備中"
-#~ msgstr "入国前準備中"
-
-#~ msgid "已抵臺就學中"
-#~ msgstr "すでに台湾に到着し就学中"
-
-#~ msgid "使用者帳號"
-#~ msgstr "ユーザーアカウント"
-
-#~ msgid "頭像"
-#~ msgstr "プロフィール画像"
-
-#~ msgid "慣用語言"
-#~ msgstr "優先言語"
-
-#~ msgid "更新時間"
-#~ msgstr "更新日時"
-
-#~ msgid "學生資料"
-#~ msgstr "学生プロフィール"
-
-#~ msgid "驗證 Token"
-#~ msgstr "認証トークン"
-
-#~ msgid "是否已使用"
-#~ msgstr "使用済み"
-
-#~ msgid "Email 驗證 Token"
-#~ msgstr "メール認証トークン"
-
-#~ msgid "IP 位址"
-#~ msgstr "IPアドレス"
-
-#~ msgid "使用者代理"
-#~ msgstr "ユーザーエージェント"
-
-#~ msgid "登入時間"
-#~ msgstr "ログイン日時"
-
-#~ msgid "是否成功"
-#~ msgstr "成功"
-
-#, python-format
-#~ msgid "你好，%(name)s 👋"
-#~ msgstr "こんにちは、%(name)s 👋"
-
-#~ msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
-#~ msgstr ""
-#~ "、StudyGo Taiwanへようこそ。あなた専用の台湾留学プロセスが準備できました。"
-
-#~ msgid "個人化流程生成後顯示"
-#~ msgstr "個人化プロセスの生成後に表示されます"
-
-#~ msgid "連接模塊三後顯示"
-#~ msgstr "モジュール3接続後に表示されます"
-
-#~ msgid "信箱已驗證"
-#~ msgstr "メール認証済み"
-
-#~ msgid "信箱未驗證"
-#~ msgstr "メール未認証"
-
-#~ msgid "任務清單由模塊二提供"
-#~ msgstr "タスクリストはモジュール2によって提供されます"
-
-#~ msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
-#~ msgstr ""
-#~ "モジュール2（プロセスとタスク管理）が完了すると、ここにあなた専用のタスク"
-#~ "リストが表示されます。"
-
-#~ msgid "例如：國立臺灣大學"
-#~ msgstr "例：国立台湾大学"
-
-#~ msgid "準備來臺流程"
-#~ msgstr "台湾渡航プロセスの準備"
-
-#~ msgid ""
-#~ "\n"
-#~ "            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與\n"
-#~ "            <b>入學狀態</b> 自動生成個人化任務流程。\n"
-#~ "            "
-#~ msgstr ""
-#~ "\n"
-#~ "            情報が保存されると、システムはあなたの <b>国籍</b>、<b>身分種"
-#~ "別</b>、\n"
-#~ "            <b>入学状況</b> に基づいて、個人化されたタスクプロセスを自動生"
-#~ "成します。\n"
-#~ "            "
-
-#~ msgid "未讀的通知"
-#~ msgstr "未読の通知"
 
 msgid "地圖導覽"
 msgstr "マップ＆ナビ"
@@ -2622,14 +2380,278 @@ msgstr "入学申請ガイド"
 msgid "申請資格、時程、所需文件與注意事項整理"
 msgstr "申請資格・スケジュール・必要書類・注意事項のまとめ"
 
+msgid "國立臺灣科技大學（NTUST）"
+msgstr "国立台湾科学技術大学 (NTUST)"
+
+msgid "國立臺灣大學（NTU）"
+msgstr "国立台湾大学 (NTU)"
+
+msgid "國立聯合大學（NUU）"
+msgstr "国立統一大学 (NUU)"
+
+msgid "國立雲林科技大學（YunTech）"
+msgstr "国立雲林科学技術大学 (YunTech)"
+
+msgid "國立臺中科技大學（NTCUST）"
+msgstr "国立台中科技大学 (NTCUST)"
+
+msgid "國立臺北大學（NTPU）"
+msgstr "国立台北大学 (NTPU)"
+
+msgid "國立臺北商業大學（NTUB）"
+msgstr "国立台北商科大学 (NTUB)"
+
+msgid "國立成功大學（NCKU）"
+msgstr "国立成功大学 (NCKU)"
+
+msgid "國立臺北教育大學（NTUE）"
+msgstr "国立台北教育大学 (NTUE)"
+
+msgid "國立清華大學（NTHU）"
+msgstr "国立清華大学 (NTHU)"
+
+msgid "國立金門大學（NQU）"
+msgstr "国立ケモイ大学 (NQU)"
+
+msgid "國立空中大學（NOU）"
+msgstr "国立航空大学 (NOU)"
+
+msgid "國立中山大學（NSYSU）"
+msgstr "国立中山大学 (NSYSU)"
+
+msgid "國立彰化師範大學（NCUE）"
+msgstr "国立彰化師範大学 (NCUE)"
+
+msgid "國立臺北科技大學（NTUT）"
+msgstr "国立台北理工大学 (NTUT)"
+
+msgid "國立暨南國際大學（NCNU）"
+msgstr "国立済南国際大学 (NCNU)"
+
+msgid "..."
+msgstr ""
+
+msgid "國立宜蘭大學（NIU）"
+msgstr "国立宜蘭大学 (NIU)"
+
+msgid "國立東華大學（NDHU）"
+msgstr "国立東華大学 (NDHU)"
+
+msgid "國立臺南大學（NUTN）"
+msgstr "国立台南大学 (NUTN)"
+
+msgid "國立臺灣師範大學（NTNU）"
+msgstr "国立台湾師範大学 (NTNU)"
+
+msgid "國立陽明交通大學（NYCU）"
+msgstr "国立陽明交通大学 (NYCU)"
+
+msgid "國立高雄餐旅大學（NKUHT）"
+msgstr "国立高雄ホスピタリティ観光大学 (NKUHT)"
+
+msgid "國立中興大學（NCHU）"
+msgstr "国立中興大学 (NCHU)"
+
+msgid "國立澎湖科技大學（NPU）"
+msgstr "国立澎湖科学技術大学 (NPU)"
+
+msgid "國立高雄科技大學（NKUST）"
+msgstr "国立高雄科学技術大学 (NKUST)"
+
+msgid "國立臺中教育大學（NTCU）"
+msgstr "国立台中教育大学 (NTCU)"
+
+msgid "國立政治大學（NCCU）"
+msgstr "国立政治大学 (NCCU)"
+
+msgid "國立屏東大學（NPTU）"
+msgstr "国立屏東大学 (NPTU)"
+
+msgid "國立嘉義大學（NCYU）"
+msgstr "国立嘉義大学 (NCYU)"
+
+msgid "國立臺東大學（NTTU）"
+msgstr "国立台東大学 (NTTU)"
+
+msgid "國立中央大學（NCU）"
+msgstr "国立中央大学 (NCU)"
+
+msgid "其他（Other）"
+msgstr "他の"
+
+msgid "國立臺灣體育運動大學（NTUS）"
+msgstr "国立台湾体育大学 (NTUS)"
+
+msgid "國立虎尾科技大學（NFU）"
+msgstr "国立湖威理工大学 (NFU)"
+
+msgid "國立屏東科技大學（NPUST）"
+msgstr "国立屏東科学技術大学 (NPUST)"
+
+msgid "國立高雄師範大學（NKNU）"
+msgstr "国立高雄師範大学 (NKNU)"
+
+#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
+#~ msgstr "質問を入力してください。システムがあなたの身分と状態に基づいて提案を整理します。"
+
+#~ msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
+#~ msgstr "ビザ、滞在許可、健康保険、宿泊、登録、入国後の手続きなど、台湾に留学するための手続きについて相談できます。"
+
+#~ msgid "繁體中文"
+#~ msgstr "繁体字中国語"
+
+#~ msgid "English"
+#~ msgstr "英語"
+
+#~ msgid "日本語"
+#~ msgstr "日本語"
+
+#~ msgid "မြန်မာဘာသာ"
+#~ msgstr "ミャンマー語"
+
+#~ msgid "Bahasa Indonesia"
+#~ msgstr "インドネシア語"
+
+#~ msgid "ภาษาไทย"
+#~ msgstr "タイ語"
+
+#~ msgid "Bahasa Melayu"
+#~ msgstr "マレー語"
+
+#~ msgid "   同學"
+#~ msgstr "同級生"
+
+#~ msgid "電子郵件為必填欄位"
+#~ msgstr "メールアドレスは必須項目です"
+
+#~ msgid "系統管理員"
+#~ msgstr "システム管理者"
+
+#~ msgid "角色"
+#~ msgstr "役割"
+
+#~ msgid "啟用狀態"
+#~ msgstr "有効状態"
+
+#~ msgid "工作人員狀態"
+#~ msgstr "スタッフ状態"
+
+#~ msgid "建立時間"
+#~ msgstr "作成日時"
+
+#~ msgid "最後登入IP"
+#~ msgstr "最終ログインIP"
+
+#~ msgid "Email 已驗證"
+#~ msgstr "メール認証済み"
+
+#~ msgid "使用者"
+#~ msgstr "ユーザー"
+
+#~ msgid "僑生（海外華裔）"
+#~ msgstr "華僑学生（海外華人）"
+
+#~ msgid "外籍生（一般外國學生）"
+#~ msgstr "外国人留学生"
+
+#~ msgid "僑大先修生"
+#~ msgstr "華僑大学予科生"
+
+#~ msgid "已收到錄取通知"
+#~ msgstr "合格通知を受け取り済み"
+
+#~ msgid "入境前準備中"
+#~ msgstr "入国前準備中"
+
+#~ msgid "已抵臺就學中"
+#~ msgstr "すでに台湾に到着し就学中"
+
+#~ msgid "使用者帳號"
+#~ msgstr "ユーザーアカウント"
+
+#~ msgid "頭像"
+#~ msgstr "プロフィール画像"
+
+#~ msgid "慣用語言"
+#~ msgstr "優先言語"
+
+#~ msgid "更新時間"
+#~ msgstr "更新日時"
+
+#~ msgid "學生資料"
+#~ msgstr "学生プロフィール"
+
+#~ msgid "驗證 Token"
+#~ msgstr "認証トークン"
+
+#~ msgid "是否已使用"
+#~ msgstr "使用済み"
+
+#~ msgid "Email 驗證 Token"
+#~ msgstr "メール認証トークン"
+
+#~ msgid "IP 位址"
+#~ msgstr "IPアドレス"
+
+#~ msgid "使用者代理"
+#~ msgstr "ユーザーエージェント"
+
+#~ msgid "登入時間"
+#~ msgstr "ログイン日時"
+
+#~ msgid "是否成功"
+#~ msgstr "成功"
+
+#, python-format
+#~ msgid "你好，%(name)s 👋"
+#~ msgstr "こんにちは、%(name)s 👋"
+
+#~ msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+#~ msgstr "、StudyGo Taiwanへようこそ。あなた専用の台湾留学プロセスが準備できました。"
+
+#~ msgid "個人化流程生成後顯示"
+#~ msgstr "個人化プロセスの生成後に表示されます"
+
+#~ msgid "連接模塊三後顯示"
+#~ msgstr "モジュール3接続後に表示されます"
+
+#~ msgid "信箱已驗證"
+#~ msgstr "メール認証済み"
+
+#~ msgid "信箱未驗證"
+#~ msgstr "メール未認証"
+
+#~ msgid "任務清單由模塊二提供"
+#~ msgstr "タスクリストはモジュール2によって提供されます"
+
+#~ msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
+#~ msgstr "モジュール2（プロセスとタスク管理）が完了すると、ここにあなた専用のタスクリストが表示されます。"
+
+#~ msgid "例如：國立臺灣大學"
+#~ msgstr "例：国立台湾大学"
+
+#~ msgid "準備來臺流程"
+#~ msgstr "台湾渡航プロセスの準備"
+
+#~ msgid ""
+#~ "\n"
+#~ "            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與\n"
+#~ "            <b>入學狀態</b> 自動生成個人化任務流程。\n"
+#~ "            "
+#~ msgstr ""
+#~ "\n"
+#~ "            情報が保存されると、システムはあなたの <b>国籍</b>、<b>身分種別</b>、\n"
+#~ "            <b>入学状況</b> に基づいて、個人化されたタスクプロセスを自動生成します。\n"
+#~ "            "
+
+#~ msgid "未讀的通知"
+#~ msgstr "未読の通知"
+
 #~ msgid "回到儀表板"
 #~ msgstr "ダッシュボードに戻る"
 
-#~ msgid ""
-#~ "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
-#~ msgstr ""
-#~ "あなたのプロフィールに基づいて、入国前、入国後、ビザ、居留証、健康保険、生"
-#~ "活情報を整理します。"
+#~ msgid "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
+#~ msgstr "あなたのプロフィールに基づいて、入国前、入国後、ビザ、居留証、健康保険、生活情報を整理します。"
 
 #~ msgid "你好，"
 #~ msgstr "こんにちは、"

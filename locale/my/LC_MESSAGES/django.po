@@ -84,7 +84,7 @@ msgstr "မင်္ဂလာပါ !"
 
 #: .\chatbot\templates\chatbot\chatbot.html:104
 msgid "回到底部"
-msgstr ""
+msgstr "အောက်ခြေသို့ ပြန်သွားရန်"
 
 #: .\chatbot\templates\chatbot\chatbot.html:114
 msgid "新增附件"
@@ -105,7 +105,8 @@ msgstr "ဓာတ်ပုံရိုက်ရန်"
 #: .\chatbot\templates\chatbot\chatbot.html:125
 msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
 msgstr ""
-"ဥပမာ - ကျွန်ုပ်သည် မြန်မာနိုင်ငံမှ ထိုင်ဝမ်သို့ ဘွဲ့သင်တန်းတက်ရန် လာမည်ဆိုလျှင် ဗီဇာအတွက် ဘာတွေ အရင်ပြင်ဆင်ရမလဲ။"
+"ဥပမာ - ကျွန်ုပ်သည် မြန်မာနိုင်ငံမှ ထိုင်ဝမ်သို့ ဘွဲ့သင်တန်းတက်ရန် "
+"လာမည်ဆိုလျှင် ဗီဇာအတွက် ဘာတွေ အရင်ပြင်ဆင်ရမလဲ။"
 
 #: .\chatbot\templates\chatbot\chatbot.html:127
 #: .\chatbot\templates\chatbot\chatbot.html:158
@@ -163,56 +164,63 @@ msgstr "ပြန်ဖြေနေသည်…"
 #: .\chatbot\views.py:16
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
 msgstr ""
-"ထိုင်ဝမ်ရှိ convenience store များတွင် ငွေပေးချေခြင်း၊ ပစ္စည်းယူခြင်း၊ မိတ္တူကူးခြင်းများ "
-"ပြုလုပ်နိုင်ပြီး နေ့စဉ်သုံးပစ္စည်းများလည်း ဝယ်ယူနိုင်သည်။"
+"ထိုင်ဝမ်ရှိ convenience store များတွင် ငွေပေးချေခြင်း၊ ပစ္စည်းယူခြင်း၊ "
+"မိတ္တူကူးခြင်းများ ပြုလုပ်နိုင်ပြီး နေ့စဉ်သုံးပစ္စည်းများလည်း ဝယ်ယူနိုင်သည်။"
 
 #: .\chatbot\views.py:17
 msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
-msgstr "ထိုင်ဝမ်တွင် MRT သို့မဟုတ် ဘတ်စ်ကားစီးရာတွင် EasyCard သို့မဟုတ် iPASS ကို မကြာခဏ အသုံးပြုကြသည်။"
+msgstr ""
+"ထိုင်ဝမ်တွင် MRT သို့မဟုတ် ဘတ်စ်ကားစီးရာတွင် EasyCard သို့မဟုတ် iPASS ကို "
+"မကြာခဏ အသုံးပြုကြသည်။"
 
 #: .\chatbot\views.py:18
 msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
 msgstr ""
-"ထိုင်ဝမ်ရှိ ကျောင်းများစွာတွင် နိုင်ငံတကာရေးရာရုံးရှိပြီး နိုင်ငံခြားကျောင်းသားများ၏ ဝင်ခွင့်နှင့် "
-"နေထိုင်မှုဆိုင်ရာ ကိစ္စများကို ကူညီနိုင်သည်။"
+"ထိုင်ဝမ်ရှိ ကျောင်းများစွာတွင် နိုင်ငံတကာရေးရာရုံးရှိပြီး "
+"နိုင်ငံခြားကျောင်းသားများ၏ ဝင်ခွင့်နှင့် နေထိုင်မှုဆိုင်ရာ ကိစ္စများကို "
+"ကူညီနိုင်သည်။"
 
 #: .\chatbot\views.py:19
 msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
-msgstr "ထိုင်ဝမ်တွင် အိမ်ငှားမီ ငှားရမ်းခ၊ စပေါ်ငွေ၊ ရေမီးခနှင့် စာချုပ်ကာလကို အရင်စစ်ဆေးသင့်သည်။"
+msgstr ""
+"ထိုင်ဝမ်တွင် အိမ်ငှားမီ ငှားရမ်းခ၊ စပေါ်ငွေ၊ ရေမီးခနှင့် စာချုပ်ကာလကို "
+"အရင်စစ်ဆေးသင့်သည်။"
 
 #: .\chatbot\views.py:20
 msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
 msgstr ""
-"ထိုင်ဝမ်တွင် ဆရာဝန်ပြသရာတွင် NHI ကျန်းမာရေးအာမခံဝင်ထားပါက ကုသစရိတ်သည် ကိုယ်တိုင်ပေးချေခြင်းထက် "
-"ပိုသက်သာနိုင်သည်။"
+"ထိုင်ဝမ်တွင် ဆရာဝန်ပြသရာတွင် NHI ကျန်းမာရေးအာမခံဝင်ထားပါက ကုသစရိတ်သည် "
+"ကိုယ်တိုင်ပေးချေခြင်းထက် ပိုသက်သာနိုင်သည်။"
 
 #: .\chatbot\views.py:21
 msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
-msgstr "ထိုင်ဝမ်တွင် အမှိုက်ကားများသည် အမှိုက်ပစ်ရန် သတိပေးသော ဂီတကို ဖွင့်လေ့ရှိပြီး ဒေသအလိုက် အချိန်ကွာခြားသည်။"
+msgstr ""
+"ထိုင်ဝမ်တွင် အမှိုက်ကားများသည် အမှိုက်ပစ်ရန် သတိပေးသော ဂီတကို "
+"ဖွင့်လေ့ရှိပြီး ဒေသအလိုက် အချိန်ကွာခြားသည်။"
 
 #: .\chatbot\views.py:22
 msgid "台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"
 msgstr ""
-"ထိုင်ဝမ်၏ နွေရာသီသည် ပူပြီး စိုထိုင်းသောကြောင့် အပြင်သွားရာတွင် ရေဘူး၊ နေရောင်ကာကွယ်ပစ္စည်းနှင့် "
-"မိုးကာပစ္စည်းများ ပြင်ဆင်ထားနိုင်သည်။"
+"ထိုင်ဝမ်၏ နွေရာသီသည် ပူပြီး စိုထိုင်းသောကြောင့် အပြင်သွားရာတွင် ရေဘူး၊ "
+"နေရောင်ကာကွယ်ပစ္စည်းနှင့် မိုးကာပစ္စည်းများ ပြင်ဆင်ထားနိုင်သည်။"
 
 #: .\chatbot\views.py:23
 msgid "如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"
 msgstr ""
-"ထိုင်ဝမ်တွင် လိပ်စာပြောင်းပါက အချို့စာရွက်စာတမ်းများ သို့မဟုတ် ကျောင်းမှတ်တမ်းများကိုပါ အတူတကွ အပ်ဒိတ်လုပ်ရန် "
-"လိုနိုင်သည်။"
+"ထိုင်ဝမ်တွင် လိပ်စာပြောင်းပါက အချို့စာရွက်စာတမ်းများ သို့မဟုတ် "
+"ကျောင်းမှတ်တမ်းများကိုပါ အတူတကွ အပ်ဒိတ်လုပ်ရန် လိုနိုင်သည်။"
 
 #: .\chatbot\views.py:24
 msgid "台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"
 msgstr ""
-"ထိုင်ဝမ်ကျောင်းများတွင် အရေးကြီးသတင်းများကို Email သို့မဟုတ် ကျောင်းစနစ်မှတစ်ဆင့် ကြေညာလေ့ရှိသောကြောင့် "
-"ပုံမှန်စစ်ဆေးသင့်သည်။"
+"ထိုင်ဝမ်ကျောင်းများတွင် အရေးကြီးသတင်းများကို Email သို့မဟုတ် "
+"ကျောင်းစနစ်မှတစ်ဆင့် ကြေညာလေ့ရှိသောကြောင့် ပုံမှန်စစ်ဆေးသင့်သည်။"
 
 #: .\chatbot\views.py:25
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
 msgstr ""
-"ထိုင်ဝမ်ရောက်ပြီးနောက် ဖုန်းနံပါတ်လျှောက်ရာတွင် များသောအားဖြင့် ပတ်စ်ပို့၊ ARC နေထိုင်ခွင့်ကတ် သို့မဟုတ် "
-"အခြားအထောက်အထားစာရွက်စာတမ်းများ လိုအပ်သည်။"
+"ထိုင်ဝမ်ရောက်ပြီးနောက် ဖုန်းနံပါတ်လျှောက်ရာတွင် များသောအားဖြင့် ပတ်စ်ပို့၊ "
+"ARC နေထိုင်ခွင့်ကတ် သို့မဟုတ် အခြားအထောက်အထားစာရွက်စာတမ်းများ လိုအပ်သည်။"
 
 #: .\flows\models.py:240
 msgid "未開始"
@@ -230,7 +238,7 @@ msgstr "ပြီးသွားပြီ"
 #: .\flows\templates\flows\admissions_guide.html:4
 #: .\flows\templates\flows\admissions_guide.html:218
 msgid "招生簡章"
-msgstr ""
+msgstr "ဝင်ခွင့်ဘောင်ချာ"
 
 #: .\flows\templates\flows\admissions_guide.html:212
 #: .\flows\templates\flows\guide_index.html:10
@@ -239,119 +247,126 @@ msgid "返回儀表板"
 msgstr "ဒက်ရှ်ဘုတ်သို့ ပြန်သွားရန်"
 
 #: .\flows\templates\flows\admissions_guide.html:217
-#, fuzzy
 #| msgid "境外學生"
 msgid "境外學生招生資訊"
-msgstr "နိုင်ငံခြားကျောင်းသား"
+msgstr "နိုင်ငံရပ်ခြား ကျောင်းသား ဝင်ခွင့်အချက်အလက်"
 
 #: .\flows\templates\flows\admissions_guide.html:220
-msgid ""
-"本頁彙整境外學生（僑生、外籍生、交換生）來臺就讀相關招生資訊，包含各學制申請"
-"資格、招生管道、獎學金及申請時程，助您順利規劃來臺求學之路。"
+msgid "本頁彙整境外學生（僑生、外籍生、交換生）來臺就讀相關招生資訊，包含各學制申請資格、招生管道、獎學金及申請時程，助您順利規劃來臺求學之路。"
 msgstr ""
+"ဤစာမျက်နှာသည် ထိုင်ဝမ်တွင်ပညာသင်ကြားရန် နိုင်ငံရပ်ခြားကျောင်းသားများ "
+"(နိုင်ငံရပ်ခြားကျောင်းသားများ၊ နိုင်ငံခြားကျောင်းသားများနှင့် "
+"လဲလှယ်ကျောင်းသားများ) အတွက် သက်ဆိုင်ရာ ဝင်ခွင့်အချက်အလက်များကို "
+"စုစည်းထားပြီး စာသင်စနစ်တစ်ခုစီအတွက် ဝင်ခွင့်အရည်အချင်းများ၊ "
+"ဝင်ခွင့်လမ်းကြောင်းများ၊ ပညာသင်ဆုများနှင့် လျှောက်လွှာအချိန်ဇယားများ အပါအဝင်"
+" ထိုင်ဝမ်တွင် သင်ပညာသင်ကြားရန် အချိန်ဇယားများကို စုစည်းထားသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:223
 msgid "多學制招生"
-msgstr ""
+msgstr "Multi-study စာရင်းသွင်းခြင်း။"
 
 #: .\flows\templates\flows\admissions_guide.html:224
 msgid "多國籍適用"
-msgstr ""
+msgstr "လူမျိုးပေါင်းစုံနဲ့ သက်ဆိုင်ပါတယ်။"
 
 #: .\flows\templates\flows\admissions_guide.html:225
 msgid "獎學金機會"
-msgstr ""
+msgstr "ပညာသင်ဆုအခွင့်အလမ်းများ"
 
 #: .\flows\templates\flows\admissions_guide.html:226
 msgid "分期申請時程"
-msgstr ""
+msgstr "အရစ်ကျလျှောက်လွှာအချိန်ဇယား"
 
 #: .\flows\templates\flows\admissions_guide.html:234
 msgid "重要提醒："
-msgstr ""
+msgstr "အရေးကြီးသတိပေးချက်"
 
 #: .\flows\templates\flows\admissions_guide.html:235
-msgid ""
-"各學制招生截止日期每年均可能調整，本頁資訊僅供參考，請務必以各校最新公告或海"
-"外聯招會官網為準。"
+msgid "各學制招生截止日期每年均可能調整，本頁資訊僅供參考，請務必以各校最新公告或海外聯招會官網為準。"
 msgstr ""
+"ပညာရေးစနစ်တစ်ခုစီအတွက် ဝင်ခွင့်နောက်ဆုံးရက်ကို နှစ်စဉ်နှစ်တိုင်း "
+"ချိန်ညှိနိုင်ပါသည်။ ဤစာမျက်နှာရှိ အချက်အလက်များသည် ကိုးကားရန်အတွက်သာဖြစ်သည်။"
+" ကျေးဇူးပြု၍ ကျောင်းတစ်ခုစီ၏ နောက်ဆုံးထုတ်ပြန်ချက်များကို ကိုးကားပါ "
+"သို့မဟုတ် Overseas Joint Admissions Association ၏ တရားဝင်ဝဘ်ဆိုဒ်ကို "
+"ကြည့်ပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:240
 msgid "學制快速一覽"
-msgstr ""
+msgstr "ပညာရေးစနစ်၏ အမြန်ခြုံငုံသုံးသပ်ချက်"
 
 #: .\flows\templates\flows\admissions_guide.html:244
 msgid "學制種類"
-msgstr ""
+msgstr "ပညာရေးစနစ်အမျိုးအစား"
 
 #: .\flows\templates\flows\admissions_guide.html:245
 msgid "類"
-msgstr ""
+msgstr "ကြင်နာပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:246
 #: .\flows\templates\flows\admissions_guide.html:561
 #: .\flows\templates\flows\admissions_guide.html:611
 msgid "僑先部 / 學士班 / 研究所"
-msgstr ""
+msgstr "ပြည်ပတရုတ်/ဘွဲ့အစီအစဉ်/သုတေသနဌာန"
 
 #: .\flows\templates\flows\admissions_guide.html:250
 msgid "適用身份"
-msgstr ""
+msgstr "အသုံးချနိုင်သော အခြေအနေ"
 
 #: .\flows\templates\flows\admissions_guide.html:251
 msgid "種"
-msgstr ""
+msgstr "ကြင်နာပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:252
 msgid "僑生 / 外籍生 / 交換生"
 msgstr ""
+"နိုင်ငံရပ်ခြား တရုတ်ကျောင်းသားများ/နိုင်ငံခြားကျောင်းသား/ကျောင်းသူများ "
+"ဖလှယ်ကြသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:256
 msgid "可申請獎學金"
-msgstr ""
+msgstr "ပညာသင်ဆုများရရှိနိုင်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:257
-#, fuzzy
 #| msgid "項"
 msgid "多項"
-msgstr "ခု"
+msgstr "မျိုးစုံ"
 
 #: .\flows\templates\flows\admissions_guide.html:258
 msgid "教育部、學校、地方政府"
-msgstr ""
+msgstr "ပညာရေးဝန်ကြီးဌာန၊ ကျောင်းများ၊ ဒေသဆိုင်ရာ အစိုးရများ၊"
 
 #: .\flows\templates\flows\admissions_guide.html:262
 msgid "申請截止"
-msgstr ""
+msgstr "လျှောက်လွှာနောက်ဆုံးရက်"
 
 #: .\flows\templates\flows\admissions_guide.html:263
 #: .\flows\templates\flows\admissions_guide.html:569
 #: .\flows\templates\flows\admissions_guide.html:619
 msgid "約每年 3 月"
-msgstr ""
+msgstr "ခန့်မှန်းခြေအားဖြင့် နှစ်စဉ် မတ်လ"
 
 #: .\flows\templates\flows\admissions_guide.html:264
 msgid "各管道略有差異"
-msgstr ""
+msgstr "ပိုက်လိုင်းတစ်ခုစီသည် အနည်းငယ်ကွဲပြားသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:269
 msgid "招生學制說明"
-msgstr ""
+msgstr "ဝင်ခွင့်နှင့် ပညာရေးစနစ်ဖော်ပြချက်"
 
 #: .\flows\templates\flows\admissions_guide.html:271
 #: .\flows\templates\flows\admissions_guide.html:283
 msgid "僑先部（預科）"
-msgstr ""
+msgstr "ပြည်ပ တရုတ်စာဌာန (အကြိုသင်တန်း)၊"
 
 #: .\flows\templates\flows\admissions_guide.html:272
 #: .\flows\templates\flows\admissions_guide.html:337
 msgid "學士班"
-msgstr ""
+msgstr "တက္ကသိုလ်ဘွဲ့"
 
 #: .\flows\templates\flows\admissions_guide.html:273
 #: .\flows\templates\flows\admissions_guide.html:391
 msgid "研究所"
-msgstr ""
+msgstr "ဘွဲ့လွန်သင်တန်း"
 
 #: .\flows\templates\flows\admissions_guide.html:274
 #: .\flows\templates\flows\admissions_guide.html:445 .\users\models.py:96
@@ -366,406 +381,469 @@ msgid "交換生"
 msgstr "လဲလှယ်ကျောင်းသား"
 
 #: .\flows\templates\flows\admissions_guide.html:283
-msgid ""
-"：針對僑生設立的一年制預備課程，修畢成績合格後可直升大學學士班，無需再參加大"
-"學入學考試。適合剛完成高中學業的僑生。"
+msgid "：針對僑生設立的一年制預備課程，修畢成績合格後可直升大學學士班，無需再參加大學入學考試。適合剛完成高中學業的僑生。"
 msgstr ""
+"- နိုင်ငံရပ်ခြား တရုတ်ကျောင်းသားများအတွက် တစ်နှစ်ကြိုတင်ပြင်ဆင်မှုသင်တန်း။ "
+"သင်တန်းအောင်မြင်ပြီးပါက တက္ကသိုလ်ဝင်ခွင့်စာမေးပွဲကို ဖြေဆိုရန်မလိုဘဲ "
+"ဘွဲ့ဒီဂရီအစီအစဉ်သို့ တိုက်ရိုက်ဝင်ရောက်နိုင်သည်။ အထက်တန်းကျောင်းပြီးပြီးတဲ့ "
+"နိုင်ငံရပ်ခြားက ကျောင်းသားတွေအတွက် သင့်တော်ပါတယ်။"
 
 #: .\flows\templates\flows\admissions_guide.html:290
 #: .\flows\templates\flows\admissions_guide.html:452
 msgid "申請資格"
-msgstr ""
+msgstr "အရည်အချင်းပြည့်မီခြင်း။"
 
 #: .\flows\templates\flows\admissions_guide.html:291
-msgid ""
-"具僑生身份、完成相當於我國高中一至三年級學業（高中畢業），成績達一定標準。年"
-"齡通常不超過 25 歲。"
+msgid "具僑生身份、完成相當於我國高中一至三年級學業（高中畢業），成績達一定標準。年齡通常不超過 25 歲。"
 msgstr ""
+"လျှောက်ထားသူများသည် နိုင်ငံရပ်ခြားရှိ တရုတ်အဆင့်အတန်းရှိရမည်၊ "
+"ကျွန်ုပ်၏နိုင်ငံရှိ အထက်တန်းကျောင်း ပထမတန်းမှ တတိယတန်းနှင့် ညီမျှသော "
+"ဘာသာရပ်များကို ပြီးမြောက်ပြီးပြီ (အထက်တန်းကျောင်းဆင်းခြင်း)၊ အချို့သော "
+"ပညာရပ်ဆိုင်ရာ စံနှုန်းများကို အောင်မြင်ပြီး ဖြစ်ပါသည်။ များသောအားဖြင့် အသက် "
+"25 နှစ်ထက် မပိုပါဘူး။"
 
 #: .\flows\templates\flows\admissions_guide.html:293
 #: .\flows\templates\flows\admissions_guide.html:348
 msgid "高中畢業"
-msgstr ""
+msgstr "အထက်တန်းကျောင်းဆင်း"
 
 #: .\flows\templates\flows\admissions_guide.html:294
 msgid "僑生身份"
-msgstr ""
+msgstr "ပင်လယ်ရပ်ခြား တရုတ် အမှတ်အသား"
 
 #: .\flows\templates\flows\admissions_guide.html:295
 msgid "25 歲以下"
-msgstr ""
+msgstr "၂၅ နှစ်အောက်"
 
 #: .\flows\templates\flows\admissions_guide.html:301
 msgid "申請管道"
-msgstr ""
+msgstr "လျှောက်လွှာပိုက်လိုင်း"
 
 #: .\flows\templates\flows\admissions_guide.html:302
-msgid ""
-"透過海外聯合招生委員會（海聯會）統一分發。馬來西亞、緬甸、印尼、港澳及其他地"
-"區各有獨立招生窗口。"
+msgid "透過海外聯合招生委員會（海聯會）統一分發。馬來西亞、緬甸、印尼、港澳及其他地區各有獨立招生窗口。"
 msgstr ""
+"ပြည်ပ ဝင်ခွင့် ကော်မတီ (Overseas Joint Admissions Committee) မှတဆင့် "
+"တစ်ပြေးညီ ဖြန့်ဝေပါသည်။ မလေးရှား၊ မြန်မာ၊ အင်ဒိုနီးရှား၊ ဟောင်ကောင်၊ မကာအို "
+"နှင့် အခြားဒေသအသီးသီးတွင် သီးခြားစာရင်းသွင်းနိုင်သော ပြတင်းပေါက်များရှိသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:304
 msgid "海聯會"
-msgstr ""
+msgstr "ALATS"
 
 #: .\flows\templates\flows\admissions_guide.html:305
 msgid "統一分發"
-msgstr ""
+msgstr "တစ်စုတစ်စည်းတည်း ဖြန့်ဖြူးခြင်း။"
 
 #: .\flows\templates\flows\admissions_guide.html:311
 #: .\flows\templates\flows\admissions_guide.html:365
 #: .\flows\templates\flows\admissions_guide.html:420
 msgid "申請時程"
-msgstr ""
+msgstr "လျှောက်လွှာအချိန်ဇယား"
 
 #: .\flows\templates\flows\admissions_guide.html:312
-msgid ""
-"通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公"
-"告，8 月底至 9 月初入學報到。"
+msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
 msgstr ""
+"အွန်လိုင်းမှတ်ပုံတင်ခြင်းကို နှစ်စဉ် ဇန်နဝါရီလမှ မတ်လအထိ ဖွင့်လှစ်လေ့ရှိပြီး"
+" သတ်မှတ်ရက်မှာ ဒေသတစ်ခုစီတွင် အနည်းငယ်ကွဲပြားသည်။ ဝင်ခွင့်ရလဒ်များကို မေလမှ "
+"ဇွန်လအတွင်း ထုတ်ပြန်ကြေညာမည်ဖြစ်ပြီး ဩဂုတ်လကုန်မှ စက်တင်ဘာလအစအထိ "
+"စာရင်းပေးသွင်းရမည်ဖြစ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:314
 msgid "1～3 月報名"
-msgstr ""
+msgstr "ဇန်နဝါရီမှ မတ်လအထိ မှတ်ပုံတင်ခြင်း။"
 
 #: .\flows\templates\flows\admissions_guide.html:315
 msgid "5～6 月放榜"
-msgstr ""
+msgstr "မေလမှ ဇွန်လအထိ အဆင့်သတ်မှတ်ချက်များ ထုတ်ပြန်ခဲ့သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:316
 msgid "9 月入學"
-msgstr ""
+msgstr "စက်တင်ဘာလတွင်ဝင်ခွင့်"
 
 #: .\flows\templates\flows\admissions_guide.html:322
 #: .\flows\templates\flows\admissions_guide.html:375
 #: .\flows\templates\flows\admissions_guide.html:430
 msgid "獎助學金"
-msgstr ""
+msgstr "ပညာသင်ဆုများနှင့် Bursaries"
 
 #: .\flows\templates\flows\admissions_guide.html:323
-msgid ""
-"教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎"
-"學金或特定區域補助。"
+msgid "教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎學金或特定區域補助。"
 msgstr ""
+"ပညာရေးဝန်ကြီးဌာနသည် နိုင်ငံရပ်ခြားရှိ တရုတ်ကျောင်းသားများအတွက် "
+"ပညာသင်ဆုများအပြင် ကျောင်းများနှင့် ဒေသဆိုင်ရာ အစိုးရအသီးသီးမှ "
+"ထောက်ပံ့ကြေးများ ပေးအပ်သည်။ ထူးချွန်သော ပညာရေးဆိုင်ရာ စွမ်းဆောင်ရည်ရှိသော "
+"နိုင်ငံရပ်ခြားကျောင်းသားများသည် ပညာရေးဝန်ကြီးဌာန၏ တရုတ်ပညာသင်ဆု သို့မဟုတ် "
+"သီးခြားဒေသဆိုင်ရာ ထောက်ပံ့ကြေးများကို လျှောက်ထားနိုင်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:325
 #: .\flows\templates\flows\admissions_guide.html:378
 msgid "教育部獎學金"
-msgstr ""
+msgstr "ပညာရေးဝန်ကြီးဌာန ပညာသင်ဆု"
 
 #: .\flows\templates\flows\admissions_guide.html:326
 msgid "學校補助"
-msgstr ""
+msgstr "ကျောင်းထောက်ပံ့ကြေး"
 
 #: .\flows\templates\flows\admissions_guide.html:337
-msgid ""
-"：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生"
-"管道。修業成績合格者授予學士學位。"
+msgid "：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生管道。修業成績合格者授予學士學位。"
 msgstr ""
+"- လေးနှစ်တက္ကသိုလ်သင်တန်းများ (အချို့ဌာနများတွင်ငါးနှစ်)၊ "
+"ပြည်ပကျောင်းသားများသည် Overseas Chinese Federation မှတဆင့်လျှောက်ထားကြပြီး "
+"နိုင်ငံခြားကျောင်းသားများသည် ကျောင်းတစ်ခုစီအတွက် "
+"သီးခြားဝင်ခွင့်လမ်းကြောင်းများရှိသည်။ ပညာသင်နှစ် စာမေးပွဲအောင်မြင်သူများကို "
+"ဘွဲ့ဒီဂရီချီးမြှင့်မည်ဖြစ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:344
 msgid "僑生申請資格"
-msgstr ""
+msgstr "နိုင်ငံရပ်ခြားတရုတ်ကျောင်းသားများအတွက်လျှောက်လွှာအရည်အချင်းစစ်"
 
 #: .\flows\templates\flows\admissions_guide.html:345
-msgid ""
-"具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西"
-"亞 SPM 成績、緬甸高中畢業等均可申請。"
+msgid "具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西亞 SPM 成績、緬甸高中畢業等均可申請。"
 msgstr ""
+"လျှောက်ထားသူများသည် နိုင်ငံရပ်ခြားရှိ တရုတ်လူမျိုးများ၏ အဆင့်အတန်းနှင့် "
+"အထက်တန်းကျောင်း (အထက်တန်းကျောင်း) ပြီးမြောက်ပြီး (အထက်တန်းကျောင်း) ကို "
+"ကျေနပ်ဖွယ် ပညာရေးဆိုင်ရာ စွမ်းဆောင်နိုင်မှု သို့မဟုတ် ညီမျှသော ပညာရေးဆိုင်ရာ"
+" အရည်အချင်းစစ်လက်မှတ် ကိုင်ဆောင်ထားရပါမည်။ Malaysian SPM ရလဒ်များ၊ "
+"မြန်မာအထက်တန်းကျောင်း ဘွဲ့ရများ စသည်တို့ကို လျှောက်ထားနိုင်ပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:347
 msgid "海聯會管道"
-msgstr ""
+msgstr "ပြည်ပမဟာမိတ်ပိုက်လိုင်း"
 
 #: .\flows\templates\flows\admissions_guide.html:349
 msgid "同等學力"
-msgstr ""
+msgstr "ပညာရေးအဆင့်နှင့် ညီမျှသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:355
 msgid "外籍生申請資格"
-msgstr ""
+msgstr "နိုင်ငံခြားကျောင်းသားများ လျှောက်ထားရန် အရည်အချင်းပြည့်မီသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:356
-msgid ""
-"持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力"
-"證明（HSK、TOCFL、TOEFL、IELTS 等）。"
+msgid "持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力證明（HSK、TOCFL、TOEFL、IELTS 等）。"
 msgstr ""
+"နိုင်ငံရပ်ခြားနိုင်ငံသားအဖြစ် ခံယူထားပြီး ကျောင်းတစ်ခုစီ၏ "
+"အနိမ့်ဆုံးစံချိန်စံညွှန်းများနှင့် ကိုက်ညီသော အထက်တန်းကျောင်း (သို့မဟုတ် "
+"ညီမျှသော) ပညာရေးဆိုင်ရာ စွမ်းဆောင်ရည်ရှိရမည်။ အချို့ကျောင်းများနှင့် "
+"ဌာနများသည် တရုတ် သို့မဟုတ် အင်္ဂလိပ်ကျွမ်းကျင်မှု အထောက်အထား (HSK၊ TOCFL၊ "
+"TOEFL၊ IELTS စသည်) လိုအပ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:358
 msgid "各校獨立招生"
-msgstr ""
+msgstr "ကျောင်းတိုင်းသည် ကျောင်းသားများကို လွတ်လပ်စွာ စုဆောင်းသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:359
 #: .\flows\templates\flows\admissions_guide.html:403
 #: .\flows\templates\flows\admissions_guide.html:456
 msgid "語言能力"
-msgstr ""
+msgstr "ဘာသာစကားစွမ်းရည်"
 
 #: .\flows\templates\flows\admissions_guide.html:366
-msgid ""
-"海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確"
-"認目標校系公告。"
+msgid "海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確認目標校系公告。"
 msgstr ""
+"AIS ပိုက်လိုင်းအတွက် မှတ်ပုံတင်ခြင်းကို များသောအားဖြင့် ဇန်နဝါရီလမှ မတ်လအထိ "
+"ပြုလုပ်လေ့ရှိသည်။ ကျောင်းတစ်ခုစီအတွက် သီးခြားဝင်ခွင့်များသည် "
+"အခြားအချိန်ဇယားများ (အများစုမှာ မတ်လမှ မေလအထိ) ရှိသည်။ သတ်မှတ်ထားသော "
+"ကျောင်းနှင့် ဌာနဆိုင်ရာ ကြေညာချက်ကို ကြိုတင်စစ်ဆေးရန် အကြံပြုထားသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:368
 msgid "1～3 月（海聯會）"
-msgstr ""
+msgstr "ဇန်နဝါရီလမှ မတ်လအထိ (ပြည်ပမဟာမိတ်အဖွဲ့)၊"
 
 #: .\flows\templates\flows\admissions_guide.html:369
 msgid "3～5 月（各校）"
-msgstr ""
+msgstr "မတ်လမှ မေလ (ကျောင်းတိုင်း)၊"
 
 #: .\flows\templates\flows\admissions_guide.html:376
-msgid ""
-"教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎"
-"助。外籍生可申請教育部臺灣獎學金。"
+msgid "教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎助。外籍生可申請教育部臺灣獎學金。"
 msgstr ""
+"ပညာရေးဝန်ကြီးဌာန၏ ပြည်ပတရုတ်ပညာသင်ဆု (တစ်လလျှင် NT$ 5,000 ~ 8,000 ခန့်)၊ "
+"ကျောင်းတစ်ခုစီတွင် ဝင်ခွင့်ပညာသင်ဆုများ သို့မဟုတ် စွမ်းဆောင်ရည်ဆုများ လည်း "
+"ရှိနိုင်ပါသည်။ နိုင်ငံခြားကျောင်းသားများသည် ပညာရေးဝန်ကြီးဌာန "
+"ထိုင်ဝမ်ပညာသင်ဆုအတွက် လျှောက်ထားနိုင်ပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:379
 #: .\flows\templates\flows\admissions_guide.html:433
 msgid "臺灣獎學金"
-msgstr ""
+msgstr "ထိုင်ဝမ်ပညာသင်ဆု"
 
 #: .\flows\templates\flows\admissions_guide.html:380
 msgid "學校獎助"
-msgstr ""
+msgstr "ကျောင်းပညာသင်ဆုများ"
 
 #: .\flows\templates\flows\admissions_guide.html:391
-msgid ""
-"：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有"
-"英文授課專班。"
+msgid "：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有英文授課專班。"
 msgstr ""
+": ကျောင်းတစ်ခုစီ၏ သုတေသနအင်စတီကျုများမှ လွတ်လပ်စွာ ခေါ်ယူထားသော "
+"မာစတာပရိုဂရမ် (၂ နှစ်) နှင့် ပါရဂူပရိုဂရမ်များ (၃ နှစ်မှ ၅ နှစ်) တို့ "
+"ပါဝင်သည်။ အချို့ကျောင်းများတွင် အင်္ဂလိပ်လို အထူးသင်တန်းများရှိသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:398
 msgid "碩士班申請資格"
-msgstr ""
+msgstr "မဟာဘွဲ့လျှောက်လွှာအရည်အချင်းများ"
 
 #: .\flows\templates\flows\admissions_guide.html:399
-msgid ""
-"大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言"
-"能力證明（中文 / 英文）。"
+msgid "大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言能力證明（中文 / 英文）。"
 msgstr ""
+"ကျောင်း သို့မဟုတ် ဌာနတစ်ခုစီ၏ အနိမ့်ဆုံးစံချိန်စံညွှန်းများနှင့် ကိုက်ညီသော "
+"တက္ကသိုလ် (ဘွဲ့) ဘွဲ့။ အချို့ဌာနများသည် သက်ဆိုင်ရာနယ်ပယ်နောက်ခံ သို့မဟုတ် "
+"ဘာသာစကားကျွမ်းကျင်မှုအထောက်အထား (တရုတ်/အင်္ဂလိပ်) လိုအပ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:401
 msgid "學士畢業"
-msgstr ""
+msgstr "ဘွဲ့ဒီဂရီဘွဲ့"
 
 #: .\flows\templates\flows\admissions_guide.html:402
 msgid "相關領域"
-msgstr ""
+msgstr "ဆက်စပ်နယ်ပယ်"
 
 #: .\flows\templates\flows\admissions_guide.html:409
 msgid "博士班申請資格"
-msgstr ""
+msgstr "ပါရဂူပရိုဂရမ်အတွက် လျှောက်ထားရန်အရည်အချင်းပြည့်မီခြင်း။"
 
 #: .\flows\templates\flows\admissions_guide.html:410
-msgid ""
-"碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部"
-"分系所接受優秀碩士生直攻博士。"
+msgid "碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部分系所接受優秀碩士生直攻博士。"
 msgstr ""
+"သုတေသန အလားအလာနှင့် မဟာဘွဲ့ (သို့မဟုတ် ညီမျှ)။ အများအားဖြင့်၊ "
+"သုတေသနအဆိုပြုချက်နှင့် သက်ဆိုင်ရာ အကြံပြုစာများ လိုအပ်သည်။ "
+"အချို့သောဌာနများသည် Ph.D အတွက် တိုက်ရိုက်လေ့လာရန် "
+"ထူးချွန်မာစတာကျောင်းသားများကို လက်ခံပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:412
 msgid "碩士畢業"
-msgstr ""
+msgstr "မဟာဘွဲ့"
 
 #: .\flows\templates\flows\admissions_guide.html:413
 msgid "研究計畫"
-msgstr ""
+msgstr "သုတေသနစီမံကိန်း"
 
 #: .\flows\templates\flows\admissions_guide.html:414
 msgid "推薦信"
-msgstr ""
+msgstr "ထောက်ခံစာ"
 
 #: .\flows\templates\flows\admissions_guide.html:421
-msgid ""
-"各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截"
-"止日期及備審資料需求。"
+msgid "各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截止日期及備審資料需求。"
 msgstr ""
+"ကျောင်းတစ်ခုစီ၏ ဘွဲ့လွန်ကျောင်းအတွက် စာရင်းသွင်းကာလသည် အများအားဖြင့် "
+"အောက်တိုဘာလမှ မတ်လအထိ ကွဲပြားသည်။ သတ်မှတ်ရက်နှင့် ပြန်လည်သုံးသပ်သည့် "
+"ပစ္စည်းများ လိုအပ်ချက်များကို အတည်ပြုရန် ပစ်မှတ်ဌာန၏ တရားဝင်ဝဘ်ဆိုဒ်ကို "
+"တိုက်ရိုက်စစ်ဆေးရန် အကြံပြုအပ်ပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:423
 msgid "依各所公告"
-msgstr ""
+msgstr "အေဂျင်စီတစ်ခုစီ၏ ထုတ်ပြန်ချက်အရ သိရသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:424
 msgid "10 月～3 月"
-msgstr ""
+msgstr "အောက်တိုဘာလမှ မတ်လ"
 
 #: .\flows\templates\flows\admissions_guide.html:431
-msgid ""
-"教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）"
-"薪資，及科技部研究計畫補助。"
+msgid "教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）薪資，及科技部研究計畫補助。"
 msgstr ""
+"ပညာရေးဝန်ကြီးဌာနမှ ထိုင်ဝမ်ပညာသင်ဆု (နိုင်ငံခြားဘွဲ့ရကျောင်းသားများ); "
+"ပညာရေးဝန်ကြီးဌာနမှ နိုင်ငံရပ်ခြား တရုတ်ပညာသင်ဆု (ပြည်ပ ကျောင်းသား၊ "
+"ကျောင်းတစ်ကျောင်းစီရှိ သုတေသနအကူ (RA) လစာနှင့် "
+"သိပ္ပံနှင့်နည်းပညာဝန်ကြီးဌာနမှ သုတေသနပရောဂျက်ထောက်ပံ့ကြေးများ။"
 
 #: .\flows\templates\flows\admissions_guide.html:434
 msgid "研究助理薪資"
-msgstr ""
+msgstr "သုတေသနလက်ထောက်လစာ"
 
 #: .\flows\templates\flows\admissions_guide.html:445
-msgid ""
-"：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外"
-"僑居留證（ARC）。"
+msgid "：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外僑居留證（ARC）。"
 msgstr ""
+": "
+"နိုင်ငံရပ်ခြားကျောင်းသားများအဖြစ်လျှောက်ထားခြင်းမရှိသောနိုင်ငံခြားသားကျောင်းသားများ။"
+" တက္ကသိုလ်တစ်ခုစီရှိ လွတ်လပ်သော ဝင်ခွင့်ဆိုင်ရာ "
+"လုပ်ထုံးလုပ်နည်းများမှတစ်ဆင့် သင်သည် ဝင်ခွင့်ပြီးနောက် Alien Residence "
+"Certificate (ARC) ကို လျှောက်ထားရမည်ဖြစ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:453
 msgid ""
-"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
-"或英文（IELTS / TOEFL）能力證明，依各校系規定。"
+"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"နိုင်ငံရပ်ခြားနိုင်ငံသားအဖြစ် ခံယူပြီး သက်ဆိုင်ရာ ပညာရေးစနစ် "
+"(အထက်တန်းကျောင်း သို့မဟုတ် တက္ကသိုလ် ဘွဲ့ရ) ၏ လိုအပ်သော ပညာရေးဆိုင်ရာ "
+"အရည်အချင်းများကို ဖြည့်သွင်းပါ။ အများအားဖြင့်၊ ကျောင်းနှင့် ဌာနတစ်ခုစီ၏ "
+"စည်းမျဉ်းများအတိုင်း တရုတ် (TOCFL) သို့မဟုတ် အင်္ဂလိပ် (IELTS/TOEFL) "
+"ကျွမ်းကျင်မှု အထောက်အထား လိုအပ်ပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:455
 msgid "外國國籍"
-msgstr ""
+msgstr "နိုင်ငံခြားသား"
 
 #: .\flows\templates\flows\admissions_guide.html:457
 msgid "前置學歷"
-msgstr ""
+msgstr "ပညာသင်ဆုအတွက် လိုအပ်သောအရည်အချင်းများ"
 
 #: .\flows\templates\flows\admissions_guide.html:463
 msgid "所需備審文件"
-msgstr ""
+msgstr "ပြန်လည်သုံးသပ်ရန်အတွက် လိုအပ်သောစာရွက်စာတမ်းများ"
 
 #: .\flows\templates\flows\admissions_guide.html:464
-msgid ""
-"護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書"
-"計畫）、推薦信（研究所）、體檢報告。"
+msgid "護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書計畫）、推薦信（研究所）、體檢報告。"
 msgstr ""
+"နိုင်ငံကူးလက်မှတ်၊ အမြင့်ဆုံးပညာရေးမှတ်တမ်းနှင့် ဘွဲ့လက်မှတ် "
+"(တရုတ်နှင့်အင်္ဂလိပ်ဘာသာဖြင့် အသိအမှတ်ပြုခြင်းအပါအဝင်)၊ "
+"ဘာသာစကားကျွမ်းကျင်မှုလက်မှတ်၊ ကိုယ်ရေးကိုယ်တာထုတ်ပြန်ချက် (လေ့လာမှုအစီအစဉ်)၊"
+" အကြံပြုစာ (သုတေသနဌာန) နှင့် ရုပ်ပိုင်းဆိုင်ရာစစ်ဆေးမှုအစီရင်ခံစာ။"
 
 #: .\flows\templates\flows\admissions_guide.html:466
 msgid "學歷公證"
-msgstr ""
+msgstr "ပညာရေးဆိုင်ရာ အရည်အချင်းများကို အသိအမှတ်ပြုခြင်း။"
 
 #: .\flows\templates\flows\admissions_guide.html:467
 msgid "讀書計畫"
-msgstr ""
+msgstr "စာဖတ်ခြင်းအစီအစဉ်"
 
 #: .\flows\templates\flows\admissions_guide.html:473
 msgid "教育部臺灣獎學金"
-msgstr ""
+msgstr "ပညာရေးဝန်ကြီးဌာန ထိုင်ဝမ်ပညာသင်ဆု"
 
 #: .\flows\templates\flows\admissions_guide.html:474
-msgid ""
-"每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，"
-"需透過台灣駐外機構或各大學推薦申請。"
+msgid "每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，需透過台灣駐外機構或各大學推薦申請。"
 msgstr ""
+"လစဉ်နေထိုင်စရိတ်သည် ထိုင်ဝမ်ဒေါ်လာ ၁၅,၀၀၀ မှ ထိုင်ဝမ်ဒေါ်လာ ၂၅,၀၀၀ "
+"(ပညာရေးစနစ်ပေါ် မူတည်၍)။ သင်တန်းကြေးနှင့် အထွေထွေကြေးများကို "
+"လျှော့ပေါ့ပေးပါသည်။ လျှောက်လွှာများကို ၁ နှစ်မှ ၄ နှစ်အထိ ပြုလုပ်နိုင်သည်။ "
+"နေရာများ ကန့်သတ်ထားသည်။ လျှောက်လွှာများကို "
+"ထိုင်ဝမ်နိုင်ငံရပ်ခြားအေဂျင်စီများ သို့မဟုတ် တက္ကသိုလ်များမှ အကြံပြုရပါမည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:476
 msgid "NT$15,000~/月"
-msgstr ""
+msgstr "NT$15,000~/လ"
 
 #: .\flows\templates\flows\admissions_guide.html:477
 msgid "免學雜費"
-msgstr ""
+msgstr "အခမဲ့ကျူရှင်နှင့်အခကြေးငွေ"
 
 #: .\flows\templates\flows\admissions_guide.html:478
 msgid "名額有限"
-msgstr ""
+msgstr "ကန့်သတ်နေရာများ"
 
 #: .\flows\templates\flows\admissions_guide.html:484
 msgid "入台後必辦事項"
-msgstr ""
+msgstr "ထိုင်ဝမ်သို့ရောက်ပြီးနောက် လုပ်ဆောင်ရမည့်အရာများ"
 
 #: .\flows\templates\flows\admissions_guide.html:485
-msgid ""
-"持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
-"立銀行帳戶等。"
+msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
 msgstr ""
+"ကျောင်းသားနေထိုင်ခွင့်လက်မှတ်ဖြင့် ဝင်ရောက်ပြီးနောက်၊ သင်သည် 15 ရက်အတွင်း "
+"Alien Residence Certificate (ARC) ကို လျှောက်ထားရမည်ဖြစ်ပြီး၊ ထို့နောက် "
+"ကျန်းမာရေးအာမခံအတွက် အကျုံးဝင်စေရန် လျှောက်ထားရန်၊ ဘဏ်အကောင့်ဖွင့်ခြင်း "
+"စသည်တို့ကို လျှောက်ထားရမည်ဖြစ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:487
 msgid "15 天內辦 ARC"
-msgstr ""
+msgstr "15 ရက်အတွင်း ARC ကိုလျှောက်ထားပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:488
 msgid "健保加保"
-msgstr ""
+msgstr "ကျန်းမာရေးအာမခံဖြည့်စွက်"
 
 #: .\flows\templates\flows\admissions_guide.html:499
-msgid ""
-"：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依"
-"協議返校抵免，通常免繳台灣學雜費。"
+msgid "：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依協議返校抵免，通常免繳台灣學雜費。"
 msgstr ""
+": မူလကျောင်းသည် ကာလတို (တစ်နှစ်ခွဲ သို့မဟုတ် ပညာသင်နှစ်တစ်နှစ်) "
+"ပညာသင်ကြားရန် ထိုင်ဝမ်တက္ကသိုလ်တစ်ခုနှင့် ဖလှယ်ရေးသဘောတူညီချက်ကို "
+"နိဂုံးချုပ်ထားသည်။ သဘောတူညီချက်အရ ကျောင်းသို့ပြန်လာသည့်အခါ ခရက်ဒစ်များကို "
+"ခရက်ဒစ်အဖြစ် အသုံးပြုနိုင်ပြီး ထိုင်ဝမ်ကျူရှင်နှင့် အခကြေးငွေများကို "
+"များသောအားဖြင့် ကင်းလွတ်ခွင့်ပေးပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:506
 msgid "申請流程"
-msgstr ""
+msgstr "လျှောက်လွှာလုပ်ငန်းစဉ်"
 
 #: .\flows\templates\flows\admissions_guide.html:507
-msgid ""
-"透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申"
-"請，須先確認原校有締結交換協議。"
+msgid "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申請，須先確認原校有締結交換協議。"
 msgstr ""
+"မူလကျောင်း၏ Exchange and Cooperation Office မှတဆင့် "
+"အမည်စာရင်းတင်သွင်းခဲ့ပြီး National Taiwan University မှ "
+"ပြန်လည်သုံးသပ်ခဲ့သည်။ အမျိုးသား ထိုင်ဝမ်တက္ကသိုလ်သို့ "
+"တိုက်ရိုက်လျှောက်ထားခြင်းမပြုနိုင်ပါက မူလကျောင်းသည် လဲလှယ်ရေးသဘောတူညီချက်ကို"
+" နိဂုံးချုပ်ကြောင်း ဦးစွာအတည်ပြုရပါမည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:509
 msgid "原校提名"
-msgstr ""
+msgstr "မူလကျောင်းမှ အမည်စာရင်းတင်သွင်းထားသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:510
 msgid "需締結協議"
-msgstr ""
+msgstr "သဘောတူညီချက် လိုအပ်ပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:516
 msgid "期程與截止"
-msgstr ""
+msgstr "အချိန်ဇယားနှင့် သတ်မှတ်ရက်"
 
 #: .\flows\templates\flows\admissions_guide.html:517
-msgid ""
-"上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月"
-"截止。依各校締約條件而有不同。"
+msgid "上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月截止。依各校締約條件而有不同。"
 msgstr ""
+"ယခင် semester (စက်တင်ဘာ) "
+"တွင်စာရင်းသွင်းထားသောလျှောက်ထားသူများအတွက်အမည်စာရင်းတင်သွင်းရန်နောက်ဆုံးရက်သည်ပုံမှန်အားဖြင့်မတ်လမှဧပြီဖြစ်သည်။"
+" လာမည့် semester (ဖေဖော်ဝါရီ) တွင် စာရင်းသွင်းမည့် လျှောက်ထားသူများအတွက် "
+"အမည်စာရင်းတင်သွင်းရန် နောက်ဆုံးရက်မှာ ပုံမှန်အားဖြင့် အောက်တိုဘာလမှ "
+"နိုဝင်ဘာလဖြစ်သည်။ စာချုပ်စာတမ်းများသည် ကျောင်းအလိုက် ကွဲပြားသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:519
 msgid "上學期：3～4 月"
-msgstr ""
+msgstr "နောက်ဆုံးစာသင်ချိန်- မတ်လမှ ဧပြီလ"
 
 #: .\flows\templates\flows\admissions_guide.html:520
 msgid "下學期：10～11 月"
-msgstr ""
+msgstr "လာမည့်စာသင်ကာလ- အောက်တိုဘာလမှ နိုဝင်ဘာလ"
 
 #: .\flows\templates\flows\admissions_guide.html:526
 msgid "簽證與居留"
-msgstr ""
+msgstr "ဗီဇာနှင့် နေထိုင်ခွင့်"
 
 #: .\flows\templates\flows\admissions_guide.html:527
-msgid ""
-"短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入"
-"台，並辦理外僑居留證。"
+msgid "短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入台，並辦理外僑居留證。"
 msgstr ""
+"ကာလတိုနေထိုင်မှုအတွက် (၆ လအတွင်း) သင်သည် ခရီးသွားဗီဇာဖြင့် ထိုင်ဝမ်သို့ "
+"ဝင်ရောက်နိုင်ပြီး ARC လျှောက်ထားရန် မလိုအပ်ပါ။ အကယ်၍ သင်သည် 6 "
+"လထက်ပို၍နေထိုင်ပါက၊ ကျောင်းသားနေထိုင်ခွင့်နှင့် ထိုင်ဝမ်သို့ဝင်ရောက်ပြီး "
+"နိုင်ငံခြားသားနေထိုင်ခွင့်ကို လျှောက်ထားရမည်ဖြစ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:529
 msgid "≤6 月：觀光簽"
-msgstr ""
+msgstr "≤6 လ: ခရီးသွားဗီဇာ"
 
 #: .\flows\templates\flows\admissions_guide.html:530
 msgid ">6 月：需 ARC"
-msgstr ""
+msgstr "> 6 လ- ARC လိုအပ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:536
 msgid "費用說明"
-msgstr ""
+msgstr "အခကြေးငွေဖော်ပြချက်"
 
 #: .\flows\templates\flows\admissions_guide.html:537
-msgid ""
-"依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行"
-"負擔，每月約 NT$10,000～15,000。"
+msgid "依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行負擔，每月約 NT$10,000～15,000。"
 msgstr ""
+"အများစုသော ဖလှယ်ရေးသဘောတူညီချက်များအောက်တွင် National Taiwan University သည် "
+"ငွေလဲကျောင်းသားများအတွက် ကျူရှင်နှင့်အခကြေးငွေများကို လျှော့ပေါ့ပေးသည်။ "
+"နေထိုင်စရိတ် (အိပ်ဆောင်၊ အစားအသောက်၊ သယ်ယူပို့ဆောင်ရေး စသည်) ကို တစ်လလျှင် "
+"ထိုင်ဝမ်ဒေါ်လာ ၁၀,၀၀၀ မှ ၁၅,၀၀၀ ခန့်ဖြင့် ကိုယ်တိုင်ပေးချေရန် လိုအပ်ပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:539
 msgid "學雜費全免"
-msgstr ""
+msgstr "သင်တန်းကြေးနှင့် အခကြေးငွေ အခမဲ့ဖြစ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:540
 msgid "生活費自理"
-msgstr ""
+msgstr "သင့်ကိုယ်ပိုင်နေထိုင်စရိတ်အတွက် ပေးချေပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:547
 msgid "各地區僑生申請資訊"
 msgstr ""
+"ဒေသအသီးသီးရှိ နိုင်ငံရပ်ခြား တရုတ်ကျောင်းသားများအတွက် လျှောက်လွှာအချက်အလက်"
 
 #: .\flows\templates\flows\admissions_guide.html:550
-msgid ""
-"以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申"
-"請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
+msgid "以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
 msgstr ""
+"အောက်ဖော်ပြပါသည် ပင်လယ်ရပ်ခြား ဝင်ခွင့်ကော်မတီ (Overseas Joint Admissions "
+"Committee) ၏ ဒေသဆိုင်ရာ ဝင်ခွင့်ရုံးများအကြောင်း အချက်အလက်များ ဖြစ်ပါသည်။ "
+"နယ်ပယ်အသီးသီးတွင် မတူညီသော ပညာရပ်ဆိုင်ရာစနစ်များကြောင့် "
+"လျှောက်ထားမှုအရည်အချင်းများနှင့် သတ်မှတ်ရက်များသည် ကွဲပြားနိုင်ပါသည်။ "
+"Overseas Alliance ၏ နောက်ဆုံးထုတ်ပြန်ချက်ကို ကိုးကားပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:556 .\users\models.py:108
 #: .\users\templates\users\edit_profile.html:54
@@ -780,7 +858,7 @@ msgstr "မလေးရှား"
 #: .\flows\templates\flows\admissions_guide.html:660
 #: .\flows\templates\flows\admissions_guide.html:685
 msgid "招生學制"
-msgstr ""
+msgstr "ဝင်ခွင့်နှင့် ပညာရေးစနစ်"
 
 #: .\flows\templates\flows\admissions_guide.html:564
 #: .\flows\templates\flows\admissions_guide.html:589
@@ -789,11 +867,11 @@ msgstr ""
 #: .\flows\templates\flows\admissions_guide.html:664
 #: .\flows\templates\flows\admissions_guide.html:689
 msgid "主要學歷要求"
-msgstr ""
+msgstr "အဓိက ပညာရေးလိုအပ်ချက်များ"
 
 #: .\flows\templates\flows\admissions_guide.html:565
 msgid "SPM / STPM / UEC / A-Level"
-msgstr ""
+msgstr "SPM/STPM/UEC/A-အဆင့်"
 
 #: .\flows\templates\flows\admissions_guide.html:568
 #: .\flows\templates\flows\admissions_guide.html:593
@@ -802,7 +880,7 @@ msgstr ""
 #: .\flows\templates\flows\admissions_guide.html:668
 #: .\flows\templates\flows\admissions_guide.html:693
 msgid "報名截止（參考）"
-msgstr ""
+msgstr "မှတ်ပုံတင်ရန်နောက်ဆုံးရက် (ကိုးကား)"
 
 #: .\flows\templates\flows\admissions_guide.html:572
 #: .\flows\templates\flows\admissions_guide.html:597
@@ -811,13 +889,12 @@ msgstr ""
 #: .\flows\templates\flows\admissions_guide.html:672
 #: .\flows\templates\flows\admissions_guide.html:697
 msgid "承辦窗口"
-msgstr ""
+msgstr "ပြတင်းပေါက်မှ ဆောင်ရွက်ခဲ့ပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:573
-#, fuzzy
 #| msgid "馬來西亞"
 msgid "馬來西亞留台同學會"
-msgstr "မလေးရှား"
+msgstr "ထိုင်ဝမ်ရှိ မလေးရှားကျောင်းသားများအသင်း"
 
 #: .\flows\templates\flows\admissions_guide.html:581 .\users\models.py:113
 #: .\users\templates\users\edit_profile.html:68
@@ -828,21 +905,21 @@ msgstr "မြန်မာ"
 #: .\flows\templates\flows\admissions_guide.html:586
 #: .\flows\templates\flows\admissions_guide.html:661
 msgid "僑先部 / 學士班"
-msgstr ""
+msgstr "ပင်လယ်ရပ်ခြားတရုတ်ဌာန/ဘွဲ့သင်တန်း"
 
 #: .\flows\templates\flows\admissions_guide.html:590
 msgid "緬甸高中畢業（Matriculation）"
-msgstr ""
+msgstr "မြန်မာနိုင်ငံ အထက်တန်းကျောင်း (တက္ကသိုလ်ဝင်တန်း)၊"
 
 #: .\flows\templates\flows\admissions_guide.html:594
 #: .\flows\templates\flows\admissions_guide.html:669
 #: .\flows\templates\flows\admissions_guide.html:694
 msgid "約每年 2～3 月"
-msgstr ""
+msgstr "နှစ်စဉ် ဖေဖော်ဝါရီလမှ မတ်လအထိဖြစ်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:598
 msgid "緬甸華校教師會"
-msgstr ""
+msgstr "မြန်မာနိုင်ငံ တရုတ်ကျောင်း ဆရာများအသင်း၊"
 
 #: .\flows\templates\flows\admissions_guide.html:606 .\users\models.py:107
 #: .\users\templates\users\edit_profile.html:51
@@ -852,401 +929,491 @@ msgstr "အင်ဒိုနီးရှား"
 
 #: .\flows\templates\flows\admissions_guide.html:615
 msgid "SMA / SMK 高中畢業"
-msgstr ""
+msgstr "SMA/SMK အထက်တန်းကျောင်းဆင်း"
 
 #: .\flows\templates\flows\admissions_guide.html:623
 msgid "印尼留台校友會"
-msgstr ""
+msgstr "ထိုင်ဝမ်ရှိ အင်ဒိုနီးရှားကျောင်းသားဟောင်းများအသင်း"
 
 #: .\flows\templates\flows\admissions_guide.html:631
 msgid "香港 / 澳門"
-msgstr ""
+msgstr "ဟောင်ကောင်/မကာအို"
 
 #: .\flows\templates\flows\admissions_guide.html:636
 #: .\flows\templates\flows\admissions_guide.html:686
 msgid "學士班 / 研究所"
-msgstr ""
+msgstr "ဘွဲ့/ဘွဲ့လွန်လေ့လာမှုများ"
 
 #: .\flows\templates\flows\admissions_guide.html:640
 msgid "HKDSE / 澳門高中畢業"
-msgstr ""
+msgstr "HKDSE/ Macau အထက်တန်းကျောင်းမှ ဘွဲ့ရ"
 
 #: .\flows\templates\flows\admissions_guide.html:644
 msgid "約每年 2 月"
-msgstr ""
+msgstr "ဖေဖော်ဝါရီ တစ်ကြိမ်ခန့်"
 
 #: .\flows\templates\flows\admissions_guide.html:648
 msgid "海聯會港澳組"
-msgstr ""
+msgstr "ဟောင်ကောင်နှင့် မကာအိုအုပ်စုတို့သည် ရေကြောင်းအဖွဲ့ချုပ်၊"
 
 #: .\flows\templates\flows\admissions_guide.html:656
 msgid "泰北（北泰）"
-msgstr ""
+msgstr "ထိုင်းမြောက်ပိုင်း (ထိုင်းမြောက်ပိုင်း)"
 
 #: .\flows\templates\flows\admissions_guide.html:665
 msgid "泰北僑校高中畢業"
-msgstr ""
+msgstr "ထိုင်းနိုင်ငံမြောက်ပိုင်းရှိ အထက်တန်းကျောင်းမှ ဘွဲ့ရရှိခဲ့သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:673
 msgid "泰北各僑校教師會"
 msgstr ""
+"ထိုင်းနိုင်ငံမြောက်ပိုင်းရှိ ပင်လယ်ရပ်ခြားတရုတ်ကျောင်းများမှ ဆရာများအသင်း"
 
 #: .\flows\templates\flows\admissions_guide.html:681
 msgid "日本 / 韓國 / 新加坡 / 菲律賓"
-msgstr ""
+msgstr "ဂျပန်/ကိုရီးယား/စင်္ကာပူ/ဖိလစ်ပိုင်"
 
 #: .\flows\templates\flows\admissions_guide.html:690
 msgid "各國高中 / 大學畢業"
-msgstr ""
+msgstr "နိုင်ငံအသီးသီးမှ အထက်တန်းကျောင်း/ တက္ကသိုလ်ဘွဲ့ရများ"
 
 #: .\flows\templates\flows\admissions_guide.html:698
 msgid "海聯會或各地台灣辦事處"
-msgstr ""
+msgstr "ALATS သို့မဟုတ် အမျိုးမျိုးသော ထိုင်ဝမ်ရုံးများ"
 
 #: .\flows\templates\flows\admissions_guide.html:705
 msgid "學費與生活費參考"
-msgstr ""
+msgstr "သင်တန်းကြေးနှင့် နေထိုင်စရိတ်များကို ရည်ညွှန်းပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:708
-msgid ""
-"以下費用資料為概略參考，實際金額依各校、各系所及入學年度公告為準。請務必向目"
-"標學校確認最新收費標準。"
+msgid "以下費用資料為概略參考，實際金額依各校、各系所及入學年度公告為準。請務必向目標學校確認最新收費標準。"
 msgstr ""
+"အောက်ပါအခကြေးငွေအချက်အလက်သည် အကြမ်းဖျင်းကိုးကားပါသည်။ အမှန်တကယ်ငွေပမာဏသည် "
+"ကျောင်း၊ ဌာနနှင့် ဝင်ခွင့်နှစ်တစ်ခုစီ၏ ထုတ်ပြန်ချက်များပေါ်တွင် မူတည်ပါသည်။ "
+"နောက်ဆုံး အခကြေးငွေ အချိန်ဇယားအတွက် သင့်ပစ်မှတ်ကျောင်းကို သေချာစစ်ဆေးပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:713
 msgid "費用項目"
-msgstr ""
+msgstr "အသုံးစရိတ်များ"
 
 #: .\flows\templates\flows\admissions_guide.html:714
 msgid "金額（新臺幣）"
-msgstr ""
+msgstr "ပမာဏ (NTD)"
 
 #: .\flows\templates\flows\admissions_guide.html:715
 msgid "備註"
-msgstr ""
+msgstr "မှတ်ချက်"
 
 #: .\flows\templates\flows\admissions_guide.html:721
 msgid "學士班學雜費（文法商）"
-msgstr ""
+msgstr "ဘွဲ့ဒီဂရီအတွက် ကျူရှင်နှင့်အခကြေးငွေ (သဒ္ဒါနှင့်စီးပွားရေး)"
 
 #: .\flows\templates\flows\admissions_guide.html:722
 #: .\flows\templates\flows\admissions_guide.html:730
 #: .\flows\templates\flows\admissions_guide.html:738
 #: .\flows\templates\flows\admissions_guide.html:746
 msgid "每學期"
-msgstr ""
+msgstr "စာသင်ချိန်တိုင်း"
 
 #: .\flows\templates\flows\admissions_guide.html:724
 msgid "約 NT$28,000 ～ 35,000"
-msgstr ""
+msgstr "NT$28,000 ~ 35,000 ခန့်"
 
 #: .\flows\templates\flows\admissions_guide.html:725
 msgid "僑生與本地生同標準"
 msgstr ""
+"ပြည်ပကျောင်းသားများနှင့် ပြည်တွင်းကျောင်းသားများသည် "
+"တူညီသောစံနှုန်းများရှိသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:729
 msgid "學士班學雜費（理工醫）"
 msgstr ""
+"ဘွဲ့ဒီဂရီ (သိပ္ပံ၊ အင်ဂျင်နီယာ၊ ဆေးပညာ) အတွက် ကျူရှင်နှင့် အထွေထွေ အခကြေးငွေ"
 
 #: .\flows\templates\flows\admissions_guide.html:732
 msgid "約 NT$35,000 ～ 45,000"
-msgstr ""
+msgstr "ထိုင်ဝမ် $35,000 ~ 45,000 ခန့်"
 
 #: .\flows\templates\flows\admissions_guide.html:733
 msgid "部分系所有額外實習費"
-msgstr ""
+msgstr "အချို့ဌာနများတွင် အလုပ်သင်ကြေး ထပ်ဆောင်းပေးရသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:737
 msgid "研究所學雜費（碩士）"
-msgstr ""
+msgstr "ဘွဲ့လွန်ကျူရှင်နှင့်အခကြေးငွေ (မဟာဘွဲ့)"
 
 #: .\flows\templates\flows\admissions_guide.html:740
 msgid "約 NT$30,000 ～ 48,000"
-msgstr ""
+msgstr "ထိုင်ဝမ်ဒေါ်လာ 30,000 ~ 48,000 ခန့်"
 
 #: .\flows\templates\flows\admissions_guide.html:741
 msgid "英語授課專班費用較高"
-msgstr ""
+msgstr "အင်္ဂလိပ်-မြန်မာ အထူးသင်တန်းများသည် ပို၍စျေးကြီးသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:745
 msgid "宿舍費（學校宿舍）"
-msgstr ""
+msgstr "အိပ်ဆောင်ခ (ကျောင်းအိပ်ဆောင်)၊"
 
 #: .\flows\templates\flows\admissions_guide.html:748
 msgid "約 NT$8,000 ～ 18,000"
-msgstr ""
+msgstr "NT$8,000 ~ 18,000 ခန့်"
 
 #: .\flows\templates\flows\admissions_guide.html:749
 msgid "依房型，境外生享優先保障"
 msgstr ""
+"အခန်းအမျိုးအစားပေါ်မူတည်၍ နိုင်ငံရပ်ခြားမှ ကျောင်းသားများသည် "
+"ဦးစားပေးကာကွယ်မှုကို နှစ်သက်ကြသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:753
 msgid "生活費（餐飲 / 交通 / 日用）"
-msgstr ""
+msgstr "နေထိုင်စရိတ် (အစားအသောက်/သယ်ယူပို့ဆောင်ရေး/နေ့စဉ်သုံးပစ္စည်းများ)"
 
 #: .\flows\templates\flows\admissions_guide.html:754
 msgid "每月"
-msgstr ""
+msgstr "တစ်လလျှင်"
 
 #: .\flows\templates\flows\admissions_guide.html:756
 msgid "約 NT$8,000 ～ 15,000"
-msgstr ""
+msgstr "NT$8,000 ~ 15,000 ခန့်"
 
 #: .\flows\templates\flows\admissions_guide.html:757
 msgid "視個人消費習慣而異"
-msgstr ""
+msgstr "ကိုယ်ရေးကိုယ်တာအသုံးစရိတ်ပေါ်မူတည်၍ ကွဲပြားသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:761
 msgid "全民健康保險費"
-msgstr ""
+msgstr "အမျိုးသားကျန်းမာရေးအာမခံ ပရီမီယံ"
 
 #: .\flows\templates\flows\admissions_guide.html:762
 msgid "每月（持 ARC 加保後）"
-msgstr ""
+msgstr "လစဉ် (အာမခံ ARC ဖြင့် ထည့်ပြီးနောက်)"
 
 #: .\flows\templates\flows\admissions_guide.html:764
 msgid "約 NT$749"
-msgstr ""
+msgstr "NT$749 ခန့်"
 
 #: .\flows\templates\flows\admissions_guide.html:765
 msgid "在台超過 4 個月須加保"
-msgstr ""
+msgstr "သင်သည် ထိုင်ဝမ်တွင် 4 လထက်ပိုနေပါက အာမခံကို ဝယ်ယူရပါမည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:771
 msgid "申請時程建議（學士班僑生為例）"
 msgstr ""
+"အကြံပြုထားသော လျှောက်လွှာအချိန်ဇယား (ဥပမာအဖြစ် နိုင်ငံရပ်ခြားရှိ "
+"တရုတ်ကျောင်းသားများအတွက် ဘွဲ့ဒီဂရီအစီအစဉ်)"
 
 #: .\flows\templates\flows\admissions_guide.html:776
 msgid "了解申請資訊與準備文件"
-msgstr ""
+msgstr "လျှောက်လွှာအချက်အလက်ကို နားလည်ပြီး စာရွက်စာတမ်းများကို ပြင်ဆင်ပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:777
-msgid ""
-"前往海聯會官網確認當年度招生簡章，了解各學制申請資格、需備文件及時程。同時確"
-"認學歷文件（成績單、畢業證書）是否需要公認證。"
+msgid "前往海聯會官網確認當年度招生簡章，了解各學制申請資格、需備文件及時程。同時確認學歷文件（成績單、畢業證書）是否需要公認證。"
 msgstr ""
+"လက်ရှိနှစ်၏ဝင်ခွင့်ဘောင်ချာကိုအတည်ပြုရန် Overseas Alliance "
+"၏တရားဝင်ဝဘ်ဆိုဒ်သို့သွား၍ လျှောက်လွှာအရည်အချင်းများ၊ "
+"လိုအပ်သောစာရွက်စာတမ်းများနှင့် ပညာရေးစနစ်တစ်ခုစီအတွက် အချိန်ဇယားများအကြောင်း"
+" လေ့လာပါ။ ပညာရေးဆိုင်ရာ စာရွက်စာတမ်းများ (ထောက်ခံစာများ၊ ဘွဲ့လက်မှတ်များ) "
+"သည် အထောက်အထားပြုခြင်း လိုအပ်ခြင်း ရှိမရှိကိုလည်း အတည်ပြုပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:778
 msgid "每年 10 月～12 月"
-msgstr ""
+msgstr "နှစ်စဉ် အောက်တိုဘာလမှ ဒီဇင်ဘာလအထိ"
 
 #: .\flows\templates\flows\admissions_guide.html:779
 msgid "準備學歷文件"
-msgstr ""
+msgstr "ပညာရေးဆိုင်ရာစာရွက်စာတမ်းများပြင်ဆင်ပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:785
 msgid "向當地承辦窗口取得申請表"
-msgstr ""
+msgstr "ဒေသဆိုင်ရာ hosting window မှလျှောက်လွှာပုံစံကိုရယူပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:786
-msgid ""
-"聯繫所在地區的海聯會承辦窗口（如馬來西亞留台同學會、緬甸華校教師會等），取得"
-"當年度申請表及相關說明，確認繳件方式（線上 / 郵寄）。"
+msgid "聯繫所在地區的海聯會承辦窗口（如馬來西亞留台同學會、緬甸華校教師會等），取得當年度申請表及相關說明，確認繳件方式（線上 / 郵寄）。"
 msgstr ""
+"လက်ရှိနှစ်၏ လျှောက်လွှာပုံစံနှင့် သက်ဆိုင်ရာ ညွှန်ကြားချက်များကို ရယူရန် "
+"သင့်ဒေသရှိ Overseas Alliance (ထိုင်ဝမ်ရှိ မလေးရှားကျောင်းသားဟောင်းများအသင်း၊"
+" မြန်မာ တရုတ်ကျောင်းဆရာများအသင်း စသည်ဖြင့်) ကို ဆက်သွယ်ပြီး "
+"ငွေပေးချေနည်းလမ်း (အွန်လိုင်း/မေးလ်) ကို အတည်ပြုပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:787
 msgid "每年 1 月"
-msgstr ""
+msgstr "ဇန်နဝါရီတိုင်း"
 
 #: .\flows\templates\flows\admissions_guide.html:788
 msgid "提早聯繫避免遺漏"
-msgstr ""
+msgstr "လွဲချော်မှုမဖြစ်စေရန် စောစောဆက်သွယ်ပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:794
 msgid "線上報名並繳交備審資料"
 msgstr ""
+"အွန်လိုင်းတွင် စာရင်းသွင်းပြီး လျှောက်လွှာတင်ရန် စာရွက်စာတမ်းများ "
+"တင်သွင်းပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:795
-msgid ""
-"至海聯會網路報名系統填寫志願序（可填多個志願），並上傳或郵寄所需文件（成績"
-"單、護照、照片等）。確認申請費繳納方式。"
+msgid "至海聯會網路報名系統填寫志願序（可填多個志願），並上傳或郵寄所需文件（成績單、護照、照片等）。確認申請費繳納方式。"
 msgstr ""
+"Overseas Alliance အွန်လိုင်းမှတ်ပုံတင်စနစ်တွင် လျှောက်လွှာပုံစံကို "
+"ဖြည့်သွင်းပြီး လိုအပ်သောစာရွက်စာတမ်းများ (ထောက်ခံစာ၊ ပတ်စပို့၊ ဓာတ်ပုံများ "
+"စသည်ဖြင့်) ကို အပ်လုဒ်လုပ်ပါ။ လျှောက်လွှာကြေးကို မည်ကဲ့သို့ ပေးဆောင်ရမည်ကို "
+"အတည်ပြုပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:796
 msgid "每年 1 月～3 月"
-msgstr ""
+msgstr "နှစ်စဉ် ဇန်နဝါရီလမှ မတ်လအထိ"
 
 #: .\flows\templates\flows\admissions_guide.html:797
 msgid "備審文件繳交"
-msgstr ""
+msgstr "စာရွက်စာတမ်းများကို ပြန်လည်သုံးသပ်ရန် တင်ပြခြင်း။"
 
 #: .\flows\templates\flows\admissions_guide.html:803
 msgid "等待審查結果與放榜"
 msgstr ""
+"သုံးသပ်ချက်ရလဒ်များနှင့် အဆင့်သတ်မှတ်ထုတ်ပြန်မှုကို စောင့်မျှော်နေပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:804
-msgid ""
-"申請截止後由海聯會及各校審查。通常於每年 5～6 月公告錄取結果。請密切注意海聯"
-"會官網及承辦窗口通知。"
+msgid "申請截止後由海聯會及各校審查。通常於每年 5～6 月公告錄取結果。請密切注意海聯會官網及承辦窗口通知。"
 msgstr ""
+"လျှောက်လွှာများကို နောက်ဆုံးသတ်မှတ်ရက်ပြီးနောက် AIS နှင့် ကျောင်းတစ်ခုစီမှ "
+"ပြန်လည်စစ်ဆေးမည်ဖြစ်သည်။ ဝင်ခွင့်ရလဒ်များကို နှစ်စဉ် မေလမှ ဇွန်လအထိ "
+"ထုတ်ပြန်လေ့ရှိသည်။ Overseas Alliance ၏တရားဝင်ဝဘ်ဆိုဒ်နှင့် hosting window "
+"မှသတိပေးချက်ကို ဂရုပြုပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:805
 msgid "每年 5 月～6 月"
-msgstr ""
+msgstr "နှစ်စဉ် မေလမှ ဇွန်လအထိ"
 
 #: .\flows\templates\flows\admissions_guide.html:811
 msgid "確認志願並辦理赴台簽證"
-msgstr ""
+msgstr "သင်၏ရည်ရွယ်ချက်ကိုအတည်ပြုပြီး ထိုင်ဝမ်သို့ ဗီဇာလျှောက်ထားပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:812
-msgid ""
-"收到錄取通知後，依指定期限確認接受錄取。向台灣駐外機構（如台北經濟文化辦事"
-"處）申請學生居留簽證（Resident Visa）。"
+msgid "收到錄取通知後，依指定期限確認接受錄取。向台灣駐外機構（如台北經濟文化辦事處）申請學生居留簽證（Resident Visa）。"
 msgstr ""
+"ဝင်ခွင့်အကြောင်းကြားစာကို လက်ခံရရှိပြီးနောက် သတ်မှတ်ထားသည့် "
+"နောက်ဆုံးရက်အတိုင်း လက်ခံကြောင်း အတည်ပြုပါ။ ထိုင်ဝမ်၏ ပြည်ပမစ်ရှင်များ "
+"(တိုင်ပေစီးပွားရေးနှင့် ယဉ်ကျေးမှုရုံးကဲ့သို့သော) မှ ကျောင်းသားနေထိုင်ဗီဇာ "
+"(Resident Visa) ကို လျှောက်ထားပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:813
 msgid "每年 6 月～7 月"
-msgstr ""
+msgstr "နှစ်စဉ် ဇွန်လမှ ဇူလိုင်လအထိ"
 
 #: .\flows\templates\flows\admissions_guide.html:814
 msgid "辦理學生居留簽"
-msgstr ""
+msgstr "ကျောင်းသားနေထိုင်ဗီဇာလျှောက်ထားပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:820
 msgid "抵台入學報到"
-msgstr ""
+msgstr "ထိုင်ဝမ်သို့ရောက်ရှိပြီး ဝင်ခွင့်စာရင်းပေးသွင်းလိုက်ပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:821
-msgid ""
-"抵台後按學校通知時程辦理入學報到，並在 15 天內至移民署辦理外僑居留證（ARC）。"
-"同時參加學校國際事務處的新生說明會。"
+msgid "抵台後按學校通知時程辦理入學報到，並在 15 天內至移民署辦理外僑居留證（ARC）。同時參加學校國際事務處的新生說明會。"
 msgstr ""
+"ထိုင်ဝမ်သို့ရောက်ရှိပြီးနောက်၊ ကျောင်းမှအသိပေးထားသည့်အချိန်ဇယားအတိုင်း "
+"ဝင်ခွင့်အတွက် စာရင်းပေးသွင်းပြီး 15 ရက်အတွင်း Alien Residence Certificate "
+"(ARC) လျှောက်ထားရန် လူဝင်မှုကြီးကြပ်ရေးဌာနသို့ သွားရပါမည်။ "
+"တစ်ချိန်တည်းမှာပင် ကျောင်း၏ နိုင်ငံတကာရေးရာရုံးမှ ကျင်းပသော "
+"ကျောင်းသားသစ်များအတွက် လမ်းညွှန်ဆွေးနွေးပွဲကို တက်ရောက်ပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:822
 msgid "每年 8 月底～9 月初"
-msgstr ""
+msgstr "နှစ်စဉ်သြဂုတ်လကုန်မှစက်တင်ဘာလအစအထိ"
 
 #: .\flows\templates\flows\admissions_guide.html:823
 msgid "完成入學！"
-msgstr ""
+msgstr "စာရင်းသွင်းမှု ပြီးပါပြီ။"
 
 #: .\flows\templates\flows\admissions_guide.html:829
 msgid "常見問題"
-msgstr ""
+msgstr "အမြဲမေးလေ့ရှိသောမေးခွန်းများ"
 
 #: .\flows\templates\flows\admissions_guide.html:833
 msgid "我是外籍生（非僑生），可以透過海聯會申請嗎？"
 msgstr ""
+"ကျွန်ုပ်သည် နိုင်ငံခြားကျောင်းသား (နိုင်ငံရပ်ခြားမှ တရုတ်မဟုတ်သူ) "
+"တစ်ဦးဖြစ်ပြီး Overseas Alliance မှတဆင့် လျှောက်ထားနိုင်ပါသလား။"
 
 #: .\flows\templates\flows\admissions_guide.html:838
 msgid ""
-"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認"
-"定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
+"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
 msgstr ""
+"မရဘူး Overseas Alliance Channel သည် နိုင်ငံရပ်ခြားရှိ တရုတ်နိုင်ငံသား "
+"အဆင့်အတန်းရှိသော လျှောက်ထားသူများအတွက်သာ သက်ဆိုင်ပါသည်။ "
+"နိုင်ငံခြားကျောင်းသားများ (နိုင်ငံခြားသားကိုင်ဆောင်ထားသော်လည်း "
+"နိုင်ငံရပ်ခြားကျောင်းသားများအဖြစ် အရည်အချင်းမပြည့်မီ) တက္ကသိုလ်တစ်ခုစီ၏ "
+"နိုင်ငံတကာဝင်ခွင့်ရုံးသို့ တိုက်ရိုက်လျှောက်ထားရမည်ဖြစ်သည်။ ကျောင်းတစ်ခုစီ၏ "
+"ဝင်ခွင့်အချိန်ဇယားနှင့် စာရွက်စာတမ်းလိုအပ်ချက်များအတွက် "
+"ကျောင်းတစ်ခုစီ၏တရားဝင်ဝဘ်ဆိုဒ်တွင် ကျေးဇူးပြု၍ ကြည့်ပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:844
 msgid "僑生與外籍生有什麼不同？"
 msgstr ""
+"နိုင်ငံရပ်ခြားက တရုတ်ကျောင်းသားတွေနဲ့ နိုင်ငံခြားကျောင်းသားတွေ ကွာခြားချက်က "
+"ဘာလဲ။"
 
 #: .\flows\templates\flows\admissions_guide.html:849
 msgid ""
-"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教"
-"育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國"
-"籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份"
-"認定不同，適用的招生管道與優惠也不同。"
+"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。"
 msgstr ""
+"\"နိုင်ငံရပ်ခြား တရုတ်ကျောင်းသားများ\" သည် တရုတ်ပြည်သူ့သမ္မတနိုင်ငံ၏ "
+"နိုင်ငံသား သို့မဟုတ် တရုတ်မျိုးရိုးရှိသူ၊ နိုင်ငံရပ်ခြားတွင် "
+"ကာလကြာရှည်နေထိုင်ပြီး ပြည်တွင်း၌ ပညာသင်ကြားခွင့်ရရှိသူများကို ရည်ညွှန်းသည်။ "
+"၎င်းတို့သည် ပညာရေးဝန်ကြီးဌာန၏ စည်းမျဉ်းများနှင့်အညီ အသိအမှတ်ပြုခံရပြီး "
+"ပြည်ပတရုတ်ကျောင်းသားပညာသင်ဆုနှင့် ပြည်ပတရုတ်ဦးစားပေးဌာနကဲ့သို့သော "
+"အထူးချန်နယ်များကို ခံစားနိုင်သည်။ \"နိုင်ငံခြားကျောင်းသားများ\" သည် "
+"တရုတ်ပြည်သူ့သမ္မတနိုင်ငံမဟုတ်သော နိုင်ငံကူးလက်မှတ်ကိုင်ဆောင်ပြီး "
+"ကျောင်းတစ်ခုစီ၏ သီးခြားဝင်ခွင့်လမ်းကြောင်းများမှတစ်ဆင့် "
+"လျှောက်ထားသူများဖြစ်သည်။ ပညာရေးဝန်ကြီးဌာန ထိုင်ဝမ်ပညာသင်ဆုအတွက် "
+"လျှောက်ထားနိုင်ပါသည်။ အထောက်အထားနှစ်ခုသည် ကွဲပြားပြီး သက်ဆိုင်ရာ "
+"စာရင်းသွင်းလမ်းကြောင်းများနှင့် လျှော့စျေးများလည်း ကွဲပြားပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:855
 msgid "可以同時申請多所學校嗎？"
-msgstr ""
+msgstr "ကျောင်းများစွာကို တစ်ချိန်တည်းတွင် လျှောက်ထားနိုင်ပါသလား။"
 
 #: .\flows\templates\flows\admissions_guide.html:860
 msgid ""
-"海聯會管道可填寫多個志願（學校 + 系所），系統依志願序分發，通常一個申請可含多"
-"個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但"
-"需留意各校的申請費及文件要求可能不同。"
+"海聯會管道可填寫多個志願（學校 + "
+"系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。"
 msgstr ""
+"Overseas Alliance Pipeline တွင် လျှောက်လွှာအများအပြား (ကျောင်း + ဌာန) ကို "
+"သင်ဖြည့်နိုင်ပြီး စနစ်က ၎င်းတို့ကို လျှောက်လွှာအလိုက် ဖြန့်ဝေပေးပါသည်။ "
+"အများအားဖြင့်၊ အပလီကေးရှင်းတစ်ခုတွင် အပလီကေးရှင်းများစွာ ပါဝင်နိုင်သည်။ "
+"နိုင်ငံခြားကျောင်းသားများသည် ကျောင်းတစ်ခုစီမှတစ်ဆင့် လွတ်လပ်စွာ "
+"လျှောက်ထားသောအခါတွင် ၎င်းတို့၏ လျှောက်လွှာများကို နောက်ဆုံးနေ့မတိုင်မီ "
+"ကျောင်းတစ်ခုစီသို့ တင်ပြရန်သာ လိုအပ်သည်။ သို့သော် ကျောင်းတစ်ခုစီ၏ "
+"လျှောက်လွှာကြေးနှင့် စာရွက်စာတမ်းလိုအပ်ချက်များသည် မတူညီနိုင်ကြောင်း "
+"ကျေးဇူးပြု၍ သတိပြုပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:866
 msgid "中文不夠好，可以申請中文授課的系所嗎？"
 msgstr ""
+"အကယ်၍ ကျွန်ုပ်၏ တရုတ်စာ မညံ့ပါက တရုတ်ဘာသာ သင်ကြားရေးဌာနသို့ "
+"လျှောက်ထားနိုင်ပါသလား။"
 
 #: .\flows\templates\flows\admissions_guide.html:871
 msgid ""
-"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 以上），"
-"部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確"
-"認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所"
-"或語言先修課程。"
+"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 "
+"以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。"
 msgstr ""
+"ဌာနတစ်ခုစီတွင် တရုတ်ကျွမ်းကျင်မှုအတွက် မတူညီသောလိုအပ်ချက်များရှိသည်။ "
+"အချို့ဌာနများတွင် အနိမ့်ဆုံး တရုတ်ကျွမ်းကျင်မှု စာမေးပွဲအဆင့် (ဥပမာ TOCFL B1"
+" သို့မဟုတ် အထက်) ရှိပြီး အချို့ဌာနများသည် ဝင်ခွင့်ပြီးနောက် ဖြည့်စွက်စာအဖြစ်"
+" တရုတ်ဘာသာစကားသင်တန်းများကို လက်ခံပါသည်။ အတည်ပြုရန် ပစ်မှတ်ဌာန၏ "
+"နောက်ဆုံးဝင်ခွင့်ရလက်ကမ်းစာစောင်ကို စစ်ဆေးရန် သို့မဟုတ် ကျောင်း၏ "
+"နိုင်ငံတကာရေးရာရုံးသို့ ဆက်သွယ်မေးမြန်းရန် အကြံပြုအပ်ပါသည်။ သင်၏ "
+"တရုတ်ဘာသာစကားစွမ်းရည်သည် စံနှုန်းနှင့်မညီပါက ဌာနဆိုင်ရာများ သို့မဟုတ် "
+"အင်္ဂလိပ်ဘာသာဖြင့် လုံးလုံးလျားလျားသင်ကြားသော "
+"ဘာသာစကားပြင်ဆင်မှုသင်တန်းများသို့ လျှောက်ထားရန် စဉ်းစားနိုင်သည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:877
 msgid "申請獎學金需要另外申請嗎？"
-msgstr ""
+msgstr "ပညာသင်ဆုလျှောက်ထားရန် သီးခြားလျှောက်ထားရန် လိုအပ်ပါသလား။"
 
 #: .\flows\templates\flows\admissions_guide.html:882
 msgid ""
-"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直"
-"接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部"
-"分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
+"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
 msgstr ""
+"ပညာရေးဝန်ကြီးဌာန၏ ထိုင်ဝမ်ပညာသင်ဆုသည် ဝင်ခွင့်လက်ခံချိန်တွင် သို့မဟုတ် "
+"ဝင်ခွင့်ပြီးနောက် သီးခြားလျှောက်ထားရန် လိုအပ်သည်။ သင်သည် ထိုင်ဝမ်၏ "
+"နိုင်ငံရပ်ခြား အဖွဲ့အစည်းများမှတဆင့် သို့မဟုတ် ကျောင်းသို့ "
+"တိုက်ရိုက်လျှောက်ထားလေ့ရှိပါသည်။ နေရာအရေအတွက် ကန့်သတ်ထားပြီး ပြိုင်ဆိုင်မှု "
+"ပြင်းထန်ပါတယ်။ နိုင်ငံရပ်ခြားရှိ တရုတ်ကျောင်းသားများအတွက် ပညာသင်ဆုအချို့ကို "
+"Overseas Chinese Association သို့မဟုတ် ကျောင်းမှ အလိုအလျောက် စိစစ်ပြီး "
+"အချို့မှာ ဖြည့်စွက်လျှောက်လွှာပုံစံ ထပ်မံလိုအပ်ပါသည်။ "
+"ကျောင်း၏ကိုယ်ပိုင်ဝင်ခွင့်ပညာသင်ဆုများနှင့် bursaries များကို "
+"ဝင်ခွင့်သတိပေးချက်တွင် အများအားဖြင့်ဖော်ပြထားပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:888
 msgid "我已在台灣就讀，可以轉學嗎？"
-msgstr ""
+msgstr "ထိုင်ဝမ်မှာ ကျောင်းတက်နေပြီ၊ ငွေလွှဲလို့ရလား။"
 
 #: .\flows\templates\flows\admissions_guide.html:893
 msgid ""
-"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及"
-"放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標"
-"校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
+"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
 msgstr ""
+"ဟုတ်ပါသည်၊ သို့သော် ပြောင်းရွှေ့ခြင်းလျှောက်လွှာများတွင် များသောအားဖြင့် "
+"အဆင့်ကန့်သတ်ချက်များ (အများအားဖြင့် ဒုတိယနှစ်နှင့် သူငယ်တန်းများ) ရှိပြီး "
+"မူလကျောင်းမှ ထောက်ခံစာများနှင့် ကျောင်းသားအဆင့်အတန်းကို စွန့်လွှတ်ကြောင်း "
+"အထောက်အထားများ ပေးဆောင်ရန် လိုအပ်ပါသည်။ အပြောင်းအရွှေ့ ဝင်ခွင့် "
+"လုပ်ငန်းစဉ်သည် ကျောင်းတစ်ကျောင်းမှ ကျောင်းတစ်ကျောင်းသို့ ကွဲပြားပြီး "
+"စာသင်နှစ်တစ်ခုစီ၏ အဆုံးတွင် လုပ်ဆောင်လေ့ရှိပါသည်။ အသေးစိတ်အတွက်၊ "
+"ပစ်မှတ်ကျောင်း၏ ပြောင်းရွှေ့စာမေးပွဲလမ်းညွှန်ကို ဖတ်ရှုပါ။ "
+"ဘွဲ့လွန်ကျောင်းသားအပြောင်းအရွှေ့ကို တက္ကသိုလ်တစ်ခုစီ၏ "
+"စည်းမျဉ်းစည်းကမ်းများနှင့်အညီ ကိုင်တွယ်ဆောင်ရွက်ရန် လိုအပ်ပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:900
 msgid "重要聯絡與資源"
-msgstr ""
+msgstr "အရေးကြီးသောအဆက်အသွယ်များနှင့် အရင်းအမြစ်များ"
 
 #: .\flows\templates\flows\admissions_guide.html:905
 msgid "海外聯合招生委員會（海聯會）"
-msgstr ""
+msgstr "ပြည်ပ ဝင်ခွင့် ကော်မတီ (Overseas Joint Admissions Committee)၊"
 
 #: .\flows\templates\flows\admissions_guide.html:907
 msgid "僑生申請主要管道，提供報名、志願填寫、成績查詢。"
 msgstr ""
+"မှတ်ပုံတင်ခြင်း၊ စေတနာ့ဝန်ထမ်းဖြည့်သွင်းခြင်းနှင့် "
+"ရမှတ်စုံစမ်းမေးမြန်းခြင်းတို့ကို ပံ့ပိုးပေးသည့် နိုင်ငံရပ်ခြားရှိ "
+"တရုတ်ကျောင်းသားများအတွက် အဓိကလျှောက်လွှာချန်နယ်။"
 
 #: .\flows\templates\flows\admissions_guide.html:915
 msgid "教育部學生事務及特教司"
-msgstr ""
+msgstr "ကျောင်းသားရေးရာနှင့် အထူးပညာရေးဦးစီးဌာန၊ ပညာရေးဝန်ကြီးဌာန"
 
 #: .\flows\templates\flows\admissions_guide.html:917
 msgid "僑生獎學金、臺灣獎學金主管機關，提供獎助學金申請辦法。"
 msgstr ""
+"Overseas Chinese Scholarship နှင့် Taiwan Scholarship Authority သည် "
+"ပညာသင်ဆုနှင့် bursary လျှောက်လွှာလုပ်ငန်းစဉ်များကို ပံ့ပိုးပေးပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:925
 msgid "學校國際事務處（OIA）"
-msgstr ""
+msgstr "နိုင်ငံတကာရေးရာရုံး (OIA) ကျောင်း၊"
 
 #: .\flows\templates\flows\admissions_guide.html:927
 msgid "入學後主要聯繫窗口，提供簽證協助、ARC 辦理、生活輔導、獎學金申請。"
 msgstr ""
+"ဝင်ခွင့်ပြီးနောက် ပင်မအဆက်အသွယ်ပြတင်းပေါက်သည် ဗီဇာအကူအညီ၊ ARC လုပ်ဆောင်မှု၊ "
+"ဘဝလမ်းညွှန်မှုနှင့် ပညာသင်ဆုလျှောက်လွှာများကို ပံ့ပိုးပေးပါသည်။"
 
 #: .\flows\templates\flows\admissions_guide.html:934
 msgid "台灣駐外機構（辦理學生簽證）"
 msgstr ""
+"ထိုင်ဝမ်နိုင်ငံရပ်ခြားတွင် မစ်ရှင်များ (ကျောင်းသားဗီဇာလျှောက်ထားခြင်း)"
 
 #: .\flows\templates\flows\admissions_guide.html:936
 msgid "確認錄取後，向所在地台灣駐外辦事處申請學生居留簽證（Resident Visa）。"
 msgstr ""
+"သင်၏ဝင်ခွင့်ကို အတည်ပြုပြီးနောက်၊ သင်တည်ရှိသည့် ထိုင်ဝမ်ပြည်ပရုံးတွင် "
+"ကျောင်းသားနေထိုင်ခွင့်ဗီဇာ (Resident Visa) ကို လျှောက်ထားပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:944
 msgid "外來人士在台生活諮詢專線"
 msgstr ""
+"ထိုင်ဝမ်တွင်နေထိုင်သော နိုင်ငံခြားသားများအတွက် တိုင်ပင်ဆွေးနွေးမှု hotline"
 
 #: .\flows\templates\flows\admissions_guide.html:946
-msgid ""
-"提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
+msgid "提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
 msgstr ""
+"ထိုင်ဝမ်တွင် နေထိုင်ခြင်းနှင့် ပညာသင်ကြားခြင်းဆိုင်ရာ မေးခွန်းများကို "
+"ဖြေဆိုရန်အတွက် ဘာသာစကားပေါင်းစုံ (အင်္ဂလိပ်၊ ဂျပန်၊ ကိုရီးယား၊ ဗီယက်နမ်၊ "
+"ထိုင်း၊ အင်ဒိုနီးရှား၊ စသည်) ပေးဆောင်ပါ။"
 
 #: .\flows\templates\flows\admissions_guide.html:947
 msgid "免費電話：1925"
-msgstr ""
+msgstr "အခမဲ့ : 1925"
 
 #: .\flows\templates\flows\admissions_guide.html:954
 msgid "全民健康保險署"
-msgstr ""
+msgstr "အမျိုးသားကျန်းမာရေးအာမခံအေဂျင်စီ"
 
 #: .\flows\templates\flows\admissions_guide.html:956
 msgid "持 ARC 在台居留超過 4 個月者須加入全民健保，由學校協助辦理加保手續。"
 msgstr ""
+"ထိုင်ဝမ်တွင် 4 လကျော်နေထိုင်ခဲ့သော ARC ရှိသူများသည် "
+"အမျိုးသားကျန်းမာရေးအာမခံတွင် ပါဝင်ရမည်ဖြစ်ပြီး ကျောင်းမှ "
+"အာမခံစာရင်းသွင်းခြင်းလုပ်ငန်းစဉ်များတွင် ကူညီပေးပါမည်။"
 
 #: .\flows\templates\flows\guide_index.html:4
 #: .\flows\templates\flows\guide_index.html:11
@@ -1264,7 +1431,9 @@ msgstr "နိုင်ငံခြားကျောင်းသားမျာ
 
 #: .\flows\templates\flows\guide_index.html:25
 msgid "外國護照入學者的居留證申請流程與文件清單"
-msgstr "နိုင်ငံခြားနိုင်ငံကူးလက်မှတ်ဖြင့် ဝင်ရောက်သူများ ARC လျှောက်လွှာနှင့် စာရွက်စာတမ်းများ"
+msgstr ""
+"နိုင်ငံခြားနိုင်ငံကူးလက်မှတ်ဖြင့် ဝင်ရောက်သူများ ARC လျှောက်လွှာနှင့် "
+"စာရွက်စာတမ်းများ"
 
 #: .\flows\templates\flows\guide_index.html:33
 msgid "僑生 ARC 辦理"
@@ -1272,7 +1441,9 @@ msgstr "ဝပ်ကျောင်းသားများ ARC လျှော�
 
 #: .\flows\templates\flows\guide_index.html:34
 msgid "持外國護照入台的僑生居留證申請說明"
-msgstr "နိုင်ငံခြားနိုင်ငံကူးလက်မှတ်ဖြင့် တိုင်ဝမ်ဝင်ရောက်သော ဝပ်ကျောင်းသားများ ARC လမ်းညွှန်"
+msgstr ""
+"နိုင်ငံခြားနိုင်ငံကူးလက်မှတ်ဖြင့် တိုင်ဝမ်ဝင်ရောက်သော ဝပ်ကျောင်းသားများ ARC "
+"လမ်းညွှန်"
 
 #: .\flows\templates\flows\guide_index.html:42
 msgid "交換生居留說明"
@@ -1280,7 +1451,9 @@ msgstr "လဲလှယ်ကျောင်းသားများ နေထ�
 
 #: .\flows\templates\flows\guide_index.html:43
 msgid "短期觀光簽 vs 長期居留簽，ARC 辦理判斷指南"
-msgstr "တိုတောင်းသောခရီးသွားဗီဇာ vs ရှည်လျားသောနေထိုင်ဗီဇာ — ARC လျှောက်ထားရန် လမ်းညွှန်"
+msgstr ""
+"တိုတောင်းသောခရီးသွားဗီဇာ vs ရှည်လျားသောနေထိုင်ဗီဇာ — ARC လျှောက်ထားရန် "
+"လမ်းညွှန်"
 
 #: .\flows\templates\flows\guide_index.html:51
 msgid "中央大學住宿申請"
@@ -1289,8 +1462,8 @@ msgstr "NCU အိပ်ဆောင်လျှောက်ထားခြင�
 #: .\flows\templates\flows\guide_index.html:52
 msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
 msgstr ""
-"ကျောင်းသူဆောင်ဇုန်များ၊ အသုံးအဆောင်များ၊ လျှောက်ထားရေးနှင့် နိုင်ငံခြားကျောင်းသားများ "
-"ဦးစားပေးသေချာပေါက်"
+"ကျောင်းသူဆောင်ဇုန်များ၊ အသုံးအဆောင်များ၊ လျှောက်ထားရေးနှင့် "
+"နိုင်ငံခြားကျောင်းသားများ ဦးစားပေးသေချာပေါက်"
 
 #: .\flows\templates\flows\guide_index.html:60
 msgid "中央大學公車指南"
@@ -1298,7 +1471,9 @@ msgstr "NCU ဘတ်စ်ကားလမ်းညွှန်"
 
 #: .\flows\templates\flows\guide_index.html:61
 msgid "主要路線、常見目的地與即時查詢連結"
-msgstr "အဓိကလမ်းကြောင်းများ၊ ပုံမှန်သွားသောနေရာများနှင့် အချိန်နှင့်တပြေးညီ သတင်းသုံးနည်း"
+msgstr ""
+"အဓိကလမ်းကြောင်းများ၊ ပုံမှန်သွားသောနေရာများနှင့် အချိန်နှင့်တပြေးညီ "
+"သတင်းသုံးနည်း"
 
 #: .\flows\templates\flows\guide_index.html:69
 msgid "來臺就學相關法規"
@@ -1306,31 +1481,39 @@ msgstr "တိုင်ဝမ်တွင် ပညာသင်ရေးဆိ�
 
 #: .\flows\templates\flows\guide_index.html:70
 msgid "入學・居留・健保・工讀・學籍等重要法規說明"
-msgstr "ဝင်ခွင့်၊ နေထိုင်ခွင့်၊ ကျန်းမာရေးအာမခံ၊ အလုပ်နှင့် ပညာရေးဆိုင်ရာ အရေးကြီးသောဥပဒေများ"
+msgstr ""
+"ဝင်ခွင့်၊ နေထိုင်ခွင့်၊ ကျန်းမာရေးအာမခံ၊ အလုပ်နှင့် ပညာရေးဆိုင်ရာ "
+"အရေးကြီးသောဥပဒေများ"
 
 #: .\flows\templates\flows\guide_index.html:82
 msgid "全民健保申請"
-msgstr ""
+msgstr "အမျိုးသားကျန်းမာရေးအာမခံလျှောက်လွှာ"
 
 #: .\flows\templates\flows\guide_index.html:83
 msgid "ARC 核發後即可加保，門診費用大幅降低"
 msgstr ""
+"ARC ထုတ်ပေးပြီးနောက်တွင် အာမခံကို သင်ထည့်သွင်းနိုင်ပြီး "
+"ပြင်ပလူနာစရိတ်များကို သိသိသာသာ လျှော့ချပေးမည်ဖြစ်သည်။"
 
 #: .\flows\templates\flows\guide_index.html:91
 msgid "台灣銀行開戶"
-msgstr ""
+msgstr "ထိုင်ဝမ်ဘဏ်အကောင့်ဖွင့်ခြင်း။"
 
 #: .\flows\templates\flows\guide_index.html:92
 msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
 msgstr ""
+"ပညာသင်ဆုလက်ခံခြင်း၊ စာတိုက်၊ ထိုင်ဝမ်ဘဏ်၊ Yushan ဘဏ်တို့ကို "
+"နှိုင်းယှဉ်အကြံပြုထားသည်။"
 
 #: .\flows\templates\flows\guide_index.html:100
 msgid "台灣門號申辦"
-msgstr ""
+msgstr "ထိုင်ဝမ်ဖုန်းနံပါတ်လျှောက်လွှာ"
 
 #: .\flows\templates\flows\guide_index.html:101
 msgid "預付卡 vs 月租方案，各大電信業者說明"
 msgstr ""
+"ကြိုတင်ငွေပေးကတ်များနှင့် လစဉ်ငှားရမ်းမှုအစီအစဉ်များကို အဓိက "
+"တယ်လီကွန်းအော်ပရေတာများက ရှင်းပြသည်။"
 
 #: .\flows\templates\flows\my_flows.html:3
 msgid "我的任務"
@@ -1358,7 +1541,8 @@ msgstr "ကျွန်ုပ်၏ ကိုယ်ပိုင်တာဝန�
 
 #: .\flows\templates\flows\my_flows.html:354
 msgid "完成這些任務，為你在台灣的學習生活做好準備！"
-msgstr "ဤတာဝန်များကို ပြီးမြောက်စေပြီး ထိုင်ဝမ်ရှိ ပညာသင်ဘဝအတွက် ကြိုတင်ပြင်ဆင်ပါ။"
+msgstr ""
+"ဤတာဝန်များကို ပြီးမြောက်စေပြီး ထိုင်ဝမ်ရှိ ပညာသင်ဘဝအတွက် ကြိုတင်ပြင်ဆင်ပါ။"
 
 #: .\flows\templates\flows\my_flows.html:376
 msgid "📋 需要的文件"
@@ -1389,10 +1573,11 @@ msgid "⚠️ 截止日期"
 msgstr "⚠️ သတ်မှတ်ရက်"
 
 #: .\flows\templates\flows\my_flows.html:383
-msgid ""
-"請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的"
-"截止日期。"
-msgstr "စနစ်မှ ဤတာဝန်၏ သတ်မှတ်ရက်ကို အလိုအလျောက် တွက်ချက်နိုင်ရန်အတွက် ကျေးဇူးပြု၍ \"ကိုယ်ရေးအချက်အလက်\" တွင် <strong>ထိုင်ဝမ်သို့ ရောက်ရှိမည့် ခန့်မှန်းရက်စွဲ</strong> ကို အရင်ဖြည့်စွက်ပါ။"
+msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
+msgstr ""
+"စနစ်မှ ဤတာဝန်၏ သတ်မှတ်ရက်ကို အလိုအလျောက် တွက်ချက်နိုင်ရန်အတွက် ကျေးဇူးပြု၍ "
+"\"ကိုယ်ရေးအချက်အလက်\" တွင် <strong>ထိုင်ဝမ်သို့ ရောက်ရှိမည့် "
+"ခန့်မှန်းရက်စွဲ</strong> ကို အရင်ဖြည့်စွက်ပါ။"
 
 #: .\flows\templates\flows\my_flows.html:384
 msgid "📅 截止日期"
@@ -1455,10 +1640,9 @@ msgid "來臺就學小幫手"
 msgstr "ထိုင်ဝမ်ပညာသင်ရေး အကူအညီ"
 
 #: .\templates\base.html:72
-#, fuzzy
 #| msgid "同學"
 msgid " 同學"
-msgstr "ကျောင်းသား/ကျောင်းသူ"
+msgstr "အတန်းဖော်"
 
 #: .\templates\base.html:75 .\users\templates\users\dashboard.html:112
 msgid "登出"
@@ -1534,7 +1718,8 @@ msgstr "နိုင်ငံတကာကျောင်းသား/ကျေ�
 #: .\users\templates\users\dashboard.html:15
 msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
 msgstr ""
-"StudyGo Taiwan မှ ကြိုဆိုပါသည်။ သင့်အတွက် ကိုယ်ပိုင်ပြင်ဆင်ထားသော ထိုင်ဝမ်ပညာသင် လုပ်ငန်းစဉ် အသင့်ဖြစ်ပါပြီ။"
+"StudyGo Taiwan မှ ကြိုဆိုပါသည်။ သင့်အတွက် ကိုယ်ပိုင်ပြင်ဆင်ထားသော "
+"ထိုင်ဝမ်ပညာသင် လုပ်ငန်းစဉ် အသင့်ဖြစ်ပါပြီ။"
 
 #: .\users\templates\users\dashboard.html:18
 msgid "查看任務清單"
@@ -1561,16 +1746,14 @@ msgid "即將到期 / 提醒"
 msgstr "မကြာမီ သတ်မှတ်ချိန်ရောက်မည် / သတိပေးချက်"
 
 #: .\users\templates\users\dashboard.html:41
-#, fuzzy
 #| msgid "即將到期 / 提醒"
 msgid "即將到期任務"
-msgstr "မကြာမီ သတ်မှတ်ချိန်ရောက်မည် / သတိပေးချက်"
+msgstr "မကြာမီ အလုပ်များ ပြီးမည်။"
 
 #: .\users\templates\users\dashboard.html:46
-#, fuzzy
 #| msgid "沒有未讀通知 🎉"
 msgid "未讀通知"
-msgstr "ဖတ်ရန်ကျန်သော အသိပေးချက်မရှိပါ 🎉"
+msgstr "မဖတ်ရသေးသော အသိပေးချက်များ"
 
 #: .\users\templates\users\dashboard.html:52
 msgid "目前入學狀態"
@@ -1602,7 +1785,9 @@ msgstr "အချက်အလက် ပြင်ရန်"
 
 #: .\users\templates\users\dashboard.html:109
 msgid "確定要登出嗎？登出後將返回登入頁面。"
-msgstr "ထွက်လိုသည်မှာ သေချာပါသလား။ ထွက်ပြီးနောက်၊ သင်သည် လော့ဂ်အင်စာမျက်နှာသို့ ပြန်သွားလိမ့်မည်။"
+msgstr ""
+"ထွက်လိုသည်မှာ သေချာပါသလား။ ထွက်ပြီးနောက်၊ သင်သည် လော့ဂ်အင်စာမျက်နှာသို့ "
+"ပြန်သွားလိမ့်မည်။"
 
 #: .\users\templates\users\dashboard.html:119
 msgid "近期待辦任務"
@@ -1668,6 +1853,8 @@ msgstr "တက်ရောက်မည့် ကျောင်း / တက္�
 #: .\users\templates\users\edit_profile.html:109
 msgid "就讀學校於註冊完成後即與帳號永久綁定，無法修改"
 msgstr ""
+"မှတ်ပုံတင်ခြင်းပြီးသည်နှင့်၊ သင်တက်ရောက်သည့်ကျောင်းသည် သင့်အကောင့်နှင့် "
+"အပြီးအပိုင် ချည်နှောင်ထားပြီး ပြုပြင်၍မရပါ။"
 
 #: .\users\templates\users\edit_profile.html:116
 #: .\users\templates\users\profile_setup.html:164
@@ -1768,7 +1955,8 @@ msgstr "ဝင်ရောက်ရန် ပြန်သွားရန်"
 
 #: .\users\templates\users\forgot_password.html:16
 msgid "輸入您的電子郵件，我們將寄送重設密碼連結。"
-msgstr "သင့်အီးမေးလ်ကို ထည့်ပါ။ စကားဝှက်ပြန်လည်သတ်မှတ်ရန် လင့်ခ်ကို ပို့ပေးပါမည်။"
+msgstr ""
+"သင့်အီးမေးလ်ကို ထည့်ပါ။ စကားဝှက်ပြန်လည်သတ်မှတ်ရန် လင့်ခ်ကို ပို့ပေးပါမည်။"
 
 #: .\users\templates\users\forgot_password.html:21
 #: .\users\templates\users\login.html:108
@@ -1805,34 +1993,30 @@ msgid "流程提醒"
 msgstr "လုပ်ငန်းစဉ် သတိပေးချက်"
 
 #: .\users\templates\users\login.html:23
-msgid ""
-"系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任"
-"務，並以進度方式提醒你一步一步完成。"
+msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
 msgstr ""
-"စနစ်သည် သင့်နိုင်ငံသား၊ အထောက်အထားအမျိုးအစားနှင့် လက်ရှိအခြေအနေအပေါ်မူတည်၍ ဗီဇာလျှောက်ထားခြင်း၊ "
-"ထိုင်ဝမ်မရောက်မီနှင့် ရောက်ရှိပြီးနောက် လုပ်ဆောင်ရမည့် အရေးကြီးတာဝန်များကို အလိုအလျောက် ဖန်တီးပေးပြီး "
-"တိုးတက်မှုအခြေအနေဖြင့် တစ်ဆင့်ချင်း သတိပေးပါမည်။"
+"စနစ်သည် သင့်နိုင်ငံသား၊ အထောက်အထားအမျိုးအစားနှင့် လက်ရှိအခြေအနေအပေါ်မူတည်၍ "
+"ဗီဇာလျှောက်ထားခြင်း၊ ထိုင်ဝမ်မရောက်မီနှင့် ရောက်ရှိပြီးနောက် လုပ်ဆောင်ရမည့် "
+"အရေးကြီးတာဝန်များကို အလိုအလျောက် ဖန်တီးပေးပြီး တိုးတက်မှုအခြေအနေဖြင့် "
+"တစ်ဆင့်ချင်း သတိပေးပါမည်။"
 
 #: .\users\templates\users\login.html:41
 msgid "資訊管理"
 msgstr "သတင်းအချက်အလက် စီမံခန့်ခွဲမှု"
 
 #: .\users\templates\users\login.html:42
-msgid ""
-"把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
-"確資料，不再被零散資訊搞混。"
+msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
 msgstr ""
-"ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံ၊ နေထိုင်ရာနှင့် ကျောင်းမှတ်ပုံတင်ခြင်းဆိုင်ရာ အချက်အလက်များကို "
-"တစ်နေရာတည်းတွင် စုစည်းပေး၍ ကျောင်းသား/ကျောင်းသူများသည် မှန်ကန်သောအချက်အလက်များကို ပိုမိုလွယ်ကူစွာ "
+"ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံ၊ နေထိုင်ရာနှင့် "
+"ကျောင်းမှတ်ပုံတင်ခြင်းဆိုင်ရာ အချက်အလက်များကို တစ်နေရာတည်းတွင် စုစည်းပေး၍ "
+"ကျောင်းသား/ကျောင်းသူများသည် မှန်ကန်သောအချက်အလက်များကို ပိုမိုလွယ်ကူစွာ "
 "ရှာနိုင်ပြီး ပြန့်ကျဲနေသောအချက်အလက်များကြောင့် မရှုပ်ထွေးတော့ပါ။"
 
 #: .\users\templates\users\login.html:65
-msgid ""
-"當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 "
-"AI 小幫手快速獲得協助。"
+msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
 msgstr ""
-"ပထမဆုံး ဘာလုပ်ရမည်၊ မည်သည့်စာရွက်စာတမ်းများ ပြင်ဆင်ရမည် သို့မဟုတ် မည်သူ့ကို မေးရမည် မသိသည့်အခါ AI "
-"အကူအညီမှတစ်ဆင့် မြန်မြန်ဆန်ဆန် အကူအညီရနိုင်ပါသည်။"
+"ပထမဆုံး ဘာလုပ်ရမည်၊ မည်သည့်စာရွက်စာတမ်းများ ပြင်ဆင်ရမည် သို့မဟုတ် မည်သူ့ကို "
+"မေးရမည် မသိသည့်အခါ AI အကူအညီမှတစ်ဆင့် မြန်မြန်ဆန်ဆန် အကူအညီရနိုင်ပါသည်။"
 
 #: .\users\templates\users\login.html:81
 msgid "顯示第一張介紹"
@@ -1846,12 +2030,14 @@ msgstr "ဒုတိယ မိတ်ဆက်စာမျက်နှာ ပြ�
 msgid "顯示第三張介紹"
 msgstr "တတိယ မိတ်ဆက်စာမျက်နှာ ပြသရန်"
 
-#: .\users\templates\users\login.html:95 .\users\templates\users\login.html:134
+#: .\users\templates\users\login.html:95
+#: .\users\templates\users\login.html:134
 #: .\users\templates\users\login.html:152
 msgid "登入"
 msgstr "ဝင်ရောက်ရန်"
 
-#: .\users\templates\users\login.html:97 .\users\templates\users\login.html:154
+#: .\users\templates\users\login.html:97
+#: .\users\templates\users\login.html:154
 msgid "註冊帳號"
 msgstr "အကောင့် မှတ်ပုံတင်ရန်"
 
@@ -1945,35 +2131,36 @@ msgstr "ယခု ဝင်ရောက်ရန်"
 
 #: .\users\templates\users\login.html:228
 msgid "請確認您的電子信箱"
-msgstr ""
+msgstr "သင့်အီးမေးလ်ကို အတည်ပြုပါ။"
 
 #: .\users\templates\users\login.html:230
 msgid "驗證信已寄至"
-msgstr ""
+msgstr "စိစစ်ရေးစာပေးပို့ပြီးပါပြီ။"
 
 #: .\users\templates\users\login.html:237
 msgid "請至信箱點擊驗證連結，完成驗證後系統將自動引導您填寫個人資料。"
 msgstr ""
+"ကျေးဇူးပြု၍ သင့်စာတိုက်ပုံးသို့သွားပြီး အတည်ပြုခြင်းလင့်ခ်ကို နှိပ်ပါ။ "
+"အတည်ပြုခြင်းပြီးပါက၊ သင့်ကိုယ်ရေးကိုယ်တာအချက်အလက်များကို ဖြည့်ရန် စနစ်က "
+"အလိုအလျောက် လမ်းညွှန်ပေးမည်ဖြစ်ပါသည်။"
 
 #: .\users\templates\users\login.html:238
 msgid "驗證連結有效期限為"
-msgstr ""
+msgstr "အတည်ပြုခြင်းလင့်ခ်သည် တရားဝင်သည်။"
 
 #: .\users\templates\users\login.html:238
 msgid "24 小時"
-msgstr ""
+msgstr "၂၄ နာရီ"
 
 #: .\users\templates\users\login.html:242
-#, fuzzy
 #| msgid "重新寄送驗證信"
 msgid "重新發送驗證信"
-msgstr "အတည်ပြုအီးမေးလ် ပြန်ပို့ရန်"
+msgstr "စိစစ်ရေးစာပြန်ပို့ပါ။"
 
 #: .\users\templates\users\login.html:246
-#, fuzzy
 #| msgid "返回登入"
 msgid "已驗證？返回登入"
-msgstr "ဝင်ရောက်ရန် ပြန်သွားရန်"
+msgstr "အတည်ပြုမလား။ လော့ဂ်အင်သို့ ပြန်သွားသည်။"
 
 #: .\users\templates\users\logout_redirect.html:10
 msgid "登出中…"
@@ -2001,37 +2188,38 @@ msgid "開始使用"
 msgstr "စတင်အသုံးပြုရန်"
 
 #: .\users\templates\users\profile_setup.html:35
-msgid ""
-"這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
+msgid "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
 msgstr ""
-"ဤအချက်အလက်များကို သင့်ကိုယ်ပိုင် ထိုင်ဝမ်သို့လာရောက်ပညာသင်ရေး လုပ်ငန်းစဉ် ဖန်တီးရန် အသုံးပြုပါမည်။ အတိကျဆုံး "
-"အဆင့်လိုက်လမ်းညွှန်မှုရရန် မှန်ကန်စွာ ဖြည့်ပါ။"
+"ဤအချက်အလက်များကို သင့်ကိုယ်ပိုင် ထိုင်ဝမ်သို့လာရောက်ပညာသင်ရေး လုပ်ငန်းစဉ် "
+"ဖန်တီးရန် အသုံးပြုပါမည်။ အတိကျဆုံး အဆင့်လိုက်လမ်းညွှန်မှုရရန် မှန်ကန်စွာ "
+"ဖြည့်ပါ။"
 
 #: .\users\templates\users\profile_setup.html:45
 msgid "請選擇國籍"
 msgstr "နိုင်ငံသားကို ရွေးချယ်ပါ"
 
 #: .\users\templates\users\profile_setup.html:63
-#, fuzzy
 #| msgid "就讀學校"
 msgid "請選擇就讀學校"
-msgstr "တက်ရောက်မည့် ကျောင်း / တက္ကသိုလ်"
+msgstr "သင့်ကျောင်းကို ရွေးချယ်ပါ။"
 
 #: .\users\templates\users\profile_setup.html:65
 msgid "綜合大學"
-msgstr ""
+msgstr "ဘက်စုံတက္ကသိုလ်"
 
 #: .\users\templates\users\profile_setup.html:87
 msgid "科技大學"
-msgstr ""
+msgstr "သိပ္ပံနှင့်နည်းပညာတက္ကသိုလ်"
 
 #: .\users\templates\users\profile_setup.html:98
 msgid "師範／教育大學"
-msgstr ""
+msgstr "ပုံမှန်တက္ကသိုလ်/ပညာရေးတက္ကသိုလ်"
 
 #: .\users\templates\users\profile_setup.html:114
 msgid "目前僅開放國立中央大學（NCU）的個人化流程"
 msgstr ""
+"လက်ရှိတွင် အမျိုးသားဗဟိုတက္ကသိုလ် (NCU) ၏ "
+"ကိုယ်ပိုင်သတ်မှတ်ရေးလုပ်ငန်းစဉ်ကိုသာ ဖွင့်လှစ်ထားသည်။"
 
 #: .\users\templates\users\profile_setup.html:123
 msgid "請選擇身份別"
@@ -2039,17 +2227,18 @@ msgstr "အထောက်အထားအမျိုးအစားကို �
 
 #: .\users\templates\users\profile_setup.html:128
 msgid "身份別將影響您的流程任務內容"
-msgstr "အထောက်အထားအမျိုးအစားသည် သင့်လုပ်ငန်းစဉ်တာဝန်များ၏ အကြောင်းအရာကို သက်ရောက်စေပါမည်"
+msgstr ""
+"အထောက်အထားအမျိုးအစားသည် သင့်လုပ်ငန်းစဉ်တာဝန်များ၏ အကြောင်းအရာကို "
+"သက်ရောက်စေပါမည်"
 
 #: .\users\templates\users\profile_setup.html:138
 msgid "辦理簽證等手續"
 msgstr "ဗီဇာနှင့် သက်ဆိုင်ရာ လုပ်ငန်းစဉ်များ ဆောင်ရွက်ခြင်း"
 
 #: .\users\templates\users\profile_setup.html:145
-#, fuzzy
 #| msgid "抵臺後"
 msgid "入臺後"
-msgstr "ထိုင်ဝမ်သို့ရောက်ရှိပြီးနောက်"
+msgstr "ထိုင်ဝမ်သို့ဝင်ပြီးနောက်"
 
 #: .\users\templates\users\profile_setup.html:146
 msgid "辦理 ARC 等後續"
@@ -2085,11 +2274,13 @@ msgstr "အခြေအနေ မရွေးရသေးပါ"
 
 #: .\users\templates\users\profile_setup.html:216
 msgid "資料儲存後，系統將根據您的"
-msgstr ""
+msgstr "ဒေတာကို သိမ်းဆည်းပြီးနောက်၊ စနစ်သည် သင့်အား အသုံးပြုမည်ဖြစ်သည်။"
 
 #: .\users\templates\users\profile_setup.html:219
 msgid "自動生成個人化任務流程。"
 msgstr ""
+"ပုဂ္ဂိုလ်ရေးသီးသန့် လုပ်ဆောင်စရာ လုပ်ငန်းစဉ်များကို အလိုအလျောက် "
+"ထုတ်ပေးပါသည်။"
 
 #: .\users\templates\users\reset_password.html:4
 #: .\users\templates\users\reset_password.html:11
@@ -2119,43 +2310,6 @@ msgstr "စကားဝှက် ပြန်လည်သတ်မှတ်မ�
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "ပြန်လည်သတ်မှတ်မှု မအောင်မြင်ပါ။ လင့်ခ်သည် သက်တမ်းကုန်နေနိုင်ပါသည်။"
-
-#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
-#~ msgstr ""
-#~ "သင့်မေးခွန်းကို ရိုက်ထည့်ပါ။ စနစ်သည် သင့်အထောက်အထားနှင့် အခြေအနေအပေါ်မူတည်၍ အကြံပြုချက်များကို "
-#~ "စီစဉ်ပေးပါမည်။"
-
-#, fuzzy
-#~| msgid ""
-#~| "。你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要"
-#~| "做什麼。"
-#~ msgid ""
-#~ "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什"
-#~ "麼"
-#~ msgstr ""
-#~ "။ ထိုင်ဝမ်တွင် ပညာသင်ရန် လုပ်ငန်းစဉ်များကို မေးနိုင်ပါသည်။ ဥပမာ ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ "
-#~ "ကျန်းမာရေးအာမခံ၊ နေထိုင်ရာ၊ မှတ်ပုံတင်ခြင်း သို့မဟုတ် ထိုင်ဝမ်ရောက်ပြီးနောက် လုပ်ရမည့်အရာများ။"
-
-#~ msgid "   同學"
-#~ msgstr "အတန်းဖော်"
-
-#~ msgid "僑生（海外華裔）"
-#~ msgstr "ပြည်ပတရုတ်ကျောင်းသား/ကျောင်းသူ"
-
-#~ msgid "外籍生（一般外國學生）"
-#~ msgstr "နိုင်ငံခြားကျောင်းသား"
-
-#~ msgid "未讀的通知"
-#~ msgstr "မဖတ်ရသေးသော အသိပေးချက်များ"
-
-#~ msgid "信箱已驗證"
-#~ msgstr "အီးမေးလ် အတည်ပြုပြီး"
-
-#~ msgid "信箱未驗證"
-#~ msgstr "အီးမေးလ် အတည်မပြုရသေးပါ"
-
-#~ msgid "例如：國立臺灣大學"
-#~ msgstr "ဥပမာ - National Taiwan University"
 
 msgid "地圖導覽"
 msgstr "မြေပုံ နှင့် လမ်းညွှန်"
@@ -2491,6 +2645,149 @@ msgstr ""
 "အရည်အချင်းများ၊ အချိန်ဇယား၊ လိုအပ်သောစာရွက်စာတမ်းများနှင့် "
 "အရေးကြီးသောမှတ်ချက်များ"
 
+msgid "國立臺灣科技大學（NTUST）"
+msgstr "National Taiwan University of Science and Technology (NTUST)"
+
+msgid "國立臺灣大學（NTU）"
+msgstr "အမျိုးသား ထိုင်ဝမ်တက္ကသိုလ် (NTU)"
+
+msgid "國立聯合大學（NUU）"
+msgstr "အမျိုးသားညီညွတ်သော တက္ကသိုလ် (NUU)၊"
+
+msgid "國立雲林科技大學（YunTech）"
+msgstr "National Yunlin University of Science and Technology (YunTech)၊"
+
+msgid "國立臺中科技大學（NTCUST）"
+msgstr "National Taichung သိပ္ပံနှင့်နည်းပညာတက္ကသိုလ် (NTCUST)"
+
+msgid "國立臺北大學（NTPU）"
+msgstr "အမျိုးသား ထိုင်ပေတက္ကသိုလ် (NTPU)"
+
+msgid "國立臺北商業大學（NTUB）"
+msgstr "National Taipei University of Business (NTUB)"
+
+msgid "國立成功大學（NCKU）"
+msgstr "အမျိုးသား Cheng Kung တက္ကသိုလ် (NCKU)"
+
+msgid "國立臺北教育大學（NTUE）"
+msgstr "အမျိုးသား Taipei ပညာရေးတက္ကသိုလ် (NTUE)"
+
+msgid "國立清華大學（NTHU）"
+msgstr "National Tsing Hua University (NTHU)"
+
+msgid "國立金門大學（NQU）"
+msgstr "အမျိုးသား Quemoy တက္ကသိုလ် (NQU)"
+
+msgid "國立空中大學（NOU）"
+msgstr "အမျိုးသားလေကြောင်းတက္ကသိုလ် (NOU)၊"
+
+msgid "國立中山大學（NSYSU）"
+msgstr "အမျိုးသား Sun Yat-sen တက္ကသိုလ် (NSYSU)"
+
+msgid "國立彰化師範大學（NCUE）"
+msgstr "အမျိုးသား Changhua ပုံမှန်တက္ကသိုလ် (NCUE)"
+
+msgid "國立臺北科技大學（NTUT）"
+msgstr "National Taipei University of Technology (NTUT)၊"
+
+msgid "國立暨南國際大學（NCNU）"
+msgstr "National Jinan International University (NCNU)၊"
+
+msgid "..."
+msgstr ""
+
+msgid "國立宜蘭大學（NIU）"
+msgstr "အမျိုးသား Yilan တက္ကသိုလ် (NIU)"
+
+msgid "國立東華大學（NDHU）"
+msgstr "အမျိုးသား Dong Hwa တက္ကသိုလ် (NDHU)"
+
+msgid "國立臺南大學（NUTN）"
+msgstr "အမျိုးသား တိုင်နန်တက္ကသိုလ် (NUTN)၊"
+
+msgid "國立臺灣師範大學（NTNU）"
+msgstr "အမျိုးသား ထိုင်ဝမ်ပုံမှန်တက္ကသိုလ် (NTNU)"
+
+msgid "國立陽明交通大學（NYCU）"
+msgstr "အမျိုးသား Yang Ming Chiao Tung တက္ကသိုလ် (NYCU)၊"
+
+msgid "國立高雄餐旅大學（NKUHT）"
+msgstr "National Kaohsiung University of Hospitality and Tourism (NKUHT)"
+
+msgid "國立中興大學（NCHU）"
+msgstr "National Chung Hsing University (NCHU)"
+
+msgid "國立澎湖科技大學（NPU）"
+msgstr "National Penghu University of Science and Technology (NPU)"
+
+msgid "國立高雄科技大學（NKUST）"
+msgstr "National Kaohsiung University of Science and Technology (NKUST)"
+
+msgid "國立臺中教育大學（NTCU）"
+msgstr "အမျိုးသား Taichung ပညာရေးတက္ကသိုလ် (NTCU)"
+
+msgid "國立政治大學（NCCU）"
+msgstr "National Chengchi University (NCCU)"
+
+msgid "國立屏東大學（NPTU）"
+msgstr "အမျိုးသား ပင်းတုံတက္ကသိုလ် (NPTU)၊"
+
+msgid "國立嘉義大學（NCYU）"
+msgstr "National Chiayi တက္ကသိုလ် (NCYU)"
+
+msgid "國立臺東大學（NTTU）"
+msgstr "အမျိုးသား Taitung တက္ကသိုလ် (NTTU)၊"
+
+msgid "國立中央大學（NCU）"
+msgstr "အမျိုးသားဗဟိုတက္ကသိုလ် (NCU)၊"
+
+msgid "其他（Other）"
+msgstr "တခြား"
+
+msgid "國立臺灣體育運動大學（NTUS）"
+msgstr "အမျိုးသား ထိုင်ဝမ် အားကစားတက္ကသိုလ် (NTUS)"
+
+msgid "國立虎尾科技大學（NFU）"
+msgstr "အမျိုးသား Huwei နည်းပညာတက္ကသိုလ် (NFU)"
+
+msgid "國立屏東科技大學（NPUST）"
+msgstr "အမျိုးသား ပင်းတုံသိပ္ပံနှင့် နည်းပညာတက္ကသိုလ် (NPUST)၊"
+
+msgid "國立高雄師範大學（NKNU）"
+msgstr "အမျိုးသားရှုံရိုးပုံမှန်တက္ကသိုလ် (NKNU)၊"
+
+#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
+#~ msgstr ""
+#~ "သင့်မေးခွန်းကို ရိုက်ထည့်ပါ။ စနစ်သည် သင့်အထောက်အထားနှင့် အခြေအနေအပေါ်မူတည်၍ "
+#~ "အကြံပြုချက်များကို စီစဉ်ပေးပါမည်။"
+
+#~ msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
+#~ msgstr ""
+#~ "ဗီဇာ၊ နေထိုင်ခွင့်၊ ကျန်းမာရေးအာမခံ၊ နေရာထိုင်ခင်း၊ မှတ်ပုံတင်ခြင်း "
+#~ "သို့မဟုတ် ဝင်ခွင့်ပြီးနောက် ဘာတွေလုပ်ဆောင်ရမလဲဆိုတာ ထိုင်ဝမ်ကို လာလေ့လာဖို့ "
+#~ "လုပ်ထုံးလုပ်နည်းတွေအကြောင်း မေးနိုင်ပါတယ်။"
+
+#~ msgid "   同學"
+#~ msgstr "အတန်းဖော်"
+
+#~ msgid "僑生（海外華裔）"
+#~ msgstr "ပြည်ပတရုတ်ကျောင်းသား/ကျောင်းသူ"
+
+#~ msgid "外籍生（一般外國學生）"
+#~ msgstr "နိုင်ငံခြားကျောင်းသား"
+
+#~ msgid "未讀的通知"
+#~ msgstr "မဖတ်ရသေးသော အသိပေးချက်များ"
+
+#~ msgid "信箱已驗證"
+#~ msgstr "အီးမေးလ် အတည်ပြုပြီး"
+
+#~ msgid "信箱未驗證"
+#~ msgstr "အီးမေးလ် အတည်မပြုရသေးပါ"
+
+#~ msgid "例如：國立臺灣大學"
+#~ msgstr "ဥပမာ - National Taiwan University"
+
 #~ msgid "入境前準備中"
 #~ msgstr "ဝင်ရောက်မလာမီ ပြင်ဆင်နေသည်"
 
@@ -2602,8 +2899,8 @@ msgstr ""
 
 #~ msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
 #~ msgstr ""
-#~ "မော်ဂျူး ၂ (လုပ်ငန်းစဉ်နှင့် တာဝန်စီမံခန့်ခွဲမှု) ပြီးစီးပြီးနောက် သင့်ကိုယ်ပိုင် တာဝန်စာရင်းကို ဤနေရာတွင် "
-#~ "ပြသပါမည်။"
+#~ "မော်ဂျူး ၂ (လုပ်ငန်းစဉ်နှင့် တာဝန်စီမံခန့်ခွဲမှု) ပြီးစီးပြီးနောက် "
+#~ "သင့်ကိုယ်ပိုင် တာဝန်စာရင်းကို ဤနေရာတွင် ပြသပါမည်။"
 
 #~ msgid "準備來臺流程"
 #~ msgstr "ထိုင်ဝမ်သို့လာရောက်ရန် လုပ်ငန်းစဉ် ပြင်ဆင်ခြင်း"
@@ -2615,20 +2912,18 @@ msgstr ""
 #~ "            "
 #~ msgstr ""
 #~ "\n"
-#~ "            အချက်အလက် သိမ်းပြီးနောက် စနစ်သည် သင့် <b>နိုင်ငံသား</b>၊ "
-#~ "<b>အထောက်အထားအမျိုးအစား</b> နှင့်\n"
-#~ "            <b>ဝင်ခွင့်အခြေအနေ</b> အပေါ်မူတည်၍ ကိုယ်ပိုင်တာဝန်လုပ်ငန်းစဉ်ကို အလိုအလျောက် "
-#~ "ဖန်တီးပါမည်။\n"
+#~ "            အချက်အလက် သိမ်းပြီးနောက် စနစ်သည် သင့် <b>နိုင်ငံသား</b>၊ <b>အထောက်အထားအမျိုးအစား</b> နှင့်\n"
+#~ "            <b>ဝင်ခွင့်အခြေအနေ</b> အပေါ်မူတည်၍ ကိုယ်ပိုင်တာဝန်လုပ်ငန်းစဉ်ကို အလိုအလျောက် ဖန်တီးပါမည်။\n"
 #~ "            "
 
 #~ msgid "回到儀表板"
 #~ msgstr "ဒက်ရှ်ဘုတ်သို့ ပြန်သွားရန်"
 
-#~ msgid ""
-#~ "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
+#~ msgid "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
 #~ msgstr ""
-#~ "သင့်ကိုယ်ရေးအချက်အလက်အပေါ်မူတည်၍ ထိုင်ဝမ်မရောက်မီ၊ ရောက်ရှိပြီးနောက်၊ ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ "
-#~ "ကျန်းမာရေးအာမခံနှင့် နေထိုင်မှုဆိုင်ရာ အချက်အလက်များကို စီစဉ်ကူညီပေးပါသည်။"
+#~ "သင့်ကိုယ်ရေးအချက်အလက်အပေါ်မူတည်၍ ထိုင်ဝမ်မရောက်မီ၊ ရောက်ရှိပြီးနောက်၊ ဗီဇာ၊ "
+#~ "နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံနှင့် နေထိုင်မှုဆိုင်ရာ အချက်အလက်များကို "
+#~ "စီစဉ်ကူညီပေးပါသည်။"
 
 #~ msgid "我的帳戶"
 #~ msgstr "ကျွန်ုပ်၏ အကောင့်"

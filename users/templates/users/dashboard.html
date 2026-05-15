@@ -69,7 +69,7 @@
           {% if profile %}
           <span class="ptag ptag-green">🌏 {{ profile.get_nationality_display }}</span>
           <span class="ptag ptag-yellow">{{ profile.get_identity_type_display }}</span>
-          <span class="ptag ptag-blue">{{ profile.university }}</span>
+          <span class="ptag ptag-blue">{{ profile.get_university_display|default:profile.university }}</span>
           {% endif %}
         </div>
         <div style="margin-top:18px;padding:14px;background:var(--bg);border-radius:14px;text-align:left;">
@@ -138,7 +138,4 @@
   </div>
 </section>
 {% endblock %}
-
-{% block extra_js %}
-<script src="{% static 'flows/js/flows.js' %}?v={% now 'U' %}"></script>
-{% endblock %}
+

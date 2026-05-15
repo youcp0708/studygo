@@ -84,7 +84,7 @@ msgstr "Hello !"
 
 #: .\chatbot\templates\chatbot\chatbot.html:104
 msgid "回到底部"
-msgstr ""
+msgstr "back to bottom"
 
 #: .\chatbot\templates\chatbot\chatbot.html:114
 msgid "新增附件"
@@ -217,8 +217,8 @@ msgstr ""
 #: .\chatbot\views.py:25
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
 msgstr ""
-"When applying for a mobile number after arriving in Taiwan, you usually need "
-"a passport, ARC, or other identity documents."
+"When applying for a mobile number after arriving in Taiwan, you usually need"
+" a passport, ARC, or other identity documents."
 
 #: .\flows\models.py:240
 msgid "未開始"
@@ -236,7 +236,7 @@ msgstr "Completed"
 #: .\flows\templates\flows\admissions_guide.html:4
 #: .\flows\templates\flows\admissions_guide.html:218
 msgid "招生簡章"
-msgstr ""
+msgstr "Admission brochure"
 
 #: .\flows\templates\flows\admissions_guide.html:212
 #: .\flows\templates\flows\guide_index.html:10
@@ -245,119 +245,122 @@ msgid "返回儀表板"
 msgstr "Back to Dashboard"
 
 #: .\flows\templates\flows\admissions_guide.html:217
-#, fuzzy
 #| msgid "境外學生"
 msgid "境外學生招生資訊"
-msgstr "International Student"
+msgstr "Overseas student admissions information"
 
 #: .\flows\templates\flows\admissions_guide.html:220
-msgid ""
-"本頁彙整境外學生（僑生、外籍生、交換生）來臺就讀相關招生資訊，包含各學制申請"
-"資格、招生管道、獎學金及申請時程，助您順利規劃來臺求學之路。"
+msgid "本頁彙整境外學生（僑生、外籍生、交換生）來臺就讀相關招生資訊，包含各學制申請資格、招生管道、獎學金及申請時程，助您順利規劃來臺求學之路。"
 msgstr ""
+"This page compiles relevant admissions information for overseas students "
+"(overseas students, foreign students, and exchange students) to study in "
+"Taiwan, including application qualifications for each academic system, "
+"admissions channels, scholarships, and application timelines to help you "
+"smoothly plan your path to study in Taiwan."
 
 #: .\flows\templates\flows\admissions_guide.html:223
 msgid "多學制招生"
-msgstr ""
+msgstr "Multi-study enrollment"
 
 #: .\flows\templates\flows\admissions_guide.html:224
 msgid "多國籍適用"
-msgstr ""
+msgstr "Applicable to multiple nationalities"
 
 #: .\flows\templates\flows\admissions_guide.html:225
 msgid "獎學金機會"
-msgstr ""
+msgstr "Scholarship Opportunities"
 
 #: .\flows\templates\flows\admissions_guide.html:226
 msgid "分期申請時程"
-msgstr ""
+msgstr "Installment application timetable"
 
 #: .\flows\templates\flows\admissions_guide.html:234
 msgid "重要提醒："
-msgstr ""
+msgstr "Important reminder:"
 
 #: .\flows\templates\flows\admissions_guide.html:235
-msgid ""
-"各學制招生截止日期每年均可能調整，本頁資訊僅供參考，請務必以各校最新公告或海"
-"外聯招會官網為準。"
+msgid "各學制招生截止日期每年均可能調整，本頁資訊僅供參考，請務必以各校最新公告或海外聯招會官網為準。"
 msgstr ""
+"The admission deadline for each academic system may be adjusted every year. "
+"The information on this page is for reference only. Please be sure to refer "
+"to the latest announcements of each school or the official website of the "
+"Overseas Joint Admissions Association."
 
 #: .\flows\templates\flows\admissions_guide.html:240
 msgid "學制快速一覽"
-msgstr ""
+msgstr "A quick overview of the academic system"
 
 #: .\flows\templates\flows\admissions_guide.html:244
 msgid "學制種類"
-msgstr ""
+msgstr "Type of academic system"
 
 #: .\flows\templates\flows\admissions_guide.html:245
 msgid "類"
-msgstr ""
+msgstr "kind"
 
 #: .\flows\templates\flows\admissions_guide.html:246
 #: .\flows\templates\flows\admissions_guide.html:561
 #: .\flows\templates\flows\admissions_guide.html:611
 msgid "僑先部 / 學士班 / 研究所"
-msgstr ""
+msgstr "Department of Overseas Chinese/Bachelor's Program/Research Institute"
 
 #: .\flows\templates\flows\admissions_guide.html:250
 msgid "適用身份"
-msgstr ""
+msgstr "Applicable status"
 
 #: .\flows\templates\flows\admissions_guide.html:251
 msgid "種"
-msgstr ""
+msgstr "kind"
 
 #: .\flows\templates\flows\admissions_guide.html:252
 msgid "僑生 / 外籍生 / 交換生"
-msgstr ""
+msgstr "Overseas Chinese students / foreign students / exchange students"
 
 #: .\flows\templates\flows\admissions_guide.html:256
 msgid "可申請獎學金"
-msgstr ""
+msgstr "Scholarships available"
 
 #: .\flows\templates\flows\admissions_guide.html:257
-#, fuzzy
 #| msgid "項"
 msgid "多項"
-msgstr "items"
+msgstr "Multiple"
 
 #: .\flows\templates\flows\admissions_guide.html:258
 msgid "教育部、學校、地方政府"
-msgstr ""
+msgstr "Ministry of Education, schools, local governments"
 
 #: .\flows\templates\flows\admissions_guide.html:262
 msgid "申請截止"
-msgstr ""
+msgstr "Application deadline"
 
 #: .\flows\templates\flows\admissions_guide.html:263
 #: .\flows\templates\flows\admissions_guide.html:569
 #: .\flows\templates\flows\admissions_guide.html:619
 msgid "約每年 3 月"
-msgstr ""
+msgstr "Approximately March every year"
 
 #: .\flows\templates\flows\admissions_guide.html:264
 msgid "各管道略有差異"
-msgstr ""
+msgstr "Each pipeline is slightly different"
 
 #: .\flows\templates\flows\admissions_guide.html:269
 msgid "招生學制說明"
-msgstr ""
+msgstr "Admissions and Academic System Description"
 
 #: .\flows\templates\flows\admissions_guide.html:271
 #: .\flows\templates\flows\admissions_guide.html:283
 msgid "僑先部（預科）"
-msgstr ""
+msgstr "Department of Overseas Chinese (preparatory course)"
 
 #: .\flows\templates\flows\admissions_guide.html:272
 #: .\flows\templates\flows\admissions_guide.html:337
 msgid "學士班"
-msgstr ""
+msgstr "Bachelor's degree"
 
 #: .\flows\templates\flows\admissions_guide.html:273
 #: .\flows\templates\flows\admissions_guide.html:391
 msgid "研究所"
-msgstr ""
+msgstr "graduate School"
 
 #: .\flows\templates\flows\admissions_guide.html:274
 #: .\flows\templates\flows\admissions_guide.html:445 .\users\models.py:96
@@ -372,406 +375,457 @@ msgid "交換生"
 msgstr "Exchange Student"
 
 #: .\flows\templates\flows\admissions_guide.html:283
-msgid ""
-"：針對僑生設立的一年制預備課程，修畢成績合格後可直升大學學士班，無需再參加大"
-"學入學考試。適合剛完成高中學業的僑生。"
+msgid "：針對僑生設立的一年制預備課程，修畢成績合格後可直升大學學士班，無需再參加大學入學考試。適合剛完成高中學業的僑生。"
 msgstr ""
+": A one-year preparatory course for overseas Chinese students. After passing"
+" the course, they can directly enter the bachelor's degree program without "
+"having to take the university entrance exam. Suitable for overseas students "
+"who have just completed high school studies."
 
 #: .\flows\templates\flows\admissions_guide.html:290
 #: .\flows\templates\flows\admissions_guide.html:452
 msgid "申請資格"
-msgstr ""
+msgstr "Eligibility"
 
 #: .\flows\templates\flows\admissions_guide.html:291
-msgid ""
-"具僑生身份、完成相當於我國高中一至三年級學業（高中畢業），成績達一定標準。年"
-"齡通常不超過 25 歲。"
+msgid "具僑生身份、完成相當於我國高中一至三年級學業（高中畢業），成績達一定標準。年齡通常不超過 25 歲。"
 msgstr ""
+"Applicants must have overseas Chinese status, have completed studies "
+"equivalent to the first to third grade of high school in my country (high "
+"school graduation), and have achieved certain academic standards. Usually no"
+" more than 25 years old."
 
 #: .\flows\templates\flows\admissions_guide.html:293
 #: .\flows\templates\flows\admissions_guide.html:348
 msgid "高中畢業"
-msgstr ""
+msgstr "high school graduation"
 
 #: .\flows\templates\flows\admissions_guide.html:294
 msgid "僑生身份"
-msgstr ""
+msgstr "Overseas Chinese identity"
 
 #: .\flows\templates\flows\admissions_guide.html:295
 msgid "25 歲以下"
-msgstr ""
+msgstr "Under 25"
 
 #: .\flows\templates\flows\admissions_guide.html:301
 msgid "申請管道"
-msgstr ""
+msgstr "Application pipeline"
 
 #: .\flows\templates\flows\admissions_guide.html:302
-msgid ""
-"透過海外聯合招生委員會（海聯會）統一分發。馬來西亞、緬甸、印尼、港澳及其他地"
-"區各有獨立招生窗口。"
+msgid "透過海外聯合招生委員會（海聯會）統一分發。馬來西亞、緬甸、印尼、港澳及其他地區各有獨立招生窗口。"
 msgstr ""
+"Distributed uniformly through the Overseas Joint Admissions Committee "
+"(Overseas Joint Admissions Committee). Malaysia, Myanmar, Indonesia, Hong "
+"Kong, Macao and other regions each have independent enrollment windows."
 
 #: .\flows\templates\flows\admissions_guide.html:304
 msgid "海聯會"
-msgstr ""
+msgstr "ALATS"
 
 #: .\flows\templates\flows\admissions_guide.html:305
 msgid "統一分發"
-msgstr ""
+msgstr "Unified distribution"
 
 #: .\flows\templates\flows\admissions_guide.html:311
 #: .\flows\templates\flows\admissions_guide.html:365
 #: .\flows\templates\flows\admissions_guide.html:420
 msgid "申請時程"
-msgstr ""
+msgstr "Application timetable"
 
 #: .\flows\templates\flows\admissions_guide.html:312
-msgid ""
-"通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公"
-"告，8 月底至 9 月初入學報到。"
+msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
 msgstr ""
+"Online registration is usually open from January to March every year, and "
+"the deadlines vary slightly in each region. Admission results will be "
+"announced around May to June, and registration will be from the end of "
+"August to the beginning of September."
 
 #: .\flows\templates\flows\admissions_guide.html:314
 msgid "1～3 月報名"
-msgstr ""
+msgstr "Registration from January to March"
 
 #: .\flows\templates\flows\admissions_guide.html:315
 msgid "5～6 月放榜"
-msgstr ""
+msgstr "Ranking released from May to June"
 
 #: .\flows\templates\flows\admissions_guide.html:316
 msgid "9 月入學"
-msgstr ""
+msgstr "Admission in September"
 
 #: .\flows\templates\flows\admissions_guide.html:322
 #: .\flows\templates\flows\admissions_guide.html:375
 #: .\flows\templates\flows\admissions_guide.html:430
 msgid "獎助學金"
-msgstr ""
+msgstr "Scholarships and Bursaries"
 
 #: .\flows\templates\flows\admissions_guide.html:323
-msgid ""
-"教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎"
-"學金或特定區域補助。"
+msgid "教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎學金或特定區域補助。"
 msgstr ""
+"The Ministry of Education provides scholarships for overseas Chinese "
+"students, as well as subsidies from various schools and local governments. "
+"Overseas students with excellent academic performance can apply for the "
+"Ministry of Education Chinese Scholarship or specific regional subsidies."
 
 #: .\flows\templates\flows\admissions_guide.html:325
 #: .\flows\templates\flows\admissions_guide.html:378
 msgid "教育部獎學金"
-msgstr ""
+msgstr "Ministry of Education Scholarship"
 
 #: .\flows\templates\flows\admissions_guide.html:326
 msgid "學校補助"
-msgstr ""
+msgstr "school subsidies"
 
 #: .\flows\templates\flows\admissions_guide.html:337
-msgid ""
-"：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生"
-"管道。修業成績合格者授予學士學位。"
+msgid "：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生管道。修業成績合格者授予學士學位。"
 msgstr ""
+": For four-year university courses (five years in some departments), "
+"overseas students apply through the Overseas Chinese Federation, and foreign"
+" students have independent admissions channels for each school. Those who "
+"pass the academic examination will be awarded a bachelor's degree."
 
 #: .\flows\templates\flows\admissions_guide.html:344
 msgid "僑生申請資格"
-msgstr ""
+msgstr "Application Qualifications for Overseas Chinese Students"
 
 #: .\flows\templates\flows\admissions_guide.html:345
-msgid ""
-"具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西"
-"亞 SPM 成績、緬甸高中畢業等均可申請。"
+msgid "具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西亞 SPM 成績、緬甸高中畢業等均可申請。"
 msgstr ""
+"Applicants must have overseas Chinese status and have completed high school "
+"(senior secondary school) with satisfactory academic performance, or hold a "
+"certificate of equivalent academic ability. Malaysian SPM results, Myanmar "
+"high school graduation, etc. can apply."
 
 #: .\flows\templates\flows\admissions_guide.html:347
 msgid "海聯會管道"
-msgstr ""
+msgstr "Overseas Alliance Pipeline"
 
 #: .\flows\templates\flows\admissions_guide.html:349
 msgid "同等學力"
-msgstr ""
+msgstr "Equivalent academic level"
 
 #: .\flows\templates\flows\admissions_guide.html:355
 msgid "外籍生申請資格"
-msgstr ""
+msgstr "Eligibility for foreign students to apply"
 
 #: .\flows\templates\flows\admissions_guide.html:356
-msgid ""
-"持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力"
-"證明（HSK、TOCFL、TOEFL、IELTS 等）。"
+msgid "持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力證明（HSK、TOCFL、TOEFL、IELTS 等）。"
 msgstr ""
+"Hold foreign nationality and have high school (or equivalent) academic "
+"performance that meets the minimum standards of each school. Some schools "
+"and departments require proof of Chinese or English proficiency (HSK, TOCFL,"
+" TOEFL, IELTS, etc.)."
 
 #: .\flows\templates\flows\admissions_guide.html:358
 msgid "各校獨立招生"
-msgstr ""
+msgstr "Each school recruits students independently"
 
 #: .\flows\templates\flows\admissions_guide.html:359
 #: .\flows\templates\flows\admissions_guide.html:403
 #: .\flows\templates\flows\admissions_guide.html:456
 msgid "語言能力"
-msgstr ""
+msgstr "language ability"
 
 #: .\flows\templates\flows\admissions_guide.html:366
-msgid ""
-"海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確"
-"認目標校系公告。"
+msgid "海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確認目標校系公告。"
 msgstr ""
+"Registration for the AIS pipeline usually takes place from January to March;"
+" independent admissions for each school have other schedules (mostly from "
+"March to May). It is recommended to check the target school and department "
+"announcement in advance."
 
 #: .\flows\templates\flows\admissions_guide.html:368
 msgid "1～3 月（海聯會）"
-msgstr ""
+msgstr "January to March (Overseas Alliance)"
 
 #: .\flows\templates\flows\admissions_guide.html:369
 msgid "3～5 月（各校）"
-msgstr ""
+msgstr "March to May (each school)"
 
 #: .\flows\templates\flows\admissions_guide.html:376
-msgid ""
-"教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎"
-"助。外籍生可申請教育部臺灣獎學金。"
+msgid "教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎助。外籍生可申請教育部臺灣獎學金。"
 msgstr ""
+"The Ministry of Education’s Overseas Chinese Scholarship (approximately "
+"NT$5,000~8,000 per month); each school may also have entrance scholarships "
+"or performance awards. Foreign students can apply for the Ministry of "
+"Education Taiwan Scholarship."
 
 #: .\flows\templates\flows\admissions_guide.html:379
 #: .\flows\templates\flows\admissions_guide.html:433
 msgid "臺灣獎學金"
-msgstr ""
+msgstr "Taiwan Scholarship"
 
 #: .\flows\templates\flows\admissions_guide.html:380
 msgid "學校獎助"
-msgstr ""
+msgstr "School scholarships"
 
 #: .\flows\templates\flows\admissions_guide.html:391
-msgid ""
-"：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有"
-"英文授課專班。"
+msgid "：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有英文授課專班。"
 msgstr ""
+": Including master's programs (2 years) and doctoral programs (3 to 5 "
+"years), which are independently recruited through the research institutes of"
+" each school. Some schools have special classes taught in English."
 
 #: .\flows\templates\flows\admissions_guide.html:398
 msgid "碩士班申請資格"
-msgstr ""
+msgstr "Master's degree application qualifications"
 
 #: .\flows\templates\flows\admissions_guide.html:399
-msgid ""
-"大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言"
-"能力證明（中文 / 英文）。"
+msgid "大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言能力證明（中文 / 英文）。"
 msgstr ""
+"Graduation from a university (bachelor's) degree, with grades that meet the "
+"minimum standards of each school or department. Some departments require "
+"relevant field background or proof of language proficiency "
+"(Chinese/English)."
 
 #: .\flows\templates\flows\admissions_guide.html:401
 msgid "學士畢業"
-msgstr ""
+msgstr "Bachelor's degreeGraduation"
 
 #: .\flows\templates\flows\admissions_guide.html:402
 msgid "相關領域"
-msgstr ""
+msgstr "Related fields"
 
 #: .\flows\templates\flows\admissions_guide.html:409
 msgid "博士班申請資格"
-msgstr ""
+msgstr "Eligibility to apply for doctoral program"
 
 #: .\flows\templates\flows\admissions_guide.html:410
-msgid ""
-"碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部"
-"分系所接受優秀碩士生直攻博士。"
+msgid "碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部分系所接受優秀碩士生直攻博士。"
 msgstr ""
+"Master's degree (or equivalent) with research potential. Usually, a research"
+" proposal and relevant letters of recommendation are required. Some "
+"departments accept outstanding master's students to study directly for Ph.D."
 
 #: .\flows\templates\flows\admissions_guide.html:412
 msgid "碩士畢業"
-msgstr ""
+msgstr "Master's degree"
 
 #: .\flows\templates\flows\admissions_guide.html:413
 msgid "研究計畫"
-msgstr ""
+msgstr "research project"
 
 #: .\flows\templates\flows\admissions_guide.html:414
 msgid "推薦信"
-msgstr ""
+msgstr "Letter of recommendation"
 
 #: .\flows\templates\flows\admissions_guide.html:421
-msgid ""
-"各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截"
-"止日期及備審資料需求。"
+msgid "各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截止日期及備審資料需求。"
 msgstr ""
+"The enrollment period for each school's graduate school varies, mostly from "
+"October to March. It is recommended to directly check the official website "
+"of the target department to confirm the deadline and the requirements for "
+"review materials."
 
 #: .\flows\templates\flows\admissions_guide.html:423
 msgid "依各所公告"
-msgstr ""
+msgstr "According to the announcement of each agency"
 
 #: .\flows\templates\flows\admissions_guide.html:424
 msgid "10 月～3 月"
-msgstr ""
+msgstr "October to March"
 
 #: .\flows\templates\flows\admissions_guide.html:431
-msgid ""
-"教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）"
-"薪資，及科技部研究計畫補助。"
+msgid "教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）薪資，及科技部研究計畫補助。"
 msgstr ""
+"Taiwan Scholarship from the Ministry of Education (foreign graduate "
+"students); Overseas Chinese Scholarship from the Ministry of Education "
+"(overseas students); salaries of research assistants (RA) in each school, "
+"and research project subsidies from the Ministry of Science and Technology."
 
 #: .\flows\templates\flows\admissions_guide.html:434
 msgid "研究助理薪資"
-msgstr ""
+msgstr "Research Assistant Salary"
 
 #: .\flows\templates\flows\admissions_guide.html:445
-msgid ""
-"：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外"
-"僑居留證（ARC）。"
+msgid "：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外僑居留證（ARC）。"
 msgstr ""
+": Students with foreign nationality who are not applying as overseas "
+"students. Through independent admissions procedures at each university, you "
+"must apply for an Alien Residence Certificate (ARC) after admission."
 
 #: .\flows\templates\flows\admissions_guide.html:453
 msgid ""
-"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
-"或英文（IELTS / TOEFL）能力證明，依各校系規定。"
+"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"Hold foreign nationality and complete the prerequisite academic "
+"qualifications of the corresponding academic system (high school or "
+"university graduation). Usually, proof of proficiency in Chinese (TOCFL) or "
+"English (IELTS/TOEFL) is required, according to the regulations of each "
+"school and department."
 
 #: .\flows\templates\flows\admissions_guide.html:455
 msgid "外國國籍"
-msgstr ""
+msgstr "foreign nationality"
 
 #: .\flows\templates\flows\admissions_guide.html:457
 msgid "前置學歷"
-msgstr ""
+msgstr "Prerequisite academic qualifications"
 
 #: .\flows\templates\flows\admissions_guide.html:463
 msgid "所需備審文件"
-msgstr ""
+msgstr "Required documents for review"
 
 #: .\flows\templates\flows\admissions_guide.html:464
-msgid ""
-"護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書"
-"計畫）、推薦信（研究所）、體檢報告。"
+msgid "護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書計畫）、推薦信（研究所）、體檢報告。"
 msgstr ""
+"Passport, highest academic transcript and graduation certificate (including "
+"notarization in Chinese and English), language proficiency certificate, "
+"personal statement (study plan), recommendation letter (research institute),"
+" and physical examination report."
 
 #: .\flows\templates\flows\admissions_guide.html:466
 msgid "學歷公證"
-msgstr ""
+msgstr "Notarization of academic qualifications"
 
 #: .\flows\templates\flows\admissions_guide.html:467
 msgid "讀書計畫"
-msgstr ""
+msgstr "reading plan"
 
 #: .\flows\templates\flows\admissions_guide.html:473
 msgid "教育部臺灣獎學金"
-msgstr ""
+msgstr "Ministry of Education Taiwan Scholarship"
 
 #: .\flows\templates\flows\admissions_guide.html:474
-msgid ""
-"每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，"
-"需透過台灣駐外機構或各大學推薦申請。"
+msgid "每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，需透過台灣駐外機構或各大學推薦申請。"
 msgstr ""
+"Monthly living expenses range from NT$15,000 to NT$25,000 (depending on the "
+"academic system). Tuition and miscellaneous fees are waived. Applications "
+"can be made for 1 to 4 years. Places are limited. Applications must be "
+"recommended by Taiwanese overseas agencies or universities."
 
 #: .\flows\templates\flows\admissions_guide.html:476
 msgid "NT$15,000~/月"
-msgstr ""
+msgstr "NT$15,000~/month"
 
 #: .\flows\templates\flows\admissions_guide.html:477
 msgid "免學雜費"
-msgstr ""
+msgstr "Free tuition and fees"
 
 #: .\flows\templates\flows\admissions_guide.html:478
 msgid "名額有限"
-msgstr ""
+msgstr "Limited places"
 
 #: .\flows\templates\flows\admissions_guide.html:484
 msgid "入台後必辦事項"
-msgstr ""
+msgstr "Things to do after arriving in Taiwan"
 
 #: .\flows\templates\flows\admissions_guide.html:485
-msgid ""
-"持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
-"立銀行帳戶等。"
+msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
 msgstr ""
+"After checking in with a student residence permit, you must apply for an "
+"Alien Residence Certificate (ARC) within 15 days, and then apply for health "
+"insurance coverage, open a bank account, etc."
 
 #: .\flows\templates\flows\admissions_guide.html:487
 msgid "15 天內辦 ARC"
-msgstr ""
+msgstr "Apply for ARC within 15 days"
 
 #: .\flows\templates\flows\admissions_guide.html:488
 msgid "健保加保"
-msgstr ""
+msgstr "Health insurance supplement"
 
 #: .\flows\templates\flows\admissions_guide.html:499
-msgid ""
-"：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依"
-"協議返校抵免，通常免繳台灣學雜費。"
+msgid "：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依協議返校抵免，通常免繳台灣學雜費。"
 msgstr ""
+": The original school concludes an exchange agreement with a Taiwanese "
+"university to study for a short term (half a year or one academic year). "
+"Credits can be used as credits when returning to school according to the "
+"agreement, and Taiwan tuition and fees are usually exempted."
 
 #: .\flows\templates\flows\admissions_guide.html:506
 msgid "申請流程"
-msgstr ""
+msgstr "Application process"
 
 #: .\flows\templates\flows\admissions_guide.html:507
-msgid ""
-"透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申"
-"請，須先確認原校有締結交換協議。"
+msgid "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申請，須先確認原校有締結交換協議。"
 msgstr ""
+"Nominated through the Exchange and Cooperation Office of the original "
+"school, and then reviewed by National Taiwan University. If you cannot apply"
+" directly to National Taiwan University, you must first confirm that the "
+"original school has concluded an exchange agreement."
 
 #: .\flows\templates\flows\admissions_guide.html:509
 msgid "原校提名"
-msgstr ""
+msgstr "Nominated by original school"
 
 #: .\flows\templates\flows\admissions_guide.html:510
 msgid "需締結協議"
-msgstr ""
+msgstr "Agreement required"
 
 #: .\flows\templates\flows\admissions_guide.html:516
 msgid "期程與截止"
-msgstr ""
+msgstr "Schedule and deadlines"
 
 #: .\flows\templates\flows\admissions_guide.html:517
-msgid ""
-"上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月"
-"截止。依各校締約條件而有不同。"
+msgid "上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月截止。依各校締約條件而有不同。"
 msgstr ""
+"The nomination deadline for applicants who enrolled in the previous semester"
+" (September) is usually March to April; the deadline for nomination for "
+"applicants who enrolled in the next semester (February) is usually October "
+"to November. The contract conditions vary by school."
 
 #: .\flows\templates\flows\admissions_guide.html:519
 msgid "上學期：3～4 月"
-msgstr ""
+msgstr "Last semester: March to April"
 
 #: .\flows\templates\flows\admissions_guide.html:520
 msgid "下學期：10～11 月"
-msgstr ""
+msgstr "Next semester: October to November"
 
 #: .\flows\templates\flows\admissions_guide.html:526
 msgid "簽證與居留"
-msgstr ""
+msgstr "Visa and residence"
 
 #: .\flows\templates\flows\admissions_guide.html:527
-msgid ""
-"短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入"
-"台，並辦理外僑居留證。"
+msgid "短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入台，並辦理外僑居留證。"
 msgstr ""
+"For short-term stays (within 6 months), you can enter Taiwan with a tourist "
+"visa and do not need to apply for an ARC; if you stay for more than 6 "
+"months, you must enter Taiwan with a student residence permit and apply for "
+"an alien residence permit."
 
 #: .\flows\templates\flows\admissions_guide.html:529
 msgid "≤6 月：觀光簽"
-msgstr ""
+msgstr "≤6 months: tourist visa"
 
 #: .\flows\templates\flows\admissions_guide.html:530
 msgid ">6 月：需 ARC"
-msgstr ""
+msgstr ">6 months: ARC required"
 
 #: .\flows\templates\flows\admissions_guide.html:536
 msgid "費用說明"
-msgstr ""
+msgstr "Fee description"
 
 #: .\flows\templates\flows\admissions_guide.html:537
-msgid ""
-"依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行"
-"負擔，每月約 NT$10,000～15,000。"
+msgid "依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行負擔，每月約 NT$10,000～15,000。"
 msgstr ""
+"Under most exchange agreements, National Taiwan University waives tuition "
+"and fees for exchange students. Living expenses (dormitory, meals, "
+"transportation, etc.) need to be paid by yourself, which is about "
+"NT$10,000~15,000 per month."
 
 #: .\flows\templates\flows\admissions_guide.html:539
 msgid "學雜費全免"
-msgstr ""
+msgstr "Tuition and fees are free"
 
 #: .\flows\templates\flows\admissions_guide.html:540
 msgid "生活費自理"
-msgstr ""
+msgstr "Pay for your own living expenses"
 
 #: .\flows\templates\flows\admissions_guide.html:547
 msgid "各地區僑生申請資訊"
 msgstr ""
+"Application information for overseas Chinese students in various regions"
 
 #: .\flows\templates\flows\admissions_guide.html:550
-msgid ""
-"以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申"
-"請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
+msgid "以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
 msgstr ""
+"The following is information about the regional admissions offices of the "
+"Overseas Joint Admissions Committee (Overseas Joint Admissions Committee). "
+"Due to different academic systems in various regions, application "
+"qualifications and deadlines may be different. Please refer to the latest "
+"announcement from the Overseas Alliance."
 
 #: .\flows\templates\flows\admissions_guide.html:556 .\users\models.py:108
 #: .\users\templates\users\edit_profile.html:54
@@ -786,7 +840,7 @@ msgstr "Malaysia"
 #: .\flows\templates\flows\admissions_guide.html:660
 #: .\flows\templates\flows\admissions_guide.html:685
 msgid "招生學制"
-msgstr ""
+msgstr "Admissions and academic system"
 
 #: .\flows\templates\flows\admissions_guide.html:564
 #: .\flows\templates\flows\admissions_guide.html:589
@@ -795,11 +849,11 @@ msgstr ""
 #: .\flows\templates\flows\admissions_guide.html:664
 #: .\flows\templates\flows\admissions_guide.html:689
 msgid "主要學歷要求"
-msgstr ""
+msgstr "Main academic requirements"
 
 #: .\flows\templates\flows\admissions_guide.html:565
 msgid "SPM / STPM / UEC / A-Level"
-msgstr ""
+msgstr "SPM/STPM/UEC/A-Level"
 
 #: .\flows\templates\flows\admissions_guide.html:568
 #: .\flows\templates\flows\admissions_guide.html:593
@@ -808,7 +862,7 @@ msgstr ""
 #: .\flows\templates\flows\admissions_guide.html:668
 #: .\flows\templates\flows\admissions_guide.html:693
 msgid "報名截止（參考）"
-msgstr ""
+msgstr "Deadline for registration (reference)"
 
 #: .\flows\templates\flows\admissions_guide.html:572
 #: .\flows\templates\flows\admissions_guide.html:597
@@ -817,13 +871,12 @@ msgstr ""
 #: .\flows\templates\flows\admissions_guide.html:672
 #: .\flows\templates\flows\admissions_guide.html:697
 msgid "承辦窗口"
-msgstr ""
+msgstr "Undertaken window"
 
 #: .\flows\templates\flows\admissions_guide.html:573
-#, fuzzy
 #| msgid "馬來西亞"
 msgid "馬來西亞留台同學會"
-msgstr "Malaysia"
+msgstr "Malaysian Students Association in Taiwan"
 
 #: .\flows\templates\flows\admissions_guide.html:581 .\users\models.py:113
 #: .\users\templates\users\edit_profile.html:68
@@ -834,21 +887,21 @@ msgstr "Myanmar"
 #: .\flows\templates\flows\admissions_guide.html:586
 #: .\flows\templates\flows\admissions_guide.html:661
 msgid "僑先部 / 學士班"
-msgstr ""
+msgstr "Overseas Chinese Department/Bachelor's Program"
 
 #: .\flows\templates\flows\admissions_guide.html:590
 msgid "緬甸高中畢業（Matriculation）"
-msgstr ""
+msgstr "Myanmar High School Graduation (Matriculation)"
 
 #: .\flows\templates\flows\admissions_guide.html:594
 #: .\flows\templates\flows\admissions_guide.html:669
 #: .\flows\templates\flows\admissions_guide.html:694
 msgid "約每年 2～3 月"
-msgstr ""
+msgstr "Approximately February to March every year"
 
 #: .\flows\templates\flows\admissions_guide.html:598
 msgid "緬甸華校教師會"
-msgstr ""
+msgstr "Myanmar Chinese School Teachers Association"
 
 #: .\flows\templates\flows\admissions_guide.html:606 .\users\models.py:107
 #: .\users\templates\users\edit_profile.html:51
@@ -858,401 +911,479 @@ msgstr "Indonesia"
 
 #: .\flows\templates\flows\admissions_guide.html:615
 msgid "SMA / SMK 高中畢業"
-msgstr ""
+msgstr "SMA/SMK high school graduate"
 
 #: .\flows\templates\flows\admissions_guide.html:623
 msgid "印尼留台校友會"
-msgstr ""
+msgstr "Indonesian Alumni Association in Taiwan"
 
 #: .\flows\templates\flows\admissions_guide.html:631
 msgid "香港 / 澳門"
-msgstr ""
+msgstr "Hong Kong / Macau"
 
 #: .\flows\templates\flows\admissions_guide.html:636
 #: .\flows\templates\flows\admissions_guide.html:686
 msgid "學士班 / 研究所"
-msgstr ""
+msgstr "Bachelor's degree/graduate studies"
 
 #: .\flows\templates\flows\admissions_guide.html:640
 msgid "HKDSE / 澳門高中畢業"
-msgstr ""
+msgstr "HKDSE / Macau high school graduate"
 
 #: .\flows\templates\flows\admissions_guide.html:644
 msgid "約每年 2 月"
-msgstr ""
+msgstr "Approximately every February"
 
 #: .\flows\templates\flows\admissions_guide.html:648
 msgid "海聯會港澳組"
-msgstr ""
+msgstr "Hong Kong and Macao Group of the Maritime Federation"
 
 #: .\flows\templates\flows\admissions_guide.html:656
 msgid "泰北（北泰）"
-msgstr ""
+msgstr "Northern Thailand (Northern Thailand)"
 
 #: .\flows\templates\flows\admissions_guide.html:665
 msgid "泰北僑校高中畢業"
-msgstr ""
+msgstr "Graduated from high school in Northern Thailand"
 
 #: .\flows\templates\flows\admissions_guide.html:673
 msgid "泰北各僑校教師會"
-msgstr ""
+msgstr "Teachers Association of Overseas Chinese Schools in Northern Thailand"
 
 #: .\flows\templates\flows\admissions_guide.html:681
 msgid "日本 / 韓國 / 新加坡 / 菲律賓"
-msgstr ""
+msgstr "Japan / South Korea / Singapore / Philippines"
 
 #: .\flows\templates\flows\admissions_guide.html:690
 msgid "各國高中 / 大學畢業"
-msgstr ""
+msgstr "High school/university graduates from various countries"
 
 #: .\flows\templates\flows\admissions_guide.html:698
 msgid "海聯會或各地台灣辦事處"
-msgstr ""
+msgstr "ALATS or various Taiwan offices"
 
 #: .\flows\templates\flows\admissions_guide.html:705
 msgid "學費與生活費參考"
-msgstr ""
+msgstr "Tuition fees and living expenses reference"
 
 #: .\flows\templates\flows\admissions_guide.html:708
-msgid ""
-"以下費用資料為概略參考，實際金額依各校、各系所及入學年度公告為準。請務必向目"
-"標學校確認最新收費標準。"
+msgid "以下費用資料為概略參考，實際金額依各校、各系所及入學年度公告為準。請務必向目標學校確認最新收費標準。"
 msgstr ""
+"The following fee information is a rough reference. The actual amount is "
+"subject to the announcements of each school, department and admission year. "
+"Be sure to check with your target school for the latest fee schedule."
 
 #: .\flows\templates\flows\admissions_guide.html:713
 msgid "費用項目"
-msgstr ""
+msgstr "Expense items"
 
 #: .\flows\templates\flows\admissions_guide.html:714
 msgid "金額（新臺幣）"
-msgstr ""
+msgstr "Amount (NTD)"
 
 #: .\flows\templates\flows\admissions_guide.html:715
 msgid "備註"
-msgstr ""
+msgstr "Remark"
 
 #: .\flows\templates\flows\admissions_guide.html:721
 msgid "學士班學雜費（文法商）"
-msgstr ""
+msgstr "Tuition and fees for bachelor's degree (Grammar and Business)"
 
 #: .\flows\templates\flows\admissions_guide.html:722
 #: .\flows\templates\flows\admissions_guide.html:730
 #: .\flows\templates\flows\admissions_guide.html:738
 #: .\flows\templates\flows\admissions_guide.html:746
 msgid "每學期"
-msgstr ""
+msgstr "every semester"
 
 #: .\flows\templates\flows\admissions_guide.html:724
 msgid "約 NT$28,000 ～ 35,000"
-msgstr ""
+msgstr "About NT$28,000 ~ 35,000"
 
 #: .\flows\templates\flows\admissions_guide.html:725
 msgid "僑生與本地生同標準"
-msgstr ""
+msgstr "Overseas students and local students have the same standards"
 
 #: .\flows\templates\flows\admissions_guide.html:729
 msgid "學士班學雜費（理工醫）"
 msgstr ""
+"Tuition and Miscellaneous Fees for Bachelor's Degree (Science, Engineering, "
+"Medicine)"
 
 #: .\flows\templates\flows\admissions_guide.html:732
 msgid "約 NT$35,000 ～ 45,000"
-msgstr ""
+msgstr "About NT$35,000 ~ 45,000"
 
 #: .\flows\templates\flows\admissions_guide.html:733
 msgid "部分系所有額外實習費"
-msgstr ""
+msgstr "Some departments have additional internship fees"
 
 #: .\flows\templates\flows\admissions_guide.html:737
 msgid "研究所學雜費（碩士）"
-msgstr ""
+msgstr "Graduate Tuition and Fees (Master's)"
 
 #: .\flows\templates\flows\admissions_guide.html:740
 msgid "約 NT$30,000 ～ 48,000"
-msgstr ""
+msgstr "About NT$30,000 ~ 48,000"
 
 #: .\flows\templates\flows\admissions_guide.html:741
 msgid "英語授課專班費用較高"
-msgstr ""
+msgstr "English-taught special classes are more expensive"
 
 #: .\flows\templates\flows\admissions_guide.html:745
 msgid "宿舍費（學校宿舍）"
-msgstr ""
+msgstr "Dormitory fee (school dormitory)"
 
 #: .\flows\templates\flows\admissions_guide.html:748
 msgid "約 NT$8,000 ～ 18,000"
-msgstr ""
+msgstr "About NT$8,000 ~ 18,000"
 
 #: .\flows\templates\flows\admissions_guide.html:749
 msgid "依房型，境外生享優先保障"
 msgstr ""
+"Depending on the room type, overseas students enjoy priority protection"
 
 #: .\flows\templates\flows\admissions_guide.html:753
 msgid "生活費（餐飲 / 交通 / 日用）"
-msgstr ""
+msgstr "Living expenses (meals/transportation/daily necessities)"
 
 #: .\flows\templates\flows\admissions_guide.html:754
 msgid "每月"
-msgstr ""
+msgstr "per month"
 
 #: .\flows\templates\flows\admissions_guide.html:756
 msgid "約 NT$8,000 ～ 15,000"
-msgstr ""
+msgstr "About NT$8,000 ~ 15,000"
 
 #: .\flows\templates\flows\admissions_guide.html:757
 msgid "視個人消費習慣而異"
-msgstr ""
+msgstr "Varies depending on personal spending habits"
 
 #: .\flows\templates\flows\admissions_guide.html:761
 msgid "全民健康保險費"
-msgstr ""
+msgstr "National health insurance premium"
 
 #: .\flows\templates\flows\admissions_guide.html:762
 msgid "每月（持 ARC 加保後）"
-msgstr ""
+msgstr "Monthly (after adding insurance with ARC)"
 
 #: .\flows\templates\flows\admissions_guide.html:764
 msgid "約 NT$749"
-msgstr ""
+msgstr "About NT$749"
 
 #: .\flows\templates\flows\admissions_guide.html:765
 msgid "在台超過 4 個月須加保"
 msgstr ""
+"If you stay in Taiwan for more than 4 months, you must purchase insurance"
 
 #: .\flows\templates\flows\admissions_guide.html:771
 msgid "申請時程建議（學士班僑生為例）"
 msgstr ""
+"Suggested application schedule (for overseas Chinese students in bachelor’s "
+"degree program as an example)"
 
 #: .\flows\templates\flows\admissions_guide.html:776
 msgid "了解申請資訊與準備文件"
-msgstr ""
+msgstr "Understand application information and prepare documents"
 
 #: .\flows\templates\flows\admissions_guide.html:777
-msgid ""
-"前往海聯會官網確認當年度招生簡章，了解各學制申請資格、需備文件及時程。同時確"
-"認學歷文件（成績單、畢業證書）是否需要公認證。"
+msgid "前往海聯會官網確認當年度招生簡章，了解各學制申請資格、需備文件及時程。同時確認學歷文件（成績單、畢業證書）是否需要公認證。"
 msgstr ""
+"Go to the official website of the Overseas Alliance to confirm the current "
+"year's admissions brochure and learn about the application qualifications, "
+"required documents and schedule for each academic system. Also confirm "
+"whether academic documents (transcripts, graduation certificates) require "
+"notarization."
 
 #: .\flows\templates\flows\admissions_guide.html:778
 msgid "每年 10 月～12 月"
-msgstr ""
+msgstr "Every year from October to December"
 
 #: .\flows\templates\flows\admissions_guide.html:779
 msgid "準備學歷文件"
-msgstr ""
+msgstr "Prepare academic documents"
 
 #: .\flows\templates\flows\admissions_guide.html:785
 msgid "向當地承辦窗口取得申請表"
-msgstr ""
+msgstr "Obtain the application form from the local hosting window"
 
 #: .\flows\templates\flows\admissions_guide.html:786
-msgid ""
-"聯繫所在地區的海聯會承辦窗口（如馬來西亞留台同學會、緬甸華校教師會等），取得"
-"當年度申請表及相關說明，確認繳件方式（線上 / 郵寄）。"
+msgid "聯繫所在地區的海聯會承辦窗口（如馬來西亞留台同學會、緬甸華校教師會等），取得當年度申請表及相關說明，確認繳件方式（線上 / 郵寄）。"
 msgstr ""
+"Contact the organizer of the Overseas Alliance in your region (such as the "
+"Malaysian Alumni Association in Taiwan, Myanmar Chinese School Teachers "
+"Association, etc.) to obtain the current year's application form and "
+"relevant instructions, and confirm the payment method (online/mail)."
 
 #: .\flows\templates\flows\admissions_guide.html:787
 msgid "每年 1 月"
-msgstr ""
+msgstr "every January"
 
 #: .\flows\templates\flows\admissions_guide.html:788
 msgid "提早聯繫避免遺漏"
-msgstr ""
+msgstr "Contact early to avoid missing out"
 
 #: .\flows\templates\flows\admissions_guide.html:794
 msgid "線上報名並繳交備審資料"
-msgstr ""
+msgstr "Register online and submit application materials"
 
 #: .\flows\templates\flows\admissions_guide.html:795
-msgid ""
-"至海聯會網路報名系統填寫志願序（可填多個志願），並上傳或郵寄所需文件（成績"
-"單、護照、照片等）。確認申請費繳納方式。"
+msgid "至海聯會網路報名系統填寫志願序（可填多個志願），並上傳或郵寄所需文件（成績單、護照、照片等）。確認申請費繳納方式。"
 msgstr ""
+"Fill in the application form (you can fill in multiple applications) in the "
+"Overseas Alliance online registration system, and upload or mail the "
+"required documents (transcripts, passports, photos, etc.). Confirm how to "
+"pay the application fee."
 
 #: .\flows\templates\flows\admissions_guide.html:796
 msgid "每年 1 月～3 月"
-msgstr ""
+msgstr "January to March every year"
 
 #: .\flows\templates\flows\admissions_guide.html:797
 msgid "備審文件繳交"
-msgstr ""
+msgstr "Submission of documents for review"
 
 #: .\flows\templates\flows\admissions_guide.html:803
 msgid "等待審查結果與放榜"
-msgstr ""
+msgstr "Waiting for review results and release of rankings"
 
 #: .\flows\templates\flows\admissions_guide.html:804
-msgid ""
-"申請截止後由海聯會及各校審查。通常於每年 5～6 月公告錄取結果。請密切注意海聯"
-"會官網及承辦窗口通知。"
+msgid "申請截止後由海聯會及各校審查。通常於每年 5～6 月公告錄取結果。請密切注意海聯會官網及承辦窗口通知。"
 msgstr ""
+"Applications will be reviewed by the AIS and each school after the deadline."
+" Admission results are usually announced from May to June every year. Please"
+" pay close attention to the official website of the Overseas Alliance and "
+"the notification from the hosting window."
 
 #: .\flows\templates\flows\admissions_guide.html:805
 msgid "每年 5 月～6 月"
-msgstr ""
+msgstr "May to June every year"
 
 #: .\flows\templates\flows\admissions_guide.html:811
 msgid "確認志願並辦理赴台簽證"
-msgstr ""
+msgstr "Confirm your intention and apply for a visa to Taiwan"
 
 #: .\flows\templates\flows\admissions_guide.html:812
-msgid ""
-"收到錄取通知後，依指定期限確認接受錄取。向台灣駐外機構（如台北經濟文化辦事"
-"處）申請學生居留簽證（Resident Visa）。"
+msgid "收到錄取通知後，依指定期限確認接受錄取。向台灣駐外機構（如台北經濟文化辦事處）申請學生居留簽證（Resident Visa）。"
 msgstr ""
+"After receiving the admission notice, confirm acceptance according to the "
+"specified deadline. Apply for a student residence visa (Resident Visa) from "
+"Taiwan’s overseas missions (such as the Taipei Economic and Cultural "
+"Office)."
 
 #: .\flows\templates\flows\admissions_guide.html:813
 msgid "每年 6 月～7 月"
-msgstr ""
+msgstr "June to July every year"
 
 #: .\flows\templates\flows\admissions_guide.html:814
 msgid "辦理學生居留簽"
-msgstr ""
+msgstr "Apply for student residence visa"
 
 #: .\flows\templates\flows\admissions_guide.html:820
 msgid "抵台入學報到"
-msgstr ""
+msgstr "Arrive in Taiwan and register for admission"
 
 #: .\flows\templates\flows\admissions_guide.html:821
-msgid ""
-"抵台後按學校通知時程辦理入學報到，並在 15 天內至移民署辦理外僑居留證（ARC）。"
-"同時參加學校國際事務處的新生說明會。"
+msgid "抵台後按學校通知時程辦理入學報到，並在 15 天內至移民署辦理外僑居留證（ARC）。同時參加學校國際事務處的新生說明會。"
 msgstr ""
+"After arriving in Taiwan, you must register for admission according to the "
+"schedule notified by the school, and go to the Immigration Department to "
+"apply for an Alien Residence Certificate (ARC) within 15 days. At the same "
+"time, attend the orientation meeting for new students held by the "
+"International Affairs Office of the school."
 
 #: .\flows\templates\flows\admissions_guide.html:822
 msgid "每年 8 月底～9 月初"
-msgstr ""
+msgstr "Every year from the end of August to the beginning of September"
 
 #: .\flows\templates\flows\admissions_guide.html:823
 msgid "完成入學！"
-msgstr ""
+msgstr "Enrollment completed!"
 
 #: .\flows\templates\flows\admissions_guide.html:829
 msgid "常見問題"
-msgstr ""
+msgstr "FAQ"
 
 #: .\flows\templates\flows\admissions_guide.html:833
 msgid "我是外籍生（非僑生），可以透過海聯會申請嗎？"
 msgstr ""
+"I am a foreign student (non-overseas Chinese), can I apply through the "
+"Overseas Alliance?"
 
 #: .\flows\templates\flows\admissions_guide.html:838
 msgid ""
-"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認"
-"定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
+"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
 msgstr ""
+"Can't. The Overseas Alliance Channel is only applicable to applicants with "
+"overseas Chinese status. Foreign students (holding foreign nationality but "
+"not qualifying as overseas students) must apply directly to the "
+"international admissions office of each university. For the admissions "
+"schedule and document requirements of each school, please see the official "
+"website of each school."
 
 #: .\flows\templates\flows\admissions_guide.html:844
 msgid "僑生與外籍生有什麼不同？"
 msgstr ""
+"What is the difference between overseas Chinese students and foreign "
+"students?"
 
 #: .\flows\templates\flows\admissions_guide.html:849
 msgid ""
-"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教"
-"育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國"
-"籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份"
-"認定不同，適用的招生管道與優惠也不同。"
+"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。"
 msgstr ""
+"\"Overseas Chinese students\" refer to those who have the nationality of the"
+" Republic of China or Chinese ancestry, have lived overseas for a long time "
+"and received education locally. They are recognized in accordance with the "
+"regulations of the Ministry of Education and can enjoy special channels such"
+" as the Overseas Chinese Student Scholarship and the Overseas Chinese "
+"Priority Department. \"Foreign students\" are those who hold a non-Republic "
+"of China nationality passport and usually apply through independent "
+"admissions channels of each school. They can apply for the Ministry of "
+"Education Taiwan Scholarship. The two identities are different, and the "
+"applicable enrollment channels and discounts are also different."
 
 #: .\flows\templates\flows\admissions_guide.html:855
 msgid "可以同時申請多所學校嗎？"
-msgstr ""
+msgstr "Can I apply to multiple schools at the same time?"
 
 #: .\flows\templates\flows\admissions_guide.html:860
 msgid ""
-"海聯會管道可填寫多個志願（學校 + 系所），系統依志願序分發，通常一個申請可含多"
-"個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但"
-"需留意各校的申請費及文件要求可能不同。"
+"海聯會管道可填寫多個志願（學校 + "
+"系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。"
 msgstr ""
+"You can fill in multiple applications (school + department) in the Overseas "
+"Alliance Pipeline, and the system distributes them in order of application. "
+"Usually, one application can contain multiple applications. When foreign "
+"students apply independently through each school, they only need to submit "
+"their applications to each school before the deadline. However, please note "
+"that the application fees and document requirements of each school may be "
+"different."
 
 #: .\flows\templates\flows\admissions_guide.html:866
 msgid "中文不夠好，可以申請中文授課的系所嗎？"
 msgstr ""
+"If my Chinese is not good enough, can I apply for a department that teaches "
+"in Chinese?"
 
 #: .\flows\templates\flows\admissions_guide.html:871
 msgid ""
-"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 以上），"
-"部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確"
-"認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所"
-"或語言先修課程。"
+"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 "
+"以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。"
 msgstr ""
+"Each department has different requirements for Chinese proficiency. Some "
+"departments have a minimum Chinese proficiency test threshold (such as TOCFL"
+" B1 or above), and some accept Chinese language courses as supplement after "
+"admission. It is recommended to check the latest admission brochure of the "
+"target department to confirm, or contact the school's International Affairs "
+"Office for enquiry. If your Chinese language skills are not up to standard, "
+"you may also consider applying to departments or language preparatory "
+"courses taught entirely in English."
 
 #: .\flows\templates\flows\admissions_guide.html:877
 msgid "申請獎學金需要另外申請嗎？"
-msgstr ""
+msgstr "Do I need to apply separately to apply for a scholarship?"
 
 #: .\flows\templates\flows\admissions_guide.html:882
 msgid ""
-"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直"
-"接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部"
-"分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
+"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
 msgstr ""
+"The Ministry of Education's Taiwan Scholarship needs to be applied for at "
+"the time of admission or separately after admission. You usually apply "
+"through Taiwan's overseas institutions or directly to the school. The number"
+" of places is limited and the competition is fierce. Some scholarships for "
+"overseas Chinese students are automatically reviewed by the Overseas Chinese"
+" Association or the school, while some require an additional application "
+"form to be filled out. The school's own entrance scholarships and bursaries "
+"are usually stated in the admission notice."
 
 #: .\flows\templates\flows\admissions_guide.html:888
 msgid "我已在台灣就讀，可以轉學嗎？"
-msgstr ""
+msgstr "I am already studying in Taiwan, can I transfer?"
 
 #: .\flows\templates\flows\admissions_guide.html:893
 msgid ""
-"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及"
-"放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標"
-"校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
+"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
 msgstr ""
+"Yes, but please note that transfer applications usually have grade "
+"restrictions (mostly sophomores and juniors), and you need to provide "
+"transcripts from the original school and proof of abandonment of student "
+"status. The transfer admissions process varies from school to school and is "
+"usually processed around the end of each school year. For details, please "
+"refer to the transfer examination guide of the target school. Graduate "
+"student transfer needs to be handled in accordance with the regulations of "
+"each institute."
 
 #: .\flows\templates\flows\admissions_guide.html:900
 msgid "重要聯絡與資源"
-msgstr ""
+msgstr "Important contacts and resources"
 
 #: .\flows\templates\flows\admissions_guide.html:905
 msgid "海外聯合招生委員會（海聯會）"
 msgstr ""
+"Overseas Joint Admissions Committee (Overseas Joint Admissions Committee)"
 
 #: .\flows\templates\flows\admissions_guide.html:907
 msgid "僑生申請主要管道，提供報名、志願填寫、成績查詢。"
 msgstr ""
+"The main application channel for overseas Chinese students, providing "
+"registration, volunteer filling, and score inquiry."
 
 #: .\flows\templates\flows\admissions_guide.html:915
 msgid "教育部學生事務及特教司"
 msgstr ""
+"Department of Student Affairs and Special Education, Ministry of Education"
 
 #: .\flows\templates\flows\admissions_guide.html:917
 msgid "僑生獎學金、臺灣獎學金主管機關，提供獎助學金申請辦法。"
 msgstr ""
+"The Overseas Chinese Scholarship and Taiwan Scholarship Authority provide "
+"scholarship and bursary application procedures."
 
 #: .\flows\templates\flows\admissions_guide.html:925
 msgid "學校國際事務處（OIA）"
-msgstr ""
+msgstr "School International Affairs Office (OIA)"
 
 #: .\flows\templates\flows\admissions_guide.html:927
 msgid "入學後主要聯繫窗口，提供簽證協助、ARC 辦理、生活輔導、獎學金申請。"
 msgstr ""
+"The main contact window after admission provides visa assistance, ARC "
+"processing, life guidance, and scholarship applications."
 
 #: .\flows\templates\flows\admissions_guide.html:934
 msgid "台灣駐外機構（辦理學生簽證）"
-msgstr ""
+msgstr "Taiwanese missions abroad (applying for student visa)"
 
 #: .\flows\templates\flows\admissions_guide.html:936
 msgid "確認錄取後，向所在地台灣駐外辦事處申請學生居留簽證（Resident Visa）。"
 msgstr ""
+"After confirming your admission, apply for a student residence visa "
+"(Resident Visa) to the Taiwanese overseas office where you are located."
 
 #: .\flows\templates\flows\admissions_guide.html:944
 msgid "外來人士在台生活諮詢專線"
-msgstr ""
+msgstr "Consultation hotline for foreigners living in Taiwan"
 
 #: .\flows\templates\flows\admissions_guide.html:946
-msgid ""
-"提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
+msgid "提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
 msgstr ""
+"Provide multi-language (English, Japanese, Korean, Vietnamese, Thai, "
+"Indonesian, etc.) consulting services to answer questions about living and "
+"studying in Taiwan."
 
 #: .\flows\templates\flows\admissions_guide.html:947
 msgid "免費電話：1925"
-msgstr ""
+msgstr "Toll free: 1925"
 
 #: .\flows\templates\flows\admissions_guide.html:954
 msgid "全民健康保險署"
-msgstr ""
+msgstr "National Health Insurance Agency"
 
 #: .\flows\templates\flows\admissions_guide.html:956
 msgid "持 ARC 在台居留超過 4 個月者須加入全民健保，由學校協助辦理加保手續。"
 msgstr ""
+"Those with ARC who have stayed in Taiwan for more than 4 months must join "
+"the National Health Insurance, and the school will assist in the insurance "
+"enrollment procedures."
 
 #: .\flows\templates\flows\guide_index.html:4
 #: .\flows\templates\flows\guide_index.html:11
@@ -1299,8 +1430,8 @@ msgstr "NCU Dormitory Application"
 #: .\flows\templates\flows\guide_index.html:52
 msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
 msgstr ""
-"Dormitory zones, facilities, application process, and priority guarantee for "
-"foreign students"
+"Dormitory zones, facilities, application process, and priority guarantee for"
+" foreign students"
 
 #: .\flows\templates\flows\guide_index.html:60
 msgid "中央大學公車指南"
@@ -1322,27 +1453,32 @@ msgstr ""
 
 #: .\flows\templates\flows\guide_index.html:82
 msgid "全民健保申請"
-msgstr ""
+msgstr "National health insurance application"
 
 #: .\flows\templates\flows\guide_index.html:83
 msgid "ARC 核發後即可加保，門診費用大幅降低"
 msgstr ""
+"You can add insurance after ARC is issued, and outpatient costs will be "
+"significantly reduced."
 
 #: .\flows\templates\flows\guide_index.html:91
 msgid "台灣銀行開戶"
-msgstr ""
+msgstr "Taiwan bank account opening"
 
 #: .\flows\templates\flows\guide_index.html:92
 msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
 msgstr ""
+"Essentials for receiving scholarships, post office, Taiwan Bank, Yushan Bank"
+" recommended comparison"
 
 #: .\flows\templates\flows\guide_index.html:100
 msgid "台灣門號申辦"
-msgstr ""
+msgstr "Taiwan phone number application"
 
 #: .\flows\templates\flows\guide_index.html:101
 msgid "預付卡 vs 月租方案，各大電信業者說明"
 msgstr ""
+"Prepaid cards vs monthly rental plans, explained by major telecom operators"
 
 #: .\flows\templates\flows\my_flows.html:3
 msgid "我的任務"
@@ -1374,79 +1510,79 @@ msgstr "Complete these tasks and prepare for your study life in Taiwan!"
 
 #: .\flows\templates\flows\my_flows.html:376
 msgid "📋 需要的文件"
-msgstr ""
+msgstr "📋 Required documents"
 
 #: .\flows\templates\flows\my_flows.html:377
 msgid "📍 辦理地點"
-msgstr ""
+msgstr "📍 Application location"
 
 #: .\flows\templates\flows\my_flows.html:378
 msgid "🗺️ 在地圖上查看"
-msgstr ""
+msgstr "🗺️ View on map"
 
 #: .\flows\templates\flows\my_flows.html:379
 msgid "🌐 官方網站"
-msgstr ""
+msgstr "🌐 Official website"
 
 #: .\flows\templates\flows\my_flows.html:380
 msgid "點此前往官方網站"
-msgstr ""
+msgstr "Click here to go to the official website"
 
 #: .\flows\templates\flows\my_flows.html:381
 msgid "📅 辦理時程"
-msgstr ""
+msgstr "📅 Processing timetable"
 
 #: .\flows\templates\flows\my_flows.html:382
 msgid "⚠️ 截止日期"
-msgstr ""
+msgstr "⚠️ Deadline"
 
 #: .\flows\templates\flows\my_flows.html:383
-msgid ""
-"請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的"
-"截止日期。"
+msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
 msgstr ""
+"Please fill in the <strong>Estimated arrival date in Taiwan</strong> in "
+"\"Personal Information\" first, so that the system can automatically "
+"calculate the deadline for this task."
 
 #: .\flows\templates\flows\my_flows.html:384
 msgid "📅 截止日期"
-msgstr ""
+msgstr "📅 Deadline"
 
 #: .\flows\templates\flows\my_flows.html:385
 msgid "任務備註"
-msgstr ""
+msgstr "Task notes"
 
 #: .\flows\templates\flows\my_flows.html:386
 msgid "在這裡輸入您的備註..."
-msgstr ""
+msgstr "Enter your notes here..."
 
 #: .\flows\templates\flows\my_flows.html:387
 msgid "儲存備註"
-msgstr ""
+msgstr "Save notes"
 
 #: .\flows\templates\flows\my_flows.html:389
 msgid "未命名任務"
-msgstr ""
+msgstr "Unnamed task"
 
 #: .\flows\templates\flows\my_flows.html:390
 msgid "無詳細說明"
-msgstr ""
+msgstr "No detailed description"
 
 #: .\flows\templates\flows\my_flows.html:391
 msgid "暫無詳細資料"
-msgstr ""
+msgstr "No details yet"
 
 #: .\flows\templates\flows\my_flows.html:392
-#, fuzzy
 #| msgid "已完成"
 msgid "完成"
-msgstr "Completed"
+msgstr "Finish"
 
 #: .\flows\templates\flows\my_flows.html:393
 msgid "已完成任務"
-msgstr ""
+msgstr "Task completed"
 
 #: .\flows\templates\flows\my_flows.html:394
 msgid "未完成任務"
-msgstr ""
+msgstr "Unfinished tasks"
 
 #: .\templates\base.html:26
 msgid "確認操作"
@@ -1469,10 +1605,9 @@ msgid "來臺就學小幫手"
 msgstr "Study-in-Taiwan Assistant"
 
 #: .\templates\base.html:72
-#, fuzzy
 #| msgid "同學"
 msgid " 同學"
-msgstr "Student"
+msgstr "classmate"
 
 #: .\templates\base.html:75 .\users\templates\users\dashboard.html:112
 msgid "登出"
@@ -1580,10 +1715,9 @@ msgid "即將到期任務"
 msgstr "Upcoming Due Tasks"
 
 #: .\users\templates\users\dashboard.html:46
-#, fuzzy
 #| msgid "沒有未讀通知 🎉"
 msgid "未讀通知"
-msgstr "No unread notifications 🎉"
+msgstr "unread notifications"
 
 #: .\users\templates\users\dashboard.html:52
 msgid "目前入學狀態"
@@ -1616,6 +1750,8 @@ msgstr "Edit Information"
 #: .\users\templates\users\dashboard.html:109
 msgid "確定要登出嗎？登出後將返回登入頁面。"
 msgstr ""
+"Are you sure you want to log out? After logging out, you will be returned to"
+" the login page."
 
 #: .\users\templates\users\dashboard.html:119
 msgid "近期待辦任務"
@@ -1681,6 +1817,8 @@ msgstr "School"
 #: .\users\templates\users\edit_profile.html:109
 msgid "就讀學校於註冊完成後即與帳號永久綁定，無法修改"
 msgstr ""
+"Once registration is completed, the school you attend is permanently bound "
+"to your account and cannot be modified."
 
 #: .\users\templates\users\edit_profile.html:116
 #: .\users\templates\users\profile_setup.html:164
@@ -1820,12 +1958,10 @@ msgid "流程提醒"
 msgstr "Process Reminders"
 
 #: .\users\templates\users\login.html:23
-msgid ""
-"系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任"
-"務，並以進度方式提醒你一步一步完成。"
+msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
 msgstr ""
-"The system automatically generates important tasks for visa application, pre-"
-"arrival, and post-arrival based on your nationality, identity type, and "
+"The system automatically generates important tasks for visa application, "
+"pre-arrival, and post-arrival based on your nationality, identity type, and "
 "current status, and reminds you step by step through progress tracking."
 
 #: .\users\templates\users\login.html:41
@@ -1833,21 +1969,17 @@ msgid "資訊管理"
 msgstr "Information Management"
 
 #: .\users\templates\users\login.html:42
-msgid ""
-"把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
-"確資料，不再被零散資訊搞混。"
+msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
 msgstr ""
 "It integrates visa, ARC, health insurance, accommodation, and school "
-"registration information into a one-stop page, helping students find correct "
-"information more easily without being confused by scattered sources."
+"registration information into a one-stop page, helping students find correct"
+" information more easily without being confused by scattered sources."
 
 #: .\users\templates\users\login.html:65
-msgid ""
-"當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 "
-"AI 小幫手快速獲得協助。"
+msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
 msgstr ""
-"When you do not know what to do first, which documents to prepare, or who to "
-"ask, you can get quick help directly through the AI assistant."
+"When you do not know what to do first, which documents to prepare, or who to"
+" ask, you can get quick help directly through the AI assistant."
 
 #: .\users\templates\users\login.html:81
 msgid "顯示第一張介紹"
@@ -1861,12 +1993,14 @@ msgstr "Show the second introduction slide"
 msgid "顯示第三張介紹"
 msgstr "Show the third introduction slide"
 
-#: .\users\templates\users\login.html:95 .\users\templates\users\login.html:134
+#: .\users\templates\users\login.html:95
+#: .\users\templates\users\login.html:134
 #: .\users\templates\users\login.html:152
 msgid "登入"
 msgstr "Log In"
 
-#: .\users\templates\users\login.html:97 .\users\templates\users\login.html:154
+#: .\users\templates\users\login.html:97
+#: .\users\templates\users\login.html:154
 msgid "註冊帳號"
 msgstr "Register Account"
 
@@ -1960,35 +2094,36 @@ msgstr "Log in now"
 
 #: .\users\templates\users\login.html:228
 msgid "請確認您的電子信箱"
-msgstr ""
+msgstr "Please confirm your email"
 
 #: .\users\templates\users\login.html:230
 msgid "驗證信已寄至"
-msgstr ""
+msgstr "Verification letter has been sent to"
 
 #: .\users\templates\users\login.html:237
 msgid "請至信箱點擊驗證連結，完成驗證後系統將自動引導您填寫個人資料。"
 msgstr ""
+"Please go to your mailbox and click the verification link. After completing "
+"the verification, the system will automatically guide you to fill in your "
+"personal information."
 
 #: .\users\templates\users\login.html:238
 msgid "驗證連結有效期限為"
-msgstr ""
+msgstr "The verification link is valid for"
 
 #: .\users\templates\users\login.html:238
 msgid "24 小時"
-msgstr ""
+msgstr "24 hours"
 
 #: .\users\templates\users\login.html:242
-#, fuzzy
 #| msgid "重新寄送驗證信"
 msgid "重新發送驗證信"
-msgstr "Resend Verification Email"
+msgstr "Resend verification letter"
 
 #: .\users\templates\users\login.html:246
-#, fuzzy
 #| msgid "返回登入"
 msgid "已驗證？返回登入"
-msgstr "Back to Login"
+msgstr "Verified? Return to login"
 
 #: .\users\templates\users\logout_redirect.html:10
 msgid "登出中…"
@@ -2016,8 +2151,7 @@ msgid "開始使用"
 msgstr "Start Using"
 
 #: .\users\templates\users\profile_setup.html:35
-msgid ""
-"這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
+msgid "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
 msgstr ""
 "This information will be used to generate your personalized study-in-Taiwan "
 "process. Please fill it in accurately to receive the most suitable step-by-"
@@ -2028,26 +2162,27 @@ msgid "請選擇國籍"
 msgstr "Please select your nationality"
 
 #: .\users\templates\users\profile_setup.html:63
-#, fuzzy
 #| msgid "就讀學校"
 msgid "請選擇就讀學校"
-msgstr "School"
+msgstr "Please select your school"
 
 #: .\users\templates\users\profile_setup.html:65
 msgid "綜合大學"
-msgstr ""
+msgstr "comprehensive university"
 
 #: .\users\templates\users\profile_setup.html:87
 msgid "科技大學"
-msgstr ""
+msgstr "University of Science and Technology"
 
 #: .\users\templates\users\profile_setup.html:98
 msgid "師範／教育大學"
-msgstr ""
+msgstr "Normal University/University of Education"
 
 #: .\users\templates\users\profile_setup.html:114
 msgid "目前僅開放國立中央大學（NCU）的個人化流程"
 msgstr ""
+"Currently only the National Central University (NCU) personalization process"
+" is open"
 
 #: .\users\templates\users\profile_setup.html:123
 msgid "請選擇身份別"
@@ -2062,10 +2197,9 @@ msgid "辦理簽證等手續"
 msgstr "Handling visa and related procedures"
 
 #: .\users\templates\users\profile_setup.html:145
-#, fuzzy
 #| msgid "抵臺後"
 msgid "入臺後"
-msgstr "Arrived in Taiwan"
+msgstr "After entering Taiwan"
 
 #: .\users\templates\users\profile_setup.html:146
 msgid "辦理 ARC 等後續"
@@ -2101,11 +2235,11 @@ msgstr "Status not selected"
 
 #: .\users\templates\users\profile_setup.html:216
 msgid "資料儲存後，系統將根據您的"
-msgstr ""
+msgstr "After the data is saved, the system will use your"
 
 #: .\users\templates\users\profile_setup.html:219
 msgid "自動生成個人化任務流程。"
-msgstr ""
+msgstr "Automatically generate personalized task processes."
 
 #: .\users\templates\users\reset_password.html:4
 #: .\users\templates\users\reset_password.html:11
@@ -2135,178 +2269,6 @@ msgstr "Password reset successful. Please log in again."
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "Reset failed. The link may have expired."
-
-#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
-#~ msgstr ""
-#~ "Enter your question, and the system will organize suggestions based on "
-#~ "your identity and status."
-
-#~| msgid ""
-#~| "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做"
-#~| "什麼"
-#~ msgid ""
-#~ "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什"
-#~ "麼"
-#~ msgstr ""
-#~ ". You can ask me about the study-in-Taiwan process, such as visas, ARC, "
-#~ "health insurance, accommodation, registration, or what to do after "
-#~ "arrival."
-
-#~ msgid "繁體中文"
-#~ msgstr "Traditional Chinese"
-
-#~ msgid "English"
-#~ msgstr "English"
-
-#~ msgid "日本語"
-#~ msgstr "Japanese"
-
-#~ msgid "မြန်မာဘာသာ"
-#~ msgstr "Burmese"
-
-#~ msgid "Bahasa Indonesia"
-#~ msgstr "Indonesian"
-
-#~ msgid "ภาษาไทย"
-#~ msgstr "Thai"
-
-#~ msgid "Bahasa Melayu"
-#~ msgstr "Malay"
-
-#~ msgid "   同學"
-#~ msgstr "classmate"
-
-#~ msgid "電子郵件為必填欄位"
-#~ msgstr "Email is required"
-
-#~ msgid "系統管理員"
-#~ msgstr "System Administrator"
-
-#~ msgid "角色"
-#~ msgstr "Role"
-
-#~ msgid "啟用狀態"
-#~ msgstr "Active Status"
-
-#~ msgid "工作人員狀態"
-#~ msgstr "Staff Status"
-
-#~ msgid "建立時間"
-#~ msgstr "Created Time"
-
-#~ msgid "最後登入IP"
-#~ msgstr "Last Login IP"
-
-#~ msgid "Email 已驗證"
-#~ msgstr "Email Verified"
-
-#~ msgid "使用者"
-#~ msgstr "User"
-
-#~ msgid "僑生（海外華裔）"
-#~ msgstr "Overseas Chinese Student"
-
-#~ msgid "外籍生（一般外國學生）"
-#~ msgstr "International Student"
-
-#~ msgid "僑大先修生"
-#~ msgstr "Overseas Chinese Preparatory Student"
-
-#~ msgid "已收到錄取通知"
-#~ msgstr "Admission notice received"
-
-#~ msgid "入境前準備中"
-#~ msgstr "Preparing before arrival"
-
-#~ msgid "已抵臺就學中"
-#~ msgstr "Already studying in Taiwan"
-
-#~ msgid "使用者帳號"
-#~ msgstr "User Account"
-
-#~ msgid "頭像"
-#~ msgstr "Avatar"
-
-#~ msgid "慣用語言"
-#~ msgstr "Preferred Language"
-
-#~ msgid "更新時間"
-#~ msgstr "Updated Time"
-
-#~ msgid "學生資料"
-#~ msgstr "Student Profile"
-
-#~ msgid "驗證 Token"
-#~ msgstr "Verification Token"
-
-#~ msgid "是否已使用"
-#~ msgstr "Used"
-
-#~ msgid "Email 驗證 Token"
-#~ msgstr "Email Verification Token"
-
-#~ msgid "IP 位址"
-#~ msgstr "IP Address"
-
-#~ msgid "使用者代理"
-#~ msgstr "User Agent"
-
-#~ msgid "登入時間"
-#~ msgstr "Login Time"
-
-#~ msgid "是否成功"
-#~ msgstr "Success"
-
-#, python-format
-#~ msgid "你好，%(name)s 👋"
-#~ msgstr "Hello, %(name)s 👋"
-
-#~ msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
-#~ msgstr ""
-#~ ", welcome to StudyGo Taiwan. Your personalized study-in-Taiwan process is "
-#~ "ready."
-
-#~ msgid "個人化流程生成後顯示"
-#~ msgstr "Shown after the personalized process is generated"
-
-#~ msgid "連接模塊三後顯示"
-#~ msgstr "Shown after Module 3 is connected"
-
-#~ msgid "信箱已驗證"
-#~ msgstr "Email Verified"
-
-#~ msgid "信箱未驗證"
-#~ msgstr "Email Not Verified"
-
-#~ msgid "任務清單由模塊二提供"
-#~ msgstr "The task list is provided by Module 2"
-
-#~ msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
-#~ msgstr ""
-#~ "After Module 2 (Process and Task Management) is completed, your "
-#~ "personalized task list will be shown here."
-
-#~ msgid "例如：國立臺灣大學"
-#~ msgstr "For example: National Taiwan University"
-
-#~ msgid "準備來臺流程"
-#~ msgstr "Preparing for the Taiwan arrival process"
-
-#~ msgid ""
-#~ "\n"
-#~ "            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與\n"
-#~ "            <b>入學狀態</b> 自動生成個人化任務流程。\n"
-#~ "            "
-#~ msgstr ""
-#~ "\n"
-#~ "            After the information is saved, the system will automatically "
-#~ "generate a personalized task process based on your <b>nationality</b>, "
-#~ "<b>identity type</b>, and\n"
-#~ "            <b>admission status</b>.\n"
-#~ "            "
-
-#~ msgid "未讀的通知"
-#~ msgstr "unread notifications"
 
 msgid "地圖導覽"
 msgstr "Map & Navigation"
@@ -2642,11 +2604,285 @@ msgstr "Admissions Guide"
 msgid "申請資格、時程、所需文件與注意事項整理"
 msgstr "Eligibility, timeline, required documents, and important notes"
 
+msgid "國立臺灣科技大學（NTUST）"
+msgstr "National Taiwan University of Science and Technology (NTUST)"
+
+msgid "國立臺灣大學（NTU）"
+msgstr "National Taiwan University (NTU)"
+
+msgid "國立聯合大學（NUU）"
+msgstr "National United University (NUU)"
+
+msgid "國立雲林科技大學（YunTech）"
+msgstr "National Yunlin University of Science and Technology (YunTech)"
+
+msgid "國立臺中科技大學（NTCUST）"
+msgstr "National Taichung University of Science and Technology (NTCUST)"
+
+msgid "國立臺北大學（NTPU）"
+msgstr "National Taipei University (NTPU)"
+
+msgid "國立臺北商業大學（NTUB）"
+msgstr "National Taipei University of Business (NTUB)"
+
+msgid "國立成功大學（NCKU）"
+msgstr "National Cheng Kung University (NCKU)"
+
+msgid "國立臺北教育大學（NTUE）"
+msgstr "National Taipei University of Education (NTUE)"
+
+msgid "國立清華大學（NTHU）"
+msgstr "National Tsing Hua University (NTHU)"
+
+msgid "國立金門大學（NQU）"
+msgstr "National Quemoy University (NQU)"
+
+msgid "國立空中大學（NOU）"
+msgstr "National Aerial University (NOU)"
+
+msgid "國立中山大學（NSYSU）"
+msgstr "National Sun Yat-sen University (NSYSU)"
+
+msgid "國立彰化師範大學（NCUE）"
+msgstr "National Changhua Normal University (NCUE)"
+
+msgid "國立臺北科技大學（NTUT）"
+msgstr "National Taipei University of Technology (NTUT)"
+
+msgid "國立暨南國際大學（NCNU）"
+msgstr "National Jinan International University (NCNU)"
+
+msgid "..."
+msgstr ""
+
+msgid "國立宜蘭大學（NIU）"
+msgstr "National Yilan University (NIU)"
+
+msgid "國立東華大學（NDHU）"
+msgstr "National Dong Hwa University (NDHU)"
+
+msgid "國立臺南大學（NUTN）"
+msgstr "National Tainan University (NUTN)"
+
+msgid "國立臺灣師範大學（NTNU）"
+msgstr "National Taiwan Normal University (NTNU)"
+
+msgid "國立陽明交通大學（NYCU）"
+msgstr "National Yang Ming Chiao Tung University (NYCU)"
+
+msgid "國立高雄餐旅大學（NKUHT）"
+msgstr "National Kaohsiung University of Hospitality and Tourism (NKUHT)"
+
+msgid "國立中興大學（NCHU）"
+msgstr "National Chung Hsing University (NCHU)"
+
+msgid "國立澎湖科技大學（NPU）"
+msgstr "National Penghu University of Science and Technology (NPU)"
+
+msgid "國立高雄科技大學（NKUST）"
+msgstr "National Kaohsiung University of Science and Technology (NKUST)"
+
+msgid "國立臺中教育大學（NTCU）"
+msgstr "National Taichung University of Education (NTCU)"
+
+msgid "國立政治大學（NCCU）"
+msgstr "National Chengchi University (NCCU)"
+
+msgid "國立屏東大學（NPTU）"
+msgstr "National Pingtung University (NPTU)"
+
+msgid "國立嘉義大學（NCYU）"
+msgstr "National Chiayi University (NCYU)"
+
+msgid "國立臺東大學（NTTU）"
+msgstr "National Taitung University (NTTU)"
+
+msgid "國立中央大學（NCU）"
+msgstr "National Central University (NCU)"
+
+msgid "其他（Other）"
+msgstr "Other"
+
+msgid "國立臺灣體育運動大學（NTUS）"
+msgstr "National Taiwan Sports University (NTUS)"
+
+msgid "國立虎尾科技大學（NFU）"
+msgstr "National Huwei University of Technology (NFU)"
+
+msgid "國立屏東科技大學（NPUST）"
+msgstr "National Pingtung University of Science and Technology (NPUST)"
+
+msgid "國立高雄師範大學（NKNU）"
+msgstr "National Kaohsiung Normal University (NKNU)"
+
+#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
+#~ msgstr ""
+#~ "Enter your question, and the system will organize suggestions based on your "
+#~ "identity and status."
+
+#~ msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
+#~ msgstr ""
+#~ ". You can ask me about the study-in-Taiwan process, such as visas, ARC, "
+#~ "health insurance, accommodation, registration, or what to do after arrival."
+
+#~ msgid "繁體中文"
+#~ msgstr "Traditional Chinese"
+
+#~ msgid "English"
+#~ msgstr "English"
+
+#~ msgid "日本語"
+#~ msgstr "Japanese"
+
+#~ msgid "မြန်မာဘာသာ"
+#~ msgstr "Burmese"
+
+#~ msgid "Bahasa Indonesia"
+#~ msgstr "Indonesian"
+
+#~ msgid "ภาษาไทย"
+#~ msgstr "Thai"
+
+#~ msgid "Bahasa Melayu"
+#~ msgstr "Malay"
+
+#~ msgid "   同學"
+#~ msgstr "classmate"
+
+#~ msgid "電子郵件為必填欄位"
+#~ msgstr "Email is required"
+
+#~ msgid "系統管理員"
+#~ msgstr "System Administrator"
+
+#~ msgid "角色"
+#~ msgstr "Role"
+
+#~ msgid "啟用狀態"
+#~ msgstr "Active Status"
+
+#~ msgid "工作人員狀態"
+#~ msgstr "Staff Status"
+
+#~ msgid "建立時間"
+#~ msgstr "Created Time"
+
+#~ msgid "最後登入IP"
+#~ msgstr "Last Login IP"
+
+#~ msgid "Email 已驗證"
+#~ msgstr "Email Verified"
+
+#~ msgid "使用者"
+#~ msgstr "User"
+
+#~ msgid "僑生（海外華裔）"
+#~ msgstr "Overseas Chinese Student"
+
+#~ msgid "外籍生（一般外國學生）"
+#~ msgstr "International Student"
+
+#~ msgid "僑大先修生"
+#~ msgstr "Overseas Chinese Preparatory Student"
+
+#~ msgid "已收到錄取通知"
+#~ msgstr "Admission notice received"
+
+#~ msgid "入境前準備中"
+#~ msgstr "Preparing before arrival"
+
+#~ msgid "已抵臺就學中"
+#~ msgstr "Already studying in Taiwan"
+
+#~ msgid "使用者帳號"
+#~ msgstr "User Account"
+
+#~ msgid "頭像"
+#~ msgstr "Avatar"
+
+#~ msgid "慣用語言"
+#~ msgstr "Preferred Language"
+
+#~ msgid "更新時間"
+#~ msgstr "Updated Time"
+
+#~ msgid "學生資料"
+#~ msgstr "Student Profile"
+
+#~ msgid "驗證 Token"
+#~ msgstr "Verification Token"
+
+#~ msgid "是否已使用"
+#~ msgstr "Used"
+
+#~ msgid "Email 驗證 Token"
+#~ msgstr "Email Verification Token"
+
+#~ msgid "IP 位址"
+#~ msgstr "IP Address"
+
+#~ msgid "使用者代理"
+#~ msgstr "User Agent"
+
+#~ msgid "登入時間"
+#~ msgstr "Login Time"
+
+#~ msgid "是否成功"
+#~ msgstr "Success"
+
+#, python-format
+#~ msgid "你好，%(name)s 👋"
+#~ msgstr "Hello, %(name)s 👋"
+
+#~ msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+#~ msgstr ""
+#~ ", welcome to StudyGo Taiwan. Your personalized study-in-Taiwan process is "
+#~ "ready."
+
+#~ msgid "個人化流程生成後顯示"
+#~ msgstr "Shown after the personalized process is generated"
+
+#~ msgid "連接模塊三後顯示"
+#~ msgstr "Shown after Module 3 is connected"
+
+#~ msgid "信箱已驗證"
+#~ msgstr "Email Verified"
+
+#~ msgid "信箱未驗證"
+#~ msgstr "Email Not Verified"
+
+#~ msgid "任務清單由模塊二提供"
+#~ msgstr "The task list is provided by Module 2"
+
+#~ msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
+#~ msgstr ""
+#~ "After Module 2 (Process and Task Management) is completed, your personalized"
+#~ " task list will be shown here."
+
+#~ msgid "例如：國立臺灣大學"
+#~ msgstr "For example: National Taiwan University"
+
+#~ msgid "準備來臺流程"
+#~ msgstr "Preparing for the Taiwan arrival process"
+
+#~ msgid ""
+#~ "\n"
+#~ "            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與\n"
+#~ "            <b>入學狀態</b> 自動生成個人化任務流程。\n"
+#~ "            "
+#~ msgstr ""
+#~ "\n"
+#~ "            After the information is saved, the system will automatically generate a personalized task process based on your <b>nationality</b>, <b>identity type</b>, and\n"
+#~ "            <b>admission status</b>.\n"
+#~ "            "
+
+#~ msgid "未讀的通知"
+#~ msgstr "unread notifications"
+
 #~ msgid "回到儀表板"
 #~ msgstr "Back to Dashboard"
 
-#~ msgid ""
-#~ "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
+#~ msgid "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
 #~ msgstr ""
 #~ "Based on your profile, it helps organize pre-arrival, post-arrival, visa, "
 #~ "ARC, health insurance, and daily life information."
