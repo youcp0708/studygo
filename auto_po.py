@@ -11,6 +11,7 @@ LANGUAGES = {
     'ms': 'ms',
     'my': 'my', # Myanmar (Burmese)
     'th': 'th',
+    'ko': 'ko',
 }
 
 def extract_strings(root_dir):

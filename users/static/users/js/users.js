@@ -274,18 +274,20 @@ function backToLogin() {
 ════════════════════════════════════════ */
 async function handleProfileSetup(e) {
   e.preventDefault();
-  clearErrors(['nationalityErr', 'universityErr', 'identityErr', 'statusErr']);
+  clearErrors(['nationalityErr', 'universityErr', 'identityErr', 'statusErr', 'arrivalErr']);
 
   const nationality = document.getElementById('setupNationality').value;
   const university = document.getElementById('setupUniversity').value.trim();
   const identity = document.getElementById('setupIdentity').value;
   const status = document.getElementById('admissionStatusVal').value;
+  const arrival = document.getElementById('setupArrival')?.value || '';
 
   let ok = true;
   if (!nationality) { showError('nationalityErr', '請選擇國籍'); ok = false; }
   if (!university) { showError('universityErr', '請選擇就讀學校'); ok = false; }
   if (!identity) { showError('identityErr', '請選擇身份別'); ok = false; }
   if (!status) { showError('statusErr', '請選擇入學狀態'); ok = false; }
+  if (!arrival) { showError('arrivalErr', '請填寫預計抵台日期'); ok = false; }
   if (!ok) return;
 
   setLoading('setupSubmitBtn', true);
@@ -296,7 +298,7 @@ async function handleProfileSetup(e) {
     identity_type: identity,
     admission_status: status,
     department: document.getElementById('setupDept')?.value || '',
-    expected_arrival: document.getElementById('setupArrival')?.value || null,
+    expected_arrival: arrival,
   };
 
   const { ok: apiOk, data } = await apiFetch('/api/users/profile/', 'POST', body);
