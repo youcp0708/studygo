@@ -1,0 +1,459 @@
+{# guides/templates/guides/guide_scholarship.html — 獎助學金 #}
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "獎助學金" %} — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  .gsc-wrap { width:min(1440px,96%); margin:0 auto; padding:32px 24px 72px; }
+
+  .gsc-hero {
+    background:linear-gradient(135deg,#1e3a5f 0%,#b45309 100%);
+    color:#fff; border-radius:20px; padding:36px 44px 32px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .gsc-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:88px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .gsc-hero h2 { font-size:26px; font-weight:900; margin:0 0 8px; }
+  .gsc-hero p  { opacity:.85; font-size:15px; margin:0; }
+
+  .gsc-back {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
+  }
+  .gsc-back:hover { color:var(--primary-dark); }
+
+  .gsc-label {
+    font-size:15px; font-weight:900; color:var(--primary-dark);
+    padding:0 0 10px; margin:32px 0 16px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  .gsc-alert {
+    border-radius:12px; padding:14px 18px; font-size:13px;
+    line-height:1.7; margin-bottom:16px;
+  }
+  .gsc-alert.info  { background:#eff6ff; border-left:4px solid #3b82f6; color:#1e40af; }
+  .gsc-alert.warn  { background:#fff7ed; border-left:4px solid #f59e0b; color:#92400e; }
+  .gsc-alert.red   { background:#fef2f2; border-left:4px solid #ef4444; color:#7f1d1d; }
+  .gsc-alert.green { background:#f0fdf4; border-left:4px solid #22c55e; color:#166534; }
+
+  /* 管道快覽 */
+  .gsc-portal-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:8px;
+  }
+  .gsc-portal-card {
+    border-radius:14px; padding:18px 16px; text-decoration:none;
+    display:flex; flex-direction:column; gap:6px;
+    border:1.5px solid var(--border); background:#fff;
+    transition:box-shadow .2s, transform .15s;
+  }
+  .gsc-portal-card:hover { box-shadow:0 4px 16px rgba(0,0,0,.1); transform:translateY(-2px); }
+  .gsc-portal-card .pc-icon  { font-size:24px; }
+  .gsc-portal-card .pc-name  { font-size:14px; font-weight:800; color:var(--primary-dark); }
+  .gsc-portal-card .pc-desc  { font-size:12px; color:var(--muted); line-height:1.5; }
+
+  /* 卡片 */
+  .gsc-card {
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:16px; padding:24px 24px 20px; margin-bottom:20px;
+  }
+  .gsc-card h3 {
+    font-size:15px; font-weight:900; color:var(--primary-dark);
+    margin:0 0 14px; display:flex; align-items:center; gap:8px;
+  }
+
+  /* 表格 */
+  .gsc-table-wrap { overflow-x:auto; margin-bottom:4px; }
+  .gsc-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .gsc-table th {
+    background:var(--primary); color:#fff;
+    padding:10px 14px; text-align:left; font-weight:700; font-size:12px;
+  }
+  .gsc-table td { padding:10px 14px; border-bottom:1px solid #f0f0f0; vertical-align:top; line-height:1.6; }
+  .gsc-table tr:last-child td { border-bottom:none; }
+  .gsc-table tr:nth-child(even) td { background:#f8fafc; }
+
+  .gsc-amount {
+    font-weight:800; color:#d97706; white-space:nowrap;
+  }
+
+  /* 重要條件列表 */
+  .gsc-rule-list { list-style:none; padding:0; margin:12px 0 0; }
+  .gsc-rule-list li {
+    padding:8px 0; border-bottom:1px solid #f0f0f0;
+    font-size:13px; color:#444; line-height:1.6;
+    display:flex; gap:8px; align-items:flex-start;
+  }
+  .gsc-rule-list li:last-child { border-bottom:none; }
+  .gsc-rule-list li::before { content:'•'; color:var(--primary); font-weight:900; flex-shrink:0; }
+
+  /* 重要提醒區塊 */
+  .gsc-warn-grid {
+    display:grid; grid-template-columns:repeat(2,1fr); gap:12px;
+  }
+  .gsc-warn-card {
+    border-radius:12px; padding:16px 18px; font-size:13px; line-height:1.7;
+  }
+  .gsc-warn-card.red    { background:#fef2f2; border:1.5px solid #fca5a5; color:#7f1d1d; }
+  .gsc-warn-card.amber  { background:#fff7ed; border:1.5px solid #fdba74; color:#92400e; }
+  .gsc-warn-card.blue   { background:#eff6ff; border:1.5px solid #93c5fd; color:#1e40af; }
+  .gsc-warn-card.green  { background:#f0fdf4; border:1.5px solid #86efac; color:#166534; }
+  .gsc-warn-card strong { display:block; font-weight:800; margin-bottom:4px; }
+
+  @media(max-width:700px){
+    .gsc-portal-grid { grid-template-columns:1fr; }
+    .gsc-warn-grid   { grid-template-columns:1fr; }
+    .gsc-hero { padding:28px 20px 24px; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="gsc-wrap">
+
+  <a class="gsc-back" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
+
+  <div class="gsc-hero">
+    <div class="bg-text">獎學金</div>
+    <h2>🏆 {% trans "獎助學金" %}</h2>
+    <p>{% trans "僑生獎學金・清寒補助・校內外各項申請指南" %}</p>
+  </div>
+
+  <!-- 申請管道快覽 -->
+  <div class="gsc-label">🔗 {% trans "申請管道快覽" %}</div>
+  <div class="gsc-portal-grid">
+    <a href="https://www.oia.ncu.edu.tw/tw/international-students-in-school-tw/overseas-chinese-related-links-tw/scholarship-and-bursary-tw.html" target="_blank" rel="noopener" class="gsc-portal-card">
+      <div class="pc-icon">🌏</div>
+      <div class="pc-name">{% trans "NCU 國際事務處（OIA）" %}</div>
+      <div class="pc-desc">{% trans "僑生專屬獎學金申請入口，電話：03-425-4945" %}</div>
+    </a>
+    <a href="https://scholarship.ocac.gov.tw" target="_blank" rel="noopener" class="gsc-portal-card">
+      <div class="pc-icon">🏛️</div>
+      <div class="pc-name">{% trans "僑委會獎學金系統" %}</div>
+      <div class="pc-desc">scholarship.ocac.gov.tw</div>
+    </a>
+    <a href="https://scholarship.careercenter.ncu.edu.tw" target="_blank" rel="noopener" class="gsc-portal-card">
+      <div class="pc-icon">🎓</div>
+      <div class="pc-name">{% trans "NCU Portal 獎助學金系統" %}</div>
+      <div class="pc-desc">{% trans "校內各項獎學金 / 校外獎學金公告" %}</div>
+    </a>
+  </div>
+
+  <!-- 僑生清寒助學金 -->
+  <div class="gsc-label">💰 {% trans "清寒補助（僑生）" %}</div>
+
+  <div class="gsc-alert info">
+    📅 {% trans "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。" %}
+  </div>
+
+  <div class="gsc-card">
+    <div class="gsc-table-wrap">
+      <table class="gsc-table">
+        <thead>
+          <tr>
+            <th>{% trans "名稱" %}</th>
+            <th>{% trans "金額" %}</th>
+            <th>{% trans "期限" %}</th>
+            <th>{% trans "備注" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{% trans "教育部清寒僑生助學金" %}</td>
+            <td><span class="gsc-amount">NT$3,000 / {% trans "月" %}</span></td>
+            <td>{% trans "1 學年（9 月至翌年 8 月）" %}</td>
+            <td>{% trans "每學年重新申請，可連續領取" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "僑委會清寒僑生助學金" %}</td>
+            <td>{% trans "依僑委會公告（每學期）" %}</td>
+            <td>{% trans "1 學期" %}</td>
+            <td>{% trans "需完成 10 小時服務學習（OIA，10–11 月 / 4–5 月）" %}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul class="gsc-rule-list">
+      <li>{% trans "須為依僑生回國就學辦法入學的僑生" %}</li>
+      <li>{% trans "前學期成績及格，操行成績 80 分以上" %}</li>
+      <li>{% trans "需持有「i 僑卡」，否則無法撥款" %}</li>
+      <li>{% trans "不得同時領取其他政府清寒補助或學費減免（不得重複領取）" %}</li>
+      <li>{% trans "所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學生證 / 護照 / ARC / 郵局存摺影本" %}</li>
+    </ul>
+  </div>
+
+  <!-- 僑委會新生獎學金 -->
+  <div class="gsc-label">🌟 {% trans "僑委會新生入學獎學金" %}</div>
+
+  <div class="gsc-alert info">
+    💡 {% trans "以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。" %}
+  </div>
+
+  <div class="gsc-card">
+    <div class="gsc-table-wrap">
+      <table class="gsc-table">
+        <thead>
+          <tr>
+            <th>{% trans "等級" %}</th>
+            <th>{% trans "年額" %}</th>
+            <th>{% trans "申請資格（成績）" %}</th>
+            <th>{% trans "續領條件" %}</th>
+            <th>{% trans "年限" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{% trans "頂尖" %}</td>
+            <td><span class="gsc-amount">NT$260,000</span></td>
+            <td>{% trans "88 分以上或班排前 5%" %}</td>
+            <td>{% trans "85 分以上或 A 等" %}</td>
+            <td>{% trans "4 年" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "傑出" %}</td>
+            <td><span class="gsc-amount">NT$100,000</span></td>
+            <td>{% trans "85 分以上或班排前 10%" %}</td>
+            <td>{% trans "80 分以上或 A- 等" %}</td>
+            <td>{% trans "4 年" %}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="gsc-rule-list">
+      <li>{% trans "操行成績 80 分以上，每學期最少 9 學分" %}</li>
+      <li>{% trans "不得同時領取其他政府獎學金" %}</li>
+    </ul>
+  </div>
+
+  <!-- 教育部台灣獎學金（外籍生） -->
+  <div class="gsc-label">🇹🇼 {% trans "教育部台灣獎學金（外籍生）" %}</div>
+
+  <div class="gsc-alert warn">
+    ⚠️ {% trans "台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居身分的僑生，香港澳門生亦不適用。" %}
+  </div>
+
+  <div class="gsc-card">
+    <div class="gsc-table-wrap">
+      <table class="gsc-table">
+        <thead>
+          <tr>
+            <th>{% trans "學制" %}</th>
+            <th>{% trans "每月生活費" %}</th>
+            <th>{% trans "學費補助" %}</th>
+            <th>{% trans "最長年限" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{% trans "學士" %}</td>
+            <td><span class="gsc-amount">NT$20,000 / {% trans "月" %}</span></td>
+            <td>{% trans "每學期最高 NT$40,000" %}</td>
+            <td>{% trans "4 年" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "碩士" %}</td>
+            <td><span class="gsc-amount">NT$20,000 / {% trans "月" %}</span></td>
+            <td>{% trans "每學期最高 NT$40,000" %}</td>
+            <td>{% trans "2 年" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "博士" %}</td>
+            <td><span class="gsc-amount">NT$28,000 / {% trans "月" %}</span></td>
+            <td>{% trans "每學期最高 NT$40,000" %}</td>
+            <td>{% trans "4 年" %}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="gsc-rule-list">
+      <li>{% trans "申請期間：每年 2 月 1 日至 3 月 31 日，向所在國 TECO（台灣辦事處）申請" %}</li>
+      <li>{% trans "官方入口：taiwanscholarship.moe.gov.tw" %}</li>
+    </ul>
+  </div>
+
+  <!-- 校內一般獎學金 -->
+  <div class="gsc-label">🏫 {% trans "校內獎學金" %}</div>
+
+  <div class="gsc-card">
+    <div class="gsc-table-wrap">
+      <table class="gsc-table">
+        <thead>
+          <tr>
+            <th>{% trans "名稱" %}</th>
+            <th>{% trans "金額" %}</th>
+            <th>{% trans "主要對象 / 條件" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{% trans "優秀學生獎學金" %}</td>
+            <td><span class="gsc-amount">NT$20,000</span></td>
+            <td>{% trans "競賽優異、發明專利、社務貢獻；需推薦信＋自傳，每學期申請" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "勵學獎學金（清寒）" %}</td>
+            <td><span class="gsc-amount">{% trans "最高" %} NT$10,000</span></td>
+            <td>{% trans "清寒優秀生，低收 / 單親家庭優先" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "學術成績優異榮譽榜" %}</td>
+            <td><span class="gsc-amount">NT$5,000</span></td>
+            <td>{% trans "學期成績系排前 5%，自動核發" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "傑出領導獎學金" %}</td>
+            <td><span class="gsc-amount">NT$100,000</span></td>
+            <td>{% trans "社團 / 自治會 / 宿委幹部或校外代表績效卓著" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "羅家倫先生紀念獎學金" %}</td>
+            <td><span class="gsc-amount">NT$100,000（6 名）</span></td>
+            <td>{% trans "大二以上或研究生；清寒優秀" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "李國鼎紀念獎學金" %}</td>
+            <td><span class="gsc-amount">NT$30,000（10 名）</span></td>
+            <td>{% trans "大二以上；清寒" %}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="gsc-alert info" style="margin-top:16px; margin-bottom:0;">
+      📋 {% trans "完整校內獎學金清單及申請時間：NCU Portal → 獎助學金暨工讀管理系統，或查" %}
+      <a href="https://military.ncu.edu.tw/scholarship.php" target="_blank" rel="noopener">{% trans "軍訓室獎學金頁 ↗" %}</a>
+    </div>
+  </div>
+
+  <!-- 安心就學 -->
+  <div class="gsc-label">🛡️ {% trans "安心就學支持計劃（需申請，學務處辦理）" %}</div>
+
+  <div class="gsc-card">
+    <div class="gsc-table-wrap">
+      <table class="gsc-table">
+        <thead>
+          <tr>
+            <th>{% trans "項目" %}</th>
+            <th>{% trans "金額" %}</th>
+            <th>{% trans "條件摘要" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{% trans "安心學習助學金" %}</td>
+            <td><span class="gsc-amount">NT$12,000 / {% trans "學期" %}</span></td>
+            <td>{% trans "低 / 中低收入或特殊情況；需學習計畫＋3 場活動＋2 次導師面談" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "競賽拔尖獎勵金" %}</td>
+            <td><span class="gsc-amount">{% trans "最高" %} NT$40,000</span></td>
+            <td>{% trans "國內外競賽獲獎" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "外語檢定認證助學金" %}</td>
+            <td><span class="gsc-amount">NT$2,000–10,000</span></td>
+            <td>{% trans "英語最高 NT$10,000；日文 / 法文 / 德文最高 NT$6,000，每學年 1 次" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "實習獎勵金" %}</td>
+            <td><span class="gsc-amount">NT$20,000–40,000</span></td>
+            <td>{% trans "140 小時以上實習，成績 85 分以上" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "宿舍學習助學金" %}</td>
+            <td><span class="gsc-amount">NT$200 / {% trans "時，最高" %} NT$5,000</span></td>
+            <td>{% trans "宿舍活動參與" %}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="gsc-rule-list">
+      <li>{% trans "申請入口：NCU ALC 安心就學頁面（ncu.edu.tw/ALC/）" %}</li>
+    </ul>
+  </div>
+
+  <!-- 校外獎學金 -->
+  <div class="gsc-label">🏢 {% trans "校外獎學金（精選）" %}</div>
+
+  <div class="gsc-card">
+    <div class="gsc-table-wrap">
+      <table class="gsc-table">
+        <thead>
+          <tr>
+            <th>{% trans "名稱" %}</th>
+            <th>{% trans "金額" %}</th>
+            <th>{% trans "申請期間（約）" %}</th>
+            <th>{% trans "主要條件" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{% trans "行天宮獎學金" %}</td>
+            <td><span class="gsc-amount">{% trans "最高" %} NT$200,000 / {% trans "年" %}</span></td>
+            <td>{% trans "上學期 9/30、下學期 3/10" %}</td>
+            <td>{% trans "大二以上；成績 80+；操行 A；清寒優先" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "孺鴻教育獎學金" %}</td>
+            <td><span class="gsc-amount">NT$100,000</span></td>
+            <td>{% trans "每年 3 月" %}</td>
+            <td>{% trans "成績 80+；GEPT 中級；操行 80+" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "平安菁英教育基金會" %}</td>
+            <td><span class="gsc-amount">NT$12,000 / {% trans "學期" %}</span></td>
+            <td>{% trans "2/12 – 3/5" %}</td>
+            <td>{% trans "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "合作金庫研究獎學金" %}</td>
+            <td><span class="gsc-amount">NT$30,000（碩）/ NT$40,000（博）</span></td>
+            <td>{% trans "1/13 – 5/5" %}</td>
+            <td>{% trans "大四或研究生；成績 80+" %}</td>
+          </tr>
+          <tr>
+            <td>{% trans "關渡宮助學金" %}</td>
+            <td><span class="gsc-amount">NT$5,000</span></td>
+            <td>{% trans "2/10 – 3/17" %}</td>
+            <td>{% trans "低 / 中低收入或身心障礙；成績 65+" %}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="gsc-rule-list">
+      <li>{% trans "每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期查看" %}</li>
+    </ul>
+  </div>
+
+  <!-- 重要提醒 -->
+  <div class="gsc-label">⚠️ {% trans "重要提醒" %}</div>
+  <div class="gsc-warn-grid">
+    <div class="gsc-warn-card red">
+      <strong>🚫 {% trans "不得重複領取" %}</strong>
+      {% trans "教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再申請。" %}
+    </div>
+    <div class="gsc-warn-card amber">
+      <strong>🪪 i {% trans "僑卡必備" %}</strong>
+      {% trans "申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。" %}
+    </div>
+    <div class="gsc-warn-card blue">
+      <strong>📄 {% trans "清寒證明須原件" %}</strong>
+      {% trans "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。" %}
+    </div>
+    <div class="gsc-warn-card green">
+      <strong>📅 {% trans "留意截止日" %}</strong>
+      {% trans "多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提早準備文件。" %}
+    </div>
+  </div>
+
+  <div class="gsc-alert info" style="margin-top:20px;">
+    📞 {% trans "NCU 國際事務處：+886-3-425-4945｜僑生獎助學金相關業務洽 OIA 辦理" %}
+  </div>
+
+</div>
+{% endblock %}

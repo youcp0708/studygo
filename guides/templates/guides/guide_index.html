@@ -181,10 +181,22 @@
   <div class="gi-section-label">🏡 {% trans "生活類" %}</div>
   <div class="gi-grid">
 
+    <a href="{% url 'guide_mental_health' %}" class="gi-card">
+      <div class="gi-icon">🌱</div>
+      <div class="gi-title">{% trans "心理支持" %}</div>
+      <div class="gi-desc">{% trans "諮商中心預約、壓力、人際困擾、24H 熱線" %}</div>
+    </a>
+
     <a href="{% url 'guide_medical' %}" class="gi-card">
       <div class="gi-icon">🏥</div>
       <div class="gi-title">{% trans "醫療資訊" %}</div>
       <div class="gi-desc">{% trans "衛保組、校外診所、周邊醫院、急診與緊急電話" %}</div>
+    </a>
+
+    <a href="{% url 'guide_scholarship' %}" class="gi-card">
+      <div class="gi-icon">🏆</div>
+      <div class="gi-title">{% trans "獎助學金" %}</div>
+      <div class="gi-desc">{% trans "僑生獎學金、清寒補助、校內外各項申請指南" %}</div>
     </a>
 
     <a href="{% url 'guide_nhi' %}" class="gi-card">
@@ -211,6 +223,12 @@
   <div class="gi-section-label">📚 {% trans "學業類" %}</div>
   <div class="gi-grid">
 
+    <a href="{% url 'guide_enrollment' %}" class="gi-card">
+      <div class="gi-icon">🗂️</div>
+      <div class="gi-title">{% trans "學籍辦理" %}</div>
+      <div class="gi-desc">{% trans "休學、復學、轉系、雙主修規定與流程" %}</div>
+    </a>
+
     <a href="{% url 'guide_course' %}" class="gi-card">
       <div class="gi-icon">📚</div>
       <div class="gi-title">{% trans "課務資訊" %}</div>
@@ -223,11 +241,29 @@
       <div class="gi-desc">{% trans "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準" %}</div>
     </a>
 
+    <a href="{% url 'guide_systems' %}" class="gi-card">
+      <div class="gi-icon">🖥️</div>
+      <div class="gi-title">{% trans "校內系統" %}</div>
+      <div class="gi-desc">{% trans "Portal 帳號啟用、ee-class 課程平台、學生信箱設定" %}</div>
+    </a>
+
   </div>
 
   <!-- 實用工具 -->
   <div class="gi-section-label">🛠 {% trans "實用工具" %}</div>
   <div class="gi-grid">
+
+    <a href="{% url 'guide_emergency' %}" class="gi-card">
+      <div class="gi-icon">🚨</div>
+      <div class="gi-title">{% trans "緊急聯絡" %}</div>
+      <div class="gi-desc">{% trans "110・119・112・校安中心・國際事務處" %}</div>
+    </a>
+
+    <a href="{% url 'guide_library' %}" class="gi-card">
+      <div class="gi-icon">📚</div>
+      <div class="gi-title">{% trans "圖書館" %}</div>
+      <div class="gi-desc">{% trans "借書規則、K書中心、學術資料庫、列印費用" %}</div>
+    </a>
 
     <a href="{% url 'guide_map' %}" class="gi-card">
       <div class="gi-icon">🗺</div>

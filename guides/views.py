@@ -67,6 +67,30 @@ def guide_graduation(request):
     return render(request, 'guides/guide_graduation.html')
 
 @login_required(login_url='/login/')
+def guide_scholarship(request):
+    return render(request, 'guides/guide_scholarship.html')
+
+@login_required(login_url='/login/')
+def guide_mental_health(request):
+    return render(request, 'guides/guide_mental_health.html')
+
+@login_required(login_url='/login/')
+def guide_enrollment(request):
+    return render(request, 'guides/guide_enrollment.html')
+
+@login_required(login_url='/login/')
+def guide_library(request):
+    return render(request, 'guides/guide_library.html')
+
+@login_required(login_url='/login/')
+def guide_emergency(request):
+    return render(request, 'guides/guide_emergency.html')
+
+@login_required(login_url='/login/')
+def guide_systems(request):
+    return render(request, 'guides/guide_systems.html')
+
+@login_required(login_url='/login/')
 def guide_map(request):
     from django.conf import settings
     from django.utils import translation

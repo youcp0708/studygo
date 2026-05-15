@@ -19,4 +19,10 @@ urlpatterns = [
     path('guides/medical/',            views.guide_medical,      name='guide_medical'),
     path('guides/course/',             views.guide_course,       name='guide_course'),
     path('guides/graduation/',         views.guide_graduation,   name='guide_graduation'),
+    path('guides/systems/',            views.guide_systems,      name='guide_systems'),
+    path('guides/emergency/',          views.guide_emergency,    name='guide_emergency'),
+    path('guides/library/',            views.guide_library,      name='guide_library'),
+    path('guides/enrollment/',         views.guide_enrollment,   name='guide_enrollment'),
+    path('guides/mental-health/',      views.guide_mental_health,name='guide_mental_health'),
+    path('guides/scholarship/',        views.guide_scholarship,  name='guide_scholarship'),
 ]
