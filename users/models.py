@@ -113,6 +113,8 @@ class StudentProfile(models.Model):
     ('Myanmar',     _('緬甸')),
     ('Japan',       _('日本')),
     ('Korea',       _('韓國')),
+    ('Hong Kong',   _('香港')),
+    ('Macao',       _('澳門')),
     ('Other',       _('其他')),
     ]
 

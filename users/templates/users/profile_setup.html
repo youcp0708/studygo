@@ -52,6 +52,8 @@
                 <option value="Myanmar">🇲🇲 {% trans "緬甸" %}</option>
                 <option value="Japan">🇯🇵 {% trans "日本" %}</option>
                 <option value="Korea">🇰🇷 {% trans "韓國" %}</option>
+                <option value="Hong Kong">🇭🇰 {% trans "香港" %}</option>
+                <option value="Macao">🇲🇴 {% trans "澳門" %}</option>
                 <option value="Other">🌍 {% trans "其他" %}</option>
               </select>
               <div class="field-error hidden" id="nationalityErr"></div>
@@ -154,9 +156,10 @@
           <div class="setup-section-title">{% trans "時間規劃" %}</div>
           <div class="field-row">
             <div class="field">
-              <label>{% trans "預計抵台日期" %}</label>
-              <input type="date" name="expected_arrival" id="setupArrival" onchange="updatePreview()" />
-              <div class="field-hint">{% trans "非必填" %}</div>
+              <label>{% trans "預計抵台日期" %} <span style="color:red;">*</span></label>
+              <input type="date" name="expected_arrival" id="setupArrival" onchange="updatePreview()" required />
+              <div class="field-hint">{% trans "必填" %}</div>
+              <div class="field-error hidden" id="arrivalErr"></div>
             </div>
 
             <div class="field">

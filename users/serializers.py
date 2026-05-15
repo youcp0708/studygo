@@ -90,6 +90,9 @@ class StudentProfileSerializer(serializers.ModelSerializer):
         read_only_fields = ('id', 'created_at', 'updated_at',
                             'nationality_display', 'identity_type_display',
                             'admission_status_display')
+        extra_kwargs = {
+            'expected_arrival': {'required': True, 'allow_null': False},
+        }
 
     def validate_nationality(self, value):
         valid = [c[0] for c in StudentProfile.NATIONALITY_CHOICES]

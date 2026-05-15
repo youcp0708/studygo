@@ -74,6 +74,12 @@
                 <option value="Korea" {% if profile.nationality == "Korea" %}selected{% endif %}>
                   🇰🇷 {% trans "韓國" %}
                 </option>
+                <option value="Hong Kong" {% if profile.nationality == "Hong Kong" %}selected{% endif %}>
+                  🇭🇰 {% trans "香港" %}
+                </option>
+                <option value="Macao" {% if profile.nationality == "Macao" %}selected{% endif %}>
+                  🇲🇴 {% trans "澳門" %}
+                </option>
                 <option value="Other" {% if profile.nationality == "Other" %}selected{% endif %}>
                   🌍 {% trans "其他" %}
                 </option>
