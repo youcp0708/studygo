@@ -20,6 +20,7 @@ LANGUAGE_LABELS = {
     'zh-hant': '繁體中文',
     'zh': '繁體中文',
     'en': 'English',
+    'vi': 'Tiếng Việt',
     'ja': '日本語',
     'my': 'မြန်မာဘာသာ',
     'id': 'Bahasa Indonesia',
@@ -32,6 +33,7 @@ LANGUAGE_LABELS_EN = {
     'zh-hant': 'Traditional Chinese',
     'zh': 'Traditional Chinese',
     'en': 'English',
+    'vi': 'Vietnamese',
     'ja': 'Japanese',
     'my': 'Burmese',
     'id': 'Indonesian',
@@ -44,6 +46,7 @@ LANGUAGE_LABELS_EN = {
 ANSWER_LABELS = {
     'zh-hant': ('個人化回答', '一般回答'),
     'en': ('Personalized answer', 'General answer'),
+    'vi': ('Câu trả lời cá nhân', 'Câu trả lời chung'),
     'ja': ('個別回答', '一般回答'),
     'my': ('ကိုယ်ရေးကိုယ်တာအခြေအနေအရ အဖြေ', 'ယေဘုယျအဖြေ'),
     'id': ('Jawaban personal', 'Jawaban umum'),
@@ -61,6 +64,8 @@ def normalize_language_code(language_code):
         return 'zh-hant'
     if code.startswith('en'):
         return 'en'
+    if code.startswith('vi'):
+        return 'vi'
     if code.startswith('ja'):
         return 'ja'
     if code.startswith('my'):
@@ -98,6 +103,7 @@ def detect_question_language(text):
     explicit_rules = [
         ('zh-hant', ['用中文回答', '用繁體中文回答', '請用中文', '請用繁體中文']),
         ('en', ['answer in english', 'use english', 'in english', '用英文回答', '請用英文']),
+        ('vi', ['trả lời bằng tiếng việt', 'dùng tiếng việt', 'reply in vietnamese', '用越南文回答', '請用越南文']),
         ('ja', ['日本語で', '日本語で答えて', '用日文回答', '請用日文']),
         ('ko', ['한국어로', '한국어로 답해', '한국어로 대답해', '用韓文回答', '請用韓文']),
         ('my', ['用緬文回答', '請用緬文', 'မြန်မာလို', 'မြန်မာဘာသာ']),
@@ -136,6 +142,14 @@ def detect_question_language(text):
 
     if any('가' <= ch <= '힯' for ch in text):
         return 'ko'
+
+    vietnamese_markers = [
+        'xin chào', 'cảm ơn', 'visa', 'hộ chiếu', 'thẻ cư trú', 'bảo hiểm',
+        'ký túc xá', 'đăng ký', 'đài loan', 'du học', 'tiếng việt',
+        'tôi', 'bạn', 'như thế nào', 'cần', 'được không',
+    ]
+    if any(word in lower_text for word in vietnamese_markers):
+        return 'vi'
 
     indonesian_markers = [
         'saya', 'anda', 'bagaimana', 'kapan', 'dokumen', 'kuliah',
@@ -606,6 +620,7 @@ def search_knowledge_base(question, language_code='zh-hant', limit=3):
 
         optional_fields = [
             ('title_en', 'content_en'),
+            ('title_vi', 'content_vi'),
             ('title_my', 'content_my'),
             ('title_id', 'content_id'),
             ('title_ms', 'content_ms'),
@@ -686,6 +701,7 @@ def remove_trailing_language_name(reply):
     language_words = [
         '繁體中文',
         'English',
+        'Tiếng Việt',
         '日本語',
         'မြန်မာဘာသာ',
         'Bahasa Indonesia',
@@ -759,6 +775,10 @@ def local_fallback_reply(question, user, language_code='zh-hant'):
             f'Jawapan peribadi:\n{name or "Pelajar"}, kunci AI belum ditetapkan, jadi saya belum dapat menjana jawapan peribadi yang lengkap.\n\n'
             'Jawapan umum:\nAnda boleh bertanya tentang visa, ARC, NHI, asrama, pendaftaran, dan proses belajar di Taiwan.'
         ),
+        'vi': (
+            f'Câu trả lời cá nhân:\n{name or "Bạn"}, khóa AI chưa được cài đặt, vì vậy tôi chưa thể tạo câu trả lời cá nhân đầy đủ.\n\n'
+            'Câu trả lời chung:\nBạn có thể hỏi về visa, ARC, bảo hiểm y tế NHI, ký túc xá, đăng ký nhập học và quy trình du học Đài Loan.'
+        ),
         'ko': (
             f'개인 맞춤 답변:\n{name or "학생"}, AI 키가 설정되지 않았으므로 개인 맞춤 답변을 생성할 수 없습니다.\n\n'
             '일반 답변:\n비자, ARC, NHI, 기숙사, 등록, 대만 유학 절차에 대해 질문할 수 있습니다.'
@@ -793,6 +813,7 @@ def generate_ai_reply(*, user, question, recent_messages):
             'id': 'Jawaban personal:\nPaket openai belum terpasang di backend.\n\nJawaban umum:\nJalankan: pip install -r requirements.txt',
             'th': 'คำตอบเฉพาะบุคคล:\nยังไม่ได้ติดตั้งแพ็กเกจ openai ใน backend\n\nคำตอบทั่วไป:\nโปรดรัน: pip install -r requirements.txt',
             'ms': 'Jawapan peribadi:\nPakej openai belum dipasang pada backend.\n\nJawapan umum:\nSila jalankan: pip install -r requirements.txt',
+            'vi': 'Câu trả lời cá nhân:\nGói openai chưa được cài đặt trên backend.\n\nCâu trả lời chung:\nVui lòng chạy: pip install -r requirements.txt',
             'ko': '개인 맞춤 답변:\n백엔드에 openai 패키지가 설치되지 않았습니다.\n\n일반 답변:\npip install -r requirements.txt 를 실행하세요.',
         }
 
@@ -870,6 +891,7 @@ def generate_ai_reply(*, user, question, recent_messages):
                 'id': 'Jawaban personal:\nSaya belum dapat menghasilkan jawaban lengkap saat ini.\n\nJawaban umum:\nAnda dapat bertanya tentang visa, ARC, NHI, asrama, registrasi, dan proses studi di Taiwan.',
                 'th': 'คำตอบเฉพาะบุคคล:\nขณะนี้ฉันยังไม่สามารถสร้างคำตอบที่สมบูรณ์ได้\n\nคำตอบทั่วไป:\nคุณสามารถถามเรื่องวีซ่า ARC NHI หอพัก การลงทะเบียน และขั้นตอนการมาเรียนที่ไต้หวันได้',
                 'ms': 'Jawapan peribadi:\nSaya belum dapat menghasilkan jawapan lengkap buat masa ini.\n\nJawapan umum:\nAnda boleh bertanya tentang visa, ARC, NHI, asrama, pendaftaran, dan proses belajar di Taiwan.',
+                'vi': 'Câu trả lời cá nhân:\nHiện tôi chưa thể tạo câu trả lời đầy đủ. Vui lòng thử hỏi theo cách khác.\n\nCâu trả lời chung:\nBạn có thể hỏi về visa, ARC, bảo hiểm y tế NHI, ký túc xá, đăng ký nhập học và quy trình du học Đài Loan.',
                 'ko': '개인 맞춤 답변:\n현재 완전한 답변을 생성할 수 없습니다. 다른 표현으로 다시 질문해 주세요.\n\n일반 답변:\n비자, ARC, NHI, 기숙사, 등록, 대만 유학 절차에 대해 질문할 수 있습니다.',
             }
             reply = empty_messages.get(language_code, empty_messages['zh-hant'])
@@ -889,6 +911,7 @@ def generate_ai_reply(*, user, question, recent_messages):
             'id': 'Jawaban personal:\nLayanan AI sementara tidak dapat terhubung.\n\nJawaban umum:\nSilakan coba lagi nanti. Ringkasan error: ',
             'th': 'คำตอบเฉพาะบุคคล:\nไม่สามารถเชื่อมต่อบริการ AI ได้ชั่วคราว\n\nคำตอบทั่วไป:\nกรุณาลองใหม่ภายหลัง สรุปข้อผิดพลาด: ',
             'ms': 'Jawapan peribadi:\nPerkhidmatan AI tidak dapat disambungkan buat sementara waktu.\n\nJawapan umum:\nSila cuba lagi kemudian. Ringkasan ralat: ',
+            'vi': 'Câu trả lời cá nhân:\nDịch vụ AI tạm thời không thể kết nối.\n\nCâu trả lời chung:\nVui lòng thử lại sau. Tóm tắt lỗi: ',
             'ko': '개인 맞춤 답변:\nAI 서비스에 일시적으로 연결할 수 없습니다.\n\n일반 답변:\n나중에 다시 시도해 주세요. 오류 요약: ',
         }
 

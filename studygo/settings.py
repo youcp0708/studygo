@@ -96,6 +96,7 @@ USE_TZ        = True
 LANGUAGES = [
     ('zh-hant', '繁體中文'),
     ('en', 'English'),
+    ('vi', 'Tiếng Việt'),
     ('my', 'မြန်မာဘာသာ'),
     ('id', 'Bahasa Indonesia'),
     ('ms', 'Bahasa Melayu'),

@@ -85,6 +85,7 @@ class StudentProfileSerializer(serializers.ModelSerializer):
             'identity_type', 'identity_type_display',
             'admission_status', 'admission_status_display',
             'expected_arrival', 'preferred_language',
+            'has_taiwan_id', 'is_deferred', 'has_indo_prep',
             'created_at', 'updated_at',
         )
         read_only_fields = ('id', 'created_at', 'updated_at',
@@ -141,6 +142,9 @@ class UpdateBasicInfoSerializer(serializers.Serializer):
         choices=[c[0] for c in StudentProfile.ADMISSION_STATUS_CHOICES], required=False)
     expected_arrival = serializers.DateField(required=False, allow_null=True)
     preferred_language = serializers.CharField(max_length=10, required=False)
+    has_taiwan_id = serializers.BooleanField(required=False, allow_null=True, default=None)
+    is_deferred   = serializers.BooleanField(required=False, allow_null=True, default=None)
+    has_indo_prep = serializers.BooleanField(required=False, allow_null=True, default=None)
 
 
 # ══════════════════════════════════════════

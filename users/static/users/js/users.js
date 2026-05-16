@@ -267,32 +267,40 @@ function backToLogin() {
   switchAuth('signin');
 }
 
-/* ════════════════════════════════════════
-   6. 個人資料設定（Step 2）
-   POST /api/users/profile/
-   Activity Diagram: 選擇國際/身份別/入學狀態 → 系統產生個人化流程
-════════════════════════════════════════ */
-async function handleProfileSetup(e) {
+/* ── 問答系統狀態 ── */
+let _quizFormData = null;          // 暫存原表單資料
+let _quizAnswers  = {};            // 問答結果
+let _quizStep     = 0;             // 當前題目 index
+let _quizSequence = [];            // 實際要顯示的題目 ID 序列
+let _quizTransitioning = false;
+
+/**
+ * Step 1: 驗證原有表單，進入問答模式
+ */
+function startProfileQuiz(e) {
   e.preventDefault();
   clearErrors(['nationalityErr', 'universityErr', 'identityErr', 'statusErr', 'arrivalErr']);
 
   const nationality = document.getElementById('setupNationality').value;
-  const university = document.getElementById('setupUniversity').value.trim();
-  const identity = document.getElementById('setupIdentity').value;
-  const status = document.getElementById('admissionStatusVal').value;
-  const arrival = document.getElementById('setupArrival')?.value || '';
+  const university  = document.getElementById('setupUniversity').value.trim();
+  const identity    = document.getElementById('setupIdentity').value;
+  const status      = document.getElementById('admissionStatusVal').value;
+  const arrival     = document.getElementById('setupArrival')?.value || '';
 
   let ok = true;
   if (!nationality) { showError('nationalityErr', '請選擇國籍'); ok = false; }
-  if (!university) { showError('universityErr', '請選擇就讀學校'); ok = false; }
-  if (!identity) { showError('identityErr', '請選擇身份別'); ok = false; }
-  if (!status) { showError('statusErr', '請選擇入學狀態'); ok = false; }
-  if (!arrival) { showError('arrivalErr', '請填寫預計抵台日期'); ok = false; }
-  if (!ok) return;
+  if (!university)  { showError('universityErr', '請選擇就讀學校'); ok = false; }
+  if (!identity)    { showError('identityErr', '請選擇身份別'); ok = false; }
+  if (!status)      { showError('statusErr', '請選擇入學狀態'); ok = false; }
+  if (!arrival)     { showError('arrivalErr', '請填寫預計抵台日期'); ok = false; }
+  if (!ok) {
+    const firstErr = document.querySelector('.field-error:not(.hidden)');
+    if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
 
-  setLoading('setupSubmitBtn', true);
-
-  const body = {
+  // 暫存表單資料
+  _quizFormData = {
     nationality,
     university,
     identity_type: identity,
@@ -301,11 +309,123 @@ async function handleProfileSetup(e) {
     expected_arrival: arrival,
   };
 
+  // 決定題目序列：Q1、Q2 必出；Q3 僅限印尼
+  _quizSequence = ['quizQ1', 'quizQ2'];
+  if (nationality === 'Indonesia') {
+    _quizSequence.push('quizQ3');
+  }
+
+  _quizStep = 0;
+  _quizAnswers = {};
+
+  // 設定進度指示器
+  _buildQuizProgress(_quizSequence.length);
+
+  // 啟動 overlay
+  const overlay = document.getElementById('quizOverlay');
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Fade in 第一題
+  setTimeout(() => {
+    const firstCard = document.getElementById(_quizSequence[0]);
+    firstCard.classList.add('visible');
+    _updateQuizDots(0);
+  }, 200);
+}
+
+/**
+ * 動態建構進度 dots（2 或 3 題）
+ */
+function _buildQuizProgress(total) {
+  const container = document.getElementById('quizProgress');
+  container.innerHTML = '';
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'quiz-dot' + (i === 0 ? ' active' : '');
+    dot.dataset.dot = i;
+    container.appendChild(dot);
+    if (i < total - 1) {
+      const line = document.createElement('div');
+      line.className = 'quiz-line';
+      line.dataset.line = i;
+      container.appendChild(line);
+    }
+  }
+}
+
+/**
+ * 更新進度 dots
+ */
+function _updateQuizDots(activeIndex) {
+  const dots  = document.querySelectorAll('#quizProgress .quiz-dot');
+  const lines = document.querySelectorAll('#quizProgress .quiz-line');
+  dots.forEach((dot, i) => {
+    dot.classList.remove('active', 'done');
+    if (i < activeIndex) dot.classList.add('done');
+    else if (i === activeIndex) dot.classList.add('active');
+  });
+  lines.forEach((line, i) => {
+    line.classList.toggle('done', i < activeIndex);
+  });
+}
+
+/**
+ * Step 2: 記錄答案並前進到下一題
+ */
+function answerQuiz(field, value) {
+  if (_quizTransitioning) return;
+  _quizTransitioning = true;
+
+  _quizAnswers[field] = value;
+
+  const currentCard = document.getElementById(_quizSequence[_quizStep]);
+  const nextStep    = _quizStep + 1;
+
+  // Fade out 當前卡片
+  currentCard.classList.remove('visible');
+  currentCard.classList.add('exit');
+
+  setTimeout(() => {
+    currentCard.classList.remove('exit');
+
+    if (nextStep >= _quizSequence.length) {
+      // 已回答完所有題目 → 提交資料
+      _updateQuizDots(nextStep);
+      submitProfileWithQuiz();
+      return;
+    }
+
+    // Fade in 下一題
+    _quizStep = nextStep;
+    _updateQuizDots(nextStep);
+    const nextCard = document.getElementById(_quizSequence[nextStep]);
+    setTimeout(() => {
+      nextCard.classList.add('visible');
+      _quizTransitioning = false;
+    }, 80);
+  }, 380);
+}
+
+/**
+ * Step 3: 合併表單 + 問答資料，提交至 API
+ */
+async function submitProfileWithQuiz() {
+  const body = {
+    ..._quizFormData,
+    has_taiwan_id: _quizAnswers.has_taiwan_id ?? null,
+    is_deferred:   _quizAnswers.is_deferred ?? null,
+    has_indo_prep: _quizAnswers.has_indo_prep ?? null,
+  };
+
   const { ok: apiOk, data } = await apiFetch('/api/users/profile/', 'POST', body);
 
-  setLoading('setupSubmitBtn', false);
-
   if (!apiOk) {
+    // 關閉 overlay，顯示錯誤
+    const overlay = document.getElementById('quizOverlay');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    _quizTransitioning = false;
     const msg = (data?.errors && Object.keys(data.errors).length > 0)
       ? Object.values(data.errors).flat().join('、')
       : (data?.message || '儲存失敗，請稍後再試');
@@ -316,6 +436,7 @@ async function handleProfileSetup(e) {
   showToast('資料已儲存！個人化流程已生成 🎉', 'success');
   setTimeout(() => { window.location.href = '/dashboard/'; }, 800);
 }
+
 
 /* ════════════════════════════════════════
    7. 更新基本資料
@@ -532,7 +653,9 @@ function updatePreview() {
   set('prevNationality', g('setupNationality')?.value || '國籍未選');
   set('prevIdentity', IDENTITY_LABELS[g('setupIdentity')?.value] || '身份別未選');
   set('prevStatus', STATUS_LABELS[g('admissionStatusVal')?.value] || '狀態未選');
-  set('prevUniv', g('setupUniversity')?.value || '—');
+  const univSel = g('setupUniversity');
+  const univLabel = univSel?.options[univSel.selectedIndex]?.text || univSel?.value || '—';
+  set('prevUniv', univLabel !== '請選擇就讀學校' ? univLabel : '—');
   set('prevDept', g('setupDept')?.value || '—');
   set('prevArrival', g('setupArrival')?.value || '—');
 }
