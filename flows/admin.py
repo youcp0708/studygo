@@ -96,6 +96,7 @@ class TaskAdmin(admin.ModelAdmin):
         'title_ja',
         'title_ko',
         'stage',
+        'region',
         'identity_type',
         'nationality',
         'university',
@@ -112,6 +113,7 @@ class TaskAdmin(admin.ModelAdmin):
                 'stage',
                 'title',
                 'description',
+                'region',
                 'identity_type',
                 'nationality',
                 'university',
@@ -200,6 +202,7 @@ class TaskAdmin(admin.ModelAdmin):
 
     list_filter = (
         'stage',
+        'region',
         'identity_type',
         'nationality',
         'university',
