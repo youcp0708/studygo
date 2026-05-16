@@ -102,18 +102,66 @@ class StudentProfile(models.Model):
     ('pre_arrival', _('入臺前準備')),
     ('arrived', _('抵臺後')),
 ]   
+    # ── 地區選項 (region) ──
+    REGION_CHOICES = [
+        ('East Asia', _('東亞')),
+        ('Southeast Asia', _('東南亞')),
+        ('South Asia', _('南亞')),
+        ('Middle East', _('中東')),
+        ('Europe', _('歐洲')),
+        ('North America', _('北美洲')),
+        ('Latin America', _('中南美洲')),
+        ('Africa', _('非洲')),
+        ('Oceania', _('大洋洲')),
+    ]
+
     # ── 國籍選項 (nationality) ──
     NATIONALITY_CHOICES = [
-    ('Indonesia',   _('印尼')),
-    ('Malaysia',    _('馬來西亞')),
-    ('Vietnam',     _('越南')),
-    ('Thailand',    _('泰國')),
-    ('Philippines', _('菲律賓')),
-    ('Cambodia',    _('柬埔寨')),
-    ('Myanmar',     _('緬甸')),
-    ('Japan',       _('日本')),
-    ('Korea',       _('韓國')),
-    ('Other',       _('其他')),
+        # 東亞
+        ('Japan',       _('日本')),
+        ('Korea',       _('韓國')),
+        ('Macau',       _('澳門')),
+        ('Hong Kong',   _('香港')),
+        ('Mongolia',    _('蒙古')),
+        # 東南亞
+        ('Indonesia',   _('印尼')),
+        ('Malaysia',    _('馬來西亞')),
+        ('Vietnam',     _('越南')),
+        ('Thailand',    _('泰國')),
+        ('Philippines', _('菲律賓')),
+        ('Cambodia',    _('柬埔寨')),
+        ('Myanmar',     _('緬甸')),
+        ('Singapore',   _('新加坡')),
+        # 南亞
+        ('India',       _('印度')),
+        ('Pakistan',    _('巴基斯坦')),
+        ('Bangladesh',  _('孟加拉')),
+        # 中東
+        ('Saudi Arabia',_('沙烏地阿拉伯')),
+        ('UAE',         _('阿拉伯聯合大公國')),
+        ('Turkey',      _('土耳其')),
+        # 歐洲
+        ('UK',          _('英國')),
+        ('France',      _('法國')),
+        ('Germany',     _('德國')),
+        ('Italy',       _('義大利')),
+        ('Spain',       _('西班牙')),
+        # 北美洲
+        ('USA',         _('美國')),
+        ('Canada',      _('加拿大')),
+        # 中南美洲
+        ('Brazil',      _('巴西')),
+        ('Mexico',      _('墨西哥')),
+        ('Argentina',   _('阿根廷')),
+        # 非洲
+        ('South Africa',_('南非')),
+        ('Egypt',       _('埃及')),
+        ('Nigeria',     _('奈及利亞')),
+        # 大洋洲
+        ('Australia',   _('澳洲')),
+        ('New Zealand', _('紐西蘭')),
+        
+        ('Other',       _('其他')),
     ]
 
     # ── 學校選項 (university) ──
@@ -165,6 +213,8 @@ class StudentProfile(models.Model):
     )
 
     # ── Class Diagram 欄位 ──
+    region           = models.CharField(max_length=50, choices=REGION_CHOICES,
+                                        blank=True, null=True, verbose_name='所屬地區')
     nationality      = models.CharField(max_length=50, choices=NATIONALITY_CHOICES,
                                         verbose_name='國籍')
     university       = models.CharField(max_length=200, choices=UNIVERSITY_CHOICES, verbose_name='就讀學校')

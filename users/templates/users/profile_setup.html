@@ -40,22 +40,32 @@
           <div class="setup-section-title">{% trans "基本資訊" %}</div>
           <div class="field-row">
             <div class="field">
+              <label>{% trans "所屬地區" %} Region</label>
+              <select name="region" id="setupRegion" required onchange="handleRegionChange(); updatePreview()">
+                <option value="">{% trans "請選擇地區" %}</option>
+                <option value="East Asia">🌏 {% trans "東亞" %}</option>
+                <option value="Southeast Asia">🌴 {% trans "東南亞" %}</option>
+                <option value="South Asia">🕌 {% trans "南亞" %}</option>
+                <option value="Middle East">🏜️ {% trans "中東" %}</option>
+                <option value="Europe">🏰 {% trans "歐洲" %}</option>
+                <option value="North America">🗽 {% trans "北美洲" %}</option>
+                <option value="Latin America">💃 {% trans "中南美洲" %}</option>
+                <option value="Africa">🦁 {% trans "非洲" %}</option>
+                <option value="Oceania">🦘 {% trans "大洋洲" %}</option>
+              </select>
+              <div class="field-error hidden" id="regionErr"></div>
+            </div>
+
+            <div class="field">
               <label>{% trans "國籍" %} Nationality</label>
               <select name="nationality" id="setupNationality" required onchange="updatePreview()">
-                <option value="">{% trans "請選擇國籍" %}</option>
-                <option value="Indonesia">🇮🇩 {% trans "印尼" %}</option>
-                <option value="Malaysia">🇲🇾 {% trans "馬來西亞" %}</option>
-                <option value="Vietnam">🇻🇳 {% trans "越南" %}</option>
-                <option value="Thailand">🇹🇭 {% trans "泰國" %}</option>
-                <option value="Philippines">🇵🇭 {% trans "菲律賓" %}</option>
-                <option value="Cambodia">🇰🇭 {% trans "柬埔寨" %}</option>
-                <option value="Myanmar">🇲🇲 {% trans "緬甸" %}</option>
-                <option value="Japan">🇯🇵 {% trans "日本" %}</option>
-                <option value="Korea">🇰🇷 {% trans "韓國" %}</option>
-                <option value="Other">🌍 {% trans "其他" %}</option>
+                <option value="">{% trans "請先選擇地區" %}</option>
               </select>
               <div class="field-error hidden" id="nationalityErr"></div>
             </div>
+          </div>
+
+          <div class="field-row">
 
             <div class="field">
               <label>{% trans "就讀學校" %}</label>

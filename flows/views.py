@@ -172,6 +172,8 @@ def init_student_tasks_view(request):
     # ── 計算哪些任務符合此學生的條件 ──
     eligible_task_ids = set()
     for task in all_tasks:
+        if task.region and profile.region not in task.region:
+            continue
         if task.identity_type and profile.identity_type not in task.identity_type:
             continue
         if task.nationality and profile.nationality not in task.nationality:

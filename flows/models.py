@@ -100,6 +100,12 @@ class Task(models.Model):
     description_ko = models.TextField(blank=True, verbose_name="任務說明 Korean")
 
     # 用來判斷這個任務適合哪種學生
+    region = MultiSelectField(
+        choices=StudentProfile.REGION_CHOICES,
+        blank=True,
+        null=True,
+        verbose_name="適用地區"
+    )
     identity_type = MultiSelectField(
         choices=StudentProfile.IDENTITY_CHOICES,
         blank=True,
