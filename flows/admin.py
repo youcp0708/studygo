@@ -96,9 +96,9 @@ class TaskAdmin(admin.ModelAdmin):
         'title_ja',
         'title_ko',
         'stage',
-        'region',
-        'identity_type',
-        'nationality',
+        'display_region',
+        'display_identity_type',
+        'display_nationality',
         'university',
         'admission_status',
         'deadline_type',
@@ -224,6 +224,18 @@ class TaskAdmin(admin.ModelAdmin):
     )
 
     ordering = ('stage__order', 'order')
+
+    def display_region(self, obj):
+        return obj.get_region_display() if obj.region else '-'
+    display_region.short_description = '適用地區'
+
+    def display_identity_type(self, obj):
+        return obj.get_identity_type_display() if obj.identity_type else '-'
+    display_identity_type.short_description = '適用身份類型'
+
+    def display_nationality(self, obj):
+        return obj.get_nationality_display() if obj.nationality else '-'
+    display_nationality.short_description = '適用國籍'
 
 
 @admin.register(StudentTask)
