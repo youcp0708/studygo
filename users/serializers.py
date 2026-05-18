@@ -80,7 +80,8 @@ class StudentProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model  = StudentProfile
         fields = (
-            'id', 'nationality', 'nationality_display',
+            'id', 'region', 'region_display',
+            'nationality', 'nationality_display',
             'university', 'department',
             'identity_type', 'identity_type_display',
             'admission_status', 'admission_status_display',
@@ -89,11 +90,20 @@ class StudentProfileSerializer(serializers.ModelSerializer):
             'created_at', 'updated_at',
         )
         read_only_fields = ('id', 'created_at', 'updated_at',
-                            'nationality_display', 'identity_type_display',
+                            'region_display', 'nationality_display', 'identity_type_display',
                             'admission_status_display')
         extra_kwargs = {
             'expected_arrival': {'required': True, 'allow_null': False},
         }
+
+    region_display = serializers.CharField(source='get_region_display', read_only=True)
+
+    def validate_region(self, value):
+        if value:
+            valid = [c[0] for c in StudentProfile.REGION_CHOICES]
+            if value not in valid:
+                raise serializers.ValidationError('無效的地區選項')
+        return value
 
     def validate_nationality(self, value):
         valid = [c[0] for c in StudentProfile.NATIONALITY_CHOICES]
@@ -105,6 +115,12 @@ class StudentProfileSerializer(serializers.ModelSerializer):
         valid = [c[0] for c in StudentProfile.IDENTITY_CHOICES]
         if value not in valid:
             raise serializers.ValidationError('無效的身份別選項')
+        return value
+
+    def validate_university(self, value):
+        valid = [c[0] for c in StudentProfile.UNIVERSITY_CHOICES]
+        if value not in valid:
+            raise serializers.ValidationError('無效的學校選項')
         return value
 
 
@@ -132,6 +148,8 @@ class UserDetailSerializer(serializers.ModelSerializer):
 # ══════════════════════════════════════════
 class UpdateBasicInfoSerializer(serializers.Serializer):
     name             = serializers.CharField(max_length=100, required=False)
+    region           = serializers.ChoiceField(
+        choices=[c[0] for c in StudentProfile.REGION_CHOICES], required=False, allow_null=True)
     nationality      = serializers.ChoiceField(
         choices=[c[0] for c in StudentProfile.NATIONALITY_CHOICES], required=False)
     university       = serializers.CharField(max_length=200, required=False)
@@ -145,6 +163,13 @@ class UpdateBasicInfoSerializer(serializers.Serializer):
     has_taiwan_id = serializers.BooleanField(required=False, allow_null=True, default=None)
     is_deferred   = serializers.BooleanField(required=False, allow_null=True, default=None)
     has_indo_prep = serializers.BooleanField(required=False, allow_null=True, default=None)
+
+    def validate_university(self, value):
+        if value:
+            valid = [c[0] for c in StudentProfile.UNIVERSITY_CHOICES]
+            if value not in valid:
+                raise serializers.ValidationError('無效的學校選項')
+        return value
 
 
 # ══════════════════════════════════════════

@@ -188,17 +188,44 @@ def init_student_tasks_view(request):
     all_tasks = Task.objects.all()
 
     # ── 計算哪些任務符合此學生的條件 ──
-    eligible_task_ids = set()
+    eligible_tasks = []
     for task in all_tasks:
-        if task.identity_type and task.identity_type != profile.identity_type:
+        if task.region and profile.region not in task.region:
             continue
-        if task.nationality and task.nationality != profile.nationality:
+        if task.identity_type and profile.identity_type not in task.identity_type:
+            continue
+        if task.nationality and profile.nationality not in task.nationality:
             continue
         if task.university and task.university != profile.university:
             continue
         if task.admission_status and task.admission_status != profile.admission_status:
             continue
-        eligible_task_ids.add(task.id)
+        eligible_tasks.append(task)
+
+    # ── 將任務去重，同 title 只取最精準（分數最高）的一筆 ──
+    def get_specificity_score(t):
+        score = 0
+        if t.university: score += 16
+        if t.nationality: score += 8
+        if t.region: score += 4
+        if t.identity_type: score += 2
+        if t.admission_status: score += 1
+        return score
+
+    best_tasks = {}
+    for task in eligible_tasks:
+        score = get_specificity_score(task)
+        # 有 task_code 就用 task_code 判斷同一任務
+        # 沒有 task_code 就先用 title 判斷，避免舊資料出問題
+        code = task.task_code or task.title
+
+        if code not in best_tasks or score > best_tasks[code]['score']:
+            best_tasks[code] = {
+                'task': task,
+                'score': score
+            }
+
+    eligible_task_ids = {item['task'].id for item in best_tasks.values()}
 
     # ── 取得目前學生已有的任務 ──
     existing_student_tasks = StudentTask.objects.filter(student=profile)

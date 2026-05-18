@@ -19,6 +19,94 @@ function getCookie(name) {
   return null;
 }
 
+const REGION_COUNTRY_MAP = {
+  'East Asia': [
+    { value: 'Japan', label: '🇯🇵 日本' },
+    { value: 'Korea', label: '🇰🇷 韓國' },
+    { value: 'Macau', label: '🇲🇴 澳門' },
+    { value: 'Hong Kong', label: '🇭🇰 香港' },
+  ],
+  'Southeast Asia': [
+    { value: 'Indonesia', label: '🇮🇩 印尼' },
+    { value: 'Malaysia', label: '🇲🇾 馬來西亞' },
+    { value: 'Vietnam', label: '🇻🇳 越南' },
+    { value: 'Thailand', label: '🇹🇭 泰國' },
+    { value: 'Philippines', label: '🇵🇭 菲律賓' },
+    { value: 'Cambodia', label: '🇰🇭 柬埔寨' },
+    { value: 'Myanmar', label: '🇲🇲 緬甸' },
+    { value: 'Singapore', label: '🇸🇬 新加坡' },
+  ],
+  'South Asia': [
+    { value: 'India', label: '🇮🇳 印度' },
+    { value: 'Pakistan', label: '🇵🇰 巴基斯坦' },
+    { value: 'Bangladesh', label: '🇧🇩 孟加拉' },
+  ],
+  'Middle East': [
+    { value: 'Saudi Arabia', label: '🇸🇦 沙烏地阿拉伯' },
+    { value: 'UAE', label: '🇦🇪 阿拉伯聯合大公國' },
+    { value: 'Turkey', label: '🇹🇷 土耳其' },
+  ],
+  'Europe': [
+    { value: 'UK', label: '🇬🇧 英國' },
+    { value: 'France', label: '🇫🇷 法國' },
+    { value: 'Germany', label: '🇩🇪 德國' },
+    { value: 'Italy', label: '🇮🇹 義大利' },
+    { value: 'Spain', label: '🇪🇸 西班牙' },
+  ],
+  'North America': [
+    { value: 'USA', label: '🇺🇸 美國' },
+    { value: 'Canada', label: '🇨🇦 加拿大' },
+  ],
+  'Latin America': [
+    { value: 'Brazil', label: '🇧🇷 巴西' },
+    { value: 'Mexico', label: '🇲🇽 墨西哥' },
+    { value: 'Argentina', label: '🇦🇷 阿根廷' },
+  ],
+  'Africa': [
+    { value: 'South Africa', label: '🇿🇦 南非' },
+    { value: 'Egypt', label: '🇪🇬 埃及' },
+    { value: 'Nigeria', label: '🇳🇬 奈及利亞' },
+  ],
+  'Oceania': [
+    { value: 'Australia', label: '🇦🇺 澳洲' },
+    { value: 'New Zealand', label: '🇳🇿 紐西蘭' },
+  ],
+};
+
+window.handleRegionChange = function(regionId = 'setupRegion', nationalityId = 'setupNationality') {
+  const regionSelect = document.getElementById(regionId);
+  const natSelect = document.getElementById(nationalityId);
+  if (!regionSelect || !natSelect) return;
+
+  const region = regionSelect.value;
+  const currentVal = natSelect.getAttribute('data-selected') || natSelect.value;
+  
+  natSelect.innerHTML = '<option value="">請選擇國籍</option>';
+  
+  if (region && REGION_COUNTRY_MAP[region]) {
+    REGION_COUNTRY_MAP[region].forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c.value;
+      opt.textContent = c.label;
+      if (c.value === currentVal) opt.selected = true;
+      natSelect.appendChild(opt);
+    });
+    
+    const otherOpt = document.createElement('option');
+    otherOpt.value = 'Other';
+    otherOpt.textContent = '🌍 其他';
+    if ('Other' === currentVal) otherOpt.selected = true;
+    natSelect.appendChild(otherOpt);
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const editRegion = document.getElementById('editRegion');
+  if (editRegion) {
+    handleRegionChange('editRegion', 'editNationality');
+  }
+});
+
 /** 統一 fetch 封裝（自動帶 CSRF Token 與 JSON headers）*/
 async function apiFetch(url, method = 'GET', body = null) {
   const opts = {
@@ -281,6 +369,7 @@ function startProfileQuiz(e) {
   e.preventDefault();
   clearErrors(['nationalityErr', 'universityErr', 'identityErr', 'statusErr', 'arrivalErr']);
 
+  const region = document.getElementById('setupRegion').value;
   const nationality = document.getElementById('setupNationality').value;
   const university  = document.getElementById('setupUniversity').value.trim();
   const identity    = document.getElementById('setupIdentity').value;
@@ -288,6 +377,7 @@ function startProfileQuiz(e) {
   const arrival     = document.getElementById('setupArrival')?.value || '';
 
   let ok = true;
+  if (!region) { showError('regionErr', '請選擇地區'); ok = false; }
   if (!nationality) { showError('nationalityErr', '請選擇國籍'); ok = false; }
   if (!university)  { showError('universityErr', '請選擇就讀學校'); ok = false; }
   if (!identity)    { showError('identityErr', '請選擇身份別'); ok = false; }
@@ -301,6 +391,7 @@ function startProfileQuiz(e) {
 
   // 暫存表單資料
   _quizFormData = {
+    region,
     nationality,
     university,
     identity_type: identity,
@@ -448,6 +539,7 @@ async function handleEditBasic(e) {
 
   const body = {
     name: document.getElementById('editName').value.trim(),
+    region: document.getElementById('editRegion').value,
     nationality: document.getElementById('editNationality').value,
     department: document.getElementById('editDept').value.trim(),
     identity_type: document.getElementById('editIdentity').value,

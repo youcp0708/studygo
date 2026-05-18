@@ -45,46 +45,29 @@
 
           <div class="field-row">
             <div class="field">
-              <label>{% trans "國籍" %}</label>
-              <select name="nationality" id="editNationality">
-                <option value="Indonesia" {% if profile.nationality == "Indonesia" %} selected {% endif %}>
-                  🇮🇩 {% trans "印尼" %}
-                </option>
-                <option value="Malaysia" {% if profile.nationality == "Malaysia" %} selected {% endif %}>
-                  🇲🇾 {% trans "馬來西亞" %}
-                </option>
-                <option value="Vietnam" {% if profile.nationality == "Vietnam" %} selected {% endif %}>
-                  🇻🇳 {% trans "越南" %}
-                </option>
-                <option value="Thailand" {% if profile.nationality == "Thailand" %} selected{% endif %}>
-                  🇹🇭 {% trans "泰國" %}
-                </option>
-                <option value="Philippines" {% if profile.nationality == "Philippines" %} selected{% endif %}>
-                  🇵🇭 {% trans "菲律賓" %}
-                </option>
-                <option value="Cambodia" {% if profile.nationality == "Cambodia" %} selected {% endif %}>
-                  🇰🇭 {% trans "柬埔寨" %}
-                </option>
-                <option value="Myanmar" {% if profile.nationality == "Myanmar" %} selected{% endif %}>
-                  🇲🇲 {% trans "緬甸" %}
-                </option>
-                <option value="Japan" {% if profile.nationality == "Japan" %}selected{% endif %}>
-                  🇯🇵 {% trans "日本" %}
-                </option>
-                <option value="Korea" {% if profile.nationality == "Korea" %}selected{% endif %}>
-                  🇰🇷 {% trans "韓國" %}
-                </option>
-                <option value="Hong Kong" {% if profile.nationality == "Hong Kong" %}selected{% endif %}>
-                  🇭🇰 {% trans "香港" %}
-                </option>
-                <option value="Macao" {% if profile.nationality == "Macao" %}selected{% endif %}>
-                  🇲🇴 {% trans "澳門" %}
-                </option>
-                <option value="Other" {% if profile.nationality == "Other" %}selected{% endif %}>
-                  🌍 {% trans "其他" %}
-                </option>
+              <label>{% trans "所屬地區" %}</label>
+              <select name="region" id="editRegion" onchange="handleRegionChange('editRegion', 'editNationality')">
+                <option value="East Asia" {% if profile.region == "East Asia" %} selected {% endif %}>🌏 {% trans "東亞" %}</option>
+                <option value="Southeast Asia" {% if profile.region == "Southeast Asia" %} selected {% endif %}>🌴 {% trans "東南亞" %}</option>
+                <option value="South Asia" {% if profile.region == "South Asia" %} selected {% endif %}>🕌 {% trans "南亞" %}</option>
+                <option value="Middle East" {% if profile.region == "Middle East" %} selected {% endif %}>🏜️ {% trans "中東" %}</option>
+                <option value="Europe" {% if profile.region == "Europe" %} selected {% endif %}>🏰 {% trans "歐洲" %}</option>
+                <option value="North America" {% if profile.region == "North America" %} selected {% endif %}>🗽 {% trans "北美洲" %}</option>
+                <option value="Latin America" {% if profile.region == "Latin America" %} selected {% endif %}>💃 {% trans "中南美洲" %}</option>
+                <option value="Africa" {% if profile.region == "Africa" %} selected {% endif %}>🦁 {% trans "非洲" %}</option>
+                <option value="Oceania" {% if profile.region == "Oceania" %} selected {% endif %}>🦘 {% trans "大洋洲" %}</option>
               </select>
             </div>
+
+            <div class="field">
+              <label>{% trans "國籍" %}</label>
+              <select name="nationality" id="editNationality" data-selected="{{ profile.nationality }}">
+                <!-- Options populated by JS -->
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row">
 
             <div class="field">
               <label>{% trans "身份別" %}</label>
@@ -108,7 +91,7 @@
               <input
                 type="text"
                 id="editUniversity"
-                value="{{ profile.university|default:'—' }}"
+                value="{{ profile.get_university_display|default:'—' }}"
                 disabled
                 style="background:#f5f5f5;color:var(--muted);cursor:not-allowed;"
               />
