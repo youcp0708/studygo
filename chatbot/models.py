@@ -185,6 +185,7 @@ class ChatKnowledge(models.Model):
 
     title = models.CharField(max_length=200, verbose_name='繁體中文標題')
     title_en = models.CharField(max_length=200, blank=True, verbose_name='英文標題')
+    title_vi = models.CharField(max_length=200, blank=True, verbose_name='越文標題')
     title_my = models.CharField(max_length=200, blank=True, verbose_name='緬文標題')
     title_id = models.CharField(max_length=200, blank=True, verbose_name='印尼文標題')
     title_ms = models.CharField(max_length=200, blank=True, verbose_name='馬來文標題')
@@ -200,6 +201,7 @@ class ChatKnowledge(models.Model):
 
     content = models.TextField(verbose_name='繁體中文內容')
     content_en = models.TextField(blank=True, verbose_name='英文內容')
+    content_vi = models.TextField(blank=True, verbose_name='越文內容')
     content_my = models.TextField(blank=True, verbose_name='緬文內容')
     content_id = models.TextField(blank=True, verbose_name='印尼文內容')
     content_ms = models.TextField(blank=True, verbose_name='馬來文內容')
@@ -223,6 +225,7 @@ class ChatKnowledge(models.Model):
     def get_title_by_lang(self, lang_code):
         lang_map = {
             'en': self.title_en,
+            'vi': self.title_vi,
             'my': self.title_my,
             'id': self.title_id,
             'ms': self.title_ms,
@@ -235,6 +238,7 @@ class ChatKnowledge(models.Model):
     def get_content_by_lang(self, lang_code):
         lang_map = {
             'en': self.content_en,
+            'vi': self.content_vi,
             'my': self.content_my,
             'id': self.content_id,
             'ms': self.content_ms,
