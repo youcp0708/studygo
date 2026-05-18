@@ -88,6 +88,7 @@ class TaskAdmin(admin.ModelAdmin):
     list_display = (
         'id',
         'title',
+        'task_code',
         'title_en',
         'title_my',
         'title_id',
@@ -112,6 +113,7 @@ class TaskAdmin(admin.ModelAdmin):
             'fields': (
                 'stage',
                 'title',
+                'task_code',
                 'description',
                 'region',
                 'identity_type',
@@ -213,6 +215,7 @@ class TaskAdmin(admin.ModelAdmin):
 
     search_fields = (
         'title',
+        'task_code',
         'title_en',
         'title_my',
         'title_id',

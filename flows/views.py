@@ -197,8 +197,15 @@ def init_student_tasks_view(request):
     best_tasks = {}
     for task in eligible_tasks:
         score = get_specificity_score(task)
-        if task.title not in best_tasks or score > best_tasks[task.title]['score']:
-            best_tasks[task.title] = {'task': task, 'score': score}
+        # 有 task_code 就用 task_code 判斷同一任務
+        # 沒有 task_code 就先用 title 判斷，避免舊資料出問題
+        code = task.task_code or task.title
+
+        if code not in best_tasks or score > best_tasks[code]['score']:
+            best_tasks[code] = {
+                'task': task,
+                'score': score
+            }
 
     eligible_task_ids = {item['task'].id for item in best_tasks.values()}
 

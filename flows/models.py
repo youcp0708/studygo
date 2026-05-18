@@ -80,6 +80,13 @@ class Task(models.Model):
 
     # 中文欄位：原本欄位保留，當作繁體中文
     title = models.CharField(max_length=200, verbose_name="任務名稱")
+    task_code = models.CharField(
+        max_length=100,
+        blank=True,
+        default="",
+        verbose_name="任務代碼",
+        help_text="用來判斷同一類任務，例如 prepare_passport、apply_visa。學生前端不會顯示。"
+)
     description = models.TextField(blank=True, verbose_name="任務說明")
 
     # 多語言欄位：給 admin 手動填
