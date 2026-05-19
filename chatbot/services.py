@@ -617,6 +617,8 @@ def search_knowledge_base(question, language_code='zh-hant', limit=3):
         query |= Q(content_ja__icontains=term)
         query |= Q(title_ko__icontains=term)
         query |= Q(content_ko__icontains=term)
+        query |= Q(title_vi__icontains=term)
+        query |= Q(content_vi__icontains=term)
 
         optional_fields = [
             ('title_en', 'content_en'),
