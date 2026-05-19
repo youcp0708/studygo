@@ -5,196 +5,192 @@
 
 {% block extra_css %}
 <style>
-  :root { --border: var(--line); --dark: var(--primary-dark); --warning: #ca8a04; --warning-soft: #fef9c3; }
-  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
+  .guide-wrap {
+    width: min(1200px, 96%);
+    margin: 0 auto;
+    padding: 32px 0 72px;
+  }
 
+  /* ── Back link ── */
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--primary); font-size: 14px; font-weight: 700;
+    margin-bottom: 24px; text-decoration: none;
+  }
+  .back-link:hover { color: var(--primary-dark); }
+
+  /* ── Hero ── */
   .guide-hero {
     background: linear-gradient(135deg, #1e3a5f 0%, #7c3aed 100%);
-    color:#fff; padding:36px 44px 32px; border-radius:20px;
-    margin-bottom:32px; position:relative; overflow:hidden;
-  }
-  .guide-hero .bg-text {
-    position:absolute; right:24px; top:50%; transform:translateY(-50%);
-    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
-    pointer-events:none; user-select:none;
+    color: #fff; padding: 28px 32px; border-radius: 16px;
+    margin-bottom: 32px;
   }
   .guide-hero .hero-badge {
-    display:inline-block; background:rgba(255,255,255,.18);
-    border:1px solid rgba(255,255,255,.35); border-radius:99px;
-    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
+    display: inline-block;
+    background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35);
+    border-radius: 99px; padding: 3px 12px; font-size: 12px;
+    font-weight: 700; margin-bottom: 10px;
   }
-  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
-  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:540px; margin:0; }
+  .guide-hero h2 { font-size: 22px; font-weight: 900; margin-bottom: 6px; }
+  .guide-hero p  { opacity: .85; font-size: 14px; line-height: 1.7; margin: 0; }
 
+  /* ── Section title ── */
   .section-title {
-    font-size:17px; font-weight:900; color:var(--primary-dark);
-    margin:28px 0 14px; padding-bottom:10px;
-    border-bottom:2.5px solid var(--primary-soft);
-    display:flex; align-items:center; gap:8px;
+    font-size: 16px; font-weight: 900; color: var(--primary-dark);
+    margin: 28px 0 12px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-soft);
   }
 
+  /* ── Alert boxes ── */
   .alert {
-    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
-    margin-bottom:14px; display:flex; gap:12px; align-items:flex-start;
+    border-radius: 10px; padding: 12px 16px;
+    font-size: 14px; line-height: 1.7; margin-bottom: 12px;
+    display: flex; gap: 10px; align-items: flex-start;
+    border-width: 1.5px; border-style: solid;
   }
-  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
-  .alert-info    { background:#eff6ff; border:1.5px solid #bae6fd; }
-  .alert-info strong { color:#0369a1; }
-  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
-  .alert-warning strong { color:var(--warning); }
-  .alert-danger  { background:#fff1f2; border:1.5px solid #fca5a5; }
-  .alert-danger strong { color:#dc2626; }
-  .alert-success { background:#f0fdf4; border:1.5px solid #86efac; }
-  .alert-success strong { color:#15803d; }
+  .alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .alert-info    { background: #eff6ff; border-color: #bae6fd; }
+  .alert-info strong    { color: #0369a1; }
+  .alert-warning { background: #fef9c3; border-color: #fde68a; }
+  .alert-warning strong { color: #ca8a04; }
+  .alert-danger  { background: #fff1f2; border-color: #fca5a5; }
+  .alert-danger strong  { color: #dc2626; }
 
-  /* ── Info row ── */
-  .info-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-bottom:28px; }
-  .info-card { background:#fff; border:1.5px solid var(--border); border-radius:14px; padding:18px; text-align:center; }
-  .info-card .i-icon  { font-size:28px; margin-bottom:6px; }
-  .info-card .i-label { font-size:11px; color:var(--muted); font-weight:700; margin-bottom:4px; }
-  .info-card .i-val   { font-size:19px; font-weight:900; color:var(--primary-dark); line-height:1.2; }
-  .info-card .i-sub   { font-size:11px; color:var(--muted); margin-top:4px; }
+  /* ── Simple info table ── */
+  .info-table {
+    width: 100%; border-collapse: collapse;
+    font-size: 14px; margin-bottom: 24px;
+  }
+  .info-table th {
+    background: var(--primary); color: #fff;
+    padding: 10px 14px; text-align: left;
+    font-weight: 800; font-size: 13px;
+  }
+  .info-table th:first-child { border-radius: 10px 0 0 0; }
+  .info-table th:last-child  { border-radius: 0 10px 0 0; }
+  .info-table td {
+    padding: 11px 14px; border-bottom: 1px solid var(--line);
+    vertical-align: middle; line-height: 1.6;
+  }
+  .info-table tr:last-child td { border-bottom: none; }
+  .info-table tr:nth-child(even) td { background: #fafafa; }
+  .info-table .td-label { font-weight: 800; color: var(--primary-dark); white-space: nowrap; }
 
-  /* ── 適用對象 chips ── */
-  .eligible-grid { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; }
-  .eligible-chip {
-    display:flex; align-items:center; gap:8px;
-    padding:10px 16px; border-radius:12px; font-size:13px; font-weight:700;
-    border:1.5px solid var(--border); background:#fff; color:var(--dark);
+  /* ── Chips ── */
+  .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .chip {
+    padding: 6px 14px; border-radius: 99px; font-size: 13px;
+    font-weight: 700; border: 1.5px solid;
   }
-  .eligible-chip.yes { border-color:#86efac; background:#f0fdf4; color:#15803d; }
-  .eligible-chip.no  { border-color:#fca5a5; background:#fff1f2; color:#dc2626; }
+  .chip-yes { border-color: #86efac; background: #f0fdf4; color: #15803d; }
+  .chip-no  { border-color: #fca5a5; background: #fff1f2; color: #dc2626; }
 
-  /* ── 工時表 ── */
-  .hour-table-wrap { overflow-x:auto; margin-bottom:28px; }
-  .hour-table {
-    width:100%; border-collapse:collapse; font-size:14px; min-width:400px;
+  /* ── Timeline ── */
+  .timeline { list-style: none; padding: 0; margin: 0 0 24px; }
+  .tl-item  { display: flex; gap: 16px; margin-bottom: 16px; position: relative; }
+  .tl-item:not(:last-child)::before {
+    content: ''; position: absolute; left: 18px; top: 40px; bottom: -16px;
+    width: 2px; background: var(--primary-soft);
   }
-  .hour-table th {
-    background:var(--primary); color:#fff;
-    padding:12px 16px; text-align:center; font-weight:800; font-size:13px;
+  .tl-num {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--primary); color: #fff;
+    font-size: 14px; font-weight: 900; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 1;
   }
-  .hour-table th:first-child { border-radius:12px 0 0 0; }
-  .hour-table th:last-child  { border-radius:0 12px 0 0; }
-  .hour-table td {
-    padding:13px 16px; border-bottom:1px solid var(--border);
-    vertical-align:middle; line-height:1.6; text-align:center;
+  .tl-num.done { background: #22c55e; }
+  .tl-body { flex: 1; padding-top: 4px; }
+  .tl-title { font-size: 14px; font-weight: 800; color: var(--primary-dark); margin-bottom: 2px; }
+  .tl-desc  { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  /* ── Penalty items ── */
+  .penalty-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+  .penalty-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    background: #fff1f2; border: 1.5px solid #fca5a5;
+    border-radius: 10px; padding: 12px 14px;
+    font-size: 14px; line-height: 1.7;
   }
-  .hour-table tr:last-child td { border-bottom:none; }
-  .hour-table tr:nth-child(even) td { background:#fafafa; }
-  .hour-table .label { font-weight:800; color:var(--primary-dark); text-align:left; }
+  .penalty-icon { font-size: 20px; flex-shrink: 0; }
+
+  /* ── External links ── */
+  .link-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .ext-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: 8px;
+    border: 1.5px solid var(--line); background: #fff;
+    font-size: 14px; font-weight: 700; color: var(--primary-dark);
+    text-decoration: none; transition: border-color .15s;
+  }
+  .ext-link:hover { border-color: var(--primary); }
+
+  /* ── Badge ── */
   .badge-ok  { display:inline-block; background:#dcfce7; color:#15803d; font-size:12px; font-weight:700; padding:2px 10px; border-radius:99px; }
   .badge-lim { display:inline-block; background:#fef9c3; color:#ca8a04; font-size:12px; font-weight:700; padding:2px 10px; border-radius:99px; }
   .badge-no  { display:inline-block; background:#fee2e2; color:#dc2626; font-size:12px; font-weight:700; padding:2px 10px; border-radius:99px; }
-
-  /* ── 申請流程 timeline ── */
-  .timeline { list-style:none; padding:0; margin:0 0 28px; }
-  .tl-item  { display:flex; gap:18px; margin-bottom:20px; position:relative; }
-  .tl-item:not(:last-child)::before {
-    content:''; position:absolute; left:19px; top:42px; bottom:-20px;
-    width:2px; background:var(--primary-soft);
-  }
-  .tl-num {
-    width:40px; height:40px; border-radius:50%; background:var(--primary);
-    color:#fff; font-size:15px; font-weight:900;
-    display:flex; align-items:center; justify-content:center;
-    flex-shrink:0; z-index:1; position:relative;
-  }
-  .tl-num.done { background:#22c55e; }
-  .tl-body { flex:1; padding-top:5px; }
-  .tl-title { font-size:15px; font-weight:800; color:var(--dark); margin-bottom:3px; }
-  .tl-desc  { font-size:13px; color:var(--muted); line-height:1.7; }
-
-  /* ── 違規後果 ── */
-  .penalty-list { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
-  .penalty-item {
-    display:flex; gap:14px; align-items:flex-start;
-    background:#fff1f2; border:1.5px solid #fca5a5; border-radius:12px;
-    padding:14px 16px; font-size:14px; line-height:1.7;
-  }
-  .penalty-icon { font-size:22px; flex-shrink:0; }
-
-  /* ── 相關連結 ── */
-  .link-row { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px; }
-  .ext-link {
-    display:inline-flex; align-items:center; gap:8px;
-    padding:10px 18px; border-radius:10px; border:1.5px solid var(--border);
-    background:#fff; font-size:14px; font-weight:700;
-    color:var(--primary-dark); text-decoration:none;
-    transition:border-color .15s, box-shadow .15s;
-  }
-  .ext-link:hover { border-color:var(--primary); box-shadow:0 2px 8px rgba(0,80,160,.08); }
-
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }
 </style>
 {% endblock %}
 
 {% block content %}
-<div class="guide-wrap" style="padding-top:32px;">
+<div class="guide-wrap">
 
   <a class="back-link" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
 
+  <!-- ── Hero ── -->
   <div class="guide-hero">
-    <div class="bg-text">WORK</div>
     <div class="hero-badge">僑生・外籍生必知</div>
     <h2>💼 {% trans "工作許可證申請指南" %}</h2>
     <p>在台灣工作（不論校內或校外）前，必須先申請並取得工作許可證，否則將依法受罰並可能限令出境。</p>
   </div>
 
   <!-- ── 重點一覽 ── -->
-  <div class="info-row">
-    <div class="info-card">
-      <div class="i-icon">💻</div>
-      <div class="i-label">申請方式</div>
-      <div class="i-val" style="font-size:15px;">線上申辦</div>
-      <div class="i-sub">勞動部 ezwp 系統</div>
-    </div>
-    <div class="info-card">
-      <div class="i-icon">💰</div>
-      <div class="i-label">審查費</div>
-      <div class="i-val">NT$100</div>
-      <div class="i-sub">郵局劃撥或 ATM</div>
-    </div>
-    <div class="info-card">
-      <div class="i-icon">📅</div>
-      <div class="i-label">許可期限</div>
-      <div class="i-val" style="font-size:15px;">最長 6 個月</div>
-      <div class="i-sub">到期需重新申請</div>
-    </div>
-    <div class="info-card">
-      <div class="i-icon">⏱</div>
-      <div class="i-label">上課期間工時上限</div>
-      <div class="i-val">20 hr</div>
-      <div class="i-sub">每週最多</div>
-    </div>
-    <div class="info-card">
-      <div class="i-icon">🏖</div>
-      <div class="i-label">寒暑假工時</div>
-      <div class="i-val" style="font-size:15px;">無限制</div>
-      <div class="i-sub">可全職工作</div>
-    </div>
-    <div class="info-card">
-      <div class="i-icon">⚠️</div>
-      <div class="i-label">違規罰鍰</div>
-      <div class="i-val" style="font-size:15px;color:#dc2626;">NT$3～15 萬</div>
-      <div class="i-sub">並可能限令出境</div>
-    </div>
-  </div>
+  <div class="section-title">📌 重點一覽</div>
+  <table class="info-table">
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>內容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-label">💻 申請方式</td>
+        <td>線上申辦（勞動部 ezwp 系統）</td>
+      </tr>
+      <tr>
+        <td class="td-label">💰 審查費</td>
+        <td>NT$100（郵局劃撥或 ATM）</td>
+      </tr>
+      <tr>
+        <td class="td-label">📅 許可期限</td>
+        <td>最長 6 個月（到期需重新申請）</td>
+      </tr>
+      <tr>
+        <td class="td-label">⏱ 上課期間工時</td>
+        <td>每週最多 <strong>20 小時</strong></td>
+      </tr>
+      <tr>
+        <td class="td-label">🏖 寒暑假工時</td>
+        <td>無限制，可全職工作</td>
+      </tr>
+      <tr>
+        <td class="td-label">⚠️ 違規罰鍰</td>
+        <td style="color:#dc2626;font-weight:700;">NT$3～15 萬，並可能限令出境</td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- ── 適用對象 ── -->
   <div class="section-title">👤 適用對象</div>
-  <div class="eligible-grid">
-    <div class="eligible-chip yes">✅ 僑生（持外國護照）</div>
-    <div class="eligible-chip yes">✅ 外籍生（學位生）</div>
-    <div class="eligible-chip yes">✅ 港澳生（學位生）</div>
-    <div class="eligible-chip no">❌ 短期交換生</div>
-    <div class="eligible-chip no">❌ 語言研習生</div>
+  <div class="chip-row">
+    <span class="chip chip-yes">✅ 僑生（持外國護照）</span>
+    <span class="chip chip-yes">✅ 外籍生（學位生）</span>
+    <span class="chip chip-yes">✅ 港澳生（學位生）</span>
+    <span class="chip chip-no">❌ 短期交換生</span>
+    <span class="chip chip-no">❌ 語言研習生</span>
   </div>
-  <div class="alert alert-warning" style="margin-bottom:28px;">
+  <div class="alert alert-warning" style="margin-bottom:24px;">
     <div class="alert-icon">📌</div>
     <div>
       工作許可針對<strong>個別雇主</strong>核發，換工作或增加兼職需重新申請。校內工讀（如助理）與校外工作<strong>均需</strong>持有工作許可。<br>
@@ -204,50 +200,53 @@
 
   <!-- ── 應備文件 ── -->
   <div class="section-title">📋 應備文件</div>
-  <div class="alert alert-info" style="margin-bottom:16px;">
-    <div class="alert-icon">📄</div>
-    <div>
-      以下文件須掃描為 <strong>PDF 檔案</strong>，於 ezwp 系統中上傳：
-    </div>
-  </div>
-  <div class="info-row" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:28px;">
-    <div class="info-card" style="text-align:left;">
-      <div class="i-icon" style="text-align:center;">🪪</div>
-      <div class="i-val" style="font-size:14px;text-align:center;">學生證</div>
-      <div class="i-sub" style="text-align:center;">正面＋背面（須含當學期<strong>註冊章</strong>），或另附在學證明</div>
-    </div>
-    <div class="info-card" style="text-align:left;">
-      <div class="i-icon" style="text-align:center;">📘</div>
-      <div class="i-val" style="font-size:14px;text-align:center;">護照</div>
-      <div class="i-sub" style="text-align:center;">含照片及個人資料頁</div>
-    </div>
-    <div class="info-card" style="text-align:left;">
-      <div class="i-icon" style="text-align:center;">🆔</div>
-      <div class="i-val" style="font-size:14px;text-align:center;">居留證（ARC）</div>
-      <div class="i-sub" style="text-align:center;">正面＋背面</div>
-    </div>
-  </div>
+  <table class="info-table" style="margin-bottom:24px;">
+    <thead>
+      <tr>
+        <th>文件</th>
+        <th>說明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-label">🪪 學生證</td>
+        <td>正面＋背面（須含當學期<strong>註冊章</strong>），或另附在學證明</td>
+      </tr>
+      <tr>
+        <td class="td-label">📘 護照</td>
+        <td>含照片及個人資料頁</td>
+      </tr>
+      <tr>
+        <td class="td-label">🆔 居留證（ARC）</td>
+        <td>正面＋背面</td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- ── 審查費繳納 ── -->
   <div class="section-title">💰 審查費繳納（NT$100）</div>
-  <div class="info-row" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-bottom:28px;">
-    <div class="info-card" style="text-align:left;">
-      <div class="i-icon" style="text-align:center;">🏣</div>
-      <div class="i-val" style="font-size:14px;text-align:center;">郵局劃撥</div>
-      <div class="i-sub">
-        劃撥帳號：<strong>19058848</strong><br>
-        戶名：<strong>勞動部勞動力發展署聘僱許可收費專戶</strong><br>
-        繳費後請記錄收據號碼、交易日期、交易局號，填入系統。
-      </div>
-    </div>
-    <div class="info-card" style="text-align:left;">
-      <div class="i-icon" style="text-align:center;">🏧</div>
-      <div class="i-val" style="font-size:14px;text-align:center;">ATM 繳費</div>
-      <div class="i-sub">
-        先完成線上申請 → 學校審核 → 系統產生 16 碼繳費帳號 → 使用 ATM「繳費」功能繳納。
-      </div>
-    </div>
-  </div>
+  <table class="info-table" style="margin-bottom:24px;">
+    <thead>
+      <tr>
+        <th>方式</th>
+        <th>說明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-label">🏣 郵局劃撥</td>
+        <td>
+          劃撥帳號：<strong>19058848</strong><br>
+          戶名：<strong>勞動部勞動力發展署聘僱許可收費專戶</strong><br>
+          繳費後請記錄收據號碼、交易日期、交易局號，填入系統。
+        </td>
+      </tr>
+      <tr>
+        <td class="td-label">🏧 ATM 繳費</td>
+        <td>先完成線上申請 → 學校審核 → 系統產生 16 碼繳費帳號 → 使用 ATM「繳費」功能繳納。</td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- ── 申請流程 ── -->
   <div class="section-title">🪜 線上申請流程</div>
@@ -308,36 +307,34 @@
     </li>
   </ul>
 
-  <!-- ── 工時限制 ── -->
+  <!-- ── 工時規定 ── -->
   <div class="section-title">⏱ 工時規定</div>
-  <div class="hour-table-wrap">
-    <table class="hour-table">
-      <thead>
-        <tr>
-          <th style="width:30%;text-align:left;">期間</th>
-          <th>工時上限</th>
-          <th>說明</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="label">上課期間（學期中）</td>
-          <td><span class="badge-lim">每週最多 20 小時</span></td>
-          <td style="text-align:left;">週一至週日合計不得超過 20 小時，超時視同違規</td>
-        </tr>
-        <tr>
-          <td class="label">寒假・暑假</td>
-          <td><span class="badge-ok">無限制</span></td>
-          <td style="text-align:left;">可全職工作，時數無上限</td>
-        </tr>
-        <tr>
-          <td class="label">短期交換生 / 語研生</td>
-          <td><span class="badge-no">不得工作</span></td>
-          <td style="text-align:left;">不符合申請資格，任何工作均屬違規</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table class="info-table">
+    <thead>
+      <tr>
+        <th style="width:35%;">期間</th>
+        <th style="width:25%;">工時上限</th>
+        <th>說明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-label">上課期間（學期中）</td>
+        <td><span class="badge-lim">每週最多 20 小時</span></td>
+        <td>週一至週日合計不得超過 20 小時，超時視同違規</td>
+      </tr>
+      <tr>
+        <td class="td-label">寒假・暑假</td>
+        <td><span class="badge-ok">無限制</span></td>
+        <td>可全職工作，時數無上限</td>
+      </tr>
+      <tr>
+        <td class="td-label">短期交換生 / 語研生</td>
+        <td><span class="badge-no">不得工作</span></td>
+        <td>不符合申請資格，任何工作均屬違規</td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- ── 違規後果 ── -->
   <div class="section-title">🚨 違規後果</div>
@@ -346,21 +343,21 @@
       <div class="penalty-icon">💸</div>
       <div>
         <strong style="color:#dc2626;">罰鍰 NT$30,000～150,000</strong><br>
-        <span style="font-size:13px;color:var(--dark);">未持工作許可違法工作者，依就業服務法可處罰鍰新臺幣三萬元至十五萬元。</span>
+        <span style="font-size:13px;">未持工作許可違法工作者，依就業服務法可處罰鍰新臺幣三萬元至十五萬元。</span>
       </div>
     </div>
     <div class="penalty-item">
       <div class="penalty-icon">✈️</div>
       <div>
         <strong style="color:#dc2626;">限令出境</strong><br>
-        <span style="font-size:13px;color:var(--dark);">主管機關可依規定限令違規者出境，情節嚴重者可能影響日後再入境資格。</span>
+        <span style="font-size:13px;">主管機關可依規定限令違規者出境，情節嚴重者可能影響日後再入境資格。</span>
       </div>
     </div>
     <div class="penalty-item">
       <div class="penalty-icon">🏢</div>
       <div>
         <strong style="color:#dc2626;">雇主連帶受罰</strong><br>
-        <span style="font-size:13px;color:var(--dark);">非法僱用外籍生的雇主同樣面臨罰鍰，請勿在未取得工作許可前接受工作邀約。</span>
+        <span style="font-size:13px;">非法僱用外籍生的雇主同樣面臨罰鍰，請勿在未取得工作許可前接受工作邀約。</span>
       </div>
     </div>
   </div>
@@ -369,33 +366,23 @@
   <div class="section-title">💡 注意事項</div>
   <div class="alert alert-info">
     <div class="alert-icon">🔄</div>
-    <div>
-      <strong>換工作需重新申請：</strong>工作許可針對特定雇主核發，換雇主或增加兼職均須重新申請新的工作許可，不可沿用舊許可。
-    </div>
+    <div><strong>換工作需重新申請：</strong>工作許可針對特定雇主核發，換雇主或增加兼職均須重新申請新的工作許可，不可沿用舊許可。</div>
   </div>
   <div class="alert alert-info">
     <div class="alert-icon">📅</div>
-    <div>
-      <strong>許可期限最長 6 個月：</strong>到期前需提前申請展延，過期繼續工作視同無許可違規。
-    </div>
+    <div><strong>許可期限最長 6 個月：</strong>到期前需提前申請展延，過期繼續工作視同無許可違規。</div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-icon">🎓</div>
-    <div>
-      <strong>畢業生注意：</strong>畢業生工作許可通常至 <strong>6 月 30 日</strong>截止。如有暑期課程（需附證明）或已獲錄取繼續升學者，方可延長至 <strong>9 月 30 日</strong>。
-    </div>
+    <div><strong>畢業生注意：</strong>畢業生工作許可通常至 <strong>6 月 30 日</strong>截止。如有暑期課程（需附證明）或已獲錄取繼續升學者，方可延長至 <strong>9 月 30 日</strong>。</div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-icon">💾</div>
-    <div>
-      <strong>系統暫存限制：</strong>ezwp 系統暫存資料最多保留 <strong>7 天</strong>，逾期需重新填寫。選擇電子文件領取者，須於核發後 <strong>8 天內</strong>至系統下載許可證。
-    </div>
+    <div><strong>系統暫存限制：</strong>ezwp 系統暫存資料最多保留 <strong>7 天</strong>，逾期需重新填寫。選擇電子文件領取者，須於核發後 <strong>8 天內</strong>至系統下載許可證。</div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-icon">🏥</div>
-    <div>
-      <strong>工作期間健保轉換：</strong>受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工作結束後需回學校重新加保。
-    </div>
+    <div><strong>工作期間健保轉換：</strong>受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工作結束後需回學校重新加保。</div>
   </div>
 
   <!-- ── 相關連結 ── -->
