@@ -374,9 +374,27 @@ def extract_search_terms(question):
             terms.append(token)
 
     common_terms = [
-        '簽證', '居留證', '外僑居留證', '健保', '體檢', '註冊', '報到',
-        '住宿', '宿舍', '租屋', '獎學金', '入境', '抵台', '抵臺', '文件',
-        '護照', '學校', '國際處', '銀行', '手機', '門號',
+    '海聯招', '海外聯招', '海外聯合招生', '聯合招生',
+    '單招', '外籍生申請', '港澳生申請', '僑生申請',
+
+    '入學申請', '文件準備', '文件驗證', '簽證',
+    '財力證明', '語言證明', '來台前準備', '來臺前準備',
+    '入境規定', '國家差異', '身分別流程',
+
+    '到校交通', '新生報到', '註冊繳費', '學生證',
+    '居留證', 'ARC', '居留證 ARC', '健檢', '體檢',
+    '保險', '銀行開戶', '手機門號', '校內系統',
+
+    '課務選課', '選課', '學籍', '成績', '畢業',
+    '宿舍', '租屋', '健保', '工作證', '獎助學金',
+    '獎學金', '校內活動',
+
+    '圖書館', '交換', '實習', '行政文件',
+    '交通', '飲食', '醫療', '心理支持',
+    '緊急聯絡', '生活費', '其他',
+
+    '護照', '學校', '國際處', '報到', '文件',
+
     ]
     for term in common_terms:
         if term in question:
@@ -593,8 +611,23 @@ def search_knowledge_base(question, language_code='zh-hant', limit=3):
         return '目前沒有可用的知識庫資料。'
 
     terms = extract_search_terms(question)
+
+    cleaned_question = (question or '').strip()
+    for word in ['是什麼', '是什么', '是啥', '？', '?', '請問', '我想知道']:
+        cleaned_question = cleaned_question.replace(word, '')
+        cleaned_question = cleaned_question.strip()
+
+        if cleaned_question:
+            terms.append(cleaned_question)
+
+        if '海聯招' in question:
+            terms.extend(['海聯招', '海外聯招', '海外聯合招生'])
+
     if not terms:
         return '目前沒有可用的知識庫資料。'
+
+    terms = list(dict.fromkeys([term for term in terms if term]))
+    print("[DEBUG] search terms:", terms)
 
     model_fields = {field.name for field in ChatKnowledge._meta.get_fields()}
 
@@ -652,15 +685,11 @@ def search_knowledge_base(question, language_code='zh-hant', limit=3):
 
     lines = []
     for item in results:
-        title = item.get_title_by_lang(language_code)
         content = item.get_content_by_lang(language_code)
-        lines.append(f'標題：{title}')
-        lines.append(f'分類：{item.get_category_display()}')
-        lines.append(f'內容：{content}')
-        lines.append('')
+        if content:
+            lines.append(content)
 
-    return '\n'.join(lines).strip()
-
+    return '\n\n'.join(lines).strip()
 
 def build_history_text(messages, max_messages=3, max_chars_per_message=300):
     """
@@ -794,16 +823,27 @@ def generate_ai_reply(*, user, question, recent_messages):
     """產生 AI 回覆。若未設定金鑰，使用本地備援。"""
     api_key = getattr(settings, 'OPENAI_API_KEY', '')
     model = getattr(settings, 'OPENAI_MODEL', 'gpt-4o-mini')
+    print("[DEBUG] api_key exists:", bool(api_key))
 
     language_code, language_source = choose_reply_language(question)
+    personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
+
+    knowledge_context = search_knowledge_base(question, language_code)
+
+    if not knowledge_context.strip():
+        knowledge_context = '目前沒有找到直接相關的知識庫資料。'
 
     if not api_key:
         return {
-            'reply': local_fallback_reply(question, user, language_code),
-            'source': 'local_fallback',
+            'reply': (
+                f'{personal_label}：\n'
+                f'目前 AI 金鑰尚未設定，無法產生完整個人化回答。\n\n'
+                f'{general_label}：\n'
+                f'{knowledge_context}'
+            ),
+            'source': 'local_fallback_with_knowledge',
             'model': 'local-fallback',
         }
-
     try:
         from openai import OpenAI
     except Exception:
@@ -828,6 +868,31 @@ def generate_ai_reply(*, user, question, recent_messages):
     profile_context = build_user_profile_context(user)
     flow_context = build_student_flow_context(user, language_code)
     knowledge_context = search_knowledge_base(question, language_code)
+
+    if not knowledge_context.strip():
+        knowledge_context = '目前沒有找到直接相關的知識庫資料。'
+
+    personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
+
+    print("[DEBUG] knowledge_context:", knowledge_context)
+
+    if (
+        knowledge_context
+        and '目前沒有找到直接相關的知識庫資料' not in knowledge_context
+        and '目前沒有可用的知識庫資料' not in knowledge_context
+        and '目前知識庫欄位與資料庫尚未同步' not in knowledge_context
+    ):
+        return {
+            'reply': (
+                f'{personal_label}：\n'
+                f'目前沒有足夠個人資料可判斷，請依你的身份別、國籍與學校公告確認。\n\n'
+                f'{general_label}：\n'
+                f'{knowledge_context}'
+            ),
+            'source': 'knowledge_base_direct',
+            'model': 'local-knowledge',
+        }
+
     history_text = build_history_text(recent_messages)
     personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
     info_page = get_personalized_info_page(user, question)
@@ -846,8 +911,11 @@ def generate_ai_reply(*, user, question, recent_messages):
 以下是系統提供的資訊區頁面與附件資料，僅供「{personal_label}」參考：
 {info_page or '目前沒有對應的資訊區頁面。'}
 
-以下是系統 FAQ / 知識庫搜尋結果，僅供「{general_label}」參考：
+以下是系統 FAQ / 知識庫搜尋結果，必須優先用於「{general_label}」：
 {knowledge_context}
+
+如果知識庫有直接相關內容，「{general_label}」必須根據知識庫回答，不要忽略。
+如果知識庫顯示「目前沒有找到直接相關的知識庫資料。」，才可以根據一般來臺就學流程回答。
 
 [CRITICAL] The knowledge base above may be in Chinese. You MUST write the {general_label} section in {language_en}, not Chinese.
 

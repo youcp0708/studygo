@@ -140,6 +140,9 @@ def chat_message_api(request):
         question=message,
         recent_messages=recent_messages,
     )
+    print("[DEBUG] ai_result source:", ai_result.get("source"))
+    print("[DEBUG] ai_result model:", ai_result.get("model"))
+    print("[DEBUG] ai_result reply:", ai_result.get("reply"))
 
     assistant_msg = ChatMessage.objects.create(
         session=session,
