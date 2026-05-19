@@ -58,7 +58,9 @@
       "WebFetch(domain:military.ncu.edu.tw)",
       "WebFetch(domain:edu.law.moe.gov.tw)",
       "WebFetch(domain:oia.ncku.edu.tw)",
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "Bash(python manage.py makemessages -l en)",
+      "Bash(python manage.py compilemessages -l en)"
     ]
   }
 }

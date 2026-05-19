@@ -2616,6 +2616,115 @@ msgstr "Panduan Penerimaan"
 msgid "申請資格、時程、所需文件與注意事項整理"
 msgstr "Kelayakan, jadwal, dokumen yang diperlukan, dan catatan penting"
 
+msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
+msgstr ""
+"Pengurusan ARC, tempat tinggal, transportasi — semua info yang Anda "
+"butuhkan."
+
+msgid "主題分類"
+msgstr "Kategori"
+
+msgid "實用指南"
+msgstr "Panduan"
+
+msgid "隨時查閱"
+msgstr "Tersedia 24 Jam"
+
+msgid "個指南"
+msgstr "panduan"
+
+msgid "學業類"
+msgstr "Akademik"
+
+msgid "心理支持"
+msgstr "Kesehatan Mental"
+
+msgid "行政文件"
+msgstr "Dokumen Administrasi"
+
+msgid "學籍辦理"
+msgstr "Status Akademik"
+
+msgid "校內系統"
+msgstr "Sistem Kampus"
+
+msgid "緊急聯絡"
+msgstr "Kontak Darurat"
+
+msgid "圖書館"
+msgstr "Perpustakaan"
+
+msgid "需要更多協助？"
+msgstr "Butuh bantuan lebih?"
+
+msgid "請聯繫"
+msgstr "Hubungi"
+
+msgid "國際事務處（OIA）"
+msgstr "Kantor Urusan Internasional (OIA)"
+
+msgid "分機 57081，我們很樂意幫助你！"
+msgstr "Ext. 57081 — kami siap membantu!"
+
+msgid "申請流程、每週工時上限、違規罰則說明"
+msgstr "Proses pengajuan, batas jam kerja per minggu, dan sanksi"
+
+msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
+msgstr "Janji konseling, stres, masalah hubungan, dan hotline 24 jam"
+
+msgid "衛保組、校外診所、周邊醫院、急診與緊急電話"
+msgstr "Klinik kampus, klinik luar, RS terdekat, UGD, dan nomor darurat"
+
+msgid "僑生獎學金、清寒補助、校內外各項申請指南"
+msgstr ""
+"Beasiswa mahasiswa Tionghoa perantau, bantuan keuangan, dan panduan daftar"
+
+msgid "統一證號說明、郵局・台灣銀行・玉山銀行開戶比較"
+msgstr ""
+"Panduan Uniform ID dan perbandingan Kantor Pos, Bank of Taiwan, dan E.SUN"
+
+msgid "在學證明、成績單、推薦信申請說明"
+msgstr ""
+"Cara mengajukan surat keterangan mahasiswa, transkrip, dan surat rekomendasi"
+
+msgid "休學、復學、轉系、雙主修規定與流程"
+msgstr ""
+"Aturan dan prosedur cuti, reinstatement, pindah jurusan, dan double major"
+
+msgid "選課、加退選、人工加退選、停修流程與日程"
+msgstr ""
+"Registrasi matkul, tambah/batal, batal manual, dan pengunduran diri matkul"
+
+msgid "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準"
+msgstr ""
+"GPA huruf, SKS kelulusan, dan standar bahasa Inggris (TOEIC) per fakultas"
+
+msgid "Portal 帳號啟用、ee-class 課程平台、學生信箱設定"
+msgstr ""
+"Aktivasi akun Portal, platform kuliah ee-class, dan pengaturan email "
+"mahasiswa"
+
+msgid "110・119・112・校安中心・國際事務處"
+msgstr "110・119・112・Pusat Keamanan Kampus・OIA"
+
+msgid "借書規則、K書中心、學術資料庫、列印費用"
+msgstr "Aturan peminjaman, ruang belajar, database akademik, dan biaya cetak"
+
+msgid "工作許可證"
+msgstr "Izin Kerja"
+
+msgid "在台開設銀行帳戶"
+msgstr "Buka Rekening Bank di Taiwan"
+
+msgid "醫療資訊"
+msgstr "Informasi Medis"
+
+msgid "課務資訊"
+msgstr "Informasi Matakuliah"
+
+msgid "成績與畢業門檻"
+msgstr "Nilai dan Syarat Kelulusan"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Masukkan pertanyaan Anda. Sistem akan menyusun saran berdasarkan identitas "
