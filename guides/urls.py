@@ -25,4 +25,5 @@ urlpatterns = [
     path('guides/enrollment/',         views.guide_enrollment,   name='guide_enrollment'),
     path('guides/mental-health/',      views.guide_mental_health,name='guide_mental_health'),
     path('guides/scholarship/',        views.guide_scholarship,  name='guide_scholarship'),
+    path('guides/admin-docs/',         views.guide_admin_docs,   name='guide_admin_docs'),
 ]

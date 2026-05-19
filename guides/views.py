@@ -67,6 +67,27 @@ def guide_graduation(request):
     return render(request, 'guides/guide_graduation.html')
 
 @login_required(login_url='/login/')
+def guide_admin_docs(request):
+    # 學校名稱 → code 對應表，之後加學校在這裡新增
+    SCHOOL_MAP = {
+        '國立中央大學': 'ncu',
+        'National Central University': 'ncu',
+        'NCU': 'ncu',
+    }
+    school_code = 'ncu'  # 預設
+    school_name = ''
+    try:
+        university = request.user.student_profile.university or ''
+        school_code = SCHOOL_MAP.get(university.strip(), 'unknown')
+        school_name = university
+    except Exception:
+        pass
+    return render(request, 'guides/guide_admin_docs.html', {
+        'school_code': school_code,
+        'school_name': school_name,
+    })
+
+@login_required(login_url='/login/')
 def guide_scholarship(request):
     return render(request, 'guides/guide_scholarship.html')
 
