@@ -57,7 +57,8 @@
       "WebFetch(domain:www.lawgov.ncu.edu.tw)",
       "WebFetch(domain:military.ncu.edu.tw)",
       "WebFetch(domain:edu.law.moe.gov.tw)",
-      "WebFetch(domain:oia.ncku.edu.tw)"
+      "WebFetch(domain:oia.ncku.edu.tw)",
+      "Bash(pip install *)"
     ]
   }
 }
