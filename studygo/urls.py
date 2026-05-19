@@ -18,6 +18,7 @@ urlpatterns = [
     path('api/', include('users.api_urls')),        # Users app API
 
     path('flows/', include('flows.urls')),          # Flows app 前端
+    path('', include('guides.urls')),              # 資訊中心指南
     path('api/', include('flows.api_urls')),        # Flows app API
 
     path('chatbot/', include('chatbot.urls')),      # AI 聊天機器人
