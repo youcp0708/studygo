@@ -2715,6 +2715,123 @@ msgstr "National Pingtung University of Science and Technology (NPUST)"
 msgid "國立高雄師範大學（NKNU）"
 msgstr "National Kaohsiung Normal University (NKNU)"
 
+msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
+msgstr "ARC, housing, transport and more — all the info you need in one place."
+
+msgid "主題分類"
+msgstr "Categories"
+
+msgid "實用指南"
+msgstr "Guides"
+
+msgid "隨時查閱"
+msgstr "Available 24H"
+
+msgid "個指南"
+msgstr "guides"
+
+msgid "學業類"
+msgstr "Academic"
+
+msgid "心理支持"
+msgstr "Mental Health"
+
+msgid "行政文件"
+msgstr "Admin Documents"
+
+msgid "學籍辦理"
+msgstr "Enrollment Affairs"
+
+msgid "校內系統"
+msgstr "Campus Systems"
+
+msgid "緊急聯絡"
+msgstr "Emergency Contacts"
+
+msgid "圖書館"
+msgstr "Library"
+
+msgid "需要更多協助？"
+msgstr "Need more help?"
+
+msgid "請聯繫"
+msgstr "Contact"
+
+msgid "國際事務處（OIA）"
+msgstr "Office of International Affairs (OIA)"
+
+msgid "分機 57081，我們很樂意幫助你！"
+msgstr "Ext. 57081 — we're happy to help!"
+
+msgid "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等"
+msgstr "Admissions info by region — Hong Kong, Malaysia, Thailand and more"
+
+msgid "申請資格、時程、所需文件與注意事項整理"
+msgstr "Eligibility, timeline, required documents and key notes"
+
+msgid "外國護照入學者的居留證申請流程與文件清單"
+msgstr "ARC application process and document checklist for foreign passport holders"
+
+msgid "持外國護照入台的僑生居留證申請說明"
+msgstr "ARC application guide for overseas Chinese students entering on a foreign passport"
+
+msgid "入出境許可證、居留申請流程與健保工讀說明"
+msgstr "Entry permit, residence application, NHI and work permit info for HK/Macau students"
+
+msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
+msgstr "Dorm zones, facilities, application process and guaranteed housing for international students"
+
+msgid "入學・居留・健保・工讀・學籍等重要法規說明"
+msgstr "Key regulations on admission, residence, NHI, part-time work and enrollment"
+
+msgid "申請流程、每週工時上限、違規罰則說明"
+msgstr "Application process, weekly hour limits and penalty information"
+
+msgid "主要路線、常見目的地與即時查詢連結"
+msgstr "Main routes, common destinations and real-time bus lookup"
+
+msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
+msgstr "Counseling appointments, stress, interpersonal issues and 24H hotlines"
+
+msgid "衛保組、校外診所、周邊醫院、急診與緊急電話"
+msgstr "Campus clinic, off-campus clinics, nearby hospitals, ER and emergency numbers"
+
+msgid "僑生獎學金、清寒補助、校內外各項申請指南"
+msgstr "Overseas student scholarships, financial aid and on/off-campus application guides"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "Enroll after ARC is issued — greatly reduces outpatient costs"
+
+msgid "統一證號說明、郵局・台灣銀行・玉山銀行開戶比較"
+msgstr "Uniform ID guide and comparison of Post Office, Bank of Taiwan and E.SUN Bank"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "Prepaid vs. monthly plans — overview of major Taiwan carriers"
+
+msgid "在學證明、成績單、推薦信申請說明"
+msgstr "How to apply for enrollment certificates, transcripts and recommendation letters"
+
+msgid "休學、復學、轉系、雙主修規定與流程"
+msgstr "Rules and procedures for leave of absence, reinstatement, transfer and double major"
+
+msgid "選課、加退選、人工加退選、停修流程與日程"
+msgstr "Course registration, add/drop, manual add/drop and withdrawal procedures"
+
+msgid "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準"
+msgstr "Letter-grade GPA, graduation credits and English proficiency (TOEIC) by college"
+
+msgid "Portal 帳號啟用、ee-class 課程平台、學生信箱設定"
+msgstr "Portal account activation, ee-class course platform and student email setup"
+
+msgid "110・119・112・校安中心・國際事務處"
+msgstr "110・119・112・Campus Safety Center・OIA"
+
+msgid "借書規則、K書中心、學術資料庫、列印費用"
+msgstr "Borrowing rules, study rooms, academic databases and printing costs"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "School, hospitals, stations and airports — one-tap navigation"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Enter your question, and the system will organize suggestions based on your "
