@@ -3,342 +3,6 @@
 {% block title %}{% trans "我的任務" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
-<style>
-  .flows-page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 32px 24px 64px;
-  }
-
-  .flows-back-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 38px;
-    padding: 0 16px;
-    margin-bottom: 22px;
-    border: 1px solid var(--primary);
-    border-radius: 999px;
-    background: var(--primary);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 900;
-    text-decoration: none;
-    box-shadow: 0 8px 18px rgba(23, 83, 77, .12);
-  }
-
-  .flows-back-link:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
-    color: #fff;
-    transform: translateY(-1px);
-  }
-
-  .flows-header {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-
-  .flows-header h2 {
-    font-size: 32px;
-    color: var(--text-dark);
-    margin-bottom: 12px;
-  }
-
-  .flows-header p {
-    font-size: 16px;
-    color: var(--muted);
-  }
-
-  .flows-tabs {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
-    overflow-x: auto;
-    padding-bottom: 8px;
-  }
-
-  .flow-tab-btn {
-    padding: 12px 24px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background: white;
-    color: var(--muted);
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-  }
-
-  .flow-tab-btn:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-  }
-
-  .flow-tab-btn.active {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: white;
-    box-shadow: 0 4px 12px rgba(46, 168, 94, 0.2);
-  }
-
-  .stage-section {
-    display: none;
-    background: var(--bg);
-    border-radius: 16px;
-    padding: 32px;
-    margin-bottom: 32px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  }
-
-  .stage-section.active {
-    display: block;
-  }
-
-  .stage-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 16px;
-  }
-
-  .stage-title {
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--primary-dark);
-  }
-
-  .stage-progress {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--muted);
-    background: #f0f4f8;
-    padding: 6px 12px;
-    border-radius: 20px;
-  }
-
-  .task-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .task-item {
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 16px 20px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    transition: all 0.2s ease;
-    cursor: pointer;
-  }
-
-  .task-item:hover {
-    border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(46, 168, 94, 0.1);
-  }
-
-  .task-item.completed {
-    background: #f8fbf9;
-    border-color: #d1e7dd;
-    opacity: 0.8;
-  }
-
-  .task-checkbox {
-    width: 24px;
-    height: 24px;
-    border: 2px solid var(--border);
-    border-radius: 6px;
-    margin-right: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: white;
-    transition: all 0.2s;
-  }
-
-  .task-item.completed .task-checkbox {
-    background: var(--primary);
-    border-color: var(--primary);
-  }
-
-  .task-item.completed .task-checkbox::after {
-    content: "✓";
-  }
-
-  .task-content {
-    flex: 1;
-  }
-
-  .task-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 4px;
-  }
-
-  .task-item.completed .task-title {
-    text-decoration: line-through;
-    color: var(--muted);
-  }
-
-  .task-desc {
-    font-size: 14px;
-    color: var(--muted);
-    white-space: pre-wrap;
-    line-height: 1.8;
-  }
-
-  /* Batch actions */
-  .batch-actions {
-    display: none;
-    background: var(--bg);
-    padding: 12px 20px;
-    border-radius: 12px;
-    margin-bottom: 24px;
-    align-items: center;
-    gap: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  }
-
-  .batch-actions.active {
-    display: flex;
-  }
-
-  .btn-batch {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-  }
-
-  .btn-batch.complete {
-    background: var(--primary);
-  }
-
-  /* Status Pills */
-  .status-pills {
-    display: flex;
-    gap: 8px;
-    margin-left: auto;
-  }
-
-  .status-pill {
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    border: 1px solid var(--border);
-    background: white;
-    color: var(--muted);
-    transition: all 0.2s;
-  }
-
-  .status-pill.active.not_started {
-    background: #f8f9fa;
-    border-color: #dee2e6;
-    color: #495057;
-  }
-
-  .status-pill.active.in_progress {
-    background: #e0f2fe;
-    border-color: #bae6fd;
-    color: #0284c7;
-  }
-
-  .status-pill.active.completed {
-    background: #d1fae5;
-    border-color: #a7f3d0;
-    color: #059669;
-  }
-
-  /* Task details expanded */
-  .task-details {
-    display: none;
-    padding: 16px;
-    margin-top: 16px;
-    background: #f8fbf9;
-    border-radius: 8px;
-    border: 1px dashed var(--border);
-    cursor: default;
-  }
-
-  .task-details.active {
-    display: block;
-  }
-
-  .detail-row {
-    margin-bottom: 12px;
-    font-size: 14px;
-  }
-
-  .detail-label {
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 4px;
-  }
-
-  .detail-value {
-    color: var(--text);
-  }
-
-  .task-note-input,
-  .task-date-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    margin-top: 4px;
-  }
-
-  .btn-save-note {
-    margin-top: 8px;
-    padding: 6px 12px;
-    background: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-
-  .chart-container {
-    background: white;
-    padding: 24px;
-    border-radius: 16px;
-    margin-bottom: 32px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-  }
-
-  /* Loading State */
-  .skeleton {
-    background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: loading 1.5s infinite;
-    border-radius: 8px;
-  }
-
-  @keyframes loading {
-    0% {
-      background-position: 200% 0;
-    }
-
-    100% {
-      background-position: -200% 0;
-    }
-  }
-</style>
 <link rel="stylesheet" href="{% static 'flows/css/my_flows.css' %}">
 {% endblock %}
 
@@ -353,18 +17,38 @@
     <p>{% trans "完成這些任務，為你在台灣的學習生活做好準備！" %}</p>
   </div>
 
-  <div class="chart-container" id="chartContainer"
-    style="display:none; margin-bottom: 32px; height: 300px; width: 100%;">
-    <canvas id="progressChart"></canvas>
-  </div>
+  {# ── 雙欄佈局 ── #}
+  <div class="flows-layout">
 
-  <div id="flowsContainer">
-    <!-- Skeleton Loading -->
-    <div class="flows-tabs">
-      <div class="flow-tab-btn skeleton" style="width: 100px; height: 40px; color: transparent;">Tab</div>
-      <div class="flow-tab-btn skeleton" style="width: 100px; height: 40px; color: transparent;">Tab</div>
+    {# ── 左欄：任務清單 ── #}
+    <div class="flows-main">
+      <div id="flowsContainer">
+        <!-- Skeleton Loading -->
+        <div class="flows-tabs">
+          <div class="flow-tab-btn skeleton" style="width: 100px; height: 40px; color: transparent;">Tab</div>
+          <div class="flow-tab-btn skeleton" style="width: 100px; height: 40px; color: transparent;">Tab</div>
+        </div>
+        <div class="stage-section skeleton active" style="height: 200px;"></div>
+      </div>
     </div>
-    <div class="stage-section skeleton active" style="height: 200px;"></div>
+
+    {# ── 右欄：進度圖表 + 小貼士 ── #}
+    <div class="flows-sidebar">
+      <div class="sidebar-card" id="chartCard" style="display:none;">
+        <h3 class="sidebar-card-title">{% trans "完成進度" %}</h3>
+        <div class="chart-container" id="chartContainer" style="height: 220px; width: 100%;">
+          <canvas id="progressChart"></canvas>
+        </div>
+      </div>
+
+      <div class="sidebar-card" id="tipsCard" style="display:none;">
+        <h3 class="sidebar-card-title">💡 {% trans "小貼士" %}</h3>
+        <div id="tipsContainer">
+          <!-- JS 動態載入 -->
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </section>
@@ -392,7 +76,8 @@
     noDetails: '{% trans "暫無詳細資料" %}',
     completedProgress: '{% trans "完成" %}', // e.g. 1 / 5 完成
     completedTasks: '{% trans "已完成任務" %}',
-    inProgressTasks: '{% trans "未完成任務" %}'
+    inProgressTasks: '{% trans "未完成任務" %}',
+    visitLink: '{% trans "前往查看" %}',
   };
 </script>
 

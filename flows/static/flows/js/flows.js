@@ -192,15 +192,15 @@ window.switchFlowTab = function (activeIndex) {
 let progressChartInstance = null;
 
 async function renderProgressChart() {
-  const chartContainer = document.getElementById('chartContainer');
+  const chartCard = document.getElementById('chartCard');
   const canvas = document.getElementById('progressChart');
-  if (!chartContainer || !canvas) return;
+  if (!chartCard || !canvas) return;
 
   try {
     const { ok, data } = await apiFetch('/api/flows/progress/');
     if (!ok || !data || !data.data) return;
 
-    chartContainer.style.display = 'flex';
+    chartCard.style.display = 'block';
 
     const stages = data.data.stages || [];
     let totalCompleted = 0;
@@ -214,22 +214,34 @@ async function renderProgressChart() {
       progressChartInstance.destroy();
     }
 
+    const completedLabel = window.UI_STRINGS?.completedTasks || '已完成任務';
+    const pendingLabel = window.UI_STRINGS?.inProgressTasks || '未完成任務';
+
     progressChartInstance = new Chart(canvas, {
       type: 'doughnut',
       data: {
-        labels: ['已完成', '未完成'],
+        labels: [completedLabel, pendingLabel],
         datasets: [{
           data: [totalCompleted, totalPending],
-          backgroundColor: ['#059669', '#e5e7eb'],
-          borderWidth: 0
+          backgroundColor: ['#3d9970', '#dce5df'],
+          borderWidth: 0,
+          borderRadius: 4
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        cutout: '68%',
         plugins: {
           legend: {
-            position: 'top',
+            position: 'bottom',
+            labels: {
+              padding: 14,
+              usePointStyle: true,
+              pointStyleWidth: 10,
+              font: { size: 12, weight: '600' },
+              color: '#6b7c74'
+            }
           }
         }
       }
@@ -306,7 +318,7 @@ async function renderMyTasks() {
 
   if (!stages || stages.length === 0) {
     container.innerHTML = `
-      <div style="text-align:center;padding:48px;background:white;border-radius:16px;">
+      <div style="text-align:center;padding:48px;background:white;border-radius:14px;border:1px solid #e5e8e6;">
         <h3 style="margin-bottom:12px;">尚未產生任務</h3>
         <p style="color:var(--muted);">請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。</p>
       </div>
@@ -332,7 +344,7 @@ async function renderMyTasks() {
 
     contentHtml += `
       <div class="stage-section ${isActive}">
-        <div class="stage-header" style="justify-content: flex-end; border-bottom: none; padding-bottom: 0; margin-bottom: 16px;">
+        <div class="stage-header">
           <div class="stage-progress">${progressText}</div>
         </div>
         <div class="task-list">
@@ -359,23 +371,23 @@ async function renderMyTasks() {
       let deadlineHtml = '';
       if (deadlineInfo.type === 'text_only' && deadlineInfo.text) {
         deadlineHtml = `
-          <div class="detail-row" style="margin-top:12px; background:#f0fdf4; padding:10px 14px; border-radius:8px; border-left:3px solid #059669;">
-            <div class="detail-label" style="color:#059669;">${window.UI_STRINGS.taskSchedule}</div>
+          <div class="deadline-block">
+            <div class="detail-label">${window.UI_STRINGS.taskSchedule}</div>
             <div class="detail-value">${deadlineInfo.text}</div>
           </div>`;
       } else if (deadlineInfo.type === 'from_arrival') {
         if (deadlineInfo.arrival_missing) {
           deadlineHtml = `
-            <div class="detail-row" style="margin-top:12px; background:#fef9c3; padding:10px 14px; border-radius:8px; border-left:3px solid #ca8a04;">
-              <div class="detail-label" style="color:#ca8a04;">${window.UI_STRINGS.deadlineWarning}</div>
+            <div class="deadline-block warning">
+              <div class="detail-label">${window.UI_STRINGS.deadlineWarning}</div>
               <div class="detail-value">${window.UI_STRINGS.fillArrivalDatePrompt}</div>
               ${deadlineInfo.text ? `<div style="margin-top:6px;color:#555;">${deadlineInfo.text}</div>` : ''}
             </div>`;
         } else {
           deadlineHtml = `
-            <div class="detail-row" style="margin-top:12px; background:#f0fdf4; padding:10px 14px; border-radius:8px; border-left:3px solid #059669;">
-              <div class="detail-label" style="color:#059669;">${window.UI_STRINGS.deadline}</div>
-              <div class="detail-value" style="font-size:16px; font-weight:700; color:#059669;">${deadlineInfo.calculated_due_date}</div>
+            <div class="deadline-block">
+              <div class="detail-label">${window.UI_STRINGS.deadline}</div>
+              <div class="detail-value" style="font-size:15px; font-weight:700; color:#059669;">${deadlineInfo.calculated_due_date}</div>
               ${deadlineInfo.text ? `<div style="margin-top:4px; font-size:13px; color:#555;">${deadlineInfo.text}</div>` : ''}
             </div>`;
         }
@@ -409,24 +421,22 @@ async function renderMyTasks() {
       ].join('');
 
       contentHtml += `
-        <div class="task-item ${isDone ? 'completed' : ''}" style="display:flex; flex-direction:column; align-items:stretch; padding:0;">
-          <div style="display:flex; align-items:center; width:100%; padding:16px 20px; cursor:pointer;" onclick="toggleTaskDetails(${task.id})">
-            <input type="checkbox" id="chk-${task.id}" style="width:20px; height:20px; margin-right:16px; cursor:pointer;" onclick="toggleTaskCompletion(${task.id}, event)" ${isDone ? 'checked' : ''}>
+        <div class="task-item ${isDone ? 'completed' : ''}">
+          <div class="task-item-row" onclick="toggleTaskDetails(${task.id})">
+            <input type="checkbox" id="chk-${task.id}" onclick="toggleTaskCompletion(${task.id}, event)" ${isDone ? 'checked' : ''}>
             <div class="task-content">
               <div class="task-title">
                 ${loc.title || window.UI_STRINGS.unnamedTask}
                 ${requiredBadge}
               </div>
-              <div class="task-desc" style="white-space: pre-wrap;>${loc.description || ''}</div>
+              <div class="task-desc" style="white-space: pre-wrap;">${loc.description || ''}</div>
             </div>
-            <div class="status-pills" onclick="event.stopPropagation()">
-              ${isDone ? `<span style="color:#059669; font-weight:bold; font-size:14px; background:#d1fae5; padding:4px 12px; border-radius:999px;">${window.UI_STRINGS.completedBadge}</span>` : ''}
-            </div>
+            ${isDone ? `<span class="task-completed-badge">${window.UI_STRINGS.completedBadge}</span>` : ''}
           </div>
           <div id="details-${task.id}" class="task-details" onclick="event.stopPropagation()">
             ${detailRows || `<div style="color:var(--muted);font-size:13px;">${window.UI_STRINGS.noDetails}</div>`}
             ${deadlineHtml}
-            <div class="detail-row" style="margin-top:12px;">
+            <div class="detail-row" style="margin-top:10px;">
               <div class="detail-label">${window.UI_STRINGS.taskNotes}</div>
               <textarea id="note-${task.id}" class="task-note-input" rows="3" placeholder="${window.UI_STRINGS.enterNotesPlaceholder}">${noteVal}</textarea>
               <button class="btn-save-note" onclick="saveTaskNote(${task.id}, event)">${window.UI_STRINGS.saveNotesBtn}</button>
@@ -443,6 +453,44 @@ async function renderMyTasks() {
   tabsHtml += `</div>`;
   container.innerHTML = tabsHtml + contentHtml;
 }
+
+
+/* ════════════════════════════════════════
+   4. 渲染小貼士
+   GET /api/flows/tips/
+════════════════════════════════════════ */
+async function renderTips() {
+  const tipsCard = document.getElementById('tipsCard');
+  const tipsContainer = document.getElementById('tipsContainer');
+  if (!tipsCard || !tipsContainer) return;
+
+  try {
+    const { ok, data } = await apiFetch('/api/flows/tips/');
+    if (!ok || !data || !data.data) return;
+
+    const tips = data.data.tips || [];
+    if (tips.length === 0) return;
+
+    tipsCard.style.display = 'block';
+    const visitText = window.UI_STRINGS?.visitLink || '前往查看';
+
+    let html = '';
+    tips.forEach(tip => {
+      html += `
+        <div class="tip-item">
+          <div class="tip-item-title">${tip.icon || '💡'} ${tip.title}</div>
+          ${tip.content ? `<div class="tip-item-content">${tip.content}</div>` : ''}
+          ${tip.official_url ? `<a href="${tip.official_url}" target="_blank" class="tip-item-link">${visitText} →</a>` : ''}
+        </div>
+      `;
+    });
+
+    tipsContainer.innerHTML = html;
+  } catch (err) {
+    console.error('Failed to render tips:', err);
+  }
+}
+
 
 /* ════════════════════════════════════════
    5. 讀取並渲染通知
@@ -544,6 +592,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   if (document.getElementById('flowsContainer')) {
     await renderMyTasks();
+    await renderTips();
   }
 
   if (document.getElementById('reminderBtn') || document.getElementById('profileDash')) {

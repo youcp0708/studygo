@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import FlowStage, Task, StudentTask, Reminder
+from .models import FlowStage, Task, StudentTask, Reminder, Tip
 
 
 @admin.register(FlowStage)
@@ -310,3 +310,89 @@ class ReminderAdmin(admin.ModelAdmin):
     )
 
     ordering = ('-created_at',)
+
+
+@admin.register(Tip)
+class TipAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'icon',
+        'title',
+        'title_en',
+        'official_url',
+        'is_active',
+        'order',
+    )
+
+    fieldsets = (
+        ('基本資料', {
+            'fields': (
+                'title',
+                'content',
+                'official_url',
+                'icon',
+                'is_active',
+                'order',
+            )
+        }),
+        ('英文 English', {
+            'classes': ('collapse',),
+            'fields': (
+                'title_en',
+                'content_en',
+            )
+        }),
+        ('緬甸語 Burmese', {
+            'classes': ('collapse',),
+            'fields': (
+                'title_my',
+                'content_my',
+            )
+        }),
+        ('印尼語 Indonesian', {
+            'classes': ('collapse',),
+            'fields': (
+                'title_id',
+                'content_id',
+            )
+        }),
+        ('馬來語 Malay', {
+            'classes': ('collapse',),
+            'fields': (
+                'title_ms',
+                'content_ms',
+            )
+        }),
+        ('泰語 Thai', {
+            'classes': ('collapse',),
+            'fields': (
+                'title_th',
+                'content_th',
+            )
+        }),
+        ('日語 Japanese', {
+            'classes': ('collapse',),
+            'fields': (
+                'title_ja',
+                'content_ja',
+            )
+        }),
+        ('韓語 Korean', {
+            'classes': ('collapse',),
+            'fields': (
+                'title_ko',
+                'content_ko',
+            )
+        }),
+        ('越南語 Vietnamese', {
+            'classes': ('collapse',),
+            'fields': (
+                'title_vi',
+                'content_vi',
+            )
+        }),
+    )
+
+    list_filter = ('is_active',)
+    search_fields = ('title', 'title_en', 'content')
+    ordering = ('order',)

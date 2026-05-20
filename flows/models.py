@@ -396,3 +396,84 @@ def auto_create_reminder_on_task_update(sender, instance, **kwargs):
                         student_task=instance,
                         message=message
                     )
+
+
+# ==========================================
+# 小貼士（Tips）：後台可管理的實用資訊
+# ==========================================
+class Tip(models.Model):
+    """
+    小貼士：提供學生實用資訊，例如獎學金查詢、工作許可、護照遺失處理等。
+    管理員可在 Django Admin 新增 / 編輯，前端會在流程頁面右側欄顯示。
+    """
+    # ── 中文（預設）──
+    title = models.CharField(max_length=200, verbose_name="標題")
+    content = models.TextField(blank=True, verbose_name="內容說明")
+    official_url = models.URLField(blank=True, verbose_name="官方網站連結")
+    icon = models.CharField(
+        max_length=10, blank=True, default="💡",
+        verbose_name="圖示 Emoji",
+        help_text="顯示在標題前方的 Emoji，例如 💡📚🏥"
+    )
+    is_active = models.BooleanField(default=True, verbose_name="是否啟用")
+    order = models.PositiveIntegerField(default=0, verbose_name="排序")
+
+    # ── 多語言：標題 ──
+    title_en = models.CharField(max_length=200, blank=True, verbose_name="標題 English")
+    title_my = models.CharField(max_length=200, blank=True, verbose_name="標題 Burmese")
+    title_id = models.CharField(max_length=200, blank=True, verbose_name="標題 Indonesian")
+    title_ms = models.CharField(max_length=200, blank=True, verbose_name="標題 Malay")
+    title_th = models.CharField(max_length=200, blank=True, verbose_name="標題 Thai")
+    title_ja = models.CharField(max_length=200, blank=True, verbose_name="標題 Japanese")
+    title_ko = models.CharField(max_length=200, blank=True, verbose_name="標題 Korean")
+    title_vi = models.CharField(max_length=200, blank=True, verbose_name="標題 Vietnamese")
+
+    # ── 多語言：內容 ──
+    content_en = models.TextField(blank=True, verbose_name="內容 English")
+    content_my = models.TextField(blank=True, verbose_name="內容 Burmese")
+    content_id = models.TextField(blank=True, verbose_name="內容 Indonesian")
+    content_ms = models.TextField(blank=True, verbose_name="內容 Malay")
+    content_th = models.TextField(blank=True, verbose_name="內容 Thai")
+    content_ja = models.TextField(blank=True, verbose_name="內容 Japanese")
+    content_ko = models.TextField(blank=True, verbose_name="內容 Korean")
+    content_vi = models.TextField(blank=True, verbose_name="內容 Vietnamese")
+
+    class Meta:
+        db_table = "flows_tip"
+        ordering = ["order"]
+        verbose_name = "小貼士"
+        verbose_name_plural = "小貼士"
+
+    def __str__(self):
+        return self.title
+
+    def get_localized(self, lang_code):
+        """
+        依語言代碼回傳本地化的標題與內容。
+        若該語言沒有填就回傳中文預設。
+        """
+        suffix_map = {
+            'en': '_en', 'my': '_my', 'id': '_id',
+            'ms': '_ms', 'th': '_th', 'ja': '_ja',
+            'ko': '_ko', 'vi': '_vi',
+        }
+        s = suffix_map.get(lang_code)
+
+        if s is None:
+            return {
+                'title': self.title,
+                'content': self.content,
+                'official_url': self.official_url,
+                'icon': self.icon,
+            }
+
+        def pick(base_val, field_name):
+            translated = getattr(self, field_name, '') or ''
+            return translated if translated.strip() else (base_val or '')
+
+        return {
+            'title': pick(self.title, f'title{s}'),
+            'content': pick(self.content, f'content{s}'),
+            'official_url': self.official_url,
+            'icon': self.icon,
+        }

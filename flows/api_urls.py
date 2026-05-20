@@ -37,4 +37,8 @@ urlpatterns = [
     
     # PATCH /api/flows/reminders/<id>/read/  → 標記為已讀
     path('flows/reminders/<int:reminder_id>/read/', views.read_reminder_view, name='api_read_reminder'),
+
+    # ── 小貼士 ──────────────────────────────────────
+    # GET   /api/flows/tips/                → 取得小貼士列表
+    path('flows/tips/',                 views.get_tips_view,            name='api_tips'),
 ]

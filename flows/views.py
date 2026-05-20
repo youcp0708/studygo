@@ -40,12 +40,13 @@ def my_flows_page(request):
 # ==========================================
 # REST API 視圖 (DRF)
 # ==========================================
-from .models import FlowStage, Task, StudentTask, Reminder
+from .models import FlowStage, Task, StudentTask, Reminder, Tip
 from .serializers import (
     FlowStageSerializer,
     TaskSerializer,
     StudentTaskSerializer,
     ReminderSerializer,
+    TipSerializer,
 )
 
 
@@ -536,3 +537,39 @@ def read_reminder_view(request, reminder_id):
     reminder.save()
     
     return success_response({}, '已標記為已讀')
+
+
+# ══════════════════════════════════════════
+# 11. 取得小貼士列表
+# GET /api/flows/tips/
+# ══════════════════════════════════════════
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_tips_view(request):
+    """
+    回傳所有啟用中的小貼士，並根據使用者的語言進行本地化。
+    Response (200):
+      { "success": true,
+        "data": {
+          "tips": [
+            { "id": 1, "icon": "💡", "title": "...", "content": "...", "official_url": "..." },
+            ...
+          ]
+        } }
+    """
+    active_lang = get_language() or ''
+    short_lang = active_lang.split('-')[0] if '-' in active_lang else active_lang
+    SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko', 'vi'}
+    if short_lang not in SUPPORTED:
+        short_lang = ''
+
+    tips = Tip.objects.filter(is_active=True).order_by('order')
+    tips_data = []
+    for tip in tips:
+        localized = tip.get_localized(short_lang)
+        tips_data.append({
+            'id': tip.id,
+            **localized,
+        })
+
+    return success_response({'tips': tips_data})
