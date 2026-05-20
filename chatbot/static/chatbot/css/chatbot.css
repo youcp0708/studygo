@@ -1169,3 +1169,77 @@ html[lang="my"] .bot-profile-card p {
 .chat-link:hover {
   color: #1d4ed8 !important;
 }
+
+/* ===== AI mode switcher: StudyGo AI 小幫手 / 聊天好朋友 ===== */
+
+.ai-mode-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 14px;
+  margin: 0 0 12px;
+}
+
+.ai-mode-card {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  border-radius: 22px;
+  padding: 14px 12px;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.42;
+  transform: scale(0.96);
+  transition: all 0.22s ease;
+}
+
+.ai-mode-card.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ai-mode-card .bot-avatar {
+  margin: 0 auto 10px !important;
+  transform: none !important;
+}
+
+.bot-avatar-dark {
+  background: linear-gradient(135deg, #0f5f52, #2d7d6d) !important;
+  box-shadow: 0 16px 34px rgba(23, 83, 77, .24);
+}
+
+.bot-avatar-light {
+  background: linear-gradient(135deg, #dff3ed, #b9e6d7) !important;
+  box-shadow: 0 16px 34px rgba(105, 170, 150, .18);
+}
+
+.ai-mode-card h2 {
+  margin: 0 0 6px !important;
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  color: var(--primary-dark);
+  font-weight: 950;
+}
+
+.ai-mode-card p {
+  margin: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+  color: var(--muted);
+}
+
+.ai-mode-card:not(.active) h2,
+.ai-mode-card:not(.active) p {
+  color: #9aa8a6 !important;
+}
+
+.ai-mode-card:not(.active) .bot-avatar {
+  filter: grayscale(.25);
+}
+
+@media (max-width: 760px) {
+  .ai-mode-switcher {
+    flex-direction: column;
+  }
+}

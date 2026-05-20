@@ -78,6 +78,11 @@ def chat_message_api(request):
     POST /chatbot/api/message/
     """
     message = (request.data.get('message') or '').strip()
+    ai_mode = request.POST.get("ai_mode", "helper")
+
+    if ai_mode not in ["helper", "friend"]:
+        ai_mode = "helper"
+        
     session_id = request.data.get('session_id')
 
     attachments = request.FILES.getlist('attachments')

@@ -7,7 +7,8 @@
 {% endblock %}
 
 {% block content %}
-<section class="chatbot-page" data-session-id="{% if active_session %}{{ active_session.id }}{% endif %}">
+<section class="chatbot-page" data-session-id="{% if active_session %}{{ active_session.id }}{% endif %}"
+  data-ai-mode="{% if active_session %}{{ active_session.ai_mode|default:'helper' }}{% else %}helper{% endif %}">
   <div class="chatbot-layout">
 
     <aside class="chatbot-sidebar">
@@ -17,8 +18,22 @@
           ← {% trans "返回" %}
         </a>
 
-        <div class="bot-avatar">🤖</div>
-        <h2>{% trans "AI 來臺就學小幫手" %}</h2>
+        <div class="ai-mode-switcher">
+
+          <button class="ai-mode-card active" data-mode="helper" type="button">
+            <div class="bot-avatar bot-avatar-dark">🤖</div>
+            <h2>{% trans "StudyGo AI 小幫手" %}</h2>
+            <p>{% trans "協助管理來臺任務、文件提醒與流程進度。" %}</p>
+          </button>
+
+          <button class="ai-mode-card" data-mode="friend" type="button">
+            <div class="bot-avatar bot-avatar-light">🤖</div>
+            <h2>{% trans "StudyGo AI 好朋友" %}</h2>
+            <p>{% trans "陪你聊天，協助處理生活適應與心理壓力問題。" %}</p>
+          </button>
+
+        </div>
+
         <p id="botTipText" class="bot-tip-text">{{ taiwan_tip }}</p>
         {{ taiwan_tips|json_script:"taiwanTipsData" }}
       </div>
@@ -91,10 +106,15 @@
         <div class="message-row assistant welcome-message">
           <div class="message-avatar">🤖</div>
           <div class="message-bubble">
-            <div class="message-name">{% trans "StudyGo AI 小幫手" %}</div>
+            <div class="message-name js-ai-name">
+              {% if active_session and active_session.ai_mode == "friend" %}
+              {% trans "StudyGo AI 好朋友" %}
+              {% else %}
+              {% trans "StudyGo AI 小幫手" %}
+              {% endif %}
+            </div>
             <div class="message-content">
-              {% trans "你好 !" %}
-              {% firstof user.name user.email "同學" %}
+              {% trans "你好 !" %} {% firstof user.name user.email "同學" %}
             </div>
           </div>
         </div>

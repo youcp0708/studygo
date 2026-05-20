@@ -4,6 +4,23 @@
   const page = document.querySelector('.chatbot-page');
   if (!page) return;
 
+  let currentAIMode = page.dataset.aiMode || 'helper';
+
+  const AI_MODE_NAMES = {
+    helper: 'StudyGo AI 小幫手',
+    friend: 'StudyGo AI 聊天好朋友',
+  };
+
+  function getCurrentAIName() {
+    return AI_MODE_NAMES[currentAIMode] || AI_MODE_NAMES.helper;
+  }
+
+  function updateAINameOnPage() {
+    document.querySelectorAll('.js-ai-name').forEach((el) => {
+      el.textContent = getCurrentAIName();
+    });
+  }
+
   let activeSessionId = page.dataset.sessionId || null;
 
   const endpoints = window.CHATBOT_ENDPOINTS || {};
@@ -177,7 +194,8 @@
     if (role !== 'user') {
       const name = document.createElement('div');
       name.className = 'message-name';
-      name.textContent = t('assistantName', 'StudyGo AI 小幫手');
+      name.textContent = getCurrentAIName();
+      name.classList.add('js-ai-name');
       bubble.appendChild(name);
     }
 
@@ -467,6 +485,7 @@
       const formData = new FormData();
 
       formData.append('message', message || t('uploadedAttachment', '已上傳附件'));
+      formData.append('ai_mode', currentAIMode);
 
       if (activeSessionId) {
         formData.append('session_id', activeSessionId);
@@ -763,10 +782,50 @@
     messagesEl.addEventListener('scroll', updateScrollBottomButton);
   }
 
+  function setupAIModeSwitcher() {
+    const modeCards = document.querySelectorAll('.ai-mode-card');
+
+    if (!modeCards.length) return;
+
+    modeCards.forEach((card) => {
+      card.addEventListener('click', function () {
+        const mode = this.dataset.mode || 'helper';
+
+        if (!['helper', 'friend'].includes(mode)) return;
+
+        currentAIMode = mode;
+        window.CHATBOT_CURRENT_MODE = mode;
+        page.dataset.aiMode = mode;
+
+        modeCards.forEach((item) => {
+          item.classList.toggle('active', item.dataset.mode === mode);
+        });
+
+        updateAINameOnPage();
+
+        if (input) {
+          input.placeholder = AI_MODE_PLACEHOLDERS[mode] || AI_MODE_PLACEHOLDERS.helper;
+        }
+      });
+    });
+
+    modeCards.forEach((item) => {
+      item.classList.toggle('active', item.dataset.mode === currentAIMode);
+    });
+
+    updateAINameOnPage();
+
+    if (input) {
+      input.placeholder = AI_MODE_PLACEHOLDERS[currentAIMode] || AI_MODE_PLACEHOLDERS.helper;
+    }
+  }
+
   setupHistoryMenu();
   setupAttachmentButtons();
   setupHistorySearch();
   setupTaiwanTipRotator();
+  setupAIModeSwitcher();
+  updateAINameOnPage();
   renderExistingMessageLinks();
   updateCount();
   scrollToBottom();
@@ -776,3 +835,4 @@
 renderExistingMessageLinks();
 setTimeout(renderExistingMessageLinks, 300);
 setTimeout(renderExistingMessageLinks, 1000);
+
