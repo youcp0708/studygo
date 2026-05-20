@@ -410,11 +410,6 @@ class Tip(models.Model):
     title = models.CharField(max_length=200, verbose_name="標題")
     content = models.TextField(blank=True, verbose_name="內容說明")
     official_url = models.URLField(blank=True, verbose_name="官方網站連結")
-    icon = models.CharField(
-        max_length=10, blank=True, default="💡",
-        verbose_name="圖示 Emoji",
-        help_text="顯示在標題前方的 Emoji，例如 💡📚🏥"
-    )
     is_active = models.BooleanField(default=True, verbose_name="是否啟用")
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
 
@@ -441,8 +436,8 @@ class Tip(models.Model):
     class Meta:
         db_table = "flows_tip"
         ordering = ["order"]
-        verbose_name = "小貼士"
-        verbose_name_plural = "小貼士"
+        verbose_name = "Tip"
+        verbose_name_plural = "Tips"
 
     def __str__(self):
         return self.title
@@ -464,7 +459,6 @@ class Tip(models.Model):
                 'title': self.title,
                 'content': self.content,
                 'official_url': self.official_url,
-                'icon': self.icon,
             }
 
         def pick(base_val, field_name):
@@ -475,5 +469,4 @@ class Tip(models.Model):
             'title': pick(self.title, f'title{s}'),
             'content': pick(self.content, f'content{s}'),
             'official_url': self.official_url,
-            'icon': self.icon,
         }
