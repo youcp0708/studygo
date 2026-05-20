@@ -417,7 +417,7 @@ async function renderMyTasks() {
                 ${loc.title || window.UI_STRINGS.unnamedTask}
                 ${requiredBadge}
               </div>
-              <div class="task-desc" style="white-space: pre-wrap;">${loc.description || ''}</div>
+              <div class="task-desc">${loc.description || ''}</div>
             </div>
             <div class="status-pills" onclick="event.stopPropagation()">
               ${isDone ? `<span style="color:#059669; font-weight:bold; font-size:14px; background:#d1fae5; padding:4px 12px; border-radius:999px;">${window.UI_STRINGS.completedBadge}</span>` : ''}
