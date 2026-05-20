@@ -45,7 +45,7 @@
   {# ── NavBar ── #}
   <nav class="navbar site-header">
     <div class="brand">
-      <div class="brand-icon">🌎</div>
+      <img src="{% static 'image/taiwan_globe.png' %}?v={% now 'U' %}" alt="StudyGo Taiwan Logo" class="brand-icon">
       <div class="brand-text">
         <h1>StudyGo Taiwan</h1>
         <p>{% trans "來臺就學小幫手" %}</p>
@@ -72,6 +72,7 @@
         {% csrf_token %}
         {% get_current_language as CURRENT_LANGUAGE %}
         <input name="next" type="hidden" value="{{ request.get_full_path }}">
+
         <select name="language" class="language-select" onchange="this.form.submit()">
           <option value="zh-hant" {% if CURRENT_LANGUAGE == 'zh-hant' %}selected{% endif %}>繁體中文</option>
           <option value="en" {% if CURRENT_LANGUAGE == 'en' %}selected{% endif %}>English</option>
