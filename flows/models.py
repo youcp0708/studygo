@@ -409,7 +409,6 @@ class Tip(models.Model):
     # ── 中文（預設）──
     title = models.CharField(max_length=200, verbose_name="標題")
     content = models.TextField(blank=True, verbose_name="內容說明")
-    official_url = models.URLField(blank=True, verbose_name="官方網站連結")
     is_active = models.BooleanField(default=True, verbose_name="是否啟用")
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
 
@@ -458,7 +457,6 @@ class Tip(models.Model):
             return {
                 'title': self.title,
                 'content': self.content,
-                'official_url': self.official_url,
             }
 
         def pick(base_val, field_name):
@@ -468,5 +466,33 @@ class Tip(models.Model):
         return {
             'title': pick(self.title, f'title{s}'),
             'content': pick(self.content, f'content{s}'),
-            'official_url': self.official_url,
         }
+
+class TipLink(models.Model):
+    """
+    一筆小貼士的可重複鏈結。
+    - `url`   : 真正的網址
+    - `label` : 顯示在前端的文字（如「官方網站」/「申請表」），可留空，若空會直接顯示 URL 本身
+    """
+    tip = models.ForeignKey(
+        Tip,
+        on_delete=models.CASCADE,
+        related_name="links",   # Tip.links -> QuerySet[TipLink]
+        verbose_name="所屬小貼士"
+    )
+    url = models.URLField(verbose_name="鏈結網址")
+    label = models.CharField(
+        max_length=120,
+        blank=True,
+        verbose_name="鏈結顯示文字",
+        help_text="留空則直接使用 URL 作為顯示文字"
+    )
+
+    class Meta:
+        db_table = "flows_tip_link"
+        ordering = ["id"]
+        verbose_name = "小貼士鏈結"
+        verbose_name_plural = "小貼士鏈結"
+
+    def __str__(self):
+        return self.label or self.url
