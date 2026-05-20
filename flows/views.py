@@ -292,7 +292,7 @@ def my_tasks_view(request):
             # 取短代碼：'zh-hant' → 'zh', 'my' → 'my'
             short_lang = active_lang.split('-')[0] if '-' in active_lang else active_lang
             # get_localized 支援 en/my/id/ms/th/ja，其他回退中文
-            SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko'}
+            SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko', 'vi'}
             if short_lang not in SUPPORTED:
                 short_lang = ''  # 空字串 = 使用中文預設
             print(f"[DEBUG] get_language()={active_lang!r}, short_lang={short_lang!r}")
@@ -497,7 +497,7 @@ def progress_overview_view(request):
 
     active_lang = get_language() or ''
     short_lang = active_lang.split('-')[0] if '-' in active_lang else active_lang
-    SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko'}
+    SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko', 'vi'}
     if short_lang not in SUPPORTED:
         short_lang = ''
         
