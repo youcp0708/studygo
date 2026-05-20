@@ -39,10 +39,13 @@
   /* back */
   .gi-back {
     display:inline-flex; align-items:center; gap:6px;
-    color:var(--primary); font-size:13px; font-weight:600;
-    padding:20px 0 18px; text-decoration:none; transition:color .2s;
+    background:var(--primary-dark); color:#fff;
+    font-size:13px; font-weight:700;
+    padding:8px 18px; border-radius:999px;
+    margin:20px 0 18px; text-decoration:none;
+    transition:background .2s;
   }
-  .gi-back:hover { color:var(--primary-dark); }
+  .gi-back:hover { background:var(--primary); color:#fff; }
 
   /* ── Wrap ── */
   .gi-wrap { width:min(1200px,96%); margin:0 auto; padding:40px 24px 80px; }

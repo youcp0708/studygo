@@ -1102,7 +1102,6 @@ msgstr "진행 중"
 msgid "未讀通知"
 msgstr "읽지 않은 알림"
 
-<<<<<<< HEAD
 #: flows/templates/flows/admissions_guide.html
 msgid "返回資訊中心"
 msgstr "정보 센터로 돌아가기"
@@ -2722,7 +2721,6 @@ msgstr "완료된 작업"
 msgid "未完成任務"
 msgstr "미완료 작업"
 
-=======
 msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
 msgstr "ARC 신청, 주거, 교통 등 — 필요한 모든 정보를 한 곳에서."
 
@@ -2854,4 +2852,3 @@ msgstr "수업 정보"
 
 msgid "成績與畢業門檻"
 msgstr "성적 및 졸업 기준"
->>>>>>> new/05
