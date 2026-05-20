@@ -1583,11 +1583,6 @@ msgstr "ยืนยัน"
 msgid "來臺就學小幫手"
 msgstr "ผู้ช่วยสำหรับการมาเรียนที่ไต้หวัน"
 
-#: .\templates\base.html:72
-#| msgid "同學"
-msgid " 同學"
-msgstr "เพื่อนร่วมชั้น"
-
 #: .\templates\base.html:75 .\users\templates\users\dashboard.html:112
 msgid "登出"
 msgstr "ออกจากระบบ"

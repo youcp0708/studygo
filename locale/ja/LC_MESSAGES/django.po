@@ -1409,11 +1409,6 @@ msgstr "確認"
 msgid "來臺就學小幫手"
 msgstr "台湾留学アシスタント"
 
-#: .\templates\base.html:72
-#| msgid "同學"
-msgid " 同學"
-msgstr "同級生"
-
 #: .\templates\base.html:75 .\users\templates\users\dashboard.html:112
 msgid "登出"
 msgstr "ログアウト"

@@ -106,7 +106,7 @@
       </div>
 
       <a href="{% url 'edit_profile' %}" class="btn-outline-sm">
-        {% if user.name %}{{ user.name }}{% trans " 同學" %}{% else %}{{ user.email }}{% endif %}
+        {% if user.name %}{{ user.name }}{% else %}{{ user.email }}{% endif %}
       </a>
       <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;">
         {% trans "登出" %}

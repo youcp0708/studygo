@@ -280,10 +280,6 @@ msgstr "Xác nhận"
 msgid "來臺就學小幫手"
 msgstr "Trợ lý du học Đài Loan"
 
-#: .\templates\base.html:71
-msgid "   同學"
-msgstr "   Bạn"
-
 #: .\templates\base.html:78 .\users\templates\users\dashboard.html:132
 msgid "登出"
 msgstr "Đăng xuất"

@@ -1615,11 +1615,6 @@ msgstr "Konfirmasi"
 msgid "來臺就學小幫手"
 msgstr "Asisten Studi di Taiwan"
 
-#: .\templates\base.html:72
-#| msgid "同學"
-msgid " 同學"
-msgstr "teman sekelas"
-
 #: .\templates\base.html:75 .\users\templates\users\dashboard.html:112
 msgid "登出"
 msgstr "Keluar"
