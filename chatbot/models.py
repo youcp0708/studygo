@@ -130,13 +130,50 @@ class ChatKnowledge(models.Model):
     """聊天機器人知識庫 / FAQ：給 AI 一般回答參考，可支援多語言。"""
 
     CATEGORY_CHOICES = [
-        ('visa', '簽證'),
-        ('arc', '居留證 ARC'),
-        ('nhi', '健保'),
-        ('school', '學校行政'),
-        ('housing', '住宿'),
-        ('life', '生活'),
-        ('other', '其他'),
+    ('admission', '入學申請'),
+    ('documents', '文件準備'),
+    ('document_verification', '文件驗證'),
+    ('visa', '簽證'),
+    ('financial_proof', '財力證明'),
+    ('language_proof', '語言證明'),
+    ('before_arrival', '來台前準備'),
+    ('entry', '入境規定'),
+    ('country_difference', '國家差異'),
+    ('identity_type', '身分別流程'),
+
+    ('arrival_transport', '到校交通'),
+    ('orientation', '新生報到'),
+    ('registration_payment', '註冊繳費'),
+    ('student_id', '學生證'),
+    ('arc', '居留證 ARC'),
+    ('health_check', '健檢'),
+    ('insurance', '保險'),
+    ('bank', '銀行開戶'),
+    ('phone', '手機門號'),
+    ('school_system', '校內系統'),
+
+    ('course', '課務選課'),
+    ('student_status', '學籍'),
+    ('grades', '成績'),
+    ('graduation', '畢業'),
+    ('dorm', '宿舍'),
+    ('renting', '租屋'),
+    ('nhi', '健保'),
+    ('work_permit', '工作證'),
+    ('scholarship', '獎助學金'),
+    ('campus_activity', '校內活動'),
+
+    ('library', '圖書館'),
+    ('internship', '交換與實習'),
+    ('admin_documents', '行政文件'),
+    ('transportation', '交通'),
+    ('food', '飲食'),
+    ('medical', '醫療'),
+    ('mental_support', '心理支持'),
+    ('emergency', '緊急聯絡'),
+    ('living_cost', '生活費'),
+    ('other', '其他'),
+
     ]
 
     category = models.CharField(
@@ -148,12 +185,14 @@ class ChatKnowledge(models.Model):
 
     title = models.CharField(max_length=200, verbose_name='繁體中文標題')
     title_en = models.CharField(max_length=200, blank=True, verbose_name='英文標題')
+    title_vi = models.CharField(max_length=200, blank=True, verbose_name='越文標題')
     title_my = models.CharField(max_length=200, blank=True, verbose_name='緬文標題')
     title_id = models.CharField(max_length=200, blank=True, verbose_name='印尼文標題')
     title_ms = models.CharField(max_length=200, blank=True, verbose_name='馬來文標題')
     title_th = models.CharField(max_length=200, blank=True, verbose_name='泰文標題')
     title_ja = models.CharField(max_length=200, blank=True, verbose_name='日文標題')
     title_ko = models.CharField(max_length=200, blank=True, verbose_name='韓文標題')
+    title_vi = models.CharField(max_length=200, blank=True, verbose_name='越南文標題')
 
     keywords = models.CharField(
         max_length=500,
@@ -163,12 +202,14 @@ class ChatKnowledge(models.Model):
 
     content = models.TextField(verbose_name='繁體中文內容')
     content_en = models.TextField(blank=True, verbose_name='英文內容')
+    content_vi = models.TextField(blank=True, verbose_name='越文內容')
     content_my = models.TextField(blank=True, verbose_name='緬文內容')
     content_id = models.TextField(blank=True, verbose_name='印尼文內容')
     content_ms = models.TextField(blank=True, verbose_name='馬來文內容')
     content_th = models.TextField(blank=True, verbose_name='泰文內容')
     content_ja = models.TextField(blank=True, verbose_name='日文內容')
     content_ko = models.TextField(blank=True, verbose_name='韓文內容')
+    content_vi = models.TextField(blank=True, verbose_name='越南文內容')
 
     is_active = models.BooleanField(default=True, verbose_name='是否啟用')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')
@@ -186,23 +227,27 @@ class ChatKnowledge(models.Model):
     def get_title_by_lang(self, lang_code):
         lang_map = {
             'en': self.title_en,
+            'vi': self.title_vi,
             'my': self.title_my,
             'id': self.title_id,
             'ms': self.title_ms,
             'th': self.title_th,
             'ja': self.title_ja,
             'ko': self.title_ko,
+            'vi': self.title_vi,
         }
         return lang_map.get((lang_code or '').lower(), '') or self.title
 
     def get_content_by_lang(self, lang_code):
         lang_map = {
             'en': self.content_en,
+            'vi': self.content_vi,
             'my': self.content_my,
             'id': self.content_id,
             'ms': self.content_ms,
             'th': self.content_th,
             'ja': self.content_ja,
             'ko': self.content_ko,
+            'vi': self.content_vi,
         }
         return lang_map.get((lang_code or '').lower(), '') or self.content

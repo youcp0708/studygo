@@ -37,69 +37,6 @@ def my_flows_page(request):
     })
 
 
-@login_required(login_url='/login/')
-def guide_index(request):
-    return render(request, 'flows/guide_index.html')
-
-@login_required(login_url='/login/')
-def guide_regulations(request):
-    return render(request, 'flows/guide_regulations.html')
-
-@login_required(login_url='/login/')
-def admissions_guide(request):
-    return render(request, 'flows/admissions_guide.html')
-
-@login_required(login_url='/login/')
-def guide_national_area(request):
-    return render(request, 'flows/guide_national_area.html')
-
-@login_required(login_url='/login/')
-def guide_arc_exchange(request):
-    return render(request, 'flows/guide_arc_exchange.html')
-
-@login_required(login_url='/login/')
-def guide_arc_foreign(request):
-    return render(request, 'flows/guide_arc_foreign.html')
-
-@login_required(login_url='/login/')
-def guide_arc_overseas(request):
-    return render(request, 'flows/guide_arc_overseas.html')
-
-@login_required(login_url='/login/')
-def guide_bus_ncu(request):
-    return render(request, 'flows/guide_bus_ncu.html')
-
-@login_required(login_url='/login/')
-def guide_housing_ncu(request):
-    return render(request, 'flows/guide_housing_ncu.html')
-
-@login_required(login_url='/login/')
-def guide_nhi(request):
-    return render(request, 'flows/guide_nhi.html')
-
-@login_required(login_url='/login/')
-def guide_bank(request):
-    return render(request, 'flows/guide_bank.html')
-
-@login_required(login_url='/login/')
-def guide_sim(request):
-    return render(request, 'flows/guide_sim.html')
-
-@login_required(login_url='/login/')
-def guide_map(request):
-    from django.conf import settings
-    from django.utils import translation
-    lang_map = {
-        'zh-hant': 'zh-TW', 'en': 'en', 'id': 'id',
-        'ja': 'ja', 'ms': 'ms', 'my': 'my', 'th': 'th',
-    }
-    current_lang = (translation.get_language() or 'zh-hant').lower()
-    return render(request, 'flows/guide_map.html', {
-        'maps_api_key': getattr(settings, 'GOOGLE_MAPS_API_KEY', ''),
-        'maps_lang': lang_map.get(current_lang, 'zh-TW'),
-    })
-
-
 # ==========================================
 # REST API 視圖 (DRF)
 # ==========================================
@@ -310,7 +247,7 @@ def my_tasks_view(request):
             # 取短代碼：'zh-hant' → 'zh', 'my' → 'my'
             short_lang = active_lang.split('-')[0] if '-' in active_lang else active_lang
             # get_localized 支援 en/my/id/ms/th/ja，其他回退中文
-            SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko'}
+            SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko', 'vi'}
             if short_lang not in SUPPORTED:
                 short_lang = ''  # 空字串 = 使用中文預設
             print(f"[DEBUG] get_language()={active_lang!r}, short_lang={short_lang!r}")
@@ -515,7 +452,7 @@ def progress_overview_view(request):
 
     active_lang = get_language() or ''
     short_lang = active_lang.split('-')[0] if '-' in active_lang else active_lang
-    SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko'}
+    SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko', 'vi'}
     if short_lang not in SUPPORTED:
         short_lang = ''
         

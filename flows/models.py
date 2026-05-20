@@ -18,6 +18,7 @@ class FlowStage(models.Model):
     name_th = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Thai")
     name_ja = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Japanese")
     name_ko = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Korean")
+    name_vi = models.CharField(max_length=100, blank=True, verbose_name="流程階段名稱 Vietnamese")
 
     description_en = models.TextField(blank=True, verbose_name="階段說明 English")
     description_my = models.TextField(blank=True, verbose_name="階段說明 Burmese")
@@ -26,6 +27,7 @@ class FlowStage(models.Model):
     description_th = models.TextField(blank=True, verbose_name="階段說明 Thai")
     description_ja = models.TextField(blank=True, verbose_name="階段說明 Japanese")
     description_ko = models.TextField(blank=True, verbose_name="階段說明 Korean")
+    description_vi = models.TextField(blank=True, verbose_name="階段說明 Vietnamese")
 
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
 
@@ -49,6 +51,7 @@ class FlowStage(models.Model):
             "th": self.name_th,
             "ja": self.name_ja,
             "ko": self.name_ko,
+            "vi": self.name_vi,
         }
         return lang_map.get(lang_code, "") or self.name
 
@@ -65,6 +68,7 @@ class FlowStage(models.Model):
             "th": self.description_th,
             "ja": self.description_ja,
             "ko": self.description_ko,
+            "vi": self.description_vi,
         }
         return lang_map.get(lang_code, "") or self.description
 
@@ -97,6 +101,7 @@ class Task(models.Model):
     title_th = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Thai")
     title_ja = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Japanese")
     title_ko = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Korean")
+    title_vi = models.CharField(max_length=200, blank=True, verbose_name="任務名稱 Vietnamese")
 
     description_en = models.TextField(blank=True, verbose_name="任務說明 English")
     description_my = models.TextField(blank=True, verbose_name="任務說明 Burmese")
@@ -105,6 +110,7 @@ class Task(models.Model):
     description_th = models.TextField(blank=True, verbose_name="任務說明 Thai")
     description_ja = models.TextField(blank=True, verbose_name="任務說明 Japanese")
     description_ko = models.TextField(blank=True, verbose_name="任務說明 Korean")
+    description_vi = models.TextField(blank=True, verbose_name="任務說明 Vietnamese")
 
     # 用來判斷這個任務適合哪種學生
     region = MultiSelectField(
@@ -151,6 +157,7 @@ class Task(models.Model):
     required_documents_th = models.TextField(blank=True, verbose_name="需要的文件 Thai")
     required_documents_ja = models.TextField(blank=True, verbose_name="需要的文件 Japanese")
     required_documents_ko = models.TextField(blank=True, verbose_name="需要的文件 Korean")
+    required_documents_vi = models.TextField(blank=True, verbose_name="需要的文件 Vietnamese")
     # ── 辦理地點（多語言）──
     apply_location    = models.CharField(max_length=200, blank=True, verbose_name="辦理地點")
     apply_location_en = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 English")
@@ -160,6 +167,7 @@ class Task(models.Model):
     apply_location_th = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Thai")
     apply_location_ja = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Japanese")
     apply_location_ko = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Korean")
+    apply_location_vi = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Vietnamese")
 
     apply_address = models.CharField(max_length=200, blank=True, verbose_name="辦理地址")
     apply_map_url = models.URLField(
@@ -194,6 +202,7 @@ class Task(models.Model):
     deadline_text_th = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Thai")
     deadline_text_ja = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Japanese")
     deadline_text_ko = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Korean")
+    deadline_text_vi = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字 Vietnamese")
 
     is_required = models.BooleanField(default=True, verbose_name="是否必做")
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
@@ -218,6 +227,7 @@ class Task(models.Model):
             "th": self.title_th,
             "ja": self.title_ja,
             "ko": self.title_ko,
+            "vi": self.title_vi,
         }
         return lang_map.get(lang_code, "") or self.title
 
@@ -230,7 +240,7 @@ class Task(models.Model):
         suffix_map = {
             'en': '_en', 'my': '_my', 'id': '_id',
             'ms': '_ms', 'th': '_th', 'ja': '_ja',
-            'ko': '_ko',
+            'ko': '_ko', 'vi': '_vi',
         }
         s = suffix_map.get(lang_code)  # None if not supported (= Chinese default)
 

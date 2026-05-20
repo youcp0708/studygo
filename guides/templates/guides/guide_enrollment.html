@@ -1,0 +1,339 @@
+{# guides/templates/guides/guide_enrollment.html — 學籍 #}
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "學籍辦理" %} — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  .ge2-wrap { width:min(1440px,96%); margin:0 auto; padding:32px 24px 72px; }
+
+  .ge2-hero {
+    background:linear-gradient(135deg,#1e3a5f 0%,#4c1d95 100%);
+    color:#fff; border-radius:20px; padding:36px 44px 32px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .ge2-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:88px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .ge2-hero h2 { font-size:26px; font-weight:900; margin:0 0 8px; }
+  .ge2-hero p  { opacity:.85; font-size:15px; margin:0; }
+
+  .ge2-back {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
+  }
+  .ge2-back:hover { color:var(--primary-dark); }
+
+  .ge2-label {
+    font-size:15px; font-weight:900; color:var(--primary-dark);
+    padding:0 0 10px; margin:32px 0 16px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  .ge2-alert {
+    border-radius:12px; padding:14px 18px; font-size:13px;
+    line-height:1.7; margin-bottom:16px;
+  }
+  .ge2-alert.info  { background:#eff6ff; border-left:4px solid #3b82f6; color:#1e40af; }
+  .ge2-alert.warn  { background:#fff7ed; border-left:4px solid #f59e0b; color:#92400e; }
+  .ge2-alert.red   { background:#fef2f2; border-left:4px solid #ef4444; color:#7f1d1d; }
+  .ge2-alert.green { background:#f0fdf4; border-left:4px solid #22c55e; color:#166534; }
+
+  .ge2-sys-card {
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:16px; padding:24px 24px 20px; margin-bottom:20px;
+  }
+
+  .ge2-info-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+  .ge2-info-chip {
+    display:flex; flex-direction:column;
+    background:var(--bg); border:1px solid var(--border);
+    border-radius:10px; padding:10px 14px; flex:1; min-width:120px;
+  }
+  .ge2-info-chip .ic-label { font-size:11px; color:var(--muted); margin-bottom:3px; }
+  .ge2-info-chip .ic-val   { font-size:14px; font-weight:800; color:var(--primary-dark); line-height:1.4; }
+
+  .ge2-rule-list { list-style:none; padding:0; margin:0; }
+  .ge2-rule-list li {
+    padding:9px 0; border-bottom:1px solid #f0f0f0;
+    font-size:14px; color:#444; line-height:1.6;
+    display:flex; gap:8px; align-items:flex-start;
+  }
+  .ge2-rule-list li:last-child { border-bottom:none; }
+  .ge2-rule-list li::before { content:'•'; color:var(--primary); font-weight:900; flex-shrink:0; }
+
+  .ge2-tag {
+    display:inline-block; font-size:11px; font-weight:700;
+    padding:2px 8px; border-radius:20px; margin-left:6px; vertical-align:middle;
+  }
+  .ge2-tag.red   { background:#fef2f2; color:#b91c1c; }
+  .ge2-tag.green { background:#dcfce7; color:#166534; }
+  .ge2-tag.blue  { background:#dbeafe; color:#1e40af; }
+
+  /* 轉系資格條 */
+  .ge2-year-strip {
+    display:flex; gap:0; margin-bottom:16px; border-radius:12px; overflow:hidden;
+    border:1.5px solid var(--border);
+  }
+  .ge2-year-cell {
+    flex:1; padding:12px 10px; text-align:center;
+    font-size:13px; font-weight:700; line-height:1.4; border-right:1px solid var(--border);
+  }
+  .ge2-year-cell:last-child { border-right:none; }
+  .ge2-year-cell .yc-label { font-size:11px; font-weight:500; color:var(--muted); margin-top:4px; }
+  .ge2-year-cell.ok   { background:#f0fdf4; color:#166534; }
+  .ge2-year-cell.no   { background:#fef2f2; color:#b91c1c; }
+
+  /* 雙主修流程 */
+  .ge2-steps { display:flex; flex-direction:column; gap:0; }
+  .ge2-step  {
+    display:flex; gap:14px; align-items:flex-start;
+    padding:12px 0; border-bottom:1px solid #f0f0f0;
+  }
+  .ge2-step:last-child { border-bottom:none; }
+  .ge2-step-num {
+    width:26px; height:26px; border-radius:50%; flex-shrink:0;
+    background:var(--primary); color:#fff;
+    font-size:12px; font-weight:800;
+    display:flex; align-items:center; justify-content:center; margin-top:2px;
+  }
+  .ge2-step-title { font-size:14px; font-weight:700; color:var(--primary-dark); margin-bottom:3px; }
+  .ge2-step-desc  { font-size:13px; color:#555; line-height:1.6; }
+
+  /* 聯絡 */
+  .ge2-contact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:4px; }
+  .ge2-contact-card {
+    background:var(--bg); border:1px solid var(--border);
+    border-radius:10px; padding:14px 16px;
+  }
+  .ge2-contact-card .cc-name { font-size:13px; font-weight:700; color:var(--primary-dark); margin-bottom:4px; }
+  .ge2-contact-card .cc-info { font-size:12px; color:#555; line-height:1.7; }
+
+  @media(max-width:600px){
+    .ge2-hero { padding:28px 20px 24px; }
+    .ge2-year-strip { flex-wrap:wrap; }
+    .ge2-year-cell  { min-width:calc(50% - 1px); }
+    .ge2-contact-grid { grid-template-columns:1fr; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="ge2-wrap">
+
+  <a class="ge2-back" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
+
+  <div class="ge2-hero">
+    <div class="bg-text">學籍</div>
+    <h2>🗂️ {% trans "學籍辦理" %}</h2>
+    <p>{% trans "休學・復學・轉系・雙主修　辦理規定與注意事項" %}</p>
+  </div>
+
+  <!-- 休學 -->
+  <div class="ge2-label">😴 {% trans "休學" %}</div>
+
+  <div class="ge2-sys-card">
+    <div class="ge2-info-row">
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "申請期限" %}</div>
+        <div class="ic-val">{% trans "期末考試開始前" %}</div>
+      </div>
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "每次最長" %}</div>
+        <div class="ic-val">{% trans "2 學年" %}</div>
+      </div>
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "累計上限" %}</div>
+        <div class="ic-val">{% trans "2 學年（原則）" %}</div>
+      </div>
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "特殊延長" %}</div>
+        <div class="ic-val">{% trans "可再延長 2 年" %}</div>
+      </div>
+    </div>
+
+    <ul class="ge2-rule-list">
+      <li>{% trans "申請須取得家長或監護人同意，以及系主任同意，再至教務處辦理" %}</li>
+      <li>{% trans "新生及轉學生第一學期須先完成註冊繳費，才能申請休學" %}</li>
+      <li>{% trans "休學當學期已選課程一律取消，不計成績（預修與抵免課程除外）" %}</li>
+      <li>{% trans "休學期間不計入修業年限" %}</li>
+      <li>
+        {% trans "服兵役、懷孕、生產、照顧未滿 3 歲子女所致休學" %}
+        <span class="ge2-tag green">{% trans "不計入累計年限" %}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="ge2-alert red">
+    🪪 <strong>{% trans "外籍生 ARC 注意" %}</strong>：{% trans "辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。" %}
+  </div>
+
+  <div class="ge2-alert warn">
+    🏠 {% trans "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。" %}
+  </div>
+
+  <!-- 復學 -->
+  <div class="ge2-label">🔄 {% trans "復學" %}</div>
+
+  <div class="ge2-sys-card">
+    <div class="ge2-info-row">
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "自動復學" %}</div>
+        <div class="ic-val">{% trans "休學期滿即自動復學" %}</div>
+      </div>
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "註冊期限" %}</div>
+        <div class="ic-val">{% trans "當學期註冊日（含）前" %}</div>
+      </div>
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "提前復學" %}</div>
+        <div class="ic-val">{% trans "最遲於註冊日前申請" %}</div>
+      </div>
+    </div>
+
+    <ul class="ge2-rule-list">
+      <li>{% trans "休學期滿後自動回復學籍，須於當學期校曆註冊日（含）前完成報到與繳費" %}</li>
+      <li>{% trans "提前復學：須於預定復學學期的註冊日前提出申請，不可在休學中途直接回來上課" %}</li>
+      <li>{% trans "復學後回到原學系，年級銜接休學前的年級繼續就讀" %}</li>
+      <li>{% trans "若屆時無法如期復學，需於註冊日前再次申請延續休學；逾期未辦者視情形處理" %}</li>
+      <li>{% trans "復學後的畢業條件，依入學當年度的學則與相關規章認定" %}</li>
+    </ul>
+  </div>
+
+  <!-- 轉系 -->
+  <div class="ge2-label">🔀 {% trans "轉系" %}</div>
+
+  <div class="ge2-alert info">
+    📅 {% trans "申請時間依當學年度校曆公告，每輪申請限報名一個科系，超過一個即取消資格。" %}
+  </div>
+
+  <div class="ge2-sys-card">
+    <h3 style="font-size:14px; font-weight:800; color:var(--primary-dark); margin:0 0 12px;">{% trans "申請資格（年級）" %}</h3>
+    <div class="ge2-year-strip">
+      <div class="ge2-year-cell ok">
+        ✅ {% trans "大二" %}<br>
+        <div class="yc-label">{% trans "升大二前可申請" %}</div>
+      </div>
+      <div class="ge2-year-cell ok">
+        ✅ {% trans "大三" %}<br>
+        <div class="yc-label">{% trans "升大三前可申請" %}</div>
+      </div>
+      <div class="ge2-year-cell no">
+        ❌ {% trans "大四" %}<br>
+        <div class="yc-label">{% trans "四年級生不得申請" %}</div>
+      </div>
+      <div class="ge2-year-cell no">
+        ❌ {% trans "休學中" %}<br>
+        <div class="yc-label">{% trans "休學期間不得申請" %}</div>
+      </div>
+    </div>
+
+    <ul class="ge2-rule-list">
+      <li>{% trans "每一申請週期只能申請一個科系，多報即全部取消資格" %}</li>
+      <li>{% trans "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）" %}</li>
+      <li>{% trans "轉入名額上限：各系每年級最多招收原核定名額的 20%" %}</li>
+      <li>{% trans "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級" %}</li>
+      <li>{% trans "核准後不可撤回，原系修過的學分可申請抵免，由新系系主任審核認定" %}</li>
+      <li>{% trans "離島優惠入學生、國防大學生等特定身份不得申請轉系" %}</li>
+    </ul>
+  </div>
+
+  <!-- 雙主修 -->
+  <div class="ge2-label">📑 {% trans "雙主修" %}</div>
+
+  <div class="ge2-alert info">
+    📅 {% trans "申請時間依校曆公告。大二起至修業年限最後一年第一學期止（延修期間不得新申請）。" %}
+  </div>
+
+  <div class="ge2-sys-card">
+    <div class="ge2-info-row">
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "最早申請" %}</div>
+        <div class="ic-val">{% trans "大二開始" %}</div>
+      </div>
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "最晚申請" %}</div>
+        <div class="ic-val">{% trans "畢業年級第一學期" %}</div>
+      </div>
+      <div class="ge2-info-chip">
+        <div class="ic-label">{% trans "額外延修" %}</div>
+        <div class="ic-val">{% trans "最多 1 學年" %}</div>
+      </div>
+    </div>
+
+    <ul class="ge2-rule-list">
+      <li>{% trans "需同時完成本系全部畢業要求，以及加修學系的所有「專業必修」科目學分" %}</li>
+      <li>{% trans "各系可自訂申請條件（如 GPA 門檻），需向目標系查詢當年公告" %}</li>
+      <li>{% trans "學位證書上並列兩個學系名稱；畢業成績單亦加註雙主修" %}</li>
+      <li>{% trans "若加修學分未能完成 → 可申請再延修一學年，或放棄雙主修僅以本系學分畢業" %}</li>
+      <li>
+        {% trans "若已修完的加修學分符合輔系規定 → 可改認定為輔系資格" %}
+        <span class="ge2-tag blue">{% trans "備用選項" %}</span>
+      </li>
+      <li>{% trans "延修期間（因雙主修而延修）：9 學分以下按學分費計；10 學分以上收全額學雜費" %}</li>
+    </ul>
+
+    <div class="ge2-label" style="font-size:13px; margin-top:16px; margin-bottom:12px;">{% trans "申請流程" %}</div>
+    <div class="ge2-steps">
+      <div class="ge2-step">
+        <div class="ge2-step-num">1</div>
+        <div>
+          <div class="ge2-step-title">{% trans "確認加修學系的申請條件" %}</div>
+          <div class="ge2-step-desc">{% trans "各系 GPA 門檻與名額不同，至目標系系辦查詢當年公告" %}</div>
+        </div>
+      </div>
+      <div class="ge2-step">
+        <div class="ge2-step-num">2</div>
+        <div>
+          <div class="ge2-step-title">{% trans "填寫申請表，經本系主任同意" %}</div>
+          <div class="ge2-step-desc">{% trans "表格至教務處或各系系辦索取" %}</div>
+        </div>
+      </div>
+      <div class="ge2-step">
+        <div class="ge2-step-num">3</div>
+        <div>
+          <div class="ge2-step-title">{% trans "送交加修學系審核" %}</div>
+          <div class="ge2-step-desc">{% trans "目標系系主任同意後，轉呈教務長核准" %}</div>
+        </div>
+      </div>
+      <div class="ge2-step">
+        <div class="ge2-step-num">4</div>
+        <div>
+          <div class="ge2-step-title">{% trans "核准後按加修課表修課" %}</div>
+          <div class="ge2-step-desc">{% trans "可選擇每學期邊修或在畢業學期一次申請資格審核（自主規劃路線）" %}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 聯絡 -->
+  <div class="ge2-label">📞 {% trans "辦理窗口" %}</div>
+  <div class="ge2-contact-grid">
+    <div class="ge2-contact-card">
+      <div class="cc-name">{% trans "教務處 / 註冊組" %}</div>
+      <div class="cc-info">
+        {% trans "學籍異動（休學、復學、轉系）" %}<br>
+        <a href="https://pdc.adm.ncu.edu.tw" target="_blank" rel="noopener">pdc.adm.ncu.edu.tw ↗</a>
+      </div>
+    </div>
+    <div class="ge2-contact-card">
+      <div class="cc-name">{% trans "國際事務處（OIA）" %}</div>
+      <div class="cc-info">
+        {% trans "外籍生休學 ARC 問題" %}<br>
+        {% trans "分機" %} 57081
+      </div>
+    </div>
+    <div class="ge2-contact-card">
+      <div class="cc-name">{% trans "各系系辦" %}</div>
+      <div class="cc-info">
+        {% trans "轉系、雙主修申請條件查詢" %}<br>
+        {% trans "及課程規劃建議" %}
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

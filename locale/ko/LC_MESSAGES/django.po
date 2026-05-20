@@ -1101,3 +1101,1757 @@ msgstr "진행 중"
 
 msgid "未讀通知"
 msgstr "읽지 않은 알림"
+
+<<<<<<< HEAD
+#: flows/templates/flows/admissions_guide.html
+msgid "返回資訊中心"
+msgstr "정보 센터로 돌아가기"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "境外學生招生資訊"
+msgstr "외국 학생 입학 정보"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "本頁彙整境外學生（僑生、外籍生、交換生）來臺就讀相關招生資訊，包含各學制申請資格、招生管道、獎學金及申請時程，助您順利規劃來臺求學之路。"
+msgstr ""
+"이 페이지는 해외 학생(화교 학생, 외국인 학생, 교환 학생)의 대만 유학 관련 입학 정보를 정리하며, 각 학제별 지원 자격, "
+"입학 채널, 장학금 및 지원 일정을 포함하여 대만 유학을 원활하게 계획할 수 있도록 돕습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "多學制招生"
+msgstr "다양한 학제 모집"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "多國籍適用"
+msgstr "다국적 적용"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "獎學金機會"
+msgstr "장학금 기회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "分期申請時程"
+msgstr "단계별 지원 일정"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "重要提醒："
+msgstr "중요 안내:"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各學制招生截止日期每年均可能調整，本頁資訊僅供參考，請務必以各校最新公告或海外聯招會官網為準。"
+msgstr ""
+"각 학제의 모집 마감일은 매년 변동될 수 있으며, 이 페이지의 정보는 참고용입니다. 반드시 각 학교의 최신 공지 또는 해련회 공식 "
+"사이트를 기준으로 하시기 바랍니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學制快速一覽"
+msgstr "학제 빠른 개요"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學制種類"
+msgstr "학제 종류"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "類"
+msgstr "종류"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑先部 / 學士班 / 研究所"
+msgstr "화교 예비과 / 학사과 / 대학원"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "適用身份"
+msgstr "적용 신분"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "種"
+msgstr "종"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生 / 外籍生 / 交換生"
+msgstr "화교 학생 / 외국인 학생 / 교환 학생"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "可申請獎學金"
+msgstr "장학금 신청 가능"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "多項"
+msgstr "다수"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部、學校、地方政府"
+msgstr "교육부, 학교, 지방 정부"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "申請截止"
+msgstr "지원 마감"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "約每年 3 月"
+msgstr "매년 약 3월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各管道略有差異"
+msgstr "채널별 차이 있음"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "招生學制說明"
+msgstr "학제 설명"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑先部（預科）"
+msgstr "화교 예비과(예과)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學士班"
+msgstr "학사과"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "研究所"
+msgstr "대학원"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "：針對僑生設立的一年制預備課程，修畢成績合格後可直升大學學士班，無需再參加大學入學考試。適合剛完成高中學業的僑生。"
+msgstr ""
+": 화교 학생을 위해 설립된 1년제 예비 과정으로, 이수 성적 합격 후 대학 학사 과정으로 바로 진학할 수 있으며, 대학 입학시험 "
+"재응시가 불필요합니다. 고등학교를 갓 마친 화교 학생에게 적합합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "申請資格"
+msgstr "지원 자격"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "具僑生身份、完成相當於我國高中一至三年級學業（高中畢業），成績達一定標準。年齡通常不超過 25 歲。"
+msgstr ""
+"화교 학생 신분을 갖추고 고등학교 1~3학년에 해당하는 학업(고등학교 졸업)을 이수하며 일정 성적 기준을 충족해야 합니다. 연령은 "
+"통상 25세 이하입니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "高中畢業"
+msgstr "고등학교 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生身份"
+msgstr "화교 학생 신분"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "25 歲以下"
+msgstr "25세 이하"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "申請管道"
+msgstr "지원 채널"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "透過海外聯合招生委員會（海聯會）統一分發。馬來西亞、緬甸、印尼、港澳及其他地區各有獨立招生窗口。"
+msgstr ""
+"해외연합초생위원회(해련회)를 통해 통합 배정됩니다. 말레이시아, 미얀마, 인도네시아, 홍콩·마카오 및 기타 지역에는 각자 독립적인 "
+"모집 창구가 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海聯會"
+msgstr "해련회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "統一分發"
+msgstr "통합 배정"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "申請時程"
+msgstr "지원 일정"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
+msgstr ""
+"통상 매년 1~3월에 인터넷 원서 접수를 받으며, 지역마다 마감일이 다소 다릅니다. 합격 결과는 약 5~6월에 발표되며, 8월 "
+"말~9월 초에 입학 등록합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "1～3 月報名"
+msgstr "1~3월 원서 접수"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "5～6 月放榜"
+msgstr "5~6월 합격 발표"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "9 月入學"
+msgstr "9월 입학"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "獎助學金"
+msgstr "장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎學金或特定區域補助。"
+msgstr ""
+"교육부에서 화교 학생 장학금을 제공하며, 각 학교 및 지방 정부의 보조금도 있습니다. 우수 성적 화교 학생은 교육부 중국어 장학금 "
+"또는 특정 지역 보조금을 신청할 수 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部獎學金"
+msgstr "교육부 장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學校補助"
+msgstr "학교 보조금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生管道。修業成績合格者授予學士學位。"
+msgstr ""
+": 4년제 대학 과정(일부 학과는 5년)으로, 화교 학생은 해련회를 통해 지원하고, 외국인 학생은 각 학교의 독립 모집 채널을 "
+"이용합니다. 이수 성적 합격자에게 학사 학위를 수여합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生申請資格"
+msgstr "화교 학생 지원 자격"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西亞 SPM 成績、緬甸高中畢業等均可申請。"
+msgstr ""
+"화교 학생 신분을 갖추고 고등학교(고급 중등학교) 학업 성적이 합격이거나 동등 학력 증명을 보유해야 합니다. 말레이시아 SPM "
+"성적, 미얀마 고등학교 졸업 등도 지원 가능합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海聯會管道"
+msgstr "해련회 채널"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "同等學力"
+msgstr "동등 학력"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "外籍生申請資格"
+msgstr "외국인 학생 지원 자격"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力證明（HSK、TOCFL、TOEFL、IELTS 等）。"
+msgstr ""
+"외국 국적을 보유하고 고등학교(또는 동등) 학업 성적이 각 학교 최소 기준에 달해야 합니다. 일부 학과는 중국어 또는 영어 능력 "
+"증명(HSK, TOCFL, TOEFL, IELTS 등)을 요구합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各校獨立招生"
+msgstr "각 학교 독립 모집"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "語言能力"
+msgstr "언어 능력"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確認目標校系公告。"
+msgstr ""
+"해련회 채널은 통상 1~3월에 접수하며, 각 학교 독립 모집은 별도 일정(대부분 3~5월)이 있습니다. 목표 학교·학과의 공지를 "
+"미리 확인하는 것을 권장합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "1～3 月（海聯會）"
+msgstr "1~3월(해련회)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "3～5 月（各校）"
+msgstr "3~5월(각 학교)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎助。外籍生可申請教育部臺灣獎學金。"
+msgstr ""
+"교육부 화교 학생 장학금(월 약 NT$5,000~8,000), 각 학교의 입학 장학금 또는 성적 우수 장학금도 있습니다. 외국인 "
+"학생은 교육부 대만 장학금을 신청할 수 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "臺灣獎學金"
+msgstr "대만 장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學校獎助"
+msgstr "학교 장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有英文授課專班。"
+msgstr ""
+": 석사과정(2년)과 박사과정(3~5년)으로 구성되며, 각 대학원의 독립 모집을 통해 지원합니다. 일부 학교에는 영어 강의 전문 "
+"프로그램이 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "碩士班申請資格"
+msgstr "석사과정 지원 자격"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言能力證明（中文 / 英文）。"
+msgstr ""
+"대학(학사) 학위 취득 후 각 학교·학과 최소 기준 성적을 충족해야 합니다. 일부 학과는 관련 분야 배경 또는 언어 능력 "
+"증명(중국어/영어)을 요구합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學士畢業"
+msgstr "학사 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "相關領域"
+msgstr "관련 분야"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "博士班申請資格"
+msgstr "박사과정 지원 자격"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部分系所接受優秀碩士生直攻博士。"
+msgstr ""
+"석사 학위 취득(또는 동등 학력)과 연구 잠재력이 있어야 합니다. 일반적으로 연구 계획서 및 관련 추천서를 제출해야 합니다. 일부 "
+"학과는 우수 석사생의 박사 직접 진학을 허용합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "碩士畢業"
+msgstr "석사 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "研究計畫"
+msgstr "연구 계획"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "推薦信"
+msgstr "추천서"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截止日期及備審資料需求。"
+msgstr ""
+"각 대학원의 모집 일정은 다르며, 대부분 10월~3월에 이루어집니다. 목표 학과 공식 사이트를 직접 확인하여 마감일 및 심사 "
+"서류를 확인하는 것을 권장합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "依各所公告"
+msgstr "각 학과 공지에 따름"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "10 月～3 月"
+msgstr "10월~3월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）薪資，及科技部研究計畫補助。"
+msgstr ""
+"교육부 대만 장학금(외국인 대학원생), 교육부 화교 학생 장학금(화교 학생), 각 학교 연구 보조(RA) 급여 및 과학기술부 연구 "
+"계획 보조금."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "研究助理薪資"
+msgstr "연구 보조 급여"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外僑居留證（ARC）。"
+msgstr ""
+": 외국 국적을 보유하고 화교 학생 신분이 아닌 학생입니다. 각 대학의 독립 모집을 통해 지원하며, 입학 후 외국인 "
+"거류증(ARC)을 발급받아야 합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
+msgstr ""
+"외국 국적을 보유하고 해당 학제의 전제 학력(고등학교 또는 대학 졸업)을 이수해야 합니다. 각 학과 규정에 따라 "
+"중국어(TOCFL) 또는 영어(IELTS / TOEFL) 능력 증명이 필요할 수 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "外國國籍"
+msgstr "외국 국적"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "前置學歷"
+msgstr "전제 학력"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "所需備審文件"
+msgstr "필요 심사 서류"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書計畫）、推薦信（研究所）、體檢報告。"
+msgstr ""
+"여권, 최고 학력 성적표 및 졸업 증명서(중영문 공증 포함), 언어 능력 증명, 자기소개서(학업 계획서), 추천서(대학원), 건강 "
+"진단서."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學歷公證"
+msgstr "학력 공증"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "讀書計畫"
+msgstr "학업 계획서"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部臺灣獎學金"
+msgstr "교육부 대만 장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，需透過台灣駐外機構或各大學推薦申請。"
+msgstr ""
+"월 생활비 NT$15,000~25,000(학제에 따라 다름), 학비 면제, 1~4년 신청 가능, 정원 제한이 있으며 대만 주재 "
+"해외 기관 또는 각 대학의 추천을 통해 신청해야 합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "NT$15,000~/月"
+msgstr "NT$15,000~/월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "免學雜費"
+msgstr "학비 면제"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "名額有限"
+msgstr "정원 제한"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "入台後必辦事項"
+msgstr "입대 후 필수 사항"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
+msgstr ""
+"학생 거류 비자로 입대 후 15일 이내에 외국인 거류증(ARC)을 발급받아야 하며, 이후 건강보험 가입, 은행 계좌 개설 등을 "
+"처리합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "15 天內辦 ARC"
+msgstr "15일 이내 ARC 발급"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "健保加保"
+msgstr "건강보험 가입"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依協議返校抵免，通常免繳台灣學雜費。"
+msgstr ""
+": 원 재학 학교와 대만 대학 간의 교환 협정에 따라 단기(반년 또는 1학년) 교환 학습을 합니다. 학점은 협정에 따라 귀교 후 "
+"인정받을 수 있으며, 대만 학비는 통상 면제됩니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "申請流程"
+msgstr "지원 절차"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申請，須先確認原校有締結交換協議。"
+msgstr ""
+"원 재학 학교의 교류 협력 사무소를 통해 추천을 받은 후, 대만 대학의 심사를 거칩니다. 대만 대학에 직접 지원할 수 없으며, 원 "
+"학교와 교환 협정이 체결되어 있는지 먼저 확인해야 합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "原校提名"
+msgstr "원 학교 추천"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "需締結協議"
+msgstr "협정 체결 필요"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "期程與截止"
+msgstr "일정 및 마감"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月截止。依各校締約條件而有不同。"
+msgstr ""
+"1학기(9월) 입학자는 통상 3~4월에 추천 마감, 2학기(2월) 입학자는 통상 10~11월에 마감합니다. 각 학교의 협정 조건에 "
+"따라 다릅니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "上學期：3～4 月"
+msgstr "1학기: 3~4월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "下學期：10～11 月"
+msgstr "2학기: 10~11월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "簽證與居留"
+msgstr "비자 및 거류"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入台，並辦理外僑居留證。"
+msgstr ""
+"단기(6개월 이내)는 관광 비자로 입대 가능하며 ARC가 필요 없습니다. 6개월 이상은 학생 거류 비자로 입대하고 외국인 거류증을 "
+"발급받아야 합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "≤6 月：觀光簽"
+msgstr "≤6개월: 관광 비자"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ">6 月：需 ARC"
+msgstr ">6개월: ARC 필요"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "費用說明"
+msgstr "비용 안내"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行負擔，每月約 NT$10,000～15,000。"
+msgstr ""
+"대부분의 교환 협정에 따라 대만 대학은 교환 학생의 학비를 면제합니다. 생활비(기숙사, 식사, 교통 등)는 자비로 부담해야 하며, "
+"월 약 NT$10,000~15,000입니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學雜費全免"
+msgstr "학비 전액 면제"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "生活費自理"
+msgstr "생활비 자부담"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各地區僑生申請資訊"
+msgstr "지역별 화교 학생 지원 정보"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
+msgstr ""
+"다음은 해외연합초생위원회(해련회)의 지역별 모집 사무소 정보입니다. 지역마다 학제가 달라 지원 자격과 마감일이 다를 수 있으니, "
+"해련회 최신 공지를 기준으로 하시기 바랍니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "招生學制"
+msgstr "모집 학제"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "主要學歷要求"
+msgstr "주요 학력 요건"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "SPM / STPM / UEC / A-Level"
+msgstr "SPM / STPM / UEC / A-Level"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "報名截止（參考）"
+msgstr "원서 마감(참고)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "承辦窗口"
+msgstr "담당 창구"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "馬來西亞留台同學會"
+msgstr "말레이시아 대만 유학생 동문회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑先部 / 學士班"
+msgstr "화교 예비과 / 학사과"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "緬甸高中畢業（Matriculation）"
+msgstr "미얀마 고등학교 졸업(Matriculation)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "約每年 2～3 月"
+msgstr "매년 약 2~3월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "緬甸華校教師會"
+msgstr "미얀마 화교 학교 교사회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "SMA / SMK 高中畢業"
+msgstr "SMA / SMK 고등학교 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "印尼留台校友會"
+msgstr "인도네시아 대만 유학 동문회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "香港 / 澳門"
+msgstr "홍콩 / 마카오"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學士班 / 研究所"
+msgstr "학사과 / 대학원"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "HKDSE / 澳門高中畢業"
+msgstr "HKDSE / 마카오 고등학교 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "約每年 2 月"
+msgstr "매년 약 2월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海聯會港澳組"
+msgstr "해련회 홍콩·마카오팀"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "泰北（北泰）"
+msgstr "태북(북태)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "泰北僑校高中畢業"
+msgstr "태북 화교 학교 고등학교 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "泰北各僑校教師會"
+msgstr "태북 각 화교 학교 교사회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "日本 / 韓國 / 新加坡 / 菲律賓"
+msgstr "일본 / 한국 / 싱가포르 / 필리핀"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各國高中 / 大學畢業"
+msgstr "각국 고등학교 / 대학 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海聯會或各地台灣辦事處"
+msgstr "해련회 또는 각지 대만 사무소"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "常見問題"
+msgstr "자주 묻는 질문"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "我是外籍生（非僑生），可以透過海聯會申請嗎？"
+msgstr "저는 외국인 학생(화교 학생 아님)입니다. 해련회를 통해 지원할 수 있나요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
+msgstr ""
+"불가합니다. 해련회 채널은 화교 학생 신분을 가진 지원자만 이용할 수 있습니다. 외국인 학생(외국 국적을 보유하나 화교 학생 인정 "
+"기준에 해당하지 않는 경우)은 각 대학의 국제 입학 사무소에 직접 지원해야 합니다. 각 학교의 모집 일정과 서류 요건은 각 학교 "
+"공식 사이트를 참고하세요."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生與外籍生有什麼不同？"
+msgstr "화교 학생과 외국인 학생의 차이점은 무엇인가요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。"
+msgstr ""
+"'화교 학생'은 중화민국 국적 또는 화인 혈통을 지니고 장기간 해외 거주하며 현지에서 교육을 받은 자로, 교육부 규정에 따라 "
+"인정되며 화교 장학금, 화교 예비과 등 특별 채널을 이용할 수 있습니다. '외국인 학생'은 비중화민국 국적 여권으로 입학하는 "
+"자로, 통상 각 학교의 독립 모집 채널을 통해 지원하며 교육부 대만 장학금을 신청할 수 있습니다. 두 신분은 인정 기준, 적용 "
+"채널, 혜택이 서로 다릅니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "可以同時申請多所學校嗎？"
+msgstr "여러 학교에 동시에 지원할 수 있나요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"海聯會管道可填寫多個志願（學校 + "
+"系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。"
+msgstr ""
+"해련회 채널은 여러 지망(학교 + 학과)을 입력할 수 있으며, 시스템이 지망 순서에 따라 배정합니다. 통상 하나의 지원서로 여러 "
+"지망을 포함할 수 있습니다. 외국인 학생이 각 학교에 개별 지원할 때는 마감일 전에 각 학교에 별도로 지원서를 제출하면 되며, 각 "
+"학교의 지원비와 서류 요건이 다를 수 있으니 유의하세요."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "中文不夠好，可以申請中文授課的系所嗎？"
+msgstr "중국어가 부족한데, 중국어로 강의하는 학과에 지원할 수 있나요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 "
+"以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。"
+msgstr ""
+"중국어 능력 요건은 학과마다 다릅니다. 일부 학과는 최소 중국어 검정 기준(예: TOCFL B1 이상)을 설정하며, 일부는 입학 "
+"후 중국어 어학 과정 수강으로 보완을 인정합니다. 목표 학과의 최신 모집 요강을 확인하거나 학교 국제 사무처에 문의하는 것을 "
+"권장합니다. 중국어가 아직 기준에 미치지 못한다면, 영어 전용 강의 학과 또는 어학 준비 과정 지원도 고려해 보세요."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "申請獎學金需要另外申請嗎？"
+msgstr "장학금 신청은 별도로 해야 하나요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
+msgstr ""
+"교육부 대만 장학금은 입학 지원 시 또는 입학 후 별도로 신청해야 하며, 통상 대만 주재 해외 기관이나 학교에 직접 신청합니다. "
+"정원이 제한되어 있어 경쟁이 치열합니다. 화교 학생 장학금은 일부가 해련회나 학교에서 자동 심사하며, 일부는 별도 신청서 작성이 "
+"필요합니다. 학교 자체 입학 장학금은 통상 합격 통지서에 안내되어 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "我已在台灣就讀，可以轉學嗎？"
+msgstr "현재 대만에서 재학 중인데, 전학이 가능한가요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
+msgstr ""
+"가능합니다만, 전학 지원은 학년 제한(주로 2학년, 3학년으로 제한)이 있으며, 원 학교 성적표와 학적 포기 증명서가 필요합니다. "
+"각 학교의 전학 모집 일정은 달라 통상 매 학년 말 전후에 진행합니다. 자세한 내용은 목표 학교·학과의 전학 시험 요강을 "
+"확인하세요. 대학원생의 전과는 각 학과 규정에 따라 진행합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "重要聯絡與資源"
+msgstr "주요 연락처 및 자원"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海外聯合招生委員會（海聯會）"
+msgstr "해외연합초생위원회(해련회)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生申請主要管道，提供報名、志願填寫、成績查詢。"
+msgstr "화교 학생 지원의 주요 채널로, 원서 접수, 지망 입력, 성적 조회를 제공합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部學生事務及特教司"
+msgstr "교육부 학생사무 및 특수교육과"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生獎學金、臺灣獎學金主管機關，提供獎助學金申請辦法。"
+msgstr "화교 학생 장학금, 대만 장학금 주관 기관으로, 장학금 신청 방법을 제공합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學校國際事務處（OIA）"
+msgstr "학교 국제사무처(OIA)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "入學後主要聯繫窗口，提供簽證協助、ARC 辦理、生活輔導、獎學金申請。"
+msgstr "입학 후 주요 연락 창구로, 비자 지원, ARC 발급, 생활 안내, 장학금 신청을 제공합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "台灣駐外機構（辦理學生簽證）"
+msgstr "대만 주재 해외 기관(학생 비자 발급)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "確認錄取後，向所在地台灣駐外辦事處申請學生居留簽證（Resident Visa）。"
+msgstr "합격 확인 후, 거주지의 대만 주재 사무소에 학생 거류 비자(Resident Visa)를 신청합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "外來人士在台生活諮詢專線"
+msgstr "외국인 대만 생활 상담 전화"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
+msgstr ""
+"다국어(영어, 일어, 한국어, 베트남어, 태국어, 인도네시아어 등) 상담 서비스를 제공하며, 대만 생활 및 학업 관련 질문에 "
+"답변합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "免費電話：1925"
+msgstr "무료 전화: 1925"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "全民健康保險署"
+msgstr "국민건강보험공단"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "持 ARC 在台居留超過 4 個月者須加入全民健保，由學校協助辦理加保手續。"
+msgstr "ARC를 보유하고 대만에 4개월 이상 거류하는 자는 국민건강보험에 가입해야 하며, 학교가 가입 절차를 지원합니다."
+
+
+#: flows/templates/flows/
+msgid "港澳生在台居留說明"
+msgstr "홍콩·마카오 학생 대만 거류 안내"
+
+#: flows/templates/flows/
+msgid "香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般外籍生不同。本頁整理港澳生常見的入台文件、居留證申請流程及注意事項。"
+msgstr ""
+"홍콩·마카오 학생은 '홍콩마카오관계조례'에 따라 대만에 유학하며, 입대 방법 및 거류 허가 신청 절차가 일반 외국인 학생과 "
+"다릅니다. 이 페이지는 홍콩·마카오 학생의 공통적인 입대 서류, ARC 신청 절차, 주의사항을 정리합니다."
+
+#: flows/templates/flows/
+msgid "依港澳關係條例辦理"
+msgstr "홍콩마카오관계조례에 따라 처리"
+
+#: flows/templates/flows/
+msgid "抵台 15 天內辦居留"
+msgstr "대만 도착 후 15일 이내 거류 신청"
+
+#: flows/templates/flows/
+msgid "移民署：0800-024-111"
+msgstr "이민서: 0800-024-111"
+
+#: flows/templates/flows/
+msgid "港澳生受到特別保障："
+msgstr "홍콩·마카오 학생이 받는 특별 보호:"
+
+#: flows/templates/flows/
+msgid "香港及澳門居民依《香港澳門關係條例》在台就學，享有許多類似本國生的優惠待遇（如宿舍優先、獎學金資格等），但居留申請程序仍須透過移民署辦理。"
+msgstr ""
+"'홍콩마카오관계조례'에 따라 대만에서 학업을 이어가는 홍콩·마카오 거민은 내국인 학생과 유사한 많은 혜택(기숙사 우선 배정, "
+"장학금 자격 등)을 누리지만, 거류 신청 절차는 여전히 이민서를 통해 진행해야 합니다."
+
+#: flows/templates/flows/
+msgid "兩種入台方式"
+msgstr "두 가지 입대 방법"
+
+#: flows/templates/flows/
+msgid "持港澳身份入台"
+msgstr "홍콩·마카오 신분으로 입대"
+
+#: flows/templates/flows/
+msgid "使用臺灣入出境許可證"
+msgstr "대만 입출경 허가증 사용"
+
+#: flows/templates/flows/
+msgid "持香港永久居民身份證（或澳門居民身份證）向內政部移民署或駐外館處申請"
+msgstr "홍콩 영주권 신분증(또는 마카오 거민증)을 지참하여 내정부 이민서 또는 재외 공관에 신청"
+
+#: flows/templates/flows/
+msgid "臺灣地區入出境許可證"
+msgstr "대만지역 입출경 허가증"
+
+#: flows/templates/flows/
+msgid "，再以此入台就讀。"
+msgstr ", 이 허가증으로 입대하여 학업을 이어갑니다."
+
+#: flows/templates/flows/
+msgid "入台後需申請港澳居民居留許可（居留證）。"
+msgstr "입대 후 홍콩·마카오 거민 거류 허가(거류증)를 신청해야 합니다."
+
+#: flows/templates/flows/
+msgid "持外國護照入台"
+msgstr "외국 여권으로 입대"
+
+#: flows/templates/flows/
+msgid "使用外國護照 + 居留簽"
+msgstr "외국 여권 + 거류 비자 사용"
+
+#: flows/templates/flows/
+msgid "同時持有他國護照（如英國 BN(O)、葡萄牙等）的港澳生，可選擇以外國護照申請"
+msgstr "다른 나라 여권(예: 영국 BN(O), 포르투갈 등)도 보유한 홍콩·마카오 학생은 외국 여권으로"
+
+#: flows/templates/flows/
+msgid "學生居留簽（Resident Visa）"
+msgstr "학생 거류 비자(Resident Visa)"
+
+#: flows/templates/flows/
+msgid "入台。"
+msgstr "입대를 신청할 수 있습니다."
+
+#: flows/templates/flows/
+msgid "此類情況辦理流程接近一般外籍生，抵台後申請外僑居留證（ARC）。"
+msgstr "이 경우 절차는 일반 외국인 학생과 유사하며, 입대 후 외국인 거류증(ARC)을 신청합니다."
+
+#: flows/templates/flows/
+msgid "不確定自己應走哪一條路線，建議在出發前聯絡"
+msgstr "어느 경로를 택해야 할지 불확실하다면, 출발 전에 연락하는 것을 권장합니다"
+
+#: flows/templates/flows/
+msgid "或直接致電移民署（0800-024-111），說明持有的旅行證件類型，即可獲得最準確的指引。"
+msgstr "또는 이민서(0800-024-111)에 직접 전화하여 소지한 여행 증명서 종류를 설명하면 가장 정확한 안내를 받을 수 있습니다."
+
+#: flows/templates/flows/
+msgid "居留申請重點一覽"
+msgstr "거류 신청 주요 사항 개요"
+
+#: flows/templates/flows/
+msgid "辦理期限"
+msgstr "처리 기한"
+
+#: flows/templates/flows/
+msgid "15 天"
+msgstr "15일"
+
+#: flows/templates/flows/
+msgid "抵台後起算"
+msgstr "대만 도착일부터 기산"
+
+#: flows/templates/flows/
+msgid "申請規費"
+msgstr "신청 수수료"
+
+#: flows/templates/flows/
+msgid "起"
+msgstr "부터"
+
+#: flows/templates/flows/
+msgid "1年$1,000 / 2年$2,000 / 3年$3,000"
+msgstr "1년: NT$1,000 / 2년: NT$2,000 / 3년: NT$3,000"
+
+#: flows/templates/flows/
+msgid "居留證效期"
+msgstr "거류증 유효 기간"
+
+#: flows/templates/flows/
+msgid "依就學期間"
+msgstr "재학 기간에 따름"
+
+#: flows/templates/flows/
+msgid "通常每年換證"
+msgstr "통상 매년 갱신"
+
+#: flows/templates/flows/
+msgid "核發時間"
+msgstr "발급 소요 시간"
+
+#: flows/templates/flows/
+msgid "10 個工作天"
+msgstr "10 영업일"
+
+#: flows/templates/flows/
+msgid "不含退補件；預約可加快"
+msgstr "반려 서류 제외; 예약으로 빠르게 처리 가능"
+
+#: flows/templates/flows/
+msgid "申請應備文件"
+msgstr "신청 필요 서류"
+
+#: flows/templates/flows/
+msgid "以港澳身份入台者，需提供入出境許可證正本及影本。"
+msgstr "홍콩·마카오 신분으로 입대한 경우, 입출경 허가증 원본 및 사본을 제출해야 합니다."
+
+#: flows/templates/flows/
+msgid "持港澳證件者必備"
+msgstr "홍콩·마카오 서류 보유자 필수"
+
+#: flows/templates/flows/
+msgid "香港 / 澳門永久居民身份證"
+msgstr "홍콩 / 마카오 영주권 신분증"
+
+#: flows/templates/flows/
+msgid "港澳居民身份證正本及影本，作為身份認定之用。"
+msgstr "신분 확인을 위해 홍콩·마카오 거민증 원본 및 사본."
+
+#: flows/templates/flows/
+msgid "必要"
+msgstr "필수"
+
+#: flows/templates/flows/
+msgid "在學證明書"
+msgstr "재학 증명서"
+
+#: flows/templates/flows/
+msgid "由台灣就讀學校出具，載明科系、就學期間。學校 OIA 可協助申請。"
+msgstr "대만 재학 학교에서 발급하며, 학과명과 재학 기간이 기재됩니다. 학교 OIA에서 신청을 지원합니다."
+
+#: flows/templates/flows/
+msgid "照片 2 張"
+msgstr "사진 2장"
+
+#: flows/templates/flows/
+msgid "近 6 個月內 2 吋白底彩色照片（寬 3.5 cm × 高 4.5 cm）。"
+msgstr "6개월 이내 촬영한 2인치 흰 배경 컬러 사진(가로 3.5cm × 세로 4.5cm)."
+
+#: flows/templates/flows/
+msgid "居留申請書"
+msgstr "거류 신청서"
+
+#: flows/templates/flows/
+msgid "移民署官網下載或現場索取，請事先填妥。"
+msgstr "이민서 공식 사이트에서 다운로드하거나 현장에서 수령하세요. 미리 작성해 오시기 바랍니다."
+
+#: flows/templates/flows/
+msgid "健康檢查合格證明"
+msgstr "건강 검진 합격 증명서"
+
+#: flows/templates/flows/
+msgid "初次申請通常需附，須至指定醫院檢查。辦理前請向移民署或學校確認。"
+msgstr "초회 신청 시 통상 필요합니다. 지정 병원에서 검진을 받아야 합니다. 처리 전 이민서 또는 학교에 확인하세요."
+
+#: flows/templates/flows/
+msgid "初次申請通常需要"
+msgstr "초회 신청 시 통상 필요"
+
+#: flows/templates/flows/
+msgid "住宿地址證明"
+msgstr "숙소 주소 증명"
+
+#: flows/templates/flows/
+msgid "宿舍住宿證或租屋合約書，部分辦事處要求提供。"
+msgstr "기숙사 입주 증명서 또는 임대 계약서. 일부 사무소에서 요구합니다."
+
+#: flows/templates/flows/
+msgid "視情況"
+msgstr "상황에 따라"
+
+#: flows/templates/flows/
+msgid "外國護照（持外國護照者）"
+msgstr "외국 여권(외국 여권 보유자 해당)"
+
+#: flows/templates/flows/
+msgid "以外國護照入台者，需備護照正本及影本，並附上入台居留簽證。"
+msgstr "외국 여권으로 입대한 경우, 여권 원본 및 사본과 대만 거류 비자를 첨부해야 합니다."
+
+#: flows/templates/flows/
+msgid "持外國護照者適用"
+msgstr "외국 여권 보유자 해당"
+
+#: flows/templates/flows/
+msgid "居留申請流程"
+msgstr "거류 신청 절차"
+
+#: flows/templates/flows/
+msgid "抵台後前往學校國際事務處（OIA）報到"
+msgstr "도착 후 학교 국제사무처(OIA)에 등록"
+
+#: flows/templates/flows/
+msgid "OIA 通常在迎新時統一說明居留申請流程，並提供在學證明書及文件確認服務。抵台當天或次日即應前往，確認文件清單。"
+msgstr ""
+"OIA는 통상 오리엔테이션 시 거류 신청 절차를 통합 안내하고, 재학 증명서 발급 및 서류 확인 서비스를 제공합니다. 도착 당일 "
+"또는 다음 날 방문하여 서류 목록을 확인하세요."
+
+#: flows/templates/flows/
+msgid "抵台當天或次日"
+msgstr "도착 당일 또는 다음 날"
+
+#: flows/templates/flows/
+msgid "OIA 通常有團體辦理場次"
+msgstr "OIA는 통상 단체 처리 세션을 운영합니다"
+
+#: flows/templates/flows/
+msgid "取得在學證明書"
+msgstr "재학 증명서 취득"
+
+#: flows/templates/flows/
+msgid "向 OIA 申請學校出具的在學證明書。若迎新時已發放，可直接進入下一步。部分學校在報到後即可當日取件。"
+msgstr ""
+"OIA에 재학 증명서 발급을 신청하세요. 오리엔테이션 시 이미 배부된 경우 다음 단계로 진행하세요. 일부 학교는 등록 당일 발급이 "
+"가능합니다."
+
+#: flows/templates/flows/
+msgid "抵台後 1～2 天"
+msgstr "도착 후 1~2일"
+
+#: flows/templates/flows/
+msgid "健康檢查（初次申請者）"
+msgstr "건강 검진(초회 신청자)"
+
+#: flows/templates/flows/
+msgid "初次申請居留需至移民署指定合格醫院進行健康檢查，取得健康檢查合格證明書。學校 OIA 通常會提供指定醫院清單，可事先線上預約。"
+msgstr ""
+"초회 거류 신청 시 이민서 지정 의료 기관에서 건강 검진을 받고 건강 검진 합격 증명서를 취득해야 합니다. 학교 OIA가 통상 "
+"지정 의료 기관 목록을 제공하며, 온라인 사전 예약을 권장합니다."
+
+#: flows/templates/flows/
+msgid "抵台後 2～5 天"
+msgstr "도착 후 2~5일"
+
+#: flows/templates/flows/
+msgid "建議事先網路預約，節省等待時間"
+msgstr "대기 시간 절약을 위해 온라인 사전 예약 권장"
+
+#: flows/templates/flows/
+msgid "整理文件並預約移民署"
+msgstr "서류 정리 및 이민서 예약"
+
+#: flows/templates/flows/
+msgid "將所有文件整理妥當並備好正本及影本，至移民署官網線上預約辦理時段。建議選擇就近的移民署辦事處（桃園市即桃園服務站）。"
+msgstr ""
+"모든 서류를 원본 및 사본으로 정리한 후, 이민서 공식 사이트에서 처리 시간을 온라인 예약하세요. 가까운 이민서 "
+"사무소(타오위안시는 타오위안 서비스 스테이션)를 선택하는 것을 권장합니다."
+
+#: flows/templates/flows/
+msgid "抵台後 3～7 天"
+msgstr "도착 후 3~7일"
+
+#: flows/templates/flows/
+msgid "建議線上預約"
+msgstr "온라인 예약 권장"
+
+#: flows/templates/flows/
+msgid "前往移民署辦事處提交申請"
+msgstr "이민서 사무소를 방문하여 신청서 제출"
+
+#: flows/templates/flows/
+msgid "攜帶所有文件至移民署，現場核對文件、採集指紋並繳費。可由 OIA 統一帶隊辦理（若有安排），或自行前往。"
+msgstr ""
+"모든 서류를 이민서에 지참하여 현장에서 서류 확인, 지문 채취, 수수료 납부를 합니다. OIA의 단체 인솔 처리(일정이 있는 "
+"경우) 또는 개인적으로 방문할 수 있습니다."
+
+#: flows/templates/flows/
+msgid "抵台 15 天內"
+msgstr "입대 후 15일 이내"
+
+#: flows/templates/flows/
+msgid "移民署辦事處"
+msgstr "이민서 사무소"
+
+#: flows/templates/flows/
+msgid "等待審核（約 10 個工作天）"
+msgstr "심사 대기(약 10 영업일)"
+
+#: flows/templates/flows/
+msgid "申請後約"
+msgstr "신청 후 약"
+
+#: flows/templates/flows/
+msgid "製卡完成（不含退補件），移民署以簡訊通知領件。等待期間持入境許可證（或護照）及申請收據可作為合法居留暫時證明。"
+msgstr ""
+"카드 제작 완료(반려 서류 제외) 후 이민서에서 SMS로 수령 안내를 드립니다. 대기 기간 동안 입경 허가증(또는 여권)과 신청 "
+"영수증이 합법 거류 임시 증명으로 사용됩니다."
+
+#: flows/templates/flows/
+msgid "約 10 個工作天"
+msgstr "약 10 영업일"
+
+#: flows/templates/flows/
+msgid "領取居留證"
+msgstr "거류증 수령"
+
+#: flows/templates/flows/
+msgid "持入境許可證（或護照）及收據親赴辦事處領取居留證。領取後可辦理加入健保、申辦手機門號及銀行開戶。"
+msgstr ""
+"입경 허가증(또는 여권)과 영수증을 지참하여 사무소에서 직접 거류증을 수령합니다. 수령 후 건강보험 가입, 휴대폰 번호 개통, "
+"은행 계좌 개설이 가능합니다."
+
+#: flows/templates/flows/
+msgid "完成！"
+msgstr "완료!"
+
+#: flows/templates/flows/
+msgid "港澳生的居留證跟一般外籍生的 ARC 一樣嗎？"
+msgstr "홍콩·마카오 학생의 거류증은 일반 외국인 학생의 ARC와 같나요?"
+
+#: flows/templates/flows/
+msgid "功能上相同，但法源不同。"
+msgstr "기능적으로 같지만, 법적 근거가 다릅니다."
+
+#: flows/templates/flows/
+msgid "一般外籍生辦理「"
+msgstr "일반 외국인 학생은 \""
+
+#: flows/templates/flows/
+msgid "外僑居留證（ARC）"
+msgstr "외국인 거류증(ARC)"
+
+#: flows/templates/flows/
+msgid "」，依據《入出國及移民法》。"
+msgstr "\"을 신청합니다(입출국 및 이민법에 근거)."
+
+#: flows/templates/flows/
+msgid "以港澳身份入台的港澳生辦理「"
+msgstr "홍콩·마카오 신분으로 입대한 홍콩·마카오 학생은 \""
+
+#: flows/templates/flows/
+msgid "港澳居民居留證"
+msgstr "홍콩·마카오 거민 거류증"
+
+#: flows/templates/flows/
+msgid "」，依據《香港澳門關係條例》。"
+msgstr "\"을 신청합니다(홍콩마카오관계조례에 근거)."
+
+#: flows/templates/flows/
+msgid "兩者在台均可用於身份核驗、健保加保及銀行開戶等日常事務。"
+msgstr "두 증명서 모두 대만에서 신분 확인, 건강보험 가입, 은행 계좌 개설 등 일상 업무에 사용할 수 있습니다."
+
+#: flows/templates/flows/
+msgid "在台期間可以打工嗎？"
+msgstr "대만 재학 중 아르바이트를 할 수 있나요?"
+
+#: flows/templates/flows/
+msgid ""
+"港澳生持居留證可申請工讀許可（每週不超過 20 "
+"小時）。需向學校取得工讀同意書後，至勞動部辦理工作許可。在校內工讀（如圖書館、系辦助理）通常只需學校同意，手續較簡便。未取得合法工作許可的工作行為依法屬違規，請務必事先申請。"
+msgstr ""
+"홍콩·마카오 학생은 거류증을 보유하면 근로 허가(주 20시간 이하)를 신청할 수 있습니다. 먼저 학교에서 근로 동의서를 받은 후, "
+"노동부에서 취업 허가를 신청하세요. 교내 아르바이트(도서관, 학과 사무 보조 등)는 통상 학교 동의만으로 절차가 간단합니다. "
+"합법적인 취업 허가 없이 일하는 것은 위법이므로 반드시 사전에 신청하세요."
+
+#: flows/templates/flows/
+msgid "居留證到期後怎麼辦？"
+msgstr "거류증이 만료되면 어떻게 해야 하나요?"
+
+#: flows/templates/flows/
+msgid "居留證通常每年更新一次，到期前"
+msgstr "거류증은 통상 매년 갱신합니다. 만료"
+
+#: flows/templates/flows/
+msgid "30 天內"
+msgstr "30일 전"
+
+#: flows/templates/flows/
+msgid "即可申請延期。延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。"
+msgstr ""
+"부터 연장 신청을 할 수 있습니다. 연장에 필요한 서류는 초회 신청과 유사하며(재학 증명서, 거류증 원본, 사진 등), 건강 "
+"검진비는 재납부 불필요합니다. 연장 수수료는 NT$500입니다. 기한 초과를 방지하기 위해 일찍 처리하세요."
+
+#: flows/templates/flows/
+msgid "港澳生可以加入全民健保嗎？"
+msgstr "홍콩·마카오 학생도 국민건강보험에 가입할 수 있나요?"
+
+#: flows/templates/flows/
+msgid ""
+"可以。取得居留證後，透過學校衛生保健組辦理加保即可。保費依年度費率由學校代扣，學生費率比一般標準低。加保後就醫診所門診費用約 "
+"NT$150，享有與台灣學生相同的健保保障。"
+msgstr ""
+"가능합니다. 거류증 취득 후 학교 보건센터를 통해 가입 절차를 밟으면 됩니다. 보험료는 연간 요율에 따라 학교가 대납하며, 학생 "
+"요율은 일반 기준보다 낮습니다. 가입 후 클리닉 외래 진료비는 약 NT$150이며, 대만 학생과 동일한 건강보험 보장을 받습니다."
+
+#: flows/templates/flows/
+msgid "暑假返港澳超過 2 個月，健保怎麼處理？"
+msgstr "여름 방학에 홍콩·마카오로 2개월 이상 귀국하면 건강보험은 어떻게 처리하나요?"
+
+#: flows/templates/flows/
+msgid "離台超過 2 個月前，可至學校衛保組辦理「"
+msgstr "대만을 2개월 이상 떠나기 전에 학교 보건센터에서 \""
+
+#: flows/templates/flows/
+msgid "出國停保"
+msgstr "출국 정지(해외 정지 처리)"
+
+#: flows/templates/flows/
+msgid "」，停保期間不扣繳保費。回台後記得辦理「"
+msgstr "\"를 처리하세요. 정지 기간 동안 보험료가 공제되지 않습니다. 귀국 후 \""
+
+#: flows/templates/flows/
+msgid "復保"
+msgstr "복보(재가입)"
+
+#: flows/templates/flows/
+msgid "」以恢復保障。停保不影響居留證效期，但停保期間在台就醫無健保保障。"
+msgstr ""
+"\"를 신청하여 보장을 회복하세요. 정지는 거류증 유효 기간에 영향을 미치지 않지만, 정지 기간 동안 대만에서 진료를 받아도 "
+"건강보험이 적용되지 않습니다."
+
+#: flows/templates/flows/
+msgid "學校 OIA 會幫我辦居留證嗎？"
+msgstr "학교 OIA가 거류증 신청을 도와주나요?"
+
+#: flows/templates/flows/
+msgid ""
+"大多數學校會在開學初舉辦團體辦理場次，OIA 統一帶隊至移民署。建議迎新報到後立即前往 OIA "
+"確認是否有統一辦理安排，以便提早準備所需文件，節省自行前往的時間。"
+msgstr ""
+"대부분의 학교는 학기 초에 단체 처리 세션을 개최하며, OIA가 이민서까지 함께 안내합니다. 오리엔테이션 등록 후 즉시 OIA를 "
+"방문하여 단체 처리 일정 여부를 확인하고, 필요 서류를 미리 준비하세요."
+
+#: flows/templates/flows/
+msgid "相關資源"
+msgstr "관련 자원"
+
+#: flows/templates/flows/
+msgid "內政部移民署"
+msgstr "내정부 이민서(NIA)"
+
+#: flows/templates/flows/
+msgid "辦事處查詢、線上預約、進度查詢、申請書下載。"
+msgstr "사무소 검색, 온라인 예약, 진행 상황 조회, 신청서 다운로드."
+
+#: flows/templates/flows/
+msgid "居留說明、在學證明書申請、健康檢查指定醫院清單。"
+msgstr "거류 안내, 재학 증명서 신청, 건강 검진 지정 병원 목록."
+
+#: flows/templates/flows/
+msgid "取得居留證後可辦理加保，享有完整醫療保障。"
+msgstr "거류증 취득 후 건강보험 가입이 가능하며, 포괄적인 의료 보장을 받습니다."
+
+#: flows/templates/flows/
+msgid "外來人士在台生活諮詢"
+msgstr "외국인 대만 생활 상담 서비스"
+
+#: flows/templates/flows/
+msgid "多語言免費諮詢，涵蓋居留、生活、就業等問題。"
+msgstr "거류, 생활, 취업 등 다양한 주제에 대한 다국어 무료 상담 서비스입니다."
+
+#: flows/templates/flows/
+msgid "外籍生辦理居留證服務"
+msgstr "외국인 학생 거류증 발급 서비스"
+
+#: flows/templates/flows/
+msgid "辦理外僑居留證（ARC）"
+msgstr "외국인 거류증(ARC) 발급"
+
+#: flows/templates/flows/
+msgid "辦理重點一覽"
+msgstr "처리 주요 사항 개요"
+
+#: flows/templates/flows/
+msgid "效期時間"
+msgstr "유효 기간"
+
+#: flows/templates/flows/
+msgid "辦理流程（Step by Step）"
+msgstr "처리 절차(Step by Step)"
+
+#: flows/templates/flows/
+msgid "重要注意事項"
+msgstr "중요 유의사항"
+
+#: flows/templates/flows/
+msgid "僑生辦理居留證服務"
+msgstr "화교 학생 거류증 발급 서비스"
+
+#: flows/templates/flows/
+msgid "辦理居留證（ARC）"
+msgstr "거류증(ARC) 발급"
+
+#: flows/templates/flows/
+msgid "台灣銀行開戶"
+msgstr "대만 은행 계좌 개설"
+
+#: flows/templates/flows/
+msgid "台灣銀行開戶指南"
+msgstr "대만 은행 계좌 개설 안내"
+
+#: flows/templates/flows/
+msgid "推薦銀行選擇"
+msgstr "추천 은행 선택"
+
+#: flows/templates/flows/
+msgid "所需文件"
+msgstr "필요 서류"
+
+#: flows/templates/flows/
+msgid "開戶步驟"
+msgstr "계좌 개설 절차"
+
+#: flows/templates/flows/
+msgid "注意事項"
+msgstr "유의사항"
+
+#: flows/templates/flows/
+msgid "中央大學公車服務"
+msgstr "국립중앙대학교 버스 서비스"
+
+#: flows/templates/flows/
+msgid "快速總覽"
+msgstr "빠른 개요"
+
+#: flows/templates/flows/
+msgid "各出發地搭乘方式"
+msgstr "각 출발지 탑승 방법"
+
+#: flows/templates/flows/
+msgid "主要公車路線"
+msgstr "주요 버스 노선"
+
+#: flows/templates/flows/
+msgid "即時查詢到站時間"
+msgstr "실시간 도착 시간 조회"
+
+#: flows/templates/flows/
+msgid "中央大學住宿服務"
+msgstr "국립중앙대학교 기숙사 서비스"
+
+#: flows/templates/flows/
+msgid "中央大學校內住宿服務"
+msgstr "국립중앙대학교 교내 기숙사 서비스"
+
+#: flows/templates/flows/
+msgid "住宿重點一覽"
+msgstr "기숙사 주요 사항 개요"
+
+#: flows/templates/flows/
+msgid "申請優先順位"
+msgstr "신청 우선순위"
+
+#: flows/templates/flows/
+msgid "各宿舍棟次總覽"
+msgstr "각 기숙사 동 개요"
+
+#: flows/templates/flows/
+msgid "房間設備"
+msgstr "객실 설비"
+
+#: flows/templates/flows/
+msgid "聯絡資訊"
+msgstr "연락처 정보"
+
+#: flows/templates/flows/
+msgid "入學申請"
+msgstr "입학 지원"
+
+#: flows/templates/flows/
+msgid "各國專區"
+msgstr "국가별 전용 구역"
+
+#: flows/templates/flows/
+msgid "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等"
+msgstr "지역별로 해련회 지원 안내를 확인하세요. 홍콩, 말레이시아, 태국 등"
+
+#: flows/templates/flows/
+msgid "入學申請指南"
+msgstr "입학 지원 안내"
+
+#: flows/templates/flows/
+msgid "申請資格、時程、所需文件與注意事項整理"
+msgstr "지원 자격, 일정, 필요 서류, 유의사항 정리"
+
+#: flows/templates/flows/
+msgid "外國護照入學者的居留證申請流程與文件清單"
+msgstr "외국 여권 입학자의 거류증 신청 절차 및 서류 목록"
+
+#: flows/templates/flows/
+msgid "持外國護照入台的僑生居留證申請說明"
+msgstr "외국 여권으로 입대한 화교 학생의 거류증 신청 안내"
+
+#: flows/templates/flows/
+msgid "港澳生居留說明"
+msgstr "홍콩·마카오 학생 거류 안내"
+
+#: flows/templates/flows/
+msgid "入出境許可證、居留申請流程與健保工讀說明"
+msgstr "입출경 허가증, 거류 신청 절차, 건강보험 및 아르바이트 안내"
+
+#: flows/templates/flows/
+msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
+msgstr "기숙사 구역, 설비, 신청 절차 및 외국인 우선 보장 안내"
+
+#: flows/templates/flows/
+msgid "主要路線、常見目的地與即時查詢連結"
+msgstr "주요 노선, 주요 목적지 및 실시간 조회 링크"
+
+#: flows/templates/flows/
+msgid "來臺就學相關法規"
+msgstr "대만 유학 관련 법규"
+
+#: flows/templates/flows/
+msgid "入學・居留・健保・工讀・學籍等重要法規說明"
+msgstr "입학·거류·건강보험·아르바이트·학적 등 중요 법규 안내"
+
+#: flows/templates/flows/
+msgid "生活類"
+msgstr "생활류"
+
+#: flows/templates/flows/
+msgid "全民健保申請"
+msgstr "국민건강보험 신청"
+
+#: flows/templates/flows/
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "ARC 발급 후 즉시 가입 가능, 외래 진료비 대폭 절감"
+
+#: flows/templates/flows/
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "장학금 수령 필수, 우체국·대만은행·위산은행 추천 비교"
+
+#: flows/templates/flows/
+msgid "台灣門號申辦"
+msgstr "대만 휴대폰 번호 개통"
+
+#: flows/templates/flows/
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "선불 카드 vs 월정액 요금제, 주요 통신사 안내"
+
+#: flows/templates/flows/
+msgid "實用工具"
+msgstr "실용 도구"
+
+#: flows/templates/flows/
+msgid "地圖導覽"
+msgstr "지도 안내"
+
+#: flows/templates/flows/
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "학교·병원·역·공항 위치, 원클릭 내비게이션"
+
+#: flows/templates/flows/
+msgid "學校・醫院・交通"
+msgstr "학교·병원·교통"
+
+#: flows/templates/flows/
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "국립중앙대학교 주변 주요 장소, 선택 시 빠른 위치 확인 및 내비게이션"
+
+#: flows/templates/flows/
+msgid "快速定位"
+msgstr "빠른 위치 확인"
+
+#: flows/templates/flows/
+msgid "中央大學"
+msgstr "국립중앙대학교"
+
+#: flows/templates/flows/
+msgid "壢新醫院"
+msgstr "리신 병원"
+
+#: flows/templates/flows/
+msgid "中壢火車站"
+msgstr "중리 기차역"
+
+#: flows/templates/flows/
+msgid "高鐵桃園站"
+msgstr "타오위안 고속철도역"
+
+#: flows/templates/flows/
+msgid "桃園國際機場"
+msgstr "타오위안 국제공항"
+
+#: flows/templates/flows/
+msgid "大江購物中心"
+msgstr "다장 쇼핑몰"
+
+#: flows/templates/flows/
+msgid "各地區申請資訊"
+msgstr "지역별 지원 정보"
+
+#: flows/templates/flows/
+msgid "依所在地選擇對應的申請說明，直接連結至海外聯招會官方網站。"
+msgstr "거주 지역에 따라 해당 지원 안내를 선택하면, 해련회 공식 사이트로 직접 연결됩니다."
+
+#: flows/templates/flows/
+msgid "以下連結將跳轉至"
+msgstr "아래 링크는"
+
+#: flows/templates/flows/
+msgid "海外聯招會官方網站"
+msgstr "해련회 공식 사이트"
+
+#: flows/templates/flows/
+msgid "，請選擇你的所在地區查看對應的申請辦法與說明。"
+msgstr "로 이동합니다. 거주 지역을 선택하여 해당 지원 방법 및 안내를 확인하세요."
+
+#: flows/templates/flows/
+msgid "選擇你的地區"
+msgstr "지역 선택"
+
+#: flows/templates/flows/
+msgid "香港"
+msgstr "홍콩"
+
+#: flows/templates/flows/
+msgid "澳門"
+msgstr "마카오"
+
+#: flows/templates/flows/
+msgid "美國／加拿大"
+msgstr "미국/캐나다"
+
+#: flows/templates/flows/
+msgid "新加坡"
+msgstr "싱가포르"
+
+#: flows/templates/flows/
+msgid "其他地區"
+msgstr "기타 지역"
+
+#: flows/templates/flows/
+msgid "在臺僑生"
+msgstr "대만 거주 화교 학생"
+
+#: flows/templates/flows/
+msgid "海外臺校"
+msgstr "해외 대만 학교"
+
+#: flows/templates/flows/
+msgid "全民健康保險申請指南"
+msgstr "국민건강보험 신청 안내"
+
+#: flows/templates/flows/
+msgid "哪些人可以申請？"
+msgstr "누가 신청할 수 있나요?"
+
+#: flows/templates/flows/
+msgid "申請步驟"
+msgstr "신청 절차"
+
+#: flows/templates/flows/
+msgid "就醫小提醒"
+msgstr "진료 소소한 안내"
+
+#: flows/templates/flows/
+msgid "參考網站"
+msgstr "참고 사이트"
+
+#: flows/templates/flows/
+msgid "台灣門號申辦指南"
+msgstr "대만 휴대폰 번호 개통 안내"
+
+#: flows/templates/flows/
+msgid "預付卡 vs 月租方案"
+msgstr "선불 카드 vs 월정액 요금제"
+
+#: flows/templates/flows/
+msgid "主要電信業者"
+msgstr "주요 통신사"
+
+#: flows/templates/flows/
+msgid "月租方案所需文件"
+msgstr "월정액 요금제 필요 서류"
+
+#: flows/templates/flows/
+msgid "月租方案辦理步驟"
+msgstr "월정액 요금제 처리 절차"
+
+#: flows/templates/flows/
+msgid "📋 需要的文件"
+msgstr "📋 필요 서류"
+
+#: flows/templates/flows/
+msgid "📍 辦理地點"
+msgstr "📍 처리 장소"
+
+#: flows/templates/flows/
+msgid "🗺️ 在地圖上查看"
+msgstr "🗺️ 지도에서 보기"
+
+#: flows/templates/flows/
+msgid "🌐 官方網站"
+msgstr "🌐 공식 사이트"
+
+#: flows/templates/flows/
+msgid "點此前往官方網站"
+msgstr "공식 사이트로 이동"
+
+#: flows/templates/flows/
+msgid "📅 辦理時程"
+msgstr "📅 처리 일정"
+
+#: flows/templates/flows/
+msgid "⚠️ 截止日期"
+msgstr "⚠️ 마감일"
+
+#: flows/templates/flows/
+msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
+msgstr ""
+"먼저 「개인 정보」에서 <strong>예상 도착일</strong>을 입력해야 시스템이 이 작업의 마감일을 자동으로 계산할 수 "
+"있습니다."
+
+#: flows/templates/flows/
+msgid "📅 截止日期"
+msgstr "📅 마감일"
+
+#: flows/templates/flows/
+msgid "任務備註"
+msgstr "작업 메모"
+
+#: flows/templates/flows/
+msgid "在這裡輸入您的備註..."
+msgstr "여기에 메모를 입력하세요..."
+
+#: flows/templates/flows/
+msgid "儲存備註"
+msgstr "메모 저장"
+
+#: flows/templates/flows/
+msgid "未命名任務"
+msgstr "이름 없는 작업"
+
+#: flows/templates/flows/
+msgid "無詳細說明"
+msgstr "상세 설명 없음"
+
+#: flows/templates/flows/
+msgid "暫無詳細資料"
+msgstr "상세 자료 없음"
+
+#: flows/templates/flows/
+msgid "完成"
+msgstr "완료"
+
+#: flows/templates/flows/
+msgid "已完成任務"
+msgstr "완료된 작업"
+
+#: flows/templates/flows/
+msgid "未完成任務"
+msgstr "미완료 작업"
+
+=======
+msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
+msgstr "ARC 신청, 주거, 교통 등 — 필요한 모든 정보를 한 곳에서."
+
+msgid "主題分類"
+msgstr "카테고리"
+
+msgid "實用指南"
+msgstr "가이드"
+
+msgid "隨時查閱"
+msgstr "24시간 열람 가능"
+
+msgid "個指南"
+msgstr "가이드"
+
+msgid "學業類"
+msgstr "학업"
+
+msgid "心理支持"
+msgstr "정신 건강"
+
+msgid "行政文件"
+msgstr "행정 서류"
+
+msgid "學籍辦理"
+msgstr "학적 관리"
+
+msgid "校內系統"
+msgstr "교내 시스템"
+
+msgid "緊急聯絡"
+msgstr "긴급 연락처"
+
+msgid "圖書館"
+msgstr "도서관"
+
+msgid "需要更多協助？"
+msgstr "더 많은 도움이 필요하신가요?"
+
+msgid "請聯繫"
+msgstr "문의하기"
+
+msgid "國際事務處（OIA）"
+msgstr "국제처 (OIA)"
+
+msgid "分機 57081，我們很樂意幫助你！"
+msgstr "내선 57081 — 기꺼이 도와드리겠습니다!"
+
+msgid "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等"
+msgstr "지역별 입학 신청 정보: 홍콩, 말레이시아, 태국 등"
+
+msgid "申請資格、時程、所需文件與注意事項整理"
+msgstr "지원 자격, 일정, 필요 서류 및 주의사항"
+
+msgid "外國護照入學者的居留證申請流程與文件清單"
+msgstr "외국 여권 소지자의 ARC 신청 절차 및 서류 목록"
+
+msgid "持外國護照入台的僑生居留證申請說明"
+msgstr "외국 여권으로 대만에 입국하는 화교 학생을 위한 ARC 신청 가이드"
+
+msgid "入出境許可證、居留申請流程與健保工讀說明"
+msgstr "입출국 허가증, 거주 신청 절차, 건강보험 및 아르바이트"
+
+msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
+msgstr "기숙사 구역, 시설, 신청 절차 및 유학생 우선 보장"
+
+msgid "入學・居留・健保・工讀・學籍等重要法規說明"
+msgstr "입학・거주・건강보험・아르바이트・학적 관련 중요 법규"
+
+msgid "申請流程、每週工時上限、違規罰則說明"
+msgstr "신청 절차, 주당 최대 근무 시간 및 위반 처벌"
+
+msgid "主要路線、常見目的地與即時查詢連結"
+msgstr "주요 노선, 주요 목적지 및 실시간 버스 조회 링크"
+
+msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
+msgstr "상담 예약, 스트레스, 대인 관계 고민, 24시간 핫라인"
+
+msgid "衛保組、校外診所、周邊醫院、急診與緊急電話"
+msgstr "교내 보건실, 외부 클리닉, 인근 병원, 응급실 및 긴급 전화"
+
+msgid "僑生獎學金、清寒補助、校內外各項申請指南"
+msgstr "화교 학생 장학금, 경제 지원 및 교내외 신청 가이드"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "ARC 발급 후 가입 가능 — 외래 진료비 대폭 절감"
+
+msgid "統一證號說明、郵局・台灣銀行・玉山銀行開戶比較"
+msgstr "통일증호 설명 및 우체국・대만은행・옥산은행 비교"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "선불 유심 vs 월정액 요금제 — 주요 통신사 설명"
+
+msgid "在學證明、成績單、推薦信申請說明"
+msgstr "재학증명서, 성적증명서, 추천서 신청 방법"
+
+msgid "休學、復學、轉系、雙主修規定與流程"
+msgstr "휴학, 복학, 전과, 복수전공 규정 및 절차"
+
+msgid "選課、加退選、人工加退選、停修流程與日程"
+msgstr "수강신청, 수강추가/취소, 수동 추가/취소 및 수강취소 절차"
+
+msgid "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準"
+msgstr "문자 GPA, 졸업 학점 및 영어 기준(TOEIC) 학과별"
+
+msgid "Portal 帳號啟用、ee-class 課程平台、學生信箱設定"
+msgstr "Portal 계정 활성화, ee-class 강의 플랫폼 및 학생 이메일 설정"
+
+msgid "110・119・112・校安中心・國際事務處"
+msgstr "110・119・112・캠퍼스 안전센터・국제처"
+
+msgid "借書規則、K書中心、學術資料庫、列印費用"
+msgstr "대출 규정, 열람실, 학술 데이터베이스 및 인쇄 비용"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "학교, 병원, 역, 공항 위치 — 한 번의 탭으로 길 찾기"
+
+msgid "工作許可證"
+msgstr "취업허가증"
+
+msgid "在台開設銀行帳戶"
+msgstr "대만 은행 계좌 개설"
+
+msgid "醫療資訊"
+msgstr "의료 정보"
+
+msgid "課務資訊"
+msgstr "수업 정보"
+
+msgid "成績與畢業門檻"
+msgstr "성적 및 졸업 기준"
+>>>>>>> new/05

@@ -1,0 +1,375 @@
+{# guides/templates/guides/guide_library.html — 圖書館 #}
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "圖書館" %} — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  .gl-wrap { width:min(1440px,96%); margin:0 auto; padding:32px 24px 72px; }
+
+  .gl-hero {
+    background:linear-gradient(135deg,#1e3a5f 0%,#065f46 100%);
+    color:#fff; border-radius:20px; padding:36px 44px 32px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .gl-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:88px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .gl-hero h2 { font-size:26px; font-weight:900; margin:0 0 8px; }
+  .gl-hero p  { opacity:.85; font-size:15px; margin:0; }
+
+  .gl-back {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
+  }
+  .gl-back:hover { color:var(--primary-dark); }
+
+  .gl-label {
+    font-size:15px; font-weight:900; color:var(--primary-dark);
+    padding:0 0 10px; margin:32px 0 16px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  .gl-alert {
+    border-radius:12px; padding:14px 18px; font-size:13px;
+    line-height:1.7; margin-bottom:16px;
+  }
+  .gl-alert.info  { background:#eff6ff; border-left:4px solid #3b82f6; color:#1e40af; }
+  .gl-alert.warn  { background:#fff7ed; border-left:4px solid #f59e0b; color:#92400e; }
+  .gl-alert.red   { background:#fef2f2; border-left:4px solid #ef4444; color:#7f1d1d; }
+
+  /* 館別快覽 */
+  .gl-bldg-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:8px;
+  }
+  .gl-bldg-card {
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:14px; padding:18px 16px;
+  }
+  .gl-bldg-card .bc-icon { font-size:28px; margin-bottom:8px; }
+  .gl-bldg-card .bc-name { font-size:14px; font-weight:800; color:var(--primary-dark); margin-bottom:4px; }
+  .gl-bldg-card .bc-info { font-size:12px; color:#555; line-height:1.7; }
+
+  /* 借書規則 */
+  .gl-sys-card {
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:16px; padding:24px 24px 20px; margin-bottom:20px;
+  }
+  .gl-sys-card h3 {
+    font-size:16px; font-weight:900; color:var(--primary-dark);
+    margin:0 0 16px; display:flex; align-items:center; gap:8px;
+  }
+
+  .gl-info-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+  .gl-info-chip {
+    display:flex; flex-direction:column;
+    background:var(--bg); border:1px solid var(--border);
+    border-radius:10px; padding:10px 14px; flex:1; min-width:110px;
+  }
+  .gl-info-chip .ic-label { font-size:11px; color:var(--muted); margin-bottom:3px; }
+  .gl-info-chip .ic-val   { font-size:15px; font-weight:800; color:var(--primary-dark); }
+
+  .gl-rule-list { list-style:none; padding:0; margin:0; }
+  .gl-rule-list li {
+    padding:9px 0; border-bottom:1px solid #f0f0f0;
+    font-size:14px; color:#444; line-height:1.6;
+    display:flex; gap:8px; align-items:flex-start;
+  }
+  .gl-rule-list li:last-child { border-bottom:none; }
+  .gl-rule-list li::before { content:'•'; color:var(--primary); font-weight:900; flex-shrink:0; }
+
+  /* 表格 */
+  .gl-table-wrap { overflow-x:auto; margin-bottom:4px; }
+  .gl-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .gl-table th {
+    background:var(--primary); color:#fff;
+    padding:10px 14px; text-align:left; font-weight:700; font-size:12px;
+  }
+  .gl-table td { padding:10px 14px; border-bottom:1px solid #f0f0f0; vertical-align:top; }
+  .gl-table tr:last-child td { border-bottom:none; }
+  .gl-table tr:nth-child(even) td { background:#f8fafc; }
+
+  /* 自習室 */
+  .gl-room-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:8px; }
+  .gl-room-card {
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:14px; padding:20px 18px;
+  }
+  .gl-room-card .rc-title { font-size:15px; font-weight:800; color:var(--primary-dark); margin-bottom:8px; }
+  .gl-room-card .rc-badge {
+    display:inline-block; font-size:11px; font-weight:700;
+    padding:2px 8px; border-radius:20px; margin-bottom:8px;
+  }
+  .gl-room-card .rc-badge.green { background:#dcfce7; color:#166534; }
+  .gl-room-card .rc-badge.blue  { background:#dbeafe; color:#1e40af; }
+  .gl-room-card .rc-info { font-size:13px; color:#555; line-height:1.7; }
+
+  /* 資料庫 */
+  .gl-db-list { display:flex; flex-direction:column; gap:10px; margin-bottom:8px; }
+  .gl-db-row {
+    display:flex; justify-content:space-between; align-items:center;
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:12px; padding:14px 18px; gap:12px;
+  }
+  .gl-db-row .dr-name  { font-size:14px; font-weight:700; color:var(--primary-dark); }
+  .gl-db-row .dr-desc  { font-size:12px; color:var(--muted); margin-top:2px; }
+  .gl-db-row .dr-badge {
+    font-size:11px; font-weight:700; padding:3px 10px;
+    border-radius:20px; white-space:nowrap; flex-shrink:0;
+  }
+  .gl-db-row .dr-badge.active   { background:#dcfce7; color:#166534; }
+  .gl-db-row .dr-badge.static   { background:#fef9c3; color:#854d0e; }
+  .gl-db-row .dr-badge.open     { background:#dbeafe; color:#1e40af; }
+
+  /* 列印費用 */
+  .gl-print-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .gl-print-card {
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:12px; padding:16px; text-align:center;
+  }
+  .gl-print-card .pc-price { font-size:28px; font-weight:900; color:var(--primary); line-height:1.1; }
+  .gl-print-card .pc-unit  { font-size:11px; color:var(--muted); }
+  .gl-print-card .pc-type  { font-size:13px; font-weight:700; color:#333; margin-top:6px; }
+
+  /* 聯絡 */
+  .gl-contact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .gl-contact-card {
+    background:var(--bg); border:1px solid var(--border);
+    border-radius:10px; padding:14px 16px;
+  }
+  .gl-contact-card .cc-name { font-size:13px; font-weight:700; color:var(--primary-dark); margin-bottom:4px; }
+  .gl-contact-card .cc-info { font-size:12px; color:#555; line-height:1.7; }
+
+  @media(max-width:600px){
+    .gl-bldg-grid   { grid-template-columns:1fr; }
+    .gl-room-grid   { grid-template-columns:1fr; }
+    .gl-print-grid  { grid-template-columns:repeat(2,1fr); }
+    .gl-contact-grid{ grid-template-columns:1fr; }
+    .gl-hero { padding:28px 20px 24px; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="gl-wrap">
+
+  <a class="gl-back" href="{% url 'guide_index' %}">← {% trans "返回資訊中心" %}</a>
+
+  <div class="gl-hero">
+    <div class="bg-text">LIBRARY</div>
+    <h2>📚 {% trans "圖書館" %}</h2>
+    <p>{% trans "借書・自習室・學術資料庫・列印服務" %}</p>
+  </div>
+
+  <!-- 三館概覽 -->
+  <div class="gl-label">🏛️ {% trans "三館概覽" %}</div>
+  <div class="gl-bldg-grid">
+    <div class="gl-bldg-card">
+      <div class="bc-icon">📗</div>
+      <div class="bc-name">{% trans "總圖書館" %}</div>
+      <div class="bc-info">
+        {% trans "主要借閱・公用研究室 17 間・電腦檢索" %}<br>
+        {% trans "學期間 08:00–23:00" %}<br>
+        {% trans "考試週：24 小時開放" %}
+      </div>
+    </div>
+    <div class="gl-bldg-card">
+      <div class="bc-icon">📘</div>
+      <div class="bc-name">{% trans "中正圖書館" %}</div>
+      <div class="bc-info">
+        {% trans "2 樓：K書中心（113 席）" %}<br>
+        {% trans "1 樓：衛保組・崑曲特藏" %}
+      </div>
+    </div>
+    <div class="gl-bldg-card">
+      <div class="bc-icon">📙</div>
+      <div class="bc-name">{% trans "國鼎圖書資料館" %}</div>
+      <div class="bc-info">
+        {% trans "特藏・檔案資料" %}<br>
+        {% trans "週一至週五 10:00–15:00" %}
+      </div>
+    </div>
+  </div>
+
+  <!-- 借書 -->
+  <div class="gl-label">📖 {% trans "借書規則" %}</div>
+  <div class="gl-sys-card">
+    <div class="gl-info-row">
+      <div class="gl-info-chip">
+        <div class="ic-label">{% trans "最多冊數" %}</div>
+        <div class="ic-val">10 {% trans "冊" %}</div>
+      </div>
+      <div class="gl-info-chip">
+        <div class="ic-label">{% trans "借閱期限" %}</div>
+        <div class="ic-val">30 {% trans "天" %}</div>
+      </div>
+      <div class="gl-info-chip">
+        <div class="ic-label">{% trans "線上續借" %}</div>
+        <div class="ic-val">{% trans "1 次" %}</div>
+      </div>
+      <div class="gl-info-chip">
+        <div class="ic-label">{% trans "逾期罰款" %}</div>
+        <div class="ic-val">NT$5 / {% trans "天" %}</div>
+      </div>
+    </div>
+
+    <ul class="gl-rule-list">
+      <li>{% trans "憑學生證借閱，任何在學學生皆可使用，外籍生與本地生規則相同" %}</li>
+      <li>{% trans "線上續借：於到期前至 opac.lib.ncu.edu.tw 辦理，到期後不可續借" %}</li>
+      <li>{% trans "他人預約的書籍：收到通知後 7 天內須歸還，無法續借" %}</li>
+      <li>{% trans "指定參考書 / 論文逾期：NT$5 每小時（注意！比一般罰款貴很多）" %}</li>
+      <li>{% trans "非服務時間還書：總圖 1 樓入口設有還書箱，24 小時可用" %}</li>
+      <li>{% trans "畢業或離校前：所有借書必須歸還並繳清罰款" %}</li>
+    </ul>
+  </div>
+
+  <!-- 自習室 -->
+  <div class="gl-label">🪑 {% trans "自習空間" %}</div>
+  <div class="gl-room-grid">
+    <div class="gl-room-card">
+      <div class="rc-title">K {% trans "書中心（KSC）" %}</div>
+      <div class="rc-badge green">{% trans "中正圖書館 2F" %}</div>
+      <div class="rc-info">
+        <strong>113 {% trans "席" %}</strong>（{% trans "大K 82 席 + 小K 31 席" %}）<br>
+        {% trans "僅限中央大學在學生，刷學生證進入" %}<br>
+        {% trans "先到先得，禁止佔位" %}<br>
+        {% trans "違規 3 次 → 停用 6 個月" %}
+      </div>
+    </div>
+    <div class="gl-room-card">
+      <div class="rc-title">{% trans "公用研究室" %}</div>
+      <div class="rc-badge blue">{% trans "總圖書館" %}</div>
+      <div class="rc-info">
+        <strong>17 {% trans "間" %}</strong>，{% trans "可供師生使用" %}<br>
+        {% trans "學期初可申請學期用室" %}<br>
+        {% trans "臨時使用：至服務台申請" %}<br>
+        <a href="https://cir.lib.ncu.edu.tw/cir_platform/?mod=resrom_reader_service" target="_blank" rel="noopener">
+          {% trans "線上預約系統 ↗" %}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gl-alert info">
+    🌙 {% trans "考試週（期中、期末）：總圖 24 小時開放。確認最新時間請查" %}
+    <a href="https://www.lib.ncu.edu.tw/open/hours_se.php" target="_blank" rel="noopener">{% trans "開館時間表 ↗" %}</a>
+  </div>
+
+  <!-- 資料庫 -->
+  <div class="gl-label">🔍 {% trans "學術資料庫" %}</div>
+
+  <div class="gl-db-list">
+    <div class="gl-db-row">
+      <div>
+        <div class="dr-name">Scopus</div>
+        <div class="dr-desc">{% trans "Elsevier｜論文引用、摘要，推薦作為主要學術搜尋工具" %}</div>
+      </div>
+      <div class="dr-badge active">{% trans "訂閱中" %}</div>
+    </div>
+    <div class="gl-db-row">
+      <div>
+        <div class="dr-name">Web of Science (WoS)</div>
+        <div class="dr-desc">{% trans "訂閱已於 2026/01/31 終止，僅提供靜態資料（SCIE 至 2025）" %}</div>
+      </div>
+      <div class="dr-badge static">{% trans "靜態存取" %}</div>
+    </div>
+    <div class="gl-db-row">
+      <div>
+        <div class="dr-name">Journal Citation Reports (JCR)</div>
+        <div class="dr-desc">{% trans "Clarivate｜期刊影響因子（Impact Factor）查詢" %}</div>
+      </div>
+      <div class="dr-badge active">{% trans "訂閱中" %}</div>
+    </div>
+    <div class="gl-db-row">
+      <div>
+        <div class="dr-name">ScienceDirect</div>
+        <div class="dr-desc">{% trans "Elsevier｜理工科期刊與電子書" %}</div>
+      </div>
+      <div class="dr-badge active">{% trans "訂閱中" %}</div>
+    </div>
+    <div class="gl-db-row">
+      <div>
+        <div class="dr-name">HyRead eBook</div>
+        <div class="dr-desc">{% trans "中文電子書平台" %}</div>
+      </div>
+      <div class="dr-badge active">{% trans "訂閱中" %}</div>
+    </div>
+    <div class="gl-db-row">
+      <div>
+        <div class="dr-name">{% trans "中央大學機構典藏 / 學位論文" %}</div>
+        <div class="dr-desc">ir.lib.ncu.edu.tw｜etd.lib.ncu.edu.tw</div>
+      </div>
+      <div class="dr-badge open">{% trans "免費開放" %}</div>
+    </div>
+  </div>
+
+  <div class="gl-alert info" style="margin-bottom:8px;">
+    🔗 {% trans "完整資料庫清單：" %}
+    <a href="https://ncu.primo.exlibrisgroup.com/discovery/dbsearch?vid=886UST_NCU:886UST_NCU" target="_blank" rel="noopener">
+      {% trans "NCU 資料庫入口 ↗" %}
+    </a>
+  </div>
+
+  <div class="gl-sys-card" style="margin-top:16px;">
+    <h3>🏠 {% trans "校外遠端存取" %}</h3>
+    <ul class="gl-rule-list">
+      <li>
+        {% trans "方法一：從圖書館網站點選資料庫連結，選「中央大學教職員生」，以 Portal 帳號登入" %}
+      </li>
+      <li>
+        {% trans "方法二：安裝 SSL VPN（伺服器：140.115.199.1），以計算中心帳號登入。設定說明：" %}
+        <a href="https://www.lib.ncu.edu.tw/en/service/libvpn.php" target="_blank" rel="noopener">lib.ncu.edu.tw/en/service/libvpn.php ↗</a>
+      </li>
+      <li>{% trans "在校園網路（140.115.x.x）時不可使用 VPN，直接進入即可" %}</li>
+      <li>{% trans "VPN 登入問題聯絡計算機中心：分機 57555 / 57566" %}</li>
+    </ul>
+  </div>
+
+  <!-- 列印 -->
+  <div class="gl-label">🖨️ {% trans "列印・影印" %}</div>
+
+  <div class="gl-print-grid">
+    <div class="gl-print-card">
+      <div class="pc-price">NT$1</div>
+      <div class="pc-unit">/ {% trans "頁" %}</div>
+      <div class="pc-type">A4 / B4 {% trans "黑白影印" %}</div>
+    </div>
+    <div class="gl-print-card">
+      <div class="pc-price">NT$2</div>
+      <div class="pc-unit">/ {% trans "頁" %}</div>
+      <div class="pc-type">A3 {% trans "黑白影印" %}</div>
+    </div>
+    <div class="gl-print-card">
+      <div class="pc-price">NT$2</div>
+      <div class="pc-unit">/ {% trans "頁" %}</div>
+      <div class="pc-type">{% trans "電腦終端機列印" %}</div>
+    </div>
+  </div>
+
+  <div class="gl-alert info" style="margin-top:16px;">
+    📍 {% trans "自助影印機與電腦終端機均位於總圖 1 樓。彩色列印費用請至服務台詢問或查" %}
+    <a href="https://www.lib.ncu.edu.tw/service/copyprint.php" target="_blank" rel="noopener">{% trans "列印說明頁 ↗" %}</a>
+  </div>
+
+  <!-- 聯絡 -->
+  <div class="gl-label">📞 {% trans "聯絡資訊" %}</div>
+  <div class="gl-contact-grid">
+    <div class="gl-contact-card">
+      <div class="cc-name">{% trans "借閱・還書・罰款" %}</div>
+      <div class="cc-info">{% trans "分機" %} 57417<br>cirlib@ncu.edu.tw</div>
+    </div>
+    <div class="gl-contact-card">
+      <div class="cc-name">{% trans "參考諮詢・資料庫" %}</div>
+      <div class="cc-info">{% trans "分機" %} 57407<br>ncu57407@ncu.edu.tw</div>
+    </div>
+    <div class="gl-contact-card">
+      <div class="cc-name">{% trans "K書中心・開館時間" %}</div>
+      <div class="cc-info">{% trans "分機" %} 57429<br>03-4267127</div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

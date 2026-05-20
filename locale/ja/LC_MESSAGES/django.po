@@ -2491,6 +2491,105 @@ msgstr "国立屏東科学技術大学 (NPUST)"
 msgid "國立高雄師範大學（NKNU）"
 msgstr "国立高雄師範大学 (NKNU)"
 
+msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
+msgstr "在留カード・住居・交通など、必要な情報をすべてここで。"
+
+msgid "主題分類"
+msgstr "カテゴリ"
+
+msgid "實用指南"
+msgstr "ガイド"
+
+msgid "隨時查閱"
+msgstr "24時間閲覧可"
+
+msgid "個指南"
+msgstr "ガイド"
+
+msgid "學業類"
+msgstr "学業"
+
+msgid "心理支持"
+msgstr "メンタルヘルス"
+
+msgid "行政文件"
+msgstr "行政書類"
+
+msgid "學籍辦理"
+msgstr "学籍管理"
+
+msgid "校內系統"
+msgstr "学内システム"
+
+msgid "緊急聯絡"
+msgstr "緊急連絡先"
+
+msgid "圖書館"
+msgstr "図書館"
+
+msgid "需要更多協助？"
+msgstr "さらにサポートが必要ですか？"
+
+msgid "請聯繫"
+msgstr "お問い合わせ先"
+
+msgid "國際事務處（OIA）"
+msgstr "国際事務局（OIA）"
+
+msgid "分機 57081，我們很樂意幫助你！"
+msgstr "内線 57081 — お気軽にどうぞ！"
+
+msgid "申請流程、每週工時上限、違規罰則說明"
+msgstr "申請手順・週当たり労働時間上限と違反罰則"
+
+msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
+msgstr "カウンセリング予約・ストレス・対人問題・24時間ホットライン"
+
+msgid "衛保組、校外診所、周邊醫院、急診與緊急電話"
+msgstr "キャンパス診療所・近隣クリニック・病院・救急と緊急電話"
+
+msgid "僑生獎學金、清寒補助、校內外各項申請指南"
+msgstr "海外華人学生奨学金・経済支援と学内外申請ガイド"
+
+msgid "統一證號說明、郵局・台灣銀行・玉山銀行開戶比較"
+msgstr "統一証号の説明と郵便局・台湾銀行・玉山銀行の比較"
+
+msgid "在學證明、成績單、推薦信申請說明"
+msgstr "在学証明・成績証明書・推薦状の申請方法"
+
+msgid "休學、復學、轉系、雙主修規定與流程"
+msgstr "休学・復学・専攻変更・ダブルメジャーの規則と手続き"
+
+msgid "選課、加退選、人工加退選、停修流程與日程"
+msgstr "授業登録・履修追加/削除・手動追加/削除と取消手順"
+
+msgid "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準"
+msgstr "文字制GPA・卒業単位数・英語基準（TOEIC）学部別"
+
+msgid "Portal 帳號啟用、ee-class 課程平台、學生信箱設定"
+msgstr "Portalアカウント有効化・ee-class授業プラットフォーム・学生メール設定"
+
+msgid "110・119・112・校安中心・國際事務處"
+msgstr "110・119・112・キャンパス安全センター・国際事務局"
+
+msgid "借書規則、K書中心、學術資料庫、列印費用"
+msgstr "貸出規則・自習室・学術データベースと印刷費用"
+
+msgid "工作許可證"
+msgstr "就労許可証"
+
+msgid "在台開設銀行帳戶"
+msgstr "台湾での銀行口座開設"
+
+msgid "醫療資訊"
+msgstr "医療情報"
+
+msgid "課務資訊"
+msgstr "履修情報"
+
+msgid "成績與畢業門檻"
+msgstr "成績と卒業基準"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr "質問を入力してください。システムがあなたの身分と状態に基づいて提案を整理します。"
 
@@ -2658,3 +2757,498 @@ msgstr "国立高雄師範大学 (NKNU)"
 
 #~ msgid "我的帳戶"
 #~ msgstr "マイアカウント"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
+msgstr ""
+"外国籍を持ち、該当する学制の前提学歴（高校または大学卒業）を修了していること。各学科の規定に応じて、中国語（TOCFL）または英語（IELTS "
+"/ TOEFL）の能力証明が必要な場合があります。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
+msgstr ""
+"いいえ。海連会ルートは僑生身分を持つ申請者のみが利用できます。外国籍生（外国籍を持つが僑生認定に該当しない方）は各大学の国際入試事務局へ直接申請してください。各校の募集日程と提出書類については各校公式サイトをご確認ください。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。"
+msgstr ""
+"「僑生」とは、中華民国籍または華人血統を持ち、長期海外居住かつ現地で教育を受けた者を指し、教育部の規定により認定されます。僑生奨学金や僑先部などの特別ルートが利用できます。「外籍生」とは非中華民国籍のパスポートで入学する者を指し、通常は各大学の独自入試ルートで申請し、教育部台湾奨学金に応募できます。両者は身分認定・適用ルート・特典が異なります。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"海聯會管道可填寫多個志願（學校 + "
+"系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。"
+msgstr ""
+"海連会ルートでは複数の志望校・学科を記入でき、システムが志望順に振り分けます。通常1つの申請で複数の志望を含められます。外籍生が各大学に個別申請する場合は、各校の締切前に別々に申請書を提出すれば問題ありませんが、各校の申請料や書類要件が異なる場合があるのでご注意ください。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 "
+"以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。"
+msgstr ""
+"中国語能力の要件は学科によって異なります。一部の学科では最低基準（TOCFL "
+"B1以上など）を設けており、入学後に中国語コースの受講で補強を認める学科もあります。志望学科の最新募集要項を確認するか、学校の国際事務処にお問い合わせください。中国語能力がまだ不十分な場合は、全英語授業の学科や語学準備コースへの出願も検討してみてください。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
+msgstr ""
+"教育部台湾奨学金は入学申請時または入学後に別途申請が必要で、通常は台湾在外機関または学校に直接申請します。枠数が限られており競争が激しいです。僑生奨学金は海連会や学校が自動審査する部分と、別途申請書の提出が必要な部分があります。学校独自の入学奨学金については、通常合格通知に記載されています。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
+msgstr ""
+"可能ですが、転入学申請には通常学年制限（2・3年生に限る場合が多い）があり、在籍校の成績証明書と学籍放棄証明書が必要です。各校の転入学募集日程は異なり、通常は学年末前後に行われます。詳細は志望校・学科の転入学試験要項をご確認ください。大学院生の転籍は各研究科の規定に従って手続きしてください。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般外籍生不同。本頁整理港澳生常見的入台文件、居留証申請流程及注意事項。"
+msgstr ""
+"香港・マカオの学生は「香港澳門関係条例」に基づいて台湾に留学しており、入台方法および居留許可の申請手続きが一般外国人留学生とは異なります。このページでは港澳生に共通する入台書類、在留証申請の流れ、注意事項をまとめています。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般外籍生不同。本頁整理港澳生常見的入台文件、居留證申請流程及注意事項。"
+msgstr ""
+"香港・マカオの学生は「香港澳門関係条例」に基づいて台湾に留学しており、入台方法および居留許可の申請手続きが一般外国人留学生とは異なります。このページでは港澳生に共通する入台書類、在留証申請の流れ、注意事項をまとめています。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "依港澳關係條例辦理"
+msgstr "香港澳門関係条例に基づき手続き"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台 15 天內辦居留"
+msgstr "台湾到着後15日以内に在留申請"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "移民署：0800-024-111"
+msgstr "入国管理署：0800-024-111"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳生受到特別保障："
+msgstr "港澳生が受ける特別保護："
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "香港及澳門居民依《香港澳門關係條例》在台就學，享有許多類似本國生的優惠待遇（如宿舍優先、獎學金資格等），但居留申請程序仍須透過移民署辦理。"
+msgstr ""
+"「香港澳門関係条例」に基づき台湾に留学する香港・マカオ居民は、国内学生と類似した多くの優遇措置（寮の優先入居・奨学金資格など）を受けられますが、在留申請手続きは引き続き入国管理署を通じて行う必要があります。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持港澳身份入台"
+msgstr "港澳の身分証で入台"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "使用臺灣入出境許可證"
+msgstr "台湾入出境許可証を使用"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持香港永久居民身份證（或澳門居民身份證）向內政部移民署或駐外館處申請"
+msgstr "香港永久居民証（またはマカオ居民証）を持って内政部入国管理署または在外公館に申請"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "臺灣地區入出境許可證"
+msgstr "台湾地区入出境許可証"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "，再以此入台就讀。"
+msgstr "、この許可証で入台して就学します。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "入台後需申請港澳居民居留許可（居留證）。"
+msgstr "入台後、港澳居民居留許可（在留証）を申請する必要があります。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持外國護照入台"
+msgstr "外国パスポートで入台"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "使用外國護照 + 居留簽"
+msgstr "外国パスポート＋居留ビザを使用"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "同時持有他國護照（如英國 BN(O)、葡萄牙等）的港澳生，可選擇以外國護照申請"
+msgstr "他国のパスポート（英国BN(O)、ポルトガルなど）も保有する港澳生は、外国パスポートで"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "學生居留簽（Resident Visa）"
+msgstr "学生居留ビザ（Resident Visa）"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "入台。"
+msgstr "入台を申請することができます。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "此類情況辦理流程接近一般外籍生，抵台後申請外僑居留證（ARC）。"
+msgstr "この場合の手続きは一般外国人留学生に近く、入台後に外僑居留証（ARC）を申請します。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "不確定自己應走哪一條路線，建議在出發前聯絡"
+msgstr "どちらのルートが適用されるか不明な場合は、出発前に"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "或直接致電移民署（0800-024-111），說明持有的旅行證件類型，即可獲得最準確的指引。"
+msgstr "または入国管理署（0800-024-111）に直接電話し、所持する渡航書類の種類を説明すると、最も正確な案内が得られます。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "15 天"
+msgstr "15日"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後起算"
+msgstr "到着日から起算"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "起"
+msgstr "から"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "1年$1,000 / 2年$2,000 / 3年$3,000"
+msgstr "1年：NT$1,000 / 2年：NT$2,000 / 3年：NT$3,000"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "依就學期間"
+msgstr "就学期間に準ずる"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "通常每年換證"
+msgstr "通常毎年更新"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "10 個工作天"
+msgstr "10営業日"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "不含退補件；預約可加快"
+msgstr "差し戻し案件を除く；予約で手続きを早められます"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "以港澳身份入台者，需提供入出境許可證正本及影本。"
+msgstr "港澳の身分証で入台した方は、入出境許可証の原本とコピーを提出する必要があります。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持港澳證件者必備"
+msgstr "港澳書類保有者の必須書類"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "香港 / 澳門永久居民身份證"
+msgstr "香港／マカオ永久居民証"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳居民身份證正本及影本，作為身份認定之用。"
+msgstr "身分確認のため、港澳居民証の原本とコピーが必要です。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "必要"
+msgstr "必須"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "在學證明書"
+msgstr "在学証明書"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "由台灣就讀學校出具，載明科系、就學期間。學校 OIA 可協助申請。"
+msgstr "台湾の在学校が発行し、学科名と在学期間が記載されます。学校のOIAが申請のサポートをします。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "照片 2 張"
+msgstr "写真2枚"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "近 6 個月內 2 吋白底彩色照片（寬 3.5 cm × 高 4.5 cm）。"
+msgstr "6か月以内に撮影した2インチ白背景カラー写真（幅3.5cm×高さ4.5cm）。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "居留申請書"
+msgstr "居留申請書"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "移民署官網下載或現場索取，請事先填妥。"
+msgstr "入国管理署のウェブサイトからダウンロードするか、窓口で入手してください。事前に記入しておくこと。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "健康檢查合格證明"
+msgstr "健康診断合格証明書"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "初次申請通常需附，須至指定醫院檢查。辦理前請向移民署或學校確認。"
+msgstr "初回申請時には通常必要です。指定病院での受診が必要です。手続き前に入国管理署または学校に確認してください。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "初次申請通常需要"
+msgstr "初回申請時には通常必要"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "住宿地址證明"
+msgstr "居住地証明"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "宿舍住宿證或租屋合約書，部分辦事處要求提供。"
+msgstr "寮の入居証明書または賃貸契約書。一部の事務所で提出が求められます。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "視情況"
+msgstr "状況による"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "外國護照（持外國護照者）"
+msgstr "外国パスポート（外国パスポート保有者に適用）"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "以外國護照入台者，需備護照正本及影本，並附上入台居留簽證。"
+msgstr "外国パスポートで入台した方は、パスポートの原本とコピー、および台湾居留ビザを用意する必要があります。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持外國護照者適用"
+msgstr "外国パスポート保有者に適用"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後前往學校國際事務處（OIA）報到"
+msgstr "到着後、学校の国際事務処（OIA）に報告"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "OIA 通常在迎新時統一說明居留申請流程，並提供在學證明書及文件確認服務。抵台當天或次日即應前往，確認文件清單。"
+msgstr ""
+"OIAは通常オリエンテーション時に在留申請の流れをまとめて説明し、在学証明書の発行と書類確認サービスを提供します。到着当日または翌日に訪問し、必要書類リストを確認してください。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台當天或次日"
+msgstr "到着当日または翌日"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "OIA 通常有團體辦理場次"
+msgstr "OIAは通常グループ申請の場を設けています"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "取得在學證明書"
+msgstr "在学証明書を取得する"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "向 OIA 申請學校出具的在學證明書。若迎新時已發放，可直接進入下一步。部分學校在報到後即可當日取件。"
+msgstr ""
+"OIAに在学証明書の発行を申請してください。オリエンテーション時にすでに配布された場合は次のステップに進めます。当日中に発行できる学校もあります。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後 1～2 天"
+msgstr "到着後1〜2日"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "健康檢查（初次申請者）"
+msgstr "健康診断（初回申請者）"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "初次申請居留需至移民署指定合格醫院進行健康檢查，取得健康檢查合格證明書。學校 OIA 通常會提供指定醫院清單，可事先線上預約。"
+msgstr ""
+"初回在留申請には入国管理署指定の医療機関での健康診断が必要で、健康診断合格証明書を取得します。学校OIAが指定医療機関リストを提供することが多く、事前のオンライン予約を推奨します。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後 2～5 天"
+msgstr "到着後2〜5日"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "建議事先網路預約，節省等待時間"
+msgstr "待ち時間を節約するため事前にオンライン予約を推奨"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "整理文件並預約移民署"
+msgstr "書類を整理し入国管理署の予約を取る"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "將所有文件整理妥當並備好正本及影本，至移民署官網線上預約辦理時段。建議選擇就近的移民署辦事處（桃園市即桃園服務站）。"
+msgstr ""
+"すべての書類を整理し原本とコピーを用意したうえで、入国管理署のウェブサイトから手続き時間をオンライン予約してください。最寄りの事務所（桃園市は桃園サービスステーション）を選ぶことをお勧めします。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後 3～7 天"
+msgstr "到着後3〜7日"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "建議線上預約"
+msgstr "オンライン予約を推奨"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "前往移民署辦事處提交申請"
+msgstr "入国管理署事務所に行って申請書を提出する"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "攜帶所有文件至移民署，現場核對文件、採集指紋並繳費。可由 OIA 統一帶隊辦理（若有安排），或自行前往。"
+msgstr ""
+"すべての書類を持って入国管理署に行き、書類確認・指紋採取・手数料支払いを行います。OIAによる団体引率がある場合はそれに参加でき、個人でも手続き可能です。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台 15 天內"
+msgstr "入台後15日以内"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "移民署辦事處"
+msgstr "入国管理署事務所"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "等待審核（約 10 個工作天）"
+msgstr "審査を待つ（約10営業日）"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "申請後約"
+msgstr "申請後約"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "製卡完成（不含退補件），移民署以簡訊通知領件。等待期間持入境許可證（或護照）及申請收據可作為合法居留暫時証明。"
+msgstr ""
+"カードが完成したら（差し戻し案件除く）、入国管理署からSMSで通知が届きます。待機期間中は入境許可証（またはパスポート）と申請控えが合法居留の一時証明として使用できます。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "製卡完成（不含退補件），移民署以簡訊通知領件。等待期間持入境許可證（或護照）及申請收據可作為合法居留暫時證明。"
+msgstr ""
+"カードが完成したら（差し戻し案件除く）、入国管理署からSMSで通知が届きます。待機期間中は入境許可証（またはパスポート）と申請控えが合法居留の一時証明として使用できます。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "約 10 個工作天"
+msgstr "約10営業日"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "領取居留證"
+msgstr "在留証を受け取る"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持入境許可證（或護照）及收據親赴辦事處領取居留證。領取後可辦理加入健保、申辦手機門號及銀行開戶。"
+msgstr ""
+"入境許可証（またはパスポート）と受領証を持って事務所に出向き、在留証を受け取ります。受け取り後は、健康保険への加入、携帯電話番号の申し込み、銀行口座の開設が可能になります。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "完成！"
+msgstr "完了！"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳生的居留證跟一般外籍生的 ARC 一樣嗎？"
+msgstr "港澳生の在留証は一般外国人留学生のARCと同じですか？"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "功能上相同，但法源不同。"
+msgstr "機能的には同じですが、法的根拠が異なります。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "一般外籍生辦理「"
+msgstr "一般外国人留学生は「"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "外僑居留證（ARC）"
+msgstr "外僑居留証（ARC）"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "」，依據《入出國及移民法》。"
+msgstr "」を申請します（入出国及び移民法に基づく）。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "以港澳身份入台的港澳生辦理「"
+msgstr "港澳の身分証で入台した港澳生は「"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳居民居留證"
+msgstr "港澳居民居留証"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "」，依據《香港澳門關係條例》。"
+msgstr "」を申請します（香港澳門関係条例に基づく）。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "兩者在台均可用於身份核驗、健保加保及銀行開戶等日常事務。"
+msgstr "どちらの証明書も台湾で身分確認・健康保険加入・銀行口座開設などの日常手続きに使用できます。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "在台期間可以打工嗎？"
+msgstr "台湾在学中にアルバイトはできますか？"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"港澳生持居留證可申請工讀許可（每週不超過 20 "
+"小時）。需向學校取得工讀同意書後，至勞動部辦理工作許可。在校內工讀（如圖書館、系辦助理）通常只需學校同意，手續較簡便。未取得合法工作許可的工作行為依法屬違規，請務必事先申請。"
+msgstr ""
+"港澳生は在留証を持っていれば就労許可（週20時間以内）を申請できます。まず学校から就労同意書を取得し、労働部で就労許可を申請してください。学内のアルバイト（図書館・学科事務補助など）は通常学校の同意のみで手続きが簡単です。合法的な就労許可を取得せずに働くことは法律違反となりますので、必ず事前に申請してください。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "居留證到期後怎麼辦？"
+msgstr "在留証が期限切れになったらどうすればいいですか？"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "居留證通常每年更新一次，到期前"
+msgstr "在留証は通常毎年更新します。有効期限"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "30 天內"
+msgstr "30日前"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "即可申請延期。延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。"
+msgstr ""
+"から更新申請ができます。更新に必要な書類は初回申請と同様（在学証明書・在留証原本・写真など）で、健康診断費は不要です。更新手数料はNT$500です。期限切れを避けるため早めに手続きしてください。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳生可以加入全民健保嗎？"
+msgstr "港澳生は全民健康保険に加入できますか？"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"可以。取得居留證後，透過學校衛生保健組辦理加保即可。保費依年度費率由學校代扣，學生費率比一般標準低。加保後就醫診所門診費用約 "
+"NT$150，享有與台灣學生相同的健保保障。"
+msgstr ""
+"できます。在留証取得後、学校の保健センターを通じて加入手続きを行います。保険料は年間レートに基づき学校が代行徴収し、学生レートは一般よりも低く設定されています。加入後のクリニック外来費用は約NT$150で、台湾人学生と同じ健保保障が受けられます。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "暑假返港澳超過 2 個月，健保怎麼處理？"
+msgstr "夏休みに2か月以上港澳に帰省する場合、健康保険はどうなりますか？"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "離台超過 2 個月前，可至學校衛保組辦理「"
+msgstr "台湾を2か月以上離れる前に、学校の保健センターで「"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "出國停保"
+msgstr "出国停保（海外停保手続き）"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "」，停保期間不扣繳保費。回台後記得辦理「"
+msgstr "」を手続きしてください。停保期間中は保険料が差し引かれません。帰台後は「"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "復保"
+msgstr "復保（再加入）"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "」以恢復保障。停保不影響居留證效期，但停保期間在台就醫無健保保障。"
+msgstr "」の手続きを忘れずに行い保障を回復させてください。停保は在留証の有効期限に影響しませんが、停保期間中に台湾で受診しても健保は適用されません。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "學校 OIA 會幫我辦居留證嗎？"
+msgstr "学校のOIAが在留証の申請を手伝ってくれますか？"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"大多數學校會在開學初舉辦團體辦理場次，OIA 統一帶隊至移民署。建議迎新報到後立即前往 OIA "
+"確認是否有統一辦理安排，以便提早準備所需文件，節省自行前往的時間。"
+msgstr ""
+"ほとんどの大学は学期開始時にグループ申請セッションを設け、OIAが入国管理署まで引率します。オリエンテーション後すぐにOIAを訪問して団体手続きの有無を確認し、必要書類を事前に準備しておくことをお勧めします。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "內政部移民署"
+msgstr "内政部入国管理署（NIA）"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "辦事處查詢、線上預約、進度查詢、申請書下載。"
+msgstr "事務所検索・オンライン予約・申請状況確認・申請書ダウンロード。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "居留說明、在學證明書申請、健康檢查指定醫院清單。"
+msgstr "在留手続き説明・在学証明書申請・健康診断指定医療機関リスト。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "取得居留證後可辦理加保，享有完整醫療保障。"
+msgstr "在留証取得後、全民健保への加入申請が可能となり、包括的な医療保障が受けられます。"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "外來人士在台生活諮詢"
+msgstr "外国人在台生活相談サービス"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "多語言免費諮詢，涵蓋居留、生活、就業等問題。"
+msgstr "在留・日常生活・就労などに関する多言語無料相談サービスです。"
+
