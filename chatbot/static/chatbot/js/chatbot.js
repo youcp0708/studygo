@@ -4,10 +4,21 @@
   const page = document.querySelector('.chatbot-page');
   if (!page) return;
 
-  let activeSessionId = page.dataset.sessionId || null;
-
   const endpoints = window.CHATBOT_ENDPOINTS || {};
   const i18n = window.CHATBOT_I18N || {};
+
+  let activeSessionId = page.dataset.sessionId || null;
+  let currentAIMode = page.dataset.aiMode || 'helper';
+
+  const AI_MODE_NAMES = {
+    helper: i18n.assistantName || 'StudyGo AI 小幫手',
+    friend: i18n.friendName || 'StudyGo AI 聊天好朋友',
+  };
+
+  const AI_MODE_PLACEHOLDERS = {
+    helper: '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？',
+    friend: '例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？',
+  };
 
   const messagesEl = document.getElementById('chatMessages');
   const scrollBottomBtn = document.getElementById('scrollBottomBtn');
@@ -32,6 +43,10 @@
     return i18n[key] || fallback;
   }
 
+  function getCurrentAIName() {
+    return AI_MODE_NAMES[currentAIMode] || AI_MODE_NAMES.helper;
+  }
+
   function getCookie(name) {
     for (const cookie of document.cookie.split(';')) {
       const c = cookie.trim();
@@ -41,6 +56,28 @@
     }
     return '';
   }
+
+  function updateAIModeUI() {
+  page.classList.remove('ai-mode-helper', 'ai-mode-friend');
+  page.classList.add(`ai-mode-${currentAIMode}`);
+
+  document.querySelectorAll('.ai-mode-card').forEach((card) => {
+    card.classList.toggle('active', card.dataset.mode === currentAIMode);
+  });
+
+  document.querySelectorAll('.js-ai-name').forEach((el) => {
+    el.textContent = getCurrentAIName();
+  });
+
+  document.querySelectorAll('.js-ai-avatar').forEach((el) => {
+    el.classList.remove('helper', 'friend');
+    el.classList.add(currentAIMode);
+  });
+
+  if (input) {
+    input.placeholder = AI_MODE_PLACEHOLDERS[currentAIMode] || AI_MODE_PLACEHOLDERS.helper;
+  }
+}
 
   async function requestJSON(url, method, body) {
     const options = {
@@ -70,16 +107,6 @@
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
-  function updateScrollBottomButton() {
-    if (!messagesEl || !scrollBottomBtn) return;
-
-    if (isNearBottom()) {
-      scrollBottomBtn.classList.remove('show');
-    } else {
-      scrollBottomBtn.classList.add('show');
-    }
-  }
-
   function isNearBottom() {
     if (!messagesEl) return true;
 
@@ -88,6 +115,16 @@
       messagesEl.scrollTop -
       messagesEl.clientHeight
     ) < 120;
+  }
+
+  function updateScrollBottomButton() {
+    if (!messagesEl || !scrollBottomBtn) return;
+
+    if (isNearBottom()) {
+      scrollBottomBtn.classList.remove('show');
+    } else {
+      scrollBottomBtn.classList.add('show');
+    }
   }
 
   function normalizeMessageContent(content) {
@@ -112,15 +149,10 @@
   }
 
   function renderMessageContent(content) {
-    const normalized =
-      typeof normalizeMessageContent === 'function'
-        ? normalizeMessageContent(content)
-        : String(content || '');
-
+    const normalized = normalizeMessageContent(content);
     const safeText = escapeHtml(normalized);
 
     return safeText
-      // 標準 Markdown 連結：[文字](網址)
       .replace(
         /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g,
         '<a href="$2" class="chat-link">$1</a>'
@@ -131,12 +163,10 @@
   function renderExistingMessageLinks() {
     if (!messagesEl) return;
 
-    const contents = messagesEl.querySelectorAll('.message-content, .message-bubble');
+    const contents = messagesEl.querySelectorAll('.message-content');
 
     contents.forEach((el) => {
       if (el.dataset.renderedLinks === 'true') return;
-      if (el.classList.contains('message-name')) return;
-      if (el.classList.contains('message-time')) return;
 
       const rawText = el.textContent || '';
 
@@ -171,13 +201,17 @@
     avatar.className = 'message-avatar';
     avatar.textContent = role === 'user' ? '🧑' : '🤖';
 
+    if (role !== 'user') {
+      avatar.classList.add('js-ai-avatar', currentAIMode);
+    }
+
     const bubble = document.createElement('div');
     bubble.className = 'message-bubble';
 
     if (role !== 'user') {
       const name = document.createElement('div');
-      name.className = 'message-name';
-      name.textContent = t('assistantName', 'StudyGo AI 小幫手');
+      name.className = 'message-name js-ai-name';
+      name.textContent = getCurrentAIName();
       bubble.appendChild(name);
     }
 
@@ -198,7 +232,7 @@
     row.appendChild(bubble);
     messagesEl.appendChild(row);
 
-    if (role === 'user') {
+    if (shouldScroll || role === 'user') {
       scrollToBottom();
     } else {
       updateScrollBottomButton();
@@ -213,8 +247,9 @@
     row.id = 'typingRow';
 
     row.innerHTML = `
-      <div class="message-avatar">🤖</div>
+      <div class="message-avatar js-ai-avatar ${currentAIMode}">🤖</div>
       <div class="message-bubble">
+        <div class="message-name js-ai-name">${getCurrentAIName()}</div>
         <div class="typing-dots">
           <span></span>
           <span></span>
@@ -263,7 +298,7 @@
       if (item.type === 'camera') icon = '📷';
 
       chip.innerHTML = `
-        <span>${icon} ${item.file.name}</span>
+        <span>${icon} ${escapeHtml(item.file.name)}</span>
         <button type="button" data-index="${index}">×</button>
       `;
 
@@ -364,7 +399,6 @@
       items.forEach((item) => {
         const textEl = item.querySelector('.history-text');
         const text = textEl ? textEl.textContent.trim().toLowerCase() : '';
-
         item.style.display = !keyword || text.includes(keyword) ? '' : 'none';
       });
     });
@@ -379,10 +413,11 @@
     });
   }
 
-  function buildHistoryItem(sessionId, title, isPinned) {
+  function buildHistoryItem(sessionId, title, isPinned, aiMode) {
     const item = document.createElement('div');
     item.className = `chat-history-item active${isPinned ? ' pinned' : ''}`;
     item.dataset.sessionId = sessionId;
+    item.dataset.aiMode = aiMode || currentAIMode;
 
     item.innerHTML = `
       <a class="history-title" href="${endpoints.page}?session=${sessionId}">
@@ -403,7 +438,7 @@
     return item;
   }
 
-  function addOrUpdateHistoryItem(sessionId, title, isPinned) {
+  function addOrUpdateHistoryItem(sessionId, title, isPinned, aiMode) {
     if (!historyList) return;
 
     const empty = historyList.querySelector('.history-empty');
@@ -416,10 +451,11 @@
     );
 
     if (!item) {
-      item = buildHistoryItem(sessionId, title, isPinned);
+      item = buildHistoryItem(sessionId, title, isPinned, aiMode);
       historyList.prepend(item);
     }
 
+    item.dataset.aiMode = aiMode || currentAIMode;
     item.querySelector('.history-text').textContent = title || t('newChat', '新的聊天');
     item.querySelector('.pin-mark').textContent = isPinned ? '📌' : '';
     item.querySelector('.pin-chat').textContent = isPinned
@@ -467,6 +503,7 @@
       const formData = new FormData();
 
       formData.append('message', message || t('uploadedAttachment', '已上傳附件'));
+      formData.append('ai_mode', currentAIMode);
 
       if (activeSessionId) {
         formData.append('session_id', activeSessionId);
@@ -508,7 +545,8 @@
       addOrUpdateHistoryItem(
         activeSessionId,
         data.data.session_title,
-        data.data.is_pinned
+        data.data.is_pinned,
+        data.data.ai_mode || currentAIMode
       );
 
       if (isNewSession && endpoints.page) {
@@ -530,15 +568,13 @@
       renderAttachmentPreview();
 
     } catch (error) {
-      const shouldAutoScrollAfterReply = isNearBottom();
-
       removeTyping();
 
       addMessage(
         'assistant',
         t('networkError', '網路或伺服器發生錯誤，請稍後再試。'),
         null,
-        shouldAutoScrollAfterReply
+        isNearBottom()
       );
     } finally {
       setBusy(false);
@@ -556,7 +592,9 @@
   async function createNewSession() {
     if (!endpoints.createSession) return;
 
-    const result = await requestJSON(endpoints.createSession, 'POST');
+    const result = await requestJSON(endpoints.createSession, 'POST', {
+      ai_mode: currentAIMode,
+    });
 
     if (!result.ok || !result.data.success) {
       alert(result.data.message || t('createChatFailed', '建立新聊天失敗'));
@@ -641,7 +679,7 @@
       if (nextSessionId) {
         window.location.href = `${endpoints.page}?session=${nextSessionId}`;
       } else {
-        window.location.href = endpoints.page;
+        window.location.href = `${endpoints.page}?ai_mode=${currentAIMode}`;
       }
     }
   }
@@ -719,6 +757,31 @@
     }, 9000);
   }
 
+  function setupAIModeSwitcher() {
+    const modeCards = document.querySelectorAll('.ai-mode-card');
+
+    if (!modeCards.length) return;
+
+    modeCards.forEach((card) => {
+      card.addEventListener('click', function () {
+        const mode = this.dataset.mode || 'helper';
+
+        if (!['helper', 'friend'].includes(mode)) return;
+
+        if (mode !== currentAIMode && endpoints.page) {
+          window.location.href = `${endpoints.page}?ai_mode=${mode}`;
+          return;
+        }
+
+        currentAIMode = mode;
+        page.dataset.aiMode = mode;
+        updateAIModeUI();
+      });
+    });
+
+    updateAIModeUI();
+  }
+
   if (form) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -767,12 +830,9 @@
   setupAttachmentButtons();
   setupHistorySearch();
   setupTaiwanTipRotator();
+  setupAIModeSwitcher();
   renderExistingMessageLinks();
   updateCount();
   scrollToBottom();
   updateScrollBottomButton();
 })();
-
-renderExistingMessageLinks();
-setTimeout(renderExistingMessageLinks, 300);
-setTimeout(renderExistingMessageLinks, 1000);
