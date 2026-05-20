@@ -2852,3 +2852,66 @@ msgstr "수업 정보"
 
 msgid "成績與畢業門檻"
 msgstr "성적 및 졸업 기준"
+
+msgid "學校設施"
+msgstr "학교 시설"
+
+msgid "中央大學（正門）"
+msgstr "중앙대학교 (정문)"
+
+msgid "中央圖書館"
+msgstr "중앙도서관"
+
+msgid "外籍生宿舍"
+msgstr "외국인 기숙사"
+
+msgid "校內美食"
+msgstr "교내 식당"
+
+msgid "松苑餐廳"
+msgstr "송위안 식당"
+
+msgid "松果餐廳"
+msgstr "송궈 식당"
+
+msgid "小木屋鬆餅"
+msgstr "샬레 와플"
+
+msgid "校內超商"
+msgstr "교내 편의점"
+
+msgid "校外美食"
+msgstr "교외 식당"
+
+msgid "後門商圈"
+msgstr "후문 상권"
+
+msgid "宵夜街"
+msgstr "야식 거리"
+
+msgid "中大夜市商圈"
+msgstr "중다 야시장"
+
+msgid "龍岡美食廣場"
+msgstr "롱강 푸드플라자"
+
+msgid "大江美食街"
+msgstr "다장 푸드코트"
+
+msgid "中壢市場"
+msgstr "중리 시장"
+
+msgid "醫療・交通"
+msgstr "의료 · 교통"
+
+msgid "桃園市服務站"
+msgstr "타오위안시 서비스 센터"
+
+msgid "點選上方按鈕，即可在地圖上顯示位置"
+msgstr "위 버튼을 클릭하면 지도에 위치가 표시됩니다"
+
+msgid "尚未設定 Google Maps API 金鑰"
+msgstr "Google Maps API 키가 설정되지 않았습니다"
+
+msgid "開啟導航"
+msgstr "내비게이션 열기"

@@ -100,61 +100,62 @@
 
   <!-- 學校設施 -->
   <div class="chip-group">
-    <div class="chip-group-label">🏫 學校設施</div>
+    <div class="chip-group-label">🏫 {% trans "學校設施" %}</div>
     <div class="chip-row">
-      <button class="loc-chip" onclick="goTo('ncu')">🏫 中央大學（正門）</button>
-      <button class="loc-chip" onclick="goTo('oia')">🌐 國際事務處（OIA）</button>
-      <button class="loc-chip" onclick="goTo('library')">📚 中央圖書館</button>
-      <button class="loc-chip" onclick="goTo('dorm')">🏠 外籍生宿舍</button>
+      <button class="loc-chip" onclick="goTo('ncu')">🏫 {% trans "中央大學（正門）" %}</button>
+      <button class="loc-chip" onclick="goTo('oia')">🌐 {% trans "國際事務處（OIA）" %}</button>
+      <button class="loc-chip" onclick="goTo('library')">📚 {% trans "中央圖書館" %}</button>
+      <button class="loc-chip" onclick="goTo('dorm')">🏠 {% trans "外籍生宿舍" %}</button>
     </div>
   </div>
 
   <!-- 校內美食 -->
   <div class="chip-group">
-    <div class="chip-group-label">🍜 校內美食</div>
+    <div class="chip-group-label">🍜 {% trans "校內美食" %}</div>
     <div class="chip-row">
-      <button class="loc-chip" onclick="goTo('cafeteria1')">🍱 松苑餐廳</button>
-      <button class="loc-chip" onclick="goTo('cafeteria2')">🍱 松果餐廳</button>
-      <button class="loc-chip" onclick="goTo('waffle')">🧇 小木屋鬆餅</button>
-      <button class="loc-chip" onclick="goTo('convenience')">🏪 校內超商</button>
+      <button class="loc-chip" onclick="goTo('cafeteria1')">🍱 {% trans "松苑餐廳" %}</button>
+      <button class="loc-chip" onclick="goTo('cafeteria2')">🍱 {% trans "松果餐廳" %}</button>
+      <button class="loc-chip" onclick="goTo('waffle')">🧇 {% trans "小木屋鬆餅" %}</button>
+      <button class="loc-chip" onclick="goTo('convenience')">🏪 {% trans "校內超商" %}</button>
     </div>
   </div>
 
   <!-- 校外美食 -->
   <div class="chip-group">
-    <div class="chip-group-label">🍽️ 校外美食</div>
+    <div class="chip-group-label">🍽️ {% trans "校外美食" %}</div>
     <div class="chip-row">
-      <button class="loc-chip" onclick="goTo('backgate')">🚪 後門商圈</button>
-      <button class="loc-chip" onclick="goTo('snack_street')">🌙 宵夜街</button>
-      <button class="loc-chip" onclick="goTo('zhongda_night')">🥘 中大夜市商圈</button>
-      <button class="loc-chip" onclick="goTo('longgang')">🥩 龍岡美食廣場</button>
-      <button class="loc-chip" onclick="goTo('mall_food')">🛍️ 大江美食街</button>
-      <button class="loc-chip" onclick="goTo('zhongli_market')">🥬 中壢市場</button>
+      <button class="loc-chip" onclick="goTo('backgate')">🚪 {% trans "後門商圈" %}</button>
+      <button class="loc-chip" onclick="goTo('snack_street')">🌙 {% trans "宵夜街" %}</button>
+      <button class="loc-chip" onclick="goTo('zhongda_night')">🥘 {% trans "中大夜市商圈" %}</button>
+      <button class="loc-chip" onclick="goTo('longgang')">🥩 {% trans "龍岡美食廣場" %}</button>
+      <button class="loc-chip" onclick="goTo('mall_food')">🛍️ {% trans "大江美食街" %}</button>
+      <button class="loc-chip" onclick="goTo('zhongli_market')">🥬 {% trans "中壢市場" %}</button>
     </div>
   </div>
 
   <!-- 醫療・交通 -->
   <div class="chip-group">
-    <div class="chip-group-label">🏥 醫療・交通</div>
+    <div class="chip-group-label">🏥 {% trans "醫療・交通" %}</div>
     <div class="chip-row">
-      <button class="loc-chip" onclick="goTo('hospital')">🏥 壢新醫院</button>
-      <button class="loc-chip" onclick="goTo('station')">🚉 中壢火車站</button>
-      <button class="loc-chip" onclick="goTo('hsr')">🚄 高鐵桃園站</button>
-      <button class="loc-chip" onclick="goTo('airport')">✈️ 桃園國際機場</button>
-      <button class="loc-chip" onclick="goTo('mall')">🛒 大江購物中心</button>
+      <button class="loc-chip" onclick="goTo('hospital')">🏥 {% trans "壢新醫院" %}</button>
+      <button class="loc-chip" onclick="goTo('station')">🚉 {% trans "中壢火車站" %}</button>
+      <button class="loc-chip" onclick="goTo('hsr')">🚄 {% trans "高鐵桃園站" %}</button>
+      <button class="loc-chip" onclick="goTo('airport')">✈️ {% trans "桃園國際機場" %}</button>
+      <button class="loc-chip" onclick="goTo('mall')">🛒 {% trans "大江購物中心" %}</button>
+      <button class="loc-chip" onclick="goTo('taoyuan_service')">🏛️ {% trans "桃園市服務站" %}</button>
     </div>
   </div>
 
   <!-- ── 地圖 ── -->
   {% if maps_api_key %}
   <div class="map-hint" id="mapHint">
-    📍 點選上方按鈕，即可在地圖上顯示位置
+    📍 {% trans "點選上方按鈕，即可在地圖上顯示位置" %}
   </div>
   <div id="map"></div>
   {% else %}
   <div class="no-key-box">
     <div class="nk-icon">🗺</div>
-    <div class="nk-title">尚未設定 Google Maps API 金鑰</div>
+    <div class="nk-title">{% trans "尚未設定 Google Maps API 金鑰" %}</div>
     <div class="nk-desc">
       請在 <code>.env</code> 中設定 <code>GOOGLE_MAPS_API_KEY=你的金鑰</code>，
       然後重啟 server。取得方式請見
@@ -199,6 +200,7 @@ const LOCS = {
   hsr:         { lat: 24.97790, lng: 121.21650, name: "高鐵桃園站",            nav: "高鐵桃園站" },
   airport:     { lat: 25.07730, lng: 121.23220, name: "桃園國際機場（第一航廈）",nav: "桃園國際機場第一航廈" },
   mall:        { lat: 24.96680, lng: 121.21590, name: "大江購物中心",          nav: "大江購物中心" },
+  taoyuan_service: { lat: 24.99330, lng: 121.30020, name: "桃園市服務站",       nav: "桃園市桃園區縣府路106號" },
 };
 
 let map, markers = {}, infoWindow, activeId = null;

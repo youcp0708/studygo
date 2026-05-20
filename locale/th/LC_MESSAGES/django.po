@@ -3400,3 +3400,63 @@ msgstr ""
 msgid "，再以此入台就讀。"
 msgstr " จากนั้นใช้เอกสารนี้เดินทางเข้าไต้หวันเพื่อศึกษาต่อ"
 
+
+msgid "學校設施"
+msgstr "สิ่งอำนวยความสะดวกในมหาวิทยาลัย"
+
+msgid "中央大學（正門）"
+msgstr "NCU (ประตูหลัก)"
+
+msgid "中央圖書館"
+msgstr "ห้องสมุดกลาง"
+
+msgid "外籍生宿舍"
+msgstr "หอพักนักศึกษาต่างชาติ"
+
+msgid "校內美食"
+msgstr "อาหารในมหาวิทยาลัย"
+
+msgid "松苑餐廳"
+msgstr "ร้านอาหาร Songyuan"
+
+msgid "松果餐廳"
+msgstr "ร้านอาหาร Songguo"
+
+msgid "小木屋鬆餅"
+msgstr "วาฟเฟิล Chalet"
+
+msgid "校內超商"
+msgstr "ร้านสะดวกซื้อในมหาวิทยาลัย"
+
+msgid "校外美食"
+msgstr "อาหารนอกมหาวิทยาลัย"
+
+msgid "後門商圈"
+msgstr "ย่านประตูหลัง"
+
+msgid "宵夜街"
+msgstr "ถนนอาหารดึก"
+
+msgid "中大夜市商圈"
+msgstr "ตลาดกลางคืน NCU"
+
+msgid "龍岡美食廣場"
+msgstr "ลานอาหาร Longgang"
+
+msgid "大江美食街"
+msgstr "ถนนอาหาร Dajiang"
+
+msgid "中壢市場"
+msgstr "ตลาด Zhongli"
+
+msgid "醫療・交通"
+msgstr "สุขภาพ · การเดินทาง"
+
+msgid "桃園市服務站"
+msgstr "ศูนย์บริการเมืองเถาหยวน"
+
+msgid "點選上方按鈕，即可在地圖上顯示位置"
+msgstr "คลิกปุ่มด้านบนเพื่อแสดงตำแหน่งบนแผนที่"
+
+msgid "尚未設定 Google Maps API 金鑰"
+msgstr "ยังไม่ได้ตั้งค่า Google Maps API Key"

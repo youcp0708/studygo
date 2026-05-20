@@ -3172,3 +3172,63 @@ msgstr "Phòng Quan hệ Quốc tế (OIA)"
 
 msgid "分機 57081，我們很樂意幫助你！"
 msgstr "Số nội bộ 57081 — Chúng tôi sẵn lòng giúp đỡ!"
+
+msgid "學校設施"
+msgstr "Cơ sở trường học"
+
+msgid "中央大學（正門）"
+msgstr "ĐH Trung Ương (Cổng chính)"
+
+msgid "中央圖書館"
+msgstr "Thư viện Trung tâm"
+
+msgid "外籍生宿舍"
+msgstr "Ký túc xá sinh viên quốc tế"
+
+msgid "校內美食"
+msgstr "Ẩm thực trong trường"
+
+msgid "松苑餐廳"
+msgstr "Nhà hàng Songyuan"
+
+msgid "松果餐廳"
+msgstr "Nhà hàng Songguo"
+
+msgid "小木屋鬆餅"
+msgstr "Bánh waffle Chalet"
+
+msgid "校內超商"
+msgstr "Cửa hàng tiện lợi trong trường"
+
+msgid "校外美食"
+msgstr "Ẩm thực ngoài trường"
+
+msgid "後門商圈"
+msgstr "Khu cổng sau"
+
+msgid "宵夜街"
+msgstr "Phố ăn khuya"
+
+msgid "中大夜市商圈"
+msgstr "Khu chợ đêm NCU"
+
+msgid "龍岡美食廣場"
+msgstr "Quảng trường ẩm thực Longgang"
+
+msgid "大江美食街"
+msgstr "Khu ẩm thực Dajiang"
+
+msgid "中壢市場"
+msgstr "Chợ Zhongli"
+
+msgid "醫療・交通"
+msgstr "Y tế · Giao thông"
+
+msgid "桃園市服務站"
+msgstr "Trạm dịch vụ TP Đào Viên"
+
+msgid "點選上方按鈕，即可在地圖上顯示位置"
+msgstr "Nhấn nút phía trên để hiển thị vị trí trên bản đồ"
+
+msgid "尚未設定 Google Maps API 金鑰"
+msgstr "Chưa cấu hình Google Maps API Key"

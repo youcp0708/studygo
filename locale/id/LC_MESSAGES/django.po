@@ -3522,3 +3522,63 @@ msgstr ""
 "pascasarjana yang pindah antar program harus mengikuti peraturan jurusan "
 "masing-masing."
 
+
+msgid "學校設施"
+msgstr "Fasilitas Kampus"
+
+msgid "中央大學（正門）"
+msgstr "NCU (Gerbang Utama)"
+
+msgid "中央圖書館"
+msgstr "Perpustakaan Pusat"
+
+msgid "外籍生宿舍"
+msgstr "Asrama Mahasiswa Internasional"
+
+msgid "校內美食"
+msgstr "Kuliner dalam Kampus"
+
+msgid "松苑餐廳"
+msgstr "Restoran Songyuan"
+
+msgid "松果餐廳"
+msgstr "Restoran Songguo"
+
+msgid "小木屋鬆餅"
+msgstr "Waffle Chalet"
+
+msgid "校內超商"
+msgstr "Mini Market Kampus"
+
+msgid "校外美食"
+msgstr "Kuliner Luar Kampus"
+
+msgid "後門商圈"
+msgstr "Area Gerbang Belakang"
+
+msgid "宵夜街"
+msgstr "Jalan Makan Malam"
+
+msgid "中大夜市商圈"
+msgstr "Pasar Malam NCU"
+
+msgid "龍岡美食廣場"
+msgstr "Pusat Kuliner Longgang"
+
+msgid "大江美食街"
+msgstr "Food Court Dajiang"
+
+msgid "中壢市場"
+msgstr "Pasar Zhongli"
+
+msgid "醫療・交通"
+msgstr "Medis · Transportasi"
+
+msgid "桃園市服務站"
+msgstr "Pusat Layanan Kota Taoyuan"
+
+msgid "點選上方按鈕，即可在地圖上顯示位置"
+msgstr "Klik tombol di atas untuk menampilkan lokasi di peta"
+
+msgid "尚未設定 Google Maps API 金鑰"
+msgstr "Google Maps API Key belum dikonfigurasi"

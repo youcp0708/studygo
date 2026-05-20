@@ -3658,3 +3658,63 @@ msgstr "Open a Bank Account in Taiwan"
 
 #~ msgid "我的帳戶"
 #~ msgstr "My Account"
+
+msgid "學校設施"
+msgstr "School Facilities"
+
+msgid "中央大學（正門）"
+msgstr "NCU (Main Gate)"
+
+msgid "中央圖書館"
+msgstr "Central Library"
+
+msgid "外籍生宿舍"
+msgstr "International Dorm"
+
+msgid "校內美食"
+msgstr "On-Campus Food"
+
+msgid "松苑餐廳"
+msgstr "Songyuan Restaurant"
+
+msgid "松果餐廳"
+msgstr "Songguo Restaurant"
+
+msgid "小木屋鬆餅"
+msgstr "Chalet Waffles"
+
+msgid "校內超商"
+msgstr "Campus Convenience Store"
+
+msgid "校外美食"
+msgstr "Off-Campus Food"
+
+msgid "後門商圈"
+msgstr "Back Gate Area"
+
+msgid "宵夜街"
+msgstr "Late-Night Snack Street"
+
+msgid "中大夜市商圈"
+msgstr "NCU Night Market Area"
+
+msgid "龍岡美食廣場"
+msgstr "Longgang Food Plaza"
+
+msgid "大江美食街"
+msgstr "Dajiang Food Court"
+
+msgid "中壢市場"
+msgstr "Zhongli Market"
+
+msgid "醫療・交通"
+msgstr "Medical · Transport"
+
+msgid "桃園市服務站"
+msgstr "Taoyuan City Service Center"
+
+msgid "點選上方按鈕，即可在地圖上顯示位置"
+msgstr "Click a button above to show location on the map"
+
+msgid "尚未設定 Google Maps API 金鑰"
+msgstr "Google Maps API Key Not Configured"

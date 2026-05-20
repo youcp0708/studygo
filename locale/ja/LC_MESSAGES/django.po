@@ -3252,3 +3252,63 @@ msgstr "外国人在台生活相談サービス"
 msgid "多語言免費諮詢，涵蓋居留、生活、就業等問題。"
 msgstr "在留・日常生活・就労などに関する多言語無料相談サービスです。"
 
+
+msgid "學校設施"
+msgstr "学校施設"
+
+msgid "中央大學（正門）"
+msgstr "中央大学（正門）"
+
+msgid "中央圖書館"
+msgstr "中央図書館"
+
+msgid "外籍生宿舍"
+msgstr "留学生寮"
+
+msgid "校內美食"
+msgstr "学内グルメ"
+
+msgid "松苑餐廳"
+msgstr "松苑レストラン"
+
+msgid "松果餐廳"
+msgstr "松果レストラン"
+
+msgid "小木屋鬆餅"
+msgstr "小木屋ワッフル"
+
+msgid "校內超商"
+msgstr "学内コンビニ"
+
+msgid "校外美食"
+msgstr "学外グルメ"
+
+msgid "後門商圈"
+msgstr "裏門エリア"
+
+msgid "宵夜街"
+msgstr "夜食ストリート"
+
+msgid "中大夜市商圈"
+msgstr "中大夜市エリア"
+
+msgid "龍岡美食廣場"
+msgstr "龍岡フードプラザ"
+
+msgid "大江美食街"
+msgstr "大江フードコート"
+
+msgid "中壢市場"
+msgstr "中壢市場"
+
+msgid "醫療・交通"
+msgstr "医療・交通"
+
+msgid "桃園市服務站"
+msgstr "桃園市サービスセンター"
+
+msgid "點選上方按鈕，即可在地圖上顯示位置"
+msgstr "上のボタンをクリックして地図上の位置を表示"
+
+msgid "尚未設定 Google Maps API 金鑰"
+msgstr "Google Maps APIキーが設定されていません"
