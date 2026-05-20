@@ -167,9 +167,9 @@ async function renderDashboardProgress() {
 ════════════════════════════════════════ */
 let currentActiveTabIndex = 0;
 
-window.switchFlowTab = function(activeIndex) {
+window.switchFlowTab = function (activeIndex) {
   currentActiveTabIndex = activeIndex;
-  
+
   const buttons = document.querySelectorAll('.flow-tab-btn:not(.skeleton)');
   buttons.forEach((btn, idx) => {
     if (idx === activeIndex) {
@@ -239,11 +239,11 @@ async function renderProgressChart() {
   }
 }
 
-window.toggleTaskCompletion = async function(taskId, event) {
+window.toggleTaskCompletion = async function (taskId, event) {
   event.stopPropagation();
   const checkbox = event.target;
   const newStatus = checkbox.checked ? 'completed' : 'not_started';
-  
+
   const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { status: newStatus });
   if (ok) {
     showToast(newStatus === 'completed' ? '任務已完成' : '已取消完成', 'success');
@@ -255,7 +255,7 @@ window.toggleTaskCompletion = async function(taskId, event) {
   }
 };
 
-window.changeTaskStatus = async function(taskId, status, event) {
+window.changeTaskStatus = async function (taskId, status, event) {
   event.stopPropagation();
   const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { status });
   if (ok) {
@@ -265,14 +265,14 @@ window.changeTaskStatus = async function(taskId, status, event) {
   }
 };
 
-window.toggleTaskDetails = function(taskId) {
+window.toggleTaskDetails = function (taskId) {
   const details = document.getElementById(`details-${taskId}`);
   if (details) {
     details.classList.toggle('active');
   }
 };
 
-window.saveTaskNote = async function(taskId, event) {
+window.saveTaskNote = async function (taskId, event) {
   event.stopPropagation();
   const noteInput = document.getElementById(`note-${taskId}`);
   const note = noteInput ? noteInput.value : '';
@@ -280,7 +280,7 @@ window.saveTaskNote = async function(taskId, event) {
   if (ok) showToast('備註已儲存', 'success');
 };
 
-window.saveTaskDate = async function(taskId, event) {
+window.saveTaskDate = async function (taskId, event) {
   event.stopPropagation();
   const dateInput = document.getElementById(`date-${taskId}`);
   const due_date = dateInput ? dateInput.value : '';
@@ -291,7 +291,7 @@ window.saveTaskDate = async function(taskId, event) {
 async function renderMyTasks() {
   const container = document.getElementById('flowsContainer');
   if (!container) return;
-  
+
   await renderProgressChart();
 
   const { ok, data } = await apiFetch('/api/flows/my-tasks/');
@@ -324,7 +324,7 @@ async function renderMyTasks() {
   stages.forEach((stage, index) => {
     const isActive = index === currentActiveTabIndex ? 'active' : '';
     tabsHtml += `<button class="flow-tab-btn ${isActive}" onclick="switchFlowTab(${index})">${stage.stage_name}</button>`;
-    
+
     const tasks = stage.tasks || [];
     const total = tasks.length;
     const completed = tasks.filter(t => t.status === 'completed').length;
@@ -343,17 +343,17 @@ async function renderMyTasks() {
       // ── 使用後端已本地化的文字欄位 ──
       const loc = task.localized || task.task_detail || {};
       const deadlineInfo = task.deadline_info || {};
-      
-      const reqDocs = loc.required_documents ? loc.required_documents.replace(/\n/g, '<br>') : null;
-      const applyLoc = loc.apply_location || null;
-      const applyAddr = loc.apply_address || null;
+
+      const reqDocs = loc.required_documents || null;
+      const applyLoc = loc.apply_location ? loc.apply_location.trim() : null;
+      const applyAddr = loc.apply_address ? loc.apply_address.trim() : null;
       const officialUrl = loc.official_url
         ? `<a href="${loc.official_url}" target="_blank" style="color:var(--primary);text-decoration:underline;">${window.UI_STRINGS.visitOfficialWebsite}</a>`
         : null;
       const noteVal = task.note || '';
       const requiredBadge = task.task_detail?.is_required
         ? '<span class="task-badge required">必做</span>'
-        : '<span class="task-badge optional">建議</span>';  
+        : '<span class="task-badge optional">建議</span>';
 
       // ── 期限資訊區塊（deadline_text 已在後端本地化）──
       let deadlineHtml = '';
@@ -388,7 +388,7 @@ async function renderMyTasks() {
         reqDocs ? `
           <div class="detail-row">
             <div class="detail-label">${window.UI_STRINGS.requiredDocs}</div>
-            <div class="detail-value">${reqDocs}</div>
+            <div class="detail-value" style="white-space: pre-wrap;">${reqDocs}</div>
           </div>` : '',
 
         (applyLoc || applyAddr || applyMapUrl) ? `
@@ -417,7 +417,7 @@ async function renderMyTasks() {
                 ${loc.title || window.UI_STRINGS.unnamedTask}
                 ${requiredBadge}
               </div>
-              <div class="task-desc">${loc.description || ''}</div>
+              <div class="task-desc" style="white-space: pre-wrap;>${loc.description || ''}</div>
             </div>
             <div class="status-pills" onclick="event.stopPropagation()">
               ${isDone ? `<span style="color:#059669; font-weight:bold; font-size:14px; background:#d1fae5; padding:4px 12px; border-radius:999px;">${window.UI_STRINGS.completedBadge}</span>` : ''}
