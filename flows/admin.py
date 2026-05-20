@@ -316,9 +316,15 @@ class ReminderAdmin(admin.ModelAdmin):
 class TipAdmin(admin.ModelAdmin):
     list_display = (
         'id',
-        'icon',
         'title',
         'title_en',
+        'title_my',
+        'title_id',
+        'title_ms',
+        'title_th',
+        'title_ja',
+        'title_ko',
+        'title_vi',
         'official_url',
         'is_active',
         'order',
@@ -330,7 +336,6 @@ class TipAdmin(admin.ModelAdmin):
                 'title',
                 'content',
                 'official_url',
-                'icon',
                 'is_active',
                 'order',
             )

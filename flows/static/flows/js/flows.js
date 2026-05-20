@@ -210,6 +210,9 @@ async function renderProgressChart() {
       totalPending += (s.total - s.completed);
     });
 
+    const total = totalCompleted + totalPending;
+    const percent = total === 0 ? 0 : Math.round((totalCompleted / total) * 100);
+
     if (progressChartInstance) {
       progressChartInstance.destroy();
     }
@@ -217,21 +220,67 @@ async function renderProgressChart() {
     const completedLabel = window.UI_STRINGS?.completedTasks || '已完成任務';
     const pendingLabel = window.UI_STRINGS?.inProgressTasks || '未完成任務';
 
+    // 移除之前加的 HTML div (如果有)
+    const percentDiv = document.getElementById('chartPercentLabel');
+    if (percentDiv) {
+      percentDiv.remove();
+    }
+
+    // ── Chart.js 自訂外掛：繪製半圓內底色與文字 ──
+    const semiCirclePlugin = {
+      id: 'semiCirclePlugin',
+      beforeDraw: (chart) => {
+        const { ctx } = chart;
+        const meta = chart.getDatasetMeta(0);
+        if (!meta || !meta.data || meta.data.length === 0) return;
+        
+        const arc = meta.data[0];
+        const x = arc.x;
+        const y = arc.y;
+        const innerRadius = arc.innerRadius;
+
+        ctx.save();
+        
+        // 1. 繪製內圈半圓底色
+        ctx.beginPath();
+        // 畫半圓: 從 PI (左) 到 0 (右)
+        ctx.arc(x, y, innerRadius, Math.PI, 0);
+        ctx.fillStyle = '#f3f5f7'; // 截圖中的淺灰藍色
+        ctx.fill();
+
+        // 2. 繪製置中百分比文字
+        const text = percent + '%';
+        const fontSize = Math.max(16, innerRadius * 0.45); // 隨圖表大小縮放
+        ctx.font = `800 ${fontSize}px "Inter", "Segoe UI", sans-serif`;
+        ctx.fillStyle = '#1f2937';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        // 將文字放在半圓內的視覺中心 (大約是半徑的一半高度)
+        ctx.fillText(text, x, y - (innerRadius * 0.4));
+        
+        ctx.restore();
+      }
+    };
+
     progressChartInstance = new Chart(canvas, {
       type: 'doughnut',
       data: {
         labels: [completedLabel, pendingLabel],
         datasets: [{
           data: [totalCompleted, totalPending],
-          backgroundColor: ['#3d9970', '#dce5df'],
+          backgroundColor: ['#059669', '#e5e7eb'], // 原本的綠色與灰色
           borderWidth: 0,
-          borderRadius: 4
+          borderRadius: 5
         }]
       },
       options: {
+        rotation: -90,
+        circumference: 180,
         responsive: true,
-        maintainAspectRatio: false,
-        cutout: '68%',
+        maintainAspectRatio: true,
+        aspectRatio: 1.5, // 半圓形的比例
+        cutout: '72%', // 調整空心比例，讓進度條稍微粗一點點
         plugins: {
           legend: {
             position: 'bottom',
@@ -239,12 +288,13 @@ async function renderProgressChart() {
               padding: 14,
               usePointStyle: true,
               pointStyleWidth: 10,
-              font: { size: 12, weight: '600' },
-              color: '#6b7c74'
+              font: { size: 13, weight: '600' },
+              color: '#495057'
             }
           }
         }
-      }
+      },
+      plugins: [semiCirclePlugin]
     });
   } catch (err) {
     console.error('Chart error', err);
