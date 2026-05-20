@@ -1243,3 +1243,161 @@ html[lang="my"] .bot-profile-card p {
     flex-direction: column;
   }
 }
+
+.message-avatar.helper,
+.js-ai-avatar.helper {
+  background: linear-gradient(135deg, #0f5f52, #2d7d6d) !important;
+  color: #fff !important;
+}
+
+.message-avatar.friend,
+.js-ai-avatar.friend {
+  background: linear-gradient(135deg, #dff3ed, #b9e6d7) !important;
+  color: #075f55 !important;
+}
+
+/* ===== AI mode switcher and chat avatar color ===== */
+
+.ai-mode-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 14px;
+  margin: 0 0 12px;
+}
+
+.ai-mode-card {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  border-radius: 22px;
+  padding: 14px 12px;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.42;
+  transform: scale(0.96);
+  transition: all 0.22s ease;
+}
+
+.ai-mode-card.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ai-mode-card .bot-avatar {
+  margin: 0 auto 10px !important;
+  transform: none !important;
+}
+
+.bot-avatar-dark,
+.message-avatar.helper,
+.js-ai-avatar.helper {
+  background: linear-gradient(135deg, #0f5f52, #2d7d6d) !important;
+  color: #fff !important;
+  box-shadow: 0 16px 34px rgba(23, 83, 77, .24);
+}
+
+.bot-avatar-light,
+.message-avatar.friend,
+.js-ai-avatar.friend {
+  background: linear-gradient(135deg, #dff3ed, #b9e6d7) !important;
+  color: #075f55 !important;
+  box-shadow: 0 16px 34px rgba(105, 170, 150, .18);
+}
+
+.ai-mode-card h2 {
+  margin: 0 0 6px !important;
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  color: var(--primary-dark);
+  font-weight: 950;
+}
+
+.ai-mode-card p {
+  margin: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+  color: var(--muted);
+}
+
+.ai-mode-card:not(.active) h2,
+.ai-mode-card:not(.active) p {
+  color: #9aa8a6 !important;
+}
+
+.ai-mode-card:not(.active) .bot-avatar {
+  filter: grayscale(.25);
+}
+
+.history-more-btn {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 760px) {
+  .ai-mode-switcher {
+    flex-direction: column;
+  }
+}
+
+/* ===== AI 模式按鈕顏色切換 ===== */
+
+/* 小幫手：深綠色 */
+.chatbot-page.ai-mode-helper .new-chat-btn,
+.chatbot-page.ai-mode-helper #sendChatBtn {
+  background: linear-gradient(135deg, #0f5f52, #2d7d6d);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(15, 95, 82, 0.24);
+}
+
+.chatbot-page.ai-mode-helper .new-chat-btn:hover,
+.chatbot-page.ai-mode-helper #sendChatBtn:hover {
+  background: linear-gradient(135deg, #0b4f45, #236f61);
+}
+
+/* 聊天好朋友：淺綠色 */
+.chatbot-page.ai-mode-friend .new-chat-btn,
+.chatbot-page.ai-mode-friend #sendChatBtn {
+  background: linear-gradient(135deg, #b9e6d7, #dff3ed);
+  color: #075f55;
+  box-shadow: 0 12px 24px rgba(105, 170, 150, 0.22);
+}
+
+.chatbot-page.ai-mode-friend .new-chat-btn:hover,
+.chatbot-page.ai-mode-friend #sendChatBtn:hover {
+  background: linear-gradient(135deg, #a6dccb, #ccecdf);
+  color: #064c44;
+}
+
+/* disabled 狀態 */
+#sendChatBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ===== 返回按鈕跟著 AI 模式變色 ===== */
+
+/* StudyGo AI 小幫手：深綠色 */
+.chatbot-page.ai-mode-helper .bot-card-back-link {
+  background: linear-gradient(135deg, #0f5f52, #2d7d6d) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 10px 22px rgba(15, 95, 82, 0.24);
+}
+
+.chatbot-page.ai-mode-helper .bot-card-back-link:hover {
+  background: linear-gradient(135deg, #0b4f45, #236f61) !important;
+}
+
+/* StudyGo AI 聊天好朋友：薄荷淺綠色 */
+.chatbot-page.ai-mode-friend .bot-card-back-link {
+  background: #d9f3e9 !important;
+  color: #075f55 !important;
+  border: none !important;
+  box-shadow: 0 10px 22px rgba(95, 174, 152, 0.18);
+}
+
+.chatbot-page.ai-mode-friend .bot-card-back-link:hover {
+  background: #cdefe2 !important;
+}

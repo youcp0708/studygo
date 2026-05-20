@@ -11,17 +11,23 @@ from django.utils import timezone
 class ChatSession(models.Model):
     """一位使用者可有多個聊天對話。"""
 
+    AI_MODE_CHOICES = [
+        ("helper", "StudyGo AI 小幫手"),
+        ("friend", "StudyGo AI 聊天好朋友"),
+    ]
+
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name='chat_sessions',
-        verbose_name='使用者',
+        related_name="chat_sessions"
     )
 
-    title = models.CharField(
-        max_length=120,
-        default='新的對話',
-        verbose_name='對話標題'
+    title = models.CharField(max_length=100, default="新的聊天")
+    ai_mode = models.CharField(
+        max_length=20,
+        choices=AI_MODE_CHOICES,
+        default="helper",
+        verbose_name="AI 模式"
     )
 
     is_pinned = models.BooleanField(
@@ -39,17 +45,6 @@ class ChatSession(models.Model):
         verbose_name='更新時間'
     )
 
-    AI_MODE_CHOICES = [
-        ("helper", "StudyGo AI 小幫手"),
-        ("friend", "StudyGo AI 聊天好朋友"),
-        ]
-
-    ai_mode = models.CharField(
-        max_length=20,
-        choices=AI_MODE_CHOICES,
-        default="helper",
-        verbose_name="AI 模式"
-    )   
 
     class Meta:
         db_table = 'chatbot_chatsession'
@@ -204,6 +199,19 @@ class ChatKnowledge(models.Model):
     title_th = models.CharField(max_length=200, blank=True, verbose_name='泰文標題')
     title_ja = models.CharField(max_length=200, blank=True, verbose_name='日文標題')
     title_ko = models.CharField(max_length=200, blank=True, verbose_name='韓文標題')
+
+    BOT_TYPE_CHOICES = [
+    ("helper", "StudyGo AI 小幫手"),
+    ("friend", "StudyGo AI 聊天好朋友"),
+    ("both", "兩者都可使用"),
+]
+
+    bot_type = models.CharField(
+        max_length=20,
+        choices=BOT_TYPE_CHOICES,
+        default="helper",
+        verbose_name="適用 AI"
+    )
 
     keywords = models.CharField(
         max_length=500,
