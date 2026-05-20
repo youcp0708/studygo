@@ -9,8 +9,8 @@
 {% block content %}
 <section class="flows-page">
 
-  <div style="margin-bottom:22px;">
-    <a href="/dashboard/" class="flows-back-link" style="margin-bottom:0;">← {% trans "返回" %}</a>
+  <div class="flows-back-container">
+    <a href="/dashboard/" class="flows-back-link flows-back-link-no-margin">← {% trans "返回" %}</a>
   </div>
   <div class="flows-header">
     <h2>📋 {% trans "我的個人化任務清單" %}</h2>
@@ -25,23 +25,23 @@
       <div id="flowsContainer">
         <!-- Skeleton Loading -->
         <div class="flows-tabs">
-          <div class="flow-tab-btn skeleton" style="width: 100px; height: 40px; color: transparent;">Tab</div>
-          <div class="flow-tab-btn skeleton" style="width: 100px; height: 40px; color: transparent;">Tab</div>
+          <div class="flow-tab-btn skeleton skeleton-tab">Tab</div>
+          <div class="flow-tab-btn skeleton skeleton-tab">Tab</div>
         </div>
-        <div class="stage-section skeleton active" style="height: 200px;"></div>
+        <div class="stage-section skeleton active skeleton-section"></div>
       </div>
     </div>
 
     {# ── 右欄：進度圖表 + 小貼士 ── #}
     <div class="flows-sidebar">
-      <div class="sidebar-card" id="chartCard" style="display:none;">
+      <div class="sidebar-card hidden-card" id="chartCard">
         <h3 class="sidebar-card-title">{% trans "完成進度" %}</h3>
-        <div class="chart-container" id="chartContainer" style="height: 220px; width: 100%;">
+        <div class="chart-container" id="chartContainer">
           <canvas id="progressChart"></canvas>
         </div>
       </div>
 
-      <div class="sidebar-card" id="tipsCard" style="display:none;">
+      <div class="sidebar-card hidden-card" id="tipsCard">
         <h3 class="sidebar-card-title">💡 {% trans "小貼士" %}</h3>
         <div id="tipsContainer">
           <!-- JS 動態載入 -->

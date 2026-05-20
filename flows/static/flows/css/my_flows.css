@@ -441,3 +441,34 @@
     font-size: 24px;
   }
 }
+
+
+/* ═══════════════════════════════════════════
+   Utility Classes (從 HTML 移出的 Inline Styles)
+   ═══════════════════════════════════════════ */
+.flows-back-container {
+  margin-bottom: 22px;
+}
+
+.flows-back-link-no-margin {
+  margin-bottom: 0 !important;
+}
+
+.skeleton-tab {
+  width: 100px;
+  height: 40px;
+  color: transparent;
+}
+
+.skeleton-section {
+  height: 200px;
+}
+
+#chartContainer {
+  height: 220px;
+  width: 100%;
+}
+
+.hidden-card {
+  display: none;
+}
