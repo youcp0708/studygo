@@ -3,7 +3,7 @@ flows/serializers.py
 負責 flows 應用程式的資料序列化與反序列化 (Model <-> JSON)
 """
 from rest_framework import serializers
-from .models import FlowStage, Task, StudentTask, Reminder, Tip
+from .models import FlowStage, Task, StudentTask, Reminder, Tip, TipLink
 
 # Task 任務資料轉成 JSON 格式(前後端分離)
 class TaskSerializer(serializers.ModelSerializer):
@@ -42,7 +42,15 @@ class ReminderSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class TipLinkSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TipLink
+        fields = ("id", "url", "label")
+
+
 class TipSerializer(serializers.ModelSerializer):
+    links = TipLinkSerializer(many=True, read_only=True)
+
     class Meta:
         model = Tip
-        fields = '__all__'
+        fields = ("id", "title", "content", "is_active", "order", "links")

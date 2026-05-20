@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import FlowStage, Task, StudentTask, Reminder, Tip
+from .models import FlowStage, Task, StudentTask, Reminder, Tip, TipLink
 
 
 @admin.register(FlowStage)
@@ -312,6 +312,13 @@ class ReminderAdmin(admin.ModelAdmin):
     ordering = ('-created_at',)
 
 
+class TipLinkInline(admin.TabularInline):
+    model = TipLink
+    extra = 1
+    fields = ('url', 'label')
+    verbose_name = "小貼士鏈結"
+    verbose_name_plural = "小貼士鏈結"
+
 @admin.register(Tip)
 class TipAdmin(admin.ModelAdmin):
     list_display = (
@@ -325,7 +332,6 @@ class TipAdmin(admin.ModelAdmin):
         'title_ja',
         'title_ko',
         'title_vi',
-        'official_url',
         'is_active',
         'order',
     )
@@ -335,7 +341,6 @@ class TipAdmin(admin.ModelAdmin):
             'fields': (
                 'title',
                 'content',
-                'official_url',
                 'is_active',
                 'order',
             )
@@ -398,6 +403,7 @@ class TipAdmin(admin.ModelAdmin):
         }),
     )
 
+    inlines = [TipLinkInline]
     list_filter = ('is_active',)
     search_fields = ('title', 'title_en', 'content')
     ordering = ('order',)

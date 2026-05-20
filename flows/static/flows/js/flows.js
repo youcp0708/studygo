@@ -528,11 +528,18 @@ async function renderTips() {
     tips.forEach(tip => {
       html += `
         <div class="tip-item">
-          <div class="tip-item-title">${tip.icon || '💡'} ${tip.title}</div>
+          <div class="tip-item-title">${tip.title}</div>
           ${tip.content ? `<div class="tip-item-content">${tip.content}</div>` : ''}
-          ${tip.official_url ? `<a href="${tip.official_url}" target="_blank" class="tip-item-link">${visitText} →</a>` : ''}
-        </div>
       `;
+
+      if (Array.isArray(tip.links) && tip.links.length > 0) {
+        tip.links.forEach(l => {
+          const label = l.label || l.url;
+          html += `<a href="${l.url}" target="_blank" class="tip-item-link">${label} →</a>`;
+        });
+      }
+
+      html += `</div>`;
     });
 
     tipsContainer.innerHTML = html;

@@ -47,6 +47,7 @@ from .serializers import (
     StudentTaskSerializer,
     ReminderSerializer,
     TipSerializer,
+    TipLinkSerializer,
 )
 
 
@@ -570,6 +571,7 @@ def get_tips_view(request):
         tips_data.append({
             'id': tip.id,
             **localized,
+            'links': TipLinkSerializer(tip.links.all(), many=True).data,
         })
 
     return success_response({'tips': tips_data})
