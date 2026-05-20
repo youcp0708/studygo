@@ -3454,3 +3454,380 @@ msgstr ""
 msgid "，再以此入台就讀。"
 msgstr ", kemudian gunakan ini untuk memasuki Taiwan bagi tujuan pengajian."
 
+
+
+msgid "外籍生辦理居留證（ARC）"
+msgstr "Permohonan ARC (Kad Izin Tinggal) untuk Pelajar Asing"
+
+msgid "外籍生專屬"
+msgstr "Khas untuk Pelajar Asing"
+
+msgid "持外國護照以正式學籍入台就讀的外籍生，須在抵台後"
+msgstr ""
+"Pelajar asing yang memegang pasport asing dan berdaftar secara rasmi "
+"mesti, dalam"
+
+msgid "向內政部移民署辦理外僑居留證（ARC），方能在台合法居留及完成就學程序。"
+msgstr ""
+"hari selepas tiba, memohon ARC di Agensi Imigresen Negara untuk tinggal "
+"secara sah di Taiwan dan melengkapkan prosedur pendaftaran."
+
+msgid "抵台後 15 天內辦理"
+msgstr "Mohon dalam 15 hari selepas tiba"
+
+msgid "規費 NT$1,000 起"
+msgstr "Yuran bermula dari NT$1,000"
+
+msgid "核發約 10 個工作天"
+msgstr "Proses kira-kira 10 hari bekerja"
+
+msgid "移民署各地服務站"
+msgstr "Pusat perkhidmatan NIA di seluruh negara"
+
+msgid "首次申請規費"
+msgstr "Yuran Permohonan Pertama"
+
+msgid "NT$1,000 起"
+msgstr "Mulai dari NT$1.000"
+
+msgid "1年$1,000／2年$2,000／3年$3,000"
+msgstr "1 thn $1,000 / 2 thn $2,000 / 3 thn $3,000"
+
+msgid "觀光簽或免簽入台另加 NT$2,200"
+msgstr "Tambah NT$2,200 jika masuk dengan visa pelancong atau bebas visa"
+
+msgid "效期"
+msgstr "Tempoh Sah"
+
+msgid "1–3 年"
+msgstr "1–3 Tahun"
+
+msgid "依申請年數核發"
+msgstr "Dikeluarkan mengikut tahun yang dipohon"
+
+msgid "不含退補件及面談"
+msgstr "Tidak termasuk pemulangan dokumen dan temu duga"
+
+msgid "首次申請居留"
+msgstr "Permohonan Izin Tinggal Pertama"
+
+msgid "剛入台的外籍生"
+msgstr "Pelajar asing yang baru tiba"
+
+msgid "居留延期"
+msgstr "Pemanjangan Izin Tinggal"
+
+msgid "ARC 到期前續辦"
+msgstr "Perbaharui sebelum ARC tamat tempoh"
+
+msgid "變更居留事由"
+msgstr "Perubahan Sebab Tinggal"
+
+msgid "更換居留原因"
+msgstr "Tukar sebab tinggal"
+
+msgid "補換發"
+msgstr "Penggantian / Pengeluaran Semula"
+
+msgid "遺失或毀損補發"
+msgstr "Pengeluaran semula kerana hilang atau rosak"
+
+msgid "應備文件"
+msgstr "Dokumen Diperlukan"
+
+msgid "遺失 / 毀損"
+msgstr "Hilang / Rosak"
+
+msgid "外國人居（停）留案件申請書"
+msgstr "Borang Permohonan Izin Tinggal/Kunjungan Orang Asing"
+
+msgid "可至移民署官網下載或現場索取，請事先填妥。"
+msgstr ""
+"Boleh dimuat turun dari laman web NIA atau diperoleh di tempat. Sila isi "
+"terlebih dahulu."
+
+msgid "近期彩色照片 2 張"
+msgstr "2 keping foto berwarna terbaru"
+
+msgid "2 年內拍攝，2 吋白底（寬 3.5 cm × 高 4.5 cm）。"
+msgstr "Diambil dalam 2 tahun, latar putih 2 inci (L 3.5 cm x T 4.5 cm)."
+
+msgid "有效護照及居留簽證"
+msgstr "Pasport yang sah dan visa izin tinggal"
+
+msgid "正本（審核後當場歸還）。護照效期須超過居留期限 6 個月以上。"
+msgstr ""
+"Asal (dikembalikan selepas semakan). Pasport mesti sah "
+"sekurang-kurangnya 6 bulan selepas tempoh izin tinggal."
+
+msgid "居留事由證明文件 — 在學證明書 / 清冊及通知書"
+msgstr ""
+"Bukti Sebab Tinggal — Surat Pengesahan Belajar / Senarai & Surat "
+"Pemberitahuan"
+
+msgid "由就讀學校國際事務處（OIA）出具，含入學日期及就讀系所，正本及影本各 1 份。"
+msgstr ""
+"Dikeluarkan oleh OIA universiti, mengandungi tarikh kemasukan dan "
+"jabatan. Diperlukan 1 asal dan 1 salinan."
+
+msgid "於台灣認可醫院完成，3 個月內有效。含胸部 X 光及肺結核篩檢。"
+msgstr ""
+"Dilakukan di hospital yang diluluskan Taiwan. Sah dalam 3 bulan. "
+"Termasuk X-ray dada dan saringan tibi."
+
+msgid "本國警察刑事紀錄證明"
+msgstr "Sijil Rekod Jenayah Polis Negara Asal"
+
+msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駸外館處驗證或在台公證。"
+msgstr ""
+"Dikeluarkan oleh polis atau badan kehakiman negara asal. Sah dalam 1 "
+"tahun. Dokumen berbahasa asing mesti disahkan oleh pejabat perwakilan "
+"Taiwan atau dinotariskan di Taiwan."
+
+msgid "住居所證明文件"
+msgstr "Bukti Alamat Kediaman"
+
+msgid "宿舍住宿證明或租屋合約書。"
+msgstr "Surat pengesahan asrama atau kontrak sewaan rumah."
+
+msgid "財力證明"
+msgstr "Bukti Kewangan"
+
+msgid "銀行存款證明或獎學金核定文件，部分辦事處要求提供。"
+msgstr ""
+"Penyata akaun bank atau surat pengesahan biasiswa; diperlukan oleh "
+"sesetengah pejabat."
+
+msgid "規費"
+msgstr "Yuran"
+
+msgid "1年 NT$1,000 / 2年 NT$2,000 / 3年 NT$3,000"
+msgstr "1 thn NT$1,000 / 2 thn NT$2,000 / 3 thn NT$3,000"
+
+msgid "以觀光簽或免簽入台者，另加 NT$2,200。"
+msgstr "Bagi yang masuk dengan visa pelancong atau bebas visa, tambah NT$2,200."
+
+msgid "請事先填妥，移民署官網可下載。"
+msgstr "Sila isi terlebih dahulu; boleh dimuat turun dari laman web NIA."
+
+msgid "2 年內拍攝，2 吋白底。"
+msgstr "Diambil dalam 2 tahun, latar putih 2 inci."
+
+msgid "有效護照"
+msgstr "Pasport yang sah"
+
+msgid "正本（審核後歸還）。"
+msgstr "Asal (dikembalikan selepas semakan)."
+
+msgid "居留證正本及影本"
+msgstr "ARC asal dan salinan"
+
+msgid "現有的 ARC 卡，正本及影本各 1 份。"
+msgstr "Kad ARC semasa, 1 asal dan 1 salinan."
+
+msgid "在學證明書（最新）"
+msgstr "Surat Pengesahan Belajar (terkini)"
+
+msgid "由學校 OIA 出具，證明居留事由（就學）仍持續存在。"
+msgstr ""
+"Dikeluarkan oleh OIA universiti, mengesahkan sebab tinggal (belajar) "
+"masih berterusan."
+
+msgid "地址未變更者免附。"
+msgstr "Tidak diperlukan jika alamat tidak berubah."
+
+msgid "地址變更才需要"
+msgstr "Diperlukan hanya jika alamat berubah"
+
+msgid "延期 NT$500。"
+msgstr "Pemanjangan: NT$500."
+
+msgid "請於 ARC 到期前 30 天內辦理。"
+msgstr "Mohon dalam 30 hari sebelum ARC tamat tempoh."
+
+msgid "請事先填妥。"
+msgstr "Sila isi terlebih dahulu."
+
+msgid "有效護照及現有居留證"
+msgstr "Pasport yang sah dan ARC semasa"
+
+msgid "護照及居留證正本及影本各 1 份。"
+msgstr "1 asal dan 1 salinan pasport dan ARC."
+
+msgid "新居留事由證明文件"
+msgstr "Bukti Sebab Tinggal Baharu"
+
+msgid "例如：從就學改為工作，需提供工作許可文件及聘僱合約。"
+msgstr ""
+"Contoh: menukar daripada belajar kepada bekerja memerlukan permit kerja "
+"dan kontrak pekerjaan."
+
+msgid "變更事由 NT$500。"
+msgstr "Perubahan sebab: NT$500."
+
+msgid "正本及影本各 1 份。"
+msgstr "1 asal dan 1 salinan."
+
+msgid "遺失：警察機關報案遺失報告書或具結書"
+msgstr "Hilang: Laporan polis atau akuan bersumpah kehilangan"
+
+msgid "ARC 遺失時，請先至警察局報案，取得報案文件。"
+msgstr "Jika ARC hilang, laporkan ke balai polis dan dapatkan laporan polis."
+
+msgid "遺失時必要"
+msgstr "Diperlukan jika hilang"
+
+msgid "毀損：被損壞之居留證正本"
+msgstr "Rosak: Kad ARC asal yang rosak"
+
+msgid "ARC 卡片毀損時，需攜帶損壞的原卡辦理換發。"
+msgstr "Jika kad ARC rosak, bawa kad asal yang rosak untuk memohon penggantian."
+
+msgid "毀損時必要"
+msgstr "Diperlukan jika rosak"
+
+msgid "補換發 NT$500。"
+msgstr "Penggantian/Pengeluaran Semula: NT$500."
+
+msgid "申請須知 / 注意事項"
+msgstr "Panduan Permohonan / Nota Penting"
+
+msgid "以下為內政部移民署官方申請須知（節錄自官方網站）"
+msgstr ""
+"Berikut adalah panduan permohonan rasmi Agensi Imigresen Negara (dipetik "
+"dari laman web rasmi)"
+
+msgid ""
+"在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駐外館處驗證，並檢附經駸外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
+msgstr ""
+"Dokumen yang disediakan di China Daratan, luar negeri, atau Hong "
+"Kong/Macau mesti disahkan oleh SEF, pejabat perwakilan luar negeri, atau "
+"TECO (Hong Kong/Macau). Dokumen berbahasa asing mesti disahkan oleh "
+"pejabat perwakilan luar negeri dan disertakan terjemahan Cina yang "
+"diperakui; sijil vaksinasi berbahasa asing mesti diterjemahkan di pusat "
+"kesihatan berkenaan. Dikecualikan bagi pemohon Kad Emas Pekerjaan di "
+"bawah Seksyen 24 Akta Pengambilan dan Pekerjaan Profesional Asing "
+"(Seksyen 9)."
+
+msgid ""
+"居留一定期間之計算方式：自定居申請日往前推算，在臺連續居留滿一年（一年內得出境三十日，出境次數不予限制）或連續居留滿二年且每年在臺居住二百七十日以上。"
+msgstr ""
+"Kaedah pengiraan tempoh tinggal: dikira ke belakang dari tarikh "
+"permohonan kediaman tetap — tinggal berterusan di Taiwan selama satu "
+"tahun penuh (dengan kebenaran keluar hingga 30 hari setahun, bilangan "
+"perjalanan tidak terhad) atau tinggal berterusan selama dua tahun dengan "
+"sekurang-kurangnya 270 hari setahun di Taiwan."
+
+msgid ""
+"經許可居留，在臺灣地區居留一定期間，仍具備原居留條件者（親屬關係因結婚或收養發生者，應存續三年以上。但婚姻關係存續期間已生產子女者，不在此限），得申請在臺灣地區定居。"
+msgstr ""
+"Pemegang izin tinggal yang telah tinggal di Taiwan untuk tempoh yang "
+"diperlukan dan masih memenuhi syarat tinggal asal (hubungan kekeluargaan "
+"melalui perkahwinan atau pengambilan anak angkat mesti berterusan "
+"sekurang-kurangnya tiga tahun; kecuali jika anak dilahirkan semasa "
+"perkahwinan) boleh memohon kediaman tetap di Taiwan."
+
+msgid ""
+"經中央目的事業主管機關核准來臺就學者畢業後（HF168），依第十六條第一項第八款規定經許可居留連續滿五年，每年在臺灣地區居住一百八十三日以上，且最近一年於臺灣地區平均每月收入達中央勞動主管機關公告基本工資二倍以上者，得申請在臺灣地區定居。"
+msgstr ""
+"Pelajar yang diluluskan untuk belajar di Taiwan dan telah menamatkan "
+"pengajian (HF168), yang telah mendapat kebenaran tinggal berterusan "
+"selama lima tahun dengan sekurang-kurangnya 183 hari setahun di Taiwan, "
+"dan pendapatan bulanan purata setahun kebelakangan ini "
+"sekurang-kurangnya dua kali ganda gaji minimum, boleh memohon kediaman "
+"tetap di Taiwan."
+
+msgid ""
+"臺灣地區居留證有效期間屆滿前三十日內，原申請居留原因仍繼續存在者，得申請延期，每次不得逾二年；學生申請畢業延期居留者，自畢業當日起算六個月，延期居留期間屆滿前，得再申請延期一次，總延期居留期間最長為一年。（應備文件：1.申請書、2.臺灣地區居留證、3.其他相關證明文件）"
+msgstr ""
+"Dalam 30 hari sebelum Kad Izin Tinggal Taiwan tamat tempoh, pemohon yang "
+"sebab tinggal asalnya masih wujud boleh memohon lanjutan, tidak melebihi "
+"dua tahun setiap permohonan. Pelajar yang memohon lanjutan selepas tamat "
+"pengajian boleh memohon dalam enam bulan dari tarikh tamat pengajian, "
+"dan boleh memohon satu lanjutan tambahan, dengan jumlah lanjutan "
+"maksimum satu tahun. (Dokumen: 1. Borang, 2. Kad Izin Tinggal Taiwan, 3. "
+"Dokumen sokongan lain)"
+
+msgid ""
+"依外國人才專法第二十四條規定經許可居留，原申請居留原因仍繼續存在者，得申請延期居留：1.準用同法第八條規定者：每次最長為五年。2.準用同法第五條至第七條、第九條及第十條規定者：每次最長為三年。"
+msgstr ""
+"Pemegang izin tinggal di bawah Seksyen 24 Akta Pengambilan dan Pekerjaan "
+"Profesional Asing yang sebab tinggal asalnya masih wujud boleh memohon "
+"lanjutan: 1. Yang menggunakan Seksyen 8 secara mutatis mutandis: "
+"maksimum lima tahun setiap lanjutan. 2. Yang menggunakan Seksyen 5 "
+"hingga 7, 9, dan 10: maksimum tiga tahun setiap lanjutan."
+
+msgid "曾逾停留期限超過三十日未滿一年者，不予許可期間自其出境之日起算一年；逾期停留一年以上未滿二年者，起算二年；逾期停留二年以上者，起算三年。"
+msgstr ""
+"Mereka yang pernah melebihi had tinggal lebih dari 30 hari tetapi kurang "
+"dari satu tahun: tempoh penolakan bermula satu tahun dari tarikh "
+"keberangkatan; yang melebihi satu tahun atau lebih tetapi kurang dari "
+"dua tahun: dua tahun; yang melebihi dua tahun atau lebih: tiga tahun."
+
+msgid "申請案件資料不符或欠缺者，應於書面通知送達之翌日起三個月內補正；未於規定期間補正或補正仍不合規定者，駁回其申請。"
+msgstr ""
+"Jika dokumen permohonan tidak lengkap atau tidak mencukupi, pemohon "
+"mesti melengkapkannya dalam tiga bulan dari hari berikutnya selepas "
+"pemberitahuan bertulis diterima. Kegagalan melengkapkan akan "
+"mengakibatkan permohonan ditolak."
+
+msgid "香港澳門居民以依親事由及其隨同申請之未成年子女申請在臺灣地區居留，其親屬關係因收養發生者，應存續二年以上。"
+msgstr ""
+"Penduduk Hong Kong dan Macau yang memohon kediaman di Taiwan atas sebab "
+"penyatuan keluarga, di mana hubungan kekeluargaan berlaku melalui "
+"pengambilan anak angkat, hubungan tersebut mesti berterusan "
+"sekurang-kurangnya dua tahun."
+
+msgid ""
+"港澳居民逾期居留未滿三十日，原申請居留原因仍繼續存在者，經依相關規定處罰、繳清罰鍰後，得向本署重新申請居留；港澳居民未於居留期間屆滿前經許可延期居留，且逾期居留三十日以上者，應繳清罰款，並申請出境證出境。"
+msgstr ""
+"Penduduk Hong Kong dan Macau yang tinggal melebihi tempoh kurang dari 30 "
+"hari dan sebab tinggal asalnya masih wujud boleh memohon semula kepada "
+"Agensi setelah membayar semua denda; mereka yang tinggal melebihi 30 "
+"hari atau lebih mesti membayar semua denda dan memohon permit keluar "
+"untuk keluar."
+
+msgid "港澳居民依外國人才專法第二十四條規定準用同法第九條規定以網路申請平臺申請就業金卡者，相關規定請參考「外國特定專業人才申請就業金卡送件須知」。"
+msgstr ""
+"Penduduk Hong Kong dan Macau yang memohon Kad Emas Pekerjaan melalui "
+"platform dalam talian di bawah Seksyen 24 Akta Pengambilan dan Pekerjaan "
+"Profesional Asing (menggunakan Seksyen 9 secara mutatis mutandis) boleh "
+"merujuk kepada \"Panduan Penyerahan Permohonan Kad Emas Pekerjaan untuk "
+"Profesional Asing Tertentu.\""
+
+msgid "申請須知 & 相關文件下載"
+msgstr "Panduan Permohonan & Muat Turun Dokumen Berkaitan"
+
+msgid "0902－外國人申請居留及延期居留或變更居留原因送件須知（20260116）"
+msgstr ""
+"0902 — Panduan Penyerahan untuk Orang Asing yang Memohon Izin Tinggal, "
+"Lanjutan, atau Perubahan Sebab Tinggal (20260116)"
+
+msgid "外國人居（停）留案件申請表（20220801 版）"
+msgstr "Borang Permohonan Izin Tinggal/Kunjungan Orang Asing (Versi 20220801)"
+
+msgid "在職證明書"
+msgstr "Surat Pengesahan Pekerjaan"
+
+msgid "內政部移民署 — 居留申請說明"
+msgstr "Agensi Imigresen Negara — Panduan Permohonan Izin Tinggal"
+
+msgid "應備文件官方說明、辦事處查詢、線上預約、申請書下載。"
+msgstr ""
+"Keperluan dokumen rasmi, carian pejabat, temujanji dalam talian, dan "
+"muat turun borang."
+
+msgid "在學證明申請、指定合作醫院確認、ARC 辦理協助。"
+msgstr ""
+"Permohonan surat pengesahan belajar, pengesahan hospital rakan kongsi, "
+"dan bantuan permohonan ARC."
+
+msgid "領取 ARC 後，持 ARC 和學校加保公文辦理加保程序。"
+msgstr ""
+"Selepas menerima ARC, bawa ARC bersama surat pendaftaran NHI dari "
+"universiti untuk melengkapkan proses pendaftaran."
+
+msgid "提供多語言諮詢服務，解答居留、就業、生活等問題。"
+msgstr ""
+"Menyediakan perkhidmatan perundingan pelbagai bahasa untuk isu tinggal, "
+"pekerjaan, dan kehidupan harian."

@@ -3654,6 +3654,9 @@ msgstr "NIA service stations nationwide"
 msgid "首次申請規費"
 msgstr "Initial Application Fees"
 
+msgid "NT$1,000 起"
+msgstr "From NT$1,000"
+
 msgid "1年$1,000／2年$2,000／3年$3,000"
 msgstr "1 yr $1,000 / 2 yrs $2,000 / 3 yrs $3,000"
 
