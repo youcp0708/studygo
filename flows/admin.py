@@ -14,6 +14,7 @@ class FlowStageAdmin(admin.ModelAdmin):
         'name_th',
         'name_ja',
         'name_ko',
+        'name_vi',
         'order',
     )
 
@@ -67,6 +68,12 @@ class FlowStageAdmin(admin.ModelAdmin):
                 'description_ko',
             )
         }),
+        ('越南語 Vietnamese', {
+            'fields': (
+                'name_vi',
+                'description_vi',
+            )
+        }),
     )
 
     search_fields = (
@@ -78,6 +85,7 @@ class FlowStageAdmin(admin.ModelAdmin):
         'name_th',
         'name_ja',
         'name_ko',
+        'name_vi',
     )
 
     ordering = ('order',)
@@ -96,6 +104,7 @@ class TaskAdmin(admin.ModelAdmin):
         'title_th',
         'title_ja',
         'title_ko',
+        'title_vi',
         'stage',
         'display_region',
         'display_identity_type',
@@ -200,6 +209,15 @@ class TaskAdmin(admin.ModelAdmin):
                 'deadline_text_ko',
             )
         }),
+        ('越南語 Vietnamese', {
+            'fields': (
+                'title_vi',
+                'description_vi',
+                'required_documents_vi',
+                'apply_location_vi',
+                'deadline_text_vi',
+            )
+        }),
     )
 
     list_filter = (
@@ -223,6 +241,7 @@ class TaskAdmin(admin.ModelAdmin):
         'title_th',
         'title_ja',
         'title_ko',
+        'title_vi',
         'description',
     )
 

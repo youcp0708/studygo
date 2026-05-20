@@ -351,6 +351,9 @@ async function renderMyTasks() {
         ? `<a href="${loc.official_url}" target="_blank" style="color:var(--primary);text-decoration:underline;">${window.UI_STRINGS.visitOfficialWebsite}</a>`
         : null;
       const noteVal = task.note || '';
+      const requiredBadge = task.task_detail?.is_required
+        ? '<span class="task-badge required">必做</span>'
+        : '<span class="task-badge optional">建議</span>';  
 
       // ── 期限資訊區塊（deadline_text 已在後端本地化）──
       let deadlineHtml = '';
@@ -410,7 +413,10 @@ async function renderMyTasks() {
           <div style="display:flex; align-items:center; width:100%; padding:16px 20px; cursor:pointer;" onclick="toggleTaskDetails(${task.id})">
             <input type="checkbox" id="chk-${task.id}" style="width:20px; height:20px; margin-right:16px; cursor:pointer;" onclick="toggleTaskCompletion(${task.id}, event)" ${isDone ? 'checked' : ''}>
             <div class="task-content">
-              <div class="task-title">${loc.title || window.UI_STRINGS.unnamedTask}</div>
+              <div class="task-title">
+                ${loc.title || window.UI_STRINGS.unnamedTask}
+                ${requiredBadge}
+              </div>
               <div class="task-desc">${loc.description || ''}</div>
             </div>
             <div class="status-pills" onclick="event.stopPropagation()">
