@@ -4596,3 +4596,407 @@ msgstr "Komisi Urusan Warga Negara Asing (OCAC)"
 
 msgid "教育部－主管法規查詢系統"
 msgstr "Kementerian Pendidikan — Sistem Basis Data Peraturan"
+
+
+msgid "僑生・外籍生必知"
+msgstr "Wajib Diketahui Pelajar Tionghoa Perantauan & Mahasiswa Internasional"
+
+msgid "工作許可證申請指南"
+msgstr "Panduan Permohonan Izin Kerja"
+
+msgid "在台灣工作（不論校內或校外）前，必須先申請並取得工作許可證，否則將依法受罰並可能限令出境。"
+msgstr ""
+"Sebelum bekerja di Taiwan (di dalam atau di luar kampus), Anda harus "
+"terlebih dahulu mengajukan dan mendapatkan izin kerja. Kegagalan "
+"melakukannya adalah pelanggaran hukum dan dapat mengakibatkan denda "
+"serta perintah deportasi."
+
+msgid "重點一覽"
+msgstr "Ringkasan Penting"
+
+msgid "項目"
+msgstr "Item"
+
+msgid "內容"
+msgstr "Detail"
+
+msgid "申請方式"
+msgstr "Metode Permohonan"
+
+msgid "線上申辦（勞動部 ezwp 系統）"
+msgstr "Online (sistem ezwp Kementerian Tenaga Kerja)"
+
+msgid "審查費"
+msgstr "Biaya Peninjauan"
+
+msgid "NT$100（郵局劃撥或 ATM）"
+msgstr "NT$100 (transfer kantor pos atau ATM)"
+
+msgid "許可期限"
+msgstr "Masa Berlaku Izin"
+
+msgid "最長 6 個月（到期需重新申請）"
+msgstr "Hingga 6 bulan (harus mengajukan ulang saat kadaluarsa)"
+
+msgid "上課期間工時"
+msgstr "Jam Kerja Saat Kuliah"
+
+msgid "每週最多"
+msgstr "Maks per minggu:"
+
+msgid "小時"
+msgstr "jam"
+
+msgid "寒暑假工時"
+msgstr "Jam Kerja Saat Liburan"
+
+msgid "無限制，可全職工作"
+msgstr "Tidak terbatas, kerja penuh waktu diizinkan"
+
+msgid "違規罰鍰"
+msgstr "Denda Pelanggaran"
+
+msgid "NT$3～15 萬，並可能限令出境"
+msgstr "NT$30.000–150.000 dan kemungkinan perintah deportasi"
+
+msgid "適用對象"
+msgstr "Siapa yang Dapat Mendaftar"
+
+msgid "僑生（持外國護照）"
+msgstr "Pelajar Tionghoa Perantauan (pemegang paspor asing)"
+
+msgid "外籍生（學位生）"
+msgstr "Mahasiswa Internasional (mahasiswa gelar)"
+
+msgid "港澳生（學位生）"
+msgstr "Mahasiswa HK/Makau (mahasiswa gelar)"
+
+msgid "短期交換生"
+msgstr "Mahasiswa Pertukaran Jangka Pendek"
+
+msgid "語言研習生"
+msgstr "Mahasiswa Studi Bahasa"
+
+msgid "工作許可針對"
+msgstr "Izin kerja diterbitkan untuk"
+
+msgid "個別雇主"
+msgstr "pemberi kerja tertentu"
+
+msgid "核發，換工作或增加兼職需重新申請。校內工讀（如助理）與校外工作"
+msgstr ""
+". Perubahan pekerjaan atau penambahan pekerjaan paruh waktu memerlukan "
+"permohonan baru. Pekerjaan di dalam kampus (mis. asisten) dan di luar "
+"kampus"
+
+msgid "均需"
+msgstr "keduanya memerlukan"
+
+msgid "持有工作許可。"
+msgstr "izin kerja yang valid."
+
+msgid "所有應備文件須掃描為"
+msgstr "Semua dokumen yang diperlukan harus dipindai sebagai"
+
+msgid "檔案"
+msgstr "file"
+
+msgid "上傳至系統。"
+msgstr "dan diunggah ke sistem."
+
+msgid "文件"
+msgstr "Dokumen"
+
+msgid "說明"
+msgstr "Keterangan"
+
+msgid "學生證"
+msgstr "Kartu Pelajar"
+
+msgid "正面＋背面（須含當學期"
+msgstr "Depan + belakang (harus menyertakan"
+
+msgid "註冊章"
+msgstr "stempel pendaftaran semester ini"
+
+msgid "），或另附在學證明"
+msgstr "), atau lampirkan surat keterangan mahasiswa secara terpisah"
+
+msgid "護照"
+msgstr "Paspor"
+
+msgid "含照片及個人資料頁"
+msgstr "Termasuk halaman foto dan informasi pribadi"
+
+msgid "居留證（ARC）"
+msgstr "Kartu Izin Tinggal (ARC)"
+
+msgid "正面＋背面"
+msgstr "Depan + belakang"
+
+msgid "審查費繳納（NT$100）"
+msgstr "Pembayaran Biaya (NT$100)"
+
+msgid "方式"
+msgstr "Metode"
+
+msgid "郵局劃撥"
+msgstr "Transfer Kantor Pos"
+
+msgid "劃撥帳號："
+msgstr "Nomor rekening:"
+
+msgid "戶名："
+msgstr "Nama rekening:"
+
+msgid "勞動部勞動力發展署聘僱許可收費專戶"
+msgstr ""
+"Badan Pengembangan Tenaga Kerja, Kementerian Tenaga Kerja — Rekening "
+"Biaya Izin Kerja"
+
+msgid "繳費後請記錄收據號碼、交易日期、交易局號，填入系統。"
+msgstr ""
+"Setelah pembayaran, catat nomor kwitansi, tanggal transaksi, dan kode "
+"cabang untuk dimasukkan ke sistem."
+
+msgid "ATM 繳費"
+msgstr "Pembayaran ATM"
+
+msgid "先完成線上申請 → 學校審核 → 系統產生 16 碼繳費帳號 → 使用 ATM「繳費」功能繳納。"
+msgstr ""
+"Selesaikan permohonan online → tinjauan sekolah → sistem menghasilkan "
+"akun pembayaran 16 digit → bayar menggunakan fungsi \"Pembayaran "
+"Tagihan\" ATM."
+
+msgid "線上申請流程"
+msgstr "Proses Permohonan Online"
+
+msgid "全程於勞動部「外國人在台工作服務網」線上辦理，選擇「"
+msgstr ""
+"Seluruh proses ditangani secara online di \"Jaringan Layanan Pekerja "
+"Asing di Taiwan\" Kementerian Tenaga Kerja. Pilih \""
+
+msgid "僑外生工讀申請"
+msgstr "Permohonan Kerja-Studi Pelajar Tionghoa/Internasional"
+
+msgid "」。"
+msgstr "\"."
+
+msgid "準備應備文件並繳費"
+msgstr "Siapkan dokumen yang diperlukan dan bayar biaya"
+
+msgid "將學生證（正反面含註冊章）、護照、居留證（ARC 正反面）掃描為 PDF。並先至郵局劃撥繳納審查費 NT$100（或選擇 ATM 後繳）。"
+msgstr ""
+"Pindai kartu pelajar (depan dan belakang dengan stempel pendaftaran), "
+"paspor, dan ARC (depan dan belakang) sebagai file PDF. Bayar biaya "
+"peninjauan NT$100 melalui transfer kantor pos terlebih dahulu (atau "
+"pilih pembayaran ATM kemudian)."
+
+msgid "至 ezwp 系統註冊 / 登入"
+msgstr "Daftar / Masuk ke sistem ezwp"
+
+msgid "前往"
+msgstr "Buka"
+
+msgid "，選擇「僑外生工讀申請」，依指示註冊帳號或登入。"
+msgstr ""
+", pilih \"Permohonan Kerja-Studi Pelajar Tionghoa/Internasional\", lalu "
+"daftar akun atau masuk sesuai petunjuk."
+
+msgid "填寫申請資料"
+msgstr "Isi detail permohonan"
+
+msgid "步驟 2 — 校園資訊："
+msgstr "Langkah 2 — Informasi Kampus:"
+
+msgid "填寫學校地址與國際學生顧問室資訊"
+msgstr "Masukkan alamat sekolah dan informasi Kantor Mahasiswa Internasional"
+
+msgid "步驟 3 — 申請事項："
+msgstr "Langkah 3 — Detail Permohonan:"
+
+msgid "選擇「個人申請」，許可期限最長"
+msgstr "Pilih \"Permohonan Pribadi\"; durasi izin maksimum adalah"
+
+msgid "領取方式："
+msgstr "Metode Pengiriman:"
+
+msgid "可選電子文件（需於 8 天內下載）或郵寄至學校"
+msgstr ""
+"Pilih dokumen elektronik (harus diunduh dalam 8 hari) atau pengiriman "
+"pos ke sekolah"
+
+msgid "上傳文件並送出"
+msgstr "Unggah dokumen dan kirimkan"
+
+msgid "上傳掃描好的 PDF 文件，確認資料無誤後送出申請。"
+msgstr ""
+"Unggah dokumen PDF yang telah dipindai, konfirmasi semua detail sudah "
+"benar, lalu kirimkan permohonan."
+
+msgid "注意：系統暫存最多保留 7 天，逾期需重新填寫。"
+msgstr ""
+"Catatan: Sistem menyimpan draf maksimal 7 hari; setelah itu Anda harus "
+"mulai dari awal."
+
+msgid "等待審核"
+msgstr "Tunggu tinjauan"
+
+msgid "送出後由學校及勞動部審核，期間可至系統查詢進度。"
+msgstr ""
+"Setelah dikirim, permohonan ditinjau oleh sekolah dan Kementerian Tenaga "
+"Kerja. Periksa perkembangan di sistem selama waktu ini."
+
+msgid "取得許可前不得開始工作。"
+msgstr "Jangan mulai bekerja sebelum izin diterbitkan."
+
+msgid "取得工作許可，開始工作"
+msgstr "Dapatkan izin kerja dan mulai bekerja"
+
+msgid "許可核發後即可依核准內容開始工作。若選擇電子文件，請於 8 天內至系統下載許可證。"
+msgstr ""
+"Setelah izin diterbitkan, Anda boleh mulai bekerja sesuai yang "
+"disetujui. Jika memilih pengiriman elektronik, unduh izin dari sistem "
+"dalam 8 hari."
+
+msgid "工時規定"
+msgstr "Peraturan Jam Kerja"
+
+msgid "期間"
+msgstr "Periode"
+
+msgid "工時上限"
+msgstr "Batas Jam"
+
+msgid "上課期間（學期中）"
+msgstr "Saat Kuliah (dalam semester)"
+
+msgid "每週最多 20 小時"
+msgstr "Maks 20 jam/minggu"
+
+msgid "週一至週日合計不得超過 20 小時，超時視同違規"
+msgstr ""
+"Total Sen–Min tidak boleh melebihi 20 jam; melebihi ini adalah "
+"pelanggaran"
+
+msgid "寒假・暑假"
+msgstr "Liburan Musim Dingin / Panas"
+
+msgid "無限制"
+msgstr "Tidak terbatas"
+
+msgid "可全職工作，時數無上限"
+msgstr "Kerja penuh waktu diizinkan, tidak ada batas jam"
+
+msgid "短期交換生 / 語研生"
+msgstr "Mahasiswa Pertukaran Jangka Pendek / Studi Bahasa"
+
+msgid "不得工作"
+msgstr "Tidak diizinkan"
+
+msgid "不符合申請資格，任何工作均屬違規"
+msgstr ""
+"Tidak memenuhi syarat untuk mendaftar; pekerjaan apa pun adalah "
+"pelanggaran"
+
+msgid "違規後果"
+msgstr "Konsekuensi Pelanggaran"
+
+msgid "罰鍰 NT$30,000～150,000"
+msgstr "Denda: NT$30.000–150.000"
+
+msgid "未持工作許可違法工作者，依就業服務法可處罰鍰新臺幣三萬元至十五萬元。"
+msgstr ""
+"Mereka yang bekerja tanpa izin kerja yang valid dapat didenda "
+"NT$30.000–150.000 berdasarkan Undang-Undang Layanan Ketenagakerjaan."
+
+msgid "限令出境"
+msgstr "Perintah Deportasi"
+
+msgid "主管機關可依規定限令違規者出境，情節嚴重者可能影響日後再入境資格。"
+msgstr ""
+"Otoritas berwenang dapat memerintahkan pelanggar untuk meninggalkan "
+"negara; kasus serius dapat mempengaruhi kelayakan masuk kembali di masa "
+"depan."
+
+msgid "雇主連帶受罰"
+msgstr "Pemberi Kerja Juga Dikenakan Sanksi"
+
+msgid "非法僱用外籍生的雇主同樣面臨罰鍰，請勿在未取得工作許可前接受工作邀約。"
+msgstr ""
+"Pemberi kerja yang secara ilegal mempekerjakan mahasiswa internasional "
+"juga menghadapi denda. Jangan menerima tawaran kerja sebelum mendapatkan "
+"izin kerja."
+
+msgid "換工作需重新申請："
+msgstr "Mengganti Pekerjaan Memerlukan Permohonan Baru:"
+
+msgid "工作許可針對特定雇主核發，換雇主或增加兼職均須重新申請新的工作許可，不可沿用舊許可。"
+msgstr ""
+"Izin kerja diterbitkan untuk pemberi kerja tertentu. Mengganti pemberi "
+"kerja atau menambah pekerjaan paruh waktu memerlukan permohonan baru; "
+"izin lama tidak dapat digunakan kembali."
+
+msgid "許可期限最長 6 個月："
+msgstr "Masa Berlaku Izin Maksimum 6 Bulan:"
+
+msgid "到期前需提前申請展延，過期繼續工作視同無許可違規。"
+msgstr ""
+"Ajukan perpanjangan sebelum kadaluarsa; melanjutkan bekerja setelah "
+"kadaluarsa dianggap bekerja tanpa izin."
+
+msgid "畢業生注意："
+msgstr "Perhatian untuk Lulusan:"
+
+msgid "畢業生工作許可通常至"
+msgstr "Izin kerja lulusan biasanya berlaku hingga"
+
+msgid "日"
+msgstr ""
+
+msgid "截止。如有暑期課程（需附證明）或已獲錄取繼續升學者，方可延長至"
+msgstr ""
+". Jika terdaftar dalam program musim panas (bukti diperlukan) atau "
+"diterima untuk studi lanjut, izin dapat diperpanjang hingga"
+
+msgid "。"
+msgstr "."
+
+msgid "系統暫存限制："
+msgstr "Batas Draf Sistem:"
+
+msgid "ezwp 系統暫存資料最多保留"
+msgstr "Sistem ezwp menyimpan data draf maksimal"
+
+msgid "天"
+msgstr "hari"
+
+msgid "，逾期需重新填寫。選擇電子文件領取者，須於核發後"
+msgstr ""
+"; setelah itu Anda harus mulai dari awal. Jika memilih pengiriman "
+"elektronik, unduh izin dalam"
+
+msgid "至系統下載許可證。"
+msgstr "setelah diterbitkan."
+
+msgid "工作期間健保轉換："
+msgstr "Transfer NHI Selama Bekerja:"
+
+msgid "受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工作結束後需回學校重新加保。"
+msgstr ""
+"Setelah dipekerjakan, Anda harus mendaftar NHI di bawah pemberi kerja "
+"(Kategori 1). Pertama batalkan pendaftaran dari NHI sekolah untuk "
+"menghindari cakupan ganda. Daftar ulang di sekolah setelah pekerjaan "
+"berakhir."
+
+msgid "相關連結"
+msgstr "Tautan Terkait"
+
+msgid "勞動部外國人在台工作服務網 ↗"
+msgstr "Jaringan Layanan Pekerja Asing di Taiwan, Kementerian Tenaga Kerja ↗"
+
+msgid "勞動部勞動力發展署 ↗"
+msgstr "Badan Pengembangan Tenaga Kerja, Kementerian Tenaga Kerja ↗"
+
+msgid "NCU 國際事務處 ↗"
+msgstr "Kantor Urusan Internasional NCU ↗"

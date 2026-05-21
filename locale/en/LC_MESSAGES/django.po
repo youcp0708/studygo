@@ -4728,3 +4728,397 @@ msgstr "Overseas Compatriot Affairs Commission (OCAC)"
 
 msgid "教育部－主管法規查詢系統"
 msgstr "Ministry of Education — Regulatory Database"
+
+
+msgid "工作許可證"
+msgstr "Work Permit"
+
+msgid "僑生・外籍生必知"
+msgstr "Essential for Overseas Chinese & Int'l Students"
+
+msgid "工作許可證申請指南"
+msgstr "Work Permit Application Guide"
+
+msgid "在台灣工作（不論校內或校外）前，必須先申請並取得工作許可證，否則將依法受罰並可能限令出境。"
+msgstr ""
+"Before working in Taiwan (on-campus or off-campus), you must first apply "
+"for and obtain a work permit. Failure to do so is a legal violation and "
+"may result in a fine and deportation order."
+
+msgid "重點一覽"
+msgstr "Key Overview"
+
+msgid "項目"
+msgstr "Item"
+
+msgid "內容"
+msgstr "Details"
+
+msgid "申請方式"
+msgstr "Application Method"
+
+msgid "線上申辦（勞動部 ezwp 系統）"
+msgstr "Online (MOL ezwp system)"
+
+msgid "審查費"
+msgstr "Review Fee"
+
+msgid "NT$100（郵局劃撥或 ATM）"
+msgstr "NT$100 (post office transfer or ATM)"
+
+msgid "許可期限"
+msgstr "Permit Duration"
+
+msgid "最長 6 個月（到期需重新申請）"
+msgstr "Up to 6 months (must reapply upon expiry)"
+
+msgid "上課期間工時"
+msgstr "Working Hours During Classes"
+
+msgid "每週最多"
+msgstr "Max per week:"
+
+msgid "小時"
+msgstr "hours"
+
+msgid "寒暑假工時"
+msgstr "Working Hours During Breaks"
+
+msgid "無限制，可全職工作"
+msgstr "Unlimited, full-time work allowed"
+
+msgid "違規罰鍰"
+msgstr "Penalty for Violations"
+
+msgid "NT$3～15 萬，並可能限令出境"
+msgstr "NT$30,000–150,000 and possible deportation order"
+
+msgid "適用對象"
+msgstr "Who Can Apply"
+
+msgid "僑生（持外國護照）"
+msgstr "Overseas Chinese Students (foreign passport)"
+
+msgid "外籍生（學位生）"
+msgstr "International Students (degree students)"
+
+msgid "港澳生（學位生）"
+msgstr "HK/Macau Students (degree students)"
+
+msgid "短期交換生"
+msgstr "Short-term Exchange Students"
+
+msgid "語言研習生"
+msgstr "Language Study Students"
+
+msgid "工作許可針對"
+msgstr "Work permits are issued for"
+
+msgid "個別雇主"
+msgstr "individual employers"
+
+msgid "核發，換工作或增加兼職需重新申請。校內工讀（如助理）與校外工作"
+msgstr ""
+". Changing jobs or adding a part-time position requires a new "
+"application. Both on-campus work (e.g., assistant) and off-campus work"
+
+msgid "均需"
+msgstr "require"
+
+msgid "持有工作許可。"
+msgstr "a valid work permit."
+
+msgid "所有應備文件須掃描為"
+msgstr "All required documents must be scanned as"
+
+msgid "檔案"
+msgstr "files"
+
+msgid "上傳至系統。"
+msgstr "and uploaded to the system."
+
+msgid "文件"
+msgstr "Document"
+
+msgid "說明"
+msgstr "Description"
+
+msgid "學生證"
+msgstr "Student ID"
+
+msgid "正面＋背面（須含當學期"
+msgstr "Front + back (must include the current semester's"
+
+msgid "註冊章"
+msgstr "registration stamp"
+
+msgid "），或另附在學證明"
+msgstr "), or attach an enrollment certificate separately"
+
+msgid "護照"
+msgstr "Passport"
+
+msgid "含照片及個人資料頁"
+msgstr "Including photo and personal information page"
+
+msgid "居留證（ARC）"
+msgstr "Alien Resident Certificate (ARC)"
+
+msgid "正面＋背面"
+msgstr "Front + back"
+
+msgid "審查費繳納（NT$100）"
+msgstr "Fee Payment (NT$100)"
+
+msgid "方式"
+msgstr "Method"
+
+msgid "郵局劃撥"
+msgstr "Post Office Transfer"
+
+msgid "劃撥帳號："
+msgstr "Account number:"
+
+msgid "戶名："
+msgstr "Account name:"
+
+msgid "勞動部勞動力發展署聘僱許可收費專戶"
+msgstr "Workforce Development Agency, MOL — Employment Permit Fee Account"
+
+msgid "繳費後請記錄收據號碼、交易日期、交易局號，填入系統。"
+msgstr ""
+"After payment, record the receipt number, transaction date, and branch "
+"code to enter into the system."
+
+msgid "ATM 繳費"
+msgstr "ATM Payment"
+
+msgid "先完成線上申請 → 學校審核 → 系統產生 16 碼繳費帳號 → 使用 ATM「繳費」功能繳納。"
+msgstr ""
+"Complete online application → school review → system generates a "
+"16-digit payment account → pay using ATM \"Bill Payment\" function."
+
+msgid "線上申請流程"
+msgstr "Online Application Process"
+
+msgid "全程於勞動部「外國人在台工作服務網」線上辦理，選擇「"
+msgstr ""
+"The entire process is handled online at the MOL \"Foreign Workers in "
+"Taiwan Service Network\". Select \""
+
+msgid "僑外生工讀申請"
+msgstr "Overseas Chinese / Int'l Student Work-Study Application"
+
+msgid "」。"
+msgstr "\"."
+
+msgid "準備應備文件並繳費"
+msgstr "Prepare required documents and pay the fee"
+
+msgid "將學生證（正反面含註冊章）、護照、居留證（ARC 正反面）掃描為 PDF。並先至郵局劃撥繳納審查費 NT$100（或選擇 ATM 後繳）。"
+msgstr ""
+"Scan your student ID (front and back with registration stamp), passport, "
+"and ARC (front and back) as PDF files. Pay the NT$100 review fee via "
+"post office transfer in advance (or choose ATM payment later)."
+
+msgid "至 ezwp 系統註冊 / 登入"
+msgstr "Register / Log in to the ezwp system"
+
+msgid "前往"
+msgstr "Go to"
+
+msgid "，選擇「僑外生工讀申請」，依指示註冊帳號或登入。"
+msgstr ""
+", select \"Overseas Chinese / Int'l Student Work-Study Application\", "
+"then register an account or log in as directed."
+
+msgid "填寫申請資料"
+msgstr "Fill in the application details"
+
+msgid "步驟 2 — 校園資訊："
+msgstr "Step 2 — Campus Information:"
+
+msgid "填寫學校地址與國際學生顧問室資訊"
+msgstr "Enter the school address and International Student Office information"
+
+msgid "步驟 3 — 申請事項："
+msgstr "Step 3 — Application Details:"
+
+msgid "選擇「個人申請」，許可期限最長"
+msgstr "Select \"Personal Application\"; maximum permit duration is"
+
+msgid "領取方式："
+msgstr "Delivery Method:"
+
+msgid "可選電子文件（需於 8 天內下載）或郵寄至學校"
+msgstr ""
+"Choose electronic document (must be downloaded within 8 days) or postal "
+"delivery to school"
+
+msgid "上傳文件並送出"
+msgstr "Upload documents and submit"
+
+msgid "上傳掃描好的 PDF 文件，確認資料無誤後送出申請。"
+msgstr ""
+"Upload the scanned PDF documents, confirm all details are correct, then "
+"submit the application."
+
+msgid "注意：系統暫存最多保留 7 天，逾期需重新填寫。"
+msgstr ""
+"Note: The system saves drafts for a maximum of 7 days; after that you "
+"must start over."
+
+msgid "等待審核"
+msgstr "Wait for review"
+
+msgid "送出後由學校及勞動部審核，期間可至系統查詢進度。"
+msgstr ""
+"After submission, the application is reviewed by the school and the MOL. "
+"Check the progress in the system during this time."
+
+msgid "取得許可前不得開始工作。"
+msgstr "Do not start working before the permit is issued."
+
+msgid "取得工作許可，開始工作"
+msgstr "Obtain the work permit and start working"
+
+msgid "許可核發後即可依核准內容開始工作。若選擇電子文件，請於 8 天內至系統下載許可證。"
+msgstr ""
+"Once the permit is issued, you may begin working as approved. If you "
+"chose electronic delivery, download the permit from the system within 8 "
+"days."
+
+msgid "工時規定"
+msgstr "Working Hours Rules"
+
+msgid "期間"
+msgstr "Period"
+
+msgid "工時上限"
+msgstr "Hour Limit"
+
+msgid "上課期間（學期中）"
+msgstr "During Classes (in-semester)"
+
+msgid "每週最多 20 小時"
+msgstr "Max 20 hrs/week"
+
+msgid "週一至週日合計不得超過 20 小時，超時視同違規"
+msgstr "Total Mon–Sun must not exceed 20 hours; exceeding this is a violation"
+
+msgid "寒假・暑假"
+msgstr "Winter / Summer Vacation"
+
+msgid "無限制"
+msgstr "No limit"
+
+msgid "可全職工作，時數無上限"
+msgstr "Full-time work allowed, no hour cap"
+
+msgid "短期交換生 / 語研生"
+msgstr "Short-term Exchange / Language Study Students"
+
+msgid "不得工作"
+msgstr "Not permitted"
+
+msgid "不符合申請資格，任何工作均屬違規"
+msgstr "Not eligible to apply; any work is a violation"
+
+msgid "違規後果"
+msgstr "Consequences of Violations"
+
+msgid "罰鍰 NT$30,000～150,000"
+msgstr "Fine: NT$30,000–150,000"
+
+msgid "未持工作許可違法工作者，依就業服務法可處罰鍰新臺幣三萬元至十五萬元。"
+msgstr ""
+"Those who work without a valid work permit may be fined "
+"NT$30,000–150,000 under the Employment Services Act."
+
+msgid "限令出境"
+msgstr "Deportation Order"
+
+msgid "主管機關可依規定限令違規者出境，情節嚴重者可能影響日後再入境資格。"
+msgstr ""
+"The competent authority may order violators to leave the country; "
+"serious cases may affect future re-entry eligibility."
+
+msgid "雇主連帶受罰"
+msgstr "Employer Also Penalized"
+
+msgid "非法僱用外籍生的雇主同樣面臨罰鍰，請勿在未取得工作許可前接受工作邀約。"
+msgstr ""
+"Employers who illegally hire international students also face fines. Do "
+"not accept job offers before obtaining a work permit."
+
+msgid "換工作需重新申請："
+msgstr "Changing Jobs Requires a New Application:"
+
+msgid "工作許可針對特定雇主核發，換雇主或增加兼職均須重新申請新的工作許可，不可沿用舊許可。"
+msgstr ""
+"Work permits are issued for a specific employer. Changing employers or "
+"adding a part-time job requires a new application; the old permit cannot "
+"be reused."
+
+msgid "許可期限最長 6 個月："
+msgstr "Maximum Permit Duration is 6 Months:"
+
+msgid "到期前需提前申請展延，過期繼續工作視同無許可違規。"
+msgstr ""
+"Apply for renewal before expiry; continuing to work after expiry counts "
+"as working without a permit."
+
+msgid "畢業生注意："
+msgstr "Graduates Please Note:"
+
+msgid "畢業生工作許可通常至"
+msgstr "Graduates' work permits are typically valid until"
+
+msgid "日"
+msgstr ""
+
+msgid "截止。如有暑期課程（需附證明）或已獲錄取繼續升學者，方可延長至"
+msgstr ""
+". If enrolled in a summer program (proof required) or admitted for "
+"further study, the permit may be extended to"
+
+msgid "。"
+msgstr "."
+
+msgid "系統暫存限制："
+msgstr "System Draft Limit:"
+
+msgid "ezwp 系統暫存資料最多保留"
+msgstr "The ezwp system saves draft data for a maximum of"
+
+msgid "天"
+msgstr "days"
+
+msgid "，逾期需重新填寫。選擇電子文件領取者，須於核發後"
+msgstr ""
+"; after that you must start over. If you chose electronic delivery, "
+"download the permit within"
+
+msgid "至系統下載許可證。"
+msgstr "of issuance."
+
+msgid "工作期間健保轉換："
+msgstr "NHI Transfer During Employment:"
+
+msgid "受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工作結束後需回學校重新加保。"
+msgstr ""
+"Once employed, you must enroll in NHI under your employer (Category 1). "
+"First de-enroll from the school's NHI to avoid duplicate coverage. "
+"Re-enroll with the school after employment ends."
+
+msgid "相關連結"
+msgstr "Related Links"
+
+msgid "勞動部外國人在台工作服務網 ↗"
+msgstr "MOL Foreign Workers in Taiwan Service Network ↗"
+
+msgid "勞動部勞動力發展署 ↗"
+msgstr "Workforce Development Agency, MOL ↗"
+
+msgid "NCU 國際事務處 ↗"
+msgstr "NCU Office of International Affairs ↗"

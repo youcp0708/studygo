@@ -4118,3 +4118,399 @@ msgstr "Ủy ban Công vụ Người Hoa Hải ngoại (OCAC)"
 
 msgid "教育部－主管法規查詢系統"
 msgstr "Bộ Giáo dục — Hệ thống Cơ sở Dữ liệu Quy định"
+
+
+msgid "工作許可證"
+msgstr "Giấy phép lao động"
+
+msgid "僑生・外籍生必知"
+msgstr "Thông tin bắt buộc cho sinh viên Hoa kiều và sinh viên quốc tế"
+
+msgid "工作許可證申請指南"
+msgstr "Hướng dẫn xin giấy phép lao động"
+
+msgid "在台灣工作（不論校內或校外）前，必須先申請並取得工作許可證，否則將依法受罰並可能限令出境。"
+msgstr ""
+"Trước khi làm việc tại Đài Loan (trong hoặc ngoài khuôn viên trường), "
+"bạn phải nộp đơn và có được giấy phép lao động. Không tuân thủ là vi "
+"phạm pháp luật và có thể bị phạt tiền cũng như bị lệnh trục xuất."
+
+msgid "重點一覽"
+msgstr "Tóm tắt các điểm chính"
+
+msgid "項目"
+msgstr "Mục"
+
+msgid "內容"
+msgstr "Chi tiết"
+
+msgid "申請方式"
+msgstr "Phương thức đăng ký"
+
+msgid "線上申辦（勞動部 ezwp 系統）"
+msgstr "Trực tuyến (hệ thống ezwp Bộ Lao động)"
+
+msgid "審查費"
+msgstr "Phí xét duyệt"
+
+msgid "NT$100（郵局劃撥或 ATM）"
+msgstr "NT$100 (chuyển khoản bưu điện hoặc ATM)"
+
+msgid "許可期限"
+msgstr "Thời hạn giấy phép"
+
+msgid "最長 6 個月（到期需重新申請）"
+msgstr "Tối đa 6 tháng (phải nộp đơn lại khi hết hạn)"
+
+msgid "上課期間工時"
+msgstr "Giờ làm việc trong kỳ học"
+
+msgid "每週最多"
+msgstr "Tối đa mỗi tuần:"
+
+msgid "小時"
+msgstr "giờ"
+
+msgid "寒暑假工時"
+msgstr "Giờ làm việc trong kỳ nghỉ"
+
+msgid "無限制，可全職工作"
+msgstr "Không giới hạn, được làm toàn thời gian"
+
+msgid "違規罰鍰"
+msgstr "Phạt tiền vi phạm"
+
+msgid "NT$3～15 萬，並可能限令出境"
+msgstr "NT$30.000–150.000 và có thể bị lệnh trục xuất"
+
+msgid "適用對象"
+msgstr "Đối tượng được đăng ký"
+
+msgid "僑生（持外國護照）"
+msgstr "Sinh viên Hoa kiều (người giữ hộ chiếu nước ngoài)"
+
+msgid "外籍生（學位生）"
+msgstr "Sinh viên quốc tế (sinh viên theo học bằng cấp)"
+
+msgid "港澳生（學位生）"
+msgstr "Sinh viên HK/Macau (sinh viên theo học bằng cấp)"
+
+msgid "短期交換生"
+msgstr "Sinh viên trao đổi ngắn hạn"
+
+msgid "語言研習生"
+msgstr "Sinh viên học ngôn ngữ"
+
+msgid "工作許可針對"
+msgstr "Giấy phép lao động được cấp cho"
+
+msgid "個別雇主"
+msgstr "từng chủ sử dụng lao động cụ thể"
+
+msgid "核發，換工作或增加兼職需重新申請。校內工讀（如助理）與校外工作"
+msgstr ""
+". Thay đổi công việc hoặc thêm việc làm bán thời gian cần nộp đơn mới. "
+"Công việc trong trường (ví dụ: trợ lý) và công việc ngoài trường"
+
+msgid "均需"
+msgstr "đều cần"
+
+msgid "持有工作許可。"
+msgstr "giấy phép lao động hợp lệ."
+
+msgid "所有應備文件須掃描為"
+msgstr "Tất cả tài liệu cần thiết phải được quét thành"
+
+msgid "檔案"
+msgstr "tệp"
+
+msgid "上傳至系統。"
+msgstr "và tải lên hệ thống."
+
+msgid "文件"
+msgstr "Tài liệu"
+
+msgid "說明"
+msgstr "Mô tả"
+
+msgid "學生證"
+msgstr "Thẻ sinh viên"
+
+msgid "正面＋背面（須含當學期"
+msgstr "Mặt trước + mặt sau (phải có"
+
+msgid "註冊章"
+msgstr "dấu đăng ký học kỳ hiện tại"
+
+msgid "），或另附在學證明"
+msgstr "), hoặc đính kèm giấy xác nhận đang theo học riêng"
+
+msgid "護照"
+msgstr "Hộ chiếu"
+
+msgid "含照片及個人資料頁"
+msgstr "Bao gồm trang ảnh và thông tin cá nhân"
+
+msgid "居留證（ARC）"
+msgstr "Thẻ cư trú (ARC)"
+
+msgid "正面＋背面"
+msgstr "Mặt trước + mặt sau"
+
+msgid "審查費繳納（NT$100）"
+msgstr "Thanh toán phí (NT$100)"
+
+msgid "方式"
+msgstr "Phương thức"
+
+msgid "郵局劃撥"
+msgstr "Chuyển khoản bưu điện"
+
+msgid "劃撥帳號："
+msgstr "Số tài khoản:"
+
+msgid "戶名："
+msgstr "Tên tài khoản:"
+
+msgid "勞動部勞動力發展署聘僱許可收費專戶"
+msgstr ""
+"Cơ quan Phát triển Lao động, Bộ Lao động — Tài khoản phí giấy phép tuyển "
+"dụng"
+
+msgid "繳費後請記錄收據號碼、交易日期、交易局號，填入系統。"
+msgstr ""
+"Sau khi thanh toán, ghi lại số biên lai, ngày giao dịch và mã chi nhánh "
+"để nhập vào hệ thống."
+
+msgid "ATM 繳費"
+msgstr "Thanh toán ATM"
+
+msgid "先完成線上申請 → 學校審核 → 系統產生 16 碼繳費帳號 → 使用 ATM「繳費」功能繳納。"
+msgstr ""
+"Hoàn tất đăng ký trực tuyến → trường xét duyệt → hệ thống tạo tài khoản "
+"thanh toán 16 chữ số → thanh toán bằng chức năng \"Thanh toán hóa đơn\" "
+"của ATM."
+
+msgid "線上申請流程"
+msgstr "Quy trình đăng ký trực tuyến"
+
+msgid "全程於勞動部「外國人在台工作服務網」線上辦理，選擇「"
+msgstr ""
+"Toàn bộ quy trình được thực hiện trực tuyến tại \"Mạng dịch vụ lao động "
+"nước ngoài tại Đài Loan\" của Bộ Lao động. Chọn \""
+
+msgid "僑外生工讀申請"
+msgstr "Đăng ký làm việc-học tập của sinh viên Hoa kiều/quốc tế"
+
+msgid "」。"
+msgstr "\"."
+
+msgid "準備應備文件並繳費"
+msgstr "Chuẩn bị tài liệu cần thiết và thanh toán phí"
+
+msgid "將學生證（正反面含註冊章）、護照、居留證（ARC 正反面）掃描為 PDF。並先至郵局劃撥繳納審查費 NT$100（或選擇 ATM 後繳）。"
+msgstr ""
+"Quét thẻ sinh viên (mặt trước và sau có dấu đăng ký), hộ chiếu và ARC "
+"(mặt trước và sau) thành tệp PDF. Thanh toán phí xét duyệt NT$100 qua "
+"chuyển khoản bưu điện trước (hoặc chọn thanh toán ATM sau)."
+
+msgid "至 ezwp 系統註冊 / 登入"
+msgstr "Đăng ký / Đăng nhập hệ thống ezwp"
+
+msgid "前往"
+msgstr "Truy cập"
+
+msgid "，選擇「僑外生工讀申請」，依指示註冊帳號或登入。"
+msgstr ""
+", chọn \"Đăng ký làm việc-học tập của sinh viên Hoa kiều/quốc tế\", sau "
+"đó đăng ký tài khoản hoặc đăng nhập theo hướng dẫn."
+
+msgid "填寫申請資料"
+msgstr "Điền thông tin đăng ký"
+
+msgid "步驟 2 — 校園資訊："
+msgstr "Bước 2 — Thông tin khuôn viên trường:"
+
+msgid "填寫學校地址與國際學生顧問室資訊"
+msgstr "Nhập địa chỉ trường và thông tin Văn phòng sinh viên quốc tế"
+
+msgid "步驟 3 — 申請事項："
+msgstr "Bước 3 — Chi tiết đăng ký:"
+
+msgid "選擇「個人申請」，許可期限最長"
+msgstr "Chọn \"Đăng ký cá nhân\"; thời hạn giấy phép tối đa là"
+
+msgid "領取方式："
+msgstr "Phương thức nhận:"
+
+msgid "可選電子文件（需於 8 天內下載）或郵寄至學校"
+msgstr ""
+"Chọn tài liệu điện tử (phải tải xuống trong 8 ngày) hoặc gửi bưu điện "
+"đến trường"
+
+msgid "上傳文件並送出"
+msgstr "Tải lên tài liệu và gửi"
+
+msgid "上傳掃描好的 PDF 文件，確認資料無誤後送出申請。"
+msgstr ""
+"Tải lên các tệp PDF đã quét, xác nhận tất cả thông tin chính xác, sau đó "
+"gửi đơn đăng ký."
+
+msgid "注意：系統暫存最多保留 7 天，逾期需重新填寫。"
+msgstr "Lưu ý: Hệ thống lưu bản nháp tối đa 7 ngày; sau đó bạn phải bắt đầu lại."
+
+msgid "等待審核"
+msgstr "Chờ xét duyệt"
+
+msgid "送出後由學校及勞動部審核，期間可至系統查詢進度。"
+msgstr ""
+"Sau khi gửi, đơn được xét duyệt bởi trường và Bộ Lao động. Kiểm tra tiến "
+"độ trong hệ thống trong thời gian này."
+
+msgid "取得許可前不得開始工作。"
+msgstr "Không được bắt đầu làm việc trước khi có giấy phép."
+
+msgid "取得工作許可，開始工作"
+msgstr "Nhận giấy phép lao động và bắt đầu làm việc"
+
+msgid "許可核發後即可依核准內容開始工作。若選擇電子文件，請於 8 天內至系統下載許可證。"
+msgstr ""
+"Sau khi cấp giấy phép, bạn có thể bắt đầu làm việc theo nội dung được "
+"phê duyệt. Nếu chọn nhận điện tử, hãy tải xuống giấy phép từ hệ thống "
+"trong 8 ngày."
+
+msgid "工時規定"
+msgstr "Quy định giờ làm việc"
+
+msgid "期間"
+msgstr "Thời kỳ"
+
+msgid "工時上限"
+msgstr "Giới hạn giờ"
+
+msgid "上課期間（學期中）"
+msgstr "Trong kỳ học (trong học kỳ)"
+
+msgid "每週最多 20 小時"
+msgstr "Tối đa 20 giờ/tuần"
+
+msgid "週一至週日合計不得超過 20 小時，超時視同違規"
+msgstr "Tổng Thứ Hai–Chủ Nhật không được vượt quá 20 giờ; vượt quá là vi phạm"
+
+msgid "寒假・暑假"
+msgstr "Kỳ nghỉ đông / hè"
+
+msgid "無限制"
+msgstr "Không giới hạn"
+
+msgid "可全職工作，時數無上限"
+msgstr "Được làm toàn thời gian, không giới hạn số giờ"
+
+msgid "短期交換生 / 語研生"
+msgstr "Sinh viên trao đổi ngắn hạn / Sinh viên học ngôn ngữ"
+
+msgid "不得工作"
+msgstr "Không được phép"
+
+msgid "不符合申請資格，任何工作均屬違規"
+msgstr "Không đủ điều kiện đăng ký; bất kỳ công việc nào đều là vi phạm"
+
+msgid "違規後果"
+msgstr "Hậu quả vi phạm"
+
+msgid "罰鍰 NT$30,000～150,000"
+msgstr "Phạt tiền: NT$30.000–150.000"
+
+msgid "未持工作許可違法工作者，依就業服務法可處罰鍰新臺幣三萬元至十五萬元。"
+msgstr ""
+"Người làm việc không có giấy phép lao động hợp lệ có thể bị phạt "
+"NT$30.000–150.000 theo Luật Dịch vụ việc làm."
+
+msgid "限令出境"
+msgstr "Lệnh trục xuất"
+
+msgid "主管機關可依規定限令違規者出境，情節嚴重者可能影響日後再入境資格。"
+msgstr ""
+"Cơ quan có thẩm quyền có thể ra lệnh cho người vi phạm rời khỏi đất "
+"nước; trường hợp nghiêm trọng có thể ảnh hưởng đến tư cách nhập cảnh sau "
+"này."
+
+msgid "雇主連帶受罰"
+msgstr "Chủ sử dụng lao động cũng bị phạt"
+
+msgid "非法僱用外籍生的雇主同樣面臨罰鍰，請勿在未取得工作許可前接受工作邀約。"
+msgstr ""
+"Chủ sử dụng lao động thuê sinh viên quốc tế bất hợp pháp cũng bị phạt. "
+"Không nhận đề nghị việc làm trước khi có giấy phép lao động."
+
+msgid "換工作需重新申請："
+msgstr "Thay đổi công việc cần đăng ký mới:"
+
+msgid "工作許可針對特定雇主核發，換雇主或增加兼職均須重新申請新的工作許可，不可沿用舊許可。"
+msgstr ""
+"Giấy phép lao động được cấp cho chủ sử dụng lao động cụ thể. Thay đổi "
+"chủ hoặc thêm việc bán thời gian cần đăng ký mới; giấy phép cũ không "
+"được dùng lại."
+
+msgid "許可期限最長 6 個月："
+msgstr "Thời hạn giấy phép tối đa 6 tháng:"
+
+msgid "到期前需提前申請展延，過期繼續工作視同無許可違規。"
+msgstr ""
+"Nộp đơn gia hạn trước khi hết hạn; tiếp tục làm việc sau khi hết hạn "
+"được coi là làm việc không có giấy phép."
+
+msgid "畢業生注意："
+msgstr "Lưu ý cho sinh viên tốt nghiệp:"
+
+msgid "畢業生工作許可通常至"
+msgstr "Giấy phép lao động của sinh viên tốt nghiệp thường có hiệu lực đến"
+
+msgid "日"
+msgstr ""
+
+msgid "截止。如有暑期課程（需附證明）或已獲錄取繼續升學者，方可延長至"
+msgstr ""
+". Nếu đăng ký chương trình hè (cần bằng chứng) hoặc được nhận vào học "
+"tiếp, giấy phép có thể được gia hạn đến"
+
+msgid "。"
+msgstr "."
+
+msgid "系統暫存限制："
+msgstr "Giới hạn bản nháp hệ thống:"
+
+msgid "ezwp 系統暫存資料最多保留"
+msgstr "Hệ thống ezwp lưu dữ liệu nháp tối đa"
+
+msgid "天"
+msgstr "ngày"
+
+msgid "，逾期需重新填寫。選擇電子文件領取者，須於核發後"
+msgstr ""
+"; sau đó bạn phải bắt đầu lại. Nếu chọn nhận điện tử, hãy tải xuống giấy "
+"phép trong"
+
+msgid "至系統下載許可證。"
+msgstr "kể từ ngày cấp."
+
+msgid "工作期間健保轉換："
+msgstr "Chuyển đổi bảo hiểm y tế trong thời gian làm việc:"
+
+msgid "受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工作結束後需回學校重新加保。"
+msgstr ""
+"Sau khi được tuyển dụng, bạn phải đăng ký bảo hiểm y tế tại nơi làm việc "
+"(Loại 1). Trước tiên hủy đăng ký khỏi bảo hiểm y tế của trường để tránh "
+"bảo hiểm trùng lặp. Đăng ký lại với trường sau khi kết thúc công việc."
+
+msgid "相關連結"
+msgstr "Liên kết liên quan"
+
+msgid "勞動部外國人在台工作服務網 ↗"
+msgstr "Mạng dịch vụ lao động nước ngoài tại Đài Loan, Bộ Lao động ↗"
+
+msgid "勞動部勞動力發展署 ↗"
+msgstr "Cơ quan Phát triển Lao động, Bộ Lao động ↗"
+
+msgid "NCU 國際事務處 ↗"
+msgstr "Văn phòng Hợp tác Quốc tế NCU ↗"
