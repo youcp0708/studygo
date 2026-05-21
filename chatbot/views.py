@@ -86,6 +86,26 @@ def chatbot_page(request):
     return render(request, 'chatbot/chatbot.html', context)
 
 
+def split_friend_reply(reply):
+    import re
+    reply = (reply or '').strip()
+
+    if not reply:
+        return []
+
+    # 在句尾標點後切割（保留標點在前一句）
+    parts = re.split(r'(?<=[。！？])\s*', reply)
+    parts = [p.strip() for p in parts if p.strip()]
+
+    if len(parts) <= 1:
+        return [reply]
+
+    # 最多 3 則，超過就把剩餘合併進最後一則
+    if len(parts) > 3:
+        parts = parts[:2] + [''.join(parts[2:])]
+
+    return parts
+
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def chat_message_api(request):
@@ -167,13 +187,29 @@ def chat_message_api(request):
     print("[DEBUG] ai_result model:", ai_result.get("model"))
     print("[DEBUG] ai_result reply:", ai_result.get("reply"))
 
-    assistant_msg = ChatMessage.objects.create(
-        session=session,
-        role='assistant',
-        content=ai_result['reply'],
-    )
+    if ai_mode == "friend":
+        reply_parts = split_friend_reply(ai_result['reply'])
+    else:
+        reply_parts = [ai_result['reply']]
 
-    session.save(update_fields=['updated_at'])
+    assistant_messages = []
+
+    for part in reply_parts:
+        assistant_msg = ChatMessage.objects.create(
+            session=session,
+            role='assistant',
+            content=part,
+        )
+
+        assistant_messages.append({
+            'id': assistant_msg.id,
+            'role': assistant_msg.role,
+            'content': assistant_msg.content,
+            'created_at': assistant_msg.created_at.strftime('%Y-%m-%d %H:%M'),
+        })
+
+    session.ai_mode = ai_mode
+    session.save(update_fields=['ai_mode', 'updated_at'])
 
     return Response({
         'success': True,
@@ -184,20 +220,18 @@ def chat_message_api(request):
             'is_pinned': session.is_pinned,
             'ai_mode': session.ai_mode,
             'user_message': {
-                'id': user_msg.id,
-                'role': user_msg.role,
-                'content': user_msg.content,
-                'created_at': user_msg.created_at.strftime('%Y-%m-%d %H:%M'),
-            },
-            'assistant_message': {
-                'id': assistant_msg.id,
-                'role': assistant_msg.role,
-                'content': assistant_msg.content,
-                'created_at': assistant_msg.created_at.strftime('%Y-%m-%d %H:%M'),
-            },
+            'id': user_msg.id,
+            'role': user_msg.role,
+            'content': user_msg.content,
+            'created_at': user_msg.created_at.strftime('%Y-%m-%d %H:%M'),
         },
-    })
+        # 新版：多則 AI 訊息
+        'assistant_messages': assistant_messages,
 
+        # 保留舊版欄位，避免前端其他地方壞掉
+        'assistant_message': assistant_messages[0] if assistant_messages else None,
+    }
+    })
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])

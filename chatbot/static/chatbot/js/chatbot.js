@@ -17,7 +17,7 @@
 
   const AI_MODE_PLACEHOLDERS = {
     helper: '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？',
-    friend: '例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？',
+    friend: '例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？  或是用學長姐的身份陪我聊會天',
   };
 
   const messagesEl = document.getElementById('chatMessages');
@@ -191,7 +191,35 @@
     }
   }
 
-  function addMessage(role, content, time, shouldScroll = true) {
+  function typewriterEffect(bodyEl, bubbleEl, content, time, shouldScroll) {
+    const normalized = normalizeMessageContent(content);
+    let i = 0;
+    const speed = 65;
+
+    function tick() {
+      if (i < normalized.length) {
+        bodyEl.textContent = normalized.slice(0, i + 1);
+        i++;
+        if (shouldScroll && isNearBottom()) scrollToBottom();
+        setTimeout(tick, speed);
+      } else {
+        bodyEl.innerHTML = renderMessageContent(content);
+        bodyEl.dataset.renderedLinks = 'true';
+        if (time) {
+          const timeEl = document.createElement('div');
+          timeEl.className = 'message-time';
+          timeEl.textContent = time;
+          bubbleEl.appendChild(timeEl);
+        }
+        if (shouldScroll && isNearBottom()) scrollToBottom();
+        updateScrollBottomButton();
+      }
+    }
+
+    tick();
+  }
+
+  function addMessage(role, content, time, shouldScroll = true, animate = false) {
     if (!messagesEl) return;
 
     const row = document.createElement('div');
@@ -217,11 +245,17 @@
 
     const body = document.createElement('div');
     body.className = 'message-content';
-    body.innerHTML = renderMessageContent(content);
-    body.dataset.renderedLinks = 'true';
+
+    if (animate && role !== 'user') {
+      body.textContent = '';
+    } else {
+      body.innerHTML = renderMessageContent(content);
+      body.dataset.renderedLinks = 'true';
+    }
+
     bubble.appendChild(body);
 
-    if (time) {
+    if (!animate && time) {
       const timeEl = document.createElement('div');
       timeEl.className = 'message-time';
       timeEl.textContent = time;
@@ -236,6 +270,10 @@
       scrollToBottom();
     } else {
       updateScrollBottomButton();
+    }
+
+    if (animate && role !== 'user') {
+      typewriterEffect(body, bubble, content, time, shouldScroll);
     }
   }
 
@@ -557,12 +595,29 @@
         );
       }
 
-      addMessage(
-        'assistant',
-        data.data.assistant_message.content,
-        data.data.assistant_message.created_at,
-        shouldAutoScrollAfterReply
-      );
+      const assistantMessages = data.data.assistant_messages || [];
+
+      if (assistantMessages.length > 0) {
+        assistantMessages.forEach((msg, index) => {
+          setTimeout(() => {
+            addMessage(
+              'assistant',
+              msg.content,
+              msg.created_at,
+              shouldAutoScrollAfterReply,
+              true
+            );
+          }, index * 2000);
+        });
+      } else if (data.data.assistant_message) {
+        addMessage(
+          'assistant',
+          data.data.assistant_message.content,
+          data.data.assistant_message.created_at,
+          shouldAutoScrollAfterReply,
+          true
+        );
+      }
 
       selectedAttachments = [];
       renderAttachmentPreview();
