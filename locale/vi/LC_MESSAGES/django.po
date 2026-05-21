@@ -3755,3 +3755,246 @@ msgstr ""
 
 msgid "僑生1年居留證（線上繳費）"
 msgstr "ARC 1 năm cho Sinh viên Hoa kiều (thanh toán trực tuyến)"
+
+
+msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
+msgstr ""
+"Hướng dẫn thông tin các khu ký túc xá NCU, quy trình đăng ký, trang "
+"thiết bị phòng và chi phí, giúp sinh viên quốc tế, Hoa kiều và sinh viên "
+"trao đổi đăng ký chỗ ở trong trường từ trước."
+
+msgid "4 大宿舍區"
+msgstr "4 Khu Ký túc xá"
+
+msgid "外僑優先抽籤"
+msgstr "Rút thăm ưu tiên cho sinh viên quốc tế"
+
+msgid "宿舍分區"
+msgstr "Khu Ký túc xá"
+
+msgid "東 / 西 / 南 / 北"
+msgstr "Đông / Tây / Nam / Bắc"
+
+msgid "四大分區，遍佈校內"
+msgstr "Bốn khu trải rộng khắp khuôn viên"
+
+msgid "國際宿舍"
+msgstr "Ký túc xá Quốc tế"
+
+msgid "東區"
+msgstr "Khu Đông"
+
+msgid "外僑生專屬宿舍"
+msgstr "Ký túc xá dành riêng cho sinh viên quốc tế"
+
+msgid "住宿學期"
+msgstr "Học kỳ ở ký túc xá"
+
+msgid "上 9月─1月"
+msgstr "Học kỳ 1: Tháng 9–1"
+
+msgid "下 2月─8月"
+msgstr "Học kỳ 2: Tháng 2–8"
+
+msgid "含寒假（不需遷出）"
+msgstr "Bao gồm kỳ nghỉ đông (không cần dọn ra)"
+
+msgid "行政電話"
+msgstr "Điện thoại Hành chính"
+
+msgid "各分區 24 小時總線"
+msgstr "Đường dây 24 giờ cho tất cả các khu"
+
+msgid "第一順位 ── 優先保證"
+msgstr "Ưu tiên 1 — Đảm bảo"
+
+msgid "以下身份優先獲得宿舍"
+msgstr "Các đối tượng sau được ưu tiên chỗ ở"
+
+msgid "外籍生（Foreign Students）"
+msgstr "Sinh viên nước ngoài (Foreign Students)"
+
+msgid "僑生（Overseas Chinese Students）"
+msgstr "Sinh viên Hoa kiều"
+
+msgid "低（中）收入收學生"
+msgstr "Sinh viên thu nhập thấp (trung bình)"
+
+msgid "身心障礙學生"
+msgstr "Sinh viên khuyết tật"
+
+msgid "特殊弱勢家庭學生"
+msgstr "Sinh viên từ gia đình có hoàn cảnh đặc biệt khó khăn"
+
+msgid "第二順位"
+msgstr "Ưu tiên 2"
+
+msgid "一般學生（本島）"
+msgstr "Sinh viên thông thường (trong nước)"
+
+msgid "大學部學生"
+msgstr "Sinh viên đại học"
+
+msgid "碩博士生（無保證宿舍）"
+msgstr "Học viên cao học/nghiên cứu sinh (không đảm bảo)"
+
+msgid "以抽籤決定是否取得床位"
+msgstr "Phân bổ giường ngủ được xác định bằng rút thăm"
+
+msgid "依抽籤號碼依公告排序"
+msgstr "Xếp hạng theo số thăm theo thông báo"
+
+msgid "分區："
+msgstr "Khu:"
+
+msgid "西區"
+msgstr "Khu Tây"
+
+msgid "南區"
+msgstr "Khu Nam"
+
+msgid "北區"
+msgstr "Khu Bắc"
+
+msgid "女生宿舍"
+msgstr "Ký túc xá nữ"
+
+msgid "外僑生專屬"
+msgstr "Dành riêng cho sinh viên quốc tế"
+
+msgid "女14舍"
+msgstr "Ký túc xá nữ 14"
+
+msgid "男11舍"
+msgstr "Ký túc xá nam 11"
+
+msgid "男生宿舍"
+msgstr "Ký túc xá nam"
+
+msgid "男5舍"
+msgstr "Ký túc xá nam 5"
+
+msgid "女1舍"
+msgstr "Ký túc xá nữ 1"
+
+msgid "女2舍"
+msgstr "Ký túc xá nữ 2"
+
+msgid "女3舍"
+msgstr "Ký túc xá nữ 3"
+
+msgid "女4舍"
+msgstr "Ký túc xá nữ 4"
+
+msgid "男3舍"
+msgstr "Ký túc xá nam 3"
+
+msgid "男6舍"
+msgstr "Ký túc xá nam 6"
+
+msgid "男7舍"
+msgstr "Ký túc xá nam 7"
+
+msgid "男13舍"
+msgstr "Ký túc xá nam 13"
+
+msgid "男9A舍"
+msgstr "Ký túc xá nam 9A"
+
+msgid "男9B舍"
+msgstr "Ký túc xá nam 9B"
+
+msgid "男12舍"
+msgstr "Ký túc xá nam 12"
+
+msgid "和平屋"
+msgstr "Peace House"
+
+msgid "性別友善宿舍"
+msgstr "Ký túc xá thân thiện giới tính"
+
+msgid "中大會館"
+msgstr "NCU Guest House"
+
+msgid "訪客 / 短住"
+msgstr "Khách / Lưu trú ngắn hạn"
+
+msgid "床架"
+msgstr "Khung giường"
+
+msgid "衣櫃"
+msgstr "Tủ quần áo"
+
+msgid "書桌 + 書椅"
+msgstr "Bàn học + Ghế"
+
+msgid "置物架"
+msgstr "Kệ lưu trữ"
+
+msgid "鎖頭"
+msgstr "Khóa"
+
+msgid "冷氣"
+msgstr "Điều hòa không khí"
+
+msgid "桌燈（部分）"
+msgstr "Đèn bàn (một số phòng)"
+
+msgid "電風扇（部分）"
+msgstr "Quạt điện (một số phòng)"
+
+msgid "網路孔"
+msgstr "Cổng mạng"
+
+msgid "禁用電器"
+msgstr "Thiết bị điện bị cấm"
+
+msgid "電磁爐（全面禁用）"
+msgstr "Bếp từ (cấm hoàn toàn)"
+
+msgid "電爐 / 電磁盤"
+msgstr "Bếp điện / Đĩa cảm ứng"
+
+msgid "熱水壺 / 快煮壺"
+msgstr "Ấm đun nước / Ấm điện"
+
+msgid "延長線過載"
+msgstr "Dây nối dài quá tải"
+
+msgid "住宿服務組常見問題（官方）"
+msgstr "FAQ Dịch vụ Ký túc xá (Chính thức)"
+
+msgid "退宿費用、寒暑假規定、換宿申請、床墊、研究生住宿……"
+msgstr "Phí trả phòng, quy định kỳ nghỉ, chuyển phòng, đệm, chỗ ở sau đại học..."
+
+msgid "完整 Q&A 由住宿服務組官方維護，內容最新最準確。"
+msgstr ""
+"Q&A đầy đủ được quản lý chính thức bởi đội Dịch vụ Ký túc xá — cập nhật "
+"và chính xác nhất."
+
+msgid "行政諮詢電話"
+msgstr "Điện thoại tư vấn hành chính"
+
+msgid "一般住宿申請、退宿、換宿等問題"
+msgstr "Đăng ký chỗ ở thông thường, trả phòng, chuyển phòng và các thắc mắc khác"
+
+msgid "公告信箱"
+msgstr "Email chính thức"
+
+msgid "文件申請、書面問題"
+msgstr "Nộp tài liệu và thắc mắc bằng văn bản"
+
+msgid "住宿服務組官網"
+msgstr "Website chính thức của Bộ phận Dịch vụ Ký túc xá"
+
+msgid "最新公告、申請系統、規章下載"
+msgstr "Thông báo mới nhất, hệ thống đăng ký, tải quy định"
+
+msgid "24 小時緊急總線"
+msgstr "Đường dây khẩn cấp 24 giờ"
+
+msgid "東 / 西 / 南 / 北 各分區緊急專線"
+msgstr "Đường dây khẩn cấp khu Đông / Tây / Nam / Bắc"
+
+msgid "緊急設施損壞、安全事件聯繫"
+msgstr "Liên hệ cho sự cố hư hỏng cơ sở vật chất khẩn cấp hoặc sự cố an ninh"

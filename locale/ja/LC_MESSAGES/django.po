@@ -3790,3 +3790,241 @@ msgstr "居留・就労・生活などに関する多言語相談を提供して
 
 msgid "僑生1年居留證（線上繳費）"
 msgstr "海外華僑学生1年居留証（オンライン支払い）"
+
+
+msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
+msgstr "NCU各寮ゾーンの情報、申請手続き、部屋の設備、費用を案内し、外国人・華僑・交換留学生が校内住宿を事前に申請できるようサポートします。"
+
+msgid "4 大宿舍區"
+msgstr "4つの寮ゾーン"
+
+msgid "外僑優先抽籤"
+msgstr "外国人・華僑優先抽選"
+
+msgid "宿舍分區"
+msgstr "寮ゾーン"
+
+msgid "東 / 西 / 南 / 北"
+msgstr "東 / 西 / 南 / 北"
+
+msgid "四大分區，遍佈校內"
+msgstr "キャンパス全体に4ゾーン"
+
+msgid "國際宿舍"
+msgstr "国際寮"
+
+msgid "東區"
+msgstr "東ゾーン"
+
+msgid "外僑生專屬宿舍"
+msgstr "外国人・華僑学生専用寮"
+
+msgid "住宿學期"
+msgstr "入居学期"
+
+msgid "上 9月─1月"
+msgstr "前期：9月〜1月"
+
+msgid "下 2月─8月"
+msgstr "後期：2月〜8月"
+
+msgid "含寒假（不需遷出）"
+msgstr "冬休みを含む（退去不要）"
+
+msgid "行政電話"
+msgstr "管理電話"
+
+msgid "各分區 24 小時總線"
+msgstr "全ゾーン24時間対応"
+
+msgid "第一順位 ── 優先保證"
+msgstr "第1優先 — 保証"
+
+msgid "以下身份優先獲得宿舍"
+msgstr "以下の対象者は優先的に入寮できます"
+
+msgid "外籍生（Foreign Students）"
+msgstr "外国人留学生（Foreign Students）"
+
+msgid "僑生（Overseas Chinese Students）"
+msgstr "海外華僑学生"
+
+msgid "低（中）收入收學生"
+msgstr "低（中）所得の学生"
+
+msgid "身心障礙學生"
+msgstr "障がいのある学生"
+
+msgid "特殊弱勢家庭學生"
+msgstr "特別支援家庭の学生"
+
+msgid "第二順位"
+msgstr "第2優先"
+
+msgid "一般學生（本島）"
+msgstr "一般学生（国内）"
+
+msgid "大學部學生"
+msgstr "学部生"
+
+msgid "碩博士生（無保證宿舍）"
+msgstr "修士・博士課程学生（入寮保証なし）"
+
+msgid "以抽籤決定是否取得床位"
+msgstr "ベッドの配分は抽選で決定"
+
+msgid "依抽籤號碼依公告排序"
+msgstr "抽選番号に基づき公告順に並べる"
+
+msgid "分區："
+msgstr "ゾーン："
+
+msgid "西區"
+msgstr "西ゾーン"
+
+msgid "南區"
+msgstr "南ゾーン"
+
+msgid "北區"
+msgstr "北ゾーン"
+
+msgid "女生宿舍"
+msgstr "女子寮"
+
+msgid "外僑生專屬"
+msgstr "外国人・華僑学生専用"
+
+msgid "女14舍"
+msgstr "女子寮14棟"
+
+msgid "男11舍"
+msgstr "男子寮11棟"
+
+msgid "男生宿舍"
+msgstr "男子寮"
+
+msgid "男5舍"
+msgstr "男子寮5棟"
+
+msgid "女1舍"
+msgstr "女子寮1棟"
+
+msgid "女2舍"
+msgstr "女子寮2棟"
+
+msgid "女3舍"
+msgstr "女子寮3棟"
+
+msgid "女4舍"
+msgstr "女子寮4棟"
+
+msgid "男3舍"
+msgstr "男子寮3棟"
+
+msgid "男6舍"
+msgstr "男子寮6棟"
+
+msgid "男7舍"
+msgstr "男子寮7棟"
+
+msgid "男13舍"
+msgstr "男子寮13棟"
+
+msgid "男9A舍"
+msgstr "男子寮9A棟"
+
+msgid "男9B舍"
+msgstr "男子寮9B棟"
+
+msgid "男12舍"
+msgstr "男子寮12棟"
+
+msgid "和平屋"
+msgstr "ピースハウス"
+
+msgid "性別友善宿舍"
+msgstr "ジェンダーフレンドリー寮"
+
+msgid "中大會館"
+msgstr "NCUゲストハウス"
+
+msgid "訪客 / 短住"
+msgstr "訪問者 / 短期滞在"
+
+msgid "床架"
+msgstr "ベッドフレーム"
+
+msgid "衣櫃"
+msgstr "ワードローブ"
+
+msgid "書桌 + 書椅"
+msgstr "デスク + チェア"
+
+msgid "置物架"
+msgstr "収納棚"
+
+msgid "鎖頭"
+msgstr "錠前"
+
+msgid "冷氣"
+msgstr "エアコン"
+
+msgid "桌燈（部分）"
+msgstr "デスクランプ（一部の部屋）"
+
+msgid "電風扇（部分）"
+msgstr "扇風機（一部の部屋）"
+
+msgid "網路孔"
+msgstr "ネットワークポート"
+
+msgid "禁用電器"
+msgstr "持ち込み禁止電気器具"
+
+msgid "電磁爐（全面禁用）"
+msgstr "IHクッキングヒーター（全面禁止）"
+
+msgid "電爐 / 電磁盤"
+msgstr "電気コンロ / 電磁調理板"
+
+msgid "熱水壺 / 快煮壺"
+msgstr "電気ケトル / 湯沸かし器"
+
+msgid "延長線過載"
+msgstr "延長コードの過負荷"
+
+msgid "住宿服務組常見問題（官方）"
+msgstr "住宿サービス課よくある質問（公式）"
+
+msgid "退宿費用、寒暑假規定、換宿申請、床墊、研究生住宿……"
+msgstr "退寮費用、冬夏休み規定、部屋交換申請、マットレス、大学院生入寮..."
+
+msgid "完整 Q&A 由住宿服務組官方維護，內容最新最準確。"
+msgstr "完全なQ&Aは住宿サービス課が公式に管理しており、最新かつ正確な内容です。"
+
+msgid "行政諮詢電話"
+msgstr "管理問い合わせ電話"
+
+msgid "一般住宿申請、退宿、換宿等問題"
+msgstr "入寮申請・退寮・部屋交換などの問い合わせ"
+
+msgid "公告信箱"
+msgstr "公式メール"
+
+msgid "文件申請、書面問題"
+msgstr "書類申請・書面に関する問い合わせ"
+
+msgid "住宿服務組官網"
+msgstr "住宿サービス課公式ウェブサイト"
+
+msgid "最新公告、申請系統、規章下載"
+msgstr "最新公告・申請システム・規定ダウンロード"
+
+msgid "24 小時緊急總線"
+msgstr "24時間緊急回線"
+
+msgid "東 / 西 / 南 / 北 各分區緊急專線"
+msgstr "東 / 西 / 南 / 北 各ゾーン緊急専用回線"
+
+msgid "緊急設施損壞、安全事件聯繫"
+msgstr "緊急設備故障・安全事案の連絡先"

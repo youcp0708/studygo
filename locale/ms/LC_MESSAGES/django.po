@@ -4178,3 +4178,250 @@ msgstr ""
 
 msgid "僑生1年居留證（線上繳費）"
 msgstr "ARC 1 Tahun untuk Pelajar Diaspora Cina (bayaran dalam talian)"
+
+
+msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
+msgstr ""
+"Panduan maklumat zon asrama NCU, proses permohonan, peralatan bilik, dan "
+"yuran, untuk membantu pelajar antarabangsa, diaspora Cina, dan pelajar "
+"pertukaran memohon penginapan kampus lebih awal."
+
+msgid "4 大宿舍區"
+msgstr "4 Zon Asrama"
+
+msgid "外僑優先抽籤"
+msgstr "Loteri Keutamaan untuk Pelajar Antarabangsa"
+
+msgid "宿舍分區"
+msgstr "Zon Asrama"
+
+msgid "東 / 西 / 南 / 北"
+msgstr "Timur / Barat / Selatan / Utara"
+
+msgid "四大分區，遍佈校內"
+msgstr "Empat zon merentasi kampus"
+
+msgid "國際宿舍"
+msgstr "Asrama Antarabangsa"
+
+msgid "東區"
+msgstr "Zon Timur"
+
+msgid "外僑生專屬宿舍"
+msgstr "Asrama eksklusif untuk pelajar antarabangsa"
+
+msgid "住宿學期"
+msgstr "Semester Penginapan"
+
+msgid "上 9月─1月"
+msgstr "Semester 1: Sep–Jan"
+
+msgid "下 2月─8月"
+msgstr "Semester 2: Feb–Ogo"
+
+msgid "含寒假（不需遷出）"
+msgstr "Termasuk cuti musim sejuk (tidak perlu berpindah)"
+
+msgid "行政電話"
+msgstr "Telefon Pentadbiran"
+
+msgid "各分區 24 小時總線"
+msgstr "Talian 24 jam untuk semua zon"
+
+msgid "第一順位 ── 優先保證"
+msgstr "Keutamaan 1 — Dijamin"
+
+msgid "以下身份優先獲得宿舍"
+msgstr "Kategori berikut mendapat keutamaan penginapan"
+
+msgid "外籍生（Foreign Students）"
+msgstr "Pelajar Asing (Foreign Students)"
+
+msgid "僑生（Overseas Chinese Students）"
+msgstr "Pelajar Diaspora Cina"
+
+msgid "低（中）收入收學生"
+msgstr "Pelajar Berpendapatan Rendah (Sederhana)"
+
+msgid "身心障礙學生"
+msgstr "Pelajar Orang Kurang Upaya"
+
+msgid "特殊弱勢家庭學生"
+msgstr "Pelajar dari Keluarga Susah"
+
+msgid "第二順位"
+msgstr "Keutamaan 2"
+
+msgid "一般學生（本島）"
+msgstr "Pelajar Umum (Tempatan)"
+
+msgid "大學部學生"
+msgstr "Pelajar Prasiswazah"
+
+msgid "碩博士生（無保證宿舍）"
+msgstr "Pelajar Pascasiswazah (tiada jaminan)"
+
+msgid "以抽籤決定是否取得床位"
+msgstr "Peruntukan katil ditentukan melalui loteri"
+
+msgid "依抽籤號碼依公告排序"
+msgstr "Disusun mengikut nombor loteri seperti yang diumumkan"
+
+msgid "分區："
+msgstr "Zon:"
+
+msgid "西區"
+msgstr "Zon Barat"
+
+msgid "南區"
+msgstr "Zon Selatan"
+
+msgid "北區"
+msgstr "Zon Utara"
+
+msgid "女生宿舍"
+msgstr "Asrama Perempuan"
+
+msgid "外僑生專屬"
+msgstr "Khusus Pelajar Antarabangsa"
+
+msgid "女14舍"
+msgstr "Asrama Perempuan 14"
+
+msgid "男11舍"
+msgstr "Asrama Lelaki 11"
+
+msgid "男生宿舍"
+msgstr "Asrama Lelaki"
+
+msgid "男5舍"
+msgstr "Asrama Lelaki 5"
+
+msgid "女1舍"
+msgstr "Asrama Perempuan 1"
+
+msgid "女2舍"
+msgstr "Asrama Perempuan 2"
+
+msgid "女3舍"
+msgstr "Asrama Perempuan 3"
+
+msgid "女4舍"
+msgstr "Asrama Perempuan 4"
+
+msgid "男3舍"
+msgstr "Asrama Lelaki 3"
+
+msgid "男6舍"
+msgstr "Asrama Lelaki 6"
+
+msgid "男7舍"
+msgstr "Asrama Lelaki 7"
+
+msgid "男13舍"
+msgstr "Asrama Lelaki 13"
+
+msgid "男9A舍"
+msgstr "Asrama Lelaki 9A"
+
+msgid "男9B舍"
+msgstr "Asrama Lelaki 9B"
+
+msgid "男12舍"
+msgstr "Asrama Lelaki 12"
+
+msgid "和平屋"
+msgstr "Peace House"
+
+msgid "性別友善宿舍"
+msgstr "Asrama Mesra Gender"
+
+msgid "中大會館"
+msgstr "NCU Guest House"
+
+msgid "訪客 / 短住"
+msgstr "Pelawat / Penginapan Singkat"
+
+msgid "床架"
+msgstr "Rangka Katil"
+
+msgid "衣櫃"
+msgstr "Almari Pakaian"
+
+msgid "書桌 + 書椅"
+msgstr "Meja + Kerusi Belajar"
+
+msgid "置物架"
+msgstr "Rak Penyimpanan"
+
+msgid "鎖頭"
+msgstr "Kunci Padlock"
+
+msgid "冷氣"
+msgstr "Penghawa Dingin"
+
+msgid "桌燈（部分）"
+msgstr "Lampu Meja (sebilangan bilik)"
+
+msgid "電風扇（部分）"
+msgstr "Kipas (sebilangan bilik)"
+
+msgid "網路孔"
+msgstr "Port Rangkaian"
+
+msgid "禁用電器"
+msgstr "Peralatan Elektrik Dilarang"
+
+msgid "電磁爐（全面禁用）"
+msgstr "Dapur Aruhan (dilarang sepenuhnya)"
+
+msgid "電爐 / 電磁盤"
+msgstr "Dapur Elektrik / Plat Aruhan"
+
+msgid "熱水壺 / 快煮壺"
+msgstr "Cerek / Cerek Elektrik"
+
+msgid "延長線過載"
+msgstr "Litar Sambung Terlebih Beban"
+
+msgid "住宿服務組常見問題（官方）"
+msgstr "Soalan Lazim Perkhidmatan Asrama (Rasmi)"
+
+msgid "退宿費用、寒暑假規定、換宿申請、床墊、研究生住宿……"
+msgstr ""
+"Yuran daftar keluar, peraturan cuti, permohonan tukar bilik, tilam, "
+"penginapan pascasiswazah..."
+
+msgid "完整 Q&A 由住宿服務組官方維護，內容最新最準確。"
+msgstr ""
+"Q&A lengkap diuruskan secara rasmi oleh pasukan Perkhidmatan Asrama — "
+"paling terkini dan tepat."
+
+msgid "行政諮詢電話"
+msgstr "Telefon Pertanyaan Pentadbiran"
+
+msgid "一般住宿申請、退宿、換宿等問題"
+msgstr ""
+"Permohonan penginapan umum, daftar keluar, tukar bilik, dan pertanyaan "
+"lain"
+
+msgid "公告信箱"
+msgstr "E-mel Rasmi"
+
+msgid "文件申請、書面問題"
+msgstr "Permohonan dokumen dan pertanyaan bertulis"
+
+msgid "住宿服務組官網"
+msgstr "Laman Web Rasmi Perkhidmatan Asrama"
+
+msgid "最新公告、申請系統、規章下載"
+msgstr "Pengumuman terkini, sistem permohonan, muat turun peraturan"
+
+msgid "24 小時緊急總線"
+msgstr "Talian Kecemasan 24 Jam"
+
+msgid "東 / 西 / 南 / 北 各分區緊急專線"
+msgstr "Talian kecemasan zon Timur / Barat / Selatan / Utara"
+
+msgid "緊急設施損壞、安全事件聯繫"
+msgstr "Untuk kerosakan kemudahan mendesak atau insiden keselamatan"

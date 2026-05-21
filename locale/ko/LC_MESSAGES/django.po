@@ -3422,3 +3422,243 @@ msgstr "체류·취업·생활 등에 관한 다국어 상담을 제공합니다
 
 msgid "僑生1年居留證（線上繳費）"
 msgstr "재외 화교 학생 1년 거류증（온라인 납부）"
+
+
+msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
+msgstr ""
+"NCU 각 기숙사 구역 정보, 신청 절차, 객실 시설, 비용을 안내하여 외국인·화교·교환 학생이 교내 기숙사를 미리 신청할 수 "
+"있도록 돕습니다."
+
+msgid "4 大宿舍區"
+msgstr "4개 기숙사 구역"
+
+msgid "外僑優先抽籤"
+msgstr "외국인·화교 우선 추첨"
+
+msgid "宿舍分區"
+msgstr "기숙사 구역"
+
+msgid "東 / 西 / 南 / 北"
+msgstr "동 / 서 / 남 / 북"
+
+msgid "四大分區，遍佈校內"
+msgstr "캠퍼스 전체에 4개 구역"
+
+msgid "國際宿舍"
+msgstr "국제 기숙사"
+
+msgid "東區"
+msgstr "동구"
+
+msgid "外僑生專屬宿舍"
+msgstr "외국인·화교 학생 전용 기숙사"
+
+msgid "住宿學期"
+msgstr "기숙사 학기"
+
+msgid "上 9月─1月"
+msgstr "1학기: 9월–1월"
+
+msgid "下 2月─8月"
+msgstr "2학기: 2월–8월"
+
+msgid "含寒假（不需遷出）"
+msgstr "겨울 방학 포함 (이사 불필요)"
+
+msgid "行政電話"
+msgstr "행정 전화"
+
+msgid "各分區 24 小時總線"
+msgstr "모든 구역 24시간 전화"
+
+msgid "第一順位 ── 優先保證"
+msgstr "1순위 — 보장"
+
+msgid "以下身份優先獲得宿舍"
+msgstr "다음 대상자는 우선 입사 가능"
+
+msgid "外籍生（Foreign Students）"
+msgstr "외국인 유학생 (Foreign Students)"
+
+msgid "僑生（Overseas Chinese Students）"
+msgstr "재외 화교 학생"
+
+msgid "低（中）收入收學生"
+msgstr "저(중)소득 학생"
+
+msgid "身心障礙學生"
+msgstr "장애 학생"
+
+msgid "特殊弱勢家庭學生"
+msgstr "특별 취약 가정 학생"
+
+msgid "第二順位"
+msgstr "2순위"
+
+msgid "一般學生（本島）"
+msgstr "일반 학생 (국내)"
+
+msgid "大學部學生"
+msgstr "학부생"
+
+msgid "碩博士生（無保證宿舍）"
+msgstr "석·박사 과정 학생 (기숙사 보장 없음)"
+
+msgid "以抽籤決定是否取得床位"
+msgstr "침대 배정은 추첨으로 결정"
+
+msgid "依抽籤號碼依公告排序"
+msgstr "공고에 따라 추첨 번호 순으로 배정"
+
+msgid "分區："
+msgstr "구역:"
+
+msgid "西區"
+msgstr "서구"
+
+msgid "南區"
+msgstr "남구"
+
+msgid "北區"
+msgstr "북구"
+
+msgid "女生宿舍"
+msgstr "여자 기숙사"
+
+msgid "外僑生專屬"
+msgstr "외국인·화교 학생 전용"
+
+msgid "女14舍"
+msgstr "여자 기숙사 14동"
+
+msgid "男11舍"
+msgstr "남자 기숙사 11동"
+
+msgid "男生宿舍"
+msgstr "남자 기숙사"
+
+msgid "男5舍"
+msgstr "남자 기숙사 5동"
+
+msgid "女1舍"
+msgstr "여자 기숙사 1동"
+
+msgid "女2舍"
+msgstr "여자 기숙사 2동"
+
+msgid "女3舍"
+msgstr "여자 기숙사 3동"
+
+msgid "女4舍"
+msgstr "여자 기숙사 4동"
+
+msgid "男3舍"
+msgstr "남자 기숙사 3동"
+
+msgid "男6舍"
+msgstr "남자 기숙사 6동"
+
+msgid "男7舍"
+msgstr "남자 기숙사 7동"
+
+msgid "男13舍"
+msgstr "남자 기숙사 13동"
+
+msgid "男9A舍"
+msgstr "남자 기숙사 9A동"
+
+msgid "男9B舍"
+msgstr "남자 기숙사 9B동"
+
+msgid "男12舍"
+msgstr "남자 기숙사 12동"
+
+msgid "和平屋"
+msgstr "피스 하우스"
+
+msgid "性別友善宿舍"
+msgstr "성평등 기숙사"
+
+msgid "中大會館"
+msgstr "NCU 게스트 하우스"
+
+msgid "訪客 / 短住"
+msgstr "방문자 / 단기 투숙"
+
+msgid "床架"
+msgstr "침대 프레임"
+
+msgid "衣櫃"
+msgstr "옷장"
+
+msgid "書桌 + 書椅"
+msgstr "책상 + 의자"
+
+msgid "置物架"
+msgstr "수납 선반"
+
+msgid "鎖頭"
+msgstr "자물쇠"
+
+msgid "冷氣"
+msgstr "에어컨"
+
+msgid "桌燈（部分）"
+msgstr "스탠드 조명 (일부 방)"
+
+msgid "電風扇（部分）"
+msgstr "선풍기 (일부 방)"
+
+msgid "網路孔"
+msgstr "네트워크 포트"
+
+msgid "禁用電器"
+msgstr "사용 금지 전기 제품"
+
+msgid "電磁爐（全面禁用）"
+msgstr "인덕션 쿡탑 (전면 금지)"
+
+msgid "電爐 / 電磁盤"
+msgstr "전기레인지 / 인덕션 플레이트"
+
+msgid "熱水壺 / 快煮壺"
+msgstr "전기 주전자 / 전기 포트"
+
+msgid "延長線過載"
+msgstr "멀티탭 과부하"
+
+msgid "住宿服務組常見問題（官方）"
+msgstr "기숙사 서비스 자주 묻는 질문 (공식)"
+
+msgid "退宿費用、寒暑假規定、換宿申請、床墊、研究生住宿……"
+msgstr "퇴사 비용, 방학 규정, 방 이동 신청, 매트리스, 대학원생 기숙사..."
+
+msgid "完整 Q&A 由住宿服務組官方維護，內容最新最準確。"
+msgstr "전체 Q&A는 기숙사 서비스팀이 공식 관리하며 최신·정확한 내용을 제공합니다."
+
+msgid "行政諮詢電話"
+msgstr "행정 문의 전화"
+
+msgid "一般住宿申請、退宿、換宿等問題"
+msgstr "일반 기숙사 신청, 퇴사, 방 이동 등 문의"
+
+msgid "公告信箱"
+msgstr "공식 이메일"
+
+msgid "文件申請、書面問題"
+msgstr "서류 신청 및 서면 문의"
+
+msgid "住宿服務組官網"
+msgstr "기숙사 서비스팀 공식 홈페이지"
+
+msgid "最新公告、申請系統、規章下載"
+msgstr "최신 공고, 신청 시스템, 규정 다운로드"
+
+msgid "24 小時緊急總線"
+msgstr "24시간 긴급 전화"
+
+msgid "東 / 西 / 南 / 北 各分區緊急專線"
+msgstr "동 / 서 / 남 / 북 각 구역 긴급 전용 전화"
+
+msgid "緊急設施損壞、安全事件聯繫"
+msgstr "긴급 시설 손상 및 안전 사고 연락처"
