@@ -3998,3 +3998,123 @@ msgstr "Đường dây khẩn cấp khu Đông / Tây / Nam / Bắc"
 
 msgid "緊急設施損壞、安全事件聯繫"
 msgstr "Liên hệ cho sự cố hư hỏng cơ sở vật chất khẩn cấp hoặc sự cố an ninh"
+
+
+msgid "僑生・外籍生必讀"
+msgstr "Bắt buộc đọc cho sinh viên Hoa kiều và quốc tế"
+
+msgid "整理來台就學的相關法律法規，包含就學辦法、助學金、醫療保險、社團輔助等，點選名稱即可查看原文。"
+msgstr ""
+"Tổng hợp các luật và quy định liên quan đến việc học tại Đài Loan, bao "
+"gồm quy định đăng ký, học bổng, bảo hiểm y tế và hỗ trợ câu lạc bộ. Nhấp "
+"vào tiêu đề để xem toàn văn."
+
+msgid "就學辦法"
+msgstr "Quy định Đăng ký"
+
+msgid "僑生回國就學及輔導辦法"
+msgstr "Quy định Học tập và Hướng dẫn cho Sinh viên Hoa kiều Trở về"
+
+msgid "全國法規資料庫 ↗"
+msgstr "Cơ sở Dữ liệu Luật Quốc gia ↗"
+
+msgid "香港澳門地區居民來臺就學辦法"
+msgstr "Quy định Học tập tại Đài Loan cho Cư dân Hồng Kông và Ma Cao"
+
+msgid "教育部法規 ↗"
+msgstr "Quy định Bộ Giáo dục ↗"
+
+msgid "入學大學同等學力認定標準"
+msgstr "Tiêu chuẩn Công nhận Trình độ Học vấn Tương đương để Vào Đại học"
+
+msgid "助學金"
+msgstr "Học bổng & Hỗ trợ Tài chính"
+
+msgid "教育部補助高級中等以上學校僑生輔導工作實施要點"
+msgstr ""
+"Hướng dẫn của Bộ GD về Trợ cấp Hướng dẫn Sinh viên Hoa kiều tại Trung "
+"học Phổ thông trở lên"
+
+msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
+msgstr ""
+"Hướng dẫn của Bộ GD về Cấp Hỗ trợ Tài chính cho Sinh viên Hoa kiều Khó "
+"khăn"
+
+msgid "教育部補助大學校院設置研究所優秀僑生獎學金作業要點"
+msgstr ""
+"Hướng dẫn của Bộ GD về Trợ cấp Đại học Thiết lập Học bổng Sau đại học "
+"cho Sinh viên Hoa kiều Xuất sắc"
+
+msgid "教育部獎勵海外優秀僑生回國就讀大學校院獎學金核發要點"
+msgstr ""
+"Hướng dẫn của Bộ GD về Trao Học bổng cho Sinh viên Hoa kiều Xuất sắc Trở "
+"về Học"
+
+msgid "僑務委員會補助僑生工讀金及學習扶助金要點"
+msgstr ""
+"Hướng dẫn của OCAC về Trợ cấp Học bổng Làm thêm và Hỗ trợ Học tập cho "
+"Sinh viên Hoa kiều"
+
+msgid "僑委會法規 ↗"
+msgstr "Quy định OCAC ↗"
+
+msgid "僑務委員會獎勵學行優良僑生獎學金核發要點"
+msgstr ""
+"Hướng dẫn của OCAC về Trao Học bổng cho Sinh viên Hoa kiều Xuất sắc về "
+"Học thuật"
+
+msgid "醫療保險"
+msgstr "Bảo hiểm Y tế"
+
+msgid "僑生傷病醫療保險作業要點"
+msgstr ""
+"Hướng dẫn Vận hành Bảo hiểm Y tế Thương tích & Bệnh tật cho Sinh viên "
+"Hoa kiều"
+
+msgid "海外回國就學僑生醫療急難及喪葬慰問金發給要點"
+msgstr ""
+"Hướng dẫn Cấp Tiền Khẩn cấp Y tế và Phúng Điếu Tang Lễ cho Sinh viên Hoa "
+"kiều"
+
+msgid "社團活動輔助"
+msgstr "Hỗ trợ Hoạt động Câu lạc bộ Sinh viên"
+
+msgid "僑務委員會補助在學僑生社團舉辦活動要點"
+msgstr "Hướng dẫn của OCAC về Trợ cấp Hoạt động Câu lạc bộ Sinh viên Hoa kiều"
+
+msgid "在學僑生社團組設及輔導要點"
+msgstr "Hướng dẫn Thành lập và Hướng dẫn Câu lạc bộ Sinh viên Hoa kiều"
+
+msgid "僑生輔導工作績優學校及人員甄選要點"
+msgstr ""
+"Hướng dẫn Tuyển chọn Trường và Nhân sự Xuất sắc trong Công tác Hướng dẫn "
+"Sinh viên Hoa kiều"
+
+msgid "就業服務法"
+msgstr "Luật Dịch vụ Việc làm"
+
+msgid "海外聯合招生規定"
+msgstr "Quy định Tuyển sinh Chung Nước ngoài"
+
+msgid "海外聯招 ↗"
+msgstr "Tuyển sinh Chung Nước ngoài ↗"
+
+msgid "臺灣工程及科技教育學歷受新加坡政府認證"
+msgstr ""
+"Bằng cấp Kỹ thuật & Công nghệ của Đài Loan được Chính phủ Singapore Công "
+"nhận"
+
+msgid "教育部 ↗"
+msgstr "Bộ Giáo dục ↗"
+
+msgid "更多僑教法規"
+msgstr "Xem Thêm Quy định Giáo dục Hoa kiều"
+
+msgid "僑委會法規專區 ↗"
+msgstr "Mục Quy định OCAC ↗"
+
+msgid "行政院僑務委員會"
+msgstr "Ủy ban Công vụ Người Hoa Hải ngoại (OCAC)"
+
+msgid "教育部－主管法規查詢系統"
+msgstr "Bộ Giáo dục — Hệ thống Cơ sở Dữ liệu Quy định"

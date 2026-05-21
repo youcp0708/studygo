@@ -4600,3 +4600,131 @@ msgstr "Emergency hotlines for East / West / South / North zones"
 
 msgid "緊急設施損壞、安全事件聯繫"
 msgstr "For urgent facility damage or security incidents"
+
+
+msgid "僑生・外籍生必讀"
+msgstr "Required Reading for Overseas Chinese & Int'l Students"
+
+msgid "整理來台就學的相關法律法規，包含就學辦法、助學金、醫療保險、社團輔助等，點選名稱即可查看原文。"
+msgstr ""
+"A collection of laws and regulations related to studying in Taiwan, "
+"including enrollment rules, scholarships, health insurance, and club "
+"support. Click any title to view the full text."
+
+msgid "就學辦法"
+msgstr "Enrollment Regulations"
+
+msgid "僑生回國就學及輔導辦法"
+msgstr ""
+"Regulations for Overseas Chinese Students Returning to Study and "
+"Guidance"
+
+msgid "全國法規資料庫 ↗"
+msgstr "National Laws Database ↗"
+
+msgid "香港澳門地區居民來臺就學辦法"
+msgstr "Regulations for HK & Macau Residents Studying in Taiwan"
+
+msgid "教育部法規 ↗"
+msgstr "Ministry of Education Regulations ↗"
+
+msgid "入學大學同等學力認定標準"
+msgstr ""
+"Standards for Recognizing Equivalent Academic Qualifications for "
+"University Admission"
+
+msgid "助學金"
+msgstr "Scholarships & Financial Aid"
+
+msgid "教育部補助高級中等以上學校僑生輔導工作實施要點"
+msgstr ""
+"MOE Guidelines for Subsidizing Overseas Chinese Student Guidance in "
+"Senior High Schools and Above"
+
+msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
+msgstr ""
+"MOE Guidelines for Issuing Financial Aid to Economically Disadvantaged "
+"Overseas Chinese Students"
+
+msgid "教育部補助大學校院設置研究所優秀僑生獎學金作業要點"
+msgstr ""
+"MOE Guidelines for Subsidizing Universities to Establish Graduate "
+"Scholarships for Outstanding Overseas Chinese Students"
+
+msgid "教育部獎勵海外優秀僑生回國就讀大學校院獎學金核發要點"
+msgstr ""
+"MOE Guidelines for Awarding Scholarships to Outstanding Overseas Chinese "
+"Students Returning to Study at Colleges"
+
+msgid "僑務委員會補助僑生工讀金及學習扶助金要點"
+msgstr ""
+"OCAC Guidelines for Subsidizing Work-Study and Learning Assistance Funds "
+"for Overseas Chinese Students"
+
+msgid "僑委會法規 ↗"
+msgstr "OCAC Regulations ↗"
+
+msgid "僑務委員會獎勵學行優良僑生獎學金核發要點"
+msgstr ""
+"OCAC Guidelines for Awarding Scholarships to Academically Outstanding "
+"Overseas Chinese Students"
+
+msgid "醫療保險"
+msgstr "Health Insurance"
+
+msgid "僑生傷病醫療保險作業要點"
+msgstr ""
+"Operating Guidelines for Overseas Chinese Student Injury & Illness "
+"Medical Insurance"
+
+msgid "海外回國就學僑生醫療急難及喪葬慰問金發給要點"
+msgstr ""
+"Guidelines for Issuing Emergency Medical and Funeral Condolence Funds "
+"for Overseas Chinese Students"
+
+msgid "社團活動輔助"
+msgstr "Student Club Activity Support"
+
+msgid "僑務委員會補助在學僑生社團舉辦活動要點"
+msgstr ""
+"OCAC Guidelines for Subsidizing Student Club Activities for Overseas "
+"Chinese Students"
+
+msgid "在學僑生社團組設及輔導要點"
+msgstr ""
+"Guidelines for the Establishment and Guidance of Student Clubs for "
+"Overseas Chinese Students"
+
+msgid "僑生輔導工作績優學校及人員甄選要點"
+msgstr ""
+"Guidelines for Selecting Outstanding Schools and Personnel in Overseas "
+"Chinese Student Guidance"
+
+msgid "就業服務法"
+msgstr "Employment Services Act"
+
+msgid "海外聯合招生規定"
+msgstr "Overseas Joint Admissions Regulations"
+
+msgid "海外聯招 ↗"
+msgstr "Overseas Joint Admissions ↗"
+
+msgid "臺灣工程及科技教育學歷受新加坡政府認證"
+msgstr ""
+"Taiwan Engineering & Technology Degrees Recognized by the Singapore "
+"Government"
+
+msgid "教育部 ↗"
+msgstr "Ministry of Education ↗"
+
+msgid "更多僑教法規"
+msgstr "More Overseas Chinese Education Regulations"
+
+msgid "僑委會法規專區 ↗"
+msgstr "OCAC Regulations Section ↗"
+
+msgid "行政院僑務委員會"
+msgstr "Overseas Compatriot Affairs Commission (OCAC)"
+
+msgid "教育部－主管法規查詢系統"
+msgstr "Ministry of Education — Regulatory Database"

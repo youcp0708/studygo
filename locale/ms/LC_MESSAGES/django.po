@@ -4425,3 +4425,125 @@ msgstr "Talian kecemasan zon Timur / Barat / Selatan / Utara"
 
 msgid "緊急設施損壞、安全事件聯繫"
 msgstr "Untuk kerosakan kemudahan mendesak atau insiden keselamatan"
+
+
+msgid "僑生・外籍生必讀"
+msgstr "Wajib Dibaca oleh Pelajar Diaspora Cina & Antarabangsa"
+
+msgid "整理來台就學的相關法律法規，包含就學辦法、助學金、醫療保險、社團輔助等，點選名稱即可查看原文。"
+msgstr ""
+"Koleksi undang-undang dan peraturan berkaitan pengajian di Taiwan, "
+"merangkumi peraturan pendaftaran, biasiswa, insurans kesihatan, dan "
+"sokongan kelab pelajar. Klik mana-mana tajuk untuk melihat teks penuh."
+
+msgid "就學辦法"
+msgstr "Peraturan Pendaftaran"
+
+msgid "僑生回國就學及輔導辦法"
+msgstr ""
+"Peraturan Pengajian dan Bimbingan bagi Pelajar Diaspora Cina yang Pulang "
+"ke Taiwan"
+
+msgid "全國法規資料庫 ↗"
+msgstr "Pangkalan Data Undang-Undang Nasional ↗"
+
+msgid "香港澳門地區居民來臺就學辦法"
+msgstr "Peraturan Pengajian di Taiwan bagi Penduduk Hong Kong dan Macau"
+
+msgid "教育部法規 ↗"
+msgstr "Peraturan Kementerian Pendidikan ↗"
+
+msgid "入學大學同等學力認定標準"
+msgstr ""
+"Piawaian Pengiktirafan Kelayakan Akademik Setara untuk Kemasukan "
+"Universiti"
+
+msgid "助學金"
+msgstr "Biasiswa & Bantuan Kewangan"
+
+msgid "教育部補助高級中等以上學校僑生輔導工作實施要點"
+msgstr ""
+"Garis Panduan KPM untuk Mensubsidi Bimbingan Pelajar Diaspora Cina di "
+"Sekolah Menengah Atas ke Atas"
+
+msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
+msgstr ""
+"Garis Panduan KPM untuk Memberikan Bantuan Kewangan kepada Pelajar "
+"Diaspora Cina Susah"
+
+msgid "教育部補助大學校院設置研究所優秀僑生獎學金作業要點"
+msgstr ""
+"Garis Panduan KPM untuk Mensubsidi Universiti Mewujudkan Biasiswa "
+"Pascasiswazah bagi Pelajar Diaspora Cina Cemerlang"
+
+msgid "教育部獎勵海外優秀僑生回國就讀大學校院獎學金核發要點"
+msgstr ""
+"Garis Panduan KPM untuk Menganugerahkan Biasiswa kepada Pelajar Diaspora "
+"Cina Cemerlang yang Pulang Belajar"
+
+msgid "僑務委員會補助僑生工讀金及學習扶助金要點"
+msgstr ""
+"Garis Panduan OCAC untuk Mensubsidi Dana Kerja-Pelajar dan Bantuan "
+"Pembelajaran bagi Pelajar Diaspora Cina"
+
+msgid "僑委會法規 ↗"
+msgstr "Peraturan OCAC ↗"
+
+msgid "僑務委員會獎勵學行優良僑生獎學金核發要點"
+msgstr ""
+"Garis Panduan OCAC untuk Menganugerahkan Biasiswa kepada Pelajar "
+"Diaspora Cina Cemerlang Akademik"
+
+msgid "醫療保險"
+msgstr "Insurans Kesihatan"
+
+msgid "僑生傷病醫療保險作業要點"
+msgstr ""
+"Garis Panduan Operasi Insurans Perubatan Kecederaan & Penyakit Pelajar "
+"Diaspora Cina"
+
+msgid "海外回國就學僑生醫療急難及喪葬慰問金發給要點"
+msgstr ""
+"Garis Panduan Pemberian Dana Kecemasan Perubatan dan Takziah Pengebumian "
+"bagi Pelajar Diaspora Cina"
+
+msgid "社團活動輔助"
+msgstr "Sokongan Aktiviti Kelab Pelajar"
+
+msgid "僑務委員會補助在學僑生社團舉辦活動要點"
+msgstr "Garis Panduan OCAC untuk Mensubsidi Aktiviti Kelab Pelajar Diaspora Cina"
+
+msgid "在學僑生社團組設及輔導要點"
+msgstr "Garis Panduan Penubuhan dan Bimbingan Kelab Pelajar Diaspora Cina"
+
+msgid "僑生輔導工作績優學校及人員甄選要點"
+msgstr ""
+"Garis Panduan Pemilihan Sekolah dan Personel Cemerlang dalam Bimbingan "
+"Pelajar Diaspora Cina"
+
+msgid "就業服務法"
+msgstr "Akta Perkhidmatan Pekerjaan"
+
+msgid "海外聯合招生規定"
+msgstr "Peraturan Kemasukan Bersama Luar Negara"
+
+msgid "海外聯招 ↗"
+msgstr "Kemasukan Bersama Luar Negara ↗"
+
+msgid "臺灣工程及科技教育學歷受新加坡政府認證"
+msgstr "Ijazah Kejuruteraan & Teknologi Taiwan Diiktiraf oleh Kerajaan Singapura"
+
+msgid "教育部 ↗"
+msgstr "Kementerian Pendidikan ↗"
+
+msgid "更多僑教法規"
+msgstr "Lebih Banyak Peraturan Pendidikan Diaspora Cina"
+
+msgid "僑委會法規專區 ↗"
+msgstr "Bahagian Peraturan OCAC ↗"
+
+msgid "行政院僑務委員會"
+msgstr "Suruhanjaya Hal Ehwal Rakan Negara Luar Negara (OCAC)"
+
+msgid "教育部－主管法規查詢系統"
+msgstr "Kementerian Pendidikan — Sistem Pangkalan Data Peraturan"

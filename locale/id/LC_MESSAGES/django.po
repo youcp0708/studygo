@@ -4474,3 +4474,125 @@ msgstr "Saluran darurat zona Timur / Barat / Selatan / Utara"
 
 msgid "緊急設施損壞、安全事件聯繫"
 msgstr "Untuk kerusakan fasilitas mendesak atau insiden keamanan"
+
+
+msgid "僑生・外籍生必讀"
+msgstr "Wajib Dibaca oleh Mahasiswa Diaspora Tionghoa & Asing"
+
+msgid "整理來台就學的相關法律法規，包含就學辦法、助學金、醫療保險、社團輔助等，點選名稱即可查看原文。"
+msgstr ""
+"Kumpulan peraturan perundangan terkait studi di Taiwan, meliputi "
+"peraturan pendaftaran, beasiswa, asuransi kesehatan, dan dukungan klub "
+"mahasiswa. Klik judul untuk melihat teks lengkap."
+
+msgid "就學辦法"
+msgstr "Peraturan Pendaftaran"
+
+msgid "僑生回國就學及輔導辦法"
+msgstr ""
+"Peraturan Studi dan Bimbingan bagi Mahasiswa Diaspora Tionghoa yang "
+"Kembali ke Taiwan"
+
+msgid "全國法規資料庫 ↗"
+msgstr "Database Hukum Nasional ↗"
+
+msgid "香港澳門地區居民來臺就學辦法"
+msgstr "Peraturan Studi di Taiwan bagi Warga Hong Kong dan Makau"
+
+msgid "教育部法規 ↗"
+msgstr "Peraturan Kementerian Pendidikan ↗"
+
+msgid "入學大學同等學力認定標準"
+msgstr ""
+"Standar Pengakuan Kualifikasi Akademik Setara untuk Penerimaan "
+"Universitas"
+
+msgid "助學金"
+msgstr "Beasiswa & Bantuan Keuangan"
+
+msgid "教育部補助高級中等以上學校僑生輔導工作實施要點"
+msgstr ""
+"Pedoman Kemendikbud untuk Mensubsidi Bimbingan Mahasiswa Diaspora "
+"Tionghoa di SMA ke Atas"
+
+msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
+msgstr ""
+"Pedoman Kemendikbud untuk Memberikan Bantuan Keuangan kepada Mahasiswa "
+"Diaspora Tionghoa Kurang Mampu"
+
+msgid "教育部補助大學校院設置研究所優秀僑生獎學金作業要點"
+msgstr ""
+"Pedoman Kemendikbud untuk Mensubsidi Universitas dalam Menetapkan "
+"Beasiswa Pascasarjana bagi Mahasiswa Diaspora Tionghoa Berprestasi"
+
+msgid "教育部獎勵海外優秀僑生回國就讀大學校院獎學金核發要點"
+msgstr ""
+"Pedoman Kemendikbud untuk Memberikan Beasiswa kepada Mahasiswa Diaspora "
+"Tionghoa Berprestasi yang Kembali Studi"
+
+msgid "僑務委員會補助僑生工讀金及學習扶助金要點"
+msgstr ""
+"Pedoman OCAC untuk Mensubsidi Dana Kerja-Studi dan Bantuan Belajar bagi "
+"Mahasiswa Diaspora Tionghoa"
+
+msgid "僑委會法規 ↗"
+msgstr "Peraturan OCAC ↗"
+
+msgid "僑務委員會獎勵學行優良僑生獎學金核發要點"
+msgstr ""
+"Pedoman OCAC untuk Memberikan Beasiswa kepada Mahasiswa Diaspora "
+"Tionghoa Berprestasi Akademik"
+
+msgid "醫療保險"
+msgstr "Asuransi Kesehatan"
+
+msgid "僑生傷病醫療保險作業要點"
+msgstr ""
+"Pedoman Operasional Asuransi Kesehatan Cedera & Penyakit Mahasiswa "
+"Diaspora Tionghoa"
+
+msgid "海外回國就學僑生醫療急難及喪葬慰問金發給要點"
+msgstr ""
+"Pedoman Pemberian Dana Darurat Medis dan Santunan Pemakaman bagi "
+"Mahasiswa Diaspora Tionghoa"
+
+msgid "社團活動輔助"
+msgstr "Dukungan Kegiatan Klub Mahasiswa"
+
+msgid "僑務委員會補助在學僑生社團舉辦活動要點"
+msgstr "Pedoman OCAC untuk Mensubsidi Kegiatan Klub Mahasiswa Diaspora Tionghoa"
+
+msgid "在學僑生社團組設及輔導要點"
+msgstr "Pedoman Pembentukan dan Bimbingan Klub Mahasiswa Diaspora Tionghoa"
+
+msgid "僑生輔導工作績優學校及人員甄選要點"
+msgstr ""
+"Pedoman Seleksi Sekolah dan Personel Berprestasi dalam Bimbingan "
+"Mahasiswa Diaspora Tionghoa"
+
+msgid "就業服務法"
+msgstr "Undang-Undang Layanan Ketenagakerjaan"
+
+msgid "海外聯合招生規定"
+msgstr "Peraturan Penerimaan Bersama Luar Negeri"
+
+msgid "海外聯招 ↗"
+msgstr "Penerimaan Bersama Luar Negeri ↗"
+
+msgid "臺灣工程及科技教育學歷受新加坡政府認證"
+msgstr "Gelar Teknik & Teknologi Taiwan Diakui oleh Pemerintah Singapura"
+
+msgid "教育部 ↗"
+msgstr "Kementerian Pendidikan ↗"
+
+msgid "更多僑教法規"
+msgstr "Lebih Banyak Peraturan Pendidikan Diaspora Tionghoa"
+
+msgid "僑委會法規專區 ↗"
+msgstr "Bagian Peraturan OCAC ↗"
+
+msgid "行政院僑務委員會"
+msgstr "Komisi Urusan Warga Negara Asing (OCAC)"
+
+msgid "教育部－主管法規查詢系統"
+msgstr "Kementerian Pendidikan — Sistem Basis Data Peraturan"
