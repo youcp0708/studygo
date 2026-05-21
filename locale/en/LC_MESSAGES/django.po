@@ -4013,3 +4013,590 @@ msgid "提供多語言諮詢服務，解答居留、就業、生活等問題。"
 msgstr ""
 "Provides multilingual consultation services addressing residency, "
 "employment, and daily life inquiries."
+
+
+msgid "僑生專屬服務"
+msgstr "Overseas Chinese Student Service"
+
+msgid "持外國護照入台就讀的僑生，必須在抵台後"
+msgstr ""
+"Overseas Chinese students entering Taiwan on a foreign passport must, "
+"within"
+
+msgid "天內"
+msgstr "days of arrival,"
+
+msgid "向內政部移民署線上辦理外僑居留證（ARC），方能在台合法居留及就讀。"
+msgstr ""
+"apply online to the National Immigration Agency (NIA) for an Alien "
+"Resident Certificate (ARC) to legally reside in Taiwan and complete "
+"enrollment."
+
+msgid "辦理期限：入境次日起 30 天內"
+msgstr "Deadline: Within 30 days of entry"
+
+msgid "規費：NT$500（僑生1年）"
+msgstr "Fee: NT$500 (1-year for Overseas Chinese Students)"
+
+msgid "地點：移民署各地服務站"
+msgstr "Location: NIA service stations nationwide"
+
+msgid "請注意："
+msgstr "Please Note:"
+
+msgid "持居留簽證入境次日起"
+msgstr "Starting the day after entering on a resident visa,"
+
+msgid "，需自行至移民署線上系統辦理外僑居留證，逾期將被處罰鍰，嚴重者需出境重新申請簽證。ARC 是後續辦理加保、開戶等必要身份證明，請儘快辦理。"
+msgstr ""
+"you must apply for the ARC through the NIA online system on your own. "
+"Late applications will result in fines; in serious cases you may be "
+"required to leave and reapply for a visa. The ARC is required for health "
+"insurance enrollment, bank account opening, and other essential "
+"procedures. Please apply as soon as possible."
+
+msgid "1 年"
+msgstr "1 Year"
+
+msgid "每年需延期"
+msgstr "Annual renewal required"
+
+msgid "以下為一般應備文件，各移民署辦事處可能有細微差異。建議事前致電當地辦事處或至移民署官網確認最新版清單。"
+msgstr ""
+"The following are general required documents. Specific requirements may "
+"vary slightly between NIA offices. It is recommended to call your local "
+"office or check the NIA official website for the most up-to-date list."
+
+msgid "外國護照"
+msgstr "Foreign Passport"
+
+msgid "正本及影本各 1 份，效期須超過居留期間 6 個月以上。"
+msgstr ""
+"Original and one copy each; passport must be valid for at least 6 months "
+"beyond the residence period."
+
+msgid "入台學生簽證（居留簽）"
+msgstr "Taiwan Student Visa (Resident Visa)"
+
+msgid "持有入境台灣的學生居留簽證影本。"
+msgstr "A copy of the student resident visa used to enter Taiwan."
+
+msgid "僑生應核發的身份確認函"
+msgstr "Identity Confirmation Letter for Overseas Chinese Students"
+
+msgid "僑生還需提供僑委會或僑生應核發的身份確認文件正本及影本。"
+msgstr ""
+"Overseas Chinese students must also provide the original and a copy of "
+"the identity confirmation document issued by the OCAC or the relevant "
+"authority."
+
+msgid "在學證明書 / 清冊及通知書"
+msgstr "Enrollment Certificate / Registration List & Notice"
+
+msgid "由就讀學校出具的在學證明或入學許可函，需含入學日期及就讀系所。"
+msgstr ""
+"Issued by your school, stating enrollment status or admission letter, "
+"including enrollment date and department."
+
+msgid "於台灣認可醫院完成之健康檢查報告，需含胸部 X 光及肺結核篩檢結果。"
+msgstr ""
+"Health examination report conducted at a Taiwan-approved hospital, "
+"including chest X-ray and tuberculosis screening."
+
+msgid "近 6 個月內拍攝之 2 吋白底彩色照片（規格：寬 3.5 cm × 高 4.5 cm）。"
+msgstr ""
+"Color photos taken within the last 6 months, 2-inch white background "
+"(3.5 cm × 4.5 cm)."
+
+msgid "外僑居留申請書"
+msgstr "Alien Resident Application Form"
+
+msgid "可於移民署官網下載或現場索取，請事先填妥基本資料。"
+msgstr ""
+"Available for download on the NIA website or at the counter. Please fill "
+"out in advance."
+
+msgid "宿舍住宿證或租屋合約書，部分辦事處或要求。"
+msgstr ""
+"Dormitory residence certificate or rental contract; may be required by "
+"some offices."
+
+msgid "全程線上辦理："
+msgstr "Fully Online:"
+
+msgid "居留證申請及延期皆以線上申辦為主。請至移民署「外國與外僑學生線上申辦系統」自行申請，"
+msgstr ""
+"ARC applications and renewals are processed online. Please apply through "
+"the NIA \"Online Application System for Foreign and Overseas Chinese "
+"Students\" on your own,"
+
+msgid "請勿選擇「就讀學校代辦」"
+msgstr "do NOT select \"School-Assisted Application\""
+
+msgid "（中央大學無此服務）。"
+msgstr "(NCU does not provide this service)."
+
+msgid "外國與外僑學生線上申辦系統 ↗"
+msgstr "Online Application System for Foreign & Overseas Chinese Students ↗"
+
+msgid "抵台後完成體檢並整理文件"
+msgstr "Complete health check and prepare documents after arrival"
+
+msgid ""
+"確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約 "
+"NT$780）。"
+msgstr ""
+"Ensure all documents are ready: passport, admission letter, and "
+"enrollment certificate. For the health examination, go to a hospital "
+"recognized by the school (the OIA can provide a list). Non-HK/Macau "
+"students and HK/Macau students with a valid ARC may take the on-campus "
+"health exam (approx. NT$780)."
+
+msgid "至移民署線上系統註冊並上傳文件"
+msgstr "Register on the NIA online system and upload documents"
+
+msgid ""
+"前往移民署「外國與外僑學生線上申辦系統」完成帳號註冊，掃描並上傳所需文件：近三個月 2 "
+"吋彩色照片、護照、入學通知函及在學證明書。系統操作請參閱官方操作手冊。"
+msgstr ""
+"Go to the NIA \"Online Application System for Foreign and Overseas "
+"Chinese Students\" to register an account, then scan and upload required "
+"documents: a 2-inch color photo taken within the last 3 months, "
+"passport, admission letter, and enrollment certificate. Refer to the "
+"official user manual for system instructions."
+
+msgid "抵台後 30 天內"
+msgstr "Within 30 days of arrival"
+
+msgid "全程線上"
+msgstr "Fully Online"
+
+msgid "繳納申請規費"
+msgstr "Pay the application fee"
+
+msgid "線上申請時繳交規費 NT$500（1 年居留證）。繳費後保存收據以備查。"
+msgstr ""
+"Pay the NT$500 fee (1-year ARC) when submitting online. Keep the receipt "
+"for reference."
+
+msgid "NT$500 / 年"
+msgstr "NT$500 / Year"
+
+msgid "等待審核與製證"
+msgstr "Wait for review and card production"
+
+msgid "申請提交後通常需"
+msgstr "After submission, it usually takes"
+
+msgid "製卡完成（不含退補件）。可至移民署線上查詢申請進度。等待期間請保留入境章及申請收據作為合法居留的暫時證明。"
+msgstr ""
+"to produce the card (excluding returned/supplementary documents). You "
+"can check the application progress online at the NIA. During the waiting "
+"period, keep your entry stamp and application receipt as temporary proof "
+"of legal residence."
+
+msgid "上傳居留證至 NCU Portal"
+msgstr "Upload ARC to NCU Portal"
+
+msgid "取得居留證後，需於入學當年"
+msgstr ""
+"After obtaining the ARC, you must upload it to the NCU Portal by "
+"September 30 of your enrollment year."
+
+msgid "月"
+msgstr "/"
+
+msgid "日前"
+msgstr ""
+
+msgid "上傳至 NCU Portal（入口網站）。未準時上傳將影響校內工讀金撥款、獎學金核發及相關權益。"
+msgstr ""
+"Failure to upload on time will affect work-study payments, scholarship "
+"disbursements, and other entitlements."
+
+msgid "9/30 前"
+msgstr "By 9/30"
+
+msgid "完成！辦理後續程序"
+msgstr "Done! Complete follow-up procedures"
+
+msgid "居留證到手後即可辦理加入健保、開設銀行帳戶、申辦手機門號等後續程序。"
+msgstr ""
+"Once you receive the ARC, you can proceed with enrolling in NHI, opening "
+"a bank account, registering a mobile phone number, and other follow-up "
+"procedures."
+
+msgid "居留證到期前"
+msgstr "Before your ARC expires,"
+
+msgid "個月內"
+msgstr "months,"
+
+msgid "可至移民署網站線上申請延期，規費 NT$500 / 年，核辦約 10 天。建議每學年結束前提早辦理，避免居留資格失效。"
+msgstr ""
+"you can apply online at the NIA website to renew, with a fee of "
+"NT$500/year and processing time of about 10 days. It is recommended to "
+"apply early before the end of each academic year to avoid loss of "
+"residence status."
+
+msgid "請勿選擇「就讀學校代辦」："
+msgstr "Do NOT Select \"School-Assisted Application\":"
+
+msgid "中央大學（NCU）不提供學校代辦服務，請學生自行登入線上申辦系統辦理，勿在系統中選擇此選項。"
+msgstr ""
+"NCU does not provide school-assisted application services. Students must "
+"log in to the online system and apply on their own. Do not select this "
+"option in the system."
+
+msgid "居留證遺失時請立即至警局報案，持報案證明至移民署申請補發（規費 NT$500）。補發時建議隨身攜帶護照及報案證明。"
+msgstr ""
+"If your ARC is lost, immediately report it to the police and bring the "
+"police report to the NIA to apply for a replacement (fee: NT$500). It is "
+"recommended to carry your passport and police report when applying."
+
+msgid "我是台灣的僑生（台灣護照）的僑生也需要辦居留證嗎？"
+msgstr ""
+"Do overseas Chinese students with Taiwan citizenship (Taiwan passport) "
+"also need to apply for an ARC?"
+
+msgid "不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。"
+msgstr ""
+"No. Overseas Chinese students who enter Taiwan as ROC nationals (Taiwan "
+"passport holders) have full citizenship status and do not need an ARC. "
+"This page applies to overseas Chinese students entering Taiwan on a "
+"foreign passport (e.g., overseas permanent residents)."
+
+msgid "健康檢查可以在抵台後才做嗎？"
+msgstr "Can the health examination be done after arriving in Taiwan?"
+
+msgid ""
+"可以。可於抵台後參加校內體檢（約 NT$780），或至學校指定醫院完成。注意檢查報告出爐需數天，請盡早安排以避免超過 30 "
+"天辦理期限。建議抵台後隔天即至國際事務處詢問體檢安排。"
+msgstr ""
+"Yes. You can take the on-campus health exam after arrival (approx. "
+"NT$780) or go to a designated hospital. Note that results take several "
+"days, so arrange early to avoid exceeding the 30-day deadline. It is "
+"recommended to visit the OIA the day after arrival to inquire about "
+"health exam arrangements."
+
+msgid "居留證辦理期間可以在台灣合法居留嗎？"
+msgstr ""
+"Can I legally reside in Taiwan while the ARC application is being "
+"processed?"
+
+msgid "可以。申請提交後至居留證核發前，持入境章及申請收據即可作為合法居留證明。建議隨身攜帶此兩份文件，以備需要時出示。"
+msgstr ""
+"Yes. From the time of submission until the ARC is issued, your entry "
+"stamp and application receipt serve as proof of legal residence. It is "
+"recommended to carry both documents at all times in case they are "
+"needed."
+
+msgid "可以在不同縣市的移民署辦事處辦理嗎？"
+msgstr "Can I apply at an NIA office in a different city or county?"
+
+msgid "可以。全台各縣市均設有移民署服務站，選擇距離學校最近的辦事處即可。但建議選擇學校所在縣市的辦事處，方便日後延期和處理相關事務。"
+msgstr ""
+"Yes. NIA service stations are located in every city and county in "
+"Taiwan; choose the one closest to your school. However, it is "
+"recommended to use the office in the city/county where your school is "
+"located, for convenience with future renewals."
+
+msgid "畢業後若要繼續留台，居留資格如何處理？"
+msgstr ""
+"How should I handle my residence status if I want to remain in Taiwan "
+"after graduation?"
+
+msgid ""
+"在學期間以「就讀」為居留事由。畢業後如需繼續留台（例如找工作），需在畢業後 30 "
+"天內申請變更居留事由為「工作」或「其他」，或在找到合法工作並取得工作許可後辦理變更為「工作」居留事由。建議畢業前盡早規劃，避免居留證失效。"
+msgstr ""
+"During your studies, the basis for residence is \"student enrollment.\" "
+"If you wish to remain in Taiwan after graduation (e.g., to find work), "
+"you must apply to change your residence basis to \"work\" or \"other\" "
+"within 30 days of graduation, or change it to \"work\" after obtaining a "
+"legal job and work permit. Plan ahead before graduation to avoid the ARC "
+"expiring."
+
+msgid "外國與外僑學生線上申辦系統"
+msgstr "Online Application System for Foreign and Overseas Chinese Students"
+
+msgid "居留證線上申請入口，需自行註冊帳號並上傳文件。"
+msgstr ""
+"Online portal for ARC applications; you must register an account and "
+"upload documents yourself."
+
+msgid "辦事處查詢、線上預約、申請進度查詢、外僑居留申請書下載。"
+msgstr ""
+"Office finder, online appointment booking, application status inquiry, "
+"and ARC application form download."
+
+msgid "僑務委員會（OCAC）"
+msgstr "Overseas Compatriot Affairs Commission (OCAC)"
+
+msgid "僑生身份確認函申請、僑生相關權益說明、海外服務諮詢。"
+msgstr ""
+"Identity confirmation letter application, overseas Chinese student "
+"rights information, and overseas service consultation."
+
+msgid "學校國際事務處"
+msgstr "School Office of International Affairs (OIA)"
+
+msgid "諮詢在學證明申請、指定合作醫院、移民署辦理協助等服務。"
+msgstr ""
+"Consultation on enrollment certificate applications, designated partner "
+"hospitals, and NIA application assistance."
+
+msgid "提供多語言諮詢，包含居留、就業、生活等問題解答。"
+msgstr ""
+"Provides multilingual consultation on residence, employment, daily life, "
+"and more."
+
+msgid "僑生1年居留證（線上繳費）"
+msgstr "1-year ARC for Overseas Chinese Students (online payment)"
+
+
+msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
+msgstr ""
+"A guide to NCU dormitory zones, application process, room equipment, and "
+"fees, to help international, overseas Chinese, and exchange students "
+"apply for on-campus housing in advance."
+
+msgid "4 大宿舍區"
+msgstr "4 Dormitory Zones"
+
+msgid "外僑優先抽籤"
+msgstr "Priority Lottery for Int'l Students"
+
+msgid "宿舍分區"
+msgstr "Dormitory Zones"
+
+msgid "東 / 西 / 南 / 北"
+msgstr "East / West / South / North"
+
+msgid "四大分區，遍佈校內"
+msgstr "Four zones across campus"
+
+msgid "國際宿舍"
+msgstr "International Dormitory"
+
+msgid "東區"
+msgstr "East Zone"
+
+msgid "外僑生專屬宿舍"
+msgstr "Exclusive dormitory for int'l students"
+
+msgid "住宿學期"
+msgstr "Housing Term"
+
+msgid "上 9月─1月"
+msgstr "Fall: Sep–Jan"
+
+msgid "下 2月─8月"
+msgstr "Spring: Feb–Aug"
+
+msgid "含寒假（不需遷出）"
+msgstr "Includes winter break (no move-out required)"
+
+msgid "行政電話"
+msgstr "Admin Phone"
+
+msgid "各分區 24 小時總線"
+msgstr "24-hr line for all zones"
+
+msgid "第一順位 ── 優先保證"
+msgstr "Priority 1 — Guaranteed"
+
+msgid "以下身份優先獲得宿舍"
+msgstr "The following categories receive priority housing"
+
+msgid "外籍生（Foreign Students）"
+msgstr "International Students (Foreign Students)"
+
+msgid "僑生（Overseas Chinese Students）"
+msgstr "Overseas Chinese Students"
+
+msgid "低（中）收入收學生"
+msgstr "Low (Middle) Income Students"
+
+msgid "身心障礙學生"
+msgstr "Students with Disabilities"
+
+msgid "特殊弱勢家庭學生"
+msgstr "Students from Special Disadvantaged Families"
+
+msgid "第二順位"
+msgstr "Priority 2"
+
+msgid "一般學生（本島）"
+msgstr "General Students (Local)"
+
+msgid "大學部學生"
+msgstr "Undergraduate Students"
+
+msgid "碩博士生（無保證宿舍）"
+msgstr "Graduate Students (no guaranteed housing)"
+
+msgid "以抽籤決定是否取得床位"
+msgstr "Bed allocation determined by lottery"
+
+msgid "依抽籤號碼依公告排序"
+msgstr "Ranked by lottery number per announcement"
+
+msgid "分區："
+msgstr "Zone:"
+
+msgid "西區"
+msgstr "West Zone"
+
+msgid "南區"
+msgstr "South Zone"
+
+msgid "北區"
+msgstr "North Zone"
+
+msgid "女生宿舍"
+msgstr "Female Dormitory"
+
+msgid "外僑生專屬"
+msgstr "For Int'l Students Only"
+
+msgid "女14舍"
+msgstr "Female Dorm 14"
+
+msgid "男11舍"
+msgstr "Male Dorm 11"
+
+msgid "男生宿舍"
+msgstr "Male Dormitory"
+
+msgid "男5舍"
+msgstr "Male Dorm 5"
+
+msgid "女1舍"
+msgstr "Female Dorm 1"
+
+msgid "女2舍"
+msgstr "Female Dorm 2"
+
+msgid "女3舍"
+msgstr "Female Dorm 3"
+
+msgid "女4舍"
+msgstr "Female Dorm 4"
+
+msgid "男3舍"
+msgstr "Male Dorm 3"
+
+msgid "男6舍"
+msgstr "Male Dorm 6"
+
+msgid "男7舍"
+msgstr "Male Dorm 7"
+
+msgid "男13舍"
+msgstr "Male Dorm 13"
+
+msgid "男9A舍"
+msgstr "Male Dorm 9A"
+
+msgid "男9B舍"
+msgstr "Male Dorm 9B"
+
+msgid "男12舍"
+msgstr "Male Dorm 12"
+
+msgid "和平屋"
+msgstr "Peace House"
+
+msgid "性別友善宿舍"
+msgstr "Gender-Inclusive Dormitory"
+
+msgid "中大會館"
+msgstr "NCU Guest House"
+
+msgid "訪客 / 短住"
+msgstr "Visitors / Short Stay"
+
+msgid "床架"
+msgstr "Bed Frame"
+
+msgid "衣櫃"
+msgstr "Wardrobe"
+
+msgid "書桌 + 書椅"
+msgstr "Desk + Chair"
+
+msgid "置物架"
+msgstr "Storage Shelf"
+
+msgid "鎖頭"
+msgstr "Lock"
+
+msgid "冷氣"
+msgstr "Air Conditioning"
+
+msgid "桌燈（部分）"
+msgstr "Desk Lamp (some rooms)"
+
+msgid "電風扇（部分）"
+msgstr "Electric Fan (some rooms)"
+
+msgid "網路孔"
+msgstr "Network Port"
+
+msgid "禁用電器"
+msgstr "Prohibited Appliances"
+
+msgid "電磁爐（全面禁用）"
+msgstr "Induction Cooker (completely banned)"
+
+msgid "電爐 / 電磁盤"
+msgstr "Electric Stove / Induction Plate"
+
+msgid "熱水壺 / 快煮壺"
+msgstr "Kettle / Electric Kettle"
+
+msgid "延長線過載"
+msgstr "Extension Cord Overload"
+
+msgid "住宿服務組常見問題（官方）"
+msgstr "Housing Services FAQ (Official)"
+
+msgid "退宿費用、寒暑假規定、換宿申請、床墊、研究生住宿……"
+msgstr ""
+"Check-out fees, winter/summer break rules, room transfer, mattresses, "
+"graduate housing..."
+
+msgid "完整 Q&A 由住宿服務組官方維護，內容最新最準確。"
+msgstr ""
+"The complete Q&A is officially maintained by the Housing Services team — "
+"most up-to-date and accurate."
+
+msgid "行政諮詢電話"
+msgstr "Administrative Inquiry Phone"
+
+msgid "一般住宿申請、退宿、換宿等問題"
+msgstr ""
+"General housing applications, check-out, room transfers, and other "
+"inquiries"
+
+msgid "公告信箱"
+msgstr "Official Email"
+
+msgid "文件申請、書面問題"
+msgstr "Document applications and written inquiries"
+
+msgid "住宿服務組官網"
+msgstr "Housing Services Office Website"
+
+msgid "最新公告、申請系統、規章下載"
+msgstr "Latest announcements, application system, regulation downloads"
+
+msgid "24 小時緊急總線"
+msgstr "24-Hour Emergency Line"
+
+msgid "東 / 西 / 南 / 北 各分區緊急專線"
+msgstr "Emergency hotlines for East / West / South / North zones"
+
+msgid "緊急設施損壞、安全事件聯繫"
+msgstr "For urgent facility damage or security incidents"

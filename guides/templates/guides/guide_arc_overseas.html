@@ -135,24 +135,24 @@
 
   <div class="guide-hero">
     <div class="bg-text">ARC</div>
-    <div class="hero-badge">僑生專屬服務</div>
+    <div class="hero-badge">{% trans "僑生專屬服務" %}</div>
     <h2>🪪 {% trans "辦理居留證（ARC）" %}</h2>
     <p>
-      持外國護照入台就讀的僑生，必須在抵台後 <strong>30 天內</strong> 向
-      內政部移民署線上辦理外僑居留證（ARC），方能在台合法居留及就讀。
+      {% trans "持外國護照入台就讀的僑生，必須在抵台後" %} <strong>30 {% trans "天內" %}</strong>
+      {% trans "向內政部移民署線上辦理外僑居留證（ARC），方能在台合法居留及就讀。" %}
     </p>
     <div class="hero-meta">
-      <div class="hero-meta-item">⏱ 辦理期限：入境次日起 30 天內</div>
-      <div class="hero-meta-item">💰 規費：NT$500（僑生1年）</div>
-      <div class="hero-meta-item">📍 地點：移民署各地服務站</div>
+      <div class="hero-meta-item">⏱ {% trans "辦理期限：入境次日起 30 天內" %}</div>
+      <div class="hero-meta-item">💰 {% trans "規費：NT$500（僑生1年）" %}</div>
+      <div class="hero-meta-item">📍 {% trans "地點：移民署各地服務站" %}</div>
     </div>
   </div>
 
   <div class="alert alert-warning">
     <div class="alert-icon">⚠️</div>
     <div>
-      <strong>請注意：</strong>
-      持居留簽證入境次日起 <strong>30 天內</strong>，需自行至移民署線上系統辦理外僑居留證，逾期將被處罰鍰，嚴重者需出境重新申請簽證。ARC 是後續辦理加保、開戶等必要身份證明，請儘快辦理。
+      <strong>{% trans "請注意：" %}</strong>
+      {% trans "持居留簽證入境次日起" %} <strong>30 {% trans "天內" %}</strong>{% trans "，需自行至移民署線上系統辦理外僑居留證，逾期將被處罰鍰，嚴重者需出境重新申請簽證。ARC 是後續辦理加保、開戶等必要身份證明，請儘快辦理。" %}
     </div>
   </div>
 
@@ -161,26 +161,26 @@
     <div class="info-card">
       <div class="i-icon">📅</div>
       <div class="i-label">{% trans "辦理期限" %}</div>
-      <div class="i-val">15 天</div>
-      <div class="i-sub">抵台後起算</div>
+      <div class="i-val">{% trans "15 天" %}</div>
+      <div class="i-sub">{% trans "抵台後起算" %}</div>
     </div>
     <div class="info-card">
       <div class="i-icon">💳</div>
       <div class="i-label">{% trans "申請規費" %}</div>
       <div class="i-val">NT$500</div>
-      <div class="i-sub">僑生1年居留證（線上繳費）</div>
+      <div class="i-sub">{% trans "僑生1年居留證（線上繳費）" %}</div>
     </div>
     <div class="info-card">
       <div class="i-icon">📄</div>
       <div class="i-label">{% trans "效期時間" %}</div>
-      <div class="i-val">1 年</div>
-      <div class="i-sub">每年需延期</div>
+      <div class="i-val">{% trans "1 年" %}</div>
+      <div class="i-sub">{% trans "每年需延期" %}</div>
     </div>
     <div class="info-card">
       <div class="i-icon">⏳</div>
       <div class="i-label">{% trans "核發時間" %}</div>
-      <div class="i-val">10 個工作天</div>
-      <div class="i-sub">不含退補件；預約可加快</div>
+      <div class="i-val">{% trans "10 個工作天" %}</div>
+      <div class="i-sub">{% trans "不含退補件；預約可加快" %}</div>
     </div>
   </div>
 
@@ -188,73 +188,72 @@
   <div class="alert alert-info">
     <div class="alert-icon">ℹ️</div>
     <div>
-      以下為一般應備文件，各移民署辦事處可能有細微差異。
-      建議事前致電當地辦事處或至移民署官網確認最新版清單。
+      {% trans "以下為一般應備文件，各移民署辦事處可能有細微差異。建議事前致電當地辦事處或至移民署官網確認最新版清單。" %}
     </div>
   </div>
   <div class="doc-grid">
     <div class="doc-card required">
       <div class="doc-icon">📘</div>
       <div class="doc-info">
-        <div class="doc-name">外國護照</div>
-        <div class="doc-note">正本及影本各 1 份，效期須超過居留期間 6 個月以上。</div>
-        <span class="doc-badge badge-req">必要</span>
+        <div class="doc-name">{% trans "外國護照" %}</div>
+        <div class="doc-note">{% trans "正本及影本各 1 份，效期須超過居留期間 6 個月以上。" %}</div>
+        <span class="doc-badge badge-req">{% trans "必要" %}</span>
       </div>
     </div>
     <div class="doc-card required">
       <div class="doc-icon">📄</div>
       <div class="doc-info">
-        <div class="doc-name">入台學生簽證（居留簽）</div>
-        <div class="doc-note">持有入境台灣的學生居留簽證影本。</div>
-        <span class="doc-badge badge-req">必要</span>
+        <div class="doc-name">{% trans "入台學生簽證（居留簽）" %}</div>
+        <div class="doc-note">{% trans "持有入境台灣的學生居留簽證影本。" %}</div>
+        <span class="doc-badge badge-req">{% trans "必要" %}</span>
       </div>
     </div>
     <div class="doc-card required">
       <div class="doc-icon">📋</div>
       <div class="doc-info">
-        <div class="doc-name">僑生應核發的身份確認函</div>
-        <div class="doc-note">僑生還需提供僑委會或僑生應核發的身份確認文件正本及影本。</div>
-        <span class="doc-badge badge-req">必要</span>
+        <div class="doc-name">{% trans "僑生應核發的身份確認函" %}</div>
+        <div class="doc-note">{% trans "僑生還需提供僑委會或僑生應核發的身份確認文件正本及影本。" %}</div>
+        <span class="doc-badge badge-req">{% trans "必要" %}</span>
       </div>
     </div>
     <div class="doc-card required">
       <div class="doc-icon">📋</div>
       <div class="doc-info">
-        <div class="doc-name">在學證明書 / 清冊及通知書</div>
-        <div class="doc-note">由就讀學校出具的在學證明或入學許可函，需含入學日期及就讀系所。</div>
-        <span class="doc-badge badge-req">必要</span>
+        <div class="doc-name">{% trans "在學證明書 / 清冊及通知書" %}</div>
+        <div class="doc-note">{% trans "由就讀學校出具的在學證明或入學許可函，需含入學日期及就讀系所。" %}</div>
+        <span class="doc-badge badge-req">{% trans "必要" %}</span>
       </div>
     </div>
     <div class="doc-card required">
       <div class="doc-icon">🏥</div>
       <div class="doc-info">
-        <div class="doc-name">健康檢查合格證明</div>
-        <div class="doc-note">於台灣認可醫院完成之健康檢查報告，需含胸部 X 光及肺結核篩檢結果。</div>
-        <span class="doc-badge badge-req">必要</span>
+        <div class="doc-name">{% trans "健康檢查合格證明" %}</div>
+        <div class="doc-note">{% trans "於台灣認可醫院完成之健康檢查報告，需含胸部 X 光及肺結核篩檢結果。" %}</div>
+        <span class="doc-badge badge-req">{% trans "必要" %}</span>
       </div>
     </div>
     <div class="doc-card required">
       <div class="doc-icon">📸</div>
       <div class="doc-info">
-        <div class="doc-name">照片 2 張</div>
-        <div class="doc-note">近 6 個月內拍攝之 2 吋白底彩色照片（規格：寬 3.5 cm × 高 4.5 cm）。</div>
-        <span class="doc-badge badge-req">必要</span>
+        <div class="doc-name">{% trans "照片 2 張" %}</div>
+        <div class="doc-note">{% trans "近 6 個月內拍攝之 2 吋白底彩色照片（規格：寬 3.5 cm × 高 4.5 cm）。" %}</div>
+        <span class="doc-badge badge-req">{% trans "必要" %}</span>
       </div>
     </div>
     <div class="doc-card required">
       <div class="doc-icon">📝</div>
       <div class="doc-info">
-        <div class="doc-name">外僑居留申請書</div>
-        <div class="doc-note">可於移民署官網下載或現場索取，請事先填妥基本資料。</div>
-        <span class="doc-badge badge-req">必要</span>
+        <div class="doc-name">{% trans "外僑居留申請書" %}</div>
+        <div class="doc-note">{% trans "可於移民署官網下載或現場索取，請事先填妥基本資料。" %}</div>
+        <span class="doc-badge badge-req">{% trans "必要" %}</span>
       </div>
     </div>
     <div class="doc-card optional">
       <div class="doc-icon">🏠</div>
       <div class="doc-info">
-        <div class="doc-name">住宿地址證明</div>
-        <div class="doc-note">宿舍住宿證或租屋合約書，部分辦事處或要求。</div>
-        <span class="doc-badge badge-opt">視情況</span>
+        <div class="doc-name">{% trans "住宿地址證明" %}</div>
+        <div class="doc-note">{% trans "宿舍住宿證或租屋合約書，部分辦事處或要求。" %}</div>
+        <span class="doc-badge badge-opt">{% trans "視情況" %}</span>
       </div>
     </div>
   </div>
@@ -263,11 +262,10 @@
   <div class="alert alert-info" style="margin-bottom:16px;">
     <div class="alert-icon">💻</div>
     <div>
-      <strong>全程線上辦理：</strong>居留證申請及延期皆以線上申辦為主。
-      請至移民署「外國與外僑學生線上申辦系統」自行申請，<strong>請勿選擇「就讀學校代辦」</strong>（中央大學無此服務）。<br>
+      <strong>{% trans "全程線上辦理：" %}</strong>{% trans "居留證申請及延期皆以線上申辦為主。請至移民署「外國與外僑學生線上申辦系統」自行申請，" %}<strong>{% trans "請勿選擇「就讀學校代辦」" %}</strong>{% trans "（中央大學無此服務）。" %}<br>
       <a href="https://coa.immigration.gov.tw/coa-frontend/student/entry" target="_blank" rel="noopener"
          style="color:var(--primary);font-weight:700;word-break:break-all;">
-        🔗 外國與外僑學生線上申辦系統 ↗
+        🔗 {% trans "外國與外僑學生線上申辦系統 ↗" %}
       </a>
     </div>
   </div>
@@ -275,68 +273,64 @@
     <li class="timeline-item">
       <div class="step-num">1</div>
       <div class="step-body">
-        <div class="step-title">抵台後完成體檢並整理文件</div>
+        <div class="step-title">{% trans "抵台後完成體檢並整理文件" %}</div>
         <div class="step-desc">
-          確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理
-          （國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約 NT$780）。
+          {% trans "確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約 NT$780）。" %}
         </div>
-        <span class="step-tag tag-time">📅 抵台後 1～2 天</span>
+        <span class="step-tag tag-time">📅 {% trans "抵台後 1～2 天" %}</span>
       </div>
     </li>
     <li class="timeline-item">
       <div class="step-num">2</div>
       <div class="step-body">
-        <div class="step-title">至移民署線上系統註冊並上傳文件</div>
+        <div class="step-title">{% trans "至移民署線上系統註冊並上傳文件" %}</div>
         <div class="step-desc">
-          前往移民署「外國與外僑學生線上申辦系統」完成帳號註冊，掃描並上傳所需文件：
-          近三個月 2 吋彩色照片、護照、入學通知函及在學證明書。系統操作請參閱官方操作手冊。
+          {% trans "前往移民署「外國與外僑學生線上申辦系統」完成帳號註冊，掃描並上傳所需文件：近三個月 2 吋彩色照片、護照、入學通知函及在學證明書。系統操作請參閱官方操作手冊。" %}
         </div>
-        <span class="step-tag tag-time">📅 抵台後 30 天內</span>
-        <span class="step-tag tag-tip">💻 全程線上</span>
+        <span class="step-tag tag-time">📅 {% trans "抵台後 30 天內" %}</span>
+        <span class="step-tag tag-tip">💻 {% trans "全程線上" %}</span>
       </div>
     </li>
     <li class="timeline-item">
       <div class="step-num">3</div>
       <div class="step-body">
-        <div class="step-title">繳納申請規費</div>
+        <div class="step-title">{% trans "繳納申請規費" %}</div>
         <div class="step-desc">
-          線上申請時繳交規費 NT$500（1 年居留證）。繳費後保存收據以備查。
+          {% trans "線上申請時繳交規費 NT$500（1 年居留證）。繳費後保存收據以備查。" %}
         </div>
-        <span class="step-tag tag-fee">💰 NT$500 / 年</span>
+        <span class="step-tag tag-fee">💰 {% trans "NT$500 / 年" %}</span>
       </div>
     </li>
     <li class="timeline-item">
       <div class="step-num">4</div>
       <div class="step-body">
-        <div class="step-title">等待審核與製證</div>
+        <div class="step-title">{% trans "等待審核與製證" %}</div>
         <div class="step-desc">
-          申請提交後通常需 <strong>約 10 個工作天</strong> 製卡完成（不含退補件）。
-          可至移民署線上查詢申請進度。等待期間請保留入境章及申請收據作為合法居留的暫時證明。
+          {% trans "申請提交後通常需" %} <strong>{% trans "約 10 個工作天" %}</strong> {% trans "製卡完成（不含退補件）。可至移民署線上查詢申請進度。等待期間請保留入境章及申請收據作為合法居留的暫時證明。" %}
         </div>
-        <span class="step-tag tag-time">⏳ 約 10 個工作天</span>
-        <span class="step-tag tag-tip">💡 可線上查詢進度</span>
+        <span class="step-tag tag-time">⏳ {% trans "約 10 個工作天" %}</span>
+        <span class="step-tag tag-tip">💡 {% trans "可線上查詢進度" %}</span>
       </div>
     </li>
     <li class="timeline-item">
       <div class="step-num">5</div>
       <div class="step-body">
-        <div class="step-title">上傳居留證至 NCU Portal</div>
+        <div class="step-title">{% trans "上傳居留證至 NCU Portal" %}</div>
         <div class="step-desc">
-          取得居留證後，需於入學當年 <strong>9 月 30 日前</strong>上傳至 NCU Portal（入口網站）。
-          未準時上傳將影響校內工讀金撥款、獎學金核發及相關權益。
+          {% trans "取得居留證後，需於入學當年" %} <strong>9 {% trans "月" %} 30 {% trans "日前" %}</strong>{% trans "上傳至 NCU Portal（入口網站）。未準時上傳將影響校內工讀金撥款、獎學金核發及相關權益。" %}
         </div>
-        <span class="step-tag tag-time">📅 9/30 前</span>
+        <span class="step-tag tag-time">📅 {% trans "9/30 前" %}</span>
         <span class="step-tag tag-place">🖥 NCU Portal</span>
       </div>
     </li>
     <li class="timeline-item">
       <div class="step-num done">✓</div>
       <div class="step-body">
-        <div class="step-title">完成！辦理後續程序</div>
+        <div class="step-title">{% trans "完成！辦理後續程序" %}</div>
         <div class="step-desc">
-          居留證到手後即可辦理加入健保、開設銀行帳戶、申辦手機門號等後續程序。
+          {% trans "居留證到手後即可辦理加入健保、開設銀行帳戶、申辦手機門號等後續程序。" %}
         </div>
-        <span class="step-tag tag-tip">✅ 完成！</span>
+        <span class="step-tag tag-tip">✅ {% trans "完成！" %}</span>
       </div>
     </li>
   </ul>
@@ -345,22 +339,20 @@
   <div class="alert alert-success" style="margin-bottom:12px;">
     <div class="alert-icon">✅</div>
     <div>
-      居留證到期前 <strong>3 個月內</strong> 可至移民署網站線上申請延期，規費 NT$500 / 年，核辦約 10 天。
-      建議每學年結束前提早辦理，避免居留資格失效。
+      {% trans "居留證到期前" %} <strong>3 {% trans "個月內" %}</strong> {% trans "可至移民署網站線上申請延期，規費 NT$500 / 年，核辦約 10 天。建議每學年結束前提早辦理，避免居留資格失效。" %}
     </div>
   </div>
   <div class="alert alert-warning" style="margin-bottom:12px;">
     <div class="alert-icon">⚠️</div>
     <div>
-      <strong>請勿選擇「就讀學校代辦」：</strong>
-      中央大學（NCU）不提供學校代辦服務，請學生自行登入線上申辦系統辦理，勿在系統中選擇此選項。
+      <strong>{% trans "請勿選擇「就讀學校代辦」：" %}</strong>
+      {% trans "中央大學（NCU）不提供學校代辦服務，請學生自行登入線上申辦系統辦理，勿在系統中選擇此選項。" %}
     </div>
   </div>
   <div class="alert alert-info" style="margin-bottom:28px;">
     <div class="alert-icon">ℹ️</div>
     <div>
-      居留證遺失時請立即至警局報案，持報案證明至移民署申請補發（規費 NT$500）。
-      補發時建議隨身攜帶護照及報案證明。
+      {% trans "居留證遺失時請立即至警局報案，持報案證明至移民署申請補發（規費 NT$500）。補發時建議隨身攜帶護照及報案證明。" %}
     </div>
   </div>
 
@@ -368,62 +360,56 @@
   <div class="faq-list">
     <div class="faq-item">
       <div class="faq-q">
-        <span>我是台灣的僑生（台灣護照）的僑生也需要辦居留證嗎？</span>
+        <span>{% trans "我是台灣的僑生（台灣護照）的僑生也需要辦居留證嗎？" %}</span>
         <span class="faq-arrow">▼</span>
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。
-          本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。
+          {% trans "不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。" %}
         </div>
       </div>
     </div>
     <div class="faq-item">
       <div class="faq-q">
-        <span>健康檢查可以在抵台後才做嗎？</span>
+        <span>{% trans "健康檢查可以在抵台後才做嗎？" %}</span>
         <span class="faq-arrow">▼</span>
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          可以。可於抵台後參加校內體檢（約 NT$780），或至學校指定醫院完成。注意檢查報告出爐需數天，請盡早安排以避免超過 30 天辦理期限。建議抵台後隔天即至國際事務處詢問體檢安排。
+          {% trans "可以。可於抵台後參加校內體檢（約 NT$780），或至學校指定醫院完成。注意檢查報告出爐需數天，請盡早安排以避免超過 30 天辦理期限。建議抵台後隔天即至國際事務處詢問體檢安排。" %}
         </div>
       </div>
     </div>
     <div class="faq-item">
       <div class="faq-q">
-        <span>居留證辦理期間可以在台灣合法居留嗎？</span>
+        <span>{% trans "居留證辦理期間可以在台灣合法居留嗎？" %}</span>
         <span class="faq-arrow">▼</span>
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          可以。申請提交後至居留證核發前，持入境章及申請收據即可作為合法居留證明。
-          建議隨身攜帶此兩份文件，以備需要時出示。
+          {% trans "可以。申請提交後至居留證核發前，持入境章及申請收據即可作為合法居留證明。建議隨身攜帶此兩份文件，以備需要時出示。" %}
         </div>
       </div>
     </div>
     <div class="faq-item">
       <div class="faq-q">
-        <span>可以在不同縣市的移民署辦事處辦理嗎？</span>
+        <span>{% trans "可以在不同縣市的移民署辦事處辦理嗎？" %}</span>
         <span class="faq-arrow">▼</span>
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          可以。全台各縣市均設有移民署服務站，選擇距離學校最近的辦事處即可。
-          但建議選擇學校所在縣市的辦事處，方便日後延期和處理相關事務。
+          {% trans "可以。全台各縣市均設有移民署服務站，選擇距離學校最近的辦事處即可。但建議選擇學校所在縣市的辦事處，方便日後延期和處理相關事務。" %}
         </div>
       </div>
     </div>
     <div class="faq-item">
       <div class="faq-q">
-        <span>畢業後若要繼續留台，居留資格如何處理？</span>
+        <span>{% trans "畢業後若要繼續留台，居留資格如何處理？" %}</span>
         <span class="faq-arrow">▼</span>
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          在學期間以「就讀」為居留事由。畢業後如需繼續留台（例如找工作），
-          需在畢業後 30 天內申請變更居留事由為「工作」或「其他」，
-          或在找到合法工作並取得工作許可後辦理變更為「工作」居留事由。
-          建議畢業前盡早規劃，避免居留證失效。
+          {% trans "在學期間以「就讀」為居留事由。畢業後如需繼續留台（例如找工作），需在畢業後 30 天內申請變更居留事由為「工作」或「其他」，或在找到合法工作並取得工作許可後辦理變更為「工作」居留事由。建議畢業前盡早規劃，避免居留證失效。" %}
         </div>
       </div>
     </div>
@@ -434,40 +420,40 @@
     <a class="doc-card required" href="https://coa.immigration.gov.tw/coa-frontend/student/entry" target="_blank" rel="noopener">
       <div class="doc-icon">💻</div>
       <div class="doc-info">
-        <div class="doc-name">外國與外僑學生線上申辦系統</div>
-        <div class="doc-note">居留證線上申請入口，需自行註冊帳號並上傳文件。</div>
+        <div class="doc-name">{% trans "外國與外僑學生線上申辦系統" %}</div>
+        <div class="doc-note">{% trans "居留證線上申請入口，需自行註冊帳號並上傳文件。" %}</div>
         <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">coa.immigration.gov.tw ↗</div>
       </div>
     </a>
     <a class="doc-card required" href="https://www.immigration.gov.tw" target="_blank" rel="noopener">
       <div class="doc-icon">🏛</div>
       <div class="doc-info">
-        <div class="doc-name">內政部移民署</div>
-        <div class="doc-note">辦事處查詢、線上預約、申請進度查詢、外僑居留申請書下載。</div>
+        <div class="doc-name">{% trans "內政部移民署" %}</div>
+        <div class="doc-note">{% trans "辦事處查詢、線上預約、申請進度查詢、外僑居留申請書下載。" %}</div>
         <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.immigration.gov.tw ↗</div>
       </div>
     </a>
     <a class="doc-card required" href="https://www.ocac.gov.tw" target="_blank" rel="noopener">
       <div class="doc-icon">🏛</div>
       <div class="doc-info">
-        <div class="doc-name">僑務委員會（OCAC）</div>
-        <div class="doc-note">僑生身份確認函申請、僑生相關權益說明、海外服務諮詢。</div>
+        <div class="doc-name">{% trans "僑務委員會（OCAC）" %}</div>
+        <div class="doc-note">{% trans "僑生身份確認函申請、僑生相關權益說明、海外服務諮詢。" %}</div>
         <div class="doc-note" style="margin-top:4px;font-family:monospace;font-size:11px;color:var(--primary);">www.ocac.gov.tw ↗</div>
       </div>
     </a>
     <div class="doc-card optional">
       <div class="doc-icon">🏫</div>
       <div class="doc-info">
-        <div class="doc-name">學校國際事務處</div>
-        <div class="doc-note">諮詢在學證明申請、指定合作醫院、移民署辦理協助等服務。</div>
+        <div class="doc-name">{% trans "學校國際事務處" %}</div>
+        <div class="doc-note">{% trans "諮詢在學證明申請、指定合作醫院、移民署辦理協助等服務。" %}</div>
       </div>
     </div>
     <div class="doc-card optional">
       <div class="doc-icon">📞</div>
       <div class="doc-info">
-        <div class="doc-name">外來人士在台生活諮詢</div>
-        <div class="doc-note">提供多語言諮詢，包含居留、就業、生活等問題解答。</div>
-        <div class="doc-note" style="margin-top:4px;font-weight:700;color:var(--primary-dark);">免費電話：1925</div>
+        <div class="doc-name">{% trans "外來人士在台生活諮詢" %}</div>
+        <div class="doc-note">{% trans "提供多語言諮詢，包含居留、就業、生活等問題解答。" %}</div>
+        <div class="doc-note" style="margin-top:4px;font-weight:700;color:var(--primary-dark);">{% trans "免費電話：1925" %}</div>
       </div>
     </div>
   </div>

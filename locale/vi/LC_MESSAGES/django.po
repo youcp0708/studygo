@@ -3421,3 +3421,337 @@ msgid "提供多語言諮詢服務，解答居留、就業、生活等問題。"
 msgstr ""
 "Cung cấp dịch vụ tư vấn đa ngôn ngữ về vấn đề cư trú, việc làm và sinh "
 "hoạt hàng ngày."
+
+
+msgid "僑生專屬服務"
+msgstr "Dịch vụ dành riêng cho sinh viên Hoa kiều"
+
+msgid "持外國護照入台就讀的僑生，必須在抵台後"
+msgstr ""
+"Sinh viên Hoa kiều nhập học Đài Loan bằng hộ chiếu nước ngoài phải, "
+"trong vòng"
+
+msgid "天內"
+msgstr "ngày sau khi đến,"
+
+msgid "向內政部移民署線上辦理外僑居留證（ARC），方能在台合法居留及就讀。"
+msgstr ""
+"nộp đơn trực tuyến lên Cơ quan Quản lý Di trú Quốc gia (NIA) để xin Giấy "
+"chứng nhận cư trú cho người nước ngoài (ARC) nhằm cư trú và học tập hợp "
+"pháp tại Đài Loan."
+
+msgid "辦理期限：入境次日起 30 天內"
+msgstr "Thời hạn: Trong vòng 30 ngày kể từ ngày hôm sau khi nhập cảnh"
+
+msgid "規費：NT$500（僑生1年）"
+msgstr "Lệ phí: NT$500 (1 năm cho Sinh viên Hoa kiều)"
+
+msgid "地點：移民署各地服務站"
+msgstr "Địa điểm: Các trạm dịch vụ NIA trên toàn quốc"
+
+msgid "請注意："
+msgstr "Lưu ý:"
+
+msgid "持居留簽證入境次日起"
+msgstr "Bắt đầu từ ngày hôm sau khi nhập cảnh bằng visa cư trú,"
+
+msgid "，需自行至移民署線上系統辦理外僑居留證，逾期將被處罰鍰，嚴重者需出境重新申請簽證。ARC 是後續辦理加保、開戶等必要身份證明，請儘快辦理。"
+msgstr ""
+"bạn phải tự nộp đơn xin ARC qua hệ thống trực tuyến của NIA. Nộp muộn sẽ "
+"bị phạt; trong trường hợp nghiêm trọng có thể phải xuất cảnh và xin lại "
+"visa. ARC cần thiết để đăng ký bảo hiểm y tế, mở tài khoản ngân hàng và "
+"các thủ tục quan trọng khác. Vui lòng nộp đơn càng sớm càng tốt."
+
+msgid "1 年"
+msgstr "1 Năm"
+
+msgid "每年需延期"
+msgstr "Cần gia hạn hàng năm"
+
+msgid "以下為一般應備文件，各移民署辦事處可能有細微差異。建議事前致電當地辦事處或至移民署官網確認最新版清單。"
+msgstr ""
+"Dưới đây là các tài liệu cần thiết thông thường. Yêu cầu cụ thể có thể "
+"khác nhau đôi chút giữa các văn phòng NIA. Được khuyến nghị gọi điện cho "
+"văn phòng địa phương hoặc kiểm tra trang web chính thức của NIA để có "
+"danh sách mới nhất."
+
+msgid "外國護照"
+msgstr "Hộ chiếu nước ngoài"
+
+msgid "正本及影本各 1 份，效期須超過居留期間 6 個月以上。"
+msgstr ""
+"Bản gốc và một bản sao mỗi loại; hộ chiếu phải còn hiệu lực ít nhất 6 "
+"tháng sau thời gian cư trú."
+
+msgid "入台學生簽證（居留簽）"
+msgstr "Visa du học Đài Loan (Visa cư trú)"
+
+msgid "持有入境台灣的學生居留簽證影本。"
+msgstr "Bản sao visa cư trú sinh viên dùng để nhập cảnh Đài Loan."
+
+msgid "僑生應核發的身份確認函"
+msgstr "Thư xác nhận danh tính cho Sinh viên Hoa kiều"
+
+msgid "僑生還需提供僑委會或僑生應核發的身份確認文件正本及影本。"
+msgstr ""
+"Sinh viên Hoa kiều cũng phải cung cấp bản gốc và bản sao tài liệu xác "
+"nhận danh tính do OCAC hoặc cơ quan có thẩm quyền cấp."
+
+msgid "在學證明書 / 清冊及通知書"
+msgstr "Giấy xác nhận đang học / Danh sách đăng ký & Thông báo"
+
+msgid "由就讀學校出具的在學證明或入學許可函，需含入學日期及就讀系所。"
+msgstr ""
+"Do trường cấp, xác nhận tình trạng đăng ký hoặc thư nhập học, bao gồm "
+"ngày đăng ký và khoa."
+
+msgid "於台灣認可醫院完成之健康檢查報告，需含胸部 X 光及肺結核篩檢結果。"
+msgstr ""
+"Báo cáo kiểm tra sức khỏe thực hiện tại bệnh viện được Đài Loan công "
+"nhận, bao gồm X-quang ngực và xét nghiệm lao."
+
+msgid "近 6 個月內拍攝之 2 吋白底彩色照片（規格：寬 3.5 cm × 高 4.5 cm）。"
+msgstr ""
+"Ảnh màu nền trắng 2 inch chụp trong vòng 6 tháng gần đây (3,5 cm × 4,5 "
+"cm)."
+
+msgid "外僑居留申請書"
+msgstr "Mẫu đơn xin cư trú cho người nước ngoài"
+
+msgid "可於移民署官網下載或現場索取，請事先填妥基本資料。"
+msgstr ""
+"Có thể tải xuống từ trang web NIA hoặc lấy tại quầy. Vui lòng điền "
+"trước."
+
+msgid "宿舍住宿證或租屋合約書，部分辦事處或要求。"
+msgstr ""
+"Giấy chứng nhận cư trú ký túc xá hoặc hợp đồng thuê nhà; có thể yêu cầu "
+"tại một số văn phòng."
+
+msgid "全程線上辦理："
+msgstr "Hoàn toàn trực tuyến:"
+
+msgid "居留證申請及延期皆以線上申辦為主。請至移民署「外國與外僑學生線上申辦系統」自行申請，"
+msgstr ""
+"Đơn xin và gia hạn ARC được xử lý trực tuyến. Vui lòng nộp đơn qua \"Hệ "
+"thống nộp đơn trực tuyến cho sinh viên nước ngoài và Hoa kiều\" của NIA,"
+
+msgid "請勿選擇「就讀學校代辦」"
+msgstr "KHÔNG chọn \"Nộp đơn có sự hỗ trợ của trường\""
+
+msgid "（中央大學無此服務）。"
+msgstr "(NCU không cung cấp dịch vụ này)."
+
+msgid "外國與外僑學生線上申辦系統 ↗"
+msgstr "Hệ thống nộp đơn trực tuyến cho sinh viên nước ngoài & Hoa kiều ↗"
+
+msgid "抵台後完成體檢並整理文件"
+msgstr "Hoàn thành kiểm tra sức khỏe và chuẩn bị tài liệu sau khi đến"
+
+msgid ""
+"確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約 "
+"NT$780）。"
+msgstr ""
+"Đảm bảo tất cả tài liệu đã sẵn sàng: hộ chiếu, thư nhập học và giấy xác "
+"nhận đang học. Để kiểm tra sức khỏe, đến bệnh viện được trường công nhận "
+"(OIA có thể cung cấp danh sách). Sinh viên không phải từ HK/Macau và "
+"sinh viên HK/Macau có ARC còn hiệu lực có thể làm kiểm tra sức khỏe "
+"trong khuôn viên trường (khoảng NT$780)."
+
+msgid "至移民署線上系統註冊並上傳文件"
+msgstr "Đăng ký trên hệ thống trực tuyến NIA và tải lên tài liệu"
+
+msgid ""
+"前往移民署「外國與外僑學生線上申辦系統」完成帳號註冊，掃描並上傳所需文件：近三個月 2 "
+"吋彩色照片、護照、入學通知函及在學證明書。系統操作請參閱官方操作手冊。"
+msgstr ""
+"Vào \"Hệ thống nộp đơn trực tuyến cho sinh viên nước ngoài và Hoa kiều\" "
+"của NIA để đăng ký tài khoản, sau đó quét và tải lên các tài liệu cần "
+"thiết: ảnh màu 2 inch chụp trong 3 tháng gần đây, hộ chiếu, thư nhập học "
+"và giấy xác nhận đang học. Tham khảo hướng dẫn sử dụng chính thức để "
+"biết cách sử dụng hệ thống."
+
+msgid "抵台後 30 天內"
+msgstr "Trong vòng 30 ngày sau khi đến"
+
+msgid "全程線上"
+msgstr "Hoàn toàn trực tuyến"
+
+msgid "繳納申請規費"
+msgstr "Thanh toán lệ phí nộp đơn"
+
+msgid "線上申請時繳交規費 NT$500（1 年居留證）。繳費後保存收據以備查。"
+msgstr ""
+"Thanh toán lệ phí NT$500 (ARC 1 năm) khi nộp trực tuyến. Giữ lại biên "
+"lai để tham khảo."
+
+msgid "NT$500 / 年"
+msgstr "NT$500 / Năm"
+
+msgid "等待審核與製證"
+msgstr "Chờ xét duyệt và sản xuất thẻ"
+
+msgid "申請提交後通常需"
+msgstr "Sau khi nộp, thường mất"
+
+msgid "製卡完成（不含退補件）。可至移民署線上查詢申請進度。等待期間請保留入境章及申請收據作為合法居留的暫時證明。"
+msgstr ""
+"để sản xuất thẻ (không bao gồm hồ sơ trả lại/bổ sung). Bạn có thể kiểm "
+"tra tiến độ trực tuyến tại NIA. Trong thời gian chờ đợi, giữ dấu nhập "
+"cảnh và biên lai nộp đơn làm bằng chứng tạm thời về cư trú hợp pháp."
+
+msgid "上傳居留證至 NCU Portal"
+msgstr "Tải ARC lên NCU Portal"
+
+msgid "取得居留證後，需於入學當年"
+msgstr ""
+"Sau khi nhận được ARC, bạn phải tải lên NCU Portal trước ngày 30 tháng 9 "
+"của năm nhập học."
+
+msgid "月"
+msgstr "/"
+
+msgid "日前"
+msgstr ""
+
+msgid "上傳至 NCU Portal（入口網站）。未準時上傳將影響校內工讀金撥款、獎學金核發及相關權益。"
+msgstr ""
+"Không tải lên đúng hạn sẽ ảnh hưởng đến thanh toán tiền làm thêm, giải "
+"ngân học bổng và các quyền lợi khác."
+
+msgid "9/30 前"
+msgstr "Trước 9/30"
+
+msgid "完成！辦理後續程序"
+msgstr "Hoàn tất! Thực hiện các thủ tục tiếp theo"
+
+msgid "居留證到手後即可辦理加入健保、開設銀行帳戶、申辦手機門號等後續程序。"
+msgstr ""
+"Sau khi nhận được ARC, bạn có thể tiến hành đăng ký NHI, mở tài khoản "
+"ngân hàng, đăng ký số điện thoại di động và các thủ tục tiếp theo khác."
+
+msgid "居留證到期前"
+msgstr "Trước khi ARC của bạn hết hạn,"
+
+msgid "個月內"
+msgstr "tháng,"
+
+msgid "可至移民署網站線上申請延期，規費 NT$500 / 年，核辦約 10 天。建議每學年結束前提早辦理，避免居留資格失效。"
+msgstr ""
+"bạn có thể nộp đơn gia hạn trực tuyến trên trang web NIA, với lệ phí "
+"NT$500/năm và thời gian xử lý khoảng 10 ngày. Được khuyến nghị nộp đơn "
+"sớm trước khi kết thúc mỗi năm học để tránh mất tình trạng cư trú."
+
+msgid "請勿選擇「就讀學校代辦」："
+msgstr "KHÔNG Chọn \"Nộp đơn có sự hỗ trợ của trường\":"
+
+msgid "中央大學（NCU）不提供學校代辦服務，請學生自行登入線上申辦系統辦理，勿在系統中選擇此選項。"
+msgstr ""
+"NCU không cung cấp dịch vụ nộp đơn có sự hỗ trợ của trường. Sinh viên "
+"phải đăng nhập vào hệ thống trực tuyến và tự nộp đơn. Không chọn tùy "
+"chọn này trong hệ thống."
+
+msgid "居留證遺失時請立即至警局報案，持報案證明至移民署申請補發（規費 NT$500）。補發時建議隨身攜帶護照及報案證明。"
+msgstr ""
+"Nếu ARC của bạn bị mất, hãy báo cáo ngay với cảnh sát và mang biên bản "
+"báo cáo đến NIA để xin cấp lại (lệ phí: NT$500). Được khuyến nghị mang "
+"theo hộ chiếu và biên bản báo cáo khi nộp đơn."
+
+msgid "我是台灣的僑生（台灣護照）的僑生也需要辦居留證嗎？"
+msgstr ""
+"Sinh viên Hoa kiều có quốc tịch Đài Loan (hộ chiếu Đài Loan) cũng cần "
+"xin ARC không?"
+
+msgid "不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。"
+msgstr ""
+"Không. Sinh viên Hoa kiều nhập cảnh Đài Loan với tư cách công dân ROC "
+"(người có hộ chiếu Đài Loan) có đầy đủ tư cách công dân và không cần "
+"ARC. Trang này áp dụng cho sinh viên Hoa kiều nhập học Đài Loan bằng hộ "
+"chiếu nước ngoài (ví dụ: thường trú nhân ở nước ngoài)."
+
+msgid "健康檢查可以在抵台後才做嗎？"
+msgstr "Có thể kiểm tra sức khỏe sau khi đến Đài Loan không?"
+
+msgid ""
+"可以。可於抵台後參加校內體檢（約 NT$780），或至學校指定醫院完成。注意檢查報告出爐需數天，請盡早安排以避免超過 30 "
+"天辦理期限。建議抵台後隔天即至國際事務處詢問體檢安排。"
+msgstr ""
+"Có thể. Bạn có thể làm kiểm tra sức khỏe trong khuôn viên trường sau khi "
+"đến (khoảng NT$780) hoặc đến bệnh viện chỉ định. Lưu ý kết quả mất vài "
+"ngày, vì vậy hãy sắp xếp sớm để tránh vượt quá thời hạn 30 ngày. Được "
+"khuyến nghị đến OIA vào ngày hôm sau khi đến để hỏi về lịch kiểm tra sức "
+"khỏe."
+
+msgid "居留證辦理期間可以在台灣合法居留嗎？"
+msgstr ""
+"Có thể cư trú hợp pháp ở Đài Loan trong khi đơn xin ARC đang được xử lý "
+"không?"
+
+msgid "可以。申請提交後至居留證核發前，持入境章及申請收據即可作為合法居留證明。建議隨身攜帶此兩份文件，以備需要時出示。"
+msgstr ""
+"Có thể. Từ thời điểm nộp đơn đến khi ARC được cấp, dấu nhập cảnh và biên "
+"lai nộp đơn của bạn đóng vai trò là bằng chứng cư trú hợp pháp. Được "
+"khuyến nghị mang theo cả hai tài liệu mọi lúc phòng khi cần."
+
+msgid "可以在不同縣市的移民署辦事處辦理嗎？"
+msgstr "Có thể nộp đơn tại văn phòng NIA ở thành phố hoặc huyện khác không?"
+
+msgid "可以。全台各縣市均設有移民署服務站，選擇距離學校最近的辦事處即可。但建議選擇學校所在縣市的辦事處，方便日後延期和處理相關事務。"
+msgstr ""
+"Có thể. Các trạm dịch vụ NIA có mặt ở mọi thành phố và huyện tại Đài "
+"Loan; chọn nơi gần trường nhất. Tuy nhiên, được khuyến nghị sử dụng văn "
+"phòng ở thành phố/huyện nơi trường đặt, để thuận tiện cho việc gia hạn "
+"trong tương lai."
+
+msgid "畢業後若要繼續留台，居留資格如何處理？"
+msgstr ""
+"Làm thế nào để xử lý tình trạng cư trú nếu muốn ở lại Đài Loan sau khi "
+"tốt nghiệp?"
+
+msgid ""
+"在學期間以「就讀」為居留事由。畢業後如需繼續留台（例如找工作），需在畢業後 30 "
+"天內申請變更居留事由為「工作」或「其他」，或在找到合法工作並取得工作許可後辦理變更為「工作」居留事由。建議畢業前盡早規劃，避免居留證失效。"
+msgstr ""
+"Trong thời gian học, cơ sở cư trú là \"đăng ký học\". Nếu muốn ở lại Đài "
+"Loan sau khi tốt nghiệp (ví dụ: tìm việc), bạn phải nộp đơn thay đổi cơ "
+"sở cư trú thành \"làm việc\" hoặc \"khác\" trong vòng 30 ngày sau khi "
+"tốt nghiệp, hoặc thay đổi thành \"làm việc\" sau khi có việc làm hợp "
+"pháp và giấy phép lao động. Lên kế hoạch trước khi tốt nghiệp để tránh "
+"ARC hết hạn."
+
+msgid "外國與外僑學生線上申辦系統"
+msgstr "Hệ thống nộp đơn trực tuyến cho sinh viên nước ngoài và Hoa kiều"
+
+msgid "居留證線上申請入口，需自行註冊帳號並上傳文件。"
+msgstr ""
+"Cổng thông tin nộp đơn ARC trực tuyến; bạn phải tự đăng ký tài khoản và "
+"tải lên tài liệu."
+
+msgid "辦事處查詢、線上預約、申請進度查詢、外僑居留申請書下載。"
+msgstr ""
+"Tìm kiếm văn phòng, đặt lịch hẹn trực tuyến, tra cứu tình trạng đơn và "
+"tải xuống mẫu đơn xin ARC."
+
+msgid "僑務委員會（OCAC）"
+msgstr "Ủy ban Công vụ Người Hoa Hải ngoại (OCAC)"
+
+msgid "僑生身份確認函申請、僑生相關權益說明、海外服務諮詢。"
+msgstr ""
+"Xin thư xác nhận danh tính, thông tin quyền lợi sinh viên Hoa kiều và tư "
+"vấn dịch vụ ở nước ngoài."
+
+msgid "學校國際事務處"
+msgstr "Văn phòng Quan hệ Quốc tế của trường (OIA)"
+
+msgid "諮詢在學證明申請、指定合作醫院、移民署辦理協助等服務。"
+msgstr ""
+"Tư vấn về xin giấy xác nhận đang học, bệnh viện đối tác được chỉ định và "
+"hỗ trợ nộp đơn NIA."
+
+msgid "提供多語言諮詢，包含居留、就業、生活等問題解答。"
+msgstr ""
+"Cung cấp tư vấn đa ngôn ngữ về cư trú, việc làm, cuộc sống hàng ngày và "
+"nhiều vấn đề khác."
+
+msgid "僑生1年居留證（線上繳費）"
+msgstr "ARC 1 năm cho Sinh viên Hoa kiều (thanh toán trực tuyến)"

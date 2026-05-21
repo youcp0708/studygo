@@ -3890,3 +3890,340 @@ msgid "提供多語言諮詢服務，解答居留、就業、生活等問題。"
 msgstr ""
 "Menyediakan layanan konsultasi multibahasa untuk masalah tinggal, "
 "pekerjaan, dan kehidupan sehari-hari."
+
+
+msgid "僑生專屬服務"
+msgstr "Layanan Khusus Mahasiswa Perantau"
+
+msgid "持外國護照入台就讀的僑生，必須在抵台後"
+msgstr ""
+"Mahasiswa perantau yang memasuki Taiwan dengan paspor asing harus, dalam "
+"waktu"
+
+msgid "天內"
+msgstr "hari setelah tiba,"
+
+msgid "向內政部移民署線上辦理外僑居留證（ARC），方能在台合法居留及就讀。"
+msgstr ""
+"mendaftar secara online ke NIA untuk ARC agar dapat tinggal secara legal "
+"di Taiwan dan menyelesaikan pendaftaran."
+
+msgid "辦理期限：入境次日起 30 天內"
+msgstr "Batas Waktu: Dalam 30 hari sejak masuk"
+
+msgid "規費：NT$500（僑生1年）"
+msgstr "Biaya: NT$500 (1 tahun untuk Mahasiswa Perantau)"
+
+msgid "地點：移民署各地服務站"
+msgstr "Lokasi: Kantor Layanan NIA di seluruh negeri"
+
+msgid "請注意："
+msgstr "Perhatian:"
+
+msgid "持居留簽證入境次日起"
+msgstr "Mulai hari setelah masuk dengan visa residen,"
+
+msgid "，需自行至移民署線上系統辦理外僑居留證，逾期將被處罰鍰，嚴重者需出境重新申請簽證。ARC 是後續辦理加保、開戶等必要身份證明，請儘快辦理。"
+msgstr ""
+"Anda harus mendaftar ARC sendiri melalui sistem online NIA. "
+"Keterlambatan akan dikenai denda; kasus serius dapat mengharuskan Anda "
+"meninggalkan negara dan mengajukan kembali visa. ARC diperlukan untuk "
+"pendaftaran asuransi kesehatan, pembukaan rekening bank, dan prosedur "
+"penting lainnya. Harap segera urus."
+
+msgid "1 年"
+msgstr "1 Tahun"
+
+msgid "每年需延期"
+msgstr "Perpanjangan tahunan diperlukan"
+
+msgid "以下為一般應備文件，各移民署辦事處可能有細微差異。建議事前致電當地辦事處或至移民署官網確認最新版清單。"
+msgstr ""
+"Berikut adalah dokumen yang umumnya diperlukan. Persyaratan spesifik "
+"mungkin sedikit berbeda antar kantor NIA. Disarankan untuk menghubungi "
+"kantor lokal Anda atau memeriksa situs resmi NIA untuk daftar terbaru."
+
+msgid "外國護照"
+msgstr "Paspor Asing"
+
+msgid "正本及影本各 1 份，效期須超過居留期間 6 個月以上。"
+msgstr ""
+"Asli dan satu salinan; paspor harus berlaku minimal 6 bulan setelah masa "
+"tinggal berakhir."
+
+msgid "入台學生簽證（居留簽）"
+msgstr "Visa Pelajar Taiwan (Visa Residen)"
+
+msgid "持有入境台灣的學生居留簽證影本。"
+msgstr "Salinan visa residen pelajar yang digunakan untuk masuk Taiwan."
+
+msgid "僑生應核發的身份確認函"
+msgstr "Surat Konfirmasi Identitas untuk Mahasiswa Perantau"
+
+msgid "僑生還需提供僑委會或僑生應核發的身份確認文件正本及影本。"
+msgstr ""
+"Mahasiswa perantau juga harus menyerahkan asli dan salinan dokumen "
+"konfirmasi identitas yang dikeluarkan oleh OCAC atau otoritas terkait."
+
+msgid "在學證明書 / 清冊及通知書"
+msgstr "Surat Keterangan Mahasiswa Aktif / Daftar & Pemberitahuan"
+
+msgid "由就讀學校出具的在學證明或入學許可函，需含入學日期及就讀系所。"
+msgstr ""
+"Dikeluarkan oleh sekolah Anda, menyatakan status pendaftaran atau surat "
+"penerimaan, termasuk tanggal masuk dan jurusan."
+
+msgid "於台灣認可醫院完成之健康檢查報告，需含胸部 X 光及肺結核篩檢結果。"
+msgstr ""
+"Laporan pemeriksaan kesehatan di rumah sakit yang diakui Taiwan, "
+"termasuk rontgen dada dan pemeriksaan TBC."
+
+msgid "近 6 個月內拍攝之 2 吋白底彩色照片（規格：寬 3.5 cm × 高 4.5 cm）。"
+msgstr ""
+"Foto berwarna berlatar putih ukuran 2 inci yang diambil dalam 6 bulan "
+"terakhir (3,5 cm × 4,5 cm)."
+
+msgid "外僑居留申請書"
+msgstr "Formulir Permohonan Izin Tinggal Asing"
+
+msgid "可於移民署官網下載或現場索取，請事先填妥基本資料。"
+msgstr ""
+"Tersedia untuk diunduh di situs NIA atau di konter. Harap isi terlebih "
+"dahulu."
+
+msgid "宿舍住宿證或租屋合約書，部分辦事處或要求。"
+msgstr ""
+"Sertifikat hunian asrama atau kontrak sewa; mungkin diperlukan oleh "
+"beberapa kantor."
+
+msgid "全程線上辦理："
+msgstr "Sepenuhnya Online:"
+
+msgid "居留證申請及延期皆以線上申辦為主。請至移民署「外國與外僑學生線上申辦系統」自行申請，"
+msgstr ""
+"Permohonan dan perpanjangan ARC diproses secara online. Harap ajukan "
+"sendiri melalui Sistem Permohonan Online NIA untuk Mahasiswa Asing dan "
+"Perantau,"
+
+msgid "請勿選擇「就讀學校代辦」"
+msgstr "JANGAN pilih \"Permohonan Dibantu Sekolah\""
+
+msgid "（中央大學無此服務）。"
+msgstr "(NCU tidak menyediakan layanan ini)."
+
+msgid "外國與外僑學生線上申辦系統 ↗"
+msgstr "Sistem Permohonan Online untuk Mahasiswa Asing & Perantau ↗"
+
+msgid "抵台後完成體檢並整理文件"
+msgstr "Selesaikan pemeriksaan kesehatan dan siapkan dokumen setelah tiba"
+
+msgid ""
+"確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約 "
+"NT$780）。"
+msgstr ""
+"Pastikan semua dokumen lengkap: paspor, surat penerimaan, dan surat "
+"keterangan mahasiswa. Untuk pemeriksaan kesehatan, pergi ke rumah sakit "
+"yang diakui sekolah (OIA dapat memberikan daftarnya). Mahasiswa "
+"non-HK/Makau dan mahasiswa HK/Makau dengan ARC valid dapat mengikuti "
+"pemeriksaan kesehatan kampus (sekitar NT$780)."
+
+msgid "至移民署線上系統註冊並上傳文件"
+msgstr "Daftar di sistem online NIA dan unggah dokumen"
+
+msgid ""
+"前往移民署「外國與外僑學生線上申辦系統」完成帳號註冊，掃描並上傳所需文件：近三個月 2 "
+"吋彩色照片、護照、入學通知函及在學證明書。系統操作請參閱官方操作手冊。"
+msgstr ""
+"Kunjungi Sistem Permohonan Online NIA untuk mendaftar akun, lalu pindai "
+"dan unggah dokumen yang diperlukan: foto berwarna 2 inci dalam 3 bulan "
+"terakhir, paspor, surat penerimaan, dan surat keterangan mahasiswa. "
+"Lihat panduan resmi untuk petunjuk sistem."
+
+msgid "抵台後 30 天內"
+msgstr "Dalam 30 hari setelah tiba"
+
+msgid "全程線上"
+msgstr "Sepenuhnya Online"
+
+msgid "繳納申請規費"
+msgstr "Bayar biaya permohonan"
+
+msgid "線上申請時繳交規費 NT$500（1 年居留證）。繳費後保存收據以備查。"
+msgstr ""
+"Bayar biaya NT$500 (ARC 1 tahun) saat mengajukan secara online. Simpan "
+"kwitansi sebagai referensi."
+
+msgid "NT$500 / 年"
+msgstr "NT$500 / Tahun"
+
+msgid "等待審核與製證"
+msgstr "Tunggu proses verifikasi dan pembuatan kartu"
+
+msgid "申請提交後通常需"
+msgstr "Setelah pengajuan, biasanya membutuhkan"
+
+msgid "製卡完成（不含退補件）。可至移民署線上查詢申請進度。等待期間請保留入境章及申請收據作為合法居留的暫時證明。"
+msgstr ""
+"untuk membuat kartu (tidak termasuk dokumen yang dikembalikan). Anda "
+"dapat memeriksa kemajuan permohonan secara online di NIA. Selama masa "
+"tunggu, simpan cap masuk dan kwitansi permohonan sebagai bukti tinggal "
+"legal sementara."
+
+msgid "上傳居留證至 NCU Portal"
+msgstr "Unggah ARC ke NCU Portal"
+
+msgid "取得居留證後，需於入學當年"
+msgstr ""
+"Setelah mendapatkan ARC, Anda harus mengunggahnya ke NCU Portal paling "
+"lambat 30 September tahun masuk."
+
+msgid "月"
+msgstr "/"
+
+msgid "日前"
+msgstr ""
+
+msgid "上傳至 NCU Portal（入口網站）。未準時上傳將影響校內工讀金撥款、獎學金核發及相關權益。"
+msgstr ""
+"Keterlambatan unggah akan mempengaruhi pembayaran beasiswa kerja, "
+"pencairan beasiswa, dan hak-hak lainnya."
+
+msgid "9/30 前"
+msgstr "Sebelum 9/30"
+
+msgid "完成！辦理後續程序"
+msgstr "Selesai! Selesaikan prosedur lanjutan"
+
+msgid "居留證到手後即可辦理加入健保、開設銀行帳戶、申辦手機門號等後續程序。"
+msgstr ""
+"Setelah menerima ARC, Anda dapat melanjutkan dengan mendaftar NHI, "
+"membuka rekening bank, mendaftar nomor ponsel, dan prosedur lanjutan "
+"lainnya."
+
+msgid "居留證到期前"
+msgstr "Sebelum ARC Anda kedaluwarsa,"
+
+msgid "個月內"
+msgstr "bulan,"
+
+msgid "可至移民署網站線上申請延期，規費 NT$500 / 年，核辦約 10 天。建議每學年結束前提早辦理，避免居留資格失效。"
+msgstr ""
+"Anda dapat mengajukan perpanjangan secara online di situs NIA, dengan "
+"biaya NT$500/tahun dan waktu proses sekitar 10 hari. Disarankan untuk "
+"mengajukan lebih awal sebelum akhir setiap tahun akademik."
+
+msgid "請勿選擇「就讀學校代辦」："
+msgstr "JANGAN Pilih \"Permohonan Dibantu Sekolah\":"
+
+msgid "中央大學（NCU）不提供學校代辦服務，請學生自行登入線上申辦系統辦理，勿在系統中選擇此選項。"
+msgstr ""
+"NCU tidak menyediakan layanan permohonan berbantuan sekolah. Mahasiswa "
+"harus masuk ke sistem online dan mengajukan sendiri. Jangan pilih opsi "
+"ini dalam sistem."
+
+msgid "居留證遺失時請立即至警局報案，持報案證明至移民署申請補發（規費 NT$500）。補發時建議隨身攜帶護照及報案證明。"
+msgstr ""
+"Jika ARC Anda hilang, segera laporkan ke polisi dan bawa laporan polisi "
+"ke NIA untuk mengajukan penggantian (biaya: NT$500). Saat mengajukan "
+"penggantian, disarankan membawa paspor dan laporan polisi."
+
+msgid "我是台灣的僑生（台灣護照）的僑生也需要辦居留證嗎？"
+msgstr ""
+"Apakah mahasiswa perantau dengan kewarganegaraan Taiwan (paspor Taiwan) "
+"juga perlu mengajukan ARC?"
+
+msgid "不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。"
+msgstr ""
+"Tidak. Mahasiswa perantau yang masuk Taiwan sebagai warga negara ROC "
+"(pemegang paspor Taiwan) memiliki status kewarganegaraan penuh dan tidak "
+"memerlukan ARC. Halaman ini berlaku untuk mahasiswa perantau yang masuk "
+"Taiwan dengan paspor asing (mis. penduduk tetap luar negeri)."
+
+msgid "健康檢查可以在抵台後才做嗎？"
+msgstr "Apakah pemeriksaan kesehatan dapat dilakukan setelah tiba di Taiwan?"
+
+msgid ""
+"可以。可於抵台後參加校內體檢（約 NT$780），或至學校指定醫院完成。注意檢查報告出爐需數天，請盡早安排以避免超過 30 "
+"天辦理期限。建議抵台後隔天即至國際事務處詢問體檢安排。"
+msgstr ""
+"Ya. Anda dapat mengikuti pemeriksaan kesehatan kampus setelah tiba "
+"(sekitar NT$780) atau pergi ke rumah sakit yang ditunjuk. Perhatikan "
+"bahwa hasil membutuhkan beberapa hari, jadi aturlah lebih awal untuk "
+"menghindari melewati batas 30 hari. Disarankan mengunjungi OIA sehari "
+"setelah tiba untuk menanyakan jadwal pemeriksaan."
+
+msgid "居留證辦理期間可以在台灣合法居留嗎？"
+msgstr ""
+"Bisakah saya tinggal secara legal di Taiwan selama proses permohonan ARC "
+"berlangsung?"
+
+msgid "可以。申請提交後至居留證核發前，持入境章及申請收據即可作為合法居留證明。建議隨身攜帶此兩份文件，以備需要時出示。"
+msgstr ""
+"Ya. Dari saat pengajuan hingga ARC diterbitkan, cap masuk dan kwitansi "
+"permohonan Anda berfungsi sebagai bukti tinggal legal. Disarankan untuk "
+"selalu membawa kedua dokumen tersebut jika sewaktu-waktu diperlukan."
+
+msgid "可以在不同縣市的移民署辦事處辦理嗎？"
+msgstr ""
+"Bisakah saya mengajukan di kantor NIA di kota atau kabupaten yang "
+"berbeda?"
+
+msgid "可以。全台各縣市均設有移民署服務站，選擇距離學校最近的辦事處即可。但建議選擇學校所在縣市的辦事處，方便日後延期和處理相關事務。"
+msgstr ""
+"Ya. Kantor layanan NIA tersedia di setiap kota dan kabupaten di Taiwan; "
+"pilih yang terdekat dengan sekolah Anda. Namun, disarankan menggunakan "
+"kantor di kota/kabupaten lokasi sekolah untuk kemudahan perpanjangan di "
+"masa mendatang."
+
+msgid "畢業後若要繼續留台，居留資格如何處理？"
+msgstr ""
+"Bagaimana cara menangani status tinggal jika ingin tetap di Taiwan "
+"setelah lulus?"
+
+msgid ""
+"在學期間以「就讀」為居留事由。畢業後如需繼續留台（例如找工作），需在畢業後 30 "
+"天內申請變更居留事由為「工作」或「其他」，或在找到合法工作並取得工作許可後辦理變更為「工作」居留事由。建議畢業前盡早規劃，避免居留證失效。"
+msgstr ""
+"Selama studi, dasar tinggal adalah 'pendaftaran mahasiswa.' Jika ingin "
+"tetap di Taiwan setelah lulus (mis. mencari kerja), Anda harus "
+"mengajukan perubahan dasar tinggal menjadi 'pekerjaan' atau 'lainnya' "
+"dalam 30 hari setelah lulus, atau mengubahnya menjadi 'pekerjaan' "
+"setelah mendapatkan pekerjaan legal dan izin kerja. Rencanakan lebih "
+"awal sebelum lulus agar ARC tidak kedaluwarsa."
+
+msgid "外國與外僑學生線上申辦系統"
+msgstr "Sistem Permohonan Online untuk Mahasiswa Asing dan Perantau"
+
+msgid "居留證線上申請入口，需自行註冊帳號並上傳文件。"
+msgstr ""
+"Portal permohonan ARC online; Anda harus mendaftar akun dan mengunggah "
+"dokumen sendiri."
+
+msgid "辦事處查詢、線上預約、申請進度查詢、外僑居留申請書下載。"
+msgstr ""
+"Pencarian kantor, pemesanan janji online, pengecekan status permohonan, "
+"dan unduhan formulir permohonan ARC."
+
+msgid "僑務委員會（OCAC）"
+msgstr "Komisi Urusan Perantau (OCAC)"
+
+msgid "僑生身份確認函申請、僑生相關權益說明、海外服務諮詢。"
+msgstr ""
+"Permohonan surat konfirmasi identitas, informasi hak mahasiswa perantau, "
+"dan konsultasi layanan luar negeri."
+
+msgid "學校國際事務處"
+msgstr "Kantor Urusan Internasional (OIA)"
+
+msgid "諮詢在學證明申請、指定合作醫院、移民署辦理協助等服務。"
+msgstr ""
+"Konsultasi permohonan surat keterangan mahasiswa, rumah sakit mitra yang "
+"ditunjuk, dan bantuan permohonan NIA."
+
+msgid "提供多語言諮詢，包含居留、就業、生活等問題解答。"
+msgstr ""
+"Menyediakan konsultasi multibahasa mengenai tempat tinggal, pekerjaan, "
+"kehidupan sehari-hari, dan lainnya."
+
+msgid "僑生1年居留證（線上繳費）"
+msgstr "ARC 1 Tahun untuk Mahasiswa Perantau (pembayaran online)"
