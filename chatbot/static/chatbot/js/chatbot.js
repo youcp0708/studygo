@@ -17,7 +17,7 @@
 
   const AI_MODE_PLACEHOLDERS = {
     helper: '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？',
-    friend: '例如：我最近壓力很大，有點想家。  (可以用學長姐的身份陪我聊會天？)',
+    friend: '例如：我最近壓力很大，有點想家。',
   };
 
   const messagesEl = document.getElementById('chatMessages');

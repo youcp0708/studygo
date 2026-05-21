@@ -1,4 +1,4 @@
-/**
+﻿/**
  * flows/static/flows/js/flows.js
  * Flows 模塊前端邏輯
  */
@@ -471,7 +471,7 @@ async function renderMyTasks() {
       ].join('');
 
       contentHtml += `
-        <div class="task-item ${isDone ? 'completed' : ''}">
+        <div id="task-${task.id}" class="task-item ${isDone ? 'completed' : ''}">
           <div class="task-item-row" onclick="toggleTaskDetails(${task.id})">
             <input type="checkbox" id="chk-${task.id}" onclick="toggleTaskCompletion(${task.id}, event)" ${isDone ? 'checked' : ''}>
             <div class="task-content">
@@ -502,6 +502,17 @@ async function renderMyTasks() {
 
   tabsHtml += `</div>`;
   container.innerHTML = tabsHtml + contentHtml;
+
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#task-')) {
+    const target = document.querySelector(hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.classList.add('task-highlight');
+      }, 150);
+    }
+  }
 }
 
 

@@ -55,6 +55,18 @@ ANSWER_LABELS = {
     'ko': ('개인 맞춤 답변', '일반 답변'),
 }
 
+TASK_LINK_LABELS = {
+    'zh-hant': '📋 查看相關任務：',
+    'en':      '📋 View related task: ',
+    'vi':      '📋 Xem nhiệm vụ liên quan: ',
+    'ja':      '📋 関連タスクを確認：',
+    'my':      '📋 သက်ဆိုင်သောတာဝန်ကို ကြည့်ရှုရန်：',
+    'id':      '📋 Lihat tugas terkait: ',
+    'th':      '📋 ดูภารกิจที่เกี่ยวข้อง: ',
+    'ms':      '📋 Lihat tugasan berkaitan: ',
+    'ko':      '📋 관련 과제 보기: ',
+}
+
 
 def normalize_language_code(language_code):
     """統一 Django / 瀏覽器可能出現的語言代碼。"""
@@ -604,6 +616,96 @@ INFO_PAGE_MAP = {
             'url': '/flows/guides/sim/',
         },
     },
+    'work_permit': {
+        'all': {
+            'title': '工作許可申請指南',
+            'url': '/flows/guides/work-permit/',
+        },
+    },
+    'medical': {
+        'all': {
+            'title': '就醫指南',
+            'url': '/flows/guides/medical/',
+        },
+    },
+    'course': {
+        'all': {
+            'title': '課程與選課說明',
+            'url': '/flows/guides/course/',
+        },
+    },
+    'graduation': {
+        'all': {
+            'title': '畢業流程說明',
+            'url': '/flows/guides/graduation/',
+        },
+    },
+    'systems': {
+        'all': {
+            'title': '校園系統使用指南',
+            'url': '/flows/guides/systems/',
+        },
+    },
+    'emergency': {
+        'all': {
+            'title': '緊急求助資訊',
+            'url': '/flows/guides/emergency/',
+        },
+    },
+    'library': {
+        'all': {
+            'title': '圖書館使用指南',
+            'url': '/flows/guides/library/',
+        },
+    },
+    'enrollment': {
+        'all': {
+            'title': '入學報到流程',
+            'url': '/flows/guides/enrollment/',
+        },
+    },
+    'mental_health': {
+        'all': {
+            'title': '心理健康與諮商資源',
+            'url': '/flows/guides/mental-health/',
+        },
+    },
+    'scholarship': {
+        'all': {
+            'title': '獎學金申請指南',
+            'url': '/flows/guides/scholarship/',
+        },
+    },
+    'admin_docs': {
+        'all': {
+            'title': '行政文件申請指南',
+            'url': '/flows/guides/admin-docs/',
+        },
+    },
+    'regulations': {
+        'all': {
+            'title': '相關法規與規章',
+            'url': '/flows/guides/regulations/',
+        },
+    },
+    'admissions': {
+        'all': {
+            'title': '入學申請指南',
+            'url': '/flows/guides/admissions/',
+        },
+    },
+    'bus': {
+        'all': {
+            'title': '校園交通與公車資訊',
+            'url': '/flows/guides/bus-ncu/',
+        },
+    },
+    'map': {
+        'all': {
+            'title': '校園地圖',
+            'url': '/flows/guides/map/',
+        },
+    },
 }
 
 def get_student_identity_key_from_profile(user):
@@ -690,6 +792,96 @@ def detect_info_topic(question):
     ):
         return 'sim'
 
+    if (
+        any(word in lower_question for word in ['work permit', 'work visa', 'part-time', 'part time'])
+        or any(word in question for word in ['工作許可', '打工', '兼職', '工讀'])
+    ):
+        return 'work_permit'
+
+    if (
+        any(word in lower_question for word in ['hospital', 'clinic', 'doctor', 'medical'])
+        or any(word in question for word in ['醫療', '看病', '就醫', '醫院', '診所', '急診'])
+    ):
+        return 'medical'
+
+    if (
+        any(word in lower_question for word in ['course', 'class', 'register course', 'add course', 'drop course'])
+        or any(word in question for word in ['課程', '選課', '加退選', '修課', '必修', '選修'])
+    ):
+        return 'course'
+
+    if (
+        any(word in lower_question for word in ['graduation', 'graduate', 'thesis'])
+        or any(word in question for word in ['畢業', '論文', '口試', '畢業審核'])
+    ):
+        return 'graduation'
+
+    if (
+        any(word in lower_question for word in ['portal', 'system', 'login system', 'school system'])
+        or any(word in question for word in ['系統', '入口網站', '校務系統', '選課系統', '學生資訊系統'])
+    ):
+        return 'systems'
+
+    if (
+        any(word in lower_question for word in ['emergency', 'accident', 'urgent', 'ambulance', 'police'])
+        or any(word in question for word in ['緊急', '急救', '救護車', '警察', '110', '119', '事故'])
+    ):
+        return 'emergency'
+
+    if (
+        any(word in lower_question for word in ['library', 'borrow', 'book'])
+        or any(word in question for word in ['圖書館', '借書', '還書', '資料庫'])
+    ):
+        return 'library'
+
+    if (
+        any(word in lower_question for word in ['enrollment', 'registration', 'check-in', 'report'])
+        or any(word in question for word in ['報到', '入學報到', '新生報到', '完成報到'])
+    ):
+        return 'enrollment'
+
+    if (
+        any(word in lower_question for word in ['mental health', 'counseling', 'counselor', 'stress', 'depression', 'anxiety'])
+        or any(word in question for word in ['心理', '輔導', '諮商', '身心', '壓力', '憂鬱', '焦慮'])
+    ):
+        return 'mental_health'
+
+    if (
+        any(word in lower_question for word in ['scholarship', 'grant', 'stipend', 'financial aid'])
+        or any(word in question for word in ['獎學金', '補助', '助學金', '學費補助'])
+    ):
+        return 'scholarship'
+
+    if (
+        any(word in lower_question for word in ['certificate', 'transcript', 'enrollment certificate', 'official document'])
+        or any(word in question for word in ['在學證明', '成績單', '行政文件', '畢業證書', '學籍證明'])
+    ):
+        return 'admin_docs'
+
+    if (
+        any(word in lower_question for word in ['regulation', 'rule', 'policy', 'law'])
+        or any(word in question for word in ['規章', '規定', '法規', '規則', '辦法'])
+    ):
+        return 'regulations'
+
+    if (
+        any(word in lower_question for word in ['admission', 'apply', 'application', 'entrance'])
+        or any(word in question for word in ['入學申請', '招生', '海聯招', '入學資格'])
+    ):
+        return 'admissions'
+
+    if (
+        any(word in lower_question for word in ['bus', 'shuttle', 'transportation', 'transit'])
+        or any(word in question for word in ['公車', '巴士', '交通', '接駁', '校車'])
+    ):
+        return 'bus'
+
+    if (
+        any(word in lower_question for word in ['map', 'campus map', 'location', 'direction'])
+        or any(word in question for word in ['地圖', '校園地圖', '在哪裡', '怎麼走', '位置'])
+    ):
+        return 'map'
+
     return None
 
 
@@ -718,29 +910,126 @@ def get_personalized_info_page(user, question):
     return None
 
 
-def insert_info_links_after_personalized_answer(reply, info_page, personal_label, general_label):
+def get_relevant_student_task(user, question, language_code='zh-hant'):
     """
-    把資訊頁面連結插入在個人化回答後面、一般回答前面。
+    根據問題關鍵字，找出使用者最相關的未完成 StudentTask，回傳任務標題與連結。
+    """
+    profile = get_student_profile(user)
+    if not profile:
+        return None
+
+    try:
+        from flows.models import StudentTask
+    except Exception:
+        return None
+
+    try:
+        student_tasks = list(
+            StudentTask.objects
+            .filter(student=profile)
+            .exclude(status='completed')
+            .select_related('task')
+            .order_by('task__stage__order', 'task__order')
+        )
+    except Exception:
+        return None
+
+    if not student_tasks:
+        return None
+
+    question_combined = (question or '').lower()
+
+    TOPIC_TASK_KEYWORDS = {
+        'arc':          ['arc', 'residence permit', '居留', '居留證'],
+        'nhi':          ['nhi', 'health insurance', '健保', '健康保險'],
+        'bank':         ['bank account', 'open bank', '銀行', '開戶'],
+        'sim':          ['sim card', 'phone number', '手機', '門號', '電話卡'],
+        'housing':      ['housing', 'dormitory', '住宿', '宿舍'],
+        'work_permit':  ['work permit', 'part-time', '工作許可', '打工', '兼職'],
+        'medical':      ['medical', 'hospital', 'doctor', '醫療', '看病', '就醫', '醫院'],
+        'course':       ['course', 'class', '課程', '選課', '修課'],
+        'graduation':   ['graduation', 'thesis', '畢業', '論文'],
+        'enrollment':   ['enrollment', 'registration', '報到', '入學報到', '新生報到'],
+        'scholarship':  ['scholarship', '獎學金', '助學金'],
+        'admin_docs':   ['certificate', 'transcript', '在學證明', '成績單', '行政文件'],
+        'mental_health':['counseling', 'mental health', '心理', '輔導', '諮商'],
+        'library':      ['library', '圖書館', '借書'],
+        'systems':      ['school system', 'student portal', '系統', '選課系統', '校務系統'],
+        'admissions':   ['admission', '入學申請', '招生', '海聯招'],
+        'bus':          ['shuttle bus', '公車', '巴士', '交通'],
+        'emergency':    ['emergency', '緊急', '急救', '119', '110'],
+    }
+
+    def keyword_matches(keyword, text):
+        """英文關鍵字用詞邊界比對，中文直接子字串比對。"""
+        k = keyword.lower()
+        if k.isascii():
+            return bool(re.search(r'\b' + re.escape(k) + r'\b', text))
+        return k in text
+
+    # 先確定問題屬於哪些主題，再去找符合這些主題的任務
+    matched_topics = {
+        topic: keywords
+        for topic, keywords in TOPIC_TASK_KEYWORDS.items()
+        if any(keyword_matches(k, question_combined) for k in keywords)
+    }
+
+    if not matched_topics:
+        return None
+
+    for student_task in student_tasks:
+        task = student_task.task
+        task_code = (task.task_code or '').lower()
+        task_title_zh = (task.title or '').lower()
+        task_title_en = (task.title_en or '').lower()
+        task_text = f'{task_code} {task_title_zh} {task_title_en}'
+
+        for topic, keywords in matched_topics.items():
+            if any(keyword_matches(k, task_text) for k in keywords):
+                loc = task.get_localized(language_code)
+                title = loc.get('title') or task.title or task.title_en or '任務'
+                return {
+                    'title': title,
+                    'url': f'/flows/my-tasks/#task-{student_task.id}',
+                }
+
+    return None
+
+
+def insert_info_links_after_personalized_answer(reply, info_page, personal_label, general_label, task_link=None, language_code='zh-hant'):
+    """
+    把資訊頁面連結（與相關任務連結）插入在個人化回答後面、一般回答前面。
     只顯示頁面名稱，不顯示附件、不顯示網址文字。
     前端 JS 會把 Markdown 連結轉成藍色可點擊連結。
     """
-    if not reply or not info_page:
+    if not reply:
         return reply
 
-    title = info_page.get('title')
-    url = info_page.get('url')
+    task_link_label = TASK_LINK_LABELS.get(language_code, TASK_LINK_LABELS['zh-hant'])
+    links_text = ''
 
-    if not title or not url:
+    if task_link:
+        task_title = task_link.get('title')
+        task_url = task_link.get('url')
+        if task_title and task_url:
+            links_text += f'\n\n{task_link_label}[{task_title}]({task_url})'
+
+    if info_page:
+        title = info_page.get('title')
+        url = info_page.get('url')
+        if title and url:
+            separator = '\n' if links_text else '\n\n'
+            links_text += f'{separator}👉 前往資訊頁面：[{title}]({url})'
+
+    if not links_text:
         return reply
-
-    link_text = f'\n\n👉 前往資訊頁面：[{title}]({url})'
 
     general_marker = f'{general_label}：'
 
     if general_marker in reply:
-        return reply.replace(general_marker, f'{link_text}\n\n{general_marker}', 1)
+        return reply.replace(general_marker, f'{links_text}\n\n{general_marker}', 1)
 
-    return reply + link_text
+    return reply + links_text
 
 
 def search_knowledge_base(question, language_code='zh-hant', limit=3, ai_mode="helper"):
@@ -1126,6 +1415,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 
     history_text = build_history_text(recent_messages)
     info_page = get_personalized_info_page(user, question)
+    task_link = get_relevant_student_task(user, question, language_code) if ai_mode == "helper" else None
 
     print("[DEBUG] ai_mode:", ai_mode)
     print("[DEBUG] knowledge_context:", knowledge_context)
@@ -1309,7 +1599,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
         input_text = f"""
 [LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only. Do not use any other language.
 
-以下是學生自己的基本資料，僅供「{personal_label}」使用，不代表回答語言：
+以下是學生自己的基本資料，供「{personal_label}」與「{general_label}」共同參考：
 {profile_context}
 
 以下是學生目前的流程任務與提醒資料，僅供「{personal_label}」使用：
@@ -1322,7 +1612,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 {knowledge_context}
 
 如果知識庫有直接相關內容，「{general_label}」必須根據知識庫回答，不要忽略。
-如果知識庫顯示「目前沒有找到直接相關的知識庫資料。」，才可以根據一般來臺就學流程回答。
+如果知識庫沒有找到相關資料，「{general_label}」必須根據你自己對來臺就學流程的知識回答，並結合學生的身份、國籍與學校等個人資料給出更精準的回答，絕對不可以把「目前沒有找到直接相關的知識庫資料」或任何系統提示語直接輸出為答案。
 
 以下是最近對話紀錄，僅供上下文參考：
 {history_text}
@@ -1332,7 +1622,8 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 
 [REMINDER] Write your answer in {language_en} only. Use this exact format:
 {personal_label}：
-...
+根據學生的任務狀況與個人資料，說明他目前與這個問題相關的任務進度、還需要完成哪些步驟，以及這些任務和問題之間的關聯。
+不要逐步教學或列出操作指南，只需描述他目前的狀況與脈絡。
 
 {general_label}：
 ...
@@ -1358,6 +1649,8 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
                 info_page=info_page,
                 personal_label=personal_label,
                 general_label=general_label,
+                task_link=task_link,
+                language_code=language_code,
             )
 
         if not reply:
