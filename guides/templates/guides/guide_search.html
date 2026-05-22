@@ -8,6 +8,13 @@
   :root { --border: var(--line); --dark: var(--primary-dark); }
   body { background: #f8f9fa; }
 
+  /* ── back bar ── */
+  .gs-back-bar {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+  }
+
   /* ── top bar ── */
   .gs-bar-wrap {
     background: #fff; border-bottom: 1px solid var(--border);
@@ -47,21 +54,6 @@
 
   /* ── content area ── */
   .gs-content { width: min(860px, 94%); margin: 0 auto; padding: 18px 0 72px; }
-
-  /* ── category chips ── */
-  .gs-cats {
-    display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px;
-    padding-bottom: 14px; border-bottom: 1px solid var(--border);
-  }
-  .gs-cat {
-    display: inline-flex; align-items: center; gap: 4px;
-    padding: 5px 14px; border-radius: 99px;
-    border: 1.5px solid var(--border); background: #fff;
-    font-size: 13px; font-weight: 600; color: #5f6368;
-    cursor: pointer; transition: all .15s; white-space: nowrap;
-  }
-  .gs-cat:hover  { border-color: var(--primary); color: var(--primary-dark); background: var(--primary-soft); }
-  .gs-cat.active { border-color: var(--primary); background: var(--primary); color: #fff; font-weight: 700; }
 
   /* ── stats ── */
   .gs-stats { font-size: 13px; color: #70757a; margin-bottom: 20px; }
@@ -130,6 +122,12 @@
 
 {% block content %}
 
+<div class="gs-back-bar">
+  <div class="gs-bar-inner" style="padding:8px 0;">
+    <button class="back-btn" onclick="history.back()">← {% trans "返回" %}</button>
+  </div>
+</div>
+
 <div class="gs-bar-wrap">
   <div class="gs-bar-inner">
     <a class="gs-logo" href="{% url 'guide_index' %}">StudyGo 🔍</a>
@@ -143,7 +141,6 @@
 
 <div class="gs-content">
 
-  <div class="gs-cats" id="gsCats"></div>
   <div class="gs-stats" id="gsStats"></div>
   <div class="gs-results" id="gsResults"></div>
 
@@ -158,29 +155,6 @@
   var INIT_Q  = '{{ q|escapejs }}';
   var GUIDES  = (window.GUIDES_I18N && (window.GUIDES_I18N[LANG] || window.GUIDES_I18N['zh-hant'])) || [];
   var BODY    = JSON.parse(document.getElementById('bodyData').textContent || '{}');
-
-  /* ─── category definitions (URL-pattern based) ─── */
-  var CATS_DEF = [
-    { key:'arc',    icon:'🪪', test:function(g){ return /arc/.test(g.url); } },
-    { key:'study',  icon:'📚', test:function(g){ return /graduation|course|enrollment|systems|library|admin-docs/.test(g.url); } },
-    { key:'health', icon:'🏥', test:function(g){ return /medical|nhi|mental/.test(g.url); } },
-    { key:'money',  icon:'💰', test:function(g){ return /bank|scholarship|work-permit/.test(g.url); } },
-    { key:'life',   icon:'🏠', test:function(g){ return /housing|bus|map|sim/.test(g.url); } },
-    { key:'rules',  icon:'⚖️', test:function(g){ return /regulations|admissions|national/.test(g.url); } },
-  ];
-
-  var CAT_LABELS = {
-    'zh-hant':{ all:'全部', arc:'居留 / ARC', study:'學業', health:'醫療健保', money:'財務', life:'住宿生活', rules:'法規入學' },
-    'en':     { all:'All', arc:'Residence / ARC', study:'Academics', health:'Health & Insurance', money:'Finance', life:'Housing & Life', rules:'Regulations' },
-    'vi':     { all:'Tất cả', arc:'Cư trú / ARC', study:'Học tập', health:'Y tế', money:'Tài chính', life:'Nhà ở & Sinh hoạt', rules:'Quy định' },
-    'my':     { all:'အားလုံး', arc:'နေထိုင်ခွင့် / ARC', study:'ပညာရေး', health:'ကျန်းမာရေး', money:'ငွေကြေး', life:'နေထိုင်မှု', rules:'ဥပဒေ' },
-    'id':     { all:'Semua', arc:'Tinggal / ARC', study:'Akademik', health:'Kesehatan', money:'Keuangan', life:'Hunian & Kehidupan', rules:'Peraturan' },
-    'ms':     { all:'Semua', arc:'Kediaman / ARC', study:'Akademik', health:'Kesihatan', money:'Kewangan', life:'Kediaman & Kehidupan', rules:'Peraturan' },
-    'th':     { all:'ทั้งหมด', arc:'ที่พัก / ARC', study:'การศึกษา', health:'สุขภาพ', money:'การเงิน', life:'ที่พักและชีวิต', rules:'กฎระเบียบ' },
-    'ja':     { all:'すべて', arc:'在留 / ARC', study:'学業', health:'医療・保険', money:'財務', life:'住居・生活', rules:'法規・入学' },
-    'ko':     { all:'전체', arc:'거주 / ARC', study:'학업', health:'의료·보험', money:'재정', life:'주거 및 생활', rules:'법규·입학' },
-  };
-  var LBL = CAT_LABELS[LANG] || CAT_LABELS['zh-hant'];
 
   var TMPL = {
     'zh-hant':{ count:function(n,q){return n+'個結果'+(q?'：「'+q+'」':'');}, none:'沒有找到相關結果', hint:'換個關鍵字試試，或瀏覽下方全部指南', all_title:'所有指南' },
@@ -197,11 +171,8 @@
 
   var gsInput   = document.getElementById('gsInput');
   var gsBtn     = document.getElementById('gsBtn');
-  var gsCats    = document.getElementById('gsCats');
   var gsStats   = document.getElementById('gsStats');
   var gsResults = document.getElementById('gsResults');
-
-  var activeCat = 'all';
 
   /* ─── tokenise: splits on spaces/punct; also splits CJK into chars ─── */
   function tokenize(text) {
@@ -281,13 +252,8 @@
 
   /* ─── filter + rank pool ─── */
   function filterGuides(q) {
-    var pool = GUIDES.slice();
-    if (activeCat !== 'all') {
-      var cd = CATS_DEF.filter(function(c){ return c.key===activeCat; })[0];
-      if (cd) pool = pool.filter(cd.test);
-    }
     var scored = [];
-    pool.forEach(function(g) {
+    GUIDES.forEach(function(g) {
       var s = scoreGuide(g, q);
       if (s > 0) scored.push({g:g, s:s});
     });
@@ -300,19 +266,8 @@
     var results = filterGuides(q);
 
     if (!q) {
-      /* no query: show all as cards */
-      gsStats.innerHTML = '<strong>'+T.all_title+'</strong>';
-      gsResults.innerHTML =
-        '<div class="gs-all-grid">' +
-        results.map(function(g){
-          return '<a href="'+g.url+'" class="gs-all-card">'+
-            '<div class="icon">'+g.icon+'</div>'+
-            '<div class="info">'+
-              '<div class="card-title">'+esc(g.title)+'</div>'+
-              '<div class="card-desc">'+esc(g.desc)+'</div>'+
-            '</div></a>';
-        }).join('') +
-        '</div>';
+      gsStats.innerHTML = '';
+      gsResults.innerHTML = '';
       return;
     }
 
@@ -351,24 +306,6 @@
     }).join('');
   }
 
-  /* ─── category chips ─── */
-  function buildCats() {
-    var html = '<button class="gs-cat active" data-cat="all">'+esc(LBL['all'])+'</button>';
-    CATS_DEF.forEach(function(c){
-      if (GUIDES.some(c.test))
-        html += '<button class="gs-cat" data-cat="'+c.key+'">'+c.icon+' '+esc(LBL[c.key])+'</button>';
-    });
-    gsCats.innerHTML = html;
-    gsCats.querySelectorAll('.gs-cat').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        activeCat = this.dataset.cat;
-        gsCats.querySelectorAll('.gs-cat').forEach(function(b){ b.classList.remove('active'); });
-        this.classList.add('active');
-        renderResults(gsInput.value.trim());
-      });
-    });
-  }
-
   /* ─── navigation (updates URL without page reload) ─── */
   function goSearch() {
     var q = gsInput.value.trim();
@@ -382,7 +319,6 @@
   gsInput.addEventListener('input',   function(){ renderResults(this.value.trim()); });
 
   /* ─── init ─── */
-  buildCats();
   renderResults(INIT_Q);
   gsInput.focus();
   if (INIT_Q) gsInput.setSelectionRange(INIT_Q.length, INIT_Q.length);

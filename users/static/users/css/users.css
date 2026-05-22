@@ -1715,6 +1715,28 @@
   }
   .search-btn:hover { color: var(--primary); transform: scale(1.15); }
 
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: 1.5px solid var(--line);
+    border-radius: 99px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    cursor: pointer;
+    transition: border-color .15s, color .15s, background .15s;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .back-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary-dark);
+    background: var(--primary-soft);
+  }
+
   .search-input {
     width: 180px;
     border: none;
