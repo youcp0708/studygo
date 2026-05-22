@@ -19,8 +19,8 @@
   <div class="gs-bar-inner">
     <a class="gs-logo" href="{% url 'guide_index' %}">StudyGo 🔍</a>
     <div class="gs-input-wrap">
-      <input class="gs-input" id="gsInput" value="{{ q|escapejs }}"
-             placeholder="{% trans '搜尋所有指南內容...' %}" autocomplete="off">
+      <input class="gs-input" id="gsInput" value="{{ q|escapejs }}" placeholder="{% trans '搜尋所有指南內容...' %}"
+        autocomplete="off">
       <button class="gs-search-btn" id="gsBtn">🔍</button>
     </div>
   </div>
@@ -37,178 +37,178 @@
 {% block extra_js %}
 <script id="bodyData" type="application/json">{{ body_data_json|safe }}</script>
 <script>
-(function () {
-  var LANG    = '{{ CURRENT_LANGUAGE|default:"zh-hant" }}';
-  var INIT_Q  = '{{ q|escapejs }}';
-  var GUIDES  = (window.GUIDES_I18N && (window.GUIDES_I18N[LANG] || window.GUIDES_I18N['zh-hant'])) || [];
-  var BODY    = JSON.parse(document.getElementById('bodyData').textContent || '{}');
+  (function () {
+    var LANG = '{{ CURRENT_LANGUAGE|default:"zh-hant" }}';
+    var INIT_Q = '{{ q|escapejs }}';
+    var GUIDES = (window.GUIDES_I18N && (window.GUIDES_I18N[LANG] || window.GUIDES_I18N['zh-hant'])) || [];
+    var BODY = JSON.parse(document.getElementById('bodyData').textContent || '{}');
 
-  var TMPL = {
-    'zh-hant':{ count:function(n,q){return n+'個結果'+(q?'：「'+q+'」':'');}, none:'沒有找到相關結果', hint:'換個關鍵字試試，或瀏覽下方全部指南', all_title:'所有指南' },
-    'en':     { count:function(n,q){return n+' result'+(n!==1?'s':'')+(q?' for "'+q+'"':'');}, none:'No results found', hint:'Try different keywords, or browse all guides below', all_title:'All Guides' },
-    'vi':     { count:function(n,q){return n+' kết quả'+(q?' cho "'+q+'"':'');}, none:'Không tìm thấy kết quả', hint:'Thử từ khóa khác', all_title:'Tất cả hướng dẫn' },
-    'my':     { count:function(n,q){return n+' ရလဒ်'+(q?' "'+q+'"':'');}, none:'ရလဒ်မတွေ့ပါ', hint:'အခြားသော့ချက်စကားလုံး ကြိုးစားပါ', all_title:'လမ်းညွှန်အားလုံး' },
-    'id':     { count:function(n,q){return n+' hasil'+(q?' untuk "'+q+'"':'');}, none:'Tidak ada hasil', hint:'Coba kata kunci lain', all_title:'Semua Panduan' },
-    'ms':     { count:function(n,q){return n+' keputusan'+(q?' untuk "'+q+'"':'');}, none:'Tiada keputusan', hint:'Cuba kata kunci lain', all_title:'Semua Panduan' },
-    'th':     { count:function(n,q){return 'พบ '+n+' ผลลัพธ์'+(q?' สำหรับ "'+q+'"':'');}, none:'ไม่พบผลลัพธ์', hint:'ลองคีย์เวิร์ดอื่น', all_title:'คู่มือทั้งหมด' },
-    'ja':     { count:function(n,q){return (q?'"'+q+'" の':'')+n+'件の結果';}, none:'結果が見つかりません', hint:'別のキーワードで検索してください', all_title:'すべてのガイド' },
-    'ko':     { count:function(n,q){return (q?'"'+q+'" ':'') +n+'개 결과';}, none:'결과를 찾을 수 없습니다', hint:'다른 키워드로 시도해 보세요', all_title:'모든 가이드' },
-  };
-  var T = TMPL[LANG] || TMPL['zh-hant'];
+    var TMPL = {
+      'zh-hant': { count: function (n, q) { return n + '個結果' + (q ? '：「' + q + '」' : ''); }, none: '沒有找到相關結果', hint: '換個關鍵字試試，或瀏覽下方全部指南', all_title: '所有指南' },
+      'en': { count: function (n, q) { return n + ' result' + (n !== 1 ? 's' : '') + (q ? ' for "' + q + '"' : ''); }, none: 'No results found', hint: 'Try different keywords, or browse all guides below', all_title: 'All Guides' },
+      'vi': { count: function (n, q) { return n + ' kết quả' + (q ? ' cho "' + q + '"' : ''); }, none: 'Không tìm thấy kết quả', hint: 'Thử từ khóa khác', all_title: 'Tất cả hướng dẫn' },
+      'my': { count: function (n, q) { return n + ' ရလဒ်' + (q ? ' "' + q + '"' : ''); }, none: 'ရလဒ်မတွေ့ပါ', hint: 'အခြားသော့ချက်စကားလုံး ကြိုးစားပါ', all_title: 'လမ်းညွှန်အားလုံး' },
+      'id': { count: function (n, q) { return n + ' hasil' + (q ? ' untuk "' + q + '"' : ''); }, none: 'Tidak ada hasil', hint: 'Coba kata kunci lain', all_title: 'Semua Panduan' },
+      'ms': { count: function (n, q) { return n + ' keputusan' + (q ? ' untuk "' + q + '"' : ''); }, none: 'Tiada keputusan', hint: 'Cuba kata kunci lain', all_title: 'Semua Panduan' },
+      'th': { count: function (n, q) { return 'พบ ' + n + ' ผลลัพธ์' + (q ? ' สำหรับ "' + q + '"' : ''); }, none: 'ไม่พบผลลัพธ์', hint: 'ลองคีย์เวิร์ดอื่น', all_title: 'คู่มือทั้งหมด' },
+      'ja': { count: function (n, q) { return (q ? '"' + q + '" の' : '') + n + '件の結果'; }, none: '結果が見つかりません', hint: '別のキーワードで検索してください', all_title: 'すべてのガイド' },
+      'ko': { count: function (n, q) { return (q ? '"' + q + '" ' : '') + n + '개 결과'; }, none: '결과를 찾을 수 없습니다', hint: '다른 키워드로 시도해 보세요', all_title: '모든 가이드' },
+    };
+    var T = TMPL[LANG] || TMPL['zh-hant'];
 
-  var gsInput   = document.getElementById('gsInput');
-  var gsBtn     = document.getElementById('gsBtn');
-  var gsStats   = document.getElementById('gsStats');
-  var gsResults = document.getElementById('gsResults');
+    var gsInput = document.getElementById('gsInput');
+    var gsBtn = document.getElementById('gsBtn');
+    var gsStats = document.getElementById('gsStats');
+    var gsResults = document.getElementById('gsResults');
 
-  /* ─── tokenise: splits on spaces/punct; also splits CJK into chars ─── */
-  function tokenize(text) {
-    if (!text) return [];
-    var parts = text.toLowerCase().split(/[\s,、。！？\-·・·]+/).filter(Boolean);
-    var out = [];
-    parts.forEach(function(p) {
-      out.push(p);
-      var cjk = p.match(/[一-鿿㐀-䶿가-힯぀-ヿ]/g);
-      if (cjk && cjk.length > 1) cjk.forEach(function(c){ out.push(c); });
-    });
-    return out.filter(function(t,i,a){ return a.indexOf(t)===i; });
-  }
-
-  /* ─── score: returns 0 = no match, >0 = relevant ─── */
-  function scoreGuide(g, q) {
-    if (!q) return 1;
-    var title = g.title.toLowerCase();
-    var desc  = g.desc.toLowerCase();
-    var ql    = q.toLowerCase();
-    var s     = 0;
-
-    if (title === ql)           return 2000;
-    if (title.indexOf(ql) >= 0) s += 120;
-    if (desc.indexOf(ql)  >= 0) s +=  50;
-
-    var body   = BODY[g.url] || [];
-    var bodyTx = body.join(' ').toLowerCase();
-    if (bodyTx.indexOf(ql) >= 0) s += 40;
-
-    var tokens = tokenize(q);
-    var hitTitle = 0, hitDesc = 0, hitBody = 0;
-    tokens.forEach(function(t) {
-      if (t.length < 1) return;
-      if (title.indexOf(t)   >= 0) { s += 25; hitTitle++; }
-      if (desc.indexOf(t)    >= 0) { s += 10; hitDesc++;  }
-      if (bodyTx.indexOf(t)  >= 0) { s +=  8; hitBody++;  }
-    });
-    if (tokens.length > 1) {
-      if (hitTitle === tokens.length) s += 40;
-      if (hitBody  === tokens.length) s += 15;
-    }
-    return s;
-  }
-
-  /* ─── find the best matching snippet from body content ─── */
-  function bestSnippet(g, q) {
-    var body = BODY[g.url] || [];
-    if (!body.length || !q) return null;
-    var ql     = q.toLowerCase();
-    var tokens = tokenize(q);
-    var best   = null;
-    var bestS  = 0;
-
-    body.forEach(function(line) {
-      var ll = line.toLowerCase();
-      var s  = 0;
-      if (ll.indexOf(ql) >= 0) s += 100;
-      tokens.forEach(function(t){ if (ll.indexOf(t) >= 0) s += 10; });
-      if (s > bestS) { bestS = s; best = line; }
-    });
-    return bestS > 0 ? best : null;
-  }
-
-  /* ─── highlight: marks full query + individual tokens ─── */
-  function esc(s) { return s.replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
-
-  function highlight(text, q) {
-    if (!q) return esc(text);
-    var terms = [q].concat(tokenize(q))
-      .filter(function(t,i,a){ return t && a.indexOf(t)===i; })
-      .sort(function(a,b){ return b.length-a.length; });
-    var escaped = terms.map(function(t){ return t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); });
-    var re = new RegExp('('+escaped.join('|')+')', 'gi');
-    return esc(text).replace(re, '<mark>$1</mark>');
-  }
-
-  /* ─── filter + rank pool ─── */
-  function filterGuides(q) {
-    var scored = [];
-    GUIDES.forEach(function(g) {
-      var s = scoreGuide(g, q);
-      if (s > 0) scored.push({g:g, s:s});
-    });
-    scored.sort(function(a,b){ return b.s-a.s; });
-    return scored.map(function(x){ return x.g; });
-  }
-
-  /* ─── render search results ─── */
-  function renderResults(q) {
-    var results = filterGuides(q);
-
-    if (!q) {
-      gsStats.innerHTML = '';
-      gsResults.innerHTML = '';
-      return;
+    /* ─── tokenise: splits on spaces/punct; also splits CJK into chars ─── */
+    function tokenize(text) {
+      if (!text) return [];
+      var parts = text.toLowerCase().split(/[\s,、。！？\-·・·]+/).filter(Boolean);
+      var out = [];
+      parts.forEach(function (p) {
+        out.push(p);
+        var cjk = p.match(/[一-鿿㐀-䶿가-힯぀-ヿ]/g);
+        if (cjk && cjk.length > 1) cjk.forEach(function (c) { out.push(c); });
+      });
+      return out.filter(function (t, i, a) { return a.indexOf(t) === i; });
     }
 
-    gsStats.innerHTML = '<strong>' + T.count(results.length, q) + '</strong>';
+    /* ─── score: returns 0 = no match, >0 = relevant ─── */
+    function scoreGuide(g, q) {
+      if (!q) return 1;
+      var title = g.title.toLowerCase();
+      var desc = g.desc.toLowerCase();
+      var ql = q.toLowerCase();
+      var s = 0;
 
-    if (results.length === 0) {
-      gsResults.innerHTML =
-        '<div class="gs-empty">'+
-        '<div class="gs-empty-icon">🔍</div>'+
-        '<div class="gs-empty-title">'+esc(T.none)+'</div>'+
-        '<div class="gs-empty-hint">'+esc(T.hint)+'</div>'+
-        '<div class="gs-all-grid" style="margin-top:32px;text-align:left;">'+
-        (GUIDES_I18N[LANG]||GUIDES_I18N['zh-hant']).map(function(g){
-          return '<a href="'+g.url+'" class="gs-all-card">'+
-            '<div class="icon">'+g.icon+'</div>'+
-            '<div class="info"><div class="card-title">'+esc(g.title)+'</div></div></a>';
-        }).join('')+
-        '</div></div>';
-      return;
+      if (title === ql) return 2000;
+      if (title.indexOf(ql) >= 0) s += 120;
+      if (desc.indexOf(ql) >= 0) s += 50;
+
+      var body = BODY[g.url] || [];
+      var bodyTx = body.join(' ').toLowerCase();
+      if (bodyTx.indexOf(ql) >= 0) s += 40;
+
+      var tokens = tokenize(q);
+      var hitTitle = 0, hitDesc = 0, hitBody = 0;
+      tokens.forEach(function (t) {
+        if (t.length < 1) return;
+        if (title.indexOf(t) >= 0) { s += 25; hitTitle++; }
+        if (desc.indexOf(t) >= 0) { s += 10; hitDesc++; }
+        if (bodyTx.indexOf(t) >= 0) { s += 8; hitBody++; }
+      });
+      if (tokens.length > 1) {
+        if (hitTitle === tokens.length) s += 40;
+        if (hitBody === tokens.length) s += 15;
+      }
+      return s;
     }
 
-    gsResults.innerHTML = results.map(function(g) {
-      var snippet = bestSnippet(g, q);
-      var snippetHtml = snippet
-        ? '<div class="gs-result-snippet">'+highlight(snippet, q)+'</div>'
-        : '';
-      return '<a href="'+g.url+'" class="gs-result">'+
-        '<div class="gs-result-head">'+
-          '<span class="gs-result-icon">'+g.icon+'</span>'+
-          '<span class="gs-result-url">studygo.tw'+g.url+'</span>'+
-        '</div>'+
-        '<div class="gs-result-title">'+highlight(g.title, q)+'</div>'+
-        '<div class="gs-result-desc">'+highlight(g.desc, q)+'</div>'+
-        snippetHtml+
-      '</a>';
-    }).join('');
-  }
+    /* ─── find the best matching snippet from body content ─── */
+    function bestSnippet(g, q) {
+      var body = BODY[g.url] || [];
+      if (!body.length || !q) return null;
+      var ql = q.toLowerCase();
+      var tokens = tokenize(q);
+      var best = null;
+      var bestS = 0;
 
-  /* ─── navigation (updates URL without page reload) ─── */
-  function goSearch() {
-    var q = gsInput.value.trim();
-    var url = '/guides/search/' + (q ? '?q='+encodeURIComponent(q) : '');
-    window.history.replaceState({}, '', url);
-    renderResults(q);
-  }
+      body.forEach(function (line) {
+        var ll = line.toLowerCase();
+        var s = 0;
+        if (ll.indexOf(ql) >= 0) s += 100;
+        tokens.forEach(function (t) { if (ll.indexOf(t) >= 0) s += 10; });
+        if (s > bestS) { bestS = s; best = line; }
+      });
+      return bestS > 0 ? best : null;
+    }
 
-  gsBtn.addEventListener('click', goSearch);
-  gsInput.addEventListener('keydown', function(e){ if (e.key==='Enter'){ e.preventDefault(); goSearch(); } });
-  gsInput.addEventListener('input',   function(){ renderResults(this.value.trim()); });
+    /* ─── highlight: marks full query + individual tokens ─── */
+    function esc(s) { return s.replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
-  /* ─── init ─── */
-  renderResults(INIT_Q);
-  gsInput.focus();
-  if (INIT_Q) gsInput.setSelectionRange(INIT_Q.length, INIT_Q.length);
-})();
+    function highlight(text, q) {
+      if (!q) return esc(text);
+      var terms = [q].concat(tokenize(q))
+        .filter(function (t, i, a) { return t && a.indexOf(t) === i; })
+        .sort(function (a, b) { return b.length - a.length; });
+      var escaped = terms.map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); });
+      var re = new RegExp('(' + escaped.join('|') + ')', 'gi');
+      return esc(text).replace(re, '<mark>$1</mark>');
+    }
+
+    /* ─── filter + rank pool ─── */
+    function filterGuides(q) {
+      var scored = [];
+      GUIDES.forEach(function (g) {
+        var s = scoreGuide(g, q);
+        if (s > 0) scored.push({ g: g, s: s });
+      });
+      scored.sort(function (a, b) { return b.s - a.s; });
+      return scored.map(function (x) { return x.g; });
+    }
+
+    /* ─── render search results ─── */
+    function renderResults(q) {
+      var results = filterGuides(q);
+
+      if (!q) {
+        gsStats.innerHTML = '';
+        gsResults.innerHTML = '';
+        return;
+      }
+
+      gsStats.innerHTML = '<strong>' + T.count(results.length, q) + '</strong>';
+
+      if (results.length === 0) {
+        gsResults.innerHTML =
+          '<div class="gs-empty">' +
+          '<div class="gs-empty-icon">🔍</div>' +
+          '<div class="gs-empty-title">' + esc(T.none) + '</div>' +
+          '<div class="gs-empty-hint">' + esc(T.hint) + '</div>' +
+          '<div class="gs-all-grid" style="margin-top:32px;text-align:left;">' +
+          (GUIDES_I18N[LANG] || GUIDES_I18N['zh-hant']).map(function (g) {
+            return '<a href="' + g.url + '" class="gs-all-card">' +
+              '<div class="icon">' + g.icon + '</div>' +
+              '<div class="info"><div class="card-title">' + esc(g.title) + '</div></div></a>';
+          }).join('') +
+          '</div></div>';
+        return;
+      }
+
+      gsResults.innerHTML = results.map(function (g) {
+        var snippet = bestSnippet(g, q);
+        var snippetHtml = snippet
+          ? '<div class="gs-result-snippet">' + highlight(snippet, q) + '</div>'
+          : '';
+        return '<a href="' + g.url + '" class="gs-result">' +
+          '<div class="gs-result-head">' +
+          '<span class="gs-result-icon">' + g.icon + '</span>' +
+          '<span class="gs-result-url">studygo.tw' + g.url + '</span>' +
+          '</div>' +
+          '<div class="gs-result-title">' + highlight(g.title, q) + '</div>' +
+          '<div class="gs-result-desc">' + highlight(g.desc, q) + '</div>' +
+          snippetHtml +
+          '</a>';
+      }).join('');
+    }
+
+    /* ─── navigation (updates URL without page reload) ─── */
+    function goSearch() {
+      var q = gsInput.value.trim();
+      var url = '/guides/search/' + (q ? '?q=' + encodeURIComponent(q) : '');
+      window.history.replaceState({}, '', url);
+      renderResults(q);
+    }
+
+    gsBtn.addEventListener('click', goSearch);
+    gsInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); goSearch(); } });
+    gsInput.addEventListener('input', function () { renderResults(this.value.trim()); });
+
+    /* ─── init ─── */
+    renderResults(INIT_Q);
+    gsInput.focus();
+    if (INIT_Q) gsInput.setSelectionRange(INIT_Q.length, INIT_Q.length);
+  })();
 </script>
 {% endblock %}
