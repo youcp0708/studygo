@@ -4281,6 +4281,284 @@ msgstr "Required Curriculum Table"
 msgid "教務處官網"
 msgstr "Office of Academic Affairs"
 
+msgid "選課・加退選・停修・抵免"
+msgstr "Course Registration · Add/Drop · Withdrawal · Credit Exemption"
+
+msgid "中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學期略有調整。"
+msgstr ""
+"NCU course registration system, semester schedule, and application "
+"procedures. Dates are based on official announcements and may vary each "
+"semester."
+
+msgid "日程請以課務組最新公告為準："
+msgstr ""
+"Please check the latest official schedule from the Academic Affairs "
+"Division:"
+
+msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
+msgstr ""
+"Dates below are for Semester 2, AY 114 as an example. Dates vary each "
+"semester. Please visit"
+
+msgid "課務組官網 ↗"
+msgstr "Academic Affairs Division Website ↗"
+
+msgid "查看最新學期日程表。"
+msgstr "to view the latest semester schedule."
+
+msgid "學期課務日程（114-2 為例）"
+msgstr "Semester Course Schedule (AY114-2 as Example)"
+
+msgid "初選"
+msgstr "Initial Registration"
+
+msgid "加退選"
+msgstr "Add/Drop"
+
+msgid "人工加退選"
+msgstr "Manual Add/Drop"
+
+msgid "確認結果"
+msgstr "Confirm Results"
+
+msgid "繳學分費"
+msgstr "Pay Credit Fees"
+
+msgid "停修"
+msgstr "Course Withdrawal"
+
+msgid "選課系統入口"
+msgstr "Course Registration System"
+
+msgid "選課系統："
+msgstr "Course Registration System:"
+
+msgid "SPARC（計中）帳號"
+msgstr "SPARC (Computing Center) account"
+
+msgid "此時段請勿操作選課"
+msgstr "please do not access the system during this period"
+
+msgid "路徑："
+msgstr "Path:"
+
+msgid "NCU Portal → 學生服務 → 教務相關服務 → 選課系統"
+msgstr ""
+"NCU Portal → Student Services → Academic Services → Course Registration"
+
+msgid "各階段說明"
+msgstr "Stage-by-Stage Explanation"
+
+msgid "各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。"
+msgstr ""
+"Required courses are usually pre-registered. If you have applied for credit "
+"exemption or completed them early, please drop them yourself."
+
+msgid "務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。"
+msgstr ""
+"You must participate in initial registration; otherwise you lose priority "
+"for courses with enrollment limits."
+
+msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgstr ""
+"One batch allocation occurs after initial registration closes; results "
+"announced before 16:00 on 2026/02/03."
+
+msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
+msgstr ""
+"For courses requiring a password card, obtain it from the instructor; each "
+"password code is single-use."
+
+msgid "手續費 NT$100"
+msgstr "Processing Fee NT$100"
+
+msgid "適用對象：加退選截止後仍有需求者、因衝堂被系統退選後欲重新加選者。"
+msgstr ""
+"For: those who still need changes after add/drop closes, or those whose "
+"courses were dropped due to conflicts and wish to re-add."
+
+msgid "隔日更新至選課系統與 ee-class。"
+msgstr "Updates appear in the course system and ee-class the following day."
+
+msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
+msgstr ""
+"If the instructor is unavailable, a department staff member authorized by "
+"the instructor may stamp on their behalf."
+
+msgid "確認選課結果"
+msgstr "Confirm Course Registration Results"
+
+msgid "路徑：選課系統 → 個人功能表 → 選課結果。"
+msgstr "Path: Course System → Personal Menu → Registration Results."
+
+msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgstr ""
+"If any courses were force-dropped due to conflicts or duplicate codes, "
+"manual add/drop (03/10–03/12) can be used to fix this."
+
+msgid "停修（Course Withdrawal）"
+msgstr "Course Withdrawal"
+
+msgid "W 成績"
+msgstr "W Grade"
+
+msgid "重要規定"
+msgstr "Important Rules"
+
+msgid "最低修課學分："
+msgstr "Minimum Credit Requirement:"
+
+msgid "衝堂 / 同課號："
+msgstr "Schedule Conflict / Duplicate Course Code:"
+
+msgid "部份課程有群組上限："
+msgstr "Some Courses Have Group Limits:"
+
+msgid "學分費："
+msgstr "Tuition Fees:"
+
+msgid "學分抵免"
+msgstr "Credit Exemption"
+
+msgid "課務組聯絡資訊"
+msgstr "Academic Affairs Division Contact"
+
+msgid "業務項目"
+msgstr "Service Item"
+
+msgid "電話分機（03-4227151 +）"
+msgstr "Phone Extension (03-4227151 +)"
+
+msgid "選課、課務相關"
+msgstr "Course Registration & Academic Affairs"
+
+msgid "校際選課（本校至他校）"
+msgstr "Inter-School Enrollment (NCU to Other Schools)"
+
+msgid "校際選課（他校至中大）"
+msgstr "Inter-School Enrollment (Other Schools to NCU)"
+
+msgid "暑修"
+msgstr "Summer Session"
+
+msgid "數位學習平台"
+msgstr "Digital Learning Platform"
+
+msgid "導師輔導選課問題"
+msgstr "Advisor-Guided Course Selection Issues"
+
+msgid "NCU 選課系統 ↗"
+msgstr "NCU Course Registration System ↗"
+
+msgid "課務日程表 ↗"
+msgstr "Course Schedule Calendar ↗"
+
+msgid "選課相關資訊 PDF ↗"
+msgstr "Course Registration Info PDF ↗"
+
+msgid "選課系統操作手冊（英）↗"
+msgstr "Course System User Manual (English) ↗"
+
+msgid "教務處官網 ↗"
+msgstr "Academic Affairs Office Website ↗"
+
+msgid "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。"
+msgstr ""
+"First-semester freshmen do not need the advisor password card; from the "
+"second semester onward, complete the advisor-guided course selection "
+"procedure (online) before each initial registration."
+
+msgid "春節期間（02/13–02/22）不開放選課，請注意。"
+msgstr ""
+"Course registration is closed during the Lunar New Year period "
+"(02/13–02/22). Please take note."
+
+msgid ""
+"自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。"
+msgstr ""
+"From the 3rd day of add/drop, the system runs one daily allocation at "
+"07:00–09:00 (system paused during processing); after 09:00 you can check "
+"that day's results on ee-class."
+
+msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
+msgstr ""
+"If you still want to take a course you missed, you must re-register online "
+"and wait for the next day's allocation — waitlists are not held "
+"automatically."
+
+msgid "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
+msgstr ""
+"On the last day of add/drop, do not add courses that may conflict — the "
+"final allocation could force-drop conflicting courses."
+
+msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
+msgstr ""
+"Process: Print form from course system → Get instructor's signature → Pay "
+"NT$100 fee (cash at Finance Office or EasyCard at Academic Affairs) → Submit"
+" form to Academic Affairs."
+
+msgid "依選課辦法，未於期限內確認者以電腦系統為依據，不得異議。請務必確認！"
+msgstr ""
+"Per course registration rules, those who do not confirm within the deadline "
+"are bound by the system record with no recourse. Be sure to confirm!"
+
+msgid "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。"
+msgstr ""
+"Limited to one course per semester; after withdrawal, remaining credits must"
+" not fall below the minimum (16 credits for years 1–3, 9 for year 4)."
+
+msgid "停修不退學分費，成績單上以「停修 / W」登錄，不計入當學期所修學分數。"
+msgstr ""
+"Credit fees are not refunded for withdrawal; the transcript records "
+"\"Withdrawal / W\" and the credits are not counted for that semester."
+
+msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
+msgstr ""
+"Process: Print withdrawal form from course system → Get signatures from "
+"instructor and department head → Submit to Academic Affairs."
+
+msgid "已辦理減修者不得再辦理停修。"
+msgstr ""
+"Students who have already applied for a reduced course load may not also "
+"apply for withdrawal."
+
+msgid "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"Years 1–3 must take at least 16 credits per semester; year 4 at least 9. "
+"Those below the minimum must apply for a reduced load (requires advisor and "
+"department head approval), or face dismissal."
+
+msgid "加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。"
+msgstr ""
+"After add/drop closes, any remaining conflicts or duplicate course codes "
+"will be force-dropped by the Academic Affairs office. Resolve them before "
+"the deadline; if dropped, use manual add/drop to recover."
+
+msgid "如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。"
+msgstr ""
+"For example, core general education is limited to 2 courses per semester, PE"
+" 1 course, freshman English 1 course, etc. Check group limits before "
+"registering."
+
+msgid "修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。"
+msgstr ""
+"Taking ≤9 credits: pay proportional credit and miscellaneous fees; ≥10 "
+"credits: pay full tuition and miscellaneous fees (teacher training credits "
+"calculated separately)."
+
+msgid "學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。"
+msgstr ""
+"Credit exemption is handled by the Registration Section (not Academic "
+"Affairs). Please contact the Registration Section at the Academic Affairs "
+"Office for application timing and requirements."
+
+msgid "抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選期間選課，系統不會代選任何課程。"
+msgstr ""
+"After exemption results are announced, if exempted courses are still in your"
+" registration list, drop them yourself. Transfer students must register for "
+"courses themselves during add/drop; the system will not auto-register any "
+"courses."
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Enter your question, and the system will organize suggestions based on your "

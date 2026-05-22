@@ -3971,3 +3971,271 @@ msgstr "Bảng môn học yêu cầu"
 
 msgid "教務處官網"
 msgstr "Trang web Phòng Học vụ"
+
+msgid "選課・加退選・停修・抵免"
+msgstr "Đăng ký môn học · Thêm/Rút · Rút môn · Miễn tín chỉ"
+
+msgid "中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學期略有調整。"
+msgstr ""
+"Hệ thống đăng ký môn học NCU, lịch học kỳ và quy trình nộp đơn. Ngày tháng "
+"dựa trên thông báo chính thức và có thể thay đổi mỗi học kỳ."
+
+msgid "日程請以課務組最新公告為準："
+msgstr "Vui lòng kiểm tra lịch chính thức mới nhất từ Phòng Học vụ:"
+
+msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
+msgstr ""
+"Ngày dưới đây là ví dụ cho Học kỳ 2, NĂM HỌC 114. Ngày thay đổi mỗi học kỳ. "
+"Vui lòng truy cập"
+
+msgid "課務組官網 ↗"
+msgstr "Website Phòng Học vụ ↗"
+
+msgid "查看最新學期日程表。"
+msgstr "để xem lịch học kỳ mới nhất."
+
+msgid "學期課務日程（114-2 為例）"
+msgstr "Lịch Học Kỳ (Ví dụ HK114-2)"
+
+msgid "初選"
+msgstr "Đăng ký ban đầu"
+
+msgid "加退選"
+msgstr "Thêm/Rút môn"
+
+msgid "人工加退選"
+msgstr "Thêm/Rút thủ công"
+
+msgid "確認結果"
+msgstr "Xác nhận kết quả"
+
+msgid "繳學分費"
+msgstr "Nộp phí tín chỉ"
+
+msgid "停修"
+msgstr "Rút môn học"
+
+msgid "選課系統入口"
+msgstr "Hệ thống đăng ký môn học"
+
+msgid "選課系統："
+msgstr "Hệ thống đăng ký:"
+
+msgid "SPARC（計中）帳號"
+msgstr "tài khoản SPARC (Trung tâm Máy tính)"
+
+msgid "此時段請勿操作選課"
+msgstr "vui lòng không truy cập hệ thống trong khoảng thời gian này"
+
+msgid "路徑："
+msgstr "Đường dẫn:"
+
+msgid "NCU Portal → 學生服務 → 教務相關服務 → 選課系統"
+msgstr "NCU Portal → Dịch vụ sinh viên → Dịch vụ học vụ → Đăng ký môn học"
+
+msgid "各階段說明"
+msgstr "Giải thích từng giai đoạn"
+
+msgid "各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。"
+msgstr ""
+"Các môn bắt buộc thường được đăng ký sẵn. Nếu bạn đã xin miễn tín chỉ hoặc "
+"hoàn thành sớm, hãy tự rút môn."
+
+msgid "務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。"
+msgstr ""
+"Bạn phải tham gia đăng ký ban đầu, nếu không sẽ mất quyền ưu tiên đối với "
+"các môn có giới hạn chỗ."
+
+msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgstr ""
+"Một lần phân bổ hàng loạt xảy ra sau khi đăng ký ban đầu kết thúc; kết quả "
+"thông báo trước 16:00 ngày 2026/02/03."
+
+msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
+msgstr ""
+"Đối với các môn yêu cầu thẻ mật khẩu, hãy lấy từ giảng viên; mỗi mã mật khẩu"
+" chỉ dùng một lần."
+
+msgid "手續費 NT$100"
+msgstr "Phí xử lý NT$100"
+
+msgid "適用對象：加退選截止後仍有需求者、因衝堂被系統退選後欲重新加選者。"
+msgstr ""
+"Dành cho: những người vẫn cần thay đổi sau khi thêm/rút kết thúc, hoặc những"
+" người bị rút môn do xung đột và muốn đăng ký lại."
+
+msgid "隔日更新至選課系統與 ee-class。"
+msgstr "Cập nhật xuất hiện trong hệ thống và ee-class vào ngày hôm sau."
+
+msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
+msgstr ""
+"Nếu giảng viên không có mặt, nhân viên phòng ban được giảng viên ủy quyền có"
+" thể đóng dấu thay."
+
+msgid "確認選課結果"
+msgstr "Xác nhận kết quả đăng ký"
+
+msgid "路徑：選課系統 → 個人功能表 → 選課結果。"
+msgstr "Đường dẫn: Hệ thống → Menu cá nhân → Kết quả đăng ký."
+
+msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgstr ""
+"Nếu bất kỳ môn nào bị bắt buộc rút do xung đột hoặc mã trùng lặp, có thể "
+"dùng thêm/rút thủ công (03/10–03/12) để sửa."
+
+msgid "停修（Course Withdrawal）"
+msgstr "Rút môn học (Course Withdrawal)"
+
+msgid "W 成績"
+msgstr "Điểm W"
+
+msgid "重要規定"
+msgstr "Quy định quan trọng"
+
+msgid "最低修課學分："
+msgstr "Yêu cầu tín chỉ tối thiểu:"
+
+msgid "衝堂 / 同課號："
+msgstr "Xung đột lịch / Mã môn trùng lặp:"
+
+msgid "部份課程有群組上限："
+msgstr "Một số môn có giới hạn nhóm:"
+
+msgid "學分費："
+msgstr "Học phí tín chỉ:"
+
+msgid "學分抵免"
+msgstr "Miễn tín chỉ"
+
+msgid "課務組聯絡資訊"
+msgstr "Liên hệ Phòng Học vụ"
+
+msgid "業務項目"
+msgstr "Hạng mục dịch vụ"
+
+msgid "電話分機（03-4227151 +）"
+msgstr "Số máy lẻ (03-4227151 +)"
+
+msgid "選課、課務相關"
+msgstr "Đăng ký môn học & Học vụ"
+
+msgid "校際選課（本校至他校）"
+msgstr "Đăng ký liên trường (NCU đến trường khác)"
+
+msgid "校際選課（他校至中大）"
+msgstr "Đăng ký liên trường (Trường khác đến NCU)"
+
+msgid "暑修"
+msgstr "Học hè"
+
+msgid "數位學習平台"
+msgstr "Nền tảng học tập số"
+
+msgid "導師輔導選課問題"
+msgstr "Vấn đề chọn môn có hướng dẫn cố vấn"
+
+msgid "NCU 選課系統 ↗"
+msgstr "Hệ thống đăng ký NCU ↗"
+
+msgid "課務日程表 ↗"
+msgstr "Lịch học kỳ ↗"
+
+msgid "選課相關資訊 PDF ↗"
+msgstr "PDF thông tin đăng ký ↗"
+
+msgid "選課系統操作手冊（英）↗"
+msgstr "Hướng dẫn sử dụng hệ thống (Tiếng Anh) ↗"
+
+msgid "教務處官網 ↗"
+msgstr "Website Phòng Giáo vụ ↗"
+
+msgid "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。"
+msgstr ""
+"Sinh viên năm nhất học kỳ 1 không cần thẻ mật khẩu cố vấn; từ học kỳ 2 trở "
+"đi, hoàn thành thủ tục chọn môn có hướng dẫn cố vấn (trực tuyến) trước mỗi "
+"đợt đăng ký ban đầu."
+
+msgid "春節期間（02/13–02/22）不開放選課，請注意。"
+msgstr ""
+"Đăng ký môn học đóng cửa trong dịp Tết Nguyên Đán (02/13–02/22). Vui lòng "
+"lưu ý."
+
+msgid ""
+"自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。"
+msgstr ""
+"Từ ngày thứ 3 của kỳ thêm/rút, hệ thống phân bổ một lần mỗi ngày lúc "
+"07:00–09:00 (hệ thống tạm dừng trong quá trình xử lý); sau 09:00 có thể kiểm"
+" tra kết quả hôm đó trên ee-class."
+
+msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
+msgstr ""
+"Nếu vẫn muốn học môn bị loại, bạn phải đăng ký lại trực tuyến và chờ phân bổ"
+" ngày hôm sau — danh sách chờ không được giữ tự động."
+
+msgid "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
+msgstr ""
+"Vào ngày cuối của kỳ thêm/rút, đừng thêm các môn có thể xung đột — đợt phân "
+"bổ cuối có thể bắt buộc rút các môn xung đột."
+
+msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
+msgstr ""
+"Quy trình: In mẫu từ hệ thống → Lấy chữ ký giảng viên → Nộp phí NT$100 (tiền"
+" mặt tại phòng tài chính hoặc EasyCard tại phòng học vụ) → Nộp mẫu tại phòng"
+" học vụ."
+
+msgid "依選課辦法，未於期限內確認者以電腦系統為依據，不得異議。請務必確認！"
+msgstr ""
+"Theo quy định đăng ký môn học, những người không xác nhận trong thời hạn sẽ "
+"bị ràng buộc bởi hồ sơ hệ thống mà không có quyền khiếu nại. Hãy nhớ xác "
+"nhận!"
+
+msgid "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。"
+msgstr ""
+"Giới hạn một môn mỗi học kỳ; sau khi rút, số tín chỉ còn lại không được thấp"
+" hơn mức tối thiểu (16 tín chỉ cho năm 1–3, 9 cho năm 4)."
+
+msgid "停修不退學分費，成績單上以「停修 / W」登錄，不計入當學期所修學分數。"
+msgstr ""
+"Phí tín chỉ không được hoàn lại khi rút môn; bảng điểm ghi \"Rút môn / W\" "
+"và tín chỉ không được tính cho học kỳ đó."
+
+msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
+msgstr ""
+"Quy trình: In mẫu rút môn từ hệ thống → Lấy chữ ký của giảng viên và trưởng "
+"khoa → Nộp tại phòng học vụ."
+
+msgid "已辦理減修者不得再辦理停修。"
+msgstr "Sinh viên đã đăng ký giảm tải không được phép rút thêm môn."
+
+msgid "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"Năm 1–3 phải học ít nhất 16 tín chỉ mỗi học kỳ; năm 4 ít nhất 9. Những người"
+" dưới mức tối thiểu phải đăng ký giảm tải (cần sự chấp thuận của cố vấn và "
+"trưởng khoa), nếu không sẽ bị đuổi học."
+
+msgid "加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。"
+msgstr ""
+"Sau khi thêm/rút kết thúc, mọi xung đột hoặc mã trùng lặp còn lại sẽ bị "
+"phòng học vụ bắt buộc rút. Giải quyết trước thời hạn; nếu bị rút, sử dụng "
+"thêm/rút thủ công để khắc phục."
+
+msgid "如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。"
+msgstr ""
+"Ví dụ, giáo dục đại cương cốt lõi giới hạn 2 môn mỗi học kỳ, thể dục 1 môn, "
+"tiếng Anh năm nhất 1 môn, v.v. Kiểm tra giới hạn nhóm trước khi đăng ký."
+
+msgid "修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。"
+msgstr ""
+"Học ≤9 tín chỉ: nộp phí tín chỉ và phí linh tinh theo tỷ lệ; ≥10 tín chỉ: "
+"nộp toàn bộ học phí và phí linh tinh (tín chỉ đào tạo giáo viên tính riêng)."
+
+msgid "學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。"
+msgstr ""
+"Miễn tín chỉ do Phòng Đăng ký phụ trách (không phải Phòng Học vụ). Liên hệ "
+"Phòng Đăng ký tại Phòng Giáo vụ để biết thời gian và yêu cầu nộp đơn."
+
+msgid "抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選期間選課，系統不會代選任何課程。"
+msgstr ""
+"Sau khi kết quả miễn tín chỉ được công bố, nếu các môn được miễn vẫn còn "
+"trong danh sách đăng ký, hãy tự rút. Sinh viên chuyển tiếp phải tự đăng ký "
+"trong kỳ thêm/rút; hệ thống sẽ không tự động đăng ký."

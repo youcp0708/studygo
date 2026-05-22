@@ -14,62 +14,62 @@
 
   <div class="guide-hero">
     <div class="bg-text">CRS</div>
-    <div class="hero-badge">選課・加退選・停修・抵免</div>
+    <div class="hero-badge">{% trans "選課・加退選・停修・抵免" %}</div>
     <h2>📚 {% trans "課務資訊" %}</h2>
-    <p>中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學期略有調整。</p>
+    <p>{% trans "中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學期略有調整。" %}</p>
   </div>
 
   <div class="alert alert-warning">
     <div class="alert-icon">📅</div>
     <div>
-      <strong>日程請以課務組最新公告為準：</strong>以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至
-      <a href="https://pdc.adm.ncu.edu.tw/p/406-1019-9937,r498.php?Lang=zh-tw" target="_blank" rel="noopener" style="color:var(--warning);font-weight:700;">課務組官網 ↗</a>
-      查看最新學期日程表。
+      <strong>{% trans "日程請以課務組最新公告為準：" %}</strong>{% trans "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至" %}
+      <a href="https://pdc.adm.ncu.edu.tw/p/406-1019-9937,r498.php?Lang=zh-tw" target="_blank" rel="noopener" style="color:var(--warning);font-weight:700;">{% trans "課務組官網 ↗" %}</a>
+      {% trans "查看最新學期日程表。" %}
     </div>
   </div>
 
   <!-- ── 學期日程流程 ── -->
-  <div class="section-title">📅 學期課務日程（114-2 為例）</div>
+  <div class="section-title">📅 {% trans "學期課務日程（114-2 為例）" %}</div>
   <div class="schedule-flow">
     <div class="sf-step">
       <div class="sf-icon">🖱</div>
-      <div class="sf-title">初選</div>
+      <div class="sf-title">{% trans "初選" %}</div>
       <div class="sf-date">12/05 – 12/12<br>09:00–23:59</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">📋</div>
-      <div class="sf-title">加退選</div>
+      <div class="sf-title">{% trans "加退選" %}</div>
       <div class="sf-date">02/09 – 02/12<br>02/23 – 03/06</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">✍️</div>
-      <div class="sf-title">人工加退選</div>
-      <div class="sf-date">03/10 – 03/12<br>手續費 NT$100</div>
+      <div class="sf-title">{% trans "人工加退選" %}</div>
+      <div class="sf-date">03/10 – 03/12<br>{% trans "手續費 NT$100" %}</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">✅</div>
-      <div class="sf-title">確認結果</div>
+      <div class="sf-title">{% trans "確認結果" %}</div>
       <div class="sf-date">03/10 – 03/13</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">💳</div>
-      <div class="sf-title">繳學分費</div>
+      <div class="sf-title">{% trans "繳學分費" %}</div>
       <div class="sf-date">03/19 – 03/31</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">🚪</div>
-      <div class="sf-title">停修</div>
+      <div class="sf-title">{% trans "停修" %}</div>
       <div class="sf-date">04/07 – 05/15<br>17:00 截止</div>
     </div>
   </div>
 
   <!-- ── 選課系統 ── -->
-  <div class="section-title">💻 選課系統入口</div>
+  <div class="section-title">💻 {% trans "選課系統入口" %}</div>
   <div class="alert alert-info" style="margin-bottom:12px;">
     <div class="alert-icon">🔗</div>
     <div>
-      <strong>選課系統：</strong>使用 <strong>SPARC（計中）帳號</strong>登入。
-      每日 07:00–09:00 系統進行資料備份，<strong>此時段請勿操作選課</strong>。<br>
+      <strong>{% trans "選課系統：" %}</strong>{% trans "SPARC（計中）帳號" %}登入。
+      每日 07:00–09:00 系統進行資料備份，<strong>{% trans "此時段請勿操作選課" %}</strong>。<br>
       <a href="https://cis.ncu.edu.tw/Course/" target="_blank" rel="noopener"
          style="color:var(--primary);font-weight:700;">🔗 cis.ncu.edu.tw/Course/ ↗</a>
     </div>
@@ -77,25 +77,25 @@
   <div class="alert alert-info" style="margin-bottom:28px;">
     <div class="alert-icon">📍</div>
     <div>
-      <strong>路徑：</strong>NCU Portal → 學生服務 → 教務相關服務 → 選課系統
+      <strong>{% trans "路徑：" %}</strong>{% trans "NCU Portal → 學生服務 → 教務相關服務 → 選課系統" %}
     </div>
   </div>
 
   <!-- ── 各階段說明 ── -->
-  <div class="section-title">📖 各階段說明</div>
+  <div class="section-title">📖 {% trans "各階段說明" %}</div>
 
   <div class="stage-card">
     <div class="stage-header">
       <div class="stage-num">1</div>
-      初選
+      {% trans "初選" %}
       <span class="stage-tag tag-date">114/12/05 – 12/12</span>
     </div>
     <div class="stage-body">
       <ul>
-        <li>各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。</li>
-        <li>務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。</li>
-        <li>初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。</li>
-        <li>大一上學生<strong>不需要</strong>導師密碼卡；大一下起每學期初選前須完成<strong>導師輔導選課程序</strong>（線上操作）。</li>
+        <li>{% trans "各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。" %}</li>
+        <li>{% trans "務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。" %}</li>
+        <li>{% trans "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。" %}</li>
+        <li>{% trans "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。" %}</li>
       </ul>
     </div>
   </div>
@@ -103,16 +103,16 @@
   <div class="stage-card">
     <div class="stage-header">
       <div class="stage-num">2</div>
-      加退選
+      {% trans "加退選" %}
       <span class="stage-tag tag-date">02/09–02/12 及 02/23–03/06</span>
     </div>
     <div class="stage-body">
       <ul>
-        <li>春節期間（02/13–02/22）<strong>不開放</strong>選課，請注意。</li>
-        <li>自加退選第 3 日起，系統每日 <strong>07:00–09:00 分發</strong>一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。</li>
-        <li>落選課程若仍想修習，需<strong>再次上網登錄</strong>，等候隔日分發，不會自動保留候補。</li>
-        <li>加退選最後一日<strong>請勿加選可能衝堂的課</strong>，以免最後一次分發造成衝堂被系統強制退選。</li>
-        <li>課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。</li>
+        <li>{% trans "春節期間（02/13–02/22）不開放選課，請注意。" %}</li>
+        <li>{% trans "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。" %}</li>
+        <li>{% trans "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。" %}</li>
+        <li>{% trans "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。" %}</li>
+        <li>{% trans "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。" %}</li>
       </ul>
     </div>
   </div>
@@ -120,16 +120,16 @@
   <div class="stage-card">
     <div class="stage-header">
       <div class="stage-num">3</div>
-      人工加退選
+      {% trans "人工加退選" %}
       <span class="stage-tag tag-date">03/10 – 03/12</span>
-      <span class="stage-tag tag-fee">手續費 NT$100</span>
+      <span class="stage-tag tag-fee">{% trans "手續費 NT$100" %}</span>
     </div>
     <div class="stage-body">
       <ul>
-        <li>適用對象：加退選截止後仍有需求者、因衝堂被系統退選後欲重新加選者。</li>
-        <li>流程：選課系統列印申請表 → 取得<strong>任課教師簽章</strong> → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至<strong>課務組</strong>。</li>
-        <li>隔日更新至選課系統與 ee-class。</li>
-        <li>找不到教師本人，可由教師授權系辦人員代理蓋章。</li>
+        <li>{% trans "適用對象：加退選截止後仍有需求者、因衝堂被系統退選後欲重新加選者。" %}</li>
+        <li>{% trans "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。" %}</li>
+        <li>{% trans "隔日更新至選課系統與 ee-class。" %}</li>
+        <li>{% trans "找不到教師本人，可由教師授權系辦人員代理蓋章。" %}</li>
       </ul>
     </div>
   </div>
@@ -137,14 +137,14 @@
   <div class="stage-card">
     <div class="stage-header">
       <div class="stage-num">4</div>
-      確認選課結果
+      {% trans "確認選課結果" %}
       <span class="stage-tag tag-date">03/10 – 03/13</span>
     </div>
     <div class="stage-body">
       <ul>
-        <li>路徑：選課系統 → 個人功能表 → 選課結果。</li>
-        <li>依選課辦法，<strong>未於期限內確認者以電腦系統為依據，不得異議</strong>。請務必確認！</li>
-        <li>如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。</li>
+        <li>{% trans "路徑：選課系統 → 個人功能表 → 選課結果。" %}</li>
+        <li>{% trans "依選課辦法，未於期限內確認者以電腦系統為依據，不得異議。請務必確認！" %}</li>
+        <li>{% trans "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。" %}</li>
       </ul>
     </div>
   </div>
@@ -152,85 +152,85 @@
   <div class="stage-card">
     <div class="stage-header">
       <div class="stage-num">5</div>
-      停修（Course Withdrawal）
+      {% trans "停修（Course Withdrawal）" %}
       <span class="stage-tag tag-date">04/07 – 05/15 17:00</span>
-      <span class="stage-tag tag-warn">W 成績</span>
+      <span class="stage-tag tag-warn">{% trans "W 成績" %}</span>
     </div>
     <div class="stage-body">
       <ul>
-        <li>一學期以<strong>一科為限</strong>，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。</li>
-        <li>停修不退學分費，成績單上以「<strong>停修 / W</strong>」登錄，不計入當學期所修學分數。</li>
-        <li>流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至<strong>課務組</strong>。</li>
-        <li><strong>已辦理減修者不得再辦理停修。</strong></li>
+        <li>{% trans "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。" %}</li>
+        <li>{% trans "停修不退學分費，成績單上以「停修 / W」登錄，不計入當學期所修學分數。" %}</li>
+        <li>{% trans "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。" %}</li>
+        <li><strong>{% trans "已辦理減修者不得再辦理停修。" %}</strong></li>
       </ul>
     </div>
   </div>
 
   <!-- ── 重要規定 ── -->
-  <div class="section-title">⚠️ 重要規定</div>
+  <div class="section-title">⚠️ {% trans "重要規定" %}</div>
   <div class="rule-list">
     <div class="rule-item">
       <div class="rule-num">1</div>
-      <div><strong>最低修課學分：</strong>大一至大三每學期至少修 <strong>16 學分</strong>；大四每學期至少 <strong>9 學分</strong>。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。</div>
+      <div><strong>{% trans "最低修課學分：" %}</strong>{% trans "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。" %}</div>
     </div>
     <div class="rule-item">
       <div class="rule-num">2</div>
-      <div><strong>衝堂 / 同課號：</strong>加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。</div>
+      <div><strong>{% trans "衝堂 / 同課號：" %}</strong>{% trans "加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。" %}</div>
     </div>
     <div class="rule-item">
       <div class="rule-num">3</div>
-      <div><strong>部份課程有群組上限：</strong>如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。</div>
+      <div><strong>{% trans "部份課程有群組上限：" %}</strong>{% trans "如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。" %}</div>
     </div>
     <div class="rule-item">
       <div class="rule-num">4</div>
-      <div><strong>學分費：</strong>修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。</div>
+      <div><strong>{% trans "學分費：" %}</strong>{% trans "修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。" %}</div>
     </div>
   </div>
 
   <!-- ── 學分抵免 ── -->
-  <div class="section-title">🔄 學分抵免</div>
+  <div class="section-title">🔄 {% trans "學分抵免" %}</div>
   <div class="alert alert-info" style="margin-bottom:12px;">
     <div class="alert-icon">📌</div>
     <div>
-      學分抵免由<strong>註冊組</strong>負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。
+      {% trans "學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。" %}
     </div>
   </div>
   <div class="alert alert-warning" style="margin-bottom:28px;">
     <div class="alert-icon">⚠️</div>
     <div>
-      抵免結果公告後，若被抵免課程仍在選課清單中，請<strong>自行退選</strong>。轉學生需自行於加退選期間選課，系統不會代選任何課程。
+      {% trans "抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選期間選課，系統不會代選任何課程。" %}
     </div>
   </div>
 
   <!-- ── 聯絡資訊 ── -->
-  <div class="section-title">📞 課務組聯絡資訊</div>
+  <div class="section-title">📞 {% trans "課務組聯絡資訊" %}</div>
   <div class="contact-table-wrap">
     <table class="contact-table">
       <thead>
         <tr>
-          <th>業務項目</th>
-          <th>電話分機（03-4227151 +）</th>
+          <th>{% trans "業務項目" %}</th>
+          <th>{% trans "電話分機（03-4227151 +）" %}</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>選課、課務相關</td><td>57166 – 57171</td></tr>
-        <tr><td>校際選課（本校至他校）</td><td>57170</td></tr>
-        <tr><td>校際選課（他校至中大）</td><td>57168</td></tr>
-        <tr><td>暑修</td><td>57169</td></tr>
-        <tr><td>數位學習平台</td><td>57169、57132</td></tr>
-        <tr><td>導師輔導選課問題</td><td>57261（諮商中心）</td></tr>
+        <tr><td>{% trans "選課、課務相關" %}</td><td>57166 – 57171</td></tr>
+        <tr><td>{% trans "校際選課（本校至他校）" %}</td><td>57170</td></tr>
+        <tr><td>{% trans "校際選課（他校至中大）" %}</td><td>57168</td></tr>
+        <tr><td>{% trans "暑修" %}</td><td>57169</td></tr>
+        <tr><td>{% trans "數位學習平台" %}</td><td>57169、57132</td></tr>
+        <tr><td>{% trans "導師輔導選課問題" %}</td><td>57261（諮商中心）</td></tr>
       </tbody>
     </table>
   </div>
 
   <!-- ── 相關連結 ── -->
-  <div class="section-title">🔗 相關連結</div>
+  <div class="section-title">🔗 {% trans "相關連結" %}</div>
   <div class="link-row">
-    <a href="https://cis.ncu.edu.tw/Course/" target="_blank" rel="noopener" class="ext-link">💻 NCU 選課系統 ↗</a>
-    <a href="https://pdc.adm.ncu.edu.tw/p/406-1019-9937,r498.php?Lang=zh-tw" target="_blank" rel="noopener" class="ext-link">📅 課務日程表 ↗</a>
-    <a href="https://in.ncu.edu.tw/ncu57170/post/crs_info.pdf" target="_blank" rel="noopener" class="ext-link">📄 選課相關資訊 PDF ↗</a>
-    <a href="https://pdc.adm.ncu.edu.tw/Course/other/CCOP_EL.pdf" target="_blank" rel="noopener" class="ext-link">📘 選課系統操作手冊（英）↗</a>
-    <a href="https://pdc.adm.ncu.edu.tw/" target="_blank" rel="noopener" class="ext-link">🏫 教務處官網 ↗</a>
+    <a href="https://cis.ncu.edu.tw/Course/" target="_blank" rel="noopener" class="ext-link">💻 {% trans "NCU 選課系統 ↗" %}</a>
+    <a href="https://pdc.adm.ncu.edu.tw/p/406-1019-9937,r498.php?Lang=zh-tw" target="_blank" rel="noopener" class="ext-link">📅 {% trans "課務日程表 ↗" %}</a>
+    <a href="https://in.ncu.edu.tw/ncu57170/post/crs_info.pdf" target="_blank" rel="noopener" class="ext-link">📄 {% trans "選課相關資訊 PDF ↗" %}</a>
+    <a href="https://pdc.adm.ncu.edu.tw/Course/other/CCOP_EL.pdf" target="_blank" rel="noopener" class="ext-link">📘 {% trans "選課系統操作手冊（英）↗" %}</a>
+    <a href="https://pdc.adm.ncu.edu.tw/" target="_blank" rel="noopener" class="ext-link">🏫 {% trans "教務處官網 ↗" %}</a>
   </div>
 
 </div>

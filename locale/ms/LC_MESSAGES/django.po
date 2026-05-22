@@ -4082,6 +4082,291 @@ msgstr "Jadual Kursus Wajib"
 msgid "教務處官網"
 msgstr "Laman Web Pejabat Hal Ehwal Akademik"
 
+msgid "選課・加退選・停修・抵免"
+msgstr ""
+"Pendaftaran Kursus · Tambah/Gugur · Penarikan Diri · Pengecualian Kredit"
+
+msgid "中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學期略有調整。"
+msgstr ""
+"Sistem pendaftaran kursus NCU, jadual semester, dan prosedur permohonan. "
+"Tarikh berdasarkan pengumuman rasmi dan boleh berbeza setiap semester."
+
+msgid "日程請以課務組最新公告為準："
+msgstr "Sila semak jadual rasmi terkini daripada Bahagian Hal Ehwal Akademik:"
+
+msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
+msgstr ""
+"Tarikh di bawah adalah contoh Semester 2, Tahun Akademik 114. Tarikh berbeza"
+" setiap semester. Sila lawati"
+
+msgid "課務組官網 ↗"
+msgstr "Laman Web Bahagian Hal Ehwal Akademik ↗"
+
+msgid "查看最新學期日程表。"
+msgstr "untuk melihat jadual semester terkini."
+
+msgid "學期課務日程（114-2 為例）"
+msgstr "Jadual Semester (Contoh TA114-2)"
+
+msgid "初選"
+msgstr "Pendaftaran Awal"
+
+msgid "加退選"
+msgstr "Tambah/Gugur"
+
+msgid "人工加退選"
+msgstr "Tambah/Gugur Manual"
+
+msgid "確認結果"
+msgstr "Sahkan Keputusan"
+
+msgid "繳學分費"
+msgstr "Bayar Yuran Kredit"
+
+msgid "停修"
+msgstr "Penarikan Diri dari Kursus"
+
+msgid "選課系統入口"
+msgstr "Sistem Pendaftaran Kursus"
+
+msgid "選課系統："
+msgstr "Sistem Pendaftaran:"
+
+msgid "SPARC（計中）帳號"
+msgstr "akaun SPARC (Pusat Komputer)"
+
+msgid "此時段請勿操作選課"
+msgstr "sila jangan akses sistem semasa tempoh ini"
+
+msgid "路徑："
+msgstr "Laluan:"
+
+msgid "NCU Portal → 學生服務 → 教務相關服務 → 選課系統"
+msgstr ""
+"NCU Portal → Perkhidmatan Pelajar → Perkhidmatan Akademik → Pendaftaran "
+"Kursus"
+
+msgid "各階段說明"
+msgstr "Penjelasan Setiap Peringkat"
+
+msgid "各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。"
+msgstr ""
+"Kursus wajib biasanya sudah didaftarkan. Jika anda telah memohon "
+"pengecualian kredit atau menyelesaikannya lebih awal, sila gugurkan sendiri."
+
+msgid "務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。"
+msgstr ""
+"Anda mesti menyertai pendaftaran awal; jika tidak, anda kehilangan keutamaan"
+" untuk kursus yang terhad."
+
+msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgstr ""
+"Satu peruntukan kelompok berlaku selepas pendaftaran awal ditutup; keputusan"
+" diumumkan sebelum 16:00 pada 2026/02/03."
+
+msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
+msgstr ""
+"Untuk kursus yang memerlukan kad kata laluan, dapatkan daripada pensyarah; "
+"setiap kod kata laluan hanya boleh digunakan sekali."
+
+msgid "手續費 NT$100"
+msgstr "Yuran Pemprosesan NT$100"
+
+msgid "適用對象：加退選截止後仍有需求者、因衝堂被系統退選後欲重新加選者。"
+msgstr ""
+"Untuk: mereka yang masih memerlukan perubahan selepas tambah/gugur ditutup, "
+"atau mereka yang kursusnya digugurkan kerana konflik dan ingin mendaftar "
+"semula."
+
+msgid "隔日更新至選課系統與 ee-class。"
+msgstr ""
+"Kemaskini muncul dalam sistem kursus dan ee-class pada hari berikutnya."
+
+msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
+msgstr ""
+"Jika pensyarah tidak boleh ditemui, kakitangan jabatan yang diberi kuasa "
+"oleh pensyarah boleh membubuh cop sebagai ganti."
+
+msgid "確認選課結果"
+msgstr "Sahkan Keputusan Pendaftaran"
+
+msgid "路徑：選課系統 → 個人功能表 → 選課結果。"
+msgstr "Laluan: Sistem Kursus → Menu Peribadi → Keputusan Pendaftaran."
+
+msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgstr ""
+"Jika mana-mana kursus digugurkan secara paksa kerana konflik atau kod "
+"pendua, tambah/gugur manual (03/10–03/12) boleh digunakan untuk "
+"membetulkannya."
+
+msgid "停修（Course Withdrawal）"
+msgstr "Penarikan Diri dari Kursus (Course Withdrawal)"
+
+msgid "W 成績"
+msgstr "Gred W"
+
+msgid "重要規定"
+msgstr "Peraturan Penting"
+
+msgid "最低修課學分："
+msgstr "Keperluan Kredit Minimum:"
+
+msgid "衝堂 / 同課號："
+msgstr "Konflik Jadual / Kod Kursus Pendua:"
+
+msgid "部份課程有群組上限："
+msgstr "Sesetengah Kursus Mempunyai Had Kumpulan:"
+
+msgid "學分費："
+msgstr "Yuran Kredit:"
+
+msgid "學分抵免"
+msgstr "Pengecualian Kredit"
+
+msgid "課務組聯絡資訊"
+msgstr "Hubungi Bahagian Hal Ehwal Akademik"
+
+msgid "業務項目"
+msgstr "Item Perkhidmatan"
+
+msgid "電話分機（03-4227151 +）"
+msgstr "Sambungan Telefon (03-4227151 +)"
+
+msgid "選課、課務相關"
+msgstr "Pendaftaran Kursus & Hal Ehwal Akademik"
+
+msgid "校際選課（本校至他校）"
+msgstr "Pendaftaran Antara Sekolah (NCU ke Sekolah Lain)"
+
+msgid "校際選課（他校至中大）"
+msgstr "Pendaftaran Antara Sekolah (Sekolah Lain ke NCU)"
+
+msgid "暑修"
+msgstr "Sesi Musim Panas"
+
+msgid "數位學習平台"
+msgstr "Platform Pembelajaran Digital"
+
+msgid "導師輔導選課問題"
+msgstr "Isu Pemilihan Kursus dengan Bimbingan Penasihat"
+
+msgid "NCU 選課系統 ↗"
+msgstr "Sistem Pendaftaran NCU ↗"
+
+msgid "課務日程表 ↗"
+msgstr "Kalendar Jadual Kursus ↗"
+
+msgid "選課相關資訊 PDF ↗"
+msgstr "PDF Maklumat Pendaftaran ↗"
+
+msgid "選課系統操作手冊（英）↗"
+msgstr "Manual Pengguna Sistem (Inggeris) ↗"
+
+msgid "教務處官網 ↗"
+msgstr "Laman Web Pejabat Hal Ehwal Akademik ↗"
+
+msgid "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。"
+msgstr ""
+"Pelajar baru semester 1 tidak memerlukan kad kata laluan penasihat; mulai "
+"semester 2, selesaikan prosedur pemilihan kursus dengan bimbingan penasihat "
+"(dalam talian) sebelum setiap pendaftaran awal."
+
+msgid "春節期間（02/13–02/22）不開放選課，請注意。"
+msgstr ""
+"Pendaftaran kursus ditutup semasa tempoh Tahun Baru Cina (02/13–02/22). Sila"
+" ambil perhatian."
+
+msgid ""
+"自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。"
+msgstr ""
+"Mulai hari ke-3 tambah/gugur, sistem menjalankan satu peruntukan harian pada"
+" 07:00–09:00 (sistem dijeda semasa pemprosesan); selepas 09:00 boleh semak "
+"keputusan hari itu di ee-class."
+
+msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
+msgstr ""
+"Jika masih ingin mengambil kursus yang tidak berjaya, anda mesti mendaftar "
+"semula secara dalam talian dan menunggu peruntukan keesokan harinya — "
+"senarai tunggu tidak disimpan secara automatik."
+
+msgid "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
+msgstr ""
+"Pada hari terakhir tambah/gugur, jangan menambah kursus yang mungkin "
+"berkonflik — peruntukan terakhir boleh memaksa penggugurkan kursus yang "
+"berkonflik."
+
+msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
+msgstr ""
+"Proses: Cetak borang dari sistem → Dapatkan tandatangan pensyarah → Bayar "
+"NT$100 (tunai di pejabat kewangan atau EasyCard di hal ehwal akademik) → "
+"Hantar borang ke hal ehwal akademik."
+
+msgid "依選課辦法，未於期限內確認者以電腦系統為依據，不得異議。請務必確認！"
+msgstr ""
+"Mengikut peraturan pendaftaran kursus, mereka yang tidak mengesahkan dalam "
+"tempoh yang ditetapkan terikat dengan rekod sistem tanpa hak rayuan. "
+"Pastikan untuk mengesahkan!"
+
+msgid "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。"
+msgstr ""
+"Dihadkan satu kursus setiap semester; selepas penarikan, kredit yang tinggal"
+" tidak boleh jatuh di bawah minimum (16 kredit untuk tahun 1–3, 9 untuk "
+"tahun 4)."
+
+msgid "停修不退學分費，成績單上以「停修 / W」登錄，不計入當學期所修學分數。"
+msgstr ""
+"Yuran kredit tidak dikembalikan untuk penarikan; transkrip merekodkan "
+"\"Penarikan / W\" dan kredit tidak dikira untuk semester itu."
+
+msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
+msgstr ""
+"Proses: Cetak borang penarikan dari sistem → Dapatkan tandatangan pensyarah "
+"dan ketua jabatan → Hantar ke hal ehwal akademik."
+
+msgid "已辦理減修者不得再辦理停修。"
+msgstr ""
+"Pelajar yang telah memohon pengurangan beban kursus tidak dibenarkan memohon"
+" penarikan diri."
+
+msgid "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"Tahun 1–3 mesti mengambil sekurang-kurangnya 16 kredit setiap semester; "
+"tahun 4 sekurang-kurangnya 9. Mereka yang di bawah minimum mesti memohon "
+"pengurangan beban (perlu kelulusan penasihat dan ketua jabatan), atau "
+"menghadapi pemberhentian."
+
+msgid "加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。"
+msgstr ""
+"Selepas tambah/gugur ditutup, sebarang konflik atau kod pendua yang tinggal "
+"akan digugurkan secara paksa oleh pejabat hal ehwal akademik. Selesaikan "
+"sebelum tarikh akhir; jika digugurkan, gunakan tambah/gugur manual untuk "
+"memulihkan."
+
+msgid "如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。"
+msgstr ""
+"Contohnya, pendidikan am teras dihadkan 2 kursus setiap semester, sukan 1 "
+"kursus, bahasa Inggeris tahun pertama 1 kursus, dll. Semak had kumpulan "
+"sebelum mendaftar."
+
+msgid "修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。"
+msgstr ""
+"Mengambil ≤9 kredit: bayar yuran kredit dan yuran lain-lain secara berkadar;"
+" ≥10 kredit: bayar yuran pengajian penuh dan yuran lain-lain (kredit latihan"
+" guru dikira berasingan)."
+
+msgid "學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。"
+msgstr ""
+"Pengecualian kredit dikendalikan oleh Bahagian Pendaftaran (bukan Hal Ehwal "
+"Akademik). Hubungi Bahagian Pendaftaran di Pejabat Hal Ehwal Akademik untuk "
+"masa dan keperluan permohonan."
+
+msgid "抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選期間選課，系統不會代選任何課程。"
+msgstr ""
+"Selepas keputusan pengecualian diumumkan, jika kursus yang dikecualikan "
+"masih dalam senarai pendaftaran anda, gugurkan sendiri. Pelajar pindahan "
+"mesti mendaftar sendiri semasa tambah/gugur; sistem tidak akan mendaftar "
+"secara automatik."
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Masukkan soalan anda. Sistem akan menyusun cadangan berdasarkan identiti dan"
