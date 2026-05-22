@@ -11,6 +11,14 @@ from .services import generate_ai_reply
 from django.utils import timezone
 from django.utils.translation import gettext as _
 
+
+def normalize_ai_mode(value):
+    value = value or "helper"
+    if value not in ["helper", "friend"]:
+        return "helper"
+    return value
+
+
 def get_taiwan_tips():
     return [
         _("台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"),
@@ -32,22 +40,22 @@ def get_daily_taiwan_tip():
     index = today.toordinal() % len(tips)
     return tips[index]
 
+
 @login_required(login_url='/login/')
 @ensure_csrf_cookie
 def chatbot_page(request):
     """
     聊天頁面：
-    - 左邊顯示所有聊天記錄
-    - 有 ?session=xx 時載入該對話
-    - 沒有 session 時只顯示歡迎訊息
+    - 左邊顯示目前 AI 模式的聊天記錄
+    - 有 ?session=xx 時載入該對話，並以該 session 的 ai_mode 為目前模式
+    - 沒有 session 時根據 ?ai_mode=helper/friend 顯示空白歡迎頁
     """
-    sessions = ChatSession.objects.filter(
-        user=request.user
-    ).order_by('-is_pinned', '-updated_at')
+    requested_ai_mode = normalize_ai_mode(request.GET.get("ai_mode", "helper"))
 
     session_id = request.GET.get('session')
     active_session = None
     messages = []
+    current_ai_mode = requested_ai_mode
 
     if session_id:
         active_session = ChatSession.objects.filter(
@@ -56,7 +64,13 @@ def chatbot_page(request):
         ).first()
 
         if active_session:
+            current_ai_mode = normalize_ai_mode(getattr(active_session, "ai_mode", "helper"))
             messages = active_session.messages.all()
+
+    sessions = ChatSession.objects.filter(
+        user=request.user,
+        ai_mode=current_ai_mode
+    ).order_by('-is_pinned', '-updated_at')
 
     context = {
         'user': request.user,
@@ -64,12 +78,33 @@ def chatbot_page(request):
         'sessions': sessions,
         'active_session': active_session,
         'messages': messages,
+        'current_ai_mode': current_ai_mode,
         "taiwan_tip": get_daily_taiwan_tip(),
-        "taiwan_tips": get_taiwan_tips()
+        "taiwan_tips": get_taiwan_tips(),
     }
 
     return render(request, 'chatbot/chatbot.html', context)
 
+
+def split_friend_reply(reply):
+    import re
+    reply = (reply or '').strip()
+
+    if not reply:
+        return []
+
+    # 在句尾標點後切割（保留標點在前一句）
+    parts = re.split(r'(?<=[。！？])\s*', reply)
+    parts = [p.strip() for p in parts if p.strip()]
+
+    if len(parts) <= 1:
+        return [reply]
+
+    # 最多 3 則，超過就把剩餘合併進最後一則
+    if len(parts) > 3:
+        parts = parts[:2] + [''.join(parts[2:])]
+
+    return parts
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -78,6 +113,8 @@ def chat_message_api(request):
     POST /chatbot/api/message/
     """
     message = (request.data.get('message') or '').strip()
+
+    ai_mode = normalize_ai_mode(request.data.get("ai_mode", "helper"))
     session_id = request.data.get('session_id')
 
     attachments = request.FILES.getlist('attachments')
@@ -106,15 +143,22 @@ def chat_message_api(request):
             user=request.user
         ).first()
 
-    if not session:
+    if session:
+        # 防止前端傳錯模式時，把舊對話混到另一個 AI。
+        ai_mode = normalize_ai_mode(getattr(session, "ai_mode", ai_mode))
+    else:
         title = message[:24] + ('…' if len(message) > 24 else '')
         session = ChatSession.objects.create(
             user=request.user,
             title=title,
+            ai_mode=ai_mode,
         )
 
-    recent_messages = list(session.messages.order_by('-created_at')[:10])
-    recent_messages.reverse()
+    if ai_mode == 'friend':
+        recent_messages = list(session.messages.order_by('created_at'))
+    else:
+        recent_messages = list(session.messages.order_by('-created_at')[:10])
+        recent_messages.reverse()
 
     user_msg = ChatMessage.objects.create(
         session=session,
@@ -139,18 +183,36 @@ def chat_message_api(request):
         user=request.user,
         question=message,
         recent_messages=recent_messages,
+        ai_mode=ai_mode,
     )
+
     print("[DEBUG] ai_result source:", ai_result.get("source"))
     print("[DEBUG] ai_result model:", ai_result.get("model"))
     print("[DEBUG] ai_result reply:", ai_result.get("reply"))
 
-    assistant_msg = ChatMessage.objects.create(
-        session=session,
-        role='assistant',
-        content=ai_result['reply'],
-    )
+    if ai_mode == "friend":
+        reply_parts = split_friend_reply(ai_result['reply'])
+    else:
+        reply_parts = [ai_result['reply']]
 
-    session.save(update_fields=['updated_at'])
+    assistant_messages = []
+
+    for part in reply_parts:
+        assistant_msg = ChatMessage.objects.create(
+            session=session,
+            role='assistant',
+            content=part,
+        )
+
+        assistant_messages.append({
+            'id': assistant_msg.id,
+            'role': assistant_msg.role,
+            'content': assistant_msg.content,
+            'created_at': assistant_msg.created_at.strftime('%Y-%m-%d %H:%M'),
+        })
+
+    session.ai_mode = ai_mode
+    session.save(update_fields=['ai_mode', 'updated_at'])
 
     return Response({
         'success': True,
@@ -159,28 +221,30 @@ def chat_message_api(request):
             'session_id': session.id,
             'session_title': session.title,
             'is_pinned': session.is_pinned,
+            'ai_mode': session.ai_mode,
             'user_message': {
-                'id': user_msg.id,
-                'role': user_msg.role,
-                'content': user_msg.content,
-                'created_at': user_msg.created_at.strftime('%Y-%m-%d %H:%M'),
-            },
-            'assistant_message': {
-                'id': assistant_msg.id,
-                'role': assistant_msg.role,
-                'content': assistant_msg.content,
-                'created_at': assistant_msg.created_at.strftime('%Y-%m-%d %H:%M'),
-            },
+            'id': user_msg.id,
+            'role': user_msg.role,
+            'content': user_msg.content,
+            'created_at': user_msg.created_at.strftime('%Y-%m-%d %H:%M'),
         },
-    })
+        # 新版：多則 AI 訊息
+        'assistant_messages': assistant_messages,
 
+        # 保留舊版欄位，避免前端其他地方壞掉
+        'assistant_message': assistant_messages[0] if assistant_messages else None,
+    }
+    })
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def create_session_api(request):
+    ai_mode = normalize_ai_mode(request.data.get("ai_mode", "helper"))
+
     session = ChatSession.objects.create(
         user=request.user,
-        title='新的聊天'
+        title='新的聊天',
+        ai_mode=ai_mode,
     )
 
     return Response({
@@ -189,6 +253,7 @@ def create_session_api(request):
         'data': {
             'session_id': session.id,
             'title': session.title,
+            'ai_mode': session.ai_mode,
         }
     })
 
@@ -272,10 +337,13 @@ def delete_session_api(request):
             'message': '找不到此聊天紀錄',
         }, status=status.HTTP_404_NOT_FOUND)
 
+    ai_mode = normalize_ai_mode(getattr(session, "ai_mode", "helper"))
+
     session.delete()
 
     next_session = ChatSession.objects.filter(
-        user=request.user
+        user=request.user,
+        ai_mode=ai_mode,
     ).order_by('-is_pinned', '-updated_at').first()
 
     return Response({

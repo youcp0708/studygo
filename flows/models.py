@@ -437,9 +437,9 @@ def auto_create_reminder_on_task_update(sender, instance, **kwargs):
                 is_read=False
             ).exists()
 
-            if not exists:
-                Reminder.objects.create(
-                    student=instance.student,
-                    student_task=instance,
-                    message=message
-                )
+                if not exists:
+                    Reminder.objects.create(
+                        student=instance.student,
+                        student_task=instance,
+                        message=message
+                    )
