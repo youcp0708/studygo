@@ -249,6 +249,7 @@ window.toggleTaskCompletion = async function (taskId, event) {
     showToast(newStatus === 'completed' ? '任務已完成' : '已取消完成', 'success');
     renderMyTasks();
     renderDashboardProgress();
+    renderReminders();
   } else {
     showToast('狀態更新失敗', 'error');
     checkbox.checked = !checkbox.checked; // revert
@@ -262,6 +263,7 @@ window.changeTaskStatus = async function (taskId, status, event) {
     showToast('狀態更新成功', 'success');
     renderMyTasks();
     renderDashboardProgress();
+    renderReminders();
   }
 };
 

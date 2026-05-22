@@ -357,42 +357,89 @@ from datetime import timedelta
 
 @receiver(post_save, sender=StudentTask)
 def auto_create_reminder_on_task_update(sender, instance, **kwargs):
-    # 只有當任務尚未完成時，才檢查是否需要提醒
-    if instance.status in ["not_started", "in_progress"]:
+    # 當任務被標記為已完成時，檢查是否跳過了某些前置任務
+    if instance.status == "completed":
         t = instance.task
-        
-        # 1. 判斷任務是否需要計算截止日
-        calculated_due_date = None
-        if t.deadline_type == 'from_arrival' and t.deadline_days is not None:
-            if instance.student.expected_arrival:
-                # 算出真正的截止日期
-                calculated_due_date = instance.student.expected_arrival + timedelta(days=t.deadline_days)
-        
-        # 2. 如果有算出截止日，才進行快到期/逾期的檢查
-        if calculated_due_date:
-            today = timezone.now().date()
-            target_date = today + timedelta(days=3)  # 3天內到期就提醒
+        curr_stage_order = t.stage.order
+        curr_task_order = t.order
 
-            if calculated_due_date <= target_date:
-                formatted_date = calculated_due_date.strftime('%Y/%m/%d')
-                
-                if calculated_due_date < today:
-                    message = f"您的任務「{t.title}」已經逾期（截止日：{formatted_date}），請盡快完成！"
-                elif calculated_due_date == today:
-                    message = f"您的任務「{t.title}」今天到期，請記得完成！"
-                else:
-                    days_left = (calculated_due_date - today).days
-                    message = f"您的任務「{t.title}」還有 {days_left} 天到期（{formatted_date}）。"
+        # 找出本學生所有「未完成」、且「排序在此任務之前」的任務
+        # 排序定義在 Task.Meta: ordering = ["stage__order", "order"]
+        from django.db.models import Q
+        skipped_tasks = StudentTask.objects.filter(
+            student=instance.student
+        ).exclude(
+            status='completed'
+        ).filter(
+            Q(task__stage__order__lt=curr_stage_order) |
+            Q(task__stage__order=curr_stage_order, task__order__lt=curr_task_order)
+        ).select_related('task', 'task__stage')
 
-                # 檢查是否已經有未讀的相同提醒，避免重複發送
-                exists = Reminder.objects.filter(
+        if skipped_tasks.exists():
+            # 取得當前慣用語言 (支援 zh-hant, en, vi, id, ms, th, ja, ko, my)
+            from django.utils.translation import get_language
+            active_lang = get_language() or 'zh-hant'
+            lang = (active_lang.split('-')[0] if '-' in active_lang else active_lang).lower()
+
+            task_title = t.get_title_by_lang(lang)
+            skipped_titles = [st.task.get_title_by_lang(lang) for st in skipped_tasks]
+
+            if lang == 'en':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" and {len(skipped_titles) - 3} other tasks"
+                message = f'You have completed "{task_title}", but the prior task(s) {skipped_str} is/are not yet completed. It is recommended to complete them in order!'
+            elif lang == 'vi':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" và {len(skipped_titles) - 3} nhiệm vụ khác"
+                message = f'Bạn đã hoàn thành "{task_title}", nhưng (các) nhiệm vụ trước đó {skipped_str} chưa được hoàn thành. Khuyên bạn nên hoàn thành chúng theo thứ tự!'
+            elif lang == 'id':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" dan {len(skipped_titles) - 3} tugas lainnya"
+                message = f'Anda telah menyelesaikan "{task_title}", tetapi tugas sebelumnya {skipped_str} belum diselesaikan. Disarankan untuk menyelesaikannya secara berurutan!'
+            elif lang == 'ms':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" dan {len(skipped_titles) - 3} tugasan lain"
+                message = f'Anda telah menyelesaikan "{task_title}", tetapi tugasan sebelumnya {skipped_str} belum selesai. Disyorkan untuk menyelesaikannya mengikut urutan!'
+            elif lang == 'th':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" และอีก {len(skipped_titles) - 3} งาน"
+                message = f'คุณได้ทำ "{task_title}" เสร็จสิ้นแล้ว แต่งานก่อนหน้า {skipped_str} ยังไม่เสร็จสมบูรณ์ ขอแนะนำให้ทำตามลำดับ!'
+            elif lang == 'ja':
+                skipped_str = "、".join([f'「{title}」' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" など計 {len(skipped_titles)} 件のタスク"
+                message = f'「{task_title}」を完了しましたが、前置タスク{skipped_str}が未完了です。順序通りに完了することをお勧めします！'
+            elif lang == 'ko':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" 등 총 {len(skipped_titles)}개 작업"
+                message = f'"{task_title}"을(를) 완료했으나, 이전 작업인 {skipped_str}이(가) 아직 완료되지 않았습니다. 순서대로 완료하는 것을 권장합니다!'
+            elif lang == 'my':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" နှင့် အခြား {len(skipped_titles) - 3} ခု"
+                message = f'သင်သည် "{task_title}" ကို ပြီးမြောက်ပြီးဖြစ်သော်လည်း ယခင်လုပ်ဆောင်ရမည့် {skipped_str} မပြီးသေးပါ။ အစီအစဉ်အတိုင်း လုပ်ဆောင်ရန် အကြံပြုပါသည်!'
+            else:  # Default zh-hant
+                skipped_str = "、".join([f"「{title}」" for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" 等共 {len(skipped_titles)} 個任務"
+                message = f"您已完成「{task_title}」，但前置任務 {skipped_str} 尚未完成，建議您依序完成！"
+
+            # 檢查是否已經有未讀的相同提醒，避免重複發送
+            exists = Reminder.objects.filter(
+                student=instance.student,
+                student_task=instance,
+                is_read=False
+            ).exists()
+
+            if not exists:
+                Reminder.objects.create(
+                    student=instance.student,
                     student_task=instance,
-                    is_read=False
-                ).exists()
-
-                if not exists:
-                    Reminder.objects.create(
-                        student=instance.student,
-                        student_task=instance,
-                        message=message
-                    )
+                    message=message
+                )
