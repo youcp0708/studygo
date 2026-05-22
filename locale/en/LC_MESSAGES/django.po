@@ -4559,6 +4559,582 @@ msgstr ""
 "courses themselves during add/drop; the system will not auto-register any "
 "courses."
 
+msgid "休學・復學・轉系・雙主修　辦理規定與注意事項"
+msgstr ""
+"Leave of Absence · Reinstatement · Department Transfer · Double Major — "
+"Regulations & Procedures"
+
+msgid "休學"
+msgstr "Leave of Absence"
+
+msgid "申請期限"
+msgstr "Application Deadline"
+
+msgid "期末考試開始前"
+msgstr "Before final exams begin"
+
+msgid "每次最長"
+msgstr "Max per application"
+
+msgid "2 學年"
+msgstr "2 academic years"
+
+msgid "累計上限"
+msgstr "Cumulative limit"
+
+msgid "2 學年（原則）"
+msgstr "2 academic years (in principle)"
+
+msgid "特殊延長"
+msgstr "Special extension"
+
+msgid "可再延長 2 年"
+msgstr "May extend by 2 more years"
+
+msgid "申請須取得家長或監護人同意，以及系主任同意，再至教務處辦理"
+msgstr ""
+"Application requires consent from parents or guardians, plus department "
+"chair approval, then submit to the Academic Affairs Office"
+
+msgid "新生及轉學生第一學期須先完成註冊繳費，才能申請休學"
+msgstr ""
+"Freshmen and transfer students must complete registration and tuition "
+"payment in their first semester before applying for leave"
+
+msgid "休學當學期已選課程一律取消，不計成績（預修與抵免課程除外）"
+msgstr ""
+"All courses registered in the semester of leave will be cancelled with no "
+"grades recorded (except pre-approved and credit-exempted courses)"
+
+msgid "休學期間不計入修業年限"
+msgstr "Leave period does not count toward the academic time limit"
+
+msgid "服兵役、懷孕、生產、照顧未滿 3 歲子女所致休學"
+msgstr ""
+"Leave due to military service, pregnancy, childbirth, or caring for a child "
+"under 3 years old"
+
+msgid "不計入累計年限"
+msgstr "Not counted in cumulative limit"
+
+msgid "外籍生 ARC 注意"
+msgstr "International Students — ARC Notice"
+
+msgid ""
+"辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
+msgstr ""
+"After taking a leave of absence, your student ARC becomes invalid and you "
+"must leave Taiwan within the required period. You must re-apply for a "
+"student visa before returning. Please contact the Office of International "
+"Affairs (ext. 57081) to confirm procedures before finalizing your leave."
+
+msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
+msgstr ""
+"Dormitory: You must complete dorm check-out procedures before taking leave. "
+"After returning, you must re-apply for dormitory housing — your bed is not "
+"reserved."
+
+msgid "復學"
+msgstr "Reinstatement"
+
+msgid "自動復學"
+msgstr "Auto-reinstatement"
+
+msgid "休學期滿即自動復學"
+msgstr "Automatically reinstated when leave period expires"
+
+msgid "註冊期限"
+msgstr "Registration deadline"
+
+msgid "當學期註冊日（含）前"
+msgstr "By registration day of the current semester (inclusive)"
+
+msgid "提前復學"
+msgstr "Early reinstatement"
+
+msgid "最遲於註冊日前申請"
+msgstr "Apply no later than the registration date"
+
+msgid "休學期滿後自動回復學籍，須於當學期校曆註冊日（含）前完成報到與繳費"
+msgstr ""
+"Student status is automatically restored upon expiry of leave; you must "
+"check in and pay tuition by the registration date on the academic calendar "
+"(inclusive)"
+
+msgid "提前復學：須於預定復學學期的註冊日前提出申請，不可在休學中途直接回來上課"
+msgstr ""
+"Early reinstatement: Apply before the registration date of the intended "
+"return semester. You may not simply return to class mid-leave."
+
+msgid "復學後回到原學系，年級銜接休學前的年級繼續就讀"
+msgstr ""
+"Upon reinstatement, you return to your original department at the same year "
+"level as when you left"
+
+msgid "若屆時無法如期復學，需於註冊日前再次申請延續休學；逾期未辦者視情形處理"
+msgstr ""
+"If you cannot return as scheduled, re-apply for a leave extension before the"
+" registration date; failure to do so will be handled according to "
+"regulations"
+
+msgid "復學後的畢業條件，依入學當年度的學則與相關規章認定"
+msgstr ""
+"Graduation requirements after reinstatement follow the academic regulations "
+"of the year of enrollment"
+
+msgid "轉系"
+msgstr "Department Transfer"
+
+msgid "申請時間依當學年度校曆公告，每輪申請限報名一個科系，超過一個即取消資格。"
+msgstr ""
+"Application period is announced in the annual academic calendar. Each round "
+"is limited to one department — applying to more than one will disqualify "
+"you."
+
+msgid "申請資格（年級）"
+msgstr "Eligibility (by year)"
+
+msgid "大二"
+msgstr "2nd Year"
+
+msgid "升大二前可申請"
+msgstr "May apply before advancing to 2nd year"
+
+msgid "大三"
+msgstr "3rd Year"
+
+msgid "升大三前可申請"
+msgstr "May apply before advancing to 3rd year"
+
+msgid "大四"
+msgstr "4th Year"
+
+msgid "四年級生不得申請"
+msgstr "4th-year students may not apply"
+
+msgid "休學中"
+msgstr "On Leave"
+
+msgid "休學期間不得申請"
+msgstr "Cannot apply while on leave"
+
+msgid "每一申請週期只能申請一個科系，多報即全部取消資格"
+msgstr ""
+"Only one department per application cycle — applying to multiple departments"
+" disqualifies all applications"
+
+msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
+msgstr ""
+"Departments may set their own criteria (e.g. grade ranking), but the ranking"
+" threshold cannot exceed the top 50% (i.e. top half of the class)"
+
+msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
+msgstr ""
+"Transfer quota limit: Each department may accept up to 20% of the originally"
+" approved enrollment per year level"
+
+msgid "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級"
+msgstr ""
+"Applicants entering 4th year may transfer to the same year in a similar "
+"department, or to 2nd/3rd year in a different type of department"
+
+msgid "核准後不可撤回，原系修過的學分可申請抵免，由新系系主任審核認定"
+msgstr ""
+"Approval cannot be revoked. Credits earned in the original department may be"
+" applied for exemption, subject to approval by the new department chair"
+
+msgid "離島優惠入學生、國防大學生等特定身份不得申請轉系"
+msgstr ""
+"Students admitted under offshore island preferences, national defense "
+"university students, and other specific categories are not eligible to "
+"transfer departments"
+
+msgid "雙主修"
+msgstr "Double Major"
+
+msgid "申請時間依校曆公告。大二起至修業年限最後一年第一學期止（延修期間不得新申請）。"
+msgstr ""
+"Application period is announced in the academic calendar. From 2nd year up "
+"to the first semester of the final year (new applications not allowed during"
+" extended enrollment)."
+
+msgid "最早申請"
+msgstr "Earliest application"
+
+msgid "大二開始"
+msgstr "From 2nd year"
+
+msgid "最晚申請"
+msgstr "Latest application"
+
+msgid "畢業年級第一學期"
+msgstr "First semester of graduating year"
+
+msgid "額外延修"
+msgstr "Extra extended enrollment"
+
+msgid "最多 1 學年"
+msgstr "Up to 1 academic year"
+
+msgid "需同時完成本系全部畢業要求，以及加修學系的所有「專業必修」科目學分"
+msgstr ""
+"You must simultaneously complete all graduation requirements of your home "
+"department and all required major courses of the additional department"
+
+msgid "各系可自訂申請條件（如 GPA 門檻），需向目標系查詢當年公告"
+msgstr ""
+"Departments may set their own application requirements (e.g. GPA threshold);"
+" check the current year's announcement from the target department"
+
+msgid "學位證書上並列兩個學系名稱；畢業成績單亦加註雙主修"
+msgstr ""
+"The diploma lists both department names; the official transcript also notes "
+"the double major"
+
+msgid "若加修學分未能完成 → 可申請再延修一學年，或放棄雙主修僅以本系學分畢業"
+msgstr ""
+"If additional major credits cannot be completed → may apply for one more "
+"year of extended enrollment, or abandon the double major and graduate with "
+"home department credits only"
+
+msgid "若已修完的加修學分符合輔系規定 → 可改認定為輔系資格"
+msgstr ""
+"If completed additional major credits meet the minor requirements → may be "
+"recognized as a minor instead"
+
+msgid "備用選項"
+msgstr "Backup option"
+
+msgid "延修期間（因雙主修而延修）：9 學分以下按學分費計；10 學分以上收全額學雜費"
+msgstr ""
+"Extended enrollment (due to double major): ≤9 credits charged per-credit; "
+"≥10 credits charged full tuition and fees"
+
+msgid "確認加修學系的申請條件"
+msgstr "Confirm the application requirements of the additional department"
+
+msgid "各系 GPA 門檻與名額不同，至目標系系辦查詢當年公告"
+msgstr ""
+"GPA thresholds and quotas vary by department; check this year's announcement"
+" at the target department office"
+
+msgid "填寫申請表，經本系主任同意"
+msgstr ""
+"Complete the application form and obtain your home department chair's "
+"approval"
+
+msgid "表格至教務處或各系系辦索取"
+msgstr ""
+"Forms are available at the Academic Affairs Office or each department office"
+
+msgid "送交加修學系審核"
+msgstr "Submit to the additional department for review"
+
+msgid "目標系系主任同意後，轉呈教務長核准"
+msgstr ""
+"After the target department chair approves, forward to the Dean of Academic "
+"Affairs for final approval"
+
+msgid "核准後按加修課表修課"
+msgstr "After approval, follow the additional department's course schedule"
+
+msgid "可選擇每學期邊修或在畢業學期一次申請資格審核（自主規劃路線）"
+msgstr ""
+"You may choose to take courses each semester or apply for qualification "
+"review all at once in the graduation semester (self-directed path)"
+
+msgid "辦理窗口"
+msgstr "Contact Offices"
+
+msgid "教務處 / 註冊組"
+msgstr "Academic Affairs Office / Registration Section"
+
+msgid "學籍異動（休學、復學、轉系）"
+msgstr "Student status changes (leave, reinstatement, department transfer)"
+
+msgid "外籍生休學 ARC 問題"
+msgstr "ARC issues related to leave of absence for international students"
+
+msgid "各系系辦"
+msgstr "Each department office"
+
+msgid "轉系、雙主修申請條件查詢"
+msgstr "Inquiries about transfer and double major application requirements"
+
+msgid "及課程規劃建議"
+msgstr "And course planning advice"
+
+msgid "在學證明・成績單・推薦信"
+msgstr "Certificate of Enrollment · Transcript · Recommendation Letter"
+
+msgid "在學證明"
+msgstr "Certificate of Enrollment"
+
+msgid "線上自印"
+msgstr "Self-print online"
+
+msgid "Portal 自行列印"
+msgstr "Print via Portal"
+
+msgid "登入 Portal → 學生服務 → 在學證明列印。無公章，適用一般用途。"
+msgstr ""
+"Log in to Portal → Student Services → Print Certificate of Enrollment. No "
+"official seal — suitable for general use."
+
+msgid "臨櫃申請"
+msgstr "In-person application"
+
+msgid "教務處 / 註冊組（含公章）"
+msgstr "Academic Affairs Office / Registration Section (with official seal)"
+
+msgid "需蓋學校公章者至教務處（行政大樓）辦理，通常當場或隔日取件。"
+msgstr ""
+"If an official school seal is required, apply at the Academic Affairs Office"
+" (Administration Building). Usually available immediately or the next day."
+
+msgid "有效期限通常為 3 個月，申請前確認用途所需格式（中文或英文）。"
+msgstr ""
+"Validity is usually 3 months. Confirm the required format (Chinese or "
+"English) before applying."
+
+msgid "成績單"
+msgstr "Academic Transcript"
+
+msgid "Portal 自行列印（非正式）"
+msgstr "Print via Portal (unofficial)"
+
+msgid "Portal → 學生服務 → 成績查詢 → 列印。不含公章，供個人參考或非正式用途。"
+msgstr ""
+"Portal → Student Services → Grade Inquiry → Print. No official seal — for "
+"personal reference or unofficial use."
+
+msgid "教務處 / 註冊組（含公章 / 英文版）"
+msgstr ""
+"Academic Affairs Office / Registration Section (with official seal / English"
+" version)"
+
+msgid "正式成績單（含公章）或英文成績單，至教務處申請，通常需支付工本費。"
+msgstr ""
+"Official transcript (with official seal) or English transcript — apply at "
+"the Academic Affairs Office; a processing fee is usually required."
+
+msgid "申請前確認對方是否要求「校長章」或「英文版」，不同用途規格不同。"
+msgstr ""
+"Before applying, confirm whether the receiving party requires a president's "
+"seal or an English version — requirements vary by purpose."
+
+msgid "推薦信由教授撰寫，學校不直接提供，需自行向教授申請。"
+msgstr ""
+"Recommendation letters are written by professors — the school does not "
+"provide them directly. You must request one from the professor yourself."
+
+msgid "確定需求，提早 2–4 週聯絡教授"
+msgstr "Confirm your needs and contact the professor 2–4 weeks in advance"
+
+msgid "說明用途（申請學校 / 獎學金）、繳交截止日、語言（中文或英文）。"
+msgstr ""
+"Explain the purpose (university application / scholarship), submission "
+"deadline, and language required (Chinese or English)."
+
+msgid "提供個人資料給教授"
+msgstr "Provide personal materials to the professor"
+
+msgid "自傳、成績單、申請用途說明、對方機構背景，方便教授撰寫具體內容。"
+msgstr ""
+"Autobiography, transcript, explanation of application purpose, and "
+"background of the receiving institution — to help the professor write "
+"specific content."
+
+msgid "確認格式：信封密封 / 線上填表"
+msgstr "Confirm format: sealed envelope / online form"
+
+msgid "部分申請要求教授直接寄至對方或填線上表單，提前確認避免格式錯誤。"
+msgstr ""
+"Some applications require the professor to send directly to the recipient or"
+" fill out an online form. Confirm in advance to avoid format errors."
+
+msgid "繳交前再次確認截止日"
+msgstr "Reconfirm the deadline before submission"
+
+msgid "截止日前 1 週提醒教授，以防對方忘記。"
+msgstr "Remind the professor 1 week before the deadline in case they forget."
+
+msgid "選擇熟悉你的教授（上過課、做過研究），推薦信內容會更有說服力。"
+msgstr ""
+"Choose a professor who knows you well (from class or research) — the "
+"recommendation letter will be more convincing."
+
+msgid "目前尚未收錄你的學校資訊。"
+msgstr "Your school's information has not been added yet."
+
+msgid "請參考學校官網或洽詢教務處。"
+msgstr ""
+"Please refer to your school's official website or contact the Academic "
+"Affairs Office."
+
+msgid "抵台第一件事"
+msgstr "First thing after arriving in Taiwan"
+
+msgid "台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。"
+msgstr ""
+"A Taiwan phone number is essential for daily life: LINE verification, bank "
+"OTP, and map navigation all require a local number. This page covers prepaid"
+" cards and monthly plan options."
+
+msgid "剛抵台、還沒拿到 ARC？"
+msgstr "Just arrived in Taiwan and don't have your ARC yet?"
+
+msgid "可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。"
+msgstr ""
+"You can first buy a prepaid SIM card at the airport or convenience store "
+"(passport only), then switch to a monthly plan once you have your ARC."
+
+msgid "預付卡（易付卡）"
+msgstr "Prepaid SIM Card"
+
+msgid "無 ARC 可辦"
+msgstr "No ARC required"
+
+msgid "只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核發的過渡期使用。"
+msgstr ""
+"Only a passport is required. Available at 7-Eleven, FamilyMart, and the "
+"airport. Ideal for the transition period after arriving before your ARC is "
+"issued."
+
+msgid "需要：護照"
+msgstr "Required: Passport"
+
+msgid "費用：約 NT$300 起（含一個月通話 + 數據）"
+msgstr "Cost: From approx. NT$300 (includes 1 month of calls + data)"
+
+msgid "月租方案（後付型）"
+msgstr "Monthly Plan (postpaid)"
+
+msgid "ARC 後辦理"
+msgstr "Apply after getting ARC"
+
+msgid "費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。多數學生取得 ARC 後即改辦月租。"
+msgstr ""
+"Better rates, large data allowance, ideal for long-term study. Requires ARC "
+"and a Taiwan bank account or credit card. Most students switch to this after"
+" getting their ARC."
+
+msgid "需要：ARC + 護照 + 銀行帳戶（或信用卡）"
+msgstr "Required: ARC + Passport + Bank account (or credit card)"
+
+msgid "費用：約 NT$399～699/月（依方案）"
+msgstr "Cost: Approx. NT$399–699/month (depending on plan)"
+
+msgid "中華電信"
+msgstr "Chunghwa Telecom"
+
+msgid "涵蓋範圍最廣，山區及偏遠地帶訊號最佳"
+msgstr "Widest coverage; best signal in mountain and remote areas"
+
+msgid "台灣大哥大"
+msgstr "Taiwan Mobile"
+
+msgid "都會區訊號佳，學生方案較多"
+msgstr "Good signal in urban areas; more student plans available"
+
+msgid "遠傳電信"
+msgstr "FarEasTone"
+
+msgid "北部訊號穩定，資費具競爭力"
+msgstr "Stable signal in northern Taiwan; competitive pricing"
+
+msgid "亞太電信"
+msgstr "APT (Asia Pacific Telecom)"
+
+msgid "資費較低，適合純數據需求"
+msgstr "Lower rates; suitable for data-only users"
+
+msgid "居留證（ARC）正本"
+msgstr "ARC (Alien Resident Certificate) original"
+
+msgid "必備"
+msgstr "Required"
+
+msgid "護照正本"
+msgstr "Passport original"
+
+msgid "台灣銀行帳戶 或 信用卡（扣繳費用）"
+msgstr "Taiwan bank account or credit card (for bill payment)"
+
+msgid "必備其一"
+msgstr "One required"
+
+msgid "學生證（部分業者提供學生優惠）"
+msgstr "Student ID (some carriers offer student discounts)"
+
+msgid "建議攜帶"
+msgstr "Recommended"
+
+msgid "選擇電信業者與方案"
+msgstr "Choose a carrier and plan"
+
+msgid "前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。"
+msgstr ""
+"Visit the major carriers' websites to compare plans (calls + data). If on a "
+"budget and mainly using data, consider an unlimited data-only plan (approx. "
+"NT$399/month)."
+
+msgid "前往電信門市"
+msgstr "Visit a carrier store"
+
+msgid ""
+"攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
+msgstr ""
+"Bring your ARC, passport, bank account or credit card to a carrier store "
+"(all major carriers have stores in Zhongli). Tell the staff you want to "
+"'register a new number with a resident certificate'. Usually takes under 30 "
+"minutes."
+
+msgid "選擇門號與 SIM 卡規格"
+msgstr "Choose your number and SIM size"
+
+msgid ""
+"可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G "
+"正常使用。"
+msgstr ""
+"You can choose your number (special numbers cost extra) and SIM size (most "
+"phones now use nano SIM). Confirm your phone is 'fully unlocked' to ensure "
+"5G/4G works in Taiwan."
+
+msgid "插卡啟用，設定網路"
+msgstr "Insert SIM and configure network"
+
+msgid "插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設定 APN。"
+msgstr ""
+"After inserting the SIM, APN settings are usually configured automatically. "
+"If you can't connect, ask store staff to help set the APN manually."
+
+msgid "中央大學附近："
+msgstr "Near NCU:"
+
+msgid "中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。"
+msgstr ""
+"All major carriers have stores in Zhongli city center (near the train "
+"station). Chunghwa Telecom, Taiwan Mobile, and FarEasTone all have stores on"
+" Guangming Street and Zhongzheng Road."
+
+msgid "保留原國際漫遊號碼："
+msgstr "Keep your home country number (roaming):"
+
+msgid "許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。"
+msgstr ""
+"Many students keep their home country number (international roaming) for "
+"family contact, and get a local Taiwan number for daily use. A dual-SIM "
+"phone makes this much more convenient."
+
+msgid "月租方案需綁定扣款帳戶："
+msgstr "Monthly plans require a linked payment account:"
+
+msgid "銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。"
+msgstr ""
+"If your bank account balance is insufficient, the carrier may suspend your "
+"number. Make sure you have enough balance in your account each month."
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Enter your question, and the system will organize suggestions based on your "

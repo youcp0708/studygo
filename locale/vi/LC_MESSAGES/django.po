@@ -4239,3 +4239,563 @@ msgstr ""
 "Sau khi kết quả miễn tín chỉ được công bố, nếu các môn được miễn vẫn còn "
 "trong danh sách đăng ký, hãy tự rút. Sinh viên chuyển tiếp phải tự đăng ký "
 "trong kỳ thêm/rút; hệ thống sẽ không tự động đăng ký."
+
+msgid "休學・復學・轉系・雙主修　辦理規定與注意事項"
+msgstr "Nghỉ học · Phục học · Chuyển ngành · Song ngành — Quy định và thủ tục"
+
+msgid "休學"
+msgstr "Nghỉ học"
+
+msgid "申請期限"
+msgstr "Hạn nộp đơn"
+
+msgid "期末考試開始前"
+msgstr "Trước khi kỳ thi cuối kỳ bắt đầu"
+
+msgid "每次最長"
+msgstr "Tối đa mỗi lần"
+
+msgid "2 學年"
+msgstr "2 năm học"
+
+msgid "累計上限"
+msgstr "Giới hạn tích lũy"
+
+msgid "2 學年（原則）"
+msgstr "2 năm học (nguyên tắc)"
+
+msgid "特殊延長"
+msgstr "Gia hạn đặc biệt"
+
+msgid "可再延長 2 年"
+msgstr "Có thể gia hạn thêm 2 năm"
+
+msgid "申請須取得家長或監護人同意，以及系主任同意，再至教務處辦理"
+msgstr ""
+"Cần có sự đồng ý của cha mẹ hoặc người giám hộ và trưởng khoa, sau đó nộp "
+"tại Phòng Học vụ"
+
+msgid "新生及轉學生第一學期須先完成註冊繳費，才能申請休學"
+msgstr ""
+"Sinh viên mới nhập học và sinh viên chuyển trường phải hoàn thành đăng ký và"
+" đóng học phí học kỳ đầu trước khi xin nghỉ học"
+
+msgid "休學當學期已選課程一律取消，不計成績（預修與抵免課程除外）"
+msgstr ""
+"Tất cả các môn học đã đăng ký trong học kỳ nghỉ sẽ bị hủy, không ghi điểm "
+"(ngoại trừ các môn học trước và miễn tín chỉ)"
+
+msgid "休學期間不計入修業年限"
+msgstr "Thời gian nghỉ học không được tính vào thời hạn học"
+
+msgid "服兵役、懷孕、生產、照顧未滿 3 歲子女所致休學"
+msgstr ""
+"Nghỉ học do nghĩa vụ quân sự, mang thai, sinh con, hoặc chăm sóc con dưới 3 "
+"tuổi"
+
+msgid "不計入累計年限"
+msgstr "Không tính vào giới hạn tích lũy"
+
+msgid "外籍生 ARC 注意"
+msgstr "Lưu ý cho sinh viên nước ngoài về ARC"
+
+msgid ""
+"辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
+msgstr ""
+"Sau khi nghỉ học, thẻ cư trú dành cho sinh viên sẽ mất hiệu lực và bạn phải "
+"rời Đài Loan trong thời hạn quy định. Bạn phải nộp đơn xin visa sinh viên "
+"trước khi trở lại. Vui lòng liên hệ Văn phòng Quốc tế (số máy lẻ 57081) để "
+"xác nhận thủ tục trước khi quyết định nghỉ học."
+
+msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
+msgstr ""
+"Ký túc xá: Bạn phải hoàn thành thủ tục trả phòng trước khi nghỉ học. Sau khi"
+" trở lại, bạn phải đăng ký ký túc xá lại — chỗ ở không được giữ lại."
+
+msgid "復學"
+msgstr "Phục học"
+
+msgid "自動復學"
+msgstr "Phục học tự động"
+
+msgid "休學期滿即自動復學"
+msgstr "Tự động phục học khi hết thời hạn nghỉ học"
+
+msgid "註冊期限"
+msgstr "Hạn đăng ký"
+
+msgid "當學期註冊日（含）前"
+msgstr "Trước hoặc vào ngày đăng ký của học kỳ hiện tại"
+
+msgid "提前復學"
+msgstr "Phục học sớm"
+
+msgid "最遲於註冊日前申請"
+msgstr "Nộp đơn trước ngày đăng ký"
+
+msgid "休學期滿後自動回復學籍，須於當學期校曆註冊日（含）前完成報到與繳費"
+msgstr ""
+"Tư cách sinh viên được khôi phục tự động sau khi hết thời hạn nghỉ học; bạn "
+"phải đăng ký và đóng học phí trước hoặc vào ngày đăng ký trong lịch học"
+
+msgid "提前復學：須於預定復學學期的註冊日前提出申請，不可在休學中途直接回來上課"
+msgstr ""
+"Phục học sớm: Nộp đơn trước ngày đăng ký của học kỳ muốn trở lại. Bạn không "
+"thể tự ý quay lại học giữa chừng kỳ nghỉ."
+
+msgid "復學後回到原學系，年級銜接休學前的年級繼續就讀"
+msgstr "Khi phục học, bạn trở lại khoa cũ và tiếp tục từ năm học lúc nghỉ"
+
+msgid "若屆時無法如期復學，需於註冊日前再次申請延續休學；逾期未辦者視情形處理"
+msgstr ""
+"Nếu bạn không thể trở lại đúng hạn, hãy nộp đơn gia hạn nghỉ học trước ngày "
+"đăng ký; không thực hiện sẽ bị xử lý theo quy định"
+
+msgid "復學後的畢業條件，依入學當年度的學則與相關規章認定"
+msgstr ""
+"Điều kiện tốt nghiệp sau khi phục học tuân theo quy định học vụ của năm nhập"
+" học"
+
+msgid "轉系"
+msgstr "Chuyển ngành"
+
+msgid "申請時間依當學年度校曆公告，每輪申請限報名一個科系，超過一個即取消資格。"
+msgstr ""
+"Thời gian nộp đơn được thông báo trong lịch học hàng năm. Mỗi đợt chỉ được "
+"đăng ký một ngành — đăng ký nhiều hơn một ngành sẽ bị loại."
+
+msgid "申請資格（年級）"
+msgstr "Điều kiện (theo năm học)"
+
+msgid "大二"
+msgstr "Năm 2"
+
+msgid "升大二前可申請"
+msgstr "Có thể nộp đơn trước khi lên năm 2"
+
+msgid "大三"
+msgstr "Năm 3"
+
+msgid "升大三前可申請"
+msgstr "Có thể nộp đơn trước khi lên năm 3"
+
+msgid "大四"
+msgstr "Năm 4"
+
+msgid "四年級生不得申請"
+msgstr "Sinh viên năm 4 không được nộp đơn"
+
+msgid "休學中"
+msgstr "Đang nghỉ học"
+
+msgid "休學期間不得申請"
+msgstr "Không thể nộp đơn khi đang nghỉ học"
+
+msgid "每一申請週期只能申請一個科系，多報即全部取消資格"
+msgstr ""
+"Chỉ được đăng ký một ngành trong mỗi đợt — đăng ký nhiều ngành sẽ bị hủy "
+"toàn bộ"
+
+msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
+msgstr ""
+"Các khoa có thể tự đặt tiêu chí (ví dụ: xếp hạng điểm), nhưng ngưỡng xếp "
+"hạng không được vượt quá 50% đầu (tức là nửa trên của lớp)"
+
+msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
+msgstr ""
+"Hạn ngạch chuyển vào: Mỗi khoa có thể nhận tối đa 20% chỉ tiêu được phê "
+"duyệt ban đầu mỗi năm học"
+
+msgid "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級"
+msgstr ""
+"Người nộp đơn trước khi lên năm 4 có thể chuyển vào cùng năm ở ngành tương "
+"tự, hoặc vào năm 2/3 ở ngành khác loại"
+
+msgid "核准後不可撤回，原系修過的學分可申請抵免，由新系系主任審核認定"
+msgstr ""
+"Sau khi được chấp thuận không thể rút lại. Tín chỉ đã học ở khoa cũ có thể "
+"xin miễn, phụ thuộc vào sự phê duyệt của trưởng khoa mới"
+
+msgid "離島優惠入學生、國防大學生等特定身份不得申請轉系"
+msgstr ""
+"Sinh viên nhập học theo ưu tiên đảo xa, sinh viên đại học quốc phòng và các "
+"danh mục cụ thể khác không đủ điều kiện chuyển ngành"
+
+msgid "雙主修"
+msgstr "Song ngành"
+
+msgid "申請時間依校曆公告。大二起至修業年限最後一年第一學期止（延修期間不得新申請）。"
+msgstr ""
+"Thời gian nộp đơn được thông báo trong lịch học. Từ năm 2 đến học kỳ 1 của "
+"năm cuối (không được nộp đơn mới trong thời gian gia hạn)."
+
+msgid "最早申請"
+msgstr "Nộp đơn sớm nhất"
+
+msgid "大二開始"
+msgstr "Từ năm 2"
+
+msgid "最晚申請"
+msgstr "Nộp đơn muộn nhất"
+
+msgid "畢業年級第一學期"
+msgstr "Học kỳ 1 của năm cuối"
+
+msgid "額外延修"
+msgstr "Gia hạn học thêm"
+
+msgid "最多 1 學年"
+msgstr "Tối đa 1 năm học"
+
+msgid "需同時完成本系全部畢業要求，以及加修學系的所有「專業必修」科目學分"
+msgstr ""
+"Bạn phải đồng thời hoàn thành tất cả yêu cầu tốt nghiệp của khoa chính và "
+"tất cả các môn học bắt buộc của khoa phụ"
+
+msgid "各系可自訂申請條件（如 GPA 門檻），需向目標系查詢當年公告"
+msgstr ""
+"Các khoa có thể đặt yêu cầu nộp đơn riêng (ví dụ: ngưỡng GPA); kiểm tra "
+"thông báo năm nay từ khoa mục tiêu"
+
+msgid "學位證書上並列兩個學系名稱；畢業成績單亦加註雙主修"
+msgstr ""
+"Bằng tốt nghiệp ghi tên cả hai ngành; bảng điểm chính thức cũng ghi chú song"
+" ngành"
+
+msgid "若加修學分未能完成 → 可申請再延修一學年，或放棄雙主修僅以本系學分畢業"
+msgstr ""
+"Nếu không thể hoàn thành tín chỉ ngành phụ → có thể xin gia hạn thêm một "
+"năm, hoặc từ bỏ song ngành và tốt nghiệp chỉ với tín chỉ ngành chính"
+
+msgid "若已修完的加修學分符合輔系規定 → 可改認定為輔系資格"
+msgstr ""
+"Nếu tín chỉ ngành phụ đã hoàn thành đáp ứng yêu cầu môn học phụ → có thể "
+"được công nhận là môn học phụ"
+
+msgid "備用選項"
+msgstr "Lựa chọn dự phòng"
+
+msgid "延修期間（因雙主修而延修）：9 學分以下按學分費計；10 學分以上收全額學雜費"
+msgstr ""
+"Thời gian gia hạn (do song ngành): ≤9 tín chỉ tính theo tín chỉ; ≥10 tín chỉ"
+" tính học phí đầy đủ"
+
+msgid "確認加修學系的申請條件"
+msgstr "Xác nhận điều kiện nộp đơn của ngành phụ"
+
+msgid "各系 GPA 門檻與名額不同，至目標系系辦查詢當年公告"
+msgstr ""
+"Ngưỡng GPA và chỉ tiêu khác nhau theo khoa; kiểm tra thông báo năm nay tại "
+"văn phòng khoa mục tiêu"
+
+msgid "填寫申請表，經本系主任同意"
+msgstr "Điền đơn và được sự chấp thuận của trưởng khoa chính"
+
+msgid "表格至教務處或各系系辦索取"
+msgstr "Mẫu đơn có tại Phòng Học vụ hoặc văn phòng từng khoa"
+
+msgid "送交加修學系審核"
+msgstr "Nộp cho khoa phụ để xét duyệt"
+
+msgid "目標系系主任同意後，轉呈教務長核准"
+msgstr ""
+"Sau khi trưởng khoa mục tiêu chấp thuận, chuyển lên Trưởng phòng Học vụ để "
+"phê duyệt cuối"
+
+msgid "核准後按加修課表修課"
+msgstr "Sau khi được chấp thuận, theo thời khóa biểu của ngành phụ"
+
+msgid "可選擇每學期邊修或在畢業學期一次申請資格審核（自主規劃路線）"
+msgstr ""
+"Bạn có thể chọn học theo từng học kỳ hoặc nộp đơn xét tuyên bố tốt nghiệp "
+"một lần vào học kỳ cuối (tự lên kế hoạch)"
+
+msgid "辦理窗口"
+msgstr "Văn phòng liên hệ"
+
+msgid "教務處 / 註冊組"
+msgstr "Phòng Học vụ / Tổ Đăng ký"
+
+msgid "學籍異動（休學、復學、轉系）"
+msgstr "Thay đổi trạng thái sinh viên (nghỉ học, phục học, chuyển ngành)"
+
+msgid "外籍生休學 ARC 問題"
+msgstr "Vấn đề ARC liên quan đến nghỉ học cho sinh viên quốc tế"
+
+msgid "各系系辦"
+msgstr "Văn phòng từng khoa"
+
+msgid "轉系、雙主修申請條件查詢"
+msgstr "Tìm hiểu về điều kiện chuyển ngành và song ngành"
+
+msgid "及課程規劃建議"
+msgstr "Và tư vấn lập kế hoạch học tập"
+
+msgid "在學證明・成績單・推薦信"
+msgstr "Giấy xác nhận học tập · Bảng điểm · Thư giới thiệu"
+
+msgid "在學證明"
+msgstr "Giấy xác nhận học tập"
+
+msgid "線上自印"
+msgstr "Tự in trực tuyến"
+
+msgid "Portal 自行列印"
+msgstr "In qua Portal"
+
+msgid "登入 Portal → 學生服務 → 在學證明列印。無公章，適用一般用途。"
+msgstr ""
+"Đăng nhập Portal → Dịch vụ Sinh viên → In giấy xác nhận học tập. Không có "
+"dấu chính thức — phù hợp cho mục đích thông thường."
+
+msgid "臨櫃申請"
+msgstr "Nộp đơn trực tiếp"
+
+msgid "教務處 / 註冊組（含公章）"
+msgstr "Phòng Học vụ / Tổ Đăng ký (có dấu chính thức)"
+
+msgid "需蓋學校公章者至教務處（行政大樓）辦理，通常當場或隔日取件。"
+msgstr ""
+"Nếu cần dấu chính thức của trường, nộp đơn tại Phòng Học vụ (Tòa nhà Hành "
+"chính). Thường có ngay hoặc ngày hôm sau."
+
+msgid "有效期限通常為 3 個月，申請前確認用途所需格式（中文或英文）。"
+msgstr ""
+"Thời hạn hiệu lực thường là 3 tháng. Xác nhận định dạng yêu cầu (tiếng Trung"
+" hoặc tiếng Anh) trước khi nộp đơn."
+
+msgid "成績單"
+msgstr "Bảng điểm"
+
+msgid "Portal 自行列印（非正式）"
+msgstr "In qua Portal (không chính thức)"
+
+msgid "Portal → 學生服務 → 成績查詢 → 列印。不含公章，供個人參考或非正式用途。"
+msgstr ""
+"Portal → Dịch vụ Sinh viên → Tra cứu điểm → In. Không có dấu chính thức — để"
+" tham khảo cá nhân hoặc sử dụng không chính thức."
+
+msgid "教務處 / 註冊組（含公章 / 英文版）"
+msgstr "Phòng Học vụ / Tổ Đăng ký (có dấu chính thức / phiên bản tiếng Anh)"
+
+msgid "正式成績單（含公章）或英文成績單，至教務處申請，通常需支付工本費。"
+msgstr ""
+"Bảng điểm chính thức (có dấu) hoặc bảng điểm tiếng Anh — nộp đơn tại Phòng "
+"Học vụ; thường cần trả phí xử lý."
+
+msgid "申請前確認對方是否要求「校長章」或「英文版」，不同用途規格不同。"
+msgstr ""
+"Trước khi nộp đơn, xác nhận xem bên nhận có yêu cầu dấu hiệu trưởng hay "
+"phiên bản tiếng Anh không — yêu cầu khác nhau tùy mục đích."
+
+msgid "推薦信由教授撰寫，學校不直接提供，需自行向教授申請。"
+msgstr ""
+"Thư giới thiệu do giáo sư viết — nhà trường không cung cấp trực tiếp. Bạn "
+"phải tự yêu cầu từ giáo sư."
+
+msgid "確定需求，提早 2–4 週聯絡教授"
+msgstr "Xác nhận nhu cầu và liên hệ giáo sư trước 2–4 tuần"
+
+msgid "說明用途（申請學校 / 獎學金）、繳交截止日、語言（中文或英文）。"
+msgstr ""
+"Giải thích mục đích (xin học / học bổng), hạn nộp và ngôn ngữ yêu cầu (tiếng"
+" Trung hoặc tiếng Anh)."
+
+msgid "提供個人資料給教授"
+msgstr "Cung cấp tài liệu cá nhân cho giáo sư"
+
+msgid "自傳、成績單、申請用途說明、對方機構背景，方便教授撰寫具體內容。"
+msgstr ""
+"Tự truyện, bảng điểm, giải thích mục đích nộp đơn và thông tin về tổ chức "
+"nhận — để giúp giáo sư viết nội dung cụ thể."
+
+msgid "確認格式：信封密封 / 線上填表"
+msgstr "Xác nhận định dạng: phong bì niêm phong / điền mẫu trực tuyến"
+
+msgid "部分申請要求教授直接寄至對方或填線上表單，提前確認避免格式錯誤。"
+msgstr ""
+"Một số đơn yêu cầu giáo sư gửi trực tiếp cho bên nhận hoặc điền mẫu trực "
+"tuyến. Xác nhận trước để tránh lỗi định dạng."
+
+msgid "繳交前再次確認截止日"
+msgstr "Xác nhận lại hạn nộp trước khi nộp"
+
+msgid "截止日前 1 週提醒教授，以防對方忘記。"
+msgstr "Nhắc nhở giáo sư 1 tuần trước hạn chót phòng trường hợp họ quên."
+
+msgid "選擇熟悉你的教授（上過課、做過研究），推薦信內容會更有說服力。"
+msgstr ""
+"Chọn giáo sư quen biết bạn (từ lớp học hoặc nghiên cứu) — thư giới thiệu sẽ "
+"thuyết phục hơn."
+
+msgid "目前尚未收錄你的學校資訊。"
+msgstr "Thông tin trường của bạn chưa được thêm vào."
+
+msgid "請參考學校官網或洽詢教務處。"
+msgstr ""
+"Vui lòng tham khảo trang web chính thức của trường hoặc liên hệ Phòng Học "
+"vụ."
+
+msgid "抵台第一件事"
+msgstr "Việc đầu tiên khi đến Đài Loan"
+
+msgid "台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。"
+msgstr ""
+"Số điện thoại Đài Loan là nền tảng của cuộc sống: xác minh LINE, OTP ngân "
+"hàng và điều hướng bản đồ đều cần số nội địa. Trang này tóm tắt cách đăng ký"
+" SIM trả trước và gói hàng tháng."
+
+msgid "剛抵台、還沒拿到 ARC？"
+msgstr "Vừa đến Đài Loan và chưa có ARC?"
+
+msgid "可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。"
+msgstr ""
+"Bạn có thể mua SIM trả trước tại sân bay hoặc cửa hàng tiện lợi (chỉ cần hộ "
+"chiếu), sau đó chuyển sang gói hàng tháng khi có ARC."
+
+msgid "預付卡（易付卡）"
+msgstr "SIM trả trước"
+
+msgid "無 ARC 可辦"
+msgstr "Không cần ARC"
+
+msgid "只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核發的過渡期使用。"
+msgstr ""
+"Chỉ cần hộ chiếu. Có bán tại 7-Eleven, FamilyMart và sân bay. Lý tưởng cho "
+"giai đoạn chuyển tiếp sau khi đến trước khi ARC được cấp."
+
+msgid "需要：護照"
+msgstr "Cần: Hộ chiếu"
+
+msgid "費用：約 NT$300 起（含一個月通話 + 數據）"
+msgstr "Chi phí: Từ khoảng NT$300 (bao gồm 1 tháng gọi + dữ liệu)"
+
+msgid "月租方案（後付型）"
+msgstr "Gói hàng tháng (trả sau)"
+
+msgid "ARC 後辦理"
+msgstr "Đăng ký sau khi có ARC"
+
+msgid "費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。多數學生取得 ARC 後即改辦月租。"
+msgstr ""
+"Giá tốt hơn, dữ liệu lớn, lý tưởng cho việc học dài hạn. Yêu cầu ARC và tài "
+"khoản ngân hàng Đài Loan hoặc thẻ tín dụng. Hầu hết sinh viên chuyển sang "
+"gói này sau khi có ARC."
+
+msgid "需要：ARC + 護照 + 銀行帳戶（或信用卡）"
+msgstr "Cần: ARC + Hộ chiếu + Tài khoản ngân hàng (hoặc thẻ tín dụng)"
+
+msgid "費用：約 NT$399～699/月（依方案）"
+msgstr "Chi phí: Khoảng NT$399–699/tháng (tùy gói)"
+
+msgid "中華電信"
+msgstr "Chunghwa Telecom"
+
+msgid "涵蓋範圍最廣，山區及偏遠地帶訊號最佳"
+msgstr ""
+"Vùng phủ sóng rộng nhất; tín hiệu tốt nhất ở vùng núi và vùng sâu vùng xa"
+
+msgid "台灣大哥大"
+msgstr "Taiwan Mobile"
+
+msgid "都會區訊號佳，學生方案較多"
+msgstr "Tín hiệu tốt ở khu vực đô thị; nhiều gói dành cho sinh viên hơn"
+
+msgid "遠傳電信"
+msgstr "FarEasTone"
+
+msgid "北部訊號穩定，資費具競爭力"
+msgstr "Tín hiệu ổn định ở miền Bắc Đài Loan; giá cạnh tranh"
+
+msgid "亞太電信"
+msgstr "APT (Asia Pacific Telecom)"
+
+msgid "資費較低，適合純數據需求"
+msgstr "Giá thấp hơn; phù hợp với người chỉ dùng dữ liệu"
+
+msgid "居留證（ARC）正本"
+msgstr "ARC gốc (Giấy chứng nhận cư trú)"
+
+msgid "必備"
+msgstr "Bắt buộc"
+
+msgid "護照正本"
+msgstr "Hộ chiếu gốc"
+
+msgid "台灣銀行帳戶 或 信用卡（扣繳費用）"
+msgstr ""
+"Tài khoản ngân hàng Đài Loan hoặc thẻ tín dụng (để thanh toán hóa đơn)"
+
+msgid "必備其一"
+msgstr "Cần một trong hai"
+
+msgid "學生證（部分業者提供學生優惠）"
+msgstr "Thẻ sinh viên (một số nhà mạng cung cấp ưu đãi cho sinh viên)"
+
+msgid "建議攜帶"
+msgstr "Nên mang theo"
+
+msgid "選擇電信業者與方案"
+msgstr "Chọn nhà mạng và gói cước"
+
+msgid "前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。"
+msgstr ""
+"Truy cập trang web các nhà mạng lớn để so sánh gói (gọi + dữ liệu). Nếu ngân"
+" sách hạn chế và chủ yếu dùng dữ liệu, hãy xem xét gói dữ liệu không giới "
+"hạn (khoảng NT$399/tháng)."
+
+msgid "前往電信門市"
+msgstr "Đến cửa hàng nhà mạng"
+
+msgid ""
+"攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
+msgstr ""
+"Mang ARC, hộ chiếu, tài khoản ngân hàng hoặc thẻ tín dụng đến cửa hàng nhà "
+"mạng (tất cả các nhà mạng lớn đều có cửa hàng ở Zhongli). Nói với nhân viên "
+"rằng bạn muốn 'đăng ký số mới với giấy cư trú'. Thường hoàn tất trong 30 "
+"phút."
+
+msgid "選擇門號與 SIM 卡規格"
+msgstr "Chọn số và kích thước SIM"
+
+msgid ""
+"可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G "
+"正常使用。"
+msgstr ""
+"Bạn có thể chọn số (số đặc biệt mất thêm phí) và kích thước SIM (hầu hết "
+"điện thoại hiện dùng nano SIM). Xác nhận điện thoại của bạn được 'mở khóa "
+"hoàn toàn' để đảm bảo 5G/4G hoạt động ở Đài Loan."
+
+msgid "插卡啟用，設定網路"
+msgstr "Lắp SIM và cấu hình mạng"
+
+msgid "插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設定 APN。"
+msgstr ""
+"Sau khi lắp SIM, cài đặt APN thường được cấu hình tự động. Nếu không kết nối"
+" được, nhờ nhân viên cửa hàng giúp cài đặt APN thủ công."
+
+msgid "中央大學附近："
+msgstr "Gần NCU:"
+
+msgid "中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。"
+msgstr ""
+"Tất cả các nhà mạng lớn đều có cửa hàng ở trung tâm thành phố Zhongli (gần "
+"ga tàu). Chunghwa Telecom, Taiwan Mobile và FarEasTone đều có cửa hàng trên "
+"đường Guangming và Zhongzheng."
+
+msgid "保留原國際漫遊號碼："
+msgstr "Giữ số điện thoại nước nhà (chuyển vùng):"
+
+msgid "許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。"
+msgstr ""
+"Nhiều sinh viên giữ số điện thoại nước nhà (chuyển vùng quốc tế) để liên lạc"
+" với gia đình và đăng ký số nội địa Đài Loan cho sử dụng hàng ngày. Điện "
+"thoại hai SIM sẽ tiện hơn nhiều."
+
+msgid "月租方案需綁定扣款帳戶："
+msgstr "Gói hàng tháng yêu cầu tài khoản thanh toán liên kết:"
+
+msgid "銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。"
+msgstr ""
+"Nếu số dư tài khoản ngân hàng không đủ, nhà mạng có thể tạm ngừng số của "
+"bạn. Hãy đảm bảo có đủ số dư trong tài khoản mỗi tháng."

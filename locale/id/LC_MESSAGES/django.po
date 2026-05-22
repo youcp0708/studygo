@@ -4414,6 +4414,586 @@ msgstr ""
 "ada di daftar registrasi Anda, hapus sendiri. Mahasiswa transfer harus "
 "mendaftar sendiri selama tambah/hapus; sistem tidak akan mendaftar otomatis."
 
+msgid "休學・復學・轉系・雙主修　辦理規定與注意事項"
+msgstr ""
+"Cuti Akademik · Aktif Kembali · Pindah Jurusan · Double Major — Peraturan "
+"dan Prosedur"
+
+msgid "休學"
+msgstr "Cuti Akademik"
+
+msgid "申請期限"
+msgstr "Batas Pengajuan"
+
+msgid "期末考試開始前"
+msgstr "Sebelum ujian akhir semester dimulai"
+
+msgid "每次最長"
+msgstr "Maksimum per pengajuan"
+
+msgid "2 學年"
+msgstr "2 tahun akademik"
+
+msgid "累計上限"
+msgstr "Batas kumulatif"
+
+msgid "2 學年（原則）"
+msgstr "2 tahun akademik (pada prinsipnya)"
+
+msgid "特殊延長"
+msgstr "Perpanjangan khusus"
+
+msgid "可再延長 2 年"
+msgstr "Dapat diperpanjang 2 tahun lagi"
+
+msgid "申請須取得家長或監護人同意，以及系主任同意，再至教務處辦理"
+msgstr ""
+"Perlu persetujuan orang tua atau wali dan ketua jurusan, lalu diajukan ke "
+"Kantor Akademik"
+
+msgid "新生及轉學生第一學期須先完成註冊繳費，才能申請休學"
+msgstr ""
+"Mahasiswa baru dan mahasiswa pindahan harus menyelesaikan registrasi dan "
+"pembayaran biaya di semester pertama sebelum mengajukan cuti"
+
+msgid "休學當學期已選課程一律取消，不計成績（預修與抵免課程除外）"
+msgstr ""
+"Semua mata kuliah yang diambil pada semester cuti akan dibatalkan tanpa "
+"pencatatan nilai (kecuali mata kuliah pra-disetujui dan yang dibebaskan SKS)"
+
+msgid "休學期間不計入修業年限"
+msgstr "Masa cuti tidak dihitung dalam batas waktu studi"
+
+msgid "服兵役、懷孕、生產、照顧未滿 3 歲子女所致休學"
+msgstr ""
+"Cuti karena wajib militer, kehamilan, persalinan, atau merawat anak di bawah"
+" 3 tahun"
+
+msgid "不計入累計年限"
+msgstr "Tidak dihitung dalam batas kumulatif"
+
+msgid "外籍生 ARC 注意"
+msgstr "Perhatian ARC untuk Mahasiswa Asing"
+
+msgid ""
+"辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
+msgstr ""
+"Setelah mengambil cuti, ARC mahasiswa Anda menjadi tidak berlaku dan Anda "
+"harus meninggalkan Taiwan dalam batas waktu yang ditentukan. Anda harus "
+"mengajukan ulang visa pelajar sebelum kembali. Harap hubungi Kantor Urusan "
+"Internasional (ext. 57081) untuk mengkonfirmasi prosedur sebelum memutuskan "
+"cuti."
+
+msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
+msgstr ""
+"Asrama: Anda harus menyelesaikan prosedur keluar asrama sebelum cuti. "
+"Setelah kembali, Anda harus mendaftar ulang untuk asrama — tempat tidur "
+"tidak ditahan."
+
+msgid "復學"
+msgstr "Aktif Kembali"
+
+msgid "自動復學"
+msgstr "Aktif Kembali Otomatis"
+
+msgid "休學期滿即自動復學"
+msgstr "Secara otomatis aktif kembali saat masa cuti berakhir"
+
+msgid "註冊期限"
+msgstr "Batas Pendaftaran"
+
+msgid "當學期註冊日（含）前"
+msgstr "Sebelum atau pada hari registrasi semester ini (inklusif)"
+
+msgid "提前復學"
+msgstr "Aktif Kembali Lebih Awal"
+
+msgid "最遲於註冊日前申請"
+msgstr "Ajukan permohonan selambat-lambatnya sebelum hari registrasi"
+
+msgid "休學期滿後自動回復學籍，須於當學期校曆註冊日（含）前完成報到與繳費"
+msgstr ""
+"Status mahasiswa dipulihkan secara otomatis setelah cuti berakhir; Anda "
+"harus lapor diri dan membayar biaya kuliah sebelum atau pada tanggal "
+"registrasi yang tertera di kalender akademik"
+
+msgid "提前復學：須於預定復學學期的註冊日前提出申請，不可在休學中途直接回來上課"
+msgstr ""
+"Aktif kembali lebih awal: Ajukan permohonan sebelum hari registrasi semester"
+" yang dituju. Anda tidak bisa begitu saja kembali kuliah di tengah masa "
+"cuti."
+
+msgid "復學後回到原學系，年級銜接休學前的年級繼續就讀"
+msgstr ""
+"Setelah aktif kembali, Anda kembali ke jurusan asal pada tingkatan tahun "
+"yang sama saat cuti"
+
+msgid "若屆時無法如期復學，需於註冊日前再次申請延續休學；逾期未辦者視情形處理"
+msgstr ""
+"Jika tidak bisa kembali sesuai jadwal, ajukan perpanjangan cuti sebelum hari"
+" registrasi; gagal melakukannya akan ditangani sesuai peraturan"
+
+msgid "復學後的畢業條件，依入學當年度的學則與相關規章認定"
+msgstr ""
+"Persyaratan kelulusan setelah aktif kembali mengikuti peraturan akademik "
+"tahun masuk"
+
+msgid "轉系"
+msgstr "Pindah Jurusan"
+
+msgid "申請時間依當學年度校曆公告，每輪申請限報名一個科系，超過一個即取消資格。"
+msgstr ""
+"Periode pengajuan diumumkan dalam kalender akademik tahunan. Setiap putaran "
+"dibatasi satu jurusan — mendaftar lebih dari satu akan mendiskualifikasi "
+"Anda."
+
+msgid "申請資格（年級）"
+msgstr "Kelayakan (berdasarkan tahun)"
+
+msgid "大二"
+msgstr "Tahun 2"
+
+msgid "升大二前可申請"
+msgstr "Boleh mendaftar sebelum naik ke tahun 2"
+
+msgid "大三"
+msgstr "Tahun 3"
+
+msgid "升大三前可申請"
+msgstr "Boleh mendaftar sebelum naik ke tahun 3"
+
+msgid "大四"
+msgstr "Tahun 4"
+
+msgid "四年級生不得申請"
+msgstr "Mahasiswa tahun 4 tidak boleh mendaftar"
+
+msgid "休學中"
+msgstr "Sedang Cuti"
+
+msgid "休學期間不得申請"
+msgstr "Tidak bisa mendaftar saat sedang cuti"
+
+msgid "每一申請週期只能申請一個科系，多報即全部取消資格"
+msgstr ""
+"Hanya satu jurusan per siklus pendaftaran — mendaftar ke beberapa jurusan "
+"mendiskualifikasi semua pendaftaran"
+
+msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
+msgstr ""
+"Jurusan dapat menetapkan kriteria sendiri (mis. peringkat nilai), tetapi "
+"ambang batas peringkat tidak boleh melebihi 50% teratas (yaitu setengah atas"
+" kelas)"
+
+msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
+msgstr ""
+"Batas kuota transfer: Setiap jurusan dapat menerima maksimal 20% dari jumlah"
+" penerimaan awal yang disetujui per tahun"
+
+msgid "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級"
+msgstr ""
+"Pelamar yang masuk tahun 4 dapat pindah ke tahun yang sama di jurusan "
+"serupa, atau ke tahun 2/3 di jurusan berbeda jenis"
+
+msgid "核准後不可撤回，原系修過的學分可申請抵免，由新系系主任審核認定"
+msgstr ""
+"Persetujuan tidak dapat dibatalkan. Kredit yang diperoleh di jurusan asal "
+"dapat diajukan untuk pembebasan, tergantung persetujuan ketua jurusan baru"
+
+msgid "離島優惠入學生、國防大學生等特定身份不得申請轉系"
+msgstr ""
+"Mahasiswa yang diterima melalui preferensi pulau terluar, mahasiswa "
+"universitas pertahanan, dan kategori tertentu lainnya tidak memenuhi syarat "
+"untuk pindah jurusan"
+
+msgid "雙主修"
+msgstr "Double Major"
+
+msgid "申請時間依校曆公告。大二起至修業年限最後一年第一學期止（延修期間不得新申請）。"
+msgstr ""
+"Periode pengajuan diumumkan dalam kalender akademik. Dari tahun ke-2 hingga "
+"semester pertama tahun terakhir (pengajuan baru tidak diperbolehkan selama "
+"masa studi yang diperpanjang)."
+
+msgid "最早申請"
+msgstr "Pendaftaran paling awal"
+
+msgid "大二開始"
+msgstr "Mulai tahun 2"
+
+msgid "最晚申請"
+msgstr "Pendaftaran paling akhir"
+
+msgid "畢業年級第一學期"
+msgstr "Semester pertama tahun kelulusan"
+
+msgid "額外延修"
+msgstr "Perpanjangan studi tambahan"
+
+msgid "最多 1 學年"
+msgstr "Maksimal 1 tahun akademik"
+
+msgid "需同時完成本系全部畢業要求，以及加修學系的所有「專業必修」科目學分"
+msgstr ""
+"Anda harus menyelesaikan semua persyaratan kelulusan jurusan utama dan semua"
+" mata kuliah wajib mayor dari jurusan tambahan secara bersamaan"
+
+msgid "各系可自訂申請條件（如 GPA 門檻），需向目標系查詢當年公告"
+msgstr ""
+"Jurusan dapat menetapkan persyaratan pendaftaran sendiri (mis. ambang GPA); "
+"periksa pengumuman tahun ini dari jurusan yang dituju"
+
+msgid "學位證書上並列兩個學系名稱；畢業成績單亦加註雙主修"
+msgstr ""
+"Ijazah mencantumkan kedua nama jurusan; transkrip resmi juga mencatat double"
+" major"
+
+msgid "若加修學分未能完成 → 可申請再延修一學年，或放棄雙主修僅以本系學分畢業"
+msgstr ""
+"Jika kredit jurusan tambahan tidak dapat diselesaikan → dapat mengajukan "
+"perpanjangan studi satu tahun lagi, atau melepaskan double major dan lulus "
+"hanya dengan kredit jurusan utama"
+
+msgid "若已修完的加修學分符合輔系規定 → 可改認定為輔系資格"
+msgstr ""
+"Jika kredit jurusan tambahan yang sudah diselesaikan memenuhi persyaratan "
+"minor → dapat diakui sebagai minor"
+
+msgid "備用選項"
+msgstr "Opsi cadangan"
+
+msgid "延修期間（因雙主修而延修）：9 學分以下按學分費計；10 學分以上收全額學雜費"
+msgstr ""
+"Masa studi diperpanjang (karena double major): ≤9 SKS dikenakan biaya per "
+"kredit; ≥10 SKS dikenakan biaya penuh"
+
+msgid "確認加修學系的申請條件"
+msgstr "Konfirmasi persyaratan pendaftaran jurusan tambahan"
+
+msgid "各系 GPA 門檻與名額不同，至目標系系辦查詢當年公告"
+msgstr ""
+"Ambang GPA dan kuota berbeda per jurusan; periksa pengumuman tahun ini di "
+"kantor jurusan yang dituju"
+
+msgid "填寫申請表，經本系主任同意"
+msgstr "Isi formulir permohonan dan dapatkan persetujuan ketua jurusan utama"
+
+msgid "表格至教務處或各系系辦索取"
+msgstr ""
+"Formulir tersedia di Kantor Akademik atau kantor masing-masing jurusan"
+
+msgid "送交加修學系審核"
+msgstr "Serahkan ke jurusan tambahan untuk ditinjau"
+
+msgid "目標系系主任同意後，轉呈教務長核准"
+msgstr ""
+"Setelah ketua jurusan target menyetujui, teruskan ke Dekan Urusan Akademik "
+"untuk persetujuan akhir"
+
+msgid "核准後按加修課表修課"
+msgstr "Setelah disetujui, ikuti jadwal mata kuliah jurusan tambahan"
+
+msgid "可選擇每學期邊修或在畢業學期一次申請資格審核（自主規劃路線）"
+msgstr ""
+"Anda bisa memilih untuk mengambil mata kuliah setiap semester atau "
+"mengajukan tinjauan kualifikasi sekaligus di semester kelulusan (jalur "
+"mandiri)"
+
+msgid "辦理窗口"
+msgstr "Kantor yang Dituju"
+
+msgid "教務處 / 註冊組"
+msgstr "Kantor Akademik / Bagian Pendaftaran"
+
+msgid "學籍異動（休學、復學、轉系）"
+msgstr "Perubahan status mahasiswa (cuti, aktif kembali, pindah jurusan)"
+
+msgid "外籍生休學 ARC 問題"
+msgstr "Masalah ARC terkait cuti akademik untuk mahasiswa asing"
+
+msgid "各系系辦"
+msgstr "Kantor masing-masing jurusan"
+
+msgid "轉系、雙主修申請條件查詢"
+msgstr "Pertanyaan tentang persyaratan pindah jurusan dan double major"
+
+msgid "及課程規劃建議"
+msgstr "Dan saran perencanaan kursus"
+
+msgid "在學證明・成績單・推薦信"
+msgstr "Surat Keterangan Aktif · Transkrip · Surat Rekomendasi"
+
+msgid "在學證明"
+msgstr "Surat Keterangan Aktif"
+
+msgid "線上自印"
+msgstr "Cetak mandiri online"
+
+msgid "Portal 自行列印"
+msgstr "Cetak melalui Portal"
+
+msgid "登入 Portal → 學生服務 → 在學證明列印。無公章，適用一般用途。"
+msgstr ""
+"Masuk ke Portal → Layanan Mahasiswa → Cetak Surat Keterangan Aktif. Tanpa "
+"stempel resmi — cocok untuk keperluan umum."
+
+msgid "臨櫃申請"
+msgstr "Pengajuan langsung"
+
+msgid "教務處 / 註冊組（含公章）"
+msgstr "Kantor Akademik / Bagian Pendaftaran (dengan stempel resmi)"
+
+msgid "需蓋學校公章者至教務處（行政大樓）辦理，通常當場或隔日取件。"
+msgstr ""
+"Jika memerlukan stempel resmi sekolah, ajukan di Kantor Akademik (Gedung "
+"Administrasi). Biasanya tersedia segera atau hari berikutnya."
+
+msgid "有效期限通常為 3 個月，申請前確認用途所需格式（中文或英文）。"
+msgstr ""
+"Masa berlaku biasanya 3 bulan. Konfirmasi format yang diperlukan (Bahasa "
+"Cina atau Inggris) sebelum mengajukan permohonan."
+
+msgid "成績單"
+msgstr "Transkrip Akademik"
+
+msgid "Portal 自行列印（非正式）"
+msgstr "Cetak melalui Portal (tidak resmi)"
+
+msgid "Portal → 學生服務 → 成績查詢 → 列印。不含公章，供個人參考或非正式用途。"
+msgstr ""
+"Portal → Layanan Mahasiswa → Pengecekan Nilai → Cetak. Tanpa stempel resmi —"
+" untuk referensi pribadi atau penggunaan tidak resmi."
+
+msgid "教務處 / 註冊組（含公章 / 英文版）"
+msgstr ""
+"Kantor Akademik / Bagian Pendaftaran (dengan stempel resmi / versi bahasa "
+"Inggris)"
+
+msgid "正式成績單（含公章）或英文成績單，至教務處申請，通常需支付工本費。"
+msgstr ""
+"Transkrip resmi (dengan stempel resmi) atau transkrip berbahasa Inggris — "
+"ajukan di Kantor Akademik; biasanya dikenakan biaya pemrosesan."
+
+msgid "申請前確認對方是否要求「校長章」或「英文版」，不同用途規格不同。"
+msgstr ""
+"Sebelum mengajukan, konfirmasi apakah pihak penerima memerlukan stempel "
+"kepala sekolah atau versi bahasa Inggris — persyaratan berbeda tergantung "
+"tujuan."
+
+msgid "推薦信由教授撰寫，學校不直接提供，需自行向教授申請。"
+msgstr ""
+"Surat rekomendasi ditulis oleh dosen — kampus tidak menyediakannya secara "
+"langsung. Anda harus memintanya sendiri dari dosen."
+
+msgid "確定需求，提早 2–4 週聯絡教授"
+msgstr "Konfirmasi kebutuhan dan hubungi dosen 2–4 minggu sebelumnya"
+
+msgid "說明用途（申請學校 / 獎學金）、繳交截止日、語言（中文或英文）。"
+msgstr ""
+"Jelaskan tujuan (pendaftaran universitas / beasiswa), batas waktu "
+"pengumpulan, dan bahasa yang diperlukan (Cina atau Inggris)."
+
+msgid "提供個人資料給教授"
+msgstr "Berikan dokumen pribadi kepada dosen"
+
+msgid "自傳、成績單、申請用途說明、對方機構背景，方便教授撰寫具體內容。"
+msgstr ""
+"Autobiografi, transkrip, penjelasan tujuan pendaftaran, dan latar belakang "
+"lembaga penerima — untuk membantu dosen menulis konten spesifik."
+
+msgid "確認格式：信封密封 / 線上填表"
+msgstr "Konfirmasi format: amplop tersegel / formulir online"
+
+msgid "部分申請要求教授直接寄至對方或填線上表單，提前確認避免格式錯誤。"
+msgstr ""
+"Beberapa pendaftaran mengharuskan dosen mengirim langsung ke penerima atau "
+"mengisi formulir online. Konfirmasi terlebih dahulu untuk menghindari "
+"kesalahan format."
+
+msgid "繳交前再次確認截止日"
+msgstr "Konfirmasi ulang batas waktu sebelum pengumpulan"
+
+msgid "截止日前 1 週提醒教授，以防對方忘記。"
+msgstr ""
+"Ingatkan dosen 1 minggu sebelum batas waktu untuk berjaga-jaga kalau mereka "
+"lupa."
+
+msgid "選擇熟悉你的教授（上過課、做過研究），推薦信內容會更有說服力。"
+msgstr ""
+"Pilih dosen yang mengenal Anda dengan baik (dari kelas atau penelitian) — "
+"surat rekomendasi akan lebih meyakinkan."
+
+msgid "目前尚未收錄你的學校資訊。"
+msgstr "Informasi sekolah Anda belum ditambahkan."
+
+msgid "請參考學校官網或洽詢教務處。"
+msgstr ""
+"Silakan merujuk ke situs web resmi sekolah Anda atau hubungi Kantor "
+"Akademik."
+
+msgid "抵台第一件事"
+msgstr "Hal pertama setelah tiba di Taiwan"
+
+msgid "台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。"
+msgstr ""
+"Nomor telepon Taiwan sangat penting untuk kehidupan sehari-hari: verifikasi "
+"LINE, OTP bank, dan navigasi peta semuanya memerlukan nomor lokal. Halaman "
+"ini membahas kartu prabayar dan paket bulanan."
+
+msgid "剛抵台、還沒拿到 ARC？"
+msgstr "Baru tiba di Taiwan dan belum punya ARC?"
+
+msgid "可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。"
+msgstr ""
+"Anda bisa membeli kartu SIM prabayar di bandara atau minimarket (hanya perlu"
+" paspor), lalu beralih ke paket bulanan setelah mendapat ARC."
+
+msgid "預付卡（易付卡）"
+msgstr "Kartu SIM Prabayar"
+
+msgid "無 ARC 可辦"
+msgstr "Tanpa ARC"
+
+msgid "只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核發的過渡期使用。"
+msgstr ""
+"Hanya membutuhkan paspor. Tersedia di 7-Eleven, FamilyMart, dan bandara. "
+"Ideal untuk masa transisi setelah tiba sebelum ARC diterbitkan."
+
+msgid "需要：護照"
+msgstr "Diperlukan: Paspor"
+
+msgid "費用：約 NT$300 起（含一個月通話 + 數據）"
+msgstr "Biaya: Mulai sekitar NT$300 (termasuk 1 bulan panggilan + data)"
+
+msgid "月租方案（後付型）"
+msgstr "Paket Bulanan (pascabayar)"
+
+msgid "ARC 後辦理"
+msgstr "Daftar setelah mendapat ARC"
+
+msgid "費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。多數學生取得 ARC 後即改辦月租。"
+msgstr ""
+"Tarif lebih baik, kuota data besar, ideal untuk studi jangka panjang. "
+"Memerlukan ARC dan rekening bank Taiwan atau kartu kredit. Kebanyakan "
+"mahasiswa beralih ke paket ini setelah mendapat ARC."
+
+msgid "需要：ARC + 護照 + 銀行帳戶（或信用卡）"
+msgstr "Diperlukan: ARC + Paspor + Rekening bank (atau kartu kredit)"
+
+msgid "費用：約 NT$399～699/月（依方案）"
+msgstr "Biaya: Sekitar NT$399–699/bulan (tergantung paket)"
+
+msgid "中華電信"
+msgstr "Chunghwa Telecom"
+
+msgid "涵蓋範圍最廣，山區及偏遠地帶訊號最佳"
+msgstr "Jangkauan terluas; sinyal terbaik di daerah pegunungan dan terpencil"
+
+msgid "台灣大哥大"
+msgstr "Taiwan Mobile"
+
+msgid "都會區訊號佳，學生方案較多"
+msgstr "Sinyal bagus di perkotaan; lebih banyak paket untuk mahasiswa"
+
+msgid "遠傳電信"
+msgstr "FarEasTone"
+
+msgid "北部訊號穩定，資費具競爭力"
+msgstr "Sinyal stabil di Taiwan utara; harga kompetitif"
+
+msgid "亞太電信"
+msgstr "APT (Asia Pacific Telecom)"
+
+msgid "資費較低，適合純數據需求"
+msgstr "Tarif lebih rendah; cocok untuk pengguna data saja"
+
+msgid "居留證（ARC）正本"
+msgstr "ARC asli (Sertifikat Penduduk Asing)"
+
+msgid "必備"
+msgstr "Wajib"
+
+msgid "護照正本"
+msgstr "Paspor asli"
+
+msgid "台灣銀行帳戶 或 信用卡（扣繳費用）"
+msgstr "Rekening bank Taiwan atau kartu kredit (untuk pembayaran tagihan)"
+
+msgid "必備其一"
+msgstr "Salah satu wajib"
+
+msgid "學生證（部分業者提供學生優惠）"
+msgstr "Kartu mahasiswa (beberapa operator menawarkan diskon mahasiswa)"
+
+msgid "建議攜帶"
+msgstr "Disarankan dibawa"
+
+msgid "選擇電信業者與方案"
+msgstr "Pilih operator dan paket"
+
+msgid "前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。"
+msgstr ""
+"Kunjungi situs web operator besar untuk membandingkan paket (panggilan + "
+"data). Jika anggaran terbatas dan terutama menggunakan data, pertimbangkan "
+"paket data unlimited (sekitar NT$399/bulan)."
+
+msgid "前往電信門市"
+msgstr "Kunjungi toko operator"
+
+msgid ""
+"攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
+msgstr ""
+"Bawa ARC, paspor, rekening bank atau kartu kredit ke toko operator (semua "
+"operator besar memiliki toko di Zhongli). Beritahu staf bahwa Anda ingin "
+"'mendaftar nomor baru dengan sertifikat penduduk'. Biasanya selesai dalam 30"
+" menit."
+
+msgid "選擇門號與 SIM 卡規格"
+msgstr "Pilih nomor dan ukuran SIM"
+
+msgid ""
+"可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G "
+"正常使用。"
+msgstr ""
+"Anda bisa memilih nomor (nomor khusus biaya tambahan) dan ukuran SIM "
+"(kebanyakan ponsel sekarang menggunakan nano SIM). Konfirmasi ponsel Anda "
+"'fully unlocked' untuk memastikan 5G/4G berfungsi di Taiwan."
+
+msgid "插卡啟用，設定網路"
+msgstr "Masukkan SIM dan konfigurasi jaringan"
+
+msgid "插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設定 APN。"
+msgstr ""
+"Setelah memasukkan SIM, pengaturan APN biasanya dikonfigurasi secara "
+"otomatis. Jika tidak bisa tersambung, minta staf toko untuk membantu "
+"mengatur APN secara manual."
+
+msgid "中央大學附近："
+msgstr "Dekat NCU:"
+
+msgid "中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。"
+msgstr ""
+"Semua operator besar memiliki toko di pusat kota Zhongli (dekat stasiun "
+"kereta). Chunghwa Telecom, Taiwan Mobile, dan FarEasTone semuanya memiliki "
+"toko di Jalan Guangming dan Jalan Zhongzheng."
+
+msgid "保留原國際漫遊號碼："
+msgstr "Pertahankan nomor negara asal (roaming):"
+
+msgid "許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。"
+msgstr ""
+"Banyak mahasiswa memilih mempertahankan nomor negara asal (roaming "
+"internasional) untuk kontak keluarga dan mendapatkan nomor lokal Taiwan "
+"untuk penggunaan sehari-hari. Ponsel dual-SIM membuatnya lebih nyaman."
+
+msgid "月租方案需綁定扣款帳戶："
+msgstr "Paket bulanan membutuhkan rekening pembayaran yang terhubung:"
+
+msgid "銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。"
+msgstr ""
+"Jika saldo rekening bank tidak mencukupi, operator dapat menangguhkan nomor "
+"Anda. Pastikan ada saldo yang cukup di rekening Anda setiap bulan."
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Masukkan pertanyaan Anda. Sistem akan menyusun saran berdasarkan identitas "
