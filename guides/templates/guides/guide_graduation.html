@@ -142,183 +142,177 @@
 
   <div class="guide-hero">
     <div class="bg-text">GPA</div>
-    <div class="hero-badge">GPA・畢業門檻・英文門檻</div>
+    <div class="hero-badge">{% trans "GPA・畢業門檻・英文門檻" %}</div>
     <h2>🎓 {% trans "成績與畢業門檻" %}</h2>
-    <p>中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。</p>
+    <p>{% trans "中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。" %}</p>
   </div>
 
   <!-- ── 成績等第制 ── -->
-  <div class="section-title">📊 成績等第制（109 學年起適用）</div>
+  <div class="section-title">📊 {% trans "成績等第制（109 學年起適用）" %}</div>
   <div class="alert alert-info">
     <div class="alert-icon">ℹ️</div>
-    <div>
-      109 學年（2020年9月）入學起，中央大學採<strong>等第制</strong>記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 <strong>60 分（C-）</strong>，研究所為 <strong>70 分（B-）</strong>。
-    </div>
+    <div>{% trans "109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 60 分（C-），研究所為 70 分（B-）。" %}</div>
   </div>
   <div class="grade-table-wrap">
     <table class="grade-table">
       <thead>
         <tr>
-          <th>等第</th>
-          <th>分數範圍</th>
+          <th>{% trans "等第" %}</th>
+          <th>{% trans "分數範圍" %}</th>
           <th>GPA（4.3）</th>
-          <th>說明</th>
+          <th>{% trans "說明" %}</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td><span class="grade-letter gA">A+</span></td><td>90 – 100</td><td><strong>4.3</strong></td><td>優異</td></tr>
+        <tr><td><span class="grade-letter gA">A+</span></td><td>90 – 100</td><td><strong>4.3</strong></td><td>{% trans "優異" %}</td></tr>
         <tr><td><span class="grade-letter gA">A</span></td><td>85 – 89</td><td><strong>4.0</strong></td><td></td></tr>
         <tr><td><span class="grade-letter gA">A-</span></td><td>80 – 84</td><td><strong>3.7</strong></td><td></td></tr>
         <tr><td><span class="grade-letter gB">B+</span></td><td>77 – 79</td><td><strong>3.3</strong></td><td></td></tr>
         <tr><td><span class="grade-letter gB">B</span></td><td>73 – 76</td><td><strong>3.0</strong></td><td></td></tr>
-        <tr><td><span class="grade-letter gB">B-</span></td><td>70 – 72</td><td><strong>2.7</strong></td><td>研究所最低及格</td></tr>
+        <tr><td><span class="grade-letter gB">B-</span></td><td>70 – 72</td><td><strong>2.7</strong></td><td>{% trans "研究所最低及格" %}</td></tr>
         <tr><td><span class="grade-letter gC">C+</span></td><td>67 – 69</td><td><strong>2.3</strong></td><td></td></tr>
         <tr><td><span class="grade-letter gC">C</span></td><td>63 – 66</td><td><strong>2.0</strong></td><td></td></tr>
-        <tr><td><span class="grade-letter gC">C-</span></td><td>60 – 62</td><td><strong>1.7</strong></td><td>大學部最低及格</td></tr>
-        <tr><td><span class="grade-letter gD">D</span></td><td>50 – 59</td><td><strong>1.0</strong></td><td>不及格</td></tr>
-        <tr><td><span class="grade-letter gF">E</span></td><td>1 – 49</td><td><strong>0.0</strong></td><td>不及格</td></tr>
-        <tr><td><span class="grade-letter gF">X</span></td><td>0（缺考）</td><td><strong>0.0</strong></td><td>不及格</td></tr>
-        <tr><td colspan="2" style="text-align:left;color:var(--muted);font-size:12px;">W（停修）</td><td>—</td><td style="text-align:left;font-size:12px;color:var(--muted);">不計入學分，成績單標註 W</td></tr>
+        <tr><td><span class="grade-letter gC">C-</span></td><td>60 – 62</td><td><strong>1.7</strong></td><td>{% trans "大學部最低及格" %}</td></tr>
+        <tr><td><span class="grade-letter gD">D</span></td><td>50 – 59</td><td><strong>1.0</strong></td><td>{% trans "不及格" %}</td></tr>
+        <tr><td><span class="grade-letter gF">E</span></td><td>1 – 49</td><td><strong>0.0</strong></td><td>{% trans "不及格" %}</td></tr>
+        <tr><td><span class="grade-letter gF">X</span></td><td>{% trans "0（缺考）" %}</td><td><strong>0.0</strong></td><td>{% trans "不及格" %}</td></tr>
+        <tr><td colspan="2" style="text-align:left;color:var(--muted);font-size:12px;">{% trans "W（停修）" %}</td><td>—</td><td style="text-align:left;font-size:12px;color:var(--muted);">{% trans "不計入學分，成績單標註 W" %}</td></tr>
       </tbody>
     </table>
   </div>
 
   <!-- ── GPA 計算 ── -->
-  <div class="section-title">🧮 GPA 計算方式</div>
+  <div class="section-title">🧮 {% trans "GPA 計算方式" %}</div>
   <div class="formula-box">
-    <div style="font-size:13px;color:var(--muted);margin-bottom:6px;">計算公式</div>
-    <div class="formula">GPA = Σ（課程學分數 × 該課程等第積分）÷ 總學分數</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:6px;">{% trans "計算公式" %}</div>
+    <div class="formula">GPA = Σ（{% trans "課程學分數" %} × {% trans "該課程等第積分" %}）÷ {% trans "總學分數" %}</div>
     <div style="font-size:12px;color:var(--muted);margin-top:8px;">
-      中大採 4.3 滿分制。出國交換、申請研究所時，部分機構採 4.0 換算，請依對方要求換算。
+      {% trans "中大採 4.3 滿分制。出國交換、申請研究所時，部分機構採 4.0 換算，請依對方要求換算。" %}
     </div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-icon">📌</div>
-    <div>
-      體育課、軍訓、服務學習<strong>不計入畢業學分</strong>，但仍有成績記錄。這些課程的 GPA 積分計算方式請洽各系確認。
-    </div>
+    <div>{% trans "體育課、軍訓、服務學習不計入畢業學分，但仍有成績記錄。這些課程的 GPA 積分計算方式請洽各系確認。" %}</div>
   </div>
 
   <!-- ── 畢業條件 ── -->
-  <div class="section-title">🎓 畢業條件一覽（大學部）</div>
+  <div class="section-title">🎓 {% trans "畢業條件一覽（大學部）" %}</div>
   <div class="grad-checklist">
 
     <div class="grad-item">
       <div class="grad-icon">📚</div>
       <div class="grad-info">
-        <div class="grad-title">畢業學分數</div>
-        <div class="grad-desc">大多數學系需修滿 <strong>128 學分</strong>（含必修、通識、選修）。實際學分依各系課程規定，請至系網查詢應修科目表。</div>
+        <div class="grad-title">{% trans "畢業學分數" %}</div>
+        <div class="grad-desc">{% trans "大多數學系需修滿 128 學分（含必修、通識、選修）。實際學分依各系課程規定，請至系網查詢應修科目表。" %}</div>
       </div>
-      <div class="grad-badge badge-credit">計學分</div>
+      <div class="grad-badge badge-credit">{% trans "計學分" %}</div>
     </div>
 
     <div class="grad-item">
       <div class="grad-icon">🌐</div>
       <div class="grad-info">
-        <div class="grad-title">通識課程</div>
-        <div class="grad-desc">至少修習 <strong>8 學分</strong>通識課程（含核心通識及通識選修）。各學院核心通識規定略有不同，請確認是否選滿必修核心。</div>
+        <div class="grad-title">{% trans "通識課程" %}</div>
+        <div class="grad-desc">{% trans "至少修習 8 學分通識課程（含核心通識及通識選修）。各學院核心通識規定略有不同，請確認是否選滿必修核心。" %}</div>
       </div>
-      <div class="grad-badge badge-credit">計學分</div>
+      <div class="grad-badge badge-credit">{% trans "計學分" %}</div>
     </div>
 
     <div class="grad-item">
       <div class="grad-icon">🏃</div>
       <div class="grad-info">
-        <div class="grad-title">體育課</div>
-        <div class="grad-desc">需修滿 <strong>5 學期</strong>體育課（大一必修上、下 + 興趣體育 3 學期）。<strong>不列入畢業學分</strong>，但必須修畢方可畢業。</div>
+        <div class="grad-title">{% trans "體育課" %}</div>
+        <div class="grad-desc">{% trans "需修滿 5 學期體育課（大一必修上、下 + 興趣體育 3 學期）。不列入畢業學分，但必須修畢方可畢業。" %}</div>
       </div>
-      <div class="grad-badge badge-nocredit">不計學分</div>
+      <div class="grad-badge badge-nocredit">{% trans "不計學分" %}</div>
     </div>
 
     <div class="grad-item">
       <div class="grad-icon">🤝</div>
       <div class="grad-info">
-        <div class="grad-title">服務學習</div>
-        <div class="grad-desc">需修滿 <strong>1 學年</strong>（上、下各一學期）。<strong>不列入畢業學分</strong>，但必須通過方可畢業。</div>
+        <div class="grad-title">{% trans "服務學習" %}</div>
+        <div class="grad-desc">{% trans "需修滿 1 學年（上、下各一學期）。不列入畢業學分，但必須通過方可畢業。" %}</div>
       </div>
-      <div class="grad-badge badge-nocredit">不計學分</div>
+      <div class="grad-badge badge-nocredit">{% trans "不計學分" %}</div>
     </div>
 
     <div class="grad-item">
       <div class="grad-icon">🗣</div>
       <div class="grad-info">
-        <div class="grad-title">英文畢業門檻</div>
-        <div class="grad-desc">各學院標準不同（詳見下方表格）。未達標者可修習「進修英文」（4 學分，2 學期）作為替代途徑。</div>
+        <div class="grad-title">{% trans "英文畢業門檻" %}</div>
+        <div class="grad-desc">{% trans "各學院標準不同（詳見下方表格）。未達標者可修習「進修英文」（4 學分，2 學期）作為替代途徑。" %}</div>
       </div>
-      <div class="grad-badge badge-test">需達標</div>
+      <div class="grad-badge badge-test">{% trans "需達標" %}</div>
     </div>
 
     <div class="grad-item">
       <div class="grad-icon">✅</div>
       <div class="grad-info">
-        <div class="grad-title">操行成績</div>
-        <div class="grad-desc">各學期操行成績均須及格。</div>
+        <div class="grad-title">{% trans "操行成績" %}</div>
+        <div class="grad-desc">{% trans "各學期操行成績均須及格。" %}</div>
       </div>
-      <div class="grad-badge badge-nocredit">不計學分</div>
+      <div class="grad-badge badge-nocredit">{% trans "不計學分" %}</div>
     </div>
 
   </div>
 
   <!-- ── 英文門檻 ── -->
-  <div class="section-title">🗣 英文畢業門檻（大學部，依學院）</div>
+  <div class="section-title">🗣 {% trans "英文畢業門檻（大學部，依學院）" %}</div>
   <div class="alert alert-warning" style="margin-bottom:12px;">
     <div class="alert-icon">⚠️</div>
-    <div>
-      以下為各學院門檻標準，實際以<strong>語言中心公告為準</strong>。部分學院允許以「第二外語」替代英文門檻，請洽語言中心確認。
-    </div>
+    <div>{% trans "以下為各學院門檻標準，實際以語言中心公告為準。部分學院允許以「第二外語」替代英文門檻，請洽語言中心確認。" %}</div>
   </div>
   <div class="eng-table-wrap">
     <table class="eng-table">
       <thead>
         <tr>
-          <th>學院</th>
-          <th>TOEIC<br>（聽讀合計）</th>
+          <th>{% trans "學院" %}</th>
+          <th>TOEIC<br>{% trans "（聽讀合計）" %}</th>
           <th>TOEFL iBT</th>
           <th>TOEFL ITP</th>
           <th>IELTS</th>
-          <th>全民英檢</th>
+          <th>{% trans "全民英檢" %}</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="col-label">管理學院</td>
+          <td class="col-label">{% trans "管理學院" %}</td>
           <td><span class="score-hi">700</span></td>
-          <td>72</td><td>543</td><td>5.5</td><td>中高級複試通過</td>
+          <td>72</td><td>543</td><td>5.5</td><td>{% trans "中高級複試通過" %}</td>
         </tr>
         <tr>
-          <td class="col-label">文學院</td>
+          <td class="col-label">{% trans "文學院" %}</td>
           <td><span class="score-hi">670</span></td>
-          <td>72</td><td>543</td><td>5.5</td><td>中高級複試通過</td>
+          <td>72</td><td>543</td><td>5.5</td><td>{% trans "中高級複試通過" %}</td>
         </tr>
         <tr>
-          <td class="col-label">客家學院</td>
+          <td class="col-label">{% trans "客家學院" %}</td>
           <td><span class="score-hi">670</span></td>
-          <td>72</td><td>543</td><td>5.5</td><td>中高級複試通過</td>
+          <td>72</td><td>543</td><td>5.5</td><td>{% trans "中高級複試通過" %}</td>
         </tr>
         <tr>
-          <td class="col-label">電資學院</td>
+          <td class="col-label">{% trans "電資學院" %}</td>
           <td><span class="score-lo">600</span></td>
-          <td>64</td><td>483</td><td>5.0</td><td>中高級複試通過</td>
+          <td>64</td><td>483</td><td>5.0</td><td>{% trans "中高級複試通過" %}</td>
         </tr>
         <tr>
-          <td class="col-label">工學院</td>
+          <td class="col-label">{% trans "工學院" %}</td>
           <td><span class="score-lo">600</span></td>
-          <td>64</td><td>483</td><td>5.0</td><td>中高級複試通過</td>
+          <td>64</td><td>483</td><td>5.0</td><td>{% trans "中高級複試通過" %}</td>
         </tr>
         <tr>
-          <td class="col-label">理學院</td>
+          <td class="col-label">{% trans "理學院" %}</td>
           <td><span class="score-lo">600</span></td>
-          <td>64</td><td>483</td><td>5.0</td><td>中高級複試通過</td>
+          <td>64</td><td>483</td><td>5.0</td><td>{% trans "中高級複試通過" %}</td>
         </tr>
         <tr>
-          <td class="col-label">地球科學學院</td>
+          <td class="col-label">{% trans "地球科學學院" %}</td>
           <td><span class="score-lo">600</span></td>
-          <td>64</td><td>483</td><td>5.0</td><td>中高級複試通過</td>
+          <td>64</td><td>483</td><td>5.0</td><td>{% trans "中高級複試通過" %}</td>
         </tr>
         <tr>
-          <td class="col-label">生醫理工學院</td>
+          <td class="col-label">{% trans "生醫理工學院" %}</td>
           <td><span class="score-lo">600</span></td>
-          <td>64</td><td>483</td><td>5.0</td><td>中高級複試通過</td>
+          <td>64</td><td>483</td><td>5.0</td><td>{% trans "中高級複試通過" %}</td>
         </tr>
       </tbody>
     </table>
@@ -326,39 +320,35 @@
 
   <div class="alert alert-success">
     <div class="alert-icon">💡</div>
-    <div>
-      <strong>校園多益（TOEIC）考試：</strong>語言中心每學期舉辦校園多益，費用約 NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。
-    </div>
+    <div>{% trans "校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。" %}</div>
   </div>
 
   <!-- ── 進修英文 ── -->
-  <div class="section-title">📖 未達門檻的替代方案：進修英文</div>
+  <div class="section-title">📖 {% trans "未達門檻的替代方案：進修英文" %}</div>
   <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:18px 20px;margin-bottom:28px;">
-    <div style="font-size:14px;font-weight:900;color:var(--dark);margin-bottom:10px;">進修英文（Supplementary English）</div>
+    <div style="font-size:14px;font-weight:900;color:var(--dark);margin-bottom:10px;">{% trans "進修英文（Supplementary English）" %}</div>
     <div style="font-size:13px;color:var(--muted);line-height:1.9;">
-      • 共 <strong>4 學分</strong>，分兩學期修習（每學期 2 學分）<br>
-      • 修習並通過後可取代英文門檻，無需另外提交語言成績<br>
-      • 申請資格：入學英文成績未達標準，且已參加過中央大學英文鑑定測驗者<br>
-      • 是否計入畢業學分依各系規定，請洽系辦確認
+      • {% trans "共 4 學分，分兩學期修習（每學期 2 學分）" %}<br>
+      • {% trans "修習並通過後可取代英文門檻，無需另外提交語言成績" %}<br>
+      • {% trans "申請資格：入學英文成績未達標準，且已參加過中央大學英文鑑定測驗者" %}<br>
+      • {% trans "是否計入畢業學分依各系規定，請洽系辦確認" %}
     </div>
   </div>
 
   <!-- ── 研究所英文門檻 ── -->
-  <div class="section-title">🎓 研究所英文門檻（以工學院為例）</div>
+  <div class="section-title">🎓 {% trans "研究所英文門檻（以工學院為例）" %}</div>
   <div class="alert alert-info" style="margin-bottom:14px;">
     <div class="alert-icon">ℹ️</div>
-    <div>
-      各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 <strong>TOEIC 600 / TOEFL iBT 64 / IELTS 5.0</strong> 或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。
-    </div>
+    <div>{% trans "各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。" %}</div>
   </div>
 
   <!-- ── 相關連結 ── -->
-  <div class="section-title">🔗 相關連結</div>
+  <div class="section-title">🔗 {% trans "相關連結" %}</div>
   <div class="link-row">
-    <a href="https://www.lc.ncu.edu.tw/zh-TW/article/2022-08-31%2016:42:00" target="_blank" rel="noopener" class="ext-link">🗣 語言中心英文畢業門檻 ↗</a>
-    <a href="https://www.lc.ncu.edu.tw" target="_blank" rel="noopener" class="ext-link">🏫 NCU 語言中心 ↗</a>
-    <a href="https://pdc.adm.ncu.edu.tw/rule_note5.asp" target="_blank" rel="noopener" class="ext-link">📋 應修科目表 ↗</a>
-    <a href="https://pdc.adm.ncu.edu.tw/" target="_blank" rel="noopener" class="ext-link">🏛 教務處官網 ↗</a>
+    <a href="https://www.lc.ncu.edu.tw/zh-TW/article/2022-08-31%2016:42:00" target="_blank" rel="noopener" class="ext-link">🗣 {% trans "語言中心英文畢業門檻" %} ↗</a>
+    <a href="https://www.lc.ncu.edu.tw" target="_blank" rel="noopener" class="ext-link">🏫 {% trans "NCU 語言中心" %} ↗</a>
+    <a href="https://pdc.adm.ncu.edu.tw/rule_note5.asp" target="_blank" rel="noopener" class="ext-link">📋 {% trans "應修科目表" %} ↗</a>
+    <a href="https://pdc.adm.ncu.edu.tw/" target="_blank" rel="noopener" class="ext-link">🏛 {% trans "教務處官網" %} ↗</a>
   </div>
 
 </div>

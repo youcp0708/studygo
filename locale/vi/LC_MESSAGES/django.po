@@ -3232,3 +3232,742 @@ msgstr "Nhấn nút phía trên để hiển thị vị trí trên bản đồ"
 
 msgid "尚未設定 Google Maps API 金鑰"
 msgstr "Chưa cấu hình Google Maps API Key"
+
+msgid "借書・自習室・學術資料庫・列印服務"
+msgstr "Mượn sách · Phòng tự học · Cơ sở dữ liệu · In ấn"
+
+msgid "三館概覽"
+msgstr "Tổng quan các tòa nhà thư viện"
+
+msgid "總圖書館"
+msgstr "Thư viện Tổng hợp"
+
+msgid "主要借閱・公用研究室 17 間・電腦檢索"
+msgstr "Mượn chính · 17 phòng nghiên cứu · Tra cứu máy tính"
+
+msgid "學期間 08:00–23:00"
+msgstr "Giờ học kỳ: 08:00–23:00"
+
+msgid "考試週：24 小時開放"
+msgstr "Tuần thi: Mở cửa 24 giờ"
+
+msgid "中正圖書館"
+msgstr "Thư viện Trung Chính"
+
+msgid "2 樓：K書中心（113 席）"
+msgstr "Tầng 2: Trung tâm học KSC (113 chỗ)"
+
+msgid "1 樓：衛保組・崑曲特藏"
+msgstr "Tầng 1: Trung tâm y tế · Sưu tập đặc biệt Côn Khúc"
+
+msgid "國鼎圖書資料館"
+msgstr "Thư viện & Lưu trữ Quốc Đỉnh"
+
+msgid "特藏・檔案資料"
+msgstr "Bộ sưu tập đặc biệt · Lưu trữ"
+
+msgid "週一至週五 10:00–15:00"
+msgstr "Thứ 2–Thứ 6: 10:00–15:00"
+
+msgid "借書規則"
+msgstr "Quy định mượn sách"
+
+msgid "最多冊數"
+msgstr "Số sách tối đa"
+
+msgid "冊"
+msgstr "cuốn"
+
+msgid "借閱期限"
+msgstr "Thời hạn mượn"
+
+msgid "天"
+msgstr "ngày"
+
+msgid "線上續借"
+msgstr "Gia hạn trực tuyến"
+
+msgid "1 次"
+msgstr "1 lần"
+
+msgid "逾期罰款"
+msgstr "Phí trễ hạn"
+
+msgid "憑學生證借閱，任何在學學生皆可使用，外籍生與本地生規則相同"
+msgstr ""
+"Mượn bằng thẻ sinh viên; tất cả sinh viên đang học đều có thể sử dụng; quy "
+"định như nhau cho sinh viên quốc tế và địa phương"
+
+msgid "線上續借：於到期前至 opac.lib.ncu.edu.tw 辦理，到期後不可續借"
+msgstr ""
+"Gia hạn trực tuyến: Truy cập opac.lib.ncu.edu.tw trước ngày hết hạn; không "
+"gia hạn sau khi hết hạn"
+
+msgid "他人預約的書籍：收到通知後 7 天內須歸還，無法續借"
+msgstr ""
+"Sách người khác đặt trước: Phải trả trong vòng 7 ngày kể từ thông báo; không"
+" được gia hạn"
+
+msgid "指定參考書 / 論文逾期：NT$5 每小時（注意！比一般罰款貴很多）"
+msgstr ""
+"Sách chỉ định/luận văn quá hạn: NT$5 mỗi giờ (Lưu ý: đắt hơn nhiều so với "
+"phạt thông thường!)"
+
+msgid "非服務時間還書：總圖 1 樓入口設有還書箱，24 小時可用"
+msgstr ""
+"Trả sách ngoài giờ: Thùng trả sách tại lối vào tầng 1 Thư viện Tổng hợp, mở "
+"24/7"
+
+msgid "畢業或離校前：所有借書必須歸還並繳清罰款"
+msgstr ""
+"Trước khi tốt nghiệp hoặc rời trường: Tất cả sách mượn phải được trả và phí "
+"phải được thanh toán"
+
+msgid "自習空間"
+msgstr "Không gian tự học"
+
+msgid "書中心（KSC）"
+msgstr "Trung tâm Học (KSC)"
+
+msgid "中正圖書館 2F"
+msgstr "Thư viện Trung Chính Tầng 2"
+
+msgid "席"
+msgstr "chỗ"
+
+msgid "大K 82 席 + 小K 31 席"
+msgstr "Khu lớn 82 + Khu nhỏ 31 chỗ"
+
+msgid "僅限中央大學在學生，刷學生證進入"
+msgstr "Chỉ dành cho sinh viên NCU; quẹt thẻ sinh viên để vào"
+
+msgid "先到先得，禁止佔位"
+msgstr "Đến trước được trước; cấm giữ chỗ"
+
+msgid "違規 3 次 → 停用 6 個月"
+msgstr "3 lần vi phạm → bị đình chỉ 6 tháng"
+
+msgid "公用研究室"
+msgstr "Phòng nghiên cứu chung"
+
+msgid "間"
+msgstr "phòng"
+
+msgid "可供師生使用"
+msgstr "Dành cho giảng viên và sinh viên"
+
+msgid "學期初可申請學期用室"
+msgstr "Đăng ký sử dụng cả học kỳ vào đầu học kỳ"
+
+msgid "臨時使用：至服務台申請"
+msgstr "Sử dụng tạm thời: Đăng ký tại quầy dịch vụ"
+
+msgid "線上預約系統 ↗"
+msgstr "Hệ thống đặt phòng trực tuyến ↗"
+
+msgid "考試週（期中、期末）：總圖 24 小時開放。確認最新時間請查"
+msgstr ""
+"Tuần thi (giữa kỳ, cuối kỳ): Thư viện Tổng hợp mở 24 giờ. Kiểm tra giờ mới "
+"nhất tại"
+
+msgid "開館時間表 ↗"
+msgstr "Giờ mở cửa ↗"
+
+msgid "學術資料庫"
+msgstr "Cơ sở dữ liệu học thuật"
+
+msgid "Elsevier｜論文引用、摘要，推薦作為主要學術搜尋工具"
+msgstr ""
+"Elsevier | Trích dẫn, tóm tắt — được khuyến nghị là công cụ tìm kiếm học "
+"thuật chính"
+
+msgid "訂閱中"
+msgstr "Đang đăng ký"
+
+msgid "訂閱已於 2026/01/31 終止，僅提供靜態資料（SCIE 至 2025）"
+msgstr ""
+"Đăng ký kết thúc 31/01/2026; chỉ cung cấp dữ liệu tĩnh (SCIE đến 2025)"
+
+msgid "靜態存取"
+msgstr "Truy cập tĩnh"
+
+msgid "Clarivate｜期刊影響因子（Impact Factor）查詢"
+msgstr "Clarivate | Tra cứu Impact Factor của tạp chí"
+
+msgid "Elsevier｜理工科期刊與電子書"
+msgstr "Elsevier | Tạp chí và sách điện tử STEM"
+
+msgid "中文電子書平台"
+msgstr "Nền tảng sách điện tử tiếng Trung"
+
+msgid "中央大學機構典藏 / 學位論文"
+msgstr "Kho lưu trữ / Luận văn NCU"
+
+msgid "免費開放"
+msgstr "Truy cập miễn phí"
+
+msgid "完整資料庫清單："
+msgstr "Danh sách đầy đủ cơ sở dữ liệu:"
+
+msgid "NCU 資料庫入口 ↗"
+msgstr "Cổng dữ liệu NCU ↗"
+
+msgid "校外遠端存取"
+msgstr "Truy cập từ xa ngoài trường"
+
+msgid "方法一：從圖書館網站點選資料庫連結，選「中央大學教職員生」，以 Portal 帳號登入"
+msgstr ""
+"Phương pháp 1: Nhấp vào liên kết CSDL trên trang web thư viện, chọn 'Sinh "
+"viên/Giảng viên NCU', đăng nhập bằng tài khoản Portal"
+
+msgid "方法二：安裝 SSL VPN（伺服器：140.115.199.1），以計算中心帳號登入。設定說明："
+msgstr ""
+"Phương pháp 2: Cài đặt SSL VPN (máy chủ: 140.115.199.1) và đăng nhập bằng "
+"tài khoản Trung tâm Tính toán. Hướng dẫn:"
+
+msgid "在校園網路（140.115.x.x）時不可使用 VPN，直接進入即可"
+msgstr ""
+"Khi dùng mạng trong trường (140.115.x.x), không cần VPN — truy cập trực tiếp"
+
+msgid "VPN 登入問題聯絡計算機中心：分機 57555 / 57566"
+msgstr ""
+"Vấn đề đăng nhập VPN: Liên hệ Trung tâm Tính toán qua máy nhánh 57555 / "
+"57566"
+
+msgid "列印・影印"
+msgstr "In ấn & Photocopy"
+
+msgid "頁"
+msgstr "trang"
+
+msgid "黑白影印"
+msgstr "Photocopy đen trắng"
+
+msgid "電腦終端機列印"
+msgstr "In từ máy tính"
+
+msgid "自助影印機與電腦終端機均位於總圖 1 樓。彩色列印費用請至服務台詢問或查"
+msgstr ""
+"Máy photocopy tự phục vụ và máy tính đều ở tầng 1 Thư viện Tổng hợp. Phí in "
+"màu hỏi tại quầy hoặc xem"
+
+msgid "列印說明頁 ↗"
+msgstr "Trang hướng dẫn in ↗"
+
+msgid "借閱・還書・罰款"
+msgstr "Mượn · Trả · Phạt"
+
+msgid "分機"
+msgstr "Số nhánh"
+
+msgid "參考諮詢・資料庫"
+msgstr "Tham khảo & Cơ sở dữ liệu"
+
+msgid "K書中心・開館時間"
+msgstr "Trung tâm học · Giờ mở cửa"
+
+msgid "台灣緊急電話、校安中心、國際事務處"
+msgstr "Số khẩn cấp Đài Loan, An ninh Khuôn viên, Văn phòng Quốc tế"
+
+msgid "台灣緊急電話"
+msgstr "Số khẩn cấp Đài Loan"
+
+msgid "火警・救護車"
+msgstr "Cháy nổ · Xe cứu thương"
+
+msgid "火災、緊急送醫、意外傷亡"
+msgstr "Cháy nổ, cấp cứu y tế, tai nạn"
+
+msgid "警察"
+msgstr "Cảnh sát"
+
+msgid "犯罪、竊盜、人身安全威脅"
+msgstr "Tội phạm, trộm cắp, đe dọa an toàn cá nhân"
+
+msgid "行動緊急電話"
+msgstr "Đường dây khẩn cấp di động"
+
+msgid "無 SIM 卡或無訊號時仍可撥打，自動轉接 110 / 119"
+msgstr "Có thể gọi dù không có SIM hoặc tín hiệu; tự động kết nối 110/119"
+
+msgid "安心專線"
+msgstr "Đường dây tâm lý"
+
+msgid "24 小時心理支持、危機處理"
+msgstr "Hỗ trợ tâm lý 24 giờ, xử lý khủng hoảng"
+
+msgid "校內緊急聯絡"
+msgstr "Liên hệ khẩn cấp trong trường"
+
+msgid "校安中心"
+msgstr "Trung tâm An ninh Khuôn viên"
+
+msgid "24 小時，校園安全事件通報"
+msgstr "24 giờ, báo cáo sự cố an ninh khuôn viên"
+
+msgid "校內分機"
+msgstr "Số nhánh nội bộ"
+
+msgid "留學生事務、緊急協助"
+msgstr "Sự vụ sinh viên quốc tế, hỗ trợ khẩn cấp"
+
+msgid "衛保組（校醫）"
+msgstr "Trung tâm Y tế (Bác sĩ Trường)"
+
+msgid "週一至週五 08:00–17:00，中正圖書館舊圖 1 樓"
+msgstr "Thứ 2–Thứ 6 08:00–17:00, Tầng 1 Thư viện Trung Chính"
+
+msgid "如需救護車，請先撥 119，再通知校安中心 03-2805666。告知地點時可說「中央大學」加上建築物名稱。"
+msgstr ""
+"Khi cần xe cứu thương, gọi 119 trước, rồi báo An ninh Khuôn viên 03-2805666."
+" Khi mô tả vị trí, nói 'ĐH Trung Ương Quốc lập' và tên tòa nhà."
+
+msgid "三大系統快速入口"
+msgstr "Truy cập nhanh 3 hệ thống chính"
+
+msgid "統一登入入口，選課、成績、各系統 SSO"
+msgstr ""
+"Cổng đăng nhập thống nhất cho đăng ký môn, điểm và SSO tất cả hệ thống"
+
+msgid "課程平台：講義、作業、公告、成績查詢"
+msgstr "Nền tảng học: bài giảng, bài tập, thông báo, tra cứu điểm"
+
+msgid "學生信箱"
+msgstr "Email sinh viên"
+
+msgid "學號@cc.ncu.edu.tw，重要公告必看"
+msgstr "MSSV@cc.ncu.edu.tw — kiểm tra thông báo quan trọng"
+
+msgid "第一步：帳號啟用"
+msgstr "Bước 1: Kích hoạt tài khoản"
+
+msgid "Portal 帳號預設未啟用，入學後請先完成啟用，才能使用所有校內系統。"
+msgstr ""
+"Tài khoản Portal mặc định chưa được kích hoạt. Sau khi nhập học, hãy kích "
+"hoạt trước khi dùng các hệ thống của trường."
+
+msgid "啟用步驟"
+msgstr "Các bước kích hoạt"
+
+msgid "前往啟用頁面"
+msgstr "Truy cập trang kích hoạt"
+
+msgid "學號、出生年月日，外籍生填護照號碼（非台灣身分證）"
+msgstr ""
+"MSSV và ngày sinh. Sinh viên quốc tế nhập số hộ chiếu (không phải ID Đài "
+"Loan)"
+
+msgid "等待約 10 分鐘"
+msgstr "Chờ khoảng 10 phút"
+
+msgid "啟用完成後即可以學號 + 預設密碼（出生年月日，YYYYMMDD）登入 Portal。"
+msgstr ""
+"Sau khi kích hoạt, đăng nhập Portal bằng MSSV + mật khẩu mặc định (ngày "
+"sinh, YYYYMMDD)."
+
+msgid "登入後立即更改密碼"
+msgstr "Đổi mật khẩu ngay sau khi đăng nhập"
+
+msgid "預設密碼為生日，請馬上改成強密碼，並設定信箱或手機號碼以便之後找回密碼。"
+msgstr ""
+"Mật khẩu mặc định là ngày sinh. Đổi ngay sang mật khẩu mạnh và liên kết "
+"email hoặc số điện thoại để khôi phục."
+
+msgid "若瀏覽器顯示「Cookie 未被接受」，請換瀏覽器（建議 Chrome / Firefox）。聯絡計算機中心：分機 57771。"
+msgstr ""
+"Nếu trình duyệt hiển thị 'Cookie không được chấp nhận', đổi trình duyệt "
+"(khuyến nghị Chrome/Firefox). Liên hệ Trung tâm Tính toán: máy nhánh 57771."
+
+msgid "登入帳號"
+msgstr "Tài khoản đăng nhập"
+
+msgid "學號"
+msgstr "Mã số sinh viên"
+
+msgid "預設密碼"
+msgstr "Mật khẩu mặc định"
+
+msgid "功能"
+msgstr "Chức năng"
+
+msgid "選課 / 成績"
+msgstr "Đăng ký / Điểm"
+
+msgid "單一登入（SSO）：一組帳密進入 ee-class、信箱、圖書館等所有校內系統"
+msgstr ""
+"Đăng nhập một lần (SSO): một tài khoản cho ee-class, email, thư viện và tất "
+"cả hệ thống trường"
+
+msgid "選課系統（cis.ncu.edu.tw/Course/）：透過 Portal 帳號登入"
+msgstr ""
+"Đăng ký môn học (cis.ncu.edu.tw/Course/): đăng nhập bằng tài khoản Portal"
+
+msgid "成績查詢、修課記錄"
+msgstr "Tra cứu điểm, lịch sử môn học"
+
+msgid "QR Code 登入：在公用電腦可用手機掃碼，不需輸入密碼"
+msgstr ""
+"Đăng nhập QR Code: quét bằng điện thoại trên máy tính công cộng, không cần "
+"nhập mật khẩu"
+
+msgid "忘記密碼：透過已綁定的信箱或手機號碼重設"
+msgstr "Quên mật khẩu: đặt lại qua email hoặc số điện thoại đã liên kết"
+
+msgid "課程平台"
+msgstr "Nền tảng học"
+
+msgid "請勿在 ee-class 自行「註冊」新帳號！一般生直接用 Portal 帳號（學號）登入即可。"
+msgstr ""
+"KHÔNG tự đăng ký tài khoản mới trên ee-class! Sinh viên thông thường chỉ cần"
+" đăng nhập bằng tài khoản Portal (MSSV)."
+
+msgid "學號（同 Portal）"
+msgstr "MSSV (giống Portal)"
+
+msgid "同 Portal 密碼"
+msgstr "Giống mật khẩu Portal"
+
+msgid "查看課程講義、教材、教授公告"
+msgstr "Xem bài giảng, tài liệu học và thông báo của giảng viên"
+
+msgid "繳交作業、查看作業批改結果"
+msgstr "Nộp bài tập và xem kết quả chấm điểm"
+
+msgid "課程成績查詢（部分老師使用）"
+msgstr "Tra cứu điểm môn học (một số giảng viên sử dụng)"
+
+msgid "NCUx 雲端課程：選修免費線上課程（不計學分）"
+msgstr "Khóa học trực tuyến NCUx: chọn khóa học miễn phí (không tính tín chỉ)"
+
+msgid "特殊身份登入方式"
+msgstr "Phương thức đăng nhập cho người dùng đặc biệt"
+
+msgid "身份"
+msgstr "Loại người dùng"
+
+msgid "帳號"
+msgstr "Tài khoản"
+
+msgid "一般生／教職員"
+msgstr "Sinh viên thường / Giảng viên & nhân viên"
+
+msgid "Portal 密碼"
+msgstr "Mật khẩu Portal"
+
+msgid "跨校交換生"
+msgstr "Sinh viên trao đổi từ trường khác"
+
+msgid "Z 開頭臨時帳號"
+msgstr "Tài khoản tạm thời bắt đầu bằng Z"
+
+msgid "原校學號"
+msgstr "MSSV từ trường gốc"
+
+msgid "旁聽生／推廣教育"
+msgstr "Người dự thính / Giáo dục tiếp tục"
+
+msgid "Y 開頭臨時帳號"
+msgstr "Tài khoản tạm thời bắt đầu bằng Y"
+
+msgid "台灣身分證號"
+msgstr "Số CMND Đài Loan"
+
+msgid "ee-class 問題聯絡：eeclass@ncu.edu.tw｜分機 57132 / 57169"
+msgstr "Hỗ trợ ee-class: eeclass@ncu.edu.tw | máy nhánh 57132 / 57169"
+
+msgid "信箱格式"
+msgstr "Định dạng email"
+
+msgid "學號@cc.ncu.edu.tw"
+msgstr "MSSV@cc.ncu.edu.tw"
+
+msgid "容量"
+msgstr "Dung lượng"
+
+msgid "有效期限"
+msgstr "Thời hạn hiệu lực"
+
+msgid "畢業後 5 年"
+msgstr "5 năm sau khi tốt nghiệp"
+
+msgid "學校重要公告（選課結果、成績、繳費通知）均寄到此信箱，請定期查收"
+msgstr ""
+"Tất cả thông báo quan trọng của trường (kết quả đăng ký, điểm, thông báo học"
+" phí) được gửi vào hộp thư này — kiểm tra thường xuyên"
+
+msgid "登入帳號：學號；密碼：同 Portal 密碼"
+msgstr "Đăng nhập: MSSV; Mật khẩu: giống Portal"
+
+msgid "非 Gmail 帳號，無法直接存取 Google 服務"
+msgstr ""
+"Không phải tài khoản Gmail; không thể truy cập trực tiếp dịch vụ Google"
+
+msgid "手機 / 電腦設定"
+msgstr "Cài đặt trên điện thoại / máy tính"
+
+msgid "前往「設定 → 郵件 → 帳號 → 新增帳號」，選「其他」，輸入信箱與密碼，詳細步驟："
+msgstr ""
+"Vào Cài đặt → Mail → Tài khoản → Thêm tài khoản, chọn 'Khác', nhập email và "
+"mật khẩu. Hướng dẫn chi tiết:"
+
+msgid "帳號設定頁面 → 手動設定 → IMAP，詳細步驟見同上連結"
+msgstr ""
+"Cài đặt tài khoản → Thiết lập thủ công → IMAP. Xem cùng liên kết trên cho "
+"các bước đầy đủ"
+
+msgid "忘記密碼：透過 Portal 重設，不需另行聯絡信箱管理員"
+msgstr ""
+"Quên mật khẩu: đặt lại qua Portal, không cần liên hệ riêng quản trị viên "
+"mail"
+
+msgid "信箱問題聯絡：ncucc@cc.ncu.edu.tw｜分機 57555 / 57566"
+msgstr "Hỗ trợ email: ncucc@cc.ncu.edu.tw | máy nhánh 57555 / 57566"
+
+msgid "計算機中心聯絡"
+msgstr "Liên hệ Trung tâm Tính toán"
+
+msgid "帳號 / Portal 問題"
+msgstr "Vấn đề tài khoản / Portal"
+
+msgid "問題"
+msgstr "Vấn đề"
+
+msgid "信箱問題"
+msgstr "Vấn đề email"
+
+msgid "GPA・畢業門檻・英文門檻"
+msgstr "GPA · Yêu cầu tốt nghiệp · Ngưỡng tiếng Anh"
+
+msgid "中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。"
+msgstr ""
+"Hệ thống bảng chữ cái NCU, tính GPA và ngưỡng năng lực tiếng Anh yêu cầu cho"
+" mỗi trường."
+
+msgid "成績等第制（109 學年起適用）"
+msgstr "Hệ thống bảng chữ cái (áp dụng từ năm học 2020)"
+
+msgid ""
+"109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 60 分（C-），研究所為 70 "
+"分（B-）。"
+msgstr ""
+"Từ năm học 2020 (tháng 9/2020), NCU sử dụng hệ thống bảng chữ cái quy đổi "
+"sang GPA (tối đa 4.3). Điểm đạt là 60 (C-) cho sinh viên đại học và 70 (B-) "
+"cho học viên cao học."
+
+msgid "等第"
+msgstr "Hạng"
+
+msgid "分數範圍"
+msgstr "Phạm vi điểm"
+
+msgid "說明"
+msgstr "Ghi chú"
+
+msgid "優異"
+msgstr "Xuất sắc"
+
+msgid "研究所最低及格"
+msgstr "Điểm qua tối thiểu cho sau đại học"
+
+msgid "大學部最低及格"
+msgstr "Điểm qua tối thiểu cho đại học"
+
+msgid "不及格"
+msgstr "Không đạt"
+
+msgid "0（缺考）"
+msgstr "0 (Vắng thi)"
+
+msgid "W（停修）"
+msgstr "W (Rút môn)"
+
+msgid "不計入學分，成績單標註 W"
+msgstr "Không tính tín chỉ; bảng điểm ghi W"
+
+msgid "GPA 計算方式"
+msgstr "Cách tính GPA"
+
+msgid "計算公式"
+msgstr "Công thức"
+
+msgid "課程學分數"
+msgstr "Tín chỉ môn học"
+
+msgid "該課程等第積分"
+msgstr "Điểm chữ cái"
+
+msgid "總學分數"
+msgstr "Tổng tín chỉ"
+
+msgid "中大採 4.3 滿分制。出國交換、申請研究所時，部分機構採 4.0 換算，請依對方要求換算。"
+msgstr ""
+"NCU dùng thang 4.3. Khi nộp đơn trao đổi hoặc cao học, một số trường dùng "
+"thang 4.0 — hãy chuyển đổi theo yêu cầu."
+
+msgid "體育課、軍訓、服務學習不計入畢業學分，但仍有成績記錄。這些課程的 GPA 積分計算方式請洽各系確認。"
+msgstr ""
+"Thể dục, huấn luyện quân sự và học tập phục vụ không tính vào tín chỉ tốt "
+"nghiệp nhưng vẫn có điểm. Hỏi bộ môn về cách tính GPA."
+
+msgid "畢業條件一覽（大學部）"
+msgstr "Tổng quan yêu cầu tốt nghiệp (Đại học)"
+
+msgid "畢業學分數"
+msgstr "Tín chỉ tốt nghiệp"
+
+msgid "大多數學系需修滿 128 學分（含必修、通識、選修）。實際學分依各系課程規定，請至系網查詢應修科目表。"
+msgstr ""
+"Hầu hết các ngành yêu cầu 128 tín chỉ (bao gồm bắt buộc, giáo dục đại cương "
+"và tự chọn). Xem trang web ngành để biết bảng học phần yêu cầu."
+
+msgid "通識課程"
+msgstr "Giáo dục đại cương"
+
+msgid "至少修習 8 學分通識課程（含核心通識及通識選修）。各學院核心通識規定略有不同，請確認是否選滿必修核心。"
+msgstr ""
+"Ít nhất 8 tín chỉ khóa học giáo dục đại cương (bao gồm lõi và tự chọn). Yêu "
+"cầu khác nhau tùy trường — xác nhận bạn đã hoàn thành tất cả môn lõi bắt "
+"buộc."
+
+msgid "體育課"
+msgstr "Thể dục"
+
+msgid "需修滿 5 學期體育課（大一必修上、下 + 興趣體育 3 學期）。不列入畢業學分，但必須修畢方可畢業。"
+msgstr ""
+"5 học kỳ thể dục (2 bắt buộc năm 1 + 3 tự chọn). Không tính tín chỉ tốt "
+"nghiệp nhưng phải hoàn thành để tốt nghiệp."
+
+msgid "服務學習"
+msgstr "Học tập phục vụ"
+
+msgid "需修滿 1 學年（上、下各一學期）。不列入畢業學分，但必須通過方可畢業。"
+msgstr ""
+"1 năm học bắt buộc (mỗi học kỳ, thu và xuân). Không tính tín chỉ tốt nghiệp "
+"nhưng phải qua để tốt nghiệp."
+
+msgid "英文畢業門檻"
+msgstr "Ngưỡng tiếng Anh tốt nghiệp"
+
+msgid "各學院標準不同（詳見下方表格）。未達標者可修習「進修英文」（4 學分，2 學期）作為替代途徑。"
+msgstr ""
+"Tiêu chuẩn khác nhau tùy trường (xem bảng bên dưới). Những người không đạt "
+"ngưỡng có thể học Tiếng Anh Bổ túc (4 tín chỉ, 2 học kỳ) thay thế."
+
+msgid "操行成績"
+msgstr "Điểm hạnh kiểm"
+
+msgid "各學期操行成績均須及格。"
+msgstr "Điểm hạnh kiểm mỗi học kỳ phải đạt."
+
+msgid "計學分"
+msgstr "Tính tín chỉ"
+
+msgid "不計學分"
+msgstr "Không tính tín chỉ"
+
+msgid "需達標"
+msgstr "Phải đạt chuẩn"
+
+msgid "英文畢業門檻（大學部，依學院）"
+msgstr "Ngưỡng tiếng Anh tốt nghiệp (Đại học, theo trường)"
+
+msgid "以下為各學院門檻標準，實際以語言中心公告為準。部分學院允許以「第二外語」替代英文門檻，請洽語言中心確認。"
+msgstr ""
+"Các ngưỡng dưới đây theo trường; tiêu chuẩn chính thức là thông báo của "
+"Trung tâm Ngôn ngữ. Một số trường cho phép ngoại ngữ thứ hai thay thế — xác "
+"nhận với Trung tâm Ngôn ngữ."
+
+msgid "學院"
+msgstr "Trường"
+
+msgid "（聽讀合計）"
+msgstr "(Nghe + Đọc)"
+
+msgid "全民英檢"
+msgstr "GEPT"
+
+msgid "管理學院"
+msgstr "Trường Quản lý"
+
+msgid "中高級複試通過"
+msgstr "GEPT Trung-cao cấp (Vòng 2 đạt)"
+
+msgid "文學院"
+msgstr "Trường Văn học"
+
+msgid "客家學院"
+msgstr "Trường Hakka"
+
+msgid "電資學院"
+msgstr "Trường Kỹ thuật Điện & KHMT"
+
+msgid "工學院"
+msgstr "Trường Kỹ thuật"
+
+msgid "理學院"
+msgstr "Trường Khoa học"
+
+msgid "地球科學學院"
+msgstr "Trường Khoa học Trái đất"
+
+msgid "生醫理工學院"
+msgstr "Trường Kỹ thuật Khoa học Y sinh"
+
+msgid ""
+"校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 "
+"NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。"
+msgstr ""
+"TOEIC khuôn viên: Trung tâm Ngôn ngữ tổ chức TOEIC khuôn viên mỗi học kỳ "
+"(khoảng NT$1,270, chỉ sinh viên NCU). Đây là cách thuận tiện nhất để đạt "
+"ngưỡng tiếng Anh. Kiểm tra website Trung tâm Ngôn ngữ."
+
+msgid "未達門檻的替代方案：進修英文"
+msgstr "Phương án thay thế cho dưới ngưỡng: Tiếng Anh Bổ túc"
+
+msgid "進修英文（Supplementary English）"
+msgstr "Tiếng Anh Bổ túc (Supplementary English)"
+
+msgid "共 4 學分，分兩學期修習（每學期 2 學分）"
+msgstr "Tổng cộng 4 tín chỉ, chia làm hai học kỳ (2 tín chỉ mỗi kỳ)"
+
+msgid "修習並通過後可取代英文門檻，無需另外提交語言成績"
+msgstr ""
+"Sau khi hoàn thành và qua, thay thế ngưỡng tiếng Anh — không cần nộp điểm "
+"ngôn ngữ riêng"
+
+msgid "申請資格：入學英文成績未達標準，且已參加過中央大學英文鑑定測驗者"
+msgstr ""
+"Điều kiện: sinh viên có điểm tiếng Anh khi nhập học không đạt chuẩn VÀ đã "
+"thi bài kiểm tra năng lực tiếng Anh của NCU"
+
+msgid "是否計入畢業學分依各系規定，請洽系辦確認"
+msgstr ""
+"Có tính vào tín chỉ tốt nghiệp hay không tùy ngành — xác nhận với văn phòng "
+"ngành"
+
+msgid "研究所英文門檻（以工學院為例）"
+msgstr "Ngưỡng tiếng Anh cao học (ví dụ Trường Kỹ thuật)"
+
+msgid ""
+"各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 "
+"或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。"
+msgstr ""
+"Mỗi chương trình cao học tự đặt ngưỡng tiếng Anh, phải nộp trước buổi bảo "
+"vệ. Trường Kỹ thuật yêu cầu TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 hoặc tương "
+"đương; dưới ngưỡng có thể học một học kỳ tiếng Anh bổ cứu (qua với 70+). "
+"Liên hệ từng bộ môn để biết chi tiết."
+
+msgid "相關連結"
+msgstr "Liên kết liên quan"
+
+msgid "語言中心英文畢業門檻"
+msgstr "Ngưỡng tiếng Anh Trung tâm Ngôn ngữ"
+
+msgid "NCU 語言中心"
+msgstr "Trung tâm Ngôn ngữ NCU"
+
+msgid "應修科目表"
+msgstr "Bảng môn học yêu cầu"
+
+msgid "教務處官網"
+msgstr "Trang web Phòng Học vụ"

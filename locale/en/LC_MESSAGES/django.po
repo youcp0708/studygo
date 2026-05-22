@@ -3481,6 +3481,806 @@ msgstr "Grades & Graduation Requirements"
 msgid "在台開設銀行帳戶"
 msgstr "Open a Bank Account in Taiwan"
 
+msgid "學校設施"
+msgstr "School Facilities"
+
+msgid "中央大學（正門）"
+msgstr "NCU (Main Gate)"
+
+msgid "中央圖書館"
+msgstr "Central Library"
+
+msgid "外籍生宿舍"
+msgstr "International Dorm"
+
+msgid "校內美食"
+msgstr "On-Campus Food"
+
+msgid "松苑餐廳"
+msgstr "Songyuan Restaurant"
+
+msgid "松果餐廳"
+msgstr "Songguo Restaurant"
+
+msgid "小木屋鬆餅"
+msgstr "Chalet Waffles"
+
+msgid "校內超商"
+msgstr "Campus Convenience Store"
+
+msgid "校外美食"
+msgstr "Off-Campus Food"
+
+msgid "後門商圈"
+msgstr "Back Gate Area"
+
+msgid "宵夜街"
+msgstr "Late-Night Snack Street"
+
+msgid "中大夜市商圈"
+msgstr "NCU Night Market Area"
+
+msgid "龍岡美食廣場"
+msgstr "Longgang Food Plaza"
+
+msgid "大江美食街"
+msgstr "Dajiang Food Court"
+
+msgid "中壢市場"
+msgstr "Zhongli Market"
+
+msgid "醫療・交通"
+msgstr "Medical · Transport"
+
+msgid "桃園市服務站"
+msgstr "Taoyuan City Service Center"
+
+msgid "點選上方按鈕，即可在地圖上顯示位置"
+msgstr "Click a button above to show location on the map"
+
+msgid "尚未設定 Google Maps API 金鑰"
+msgstr "Google Maps API Key Not Configured"
+
+msgid "借書・自習室・學術資料庫・列印服務"
+msgstr "Borrowing · Study Rooms · Academic Databases · Printing"
+
+msgid "三館概覽"
+msgstr "Library Buildings Overview"
+
+msgid "總圖書館"
+msgstr "Main Library"
+
+msgid "主要借閱・公用研究室 17 間・電腦檢索"
+msgstr "Main borrowing · 17 study rooms · Computer catalog"
+
+msgid "學期間 08:00–23:00"
+msgstr "Semester hours: 08:00–23:00"
+
+msgid "考試週：24 小時開放"
+msgstr "Exam week: Open 24 hours"
+
+msgid "中正圖書館"
+msgstr "Zhongzheng Library"
+
+msgid "2 樓：K書中心（113 席）"
+msgstr "2F: Study Center KSC (113 seats)"
+
+msgid "1 樓：衛保組・崑曲特藏"
+msgstr "1F: Health Center · Kunqu Opera Special Collection"
+
+msgid "國鼎圖書資料館"
+msgstr "Guoding Library & Archive"
+
+msgid "特藏・檔案資料"
+msgstr "Special Collections · Archives"
+
+msgid "週一至週五 10:00–15:00"
+msgstr "Mon–Fri 10:00–15:00"
+
+msgid "借書規則"
+msgstr "Borrowing Rules"
+
+msgid "最多冊數"
+msgstr "Max volumes"
+
+msgid "冊"
+msgstr "books"
+
+msgid "借閱期限"
+msgstr "Loan period"
+
+msgid "天"
+msgstr "days"
+
+msgid "線上續借"
+msgstr "Online renewal"
+
+msgid "1 次"
+msgstr "1 time"
+
+msgid "逾期罰款"
+msgstr "Overdue fine"
+
+msgid "憑學生證借閱，任何在學學生皆可使用，外籍生與本地生規則相同"
+msgstr ""
+"Borrow with student ID; all enrolled students may use; same rules for "
+"international and local students"
+
+msgid "線上續借：於到期前至 opac.lib.ncu.edu.tw 辦理，到期後不可續借"
+msgstr ""
+"Online renewal: Visit opac.lib.ncu.edu.tw before the due date; no renewal "
+"after expiry"
+
+msgid "他人預約的書籍：收到通知後 7 天內須歸還，無法續借"
+msgstr ""
+"Books reserved by others: Must be returned within 7 days of notification; "
+"renewal not allowed"
+
+msgid "指定參考書 / 論文逾期：NT$5 每小時（注意！比一般罰款貴很多）"
+msgstr ""
+"Reserved/thesis overdue: NT$5 per hour (Note: much higher than regular "
+"fines!)"
+
+msgid "非服務時間還書：總圖 1 樓入口設有還書箱，24 小時可用"
+msgstr ""
+"Off-hours returns: Book drop at Main Library 1F entrance, available 24/7"
+
+msgid "畢業或離校前：所有借書必須歸還並繳清罰款"
+msgstr ""
+"Before graduation or leaving: All borrowed books must be returned and fines "
+"paid"
+
+msgid "自習空間"
+msgstr "Study Spaces"
+
+msgid "書中心（KSC）"
+msgstr "Study Center (KSC)"
+
+msgid "中正圖書館 2F"
+msgstr "Zhongzheng Library 2F"
+
+msgid "席"
+msgstr "seats"
+
+msgid "大K 82 席 + 小K 31 席"
+msgstr "Large section 82 + Small section 31 seats"
+
+msgid "僅限中央大學在學生，刷學生證進入"
+msgstr "NCU students only; tap student card to enter"
+
+msgid "先到先得，禁止佔位"
+msgstr "First come, first served; seat-saving is prohibited"
+
+msgid "違規 3 次 → 停用 6 個月"
+msgstr "3 violations → suspended for 6 months"
+
+msgid "公用研究室"
+msgstr "Common Study Rooms"
+
+msgid "間"
+msgstr "rooms"
+
+msgid "可供師生使用"
+msgstr "Available for faculty and students"
+
+msgid "學期初可申請學期用室"
+msgstr "Apply for semester-long use at the start of each semester"
+
+msgid "臨時使用：至服務台申請"
+msgstr "Temporary use: Apply at the service desk"
+
+msgid "線上預約系統 ↗"
+msgstr "Online Booking System ↗"
+
+msgid "考試週（期中、期末）：總圖 24 小時開放。確認最新時間請查"
+msgstr ""
+"Exam weeks (midterm, finals): Main Library open 24 hours. Check latest hours"
+" at"
+
+msgid "開館時間表 ↗"
+msgstr "Library Hours ↗"
+
+msgid "學術資料庫"
+msgstr "Academic Databases"
+
+msgid "Elsevier｜論文引用、摘要，推薦作為主要學術搜尋工具"
+msgstr ""
+"Elsevier | Citation, abstracts — recommended as primary academic search tool"
+
+msgid "訂閱中"
+msgstr "Subscribed"
+
+msgid "訂閱已於 2026/01/31 終止，僅提供靜態資料（SCIE 至 2025）"
+msgstr "Subscription ended 2026/01/31; static data only (SCIE through 2025)"
+
+msgid "靜態存取"
+msgstr "Static Access"
+
+msgid "Clarivate｜期刊影響因子（Impact Factor）查詢"
+msgstr "Clarivate | Journal Impact Factor lookup"
+
+msgid "Elsevier｜理工科期刊與電子書"
+msgstr "Elsevier | STEM journals and e-books"
+
+msgid "中文電子書平台"
+msgstr "Chinese e-book platform"
+
+msgid "中央大學機構典藏 / 學位論文"
+msgstr "NCU Institutional Repository / Theses"
+
+msgid "免費開放"
+msgstr "Free Access"
+
+msgid "完整資料庫清單："
+msgstr "Full database list:"
+
+msgid "NCU 資料庫入口 ↗"
+msgstr "NCU Database Portal ↗"
+
+msgid "校外遠端存取"
+msgstr "Off-Campus Remote Access"
+
+msgid "方法一：從圖書館網站點選資料庫連結，選「中央大學教職員生」，以 Portal 帳號登入"
+msgstr ""
+"Method 1: Click a database link on the library website, choose 'NCU "
+"Faculty/Staff/Student', and log in with your Portal account"
+
+msgid "方法二：安裝 SSL VPN（伺服器：140.115.199.1），以計算中心帳號登入。設定說明："
+msgstr ""
+"Method 2: Install SSL VPN (server: 140.115.199.1) and log in with your "
+"Computing Center account. Setup guide:"
+
+msgid "在校園網路（140.115.x.x）時不可使用 VPN，直接進入即可"
+msgstr ""
+"When on campus network (140.115.x.x), do not use VPN — access directly"
+
+msgid "VPN 登入問題聯絡計算機中心：分機 57555 / 57566"
+msgstr "VPN login issues: Contact Computing Center at ext. 57555 / 57566"
+
+msgid "列印・影印"
+msgstr "Print & Copy"
+
+msgid "頁"
+msgstr "page"
+
+msgid "黑白影印"
+msgstr "B&W copy"
+
+msgid "電腦終端機列印"
+msgstr "Computer terminal print"
+
+msgid "自助影印機與電腦終端機均位於總圖 1 樓。彩色列印費用請至服務台詢問或查"
+msgstr ""
+"Self-service copiers and computer terminals are on the 1F of the Main "
+"Library. For color printing fees, ask at the service desk or check"
+
+msgid "列印說明頁 ↗"
+msgstr "Print Info Page ↗"
+
+msgid "借閱・還書・罰款"
+msgstr "Borrowing · Returns · Fines"
+
+msgid "分機"
+msgstr "Ext."
+
+msgid "參考諮詢・資料庫"
+msgstr "Reference & Databases"
+
+msgid "K書中心・開館時間"
+msgstr "Study Center · Library Hours"
+
+msgid "台灣緊急電話、校安中心、國際事務處"
+msgstr "Taiwan Emergency Numbers, Campus Security, Int'l Affairs"
+
+msgid "台灣緊急電話"
+msgstr "Taiwan Emergency Numbers"
+
+msgid "火警・救護車"
+msgstr "Fire · Ambulance"
+
+msgid "火災、緊急送醫、意外傷亡"
+msgstr "Fire, emergency medical, accidents"
+
+msgid "警察"
+msgstr "Police"
+
+msgid "犯罪、竊盜、人身安全威脅"
+msgstr "Crime, theft, personal safety threats"
+
+msgid "行動緊急電話"
+msgstr "Mobile Emergency Line"
+
+msgid "無 SIM 卡或無訊號時仍可撥打，自動轉接 110 / 119"
+msgstr "Dialable without SIM card or signal; auto-connects to 110/119"
+
+msgid "安心專線"
+msgstr "Mental Health Hotline"
+
+msgid "24 小時心理支持、危機處理"
+msgstr "24-hour mental health support, crisis intervention"
+
+msgid "校內緊急聯絡"
+msgstr "On-Campus Emergency Contacts"
+
+msgid "校安中心"
+msgstr "Campus Security Center"
+
+msgid "24 小時，校園安全事件通報"
+msgstr "24 hours, campus safety incident reporting"
+
+msgid "校內分機"
+msgstr "Campus ext."
+
+msgid "留學生事務、緊急協助"
+msgstr "International student affairs, emergency assistance"
+
+msgid "衛保組（校醫）"
+msgstr "Health & Wellness Center (Campus Doctor)"
+
+msgid "週一至週五 08:00–17:00，中正圖書館舊圖 1 樓"
+msgstr "Mon–Fri 08:00–17:00, Zhongzheng Library 1F"
+
+msgid "如需救護車，請先撥 119，再通知校安中心 03-2805666。告知地點時可說「中央大學」加上建築物名稱。"
+msgstr ""
+"For an ambulance, call 119 first, then notify Campus Security at 03-2805666."
+" When giving your location, say 'National Central University' and the "
+"building name."
+
+msgid "三大系統快速入口"
+msgstr "Quick Access to 3 Main Systems"
+
+msgid "統一登入入口，選課、成績、各系統 SSO"
+msgstr ""
+"Unified login portal for course registration, grades, and SSO for all "
+"systems"
+
+msgid "課程平台：講義、作業、公告、成績查詢"
+msgstr "Course platform: lecture notes, assignments, announcements, grades"
+
+msgid "學生信箱"
+msgstr "Student Email"
+
+msgid "學號@cc.ncu.edu.tw，重要公告必看"
+msgstr "StudentID@cc.ncu.edu.tw — check for important announcements"
+
+msgid "第一步：帳號啟用"
+msgstr "Step 1: Account Activation"
+
+msgid "Portal 帳號預設未啟用，入學後請先完成啟用，才能使用所有校內系統。"
+msgstr ""
+"The Portal account is not activated by default. After enrollment, complete "
+"activation before using any campus systems."
+
+msgid "啟用步驟"
+msgstr "Activation Steps"
+
+msgid "前往啟用頁面"
+msgstr "Go to the activation page"
+
+msgid "學號、出生年月日，外籍生填護照號碼（非台灣身分證）"
+msgstr ""
+"Student ID and date of birth. International students enter passport number "
+"(not Taiwan ID)"
+
+msgid "等待約 10 分鐘"
+msgstr "Wait about 10 minutes"
+
+msgid "啟用完成後即可以學號 + 預設密碼（出生年月日，YYYYMMDD）登入 Portal。"
+msgstr ""
+"After activation, log in to Portal with your student ID + default password "
+"(date of birth, YYYYMMDD)."
+
+msgid "登入後立即更改密碼"
+msgstr "Change your password immediately after logging in"
+
+msgid "預設密碼為生日，請馬上改成強密碼，並設定信箱或手機號碼以便之後找回密碼。"
+msgstr ""
+"The default password is your birthday. Change it to a strong password "
+"immediately and link your email or phone number for password recovery."
+
+msgid "若瀏覽器顯示「Cookie 未被接受」，請換瀏覽器（建議 Chrome / Firefox）。聯絡計算機中心：分機 57771。"
+msgstr ""
+"If the browser shows 'Cookies not accepted', switch browsers (Chrome or "
+"Firefox recommended). Contact Computing Center: ext. 57771."
+
+msgid "登入帳號"
+msgstr "Login ID"
+
+msgid "學號"
+msgstr "Student ID"
+
+msgid "預設密碼"
+msgstr "Default password"
+
+msgid "功能"
+msgstr "Functions"
+
+msgid "選課 / 成績"
+msgstr "Courses / Grades"
+
+msgid "單一登入（SSO）：一組帳密進入 ee-class、信箱、圖書館等所有校內系統"
+msgstr ""
+"Single Sign-On (SSO): one account and password for ee-class, email, library,"
+" and all campus systems"
+
+msgid "選課系統（cis.ncu.edu.tw/Course/）：透過 Portal 帳號登入"
+msgstr ""
+"Course registration (cis.ncu.edu.tw/Course/): log in with your Portal "
+"account"
+
+msgid "成績查詢、修課記錄"
+msgstr "Grade inquiry, course records"
+
+msgid "QR Code 登入：在公用電腦可用手機掃碼，不需輸入密碼"
+msgstr ""
+"QR Code login: scan with your phone on shared computers, no password needed"
+
+msgid "忘記密碼：透過已綁定的信箱或手機號碼重設"
+msgstr "Forgot password: reset via your linked email or phone number"
+
+msgid "課程平台"
+msgstr "Course Platform"
+
+msgid "請勿在 ee-class 自行「註冊」新帳號！一般生直接用 Portal 帳號（學號）登入即可。"
+msgstr ""
+"Do NOT self-register a new account on ee-class! Regular students just log in"
+" with their Portal account (student ID)."
+
+msgid "學號（同 Portal）"
+msgstr "Student ID (same as Portal)"
+
+msgid "同 Portal 密碼"
+msgstr "Same as Portal password"
+
+msgid "查看課程講義、教材、教授公告"
+msgstr "View course handouts, materials, and professor announcements"
+
+msgid "繳交作業、查看作業批改結果"
+msgstr "Submit assignments and view grading results"
+
+msgid "課程成績查詢（部分老師使用）"
+msgstr "Course grade inquiry (used by some instructors)"
+
+msgid "NCUx 雲端課程：選修免費線上課程（不計學分）"
+msgstr "NCUx online courses: free elective online courses (non-credit)"
+
+msgid "特殊身份登入方式"
+msgstr "Login Methods for Special User Types"
+
+msgid "身份"
+msgstr "User Type"
+
+msgid "帳號"
+msgstr "Account"
+
+msgid "一般生／教職員"
+msgstr "Regular students / Faculty & staff"
+
+msgid "Portal 密碼"
+msgstr "Portal password"
+
+msgid "跨校交換生"
+msgstr "Exchange students from other universities"
+
+msgid "Z 開頭臨時帳號"
+msgstr "Temporary account starting with Z"
+
+msgid "原校學號"
+msgstr "Home university student ID"
+
+msgid "旁聽生／推廣教育"
+msgstr "Auditors / Continuing education"
+
+msgid "Y 開頭臨時帳號"
+msgstr "Temporary account starting with Y"
+
+msgid "台灣身分證號"
+msgstr "Taiwan national ID number"
+
+msgid "ee-class 問題聯絡：eeclass@ncu.edu.tw｜分機 57132 / 57169"
+msgstr "ee-class support: eeclass@ncu.edu.tw | ext. 57132 / 57169"
+
+msgid "信箱格式"
+msgstr "Email format"
+
+msgid "學號@cc.ncu.edu.tw"
+msgstr "StudentID@cc.ncu.edu.tw"
+
+msgid "容量"
+msgstr "Storage"
+
+msgid "有效期限"
+msgstr "Valid until"
+
+msgid "畢業後 5 年"
+msgstr "5 years after graduation"
+
+msgid "學校重要公告（選課結果、成績、繳費通知）均寄到此信箱，請定期查收"
+msgstr ""
+"All important school announcements (course registration results, grades, "
+"payment notices) are sent to this mailbox — check it regularly"
+
+msgid "登入帳號：學號；密碼：同 Portal 密碼"
+msgstr "Login: student ID; Password: same as Portal password"
+
+msgid "非 Gmail 帳號，無法直接存取 Google 服務"
+msgstr "Not a Gmail account; cannot directly access Google services"
+
+msgid "手機 / 電腦設定"
+msgstr "Mobile / Computer Setup"
+
+msgid "前往「設定 → 郵件 → 帳號 → 新增帳號」，選「其他」，輸入信箱與密碼，詳細步驟："
+msgstr ""
+"Go to Settings → Mail → Accounts → Add Account, choose 'Other', enter your "
+"email and password. Full guide:"
+
+msgid "帳號設定頁面 → 手動設定 → IMAP，詳細步驟見同上連結"
+msgstr ""
+"Account settings → Manual setup → IMAP. See the same link above for full "
+"steps"
+
+msgid "忘記密碼：透過 Portal 重設，不需另行聯絡信箱管理員"
+msgstr ""
+"Forgot password: reset via Portal, no need to contact the mail administrator"
+" separately"
+
+msgid "信箱問題聯絡：ncucc@cc.ncu.edu.tw｜分機 57555 / 57566"
+msgstr "Email support: ncucc@cc.ncu.edu.tw | ext. 57555 / 57566"
+
+msgid "計算機中心聯絡"
+msgstr "Computing Center Contacts"
+
+msgid "帳號 / Portal 問題"
+msgstr "Account / Portal issues"
+
+msgid "問題"
+msgstr "Issues"
+
+msgid "信箱問題"
+msgstr "Email issues"
+
+msgid "GPA・畢業門檻・英文門檻"
+msgstr "GPA · Graduation Requirements · English Threshold"
+
+msgid "中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。"
+msgstr ""
+"NCU's letter grade system, GPA calculation, and the English proficiency "
+"thresholds required for graduation by each college."
+
+msgid "成績等第制（109 學年起適用）"
+msgstr "Letter Grade System (effective from 2020 academic year)"
+
+msgid ""
+"109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 60 分（C-），研究所為 70 "
+"分（B-）。"
+msgstr ""
+"From the 2020 academic year (September 2020), NCU uses a letter grade system"
+" converted to GPA (max 4.3). Passing is 60 (C-) for undergraduates and 70 "
+"(B-) for graduates."
+
+msgid "等第"
+msgstr "Grade"
+
+msgid "分數範圍"
+msgstr "Score Range"
+
+msgid "說明"
+msgstr "Note"
+
+msgid "優異"
+msgstr "Excellent"
+
+msgid "研究所最低及格"
+msgstr "Minimum passing for graduate"
+
+msgid "大學部最低及格"
+msgstr "Minimum passing for undergraduate"
+
+msgid "不及格"
+msgstr "Fail"
+
+msgid "0（缺考）"
+msgstr "0 (Absent)"
+
+msgid "W（停修）"
+msgstr "W (Withdrawal)"
+
+msgid "不計入學分，成績單標註 W"
+msgstr "Not counted as credit; transcript shows W"
+
+msgid "GPA 計算方式"
+msgstr "GPA Calculation"
+
+msgid "計算公式"
+msgstr "Formula"
+
+msgid "課程學分數"
+msgstr "Course Credits"
+
+msgid "該課程等第積分"
+msgstr "Grade Points"
+
+msgid "總學分數"
+msgstr "Total Credits"
+
+msgid "中大採 4.3 滿分制。出國交換、申請研究所時，部分機構採 4.0 換算，請依對方要求換算。"
+msgstr ""
+"NCU uses a 4.3-point scale. When applying for exchange programs or graduate "
+"schools, some institutions use a 4.0 scale — convert as required."
+
+msgid "體育課、軍訓、服務學習不計入畢業學分，但仍有成績記錄。這些課程的 GPA 積分計算方式請洽各系確認。"
+msgstr ""
+"PE, military training, and service learning do not count toward graduation "
+"credits but are still graded. Contact your department for how their GPA "
+"points are calculated."
+
+msgid "畢業條件一覽（大學部）"
+msgstr "Graduation Requirements Overview (Undergraduate)"
+
+msgid "畢業學分數"
+msgstr "Graduation Credits"
+
+msgid "大多數學系需修滿 128 學分（含必修、通識、選修）。實際學分依各系課程規定，請至系網查詢應修科目表。"
+msgstr ""
+"Most departments require 128 credits (including required, general education,"
+" and elective courses). Check your department's website for the required "
+"curriculum table."
+
+msgid "通識課程"
+msgstr "General Education"
+
+msgid "至少修習 8 學分通識課程（含核心通識及通識選修）。各學院核心通識規定略有不同，請確認是否選滿必修核心。"
+msgstr ""
+"At least 8 credits of general education courses (including core and "
+"elective). Requirements vary by college — confirm you have fulfilled all "
+"mandatory core courses."
+
+msgid "體育課"
+msgstr "Physical Education"
+
+msgid "需修滿 5 學期體育課（大一必修上、下 + 興趣體育 3 學期）。不列入畢業學分，但必須修畢方可畢業。"
+msgstr ""
+"5 semesters of PE required (2 mandatory in Year 1 + 3 elective). Not counted"
+" toward graduation credits, but must be completed to graduate."
+
+msgid "服務學習"
+msgstr "Service Learning"
+
+msgid "需修滿 1 學年（上、下各一學期）。不列入畢業學分，但必須通過方可畢業。"
+msgstr ""
+"1 academic year required (one semester each, fall and spring). Not counted "
+"toward graduation credits, but must be passed to graduate."
+
+msgid "英文畢業門檻"
+msgstr "English Graduation Threshold"
+
+msgid "各學院標準不同（詳見下方表格）。未達標者可修習「進修英文」（4 學分，2 學期）作為替代途徑。"
+msgstr ""
+"Standards vary by college (see table below). Those who do not meet the "
+"threshold may take Supplementary English (4 credits, 2 semesters) as an "
+"alternative."
+
+msgid "操行成績"
+msgstr "Conduct Grade"
+
+msgid "各學期操行成績均須及格。"
+msgstr "Conduct grade must pass every semester."
+
+msgid "計學分"
+msgstr "Counts as Credit"
+
+msgid "不計學分"
+msgstr "No Credit"
+
+msgid "需達標"
+msgstr "Must Meet Standard"
+
+msgid "英文畢業門檻（大學部，依學院）"
+msgstr "English Graduation Threshold (Undergraduate, by College)"
+
+msgid "以下為各學院門檻標準，實際以語言中心公告為準。部分學院允許以「第二外語」替代英文門檻，請洽語言中心確認。"
+msgstr ""
+"The thresholds below are by college; the official standard is the Language "
+"Center's announcement. Some colleges allow a second foreign language to "
+"substitute — confirm with the Language Center."
+
+msgid "學院"
+msgstr "College"
+
+msgid "（聽讀合計）"
+msgstr "(Listening + Reading)"
+
+msgid "全民英檢"
+msgstr "GEPT"
+
+msgid "管理學院"
+msgstr "College of Management"
+
+msgid "中高級複試通過"
+msgstr "GEPT High-Intermediate (Stage 2 pass)"
+
+msgid "文學院"
+msgstr "College of Liberal Arts"
+
+msgid "客家學院"
+msgstr "Hakka College"
+
+msgid "電資學院"
+msgstr "College of Electrical Engineering & Computer Science"
+
+msgid "工學院"
+msgstr "College of Engineering"
+
+msgid "理學院"
+msgstr "College of Science"
+
+msgid "地球科學學院"
+msgstr "College of Earth Sciences"
+
+msgid "生醫理工學院"
+msgstr "College of Biomedical Science & Engineering"
+
+msgid ""
+"校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 "
+"NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。"
+msgstr ""
+"Campus TOEIC: The Language Center holds a campus TOEIC each semester "
+"(approx. NT$1,270, NCU students only). It is the most convenient way to meet"
+" the English threshold. Check the Language Center website for upcoming "
+"sessions."
+
+msgid "未達門檻的替代方案：進修英文"
+msgstr "Alternative for Below-Threshold: Supplementary English"
+
+msgid "進修英文（Supplementary English）"
+msgstr "Supplementary English"
+
+msgid "共 4 學分，分兩學期修習（每學期 2 學分）"
+msgstr "4 credits total, split over two semesters (2 credits each)"
+
+msgid "修習並通過後可取代英文門檻，無需另外提交語言成績"
+msgstr ""
+"Upon completion and passing, substitutes the English threshold — no separate"
+" language score required"
+
+msgid "申請資格：入學英文成績未達標準，且已參加過中央大學英文鑑定測驗者"
+msgstr ""
+"Eligibility: students whose English scores at admission did not meet the "
+"standard AND who have taken NCU's English proficiency test"
+
+msgid "是否計入畢業學分依各系規定，請洽系辦確認"
+msgstr ""
+"Whether it counts toward graduation credits depends on your department — "
+"confirm with the department office"
+
+msgid "研究所英文門檻（以工學院為例）"
+msgstr "Graduate English Threshold (College of Engineering example)"
+
+msgid ""
+"各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 "
+"或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。"
+msgstr ""
+"Each graduate program sets its own English threshold, which must be "
+"submitted before the degree defense. The College of Engineering requires "
+"TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 or equivalent; those below threshold "
+"may take one semester of remedial English (pass with 70+). Contact "
+"individual departments for details."
+
+msgid "相關連結"
+msgstr "Related Links"
+
+msgid "語言中心英文畢業門檻"
+msgstr "Language Center English Threshold"
+
+msgid "NCU 語言中心"
+msgstr "NCU Language Center"
+
+msgid "應修科目表"
+msgstr "Required Curriculum Table"
+
+msgid "教務處官網"
+msgstr "Office of Academic Affairs"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Enter your question, and the system will organize suggestions based on your "
@@ -3658,63 +4458,3 @@ msgstr "Open a Bank Account in Taiwan"
 
 #~ msgid "我的帳戶"
 #~ msgstr "My Account"
-
-msgid "學校設施"
-msgstr "School Facilities"
-
-msgid "中央大學（正門）"
-msgstr "NCU (Main Gate)"
-
-msgid "中央圖書館"
-msgstr "Central Library"
-
-msgid "外籍生宿舍"
-msgstr "International Dorm"
-
-msgid "校內美食"
-msgstr "On-Campus Food"
-
-msgid "松苑餐廳"
-msgstr "Songyuan Restaurant"
-
-msgid "松果餐廳"
-msgstr "Songguo Restaurant"
-
-msgid "小木屋鬆餅"
-msgstr "Chalet Waffles"
-
-msgid "校內超商"
-msgstr "Campus Convenience Store"
-
-msgid "校外美食"
-msgstr "Off-Campus Food"
-
-msgid "後門商圈"
-msgstr "Back Gate Area"
-
-msgid "宵夜街"
-msgstr "Late-Night Snack Street"
-
-msgid "中大夜市商圈"
-msgstr "NCU Night Market Area"
-
-msgid "龍岡美食廣場"
-msgstr "Longgang Food Plaza"
-
-msgid "大江美食街"
-msgstr "Dajiang Food Court"
-
-msgid "中壢市場"
-msgstr "Zhongli Market"
-
-msgid "醫療・交通"
-msgstr "Medical · Transport"
-
-msgid "桃園市服務站"
-msgstr "Taoyuan City Service Center"
-
-msgid "點選上方按鈕，即可在地圖上顯示位置"
-msgstr "Click a button above to show location on the map"
-
-msgid "尚未設定 Google Maps API 金鑰"
-msgstr "Google Maps API Key Not Configured"
