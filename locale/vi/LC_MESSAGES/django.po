@@ -4452,8 +4452,11 @@ msgstr ""
 "chủ hoặc thêm việc bán thời gian cần đăng ký mới; giấy phép cũ không "
 "được dùng lại."
 
-msgid "許可期限最長 6 個月："
-msgstr "Thời hạn giấy phép tối đa 6 tháng:"
+msgid "許可期限最長 "
+msgstr "Thời hạn giấy phép tối đa "
+
+msgid "6 個月"
+msgstr "6 tháng"
 
 msgid "到期前需提前申請展延，過期繼續工作視同無許可違規。"
 msgstr ""

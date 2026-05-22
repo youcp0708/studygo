@@ -4937,8 +4937,11 @@ msgstr ""
 "kerja atau menambah pekerjaan paruh waktu memerlukan permohonan baru; "
 "izin lama tidak dapat digunakan kembali."
 
-msgid "許可期限最長 6 個月："
-msgstr "Masa Berlaku Izin Maksimum 6 Bulan:"
+msgid "許可期限最長 "
+msgstr "Masa Berlaku Izin Maksimum "
+
+msgid "6 個月"
+msgstr "6 bulan"
 
 msgid "到期前需提前申請展延，過期繼續工作視同無許可違規。"
 msgstr ""

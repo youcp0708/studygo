@@ -5060,8 +5060,11 @@ msgstr ""
 "adding a part-time job requires a new application; the old permit cannot "
 "be reused."
 
-msgid "許可期限最長 6 個月："
-msgstr "Maximum Permit Duration is 6 Months:"
+msgid "許可期限最長 "
+msgstr "Maximum Permit Duration is "
+
+msgid "6 個月"
+msgstr "6 Months"
 
 msgid "到期前需提前申請展延，過期繼續工作視同無許可違規。"
 msgstr ""
