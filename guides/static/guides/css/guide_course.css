@@ -1,0 +1,147 @@
+  :root { --border: var(--line); --dark: var(--primary-dark); --warning: #ca8a04; --warning-soft: #fef9c3; }
+  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
+
+  .guide-hero {
+    background: linear-gradient(135deg, #1e3a5f 0%, #0f766e 100%);
+    color:#fff; padding:36px 44px 32px; border-radius:20px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .guide-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .guide-hero .hero-badge {
+    display:inline-block; background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.35); border-radius:99px;
+    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
+  }
+  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
+  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:540px; margin:0; }
+
+  .section-title {
+    font-size:17px; font-weight:900; color:var(--primary-dark);
+    margin:28px 0 14px; padding-bottom:10px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  .alert {
+    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
+    margin-bottom:14px; display:flex; gap:12px; align-items:flex-start;
+  }
+  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+  .alert-info    { background:#eff6ff; border:1.5px solid #bae6fd; }
+  .alert-info strong { color:#0369a1; }
+  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
+  .alert-warning strong { color:var(--warning); }
+  .alert-success { background:#f0fdf4; border:1.5px solid #86efac; }
+  .alert-success strong { color:#15803d; }
+
+  /* ── 日程流程條 ── */
+  .schedule-flow {
+    display:flex; overflow-x:auto; gap:0;
+    border-radius:14px; border:1.5px solid var(--border);
+    margin-bottom:28px;
+  }
+  .sf-step {
+    flex:1; min-width:120px; padding:16px 12px; text-align:center;
+    border-right:1.5px solid var(--border); display:flex; flex-direction:column; gap:6px;
+  }
+  .sf-step:last-child { border-right:none; }
+  .sf-icon  { font-size:22px; }
+  .sf-title { font-size:12px; font-weight:900; color:var(--dark); }
+  .sf-date  { font-size:11px; color:var(--muted); line-height:1.5; }
+  .sf-step.active { background:var(--primary-soft); }
+
+  /* ── 日程大表 ── */
+  .sched-table-wrap { overflow-x:auto; margin-bottom:28px; }
+  .sched-table {
+    width:100%; border-collapse:collapse; font-size:14px; min-width:500px;
+  }
+  .sched-table th {
+    background:var(--primary); color:#fff;
+    padding:11px 16px; font-weight:800; font-size:13px; text-align:left;
+  }
+  .sched-table th:first-child { border-radius:12px 0 0 0; }
+  .sched-table th:last-child  { border-radius:0 12px 0 0; }
+  .sched-table td {
+    padding:12px 16px; border-bottom:1px solid var(--border);
+    vertical-align:top; line-height:1.6; font-size:13px;
+  }
+  .sched-table tr:last-child td { border-bottom:none; }
+  .sched-table tr:nth-child(even) td { background:#fafafa; }
+  .sched-table .item-name { font-weight:800; color:var(--dark); white-space:nowrap; }
+  .sched-table .date-cell { color:#0369a1; font-weight:700; white-space:nowrap; }
+
+  /* ── 階段卡 ── */
+  .stage-card {
+    background:#fff; border:1.5px solid var(--border); border-radius:14px;
+    padding:20px 22px; margin-bottom:16px;
+  }
+  .stage-header {
+    display:flex; align-items:center; gap:10px;
+    font-size:15px; font-weight:900; color:var(--dark); margin-bottom:10px;
+  }
+  .stage-num {
+    width:32px; height:32px; border-radius:50%; background:var(--primary);
+    color:#fff; font-size:14px; font-weight:900;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .stage-body { font-size:13px; color:var(--muted); line-height:1.8; }
+  .stage-body ul { margin:6px 0 0 0; padding-left:18px; }
+  .stage-body li { margin-bottom:3px; }
+  .stage-tag {
+    display:inline-block; font-size:11px; font-weight:700; padding:2px 8px;
+    border-radius:99px; margin-left:8px;
+  }
+  .tag-date { background:var(--primary-soft); color:var(--primary-dark); }
+  .tag-fee  { background:#fee2e2; color:#dc2626; }
+  .tag-warn { background:var(--warning-soft); color:var(--warning); }
+
+  /* ── 重要規定 ── */
+  .rule-list { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
+  .rule-item {
+    display:flex; gap:12px; align-items:flex-start;
+    background:#fff; border:1.5px solid var(--border); border-radius:12px;
+    padding:14px 16px; font-size:14px; line-height:1.7;
+  }
+  .rule-num {
+    width:26px; height:26px; border-radius:50%; background:var(--primary);
+    color:#fff; font-size:12px; font-weight:900;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;
+  }
+
+  /* ── 聯絡表 ── */
+  .contact-table-wrap { overflow-x:auto; margin-bottom:28px; }
+  .contact-table {
+    width:100%; border-collapse:collapse; font-size:13px; min-width:360px;
+  }
+  .contact-table th {
+    background:var(--primary); color:#fff;
+    padding:10px 14px; font-weight:800; font-size:12px; text-align:left;
+  }
+  .contact-table th:first-child { border-radius:10px 0 0 0; }
+  .contact-table th:last-child  { border-radius:0 10px 0 0; }
+  .contact-table td {
+    padding:10px 14px; border-bottom:1px solid var(--border); vertical-align:middle;
+  }
+  .contact-table tr:last-child td { border-bottom:none; }
+  .contact-table tr:nth-child(even) td { background:#fafafa; }
+
+  /* ── 連結列 ── */
+  .link-row { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px; }
+  .ext-link {
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 18px; border-radius:10px; border:1.5px solid var(--border);
+    background:#fff; font-size:13px; font-weight:700;
+    color:var(--primary-dark); text-decoration:none;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .ext-link:hover { border-color:var(--primary); box-shadow:0 2px 8px rgba(0,80,160,.08); }
+
+  .back-link {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
+  }
+  .back-link:hover { color:var(--primary-dark); }

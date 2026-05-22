@@ -1,0 +1,124 @@
+  .guide-wrap {
+    width: min(1200px, 96%);
+    margin: 0 auto;
+    padding: 32px 0 72px;
+  }
+
+  /* ── Back link ── */
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--primary); font-size: 14px; font-weight: 700;
+    margin-bottom: 24px; text-decoration: none;
+  }
+  .back-link:hover { color: var(--primary-dark); }
+
+  /* ── Hero ── */
+  .guide-hero {
+    background: linear-gradient(135deg, #1e3a5f 0%, #7c3aed 100%);
+    color: #fff; padding: 28px 32px; border-radius: 16px;
+    margin-bottom: 32px;
+  }
+  .guide-hero .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35);
+    border-radius: 99px; padding: 3px 12px; font-size: 12px;
+    font-weight: 700; margin-bottom: 10px;
+  }
+  .guide-hero h2 { font-size: 22px; font-weight: 900; margin-bottom: 6px; }
+  .guide-hero p  { opacity: .85; font-size: 14px; line-height: 1.7; margin: 0; }
+
+  /* ── Section title ── */
+  .section-title {
+    font-size: 16px; font-weight: 900; color: var(--primary-dark);
+    margin: 28px 0 12px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-soft);
+  }
+
+  /* ── Alert boxes ── */
+  .alert {
+    border-radius: 10px; padding: 12px 16px;
+    font-size: 14px; line-height: 1.7; margin-bottom: 12px;
+    display: flex; gap: 10px; align-items: flex-start;
+    border-width: 1.5px; border-style: solid;
+  }
+  .alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .alert-info    { background: #eff6ff; border-color: #bae6fd; }
+  .alert-info strong    { color: #0369a1; }
+  .alert-warning { background: #fef9c3; border-color: #fde68a; }
+  .alert-warning strong { color: #ca8a04; }
+  .alert-danger  { background: #fff1f2; border-color: #fca5a5; }
+  .alert-danger strong  { color: #dc2626; }
+
+  /* ── Simple info table ── */
+  .info-table {
+    width: 100%; border-collapse: collapse;
+    font-size: 14px; margin-bottom: 24px;
+  }
+  .info-table th {
+    background: var(--primary); color: #fff;
+    padding: 10px 14px; text-align: left;
+    font-weight: 800; font-size: 13px;
+  }
+  .info-table th:first-child { border-radius: 10px 0 0 0; }
+  .info-table th:last-child  { border-radius: 0 10px 0 0; }
+  .info-table td {
+    padding: 11px 14px; border-bottom: 1px solid var(--line);
+    vertical-align: middle; line-height: 1.6;
+  }
+  .info-table tr:last-child td { border-bottom: none; }
+  .info-table tr:nth-child(even) td { background: #fafafa; }
+  .info-table .td-label { font-weight: 800; color: var(--primary-dark); white-space: nowrap; }
+
+  /* ── Chips ── */
+  .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .chip {
+    padding: 6px 14px; border-radius: 99px; font-size: 13px;
+    font-weight: 700; border: 1.5px solid;
+  }
+  .chip-yes { border-color: #86efac; background: #f0fdf4; color: #15803d; }
+  .chip-no  { border-color: #fca5a5; background: #fff1f2; color: #dc2626; }
+
+  /* ── Timeline ── */
+  .timeline { list-style: none; padding: 0; margin: 0 0 24px; }
+  .tl-item  { display: flex; gap: 16px; margin-bottom: 16px; position: relative; }
+  .tl-item:not(:last-child)::before {
+    content: ''; position: absolute; left: 18px; top: 40px; bottom: -16px;
+    width: 2px; background: var(--primary-soft);
+  }
+  .tl-num {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--primary); color: #fff;
+    font-size: 14px; font-weight: 900; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 1;
+  }
+  .tl-num.done { background: #22c55e; }
+  .tl-body { flex: 1; padding-top: 4px; }
+  .tl-title { font-size: 14px; font-weight: 800; color: var(--primary-dark); margin-bottom: 2px; }
+  .tl-desc  { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  /* ── Penalty items ── */
+  .penalty-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+  .penalty-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    background: #fff1f2; border: 1.5px solid #fca5a5;
+    border-radius: 10px; padding: 12px 14px;
+    font-size: 14px; line-height: 1.7;
+  }
+  .penalty-icon { font-size: 20px; flex-shrink: 0; }
+
+  /* ── External links ── */
+  .link-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .ext-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: 8px;
+    border: 1.5px solid var(--line); background: #fff;
+    font-size: 14px; font-weight: 700; color: var(--primary-dark);
+    text-decoration: none; transition: border-color .15s;
+  }
+  .ext-link:hover { border-color: var(--primary); }
+
+  /* ── Badge ── */
+  .badge-ok  { display:inline-block; background:#dcfce7; color:#15803d; font-size:12px; font-weight:700; padding:2px 10px; border-radius:99px; }
+  .badge-lim { display:inline-block; background:#fef9c3; color:#ca8a04; font-size:12px; font-weight:700; padding:2px 10px; border-radius:99px; }
+  .badge-no  { display:inline-block; background:#fee2e2; color:#dc2626; font-size:12px; font-weight:700; padding:2px 10px; border-radius:99px; }
