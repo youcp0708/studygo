@@ -1294,7 +1294,7 @@ def detect_place_query(question):
         '便利商店', '超商', '超市', '商店', '商場', '百貨', '夜市', '市場',
         '醫院', '診所', '藥局', '銀行', '郵局', '辦公室', '辦公大樓',
         '附近', '在哪', '在哪裡', '怎麼去', '怎麼走', '地址', '哪裡有',
-        '公園', '體育館', '游泳池', '球場',
+        '公園', '體育館', '游泳池', '球場','化妝品店','藥妝店', '屈臣氏', '康是美', '寶雅', '日藥本鋪',
     ]
     en_keywords = [
         'restaurant', 'cafe', 'coffee shop', 'shop', 'store', 'mall',
@@ -1309,10 +1309,46 @@ def detect_place_query(question):
     )
 
 
+def _geocode_location(place_name, api_key):
+    """用 Places Text Search 把地點名稱（如學校）轉成經緯度座標。"""
+    try:
+        resp = http_requests.get(
+            'https://maps.googleapis.com/maps/api/place/textsearch/json',
+            params={'query': place_name, 'key': api_key, 'language': 'zh-TW'},
+            timeout=5,
+        )
+        data = resp.json()
+        if data.get('status') == 'OK' and data.get('results'):
+            loc = data['results'][0]['geometry']['location']
+            return loc['lat'], loc['lng']
+    except Exception:
+        pass
+    return None, None
+
+
+def _format_place(place):
+    """把 Places API 單筆結果格式化成一行文字。"""
+    name = place.get('name', '')
+    address = place.get('formatted_address', '') or place.get('vicinity', '')
+    rating = place.get('rating', '')
+    place_id = place.get('place_id', '')
+    maps_url = f'https://www.google.com/maps/place/?q=place_id:{place_id}' if place_id else ''
+
+    line = f'- {name}'
+    if address:
+        line += f'，地址：{address}'
+    if rating:
+        line += f'，評分：{rating}/5'
+    if maps_url:
+        line += f'，地圖：{maps_url}'
+    return line
+
+
 def search_google_places(query, language_code='zh-hant', location_hint='台灣'):
     """
-    呼叫 Google Maps Places Text Search API 搜尋地點。
-    回傳格式化的前三筆結果字串，失敗時回傳 None。
+    搜尋地點。
+    有 location_hint（學校名稱或城市）時：先 geocode 取座標，再用 Nearby Search 搜附近。
+    沒有 location_hint 時：直接用 Text Search。
     """
     api_key = getattr(settings, 'GOOGLE_MAPS_API_KEY', '')
     if not api_key:
@@ -1324,43 +1360,51 @@ def search_google_places(query, language_code='zh-hant', location_hint='台灣')
     }
     lang = lang_map.get(language_code, 'zh-TW')
 
-    full_query = f'{query} {location_hint}' if location_hint else query
+    results = []
 
-    try:
-        resp = http_requests.get(
-            'https://maps.googleapis.com/maps/api/place/textsearch/json',
-            params={'query': full_query, 'key': api_key, 'language': lang},
-            timeout=5,
-        )
-        data = resp.json()
-    except Exception:
-        return None
+    if location_hint:
+        lat, lng = _geocode_location(location_hint, api_key)
+        if lat and lng:
+            # 用 Nearby Search 搜學校附近 1.5 km 內
+            try:
+                resp = http_requests.get(
+                    'https://maps.googleapis.com/maps/api/place/nearbysearch/json',
+                    params={
+                        'location': f'{lat},{lng}',
+                        'radius': 1500,
+                        'keyword': query,
+                        'key': api_key,
+                        'language': lang,
+                    },
+                    timeout=5,
+                )
+                data = resp.json()
+                print("[DEBUG] Places Nearby status:", data.get('status'))
+                if data.get('status') == 'OK':
+                    results = data.get('results', [])[:3]
+            except Exception as e:
+                print("[DEBUG] Places Nearby error:", e)
 
-    if data.get('status') != 'OK':
-        return None
+    # Nearby Search 沒有結果時，退回 Text Search
+    if not results:
+        try:
+            full_query = f'{query} {location_hint}'.strip() if location_hint else query
+            resp = http_requests.get(
+                'https://maps.googleapis.com/maps/api/place/textsearch/json',
+                params={'query': full_query, 'key': api_key, 'language': lang},
+                timeout=5,
+            )
+            data = resp.json()
+            print("[DEBUG] Places Text status:", data.get('status'))
+            if data.get('status') == 'OK':
+                results = data.get('results', [])[:3]
+        except Exception as e:
+            print("[DEBUG] Places Text error:", e)
 
-    results = data.get('results', [])[:3]
     if not results:
         return None
 
-    lines = []
-    for place in results:
-        name = place.get('name', '')
-        address = place.get('formatted_address', '')
-        rating = place.get('rating', '')
-        place_id = place.get('place_id', '')
-        maps_url = f'https://www.google.com/maps/place/?q=place_id:{place_id}' if place_id else ''
-
-        line = f'- {name}'
-        if address:
-            line += f'，地址：{address}'
-        if rating:
-            line += f'，評分：{rating}/5'
-        if maps_url:
-            line += f'，地圖連結：{maps_url}'
-        lines.append(line)
-
-    return '\n'.join(lines)
+    return '\n'.join(_format_place(p) for p in results)
 
 
 def build_history_text(messages, max_messages=3, max_chars_per_message=300, max_user_messages=None):
@@ -1558,6 +1602,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
             place_results = search_google_places(question, language_code, location_hint)
 
     print("[DEBUG] ai_mode:", ai_mode)
+    print("[DEBUG] place_results:", place_results)
     print("[DEBUG] knowledge_context:", knowledge_context)
 
     if not api_key:
@@ -1643,7 +1688,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 以下是學生基本資料，僅供你理解背景，不要生硬列出：
 {profile_context}
 
-{'以下是 Google 地圖搜尋結果，學生問到地點時請參考並自然帶入回答，直接說出名稱與地址，不要複製貼上連結文字：' + chr(10) + place_results if place_results else ''}
+{'以下是 Google 地圖搜尋結果，學生問到地點時請參考並自然帶入回答。介紹每個地點時，地址部分請用 Markdown 連結格式輸出，格式為 [地址文字](地圖連結)，讓使用者點擊後可直接開啟 Google 地圖：' + chr(10) + place_results if place_results else ''}
 
 以下是最近對話紀錄：
 {history_text}
@@ -1727,7 +1772,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 
 如果不太明白：
 - 先簡短回問一句再回答。
-- 例如：「嗯，你是比較難過，還是比較想吐槽一下？」
+- 例如：「嗯」
 - 例如：「你說的那件事是今天發生的嗎？」
 - 例如：「你現在比較想被安慰，還是想一起想辦法？」
 
