@@ -7,7 +7,8 @@
 {% endblock %}
 
 {% block content %}
-<section class="chatbot-page" data-session-id="{% if active_session %}{{ active_session.id }}{% endif %}">
+<section class="chatbot-page" data-session-id="{% if active_session %}{{ active_session.id }}{% endif %}"
+  data-ai-mode="{{ current_ai_mode|default:'helper' }}">
   <div class="chatbot-layout">
 
     <aside class="chatbot-sidebar">
@@ -17,10 +18,26 @@
           ← {% trans "返回" %}
         </a>
 
-        <div class="bot-avatar">🤖</div>
-        <h2>{% trans "AI 來臺就學小幫手" %}</h2>
-        <p id="botTipText" class="bot-tip-text">{{ taiwan_tip }}</p>
-        {{ taiwan_tips|json_script:"taiwanTipsData" }}
+        <div class="ai-mode-switcher">
+
+          <button class="ai-mode-card {% if current_ai_mode != 'friend' %}active{% endif %}" data-mode="helper"
+            type="button">
+            <div class="bot-avatar bot-avatar-dark">🤖</div>
+            <h2>{% trans "StudyGo AI 小幫手" %}</h2>
+            <!--<p>{% trans "我是協助管理來臺任務、查詢疑問、提供建議的小幫手。" %}</p>-->
+          </button>
+
+          <button class="ai-mode-card {% if current_ai_mode == 'friend' %}active{% endif %}" data-mode="friend"
+            type="button">
+            <div class="bot-avatar bot-avatar-light">🤖</div>
+            <h2>{% trans "StudyGo AI 聊天好朋友" %}</h2>
+            <!--<p>{% trans "我是陪你聊天協助、處理生活適應與心理壓力的好朋友。" %}</p>-->
+          </button>
+
+        </div>
+
+        <!--<p id="botTipText" class="bot-tip-text">{{ taiwan_tip }}</p>
+        {{ taiwan_tips|json_script:"taiwanTipsData" }}-->
       </div>
 
       <div class="quick-card">
@@ -40,7 +57,7 @@
           {% for session in sessions %}
           <div
             class="chat-history-item {% if active_session and session.id == active_session.id %}active{% endif %} {% if session.is_pinned %}pinned{% endif %}"
-            data-session-id="{{ session.id }}">
+            data-session-id="{{ session.id }}" data-ai-mode="{{ session.ai_mode|default:'helper' }}">
 
             <a class="history-title" href="{% url 'chatbot:page' %}?session={{ session.id }}">
               <span class="pin-mark">{% if session.is_pinned %}📌{% endif %}</span>
@@ -71,14 +88,19 @@
         {% if active_session and messages %}
         {% for message in messages %}
         <div class="message-row {{ message.role }}">
-          <div class="message-avatar">
-            {% if message.role == 'user' %}{% else %}🤖{% endif %}
+          <div
+            class="message-avatar {% if message.role != 'user' %}js-ai-avatar {{ current_ai_mode|default:'helper' }}{% endif %}">
+            {% if message.role == 'user' %}🧑{% else %}🤖{% endif %}
           </div>
 
           <div class="message-bubble">
             {% if message.role != 'user' %}
-            <div class="message-name">
+            <div class="message-name js-ai-name">
+              {% if current_ai_mode == "friend" %}
+              {% trans "StudyGo AI 聊天好朋友" %}
+              {% else %}
               {% trans "StudyGo AI 小幫手" %}
+              {% endif %}
             </div>
             {% endif %}
 
@@ -89,12 +111,17 @@
         {% endfor %}
         {% else %}
         <div class="message-row assistant welcome-message">
-          <div class="message-avatar">🤖</div>
+          <div class="message-avatar js-ai-avatar {{ current_ai_mode|default:'helper' }}">🤖</div>
           <div class="message-bubble">
-            <div class="message-name">{% trans "StudyGo AI 小幫手" %}</div>
+            <div class="message-name js-ai-name">
+              {% if current_ai_mode == "friend" %}
+              {% trans "StudyGo AI 聊天好朋友" %}
+              {% else %}
+              {% trans "StudyGo AI 小幫手" %}
+              {% endif %}
+            </div>
             <div class="message-content">
-              {% trans "你好 !" %}
-              {% firstof user.name user.email "同學" %}
+              {% trans "你好 !" %} {% firstof user.name user.email "同學" %}
             </div>
           </div>
         </div>
@@ -122,7 +149,7 @@
           </div>
 
           <textarea id="chatInput" rows="2" maxlength="1200"
-            placeholder="{% trans '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？' %}"></textarea>
+            placeholder="{% if current_ai_mode == 'friend' %}{% trans '例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？' %}{% else %}{% trans '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？' %}{% endif %}"></textarea>
 
           <button id="sendChatBtn" type="submit">{% trans "送出" %}</button>
         </div>
@@ -144,6 +171,7 @@
 {% block extra_js %}
 {% trans "我" as txt_me %}
 {% trans "StudyGo AI 小幫手" as txt_assistant_name %}
+{% trans "StudyGo AI 聊天好朋友" as txt_friend_name %}
 {% trans "已上傳附件" as txt_uploaded_attachment %}
 {% trans "找不到 message API" as txt_missing_message_api %}
 {% trans "送出失敗，請稍後再試。" as txt_send_failed %}
@@ -165,6 +193,7 @@
   window.CHATBOT_I18N = {
     me: "{{ txt_me|escapejs }}",
     assistantName: "{{ txt_assistant_name|escapejs }}",
+    friendName: "{{ txt_friend_name|escapejs }}",
     uploadedAttachment: "{{ txt_uploaded_attachment|escapejs }}",
     missingMessageApi: "{{ txt_missing_message_api|escapejs }}",
     sendFailed: "{{ txt_send_failed|escapejs }}",

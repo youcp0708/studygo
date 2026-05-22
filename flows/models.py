@@ -357,42 +357,189 @@ from datetime import timedelta
 
 @receiver(post_save, sender=StudentTask)
 def auto_create_reminder_on_task_update(sender, instance, **kwargs):
-    # 只有當任務尚未完成時，才檢查是否需要提醒
-    if instance.status in ["not_started", "in_progress"]:
+    # 當任務被標記為已完成時，檢查是否跳過了某些前置任務
+    if instance.status == "completed":
         t = instance.task
-        
-        # 1. 判斷任務是否需要計算截止日
-        calculated_due_date = None
-        if t.deadline_type == 'from_arrival' and t.deadline_days is not None:
-            if instance.student.expected_arrival:
-                # 算出真正的截止日期
-                calculated_due_date = instance.student.expected_arrival + timedelta(days=t.deadline_days)
-        
-        # 2. 如果有算出截止日，才進行快到期/逾期的檢查
-        if calculated_due_date:
-            today = timezone.now().date()
-            target_date = today + timedelta(days=3)  # 3天內到期就提醒
+        curr_stage_order = t.stage.order
+        curr_task_order = t.order
 
-            if calculated_due_date <= target_date:
-                formatted_date = calculated_due_date.strftime('%Y/%m/%d')
-                
-                if calculated_due_date < today:
-                    message = f"您的任務「{t.title}」已經逾期（截止日：{formatted_date}），請盡快完成！"
-                elif calculated_due_date == today:
-                    message = f"您的任務「{t.title}」今天到期，請記得完成！"
-                else:
-                    days_left = (calculated_due_date - today).days
-                    message = f"您的任務「{t.title}」還有 {days_left} 天到期（{formatted_date}）。"
+        # 找出本學生所有「未完成」、且「排序在此任務之前」的任務
+        # 排序定義在 Task.Meta: ordering = ["stage__order", "order"]
+        from django.db.models import Q
+        skipped_tasks = StudentTask.objects.filter(
+            student=instance.student
+        ).exclude(
+            status='completed'
+        ).filter(
+            Q(task__stage__order__lt=curr_stage_order) |
+            Q(task__stage__order=curr_stage_order, task__order__lt=curr_task_order)
+        ).select_related('task', 'task__stage')
 
-                # 檢查是否已經有未讀的相同提醒，避免重複發送
-                exists = Reminder.objects.filter(
+        if skipped_tasks.exists():
+            # 取得當前慣用語言 (支援 zh-hant, en, vi, id, ms, th, ja, ko, my)
+            from django.utils.translation import get_language
+            active_lang = get_language() or 'zh-hant'
+            lang = (active_lang.split('-')[0] if '-' in active_lang else active_lang).lower()
+
+            task_title = t.get_title_by_lang(lang)
+            skipped_titles = [st.task.get_title_by_lang(lang) for st in skipped_tasks]
+
+            if lang == 'en':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" and {len(skipped_titles) - 3} other tasks"
+                message = f'You have completed "{task_title}", but the prior task(s) {skipped_str} is/are not yet completed. It is recommended to complete them in order!'
+            elif lang == 'vi':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" và {len(skipped_titles) - 3} nhiệm vụ khác"
+                message = f'Bạn đã hoàn thành "{task_title}", nhưng (các) nhiệm vụ trước đó {skipped_str} chưa được hoàn thành. Khuyên bạn nên hoàn thành chúng theo thứ tự!'
+            elif lang == 'id':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" dan {len(skipped_titles) - 3} tugas lainnya"
+                message = f'Anda telah menyelesaikan "{task_title}", tetapi tugas sebelumnya {skipped_str} belum diselesaikan. Disarankan untuk menyelesaikannya secara berurutan!'
+            elif lang == 'ms':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" dan {len(skipped_titles) - 3} tugasan lain"
+                message = f'Anda telah menyelesaikan "{task_title}", tetapi tugasan sebelumnya {skipped_str} belum selesai. Disyorkan untuk menyelesaikannya mengikut urutan!'
+            elif lang == 'th':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" และอีก {len(skipped_titles) - 3} งาน"
+                message = f'คุณได้ทำ "{task_title}" เสร็จสิ้นแล้ว แต่งานก่อนหน้า {skipped_str} ยังไม่เสร็จสมบูรณ์ ขอแนะนำให้ทำตามลำดับ!'
+            elif lang == 'ja':
+                skipped_str = "、".join([f'「{title}」' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" など計 {len(skipped_titles)} 件のタスク"
+                message = f'「{task_title}」を完了しましたが、前置タスク{skipped_str}が未完了です。順序通りに完了することをお勧めします！'
+            elif lang == 'ko':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" 등 총 {len(skipped_titles)}개 작업"
+                message = f'"{task_title}"을(를) 완료했으나, 이전 작업인 {skipped_str}이(가) 아직 완료되지 않았습니다. 순서대로 완료하는 것을 권장합니다!'
+            elif lang == 'my':
+                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" နှင့် အခြား {len(skipped_titles) - 3} ခု"
+                message = f'သင်သည် "{task_title}" ကို ပြီးမြောက်ပြီးဖြစ်သော်လည်း ယခင်လုပ်ဆောင်ရမည့် {skipped_str} မပြီးသေးပါ။ အစီအစဉ်အတိုင်း လုပ်ဆောင်ရန် အကြံပြုပါသည်!'
+            else:  # Default zh-hant
+                skipped_str = "、".join([f"「{title}」" for title in skipped_titles[:3]])
+                if len(skipped_titles) > 3:
+                    skipped_str += f" 等共 {len(skipped_titles)} 個任務"
+                message = f"您已完成「{task_title}」，但前置任務 {skipped_str} 尚未完成，建議您依序完成！"
+
+            # 檢查是否已經有未讀的相同提醒，避免重複發送
+            exists = Reminder.objects.filter(
+                student=instance.student,
+                student_task=instance,
+                is_read=False
+            ).exists()
+
+            if not exists:
+                Reminder.objects.create(
+                    student=instance.student,
                     student_task=instance,
-                    is_read=False
-                ).exists()
+                    message=message
+                )
 
-                if not exists:
-                    Reminder.objects.create(
-                        student=instance.student,
-                        student_task=instance,
-                        message=message
-                    )
+
+# ==========================================
+# 小貼士（Tips）：後台可管理的實用資訊
+# ==========================================
+class Tip(models.Model):
+    """
+    小貼士：提供學生實用資訊，例如獎學金查詢、工作許可、護照遺失處理等。
+    管理員可在 Django Admin 新增 / 編輯，前端會在流程頁面右側欄顯示。
+    """
+    # ── 中文（預設）──
+    title = models.CharField(max_length=200, verbose_name="標題")
+    content = models.TextField(blank=True, verbose_name="內容說明")
+    is_active = models.BooleanField(default=True, verbose_name="是否啟用")
+    order = models.PositiveIntegerField(default=0, verbose_name="排序")
+
+    # ── 多語言：標題 ──
+    title_en = models.CharField(max_length=200, blank=True, verbose_name="標題 English")
+    title_my = models.CharField(max_length=200, blank=True, verbose_name="標題 Burmese")
+    title_id = models.CharField(max_length=200, blank=True, verbose_name="標題 Indonesian")
+    title_ms = models.CharField(max_length=200, blank=True, verbose_name="標題 Malay")
+    title_th = models.CharField(max_length=200, blank=True, verbose_name="標題 Thai")
+    title_ja = models.CharField(max_length=200, blank=True, verbose_name="標題 Japanese")
+    title_ko = models.CharField(max_length=200, blank=True, verbose_name="標題 Korean")
+    title_vi = models.CharField(max_length=200, blank=True, verbose_name="標題 Vietnamese")
+
+    # ── 多語言：內容 ──
+    content_en = models.TextField(blank=True, verbose_name="內容 English")
+    content_my = models.TextField(blank=True, verbose_name="內容 Burmese")
+    content_id = models.TextField(blank=True, verbose_name="內容 Indonesian")
+    content_ms = models.TextField(blank=True, verbose_name="內容 Malay")
+    content_th = models.TextField(blank=True, verbose_name="內容 Thai")
+    content_ja = models.TextField(blank=True, verbose_name="內容 Japanese")
+    content_ko = models.TextField(blank=True, verbose_name="內容 Korean")
+    content_vi = models.TextField(blank=True, verbose_name="內容 Vietnamese")
+
+    class Meta:
+        db_table = "flows_tip"
+        ordering = ["order"]
+        verbose_name = "Tip"
+        verbose_name_plural = "Tips"
+
+    def __str__(self):
+        return self.title
+
+    def get_localized(self, lang_code):
+        """
+        依語言代碼回傳本地化的標題與內容。
+        若該語言沒有填就回傳中文預設。
+        """
+        suffix_map = {
+            'en': '_en', 'my': '_my', 'id': '_id',
+            'ms': '_ms', 'th': '_th', 'ja': '_ja',
+            'ko': '_ko', 'vi': '_vi',
+        }
+        s = suffix_map.get(lang_code)
+
+        if s is None:
+            return {
+                'title': self.title,
+                'content': self.content,
+            }
+
+        def pick(base_val, field_name):
+            translated = getattr(self, field_name, '') or ''
+            return translated if translated.strip() else (base_val or '')
+
+        return {
+            'title': pick(self.title, f'title{s}'),
+            'content': pick(self.content, f'content{s}'),
+        }
+
+class TipLink(models.Model):
+    """
+    一筆小貼士的可重複鏈結。
+    - `url`   : 真正的網址
+    - `label` : 顯示在前端的文字（如「官方網站」/「申請表」），可留空，若空會直接顯示 URL 本身
+    """
+    tip = models.ForeignKey(
+        Tip,
+        on_delete=models.CASCADE,
+        related_name="links",   # Tip.links -> QuerySet[TipLink]
+        verbose_name="所屬小貼士"
+    )
+    url = models.URLField(verbose_name="鏈結網址")
+    label = models.CharField(
+        max_length=120,
+        blank=True,
+        verbose_name="鏈結顯示文字",
+        help_text="留空則直接使用 URL 作為顯示文字"
+    )
+
+    class Meta:
+        db_table = "flows_tip_link"
+        ordering = ["id"]
+        verbose_name = "小貼士鏈結"
+        verbose_name_plural = "小貼士鏈結"
+
+    def __str__(self):
+        return self.label or self.url
