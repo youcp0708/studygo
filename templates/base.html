@@ -59,9 +59,9 @@
       {% if user.is_authenticated and user.student_profile %}
       <div class="search-wrap" id="searchWrap">
         <div class="search-box" id="searchBox">
-          <span class="search-icon">🔍</span>
           <input type="text" class="search-input" id="searchInput" placeholder="{% trans '搜尋指南...' %}"
             autocomplete="off">
+          <button type="button" class="search-btn" id="searchBtn">🔍</button>
         </div>
         <div class="search-dropdown" id="searchDropdown"></div>
       </div>
@@ -123,13 +123,12 @@
   {% if user.is_authenticated %}
   <script src="{% static 'flows/js/flows.js' %}?v={% now 'U' %}"></script>
   {% endif %}
-  {% block extra_js %}{% endblock %}
 
   <script>
     (function () {
       var LANG = '{{ CURRENT_LANGUAGE|default:"zh-hant" }}';
 
-      var GUIDES_I18N = {
+      window.GUIDES_I18N = {
         'zh-hant': [
           { icon: '📋', title: '查看任務清單', desc: '我的個人化辦理任務清單', url: '/flows/my-tasks/' },
           { icon: '🤖', title: '詢問 AI 小幫手', desc: '有問題隨時問，簽證、居留、生活都能幫你解答', url: '/chatbot/' },
@@ -311,7 +310,7 @@
         ],
       };
 
-      var GUIDES = GUIDES_I18N[LANG] || GUIDES_I18N['zh-hant'];
+      var GUIDES = window.GUIDES_I18N[LANG] || window.GUIDES_I18N['zh-hant'];
 
       var input = document.getElementById('searchInput');
       var box = document.getElementById('searchBox');
@@ -399,8 +398,9 @@
           e.preventDefault();
           if (activeIdx >= 0 && items[activeIdx]) {
             window.location.href = items[activeIdx].getAttribute('href');
-          } else if (items[0]) {
-            window.location.href = items[0].getAttribute('href');
+          } else {
+            var q = input.value.trim();
+            if (q) window.location.href = '/guides/search/?q=' + encodeURIComponent(q);
           }
         } else if (e.key === 'Escape') {
           closeDropdown(); input.blur();
@@ -410,8 +410,19 @@
       document.addEventListener('click', function (e) {
         if (!wrap.contains(e.target)) closeDropdown();
       });
+
+      var searchBtn = document.getElementById('searchBtn');
+      if (searchBtn) {
+        searchBtn.addEventListener('click', function () {
+          var q = input.value.trim();
+          if (q) window.location.href = '/guides/search/?q=' + encodeURIComponent(q);
+          else input.focus();
+        });
+      }
     })();
   </script>
+
+  {% block extra_js %}{% endblock %}
 </body>
 
 </html>

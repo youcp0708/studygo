@@ -1,0 +1,391 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% block title %}{% trans "搜尋" %} — StudyGo Taiwan{% endblock %}
+
+{% block extra_css %}
+<style>
+  :root { --border: var(--line); --dark: var(--primary-dark); }
+  body { background: #f8f9fa; }
+
+  /* ── top bar ── */
+  .gs-bar-wrap {
+    background: #fff; border-bottom: 1px solid var(--border);
+    padding: 14px 0; position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .gs-bar-inner {
+    width: min(860px, 94%); margin: 0 auto;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .gs-logo {
+    font-size: 13px; font-weight: 900; color: var(--primary-dark);
+    white-space: nowrap; text-decoration: none; flex-shrink: 0;
+  }
+  .gs-input-wrap {
+    flex: 1; display: flex; align-items: center;
+    border: 1.5px solid #dfe1e5; border-radius: 999px;
+    background: #fff; padding: 0 6px 0 18px;
+    transition: box-shadow .15s, border-color .15s;
+  }
+  .gs-input-wrap:focus-within {
+    box-shadow: 0 1px 8px rgba(32,33,36,.2);
+    border-color: transparent;
+  }
+  .gs-input {
+    flex: 1; border: none; outline: none; font-size: 15px;
+    color: #202124; background: transparent; padding: 10px 0;
+  }
+  .gs-input::placeholder { color: #9aa0a6; }
+  .gs-search-btn {
+    background: var(--primary); border: none; cursor: pointer;
+    width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; transition: background .15s;
+  }
+  .gs-search-btn:hover { background: var(--primary-dark); }
+
+  /* ── content area ── */
+  .gs-content { width: min(860px, 94%); margin: 0 auto; padding: 18px 0 72px; }
+
+  /* ── category chips ── */
+  .gs-cats {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px;
+    padding-bottom: 14px; border-bottom: 1px solid var(--border);
+  }
+  .gs-cat {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 5px 14px; border-radius: 99px;
+    border: 1.5px solid var(--border); background: #fff;
+    font-size: 13px; font-weight: 600; color: #5f6368;
+    cursor: pointer; transition: all .15s; white-space: nowrap;
+  }
+  .gs-cat:hover  { border-color: var(--primary); color: var(--primary-dark); background: var(--primary-soft); }
+  .gs-cat.active { border-color: var(--primary); background: var(--primary); color: #fff; font-weight: 700; }
+
+  /* ── stats ── */
+  .gs-stats { font-size: 13px; color: #70757a; margin-bottom: 20px; }
+  .gs-stats strong { color: #202124; }
+
+  /* ── result card (Google-style) ── */
+  .gs-results { display: flex; flex-direction: column; gap: 0; }
+  .gs-result {
+    padding: 18px 4px 20px;
+    border-bottom: 1px solid #ebebeb;
+    text-decoration: none; display: block; color: inherit;
+  }
+  .gs-result:last-child { border-bottom: none; }
+  .gs-result:hover .gs-result-title { text-decoration: underline; }
+
+  .gs-result-head { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+  .gs-result-icon { font-size: 18px; flex-shrink: 0; }
+  .gs-result-url  { font-size: 12px; color: #4d5156; }
+
+  .gs-result-title {
+    font-size: 18px; font-weight: 500; color: #1a0dab;
+    margin-bottom: 5px; line-height: 1.3;
+  }
+  .gs-result-desc {
+    font-size: 13.5px; color: #4d5156; line-height: 1.65;
+  }
+  .gs-result-snippet {
+    font-size: 13.5px; color: #4d5156; line-height: 1.65;
+    margin-top: 3px;
+  }
+  .gs-result-snippet::before { content: '…'; margin-right: 2px; color: #9aa0a6; }
+  .gs-result-snippet::after  { content: '…'; margin-left:  2px; color: #9aa0a6; }
+
+  mark { background: #fff3cd; color: inherit; border-radius: 2px; font-weight: 600; }
+
+  /* ── empty state ── */
+  .gs-empty {
+    text-align: center; padding: 80px 20px; color: #5f6368;
+  }
+  .gs-empty-icon  { font-size: 52px; margin-bottom: 14px; }
+  .gs-empty-title { font-size: 20px; font-weight: 700; color: #202124; margin-bottom: 8px; }
+  .gs-empty-hint  { font-size: 14px; line-height: 1.7; }
+
+  /* ── all-guides grid (no query) ── */
+  .gs-all-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px; margin-top: 4px;
+  }
+  .gs-all-card {
+    background: #fff; border: 1.5px solid var(--border); border-radius: 12px;
+    padding: 14px 16px; text-decoration: none; color: var(--dark);
+    transition: border-color .15s, box-shadow .15s; display: flex; gap: 10px; align-items: flex-start;
+  }
+  .gs-all-card:hover { border-color: var(--primary); box-shadow: 0 2px 10px rgba(0,80,160,.08); }
+  .gs-all-card .icon { font-size: 22px; flex-shrink: 0; }
+  .gs-all-card .info { flex: 1; min-width: 0; }
+  .gs-all-card .card-title { font-size: 13px; font-weight: 800; color: var(--dark); }
+  .gs-all-card .card-desc  { font-size: 12px; color: var(--muted); margin-top: 2px; line-height: 1.5; }
+
+  @media (max-width: 600px) {
+    .gs-all-grid { grid-template-columns: 1fr; }
+    .gs-result-title { font-size: 16px; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="gs-bar-wrap">
+  <div class="gs-bar-inner">
+    <a class="gs-logo" href="{% url 'guide_index' %}">StudyGo 🔍</a>
+    <div class="gs-input-wrap">
+      <input class="gs-input" id="gsInput" value="{{ q|escapejs }}"
+             placeholder="{% trans '搜尋所有指南內容...' %}" autocomplete="off">
+      <button class="gs-search-btn" id="gsBtn">🔍</button>
+    </div>
+  </div>
+</div>
+
+<div class="gs-content">
+
+  <div class="gs-cats" id="gsCats"></div>
+  <div class="gs-stats" id="gsStats"></div>
+  <div class="gs-results" id="gsResults"></div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script id="bodyData" type="application/json">{{ body_data_json|safe }}</script>
+<script>
+(function () {
+  var LANG    = '{{ CURRENT_LANGUAGE|default:"zh-hant" }}';
+  var INIT_Q  = '{{ q|escapejs }}';
+  var GUIDES  = (window.GUIDES_I18N && (window.GUIDES_I18N[LANG] || window.GUIDES_I18N['zh-hant'])) || [];
+  var BODY    = JSON.parse(document.getElementById('bodyData').textContent || '{}');
+
+  /* ─── category definitions (URL-pattern based) ─── */
+  var CATS_DEF = [
+    { key:'arc',    icon:'🪪', test:function(g){ return /arc/.test(g.url); } },
+    { key:'study',  icon:'📚', test:function(g){ return /graduation|course|enrollment|systems|library|admin-docs/.test(g.url); } },
+    { key:'health', icon:'🏥', test:function(g){ return /medical|nhi|mental/.test(g.url); } },
+    { key:'money',  icon:'💰', test:function(g){ return /bank|scholarship|work-permit/.test(g.url); } },
+    { key:'life',   icon:'🏠', test:function(g){ return /housing|bus|map|sim/.test(g.url); } },
+    { key:'rules',  icon:'⚖️', test:function(g){ return /regulations|admissions|national/.test(g.url); } },
+  ];
+
+  var CAT_LABELS = {
+    'zh-hant':{ all:'全部', arc:'居留 / ARC', study:'學業', health:'醫療健保', money:'財務', life:'住宿生活', rules:'法規入學' },
+    'en':     { all:'All', arc:'Residence / ARC', study:'Academics', health:'Health & Insurance', money:'Finance', life:'Housing & Life', rules:'Regulations' },
+    'vi':     { all:'Tất cả', arc:'Cư trú / ARC', study:'Học tập', health:'Y tế', money:'Tài chính', life:'Nhà ở & Sinh hoạt', rules:'Quy định' },
+    'my':     { all:'အားလုံး', arc:'နေထိုင်ခွင့် / ARC', study:'ပညာရေး', health:'ကျန်းမာရေး', money:'ငွေကြေး', life:'နေထိုင်မှု', rules:'ဥပဒေ' },
+    'id':     { all:'Semua', arc:'Tinggal / ARC', study:'Akademik', health:'Kesehatan', money:'Keuangan', life:'Hunian & Kehidupan', rules:'Peraturan' },
+    'ms':     { all:'Semua', arc:'Kediaman / ARC', study:'Akademik', health:'Kesihatan', money:'Kewangan', life:'Kediaman & Kehidupan', rules:'Peraturan' },
+    'th':     { all:'ทั้งหมด', arc:'ที่พัก / ARC', study:'การศึกษา', health:'สุขภาพ', money:'การเงิน', life:'ที่พักและชีวิต', rules:'กฎระเบียบ' },
+    'ja':     { all:'すべて', arc:'在留 / ARC', study:'学業', health:'医療・保険', money:'財務', life:'住居・生活', rules:'法規・入学' },
+    'ko':     { all:'전체', arc:'거주 / ARC', study:'학업', health:'의료·보험', money:'재정', life:'주거 및 생활', rules:'법규·입학' },
+  };
+  var LBL = CAT_LABELS[LANG] || CAT_LABELS['zh-hant'];
+
+  var TMPL = {
+    'zh-hant':{ count:function(n,q){return n+'個結果'+(q?'：「'+q+'」':'');}, none:'沒有找到相關結果', hint:'換個關鍵字試試，或瀏覽下方全部指南', all_title:'所有指南' },
+    'en':     { count:function(n,q){return n+' result'+(n!==1?'s':'')+(q?' for "'+q+'"':'');}, none:'No results found', hint:'Try different keywords, or browse all guides below', all_title:'All Guides' },
+    'vi':     { count:function(n,q){return n+' kết quả'+(q?' cho "'+q+'"':'');}, none:'Không tìm thấy kết quả', hint:'Thử từ khóa khác', all_title:'Tất cả hướng dẫn' },
+    'my':     { count:function(n,q){return n+' ရလဒ်'+(q?' "'+q+'"':'');}, none:'ရလဒ်မတွေ့ပါ', hint:'အခြားသော့ချက်စကားလုံး ကြိုးစားပါ', all_title:'လမ်းညွှန်အားလုံး' },
+    'id':     { count:function(n,q){return n+' hasil'+(q?' untuk "'+q+'"':'');}, none:'Tidak ada hasil', hint:'Coba kata kunci lain', all_title:'Semua Panduan' },
+    'ms':     { count:function(n,q){return n+' keputusan'+(q?' untuk "'+q+'"':'');}, none:'Tiada keputusan', hint:'Cuba kata kunci lain', all_title:'Semua Panduan' },
+    'th':     { count:function(n,q){return 'พบ '+n+' ผลลัพธ์'+(q?' สำหรับ "'+q+'"':'');}, none:'ไม่พบผลลัพธ์', hint:'ลองคีย์เวิร์ดอื่น', all_title:'คู่มือทั้งหมด' },
+    'ja':     { count:function(n,q){return (q?'"'+q+'" の':'')+n+'件の結果';}, none:'結果が見つかりません', hint:'別のキーワードで検索してください', all_title:'すべてのガイド' },
+    'ko':     { count:function(n,q){return (q?'"'+q+'" ':'') +n+'개 결과';}, none:'결과를 찾을 수 없습니다', hint:'다른 키워드로 시도해 보세요', all_title:'모든 가이드' },
+  };
+  var T = TMPL[LANG] || TMPL['zh-hant'];
+
+  var gsInput   = document.getElementById('gsInput');
+  var gsBtn     = document.getElementById('gsBtn');
+  var gsCats    = document.getElementById('gsCats');
+  var gsStats   = document.getElementById('gsStats');
+  var gsResults = document.getElementById('gsResults');
+
+  var activeCat = 'all';
+
+  /* ─── tokenise: splits on spaces/punct; also splits CJK into chars ─── */
+  function tokenize(text) {
+    if (!text) return [];
+    var parts = text.toLowerCase().split(/[\s,、。！？\-·・·]+/).filter(Boolean);
+    var out = [];
+    parts.forEach(function(p) {
+      out.push(p);
+      var cjk = p.match(/[一-鿿㐀-䶿가-힯぀-ヿ]/g);
+      if (cjk && cjk.length > 1) cjk.forEach(function(c){ out.push(c); });
+    });
+    return out.filter(function(t,i,a){ return a.indexOf(t)===i; });
+  }
+
+  /* ─── score: returns 0 = no match, >0 = relevant ─── */
+  function scoreGuide(g, q) {
+    if (!q) return 1;
+    var title = g.title.toLowerCase();
+    var desc  = g.desc.toLowerCase();
+    var ql    = q.toLowerCase();
+    var s     = 0;
+
+    if (title === ql)           return 2000;
+    if (title.indexOf(ql) >= 0) s += 120;
+    if (desc.indexOf(ql)  >= 0) s +=  50;
+
+    var body   = BODY[g.url] || [];
+    var bodyTx = body.join(' ').toLowerCase();
+    if (bodyTx.indexOf(ql) >= 0) s += 40;
+
+    var tokens = tokenize(q);
+    var hitTitle = 0, hitDesc = 0, hitBody = 0;
+    tokens.forEach(function(t) {
+      if (t.length < 1) return;
+      if (title.indexOf(t)   >= 0) { s += 25; hitTitle++; }
+      if (desc.indexOf(t)    >= 0) { s += 10; hitDesc++;  }
+      if (bodyTx.indexOf(t)  >= 0) { s +=  8; hitBody++;  }
+    });
+    if (tokens.length > 1) {
+      if (hitTitle === tokens.length) s += 40;
+      if (hitBody  === tokens.length) s += 15;
+    }
+    return s;
+  }
+
+  /* ─── find the best matching snippet from body content ─── */
+  function bestSnippet(g, q) {
+    var body = BODY[g.url] || [];
+    if (!body.length || !q) return null;
+    var ql     = q.toLowerCase();
+    var tokens = tokenize(q);
+    var best   = null;
+    var bestS  = 0;
+
+    body.forEach(function(line) {
+      var ll = line.toLowerCase();
+      var s  = 0;
+      if (ll.indexOf(ql) >= 0) s += 100;
+      tokens.forEach(function(t){ if (ll.indexOf(t) >= 0) s += 10; });
+      if (s > bestS) { bestS = s; best = line; }
+    });
+    return bestS > 0 ? best : null;
+  }
+
+  /* ─── highlight: marks full query + individual tokens ─── */
+  function esc(s) { return s.replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+  function highlight(text, q) {
+    if (!q) return esc(text);
+    var terms = [q].concat(tokenize(q))
+      .filter(function(t,i,a){ return t && a.indexOf(t)===i; })
+      .sort(function(a,b){ return b.length-a.length; });
+    var escaped = terms.map(function(t){ return t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); });
+    var re = new RegExp('('+escaped.join('|')+')', 'gi');
+    return esc(text).replace(re, '<mark>$1</mark>');
+  }
+
+  /* ─── filter + rank pool ─── */
+  function filterGuides(q) {
+    var pool = GUIDES.slice();
+    if (activeCat !== 'all') {
+      var cd = CATS_DEF.filter(function(c){ return c.key===activeCat; })[0];
+      if (cd) pool = pool.filter(cd.test);
+    }
+    var scored = [];
+    pool.forEach(function(g) {
+      var s = scoreGuide(g, q);
+      if (s > 0) scored.push({g:g, s:s});
+    });
+    scored.sort(function(a,b){ return b.s-a.s; });
+    return scored.map(function(x){ return x.g; });
+  }
+
+  /* ─── render search results ─── */
+  function renderResults(q) {
+    var results = filterGuides(q);
+
+    if (!q) {
+      /* no query: show all as cards */
+      gsStats.innerHTML = '<strong>'+T.all_title+'</strong>';
+      gsResults.innerHTML =
+        '<div class="gs-all-grid">' +
+        results.map(function(g){
+          return '<a href="'+g.url+'" class="gs-all-card">'+
+            '<div class="icon">'+g.icon+'</div>'+
+            '<div class="info">'+
+              '<div class="card-title">'+esc(g.title)+'</div>'+
+              '<div class="card-desc">'+esc(g.desc)+'</div>'+
+            '</div></a>';
+        }).join('') +
+        '</div>';
+      return;
+    }
+
+    gsStats.innerHTML = '<strong>' + T.count(results.length, q) + '</strong>';
+
+    if (results.length === 0) {
+      gsResults.innerHTML =
+        '<div class="gs-empty">'+
+        '<div class="gs-empty-icon">🔍</div>'+
+        '<div class="gs-empty-title">'+esc(T.none)+'</div>'+
+        '<div class="gs-empty-hint">'+esc(T.hint)+'</div>'+
+        '<div class="gs-all-grid" style="margin-top:32px;text-align:left;">'+
+        (GUIDES_I18N[LANG]||GUIDES_I18N['zh-hant']).map(function(g){
+          return '<a href="'+g.url+'" class="gs-all-card">'+
+            '<div class="icon">'+g.icon+'</div>'+
+            '<div class="info"><div class="card-title">'+esc(g.title)+'</div></div></a>';
+        }).join('')+
+        '</div></div>';
+      return;
+    }
+
+    gsResults.innerHTML = results.map(function(g) {
+      var snippet = bestSnippet(g, q);
+      var snippetHtml = snippet
+        ? '<div class="gs-result-snippet">'+highlight(snippet, q)+'</div>'
+        : '';
+      return '<a href="'+g.url+'" class="gs-result">'+
+        '<div class="gs-result-head">'+
+          '<span class="gs-result-icon">'+g.icon+'</span>'+
+          '<span class="gs-result-url">studygo.tw'+g.url+'</span>'+
+        '</div>'+
+        '<div class="gs-result-title">'+highlight(g.title, q)+'</div>'+
+        '<div class="gs-result-desc">'+highlight(g.desc, q)+'</div>'+
+        snippetHtml+
+      '</a>';
+    }).join('');
+  }
+
+  /* ─── category chips ─── */
+  function buildCats() {
+    var html = '<button class="gs-cat active" data-cat="all">'+esc(LBL['all'])+'</button>';
+    CATS_DEF.forEach(function(c){
+      if (GUIDES.some(c.test))
+        html += '<button class="gs-cat" data-cat="'+c.key+'">'+c.icon+' '+esc(LBL[c.key])+'</button>';
+    });
+    gsCats.innerHTML = html;
+    gsCats.querySelectorAll('.gs-cat').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        activeCat = this.dataset.cat;
+        gsCats.querySelectorAll('.gs-cat').forEach(function(b){ b.classList.remove('active'); });
+        this.classList.add('active');
+        renderResults(gsInput.value.trim());
+      });
+    });
+  }
+
+  /* ─── navigation (updates URL without page reload) ─── */
+  function goSearch() {
+    var q = gsInput.value.trim();
+    var url = '/guides/search/' + (q ? '?q='+encodeURIComponent(q) : '');
+    window.history.replaceState({}, '', url);
+    renderResults(q);
+  }
+
+  gsBtn.addEventListener('click', goSearch);
+  gsInput.addEventListener('keydown', function(e){ if (e.key==='Enter'){ e.preventDefault(); goSearch(); } });
+  gsInput.addEventListener('input',   function(){ renderResults(this.value.trim()); });
+
+  /* ─── init ─── */
+  buildCats();
+  renderResults(INIT_Q);
+  gsInput.focus();
+  if (INIT_Q) gsInput.setSelectionRange(INIT_Q.length, INIT_Q.length);
+})();
+</script>
+{% endblock %}
