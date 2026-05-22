@@ -11,6 +11,8 @@ chatbot/services.py
 
 import re
 
+import requests as http_requests
+
 from django.conf import settings
 from django.db.models import Q
 from django.utils.translation import get_language
@@ -257,6 +259,7 @@ You MUST write your entire response in {language_en} only. No other language is 
 語氣規則：
 1. 可以自然使用少量口語詞，例如「嗯」「啊」「呀」「哈哈」「咦」「是嗎」「這真的有點煩」。
 2. 口語詞要自然，不要每句都加，不要故意裝可愛。
+3. 不要用口語詞作為句子或回答的開頭，例如不要以「嗯」「啊」「呀」「哈哈」「嗯哼」開頭。
 3. 不要過度撒嬌，不要叫學生「寶」「親愛的」「乖」「抱抱」。
 4. 不要一直使用「我懂你」「你的感受很重要」「我會一直陪著你」這種模板句。
 5. 不要一直重複「我」「你」，句子要像平常聊天一樣自然。
@@ -1255,10 +1258,116 @@ def detect_friend_emotion_hint(question):
     return '情緒不明，需要先問清楚'
 
 
-def build_history_text(messages, max_messages=3, max_chars_per_message=300):
+def detect_explicit_location(question):
     """
-    把最近對話整理成文字，供 Responses API 作為上下文。
-    為了節省 token，只保留最近幾則，且限制每則長度。
+    偵測問題裡是否已明確提到地區/城市/地點名稱。
+    有的話搜尋時不需再附加學校位置。
+    """
+    q = (question or '').strip()
+    lower_q = q.lower()
+
+    location_keywords_zh = [
+        '台北', '臺北', '新北', '桃園', '新竹', '苗栗', '台中', '臺中',
+        '彰化', '南投', '雲林', '嘉義', '台南', '臺南', '高雄', '屏東',
+        '宜蘭', '花蓮', '台東', '臺東', '澎湖', '金門', '馬祖',
+        '中壢', '桃園市', '內壢', '中原', '板橋', '新莊', '三重',
+        '信義區', '大安區', '中山區', '松山區', '內湖區',
+    ]
+    location_keywords_en = [
+        'taipei', 'new taipei', 'taoyuan', 'hsinchu', 'taichung',
+        'tainan', 'kaohsiung', 'zhongli', 'chungli',
+    ]
+
+    return (
+        any(k in q for k in location_keywords_zh)
+        or any(k in lower_q for k in location_keywords_en)
+    )
+
+
+def detect_place_query(question):
+    """偵測問題是否在詢問地點或場所（餐廳、商店、辦公大樓等）。"""
+    q = (question or '').strip()
+    lower_q = q.lower()
+
+    zh_keywords = [
+        '餐廳', '餐館', '食堂', '小吃', '咖啡廳', '咖啡館', '咖啡',
+        '便利商店', '超商', '超市', '商店', '商場', '百貨', '夜市', '市場',
+        '醫院', '診所', '藥局', '銀行', '郵局', '辦公室', '辦公大樓',
+        '附近', '在哪', '在哪裡', '怎麼去', '怎麼走', '地址', '哪裡有',
+        '公園', '體育館', '游泳池', '球場',
+    ]
+    en_keywords = [
+        'restaurant', 'cafe', 'coffee shop', 'shop', 'store', 'mall',
+        'supermarket', 'convenience store', 'hospital', 'clinic', 'pharmacy',
+        'bank', 'post office', 'office building', 'near me', 'nearby',
+        'where is', 'how to get to', 'directions to', 'night market',
+    ]
+
+    return (
+        any(k in q for k in zh_keywords)
+        or any(k in lower_q for k in en_keywords)
+    )
+
+
+def search_google_places(query, language_code='zh-hant', location_hint='台灣'):
+    """
+    呼叫 Google Maps Places Text Search API 搜尋地點。
+    回傳格式化的前三筆結果字串，失敗時回傳 None。
+    """
+    api_key = getattr(settings, 'GOOGLE_MAPS_API_KEY', '')
+    if not api_key:
+        return None
+
+    lang_map = {
+        'zh-hant': 'zh-TW', 'en': 'en', 'ja': 'ja', 'ko': 'ko',
+        'vi': 'vi', 'th': 'th', 'id': 'id', 'ms': 'ms', 'my': 'my',
+    }
+    lang = lang_map.get(language_code, 'zh-TW')
+
+    full_query = f'{query} {location_hint}' if location_hint else query
+
+    try:
+        resp = http_requests.get(
+            'https://maps.googleapis.com/maps/api/place/textsearch/json',
+            params={'query': full_query, 'key': api_key, 'language': lang},
+            timeout=5,
+        )
+        data = resp.json()
+    except Exception:
+        return None
+
+    if data.get('status') != 'OK':
+        return None
+
+    results = data.get('results', [])[:3]
+    if not results:
+        return None
+
+    lines = []
+    for place in results:
+        name = place.get('name', '')
+        address = place.get('formatted_address', '')
+        rating = place.get('rating', '')
+        place_id = place.get('place_id', '')
+        maps_url = f'https://www.google.com/maps/place/?q=place_id:{place_id}' if place_id else ''
+
+        line = f'- {name}'
+        if address:
+            line += f'，地址：{address}'
+        if rating:
+            line += f'，評分：{rating}/5'
+        if maps_url:
+            line += f'，地圖連結：{maps_url}'
+        lines.append(line)
+
+    return '\n'.join(lines)
+
+
+def build_history_text(messages, max_messages=3, max_chars_per_message=300, max_user_messages=None):
+    """
+    把對話整理成文字，供 Responses API 作為上下文。
+    max_user_messages: 從最新往回數，保留最近 N 則使用者訊息（連同對應的 AI 回覆一起保留）。
+    max_messages=None: 不限則數。
     """
     if not messages:
         return '目前沒有先前對話。'
@@ -1268,7 +1377,22 @@ def build_history_text(messages, max_messages=3, max_chars_per_message=300):
         'assistant': 'AI小幫手',
     }
 
-    recent_messages = list(messages)[-max_messages:]
+    all_messages = list(messages)
+
+    if max_user_messages is not None:
+        selected = []
+        user_count = 0
+        for msg in reversed(all_messages):
+            selected.append(msg)
+            if msg.role == 'user':
+                user_count += 1
+                if user_count >= max_user_messages:
+                    break
+        recent_messages = list(reversed(selected))
+    elif max_messages is None:
+        recent_messages = all_messages
+    else:
+        recent_messages = all_messages[-max_messages:]
 
     history = []
 
@@ -1413,9 +1537,25 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
     if not knowledge_context.strip():
         knowledge_context = '目前沒有找到直接相關的知識庫資料。'
 
-    history_text = build_history_text(recent_messages)
+    if ai_mode == 'friend':
+        history_text = build_history_text(recent_messages, max_user_messages=6)
+    else:
+        history_text = build_history_text(recent_messages)
     info_page = get_personalized_info_page(user, question)
     task_link = get_relevant_student_task(user, question, language_code) if ai_mode == "helper" else None
+
+    place_results = None
+    if ai_mode == 'friend' and detect_place_query(question):
+        if detect_explicit_location(question):
+            # 使用者已明確說明地區，直接用原問題搜尋
+            place_results = search_google_places(question, language_code, location_hint='')
+        else:
+            # 沒有說明地區，從個人資料取學校名稱作為搜尋範圍
+            profile = get_student_profile(user)
+            location_hint = '台灣'
+            if profile and getattr(profile, 'university', ''):
+                location_hint = profile.university
+            place_results = search_google_places(question, language_code, location_hint)
 
     print("[DEBUG] ai_mode:", ai_mode)
     print("[DEBUG] knowledge_context:", knowledge_context)
@@ -1503,6 +1643,8 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 以下是學生基本資料，僅供你理解背景，不要生硬列出：
 {profile_context}
 
+{'以下是 Google 地圖搜尋結果，學生問到地點時請參考並自然帶入回答，直接說出名稱與地址，不要複製貼上連結文字：' + chr(10) + place_results if place_results else ''}
+
 以下是最近對話紀錄：
 {history_text}
 
@@ -1541,8 +1683,9 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 5. 估計每 3～4 則回覆才問一次，其他時候直接回應。
 
 語氣規則：
-1. 可以自然使用少量口語詞，例如「嗯」「啊」「呀」「哈哈」「咦」「是嗎」「這真的有點煩」。
+1. 可以自然使用少量口語詞，例如「嗯」「啊」「呀」「哈哈」「嗯哼」「是嗎」「這真的有點煩」。
 2. 口語詞要自然，不要每句都加，不要故意裝可愛。
+3. 不要用口語詞作為句子或回答的開頭，例如不要以「嗯」「啊」「呀」「哈哈」「嗯哼」開頭。
 3. 不要過度撒嬌，不要叫學生「寶」「親愛的」「乖」「抱抱」。
 4. 不要一直使用「我懂你」「你的感受很重要」「我會一直陪著你」這種模板句。
 5. 不要一直重複「我」「你」，句子要像平常聊天一樣自然。
@@ -1584,7 +1727,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 
 如果不太明白：
 - 先簡短回問一句再回答。
-- 例如：「咦，你是比較難過，還是比較想吐槽一下？」
+- 例如：「嗯，你是比較難過，還是比較想吐槽一下？」
 - 例如：「你說的那件事是今天發生的嗎？」
 - 例如：「你現在比較想被安慰，還是想一起想辦法？」
 

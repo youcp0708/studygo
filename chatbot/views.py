@@ -154,8 +154,11 @@ def chat_message_api(request):
             ai_mode=ai_mode,
         )
 
-    recent_messages = list(session.messages.order_by('-created_at')[:10])
-    recent_messages.reverse()
+    if ai_mode == 'friend':
+        recent_messages = list(session.messages.order_by('created_at'))
+    else:
+        recent_messages = list(session.messages.order_by('-created_at')[:10])
+        recent_messages.reverse()
 
     user_msg = ChatMessage.objects.create(
         session=session,
