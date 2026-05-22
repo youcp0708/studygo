@@ -1,0 +1,138 @@
+  :root { --border: var(--line); --dark: var(--primary-dark); --warning: #ca8a04; --warning-soft: #fef9c3; }
+  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
+
+  .guide-hero {
+    background: linear-gradient(135deg, #0f766e 0%, #0c4a6e 100%);
+    color:#fff; padding:36px 44px 32px; border-radius:20px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .guide-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .guide-hero .hero-badge {
+    display:inline-block; background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.35); border-radius:99px;
+    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
+  }
+  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
+  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:540px; margin:0; }
+
+  .section-title {
+    font-size:17px; font-weight:900; color:var(--primary-dark);
+    margin:28px 0 14px; padding-bottom:10px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  .alert {
+    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
+    margin-bottom:14px; display:flex; gap:12px; align-items:flex-start;
+  }
+  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+  .alert-info    { background:#eff6ff; border:1.5px solid #bae6fd; }
+  .alert-info strong { color:#0369a1; }
+  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
+  .alert-warning strong { color:var(--warning); }
+  .alert-danger  { background:#fff1f2; border:1.5px solid #fca5a5; }
+  .alert-danger strong { color:#dc2626; }
+  .alert-success { background:#f0fdf4; border:1.5px solid #86efac; }
+  .alert-success strong { color:#15803d; }
+
+  /* ── 分級醫療流程 ── */
+  .tier-flow {
+    display:flex; align-items:stretch; gap:0; margin-bottom:28px;
+    border-radius:14px; overflow:hidden; border:1.5px solid var(--border);
+  }
+  .tier-step {
+    flex:1; padding:18px 14px; text-align:center;
+    display:flex; flex-direction:column; align-items:center; gap:6px;
+  }
+  .tier-step:not(:last-child) { border-right:1.5px solid var(--border); }
+  .tier-icon { font-size:28px; }
+  .tier-title { font-size:13px; font-weight:900; color:var(--dark); }
+  .tier-cost  { font-size:12px; font-weight:700; padding:2px 8px; border-radius:99px; }
+  .cost-low  { background:#dcfce7; color:#15803d; }
+  .cost-mid  { background:#fef9c3; color:#ca8a04; }
+  .cost-high { background:#fee2e2; color:#dc2626; }
+  .tier-desc  { font-size:11px; color:var(--muted); line-height:1.5; }
+  .tier-arrow {
+    display:flex; align-items:center; padding:0 4px;
+    font-size:20px; color:var(--muted); flex-shrink:0;
+  }
+  @media (max-width:600px) {
+    .tier-flow { flex-direction:column; }
+    .tier-step:not(:last-child) { border-right:none; border-bottom:1.5px solid var(--border); }
+    .tier-arrow { display:none; }
+  }
+
+  /* ── 衛保組 info card ── */
+  .health-center-card {
+    background:#fff; border:2px solid #0f766e; border-radius:16px;
+    padding:22px 24px; margin-bottom:28px;
+    display:grid; grid-template-columns:1fr 1fr; gap:16px;
+  }
+  @media (max-width:500px) { .health-center-card { grid-template-columns:1fr; } }
+  .hc-item { display:flex; flex-direction:column; gap:4px; }
+  .hc-label { font-size:11px; font-weight:800; color:#0f766e; text-transform:uppercase; letter-spacing:.5px; }
+  .hc-val   { font-size:14px; font-weight:700; color:var(--dark); }
+  .hc-sub   { font-size:12px; color:var(--muted); }
+
+  /* ── 醫院卡 ── */
+  .hospital-list { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
+  .hospital-card {
+    background:#fff; border:1.5px solid var(--border); border-radius:14px;
+    padding:16px 18px; display:flex; gap:14px; align-items:flex-start;
+  }
+  .hospital-card.featured { border-color:var(--primary); }
+  .hosp-icon { font-size:28px; flex-shrink:0; }
+  .hosp-info { flex:1; }
+  .hosp-name { font-size:15px; font-weight:900; color:var(--dark); margin-bottom:2px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .hosp-tag  { font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; background:var(--primary-soft); color:var(--primary-dark); }
+  .hosp-detail { font-size:13px; color:var(--muted); line-height:1.7; }
+  a.hosp-link {
+    display:inline-flex; align-items:center; gap:4px;
+    font-size:12px; font-weight:700; color:var(--primary);
+    text-decoration:none; margin-top:4px;
+  }
+  a.hosp-link:hover { color:var(--primary-dark); }
+
+  /* ── 急診大框 ── */
+  .emergency-box {
+    background:#fff1f2; border:2px solid #ef4444; border-radius:16px;
+    padding:22px 24px; margin-bottom:28px;
+  }
+  .emergency-nums { display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
+  .emer-num {
+    flex:1; min-width:140px; background:#fff; border:1.5px solid #fca5a5;
+    border-radius:12px; padding:14px 16px; text-align:center;
+  }
+  .emer-num .en-num  { font-size:32px; font-weight:900; color:#dc2626; line-height:1; }
+  .emer-num .en-label{ font-size:12px; font-weight:700; color:var(--dark); margin-top:4px; }
+  .emer-num .en-sub  { font-size:11px; color:var(--muted); margin-top:2px; }
+
+  /* ── 費用表 ── */
+  .fee-table-wrap { overflow-x:auto; margin-bottom:28px; }
+  .fee-table {
+    width:100%; border-collapse:collapse; font-size:14px; min-width:380px;
+  }
+  .fee-table th {
+    background:var(--primary); color:#fff;
+    padding:11px 16px; font-weight:800; font-size:13px; text-align:center;
+  }
+  .fee-table th:first-child { border-radius:12px 0 0 0; }
+  .fee-table th:last-child  { border-radius:0 12px 0 0; }
+  .fee-table td {
+    padding:12px 16px; border-bottom:1px solid var(--border);
+    vertical-align:middle; text-align:center; line-height:1.6;
+  }
+  .fee-table tr:last-child td { border-bottom:none; }
+  .fee-table tr:nth-child(even) td { background:#fafafa; }
+  .fee-table .row-label { font-weight:800; color:var(--dark); text-align:left; }
+
+  .back-link {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
+  }
+  .back-link:hover { color:var(--primary-dark); }

@@ -1,0 +1,105 @@
+  .gsc-wrap { width:min(1440px,96%); margin:0 auto; padding:32px 24px 72px; }
+
+  .gsc-hero {
+    background:linear-gradient(135deg,#1e3a5f 0%,#b45309 100%);
+    color:#fff; border-radius:20px; padding:36px 44px 32px;
+    margin-bottom:32px; position:relative; overflow:hidden;
+  }
+  .gsc-hero .bg-text {
+    position:absolute; right:24px; top:50%; transform:translateY(-50%);
+    font-size:88px; font-weight:900; opacity:.07; letter-spacing:-4px;
+    pointer-events:none; user-select:none;
+  }
+  .gsc-hero h2 { font-size:26px; font-weight:900; margin:0 0 8px; }
+  .gsc-hero p  { opacity:.85; font-size:15px; margin:0; }
+
+  .gsc-back {
+    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
+    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
+  }
+  .gsc-back:hover { color:var(--primary-dark); }
+
+  .gsc-label {
+    font-size:15px; font-weight:900; color:var(--primary-dark);
+    padding:0 0 10px; margin:32px 0 16px;
+    border-bottom:2.5px solid var(--primary-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  .gsc-alert {
+    border-radius:12px; padding:14px 18px; font-size:13px;
+    line-height:1.7; margin-bottom:16px;
+  }
+  .gsc-alert.info  { background:#eff6ff; border-left:4px solid #3b82f6; color:#1e40af; }
+  .gsc-alert.warn  { background:#fff7ed; border-left:4px solid #f59e0b; color:#92400e; }
+  .gsc-alert.red   { background:#fef2f2; border-left:4px solid #ef4444; color:#7f1d1d; }
+  .gsc-alert.green { background:#f0fdf4; border-left:4px solid #22c55e; color:#166534; }
+
+  /* 管道快覽 */
+  .gsc-portal-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:8px;
+  }
+  .gsc-portal-card {
+    border-radius:14px; padding:18px 16px; text-decoration:none;
+    display:flex; flex-direction:column; gap:6px;
+    border:1.5px solid var(--border); background:#fff;
+    transition:box-shadow .2s, transform .15s;
+  }
+  .gsc-portal-card:hover { box-shadow:0 4px 16px rgba(0,0,0,.1); transform:translateY(-2px); }
+  .gsc-portal-card .pc-icon  { font-size:24px; }
+  .gsc-portal-card .pc-name  { font-size:14px; font-weight:800; color:var(--primary-dark); }
+  .gsc-portal-card .pc-desc  { font-size:12px; color:var(--muted); line-height:1.5; }
+
+  /* 卡片 */
+  .gsc-card {
+    background:#fff; border:1.5px solid var(--border);
+    border-radius:16px; padding:24px 24px 20px; margin-bottom:20px;
+  }
+  .gsc-card h3 {
+    font-size:15px; font-weight:900; color:var(--primary-dark);
+    margin:0 0 14px; display:flex; align-items:center; gap:8px;
+  }
+
+  /* 表格 */
+  .gsc-table-wrap { overflow-x:auto; margin-bottom:4px; }
+  .gsc-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .gsc-table th {
+    background:var(--primary); color:#fff;
+    padding:10px 14px; text-align:left; font-weight:700; font-size:12px;
+  }
+  .gsc-table td { padding:10px 14px; border-bottom:1px solid #f0f0f0; vertical-align:top; line-height:1.6; }
+  .gsc-table tr:last-child td { border-bottom:none; }
+  .gsc-table tr:nth-child(even) td { background:#f8fafc; }
+
+  .gsc-amount {
+    font-weight:800; color:#d97706; white-space:nowrap;
+  }
+
+  /* 重要條件列表 */
+  .gsc-rule-list { list-style:none; padding:0; margin:12px 0 0; }
+  .gsc-rule-list li {
+    padding:8px 0; border-bottom:1px solid #f0f0f0;
+    font-size:13px; color:#444; line-height:1.6;
+    display:flex; gap:8px; align-items:flex-start;
+  }
+  .gsc-rule-list li:last-child { border-bottom:none; }
+  .gsc-rule-list li::before { content:'•'; color:var(--primary); font-weight:900; flex-shrink:0; }
+
+  /* 重要提醒區塊 */
+  .gsc-warn-grid {
+    display:grid; grid-template-columns:repeat(2,1fr); gap:12px;
+  }
+  .gsc-warn-card {
+    border-radius:12px; padding:16px 18px; font-size:13px; line-height:1.7;
+  }
+  .gsc-warn-card.red    { background:#fef2f2; border:1.5px solid #fca5a5; color:#7f1d1d; }
+  .gsc-warn-card.amber  { background:#fff7ed; border:1.5px solid #fdba74; color:#92400e; }
+  .gsc-warn-card.blue   { background:#eff6ff; border:1.5px solid #93c5fd; color:#1e40af; }
+  .gsc-warn-card.green  { background:#f0fdf4; border:1.5px solid #86efac; color:#166534; }
+  .gsc-warn-card strong { display:block; font-weight:800; margin-bottom:4px; }
+
+  @media(max-width:700px){
+    .gsc-portal-grid { grid-template-columns:1fr; }
+    .gsc-warn-grid   { grid-template-columns:1fr; }
+    .gsc-hero { padding:28px 20px 24px; }
+  }
