@@ -154,8 +154,13 @@
 
     return safeText
       .replace(
-        /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g,
-        '<a href="$2" class="chat-link">$1</a>'
+        /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)/g,
+        (_match, label, href) => {
+          if (href.startsWith('tel:')) {
+            return `<a href="${href}" class="chat-link chat-link--tel">📞 ${label}</a>`;
+          }
+          return `<a href="${href}" class="chat-link">${label}</a>`;
+        }
       )
       .replace(/\n/g, '<br>');
   }
@@ -246,7 +251,10 @@
     const body = document.createElement('div');
     body.className = 'message-content';
 
-    if (animate && role !== 'user') {
+    // Skip typewriter for messages with Markdown links so tel: links render immediately
+    const shouldAnimate = animate && role !== 'user' && !content.includes('](');
+
+    if (shouldAnimate) {
       body.textContent = '';
     } else {
       body.innerHTML = renderMessageContent(content);
@@ -255,7 +263,7 @@
 
     bubble.appendChild(body);
 
-    if (!animate && time) {
+    if (!shouldAnimate && time) {
       const timeEl = document.createElement('div');
       timeEl.className = 'message-time';
       timeEl.textContent = time;
@@ -272,7 +280,7 @@
       updateScrollBottomButton();
     }
 
-    if (animate && role !== 'user') {
+    if (shouldAnimate) {
       typewriterEffect(body, bubble, content, time, shouldScroll);
     }
   }

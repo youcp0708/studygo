@@ -69,6 +69,60 @@ TASK_LINK_LABELS = {
     'ko':      '📋 관련 과제 보기: ',
 }
 
+# 各校校安中心 / 諮商輔導中心電話
+# safety_tel / counseling_tel：去除分隔符的完整號碼（供 tel: 連結使用）
+# safety_ext / counseling_ext：分機號碼（選填）
+SCHOOL_CRISIS_PHONES = {
+    'NCU':   {
+        'safety_name': 'NCU 校安中心',      'safety_tel': '034227151', 'safety_ext': '57119',
+        'counseling_name': 'NCU 諮商輔導中心', 'counseling_tel': '034227151', 'counseling_ext': '57680',
+    },
+    'NTU':   {
+        'safety_name': 'NTU 校安中心',      'safety_tel': '0233662830',
+        'counseling_name': 'NTU 學生心理輔導中心', 'counseling_tel': '0233664716',
+    },
+    'NCCU':  {
+        'safety_name': 'NCCU 校安中心',     'safety_tel': '0229393091',
+        'counseling_name': 'NCCU 諮商中心', 'counseling_tel': '0229393091', 'counseling_ext': '62002',
+    },
+    'NTHU':  {
+        'safety_name': 'NTHU 校安',         'safety_tel': '035715131', 'safety_ext': '34119',
+        'counseling_name': 'NTHU 諮商中心', 'counseling_tel': '035715131', 'counseling_ext': '33020',
+    },
+    'NYCU':  {
+        'safety_name': 'NYCU 校安中心',     'safety_tel': '035712121', 'safety_ext': '50050',
+        'counseling_name': 'NYCU 諮商中心', 'counseling_tel': '035712121', 'counseling_ext': '50040',
+    },
+    'NCKU':  {
+        'safety_name': 'NCKU 校安中心',     'safety_tel': '062757575', 'safety_ext': '65098',
+        'counseling_name': 'NCKU 諮商輔導中心', 'counseling_tel': '062757575', 'counseling_ext': '65080',
+    },
+    'NCHU':  {
+        'safety_name': 'NCHU 校安中心',     'safety_tel': '0422840319',
+        'counseling_name': 'NCHU 諮商中心', 'counseling_tel': '0422840581', 'counseling_ext': '225',
+    },
+    'NSYSU': {
+        'safety_name': 'NSYSU 校安中心',    'safety_tel': '075252000', 'safety_ext': '2200',
+        'counseling_name': 'NSYSU 諮商中心', 'counseling_tel': '075252000', 'counseling_ext': '2523',
+    },
+    'NTNU':  {
+        'safety_name': 'NTNU 校安中心',     'safety_tel': '0277341111', 'safety_ext': '88119',
+        'counseling_name': 'NTNU 諮商中心', 'counseling_tel': '0277341111', 'counseling_ext': '66007',
+    },
+    'NTUST': {
+        'safety_name': 'NTUST 校安中心',    'safety_tel': '0227376060',
+        'counseling_name': 'NTUST 諮商中心', 'counseling_tel': '0227376060',
+    },
+    'NTUT':  {
+        'safety_name': 'NTUT 校安中心',     'safety_tel': '0227712171', 'safety_ext': '6119',
+        'counseling_name': 'NTUT 諮商中心', 'counseling_tel': '0227712171', 'counseling_ext': '3305',
+    },
+    'NKUST': {
+        'safety_name': 'NKUST 校安中心',    'safety_tel': '073814526', 'safety_ext': '12199',
+        'counseling_name': 'NKUST 諮商中心', 'counseling_tel': '073814526', 'counseling_ext': '17091',
+    },
+}
+
 
 def normalize_language_code(language_code):
     """統一 Django / 瀏覽器可能出現的語言代碼。"""
@@ -257,13 +311,13 @@ You MUST write your entire response in {language_en} only. No other language is 
 反問一定要簡短自然，不要像問卷或客服話術。
 
 語氣規則：
-1. 可以自然使用少量口語詞，例如「嗯」「啊」「呀」「哈哈」「咦」「是嗎」「這真的有點煩」。
-2. 口語詞要自然，不要每句都加，不要故意裝可愛。
-3. 不要用口語詞作為句子或回答的開頭，例如不要以「嗯」「啊」「呀」「哈哈」「嗯哼」開頭。
-3. 不要過度撒嬌，不要叫學生「寶」「親愛的」「乖」「抱抱」。
-4. 不要一直使用「我懂你」「你的感受很重要」「我會一直陪著你」這種模板句。
-5. 不要一直重複「我」「你」，句子要像平常聊天一樣自然。
-6. 少用驚嘆號和過度情緒化語氣。
+1. 預設不使用語助詞，例如「嗯」「啊」「呀」「哈哈」「嗯哼」「咦」等，一律省略。
+2. 只有在學生明確分享讓他特別開心的事情時（例如考到好成績、交到新朋友、收到好消息），才可以自然帶入少量輕鬆語氣詞，例如「哈哈」「真的嗎」。
+3. 不要用語助詞作為句子或回答的開頭。
+4. 不要過度撒嬌，不要叫學生「寶」「親愛的」「乖」「抱抱」。
+5. 不要一直使用「我懂你」「你的感受很重要」「我會一直陪著你」這種模板句。
+6. 不要一直重複「我」「你」，句子要像平常聊天一樣自然。
+7. 少用驚嘆號和過度情緒化語氣。
 
 訊息長度規則：
 系統會自動在每個句號、問號、驚嘆號後面切成一則獨立訊息傳出去。
@@ -383,9 +437,10 @@ You MUST write your entire response in {language_en} only. No other language is 
   1. 先明確表示你很重視他的安全。
   2. 請他立刻停止獨處，去找身邊可信任的人。
   3. 建議立刻聯絡家人、朋友、導師、宿舍管理員、學校輔導中心。
-  4. 如果人在台灣，請提供：1925 安心專線、1995 生命線、1980 張老師；若有立即危險，請打 119 或 110。
-  5. 不要只說「我懂你」，要引導立即求助。
-  6. 不要承諾保密或說 AI 可以單獨處理危機。
+  4. 如果學生有自傷行為或已受傷，必須優先提醒撥打 119 緊急醫療救護專線。
+  5. 使用 prompt 中提供的求助資源清單，將電話以 [說明](tel:號碼) 格式原文輸出，讓使用者可以點擊直接撥打。
+  6. 不要只說「我懂你」，要引導立即求助。
+  7. 不要承諾保密或說 AI 可以單獨處理危機。
 
 如果問題不清楚：
 - 不要亂猜。
@@ -422,6 +477,44 @@ def get_student_profile(user):
         return StudentProfile.objects.filter(user=user).first()
     except Exception:
         return None
+
+
+def build_crisis_resources(user):
+    """
+    根據學生就讀學校，建立危機求助資源清單。
+    電話以 [說明](tel:號碼) Markdown 連結格式輸出，前端會渲染成可點擊的撥號連結。
+    若有分機（ext），使用 tel:主號;ext=分機 格式。
+    """
+    profile = get_student_profile(user)
+    school_code = getattr(profile, 'university', '') if profile else ''
+    school_info = SCHOOL_CRISIS_PHONES.get(school_code)
+
+    def phone_link(label, tel, ext=None):
+        if ext:
+            return f'[{label}（撥通後轉 {ext}）](tel:{tel};ext={ext})'
+        return f'[{label}](tel:{tel})'
+
+    lines = [
+        '緊急求助資源（點擊電話連結可直接撥打）：',
+        f'{phone_link("119 緊急醫療救護專線", "119")}（如有受傷行為，立刻撥打）',
+        f'{phone_link("110 警察報案", "110")}',
+        f'{phone_link("1925 安心專線", "1925")}（24 小時心理支援）',
+        f'{phone_link("1995 生命線", "1995")}（24 小時）',
+        f'{phone_link("1980 張老師", "1980")}（24 小時）',
+    ]
+
+    if school_info:
+        lines.append(
+            f'{phone_link(school_info["safety_name"], school_info["safety_tel"], school_info.get("safety_ext"))}（24 小時校安中心）'
+        )
+        if school_info.get('counseling_tel'):
+            lines.append(
+                f'{phone_link(school_info["counseling_name"], school_info["counseling_tel"], school_info.get("counseling_ext"))}（諮商輔導中心）'
+            )
+    else:
+        lines.append('請查詢就讀學校官網取得校安中心與諮商中心電話')
+
+    return '\n'.join(lines)
 
 
 def build_user_profile_context(user):
@@ -1571,6 +1664,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
     friend_emotion_hint = detect_friend_emotion_hint(question)
 
     profile_context = build_user_profile_context(user)
+    crisis_resources = build_crisis_resources(user)
     flow_context = build_student_flow_context(user, language_code)
     knowledge_context = search_knowledge_base(
         question,
@@ -1728,9 +1822,9 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 5. 估計每 3～4 則回覆才問一次，其他時候直接回應。
 
 語氣規則：
-1. 可以自然使用少量口語詞，例如「嗯」「啊」「呀」「哈哈」「嗯哼」「是嗎」「這真的有點煩」。
-2. 口語詞要自然，不要每句都加，不要故意裝可愛。
-3. 不要用口語詞作為句子或回答的開頭，例如不要以「嗯」「啊」「呀」「哈哈」「嗯哼」開頭。
+1. 預設不使用語助詞，例如「嗯」「啊」「呀」「哈哈」「嗯哼」「咦」等，一律省略。
+2. 只有在學生明確分享讓他特別開心的事情時（例如考到好成績、交到新朋友、收到好消息），才可以自然帶入少量輕鬆語氣詞，例如「哈哈」「真的嗎」。
+3. 不要用語助詞作為句子或回答的開頭。
 3. 不要過度撒嬌，不要叫學生「寶」「親愛的」「乖」「抱抱」。
 4. 不要一直使用「我懂你」「你的感受很重要」「我會一直陪著你」這種模板句。
 5. 不要一直重複「我」「你」，句子要像平常聊天一樣自然。
@@ -1779,8 +1873,9 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 如果學生透露危險、自傷、想死、傷害他人等內容：
 - 請直接提醒他不要獨處。
 - 立刻聯絡可信任的人、學校輔導中心、家人朋友。
-- 如果人在台灣，可以提供 1925 安心專線、1995 生命線、1980 張老師。
-- 如果有立即危險，請打 119 或 110。
+- 如果學生有自傷行為或已受傷，必須首先提醒撥打 119 緊急醫療救護專線。
+- 請將以下求助資源原文複製到回覆中，電話連結格式必須完整保留：
+{crisis_resources}
 - 不要承諾保密，不要說 AI 可以單獨處理危機。
 """.strip()
     else:
@@ -1807,6 +1902,9 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 
 學生最新問題：
 {question}
+
+【危機求助資源】若學生透露自傷、想死、危險等內容，必須將以下資源原文輸出，電話連結格式不得更改：
+{crisis_resources}
 
 [REMINDER] Write your answer in {language_en} only. Use this exact format:
 {personal_label}：
