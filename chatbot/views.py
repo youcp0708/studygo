@@ -166,6 +166,14 @@ def chat_message_api(request):
         content=message,
     )
 
+    # 如果是新聊天，或標題還是預設值，就用使用者第一句話當聊天標題
+    if session.title in ["新的聊天", "New Chat", "", None]:
+        new_title = message.strip()
+        if len(new_title) > 30:
+            new_title = new_title[:30] + "..."
+        session.title = new_title
+        session.save(update_fields=["title", "updated_at"])
+
     for index, uploaded_file in enumerate(attachments):
         attachment_type = 'file'
 

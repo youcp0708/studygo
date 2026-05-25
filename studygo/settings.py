@@ -104,7 +104,6 @@ LANGUAGES = [
     ('th', 'ไทย'),
     ('ja', '日本語'),
     ('ko', '한국어'),
-    ('vi', 'Tiếng Việt'),
 ]
 
 LOCALE_PATHS = [

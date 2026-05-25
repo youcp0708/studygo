@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
+from django.utils import translation
 
 
 @login_required(login_url='/login/')
@@ -123,4 +124,19 @@ def guide_map(request):
     return render(request, 'guides/guide_map.html', {
         'maps_api_key': getattr(settings, 'GOOGLE_MAPS_API_KEY', ''),
         'maps_lang': lang_map.get(current_lang, 'zh-TW'),
+    })
+
+
+@login_required(login_url='/login/')
+def guide_search(request):
+    import json
+    from .search_data import SEARCH_BODY
+    q = request.GET.get('q', '').strip()
+    lang = (translation.get_language() or 'zh-hant').lower()
+    body = {}
+    for url, langs in SEARCH_BODY.items():
+        body[url] = langs.get(lang) or langs.get('en') or langs.get('zh-hant') or []
+    return render(request, 'guides/guide_search.html', {
+        'q': q,
+        'body_data_json': json.dumps(body, ensure_ascii=False),
     })

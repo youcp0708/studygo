@@ -2725,6 +2725,1695 @@ msgstr "Informasi Matakuliah"
 msgid "成績與畢業門檻"
 msgstr "Nilai dan Syarat Kelulusan"
 
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般外籍生不同。本頁整理港澳生常見的入台文件、居留證申請流程及注意事項。"
+msgstr ""
+"Mahasiswa Hong Kong dan Makau yang belajar di Taiwan diatur oleh Undang-"
+"Undang Hubungan dengan Hong Kong dan Makau. Prosedur masuk dan permohonan "
+"izin tinggal mereka berbeda dari mahasiswa internasional biasa. Halaman ini "
+"merangkum dokumen masuk umum, prosedur permohonan ARC, dan catatan penting "
+"bagi mahasiswa HK/Makau."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "依港澳關係條例辦理"
+msgstr "Diproses berdasarkan UU Hubungan HK/Makau"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台 15 天內辦居留"
+msgstr "Ajukan izin tinggal dalam 15 hari setelah tiba"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "移民署：0800-024-111"
+msgstr "NIA: 0800-024-111"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳生受到特別保障："
+msgstr "Perlindungan khusus bagi mahasiswa HK/Makau:"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "香港及澳門居民依《香港澳門關係條例》在台就學，享有許多類似本國生的優惠待遇（如宿舍優先、獎學金資格等），但居留申請程序仍須透過移民署辦理。"
+msgstr ""
+"Warga Hong Kong dan Makau yang belajar di Taiwan berdasarkan Undang-Undang "
+"Hubungan dengan Hong Kong dan Makau menikmati banyak keuntungan serupa "
+"mahasiswa domestik (seperti prioritas asrama dan kelayakan beasiswa), namun "
+"tetap harus mengajukan izin tinggal melalui Badan Imigrasi Nasional."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持港澳身份入台"
+msgstr "Masuk Taiwan dengan identitas HK/Makau"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "使用臺灣入出境許可證"
+msgstr "Menggunakan Izin Masuk/Keluar Taiwan"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持香港永久居民身份證（或澳門居民身份證）向內政部移民署或駐外館處申請"
+msgstr ""
+"Ajukan dengan KTP Penduduk Tetap Hong Kong (atau KTP Penduduk Makau) melalui"
+" Badan Imigrasi Nasional atau kantor perwakilan luar negeri"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "臺灣地區入出境許可證"
+msgstr "Izin Masuk/Keluar Wilayah Taiwan"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "，再以此入台就讀。"
+msgstr ", kemudian gunakan izin ini untuk masuk Taiwan dan belajar."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "入台後需申請港澳居民居留許可（居留證）。"
+msgstr ""
+"Setelah tiba di Taiwan, Anda harus mengajukan Izin Tinggal Penduduk Hong "
+"Kong/Makau (ARC)."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持外國護照入台"
+msgstr "Masuk Taiwan dengan paspor asing"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "使用外國護照 + 居留簽"
+msgstr "Menggunakan paspor asing + visa tinggal"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "同時持有他國護照（如英國 BN(O)、葡萄牙等）的港澳生，可選擇以外國護照申請"
+msgstr ""
+"Mahasiswa HK/Makau yang juga memiliki paspor asing (mis. BN(O) Inggris, "
+"Portugis, dll.) dapat memilih untuk mengajukan dengan paspor asing mereka "
+"untuk"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "學生居留簽（Resident Visa）"
+msgstr "Visa Pelajar (Resident Visa)"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "入台。"
+msgstr "masuk ke Taiwan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "此類情況辦理流程接近一般外籍生，抵台後申請外僑居留證（ARC）。"
+msgstr ""
+"Dalam kasus ini, prosesnya mirip dengan mahasiswa internasional biasa — "
+"ajukan Alien Resident Certificate (ARC) setelah tiba."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "不確定自己應走哪一條路線，建議在出發前聯絡"
+msgstr "Jika Anda tidak yakin jalur mana yang berlaku, hubungi"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "或直接致電移民署（0800-024-111），說明持有的旅行證件類型，即可獲得最準確的指引。"
+msgstr ""
+"atau hubungi NIA langsung di 0800-024-111 dan jelaskan jenis dokumen "
+"perjalanan yang Anda miliki untuk mendapatkan panduan paling akurat."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "15 天"
+msgstr "15 hari"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後起算"
+msgstr "dihitung sejak tiba"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "起"
+msgstr "mulai dari"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "1年$1,000 / 2年$2,000 / 3年$3,000"
+msgstr "1 thn: NT$1.000 / 2 thn: NT$2.000 / 3 thn: NT$3.000"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "依就學期間"
+msgstr "Sesuai masa studi"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "通常每年換證"
+msgstr "Diperbarui setiap tahun"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "10 個工作天"
+msgstr "10 hari kerja"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "不含退補件；預約可加快"
+msgstr ""
+"Tidak termasuk berkas yang dikembalikan; janji temu dapat mempercepat proses"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "以港澳身份入台者，需提供入出境許可證正本及影本。"
+msgstr ""
+"Mereka yang masuk dengan identitas HK/Makau harus menyediakan asli dan "
+"salinan Izin Masuk/Keluar."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持港澳證件者必備"
+msgstr "Wajib bagi pemegang dokumen HK/Makau"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "香港 / 澳門永久居民身份證"
+msgstr "KTP Penduduk Tetap Hong Kong / Makau"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳居民身份證正本及影本，作為身份認定之用。"
+msgstr "Asli dan salinan KTP Penduduk HK/Makau untuk verifikasi identitas."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "必要"
+msgstr "Wajib"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "在學證明書"
+msgstr "Surat Keterangan Terdaftar"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "由台灣就讀學校出具，載明科系、就學期間。學校 OIA 可協助申請。"
+msgstr ""
+"Diterbitkan oleh universitas di Taiwan, mencantumkan jurusan dan periode "
+"pendaftaran. OIA universitas dapat membantu pengajuan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "照片 2 張"
+msgstr "2 lembar foto"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "近 6 個月內 2 吋白底彩色照片（寬 3.5 cm × 高 4.5 cm）。"
+msgstr ""
+"Foto berwarna diambil dalam 6 bulan terakhir, ukuran 2 inci, latar putih "
+"(lebar 3,5 cm × tinggi 4,5 cm)."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "居留申請書"
+msgstr "Formulir Permohonan Izin Tinggal"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "移民署官網下載或現場索取，請事先填妥。"
+msgstr "Unduh dari situs NIA atau ambil di tempat. Isi terlebih dahulu."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "健康檢查合格證明"
+msgstr "Sertifikat Pemeriksaan Kesehatan"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "初次申請通常需附，須至指定醫院檢查。辦理前請向移民署或學校確認。"
+msgstr ""
+"Biasanya diperlukan untuk permohonan pertama kali. Harus dilakukan di rumah "
+"sakit yang ditunjuk. Konfirmasi dengan NIA atau universitas sebelum "
+"melanjutkan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "初次申請通常需要"
+msgstr "Biasanya diperlukan untuk permohonan pertama kali"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "住宿地址證明"
+msgstr "Bukti Alamat Tempat Tinggal"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "宿舍住宿證或租屋合約書，部分辦事處要求提供。"
+msgstr ""
+"Sertifikat hunian asrama atau kontrak sewa. Diperlukan oleh beberapa kantor."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "視情況"
+msgstr "Sesuai kebutuhan"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "外國護照（持外國護照者）"
+msgstr "Paspor Asing (bagi yang masuk dengan paspor asing)"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "以外國護照入台者，需備護照正本及影本，並附上入台居留簽證。"
+msgstr ""
+"Mereka yang masuk dengan paspor asing harus menyediakan asli dan salinan "
+"paspor, beserta visa tinggal Taiwan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持外國護照者適用"
+msgstr "Berlaku bagi pemegang paspor asing"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後前往學校國際事務處（OIA）報到"
+msgstr "Lapor ke Kantor Urusan Internasional (OIA) universitas setelah tiba"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "OIA 通常在迎新時統一說明居留申請流程，並提供在學證明書及文件確認服務。抵台當天或次日即應前往，確認文件清單。"
+msgstr ""
+"OIA biasanya menjelaskan proses permohonan izin tinggal saat orientasi dan "
+"menyediakan layanan konfirmasi surat keterangan terdaftar dan dokumen. "
+"Kunjungi pada hari tiba atau hari berikutnya untuk mengkonfirmasi daftar "
+"dokumen Anda."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台當天或次日"
+msgstr "Hari tiba atau hari berikutnya"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "OIA 通常有團體辦理場次"
+msgstr "OIA biasanya mengadakan sesi pengajuan kelompok"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "取得在學證明書"
+msgstr "Dapatkan Surat Keterangan Terdaftar"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "向 OIA 申請學校出具的在學證明書。若迎新時已發放，可直接進入下一步。部分學校在報到後即可當日取件。"
+msgstr ""
+"Minta surat keterangan terdaftar dari OIA. Jika sudah dibagikan saat "
+"orientasi, lanjutkan ke langkah berikutnya. Beberapa universitas "
+"menerbitkannya pada hari yang sama saat registrasi."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後 1～2 天"
+msgstr "1–2 hari setelah tiba"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "健康檢查（初次申請者）"
+msgstr "Pemeriksaan Kesehatan (pemohon pertama kali)"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "初次申請居留需至移民署指定合格醫院進行健康檢查，取得健康檢查合格證明書。學校 OIA 通常會提供指定醫院清單，可事先線上預約。"
+msgstr ""
+"Pemohon pertama kali harus menjalani pemeriksaan kesehatan di rumah sakit "
+"yang ditunjuk NIA dan mendapatkan sertifikat kesehatan. OIA universitas "
+"biasanya menyediakan daftar rumah sakit yang ditunjuk; pemesanan janji temu "
+"online direkomendasikan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後 2～5 天"
+msgstr "2–5 hari setelah tiba"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "建議事先網路預約，節省等待時間"
+msgstr "Pesan secara online terlebih dahulu untuk menghemat waktu tunggu"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "整理文件並預約移民署"
+msgstr "Siapkan dokumen dan jadwalkan janji temu NIA"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "將所有文件整理妥當並備好正本及影本，至移民署官網線上預約辦理時段。建議選擇就近的移民署辦事處（桃園市即桃園服務站）。"
+msgstr ""
+"Atur semua dokumen dengan asli dan salinan siap, lalu pesan slot waktu "
+"secara online melalui situs NIA. Pilih kantor NIA terdekat (Stasiun Layanan "
+"Taoyuan untuk Kota Taoyuan)."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台後 3～7 天"
+msgstr "3–7 hari setelah tiba"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "建議線上預約"
+msgstr "Janji temu online direkomendasikan"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "前往移民署辦事處提交申請"
+msgstr "Kunjungi kantor NIA untuk mengajukan permohonan"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "攜帶所有文件至移民署，現場核對文件、採集指紋並繳費。可由 OIA 統一帶隊辦理（若有安排），或自行前往。"
+msgstr ""
+"Bawa semua dokumen ke kantor NIA untuk verifikasi dokumen, pengambilan sidik"
+" jari, dan pembayaran. OIA dapat mengatur kunjungan kelompok (jika "
+"dijadwalkan), atau Anda dapat pergi sendiri."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "抵台 15 天內"
+msgstr "Dalam 15 hari setelah tiba"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "移民署辦事處"
+msgstr "Kantor Layanan NIA"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "等待審核（約 10 個工作天）"
+msgstr "Tunggu proses (sekitar 10 hari kerja)"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "申請後約"
+msgstr "Sekitar"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "製卡完成（不含退補件），移民署以簡訊通知領件。等待期間持入境許可證（或護照）及申請收據可作為合法居留暫時證明。"
+msgstr ""
+"Kartu akan siap (tidak termasuk berkas yang dikembalikan). NIA akan memberi "
+"tahu Anda melalui SMS saat siap diambil. Selama masa tunggu, Izin "
+"Masuk/Keluar (atau paspor) dan tanda terima permohonan berfungsi sebagai "
+"bukti tinggal legal sementara."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "約 10 個工作天"
+msgstr "Sekitar 10 hari kerja"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "領取居留證"
+msgstr "Ambil izin tinggal Anda"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "持入境許可證（或護照）及收據親赴辦事處領取居留證。領取後可辦理加入健保、申辦手機門號及銀行開戶。"
+msgstr ""
+"Bawa Izin Masuk/Keluar (atau paspor) dan tanda terima ke kantor NIA untuk "
+"mengambil izin tinggal. Setelahnya, Anda dapat mendaftar Asuransi Kesehatan "
+"Nasional, mengajukan paket telepon, dan membuka rekening bank."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "完成！"
+msgstr "Selesai!"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳生的居留證跟一般外籍生的 ARC 一樣嗎？"
+msgstr ""
+"Apakah izin tinggal mahasiswa HK/Makau sama dengan ARC untuk mahasiswa "
+"internasional biasa?"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "功能上相同，但法源不同。"
+msgstr "Secara fungsional sama, tetapi didasarkan pada hukum yang berbeda."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "一般外籍生辦理「"
+msgstr "Mahasiswa internasional biasa mengajukan \""
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "外僑居留證（ARC）"
+msgstr "Alien Resident Certificate (ARC)"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "」，依據《入出國及移民法》。"
+msgstr "\", berdasarkan Undang-Undang Imigrasi."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "以港澳身份入台的港澳生辦理「"
+msgstr "Mahasiswa HK/Makau yang masuk dengan identitas HK/Makau mengajukan \""
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳居民居留證"
+msgstr "Izin Tinggal Penduduk Hong Kong/Makau"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "」，依據《香港澳門關係條例》。"
+msgstr "\", berdasarkan Undang-Undang Hubungan dengan Hong Kong dan Makau."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "兩者在台均可用於身份核驗、健保加保及銀行開戶等日常事務。"
+msgstr ""
+"Kedua dokumen dapat digunakan di Taiwan untuk verifikasi identitas, "
+"pendaftaran NHI, dan pembukaan rekening bank."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "在台期間可以打工嗎？"
+msgstr "Bisakah saya bekerja paruh waktu saat belajar di Taiwan?"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"港澳生持居留證可申請工讀許可（每週不超過 20 "
+"小時）。需向學校取得工讀同意書後，至勞動部辦理工作許可。在校內工讀（如圖書館、系辦助理）通常只需學校同意，手續較簡便。未取得合法工作許可的工作行為依法屬違規，請務必事先申請。"
+msgstr ""
+"Mahasiswa HK/Makau dengan izin tinggal dapat mengajukan izin kerja paruh "
+"waktu (tidak lebih dari 20 jam per minggu). Anda harus terlebih dahulu "
+"mendapatkan surat persetujuan kerja paruh waktu dari universitas, lalu "
+"mengajukan izin kerja dari Kementerian Tenaga Kerja. Pekerjaan di kampus "
+"(mis. asisten perpustakaan, asisten kantor jurusan) biasanya hanya "
+"memerlukan persetujuan universitas dan prosedurnya lebih sederhana. Bekerja "
+"tanpa izin kerja yang sah adalah pelanggaran hukum — selalu ajukan terlebih "
+"dahulu."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "居留證到期後怎麼辦？"
+msgstr "Apa yang harus dilakukan saat izin tinggal saya kedaluwarsa?"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "居留證通常每年更新一次，到期前"
+msgstr "Izin tinggal biasanya diperbarui setiap tahun. Dalam"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "30 天內"
+msgstr "30 hari"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"即可申請延期。延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。"
+msgstr ""
+"sebelum kedaluwarsa, Anda dapat mengajukan perpanjangan. Dokumen yang "
+"diperlukan mirip dengan permohonan awal (surat keterangan terdaftar, izin "
+"tinggal asli, foto, dll.) — tidak diperlukan biaya pemeriksaan kesehatan "
+"untuk perpanjangan. Biaya perpanjangan NT$500. Ajukan lebih awal untuk "
+"menghindari overstay."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "港澳生可以加入全民健保嗎？"
+msgstr ""
+"Bisakah mahasiswa HK/Makau mendaftar Asuransi Kesehatan Nasional (NHI)?"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"可以。取得居留證後，透過學校衛生保健組辦理加保即可。保費依年度費率由學校代扣，學生費率比一般標準低。加保後就醫診所門診費用約 "
+"NT$150，享有與台灣學生相同的健保保障。"
+msgstr ""
+"Ya. Setelah menerima izin tinggal, daftar melalui pusat kesehatan "
+"universitas. Premi dipotong oleh universitas sesuai tarif tahunan, dan tarif"
+" mahasiswa lebih rendah dari tarif standar. Setelah terdaftar, biaya "
+"konsultasi klinik sekitar NT$150, memberikan cakupan NHI yang sama dengan "
+"mahasiswa Taiwan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "暑假返港澳超過 2 個月，健保怎麼處理？"
+msgstr ""
+"Jika saya kembali ke HK/Makau lebih dari 2 bulan selama liburan musim panas,"
+" apa yang terjadi dengan NHI saya?"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "離台超過 2 個月前，可至學校衛保組辦理「"
+msgstr ""
+"Sebelum meninggalkan Taiwan lebih dari 2 bulan, Anda dapat mengajukan \""
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "出國停保"
+msgstr "penangguhan NHI saat ke luar negeri"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "」，停保期間不扣繳保費。回台後記得辦理「"
+msgstr ""
+"\" melalui pusat kesehatan universitas. Premi tidak akan dikenakan selama "
+"masa penangguhan. Ingat untuk mengajukan \""
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "復保"
+msgstr "reaktivasi"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "」以恢復保障。停保不影響居留證效期，但停保期間在台就醫無健保保障。"
+msgstr ""
+"\" saat kembali untuk memulihkan cakupan Anda. Penangguhan tidak "
+"mempengaruhi validitas izin tinggal, tetapi Anda tidak akan memiliki cakupan"
+" NHI untuk perawatan medis di Taiwan selama masa penangguhan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "學校 OIA 會幫我辦居留證嗎？"
+msgstr "Apakah OIA universitas akan membantu saya mengajukan izin tinggal?"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"大多數學校會在開學初舉辦團體辦理場次，OIA 統一帶隊至移民署。建議迎新報到後立即前往 OIA "
+"確認是否有統一辦理安排，以便提早準備所需文件，節省自行前往的時間。"
+msgstr ""
+"Sebagian besar universitas mengadakan sesi pengajuan kelompok di awal "
+"semester, dengan OIA memimpin mahasiswa ke NIA bersama-sama. Setelah "
+"orientasi, segera kunjungi OIA untuk mengecek apakah ada sesi kelompok yang "
+"diatur sehingga Anda dapat menyiapkan dokumen yang diperlukan lebih awal."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "內政部移民署"
+msgstr "Kementerian Dalam Negeri — Badan Imigrasi Nasional (NIA)"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "辦事處查詢、線上預約、進度查詢、申請書下載。"
+msgstr ""
+"Pencari kantor, janji temu online, pengecekan status permohonan, dan unduhan"
+" formulir."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "居留說明、在學證明書申請、健康檢查指定醫院清單。"
+msgstr ""
+"Panduan izin tinggal, pengajuan surat keterangan terdaftar, dan daftar rumah"
+" sakit yang ditunjuk untuk pemeriksaan kesehatan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "取得居留證後可辦理加保，享有完整醫療保障。"
+msgstr ""
+"Setelah menerima izin tinggal, Anda dapat mendaftar NHI untuk perlindungan "
+"medis yang komprehensif."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "外來人士在台生活諮詢"
+msgstr "Layanan Konsultasi Kehidupan Penduduk Asing di Taiwan"
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid "多語言免費諮詢，涵蓋居留、生活、就業等問題。"
+msgstr ""
+"Konsultasi gratis multibahasa mencakup izin tinggal, kehidupan sehari-hari, "
+"pekerjaan, dan topik lainnya."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。"
+msgstr ""
+"\"Mahasiswa perantau\" (僑生) mengacu pada mereka yang memiliki "
+"kewarganegaraan ROC atau keturunan Tionghoa yang telah tinggal di luar "
+"negeri dalam jangka panjang dan menerima pendidikan di sana, sebagaimana "
+"diakui oleh Kementerian Pendidikan. Mereka dapat mengakses jalur khusus "
+"seperti beasiswa mahasiswa perantau dan program persiapan. \"Mahasiswa "
+"internasional\" (外籍生) mengacu pada mereka yang masuk dengan paspor non-ROC, "
+"biasanya mendaftar melalui proses penerimaan internasional mandiri masing-"
+"masing universitas dan berhak atas Beasiswa Taiwan Kementerian Pendidikan. "
+"Kedua status diakui secara berbeda, dengan jalur penerimaan dan manfaat yang"
+" berbeda."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
+msgstr ""
+"Tidak. Jalur OCAC hanya tersedia untuk pelamar dengan status mahasiswa "
+"perantau. Mahasiswa internasional (mereka yang memegang paspor asing tetapi "
+"tidak diakui sebagai mahasiswa perantau) harus mendaftar langsung ke kantor "
+"penerimaan internasional masing-masing universitas. Kunjungi situs web "
+"universitas terkait untuk jadwal pendaftaran dan persyaratan dokumen."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
+msgstr ""
+"Memiliki kewarganegaraan asing dan telah menyelesaikan pendidikan prasyarat "
+"untuk program yang dituju (lulus SMA atau universitas). Sertifikat kemampuan"
+" bahasa Mandarin (TOCFL) atau Inggris (IELTS / TOEFL) biasanya diperlukan, "
+"tergantung persyaratan masing-masing jurusan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 "
+"以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。"
+msgstr ""
+"Persyaratan kemampuan bahasa Mandarin bervariasi per jurusan. Beberapa "
+"jurusan menetapkan ambang batas kemampuan bahasa Mandarin minimum (mis. "
+"TOCFL B1 atau lebih), sementara yang lain menerima pendaftaran kursus bahasa"
+" Mandarin setelah diterima sebagai suplemen. Kami merekomendasikan untuk "
+"memeriksa panduan penerimaan terbaru jurusan yang dituju atau menghubungi "
+"Kantor Urusan Internasional universitas. Jika kemampuan bahasa Mandarin Anda"
+" belum memadai, Anda juga dapat mempertimbangkan untuk mendaftar ke program "
+"berbahasa Inggris atau kursus persiapan bahasa."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"海聯會管道可填寫多個志願（學校 + "
+"系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。"
+msgstr ""
+"Jalur OCAC memungkinkan Anda mengisi beberapa preferensi (universitas + "
+"jurusan), dan sistem menetapkan penempatan berdasarkan urutan preferensi — "
+"satu permohonan biasanya mencakup beberapa pilihan. Untuk mahasiswa "
+"internasional yang mendaftar ke universitas secara individual, cukup "
+"kirimkan permohonan terpisah ke setiap universitas sebelum batas waktu "
+"masing-masing, tetapi perhatikan bahwa biaya pendaftaran dan persyaratan "
+"dokumen mungkin berbeda antar universitas."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
+msgstr ""
+"Beasiswa Taiwan Kementerian Pendidikan harus diajukan secara terpisah, baik "
+"pada saat penerimaan maupun setelah pendaftaran, biasanya melalui kantor "
+"perwakilan Taiwan di luar negeri atau langsung melalui universitas. Slot "
+"terbatas dan persaingan ketat. Beasiswa mahasiswa perantau sebagian ditinjau"
+" secara otomatis oleh OCAC atau universitas, dan sebagian memerlukan "
+"formulir permohonan terpisah. Beasiswa penerimaan khusus universitas "
+"biasanya dijelaskan dalam surat penawaran penerimaan."
+
+#: flows/templates/flows/guide_arc_exchange.html
+msgid ""
+"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
+msgstr ""
+"Ya, tetapi perlu diperhatikan bahwa permohonan transfer biasanya memiliki "
+"batasan tingkat (biasanya terbatas pada tahun ke-2 atau ke-3), dan "
+"memerlukan transkrip dari universitas saat ini serta bukti penarikan diri. "
+"Jadwal penerimaan transfer bervariasi per universitas dan biasanya diadakan "
+"sekitar akhir setiap tahun akademik. Untuk detail, konsultasikan panduan "
+"ujian transfer jurusan yang dituju. Mahasiswa pascasarjana yang pindah antar"
+" program harus mengikuti peraturan jurusan masing-masing."
+
+msgid "學校設施"
+msgstr "Fasilitas Kampus"
+
+msgid "中央大學（正門）"
+msgstr "NCU (Gerbang Utama)"
+
+msgid "中央圖書館"
+msgstr "Perpustakaan Pusat"
+
+msgid "外籍生宿舍"
+msgstr "Asrama Mahasiswa Internasional"
+
+msgid "校內美食"
+msgstr "Kuliner dalam Kampus"
+
+msgid "松苑餐廳"
+msgstr "Restoran Songyuan"
+
+msgid "松果餐廳"
+msgstr "Restoran Songguo"
+
+msgid "小木屋鬆餅"
+msgstr "Waffle Chalet"
+
+msgid "校內超商"
+msgstr "Mini Market Kampus"
+
+msgid "校外美食"
+msgstr "Kuliner Luar Kampus"
+
+msgid "後門商圈"
+msgstr "Area Gerbang Belakang"
+
+msgid "宵夜街"
+msgstr "Jalan Makan Malam"
+
+msgid "中大夜市商圈"
+msgstr "Pasar Malam NCU"
+
+msgid "龍岡美食廣場"
+msgstr "Pusat Kuliner Longgang"
+
+msgid "大江美食街"
+msgstr "Food Court Dajiang"
+
+msgid "中壢市場"
+msgstr "Pasar Zhongli"
+
+msgid "醫療・交通"
+msgstr "Medis · Transportasi"
+
+msgid "桃園市服務站"
+msgstr "Pusat Layanan Kota Taoyuan"
+
+msgid "點選上方按鈕，即可在地圖上顯示位置"
+msgstr "Klik tombol di atas untuk menampilkan lokasi di peta"
+
+msgid "尚未設定 Google Maps API 金鑰"
+msgstr "Google Maps API Key belum dikonfigurasi"
+
+msgid "借書・自習室・學術資料庫・列印服務"
+msgstr "Peminjaman · Ruang Belajar · Database Akademik · Pencetakan"
+
+msgid "三館概覽"
+msgstr "Gambaran Umum Gedung Perpustakaan"
+
+msgid "總圖書館"
+msgstr "Perpustakaan Utama"
+
+msgid "主要借閱・公用研究室 17 間・電腦檢索"
+msgstr "Peminjaman utama · 17 ruang studi · Katalog komputer"
+
+msgid "學期間 08:00–23:00"
+msgstr "Jam semester: 08:00–23:00"
+
+msgid "考試週：24 小時開放"
+msgstr "Minggu ujian: Buka 24 jam"
+
+msgid "中正圖書館"
+msgstr "Perpustakaan Zhongzheng"
+
+msgid "2 樓：K書中心（113 席）"
+msgstr "Lantai 2: Study Center KSC (113 kursi)"
+
+msgid "1 樓：衛保組・崑曲特藏"
+msgstr "Lantai 1: Pusat Kesehatan · Koleksi Khusus Kunqu"
+
+msgid "國鼎圖書資料館"
+msgstr "Perpustakaan & Arsip Guoding"
+
+msgid "特藏・檔案資料"
+msgstr "Koleksi Khusus · Arsip"
+
+msgid "週一至週五 10:00–15:00"
+msgstr "Sen–Jum 10:00–15:00"
+
+msgid "借書規則"
+msgstr "Aturan Peminjaman"
+
+msgid "最多冊數"
+msgstr "Maks. buku"
+
+msgid "冊"
+msgstr "buku"
+
+msgid "借閱期限"
+msgstr "Masa peminjaman"
+
+msgid "天"
+msgstr "hari"
+
+msgid "線上續借"
+msgstr "Perpanjang online"
+
+msgid "1 次"
+msgstr "1 kali"
+
+msgid "逾期罰款"
+msgstr "Denda keterlambatan"
+
+msgid "憑學生證借閱，任何在學學生皆可使用，外籍生與本地生規則相同"
+msgstr ""
+"Pinjam dengan kartu mahasiswa; semua mahasiswa aktif dapat menggunakan; "
+"aturan sama untuk mahasiswa internasional dan lokal"
+
+msgid "線上續借：於到期前至 opac.lib.ncu.edu.tw 辦理，到期後不可續借"
+msgstr ""
+"Perpanjang online: Kunjungi opac.lib.ncu.edu.tw sebelum jatuh tempo; tidak "
+"bisa diperpanjang setelah jatuh tempo"
+
+msgid "他人預約的書籍：收到通知後 7 天內須歸還，無法續借"
+msgstr ""
+"Buku yang dipesan orang lain: Harus dikembalikan dalam 7 hari setelah "
+"pemberitahuan; tidak bisa diperpanjang"
+
+msgid "指定參考書 / 論文逾期：NT$5 每小時（注意！比一般罰款貴很多）"
+msgstr ""
+"Buku wajib/tesis terlambat: NT$5 per jam (Perhatian: jauh lebih mahal dari "
+"denda biasa!)"
+
+msgid "非服務時間還書：總圖 1 樓入口設有還書箱，24 小時可用"
+msgstr ""
+"Pengembalian di luar jam: Kotak pengembalian di pintu masuk lantai 1 "
+"Perpustakaan Utama, tersedia 24 jam"
+
+msgid "畢業或離校前：所有借書必須歸還並繳清罰款"
+msgstr ""
+"Sebelum wisuda atau keluar: Semua buku pinjaman harus dikembalikan dan denda"
+" dilunasi"
+
+msgid "自習空間"
+msgstr "Ruang Belajar"
+
+msgid "書中心（KSC）"
+msgstr "Study Center (KSC)"
+
+msgid "中正圖書館 2F"
+msgstr "Perpustakaan Zhongzheng Lantai 2"
+
+msgid "席"
+msgstr "kursi"
+
+msgid "大K 82 席 + 小K 31 席"
+msgstr "Bagian besar 82 + Bagian kecil 31 kursi"
+
+msgid "僅限中央大學在學生，刷學生證進入"
+msgstr "Hanya mahasiswa NCU; gesek kartu mahasiswa untuk masuk"
+
+msgid "先到先得，禁止佔位"
+msgstr "Siapa cepat dia dapat; tidak boleh menyimpan kursi"
+
+msgid "違規 3 次 → 停用 6 個月"
+msgstr "3 pelanggaran → ditangguhkan 6 bulan"
+
+msgid "公用研究室"
+msgstr "Ruang Studi Umum"
+
+msgid "間"
+msgstr "ruangan"
+
+msgid "可供師生使用"
+msgstr "Tersedia untuk staf dan mahasiswa"
+
+msgid "學期初可申請學期用室"
+msgstr "Daftar penggunaan satu semester di awal semester"
+
+msgid "臨時使用：至服務台申請"
+msgstr "Penggunaan sementara: Daftar di meja layanan"
+
+msgid "線上預約系統 ↗"
+msgstr "Sistem Reservasi Online ↗"
+
+msgid "考試週（期中、期末）：總圖 24 小時開放。確認最新時間請查"
+msgstr ""
+"Minggu ujian (UTS, UAS): Perpustakaan Utama buka 24 jam. Cek jam terbaru di"
+
+msgid "開館時間表 ↗"
+msgstr "Jam Buka ↗"
+
+msgid "學術資料庫"
+msgstr "Database Akademik"
+
+msgid "Elsevier｜論文引用、摘要，推薦作為主要學術搜尋工具"
+msgstr ""
+"Elsevier | Kutipan, abstrak — direkomendasikan sebagai alat pencarian "
+"akademik utama"
+
+msgid "訂閱中"
+msgstr "Berlangganan"
+
+msgid "訂閱已於 2026/01/31 終止，僅提供靜態資料（SCIE 至 2025）"
+msgstr "Langganan berakhir 31/01/2026; hanya data statis (SCIE hingga 2025)"
+
+msgid "靜態存取"
+msgstr "Akses Statis"
+
+msgid "Clarivate｜期刊影響因子（Impact Factor）查詢"
+msgstr "Clarivate | Pencarian Impact Factor jurnal"
+
+msgid "Elsevier｜理工科期刊與電子書"
+msgstr "Elsevier | Jurnal dan e-book STEM"
+
+msgid "中文電子書平台"
+msgstr "Platform e-book Bahasa China"
+
+msgid "中央大學機構典藏 / 學位論文"
+msgstr "Repositori Institusional / Tesis NCU"
+
+msgid "免費開放"
+msgstr "Akses Gratis"
+
+msgid "完整資料庫清單："
+msgstr "Daftar lengkap database:"
+
+msgid "NCU 資料庫入口 ↗"
+msgstr "Portal Database NCU ↗"
+
+msgid "校外遠端存取"
+msgstr "Akses Jarak Jauh di Luar Kampus"
+
+msgid "方法一：從圖書館網站點選資料庫連結，選「中央大學教職員生」，以 Portal 帳號登入"
+msgstr ""
+"Metode 1: Klik tautan database di website perpustakaan, pilih 'Sivitas NCU',"
+" login dengan akun Portal"
+
+msgid "方法二：安裝 SSL VPN（伺服器：140.115.199.1），以計算中心帳號登入。設定說明："
+msgstr ""
+"Metode 2: Instal SSL VPN (server: 140.115.199.1) dan login dengan akun Pusat"
+" Komputasi. Panduan pengaturan:"
+
+msgid "在校園網路（140.115.x.x）時不可使用 VPN，直接進入即可"
+msgstr ""
+"Saat di jaringan kampus (140.115.x.x), jangan gunakan VPN — akses langsung"
+
+msgid "VPN 登入問題聯絡計算機中心：分機 57555 / 57566"
+msgstr "Masalah login VPN: Hubungi Pusat Komputasi di ext. 57555 / 57566"
+
+msgid "列印・影印"
+msgstr "Cetak & Fotokopi"
+
+msgid "頁"
+msgstr "halaman"
+
+msgid "黑白影印"
+msgstr "Fotokopi hitam putih"
+
+msgid "電腦終端機列印"
+msgstr "Cetak dari terminal komputer"
+
+msgid "自助影印機與電腦終端機均位於總圖 1 樓。彩色列印費用請至服務台詢問或查"
+msgstr ""
+"Mesin fotokopi mandiri dan terminal komputer ada di lantai 1 Perpustakaan "
+"Utama. Biaya cetak warna tanya di meja layanan atau cek"
+
+msgid "列印說明頁 ↗"
+msgstr "Halaman Info Cetak ↗"
+
+msgid "借閱・還書・罰款"
+msgstr "Peminjaman · Pengembalian · Denda"
+
+msgid "分機"
+msgstr "Ext."
+
+msgid "參考諮詢・資料庫"
+msgstr "Referensi & Database"
+
+msgid "K書中心・開館時間"
+msgstr "Study Center · Jam Buka"
+
+msgid "台灣緊急電話、校安中心、國際事務處"
+msgstr "Nomor Darurat Taiwan, Keamanan Kampus, Kantor Urusan Internasional"
+
+msgid "台灣緊急電話"
+msgstr "Nomor Darurat Taiwan"
+
+msgid "火警・救護車"
+msgstr "Kebakaran · Ambulans"
+
+msgid "火災、緊急送醫、意外傷亡"
+msgstr "Kebakaran, darurat medis, kecelakaan"
+
+msgid "警察"
+msgstr "Polisi"
+
+msgid "犯罪、竊盜、人身安全威脅"
+msgstr "Kejahatan, pencurian, ancaman keselamatan pribadi"
+
+msgid "行動緊急電話"
+msgstr "Darurat Seluler"
+
+msgid "無 SIM 卡或無訊號時仍可撥打，自動轉接 110 / 119"
+msgstr "Bisa dipanggil tanpa SIM atau sinyal; otomatis terhubung ke 110/119"
+
+msgid "安心專線"
+msgstr "Hotline Kesehatan Jiwa"
+
+msgid "24 小時心理支持、危機處理"
+msgstr "Dukungan kesehatan jiwa 24 jam, penanganan krisis"
+
+msgid "校內緊急聯絡"
+msgstr "Kontak Darurat di Kampus"
+
+msgid "校安中心"
+msgstr "Pusat Keamanan Kampus"
+
+msgid "24 小時，校園安全事件通報"
+msgstr "24 jam, pelaporan insiden keamanan kampus"
+
+msgid "校內分機"
+msgstr "Ext. kampus"
+
+msgid "留學生事務、緊急協助"
+msgstr "Urusan mahasiswa internasional, bantuan darurat"
+
+msgid "衛保組（校醫）"
+msgstr "Pusat Kesehatan (Dokter Kampus)"
+
+msgid "週一至週五 08:00–17:00，中正圖書館舊圖 1 樓"
+msgstr "Sen–Jum 08:00–17:00, Lantai 1 Perpustakaan Zhongzheng"
+
+msgid "如需救護車，請先撥 119，再通知校安中心 03-2805666。告知地點時可說「中央大學」加上建築物名稱。"
+msgstr ""
+"Untuk ambulans, hubungi 119 terlebih dahulu, lalu beri tahu Keamanan Kampus "
+"di 03-2805666. Saat menyebutkan lokasi, sebutkan 'National Central "
+"University' dan nama gedung."
+
+msgid "三大系統快速入口"
+msgstr "Akses Cepat 3 Sistem Utama"
+
+msgid "統一登入入口，選課、成績、各系統 SSO"
+msgstr ""
+"Portal login terpadu untuk registrasi mata kuliah, nilai, dan SSO semua "
+"sistem"
+
+msgid "課程平台：講義、作業、公告、成績查詢"
+msgstr "Platform mata kuliah: handout, tugas, pengumuman, cek nilai"
+
+msgid "學生信箱"
+msgstr "Email Mahasiswa"
+
+msgid "學號@cc.ncu.edu.tw，重要公告必看"
+msgstr "NIM@cc.ncu.edu.tw — cek pengumuman penting"
+
+msgid "第一步：帳號啟用"
+msgstr "Langkah 1: Aktivasi Akun"
+
+msgid "Portal 帳號預設未啟用，入學後請先完成啟用，才能使用所有校內系統。"
+msgstr ""
+"Akun Portal tidak aktif secara default. Setelah diterima, aktifkan dulu "
+"sebelum menggunakan semua sistem kampus."
+
+msgid "啟用步驟"
+msgstr "Langkah Aktivasi"
+
+msgid "前往啟用頁面"
+msgstr "Buka halaman aktivasi"
+
+msgid "學號、出生年月日，外籍生填護照號碼（非台灣身分證）"
+msgstr ""
+"NIM dan tanggal lahir. Mahasiswa asing masukkan nomor paspor (bukan ID "
+"Taiwan)"
+
+msgid "等待約 10 分鐘"
+msgstr "Tunggu sekitar 10 menit"
+
+msgid "啟用完成後即可以學號 + 預設密碼（出生年月日，YYYYMMDD）登入 Portal。"
+msgstr ""
+"Setelah aktivasi, login Portal dengan NIM + password default (tanggal lahir,"
+" YYYYMMDD)."
+
+msgid "登入後立即更改密碼"
+msgstr "Ganti kata sandi segera setelah login"
+
+msgid "預設密碼為生日，請馬上改成強密碼，並設定信箱或手機號碼以便之後找回密碼。"
+msgstr ""
+"Password default adalah tanggal lahir. Ganti segera ke password kuat dan "
+"daftarkan email atau nomor HP untuk pemulihan."
+
+msgid "若瀏覽器顯示「Cookie 未被接受」，請換瀏覽器（建議 Chrome / Firefox）。聯絡計算機中心：分機 57771。"
+msgstr ""
+"Jika browser menampilkan 'Cookie tidak diterima', ganti browser (disarankan "
+"Chrome/Firefox). Hubungi Pusat Komputasi: ext. 57771."
+
+msgid "登入帳號"
+msgstr "Akun Login"
+
+msgid "學號"
+msgstr "NIM"
+
+msgid "預設密碼"
+msgstr "Password default"
+
+msgid "功能"
+msgstr "Fungsi"
+
+msgid "選課 / 成績"
+msgstr "Registrasi / Nilai"
+
+msgid "單一登入（SSO）：一組帳密進入 ee-class、信箱、圖書館等所有校內系統"
+msgstr ""
+"Single Sign-On (SSO): satu akun untuk ee-class, email, perpustakaan, dan "
+"semua sistem kampus"
+
+msgid "選課系統（cis.ncu.edu.tw/Course/）：透過 Portal 帳號登入"
+msgstr ""
+"Registrasi mata kuliah (cis.ncu.edu.tw/Course/): login dengan akun Portal"
+
+msgid "成績查詢、修課記錄"
+msgstr "Cek nilai, riwayat mata kuliah"
+
+msgid "QR Code 登入：在公用電腦可用手機掃碼，不需輸入密碼"
+msgstr ""
+"Login QR Code: scan dengan ponsel di komputer umum, tidak perlu masukkan "
+"kata sandi"
+
+msgid "忘記密碼：透過已綁定的信箱或手機號碼重設"
+msgstr ""
+"Lupa kata sandi: reset melalui email atau nomor HP yang sudah terdaftar"
+
+msgid "課程平台"
+msgstr "Platform Mata Kuliah"
+
+msgid "請勿在 ee-class 自行「註冊」新帳號！一般生直接用 Portal 帳號（學號）登入即可。"
+msgstr ""
+"JANGAN daftar akun baru sendiri di ee-class! Mahasiswa biasa langsung login "
+"dengan akun Portal (NIM)."
+
+msgid "學號（同 Portal）"
+msgstr "NIM (sama dengan Portal)"
+
+msgid "同 Portal 密碼"
+msgstr "Sama dengan password Portal"
+
+msgid "查看課程講義、教材、教授公告"
+msgstr "Lihat handout kuliah, materi, dan pengumuman dosen"
+
+msgid "繳交作業、查看作業批改結果"
+msgstr "Kumpulkan tugas dan lihat hasil penilaian"
+
+msgid "課程成績查詢（部分老師使用）"
+msgstr "Cek nilai mata kuliah (digunakan sebagian dosen)"
+
+msgid "NCUx 雲端課程：選修免費線上課程（不計學分）"
+msgstr "Kursus online NCUx: kursus online pilihan gratis (tidak ada SKS)"
+
+msgid "特殊身份登入方式"
+msgstr "Metode Login untuk Jenis Pengguna Khusus"
+
+msgid "身份"
+msgstr "Jenis Pengguna"
+
+msgid "帳號"
+msgstr "Akun"
+
+msgid "一般生／教職員"
+msgstr "Mahasiswa biasa / Staf & dosen"
+
+msgid "Portal 密碼"
+msgstr "Password Portal"
+
+msgid "跨校交換生"
+msgstr "Mahasiswa pertukaran dari universitas lain"
+
+msgid "Z 開頭臨時帳號"
+msgstr "Akun sementara berawalan Z"
+
+msgid "原校學號"
+msgstr "NIM universitas asal"
+
+msgid "旁聽生／推廣教育"
+msgstr "Pendengar / Pendidikan lanjutan"
+
+msgid "Y 開頭臨時帳號"
+msgstr "Akun sementara berawalan Y"
+
+msgid "台灣身分證號"
+msgstr "Nomor KTP Taiwan"
+
+msgid "ee-class 問題聯絡：eeclass@ncu.edu.tw｜分機 57132 / 57169"
+msgstr "Dukungan ee-class: eeclass@ncu.edu.tw | ext. 57132 / 57169"
+
+msgid "信箱格式"
+msgstr "Format email"
+
+msgid "學號@cc.ncu.edu.tw"
+msgstr "NIM@cc.ncu.edu.tw"
+
+msgid "容量"
+msgstr "Kapasitas"
+
+msgid "有效期限"
+msgstr "Masa berlaku"
+
+msgid "畢業後 5 年"
+msgstr "5 tahun setelah wisuda"
+
+msgid "學校重要公告（選課結果、成績、繳費通知）均寄到此信箱，請定期查收"
+msgstr ""
+"Semua pengumuman penting sekolah (hasil registrasi, nilai, tagihan) dikirim "
+"ke kotak surat ini — cek secara berkala"
+
+msgid "登入帳號：學號；密碼：同 Portal 密碼"
+msgstr "Login: NIM; Kata sandi: sama dengan Portal"
+
+msgid "非 Gmail 帳號，無法直接存取 Google 服務"
+msgstr "Bukan akun Gmail; tidak bisa langsung mengakses layanan Google"
+
+msgid "手機 / 電腦設定"
+msgstr "Pengaturan Ponsel / Komputer"
+
+msgid "前往「設定 → 郵件 → 帳號 → 新增帳號」，選「其他」，輸入信箱與密碼，詳細步驟："
+msgstr ""
+"Buka Pengaturan → Mail → Akun → Tambah Akun, pilih 'Lainnya', masukkan email"
+" dan kata sandi. Panduan lengkap:"
+
+msgid "帳號設定頁面 → 手動設定 → IMAP，詳細步驟見同上連結"
+msgstr ""
+"Pengaturan akun → Pengaturan manual → IMAP. Lihat link yang sama di atas "
+"untuk langkah lengkap"
+
+msgid "忘記密碼：透過 Portal 重設，不需另行聯絡信箱管理員"
+msgstr ""
+"Lupa kata sandi: reset melalui Portal, tidak perlu menghubungi admin mail "
+"secara terpisah"
+
+msgid "信箱問題聯絡：ncucc@cc.ncu.edu.tw｜分機 57555 / 57566"
+msgstr "Dukungan email: ncucc@cc.ncu.edu.tw | ext. 57555 / 57566"
+
+msgid "計算機中心聯絡"
+msgstr "Kontak Pusat Komputasi"
+
+msgid "帳號 / Portal 問題"
+msgstr "Masalah akun / Portal"
+
+msgid "問題"
+msgstr "Masalah"
+
+msgid "信箱問題"
+msgstr "Masalah email"
+
+msgid "GPA・畢業門檻・英文門檻"
+msgstr "GPA · Syarat Kelulusan · Ambang Batas Bahasa Inggris"
+
+msgid "中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。"
+msgstr ""
+"Sistem penilaian huruf NCU, perhitungan GPA, dan ambang kemampuan bahasa "
+"Inggris yang diperlukan untuk kelulusan setiap fakultas."
+
+msgid "成績等第制（109 學年起適用）"
+msgstr "Sistem Penilaian Huruf (berlaku mulai tahun akademik 2020)"
+
+msgid ""
+"109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 60 分（C-），研究所為 70 "
+"分（B-）。"
+msgstr ""
+"Mulai tahun akademik 2020 (September 2020), NCU menggunakan sistem penilaian"
+" huruf yang dikonversi ke GPA (maks 4.3). Lulus adalah 60 (C-) untuk S1 dan "
+"70 (B-) untuk S2/S3."
+
+msgid "等第"
+msgstr "Nilai"
+
+msgid "分數範圍"
+msgstr "Rentang Nilai"
+
+msgid "說明"
+msgstr "Keterangan"
+
+msgid "優異"
+msgstr "Istimewa"
+
+msgid "研究所最低及格"
+msgstr "Batas minimal lulus S2/S3"
+
+msgid "大學部最低及格"
+msgstr "Batas minimal lulus S1"
+
+msgid "不及格"
+msgstr "Tidak lulus"
+
+msgid "0（缺考）"
+msgstr "0 (Tidak hadir)"
+
+msgid "W（停修）"
+msgstr "W (Penarikan diri)"
+
+msgid "不計入學分，成績單標註 W"
+msgstr "Tidak dihitung sebagai kredit; transkrip menunjukkan W"
+
+msgid "GPA 計算方式"
+msgstr "Cara Menghitung GPA"
+
+msgid "計算公式"
+msgstr "Rumus"
+
+msgid "課程學分數"
+msgstr "SKS Mata Kuliah"
+
+msgid "該課程等第積分"
+msgstr "Poin Nilai"
+
+msgid "總學分數"
+msgstr "Total SKS"
+
+msgid "中大採 4.3 滿分制。出國交換、申請研究所時，部分機構採 4.0 換算，請依對方要求換算。"
+msgstr ""
+"NCU menggunakan skala 4.3. Saat mendaftar program pertukaran atau "
+"pascasarjana, beberapa institusi menggunakan skala 4.0 — konversikan sesuai "
+"kebutuhan."
+
+msgid "體育課、軍訓、服務學習不計入畢業學分，但仍有成績記錄。這些課程的 GPA 積分計算方式請洽各系確認。"
+msgstr ""
+"Olahraga, pelatihan militer, dan layanan belajar tidak dihitung dalam kredit"
+" kelulusan tetapi tetap dinilai. Hubungi departemen untuk cara perhitungan "
+"GPA."
+
+msgid "畢業條件一覽（大學部）"
+msgstr "Ikhtisar Syarat Kelulusan (S1)"
+
+msgid "畢業學分數"
+msgstr "SKS Kelulusan"
+
+msgid "大多數學系需修滿 128 學分（含必修、通識、選修）。實際學分依各系課程規定，請至系網查詢應修科目表。"
+msgstr ""
+"Sebagian besar jurusan memerlukan 128 SKS (termasuk wajib, pendidikan umum, "
+"dan pilihan). Periksa website jurusan untuk tabel mata kuliah yang harus "
+"diambil."
+
+msgid "通識課程"
+msgstr "Mata Kuliah Umum"
+
+msgid "至少修習 8 學分通識課程（含核心通識及通識選修）。各學院核心通識規定略有不同，請確認是否選滿必修核心。"
+msgstr ""
+"Minimal 8 SKS mata kuliah pendidikan umum (termasuk inti dan pilihan). "
+"Persyaratan bervariasi per fakultas — pastikan Anda telah memenuhi semua "
+"mata kuliah inti wajib."
+
+msgid "體育課"
+msgstr "Olahraga"
+
+msgid "需修滿 5 學期體育課（大一必修上、下 + 興趣體育 3 學期）。不列入畢業學分，但必須修畢方可畢業。"
+msgstr ""
+"5 semester olahraga (2 wajib di tahun 1 + 3 pilihan). Tidak dihitung ke "
+"dalam kredit kelulusan, tetapi harus diselesaikan untuk lulus."
+
+msgid "服務學習"
+msgstr "Pembelajaran Layanan"
+
+msgid "需修滿 1 學年（上、下各一學期）。不列入畢業學分，但必須通過方可畢業。"
+msgstr ""
+"1 tahun akademik diperlukan (satu semester masing-masing, ganjil dan genap)."
+" Tidak dihitung ke dalam kredit kelulusan, tetapi harus lulus untuk lulus."
+
+msgid "英文畢業門檻"
+msgstr "Ambang Batas Bahasa Inggris Kelulusan"
+
+msgid "各學院標準不同（詳見下方表格）。未達標者可修習「進修英文」（4 學分，2 學期）作為替代途徑。"
+msgstr ""
+"Standar bervariasi per fakultas (lihat tabel di bawah). Yang tidak memenuhi "
+"ambang batas dapat mengambil Bahasa Inggris Tambahan (4 SKS, 2 semester) "
+"sebagai alternatif."
+
+msgid "操行成績"
+msgstr "Nilai Perilaku"
+
+msgid "各學期操行成績均須及格。"
+msgstr "Nilai perilaku harus lulus setiap semester."
+
+msgid "計學分"
+msgstr "Dihitung SKS"
+
+msgid "不計學分"
+msgstr "Tidak Dihitung SKS"
+
+msgid "需達標"
+msgstr "Harus Memenuhi Standar"
+
+msgid "英文畢業門檻（大學部，依學院）"
+msgstr "Ambang Batas Bahasa Inggris Kelulusan (S1, per Fakultas)"
+
+msgid "以下為各學院門檻標準，實際以語言中心公告為準。部分學院允許以「第二外語」替代英文門檻，請洽語言中心確認。"
+msgstr ""
+"Ambang batas di bawah ini per fakultas; standar resmi adalah pengumuman "
+"Pusat Bahasa. Beberapa fakultas mengizinkan bahasa asing kedua sebagai "
+"pengganti — konfirmasi dengan Pusat Bahasa."
+
+msgid "學院"
+msgstr "Fakultas"
+
+msgid "（聽讀合計）"
+msgstr "(Listening + Reading)"
+
+msgid "全民英檢"
+msgstr "GEPT"
+
+msgid "管理學院"
+msgstr "Fakultas Manajemen"
+
+msgid "中高級複試通過"
+msgstr "GEPT Menengah-Tinggi (Tahap 2 lulus)"
+
+msgid "文學院"
+msgstr "Fakultas Ilmu Budaya"
+
+msgid "客家學院"
+msgstr "Fakultas Hakka"
+
+msgid "電資學院"
+msgstr "Fakultas Teknik Elektro & Ilmu Komputer"
+
+msgid "工學院"
+msgstr "Fakultas Teknik"
+
+msgid "理學院"
+msgstr "Fakultas Sains"
+
+msgid "地球科學學院"
+msgstr "Fakultas Ilmu Kebumian"
+
+msgid "生醫理工學院"
+msgstr "Fakultas Ilmu Kedokteran & Teknik Biomedis"
+
+msgid ""
+"校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 "
+"NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。"
+msgstr ""
+"TOEIC Kampus: Pusat Bahasa menyelenggarakan TOEIC kampus setiap semester "
+"(sekitar NT$1,270, hanya mahasiswa NCU). Ini adalah cara paling mudah untuk "
+"memenuhi ambang bahasa Inggris. Periksa website Pusat Bahasa."
+
+msgid "未達門檻的替代方案：進修英文"
+msgstr "Alternatif untuk Di Bawah Ambang: Bahasa Inggris Tambahan"
+
+msgid "進修英文（Supplementary English）"
+msgstr "Bahasa Inggris Tambahan (Supplementary English)"
+
+msgid "共 4 學分，分兩學期修習（每學期 2 學分）"
+msgstr "Total 4 SKS, dibagi dua semester (2 SKS masing-masing)"
+
+msgid "修習並通過後可取代英文門檻，無需另外提交語言成績"
+msgstr ""
+"Setelah selesai dan lulus, menggantikan ambang bahasa Inggris — tidak perlu "
+"mengajukan skor bahasa terpisah"
+
+msgid "申請資格：入學英文成績未達標準，且已參加過中央大學英文鑑定測驗者"
+msgstr ""
+"Syarat: mahasiswa yang nilai bahasa Inggrisnya saat penerimaan tidak "
+"memenuhi standar DAN sudah mengikuti tes kemampuan bahasa Inggris NCU"
+
+msgid "是否計入畢業學分依各系規定，請洽系辦確認"
+msgstr ""
+"Apakah dihitung ke dalam kredit kelulusan tergantung jurusan — konfirmasi "
+"dengan kantor jurusan"
+
+msgid "研究所英文門檻（以工學院為例）"
+msgstr "Ambang Bahasa Inggris Pascasarjana (contoh Fakultas Teknik)"
+
+msgid ""
+"各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 "
+"或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。"
+msgstr ""
+"Setiap program pascasarjana menetapkan ambang bahasa Inggrisnya sendiri, "
+"yang harus diserahkan sebelum sidang tesis. Fakultas Teknik mensyaratkan "
+"TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 atau setara. Hubungi masing-masing "
+"departemen untuk detailnya."
+
+msgid "相關連結"
+msgstr "Tautan Terkait"
+
+msgid "語言中心英文畢業門檻"
+msgstr "Ambang Bahasa Inggris Pusat Bahasa"
+
+msgid "NCU 語言中心"
+msgstr "Pusat Bahasa NCU"
+
+msgid "應修科目表"
+msgstr "Tabel Mata Kuliah Wajib"
+
+msgid "教務處官網"
+msgstr "Website Kantor Urusan Akademik"
+
+msgid "選課・加退選・停修・抵免"
+msgstr "Registrasi Kursus · Tambah/Hapus · Pengunduran Diri · Pembebasan SKS"
+
+msgid "中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學期略有調整。"
+msgstr ""
+"Sistem registrasi kursus NCU, jadwal semester, dan prosedur pengajuan. "
+"Tanggal berdasarkan pengumuman resmi dan dapat berubah setiap semester."
+
+msgid "日程請以課務組最新公告為準："
+msgstr "Harap periksa jadwal resmi terbaru dari Divisi Urusan Akademik:"
+
+msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
+msgstr ""
+"Tanggal di bawah adalah contoh untuk Semester 2, TA 114. Tanggal berbeda "
+"setiap semester. Silakan kunjungi"
+
+msgid "課務組官網 ↗"
+msgstr "Website Divisi Urusan Akademik ↗"
+
+msgid "查看最新學期日程表。"
+msgstr "untuk melihat jadwal semester terbaru."
+
+msgid "學期課務日程（114-2 為例）"
+msgstr "Jadwal Semester (Contoh TA114-2)"
+
+msgid "初選"
+msgstr "Registrasi Awal"
+
+msgid "加退選"
+msgstr "Tambah/Hapus"
+
+msgid "人工加退選"
+msgstr "Tambah/Hapus Manual"
+
+msgid "確認結果"
+msgstr "Konfirmasi Hasil"
+
+msgid "繳學分費"
+msgstr "Bayar Biaya SKS"
+
+msgid "停修"
+msgstr "Pengunduran Diri dari Kursus"
+
+msgid "選課系統入口"
+msgstr "Sistem Registrasi Kursus"
+
+msgid "選課系統："
+msgstr "Sistem Registrasi:"
+
+msgid "SPARC（計中）帳號"
+msgstr "akun SPARC (Pusat Komputasi)"
+
+msgid "此時段請勿操作選課"
+msgstr "harap tidak mengakses sistem selama periode ini"
+
+msgid "路徑："
+msgstr "Jalur:"
+
+msgid "NCU Portal → 學生服務 → 教務相關服務 → 選課系統"
+msgstr "NCU Portal → Layanan Mahasiswa → Layanan Akademik → Registrasi Kursus"
+
+msgid "各階段說明"
+msgstr "Penjelasan Per Tahap"
+
+msgid "各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。"
+msgstr ""
+"Mata kuliah wajib biasanya sudah terdaftar. Jika sudah mengajukan pembebasan"
+" SKS atau menyelesaikannya lebih awal, harap hapus sendiri."
+
+msgid "務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。"
+msgstr ""
+"Anda harus berpartisipasi dalam registrasi awal; jika tidak, Anda kehilangan"
+" prioritas untuk mata kuliah yang dibatasi."
+
+msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgstr ""
+"Satu alokasi batch terjadi setelah registrasi awal ditutup; hasil diumumkan "
+"sebelum 16:00 pada 2026/02/03."
+
+msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
+msgstr ""
+"Untuk mata kuliah yang memerlukan kartu kata sandi, dapatkan dari dosen; "
+"setiap kode kata sandi hanya dapat digunakan sekali."
+
+msgid "手續費 NT$100"
+msgstr "Biaya Administrasi NT$100"
+
+msgid "適用對象：加退選截止後仍有需求者、因衝堂被系統退選後欲重新加選者。"
+msgstr ""
+"Untuk: mereka yang masih perlu perubahan setelah tambah/hapus ditutup, atau "
+"mereka yang mata kuliahnya dihapus karena konflik dan ingin mendaftar ulang."
+
+msgid "隔日更新至選課系統與 ee-class。"
+msgstr "Pembaruan muncul di sistem kursus dan ee-class keesokan harinya."
+
+msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
+msgstr ""
+"Jika dosen tidak dapat ditemui, staf departemen yang diberi wewenang oleh "
+"dosen dapat memberi stempel sebagai pengganti."
+
+msgid "確認選課結果"
+msgstr "Konfirmasi Hasil Registrasi"
+
+msgid "路徑：選課系統 → 個人功能表 → 選課結果。"
+msgstr "Jalur: Sistem Kursus → Menu Pribadi → Hasil Registrasi."
+
+msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgstr ""
+"Jika ada mata kuliah yang dipaksa dihapus karena konflik atau kode duplikat,"
+" tambah/hapus manual (03/10–03/12) dapat digunakan untuk memperbaikinya."
+
+msgid "停修（Course Withdrawal）"
+msgstr "Pengunduran Diri dari Kursus (Course Withdrawal)"
+
+msgid "W 成績"
+msgstr "Nilai W"
+
+msgid "重要規定"
+msgstr "Peraturan Penting"
+
+msgid "最低修課學分："
+msgstr "Persyaratan SKS Minimum:"
+
+msgid "衝堂 / 同課號："
+msgstr "Konflik Jadwal / Kode Mata Kuliah Duplikat:"
+
+msgid "部份課程有群組上限："
+msgstr "Beberapa Mata Kuliah Memiliki Batas Grup:"
+
+msgid "學分費："
+msgstr "Biaya SKS:"
+
+msgid "學分抵免"
+msgstr "Pembebasan SKS"
+
+msgid "課務組聯絡資訊"
+msgstr "Kontak Divisi Urusan Akademik"
+
+msgid "業務項目"
+msgstr "Item Layanan"
+
+msgid "電話分機（03-4227151 +）"
+msgstr "Ekstensi Telepon (03-4227151 +)"
+
+msgid "選課、課務相關"
+msgstr "Registrasi Kursus & Urusan Akademik"
+
+msgid "校際選課（本校至他校）"
+msgstr "Pendaftaran Antar Sekolah (NCU ke Sekolah Lain)"
+
+msgid "校際選課（他校至中大）"
+msgstr "Pendaftaran Antar Sekolah (Sekolah Lain ke NCU)"
+
+msgid "暑修"
+msgstr "Sesi Musim Panas"
+
+msgid "數位學習平台"
+msgstr "Platform Pembelajaran Digital"
+
+msgid "導師輔導選課問題"
+msgstr "Masalah Pemilihan Kursus dengan Bimbingan Advisor"
+
+msgid "NCU 選課系統 ↗"
+msgstr "Sistem Registrasi NCU ↗"
+
+msgid "課務日程表 ↗"
+msgstr "Kalender Jadwal Kursus ↗"
+
+msgid "選課相關資訊 PDF ↗"
+msgstr "PDF Info Registrasi ↗"
+
+msgid "選課系統操作手冊（英）↗"
+msgstr "Manual Pengguna Sistem (Inggris) ↗"
+
+msgid "教務處官網 ↗"
+msgstr "Website Kantor Urusan Akademik ↗"
+
+msgid "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。"
+msgstr ""
+"Mahasiswa baru semester 1 tidak memerlukan kartu kata sandi advisor; mulai "
+"semester 2, selesaikan prosedur pemilihan kursus dengan bimbingan advisor "
+"(online) sebelum setiap registrasi awal."
+
+msgid "春節期間（02/13–02/22）不開放選課，請注意。"
+msgstr ""
+"Registrasi kursus ditutup selama periode Tahun Baru Imlek (02/13–02/22). "
+"Harap perhatikan."
+
+msgid ""
+"自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。"
+msgstr ""
+"Mulai hari ke-3 tambah/hapus, sistem menjalankan satu alokasi harian pukul "
+"07:00–09:00 (sistem dijeda saat pemrosesan); setelah 09:00 dapat cek hasil "
+"hari itu di ee-class."
+
+msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
+msgstr ""
+"Jika masih ingin mengambil mata kuliah yang tidak berhasil, Anda harus "
+"mendaftar ulang secara online dan menunggu alokasi keesokan harinya — daftar"
+" tunggu tidak disimpan otomatis."
+
+msgid "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
+msgstr ""
+"Pada hari terakhir tambah/hapus, jangan menambahkan mata kuliah yang mungkin"
+" konflik — alokasi terakhir dapat memaksa penghapusan mata kuliah yang "
+"berkonflik."
+
+msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
+msgstr ""
+"Proses: Cetak formulir dari sistem → Dapatkan tanda tangan dosen → Bayar "
+"NT$100 (tunai di kantor keuangan atau EasyCard di urusan akademik) → Kirim "
+"formulir ke urusan akademik."
+
+msgid "依選課辦法，未於期限內確認者以電腦系統為依據，不得異議。請務必確認！"
+msgstr ""
+"Sesuai aturan registrasi kursus, mereka yang tidak mengkonfirmasi dalam "
+"batas waktu terikat pada catatan sistem tanpa hak sanggah. Pastikan untuk "
+"mengkonfirmasi!"
+
+msgid "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。"
+msgstr ""
+"Dibatasi satu mata kuliah per semester; setelah penarikan, SKS tersisa tidak"
+" boleh kurang dari minimum (16 SKS untuk tahun 1–3, 9 untuk tahun 4)."
+
+msgid "停修不退學分費，成績單上以「停修 / W」登錄，不計入當學期所修學分數。"
+msgstr ""
+"Biaya SKS tidak dikembalikan untuk penarikan; transkrip mencatat "
+"\"Pengunduran Diri / W\" dan kredit tidak dihitung untuk semester itu."
+
+msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
+msgstr ""
+"Proses: Cetak formulir pengunduran diri dari sistem → Dapatkan tanda tangan "
+"dosen dan kepala jurusan → Kirim ke urusan akademik."
+
+msgid "已辦理減修者不得再辦理停修。"
+msgstr ""
+"Mahasiswa yang sudah mengajukan pengurangan beban studi tidak boleh "
+"mengajukan pengunduran diri."
+
+msgid "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"Tahun 1–3 harus mengambil minimal 16 SKS per semester; tahun 4 minimal 9. "
+"Mereka yang di bawah minimum harus mengajukan pengurangan beban (perlu "
+"persetujuan advisor dan kepala jurusan), atau menghadapi pemecatan."
+
+msgid "加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。"
+msgstr ""
+"Setelah tambah/hapus ditutup, konflik atau kode duplikat yang tersisa akan "
+"dipaksa dihapus oleh kantor urusan akademik. Selesaikan sebelum batas waktu;"
+" jika dihapus, gunakan tambah/hapus manual untuk memulihkan."
+
+msgid "如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。"
+msgstr ""
+"Misalnya, pendidikan umum inti dibatasi 2 mata kuliah per semester, olahraga"
+" 1 mata kuliah, bahasa Inggris tahun pertama 1 mata kuliah, dll. Periksa "
+"batas grup sebelum mendaftar."
+
+msgid "修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。"
+msgstr ""
+"Mengambil ≤9 SKS: bayar biaya SKS dan biaya lain-lain secara proporsional; "
+"≥10 SKS: bayar biaya kuliah penuh dan biaya lain-lain (kredit pelatihan guru"
+" dihitung terpisah)."
+
+msgid "學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。"
+msgstr ""
+"Pembebasan SKS ditangani oleh Bagian Registrasi (bukan Urusan Akademik). "
+"Hubungi Bagian Registrasi di Kantor Urusan Akademik untuk waktu dan "
+"persyaratan pengajuan."
+
+msgid "抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選期間選課，系統不會代選任何課程。"
+msgstr ""
+"Setelah hasil pembebasan diumumkan, jika mata kuliah yang dibebaskan masih "
+"ada di daftar registrasi Anda, hapus sendiri. Mahasiswa transfer harus "
+"mendaftar sendiri selama tambah/hapus; sistem tidak akan mendaftar otomatis."
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Masukkan pertanyaan Anda. Sistem akan menyusun saran berdasarkan identitas "
@@ -2904,621 +4593,3 @@ msgstr "Nilai dan Syarat Kelulusan"
 
 #~ msgid "我的帳戶"
 #~ msgstr "Akun Saya"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般外籍生不同。本頁整理港澳生常見的入台文件、居留證申請流程及注意事項。"
-msgstr ""
-"Mahasiswa Hong Kong dan Makau yang belajar di Taiwan diatur oleh "
-"Undang-Undang Hubungan dengan Hong Kong dan Makau. Prosedur masuk dan "
-"permohonan izin tinggal mereka berbeda dari mahasiswa internasional "
-"biasa. Halaman ini merangkum dokumen masuk umum, prosedur permohonan "
-"ARC, dan catatan penting bagi mahasiswa HK/Makau."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "依港澳關係條例辦理"
-msgstr "Diproses berdasarkan UU Hubungan HK/Makau"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "抵台 15 天內辦居留"
-msgstr "Ajukan izin tinggal dalam 15 hari setelah tiba"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "移民署：0800-024-111"
-msgstr "NIA: 0800-024-111"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "港澳生受到特別保障："
-msgstr "Perlindungan khusus bagi mahasiswa HK/Makau:"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "香港及澳門居民依《香港澳門關係條例》在台就學，享有許多類似本國生的優惠待遇（如宿舍優先、獎學金資格等），但居留申請程序仍須透過移民署辦理。"
-msgstr ""
-"Warga Hong Kong dan Makau yang belajar di Taiwan berdasarkan "
-"Undang-Undang Hubungan dengan Hong Kong dan Makau menikmati banyak "
-"keuntungan serupa mahasiswa domestik (seperti prioritas asrama dan "
-"kelayakan beasiswa), namun tetap harus mengajukan izin tinggal melalui "
-"Badan Imigrasi Nasional."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "持港澳身份入台"
-msgstr "Masuk Taiwan dengan identitas HK/Makau"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "使用臺灣入出境許可證"
-msgstr "Menggunakan Izin Masuk/Keluar Taiwan"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "持香港永久居民身份證（或澳門居民身份證）向內政部移民署或駐外館處申請"
-msgstr ""
-"Ajukan dengan KTP Penduduk Tetap Hong Kong (atau KTP Penduduk Makau) "
-"melalui Badan Imigrasi Nasional atau kantor perwakilan luar negeri"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "臺灣地區入出境許可證"
-msgstr "Izin Masuk/Keluar Wilayah Taiwan"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "，再以此入台就讀。"
-msgstr ", kemudian gunakan izin ini untuk masuk Taiwan dan belajar."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "入台後需申請港澳居民居留許可（居留證）。"
-msgstr ""
-"Setelah tiba di Taiwan, Anda harus mengajukan Izin Tinggal Penduduk Hong "
-"Kong/Makau (ARC)."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "持外國護照入台"
-msgstr "Masuk Taiwan dengan paspor asing"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "使用外國護照 + 居留簽"
-msgstr "Menggunakan paspor asing + visa tinggal"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "同時持有他國護照（如英國 BN(O)、葡萄牙等）的港澳生，可選擇以外國護照申請"
-msgstr ""
-"Mahasiswa HK/Makau yang juga memiliki paspor asing (mis. BN(O) Inggris, "
-"Portugis, dll.) dapat memilih untuk mengajukan dengan paspor asing "
-"mereka untuk"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "學生居留簽（Resident Visa）"
-msgstr "Visa Pelajar (Resident Visa)"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "入台。"
-msgstr "masuk ke Taiwan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "此類情況辦理流程接近一般外籍生，抵台後申請外僑居留證（ARC）。"
-msgstr ""
-"Dalam kasus ini, prosesnya mirip dengan mahasiswa internasional biasa — "
-"ajukan Alien Resident Certificate (ARC) setelah tiba."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "不確定自己應走哪一條路線，建議在出發前聯絡"
-msgstr "Jika Anda tidak yakin jalur mana yang berlaku, hubungi"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "或直接致電移民署（0800-024-111），說明持有的旅行證件類型，即可獲得最準確的指引。"
-msgstr ""
-"atau hubungi NIA langsung di 0800-024-111 dan jelaskan jenis dokumen "
-"perjalanan yang Anda miliki untuk mendapatkan panduan paling akurat."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "15 天"
-msgstr "15 hari"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "抵台後起算"
-msgstr "dihitung sejak tiba"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "起"
-msgstr "mulai dari"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "1年$1,000 / 2年$2,000 / 3年$3,000"
-msgstr "1 thn: NT$1.000 / 2 thn: NT$2.000 / 3 thn: NT$3.000"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "依就學期間"
-msgstr "Sesuai masa studi"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "通常每年換證"
-msgstr "Diperbarui setiap tahun"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "10 個工作天"
-msgstr "10 hari kerja"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "不含退補件；預約可加快"
-msgstr ""
-"Tidak termasuk berkas yang dikembalikan; janji temu dapat mempercepat "
-"proses"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "以港澳身份入台者，需提供入出境許可證正本及影本。"
-msgstr ""
-"Mereka yang masuk dengan identitas HK/Makau harus menyediakan asli dan "
-"salinan Izin Masuk/Keluar."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "持港澳證件者必備"
-msgstr "Wajib bagi pemegang dokumen HK/Makau"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "香港 / 澳門永久居民身份證"
-msgstr "KTP Penduduk Tetap Hong Kong / Makau"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "港澳居民身份證正本及影本，作為身份認定之用。"
-msgstr "Asli dan salinan KTP Penduduk HK/Makau untuk verifikasi identitas."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "必要"
-msgstr "Wajib"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "在學證明書"
-msgstr "Surat Keterangan Terdaftar"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "由台灣就讀學校出具，載明科系、就學期間。學校 OIA 可協助申請。"
-msgstr ""
-"Diterbitkan oleh universitas di Taiwan, mencantumkan jurusan dan periode "
-"pendaftaran. OIA universitas dapat membantu pengajuan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "照片 2 張"
-msgstr "2 lembar foto"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "近 6 個月內 2 吋白底彩色照片（寬 3.5 cm × 高 4.5 cm）。"
-msgstr ""
-"Foto berwarna diambil dalam 6 bulan terakhir, ukuran 2 inci, latar putih "
-"(lebar 3,5 cm × tinggi 4,5 cm)."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "居留申請書"
-msgstr "Formulir Permohonan Izin Tinggal"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "移民署官網下載或現場索取，請事先填妥。"
-msgstr "Unduh dari situs NIA atau ambil di tempat. Isi terlebih dahulu."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "健康檢查合格證明"
-msgstr "Sertifikat Pemeriksaan Kesehatan"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "初次申請通常需附，須至指定醫院檢查。辦理前請向移民署或學校確認。"
-msgstr ""
-"Biasanya diperlukan untuk permohonan pertama kali. Harus dilakukan di "
-"rumah sakit yang ditunjuk. Konfirmasi dengan NIA atau universitas "
-"sebelum melanjutkan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "初次申請通常需要"
-msgstr "Biasanya diperlukan untuk permohonan pertama kali"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "住宿地址證明"
-msgstr "Bukti Alamat Tempat Tinggal"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "宿舍住宿證或租屋合約書，部分辦事處要求提供。"
-msgstr ""
-"Sertifikat hunian asrama atau kontrak sewa. Diperlukan oleh beberapa "
-"kantor."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "視情況"
-msgstr "Sesuai kebutuhan"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "外國護照（持外國護照者）"
-msgstr "Paspor Asing (bagi yang masuk dengan paspor asing)"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "以外國護照入台者，需備護照正本及影本，並附上入台居留簽證。"
-msgstr ""
-"Mereka yang masuk dengan paspor asing harus menyediakan asli dan salinan "
-"paspor, beserta visa tinggal Taiwan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "持外國護照者適用"
-msgstr "Berlaku bagi pemegang paspor asing"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "抵台後前往學校國際事務處（OIA）報到"
-msgstr "Lapor ke Kantor Urusan Internasional (OIA) universitas setelah tiba"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "OIA 通常在迎新時統一說明居留申請流程，並提供在學證明書及文件確認服務。抵台當天或次日即應前往，確認文件清單。"
-msgstr ""
-"OIA biasanya menjelaskan proses permohonan izin tinggal saat orientasi "
-"dan menyediakan layanan konfirmasi surat keterangan terdaftar dan "
-"dokumen. Kunjungi pada hari tiba atau hari berikutnya untuk "
-"mengkonfirmasi daftar dokumen Anda."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "抵台當天或次日"
-msgstr "Hari tiba atau hari berikutnya"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "OIA 通常有團體辦理場次"
-msgstr "OIA biasanya mengadakan sesi pengajuan kelompok"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "取得在學證明書"
-msgstr "Dapatkan Surat Keterangan Terdaftar"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "向 OIA 申請學校出具的在學證明書。若迎新時已發放，可直接進入下一步。部分學校在報到後即可當日取件。"
-msgstr ""
-"Minta surat keterangan terdaftar dari OIA. Jika sudah dibagikan saat "
-"orientasi, lanjutkan ke langkah berikutnya. Beberapa universitas "
-"menerbitkannya pada hari yang sama saat registrasi."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "抵台後 1～2 天"
-msgstr "1–2 hari setelah tiba"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "健康檢查（初次申請者）"
-msgstr "Pemeriksaan Kesehatan (pemohon pertama kali)"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "初次申請居留需至移民署指定合格醫院進行健康檢查，取得健康檢查合格證明書。學校 OIA 通常會提供指定醫院清單，可事先線上預約。"
-msgstr ""
-"Pemohon pertama kali harus menjalani pemeriksaan kesehatan di rumah "
-"sakit yang ditunjuk NIA dan mendapatkan sertifikat kesehatan. OIA "
-"universitas biasanya menyediakan daftar rumah sakit yang ditunjuk; "
-"pemesanan janji temu online direkomendasikan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "抵台後 2～5 天"
-msgstr "2–5 hari setelah tiba"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "建議事先網路預約，節省等待時間"
-msgstr "Pesan secara online terlebih dahulu untuk menghemat waktu tunggu"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "整理文件並預約移民署"
-msgstr "Siapkan dokumen dan jadwalkan janji temu NIA"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "將所有文件整理妥當並備好正本及影本，至移民署官網線上預約辦理時段。建議選擇就近的移民署辦事處（桃園市即桃園服務站）。"
-msgstr ""
-"Atur semua dokumen dengan asli dan salinan siap, lalu pesan slot waktu "
-"secara online melalui situs NIA. Pilih kantor NIA terdekat (Stasiun "
-"Layanan Taoyuan untuk Kota Taoyuan)."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "抵台後 3～7 天"
-msgstr "3–7 hari setelah tiba"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "建議線上預約"
-msgstr "Janji temu online direkomendasikan"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "前往移民署辦事處提交申請"
-msgstr "Kunjungi kantor NIA untuk mengajukan permohonan"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "攜帶所有文件至移民署，現場核對文件、採集指紋並繳費。可由 OIA 統一帶隊辦理（若有安排），或自行前往。"
-msgstr ""
-"Bawa semua dokumen ke kantor NIA untuk verifikasi dokumen, pengambilan "
-"sidik jari, dan pembayaran. OIA dapat mengatur kunjungan kelompok (jika "
-"dijadwalkan), atau Anda dapat pergi sendiri."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "抵台 15 天內"
-msgstr "Dalam 15 hari setelah tiba"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "移民署辦事處"
-msgstr "Kantor Layanan NIA"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "等待審核（約 10 個工作天）"
-msgstr "Tunggu proses (sekitar 10 hari kerja)"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "申請後約"
-msgstr "Sekitar"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "製卡完成（不含退補件），移民署以簡訊通知領件。等待期間持入境許可證（或護照）及申請收據可作為合法居留暫時證明。"
-msgstr ""
-"Kartu akan siap (tidak termasuk berkas yang dikembalikan). NIA akan "
-"memberi tahu Anda melalui SMS saat siap diambil. Selama masa tunggu, "
-"Izin Masuk/Keluar (atau paspor) dan tanda terima permohonan berfungsi "
-"sebagai bukti tinggal legal sementara."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "約 10 個工作天"
-msgstr "Sekitar 10 hari kerja"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "領取居留證"
-msgstr "Ambil izin tinggal Anda"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "持入境許可證（或護照）及收據親赴辦事處領取居留證。領取後可辦理加入健保、申辦手機門號及銀行開戶。"
-msgstr ""
-"Bawa Izin Masuk/Keluar (atau paspor) dan tanda terima ke kantor NIA "
-"untuk mengambil izin tinggal. Setelahnya, Anda dapat mendaftar Asuransi "
-"Kesehatan Nasional, mengajukan paket telepon, dan membuka rekening bank."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "完成！"
-msgstr "Selesai!"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "港澳生的居留證跟一般外籍生的 ARC 一樣嗎？"
-msgstr ""
-"Apakah izin tinggal mahasiswa HK/Makau sama dengan ARC untuk mahasiswa "
-"internasional biasa?"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "功能上相同，但法源不同。"
-msgstr "Secara fungsional sama, tetapi didasarkan pada hukum yang berbeda."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "一般外籍生辦理「"
-msgstr "Mahasiswa internasional biasa mengajukan \""
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "外僑居留證（ARC）"
-msgstr "Alien Resident Certificate (ARC)"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "」，依據《入出國及移民法》。"
-msgstr "\", berdasarkan Undang-Undang Imigrasi."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "以港澳身份入台的港澳生辦理「"
-msgstr "Mahasiswa HK/Makau yang masuk dengan identitas HK/Makau mengajukan \""
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "港澳居民居留證"
-msgstr "Izin Tinggal Penduduk Hong Kong/Makau"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "」，依據《香港澳門關係條例》。"
-msgstr "\", berdasarkan Undang-Undang Hubungan dengan Hong Kong dan Makau."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "兩者在台均可用於身份核驗、健保加保及銀行開戶等日常事務。"
-msgstr ""
-"Kedua dokumen dapat digunakan di Taiwan untuk verifikasi identitas, "
-"pendaftaran NHI, dan pembukaan rekening bank."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "在台期間可以打工嗎？"
-msgstr "Bisakah saya bekerja paruh waktu saat belajar di Taiwan?"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid ""
-"港澳生持居留證可申請工讀許可（每週不超過 20 "
-"小時）。需向學校取得工讀同意書後，至勞動部辦理工作許可。在校內工讀（如圖書館、系辦助理）通常只需學校同意，手續較簡便。未取得合法工作許可的工作行為依法屬違規，請務必事先申請。"
-msgstr ""
-"Mahasiswa HK/Makau dengan izin tinggal dapat mengajukan izin kerja paruh "
-"waktu (tidak lebih dari 20 jam per minggu). Anda harus terlebih dahulu "
-"mendapatkan surat persetujuan kerja paruh waktu dari universitas, lalu "
-"mengajukan izin kerja dari Kementerian Tenaga Kerja. Pekerjaan di kampus "
-"(mis. asisten perpustakaan, asisten kantor jurusan) biasanya hanya "
-"memerlukan persetujuan universitas dan prosedurnya lebih sederhana. "
-"Bekerja tanpa izin kerja yang sah adalah pelanggaran hukum — selalu "
-"ajukan terlebih dahulu."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "居留證到期後怎麼辦？"
-msgstr "Apa yang harus dilakukan saat izin tinggal saya kedaluwarsa?"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "居留證通常每年更新一次，到期前"
-msgstr "Izin tinggal biasanya diperbarui setiap tahun. Dalam"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "30 天內"
-msgstr "30 hari"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "即可申請延期。延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。"
-msgstr ""
-"sebelum kedaluwarsa, Anda dapat mengajukan perpanjangan. Dokumen yang "
-"diperlukan mirip dengan permohonan awal (surat keterangan terdaftar, "
-"izin tinggal asli, foto, dll.) — tidak diperlukan biaya pemeriksaan "
-"kesehatan untuk perpanjangan. Biaya perpanjangan NT$500. Ajukan lebih "
-"awal untuk menghindari overstay."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "港澳生可以加入全民健保嗎？"
-msgstr "Bisakah mahasiswa HK/Makau mendaftar Asuransi Kesehatan Nasional (NHI)?"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid ""
-"可以。取得居留證後，透過學校衛生保健組辦理加保即可。保費依年度費率由學校代扣，學生費率比一般標準低。加保後就醫診所門診費用約 "
-"NT$150，享有與台灣學生相同的健保保障。"
-msgstr ""
-"Ya. Setelah menerima izin tinggal, daftar melalui pusat kesehatan "
-"universitas. Premi dipotong oleh universitas sesuai tarif tahunan, dan "
-"tarif mahasiswa lebih rendah dari tarif standar. Setelah terdaftar, "
-"biaya konsultasi klinik sekitar NT$150, memberikan cakupan NHI yang sama "
-"dengan mahasiswa Taiwan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "暑假返港澳超過 2 個月，健保怎麼處理？"
-msgstr ""
-"Jika saya kembali ke HK/Makau lebih dari 2 bulan selama liburan musim "
-"panas, apa yang terjadi dengan NHI saya?"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "離台超過 2 個月前，可至學校衛保組辦理「"
-msgstr "Sebelum meninggalkan Taiwan lebih dari 2 bulan, Anda dapat mengajukan \""
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "出國停保"
-msgstr "penangguhan NHI saat ke luar negeri"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "」，停保期間不扣繳保費。回台後記得辦理「"
-msgstr ""
-"\" melalui pusat kesehatan universitas. Premi tidak akan dikenakan "
-"selama masa penangguhan. Ingat untuk mengajukan \""
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "復保"
-msgstr "reaktivasi"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "」以恢復保障。停保不影響居留證效期，但停保期間在台就醫無健保保障。"
-msgstr ""
-"\" saat kembali untuk memulihkan cakupan Anda. Penangguhan tidak "
-"mempengaruhi validitas izin tinggal, tetapi Anda tidak akan memiliki "
-"cakupan NHI untuk perawatan medis di Taiwan selama masa penangguhan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "學校 OIA 會幫我辦居留證嗎？"
-msgstr "Apakah OIA universitas akan membantu saya mengajukan izin tinggal?"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid ""
-"大多數學校會在開學初舉辦團體辦理場次，OIA 統一帶隊至移民署。建議迎新報到後立即前往 OIA "
-"確認是否有統一辦理安排，以便提早準備所需文件，節省自行前往的時間。"
-msgstr ""
-"Sebagian besar universitas mengadakan sesi pengajuan kelompok di awal "
-"semester, dengan OIA memimpin mahasiswa ke NIA bersama-sama. Setelah "
-"orientasi, segera kunjungi OIA untuk mengecek apakah ada sesi kelompok "
-"yang diatur sehingga Anda dapat menyiapkan dokumen yang diperlukan lebih "
-"awal."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "內政部移民署"
-msgstr "Kementerian Dalam Negeri — Badan Imigrasi Nasional (NIA)"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "辦事處查詢、線上預約、進度查詢、申請書下載。"
-msgstr ""
-"Pencari kantor, janji temu online, pengecekan status permohonan, dan "
-"unduhan formulir."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "居留說明、在學證明書申請、健康檢查指定醫院清單。"
-msgstr ""
-"Panduan izin tinggal, pengajuan surat keterangan terdaftar, dan daftar "
-"rumah sakit yang ditunjuk untuk pemeriksaan kesehatan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "取得居留證後可辦理加保，享有完整醫療保障。"
-msgstr ""
-"Setelah menerima izin tinggal, Anda dapat mendaftar NHI untuk "
-"perlindungan medis yang komprehensif."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "外來人士在台生活諮詢"
-msgstr "Layanan Konsultasi Kehidupan Penduduk Asing di Taiwan"
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "多語言免費諮詢，涵蓋居留、生活、就業等問題。"
-msgstr ""
-"Konsultasi gratis multibahasa mencakup izin tinggal, kehidupan "
-"sehari-hari, pekerjaan, dan topik lainnya."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid ""
-"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。"
-msgstr ""
-"\"Mahasiswa perantau\" (僑生) mengacu pada mereka yang memiliki "
-"kewarganegaraan ROC atau keturunan Tionghoa yang telah tinggal di luar "
-"negeri dalam jangka panjang dan menerima pendidikan di sana, sebagaimana "
-"diakui oleh Kementerian Pendidikan. Mereka dapat mengakses jalur khusus "
-"seperti beasiswa mahasiswa perantau dan program persiapan. \"Mahasiswa "
-"internasional\" (外籍生) mengacu pada mereka yang masuk dengan paspor "
-"non-ROC, biasanya mendaftar melalui proses penerimaan internasional "
-"mandiri masing-masing universitas dan berhak atas Beasiswa Taiwan "
-"Kementerian Pendidikan. Kedua status diakui secara berbeda, dengan jalur "
-"penerimaan dan manfaat yang berbeda."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid ""
-"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
-msgstr ""
-"Tidak. Jalur OCAC hanya tersedia untuk pelamar dengan status mahasiswa "
-"perantau. Mahasiswa internasional (mereka yang memegang paspor asing "
-"tetapi tidak diakui sebagai mahasiswa perantau) harus mendaftar langsung "
-"ke kantor penerimaan internasional masing-masing universitas. Kunjungi "
-"situs web universitas terkait untuk jadwal pendaftaran dan persyaratan "
-"dokumen."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
-msgstr ""
-"Memiliki kewarganegaraan asing dan telah menyelesaikan pendidikan "
-"prasyarat untuk program yang dituju (lulus SMA atau universitas). "
-"Sertifikat kemampuan bahasa Mandarin (TOCFL) atau Inggris (IELTS / "
-"TOEFL) biasanya diperlukan, tergantung persyaratan masing-masing "
-"jurusan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid ""
-"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 "
-"以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。"
-msgstr ""
-"Persyaratan kemampuan bahasa Mandarin bervariasi per jurusan. Beberapa "
-"jurusan menetapkan ambang batas kemampuan bahasa Mandarin minimum (mis. "
-"TOCFL B1 atau lebih), sementara yang lain menerima pendaftaran kursus "
-"bahasa Mandarin setelah diterima sebagai suplemen. Kami merekomendasikan "
-"untuk memeriksa panduan penerimaan terbaru jurusan yang dituju atau "
-"menghubungi Kantor Urusan Internasional universitas. Jika kemampuan "
-"bahasa Mandarin Anda belum memadai, Anda juga dapat mempertimbangkan "
-"untuk mendaftar ke program berbahasa Inggris atau kursus persiapan "
-"bahasa."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid ""
-"海聯會管道可填寫多個志願（學校 + "
-"系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。"
-msgstr ""
-"Jalur OCAC memungkinkan Anda mengisi beberapa preferensi (universitas + "
-"jurusan), dan sistem menetapkan penempatan berdasarkan urutan preferensi "
-"— satu permohonan biasanya mencakup beberapa pilihan. Untuk mahasiswa "
-"internasional yang mendaftar ke universitas secara individual, cukup "
-"kirimkan permohonan terpisah ke setiap universitas sebelum batas waktu "
-"masing-masing, tetapi perhatikan bahwa biaya pendaftaran dan persyaratan "
-"dokumen mungkin berbeda antar universitas."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid ""
-"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
-msgstr ""
-"Beasiswa Taiwan Kementerian Pendidikan harus diajukan secara terpisah, "
-"baik pada saat penerimaan maupun setelah pendaftaran, biasanya melalui "
-"kantor perwakilan Taiwan di luar negeri atau langsung melalui "
-"universitas. Slot terbatas dan persaingan ketat. Beasiswa mahasiswa "
-"perantau sebagian ditinjau secara otomatis oleh OCAC atau universitas, "
-"dan sebagian memerlukan formulir permohonan terpisah. Beasiswa "
-"penerimaan khusus universitas biasanya dijelaskan dalam surat penawaran "
-"penerimaan."
-
-#: flows/templates/flows/guide_arc_exchange.html
-msgid ""
-"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
-msgstr ""
-"Ya, tetapi perlu diperhatikan bahwa permohonan transfer biasanya "
-"memiliki batasan tingkat (biasanya terbatas pada tahun ke-2 atau ke-3), "
-"dan memerlukan transkrip dari universitas saat ini serta bukti penarikan "
-"diri. Jadwal penerimaan transfer bervariasi per universitas dan biasanya "
-"diadakan sekitar akhir setiap tahun akademik. Untuk detail, "
-"konsultasikan panduan ujian transfer jurusan yang dituju. Mahasiswa "
-"pascasarjana yang pindah antar program harus mengikuti peraturan jurusan "
-"masing-masing."
-
