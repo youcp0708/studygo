@@ -4951,3 +4951,255 @@ msgstr "Agensi Pembangunan Tenaga Kerja, Kementerian Buruh ↗"
 
 msgid "NCU 國際事務處 ↗"
 msgstr "Pejabat Hal Ehwal Antarabangsa NCU ↗"
+
+
+msgid "中央大學 × 公共交通"
+msgstr "Universiti Pusat Negara × Pengangkutan Awam"
+
+msgid "整理中央大學對外主要公車路線，包含從中壢車站、高鐵桃園站、機場及台北的搭乘方式，以及即時查詢公車到站的官方連結。"
+msgstr ""
+"Ringkasan laluan bas utama dari dan ke NCU, termasuk cara menaiki bas "
+"dari Stesen Zhongli, Stesen HSR Taoyuan, lapangan terbang dan Taipei, "
+"serta pautan rasmi untuk maklumat ketibaan bas masa nyata."
+
+msgid "📍 主站點：中央大學"
+msgstr "📍 Perhentian Utama: Universiti Pusat Negara"
+
+msgid "🗺 地區：桃園市中壢區"
+msgstr "🗺 Kawasan: Daerah Zhongli, Bandar Taoyuan"
+
+msgid "⚡ 即時查詢 → 見下方連結"
+msgstr "⚡ Carian Masa Nyata → Lihat pautan di bawah"
+
+msgid "🚉 中壢車站出發 → 搭"
+msgstr "🚉 Dari Stesen Zhongli → Naik"
+
+msgid "🚄 高鐵桃園站出發 → 搭"
+msgstr "🚄 Dari Stesen HSR Taoyuan → Naik"
+
+msgid "🏙 台北出發 → 搭"
+msgstr "🏙 Dari Taipei → Naik"
+
+msgid "🚌 市區出發（後門）→ 搭"
+msgstr "🚌 Dari Kawasan Bandar (Pintu Belakang) → Naik"
+
+msgid "（雙連坡站下車步行）"
+msgstr "(turun di Shuanglianpo, berjalan ke pintu belakang)"
+
+msgid "約 20～30 分鐘"
+msgstr "Kira-kira 20–30 minit"
+
+msgid "從中壢車站出發"
+msgstr "Dari Stesen Zhongli"
+
+msgid "市區公車行駛於中壢市區及中央大學之間。票價一段票全票 18 元，可用悠遊卡。"
+msgstr ""
+"Bas bandar beroperasi antara kawasan bandar Zhongli dan NCU. Tambang "
+"NT$18 (satu zon); EasyCard diterima."
+
+msgid "校園站牌：前門警衛室、中大湖、依仁堂、後門、觀景台"
+msgstr ""
+"Perhentian kampus: Pengawal Pintu Hadapan, Tasik NCU, Dewan Yi-Ren, "
+"Pintu Belakang, Dek Pemerhatian"
+
+msgid "即時動態 ↗"
+msgstr "Penjejak Langsung ↗"
+
+msgid "桃園公車動態 ↗"
+msgstr "Bas Taoyuan Langsung ↗"
+
+msgid "約 15～20 分鐘"
+msgstr "Kira-kira 15–20 minit"
+
+msgid "從高鐵桃園站出發"
+msgstr "Dari Stesen HSR Taoyuan"
+
+msgid "市區公車直達中央大學，約每半小時一班。"
+msgstr "Bas bandar terus ke NCU, lebih kurang setiap 30 minit."
+
+msgid "💡 高鐵桃園站設有機場捷運，可直達桃園機場 T1/T2"
+msgstr ""
+"💡 Stesen HSR Taoyuan disambungkan dengan MRT Lapangan Terbang yang terus "
+"ke Terminal T1/T2 Lapangan Terbang Taoyuan"
+
+msgid "中大校園公車時刻表 ↗"
+msgstr "Jadual Bas Kampus NCU ↗"
+
+msgid "約 35～40 分鐘"
+msgstr "Kira-kira 35–40 minit"
+
+msgid "從桃園機場出發"
+msgstr "Dari Lapangan Terbang Taoyuan"
+
+msgid "搭「桃園機場捷運」至桃園高鐵站，再轉搭 172 或 173 公車直達中央大學。"
+msgstr ""
+"Naik MRT Lapangan Terbang ke Stesen HSR Taoyuan, kemudian tukar ke Bas "
+"172 atau 173 terus ke NCU."
+
+msgid "🚇 機場捷運"
+msgstr "🚇 MRT Lapangan Terbang"
+
+msgid "機場捷運至高鐵桃園站約 15 分鐘，轉車後再約 15～20 分鐘"
+msgstr ""
+"MRT Lapangan Terbang ke Stesen HSR Taoyuan kira-kira 15 minit; kemudian "
+"15–20 minit dengan bas"
+
+msgid "約 30～40 分鐘"
+msgstr "Kira-kira 30–40 minit"
+
+msgid "從台北出發"
+msgstr "Dari Taipei"
+
+msgid "國道客運 9025A 繞經中央大學，路線為松山機場－中山高－中央大學－中壢。"
+msgstr ""
+"Bas tol 9025A melalui NCU. Laluan: Lapangan Terbang Songshan – Lebuhraya "
+"Zhongshan – NCU – Zhongli."
+
+msgid "搭至「中央大學」站下車即可，不需轉乘"
+msgstr "Turun di perhentian \"Universiti Pusat Negara\"; tidak perlu transit"
+
+msgid "公路客運查詢 ↗"
+msgstr "Cari Bas Tol ↗"
+
+msgid "下車步行至後門"
+msgstr "Turun dan berjalan ke pintu belakang"
+
+msgid "市區出發（後門入口）"
+msgstr "Dari Kawasan Bandar (Pintu Masuk Belakang)"
+
+msgid "搭 5035 至「雙連坡」站下車，步行即可進入中央大學後門。"
+msgstr ""
+"Naik Bas 5035 ke perhentian \"Shuanglianpo\" dan berjalan ke pintu "
+"belakang NCU."
+
+msgid "🚪 下車後步行至後門，無需轉乘"
+msgstr "🚪 Berjalan ke pintu belakang selepas turun; tidak perlu transit"
+
+msgid "路線"
+msgstr "Laluan"
+
+msgid "行駛方向"
+msgstr "Arah"
+
+msgid "中大校園站牌"
+msgstr "Perhentian Kampus NCU"
+
+msgid "票價"
+msgstr "Tambang"
+
+msgid "中壢市區 ⟷ 中央大學"
+msgstr "Bandar Zhongli ⟷ NCU"
+
+msgid "前門警衛室"
+msgstr "Pengawal Pintu Hadapan"
+
+msgid "中大湖"
+msgstr "Tasik NCU"
+
+msgid "依仁堂"
+msgstr "Dewan Yi-Ren"
+
+msgid "後門"
+msgstr "Pintu Belakang"
+
+msgid "觀景台"
+msgstr "Dek Pemerhatian"
+
+msgid "NT$18（一段票）"
+msgstr "NT$18 (satu zon)"
+
+msgid "可用悠遊卡，車程約 20～30 分鐘"
+msgstr "EasyCard diterima; kira-kira 20–30 minit perjalanan"
+
+msgid "桃園公車 ↗"
+msgstr "Bas Taoyuan ↗"
+
+msgid "高鐵桃園站 ⟷ 中央大學"
+msgstr "Stesen HSR Taoyuan ⟷ NCU"
+
+msgid "約每半小時一班，車程 15～20 分鐘"
+msgstr "Kira-kira setiap 30 minit; perjalanan 15–20 minit"
+
+msgid "中大時刻表 ↗"
+msgstr "Jadual NCU ↗"
+
+msgid "松山機場 ⟷ 中壢（繞中央大學）"
+msgstr "Lapangan Terbang Songshan ⟷ Zhongli (melalui NCU)"
+
+msgid "國道客運，車程約 30～40 分鐘（松山機場出發）"
+msgstr "Bas tol; kira-kira 30–40 minit (dari Lapangan Terbang Songshan)"
+
+msgid "市區 ⟷ 雙連坡（步行至後門）"
+msgstr "Kawasan Bandar ⟷ Shuanglianpo (berjalan ke pintu belakang)"
+
+msgid "雙連坡"
+msgstr "Shuanglianpo"
+
+msgid "（步行至後門）"
+msgstr "(berjalan ke pintu belakang)"
+
+msgid "🚪 雙連坡站下車後步行可進入中大後門"
+msgstr "🚪 Turun di Shuanglianpo dan berjalan ke pintu belakang NCU"
+
+msgid "搭車小技巧"
+msgstr "Tips Menaiki Bas"
+
+msgid "建議使用悠遊卡（EasyCard）："
+msgstr "Gunakan EasyCard:"
+
+msgid "持卡搭車享折扣優惠，不需找零，一卡通用台鐵、高鐵、機場捷運等通用。可在中壢火車站或便利商店購買及加值。"
+msgstr ""
+"Nikmati diskaun tambang, tidak perlu duit syiling, gunakan satu kad "
+"untuk TRA, HSR, MRT Lapangan Terbang dan lain-lain. Beli dan isi semula "
+"di Stesen Zhongli atau mana-mana kedai serbaneka."
+
+msgid "尖峰時段（08:00─09:00 / 17:00─19:00）"
+msgstr "Waktu puncak (08:00–09:00 / 17:00–19:00)"
+
+msgid "公車較擁擠且可能誤點，建議提早 10 分鐘至站牌等候，或使用 App 及時確認車輛位置。"
+msgstr ""
+"Bas lebih sesak dan mungkin lewat. Tiba 10 minit lebih awal atau gunakan "
+"aplikasi untuk semak lokasi bas masa nyata."
+
+msgid "深夜及假日班次較少："
+msgstr "Lewat Malam & Hari Cuti — Perkhidmatan Lebih Sedikit:"
+
+msgid "晚上 10 點後部分路線停駛，建議提早確認末班車時間，或改搭計程車（推薦使用 LINE TAXI / Uber）。"
+msgstr ""
+"Sesetengah laluan berhenti selepas pukul 10 malam. Semak masa bas "
+"terakhir terlebih dahulu, atau naik teksi (LINE TAXI / Uber disyorkan)."
+
+msgid "官方"
+msgstr "Rasmi"
+
+msgid "桃園市公車即時查詢"
+msgstr "Bas Bandar Taoyuan Masa Nyata"
+
+msgid "桃園市政府官方公車即時到站資訊，輸入站點名稱或路線號查詢。"
+msgstr ""
+"Maklumat ketibaan bas rasmi Bandar Taoyuan. Cari mengikut nama "
+"perhentian atau nombor laluan."
+
+msgid "台灣公車網（全台）"
+msgstr "Rangkaian Bas Taiwan (Seluruh Taiwan)"
+
+msgid "交通部公路總局整合平台，支援全台縣市公車即時到站查詢。"
+msgstr ""
+"Platform bersepadu Biro Jalan MOTC yang menyokong pertanyaan bas masa "
+"nyata untuk semua daerah dan bandar."
+
+msgid "公路客運查詢（ebus）"
+msgstr "Cari Bas Tol (ebus)"
+
+msgid "政府整合公路客運班次查詢，可查中長程客運（台北──中壢等）。"
+msgstr ""
+"Jadual bas tol bersepadu kerajaan untuk laluan jarak jauh (cth., "
+"Taipei–Zhongli)."
+
+msgid "地圖"
+msgstr "Peta"
+
+msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示即時班次。"
+msgstr ""
+"Cari dari \"Universiti Pusat Negara\" untuk merancang laluan transit "
+"dengan masa berlepas masa nyata."

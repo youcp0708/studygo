@@ -4517,3 +4517,253 @@ msgstr "Cơ quan Phát triển Lao động, Bộ Lao động ↗"
 
 msgid "NCU 國際事務處 ↗"
 msgstr "Văn phòng Hợp tác Quốc tế NCU ↗"
+
+
+msgid "中央大學 × 公共交通"
+msgstr "Đại học Trung ương Quốc gia × Giao thông công cộng"
+
+msgid "整理中央大學對外主要公車路線，包含從中壢車站、高鐵桃園站、機場及台北的搭乘方式，以及即時查詢公車到站的官方連結。"
+msgstr ""
+"Tóm tắt các tuyến xe buýt chính đến và đi từ NCU, bao gồm cách đi từ Ga "
+"Zhongli, Ga HSR Taoyuan, sân bay và Đài Bắc, cùng liên kết chính thức để "
+"xem thông tin xe buýt đến theo thời gian thực."
+
+msgid "📍 主站點：中央大學"
+msgstr "📍 Điểm dừng chính: Đại học Trung ương Quốc gia"
+
+msgid "🗺 地區：桃園市中壢區"
+msgstr "🗺 Khu vực: Quận Zhongli, Thành phố Taoyuan"
+
+msgid "⚡ 即時查詢 → 見下方連結"
+msgstr "⚡ Tra cứu thời gian thực → Xem liên kết bên dưới"
+
+msgid "🚉 中壢車站出發 → 搭"
+msgstr "🚉 Từ Ga Zhongli → Lên xe"
+
+msgid "🚄 高鐵桃園站出發 → 搭"
+msgstr "🚄 Từ Ga HSR Taoyuan → Lên xe"
+
+msgid "🏙 台北出發 → 搭"
+msgstr "🏙 Từ Đài Bắc → Lên xe"
+
+msgid "🚌 市區出發（後門）→ 搭"
+msgstr "🚌 Từ khu vực trung tâm (cổng sau) → Lên xe"
+
+msgid "（雙連坡站下車步行）"
+msgstr "(xuống ở Shuanglianpo, đi bộ đến cổng sau)"
+
+msgid "約 20～30 分鐘"
+msgstr "Khoảng 20–30 phút"
+
+msgid "從中壢車站出發"
+msgstr "Từ Ga Zhongli"
+
+msgid "市區公車行駛於中壢市區及中央大學之間。票價一段票全票 18 元，可用悠遊卡。"
+msgstr ""
+"Xe buýt thành phố hoạt động giữa trung tâm thành phố Zhongli và NCU. Giá "
+"vé NT$18 (một vùng); chấp nhận EasyCard."
+
+msgid "校園站牌：前門警衛室、中大湖、依仁堂、後門、觀景台"
+msgstr ""
+"Bến trong khuôn viên: Trạm bảo vệ cổng trước, Hồ NCU, Hội trường Yi-Ren, "
+"Cổng sau, Đài quan sát"
+
+msgid "即時動態 ↗"
+msgstr "Theo dõi trực tiếp ↗"
+
+msgid "桃園公車動態 ↗"
+msgstr "Xe buýt Taoyuan trực tiếp ↗"
+
+msgid "約 15～20 分鐘"
+msgstr "Khoảng 15–20 phút"
+
+msgid "從高鐵桃園站出發"
+msgstr "Từ Ga HSR Taoyuan"
+
+msgid "市區公車直達中央大學，約每半小時一班。"
+msgstr "Xe buýt thành phố đi thẳng đến NCU, khoảng mỗi 30 phút một chuyến."
+
+msgid "💡 高鐵桃園站設有機場捷運，可直達桃園機場 T1/T2"
+msgstr ""
+"💡 Ga HSR Taoyuan kết nối với MRT Sân bay đi thẳng đến Nhà ga T1/T2 Sân "
+"bay Taoyuan"
+
+msgid "中大校園公車時刻表 ↗"
+msgstr "Lịch xe buýt khuôn viên NCU ↗"
+
+msgid "約 35～40 分鐘"
+msgstr "Khoảng 35–40 phút"
+
+msgid "從桃園機場出發"
+msgstr "Từ Sân bay Taoyuan"
+
+msgid "搭「桃園機場捷運」至桃園高鐵站，再轉搭 172 或 173 公車直達中央大學。"
+msgstr ""
+"Đi MRT Sân bay đến Ga HSR Taoyuan, sau đó chuyển sang Xe buýt 172 hoặc "
+"173 đi thẳng đến NCU."
+
+msgid "🚇 機場捷運"
+msgstr "🚇 MRT Sân bay"
+
+msgid "機場捷運至高鐵桃園站約 15 分鐘，轉車後再約 15～20 分鐘"
+msgstr ""
+"MRT Sân bay đến Ga HSR Taoyuan khoảng 15 phút; sau đó 15–20 phút đi xe "
+"buýt"
+
+msgid "約 30～40 分鐘"
+msgstr "Khoảng 30–40 phút"
+
+msgid "從台北出發"
+msgstr "Từ Đài Bắc"
+
+msgid "國道客運 9025A 繞經中央大學，路線為松山機場－中山高－中央大學－中壢。"
+msgstr ""
+"Xe buýt cao tốc 9025A đi qua NCU. Tuyến: Sân bay Songshan – Cao tốc "
+"Zhongshan – NCU – Zhongli."
+
+msgid "搭至「中央大學」站下車即可，不需轉乘"
+msgstr "Xuống ở bến \"Đại học Trung ương Quốc gia\"; không cần trung chuyển"
+
+msgid "公路客運查詢 ↗"
+msgstr "Tìm kiếm xe buýt cao tốc ↗"
+
+msgid "下車步行至後門"
+msgstr "Xuống xe và đi bộ đến cổng sau"
+
+msgid "市區出發（後門入口）"
+msgstr "Từ khu vực trung tâm (lối vào cổng sau)"
+
+msgid "搭 5035 至「雙連坡」站下車，步行即可進入中央大學後門。"
+msgstr "Đi Xe buýt 5035 đến bến \"Shuanglianpo\" và đi bộ đến cổng sau NCU."
+
+msgid "🚪 下車後步行至後門，無需轉乘"
+msgstr "🚪 Đi bộ đến cổng sau sau khi xuống xe; không cần trung chuyển"
+
+msgid "路線"
+msgstr "Tuyến"
+
+msgid "行駛方向"
+msgstr "Hướng"
+
+msgid "中大校園站牌"
+msgstr "Bến khuôn viên NCU"
+
+msgid "票價"
+msgstr "Giá vé"
+
+msgid "中壢市區 ⟷ 中央大學"
+msgstr "Trung tâm Zhongli ⟷ NCU"
+
+msgid "前門警衛室"
+msgstr "Trạm bảo vệ cổng trước"
+
+msgid "中大湖"
+msgstr "Hồ NCU"
+
+msgid "依仁堂"
+msgstr "Hội trường Yi-Ren"
+
+msgid "後門"
+msgstr "Cổng sau"
+
+msgid "觀景台"
+msgstr "Đài quan sát"
+
+msgid "NT$18（一段票）"
+msgstr "NT$18 (một vùng)"
+
+msgid "可用悠遊卡，車程約 20～30 分鐘"
+msgstr "Chấp nhận EasyCard; khoảng 20–30 phút di chuyển"
+
+msgid "桃園公車 ↗"
+msgstr "Xe buýt Taoyuan ↗"
+
+msgid "高鐵桃園站 ⟷ 中央大學"
+msgstr "Ga HSR Taoyuan ⟷ NCU"
+
+msgid "約每半小時一班，車程 15～20 分鐘"
+msgstr "Khoảng mỗi 30 phút; di chuyển 15–20 phút"
+
+msgid "中大時刻表 ↗"
+msgstr "Lịch NCU ↗"
+
+msgid "松山機場 ⟷ 中壢（繞中央大學）"
+msgstr "Sân bay Songshan ⟷ Zhongli (qua NCU)"
+
+msgid "國道客運，車程約 30～40 分鐘（松山機場出發）"
+msgstr "Xe buýt cao tốc; khoảng 30–40 phút (từ Sân bay Songshan)"
+
+msgid "市區 ⟷ 雙連坡（步行至後門）"
+msgstr "Trung tâm ⟷ Shuanglianpo (đi bộ đến cổng sau)"
+
+msgid "雙連坡"
+msgstr "Shuanglianpo"
+
+msgid "（步行至後門）"
+msgstr "(đi bộ đến cổng sau)"
+
+msgid "🚪 雙連坡站下車後步行可進入中大後門"
+msgstr "🚪 Xuống ở Shuanglianpo và đi bộ đến cổng sau NCU"
+
+msgid "搭車小技巧"
+msgstr "Mẹo đi xe buýt"
+
+msgid "建議使用悠遊卡（EasyCard）："
+msgstr "Sử dụng EasyCard:"
+
+msgid "持卡搭車享折扣優惠，不需找零，一卡通用台鐵、高鐵、機場捷運等通用。可在中壢火車站或便利商店購買及加值。"
+msgstr ""
+"Được giảm giá vé, không cần tiền lẻ, dùng một thẻ cho TRA, HSR, MRT Sân "
+"bay và nhiều dịch vụ khác. Mua và nạp tiền tại Ga Zhongli hoặc bất kỳ "
+"cửa hàng tiện lợi nào."
+
+msgid "尖峰時段（08:00─09:00 / 17:00─19:00）"
+msgstr "Giờ cao điểm (08:00–09:00 / 17:00–19:00)"
+
+msgid "公車較擁擠且可能誤點，建議提早 10 分鐘至站牌等候，或使用 App 及時確認車輛位置。"
+msgstr ""
+"Xe buýt đông và có thể trễ. Đến bến sớm 10 phút hoặc dùng ứng dụng kiểm "
+"tra vị trí xe buýt theo thời gian thực."
+
+msgid "深夜及假日班次較少："
+msgstr "Đêm khuya & Ngày lễ — Ít chuyến hơn:"
+
+msgid "晚上 10 點後部分路線停駛，建議提早確認末班車時間，或改搭計程車（推薦使用 LINE TAXI / Uber）。"
+msgstr ""
+"Một số tuyến ngừng hoạt động sau 22:00. Kiểm tra giờ xe cuối cùng trước, "
+"hoặc đi taxi (LINE TAXI / Uber được khuyến nghị)."
+
+msgid "官方"
+msgstr "Chính thức"
+
+msgid "桃園市公車即時查詢"
+msgstr "Xe buýt thành phố Taoyuan theo thời gian thực"
+
+msgid "桃園市政府官方公車即時到站資訊，輸入站點名稱或路線號查詢。"
+msgstr ""
+"Thông tin xe buýt đến theo thời gian thực chính thức của Thành phố "
+"Taoyuan. Tìm kiếm theo tên bến hoặc số tuyến."
+
+msgid "台灣公車網（全台）"
+msgstr "Mạng lưới xe buýt Đài Loan (toàn quốc)"
+
+msgid "交通部公路總局整合平台，支援全台縣市公車即時到站查詢。"
+msgstr ""
+"Nền tảng tích hợp của Cục Đường bộ MOTC hỗ trợ tra cứu xe buýt theo thời "
+"gian thực cho tất cả các huyện và thành phố."
+
+msgid "公路客運查詢（ebus）"
+msgstr "Tìm kiếm xe buýt cao tốc (ebus)"
+
+msgid "政府整合公路客運班次查詢，可查中長程客運（台北──中壢等）。"
+msgstr ""
+"Lịch xe buýt cao tốc tích hợp của chính phủ cho các tuyến đường dài (ví "
+"dụ: Đài Bắc–Zhongli)."
+
+msgid "地圖"
+msgstr "Bản đồ"
+
+msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示即時班次。"
+msgstr ""
+"Tìm kiếm từ \"Đại học Trung ương Quốc gia\" để lập kế hoạch tuyến giao "
+"thông với giờ khởi hành theo thời gian thực."

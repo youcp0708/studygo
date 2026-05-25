@@ -5125,3 +5125,251 @@ msgstr "Workforce Development Agency, MOL ↗"
 
 msgid "NCU 國際事務處 ↗"
 msgstr "NCU Office of International Affairs ↗"
+
+
+msgid "中央大學 × 公共交通"
+msgstr "National Central University × Public Transit"
+
+msgid "整理中央大學對外主要公車路線，包含從中壢車站、高鐵桃園站、機場及台北的搭乘方式，以及即時查詢公車到站的官方連結。"
+msgstr ""
+"A summary of the major bus routes to and from NCU, covering how to ride "
+"from Zhongli Station, HSR Taoyuan Station, the airport, and Taipei, plus "
+"official links for real-time arrival info."
+
+msgid "📍 主站點：中央大學"
+msgstr "📍 Main Stop: National Central University"
+
+msgid "🗺 地區：桃園市中壢區"
+msgstr "🗺 Area: Zhongli District, Taoyuan City"
+
+msgid "⚡ 即時查詢 → 見下方連結"
+msgstr "⚡ Real-time Lookup → See links below"
+
+msgid "🚉 中壢車站出發 → 搭"
+msgstr "🚉 From Zhongli Station → Take"
+
+msgid "🚄 高鐵桃園站出發 → 搭"
+msgstr "🚄 From HSR Taoyuan Station → Take"
+
+msgid "🏙 台北出發 → 搭"
+msgstr "🏙 From Taipei → Take"
+
+msgid "🚌 市區出發（後門）→ 搭"
+msgstr "🚌 From City Area (Rear Gate) → Take"
+
+msgid "（雙連坡站下車步行）"
+msgstr "(alight at Shuanglianpo, walk to rear gate)"
+
+msgid "約 20～30 分鐘"
+msgstr "Approx. 20–30 min"
+
+msgid "從中壢車站出發"
+msgstr "From Zhongli Station"
+
+msgid "市區公車行駛於中壢市區及中央大學之間。票價一段票全票 18 元，可用悠遊卡。"
+msgstr ""
+"City bus running between Zhongli urban area and NCU. Fare NT$18 (one "
+"zone); EasyCard accepted."
+
+msgid "校園站牌：前門警衛室、中大湖、依仁堂、後門、觀景台"
+msgstr ""
+"Campus stops: Front Gate Guard House, NCU Lake, Yi-Ren Hall, Rear Gate, "
+"Observation Deck"
+
+msgid "即時動態 ↗"
+msgstr "Live Tracker ↗"
+
+msgid "桃園公車動態 ↗"
+msgstr "Taoyuan Bus Live ↗"
+
+msgid "約 15～20 分鐘"
+msgstr "Approx. 15–20 min"
+
+msgid "從高鐵桃園站出發"
+msgstr "From HSR Taoyuan Station"
+
+msgid "市區公車直達中央大學，約每半小時一班。"
+msgstr "City bus running directly to NCU, approximately every 30 minutes."
+
+msgid "💡 高鐵桃園站設有機場捷運，可直達桃園機場 T1/T2"
+msgstr ""
+"💡 HSR Taoyuan Station has the Airport MRT with direct access to Taoyuan "
+"Airport T1/T2"
+
+msgid "中大校園公車時刻表 ↗"
+msgstr "NCU Campus Bus Schedule ↗"
+
+msgid "約 35～40 分鐘"
+msgstr "Approx. 35–40 min"
+
+msgid "從桃園機場出發"
+msgstr "From Taoyuan Airport"
+
+msgid "搭「桃園機場捷運」至桃園高鐵站，再轉搭 172 或 173 公車直達中央大學。"
+msgstr ""
+"Take the Airport MRT to HSR Taoyuan Station, then transfer to Bus 172 or "
+"173 directly to NCU."
+
+msgid "🚇 機場捷運"
+msgstr "🚇 Airport MRT"
+
+msgid "機場捷運至高鐵桃園站約 15 分鐘，轉車後再約 15～20 分鐘"
+msgstr "Airport MRT to HSR Taoyuan Station approx. 15 min; then 15–20 min by bus"
+
+msgid "約 30～40 分鐘"
+msgstr "Approx. 30–40 min"
+
+msgid "從台北出發"
+msgstr "From Taipei"
+
+msgid "國道客運 9025A 繞經中央大學，路線為松山機場－中山高－中央大學－中壢。"
+msgstr ""
+"Highway bus 9025A passes through NCU. Route: Songshan Airport – "
+"Zhongshan Freeway – NCU – Zhongli."
+
+msgid "搭至「中央大學」站下車即可，不需轉乘"
+msgstr "Alight at the \"National Central University\" stop; no transfer needed"
+
+msgid "公路客運查詢 ↗"
+msgstr "Highway Bus Query ↗"
+
+msgid "下車步行至後門"
+msgstr "Alight and walk to rear gate"
+
+msgid "市區出發（後門入口）"
+msgstr "From City Area (Rear Gate Entrance)"
+
+msgid "搭 5035 至「雙連坡」站下車，步行即可進入中央大學後門。"
+msgstr "Take Bus 5035 to \"Shuanglianpo\" stop and walk to the NCU rear gate."
+
+msgid "🚪 下車後步行至後門，無需轉乘"
+msgstr "🚪 Walk to rear gate after alighting; no transfer needed"
+
+msgid "路線"
+msgstr "Route"
+
+msgid "行駛方向"
+msgstr "Direction"
+
+msgid "中大校園站牌"
+msgstr "NCU Campus Stops"
+
+msgid "票價"
+msgstr "Fare"
+
+msgid "中壢市區 ⟷ 中央大學"
+msgstr "Zhongli Urban Area ⟷ NCU"
+
+msgid "前門警衛室"
+msgstr "Front Gate Guard House"
+
+msgid "中大湖"
+msgstr "NCU Lake"
+
+msgid "依仁堂"
+msgstr "Yi-Ren Hall"
+
+msgid "後門"
+msgstr "Rear Gate"
+
+msgid "觀景台"
+msgstr "Observation Deck"
+
+msgid "NT$18（一段票）"
+msgstr "NT$18 (one zone)"
+
+msgid "可用悠遊卡，車程約 20～30 分鐘"
+msgstr "EasyCard accepted; approx. 20–30 min ride"
+
+msgid "桃園公車 ↗"
+msgstr "Taoyuan Bus ↗"
+
+msgid "高鐵桃園站 ⟷ 中央大學"
+msgstr "HSR Taoyuan Station ⟷ NCU"
+
+msgid "約每半小時一班，車程 15～20 分鐘"
+msgstr "Approx. every 30 min; 15–20 min ride"
+
+msgid "中大時刻表 ↗"
+msgstr "NCU Schedule ↗"
+
+msgid "松山機場 ⟷ 中壢（繞中央大學）"
+msgstr "Songshan Airport ⟷ Zhongli (via NCU)"
+
+msgid "國道客運，車程約 30～40 分鐘（松山機場出發）"
+msgstr "Highway bus; approx. 30–40 min (from Songshan Airport)"
+
+msgid "市區 ⟷ 雙連坡（步行至後門）"
+msgstr "City Area ⟷ Shuanglianpo (walk to rear gate)"
+
+msgid "雙連坡"
+msgstr "Shuanglianpo"
+
+msgid "（步行至後門）"
+msgstr "(walk to rear gate)"
+
+msgid "🚪 雙連坡站下車後步行可進入中大後門"
+msgstr "🚪 Alight at Shuanglianpo and walk to the NCU rear gate"
+
+msgid "搭車小技巧"
+msgstr "Riding Tips"
+
+msgid "建議使用悠遊卡（EasyCard）："
+msgstr "Use an EasyCard:"
+
+msgid "持卡搭車享折扣優惠，不需找零，一卡通用台鐵、高鐵、機場捷運等通用。可在中壢火車站或便利商店購買及加值。"
+msgstr ""
+"Enjoy fare discounts, no exact change needed, and use the same card for "
+"TRA, HSR, Airport MRT, and more. Purchase and top up at Zhongli Station "
+"or any convenience store."
+
+msgid "尖峰時段（08:00─09:00 / 17:00─19:00）"
+msgstr "Peak hours (08:00–09:00 / 17:00–19:00)"
+
+msgid "公車較擁擠且可能誤點，建議提早 10 分鐘至站牌等候，或使用 App 及時確認車輛位置。"
+msgstr ""
+"Buses are more crowded and may run late. Arrive 10 min early or use an "
+"app to check real-time bus locations."
+
+msgid "深夜及假日班次較少："
+msgstr "Late Night & Holidays — Fewer Services:"
+
+msgid "晚上 10 點後部分路線停駛，建議提早確認末班車時間，或改搭計程車（推薦使用 LINE TAXI / Uber）。"
+msgstr ""
+"Some routes stop after 10 PM. Check the last bus time in advance, or "
+"take a taxi (LINE TAXI / Uber recommended)."
+
+msgid "官方"
+msgstr "Official"
+
+msgid "桃園市公車即時查詢"
+msgstr "Taoyuan City Bus Real-Time"
+
+msgid "桃園市政府官方公車即時到站資訊，輸入站點名稱或路線號查詢。"
+msgstr ""
+"Official Taoyuan City Government bus arrival info. Search by stop name "
+"or route number."
+
+msgid "台灣公車網（全台）"
+msgstr "Taiwan Bus Network (Nationwide)"
+
+msgid "交通部公路總局整合平台，支援全台縣市公車即時到站查詢。"
+msgstr ""
+"MOTC Highway Bureau platform supporting real-time bus queries for all "
+"counties and cities."
+
+msgid "公路客運查詢（ebus）"
+msgstr "Highway Bus Query (ebus)"
+
+msgid "政府整合公路客運班次查詢，可查中長程客運（台北──中壢等）。"
+msgstr ""
+"Government integrated highway bus schedule for long-distance routes "
+"(e.g., Taipei–Zhongli)."
+
+msgid "地圖"
+msgstr "Map"
+
+msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示即時班次。"
+msgstr ""
+"Search from \"National Central University\" to plan transit routes with "
+"live departure times."
