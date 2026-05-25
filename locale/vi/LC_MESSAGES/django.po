@@ -970,10 +970,6 @@ msgstr "Vui lòng chọn loại thân phận"
 msgid "身份別將影響您的流程任務內容"
 msgstr "Loại thân phận sẽ ảnh hưởng đến nội dung nhiệm vụ quy trình của bạn"
 
-#: .\users\templates\users\profile_setup.html:88
-msgid "入臺前準備"
-msgstr "Chuẩn bị trước khi đến Đài Loan"
-
 #: .\users\templates\users\profile_setup.html:96
 msgid "辦理簽證等手續"
 msgstr "Làm thủ tục visa và các thủ tục liên quan"
@@ -4443,9 +4439,6 @@ msgstr "và tải lên hệ thống."
 
 msgid "文件"
 msgstr "Tài liệu"
-
-msgid "說明"
-msgstr "Mô tả"
 
 msgid "學生證"
 msgstr "Thẻ sinh viên"

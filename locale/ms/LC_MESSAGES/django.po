@@ -358,11 +358,6 @@ msgstr "Jabatan Bahasa Cina Luar Negara (kursus persediaan)"
 msgid "學士班"
 msgstr "ijazah sarjana muda"
 
-#: .\flows\templates\flows\admissions_guide.html:273
-#: .\flows\templates\flows\admissions_guide.html:391
-msgid "研究所"
-msgstr "Sekolah siswazah"
-
 #: .\flows\templates\flows\admissions_guide.html:274
 #: .\flows\templates\flows\admissions_guide.html:445 .\users\models.py:96
 #: .\users\templates\users\edit_profile.html:89
@@ -736,10 +731,6 @@ msgstr ""
 "belajar untuk jangka pendek (setengah tahun atau satu tahun akademik). "
 "Kredit boleh digunakan sebagai kredit apabila kembali ke sekolah mengikut "
 "perjanjian, dan tuisyen dan yuran Taiwan biasanya dikecualikan."
-
-#: .\flows\templates\flows\admissions_guide.html:506
-msgid "申請流程"
-msgstr "Proses permohonan"
 
 #: .\flows\templates\flows\admissions_guide.html:507
 msgid "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申請，須先確認原校有締結交換協議。"
@@ -1205,10 +1196,6 @@ msgstr "Setiap tahun dari akhir Ogos hingga awal September"
 msgid "完成入學！"
 msgstr "Pendaftaran selesai!"
 
-#: .\flows\templates\flows\admissions_guide.html:829
-msgid "常見問題"
-msgstr "Soalan Lazim"
-
 #: .\flows\templates\flows\admissions_guide.html:833
 msgid "我是外籍生（非僑生），可以透過海聯會申請嗎？"
 msgstr ""
@@ -1454,36 +1441,6 @@ msgid "入學・居留・健保・工讀・學籍等重要法規說明"
 msgstr ""
 "Peraturan penting tentang kemasukan, pemastautinan, insurans kesihatan, "
 "bekerja, dan status akademik"
-
-#: .\flows\templates\flows\guide_index.html:82
-msgid "全民健保申請"
-msgstr "Permohonan insurans kesihatan nasional"
-
-#: .\flows\templates\flows\guide_index.html:83
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr ""
-"Anda boleh menambah insurans selepas ARC dikeluarkan dan kos pesakit luar "
-"akan dikurangkan dengan ketara."
-
-#: .\flows\templates\flows\guide_index.html:91
-msgid "台灣銀行開戶"
-msgstr "pembukaan akaun bank Taiwan"
-
-#: .\flows\templates\flows\guide_index.html:92
-msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-msgstr ""
-"Keperluan untuk menerima biasiswa, pejabat pos, Taiwan Bank, Yushan Bank "
-"mengesyorkan perbandingan"
-
-#: .\flows\templates\flows\guide_index.html:100
-msgid "台灣門號申辦"
-msgstr "Permohonan nombor telefon Taiwan"
-
-#: .\flows\templates\flows\guide_index.html:101
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr ""
-"Kad prabayar vs pelan sewa bulanan, dijelaskan oleh pengendali "
-"telekomunikasi utama"
 
 #: .\flows\templates\flows\my_flows.html:3
 msgid "我的任務"
@@ -2330,61 +2287,6 @@ msgstr "Dapatkan Nombor Telefon Taiwan"
 msgid "預付卡 vs 月租方案，各大電信業者說明"
 msgstr "Kad prabayar vs bulanan — penjelasan pengendali utama"
 
-msgid "地圖導覽"
-msgstr "Peta & Navigasi"
-
-msgid "學校・醫院・交通"
-msgstr "Kampus · Hospital · Pengangkutan"
-
-msgid "中央大學周邊重要地點，點選快速定位及導航"
-msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
-
-msgid "快速定位"
-msgstr "Lokasi Cepat"
-
-msgid "中央大學"
-msgstr "Universiti Pusat Kebangsaan"
-
-msgid "壢新醫院"
-msgstr "Hospital Lixin"
-
-msgid "中壢火車站"
-msgstr "Stesen Kereta Zhongli"
-
-msgid "高鐵桃園站"
-msgstr "Stesen HSR Taoyuan"
-
-msgid "桃園國際機場"
-msgstr "Lapangan Terbang Antarabangsa Taoyuan"
-
-msgid "大江購物中心"
-msgstr "Pusat Membeli-belah Dayeh"
-
-msgid "開啟導航"
-msgstr "Buka Navigasi"
-
-msgid "學校・醫院・車站・機場位置，一鍵導航"
-msgstr ""
-"Lokasi sekolah, hospital, stesen, lapangan terbang — navigasi satu ketik"
-
-msgid "全民健保申請"
-msgstr "Permohonan Insurans Kesihatan Kebangsaan"
-
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr "Daftar selepas ARC diluluskan, kos klinik berkurangan"
-
-msgid "台灣銀行開戶"
-msgstr "Buka Akaun Bank di Taiwan"
-
-msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-msgstr "Wajib untuk biasiswa — Pejabat Pos, Bank Taiwan, E.Sun dibandingkan"
-
-msgid "台灣門號申辦"
-msgstr "Dapatkan Nombor Telefon Taiwan"
-
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr "Kad prabayar vs bulanan — penjelasan pengendali utama"
-
 msgid "港澳生居留說明"
 msgstr "Panduan Pemastautin Pelajar HK & Macao"
 
@@ -2832,447 +2734,6 @@ msgstr "Maklumat Kursus"
 msgid "成績與畢業門檻"
 msgstr "Gred dan Syarat Graduasi"
 
-msgid "10 個工作天"
-msgstr "10 hari bekerja"
-
-msgid "15 天"
-msgstr "15 hari"
-
-msgid "1年$1,000 / 2年$2,000 / 3年$3,000"
-msgstr "1 tahun $1,000 / 2 tahun $2,000 / 3 tahun $3,000"
-
-msgid "30 天內"
-msgstr "Dalam tempoh 30 hari"
-
-msgid "OIA 通常在迎新時統一說明居留申請流程，並提供在學證明書及文件確認服務。抵台當天或次日即應前往，確認文件清單。"
-msgstr ""
-"OIA biasanya menerangkan prosedur permohonan permit kediaman secara bersama "
-"semasa orientasi, dan menyediakan perkhidmatan pengesahan dokumen dan sijil "
-"pelajar. Anda perlu hadir pada hari ketibaan atau hari berikutnya untuk "
-"mengesahkan senarai dokumen."
-
-msgid "OIA 通常有團體辦理場次"
-msgstr "OIA biasanya mempunyai sesi pemprosesan berkumpulan"
-
-msgid "」以恢復保障。停保不影響居留證效期，但停保期間在台就醫無健保保障。"
-msgstr ""
-"\" untuk memulihkan perlindungan. Penangguhan insurans tidak menjejaskan "
-"tempoh sah permit kediaman, tetapi tiada perlindungan NHI semasa rawatan "
-"perubatan di Taiwan dalam tempoh penangguhan."
-
-msgid "」，依據《入出國及移民法》。"
-msgstr "\", di bawah Akta Imigresen."
-
-msgid "」，依據《香港澳門關係條例》。"
-msgstr "\", di bawah Akta Hubungan Hong Kong-Macau."
-
-msgid "」，停保期間不扣繳保費。回台後記得辦理「"
-msgstr ""
-"\", tiada premium ditolak semasa tempoh penangguhan. Selepas kembali ke "
-"Taiwan, ingat untuk mendaftar \""
-
-msgid "一般外籍生辦理「"
-msgstr "Pelajar asing biasa memohon \""
-
-msgid "不含退補件；預約可加快"
-msgstr ""
-"Tidak termasuk kes yang dikembalikan; tempahan boleh mempercepatkan proses"
-
-msgid "不確定自己應走哪一條路線，建議在出發前聯絡"
-msgstr ""
-"Jika tidak pasti laluan mana yang perlu diikuti, disyorkan untuk menghubungi"
-" pihak berkaitan sebelum berlepas"
-
-msgid "以外國護照入台者，需備護照正本及影本，並附上入台居留簽證。"
-msgstr ""
-"Mereka yang memasuki Taiwan dengan pasport asing perlu menyediakan pasport "
-"asal dan salinannya, berserta visa kediaman Taiwan."
-
-msgid "以港澳身份入台的港澳生辦理「"
-msgstr ""
-"Pelajar Hong Kong-Macau yang memasuki Taiwan dengan identiti HK/Macau "
-"memohon \""
-
-msgid "以港澳身份入台者，需提供入出境許可證正本及影本。"
-msgstr ""
-"Mereka yang memasuki Taiwan dengan identiti HK/Macau perlu menyediakan "
-"permit masuk dan keluar asal serta salinannya."
-
-msgid "住宿地址證明"
-msgstr "Bukti alamat penginapan"
-
-msgid "使用外國護照 + 居留簽"
-msgstr "Menggunakan pasport asing + visa kediaman"
-
-msgid "使用臺灣入出境許可證"
-msgstr "Menggunakan permit masuk dan keluar Taiwan"
-
-msgid "依就學期間"
-msgstr "Berdasarkan tempoh pengajian"
-
-msgid "依港澳關係條例辦理"
-msgstr "Diproses di bawah Akta Hubungan HK-Macau"
-
-msgid "健康檢查合格證明"
-msgstr "Sijil pemeriksaan kesihatan yang lulus"
-
-msgid "健康檢查（初次申請者）"
-msgstr "Pemeriksaan kesihatan (pemohon kali pertama)"
-
-msgid "入台。"
-msgstr "memasuki Taiwan."
-
-msgid "入台後需申請港澳居民居留許可（居留證）。"
-msgstr ""
-"Selepas memasuki Taiwan, anda perlu memohon permit kediaman penduduk "
-"HK/Macau (kad kediaman)."
-
-msgid "內政部移民署"
-msgstr "Jabatan Imigresen Kementerian Dalam Negeri"
-
-msgid "兩者在台均可用於身份核驗、健保加保及銀行開戶等日常事務。"
-msgstr ""
-"Kedua-duanya boleh digunakan di Taiwan untuk pengesahan identiti, "
-"pendaftaran NHI, pembukaan akaun bank dan urusan harian lain."
-
-msgid "出國停保"
-msgstr "Penangguhan NHI semasa di luar negara"
-
-msgid "初次申請居留需至移民署指定合格醫院進行健康檢查，取得健康檢查合格證明書。學校 OIA 通常會提供指定醫院清單，可事先線上預約。"
-msgstr ""
-"Permohonan kediaman kali pertama memerlukan pemeriksaan kesihatan di "
-"hospital yang dilantik oleh Jabatan Imigresen untuk mendapatkan sijil "
-"pemeriksaan kesihatan yang lulus. OIA sekolah biasanya menyediakan senarai "
-"hospital yang dilantik, dan anda boleh membuat tempahan dalam talian "
-"terlebih dahulu."
-
-msgid "初次申請通常需要"
-msgstr "Permohonan kali pertama biasanya memerlukan"
-
-msgid "初次申請通常需附，須至指定醫院檢查。辦理前請向移民署或學校確認。"
-msgstr ""
-"Biasanya diperlukan untuk permohonan kali pertama; pemeriksaan di hospital "
-"yang dilantik diperlukan. Sila sahkan dengan Jabatan Imigresen atau sekolah "
-"sebelum membuat permohonan."
-
-msgid "前往移民署辦事處提交申請"
-msgstr "Pergi ke pejabat Jabatan Imigresen untuk mengemukakan permohonan"
-
-msgid "功能上相同，但法源不同。"
-msgstr "Fungsi sama, tetapi asas perundangan berbeza."
-
-msgid ""
-"即可申請延期。延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。"
-msgstr ""
-"anda boleh memohon pembaharuan. Dokumen yang diperlukan untuk pembaharuan "
-"adalah serupa dengan permohonan kali pertama (sijil pelajar, permit kediaman"
-" asal, foto, dll.), tiada yuran pemeriksaan kesihatan diperlukan. Yuran "
-"pembaharuan NT$500. Disyorkan untuk memohon lebih awal bagi mengelakkan "
-"tamat tempoh."
-
-msgid "取得在學證明書"
-msgstr "Dapatkan sijil pelajar"
-
-msgid "取得居留證後可辦理加保，享有完整醫療保障。"
-msgstr ""
-"Selepas mendapatkan permit kediaman, anda boleh mendaftar untuk NHI dan "
-"menikmati perlindungan perubatan penuh."
-
-msgid ""
-"可以。取得居留證後，透過學校衛生保健組辦理加保即可。保費依年度費率由學校代扣，學生費率比一般標準低。加保後就醫診所門診費用約 "
-"NT$150，享有與台灣學生相同的健保保障。"
-msgstr ""
-"Ya. Selepas mendapatkan permit kediaman, anda boleh mendaftar melalui unit "
-"kesihatan sekolah. Premium akan ditolak oleh sekolah berdasarkan kadar "
-"tahunan, dan kadar pelajar lebih rendah daripada kadar standard. Selepas "
-"pendaftaran, bayaran klinik adalah sekitar NT$150, menikmati perlindungan "
-"NHI yang sama seperti pelajar Taiwan."
-
-msgid "同時持有他國護照（如英國 BN(O)、葡萄牙等）的港澳生，可選擇以外國護照申請"
-msgstr ""
-"Pelajar HK/Macau yang juga memegang pasport negara lain (seperti BN(O) "
-"British, Portugal, dll.) boleh memilih untuk memohon dengan pasport asing"
-
-msgid "向 OIA 申請學校出具的在學證明書。若迎新時已發放，可直接進入下一步。部分學校在報到後即可當日取件。"
-msgstr ""
-"Mohon sijil pelajar yang dikeluarkan oleh sekolah dari OIA. Jika sudah "
-"diberikan semasa orientasi, anda boleh terus ke langkah seterusnya. "
-"Sebahagian sekolah membenarkan pengambilan pada hari yang sama selepas "
-"daftar masuk."
-
-msgid "在台期間可以打工嗎？"
-msgstr "Bolehkah bekerja sambilan semasa di Taiwan?"
-
-msgid "在學證明書"
-msgstr "Sijil pelajar"
-
-msgid "外來人士在台生活諮詢"
-msgstr "Perkhidmatan perundingan kehidupan di Taiwan untuk orang luar negara"
-
-msgid "外僑居留證（ARC）"
-msgstr "Kad Kediaman Orang Asing (ARC)"
-
-msgid "外國護照（持外國護照者）"
-msgstr "Pasport asing (untuk pemegang pasport asing)"
-
-msgid "多語言免費諮詢，涵蓋居留、生活、就業等問題。"
-msgstr ""
-"Perkhidmatan perundingan percuma berbilang bahasa merangkumi isu kediaman, "
-"kehidupan dan pekerjaan."
-
-msgid ""
-"大多數學校會在開學初舉辦團體辦理場次，OIA 統一帶隊至移民署。建議迎新報到後立即前往 OIA "
-"確認是否有統一辦理安排，以便提早準備所需文件，節省自行前往的時間。"
-msgstr ""
-"Kebanyakan sekolah akan menganjurkan sesi pemprosesan berkumpulan pada "
-"permulaan semester, dengan OIA membawa semua pelajar ke Jabatan Imigresen. "
-"Disyorkan untuk pergi ke OIA sejurus selepas daftar masuk semasa orientasi "
-"untuk mengesahkan sama ada ada pengaturan pemprosesan bersama, agar dapat "
-"menyediakan dokumen yang diperlukan lebih awal dan menjimatkan masa."
-
-msgid "學校 OIA 會幫我辦居留證嗎？"
-msgstr "Adakah OIA sekolah akan membantu saya mendapatkan permit kediaman?"
-
-msgid "學生居留簽（Resident Visa）"
-msgstr "Visa Kediaman Pelajar (Resident Visa)"
-
-msgid "完成！"
-msgstr "Selesai!"
-
-msgid "宿舍住宿證或租屋合約書，部分辦事處要求提供。"
-msgstr ""
-"Sijil penginapan asrama atau kontrak sewa, diperlukan oleh sebahagian "
-"pejabat."
-
-msgid "將所有文件整理妥當並備好正本及影本，至移民署官網線上預約辦理時段。建議選擇就近的移民署辦事處（桃園市即桃園服務站）。"
-msgstr ""
-"Susun semua dokumen dengan betul dan sediakan asal serta salinan, kemudian "
-"buat tempahan dalam talian di laman web rasmi Jabatan Imigresen. Disyorkan "
-"untuk memilih pejabat Jabatan Imigresen yang paling dekat (pejabat Taoyuan "
-"untuk kawasan Taoyuan)."
-
-msgid "居留申請書"
-msgstr "Borang permohonan kediaman"
-
-msgid "居留說明、在學證明書申請、健康檢查指定醫院清單。"
-msgstr ""
-"Penjelasan kediaman, permohonan sijil pelajar, senarai hospital yang "
-"dilantik untuk pemeriksaan kesihatan."
-
-msgid "居留證到期後怎麼辦？"
-msgstr "Apa yang perlu dilakukan selepas permit kediaman tamat tempoh?"
-
-msgid "居留證通常每年更新一次，到期前"
-msgstr ""
-"Permit kediaman biasanya diperbaharui setiap tahun, sebelum tamat tempoh"
-
-msgid "建議事先網路預約，節省等待時間"
-msgstr ""
-"Disyorkan membuat tempahan dalam talian terlebih dahulu untuk menjimatkan "
-"masa menunggu"
-
-msgid "建議線上預約"
-msgstr "Disyorkan tempahan dalam talian"
-
-msgid "復保"
-msgstr "Pemulihan NHI"
-
-msgid "必要"
-msgstr "Wajib"
-
-msgid "或直接致電移民署（0800-024-111），說明持有的旅行證件類型，即可獲得最準確的指引。"
-msgstr ""
-"Atau hubungi terus Jabatan Imigresen (0800-024-111), nyatakan jenis dokumen "
-"perjalanan yang anda pegang untuk mendapatkan panduan yang paling tepat."
-
-msgid "抵台 15 天內"
-msgstr "Dalam 15 hari selepas tiba di Taiwan"
-
-msgid "抵台 15 天內辦居留"
-msgstr "Daftar kediaman dalam 15 hari selepas tiba di Taiwan"
-
-msgid "抵台後 1～2 天"
-msgstr "1~2 hari selepas tiba"
-
-msgid "抵台後 2～5 天"
-msgstr "2~5 hari selepas tiba"
-
-msgid "抵台後 3～7 天"
-msgstr "3~7 hari selepas tiba"
-
-msgid "抵台後前往學校國際事務處（OIA）報到"
-msgstr ""
-"Selepas tiba, pergi ke Pejabat Hal Ehwal Antarabangsa (OIA) sekolah untuk "
-"daftar masuk"
-
-msgid "抵台後起算"
-msgstr "Dikira dari tarikh ketibaan di Taiwan"
-
-msgid "抵台當天或次日"
-msgstr "Hari ketibaan di Taiwan atau hari berikutnya"
-
-msgid "持入境許可證（或護照）及收據親赴辦事處領取居留證。領取後可辦理加入健保、申辦手機門號及銀行開戶。"
-msgstr ""
-"Bawa permit masuk (atau pasport) dan resit ke pejabat untuk mengambil permit"
-" kediaman. Selepas pengambilan, anda boleh mendaftar NHI, memohon nombor "
-"telefon bimbit dan membuka akaun bank."
-
-msgid "持外國護照入台"
-msgstr "Memasuki Taiwan dengan pasport asing"
-
-msgid "持外國護照者適用"
-msgstr "Terpakai untuk pemegang pasport asing"
-
-msgid "持港澳證件者必備"
-msgstr "Wajib untuk pemegang dokumen HK/Macau"
-
-msgid "持港澳身份入台"
-msgstr "Memasuki Taiwan dengan identiti HK/Macau"
-
-msgid "持香港永久居民身份證（或澳門居民身份證）向內政部移民署或駐外館處申請"
-msgstr ""
-"Memohon kepada Jabatan Imigresen Kementerian Dalam Negeri atau pejabat "
-"perwakilan luar negara dengan Kad Pengenalan Pemastautin Tetap Hong Kong "
-"(atau Kad Pengenalan Penduduk Macau)"
-
-msgid "攜帶所有文件至移民署，現場核對文件、採集指紋並繳費。可由 OIA 統一帶隊辦理（若有安排），或自行前往。"
-msgstr ""
-"Bawa semua dokumen ke Jabatan Imigresen, di mana dokumen akan disemak, cap "
-"jari diambil dan bayaran dibuat di tempat. Boleh diuruskan bersama oleh OIA "
-"(jika ada pengaturan), atau pergi sendiri."
-
-msgid "整理文件並預約移民署"
-msgstr "Susun dokumen dan buat tempahan Jabatan Imigresen"
-
-msgid "暑假返港澳超過 2 個月，健保怎麼處理？"
-msgstr ""
-"Jika pulang ke HK/Macau lebih dari 2 bulan semasa cuti panjang, bagaimana "
-"mengendalikan NHI?"
-
-msgid "此類情況辦理流程接近一般外籍生，抵台後申請外僑居留證（ARC）。"
-msgstr ""
-"Prosedur untuk kes ini hampir sama dengan pelajar asing biasa; memohon Kad "
-"Kediaman Orang Asing (ARC) selepas tiba di Taiwan."
-
-msgid "港澳居民居留證"
-msgstr "Permit Kediaman Penduduk HK/Macau"
-
-msgid "港澳居民身份證正本及影本，作為身份認定之用。"
-msgstr ""
-"Kad pengenalan penduduk HK/Macau asal dan salinannya, untuk tujuan "
-"pengesahan identiti."
-
-msgid "港澳生受到特別保障："
-msgstr "Pelajar HK/Macau mendapat perlindungan khas:"
-
-msgid "港澳生可以加入全民健保嗎？"
-msgstr ""
-"Bolehkah pelajar HK/Macau menyertai NHI (Insurans Kesihatan Nasional)?"
-
-msgid ""
-"港澳生持居留證可申請工讀許可（每週不超過 20 "
-"小時）。需向學校取得工讀同意書後，至勞動部辦理工作許可。在校內工讀（如圖書館、系辦助理）通常只需學校同意，手續較簡便。未取得合法工作許可的工作行為依法屬違規，請務必事先申請。"
-msgstr ""
-"Pelajar HK/Macau yang memegang permit kediaman boleh memohon permit kerja "
-"sambilan (tidak melebihi 20 jam seminggu). Dapatkan surat kebenaran kerja "
-"sambilan dari sekolah, kemudian memohon permit kerja di Kementerian Buruh. "
-"Kerja sambilan di kampus (seperti perpustakaan, pembantu jabatan) biasanya "
-"hanya memerlukan kelulusan sekolah, prosedurnya lebih mudah. Bekerja tanpa "
-"permit kerja yang sah adalah pelanggaran undang-undang; sila memohon "
-"terlebih dahulu."
-
-msgid "港澳生的居留證跟一般外籍生的 ARC 一樣嗎？"
-msgstr ""
-"Adakah permit kediaman pelajar HK/Macau sama dengan ARC pelajar asing biasa?"
-
-msgid "照片 2 張"
-msgstr "2 keping gambar"
-
-msgid "由台灣就讀學校出具，載明科系、就學期間。學校 OIA 可協助申請。"
-msgstr ""
-"Dikeluarkan oleh sekolah yang anda hadiri di Taiwan, menyatakan jabatan dan "
-"tempoh pengajian. OIA sekolah boleh membantu permohonan."
-
-msgid "申請後約"
-msgstr "Kira-kira selepas permohonan"
-
-msgid "移民署官網下載或現場索取，請事先填妥。"
-msgstr ""
-"Muat turun dari laman web rasmi Jabatan Imigresen atau dapatkan di tempat; "
-"sila isi terlebih dahulu."
-
-msgid "移民署辦事處"
-msgstr "Pejabat Jabatan Imigresen"
-
-msgid "移民署：0800-024-111"
-msgstr "Jabatan Imigresen: 0800-024-111"
-
-msgid "等待審核（約 10 個工作天）"
-msgstr "Tunggu kelulusan (kira-kira 10 hari bekerja)"
-
-msgid "約 10 個工作天"
-msgstr "Kira-kira 10 hari bekerja"
-
-msgid "臺灣地區入出境許可證"
-msgstr "Permit Masuk dan Keluar Kawasan Taiwan"
-
-msgid "製卡完成（不含退補件），移民署以簡訊通知領件。等待期間持入境許可證（或護照）及申請收據可作為合法居留暫時證明。"
-msgstr ""
-"Setelah kad siap dibuat (tidak termasuk kes yang dikembalikan), Jabatan "
-"Imigresen akan menghantar SMS untuk memberitahu pengambilan. Semasa "
-"menunggu, permit masuk (atau pasport) dan resit permohonan boleh digunakan "
-"sebagai bukti kediaman sementara yang sah."
-
-msgid "視情況"
-msgstr "Bergantung pada situasi"
-
-msgid "起"
-msgstr "bermula"
-
-msgid "辦事處查詢、線上預約、進度查詢、申請書下載。"
-msgstr ""
-"Pertanyaan pejabat, tempahan dalam talian, semakan status, muat turun borang"
-" permohonan."
-
-msgid "近 6 個月內 2 吋白底彩色照片（寬 3.5 cm × 高 4.5 cm）。"
-msgstr ""
-"Foto berwarna berlatar belakang putih 2 inci dalam 6 bulan terakhir (lebar "
-"3.5 cm × tinggi 4.5 cm)."
-
-msgid "通常每年換證"
-msgstr "Biasanya diperbaharui setiap tahun"
-
-msgid "離台超過 2 個月前，可至學校衛保組辦理「"
-msgstr ""
-"Lebih dari 2 bulan sebelum meninggalkan Taiwan, anda boleh pergi ke unit "
-"kesihatan sekolah untuk mendaftar \""
-
-msgid "領取居留證"
-msgstr "Ambil permit kediaman"
-
-msgid "香港 / 澳門永久居民身份證"
-msgstr "Kad Pengenalan Pemastautin Tetap Hong Kong / Macau"
-
-msgid ""
-"香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般外籍生不同。本頁整理港澳生常見的入台文件、居留證申請流程及注意事項。"
-msgstr ""
-"Pelajar dari Hong Kong dan Macau belajar di Taiwan di bawah Akta Hubungan "
-"Hong Kong-Macau. Cara memasuki Taiwan dan prosedur permohonan kediaman "
-"berbeza daripada pelajar asing biasa. Halaman ini meringkaskan dokumen "
-"masuk, prosedur permohonan permit kediaman dan perkara penting untuk pelajar"
-" HK/Macau."
-
-msgid "香港及澳門居民依《香港澳門關係條例》在台就學，享有許多類似本國生的優惠待遇（如宿舍優先、獎學金資格等），但居留申請程序仍須透過移民署辦理。"
-msgstr ""
-"Penduduk Hong Kong dan Macau yang belajar di Taiwan di bawah Akta Hubungan "
-"Hong Kong-Macau menikmati banyak layanan keutamaan serupa dengan pelajar "
-"tempatan (seperti keutamaan asrama, kelayakan biasiswa, dll.), tetapi "
-"prosedur permohonan kediaman masih mesti diuruskan melalui Jabatan "
-"Imigresen."
-
-msgid "，再以此入台就讀。"
-msgstr ", kemudian gunakan ini untuk memasuki Taiwan bagi tujuan pengajian."
-
 msgid "學校設施"
 msgstr "Kemudahan Kampus"
 
@@ -3380,9 +2841,6 @@ msgstr "buku"
 
 msgid "借閱期限"
 msgstr "Tempoh pinjaman"
-
-msgid "天"
-msgstr "hari"
 
 msgid "線上續借"
 msgstr "Pembaharuan dalam talian"
@@ -3861,9 +3319,6 @@ msgstr "Gred"
 msgid "分數範圍"
 msgstr "Julat Markah"
 
-msgid "說明"
-msgstr "Catatan"
-
 msgid "優異"
 msgstr "Cemerlang"
 
@@ -4061,9 +3516,6 @@ msgstr ""
 " mesti diserahkan sebelum pembelaan ijazah. Kolej Kejuruteraan memerlukan "
 "TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 atau setara. Hubungi jabatan masing-"
 "masing untuk perincian."
-
-msgid "相關連結"
-msgstr "Pautan Berkaitan"
 
 msgid "語言中心英文畢業門檻"
 msgstr "Ambang Bahasa Inggeris Pusat Bahasa"

@@ -2438,48 +2438,16 @@ msgid "各國專區"
 msgstr "국가별 전용 구역"
 
 #: flows/templates/flows/
-msgid "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等"
-msgstr "지역별로 해련회 지원 안내를 확인하세요. 홍콩, 말레이시아, 태국 등"
-
-#: flows/templates/flows/
 msgid "入學申請指南"
 msgstr "입학 지원 안내"
-
-#: flows/templates/flows/
-msgid "申請資格、時程、所需文件與注意事項整理"
-msgstr "지원 자격, 일정, 필요 서류, 유의사항 정리"
-
-#: flows/templates/flows/
-msgid "外國護照入學者的居留證申請流程與文件清單"
-msgstr "외국 여권 입학자의 거류증 신청 절차 및 서류 목록"
-
-#: flows/templates/flows/
-msgid "持外國護照入台的僑生居留證申請說明"
-msgstr "외국 여권으로 입대한 화교 학생의 거류증 신청 안내"
 
 #: flows/templates/flows/
 msgid "港澳生居留說明"
 msgstr "홍콩·마카오 학생 거류 안내"
 
 #: flows/templates/flows/
-msgid "入出境許可證、居留申請流程與健保工讀說明"
-msgstr "입출경 허가증, 거류 신청 절차, 건강보험 및 아르바이트 안내"
-
-#: flows/templates/flows/
-msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
-msgstr "기숙사 구역, 설비, 신청 절차 및 외국인 우선 보장 안내"
-
-#: flows/templates/flows/
-msgid "主要路線、常見目的地與即時查詢連結"
-msgstr "주요 노선, 주요 목적지 및 실시간 조회 링크"
-
-#: flows/templates/flows/
 msgid "來臺就學相關法規"
 msgstr "대만 유학 관련 법규"
-
-#: flows/templates/flows/
-msgid "入學・居留・健保・工讀・學籍等重要法規說明"
-msgstr "입학·거류·건강보험·아르바이트·학적 등 중요 법규 안내"
 
 #: flows/templates/flows/
 msgid "生活類"
@@ -2490,10 +2458,6 @@ msgid "全民健保申請"
 msgstr "국민건강보험 신청"
 
 #: flows/templates/flows/
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr "ARC 발급 후 즉시 가입 가능, 외래 진료비 대폭 절감"
-
-#: flows/templates/flows/
 msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
 msgstr "장학금 수령 필수, 우체국·대만은행·위산은행 추천 비교"
 
@@ -2502,20 +2466,12 @@ msgid "台灣門號申辦"
 msgstr "대만 휴대폰 번호 개통"
 
 #: flows/templates/flows/
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr "선불 카드 vs 월정액 요금제, 주요 통신사 안내"
-
-#: flows/templates/flows/
 msgid "實用工具"
 msgstr "실용 도구"
 
 #: flows/templates/flows/
 msgid "地圖導覽"
 msgstr "지도 안내"
-
-#: flows/templates/flows/
-msgid "學校・醫院・車站・機場位置，一鍵導航"
-msgstr "학교·병원·역·공항 위치, 원클릭 내비게이션"
 
 #: flows/templates/flows/
 msgid "學校・醫院・交通"
@@ -2960,9 +2916,6 @@ msgstr "권"
 
 msgid "借閱期限"
 msgstr "대출 기간"
-
-msgid "天"
-msgstr "일"
 
 msgid "線上續借"
 msgstr "온라인 연장"

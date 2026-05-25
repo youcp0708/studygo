@@ -329,11 +329,6 @@ msgstr "華僑学科（予科）"
 msgid "學士班"
 msgstr "学士号"
 
-#: .\flows\templates\flows\admissions_guide.html:273
-#: .\flows\templates\flows\admissions_guide.html:391
-msgid "研究所"
-msgstr "大学院"
-
 #: .\flows\templates\flows\admissions_guide.html:274
 #: .\flows\templates\flows\admissions_guide.html:445 .\users\models.py:96
 #: .\users\templates\users\edit_profile.html:89
@@ -574,13 +569,6 @@ msgstr "研究助手の給与"
 msgid "：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外僑居留證（ARC）。"
 msgstr "：外国人留学生として申請しない外国籍の学生。各大学独自の入学手続きにより、入学後に外国人在留証明書（ARC）を申請する必要があります。"
 
-#: .\flows\templates\flows\admissions_guide.html:453
-msgid ""
-"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
-msgstr ""
-"外国籍を有し、当該学制の前提となる学力資格（高等学校卒業または大学卒業）を修了していること。通常、各学校および学部の規定に従って、中国語 (TOCFL)"
-" または英語 (IELTS/TOEFL) の能力証明が必要です。"
-
 #: .\flows\templates\flows\admissions_guide.html:455
 msgid "外國國籍"
 msgstr "外国籍"
@@ -650,10 +638,6 @@ msgid "：由原就讀學校與台灣大學締結交換協議，短期（半年�
 msgstr ""
 "： "
 "本校が台湾の大学と交換協定を締結し、短期（半年または1学年）で留学します。単位は協定により復学時に単位として使用でき、台湾の授業料や諸費用は通常免除されます。"
-
-#: .\flows\templates\flows\admissions_guide.html:506
-msgid "申請流程"
-msgstr "申請の流れ"
 
 #: .\flows\templates\flows\admissions_guide.html:507
 msgid "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申請，須先確認原校有締結交換協議。"
@@ -1075,78 +1059,29 @@ msgstr "毎年8月下旬から9月上旬にかけて"
 msgid "完成入學！"
 msgstr "登録完了しました！"
 
-#: .\flows\templates\flows\admissions_guide.html:829
-msgid "常見問題"
-msgstr "よくある質問"
-
 #: .\flows\templates\flows\admissions_guide.html:833
 msgid "我是外籍生（非僑生），可以透過海聯會申請嗎？"
 msgstr "私は留学生（華僑ではない）ですが、海外同盟を通じて申請できますか?"
-
-#: .\flows\templates\flows\admissions_guide.html:838
-msgid ""
-"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
-msgstr ""
-"できません。海外アライアンス "
-"チャンネルは、華僑のステータスを持つ応募者のみに適用されます。外国人留学生（外国籍を保持しているが留学生に該当しない者）は、各大学の国際アドミッション・オフィスに直接申請してください。各学校の入学スケジュールや必要書類については、各学校の公式ホームページをご覧ください。"
 
 #: .\flows\templates\flows\admissions_guide.html:844
 msgid "僑生與外籍生有什麼不同？"
 msgstr "中国人留学生と留学生の違いは何ですか？"
 
-#: .\flows\templates\flows\admissions_guide.html:849
-msgid ""
-"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。"
-msgstr ""
-"「華僑学生」とは、中華民国国籍または中国系の祖先を持ち、海外に長期間居住し、現地で教育を受けた者を指します。彼らは教育省の規定に従って認定されており、華僑学生奨学金や華僑優先部門などの特別なチャンネルを利用することができます。"
-" "
-"「外国人学生」とは、中華民国以外の国籍のパスポートを保有し、通常は各学校の独立した入学ルートを通じて申請する学生です。彼らは教育部台湾奨学金に応募することができます。"
-" 2 つの ID は異なり、適用される登録チャネルと割引も異なります。"
-
 #: .\flows\templates\flows\admissions_guide.html:855
 msgid "可以同時申請多所學校嗎？"
 msgstr "同時に複数の学校に出願することはできますか?"
-
-#: .\flows\templates\flows\admissions_guide.html:860
-msgid ""
-"海聯會管道可填寫多個志願（學校 + "
-"系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。"
-msgstr ""
-"海外アライアンスパイプラインでは複数の申請書（学校＋学部）を記入することができ、申請順に配布されます。通常、1 "
-"つのアプリケーションに複数のアプリケーションを含めることができます。外国人留学生が各学校に独自に申請する場合は、締切までに各学校に申請書を提出するだけで済みます。ただし、各学校によって申請料や必要書類が異なる場合がありますのでご注意ください。"
 
 #: .\flows\templates\flows\admissions_guide.html:866
 msgid "中文不夠好，可以申請中文授課的系所嗎？"
 msgstr "中国語が十分ではない場合、中国語で教える学科に応募することはできますか?"
 
-#: .\flows\templates\flows\admissions_guide.html:871
-msgid ""
-"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 "
-"以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。"
-msgstr ""
-"学部ごとに中国語能力に対する要件が異なります。学部によっては中国語能力試験の最低基準（TOCFL B1 "
-"以上など）が設定されている場合や、入学後の補足として中国語コースを受け入れている学部もあります。対象学部の最新の入学案内を確認するか、学校の国際交流室に問い合わせることをお勧めします。あなたの中国語スキルが標準に達していない場合は、完全に英語で教えられる学部や語学準備コースへの応募を検討することもできます。"
-
 #: .\flows\templates\flows\admissions_guide.html:877
 msgid "申請獎學金需要另外申請嗎？"
 msgstr "奨学金を申請するには別途申請する必要がありますか?"
 
-#: .\flows\templates\flows\admissions_guide.html:882
-msgid ""
-"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
-msgstr ""
-"教育省の台湾奨学金は入学時または入学後に別途申請する必要があります。通常、台湾の海外機関を通じて申請するか、学校に直接申請します。出場枠は限られており、競争は熾烈です。華僑学生向けの奨学金の中には、華僑協会または学校によって自動的に審査されるものもありますが、追加の申請書に記入する必要があるものもあります。学校独自の入学奨学金や奨学金は通常、入学通知に記載されています。"
-
 #: .\flows\templates\flows\admissions_guide.html:888
 msgid "我已在台灣就讀，可以轉學嗎？"
 msgstr "すでに台湾に留学していますが、転校できますか?"
-
-#: .\flows\templates\flows\admissions_guide.html:893
-msgid ""
-"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
-msgstr ""
-"はい。ただし、転校申請には通常、学年制限 (主に 2 年生と 3 年生) "
-"があり、元の学校の成績証明書と学生資格の放棄の証明を提出する必要があることに注意してください。編入入学のプロセスは学校によって異なり、通常は各学年の終わり頃に処理されます。詳細は対象校の編入試験要項をご確認ください。大学院生の編入は各研究機関の規定に従って行う必要があります。"
 
 #: .\flows\templates\flows\admissions_guide.html:900
 msgid "重要聯絡與資源"
@@ -1262,30 +1197,6 @@ msgstr "台湾留学関連法規"
 #: .\flows\templates\flows\guide_index.html:70
 msgid "入學・居留・健保・工讀・學籍等重要法規說明"
 msgstr "入学・居留・健保・工讀・学籍等の重要法規説明"
-
-#: .\flows\templates\flows\guide_index.html:82
-msgid "全民健保申請"
-msgstr "国民健康保険の申請"
-
-#: .\flows\templates\flows\guide_index.html:83
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr "ARC発行後に保険を追加することができ、外来費用が大幅に削減されます。"
-
-#: .\flows\templates\flows\guide_index.html:91
-msgid "台灣銀行開戶"
-msgstr "台湾の銀行口座開設"
-
-#: .\flows\templates\flows\guide_index.html:92
-msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-msgstr "奨学金受給の必需品、郵便局、台湾銀行、玉山銀行おすすめ比較"
-
-#: .\flows\templates\flows\guide_index.html:100
-msgid "台灣門號申辦"
-msgstr "台湾の電話番号アプリ"
-
-#: .\flows\templates\flows\guide_index.html:101
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr "大手通信事業者が解説するプリペイドカードと月額レンタルプラン"
 
 #: .\flows\templates\flows\my_flows.html:3
 msgid "我的任務"
@@ -2047,60 +1958,6 @@ msgstr "パスワードの再設定が完了しました。再度ログインし
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "再設定に失敗しました。リンクの有効期限が切れている可能性があります。"
-
-msgid "地圖導覽"
-msgstr "マップ＆ナビ"
-
-msgid "學校・醫院・交通"
-msgstr "大学・病院・交通"
-
-msgid "中央大學周邊重要地點，點選快速定位及導航"
-msgstr "NCU周辺の重要スポット — タップしてナビ"
-
-msgid "快速定位"
-msgstr "クイックアクセス"
-
-msgid "中央大學"
-msgstr "国立中央大学"
-
-msgid "壢新醫院"
-msgstr "壢新病院"
-
-msgid "中壢火車站"
-msgstr "中壢駅"
-
-msgid "高鐵桃園站"
-msgstr "台湾高鐵桃園駅"
-
-msgid "桃園國際機場"
-msgstr "桃園国際空港"
-
-msgid "大江購物中心"
-msgstr "大江ショッピングモール"
-
-msgid "開啟導航"
-msgstr "ナビを開く"
-
-msgid "學校・醫院・車站・機場位置，一鍵導航"
-msgstr "大学・病院・駅・空港の位置 — ワンタップでナビ"
-
-msgid "全民健保申請"
-msgstr "全民健保加入手続き"
-
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr "ARC取得後すぐ加入でき、外来費用が大幅に低下"
-
-msgid "台灣銀行開戶"
-msgstr "台湾の銀行口座開設"
-
-msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-msgstr "奨学金受取に必須 — 郵便局・台湾銀行・玉山銀行を比較"
-
-msgid "台灣門號申辦"
-msgstr "台湾SIMカード申込み"
-
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr "プリペイドvs月額プラン — 主要キャリアを解説"
 
 msgid "地圖導覽"
 msgstr "マップ＆ナビ"
@@ -3191,9 +3048,6 @@ msgstr "冊"
 
 msgid "借閱期限"
 msgstr "貸出期間"
-
-msgid "天"
-msgstr "日"
 
 msgid "線上續借"
 msgstr "オンライン更新"
