@@ -509,6 +509,12 @@ async function renderMyTasks() {
   if (hash && hash.startsWith('#task-')) {
     const target = document.querySelector(hash);
     if (target) {
+      const section = target.closest('.stage-section');
+      if (section) {
+        const sections = document.querySelectorAll('.stage-section:not(.skeleton)');
+        const tabIndex = Array.from(sections).indexOf(section);
+        if (tabIndex !== -1) switchFlowTab(tabIndex);
+      }
       setTimeout(() => {
         target.scrollIntoView({ behavior: 'smooth', block: 'center' });
         target.classList.add('task-highlight');
