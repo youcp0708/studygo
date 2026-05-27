@@ -221,5 +221,22 @@
     deleteSession: "{% url 'chatbot:delete_session_api' %}"
   };
 </script>
+
+<script>
+  document.addEventListener("click", function (event) {
+    const link = event.target.closest("a");
+
+    if (!link) return;
+
+    const url = new URL(link.href, window.location.origin);
+
+    if (url.pathname.startsWith("/flows/guides/")) {
+      event.preventDefault();
+
+      const fixedPath = url.pathname.replace("/flows/guides/", "/guides/");
+      window.location.href = fixedPath + url.search + url.hash;
+    }
+  });
+</script>
 <script src="{% static 'chatbot/js/chatbot.js' %}?v={% now 'U' %}"></script>
 {% endblock %}
