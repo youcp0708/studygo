@@ -31,12 +31,10 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def validate_email(self, value):
         try:
-            existing = CustomUser.objects.get(email=value)
+            CustomUser.objects.get(email=value)
+            raise serializers.ValidationError('此電子郵件無法使用')
         except CustomUser.DoesNotExist:
             return value
-        if existing.is_active:
-            raise serializers.ValidationError('此電子郵件已被註冊')
-        raise serializers.ValidationError('此電子郵件已被停用，無法重新註冊')
 
     def create(self, validated_data):
         validated_data.pop('password2')
