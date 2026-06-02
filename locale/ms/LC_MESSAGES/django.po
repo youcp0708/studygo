@@ -5385,6 +5385,294 @@ msgstr "Laman Web Rasmi Pentadbiran Insurans Kesihatan Nasional ↗"
 msgid "非本國籍人士加保說明 ↗"
 msgstr "Panduan Pendaftaran NHI untuk Bukan Warganegara ROC ↗"
 
+msgid "衛保組・診所・醫院・急診"
+msgstr "Pusat Kesihatan · Klinik · Hospital · Kecemasan"
+
+msgid "台灣採分級醫療制度，小病先看診所、大病再轉醫院。持健保卡就醫費用大幅降低，急救請撥 119。"
+msgstr ""
+"Taiwan menggunakan sistem penjagaan kesihatan bertingkat — penyakit ringan "
+"ke klinik dahulu, penyakit serius ke hospital. Pemegang kad NHI membayar "
+"lebih sedikit. Hubungi 119 untuk kecemasan."
+
+msgid "台灣分級醫療制度"
+msgstr "Sistem Penjagaan Kesihatan Bertingkat Taiwan"
+
+msgid "衛保組 / 診所"
+msgstr "Pusat Kesihatan / Klinik"
+
+msgid "健保約 NT$150–200"
+msgstr "Bayaran bersama NHI kira-kira NT$150–200"
+
+msgid "一般感冒、輕傷、慢性病、定期回診"
+msgstr "Selesema biasa, kecederaan ringan, penyakit kronik, susulan rutin"
+
+msgid "地區醫院（門診）"
+msgstr "Hospital Daerah (Pesakit Luar)"
+
+msgid "健保約 NT$240–360"
+msgstr "Bayaran bersama NHI kira-kira NT$240–360"
+
+msgid "需要進一步檢查、診所無法處理者"
+msgstr "Memerlukan pemeriksaan lanjut atau melebihi kapasiti klinik"
+
+msgid "醫學中心（急診）"
+msgstr "Pusat Perubatan (Kecemasan)"
+
+msgid "健保約 NT$450–600"
+msgstr "Bayaran bersama NHI kira-kira NT$450–600"
+
+msgid "嚴重外傷、危及生命、需要手術"
+msgstr "Trauma serius, keadaan yang mengancam nyawa, perlu pembedahan"
+
+msgid "台灣分級醫療制度下，直接去大醫院門診的部分負擔比診所高 2–3 倍。輕症先到診所就診，若需轉診，醫師會開立轉診單，可享受較低的部分負擔。"
+msgstr ""
+"Dalam sistem bertingkat Taiwan, terus ke klinik pesakit luar hospital besar "
+"menelan kos 2–3× lebih mahal berbanding klinik. Lawati klinik dahulu untuk "
+"penyakit ringan; jika rujukan diperlukan, doktor akan mengeluarkan surat "
+"rujukan untuk bayaran bersama yang lebih rendah."
+
+msgid "校內衛保組（NCU）"
+msgstr "Pusat Kesihatan dalam Kampus (NCU)"
+
+msgid "地點"
+msgstr "Lokasi"
+
+msgid "中正圖書館（舊圖）1 樓"
+msgstr "Perpustakaan Zhongzheng (Perpustakaan Lama), Tingkat 1"
+
+msgid "電話"
+msgstr "Telefon"
+
+msgid "分機 57271"
+msgstr "Samb. 57271"
+
+msgid "服務時間"
+msgstr "Waktu Perkhidmatan"
+
+msgid "週一至週五"
+msgstr "Isnin hingga Jumaat"
+
+msgid "08:00–17:00（寒暑假可能調整）"
+msgstr "08:00–17:00 (waktu mungkin berbeza semasa cuti musim sejuk/panas)"
+
+msgid "服務項目"
+msgstr "Perkhidmatan"
+
+msgid "基本診療・諮詢・轉介"
+msgstr "Perundingan asas · Nasihat · Rujukan"
+
+msgid "量血壓、用藥諮詢、轉診協助、新生體檢"
+msgstr ""
+"Semak tekanan darah, nasihat ubat, bantuan rujukan, pemeriksaan kesihatan "
+"pelajar baru"
+
+msgid "衛保組適合輕症初診，如感冒、發燒、輕傷等。若需進一步診療，衛保組可協助轉介至校外診所或醫院。"
+msgstr ""
+"Pusat kesihatan kampus sesuai untuk lawatan pertama dengan gejala ringan "
+"seperti selesema, demam, atau kecederaan ringan. Jika rawatan lebih lanjut "
+"diperlukan, kakitangan boleh membantu merujuk anda ke klinik atau hospital "
+"di luar kampus."
+
+msgid "非上班時間請直接前往校外診所或急診。"
+msgstr ""
+"Di luar waktu pejabat, terus pergi ke klinik luar kampus atau unit "
+"kecemasan."
+
+msgid "校外診所（後門商圈 / 中壢周邊）"
+msgstr "Klinik Luar Kampus (Kawasan Pintu Belakang / Daerah Zhongli)"
+
+msgid ""
+"中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別用 Google Maps 搜尋「中壢 內科診所」、「中壢 "
+"耳鼻喉科」等。"
+msgstr ""
+"Terdapat banyak klinik di kawasan pintu belakang NCU dan bandar Zhongli. "
+"Dengan kad NHI, kos lawatan adalah sekitar NT$150–200. Cari di Google Maps "
+"mengikut kepakaran, contohnya 'klinik perubatan dalam Zhongli' atau 'klinik "
+"ENT Zhongli'."
+
+msgid "診所看診時間："
+msgstr "Waktu klinik:"
+
+msgid ""
+"多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班制，非所有診所皆有晚診。建議事先電話確認或查詢"
+" Google 地圖上的即時等候人數。"
+msgstr ""
+"Kebanyakan klinik beroperasi tiga sesi: pagi (08:30–12:00), tengah hari "
+"(14:00–17:30) dan malam (18:00–21:00). Tidak semua klinik menawarkan sesi "
+"malam. Disyorkan untuk menelefon terlebih dahulu atau menyemak bilangan "
+"menunggu masa nyata di Google Maps."
+
+msgid "周邊醫院"
+msgstr "Hospital Berdekatan"
+
+msgid "最近・急診24H"
+msgstr "Paling Dekat · Kecemasan 24H"
+
+msgid "桃園市中壢區延平路150號"
+msgstr "150 Jln Yanping, Daerah Zhongli, Bandar Taoyuan"
+
+msgid "從中大搭公車約 15–20 分鐘；設有急診室（24 小時）"
+msgstr ""
+"Kira-kira 15–20 minit dengan bas dari NCU; mempunyai unit kecemasan 24 jam"
+
+msgid "壢新醫院官網 ↗"
+msgstr "Laman Web Hospital Lixin ↗"
+
+msgid "衛福部桃園醫院中壢院區"
+msgstr "Hospital Taoyuan Kementerian Kesihatan — Cawangan Zhongli"
+
+msgid "桃園市中壢區中山東路二段16號"
+msgstr "16 Sek. 2, Jln Zhongshan Timur, Daerah Zhongli, Bandar Taoyuan"
+
+msgid "公立醫院，設有門診及急診"
+msgstr "Hospital awam dengan jabatan pesakit luar dan kecemasan"
+
+msgid "林口長庚醫院"
+msgstr "Hospital Peringatan Chang Gung Linkou"
+
+msgid "醫學中心"
+msgstr "Pusat Perubatan"
+
+msgid "桃園市龜山區舒民路5號"
+msgstr "5 Jln Shumin, Daerah Guishan, Bandar Taoyuan"
+
+msgid "中大搭車約 40 分鐘；台灣最大醫院之一，有多語言服務"
+msgstr ""
+"Kira-kira 40 minit dari NCU; salah satu hospital terbesar di Taiwan, "
+"perkhidmatan berbilang bahasa tersedia"
+
+msgid "長庚醫院官網 ↗"
+msgstr "Laman Web Hospital Chang Gung ↗"
+
+msgid "急診 / 緊急情況"
+msgstr "Kecemasan / Situasi Mendesak"
+
+msgid "危及生命・嚴重受傷・無法自行就醫"
+msgstr ""
+"Mengancam nyawa · Kecederaan serius · Tidak dapat mendapatkan bantuan "
+"perubatan sendiri"
+
+msgid "請立即撥打緊急電話，或由旁人送至最近有急診的醫院（壢新醫院）。急診 24 小時全年無休。"
+msgstr ""
+"Hubungi perkhidmatan kecemasan dengan segera, atau minta seseorang membawa "
+"anda ke hospital terdekat dengan unit kecemasan (Hospital Lixin). Unit "
+"kecemasan buka 24 jam, 365 hari."
+
+msgid "救護車・火災"
+msgstr "Ambulans · Kebakaran"
+
+msgid "免費撥打，全球手機可用"
+msgstr ""
+"Percuma untuk menelepon, berfungsi di mana-mana telefon bimbit di seluruh "
+"dunia"
+
+msgid "警察局"
+msgstr "Polis"
+
+msgid "報案・協助"
+msgstr "Lapor jenayah · Bantuan"
+
+msgid "國際緊急號碼"
+msgstr "Nombor Kecemasan Antarabangsa"
+
+msgid "任何手機（含無 SIM 卡）皆可撥打"
+msgstr "Berfungsi pada mana-mana telefon, termasuk telefon tanpa kad SIM"
+
+msgid "外來人士生活諮詢"
+msgstr "Talian Panas Penduduk Asing"
+
+msgid "多語言，含醫療協助"
+msgstr "Berbilang bahasa, termasuk bantuan perubatan"
+
+msgid "急診部分負擔較高："
+msgstr "Bayaran bersama kecemasan lebih tinggi:"
+
+msgid "非緊急狀況直接掛急診，健保部分負擔為 NT$450–600（比診所高 3 倍以上）。輕症建議前往診所就診，急診留給真正緊急的情況。"
+msgstr ""
+"Terus ke unit kecemasan untuk keadaan bukan kecemasan menelan kos NT$450–600"
+" bayaran bersama NHI — lebih 3× kadar klinik. Penyakit ringan sebaiknya ke "
+"klinik; simpan unit kecemasan untuk kecemasan sebenar."
+
+msgid "健保就醫費用對照"
+msgstr "Perbandingan Kos Perubatan NHI"
+
+msgid "就醫地點"
+msgstr "Kemudahan perubatan"
+
+msgid "持健保卡"
+msgstr "Dengan kad NHI"
+
+msgid "未持健保卡"
+msgstr "Tanpa kad NHI"
+
+msgid "衛保組（校內）"
+msgstr "Pusat Kesihatan Kampus"
+
+msgid "免費 / 極低費"
+msgstr "Percuma / Kos sangat rendah"
+
+msgid "視項目收費"
+msgstr "Dicaj mengikut perkhidmatan"
+
+msgid "診所"
+msgstr "Klinik"
+
+msgid "約 NT$150–200"
+msgstr "Kira-kira NT$150–200"
+
+msgid "全額自費（NT$500–1,000+）"
+msgstr "Bayar penuh sendiri (NT$500–1,000+)"
+
+msgid "地區醫院門診"
+msgstr "Pesakit Luar Hospital Daerah"
+
+msgid "約 NT$240–360"
+msgstr "Kira-kira NT$240–360"
+
+msgid "全額自費（NT$1,000+）"
+msgstr "Bayar penuh sendiri (NT$1,000+)"
+
+msgid "醫學中心門診"
+msgstr "Pesakit Luar Pusat Perubatan"
+
+msgid "約 NT$360–480"
+msgstr "Kira-kira NT$360–480"
+
+msgid "全額自費（NT$2,000+）"
+msgstr "Bayar penuh sendiri (NT$2,000+)"
+
+msgid "急診"
+msgstr "Unit Kecemasan"
+
+msgid "約 NT$450–600"
+msgstr "Kira-kira NT$450–600"
+
+msgid "全額自費（視治療而定）"
+msgstr "Bayar penuh sendiri (bergantung pada rawatan)"
+
+msgid "可顯示數位健保卡、查詢就醫紀錄與健保狀態，出門忘帶實體健保卡時可使用。"
+msgstr ""
+"Memaparkan kad NHI digital, membolehkan anda menyemak rekod perubatan dan "
+"status insurans — berguna apabila terlupa membawa kad fizikal."
+
+msgid "NCU 校安緊急聯絡"
+msgstr "Kenalan Kecemasan Keselamatan Kampus NCU"
+
+msgid "分機 57212"
+msgstr "Samb. 57212"
+
+msgid "24 小時校安專線："
+msgstr "Talian panas keselamatan kampus 24 jam:"
+
+msgid "國際事務處"
+msgstr "Pejabat Hal Ehwal Antarabangsa"
+
+msgid "分機 57081"
+msgstr "Samb. 57081"
+
+msgid "承辦人：徐心荷小姐"
+msgstr "Orang untuk dihubungi: Cik Xu Xinhe"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Masukkan soalan anda. Sistem akan menyusun cadangan berdasarkan identiti dan"

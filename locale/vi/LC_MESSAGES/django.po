@@ -5227,3 +5227,284 @@ msgstr "Trang web chính thức của Cơ quan Bảo hiểm Y tế Quốc gia �
 
 msgid "非本國籍人士加保說明 ↗"
 msgstr "Hướng dẫn đăng ký NHI cho người không phải quốc tịch ROC ↗"
+
+msgid "衛保組・診所・醫院・急診"
+msgstr "Trung tâm Y tế · Phòng khám · Bệnh viện · Cấp cứu"
+
+msgid "台灣採分級醫療制度，小病先看診所、大病再轉醫院。持健保卡就醫費用大幅降低，急救請撥 119。"
+msgstr ""
+"Đài Loan sử dụng hệ thống y tế theo cấp độ — bệnh nhẹ đến phòng khám trước, "
+"bệnh nặng đến bệnh viện. Người có thẻ NHI trả ít hơn nhiều. Gọi 119 trong "
+"trường hợp khẩn cấp."
+
+msgid "台灣分級醫療制度"
+msgstr "Hệ thống y tế theo cấp độ của Đài Loan"
+
+msgid "衛保組 / 診所"
+msgstr "Trung tâm Y tế / Phòng khám"
+
+msgid "健保約 NT$150–200"
+msgstr "Đồng thanh toán NHI khoảng NT$150–200"
+
+msgid "一般感冒、輕傷、慢性病、定期回診"
+msgstr "Cảm thông thường, thương nhẹ, bệnh mãn tính, tái khám định kỳ"
+
+msgid "地區醫院（門診）"
+msgstr "Bệnh viện quận (Ngoại trú)"
+
+msgid "健保約 NT$240–360"
+msgstr "Đồng thanh toán NHI khoảng NT$240–360"
+
+msgid "需要進一步檢查、診所無法處理者"
+msgstr "Cần xét nghiệm thêm hoặc vượt quá khả năng của phòng khám"
+
+msgid "醫學中心（急診）"
+msgstr "Trung tâm Y tế (Cấp cứu)"
+
+msgid "健保約 NT$450–600"
+msgstr "Đồng thanh toán NHI khoảng NT$450–600"
+
+msgid "嚴重外傷、危及生命、需要手術"
+msgstr ""
+"Chấn thương nghiêm trọng, tình trạng nguy hiểm tính mạng, cần phẫu thuật"
+
+msgid "台灣分級醫療制度下，直接去大醫院門診的部分負擔比診所高 2–3 倍。輕症先到診所就診，若需轉診，醫師會開立轉診單，可享受較低的部分負擔。"
+msgstr ""
+"Trong hệ thống phân cấp của Đài Loan, trực tiếp đến phòng khám ngoại trú "
+"bệnh viện lớn tốn gấp 2–3 lần phòng khám. Khám phòng khám trước cho bệnh "
+"nhẹ; nếu cần chuyển viện, bác sĩ sẽ cấp giấy chuyển viện, đủ điều kiện đồng "
+"thanh toán thấp hơn."
+
+msgid "校內衛保組（NCU）"
+msgstr "Trung tâm Y tế trong khuôn viên trường (NCU)"
+
+msgid "地點"
+msgstr "Địa điểm"
+
+msgid "中正圖書館（舊圖）1 樓"
+msgstr "Thư viện Zhongzheng (Thư viện cũ), tầng 1"
+
+msgid "電話"
+msgstr "Điện thoại"
+
+msgid "分機 57271"
+msgstr "Số nội bộ 57271"
+
+msgid "服務時間"
+msgstr "Giờ phục vụ"
+
+msgid "週一至週五"
+msgstr "Thứ Hai đến Thứ Sáu"
+
+msgid "08:00–17:00（寒暑假可能調整）"
+msgstr "08:00–17:00 (giờ có thể thay đổi trong kỳ nghỉ đông/hè)"
+
+msgid "服務項目"
+msgstr "Dịch vụ"
+
+msgid "基本診療・諮詢・轉介"
+msgstr "Tư vấn cơ bản · Lời khuyên · Giới thiệu"
+
+msgid "量血壓、用藥諮詢、轉診協助、新生體檢"
+msgstr ""
+"Đo huyết áp, tư vấn thuốc, hỗ trợ chuyển viện, kiểm tra sức khỏe sinh viên "
+"mới"
+
+msgid "衛保組適合輕症初診，如感冒、發燒、輕傷等。若需進一步診療，衛保組可協助轉介至校外診所或醫院。"
+msgstr ""
+"Trung tâm y tế khuôn viên phù hợp cho lần đầu đến với triệu chứng nhẹ như "
+"cảm, sốt hoặc thương nhẹ. Nếu cần điều trị thêm, nhân viên có thể giúp giới "
+"thiệu bạn đến phòng khám hoặc bệnh viện ngoài khuôn viên."
+
+msgid "非上班時間請直接前往校外診所或急診。"
+msgstr ""
+"Ngoài giờ hành chính, hãy đến thẳng phòng khám ngoài khuôn viên hoặc phòng "
+"cấp cứu."
+
+msgid "校外診所（後門商圈 / 中壢周邊）"
+msgstr "Phòng khám ngoài khuôn viên (Khu vực cổng sau / Quận Zhongli)"
+
+msgid ""
+"中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別用 Google Maps 搜尋「中壢 內科診所」、「中壢 "
+"耳鼻喉科」等。"
+msgstr ""
+"Có nhiều phòng khám trong khu vực cổng sau NCU và thành phố Zhongli. Với thẻ"
+" NHI, chi phí khám khoảng NT$150–200. Tìm kiếm trên Google Maps theo chuyên "
+"khoa, ví dụ: 'phòng khám nội khoa Zhongli' hoặc 'tai mũi họng Zhongli'."
+
+msgid "診所看診時間："
+msgstr "Giờ khám bệnh của phòng khám:"
+
+msgid ""
+"多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班制，非所有診所皆有晚診。建議事先電話確認或查詢"
+" Google 地圖上的即時等候人數。"
+msgstr ""
+"Hầu hết phòng khám hoạt động ba ca: sáng (08:30–12:00), chiều (14:00–17:30) "
+"và tối (18:00–21:00). Không phải phòng khám nào cũng có ca tối. Nên gọi "
+"trước hoặc kiểm tra thời gian chờ thực tế trên Google Maps."
+
+msgid "周邊醫院"
+msgstr "Bệnh viện lân cận"
+
+msgid "最近・急診24H"
+msgstr "Gần nhất · Cấp cứu 24H"
+
+msgid "桃園市中壢區延平路150號"
+msgstr "150 Đường Yanping, Quận Zhongli, Thành phố Đào Viên"
+
+msgid "從中大搭公車約 15–20 分鐘；設有急診室（24 小時）"
+msgstr "Khoảng 15–20 phút bằng xe buýt từ NCU; có phòng cấp cứu 24 giờ"
+
+msgid "壢新醫院官網 ↗"
+msgstr "Website Bệnh viện Lixin ↗"
+
+msgid "衛福部桃園醫院中壢院區"
+msgstr "Bệnh viện Đào Viên Bộ Y tế — Chi nhánh Zhongli"
+
+msgid "桃園市中壢區中山東路二段16號"
+msgstr "16 Đoạn 2, Đường Trung Sơn Đông, Quận Zhongli, Thành phố Đào Viên"
+
+msgid "公立醫院，設有門診及急診"
+msgstr "Bệnh viện công với khoa ngoại trú và cấp cứu"
+
+msgid "林口長庚醫院"
+msgstr "Bệnh viện Chang Gung Memorial Linkou"
+
+msgid "醫學中心"
+msgstr "Trung tâm Y tế"
+
+msgid "桃園市龜山區舒民路5號"
+msgstr "5 Đường Shumin, Quận Guishan, Thành phố Đào Viên"
+
+msgid "中大搭車約 40 分鐘；台灣最大醫院之一，有多語言服務"
+msgstr ""
+"Khoảng 40 phút từ NCU; một trong những bệnh viện lớn nhất Đài Loan, có dịch "
+"vụ đa ngôn ngữ"
+
+msgid "長庚醫院官網 ↗"
+msgstr "Website Bệnh viện Chang Gung ↗"
+
+msgid "急診 / 緊急情況"
+msgstr "Cấp cứu / Tình huống khẩn cấp"
+
+msgid "危及生命・嚴重受傷・無法自行就醫"
+msgstr ""
+"Nguy hiểm tính mạng · Thương tích nghiêm trọng · Không thể tự đến cơ sở y tế"
+
+msgid "請立即撥打緊急電話，或由旁人送至最近有急診的醫院（壢新醫院）。急診 24 小時全年無休。"
+msgstr ""
+"Gọi dịch vụ khẩn cấp ngay lập tức, hoặc nhờ ai đó đưa bạn đến bệnh viện gần "
+"nhất có phòng cấp cứu (Bệnh viện Lixin). Phòng cấp cứu mở 24 giờ, 365 ngày."
+
+msgid "救護車・火災"
+msgstr "Xe cứu thương · Cứu hỏa"
+
+msgid "免費撥打，全球手機可用"
+msgstr "Miễn phí gọi, hoạt động trên mọi điện thoại di động toàn cầu"
+
+msgid "警察局"
+msgstr "Cảnh sát"
+
+msgid "報案・協助"
+msgstr "Báo án · Hỗ trợ"
+
+msgid "國際緊急號碼"
+msgstr "Số khẩn cấp quốc tế"
+
+msgid "任何手機（含無 SIM 卡）皆可撥打"
+msgstr "Hoạt động trên mọi điện thoại, kể cả điện thoại không có SIM"
+
+msgid "外來人士生活諮詢"
+msgstr "Đường dây nóng cho người nước ngoài"
+
+msgid "多語言，含醫療協助"
+msgstr "Đa ngôn ngữ, bao gồm hỗ trợ y tế"
+
+msgid "急診部分負擔較高："
+msgstr "Đồng thanh toán cấp cứu cao hơn:"
+
+msgid "非緊急狀況直接掛急診，健保部分負擔為 NT$450–600（比診所高 3 倍以上）。輕症建議前往診所就診，急診留給真正緊急的情況。"
+msgstr ""
+"Trực tiếp đến phòng cấp cứu cho trường hợp không khẩn cấp tốn NT$450–600 "
+"tiền đồng thanh toán NHI — hơn 3 lần so với phòng khám. Bệnh nhẹ nên đến "
+"phòng khám; để phòng cấp cứu cho trường hợp thực sự khẩn cấp."
+
+msgid "健保就醫費用對照"
+msgstr "So sánh chi phí y tế NHI"
+
+msgid "就醫地點"
+msgstr "Cơ sở y tế"
+
+msgid "持健保卡"
+msgstr "Có thẻ NHI"
+
+msgid "未持健保卡"
+msgstr "Không có thẻ NHI"
+
+msgid "衛保組（校內）"
+msgstr "Trung tâm Y tế Khuôn viên"
+
+msgid "免費 / 極低費"
+msgstr "Miễn phí / Chi phí rất thấp"
+
+msgid "視項目收費"
+msgstr "Tính phí theo dịch vụ"
+
+msgid "診所"
+msgstr "Phòng khám"
+
+msgid "約 NT$150–200"
+msgstr "Khoảng NT$150–200"
+
+msgid "全額自費（NT$500–1,000+）"
+msgstr "Toàn bộ tự trả (NT$500–1,000+)"
+
+msgid "地區醫院門診"
+msgstr "Ngoại trú bệnh viện quận"
+
+msgid "約 NT$240–360"
+msgstr "Khoảng NT$240–360"
+
+msgid "全額自費（NT$1,000+）"
+msgstr "Toàn bộ tự trả (NT$1,000+)"
+
+msgid "醫學中心門診"
+msgstr "Ngoại trú trung tâm y tế"
+
+msgid "約 NT$360–480"
+msgstr "Khoảng NT$360–480"
+
+msgid "全額自費（NT$2,000+）"
+msgstr "Toàn bộ tự trả (NT$2,000+)"
+
+msgid "急診"
+msgstr "Phòng cấp cứu"
+
+msgid "約 NT$450–600"
+msgstr "Khoảng NT$450–600"
+
+msgid "全額自費（視治療而定）"
+msgstr "Toàn bộ tự trả (tùy thuộc vào điều trị)"
+
+msgid "可顯示數位健保卡、查詢就醫紀錄與健保狀態，出門忘帶實體健保卡時可使用。"
+msgstr ""
+"Hiển thị thẻ NHI kỹ thuật số, cho phép kiểm tra hồ sơ y tế và trạng thái bảo"
+" hiểm — hữu ích khi bạn quên thẻ vật lý."
+
+msgid "NCU 校安緊急聯絡"
+msgstr "Liên lạc khẩn cấp an toàn khuôn viên NCU"
+
+msgid "分機 57212"
+msgstr "Số nội bộ 57212"
+
+msgid "24 小時校安專線："
+msgstr "Đường dây nóng an toàn khuôn viên 24 giờ:"
+
+msgid "國際事務處"
+msgstr "Văn phòng Hợp tác Quốc tế"
+
+msgid "分機 57081"
+msgstr "Số nội bộ 57081"
+
+msgid "承辦人：徐心荷小姐"
+msgstr "Người liên hệ: Cô Xu Xinhe"
