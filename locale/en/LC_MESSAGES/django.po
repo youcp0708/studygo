@@ -4267,8 +4267,1300 @@ msgstr ""
 "visa reapplication. The ARC is essential for NHI enrollment, bank "
 "account opening, and other procedures — apply promptly."
 
+<<<<<<< HEAD
 msgid "僑生1年居留證（線上繳費）"
 msgstr "Overseas Chinese student 1-year ARC (online payment)"
+=======
+msgid "休學・復學・轉系・雙主修　辦理規定與注意事項"
+msgstr ""
+"Leave of Absence · Reinstatement · Department Transfer · Double Major — "
+"Regulations & Procedures"
+
+msgid "休學"
+msgstr "Leave of Absence"
+
+msgid "申請期限"
+msgstr "Application Deadline"
+
+msgid "期末考試開始前"
+msgstr "Before final exams begin"
+
+msgid "每次最長"
+msgstr "Max per application"
+
+msgid "2 學年"
+msgstr "2 academic years"
+
+msgid "累計上限"
+msgstr "Cumulative limit"
+
+msgid "2 學年（原則）"
+msgstr "2 academic years (in principle)"
+
+msgid "特殊延長"
+msgstr "Special extension"
+
+msgid "可再延長 2 年"
+msgstr "May extend by 2 more years"
+
+msgid "申請須取得家長或監護人同意，以及系主任同意，再至教務處辦理"
+msgstr ""
+"Application requires consent from parents or guardians, plus department "
+"chair approval, then submit to the Academic Affairs Office"
+
+msgid "新生及轉學生第一學期須先完成註冊繳費，才能申請休學"
+msgstr ""
+"Freshmen and transfer students must complete registration and tuition "
+"payment in their first semester before applying for leave"
+
+msgid "休學當學期已選課程一律取消，不計成績（預修與抵免課程除外）"
+msgstr ""
+"All courses registered in the semester of leave will be cancelled with no "
+"grades recorded (except pre-approved and credit-exempted courses)"
+
+msgid "休學期間不計入修業年限"
+msgstr "Leave period does not count toward the academic time limit"
+
+msgid "服兵役、懷孕、生產、照顧未滿 3 歲子女所致休學"
+msgstr ""
+"Leave due to military service, pregnancy, childbirth, or caring for a child "
+"under 3 years old"
+
+msgid "不計入累計年限"
+msgstr "Not counted in cumulative limit"
+
+msgid "外籍生 ARC 注意"
+msgstr "International Students — ARC Notice"
+
+msgid ""
+"辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
+msgstr ""
+"After taking a leave of absence, your student ARC becomes invalid and you "
+"must leave Taiwan within the required period. You must re-apply for a "
+"student visa before returning. Please contact the Office of International "
+"Affairs (ext. 57081) to confirm procedures before finalizing your leave."
+
+msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
+msgstr ""
+"Dormitory: You must complete dorm check-out procedures before taking leave. "
+"After returning, you must re-apply for dormitory housing — your bed is not "
+"reserved."
+
+msgid "復學"
+msgstr "Reinstatement"
+
+msgid "自動復學"
+msgstr "Auto-reinstatement"
+
+msgid "休學期滿即自動復學"
+msgstr "Automatically reinstated when leave period expires"
+
+msgid "註冊期限"
+msgstr "Registration deadline"
+
+msgid "當學期註冊日（含）前"
+msgstr "By registration day of the current semester (inclusive)"
+
+msgid "提前復學"
+msgstr "Early reinstatement"
+
+msgid "最遲於註冊日前申請"
+msgstr "Apply no later than the registration date"
+
+msgid "休學期滿後自動回復學籍，須於當學期校曆註冊日（含）前完成報到與繳費"
+msgstr ""
+"Student status is automatically restored upon expiry of leave; you must "
+"check in and pay tuition by the registration date on the academic calendar "
+"(inclusive)"
+
+msgid "提前復學：須於預定復學學期的註冊日前提出申請，不可在休學中途直接回來上課"
+msgstr ""
+"Early reinstatement: Apply before the registration date of the intended "
+"return semester. You may not simply return to class mid-leave."
+
+msgid "復學後回到原學系，年級銜接休學前的年級繼續就讀"
+msgstr ""
+"Upon reinstatement, you return to your original department at the same year "
+"level as when you left"
+
+msgid "若屆時無法如期復學，需於註冊日前再次申請延續休學；逾期未辦者視情形處理"
+msgstr ""
+"If you cannot return as scheduled, re-apply for a leave extension before the"
+" registration date; failure to do so will be handled according to "
+"regulations"
+
+msgid "復學後的畢業條件，依入學當年度的學則與相關規章認定"
+msgstr ""
+"Graduation requirements after reinstatement follow the academic regulations "
+"of the year of enrollment"
+
+msgid "轉系"
+msgstr "Department Transfer"
+
+msgid "申請時間依當學年度校曆公告，每輪申請限報名一個科系，超過一個即取消資格。"
+msgstr ""
+"Application period is announced in the annual academic calendar. Each round "
+"is limited to one department — applying to more than one will disqualify "
+"you."
+
+msgid "申請資格（年級）"
+msgstr "Eligibility (by year)"
+
+msgid "大二"
+msgstr "2nd Year"
+
+msgid "升大二前可申請"
+msgstr "May apply before advancing to 2nd year"
+
+msgid "大三"
+msgstr "3rd Year"
+
+msgid "升大三前可申請"
+msgstr "May apply before advancing to 3rd year"
+
+msgid "大四"
+msgstr "4th Year"
+
+msgid "四年級生不得申請"
+msgstr "4th-year students may not apply"
+
+msgid "休學中"
+msgstr "On Leave"
+
+msgid "休學期間不得申請"
+msgstr "Cannot apply while on leave"
+
+msgid "每一申請週期只能申請一個科系，多報即全部取消資格"
+msgstr ""
+"Only one department per application cycle — applying to multiple departments"
+" disqualifies all applications"
+
+msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
+msgstr ""
+"Departments may set their own criteria (e.g. grade ranking), but the ranking"
+" threshold cannot exceed the top 50% (i.e. top half of the class)"
+
+msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
+msgstr ""
+"Transfer quota limit: Each department may accept up to 20% of the originally"
+" approved enrollment per year level"
+
+msgid "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級"
+msgstr ""
+"Applicants entering 4th year may transfer to the same year in a similar "
+"department, or to 2nd/3rd year in a different type of department"
+
+msgid "核准後不可撤回，原系修過的學分可申請抵免，由新系系主任審核認定"
+msgstr ""
+"Approval cannot be revoked. Credits earned in the original department may be"
+" applied for exemption, subject to approval by the new department chair"
+
+msgid "離島優惠入學生、國防大學生等特定身份不得申請轉系"
+msgstr ""
+"Students admitted under offshore island preferences, national defense "
+"university students, and other specific categories are not eligible to "
+"transfer departments"
+
+msgid "雙主修"
+msgstr "Double Major"
+
+msgid "申請時間依校曆公告。大二起至修業年限最後一年第一學期止（延修期間不得新申請）。"
+msgstr ""
+"Application period is announced in the academic calendar. From 2nd year up "
+"to the first semester of the final year (new applications not allowed during"
+" extended enrollment)."
+
+msgid "最早申請"
+msgstr "Earliest application"
+
+msgid "大二開始"
+msgstr "From 2nd year"
+
+msgid "最晚申請"
+msgstr "Latest application"
+
+msgid "畢業年級第一學期"
+msgstr "First semester of graduating year"
+
+msgid "額外延修"
+msgstr "Extra extended enrollment"
+
+msgid "最多 1 學年"
+msgstr "Up to 1 academic year"
+
+msgid "需同時完成本系全部畢業要求，以及加修學系的所有「專業必修」科目學分"
+msgstr ""
+"You must simultaneously complete all graduation requirements of your home "
+"department and all required major courses of the additional department"
+
+msgid "各系可自訂申請條件（如 GPA 門檻），需向目標系查詢當年公告"
+msgstr ""
+"Departments may set their own application requirements (e.g. GPA threshold);"
+" check the current year's announcement from the target department"
+
+msgid "學位證書上並列兩個學系名稱；畢業成績單亦加註雙主修"
+msgstr ""
+"The diploma lists both department names; the official transcript also notes "
+"the double major"
+
+msgid "若加修學分未能完成 → 可申請再延修一學年，或放棄雙主修僅以本系學分畢業"
+msgstr ""
+"If additional major credits cannot be completed → may apply for one more "
+"year of extended enrollment, or abandon the double major and graduate with "
+"home department credits only"
+
+msgid "若已修完的加修學分符合輔系規定 → 可改認定為輔系資格"
+msgstr ""
+"If completed additional major credits meet the minor requirements → may be "
+"recognized as a minor instead"
+
+msgid "備用選項"
+msgstr "Backup option"
+
+msgid "延修期間（因雙主修而延修）：9 學分以下按學分費計；10 學分以上收全額學雜費"
+msgstr ""
+"Extended enrollment (due to double major): ≤9 credits charged per-credit; "
+"≥10 credits charged full tuition and fees"
+
+msgid "確認加修學系的申請條件"
+msgstr "Confirm the application requirements of the additional department"
+
+msgid "各系 GPA 門檻與名額不同，至目標系系辦查詢當年公告"
+msgstr ""
+"GPA thresholds and quotas vary by department; check this year's announcement"
+" at the target department office"
+
+msgid "填寫申請表，經本系主任同意"
+msgstr ""
+"Complete the application form and obtain your home department chair's "
+"approval"
+
+msgid "表格至教務處或各系系辦索取"
+msgstr ""
+"Forms are available at the Academic Affairs Office or each department office"
+
+msgid "送交加修學系審核"
+msgstr "Submit to the additional department for review"
+
+msgid "目標系系主任同意後，轉呈教務長核准"
+msgstr ""
+"After the target department chair approves, forward to the Dean of Academic "
+"Affairs for final approval"
+
+msgid "核准後按加修課表修課"
+msgstr "After approval, follow the additional department's course schedule"
+
+msgid "可選擇每學期邊修或在畢業學期一次申請資格審核（自主規劃路線）"
+msgstr ""
+"You may choose to take courses each semester or apply for qualification "
+"review all at once in the graduation semester (self-directed path)"
+
+msgid "辦理窗口"
+msgstr "Contact Offices"
+
+msgid "教務處 / 註冊組"
+msgstr "Academic Affairs Office / Registration Section"
+
+msgid "學籍異動（休學、復學、轉系）"
+msgstr "Student status changes (leave, reinstatement, department transfer)"
+
+msgid "外籍生休學 ARC 問題"
+msgstr "ARC issues related to leave of absence for international students"
+
+msgid "各系系辦"
+msgstr "Each department office"
+
+msgid "轉系、雙主修申請條件查詢"
+msgstr "Inquiries about transfer and double major application requirements"
+
+msgid "及課程規劃建議"
+msgstr "And course planning advice"
+
+msgid "在學證明・成績單・推薦信"
+msgstr "Certificate of Enrollment · Transcript · Recommendation Letter"
+
+msgid "在學證明"
+msgstr "Certificate of Enrollment"
+
+msgid "線上自印"
+msgstr "Self-print online"
+
+msgid "Portal 自行列印"
+msgstr "Print via Portal"
+
+msgid "登入 Portal → 學生服務 → 在學證明列印。無公章，適用一般用途。"
+msgstr ""
+"Log in to Portal → Student Services → Print Certificate of Enrollment. No "
+"official seal — suitable for general use."
+
+msgid "臨櫃申請"
+msgstr "In-person application"
+
+msgid "教務處 / 註冊組（含公章）"
+msgstr "Academic Affairs Office / Registration Section (with official seal)"
+
+msgid "需蓋學校公章者至教務處（行政大樓）辦理，通常當場或隔日取件。"
+msgstr ""
+"If an official school seal is required, apply at the Academic Affairs Office"
+" (Administration Building). Usually available immediately or the next day."
+
+msgid "有效期限通常為 3 個月，申請前確認用途所需格式（中文或英文）。"
+msgstr ""
+"Validity is usually 3 months. Confirm the required format (Chinese or "
+"English) before applying."
+
+msgid "成績單"
+msgstr "Academic Transcript"
+
+msgid "Portal 自行列印（非正式）"
+msgstr "Print via Portal (unofficial)"
+
+msgid "Portal → 學生服務 → 成績查詢 → 列印。不含公章，供個人參考或非正式用途。"
+msgstr ""
+"Portal → Student Services → Grade Inquiry → Print. No official seal — for "
+"personal reference or unofficial use."
+
+msgid "教務處 / 註冊組（含公章 / 英文版）"
+msgstr ""
+"Academic Affairs Office / Registration Section (with official seal / English"
+" version)"
+
+msgid "正式成績單（含公章）或英文成績單，至教務處申請，通常需支付工本費。"
+msgstr ""
+"Official transcript (with official seal) or English transcript — apply at "
+"the Academic Affairs Office; a processing fee is usually required."
+
+msgid "申請前確認對方是否要求「校長章」或「英文版」，不同用途規格不同。"
+msgstr ""
+"Before applying, confirm whether the receiving party requires a president's "
+"seal or an English version — requirements vary by purpose."
+
+msgid "推薦信由教授撰寫，學校不直接提供，需自行向教授申請。"
+msgstr ""
+"Recommendation letters are written by professors — the school does not "
+"provide them directly. You must request one from the professor yourself."
+
+msgid "確定需求，提早 2–4 週聯絡教授"
+msgstr "Confirm your needs and contact the professor 2–4 weeks in advance"
+
+msgid "說明用途（申請學校 / 獎學金）、繳交截止日、語言（中文或英文）。"
+msgstr ""
+"Explain the purpose (university application / scholarship), submission "
+"deadline, and language required (Chinese or English)."
+
+msgid "提供個人資料給教授"
+msgstr "Provide personal materials to the professor"
+
+msgid "自傳、成績單、申請用途說明、對方機構背景，方便教授撰寫具體內容。"
+msgstr ""
+"Autobiography, transcript, explanation of application purpose, and "
+"background of the receiving institution — to help the professor write "
+"specific content."
+
+msgid "確認格式：信封密封 / 線上填表"
+msgstr "Confirm format: sealed envelope / online form"
+
+msgid "部分申請要求教授直接寄至對方或填線上表單，提前確認避免格式錯誤。"
+msgstr ""
+"Some applications require the professor to send directly to the recipient or"
+" fill out an online form. Confirm in advance to avoid format errors."
+
+msgid "繳交前再次確認截止日"
+msgstr "Reconfirm the deadline before submission"
+
+msgid "截止日前 1 週提醒教授，以防對方忘記。"
+msgstr "Remind the professor 1 week before the deadline in case they forget."
+
+msgid "選擇熟悉你的教授（上過課、做過研究），推薦信內容會更有說服力。"
+msgstr ""
+"Choose a professor who knows you well (from class or research) — the "
+"recommendation letter will be more convincing."
+
+msgid "目前尚未收錄你的學校資訊。"
+msgstr "Your school's information has not been added yet."
+
+msgid "請參考學校官網或洽詢教務處。"
+msgstr ""
+"Please refer to your school's official website or contact the Academic "
+"Affairs Office."
+
+msgid "抵台第一件事"
+msgstr "First thing after arriving in Taiwan"
+
+msgid "台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。"
+msgstr ""
+"A Taiwan phone number is essential for daily life: LINE verification, bank "
+"OTP, and map navigation all require a local number. This page covers prepaid"
+" cards and monthly plan options."
+
+msgid "剛抵台、還沒拿到 ARC？"
+msgstr "Just arrived in Taiwan and don't have your ARC yet?"
+
+msgid "可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。"
+msgstr ""
+"You can first buy a prepaid SIM card at the airport or convenience store "
+"(passport only), then switch to a monthly plan once you have your ARC."
+
+msgid "預付卡（易付卡）"
+msgstr "Prepaid SIM Card"
+
+msgid "無 ARC 可辦"
+msgstr "No ARC required"
+
+msgid "只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核發的過渡期使用。"
+msgstr ""
+"Only a passport is required. Available at 7-Eleven, FamilyMart, and the "
+"airport. Ideal for the transition period after arriving before your ARC is "
+"issued."
+
+msgid "需要：護照"
+msgstr "Required: Passport"
+
+msgid "費用：約 NT$300 起（含一個月通話 + 數據）"
+msgstr "Cost: From approx. NT$300 (includes 1 month of calls + data)"
+
+msgid "月租方案（後付型）"
+msgstr "Monthly Plan (postpaid)"
+
+msgid "ARC 後辦理"
+msgstr "Apply after getting ARC"
+
+msgid "費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。多數學生取得 ARC 後即改辦月租。"
+msgstr ""
+"Better rates, large data allowance, ideal for long-term study. Requires ARC "
+"and a Taiwan bank account or credit card. Most students switch to this after"
+" getting their ARC."
+
+msgid "需要：ARC + 護照 + 銀行帳戶（或信用卡）"
+msgstr "Required: ARC + Passport + Bank account (or credit card)"
+
+msgid "費用：約 NT$399～699/月（依方案）"
+msgstr "Cost: Approx. NT$399–699/month (depending on plan)"
+
+msgid "中華電信"
+msgstr "Chunghwa Telecom"
+
+msgid "涵蓋範圍最廣，山區及偏遠地帶訊號最佳"
+msgstr "Widest coverage; best signal in mountain and remote areas"
+
+msgid "台灣大哥大"
+msgstr "Taiwan Mobile"
+
+msgid "都會區訊號佳，學生方案較多"
+msgstr "Good signal in urban areas; more student plans available"
+
+msgid "遠傳電信"
+msgstr "FarEasTone"
+
+msgid "北部訊號穩定，資費具競爭力"
+msgstr "Stable signal in northern Taiwan; competitive pricing"
+
+msgid "亞太電信"
+msgstr "APT (Asia Pacific Telecom)"
+
+msgid "資費較低，適合純數據需求"
+msgstr "Lower rates; suitable for data-only users"
+
+msgid "居留證（ARC）正本"
+msgstr "ARC (Alien Resident Certificate) original"
+
+msgid "必備"
+msgstr "Required"
+
+msgid "護照正本"
+msgstr "Passport original"
+
+msgid "台灣銀行帳戶 或 信用卡（扣繳費用）"
+msgstr "Taiwan bank account or credit card (for bill payment)"
+
+msgid "必備其一"
+msgstr "One required"
+
+msgid "學生證（部分業者提供學生優惠）"
+msgstr "Student ID (some carriers offer student discounts)"
+
+msgid "建議攜帶"
+msgstr "Recommended"
+
+msgid "選擇電信業者與方案"
+msgstr "Choose a carrier and plan"
+
+msgid "前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。"
+msgstr ""
+"Visit the major carriers' websites to compare plans (calls + data). If on a "
+"budget and mainly using data, consider an unlimited data-only plan (approx. "
+"NT$399/month)."
+
+msgid "前往電信門市"
+msgstr "Visit a carrier store"
+
+msgid ""
+"攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
+msgstr ""
+"Bring your ARC, passport, bank account or credit card to a carrier store "
+"(all major carriers have stores in Zhongli). Tell the staff you want to "
+"'register a new number with a resident certificate'. Usually takes under 30 "
+"minutes."
+
+msgid "選擇門號與 SIM 卡規格"
+msgstr "Choose your number and SIM size"
+
+msgid ""
+"可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G "
+"正常使用。"
+msgstr ""
+"You can choose your number (special numbers cost extra) and SIM size (most "
+"phones now use nano SIM). Confirm your phone is 'fully unlocked' to ensure "
+"5G/4G works in Taiwan."
+
+msgid "插卡啟用，設定網路"
+msgstr "Insert SIM and configure network"
+
+msgid "插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設定 APN。"
+msgstr ""
+"After inserting the SIM, APN settings are usually configured automatically. "
+"If you can't connect, ask store staff to help set the APN manually."
+
+msgid "中央大學附近："
+msgstr "Near NCU:"
+
+msgid "中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。"
+msgstr ""
+"All major carriers have stores in Zhongli city center (near the train "
+"station). Chunghwa Telecom, Taiwan Mobile, and FarEasTone all have stores on"
+" Guangming Street and Zhongzheng Road."
+
+msgid "保留原國際漫遊號碼："
+msgstr "Keep your home country number (roaming):"
+
+msgid "許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。"
+msgstr ""
+"Many students keep their home country number (international roaming) for "
+"family contact, and get a local Taiwan number for daily use. A dual-SIM "
+"phone makes this much more convenient."
+
+msgid "月租方案需綁定扣款帳戶："
+msgstr "Monthly plans require a linked payment account:"
+
+msgid "銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。"
+msgstr ""
+"If your bank account balance is insufficient, the carrier may suspend your "
+"number. Make sure you have enough balance in your account each month."
+
+msgid "領獎學金・生活必備"
+msgstr "Collect scholarships · Daily essentials"
+
+msgid "在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。"
+msgstr ""
+"During your studies in Taiwan, a bank account is essential for receiving "
+"scholarships, paying rent, and daily spending. This page covers bank options"
+" and the account-opening process."
+
+msgid "中華郵政（郵局）"
+msgstr "Chunghwa Post (Post Office)"
+
+msgid "外籍生首選"
+msgstr "Top pick for international students"
+
+msgid "全台門市最廣，外籍生開戶最友善，"
+msgstr ""
+"Widest branch network in Taiwan, most foreigner-friendly for account opening"
+" — "
+
+msgid "當日即可拿到存摺與提款卡"
+msgstr "passbook and ATM card on the same day"
+
+msgid "，不像一般銀行需等 3–5 個工作天審核。"
+msgstr ", unlike regular banks where you wait 3–5 business days for approval."
+
+msgid "優點："
+msgstr "Pros:"
+
+msgid "當日領卡、未有 ARC 也可辦（持統一證號）、存款有政府保障"
+msgstr ""
+"Same-day card issuance; can open without ARC (using Unified ID); deposits "
+"protected by government"
+
+msgid "缺點："
+msgstr "Cons:"
+
+msgid "ATM 主要在郵局內，跨行提款每次 NT$5+，轉帳超額 NT$8–15；App 功能較基本"
+msgstr ""
+"ATMs mainly inside post offices; inter-bank withdrawal NT$5+ each; transfer "
+"fee NT$8–15; app features are basic"
+
+msgid "多人同行請提前預約，避免等候過久"
+msgstr "Groups should book in advance to avoid long waits"
+
+msgid "多數郵局營業至 17:00，部分郵局更晚（比銀行多 1.5 小時）"
+msgstr ""
+"Most post offices open until 17:00, some even later (1.5 hours more than "
+"regular banks)"
+
+msgid "台灣銀行"
+msgstr "Bank of Taiwan"
+
+msgid "獎學金首選"
+msgstr "Top pick for scholarship recipients"
+
+msgid "政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。"
+msgstr ""
+"Government agency and Ministry of Education scholarships are usually "
+"deposited into Bank of Taiwan accounts — essential if you receive a "
+"government scholarship. There is a branch in Zhongli."
+
+msgid "玉山銀行"
+msgstr "E.Sun Bank"
+
+msgid "線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。"
+msgstr ""
+"Excellent online banking interface, better English customer service, "
+"supports Apple Pay / Google Pay. Relatively foreigner-friendly."
+
+msgid "國泰世華銀行"
+msgstr "Cathay United Bank"
+
+msgid "ATM 據點多，與多家電商合作，網路銀行功能完整，學生使用廣泛。"
+msgstr ""
+"Many ATM locations, partnerships with major e-commerce platforms, "
+"comprehensive online banking features, widely used by students."
+
+msgid "雙證件之一"
+msgstr "One of two required IDs"
+
+msgid "或 統一證號基資表（尚未領 ARC 者）"
+msgstr "or Unified ID Registration Form (if ARC not yet issued)"
+
+msgid "木頭刻印章（英文姓名）"
+msgstr "Wooden name stamp (English name)"
+
+msgid "— 原子章、橡皮章不可用"
+msgstr "— ball-point and rubber stamps not accepted"
+
+msgid "現金 NT$100（不收刷卡）"
+msgstr "Cash NT$100 (cards not accepted)"
+
+msgid "視需求"
+msgstr "As needed"
+
+msgid "台灣本人手機號碼（辦 Visa 卡時需要）"
+msgstr "Your Taiwan mobile number (required when applying for Visa card)"
+
+msgid "木頭印章哪裡買？"
+msgstr "Where to buy a wooden name stamp?"
+
+msgid ""
+"學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 "
+"分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存摺分開保管。"
+msgstr ""
+"Any stationery store near campus can make one. Tell the owner you need a "
+"wooden name stamp and provide your full English name. Cost: approx. "
+"NT$50–100, wait about 20 minutes. Have it made in advance and bring it on "
+"account-opening day. Your stamp equals your signature — keep it separate "
+"from your passbook."
+
+msgid "已領有居留證（ARC）者："
+msgstr "If you already have an ARC:"
+
+msgid "居留證號即為統一證號，無須另行申請，直接帶 ARC 正本開戶即可。"
+msgstr ""
+"Your ARC number is your Unified ID — no separate application needed. Just "
+"bring your original ARC to open an account."
+
+msgid "尚未取得居留證者（部分港澳生）："
+msgstr "If you don't have an ARC yet (some HK/Macau students):"
+
+msgid ""
+"需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
+msgstr ""
+"You must apply for a 'Unified ID Registration Form' at the local Immigration"
+" Service Station, bringing your original passport and a photocopy (no photo "
+"required). This number is permanent for life; once you receive your ARC, the"
+" ARC number will match your Unified ID."
+
+msgid "建議選擇有 VISA 功能的 Debit Card（扣帳卡）："
+msgstr "We recommend choosing a Debit Card with VISA functionality:"
+
+msgid ""
+"可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 兩種組合，可按需求選擇。請注意部分台灣商家不接受 "
+"VISA Debit，付款前請確認。"
+msgstr ""
+"Use it at ATMs and also pay directly in-store or online. The post office "
+"offers two combinations: VISA + EasyCard or VISA + iPASS — choose based on "
+"your needs. Note that some Taiwanese merchants do not accept VISA Debit; "
+"confirm before paying."
+
+msgid "建議先辦好 SIM 卡再去開戶："
+msgstr "Get your SIM card before opening a bank account:"
+
+msgid "開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。"
+msgstr ""
+"Activating online banking and a Visa card requires a Taiwan mobile number to"
+" receive OTPs. Having a local number means you can complete everything in "
+"one visit."
+
+msgid "注意營業時間 + 預留足夠時間："
+msgstr "Check business hours and allow enough time:"
+
+msgid "一般銀行週一至週五 09:00–15:30，郵局多至 17:00。外籍生開戶流程通常需 1 小時以上，請勿太晚抵達，以免被請回。"
+msgstr ""
+"Regular banks are open Mon–Fri 09:00–15:30; most post offices until 17:00. "
+"Account opening for foreign students usually takes over 1 hour — don't "
+"arrive too late or you may be turned away."
+
+msgid "台灣日期格式：先寫月份、再寫日子"
+msgstr "Taiwan date format: month first, then day"
+
+msgid " — 2 月 1 日 = 2025/2/1（與部分地區習慣相反），簽文件時請注意。"
+msgstr ""
+" — February 1 = 2025/2/1 (opposite to some regions' conventions). Be careful"
+" when signing documents."
+
+msgid "建議前往學校附近郵局："
+msgstr "We recommend the post office near campus:"
+
+msgid "大學周邊郵局對僑外生開戶經驗豐富，審核較快，手續更熟練。"
+msgstr ""
+"Post offices near universities have extensive experience helping "
+"international students open accounts — reviews are faster and procedures are"
+" smoother."
+
+msgid "ARC 到期後記得更新帳戶資料："
+msgstr "Remember to update your account details when your ARC expires:"
+
+msgid "ARC 換新後需至銀行更新證件資料，避免帳戶被凍結。"
+msgstr ""
+"After renewing your ARC, visit the bank to update your ID documents to "
+"prevent your account from being frozen."
+
+msgid "重要警示"
+msgstr "Important Warnings"
+
+msgid "絕對不要將帳戶借給他人："
+msgstr "Never lend your account to others:"
+
+msgid "依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。"
+msgstr ""
+"Under Taiwan law, lending your passbook, ATM card, or online banking "
+"password is illegal. At minimum you may be listed as a fraud suspect; at "
+"worst you face criminal liability. If your account is compromised or "
+"passbook lost, notify the bank immediately."
+
+msgid "不要短期內在多家銀行開戶："
+msgstr "Do not open accounts at multiple banks in a short period:"
+
+msgid "台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。"
+msgstr ""
+"Every time you open an account in Taiwan, the bank runs a credit inquiry. "
+"Too many inquiries in a short time may prompt the bank to call you or even "
+"reject your application (to prevent ghost accounts). Start with 1–2 banks."
+
+msgid "外籍生・僑生必辦"
+msgstr "Required for international & overseas students"
+
+msgid "僑生、外籍生（僑外生）取得居留證明文件來臺就學，自合於投保資格之日起，依法應參加全民健康保險。"
+msgstr ""
+"Overseas Chinese students and international students (overseas/foreign "
+"students) who obtain residency documents to study in Taiwan are legally "
+"required to enroll in National Health Insurance from the date they become "
+"eligible."
+
+msgid "新生第一學期保險（未達健保資格前）"
+msgstr "First-semester insurance for new students (before NHI eligibility)"
+
+msgid "重要："
+msgstr "Important:"
+
+msgid "剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保險："
+msgstr ""
+"Newly arrived overseas Chinese students have not yet met the '6 months of "
+"residence in Taiwan' requirement for NHI enrollment, and must first join one"
+" of the following insurance plans:"
+
+msgid "僑保（海外華人保險）"
+msgstr "OCAC Insurance (Overseas Chinese Insurance)"
+
+msgid "適用對象：首次入台的大一僑生新生（只能加保一次）"
+msgstr ""
+"Eligible: First-year overseas Chinese students arriving in Taiwan for the "
+"first time (can only enroll once)"
+
+msgid "保費：自費 NT$600（僑委會補助 NT$600，合計 NT$1,200）"
+msgstr "Premium: NT$600 self-pay (OCAC subsidizes NT$600, total NT$1,200)"
+
+msgid "保障期間：6 個月（一學期）"
+msgstr "Coverage period: 6 months (one semester)"
+
+msgid "由國際事務處協助辦理"
+msgstr "Handled with assistance from the Office of International Affairs"
+
+msgid "國泰人壽保險"
+msgstr "Cathay Life Insurance"
+
+msgid "適用對象：第二學期起或不符合僑保資格者"
+msgstr ""
+"Eligible: From the second semester onwards, or those not qualifying for OCAC"
+" Insurance"
+
+msgid "保費：NT$3,000 / 學期（最長六個月）"
+msgstr "Premium: NT$3,000 / semester (up to six months)"
+
+msgid "由國際事務處協助加保"
+msgstr "Enrollment assisted by the Office of International Affairs"
+
+msgid "理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影本、郵局存簿影本及個資同意書"
+msgstr ""
+"Claims: Complete a claim form at the OIA, and bring medical receipts, "
+"diagnosis certificate, ARC copy, passport copy, post office passbook copy, "
+"and personal data consent form"
+
+msgid "全民健保投保規定"
+msgstr "NHI Enrollment Rules"
+
+msgid "項目"
+msgstr "Item"
+
+msgid "僑外生就學期間"
+msgstr "During studies (overseas/foreign students)"
+
+msgid "僑外生經許可工作期間"
+msgstr "During permitted employment (overseas/foreign students)"
+
+msgid "投保資格"
+msgstr "Eligibility"
+
+msgid "自在臺居留滿 6 個月之日投保"
+msgstr "Enroll from the date of completing 6 months of residence in Taiwan"
+
+msgid "自受僱當日投保（無等待期）"
+msgstr "Enroll from the date of employment (no waiting period)"
+
+msgid "投保身分"
+msgstr "Insured category"
+
+msgid "第 6 類第 2 目被保險人"
+msgstr "Category 6, subcategory 2 insured"
+
+msgid "第 1 類被保險人（受僱者）"
+msgstr "Category 1 insured (employee)"
+
+msgid "投保方式"
+msgstr "Enrollment method"
+
+msgid "以就讀學校為投保單位辦理"
+msgstr "Enrolled through the attending school as the insuring unit"
+
+msgid "以工作單位為投保單位辦理"
+msgstr "Enrolled through the employer as the insuring unit"
+
+msgid "※ 短期性工作未逾 3 個月者，可選擇以原投保資格繼續投保"
+msgstr ""
+"※ Those working short-term (under 3 months) may choose to continue "
+"enrollment under their original insured category"
+
+msgid "「在臺居留滿 6 個月」認定方式"
+msgstr "How to count '6 months of residence in Taiwan'"
+
+msgid ""
+"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 "
+"30 天，則從重新抵台當天起算，6 個月重新計算。"
+msgstr ""
+"This means continuously residing in Taiwan for 6 months, or having departed "
+"once for no more than 30 days, with the actual residence period minus "
+"departure days totaling 6 months. If you depart more than once, or depart "
+"once for over 30 days, the 6-month count restarts from the day you return to"
+" Taiwan."
+
+msgid "計算範例："
+msgstr "Calculation example:"
+
+msgid "入境日：113/9/1 → 未曾出境 → 投保日：114/3/1"
+msgstr "Entry date: 113/9/1 → No departures → Enrollment date: 114/3/1"
+
+msgid "入境日：113/9/1 → 曾出境 1 次（114/1/1–1/5，共 4 天）→ 投保日：114/3/5"
+msgstr ""
+"Entry date: 113/9/1 → Departed once (114/1/1–1/5, 4 days total) → Enrollment"
+" date: 114/3/5"
+
+msgid "在臺參加健保注意事項"
+msgstr "Notes on NHI enrollment in Taiwan"
+
+msgid "僑外生在臺就學並符合投保資格期間，應以就讀學校為投保單位辦理投保。"
+msgstr ""
+"Overseas/foreign students studying in Taiwan who meet the eligibility "
+"requirements must enroll in NHI through their school as the insuring unit."
+
+msgid "僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 日內，向健保署辦理投保。"
+msgstr ""
+"When overseas/foreign students are permitted to work in Taiwan and are "
+"employed, the insuring unit (employer) must complete NHI enrollment within 3"
+" days of the insured becoming eligible."
+
+msgid "於受僱單位投保時，應先至學校辦理轉出，避免重複投保。"
+msgstr ""
+"When enrolling through an employer, first arrange a transfer-out from the "
+"school to avoid duplicate enrollment."
+
+msgid "與工作單位終止僱傭關係後，應另以適法身分投保：若已受新單位聘僱，於新單位投保；未受聘僱期間則應回學校辦理投保。"
+msgstr ""
+"After ending employment, enroll under another eligible status: if hired by a"
+" new employer, enroll through the new employer; during periods without "
+"employment, return to school enrollment."
+
+msgid "符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，應以眷屬身分依附其投保單位加保。"
+msgstr ""
+"During eligible but unemployed periods, if a spouse, parent, or child in "
+"Taiwan is already an NHI insured, you should enroll as a dependent under "
+"their insuring unit."
+
+msgid "在學證明（學生證或在學證明書）"
+msgstr "Proof of enrollment (student ID or certificate of enrollment)"
+
+msgid "台灣銀行帳戶（保費扣繳用）"
+msgstr "Taiwan bank account (for premium deduction)"
+
+msgid "建議"
+msgstr "Recommended"
+
+msgid "1 吋照片（部分單位需要）"
+msgstr "1-inch photo (required by some offices)"
+
+msgid "清寒僑生健保費補助："
+msgstr "NHI premium subsidy for low-income overseas Chinese students:"
+
+msgid ""
+"符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 "
+"NT$826。詳情請洽國際事務處。"
+msgstr ""
+"Those who qualify as low-income and enroll in NHI may apply to the OIA for a"
+" monthly subsidy of NT$413 (requires proof of low-income status; granted "
+"after review). Without the subsidy, the monthly premium is approx. NT$826. "
+"Contact the OIA for details."
+
+msgid "相關文件下載"
+msgstr "Download related documents"
+
+msgid "在臺僑生、外籍生參加全民健康保險須知（PDF）↓"
+msgstr "NHI Enrollment Guide for Overseas/Foreign Students in Taiwan (PDF) ↓"
+
+msgid "小病先看診所："
+msgstr "See a clinic for minor illnesses first:"
+
+msgid ""
+"台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
+msgstr ""
+"Taiwan uses a tiered healthcare system. For common illnesses, visit a clinic"
+" first (family medicine or internal medicine) — the co-pay is only about "
+"NT$150. Going directly to a hospital emergency room or outpatient department"
+" requires a higher co-pay (NT$240–480)."
+
+msgid "下載「健保快易通」App："
+msgstr "Download the 'NHI Express' App:"
+
+msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
+msgstr ""
+"Check your NHI status, medical records, and display a digital health "
+"insurance card — no need to worry about forgetting your physical card."
+
+msgid "暑假返鄉超過 2 個月時："
+msgstr "If returning home for more than 2 months during summer break:"
+
+msgid "建議辦理「出國停保」避免繼續扣繳保費；回台後記得立即「復保」恢復保障。"
+msgstr ""
+"Apply for 'departure suspension' to avoid continued premium deductions; "
+"remember to 'reinstate coverage' immediately upon returning to Taiwan."
+
+msgid "全民健康保險署官網 ↗"
+msgstr "NHI Administration Official Website ↗"
+
+msgid "非本國籍人士加保說明 ↗"
+msgstr "NHI Enrollment Guide for Non-ROC Nationals ↗"
+
+msgid "衛保組・診所・醫院・急診"
+msgstr "Health Center · Clinic · Hospital · Emergency"
+
+msgid "台灣採分級醫療制度，小病先看診所、大病再轉醫院。持健保卡就醫費用大幅降低，急救請撥 119。"
+msgstr ""
+"Taiwan uses a tiered healthcare system — minor illnesses go to a clinic "
+"first, serious ones to a hospital. NHI card holders pay much less. Call 119 "
+"for emergencies."
+
+msgid "台灣分級醫療制度"
+msgstr "Taiwan's Tiered Healthcare System"
+
+msgid "衛保組 / 診所"
+msgstr "Health Center / Clinic"
+
+msgid "健保約 NT$150–200"
+msgstr "NHI co-pay approx. NT$150–200"
+
+msgid "一般感冒、輕傷、慢性病、定期回診"
+msgstr "Common cold, minor injuries, chronic conditions, routine follow-ups"
+
+msgid "地區醫院（門診）"
+msgstr "District Hospital (Outpatient)"
+
+msgid "健保約 NT$240–360"
+msgstr "NHI co-pay approx. NT$240–360"
+
+msgid "需要進一步檢查、診所無法處理者"
+msgstr "Requires further testing or beyond clinic capacity"
+
+msgid "醫學中心（急診）"
+msgstr "Medical Center (Emergency)"
+
+msgid "健保約 NT$450–600"
+msgstr "NHI co-pay approx. NT$450–600"
+
+msgid "嚴重外傷、危及生命、需要手術"
+msgstr "Serious trauma, life-threatening conditions, surgery needed"
+
+msgid "台灣分級醫療制度下，直接去大醫院門診的部分負擔比診所高 2–3 倍。輕症先到診所就診，若需轉診，醫師會開立轉診單，可享受較低的部分負擔。"
+msgstr ""
+"Under Taiwan's tiered system, going directly to a large hospital outpatient "
+"department costs 2–3× more than a clinic. See a clinic first for minor "
+"illness; if a referral is needed the doctor will issue one, qualifying you "
+"for a lower co-pay."
+
+msgid "校內衛保組（NCU）"
+msgstr "On-campus Health Center (NCU)"
+
+msgid "地點"
+msgstr "Location"
+
+msgid "中正圖書館（舊圖）1 樓"
+msgstr "Zhongzheng Library (Old Library), 1F"
+
+msgid "電話"
+msgstr "Phone"
+
+msgid "分機 57271"
+msgstr "Ext. 57271"
+
+msgid "服務時間"
+msgstr "Service Hours"
+
+msgid "週一至週五"
+msgstr "Monday to Friday"
+
+msgid "08:00–17:00（寒暑假可能調整）"
+msgstr "08:00–17:00 (hours may vary during winter/summer break)"
+
+msgid "服務項目"
+msgstr "Services"
+
+msgid "基本診療・諮詢・轉介"
+msgstr "Basic consultation · Advice · Referrals"
+
+msgid "量血壓、用藥諮詢、轉診協助、新生體檢"
+msgstr ""
+"Blood pressure check, medication advice, referral assistance, new student "
+"health check"
+
+msgid "衛保組適合輕症初診，如感冒、發燒、輕傷等。若需進一步診療，衛保組可協助轉介至校外診所或醫院。"
+msgstr ""
+"The campus health center is suitable for first visits with minor symptoms "
+"such as colds, fever, or light injuries. If further treatment is needed, "
+"staff can help refer you to an off-campus clinic or hospital."
+
+msgid "非上班時間請直接前往校外診所或急診。"
+msgstr ""
+"Outside office hours, go directly to an off-campus clinic or emergency room."
+
+msgid "校外診所（後門商圈 / 中壢周邊）"
+msgstr "Off-campus Clinics (Back Gate Area / Zhongli District)"
+
+msgid ""
+"中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別用 Google Maps 搜尋「中壢 內科診所」、「中壢 "
+"耳鼻喉科」等。"
+msgstr ""
+"There are many clinics in the NCU back-gate area and Zhongli city. With an "
+"NHI card, visits cost about NT$150–200. Search Google Maps by specialty, "
+"e.g. 'Zhongli internal medicine clinic' or 'Zhongli ENT clinic'."
+
+msgid "診所看診時間："
+msgstr "Clinic hours:"
+
+msgid ""
+"多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班制，非所有診所皆有晚診。建議事先電話確認或查詢"
+" Google 地圖上的即時等候人數。"
+msgstr ""
+"Most clinics operate in three sessions: morning (08:30–12:00), afternoon "
+"(14:00–17:30), and evening (18:00–21:00). Not all clinics offer evening "
+"sessions. It is recommended to call ahead or check real-time wait numbers on"
+" Google Maps."
+
+msgid "周邊醫院"
+msgstr "Nearby Hospitals"
+
+msgid "最近・急診24H"
+msgstr "Nearest · 24H Emergency"
+
+msgid "桃園市中壢區延平路150號"
+msgstr "150 Yanping Rd., Zhongli Dist., Taoyuan City"
+
+msgid "從中大搭公車約 15–20 分鐘；設有急診室（24 小時）"
+msgstr "About 15–20 min by bus from NCU; has a 24-hour emergency room"
+
+msgid "壢新醫院官網 ↗"
+msgstr "Lixin Hospital Website ↗"
+
+msgid "衛福部桃園醫院中壢院區"
+msgstr "Ministry of Health and Welfare Taoyuan Hospital — Zhongli Branch"
+
+msgid "桃園市中壢區中山東路二段16號"
+msgstr "16 Sec. 2, Zhongshan E. Rd., Zhongli Dist., Taoyuan City"
+
+msgid "公立醫院，設有門診及急診"
+msgstr "Public hospital with outpatient and emergency departments"
+
+msgid "林口長庚醫院"
+msgstr "Linkou Chang Gung Memorial Hospital"
+
+msgid "醫學中心"
+msgstr "Medical Center"
+
+msgid "桃園市龜山區舒民路5號"
+msgstr "5 Shumin Rd., Guishan Dist., Taoyuan City"
+
+msgid "中大搭車約 40 分鐘；台灣最大醫院之一，有多語言服務"
+msgstr ""
+"About 40 min from NCU; one of Taiwan's largest hospitals, multilingual "
+"services available"
+
+msgid "長庚醫院官網 ↗"
+msgstr "Chang Gung Hospital Website ↗"
+
+msgid "急診 / 緊急情況"
+msgstr "Emergency / Urgent Situations"
+
+msgid "危及生命・嚴重受傷・無法自行就醫"
+msgstr "Life-threatening · Serious injury · Unable to seek medical help alone"
+
+msgid "請立即撥打緊急電話，或由旁人送至最近有急診的醫院（壢新醫院）。急診 24 小時全年無休。"
+msgstr ""
+"Call emergency services immediately, or have someone take you to the nearest"
+" hospital with an emergency room (Lixin Hospital). Emergency room open 24 "
+"hours, 365 days."
+
+msgid "救護車・火災"
+msgstr "Ambulance · Fire"
+
+msgid "免費撥打，全球手機可用"
+msgstr "Free to call, works on any mobile worldwide"
+
+msgid "警察局"
+msgstr "Police"
+
+msgid "報案・協助"
+msgstr "Report crime · Assistance"
+
+msgid "國際緊急號碼"
+msgstr "International Emergency Number"
+
+msgid "任何手機（含無 SIM 卡）皆可撥打"
+msgstr "Works on any phone, including phones without a SIM card"
+
+msgid "外來人士生活諮詢"
+msgstr "Foreign Residents Hotline"
+
+msgid "多語言，含醫療協助"
+msgstr "Multilingual, includes medical assistance"
+
+msgid "急診部分負擔較高："
+msgstr "Emergency co-pay is higher:"
+
+msgid "非緊急狀況直接掛急診，健保部分負擔為 NT$450–600（比診所高 3 倍以上）。輕症建議前往診所就診，急診留給真正緊急的情況。"
+msgstr ""
+"Going directly to the emergency room for non-emergencies costs NT$450–600 in"
+" NHI co-pay — more than 3× the clinic rate. Minor illness should go to a "
+"clinic; save the ER for genuine emergencies."
+
+msgid "健保就醫費用對照"
+msgstr "NHI Medical Fee Comparison"
+
+msgid "就醫地點"
+msgstr "Medical facility"
+
+msgid "持健保卡"
+msgstr "With NHI card"
+
+msgid "未持健保卡"
+msgstr "Without NHI card"
+
+msgid "衛保組（校內）"
+msgstr "Campus Health Center"
+
+msgid "免費 / 極低費"
+msgstr "Free / Very low cost"
+
+msgid "視項目收費"
+msgstr "Charged by service"
+
+msgid "診所"
+msgstr "Clinic"
+
+msgid "約 NT$150–200"
+msgstr "Approx. NT$150–200"
+
+msgid "全額自費（NT$500–1,000+）"
+msgstr "Full out-of-pocket (NT$500–1,000+)"
+
+msgid "地區醫院門診"
+msgstr "District Hospital Outpatient"
+
+msgid "約 NT$240–360"
+msgstr "Approx. NT$240–360"
+
+msgid "全額自費（NT$1,000+）"
+msgstr "Full out-of-pocket (NT$1,000+)"
+
+msgid "醫學中心門診"
+msgstr "Medical Center Outpatient"
+
+msgid "約 NT$360–480"
+msgstr "Approx. NT$360–480"
+
+msgid "全額自費（NT$2,000+）"
+msgstr "Full out-of-pocket (NT$2,000+)"
+
+msgid "急診"
+msgstr "Emergency Room"
+
+msgid "約 NT$450–600"
+msgstr "Approx. NT$450–600"
+
+msgid "全額自費（視治療而定）"
+msgstr "Full out-of-pocket (depends on treatment)"
+
+msgid "可顯示數位健保卡、查詢就醫紀錄與健保狀態，出門忘帶實體健保卡時可使用。"
+msgstr ""
+"Displays your digital NHI card, lets you check medical records and insurance"
+" status — useful when you forget your physical card."
+
+msgid "NCU 校安緊急聯絡"
+msgstr "NCU Campus Safety Emergency Contacts"
+
+msgid "分機 57212"
+msgstr "Ext. 57212"
+
+msgid "24 小時校安專線："
+msgstr "24-hour campus safety hotline:"
+
+msgid "國際事務處"
+msgstr "Office of International Affairs"
+
+msgid "分機 57081"
+msgstr "Ext. 57081"
+
+msgid "承辦人：徐心荷小姐"
+msgstr "Contact person: Ms. Xu Xinhe"
+
+#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
+#~ msgstr ""
+#~ "Enter your question, and the system will organize suggestions based on your "
+#~ "identity and status."
+>>>>>>> new/07
 
 msgid "1 年"
 msgstr "1 year"
