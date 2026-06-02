@@ -3814,6 +3814,1312 @@ msgstr ""
 "mesti mendaftar sendiri semasa tambah/gugur; sistem tidak akan mendaftar "
 "secara automatik."
 
+msgid "休學・復學・轉系・雙主修　辦理規定與注意事項"
+msgstr ""
+"Cuti Akademik · Pemulihan · Pindah Jabatan · Major Berganda — Peraturan dan "
+"Prosedur"
+
+msgid "休學"
+msgstr "Cuti Akademik"
+
+msgid "申請期限"
+msgstr "Tempoh Permohonan"
+
+msgid "期末考試開始前"
+msgstr "Sebelum peperiksaan akhir bermula"
+
+msgid "每次最長"
+msgstr "Maksimum setiap permohonan"
+
+msgid "2 學年"
+msgstr "2 tahun akademik"
+
+msgid "累計上限"
+msgstr "Had terkumpul"
+
+msgid "2 學年（原則）"
+msgstr "2 tahun akademik (pada dasarnya)"
+
+msgid "特殊延長"
+msgstr "Lanjutan khas"
+
+msgid "可再延長 2 年"
+msgstr "Boleh dilanjutkan 2 tahun lagi"
+
+msgid "申請須取得家長或監護人同意，以及系主任同意，再至教務處辦理"
+msgstr ""
+"Memerlukan persetujuan ibu bapa atau penjaga dan ketua jabatan, kemudian "
+"hantar ke Pejabat Hal Ehwal Akademik"
+
+msgid "新生及轉學生第一學期須先完成註冊繳費，才能申請休學"
+msgstr ""
+"Pelajar baru dan pelajar pindahan mesti melengkapkan pendaftaran dan "
+"pembayaran yuran pada semester pertama sebelum memohon cuti"
+
+msgid "休學當學期已選課程一律取消，不計成績（預修與抵免課程除外）"
+msgstr ""
+"Semua kursus yang didaftarkan dalam semester cuti akan dibatalkan tanpa "
+"merekod gred (kecuali kursus pra-lulus dan pengecualian kredit)"
+
+msgid "休學期間不計入修業年限"
+msgstr "Tempoh cuti tidak dikira dalam had masa pengajian"
+
+msgid "服兵役、懷孕、生產、照顧未滿 3 歲子女所致休學"
+msgstr ""
+"Cuti disebabkan perkhidmatan tentera, mengandung, bersalin, atau menjaga "
+"anak bawah 3 tahun"
+
+msgid "不計入累計年限"
+msgstr "Tidak dikira dalam had terkumpul"
+
+msgid "外籍生 ARC 注意"
+msgstr "Perhatian ARC untuk Pelajar Antarabangsa"
+
+msgid ""
+"辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
+msgstr ""
+"Selepas bercuti, ARC pelajar anda tidak lagi sah dan anda mesti meninggalkan"
+" Taiwan dalam tempoh yang ditetapkan. Anda mesti memohon semula visa pelajar"
+" sebelum kembali. Sila hubungi Pejabat Hal Ehwal Antarabangsa (sambungan "
+"57081) untuk mengesahkan prosedur sebelum memutuskan untuk bercuti."
+
+msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
+msgstr ""
+"Asrama: Anda mesti menyelesaikan prosedur daftar keluar sebelum bercuti. "
+"Selepas kembali, anda perlu memohon asrama semula — katil tidak ditempah."
+
+msgid "復學"
+msgstr "Pemulihan Pengajian"
+
+msgid "自動復學"
+msgstr "Pemulihan Automatik"
+
+msgid "休學期滿即自動復學"
+msgstr "Pulih secara automatik apabila tempoh cuti tamat"
+
+msgid "註冊期限"
+msgstr "Tarikh Akhir Pendaftaran"
+
+msgid "當學期註冊日（含）前"
+msgstr "Sebelum atau pada hari pendaftaran semester semasa (inklusif)"
+
+msgid "提前復學"
+msgstr "Pemulihan Awal"
+
+msgid "最遲於註冊日前申請"
+msgstr "Mohon tidak lewat dari tarikh pendaftaran"
+
+msgid "休學期滿後自動回復學籍，須於當學期校曆註冊日（含）前完成報到與繳費"
+msgstr ""
+"Status pelajar dipulihkan secara automatik selepas tamat cuti; anda mesti "
+"mendaftar masuk dan membayar yuran sebelum atau pada tarikh pendaftaran "
+"dalam takwim akademik (inklusif)"
+
+msgid "提前復學：須於預定復學學期的註冊日前提出申請，不可在休學中途直接回來上課"
+msgstr ""
+"Pemulihan awal: Mohon sebelum tarikh pendaftaran semester yang dikehendaki. "
+"Anda tidak boleh terus kembali ke kelas di pertengahan cuti."
+
+msgid "復學後回到原學系，年級銜接休學前的年級繼續就讀"
+msgstr ""
+"Setelah dipulihkan, anda kembali ke jabatan asal pada tahun yang sama "
+"seperti sebelum bercuti"
+
+msgid "若屆時無法如期復學，需於註冊日前再次申請延續休學；逾期未辦者視情形處理"
+msgstr ""
+"Jika anda tidak dapat kembali seperti yang dijadualkan, mohon lanjutan cuti "
+"sebelum tarikh pendaftaran; kegagalan berbuat demikian akan diuruskan "
+"mengikut peraturan"
+
+msgid "復學後的畢業條件，依入學當年度的學則與相關規章認定"
+msgstr ""
+"Syarat graduasi selepas pemulihan mengikut peraturan akademik tahun "
+"kemasukan"
+
+msgid "轉系"
+msgstr "Pindah Jabatan"
+
+msgid "申請時間依當學年度校曆公告，每輪申請限報名一個科系，超過一個即取消資格。"
+msgstr ""
+"Tempoh permohonan diumumkan dalam takwim akademik tahunan. Setiap pusingan "
+"terhad kepada satu jabatan — memohon lebih dari satu akan mendiskualifikasi "
+"anda."
+
+msgid "申請資格（年級）"
+msgstr "Kelayakan (mengikut tahun)"
+
+msgid "大二"
+msgstr "Tahun 2"
+
+msgid "升大二前可申請"
+msgstr "Boleh memohon sebelum naik ke tahun 2"
+
+msgid "大三"
+msgstr "Tahun 3"
+
+msgid "升大三前可申請"
+msgstr "Boleh memohon sebelum naik ke tahun 3"
+
+msgid "大四"
+msgstr "Tahun 4"
+
+msgid "四年級生不得申請"
+msgstr "Pelajar tahun 4 tidak boleh memohon"
+
+msgid "休學中"
+msgstr "Dalam Cuti"
+
+msgid "休學期間不得申請"
+msgstr "Tidak boleh memohon semasa dalam cuti"
+
+msgid "每一申請週期只能申請一個科系，多報即全部取消資格"
+msgstr ""
+"Hanya satu jabatan setiap kitaran permohonan — memohon ke beberapa jabatan "
+"akan membatalkan semua permohonan"
+
+msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
+msgstr ""
+"Jabatan boleh menetapkan kriteria sendiri (mis. kedudukan gred), tetapi "
+"ambang kedudukan tidak boleh melebihi 50% teratas (iaitu separuh atas kelas)"
+
+msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
+msgstr ""
+"Had kuota pindah masuk: Setiap jabatan boleh menerima sehingga 20% daripada "
+"enrolmen yang diluluskan asal setiap tahun"
+
+msgid "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級"
+msgstr ""
+"Pemohon yang memasuki tahun 4 boleh pindah ke tahun yang sama dalam jabatan "
+"serupa, atau ke tahun 2/3 dalam jabatan berbeza jenis"
+
+msgid "核准後不可撤回，原系修過的學分可申請抵免，由新系系主任審核認定"
+msgstr ""
+"Kelulusan tidak boleh ditarik balik. Kredit yang diperoleh di jabatan asal "
+"boleh dipohon untuk pengecualian, tertakluk kepada kelulusan ketua jabatan "
+"baru"
+
+msgid "離島優惠入學生、國防大學生等特定身份不得申請轉系"
+msgstr ""
+"Pelajar yang diterima melalui keutamaan pulau luar, pelajar universiti "
+"pertahanan, dan kategori tertentu lain tidak layak untuk pindah jabatan"
+
+msgid "雙主修"
+msgstr "Major Berganda"
+
+msgid "申請時間依校曆公告。大二起至修業年限最後一年第一學期止（延修期間不得新申請）。"
+msgstr ""
+"Tempoh permohonan diumumkan dalam takwim akademik. Dari tahun ke-2 hingga "
+"semester pertama tahun akhir (permohonan baru tidak dibenarkan semasa tempoh"
+" lanjutan)."
+
+msgid "最早申請"
+msgstr "Permohonan paling awal"
+
+msgid "大二開始"
+msgstr "Mulai tahun 2"
+
+msgid "最晚申請"
+msgstr "Permohonan paling lewat"
+
+msgid "畢業年級第一學期"
+msgstr "Semester pertama tahun graduasi"
+
+msgid "額外延修"
+msgstr "Lanjutan pengajian tambahan"
+
+msgid "最多 1 學年"
+msgstr "Maksimum 1 tahun akademik"
+
+msgid "需同時完成本系全部畢業要求，以及加修學系的所有「專業必修」科目學分"
+msgstr ""
+"Anda mesti menyelesaikan semua keperluan graduasi jabatan utama dan semua "
+"kursus wajib major jabatan tambahan secara serentak"
+
+msgid "各系可自訂申請條件（如 GPA 門檻），需向目標系查詢當年公告"
+msgstr ""
+"Jabatan boleh menetapkan syarat permohonan sendiri (mis. ambang GPA); semak "
+"pengumuman tahun semasa dari jabatan sasaran"
+
+msgid "學位證書上並列兩個學系名稱；畢業成績單亦加註雙主修"
+msgstr ""
+"Diploma menyenaraikan kedua-dua nama jabatan; transkrip rasmi juga mencatat "
+"major berganda"
+
+msgid "若加修學分未能完成 → 可申請再延修一學年，或放棄雙主修僅以本系學分畢業"
+msgstr ""
+"Jika kredit major tambahan tidak dapat diselesaikan → boleh memohon lanjutan"
+" pengajian setahun lagi, atau melepaskan major berganda dan graduasi hanya "
+"dengan kredit jabatan utama"
+
+msgid "若已修完的加修學分符合輔系規定 → 可改認定為輔系資格"
+msgstr ""
+"Jika kredit major tambahan yang telah diselesaikan memenuhi keperluan minor "
+"→ boleh diiktiraf sebagai minor"
+
+msgid "備用選項"
+msgstr "Pilihan sandaran"
+
+msgid "延修期間（因雙主修而延修）：9 學分以下按學分費計；10 學分以上收全額學雜費"
+msgstr ""
+"Tempoh pengajian lanjutan (akibat major berganda): ≤9 kredit dicaj mengikut "
+"kredit; ≥10 kredit dicaj yuran penuh"
+
+msgid "確認加修學系的申請條件"
+msgstr "Sahkan syarat permohonan jabatan tambahan"
+
+msgid "各系 GPA 門檻與名額不同，至目標系系辦查詢當年公告"
+msgstr ""
+"Ambang GPA dan kuota berbeza mengikut jabatan; semak pengumuman tahun semasa"
+" di pejabat jabatan sasaran"
+
+msgid "填寫申請表，經本系主任同意"
+msgstr "Isi borang permohonan dan dapatkan kelulusan ketua jabatan utama"
+
+msgid "表格至教務處或各系系辦索取"
+msgstr ""
+"Borang tersedia di Pejabat Hal Ehwal Akademik atau pejabat setiap jabatan"
+
+msgid "送交加修學系審核"
+msgstr "Hantar ke jabatan tambahan untuk semakan"
+
+msgid "目標系系主任同意後，轉呈教務長核准"
+msgstr ""
+"Selepas ketua jabatan sasaran meluluskan, hantar kepada Dekan Hal Ehwal "
+"Akademik untuk kelulusan akhir"
+
+msgid "核准後按加修課表修課"
+msgstr "Selepas diluluskan, ikuti jadual kursus jabatan tambahan"
+
+msgid "可選擇每學期邊修或在畢業學期一次申請資格審核（自主規劃路線）"
+msgstr ""
+"Anda boleh memilih untuk mengambil kursus setiap semester atau memohon "
+"semakan kelayakan sekali gus pada semester graduasi (laluan berdikari)"
+
+msgid "辦理窗口"
+msgstr "Pejabat yang Dihubungi"
+
+msgid "教務處 / 註冊組"
+msgstr "Pejabat Hal Ehwal Akademik / Bahagian Pendaftaran"
+
+msgid "學籍異動（休學、復學、轉系）"
+msgstr "Perubahan status pelajar (cuti, pemulihan, pindah jabatan)"
+
+msgid "外籍生休學 ARC 問題"
+msgstr "Isu ARC berkaitan cuti akademik untuk pelajar antarabangsa"
+
+msgid "各系系辦"
+msgstr "Pejabat setiap jabatan"
+
+msgid "轉系、雙主修申請條件查詢"
+msgstr "Pertanyaan mengenai syarat pindah jabatan dan major berganda"
+
+msgid "及課程規劃建議"
+msgstr "Dan nasihat perancangan kursus"
+
+msgid "在學證明・成績單・推薦信"
+msgstr "Sijil Penuntut Aktif · Transkrip · Surat Sokongan"
+
+msgid "在學證明"
+msgstr "Sijil Penuntut Aktif"
+
+msgid "線上自印"
+msgstr "Cetak sendiri dalam talian"
+
+msgid "Portal 自行列印"
+msgstr "Cetak melalui Portal"
+
+msgid "登入 Portal → 學生服務 → 在學證明列印。無公章，適用一般用途。"
+msgstr ""
+"Log masuk ke Portal → Perkhidmatan Pelajar → Cetak Sijil Penuntut Aktif. "
+"Tiada cop rasmi — sesuai untuk kegunaan umum."
+
+msgid "臨櫃申請"
+msgstr "Permohonan bersemuka"
+
+msgid "教務處 / 註冊組（含公章）"
+msgstr "Pejabat Hal Ehwal Akademik / Bahagian Pendaftaran (dengan cop rasmi)"
+
+msgid "需蓋學校公章者至教務處（行政大樓）辦理，通常當場或隔日取件。"
+msgstr ""
+"Jika memerlukan cop rasmi sekolah, mohon di Pejabat Hal Ehwal Akademik "
+"(Bangunan Pentadbiran). Biasanya tersedia serta-merta atau hari berikutnya."
+
+msgid "有效期限通常為 3 個月，申請前確認用途所需格式（中文或英文）。"
+msgstr ""
+"Kesahan biasanya 3 bulan. Sahkan format yang diperlukan (Cina atau Inggeris)"
+" sebelum memohon."
+
+msgid "成績單"
+msgstr "Transkrip Akademik"
+
+msgid "Portal 自行列印（非正式）"
+msgstr "Cetak melalui Portal (tidak rasmi)"
+
+msgid "Portal → 學生服務 → 成績查詢 → 列印。不含公章，供個人參考或非正式用途。"
+msgstr ""
+"Portal → Perkhidmatan Pelajar → Semakan Gred → Cetak. Tiada cop rasmi — "
+"untuk rujukan peribadi atau kegunaan tidak rasmi."
+
+msgid "教務處 / 註冊組（含公章 / 英文版）"
+msgstr ""
+"Pejabat Hal Ehwal Akademik / Bahagian Pendaftaran (dengan cop rasmi / versi "
+"Bahasa Inggeris)"
+
+msgid "正式成績單（含公章）或英文成績單，至教務處申請，通常需支付工本費。"
+msgstr ""
+"Transkrip rasmi (dengan cop rasmi) atau transkrip Bahasa Inggeris — mohon di"
+" Pejabat Hal Ehwal Akademik; biasanya dikenakan fi pemprosesan."
+
+msgid "申請前確認對方是否要求「校長章」或「英文版」，不同用途規格不同。"
+msgstr ""
+"Sebelum memohon, sahkan sama ada pihak penerima memerlukan cop pengetua atau"
+" versi Bahasa Inggeris — keperluan berbeza mengikut tujuan."
+
+msgid "推薦信由教授撰寫，學校不直接提供，需自行向教授申請。"
+msgstr ""
+"Surat sokongan ditulis oleh pensyarah — pihak sekolah tidak menyediakannya "
+"secara langsung. Anda mesti memintanya sendiri daripada pensyarah."
+
+msgid "確定需求，提早 2–4 週聯絡教授"
+msgstr "Sahkan keperluan dan hubungi pensyarah 2–4 minggu lebih awal"
+
+msgid "說明用途（申請學校 / 獎學金）、繳交截止日、語言（中文或英文）。"
+msgstr ""
+"Jelaskan tujuan (permohonan universiti / biasiswa), tarikh akhir "
+"penghantaran, dan bahasa yang diperlukan (Cina atau Inggeris)."
+
+msgid "提供個人資料給教授"
+msgstr "Berikan bahan peribadi kepada pensyarah"
+
+msgid "自傳、成績單、申請用途說明、對方機構背景，方便教授撰寫具體內容。"
+msgstr ""
+"Autobiografi, transkrip, penjelasan tujuan permohonan, dan latar belakang "
+"institusi penerima — untuk membantu pensyarah menulis kandungan yang "
+"spesifik."
+
+msgid "確認格式：信封密封 / 線上填表"
+msgstr "Sahkan format: sampul surat bermeterai / borang dalam talian"
+
+msgid "部分申請要求教授直接寄至對方或填線上表單，提前確認避免格式錯誤。"
+msgstr ""
+"Sesetengah permohonan memerlukan pensyarah menghantar terus kepada penerima "
+"atau mengisi borang dalam talian. Sahkan lebih awal untuk mengelakkan ralat "
+"format."
+
+msgid "繳交前再次確認截止日"
+msgstr "Sahkan semula tarikh akhir sebelum penghantaran"
+
+msgid "截止日前 1 週提醒教授，以防對方忘記。"
+msgstr ""
+"Ingatkan pensyarah 1 minggu sebelum tarikh akhir sekiranya mereka terlupa."
+
+msgid "選擇熟悉你的教授（上過課、做過研究），推薦信內容會更有說服力。"
+msgstr ""
+"Pilih pensyarah yang mengenali anda dengan baik (dari kelas atau "
+"penyelidikan) — surat sokongan akan lebih meyakinkan."
+
+msgid "目前尚未收錄你的學校資訊。"
+msgstr "Maklumat sekolah anda belum ditambah."
+
+msgid "請參考學校官網或洽詢教務處。"
+msgstr ""
+"Sila rujuk laman web rasmi sekolah anda atau hubungi Pejabat Hal Ehwal "
+"Akademik."
+
+msgid "抵台第一件事"
+msgstr "Perkara pertama selepas tiba di Taiwan"
+
+msgid "台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。"
+msgstr ""
+"Nombor telefon Taiwan adalah asas kehidupan: pengesahan LINE, OTP bank, dan "
+"navigasi peta semuanya memerlukan nombor tempatan. Halaman ini merangkumi "
+"kad prabayar dan pilihan pelan bulanan."
+
+msgid "剛抵台、還沒拿到 ARC？"
+msgstr "Baru tiba di Taiwan dan belum ada ARC?"
+
+msgid "可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。"
+msgstr ""
+"Anda boleh membeli SIM prabayar di lapangan terbang atau kedai serbaneka "
+"(hanya perlu pasport), kemudian beralih ke pelan bulanan selepas mendapat "
+"ARC."
+
+msgid "預付卡（易付卡）"
+msgstr "Kad SIM Prabayar"
+
+msgid "無 ARC 可辦"
+msgstr "Tanpa ARC"
+
+msgid "只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核發的過渡期使用。"
+msgstr ""
+"Hanya memerlukan pasport. Tersedia di 7-Eleven, FamilyMart dan lapangan "
+"terbang. Sesuai untuk tempoh peralihan selepas tiba sebelum ARC dikeluarkan."
+
+msgid "需要：護照"
+msgstr "Diperlukan: Pasport"
+
+msgid "費用：約 NT$300 起（含一個月通話 + 數據）"
+msgstr "Kos: Dari kira-kira NT$300 (termasuk 1 bulan panggilan + data)"
+
+msgid "月租方案（後付型）"
+msgstr "Pelan Bulanan (pascabayar)"
+
+msgid "ARC 後辦理"
+msgstr "Daftar selepas mendapat ARC"
+
+msgid "費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。多數學生取得 ARC 後即改辦月租。"
+msgstr ""
+"Kadar lebih baik, elaun data besar, sesuai untuk pengajian jangka panjang. "
+"Memerlukan ARC dan akaun bank Taiwan atau kad kredit. Kebanyakan pelajar "
+"beralih ke pelan ini selepas mendapat ARC."
+
+msgid "需要：ARC + 護照 + 銀行帳戶（或信用卡）"
+msgstr "Diperlukan: ARC + Pasport + Akaun bank (atau kad kredit)"
+
+msgid "費用：約 NT$399～699/月（依方案）"
+msgstr "Kos: Kira-kira NT$399–699/bulan (bergantung pada pelan)"
+
+msgid "中華電信"
+msgstr "Chunghwa Telecom"
+
+msgid "涵蓋範圍最廣，山區及偏遠地帶訊號最佳"
+msgstr ""
+"Liputan paling luas; isyarat terbaik di kawasan pergunungan dan terpencil"
+
+msgid "台灣大哥大"
+msgstr "Taiwan Mobile"
+
+msgid "都會區訊號佳，學生方案較多"
+msgstr "Isyarat baik di kawasan bandar; lebih banyak pelan pelajar tersedia"
+
+msgid "遠傳電信"
+msgstr "FarEasTone"
+
+msgid "北部訊號穩定，資費具競爭力"
+msgstr "Isyarat stabil di utara Taiwan; harga kompetitif"
+
+msgid "亞太電信"
+msgstr "APT (Asia Pacific Telecom)"
+
+msgid "資費較低，適合純數據需求"
+msgstr "Kadar lebih rendah; sesuai untuk pengguna data sahaja"
+
+msgid "居留證（ARC）正本"
+msgstr "ARC asal (Sijil Pemastautin Asing)"
+
+msgid "必備"
+msgstr "Wajib"
+
+msgid "護照正本"
+msgstr "Pasport asal"
+
+msgid "台灣銀行帳戶 或 信用卡（扣繳費用）"
+msgstr "Akaun bank Taiwan atau kad kredit (untuk pembayaran bil)"
+
+msgid "必備其一"
+msgstr "Salah satu wajib"
+
+msgid "學生證（部分業者提供學生優惠）"
+msgstr "Kad pelajar (sesetengah pengendali menawarkan diskaun pelajar)"
+
+msgid "建議攜帶"
+msgstr "Disyorkan dibawa"
+
+msgid "選擇電信業者與方案"
+msgstr "Pilih pengendali dan pelan"
+
+msgid "前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。"
+msgstr ""
+"Layari laman web pengendali utama untuk membandingkan pelan (panggilan + "
+"data). Jika bajet terhad dan terutamanya menggunakan data, pertimbangkan "
+"pelan data tidak terhad (kira-kira NT$399/bulan)."
+
+msgid "前往電信門市"
+msgstr "Pergi ke kedai pengendali"
+
+msgid ""
+"攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
+msgstr ""
+"Bawa ARC, pasport, akaun bank atau kad kredit ke kedai pengendali (semua "
+"pengendali utama mempunyai kedai di Zhongli). Beritahu kakitangan bahawa "
+"anda ingin 'mendaftar nombor baru dengan sijil pemastautin'. Biasanya "
+"selesai dalam 30 minit."
+
+msgid "選擇門號與 SIM 卡規格"
+msgstr "Pilih nombor dan saiz SIM"
+
+msgid ""
+"可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G "
+"正常使用。"
+msgstr ""
+"Anda boleh memilih nombor (nombor khas dikenakan tambahan) dan saiz SIM "
+"(kebanyakan telefon kini menggunakan nano SIM). Sahkan telefon anda 'dibuka "
+"kunci sepenuhnya' untuk memastikan 5G/4G berfungsi di Taiwan."
+
+msgid "插卡啟用，設定網路"
+msgstr "Masukkan SIM dan konfigurasi rangkaian"
+
+msgid "插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設定 APN。"
+msgstr ""
+"Selepas memasukkan SIM, tetapan APN biasanya dikonfigurasi secara automatik."
+" Jika tidak dapat menyambung, minta kakitangan kedai membantu menetapkan APN"
+" secara manual."
+
+msgid "中央大學附近："
+msgstr "Berhampiran NCU:"
+
+msgid "中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。"
+msgstr ""
+"Semua pengendali utama mempunyai kedai di pusat bandar Zhongli (berhampiran "
+"stesen kereta api). Chunghwa Telecom, Taiwan Mobile dan FarEasTone semuanya "
+"mempunyai kedai di Jalan Guangming dan Jalan Zhongzheng."
+
+msgid "保留原國際漫遊號碼："
+msgstr "Kekalkan nombor negara asal (perayauan):"
+
+msgid "許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。"
+msgstr ""
+"Ramai pelajar memilih untuk mengekalkan nombor negara asal (perayauan "
+"antarabangsa) untuk hubungi keluarga dan mendapatkan nombor tempatan Taiwan "
+"untuk penggunaan harian. Telefon dual-SIM menjadikannya lebih mudah."
+
+msgid "月租方案需綁定扣款帳戶："
+msgstr "Pelan bulanan memerlukan akaun pembayaran yang dihubungkan:"
+
+msgid "銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。"
+msgstr ""
+"Jika baki akaun bank tidak mencukupi, pengendali mungkin menggantung nombor "
+"anda. Pastikan anda mempunyai baki yang mencukupi dalam akaun anda setiap "
+"bulan."
+
+msgid "領獎學金・生活必備"
+msgstr "Terima biasiswa · Keperluan harian"
+
+msgid "在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。"
+msgstr ""
+"Semasa pengajian di Taiwan, akaun bank adalah alat penting untuk menerima "
+"biasiswa, membayar sewa dan perbelanjaan harian. Halaman ini merangkumi "
+"pilihan bank dan proses pembukaan akaun."
+
+msgid "中華郵政（郵局）"
+msgstr "Chunghwa Post (Pejabat Pos)"
+
+msgid "外籍生首選"
+msgstr "Pilihan utama pelajar antarabangsa"
+
+msgid "全台門市最廣，外籍生開戶最友善，"
+msgstr ""
+"Rangkaian cawangan paling luas di Taiwan, paling mesra untuk pembukaan akaun"
+" oleh orang asing — "
+
+msgid "當日即可拿到存摺與提款卡"
+msgstr "buku simpanan dan kad ATM boleh diterima pada hari yang sama"
+
+msgid "，不像一般銀行需等 3–5 個工作天審核。"
+msgstr ""
+", tidak seperti bank biasa yang perlu menunggu 3–5 hari bekerja untuk "
+"kelulusan."
+
+msgid "優點："
+msgstr "Kelebihan:"
+
+msgid "當日領卡、未有 ARC 也可辦（持統一證號）、存款有政府保障"
+msgstr ""
+"Kad dikeluarkan pada hari yang sama; boleh dibuka tanpa ARC (menggunakan ID "
+"Bersatu); simpanan dilindungi kerajaan"
+
+msgid "缺點："
+msgstr "Kelemahan:"
+
+msgid "ATM 主要在郵局內，跨行提款每次 NT$5+，轉帳超額 NT$8–15；App 功能較基本"
+msgstr ""
+"ATM terutamanya di pejabat pos; pengeluaran antara bank NT$5+/kali; fi "
+"pindahan NT$8–15; ciri aplikasi asas"
+
+msgid "多人同行請提前預約，避免等候過久"
+msgstr "Kumpulan sebaiknya menempah lebih awal untuk mengelak menunggu lama"
+
+msgid "多數郵局營業至 17:00，部分郵局更晚（比銀行多 1.5 小時）"
+msgstr ""
+"Kebanyakan pejabat pos buka sehingga 17:00, sebahagian lebih lewat (1.5 jam "
+"lebih dari bank biasa)"
+
+msgid "台灣銀行"
+msgstr "Bank of Taiwan"
+
+msgid "獎學金首選"
+msgstr "Pilihan utama penerima biasiswa"
+
+msgid "政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。"
+msgstr ""
+"Biasiswa dari agensi kerajaan dan Kementerian Pendidikan biasanya "
+"dikreditkan ke akaun Bank of Taiwan — perlu jika anda menerima biasiswa "
+"kerajaan. Ada cawangan di Zhongli."
+
+msgid "玉山銀行"
+msgstr "E.Sun Bank"
+
+msgid "線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。"
+msgstr ""
+"Antara muka perbankan dalam talian yang sangat baik, perkhidmatan pelanggan "
+"Bahasa Inggeris lebih baik, menyokong Apple Pay / Google Pay. Agak mesra "
+"untuk orang asing."
+
+msgid "國泰世華銀行"
+msgstr "Cathay United Bank"
+
+msgid "ATM 據點多，與多家電商合作，網路銀行功能完整，學生使用廣泛。"
+msgstr ""
+"Banyak lokasi ATM, perkongsian dengan platform e-dagang utama, ciri "
+"perbankan dalam talian yang komprehensif, digunakan secara meluas oleh "
+"pelajar."
+
+msgid "雙證件之一"
+msgstr "Salah satu daripada dua ID yang diperlukan"
+
+msgid "或 統一證號基資表（尚未領 ARC 者）"
+msgstr "atau Borang Pendaftaran ID Bersatu (jika ARC belum dikeluarkan)"
+
+msgid "木頭刻印章（英文姓名）"
+msgstr "Cop nama kayu (nama Bahasa Inggeris)"
+
+msgid "— 原子章、橡皮章不可用"
+msgstr "— cop mata pena dan getah tidak diterima"
+
+msgid "現金 NT$100（不收刷卡）"
+msgstr "Tunai NT$100 (kad tidak diterima)"
+
+msgid "視需求"
+msgstr "Mengikut keperluan"
+
+msgid "台灣本人手機號碼（辦 Visa 卡時需要）"
+msgstr ""
+"Nombor telefon bimbit Taiwan anda (diperlukan semasa memohon kad Visa)"
+
+msgid "木頭印章哪裡買？"
+msgstr "Di mana membeli cop nama kayu?"
+
+msgid ""
+"學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 "
+"分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存摺分開保管。"
+msgstr ""
+"Mana-mana kedai alat tulis berhampiran kampus boleh membuatnya. Beritahu "
+"pemilik anda memerlukan cop nama kayu dan berikan nama penuh dalam Bahasa "
+"Inggeris. Kos: kira-kira NT$50–100, tunggu kira-kira 20 minit. Buat terlebih"
+" dahulu dan bawa pada hari pembukaan akaun. Cop anda sama dengan tandatangan"
+" anda — simpan berasingan dari buku simpanan."
+
+msgid "已領有居留證（ARC）者："
+msgstr "Jika anda sudah mempunyai ARC:"
+
+msgid "居留證號即為統一證號，無須另行申請，直接帶 ARC 正本開戶即可。"
+msgstr ""
+"Nombor ARC anda adalah ID Bersatu anda — tiada permohonan berasingan "
+"diperlukan. Hanya bawa ARC asal untuk membuka akaun."
+
+msgid "尚未取得居留證者（部分港澳生）："
+msgstr "Jika anda belum mempunyai ARC (sebahagian pelajar HK/Macau):"
+
+msgid ""
+"需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
+msgstr ""
+"Anda mesti memohon 'Borang Pendaftaran ID Bersatu' di Stesen Perkhidmatan "
+"Imigrasi tempatan, membawa pasport asal dan salinan (tiada foto diperlukan)."
+" Nombor ini kekal seumur hidup; selepas menerima ARC, nombor ARC akan "
+"sepadan dengan ID Bersatu."
+
+msgid "建議選擇有 VISA 功能的 Debit Card（扣帳卡）："
+msgstr "Kami mengesyorkan memilih Kad Debit dengan fungsi VISA:"
+
+msgid ""
+"可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 兩種組合，可按需求選擇。請注意部分台灣商家不接受 "
+"VISA Debit，付款前請確認。"
+msgstr ""
+"Gunakan di ATM dan bayar terus di kedai atau dalam talian. Pejabat pos "
+"menawarkan dua gabungan: VISA + EasyCard atau VISA + iPASS — pilih mengikut "
+"keperluan. Perhatikan bahawa beberapa peniaga Taiwan tidak menerima VISA "
+"Debit; sahkan sebelum membayar."
+
+msgid "建議先辦好 SIM 卡再去開戶："
+msgstr "Dapatkan kad SIM sebelum membuka akaun bank:"
+
+msgid "開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。"
+msgstr ""
+"Mengaktifkan perbankan dalam talian dan kad Visa memerlukan nombor telefon "
+"Taiwan untuk menerima OTP. Mempunyai nombor tempatan bermakna anda boleh "
+"menyelesaikan semuanya dalam satu kunjungan."
+
+msgid "注意營業時間 + 預留足夠時間："
+msgstr "Semak waktu operasi dan peruntukkan masa yang mencukupi:"
+
+msgid "一般銀行週一至週五 09:00–15:30，郵局多至 17:00。外籍生開戶流程通常需 1 小時以上，請勿太晚抵達，以免被請回。"
+msgstr ""
+"Bank biasa buka Isnin–Jumaat 09:00–15:30; kebanyakan pejabat pos hingga "
+"17:00. Pembukaan akaun untuk pelajar asing biasanya mengambil lebih dari 1 "
+"jam — jangan tiba terlalu lewat atau anda mungkin ditolak."
+
+msgid "台灣日期格式：先寫月份、再寫日子"
+msgstr "Format tarikh Taiwan: bulan dahulu, kemudian hari"
+
+msgid " — 2 月 1 日 = 2025/2/1（與部分地區習慣相反），簽文件時請注意。"
+msgstr ""
+" — 1 Februari = 2025/2/1 (berlawanan dengan konvensyen sesetengah kawasan). "
+"Berhati-hati semasa menandatangani dokumen."
+
+msgid "建議前往學校附近郵局："
+msgstr "Kami mengesyorkan pejabat pos berhampiran kampus:"
+
+msgid "大學周邊郵局對僑外生開戶經驗豐富，審核較快，手續更熟練。"
+msgstr ""
+"Pejabat pos berhampiran universiti mempunyai pengalaman luas membantu "
+"pelajar antarabangsa membuka akaun — semakan lebih cepat dan prosedur lebih "
+"lancar."
+
+msgid "ARC 到期後記得更新帳戶資料："
+msgstr ""
+"Ingat untuk mengemas kini butiran akaun apabila ARC anda tamat tempoh:"
+
+msgid "ARC 換新後需至銀行更新證件資料，避免帳戶被凍結。"
+msgstr ""
+"Selepas memperbaharui ARC, pergi ke bank untuk mengemas kini dokumen ID anda"
+" bagi mengelak akaun dibekukan."
+
+msgid "重要警示"
+msgstr "Amaran Penting"
+
+msgid "絕對不要將帳戶借給他人："
+msgstr "Jangan sesekali meminjamkan akaun anda kepada orang lain:"
+
+msgid "依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。"
+msgstr ""
+"Di bawah undang-undang Taiwan, meminjamkan buku simpanan, kad ATM, atau kata"
+" laluan perbankan dalam talian adalah haram. Sekurang-kurangnya anda mungkin"
+" disenaraikan sebagai suspek penipuan; terburuk menghadapi liabiliti "
+"jenayah. Jika akaun anda terjejas atau buku simpanan hilang, segera "
+"maklumkan bank."
+
+msgid "不要短期內在多家銀行開戶："
+msgstr "Jangan buka akaun di beberapa bank dalam tempoh yang singkat:"
+
+msgid "台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。"
+msgstr ""
+"Setiap kali membuka akaun di Taiwan, bank akan membuat pertanyaan kredit. "
+"Terlalu banyak pertanyaan dalam masa singkat mungkin mendorong bank untuk "
+"menghubungi anda atau menolak permohonan (untuk mencegah akaun hantu). "
+"Mulakan dengan 1–2 bank."
+
+msgid "外籍生・僑生必辦"
+msgstr "Wajib untuk pelajar antarabangsa & pelajar diaspora"
+
+msgid "僑生、外籍生（僑外生）取得居留證明文件來臺就學，自合於投保資格之日起，依法應參加全民健康保險。"
+msgstr ""
+"Pelajar diaspora Cina dan pelajar antarabangsa (pelajar luar negara/asing) "
+"yang memperoleh dokumen kediaman untuk belajar di Taiwan diwajibkan secara "
+"undang-undang untuk mendaftar Insurans Kesihatan Nasional dari tarikh "
+"memenuhi kelayakan."
+
+msgid "新生第一學期保險（未達健保資格前）"
+msgstr "Insurans semester pertama untuk pelajar baru (sebelum layak NHI)"
+
+msgid "重要："
+msgstr "Penting:"
+
+msgid "剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保險："
+msgstr ""
+"Pelajar diaspora Cina yang baru tiba belum memenuhi keperluan '6 bulan "
+"kediaman di Taiwan' untuk pendaftaran NHI, dan mesti terlebih dahulu "
+"menyertai salah satu pelan insurans berikut:"
+
+msgid "僑保（海外華人保險）"
+msgstr "Insurans OCAC (Insurans Cina Luar Negara)"
+
+msgid "適用對象：首次入台的大一僑生新生（只能加保一次）"
+msgstr ""
+"Sasaran: Pelajar diaspora Cina tahun pertama yang tiba di Taiwan buat kali "
+"pertama (hanya boleh mendaftar sekali)"
+
+msgid "保費：自費 NT$600（僑委會補助 NT$600，合計 NT$1,200）"
+msgstr "Premium: NT$600 bayar sendiri (OCAC subsidi NT$600, jumlah NT$1,200)"
+
+msgid "保障期間：6 個月（一學期）"
+msgstr "Tempoh perlindungan: 6 bulan (satu semester)"
+
+msgid "由國際事務處協助辦理"
+msgstr "Diuruskan dengan bantuan Pejabat Hal Ehwal Antarabangsa"
+
+msgid "國泰人壽保險"
+msgstr "Insurans Hayat Cathay"
+
+msgid "適用對象：第二學期起或不符合僑保資格者"
+msgstr ""
+"Sasaran: Mulai semester kedua, atau yang tidak layak untuk Insurans OCAC"
+
+msgid "保費：NT$3,000 / 學期（最長六個月）"
+msgstr "Premium: NT$3,000 / semester (maksimum enam bulan)"
+
+msgid "由國際事務處協助加保"
+msgstr "Pendaftaran dibantu oleh Pejabat Hal Ehwal Antarabangsa"
+
+msgid "理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影本、郵局存簿影本及個資同意書"
+msgstr ""
+"Tuntutan: Isi borang tuntutan di OIA, dan bawa resit perubatan, sijil "
+"diagnosis, salinan ARC, salinan pasport, salinan buku simpanan pejabat pos, "
+"dan borang persetujuan data peribadi"
+
+msgid "全民健保投保規定"
+msgstr "Peraturan Pendaftaran NHI"
+
+msgid "項目"
+msgstr "Item"
+
+msgid "僑外生就學期間"
+msgstr "Semasa pengajian (pelajar diaspora/asing)"
+
+msgid "僑外生經許可工作期間"
+msgstr "Semasa bekerja dengan kebenaran (pelajar diaspora/asing)"
+
+msgid "投保資格"
+msgstr "Kelayakan"
+
+msgid "自在臺居留滿 6 個月之日投保"
+msgstr "Daftar dari tarikh melengkapkan 6 bulan kediaman di Taiwan"
+
+msgid "自受僱當日投保（無等待期）"
+msgstr "Daftar dari tarikh mula bekerja (tiada tempoh menunggu)"
+
+msgid "投保身分"
+msgstr "Kategori yang dilindungi"
+
+msgid "第 6 類第 2 目被保險人"
+msgstr "Pemegang insurans kategori 6, subkategori 2"
+
+msgid "第 1 類被保險人（受僱者）"
+msgstr "Pemegang insurans kategori 1 (pekerja)"
+
+msgid "投保方式"
+msgstr "Kaedah pendaftaran"
+
+msgid "以就讀學校為投保單位辦理"
+msgstr "Didaftarkan melalui sekolah yang dihadiri sebagai unit insurans"
+
+msgid "以工作單位為投保單位辦理"
+msgstr "Didaftarkan melalui majikan sebagai unit insurans"
+
+msgid "※ 短期性工作未逾 3 個月者，可選擇以原投保資格繼續投保"
+msgstr ""
+"※ Mereka yang bekerja jangka pendek (di bawah 3 bulan) boleh memilih untuk "
+"terus mendaftar di bawah kategori pemegang insurans asal mereka"
+
+msgid "「在臺居留滿 6 個月」認定方式"
+msgstr "Cara mengira '6 bulan kediaman di Taiwan'"
+
+msgid ""
+"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 "
+"30 天，則從重新抵台當天起算，6 個月重新計算。"
+msgstr ""
+"Ini bermaksud tinggal di Taiwan secara berterusan selama 6 bulan, atau telah"
+" meninggalkan negara sekali tidak lebih dari 30 hari, dengan tempoh kediaman"
+" sebenar tolak hari keberangkatan berjumlah 6 bulan. Jika anda pergi lebih "
+"dari sekali, atau pergi sekali lebih dari 30 hari, kiraan 6 bulan bermula "
+"semula dari hari anda kembali ke Taiwan."
+
+msgid "計算範例："
+msgstr "Contoh pengiraan:"
+
+msgid "入境日：113/9/1 → 未曾出境 → 投保日：114/3/1"
+msgstr ""
+"Tarikh masuk: 113/9/1 → Tiada keberangkatan → Tarikh pendaftaran: 114/3/1"
+
+msgid "入境日：113/9/1 → 曾出境 1 次（114/1/1–1/5，共 4 天）→ 投保日：114/3/5"
+msgstr ""
+"Tarikh masuk: 113/9/1 → Pernah berangkat 1 kali (114/1/1–1/5, jumlah 4 hari)"
+" → Tarikh pendaftaran: 114/3/5"
+
+msgid "在臺參加健保注意事項"
+msgstr "Nota tentang pendaftaran NHI di Taiwan"
+
+msgid "僑外生在臺就學並符合投保資格期間，應以就讀學校為投保單位辦理投保。"
+msgstr ""
+"Pelajar diaspora/asing yang belajar di Taiwan dan memenuhi kelayakan mesti "
+"mendaftar NHI melalui sekolah mereka sebagai unit insurans."
+
+msgid "僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 日內，向健保署辦理投保。"
+msgstr ""
+"Apabila pelajar diaspora/asing dibenarkan bekerja di Taiwan dan diambil "
+"bekerja, unit insurans (majikan) mesti melengkapkan pendaftaran NHI dalam "
+"masa 3 hari dari tarikh pemegang insurans memenuhi kelayakan."
+
+msgid "於受僱單位投保時，應先至學校辦理轉出，避免重複投保。"
+msgstr ""
+"Apabila mendaftar melalui majikan, atur terlebih dahulu pemindahan keluar "
+"dari sekolah untuk mengelakkan pendaftaran berganda."
+
+msgid "與工作單位終止僱傭關係後，應另以適法身分投保：若已受新單位聘僱，於新單位投保；未受聘僱期間則應回學校辦理投保。"
+msgstr ""
+"Selepas menamatkan pekerjaan, daftar di bawah status layak lain: jika "
+"diambil bekerja oleh majikan baru, daftar melalui majikan baru; semasa "
+"tempoh tanpa pekerjaan, kembali ke pendaftaran sekolah."
+
+msgid "符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，應以眷屬身分依附其投保單位加保。"
+msgstr ""
+"Semasa tempoh layak tetapi menganggur, jika pasangan, ibu bapa atau anak di "
+"Taiwan sudah menjadi pemegang insurans NHI, anda perlu mendaftar sebagai "
+"tanggungan di bawah unit insurans mereka."
+
+msgid "在學證明（學生證或在學證明書）"
+msgstr "Bukti pendaftaran (kad pelajar atau sijil pendaftaran)"
+
+msgid "台灣銀行帳戶（保費扣繳用）"
+msgstr "Akaun bank Taiwan (untuk potongan premium)"
+
+msgid "建議"
+msgstr "Disyorkan"
+
+msgid "1 吋照片（部分單位需要）"
+msgstr "Foto 1 inci (diperlukan oleh sesetengah pejabat)"
+
+msgid "清寒僑生健保費補助："
+msgstr "Subsidi premium NHI untuk pelajar diaspora Cina berpendapatan rendah:"
+
+msgid ""
+"符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 "
+"NT$826。詳情請洽國際事務處。"
+msgstr ""
+"Mereka yang layak sebagai berpendapatan rendah dan mendaftar NHI boleh "
+"memohon ke OIA untuk subsidi bulanan NT$413 (memerlukan bukti status "
+"berpendapatan rendah; diberikan selepas semakan). Tanpa subsidi, premium "
+"bulanan kira-kira NT$826. Hubungi OIA untuk butiran."
+
+msgid "相關文件下載"
+msgstr "Muat turun dokumen berkaitan"
+
+msgid "在臺僑生、外籍生參加全民健康保險須知（PDF）↓"
+msgstr ""
+"Panduan Pendaftaran NHI untuk Pelajar Diaspora/Asing di Taiwan (PDF) ↓"
+
+msgid "小病先看診所："
+msgstr "Pergi ke klinik dahulu untuk penyakit ringan:"
+
+msgid ""
+"台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
+msgstr ""
+"Taiwan menggunakan sistem penjagaan kesihatan bertingkat. Untuk penyakit "
+"biasa, lawati klinik dahulu (perubatan keluarga atau perubatan dalam) — "
+"bayaran bersama hanya kira-kira NT$150. Pergi terus ke UGD atau jabatan "
+"pesakit luar hospital memerlukan bayaran bersama yang lebih tinggi "
+"(NT$240–480)."
+
+msgid "下載「健保快易通」App："
+msgstr "Muat turun aplikasi 'NHI Express':"
+
+msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
+msgstr ""
+"Semak status NHI, rekod perubatan, dan paparkan kad insurans kesihatan "
+"digital — tidak perlu bimbang lupa membawa kad fizikal."
+
+msgid "暑假返鄉超過 2 個月時："
+msgstr "Jika balik kampung lebih dari 2 bulan semasa cuti musim panas:"
+
+msgid "建議辦理「出國停保」避免繼續扣繳保費；回台後記得立即「復保」恢復保障。"
+msgstr ""
+"Mohon 'penggantungan keberangkatan' untuk mengelakkan pemotongan premium "
+"yang berterusan; ingat untuk 'memulihkan perlindungan' segera setelah "
+"kembali ke Taiwan."
+
+msgid "全民健康保險署官網 ↗"
+msgstr "Laman Web Rasmi Pentadbiran Insurans Kesihatan Nasional ↗"
+
+msgid "非本國籍人士加保說明 ↗"
+msgstr "Panduan Pendaftaran NHI untuk Bukan Warganegara ROC ↗"
+
+msgid "衛保組・診所・醫院・急診"
+msgstr "Pusat Kesihatan · Klinik · Hospital · Kecemasan"
+
+msgid "台灣採分級醫療制度，小病先看診所、大病再轉醫院。持健保卡就醫費用大幅降低，急救請撥 119。"
+msgstr ""
+"Taiwan menggunakan sistem penjagaan kesihatan bertingkat — penyakit ringan "
+"ke klinik dahulu, penyakit serius ke hospital. Pemegang kad NHI membayar "
+"lebih sedikit. Hubungi 119 untuk kecemasan."
+
+msgid "台灣分級醫療制度"
+msgstr "Sistem Penjagaan Kesihatan Bertingkat Taiwan"
+
+msgid "衛保組 / 診所"
+msgstr "Pusat Kesihatan / Klinik"
+
+msgid "健保約 NT$150–200"
+msgstr "Bayaran bersama NHI kira-kira NT$150–200"
+
+msgid "一般感冒、輕傷、慢性病、定期回診"
+msgstr "Selesema biasa, kecederaan ringan, penyakit kronik, susulan rutin"
+
+msgid "地區醫院（門診）"
+msgstr "Hospital Daerah (Pesakit Luar)"
+
+msgid "健保約 NT$240–360"
+msgstr "Bayaran bersama NHI kira-kira NT$240–360"
+
+msgid "需要進一步檢查、診所無法處理者"
+msgstr "Memerlukan pemeriksaan lanjut atau melebihi kapasiti klinik"
+
+msgid "醫學中心（急診）"
+msgstr "Pusat Perubatan (Kecemasan)"
+
+msgid "健保約 NT$450–600"
+msgstr "Bayaran bersama NHI kira-kira NT$450–600"
+
+msgid "嚴重外傷、危及生命、需要手術"
+msgstr "Trauma serius, keadaan yang mengancam nyawa, perlu pembedahan"
+
+msgid "台灣分級醫療制度下，直接去大醫院門診的部分負擔比診所高 2–3 倍。輕症先到診所就診，若需轉診，醫師會開立轉診單，可享受較低的部分負擔。"
+msgstr ""
+"Dalam sistem bertingkat Taiwan, terus ke klinik pesakit luar hospital besar "
+"menelan kos 2–3× lebih mahal berbanding klinik. Lawati klinik dahulu untuk "
+"penyakit ringan; jika rujukan diperlukan, doktor akan mengeluarkan surat "
+"rujukan untuk bayaran bersama yang lebih rendah."
+
+msgid "校內衛保組（NCU）"
+msgstr "Pusat Kesihatan dalam Kampus (NCU)"
+
+msgid "地點"
+msgstr "Lokasi"
+
+msgid "中正圖書館（舊圖）1 樓"
+msgstr "Perpustakaan Zhongzheng (Perpustakaan Lama), Tingkat 1"
+
+msgid "電話"
+msgstr "Telefon"
+
+msgid "分機 57271"
+msgstr "Samb. 57271"
+
+msgid "服務時間"
+msgstr "Waktu Perkhidmatan"
+
+msgid "週一至週五"
+msgstr "Isnin hingga Jumaat"
+
+msgid "08:00–17:00（寒暑假可能調整）"
+msgstr "08:00–17:00 (waktu mungkin berbeza semasa cuti musim sejuk/panas)"
+
+msgid "服務項目"
+msgstr "Perkhidmatan"
+
+msgid "基本診療・諮詢・轉介"
+msgstr "Perundingan asas · Nasihat · Rujukan"
+
+msgid "量血壓、用藥諮詢、轉診協助、新生體檢"
+msgstr ""
+"Semak tekanan darah, nasihat ubat, bantuan rujukan, pemeriksaan kesihatan "
+"pelajar baru"
+
+msgid "衛保組適合輕症初診，如感冒、發燒、輕傷等。若需進一步診療，衛保組可協助轉介至校外診所或醫院。"
+msgstr ""
+"Pusat kesihatan kampus sesuai untuk lawatan pertama dengan gejala ringan "
+"seperti selesema, demam, atau kecederaan ringan. Jika rawatan lebih lanjut "
+"diperlukan, kakitangan boleh membantu merujuk anda ke klinik atau hospital "
+"di luar kampus."
+
+msgid "非上班時間請直接前往校外診所或急診。"
+msgstr ""
+"Di luar waktu pejabat, terus pergi ke klinik luar kampus atau unit "
+"kecemasan."
+
+msgid "校外診所（後門商圈 / 中壢周邊）"
+msgstr "Klinik Luar Kampus (Kawasan Pintu Belakang / Daerah Zhongli)"
+
+msgid ""
+"中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別用 Google Maps 搜尋「中壢 內科診所」、「中壢 "
+"耳鼻喉科」等。"
+msgstr ""
+"Terdapat banyak klinik di kawasan pintu belakang NCU dan bandar Zhongli. "
+"Dengan kad NHI, kos lawatan adalah sekitar NT$150–200. Cari di Google Maps "
+"mengikut kepakaran, contohnya 'klinik perubatan dalam Zhongli' atau 'klinik "
+"ENT Zhongli'."
+
+msgid "診所看診時間："
+msgstr "Waktu klinik:"
+
+msgid ""
+"多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班制，非所有診所皆有晚診。建議事先電話確認或查詢"
+" Google 地圖上的即時等候人數。"
+msgstr ""
+"Kebanyakan klinik beroperasi tiga sesi: pagi (08:30–12:00), tengah hari "
+"(14:00–17:30) dan malam (18:00–21:00). Tidak semua klinik menawarkan sesi "
+"malam. Disyorkan untuk menelefon terlebih dahulu atau menyemak bilangan "
+"menunggu masa nyata di Google Maps."
+
+msgid "周邊醫院"
+msgstr "Hospital Berdekatan"
+
+msgid "最近・急診24H"
+msgstr "Paling Dekat · Kecemasan 24H"
+
+msgid "桃園市中壢區延平路150號"
+msgstr "150 Jln Yanping, Daerah Zhongli, Bandar Taoyuan"
+
+msgid "從中大搭公車約 15–20 分鐘；設有急診室（24 小時）"
+msgstr ""
+"Kira-kira 15–20 minit dengan bas dari NCU; mempunyai unit kecemasan 24 jam"
+
+msgid "壢新醫院官網 ↗"
+msgstr "Laman Web Hospital Lixin ↗"
+
+msgid "衛福部桃園醫院中壢院區"
+msgstr "Hospital Taoyuan Kementerian Kesihatan — Cawangan Zhongli"
+
+msgid "桃園市中壢區中山東路二段16號"
+msgstr "16 Sek. 2, Jln Zhongshan Timur, Daerah Zhongli, Bandar Taoyuan"
+
+msgid "公立醫院，設有門診及急診"
+msgstr "Hospital awam dengan jabatan pesakit luar dan kecemasan"
+
+msgid "林口長庚醫院"
+msgstr "Hospital Peringatan Chang Gung Linkou"
+
+msgid "醫學中心"
+msgstr "Pusat Perubatan"
+
+msgid "桃園市龜山區舒民路5號"
+msgstr "5 Jln Shumin, Daerah Guishan, Bandar Taoyuan"
+
+msgid "中大搭車約 40 分鐘；台灣最大醫院之一，有多語言服務"
+msgstr ""
+"Kira-kira 40 minit dari NCU; salah satu hospital terbesar di Taiwan, "
+"perkhidmatan berbilang bahasa tersedia"
+
+msgid "長庚醫院官網 ↗"
+msgstr "Laman Web Hospital Chang Gung ↗"
+
+msgid "急診 / 緊急情況"
+msgstr "Kecemasan / Situasi Mendesak"
+
+msgid "危及生命・嚴重受傷・無法自行就醫"
+msgstr ""
+"Mengancam nyawa · Kecederaan serius · Tidak dapat mendapatkan bantuan "
+"perubatan sendiri"
+
+msgid "請立即撥打緊急電話，或由旁人送至最近有急診的醫院（壢新醫院）。急診 24 小時全年無休。"
+msgstr ""
+"Hubungi perkhidmatan kecemasan dengan segera, atau minta seseorang membawa "
+"anda ke hospital terdekat dengan unit kecemasan (Hospital Lixin). Unit "
+"kecemasan buka 24 jam, 365 hari."
+
+msgid "救護車・火災"
+msgstr "Ambulans · Kebakaran"
+
+msgid "免費撥打，全球手機可用"
+msgstr ""
+"Percuma untuk menelepon, berfungsi di mana-mana telefon bimbit di seluruh "
+"dunia"
+
+msgid "警察局"
+msgstr "Polis"
+
+msgid "報案・協助"
+msgstr "Lapor jenayah · Bantuan"
+
+msgid "國際緊急號碼"
+msgstr "Nombor Kecemasan Antarabangsa"
+
+msgid "任何手機（含無 SIM 卡）皆可撥打"
+msgstr "Berfungsi pada mana-mana telefon, termasuk telefon tanpa kad SIM"
+
+msgid "外來人士生活諮詢"
+msgstr "Talian Panas Penduduk Asing"
+
+msgid "多語言，含醫療協助"
+msgstr "Berbilang bahasa, termasuk bantuan perubatan"
+
+msgid "急診部分負擔較高："
+msgstr "Bayaran bersama kecemasan lebih tinggi:"
+
+msgid "非緊急狀況直接掛急診，健保部分負擔為 NT$450–600（比診所高 3 倍以上）。輕症建議前往診所就診，急診留給真正緊急的情況。"
+msgstr ""
+"Terus ke unit kecemasan untuk keadaan bukan kecemasan menelan kos NT$450–600"
+" bayaran bersama NHI — lebih 3× kadar klinik. Penyakit ringan sebaiknya ke "
+"klinik; simpan unit kecemasan untuk kecemasan sebenar."
+
+msgid "健保就醫費用對照"
+msgstr "Perbandingan Kos Perubatan NHI"
+
+msgid "就醫地點"
+msgstr "Kemudahan perubatan"
+
+msgid "持健保卡"
+msgstr "Dengan kad NHI"
+
+msgid "未持健保卡"
+msgstr "Tanpa kad NHI"
+
+msgid "衛保組（校內）"
+msgstr "Pusat Kesihatan Kampus"
+
+msgid "免費 / 極低費"
+msgstr "Percuma / Kos sangat rendah"
+
+msgid "視項目收費"
+msgstr "Dicaj mengikut perkhidmatan"
+
+msgid "診所"
+msgstr "Klinik"
+
+msgid "約 NT$150–200"
+msgstr "Kira-kira NT$150–200"
+
+msgid "全額自費（NT$500–1,000+）"
+msgstr "Bayar penuh sendiri (NT$500–1,000+)"
+
+msgid "地區醫院門診"
+msgstr "Pesakit Luar Hospital Daerah"
+
+msgid "約 NT$240–360"
+msgstr "Kira-kira NT$240–360"
+
+msgid "全額自費（NT$1,000+）"
+msgstr "Bayar penuh sendiri (NT$1,000+)"
+
+msgid "醫學中心門診"
+msgstr "Pesakit Luar Pusat Perubatan"
+
+msgid "約 NT$360–480"
+msgstr "Kira-kira NT$360–480"
+
+msgid "全額自費（NT$2,000+）"
+msgstr "Bayar penuh sendiri (NT$2,000+)"
+
+msgid "急診"
+msgstr "Unit Kecemasan"
+
+msgid "約 NT$450–600"
+msgstr "Kira-kira NT$450–600"
+
+msgid "全額自費（視治療而定）"
+msgstr "Bayar penuh sendiri (bergantung pada rawatan)"
+
+msgid "可顯示數位健保卡、查詢就醫紀錄與健保狀態，出門忘帶實體健保卡時可使用。"
+msgstr ""
+"Memaparkan kad NHI digital, membolehkan anda menyemak rekod perubatan dan "
+"status insurans — berguna apabila terlupa membawa kad fizikal."
+
+msgid "NCU 校安緊急聯絡"
+msgstr "Kenalan Kecemasan Keselamatan Kampus NCU"
+
+msgid "分機 57212"
+msgstr "Samb. 57212"
+
+msgid "24 小時校安專線："
+msgstr "Talian panas keselamatan kampus 24 jam:"
+
+msgid "國際事務處"
+msgstr "Pejabat Hal Ehwal Antarabangsa"
+
+msgid "分機 57081"
+msgstr "Samb. 57081"
+
+msgid "承辦人：徐心荷小姐"
+msgstr "Orang untuk dihubungi: Cik Xu Xinhe"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Masukkan soalan anda. Sistem akan menyusun cadangan berdasarkan identiti dan"

@@ -14,15 +14,15 @@
 
   <div class="guide-hero">
     <div class="bg-text">SIM</div>
-    <div class="hero-badge">抵台第一件事</div>
+    <div class="hero-badge">{% trans "抵台第一件事" %}</div>
     <h2>📱 {% trans "台灣門號申辦指南" %}</h2>
-    <p>台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。</p>
+    <p>{% trans "台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。" %}</p>
   </div>
 
   <div class="alert alert-success">
     <div class="alert-icon">💡</div>
     <div>
-      <strong>剛抵台、還沒拿到 ARC？</strong>可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。
+      <strong>{% trans "剛抵台、還沒拿到 ARC？" %}</strong>{% trans "可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。" %}
     </div>
   </div>
 
@@ -33,29 +33,27 @@
     <div class="plan-card">
       <div class="plan-head">
         <div class="plan-icon">🎫</div>
-        <div class="plan-name">預付卡（易付卡）</div>
-        <span class="plan-tag plan-tag-green">無 ARC 可辦</span>
+        <div class="plan-name">{% trans "預付卡（易付卡）" %}</div>
+        <span class="plan-tag plan-tag-green">{% trans "無 ARC 可辦" %}</span>
       </div>
       <div class="plan-desc">
-        只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。
-        適合剛抵台、ARC 尚未核發的過渡期使用。
+        {% trans "只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核發的過渡期使用。" %}
       </div>
-      <div class="plan-req">📋 需要：護照</div>
-      <div class="plan-req">💰 費用：約 NT$300 起（含一個月通話 + 數據）</div>
+      <div class="plan-req">📋 {% trans "需要：護照" %}</div>
+      <div class="plan-req">💰 {% trans "費用：約 NT$300 起（含一個月通話 + 數據）" %}</div>
     </div>
 
     <div class="plan-card recommended">
       <div class="plan-head">
         <div class="plan-icon">📃</div>
-        <div class="plan-name">月租方案（後付型）</div>
-        <span class="plan-tag">ARC 後辦理</span>
+        <div class="plan-name">{% trans "月租方案（後付型）" %}</div>
+        <span class="plan-tag">{% trans "ARC 後辦理" %}</span>
       </div>
       <div class="plan-desc">
-        費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。
-        多數學生取得 ARC 後即改辦月租。
+        {% trans "費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。多數學生取得 ARC 後即改辦月租。" %}
       </div>
-      <div class="plan-req">📋 需要：ARC + 護照 + 銀行帳戶（或信用卡）</div>
-      <div class="plan-req">💰 費用：約 NT$399～699/月（依方案）</div>
+      <div class="plan-req">📋 {% trans "需要：ARC + 護照 + 銀行帳戶（或信用卡）" %}</div>
+      <div class="plan-req">💰 {% trans "費用：約 NT$399～699/月（依方案）" %}</div>
     </div>
 
   </div>
@@ -66,29 +64,29 @@
     <div class="carrier-card">
       <div class="carrier-icon">📶</div>
       <div class="carrier-info">
-        <div class="carrier-name">中華電信</div>
-        <div class="carrier-note">涵蓋範圍最廣，山區及偏遠地帶訊號最佳</div>
+        <div class="carrier-name">{% trans "中華電信" %}</div>
+        <div class="carrier-note">{% trans "涵蓋範圍最廣，山區及偏遠地帶訊號最佳" %}</div>
       </div>
     </div>
     <div class="carrier-card">
       <div class="carrier-icon">📶</div>
       <div class="carrier-info">
-        <div class="carrier-name">台灣大哥大</div>
-        <div class="carrier-note">都會區訊號佳，學生方案較多</div>
+        <div class="carrier-name">{% trans "台灣大哥大" %}</div>
+        <div class="carrier-note">{% trans "都會區訊號佳，學生方案較多" %}</div>
       </div>
     </div>
     <div class="carrier-card">
       <div class="carrier-icon">📶</div>
       <div class="carrier-info">
-        <div class="carrier-name">遠傳電信</div>
-        <div class="carrier-note">北部訊號穩定，資費具競爭力</div>
+        <div class="carrier-name">{% trans "遠傳電信" %}</div>
+        <div class="carrier-note">{% trans "北部訊號穩定，資費具競爭力" %}</div>
       </div>
     </div>
     <div class="carrier-card">
       <div class="carrier-icon">📶</div>
       <div class="carrier-info">
-        <div class="carrier-name">亞太電信</div>
-        <div class="carrier-note">資費較低，適合純數據需求</div>
+        <div class="carrier-name">{% trans "亞太電信" %}</div>
+        <div class="carrier-note">{% trans "資費較低，適合純數據需求" %}</div>
       </div>
     </div>
   </div>
@@ -96,10 +94,10 @@
   <!-- ── 月租方案所需文件 ── -->
   <div class="section-title">📋 {% trans "月租方案所需文件" %}</div>
   <div class="doc-list">
-    <div class="doc-item"><span class="doc-icon">🪪</span>居留證（ARC）正本<span class="doc-badge badge-req">必備</span></div>
-    <div class="doc-item"><span class="doc-icon">🛂</span>護照正本<span class="doc-badge badge-req">必備</span></div>
-    <div class="doc-item"><span class="doc-icon">🏦</span>台灣銀行帳戶 或 信用卡（扣繳費用）<span class="doc-badge badge-req">必備其一</span></div>
-    <div class="doc-item"><span class="doc-icon">🎓</span>學生證（部分業者提供學生優惠）<span class="doc-badge badge-opt">建議攜帶</span></div>
+    <div class="doc-item"><span class="doc-icon">🪪</span>{% trans "居留證（ARC）正本" %}<span class="doc-badge badge-req">{% trans "必備" %}</span></div>
+    <div class="doc-item"><span class="doc-icon">🛂</span>{% trans "護照正本" %}<span class="doc-badge badge-req">{% trans "必備" %}</span></div>
+    <div class="doc-item"><span class="doc-icon">🏦</span>{% trans "台灣銀行帳戶 或 信用卡（扣繳費用）" %}<span class="doc-badge badge-req">{% trans "必備其一" %}</span></div>
+    <div class="doc-item"><span class="doc-icon">🎓</span>{% trans "學生證（部分業者提供學生優惠）" %}<span class="doc-badge badge-opt">{% trans "建議攜帶" %}</span></div>
   </div>
 
   <!-- ── 辦理步驟 ── -->
@@ -108,63 +106,59 @@
     <li class="step-item">
       <div class="step-num">1</div>
       <div class="step-body">
-        <div class="step-title">選擇電信業者與方案</div>
+        <div class="step-title">{% trans "選擇電信業者與方案" %}</div>
         <div class="step-desc">
-          前往各大電信官網比較方案（通話 + 數據）。
-          若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。
+          {% trans "前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。" %}
         </div>
       </div>
     </li>
     <li class="step-item">
       <div class="step-num">2</div>
       <div class="step-body">
-        <div class="step-title">前往電信門市</div>
+        <div class="step-title">{% trans "前往電信門市" %}</div>
         <div class="step-desc">
-          攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。
-          告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。
+          {% trans "攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。" %}
         </div>
       </div>
     </li>
     <li class="step-item">
       <div class="step-num">3</div>
       <div class="step-body">
-        <div class="step-title">選擇門號與 SIM 卡規格</div>
+        <div class="step-title">{% trans "選擇門號與 SIM 卡規格" %}</div>
         <div class="step-desc">
-          可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。
-          確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。
+          {% trans "可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。" %}
         </div>
       </div>
     </li>
     <li class="step-item">
       <div class="step-num">4</div>
       <div class="step-body">
-        <div class="step-title">插卡啟用，設定網路</div>
+        <div class="step-title">{% trans "插卡啟用，設定網路" %}</div>
         <div class="step-desc">
-          插入 SIM 卡後，系統通常自動完成 APN 設定。
-          若無法上網，可請門市人員協助手動設定 APN。
+          {% trans "插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設定 APN。" %}
         </div>
       </div>
     </li>
   </ul>
 
   <!-- ── 注意事項 ── -->
-  <div class="section-title">💡 注意事項</div>
+  <div class="section-title">💡 {% trans "注意事項" %}</div>
   <div class="alert alert-info">
     <div class="alert-icon">📍</div>
     <div>
-      <strong>中央大學附近：</strong>中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。
+      <strong>{% trans "中央大學附近：" %}</strong>{% trans "中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。" %}
     </div>
   </div>
   <div class="alert alert-info">
     <div class="alert-icon">🌏</div>
     <div>
-      <strong>保留原國際漫遊號碼：</strong>許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。
+      <strong>{% trans "保留原國際漫遊號碼：" %}</strong>{% trans "許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。" %}
     </div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-icon">⚠️</div>
     <div>
-      <strong>月租方案需綁定扣款帳戶：</strong>銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。
+      <strong>{% trans "月租方案需綁定扣款帳戶：" %}</strong>{% trans "銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。" %}
     </div>
   </div>
 
