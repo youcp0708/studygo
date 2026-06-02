@@ -4945,6 +4945,446 @@ msgstr ""
 "anda. Pastikan anda mempunyai baki yang mencukupi dalam akaun anda setiap "
 "bulan."
 
+msgid "領獎學金・生活必備"
+msgstr "Terima biasiswa · Keperluan harian"
+
+msgid "在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。"
+msgstr ""
+"Semasa pengajian di Taiwan, akaun bank adalah alat penting untuk menerima "
+"biasiswa, membayar sewa dan perbelanjaan harian. Halaman ini merangkumi "
+"pilihan bank dan proses pembukaan akaun."
+
+msgid "中華郵政（郵局）"
+msgstr "Chunghwa Post (Pejabat Pos)"
+
+msgid "外籍生首選"
+msgstr "Pilihan utama pelajar antarabangsa"
+
+msgid "全台門市最廣，外籍生開戶最友善，"
+msgstr ""
+"Rangkaian cawangan paling luas di Taiwan, paling mesra untuk pembukaan akaun"
+" oleh orang asing — "
+
+msgid "當日即可拿到存摺與提款卡"
+msgstr "buku simpanan dan kad ATM boleh diterima pada hari yang sama"
+
+msgid "，不像一般銀行需等 3–5 個工作天審核。"
+msgstr ""
+", tidak seperti bank biasa yang perlu menunggu 3–5 hari bekerja untuk "
+"kelulusan."
+
+msgid "優點："
+msgstr "Kelebihan:"
+
+msgid "當日領卡、未有 ARC 也可辦（持統一證號）、存款有政府保障"
+msgstr ""
+"Kad dikeluarkan pada hari yang sama; boleh dibuka tanpa ARC (menggunakan ID "
+"Bersatu); simpanan dilindungi kerajaan"
+
+msgid "缺點："
+msgstr "Kelemahan:"
+
+msgid "ATM 主要在郵局內，跨行提款每次 NT$5+，轉帳超額 NT$8–15；App 功能較基本"
+msgstr ""
+"ATM terutamanya di pejabat pos; pengeluaran antara bank NT$5+/kali; fi "
+"pindahan NT$8–15; ciri aplikasi asas"
+
+msgid "多人同行請提前預約，避免等候過久"
+msgstr "Kumpulan sebaiknya menempah lebih awal untuk mengelak menunggu lama"
+
+msgid "多數郵局營業至 17:00，部分郵局更晚（比銀行多 1.5 小時）"
+msgstr ""
+"Kebanyakan pejabat pos buka sehingga 17:00, sebahagian lebih lewat (1.5 jam "
+"lebih dari bank biasa)"
+
+msgid "台灣銀行"
+msgstr "Bank of Taiwan"
+
+msgid "獎學金首選"
+msgstr "Pilihan utama penerima biasiswa"
+
+msgid "政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。"
+msgstr ""
+"Biasiswa dari agensi kerajaan dan Kementerian Pendidikan biasanya "
+"dikreditkan ke akaun Bank of Taiwan — perlu jika anda menerima biasiswa "
+"kerajaan. Ada cawangan di Zhongli."
+
+msgid "玉山銀行"
+msgstr "E.Sun Bank"
+
+msgid "線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。"
+msgstr ""
+"Antara muka perbankan dalam talian yang sangat baik, perkhidmatan pelanggan "
+"Bahasa Inggeris lebih baik, menyokong Apple Pay / Google Pay. Agak mesra "
+"untuk orang asing."
+
+msgid "國泰世華銀行"
+msgstr "Cathay United Bank"
+
+msgid "ATM 據點多，與多家電商合作，網路銀行功能完整，學生使用廣泛。"
+msgstr ""
+"Banyak lokasi ATM, perkongsian dengan platform e-dagang utama, ciri "
+"perbankan dalam talian yang komprehensif, digunakan secara meluas oleh "
+"pelajar."
+
+msgid "雙證件之一"
+msgstr "Salah satu daripada dua ID yang diperlukan"
+
+msgid "或 統一證號基資表（尚未領 ARC 者）"
+msgstr "atau Borang Pendaftaran ID Bersatu (jika ARC belum dikeluarkan)"
+
+msgid "木頭刻印章（英文姓名）"
+msgstr "Cop nama kayu (nama Bahasa Inggeris)"
+
+msgid "— 原子章、橡皮章不可用"
+msgstr "— cop mata pena dan getah tidak diterima"
+
+msgid "現金 NT$100（不收刷卡）"
+msgstr "Tunai NT$100 (kad tidak diterima)"
+
+msgid "視需求"
+msgstr "Mengikut keperluan"
+
+msgid "台灣本人手機號碼（辦 Visa 卡時需要）"
+msgstr ""
+"Nombor telefon bimbit Taiwan anda (diperlukan semasa memohon kad Visa)"
+
+msgid "木頭印章哪裡買？"
+msgstr "Di mana membeli cop nama kayu?"
+
+msgid ""
+"學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 "
+"分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存摺分開保管。"
+msgstr ""
+"Mana-mana kedai alat tulis berhampiran kampus boleh membuatnya. Beritahu "
+"pemilik anda memerlukan cop nama kayu dan berikan nama penuh dalam Bahasa "
+"Inggeris. Kos: kira-kira NT$50–100, tunggu kira-kira 20 minit. Buat terlebih"
+" dahulu dan bawa pada hari pembukaan akaun. Cop anda sama dengan tandatangan"
+" anda — simpan berasingan dari buku simpanan."
+
+msgid "已領有居留證（ARC）者："
+msgstr "Jika anda sudah mempunyai ARC:"
+
+msgid "居留證號即為統一證號，無須另行申請，直接帶 ARC 正本開戶即可。"
+msgstr ""
+"Nombor ARC anda adalah ID Bersatu anda — tiada permohonan berasingan "
+"diperlukan. Hanya bawa ARC asal untuk membuka akaun."
+
+msgid "尚未取得居留證者（部分港澳生）："
+msgstr "Jika anda belum mempunyai ARC (sebahagian pelajar HK/Macau):"
+
+msgid ""
+"需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
+msgstr ""
+"Anda mesti memohon 'Borang Pendaftaran ID Bersatu' di Stesen Perkhidmatan "
+"Imigrasi tempatan, membawa pasport asal dan salinan (tiada foto diperlukan)."
+" Nombor ini kekal seumur hidup; selepas menerima ARC, nombor ARC akan "
+"sepadan dengan ID Bersatu."
+
+msgid "建議選擇有 VISA 功能的 Debit Card（扣帳卡）："
+msgstr "Kami mengesyorkan memilih Kad Debit dengan fungsi VISA:"
+
+msgid ""
+"可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 兩種組合，可按需求選擇。請注意部分台灣商家不接受 "
+"VISA Debit，付款前請確認。"
+msgstr ""
+"Gunakan di ATM dan bayar terus di kedai atau dalam talian. Pejabat pos "
+"menawarkan dua gabungan: VISA + EasyCard atau VISA + iPASS — pilih mengikut "
+"keperluan. Perhatikan bahawa beberapa peniaga Taiwan tidak menerima VISA "
+"Debit; sahkan sebelum membayar."
+
+msgid "建議先辦好 SIM 卡再去開戶："
+msgstr "Dapatkan kad SIM sebelum membuka akaun bank:"
+
+msgid "開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。"
+msgstr ""
+"Mengaktifkan perbankan dalam talian dan kad Visa memerlukan nombor telefon "
+"Taiwan untuk menerima OTP. Mempunyai nombor tempatan bermakna anda boleh "
+"menyelesaikan semuanya dalam satu kunjungan."
+
+msgid "注意營業時間 + 預留足夠時間："
+msgstr "Semak waktu operasi dan peruntukkan masa yang mencukupi:"
+
+msgid "一般銀行週一至週五 09:00–15:30，郵局多至 17:00。外籍生開戶流程通常需 1 小時以上，請勿太晚抵達，以免被請回。"
+msgstr ""
+"Bank biasa buka Isnin–Jumaat 09:00–15:30; kebanyakan pejabat pos hingga "
+"17:00. Pembukaan akaun untuk pelajar asing biasanya mengambil lebih dari 1 "
+"jam — jangan tiba terlalu lewat atau anda mungkin ditolak."
+
+msgid "台灣日期格式：先寫月份、再寫日子"
+msgstr "Format tarikh Taiwan: bulan dahulu, kemudian hari"
+
+msgid " — 2 月 1 日 = 2025/2/1（與部分地區習慣相反），簽文件時請注意。"
+msgstr ""
+" — 1 Februari = 2025/2/1 (berlawanan dengan konvensyen sesetengah kawasan). "
+"Berhati-hati semasa menandatangani dokumen."
+
+msgid "建議前往學校附近郵局："
+msgstr "Kami mengesyorkan pejabat pos berhampiran kampus:"
+
+msgid "大學周邊郵局對僑外生開戶經驗豐富，審核較快，手續更熟練。"
+msgstr ""
+"Pejabat pos berhampiran universiti mempunyai pengalaman luas membantu "
+"pelajar antarabangsa membuka akaun — semakan lebih cepat dan prosedur lebih "
+"lancar."
+
+msgid "ARC 到期後記得更新帳戶資料："
+msgstr ""
+"Ingat untuk mengemas kini butiran akaun apabila ARC anda tamat tempoh:"
+
+msgid "ARC 換新後需至銀行更新證件資料，避免帳戶被凍結。"
+msgstr ""
+"Selepas memperbaharui ARC, pergi ke bank untuk mengemas kini dokumen ID anda"
+" bagi mengelak akaun dibekukan."
+
+msgid "重要警示"
+msgstr "Amaran Penting"
+
+msgid "絕對不要將帳戶借給他人："
+msgstr "Jangan sesekali meminjamkan akaun anda kepada orang lain:"
+
+msgid "依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。"
+msgstr ""
+"Di bawah undang-undang Taiwan, meminjamkan buku simpanan, kad ATM, atau kata"
+" laluan perbankan dalam talian adalah haram. Sekurang-kurangnya anda mungkin"
+" disenaraikan sebagai suspek penipuan; terburuk menghadapi liabiliti "
+"jenayah. Jika akaun anda terjejas atau buku simpanan hilang, segera "
+"maklumkan bank."
+
+msgid "不要短期內在多家銀行開戶："
+msgstr "Jangan buka akaun di beberapa bank dalam tempoh yang singkat:"
+
+msgid "台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。"
+msgstr ""
+"Setiap kali membuka akaun di Taiwan, bank akan membuat pertanyaan kredit. "
+"Terlalu banyak pertanyaan dalam masa singkat mungkin mendorong bank untuk "
+"menghubungi anda atau menolak permohonan (untuk mencegah akaun hantu). "
+"Mulakan dengan 1–2 bank."
+
+msgid "外籍生・僑生必辦"
+msgstr "Wajib untuk pelajar antarabangsa & pelajar diaspora"
+
+msgid "僑生、外籍生（僑外生）取得居留證明文件來臺就學，自合於投保資格之日起，依法應參加全民健康保險。"
+msgstr ""
+"Pelajar diaspora Cina dan pelajar antarabangsa (pelajar luar negara/asing) "
+"yang memperoleh dokumen kediaman untuk belajar di Taiwan diwajibkan secara "
+"undang-undang untuk mendaftar Insurans Kesihatan Nasional dari tarikh "
+"memenuhi kelayakan."
+
+msgid "新生第一學期保險（未達健保資格前）"
+msgstr "Insurans semester pertama untuk pelajar baru (sebelum layak NHI)"
+
+msgid "重要："
+msgstr "Penting:"
+
+msgid "剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保險："
+msgstr ""
+"Pelajar diaspora Cina yang baru tiba belum memenuhi keperluan '6 bulan "
+"kediaman di Taiwan' untuk pendaftaran NHI, dan mesti terlebih dahulu "
+"menyertai salah satu pelan insurans berikut:"
+
+msgid "僑保（海外華人保險）"
+msgstr "Insurans OCAC (Insurans Cina Luar Negara)"
+
+msgid "適用對象：首次入台的大一僑生新生（只能加保一次）"
+msgstr ""
+"Sasaran: Pelajar diaspora Cina tahun pertama yang tiba di Taiwan buat kali "
+"pertama (hanya boleh mendaftar sekali)"
+
+msgid "保費：自費 NT$600（僑委會補助 NT$600，合計 NT$1,200）"
+msgstr "Premium: NT$600 bayar sendiri (OCAC subsidi NT$600, jumlah NT$1,200)"
+
+msgid "保障期間：6 個月（一學期）"
+msgstr "Tempoh perlindungan: 6 bulan (satu semester)"
+
+msgid "由國際事務處協助辦理"
+msgstr "Diuruskan dengan bantuan Pejabat Hal Ehwal Antarabangsa"
+
+msgid "國泰人壽保險"
+msgstr "Insurans Hayat Cathay"
+
+msgid "適用對象：第二學期起或不符合僑保資格者"
+msgstr ""
+"Sasaran: Mulai semester kedua, atau yang tidak layak untuk Insurans OCAC"
+
+msgid "保費：NT$3,000 / 學期（最長六個月）"
+msgstr "Premium: NT$3,000 / semester (maksimum enam bulan)"
+
+msgid "由國際事務處協助加保"
+msgstr "Pendaftaran dibantu oleh Pejabat Hal Ehwal Antarabangsa"
+
+msgid "理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影本、郵局存簿影本及個資同意書"
+msgstr ""
+"Tuntutan: Isi borang tuntutan di OIA, dan bawa resit perubatan, sijil "
+"diagnosis, salinan ARC, salinan pasport, salinan buku simpanan pejabat pos, "
+"dan borang persetujuan data peribadi"
+
+msgid "全民健保投保規定"
+msgstr "Peraturan Pendaftaran NHI"
+
+msgid "項目"
+msgstr "Item"
+
+msgid "僑外生就學期間"
+msgstr "Semasa pengajian (pelajar diaspora/asing)"
+
+msgid "僑外生經許可工作期間"
+msgstr "Semasa bekerja dengan kebenaran (pelajar diaspora/asing)"
+
+msgid "投保資格"
+msgstr "Kelayakan"
+
+msgid "自在臺居留滿 6 個月之日投保"
+msgstr "Daftar dari tarikh melengkapkan 6 bulan kediaman di Taiwan"
+
+msgid "自受僱當日投保（無等待期）"
+msgstr "Daftar dari tarikh mula bekerja (tiada tempoh menunggu)"
+
+msgid "投保身分"
+msgstr "Kategori yang dilindungi"
+
+msgid "第 6 類第 2 目被保險人"
+msgstr "Pemegang insurans kategori 6, subkategori 2"
+
+msgid "第 1 類被保險人（受僱者）"
+msgstr "Pemegang insurans kategori 1 (pekerja)"
+
+msgid "投保方式"
+msgstr "Kaedah pendaftaran"
+
+msgid "以就讀學校為投保單位辦理"
+msgstr "Didaftarkan melalui sekolah yang dihadiri sebagai unit insurans"
+
+msgid "以工作單位為投保單位辦理"
+msgstr "Didaftarkan melalui majikan sebagai unit insurans"
+
+msgid "※ 短期性工作未逾 3 個月者，可選擇以原投保資格繼續投保"
+msgstr ""
+"※ Mereka yang bekerja jangka pendek (di bawah 3 bulan) boleh memilih untuk "
+"terus mendaftar di bawah kategori pemegang insurans asal mereka"
+
+msgid "「在臺居留滿 6 個月」認定方式"
+msgstr "Cara mengira '6 bulan kediaman di Taiwan'"
+
+msgid ""
+"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 "
+"30 天，則從重新抵台當天起算，6 個月重新計算。"
+msgstr ""
+"Ini bermaksud tinggal di Taiwan secara berterusan selama 6 bulan, atau telah"
+" meninggalkan negara sekali tidak lebih dari 30 hari, dengan tempoh kediaman"
+" sebenar tolak hari keberangkatan berjumlah 6 bulan. Jika anda pergi lebih "
+"dari sekali, atau pergi sekali lebih dari 30 hari, kiraan 6 bulan bermula "
+"semula dari hari anda kembali ke Taiwan."
+
+msgid "計算範例："
+msgstr "Contoh pengiraan:"
+
+msgid "入境日：113/9/1 → 未曾出境 → 投保日：114/3/1"
+msgstr ""
+"Tarikh masuk: 113/9/1 → Tiada keberangkatan → Tarikh pendaftaran: 114/3/1"
+
+msgid "入境日：113/9/1 → 曾出境 1 次（114/1/1–1/5，共 4 天）→ 投保日：114/3/5"
+msgstr ""
+"Tarikh masuk: 113/9/1 → Pernah berangkat 1 kali (114/1/1–1/5, jumlah 4 hari)"
+" → Tarikh pendaftaran: 114/3/5"
+
+msgid "在臺參加健保注意事項"
+msgstr "Nota tentang pendaftaran NHI di Taiwan"
+
+msgid "僑外生在臺就學並符合投保資格期間，應以就讀學校為投保單位辦理投保。"
+msgstr ""
+"Pelajar diaspora/asing yang belajar di Taiwan dan memenuhi kelayakan mesti "
+"mendaftar NHI melalui sekolah mereka sebagai unit insurans."
+
+msgid "僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 日內，向健保署辦理投保。"
+msgstr ""
+"Apabila pelajar diaspora/asing dibenarkan bekerja di Taiwan dan diambil "
+"bekerja, unit insurans (majikan) mesti melengkapkan pendaftaran NHI dalam "
+"masa 3 hari dari tarikh pemegang insurans memenuhi kelayakan."
+
+msgid "於受僱單位投保時，應先至學校辦理轉出，避免重複投保。"
+msgstr ""
+"Apabila mendaftar melalui majikan, atur terlebih dahulu pemindahan keluar "
+"dari sekolah untuk mengelakkan pendaftaran berganda."
+
+msgid "與工作單位終止僱傭關係後，應另以適法身分投保：若已受新單位聘僱，於新單位投保；未受聘僱期間則應回學校辦理投保。"
+msgstr ""
+"Selepas menamatkan pekerjaan, daftar di bawah status layak lain: jika "
+"diambil bekerja oleh majikan baru, daftar melalui majikan baru; semasa "
+"tempoh tanpa pekerjaan, kembali ke pendaftaran sekolah."
+
+msgid "符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，應以眷屬身分依附其投保單位加保。"
+msgstr ""
+"Semasa tempoh layak tetapi menganggur, jika pasangan, ibu bapa atau anak di "
+"Taiwan sudah menjadi pemegang insurans NHI, anda perlu mendaftar sebagai "
+"tanggungan di bawah unit insurans mereka."
+
+msgid "在學證明（學生證或在學證明書）"
+msgstr "Bukti pendaftaran (kad pelajar atau sijil pendaftaran)"
+
+msgid "台灣銀行帳戶（保費扣繳用）"
+msgstr "Akaun bank Taiwan (untuk potongan premium)"
+
+msgid "建議"
+msgstr "Disyorkan"
+
+msgid "1 吋照片（部分單位需要）"
+msgstr "Foto 1 inci (diperlukan oleh sesetengah pejabat)"
+
+msgid "清寒僑生健保費補助："
+msgstr "Subsidi premium NHI untuk pelajar diaspora Cina berpendapatan rendah:"
+
+msgid ""
+"符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 "
+"NT$826。詳情請洽國際事務處。"
+msgstr ""
+"Mereka yang layak sebagai berpendapatan rendah dan mendaftar NHI boleh "
+"memohon ke OIA untuk subsidi bulanan NT$413 (memerlukan bukti status "
+"berpendapatan rendah; diberikan selepas semakan). Tanpa subsidi, premium "
+"bulanan kira-kira NT$826. Hubungi OIA untuk butiran."
+
+msgid "相關文件下載"
+msgstr "Muat turun dokumen berkaitan"
+
+msgid "在臺僑生、外籍生參加全民健康保險須知（PDF）↓"
+msgstr ""
+"Panduan Pendaftaran NHI untuk Pelajar Diaspora/Asing di Taiwan (PDF) ↓"
+
+msgid "小病先看診所："
+msgstr "Pergi ke klinik dahulu untuk penyakit ringan:"
+
+msgid ""
+"台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
+msgstr ""
+"Taiwan menggunakan sistem penjagaan kesihatan bertingkat. Untuk penyakit "
+"biasa, lawati klinik dahulu (perubatan keluarga atau perubatan dalam) — "
+"bayaran bersama hanya kira-kira NT$150. Pergi terus ke UGD atau jabatan "
+"pesakit luar hospital memerlukan bayaran bersama yang lebih tinggi "
+"(NT$240–480)."
+
+msgid "下載「健保快易通」App："
+msgstr "Muat turun aplikasi 'NHI Express':"
+
+msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
+msgstr ""
+"Semak status NHI, rekod perubatan, dan paparkan kad insurans kesihatan "
+"digital — tidak perlu bimbang lupa membawa kad fizikal."
+
+msgid "暑假返鄉超過 2 個月時："
+msgstr "Jika balik kampung lebih dari 2 bulan semasa cuti musim panas:"
+
+msgid "建議辦理「出國停保」避免繼續扣繳保費；回台後記得立即「復保」恢復保障。"
+msgstr ""
+"Mohon 'penggantungan keberangkatan' untuk mengelakkan pemotongan premium "
+"yang berterusan; ingat untuk 'memulihkan perlindungan' segera setelah "
+"kembali ke Taiwan."
+
+msgid "全民健康保險署官網 ↗"
+msgstr "Laman Web Rasmi Pentadbiran Insurans Kesihatan Nasional ↗"
+
+msgid "非本國籍人士加保說明 ↗"
+msgstr "Panduan Pendaftaran NHI untuk Bukan Warganegara ROC ↗"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Masukkan soalan anda. Sistem akan menyusun cadangan berdasarkan identiti dan"

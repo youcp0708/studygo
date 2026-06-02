@@ -4799,3 +4799,431 @@ msgid "銀行帳戶餘額不足時，電信業者可能暫停門號。請確保�
 msgstr ""
 "Nếu số dư tài khoản ngân hàng không đủ, nhà mạng có thể tạm ngừng số của "
 "bạn. Hãy đảm bảo có đủ số dư trong tài khoản mỗi tháng."
+
+msgid "領獎學金・生活必備"
+msgstr "Nhận học bổng · Thiết yếu hàng ngày"
+
+msgid "在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。"
+msgstr ""
+"Trong thời gian học tập tại Đài Loan, tài khoản ngân hàng là công cụ thiết "
+"yếu để nhận học bổng, trả tiền thuê nhà và chi tiêu hàng ngày. Trang này tóm"
+" tắt các lựa chọn ngân hàng và quy trình mở tài khoản."
+
+msgid "中華郵政（郵局）"
+msgstr "Bưu điện Chunghwa (Bưu cục)"
+
+msgid "外籍生首選"
+msgstr "Lựa chọn hàng đầu cho sinh viên quốc tế"
+
+msgid "全台門市最廣，外籍生開戶最友善，"
+msgstr ""
+"Mạng lưới chi nhánh rộng nhất Đài Loan, thân thiện nhất với người nước ngoài"
+" khi mở tài khoản — "
+
+msgid "當日即可拿到存摺與提款卡"
+msgstr "nhận sổ tiết kiệm và thẻ ATM ngay trong ngày"
+
+msgid "，不像一般銀行需等 3–5 個工作天審核。"
+msgstr ""
+", không giống ngân hàng thông thường phải chờ 3–5 ngày làm việc để duyệt."
+
+msgid "優點："
+msgstr "Ưu điểm:"
+
+msgid "當日領卡、未有 ARC 也可辦（持統一證號）、存款有政府保障"
+msgstr ""
+"Cấp thẻ ngay trong ngày; có thể mở khi chưa có ARC (dùng Mã số thống nhất); "
+"tiền gửi được chính phủ bảo vệ"
+
+msgid "缺點："
+msgstr "Nhược điểm:"
+
+msgid "ATM 主要在郵局內，跨行提款每次 NT$5+，轉帳超額 NT$8–15；App 功能較基本"
+msgstr ""
+"ATM chủ yếu trong bưu điện; rút tiền liên ngân hàng NT$5+/lần; phí chuyển "
+"khoản NT$8–15; tính năng app cơ bản"
+
+msgid "多人同行請提前預約，避免等候過久"
+msgstr "Nhóm người nên đặt trước để tránh chờ đợi lâu"
+
+msgid "多數郵局營業至 17:00，部分郵局更晚（比銀行多 1.5 小時）"
+msgstr ""
+"Hầu hết bưu điện mở đến 17:00, một số còn muộn hơn (hơn 1,5 giờ so với ngân "
+"hàng thông thường)"
+
+msgid "台灣銀行"
+msgstr "Ngân hàng Đài Loan"
+
+msgid "獎學金首選"
+msgstr "Lựa chọn hàng đầu cho người nhận học bổng"
+
+msgid "政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。"
+msgstr ""
+"Học bổng từ cơ quan chính phủ và Bộ Giáo dục thường được chuyển vào tài "
+"khoản Ngân hàng Đài Loan — thiết yếu nếu bạn nhận học bổng chính phủ. Có chi"
+" nhánh ở Zhongli."
+
+msgid "玉山銀行"
+msgstr "E.Sun Bank"
+
+msgid "線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。"
+msgstr ""
+"Giao diện ngân hàng trực tuyến xuất sắc, dịch vụ khách hàng tiếng Anh tốt "
+"hơn, hỗ trợ Apple Pay / Google Pay. Tương đối thân thiện với người nước "
+"ngoài."
+
+msgid "國泰世華銀行"
+msgstr "Cathay United Bank"
+
+msgid "ATM 據點多，與多家電商合作，網路銀行功能完整，學生使用廣泛。"
+msgstr ""
+"Nhiều địa điểm ATM, hợp tác với các nền tảng thương mại điện tử lớn, tính "
+"năng ngân hàng trực tuyến toàn diện, được sinh viên sử dụng rộng rãi."
+
+msgid "雙證件之一"
+msgstr "Một trong hai giấy tờ yêu cầu"
+
+msgid "或 統一證號基資表（尚未領 ARC 者）"
+msgstr "hoặc Mẫu đăng ký Mã số thống nhất (nếu ARC chưa được cấp)"
+
+msgid "木頭刻印章（英文姓名）"
+msgstr "Con dấu tên bằng gỗ (tên tiếng Anh)"
+
+msgid "— 原子章、橡皮章不可用"
+msgstr "— không chấp nhận dấu bi và dấu cao su"
+
+msgid "現金 NT$100（不收刷卡）"
+msgstr "Tiền mặt NT$100 (không nhận thẻ)"
+
+msgid "視需求"
+msgstr "Tùy nhu cầu"
+
+msgid "台灣本人手機號碼（辦 Visa 卡時需要）"
+msgstr "Số điện thoại Đài Loan của bạn (cần khi đăng ký thẻ Visa)"
+
+msgid "木頭印章哪裡買？"
+msgstr "Mua con dấu tên bằng gỗ ở đâu?"
+
+msgid ""
+"學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 "
+"分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存摺分開保管。"
+msgstr ""
+"Bất kỳ cửa hàng văn phòng phẩm nào gần trường đều có thể làm. Nói với chủ "
+"cửa hàng bạn cần con dấu tên bằng gỗ và cung cấp họ tên đầy đủ bằng tiếng "
+"Anh. Chi phí: khoảng NT$50–100, chờ khoảng 20 phút. Làm trước và mang theo "
+"khi mở tài khoản. Con dấu của bạn bằng với chữ ký của bạn — giữ riêng với sổ"
+" tiết kiệm."
+
+msgid "已領有居留證（ARC）者："
+msgstr "Nếu bạn đã có ARC:"
+
+msgid "居留證號即為統一證號，無須另行申請，直接帶 ARC 正本開戶即可。"
+msgstr ""
+"Số ARC của bạn là Mã số thống nhất — không cần đăng ký riêng. Chỉ cần mang "
+"ARC gốc để mở tài khoản."
+
+msgid "尚未取得居留證者（部分港澳生）："
+msgstr "Nếu bạn chưa có ARC (một số sinh viên HK/Macau):"
+
+msgid ""
+"需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
+msgstr ""
+"Bạn phải đăng ký 'Mẫu đăng ký Mã số thống nhất' tại Trạm dịch vụ Di trú địa "
+"phương, mang hộ chiếu gốc và bản sao (không cần ảnh). Số này cố định suốt "
+"đời; khi nhận ARC, số ARC sẽ khớp với Mã số thống nhất."
+
+msgid "建議選擇有 VISA 功能的 Debit Card（扣帳卡）："
+msgstr "Chúng tôi khuyên nên chọn Debit Card có tính năng VISA:"
+
+msgid ""
+"可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 兩種組合，可按需求選擇。請注意部分台灣商家不接受 "
+"VISA Debit，付款前請確認。"
+msgstr ""
+"Dùng tại ATM và thanh toán trực tiếp tại cửa hàng hoặc mua online. Bưu điện "
+"cung cấp hai tổ hợp: VISA + EasyCard hoặc VISA + iPASS — chọn theo nhu cầu. "
+"Lưu ý một số thương gia Đài Loan không chấp nhận VISA Debit; xác nhận trước "
+"khi thanh toán."
+
+msgid "建議先辦好 SIM 卡再去開戶："
+msgstr "Lấy SIM trước khi mở tài khoản ngân hàng:"
+
+msgid "開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。"
+msgstr ""
+"Kích hoạt ngân hàng trực tuyến và thẻ Visa yêu cầu số điện thoại Đài Loan để"
+" nhận OTP. Có số nội địa nghĩa là bạn có thể hoàn thành mọi thứ trong một "
+"lần ghé thăm."
+
+msgid "注意營業時間 + 預留足夠時間："
+msgstr "Kiểm tra giờ làm việc và để đủ thời gian:"
+
+msgid "一般銀行週一至週五 09:00–15:30，郵局多至 17:00。外籍生開戶流程通常需 1 小時以上，請勿太晚抵達，以免被請回。"
+msgstr ""
+"Ngân hàng thông thường mở cửa Thứ Hai–Thứ Sáu 09:00–15:30; hầu hết bưu điện "
+"đến 17:00. Mở tài khoản cho sinh viên nước ngoài thường mất hơn 1 giờ — đừng"
+" đến quá muộn kẻo bị từ chối."
+
+msgid "台灣日期格式：先寫月份、再寫日子"
+msgstr "Định dạng ngày tháng Đài Loan: tháng trước, ngày sau"
+
+msgid " — 2 月 1 日 = 2025/2/1（與部分地區習慣相反），簽文件時請注意。"
+msgstr ""
+" — 1 tháng 2 = 2025/2/1 (ngược với quy ước của một số khu vực). Hãy cẩn thận"
+" khi ký tài liệu."
+
+msgid "建議前往學校附近郵局："
+msgstr "Chúng tôi khuyên đến bưu điện gần trường:"
+
+msgid "大學周邊郵局對僑外生開戶經驗豐富，審核較快，手續更熟練。"
+msgstr ""
+"Các bưu điện gần trường đại học có nhiều kinh nghiệm giúp sinh viên quốc tế "
+"mở tài khoản — xem xét nhanh hơn và thủ tục suôn sẻ hơn."
+
+msgid "ARC 到期後記得更新帳戶資料："
+msgstr "Nhớ cập nhật thông tin tài khoản khi ARC hết hạn:"
+
+msgid "ARC 換新後需至銀行更新證件資料，避免帳戶被凍結。"
+msgstr ""
+"Sau khi gia hạn ARC, hãy đến ngân hàng để cập nhật tài liệu ID để tránh tài "
+"khoản bị đóng băng."
+
+msgid "重要警示"
+msgstr "Cảnh báo quan trọng"
+
+msgid "絕對不要將帳戶借給他人："
+msgstr "Không bao giờ cho người khác mượn tài khoản:"
+
+msgid "依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。"
+msgstr ""
+"Theo luật pháp Đài Loan, cho mượn sổ tiết kiệm, thẻ ATM hoặc mật khẩu ngân "
+"hàng trực tuyến là vi phạm pháp luật. Nhẹ thì bị liệt vào danh sách nghi "
+"phạm gian lận; nặng thì chịu trách nhiệm hình sự. Nếu tài khoản bị xâm phạm "
+"hoặc sổ tiết kiệm bị mất, hãy thông báo ngay cho ngân hàng."
+
+msgid "不要短期內在多家銀行開戶："
+msgstr "Không mở tài khoản tại nhiều ngân hàng trong thời gian ngắn:"
+
+msgid "台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。"
+msgstr ""
+"Mỗi lần mở tài khoản ở Đài Loan, ngân hàng sẽ thực hiện tra cứu tín dụng. "
+"Quá nhiều tra cứu trong thời gian ngắn có thể khiến ngân hàng gọi điện hoặc "
+"từ chối đơn (để ngăn tài khoản ma). Bắt đầu với 1–2 ngân hàng."
+
+msgid "外籍生・僑生必辦"
+msgstr "Bắt buộc cho sinh viên quốc tế & sinh viên Hoa kiều"
+
+msgid "僑生、外籍生（僑外生）取得居留證明文件來臺就學，自合於投保資格之日起，依法應參加全民健康保險。"
+msgstr ""
+"Sinh viên Hoa kiều và sinh viên quốc tế (sinh viên hải ngoại/nước ngoài) có "
+"giấy tờ cư trú để học tập tại Đài Loan bắt buộc phải đăng ký Bảo hiểm Y tế "
+"Quốc gia kể từ ngày đủ điều kiện theo quy định pháp luật."
+
+msgid "新生第一學期保險（未達健保資格前）"
+msgstr "Bảo hiểm học kỳ đầu cho sinh viên mới (trước khi đủ điều kiện NHI)"
+
+msgid "重要："
+msgstr "Quan trọng:"
+
+msgid "剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保險："
+msgstr ""
+"Sinh viên Hoa kiều mới đến chưa đáp ứng yêu cầu '6 tháng cư trú tại Đài "
+"Loan' để đăng ký NHI và phải tham gia một trong các gói bảo hiểm sau đây "
+"trước:"
+
+msgid "僑保（海外華人保險）"
+msgstr "Bảo hiểm OCAC (Bảo hiểm người Hoa hải ngoại)"
+
+msgid "適用對象：首次入台的大一僑生新生（只能加保一次）"
+msgstr ""
+"Đối tượng: Sinh viên Hoa kiều năm nhất đến Đài Loan lần đầu (chỉ có thể đăng"
+" ký một lần)"
+
+msgid "保費：自費 NT$600（僑委會補助 NT$600，合計 NT$1,200）"
+msgstr "Phí bảo hiểm: NT$600 tự trả (OCAC trợ cấp NT$600, tổng NT$1,200)"
+
+msgid "保障期間：6 個月（一學期）"
+msgstr "Thời gian bảo hiểm: 6 tháng (một học kỳ)"
+
+msgid "由國際事務處協助辦理"
+msgstr "Được xử lý với sự hỗ trợ của Văn phòng Hợp tác Quốc tế"
+
+msgid "國泰人壽保險"
+msgstr "Bảo hiểm Nhân thọ Cathay"
+
+msgid "適用對象：第二學期起或不符合僑保資格者"
+msgstr ""
+"Đối tượng: Từ học kỳ hai trở đi, hoặc những người không đủ điều kiện Bảo "
+"hiểm OCAC"
+
+msgid "保費：NT$3,000 / 學期（最長六個月）"
+msgstr "Phí bảo hiểm: NT$3,000 / học kỳ (tối đa sáu tháng)"
+
+msgid "由國際事務處協助加保"
+msgstr "Đăng ký được hỗ trợ bởi Văn phòng Hợp tác Quốc tế"
+
+msgid "理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影本、郵局存簿影本及個資同意書"
+msgstr ""
+"Yêu cầu bồi thường: Điền mẫu yêu cầu tại OIA, và mang biên lai y tế, giấy "
+"chứng nhận chẩn đoán, bản sao ARC, bản sao hộ chiếu, bản sao sổ bưu điện và "
+"mẫu đồng ý dữ liệu cá nhân"
+
+msgid "全民健保投保規定"
+msgstr "Quy định đăng ký NHI"
+
+msgid "項目"
+msgstr "Mục"
+
+msgid "僑外生就學期間"
+msgstr "Trong thời gian học tập (sinh viên Hoa kiều/nước ngoài)"
+
+msgid "僑外生經許可工作期間"
+msgstr "Trong thời gian được phép làm việc (sinh viên Hoa kiều/nước ngoài)"
+
+msgid "投保資格"
+msgstr "Điều kiện"
+
+msgid "自在臺居留滿 6 個月之日投保"
+msgstr "Đăng ký từ ngày hoàn thành 6 tháng cư trú tại Đài Loan"
+
+msgid "自受僱當日投保（無等待期）"
+msgstr "Đăng ký từ ngày được tuyển dụng (không có thời gian chờ)"
+
+msgid "投保身分"
+msgstr "Danh mục được bảo hiểm"
+
+msgid "第 6 類第 2 目被保險人"
+msgstr "Được bảo hiểm hạng 6, hạng phụ 2"
+
+msgid "第 1 類被保險人（受僱者）"
+msgstr "Được bảo hiểm hạng 1 (nhân viên)"
+
+msgid "投保方式"
+msgstr "Phương thức đăng ký"
+
+msgid "以就讀學校為投保單位辦理"
+msgstr "Đăng ký qua trường đang học là đơn vị bảo hiểm"
+
+msgid "以工作單位為投保單位辦理"
+msgstr "Đăng ký qua đơn vị làm việc là đơn vị bảo hiểm"
+
+msgid "※ 短期性工作未逾 3 個月者，可選擇以原投保資格繼續投保"
+msgstr ""
+"※ Những người làm việc ngắn hạn (dưới 3 tháng) có thể chọn tiếp tục đăng ký "
+"theo danh mục bảo hiểm ban đầu"
+
+msgid "「在臺居留滿 6 個月」認定方式"
+msgstr "Cách tính '6 tháng cư trú tại Đài Loan'"
+
+msgid ""
+"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 "
+"30 天，則從重新抵台當天起算，6 個月重新計算。"
+msgstr ""
+"Điều này có nghĩa là cư trú liên tục tại Đài Loan 6 tháng, hoặc đã xuất cảnh"
+" một lần không quá 30 ngày, với tổng thời gian cư trú thực tế trừ ngày xuất "
+"cảnh đạt 6 tháng. Nếu bạn xuất cảnh hơn một lần, hoặc xuất cảnh một lần quá "
+"30 ngày, đồng hồ 6 tháng sẽ khởi động lại từ ngày bạn trở lại Đài Loan."
+
+msgid "計算範例："
+msgstr "Ví dụ tính toán:"
+
+msgid "入境日：113/9/1 → 未曾出境 → 投保日：114/3/1"
+msgstr "Ngày nhập cảnh: 113/9/1 → Không xuất cảnh → Ngày đăng ký: 114/3/1"
+
+msgid "入境日：113/9/1 → 曾出境 1 次（114/1/1–1/5，共 4 天）→ 投保日：114/3/5"
+msgstr ""
+"Ngày nhập cảnh: 113/9/1 → Đã xuất cảnh 1 lần (114/1/1–1/5, tổng 4 ngày) → "
+"Ngày đăng ký: 114/3/5"
+
+msgid "在臺參加健保注意事項"
+msgstr "Lưu ý khi đăng ký NHI tại Đài Loan"
+
+msgid "僑外生在臺就學並符合投保資格期間，應以就讀學校為投保單位辦理投保。"
+msgstr ""
+"Sinh viên Hoa kiều/nước ngoài học tại Đài Loan đáp ứng điều kiện phải đăng "
+"ký NHI qua trường là đơn vị bảo hiểm."
+
+msgid "僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 日內，向健保署辦理投保。"
+msgstr ""
+"Khi sinh viên Hoa kiều/nước ngoài được phép làm việc tại Đài Loan và được "
+"tuyển dụng, đơn vị bảo hiểm (nhà tuyển dụng) phải hoàn tất đăng ký NHI trong"
+" vòng 3 ngày kể từ khi người được bảo hiểm đủ điều kiện."
+
+msgid "於受僱單位投保時，應先至學校辦理轉出，避免重複投保。"
+msgstr ""
+"Khi đăng ký qua nhà tuyển dụng, trước tiên hãy sắp xếp chuyển ra khỏi trường"
+" để tránh đăng ký trùng."
+
+msgid "與工作單位終止僱傭關係後，應另以適法身分投保：若已受新單位聘僱，於新單位投保；未受聘僱期間則應回學校辦理投保。"
+msgstr ""
+"Sau khi kết thúc hợp đồng lao động, đăng ký theo tình trạng hợp lệ khác: nếu"
+" được tuyển dụng bởi nhà tuyển dụng mới, đăng ký qua nhà tuyển dụng mới; "
+"trong thời gian không có việc làm, trở lại đăng ký qua trường."
+
+msgid "符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，應以眷屬身分依附其投保單位加保。"
+msgstr ""
+"Trong thời gian đủ điều kiện nhưng thất nghiệp, nếu vợ/chồng, cha mẹ hoặc "
+"con cái ở Đài Loan đã là người được bảo hiểm NHI, bạn nên đăng ký là người "
+"phụ thuộc dưới đơn vị bảo hiểm của họ."
+
+msgid "在學證明（學生證或在學證明書）"
+msgstr "Giấy xác nhận học tập (thẻ sinh viên hoặc giấy chứng nhận học tập)"
+
+msgid "台灣銀行帳戶（保費扣繳用）"
+msgstr "Tài khoản ngân hàng Đài Loan (để trừ phí bảo hiểm)"
+
+msgid "建議"
+msgstr "Khuyến nghị"
+
+msgid "1 吋照片（部分單位需要）"
+msgstr "Ảnh 1 inch (một số văn phòng yêu cầu)"
+
+msgid "清寒僑生健保費補助："
+msgstr "Trợ cấp phí NHI cho sinh viên Hoa kiều có thu nhập thấp:"
+
+msgid ""
+"符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 "
+"NT$826。詳情請洽國際事務處。"
+msgstr ""
+"Những người đủ điều kiện là hộ nghèo và đăng ký NHI có thể nộp đơn tại OIA "
+"để được trợ cấp hàng tháng NT$413 (cần bằng chứng về tình trạng thu nhập "
+"thấp; được cấp sau khi xem xét). Không có trợ cấp, phí bảo hiểm hàng tháng "
+"khoảng NT$826. Liên hệ OIA để biết chi tiết."
+
+msgid "相關文件下載"
+msgstr "Tải xuống tài liệu liên quan"
+
+msgid "在臺僑生、外籍生參加全民健康保險須知（PDF）↓"
+msgstr ""
+"Hướng dẫn đăng ký NHI cho sinh viên Hoa kiều/nước ngoài tại Đài Loan (PDF) ↓"
+
+msgid "小病先看診所："
+msgstr "Khám phòng khám trước cho các bệnh nhẹ:"
+
+msgid ""
+"台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
+msgstr ""
+"Đài Loan áp dụng hệ thống chăm sóc sức khỏe theo cấp độ. Với bệnh thông "
+"thường, hãy đến phòng khám trước (y khoa gia đình hoặc nội khoa) — đồng "
+"thanh toán chỉ khoảng NT$150. Đến trực tiếp phòng cấp cứu bệnh viện hoặc "
+"khoa ngoại trú đòi hỏi đồng thanh toán cao hơn (NT$240–480)."
+
+msgid "下載「健保快易通」App："
+msgstr "Tải xuống ứng dụng 'NHI Express':"
+
+msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
+msgstr ""
+"Kiểm tra trạng thái NHI, hồ sơ y tế và hiển thị thẻ bảo hiểm y tế kỹ thuật "
+"số — không cần lo lắng về việc quên thẻ vật lý."
+
+msgid "暑假返鄉超過 2 個月時："
+msgstr "Nếu về quê hơn 2 tháng trong kỳ nghỉ hè:"
+
+msgid "建議辦理「出國停保」避免繼續扣繳保費；回台後記得立即「復保」恢復保障。"
+msgstr ""
+"Đăng ký 'tạm dừng rời đi' để tránh tiếp tục khấu trừ phí bảo hiểm; nhớ 'khôi"
+" phục bảo hiểm' ngay khi trở về Đài Loan."
+
+msgid "全民健康保險署官網 ↗"
+msgstr "Trang web chính thức của Cơ quan Bảo hiểm Y tế Quốc gia ↗"
+
+msgid "非本國籍人士加保說明 ↗"
+msgstr "Hướng dẫn đăng ký NHI cho người không phải quốc tịch ROC ↗"

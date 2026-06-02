@@ -5135,6 +5135,435 @@ msgstr ""
 "If your bank account balance is insufficient, the carrier may suspend your "
 "number. Make sure you have enough balance in your account each month."
 
+msgid "領獎學金・生活必備"
+msgstr "Collect scholarships · Daily essentials"
+
+msgid "在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。"
+msgstr ""
+"During your studies in Taiwan, a bank account is essential for receiving "
+"scholarships, paying rent, and daily spending. This page covers bank options"
+" and the account-opening process."
+
+msgid "中華郵政（郵局）"
+msgstr "Chunghwa Post (Post Office)"
+
+msgid "外籍生首選"
+msgstr "Top pick for international students"
+
+msgid "全台門市最廣，外籍生開戶最友善，"
+msgstr ""
+"Widest branch network in Taiwan, most foreigner-friendly for account opening"
+" — "
+
+msgid "當日即可拿到存摺與提款卡"
+msgstr "passbook and ATM card on the same day"
+
+msgid "，不像一般銀行需等 3–5 個工作天審核。"
+msgstr ", unlike regular banks where you wait 3–5 business days for approval."
+
+msgid "優點："
+msgstr "Pros:"
+
+msgid "當日領卡、未有 ARC 也可辦（持統一證號）、存款有政府保障"
+msgstr ""
+"Same-day card issuance; can open without ARC (using Unified ID); deposits "
+"protected by government"
+
+msgid "缺點："
+msgstr "Cons:"
+
+msgid "ATM 主要在郵局內，跨行提款每次 NT$5+，轉帳超額 NT$8–15；App 功能較基本"
+msgstr ""
+"ATMs mainly inside post offices; inter-bank withdrawal NT$5+ each; transfer "
+"fee NT$8–15; app features are basic"
+
+msgid "多人同行請提前預約，避免等候過久"
+msgstr "Groups should book in advance to avoid long waits"
+
+msgid "多數郵局營業至 17:00，部分郵局更晚（比銀行多 1.5 小時）"
+msgstr ""
+"Most post offices open until 17:00, some even later (1.5 hours more than "
+"regular banks)"
+
+msgid "台灣銀行"
+msgstr "Bank of Taiwan"
+
+msgid "獎學金首選"
+msgstr "Top pick for scholarship recipients"
+
+msgid "政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。"
+msgstr ""
+"Government agency and Ministry of Education scholarships are usually "
+"deposited into Bank of Taiwan accounts — essential if you receive a "
+"government scholarship. There is a branch in Zhongli."
+
+msgid "玉山銀行"
+msgstr "E.Sun Bank"
+
+msgid "線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。"
+msgstr ""
+"Excellent online banking interface, better English customer service, "
+"supports Apple Pay / Google Pay. Relatively foreigner-friendly."
+
+msgid "國泰世華銀行"
+msgstr "Cathay United Bank"
+
+msgid "ATM 據點多，與多家電商合作，網路銀行功能完整，學生使用廣泛。"
+msgstr ""
+"Many ATM locations, partnerships with major e-commerce platforms, "
+"comprehensive online banking features, widely used by students."
+
+msgid "雙證件之一"
+msgstr "One of two required IDs"
+
+msgid "或 統一證號基資表（尚未領 ARC 者）"
+msgstr "or Unified ID Registration Form (if ARC not yet issued)"
+
+msgid "木頭刻印章（英文姓名）"
+msgstr "Wooden name stamp (English name)"
+
+msgid "— 原子章、橡皮章不可用"
+msgstr "— ball-point and rubber stamps not accepted"
+
+msgid "現金 NT$100（不收刷卡）"
+msgstr "Cash NT$100 (cards not accepted)"
+
+msgid "視需求"
+msgstr "As needed"
+
+msgid "台灣本人手機號碼（辦 Visa 卡時需要）"
+msgstr "Your Taiwan mobile number (required when applying for Visa card)"
+
+msgid "木頭印章哪裡買？"
+msgstr "Where to buy a wooden name stamp?"
+
+msgid ""
+"學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 "
+"分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存摺分開保管。"
+msgstr ""
+"Any stationery store near campus can make one. Tell the owner you need a "
+"wooden name stamp and provide your full English name. Cost: approx. "
+"NT$50–100, wait about 20 minutes. Have it made in advance and bring it on "
+"account-opening day. Your stamp equals your signature — keep it separate "
+"from your passbook."
+
+msgid "已領有居留證（ARC）者："
+msgstr "If you already have an ARC:"
+
+msgid "居留證號即為統一證號，無須另行申請，直接帶 ARC 正本開戶即可。"
+msgstr ""
+"Your ARC number is your Unified ID — no separate application needed. Just "
+"bring your original ARC to open an account."
+
+msgid "尚未取得居留證者（部分港澳生）："
+msgstr "If you don't have an ARC yet (some HK/Macau students):"
+
+msgid ""
+"需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
+msgstr ""
+"You must apply for a 'Unified ID Registration Form' at the local Immigration"
+" Service Station, bringing your original passport and a photocopy (no photo "
+"required). This number is permanent for life; once you receive your ARC, the"
+" ARC number will match your Unified ID."
+
+msgid "建議選擇有 VISA 功能的 Debit Card（扣帳卡）："
+msgstr "We recommend choosing a Debit Card with VISA functionality:"
+
+msgid ""
+"可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 兩種組合，可按需求選擇。請注意部分台灣商家不接受 "
+"VISA Debit，付款前請確認。"
+msgstr ""
+"Use it at ATMs and also pay directly in-store or online. The post office "
+"offers two combinations: VISA + EasyCard or VISA + iPASS — choose based on "
+"your needs. Note that some Taiwanese merchants do not accept VISA Debit; "
+"confirm before paying."
+
+msgid "建議先辦好 SIM 卡再去開戶："
+msgstr "Get your SIM card before opening a bank account:"
+
+msgid "開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。"
+msgstr ""
+"Activating online banking and a Visa card requires a Taiwan mobile number to"
+" receive OTPs. Having a local number means you can complete everything in "
+"one visit."
+
+msgid "注意營業時間 + 預留足夠時間："
+msgstr "Check business hours and allow enough time:"
+
+msgid "一般銀行週一至週五 09:00–15:30，郵局多至 17:00。外籍生開戶流程通常需 1 小時以上，請勿太晚抵達，以免被請回。"
+msgstr ""
+"Regular banks are open Mon–Fri 09:00–15:30; most post offices until 17:00. "
+"Account opening for foreign students usually takes over 1 hour — don't "
+"arrive too late or you may be turned away."
+
+msgid "台灣日期格式：先寫月份、再寫日子"
+msgstr "Taiwan date format: month first, then day"
+
+msgid " — 2 月 1 日 = 2025/2/1（與部分地區習慣相反），簽文件時請注意。"
+msgstr ""
+" — February 1 = 2025/2/1 (opposite to some regions' conventions). Be careful"
+" when signing documents."
+
+msgid "建議前往學校附近郵局："
+msgstr "We recommend the post office near campus:"
+
+msgid "大學周邊郵局對僑外生開戶經驗豐富，審核較快，手續更熟練。"
+msgstr ""
+"Post offices near universities have extensive experience helping "
+"international students open accounts — reviews are faster and procedures are"
+" smoother."
+
+msgid "ARC 到期後記得更新帳戶資料："
+msgstr "Remember to update your account details when your ARC expires:"
+
+msgid "ARC 換新後需至銀行更新證件資料，避免帳戶被凍結。"
+msgstr ""
+"After renewing your ARC, visit the bank to update your ID documents to "
+"prevent your account from being frozen."
+
+msgid "重要警示"
+msgstr "Important Warnings"
+
+msgid "絕對不要將帳戶借給他人："
+msgstr "Never lend your account to others:"
+
+msgid "依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。"
+msgstr ""
+"Under Taiwan law, lending your passbook, ATM card, or online banking "
+"password is illegal. At minimum you may be listed as a fraud suspect; at "
+"worst you face criminal liability. If your account is compromised or "
+"passbook lost, notify the bank immediately."
+
+msgid "不要短期內在多家銀行開戶："
+msgstr "Do not open accounts at multiple banks in a short period:"
+
+msgid "台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。"
+msgstr ""
+"Every time you open an account in Taiwan, the bank runs a credit inquiry. "
+"Too many inquiries in a short time may prompt the bank to call you or even "
+"reject your application (to prevent ghost accounts). Start with 1–2 banks."
+
+msgid "外籍生・僑生必辦"
+msgstr "Required for international & overseas students"
+
+msgid "僑生、外籍生（僑外生）取得居留證明文件來臺就學，自合於投保資格之日起，依法應參加全民健康保險。"
+msgstr ""
+"Overseas Chinese students and international students (overseas/foreign "
+"students) who obtain residency documents to study in Taiwan are legally "
+"required to enroll in National Health Insurance from the date they become "
+"eligible."
+
+msgid "新生第一學期保險（未達健保資格前）"
+msgstr "First-semester insurance for new students (before NHI eligibility)"
+
+msgid "重要："
+msgstr "Important:"
+
+msgid "剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保險："
+msgstr ""
+"Newly arrived overseas Chinese students have not yet met the '6 months of "
+"residence in Taiwan' requirement for NHI enrollment, and must first join one"
+" of the following insurance plans:"
+
+msgid "僑保（海外華人保險）"
+msgstr "OCAC Insurance (Overseas Chinese Insurance)"
+
+msgid "適用對象：首次入台的大一僑生新生（只能加保一次）"
+msgstr ""
+"Eligible: First-year overseas Chinese students arriving in Taiwan for the "
+"first time (can only enroll once)"
+
+msgid "保費：自費 NT$600（僑委會補助 NT$600，合計 NT$1,200）"
+msgstr "Premium: NT$600 self-pay (OCAC subsidizes NT$600, total NT$1,200)"
+
+msgid "保障期間：6 個月（一學期）"
+msgstr "Coverage period: 6 months (one semester)"
+
+msgid "由國際事務處協助辦理"
+msgstr "Handled with assistance from the Office of International Affairs"
+
+msgid "國泰人壽保險"
+msgstr "Cathay Life Insurance"
+
+msgid "適用對象：第二學期起或不符合僑保資格者"
+msgstr ""
+"Eligible: From the second semester onwards, or those not qualifying for OCAC"
+" Insurance"
+
+msgid "保費：NT$3,000 / 學期（最長六個月）"
+msgstr "Premium: NT$3,000 / semester (up to six months)"
+
+msgid "由國際事務處協助加保"
+msgstr "Enrollment assisted by the Office of International Affairs"
+
+msgid "理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影本、郵局存簿影本及個資同意書"
+msgstr ""
+"Claims: Complete a claim form at the OIA, and bring medical receipts, "
+"diagnosis certificate, ARC copy, passport copy, post office passbook copy, "
+"and personal data consent form"
+
+msgid "全民健保投保規定"
+msgstr "NHI Enrollment Rules"
+
+msgid "項目"
+msgstr "Item"
+
+msgid "僑外生就學期間"
+msgstr "During studies (overseas/foreign students)"
+
+msgid "僑外生經許可工作期間"
+msgstr "During permitted employment (overseas/foreign students)"
+
+msgid "投保資格"
+msgstr "Eligibility"
+
+msgid "自在臺居留滿 6 個月之日投保"
+msgstr "Enroll from the date of completing 6 months of residence in Taiwan"
+
+msgid "自受僱當日投保（無等待期）"
+msgstr "Enroll from the date of employment (no waiting period)"
+
+msgid "投保身分"
+msgstr "Insured category"
+
+msgid "第 6 類第 2 目被保險人"
+msgstr "Category 6, subcategory 2 insured"
+
+msgid "第 1 類被保險人（受僱者）"
+msgstr "Category 1 insured (employee)"
+
+msgid "投保方式"
+msgstr "Enrollment method"
+
+msgid "以就讀學校為投保單位辦理"
+msgstr "Enrolled through the attending school as the insuring unit"
+
+msgid "以工作單位為投保單位辦理"
+msgstr "Enrolled through the employer as the insuring unit"
+
+msgid "※ 短期性工作未逾 3 個月者，可選擇以原投保資格繼續投保"
+msgstr ""
+"※ Those working short-term (under 3 months) may choose to continue "
+"enrollment under their original insured category"
+
+msgid "「在臺居留滿 6 個月」認定方式"
+msgstr "How to count '6 months of residence in Taiwan'"
+
+msgid ""
+"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 "
+"30 天，則從重新抵台當天起算，6 個月重新計算。"
+msgstr ""
+"This means continuously residing in Taiwan for 6 months, or having departed "
+"once for no more than 30 days, with the actual residence period minus "
+"departure days totaling 6 months. If you depart more than once, or depart "
+"once for over 30 days, the 6-month count restarts from the day you return to"
+" Taiwan."
+
+msgid "計算範例："
+msgstr "Calculation example:"
+
+msgid "入境日：113/9/1 → 未曾出境 → 投保日：114/3/1"
+msgstr "Entry date: 113/9/1 → No departures → Enrollment date: 114/3/1"
+
+msgid "入境日：113/9/1 → 曾出境 1 次（114/1/1–1/5，共 4 天）→ 投保日：114/3/5"
+msgstr ""
+"Entry date: 113/9/1 → Departed once (114/1/1–1/5, 4 days total) → Enrollment"
+" date: 114/3/5"
+
+msgid "在臺參加健保注意事項"
+msgstr "Notes on NHI enrollment in Taiwan"
+
+msgid "僑外生在臺就學並符合投保資格期間，應以就讀學校為投保單位辦理投保。"
+msgstr ""
+"Overseas/foreign students studying in Taiwan who meet the eligibility "
+"requirements must enroll in NHI through their school as the insuring unit."
+
+msgid "僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 日內，向健保署辦理投保。"
+msgstr ""
+"When overseas/foreign students are permitted to work in Taiwan and are "
+"employed, the insuring unit (employer) must complete NHI enrollment within 3"
+" days of the insured becoming eligible."
+
+msgid "於受僱單位投保時，應先至學校辦理轉出，避免重複投保。"
+msgstr ""
+"When enrolling through an employer, first arrange a transfer-out from the "
+"school to avoid duplicate enrollment."
+
+msgid "與工作單位終止僱傭關係後，應另以適法身分投保：若已受新單位聘僱，於新單位投保；未受聘僱期間則應回學校辦理投保。"
+msgstr ""
+"After ending employment, enroll under another eligible status: if hired by a"
+" new employer, enroll through the new employer; during periods without "
+"employment, return to school enrollment."
+
+msgid "符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，應以眷屬身分依附其投保單位加保。"
+msgstr ""
+"During eligible but unemployed periods, if a spouse, parent, or child in "
+"Taiwan is already an NHI insured, you should enroll as a dependent under "
+"their insuring unit."
+
+msgid "在學證明（學生證或在學證明書）"
+msgstr "Proof of enrollment (student ID or certificate of enrollment)"
+
+msgid "台灣銀行帳戶（保費扣繳用）"
+msgstr "Taiwan bank account (for premium deduction)"
+
+msgid "建議"
+msgstr "Recommended"
+
+msgid "1 吋照片（部分單位需要）"
+msgstr "1-inch photo (required by some offices)"
+
+msgid "清寒僑生健保費補助："
+msgstr "NHI premium subsidy for low-income overseas Chinese students:"
+
+msgid ""
+"符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 "
+"NT$826。詳情請洽國際事務處。"
+msgstr ""
+"Those who qualify as low-income and enroll in NHI may apply to the OIA for a"
+" monthly subsidy of NT$413 (requires proof of low-income status; granted "
+"after review). Without the subsidy, the monthly premium is approx. NT$826. "
+"Contact the OIA for details."
+
+msgid "相關文件下載"
+msgstr "Download related documents"
+
+msgid "在臺僑生、外籍生參加全民健康保險須知（PDF）↓"
+msgstr "NHI Enrollment Guide for Overseas/Foreign Students in Taiwan (PDF) ↓"
+
+msgid "小病先看診所："
+msgstr "See a clinic for minor illnesses first:"
+
+msgid ""
+"台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
+msgstr ""
+"Taiwan uses a tiered healthcare system. For common illnesses, visit a clinic"
+" first (family medicine or internal medicine) — the co-pay is only about "
+"NT$150. Going directly to a hospital emergency room or outpatient department"
+" requires a higher co-pay (NT$240–480)."
+
+msgid "下載「健保快易通」App："
+msgstr "Download the 'NHI Express' App:"
+
+msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
+msgstr ""
+"Check your NHI status, medical records, and display a digital health "
+"insurance card — no need to worry about forgetting your physical card."
+
+msgid "暑假返鄉超過 2 個月時："
+msgstr "If returning home for more than 2 months during summer break:"
+
+msgid "建議辦理「出國停保」避免繼續扣繳保費；回台後記得立即「復保」恢復保障。"
+msgstr ""
+"Apply for 'departure suspension' to avoid continued premium deductions; "
+"remember to 'reinstate coverage' immediately upon returning to Taiwan."
+
+msgid "全民健康保險署官網 ↗"
+msgstr "NHI Administration Official Website ↗"
+
+msgid "非本國籍人士加保說明 ↗"
+msgstr "NHI Enrollment Guide for Non-ROC Nationals ↗"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Enter your question, and the system will organize suggestions based on your "
