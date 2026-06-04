@@ -143,6 +143,24 @@ class Task(models.Model):
         blank=True,
         verbose_name="適用入學狀態"
     )
+
+    # ── 進階個人化條件 (對應 Module 1 註冊問答) ──
+    require_taiwan_id = models.BooleanField(
+        null=True, blank=True,
+        verbose_name="是否限有台灣身份證者",
+        help_text="勾選「是」→僅有身分證者可見；勾選「否」→僅無身分證者可見；留空→不限制"
+    )
+    require_deferred = models.BooleanField(
+        null=True, blank=True,
+        verbose_name="是否限延遲入學者",
+        help_text="勾選「是」→僅延遲入學者可見；勾選「否」→僅非延遲入學者可見；留空→不限制"
+    )
+    require_indo_prep = models.BooleanField(
+        null=True, blank=True,
+        verbose_name="是否限上印輔班者",
+        help_text="勾選「是」→僅上印輔班者可見；勾選「否」→僅未上印輔班者可見；留空→不限制"
+    )
+
     official_url = models.URLField(
         blank=True,
         verbose_name="官方資源連結"
