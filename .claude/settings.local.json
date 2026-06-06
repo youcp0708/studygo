@@ -61,12 +61,9 @@
       "Bash(pip install *)",
       "Bash(python manage.py makemessages -l en)",
       "Bash(python manage.py compilemessages -l en)",
-<<<<<<< HEAD
-      "Bash(python manage.py show_urls)"
-=======
+      "Bash(python manage.py show_urls)",
       "Bash(python add_bank_translations.py)",
       "Bash(python add_nhi_translations.py)"
->>>>>>> new/07
     ]
   }
 }
