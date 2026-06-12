@@ -111,6 +111,9 @@ class TaskAdmin(admin.ModelAdmin):
         'display_nationality',
         'university',
         'admission_status',
+        'require_taiwan_id',
+        'require_deferred',
+        'require_indo_prep',
         'deadline_type',
         'deadline_days',
         'is_required',
@@ -137,6 +140,14 @@ class TaskAdmin(admin.ModelAdmin):
                 'is_required',
                 'order',
             )
+        }),
+        ('進階個人化條件 (對應註冊問答)', {
+            'fields': (
+                'require_taiwan_id',
+                'require_deferred',
+                'require_indo_prep',
+            ),
+            'description': '這些條件對應模塊一註冊時的問答。留空=不限制，是=僅回答「是」的學生可見，否=僅回答「否」的學生可見。'
         }),
         ('期限設定', {
             'fields': (
@@ -227,6 +238,9 @@ class TaskAdmin(admin.ModelAdmin):
         'nationality',
         'university',
         'admission_status',
+        'require_taiwan_id',
+        'require_deferred',
+        'require_indo_prep',
         'deadline_type',
         'is_required',
     )

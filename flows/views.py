@@ -139,6 +139,13 @@ def init_student_tasks_view(request):
             continue
         if task.admission_status and task.admission_status != profile.admission_status:
             continue
+        # ── 進階個人化條件（對應 Module 1 問答）──
+        if task.require_taiwan_id is not None and task.require_taiwan_id != profile.has_taiwan_id:
+            continue
+        if task.require_deferred is not None and task.require_deferred != profile.is_deferred:
+            continue
+        if task.require_indo_prep is not None and task.require_indo_prep != profile.has_indo_prep:
+            continue
         eligible_tasks.append(task)
 
     # ── 將任務去重，同 title 只取最精準（分數最高）的一筆 ──
@@ -149,6 +156,10 @@ def init_student_tasks_view(request):
         if t.region: score += 4
         if t.identity_type: score += 2
         if t.admission_status: score += 1
+        # 進階個人化條件具有高精確度，給予更大的權重
+        if t.require_taiwan_id is not None: score += 32
+        if t.require_deferred is not None: score += 32
+        if t.require_indo_prep is not None: score += 32
         return score
 
     best_tasks = {}
