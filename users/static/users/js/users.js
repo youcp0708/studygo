@@ -402,11 +402,7 @@ function startProfileQuiz(e) {
     expected_arrival: arrival,
   };
 
-  // 決定題目序列：Q1、Q2 必出；Q3 僅限印尼
   _quizSequence = ['quizQ1', 'quizQ2'];
-  if (nationality === 'Indonesia') {
-    _quizSequence.push('quizQ3');
-  }
 
   _quizStep = 0;
   _quizAnswers = {};
@@ -509,7 +505,6 @@ async function submitProfileWithQuiz() {
     ..._quizFormData,
     has_taiwan_id: _quizAnswers.has_taiwan_id ?? null,
     is_deferred:   _quizAnswers.is_deferred ?? null,
-    has_indo_prep: _quizAnswers.has_indo_prep ?? null,
   };
 
   const closeOverlay = () => {
