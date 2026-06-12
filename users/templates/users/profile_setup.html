@@ -170,7 +170,7 @@
 
             <div class="field">
               <label>{% trans "系所" %}</label>
-              <select name="department" id="setupDept" onchange="updatePreview()">
+              <select name="department" id="setupDept" onchange="updatePreview()" required>
                 <option value="">{% trans "請選擇系所" %}</option>
                 <optgroup label="{% trans '文學院' %}">
                   <option value="文學院學士班">文學院學士班</option>
