@@ -44,74 +44,118 @@
 
   {# ── NavBar ── #}
   <nav class="navbar site-header">
-    <div class="brand">
+    <a href="{% url 'dashboard' %}" class="brand" style="text-decoration:none;">
       <img src="{% static 'image/taiwan_globe.png' %}?v={% now 'U' %}" alt="StudyGo Taiwan Logo" class="brand-icon">
       <div class="brand-text">
-        <h1>StudyGo Taiwan</h1>
-        <p>{% trans "來臺就學小幫手" %}</p>
+        <h1>StudyGo <span style="font-weight:400;font-size:13px;color:var(--muted);">Taiwan</span></h1>
       </div>
+    </a>
+
+    {# ── 中間導覽列 ── #}
+    {% block site_nav %}
+    <div class="site-nav">
+      <a href="{% url 'dashboard' %}" class="site-nav-link">{% trans "首頁" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="{% url 'dashboard' %}#sec-flow" class="site-nav-link">{% trans "留學流程" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="{% url 'my_flows' %}" class="site-nav-link">{% trans "任務清單" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="{% url 'guide_index' %}" class="site-nav-link">{% trans "資訊中心" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="{% url 'dashboard' %}#sec-alumni" class="site-nav-link">{% trans "學長姐分享" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="{% url 'dashboard' %}#sec-faq" class="site-nav-link">{% trans "常見問題" %}</a>
     </div>
+    {% endblock site_nav %}
 
     <div class="nav-right">
-
-
 
       {% if user.is_authenticated and user.student_profile %}
       <div class="search-wrap" id="searchWrap">
         <div class="search-box" id="searchBox">
+          <button type="button" class="search-btn" id="searchBtn" aria-label="{% trans '搜尋' %}">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8.5" cy="8.5" r="5.5"/>
+              <line x1="13" y1="13" x2="18" y2="18"/>
+            </svg>
+          </button>
           <input type="text" class="search-input" id="searchInput" placeholder="{% trans '搜尋指南...' %}"
             autocomplete="off">
-          <button type="button" class="search-btn" id="searchBtn">🔍</button>
         </div>
         <div class="search-dropdown" id="searchDropdown"></div>
       </div>
       {% endif %}
 
-
-      <form action="{% url 'set_language' %}" method="post" class="language-form">
-        {% csrf_token %}
-        {% get_current_language as CURRENT_LANGUAGE %}
-        <input name="next" type="hidden" value="{{ request.get_full_path }}">
-
-        <select name="language" class="language-select" onchange="this.form.submit()">
-          <option value="zh-hant" {% if CURRENT_LANGUAGE == 'zh-hant' %}selected{% endif %}>繁體中文</option>
-          <option value="en" {% if CURRENT_LANGUAGE == 'en' %}selected{% endif %}>English</option>
-          <option value="vi" {% if CURRENT_LANGUAGE == 'vi' %}selected{% endif %}>Tiếng Việt</option>
-          <option value="my" {% if CURRENT_LANGUAGE == 'my' %}selected{% endif %}>မြန်မာဘာသာ</option>
-          <option value="id" {% if CURRENT_LANGUAGE == 'id' %}selected{% endif %}>Bahasa Indonesia</option>
-          <option value="ms" {% if CURRENT_LANGUAGE == 'ms' %}selected{% endif %}>Bahasa Melayu</option>
-          <option value="th" {% if CURRENT_LANGUAGE == 'th' %}selected{% endif %}>ไทย</option>
-          <option value="ja" {% if CURRENT_LANGUAGE == 'ja' %}selected{% endif %}>日本語</option>
-          <option value="ko" {% if CURRENT_LANGUAGE == 'ko' %}selected{% endif %}>한국어</option>
-        </select>
-      </form>
-
-      {% if user.is_authenticated %}
-      <div style="position:relative; display:inline-block; text-align:left; margin: 0 12px;">
-        <button id="reminderBtn"
-          style="position:relative; cursor:pointer; background:white; border:1px solid var(--border); color:var(--text); padding:8px; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(0,0,0,.05);"
-          onclick="toggleReminderDropdown()">
-          🔔 <span id="reminderBadge"
-            style="display:none; position:absolute; top:-4px; right:-4px; background:red; color:white; border-radius:50%; width:18px; height:18px; font-size:11px; line-height:18px; text-align:center; font-weight:bold;">0</span>
+      {# ── Language Switcher ── #}
+      {% get_current_language as CURRENT_LANGUAGE %}
+      <div class="lang-wrap" id="langWrap">
+        <button type="button" class="lang-btn" id="langBtn" onclick="toggleLangMenu()" aria-label="Change Language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="lang-label">
+            {% if CURRENT_LANGUAGE == 'zh-hant' %}繁中
+            {% elif CURRENT_LANGUAGE == 'en' %}EN
+            {% elif CURRENT_LANGUAGE == 'vi' %}VI
+            {% elif CURRENT_LANGUAGE == 'id' %}ID
+            {% elif CURRENT_LANGUAGE == 'ms' %}MS
+            {% elif CURRENT_LANGUAGE == 'th' %}TH
+            {% elif CURRENT_LANGUAGE == 'ja' %}日本
+            {% elif CURRENT_LANGUAGE == 'ko' %}한국
+            {% elif CURRENT_LANGUAGE == 'my' %}MM
+            {% else %}{{ CURRENT_LANGUAGE }}
+            {% endif %}
+          </span>
         </button>
-        <div id="reminderDropdown" data-no-reminders="{% trans '沒有未讀通知 🎉' %}" data-mark-read="{% trans '標記為已讀' %}"
-          style="display:none; position:absolute; top:100%; right:-50px; width:320px; background:white; border:1px solid var(--border, #eee); border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.1); z-index:1000; margin-top:12px; max-height:400px; overflow-y:auto; text-align:left;">
-          <div
-            style="padding:12px 16px; border-bottom:1px solid var(--border, #eee); font-weight:bold; color:var(--text, #333);">
-            🔔 {% trans "通知" %}</div>
-          <div id="reminderList">
-            <div style="padding:16px; text-align:center; color:var(--muted, #888);">{% trans "載入中..." %}</div>
+        <div class="lang-menu" id="langMenu">
+          <form action="{% url 'set_language' %}" method="post" id="langForm" style="display:none;">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.get_full_path }}">
+            <input type="hidden" name="language" id="langInput" value="">
+          </form>
+          <div class="lang-grid">
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'zh-hant' %}active{% endif %}" onclick="selectLang('zh-hant')">🇹🇼 繁體中文</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'en' %}active{% endif %}" onclick="selectLang('en')">🇬🇧 English</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'vi' %}active{% endif %}" onclick="selectLang('vi')">🇻🇳 Tiếng Việt</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'id' %}active{% endif %}" onclick="selectLang('id')">🇮🇩 Indonesia</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ms' %}active{% endif %}" onclick="selectLang('ms')">🇲🇾 Melayu</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'th' %}active{% endif %}" onclick="selectLang('th')">🇹🇭 ภาษาไทย</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ja' %}active{% endif %}" onclick="selectLang('ja')">🇯🇵 日本語</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ko' %}active{% endif %}" onclick="selectLang('ko')">🇰🇷 한국어</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'my' %}active{% endif %}" onclick="selectLang('my')">🇲🇲 မြန်မာ</button>
           </div>
         </div>
       </div>
 
-      <a href="{% url 'edit_profile' %}" class="btn-outline-sm">
+      {% block nav_cta %}
+      {% if user.is_authenticated %}
+      <div style="position:relative;display:inline-block;text-align:left;">
+        <button id="reminderBtn"
+          style="position:relative;cursor:pointer;background:white;border:1px solid var(--border);color:var(--text);padding:8px;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05);"
+          onclick="toggleReminderDropdown()">
+          🔔<span id="reminderBadge"
+            style="display:none;position:absolute;top:-4px;right:-4px;background:red;color:white;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
+        </button>
+        <div id="reminderDropdown" data-no-reminders="{% trans '沒有未讀通知 🎉' %}" data-mark-read="{% trans '標記為已讀' %}"
+          style="display:none;position:absolute;top:100%;right:-50px;width:320px;background:white;border:1px solid var(--border,#eee);border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1);z-index:1000;margin-top:12px;max-height:400px;overflow-y:auto;text-align:left;">
+          <div style="padding:12px 16px;border-bottom:1px solid var(--border,#eee);font-weight:bold;color:var(--text,#333);">
+            🔔 {% trans "通知" %}</div>
+          <div id="reminderList">
+            <div style="padding:16px;text-align:center;color:var(--muted,#888);">{% trans "載入中..." %}</div>
+          </div>
+        </div>
+      </div>
+      <a href="{% url 'edit_profile' %}" class="nav-user-btn">
+        <span class="nav-user-avatar">{% if user.name %}{{ user.name|first|upper }}{% else %}U{% endif %}</span>
         {% if user.name %}{{ user.name }}{% else %}{{ user.email }}{% endif %}
       </a>
-      <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;">
-        {% trans "登出" %}
-      </a>
+      <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;">{% trans "登出" %}</a>
+      {% else %}
+      <a href="{% url 'login_page' %}" class="nav-start-btn">{% trans "開始流程" %} →</a>
       {% endif %}
+      {% endblock nav_cta %}
     </div>
   </nav>
 
@@ -487,27 +531,129 @@
             if (q) window.location.href = '/guides/search/?q=' + encodeURIComponent(q);
           }
         } else if (e.key === 'Escape') {
-          closeDropdown(); input.blur();
+          closeDropdown();
+          input.blur();
+          collapseSearch();
         }
       });
 
       document.addEventListener('click', function (e) {
-        if (!wrap.contains(e.target)) closeDropdown();
+        if (!wrap.contains(e.target)) {
+          closeDropdown();
+          if (!input.value.trim()) collapseSearch();
+        }
       });
+
+      function expandSearch() {
+        box.classList.add('expanded');
+        setTimeout(function () { input.focus(); }, 50);
+      }
+      function collapseSearch() {
+        if (!input.value.trim()) box.classList.remove('expanded');
+      }
 
       var searchBtn = document.getElementById('searchBtn');
       if (searchBtn) {
-        searchBtn.addEventListener('click', function () {
-          var q = input.value.trim();
-          if (q) window.location.href = '/guides/search/?q=' + encodeURIComponent(q);
-          else input.focus();
+        searchBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          if (!box.classList.contains('expanded')) {
+            expandSearch();
+          } else {
+            var q = input.value.trim();
+            if (q) window.location.href = '/guides/search/?q=' + encodeURIComponent(q);
+            else collapseSearch();
+          }
         });
       }
 
     })();
   </script>
 
+  <script>
+    function toggleLangMenu() {
+      var menu = document.getElementById('langMenu');
+      var btn  = document.getElementById('langBtn');
+      var open = menu.classList.toggle('open');
+      btn.classList.toggle('active', open);
+      if (open) {
+        setTimeout(function () {
+          document.addEventListener('click', _closeLangOutside);
+        }, 0);
+      }
+    }
+    function _closeLangOutside(e) {
+      var wrap = document.getElementById('langWrap');
+      if (wrap && !wrap.contains(e.target)) {
+        document.getElementById('langMenu').classList.remove('open');
+        document.getElementById('langBtn').classList.remove('active');
+        document.removeEventListener('click', _closeLangOutside);
+      }
+    }
+    function selectLang(code) {
+      document.getElementById('langInput').value = code;
+      document.getElementById('langForm').submit();
+    }
+  </script>
+
   {% block extra_js %}{% endblock %}
+
+  {# ── Footer ── #}
+  <footer class="site-footer">
+    <div class="sf-top">
+      <p class="sf-tagline">{% trans "專為僑外籍生打造的來台留學流程指南平台，協助您一步步完成留學準備" %}</p>
+    </div>
+    <div class="sf-cols">
+      <div class="sf-col">
+        <div class="sf-col-title">{% trans "留學流程" %}</div>
+        <a href="{% url 'dashboard' %}#sec-flow" class="sf-link">{% trans "申請前準備" %}</a>
+        <a href="{% url 'dashboard' %}#sec-flow" class="sf-link">{% trans "入學申請" %}</a>
+        <a href="{% url 'dashboard' %}#sec-flow" class="sf-link">{% trans "抵台前準備" %}</a>
+        <a href="{% url 'dashboard' %}#sec-flow" class="sf-link">{% trans "抵達後事項" %}</a>
+      </div>
+      <div class="sf-col">
+        <div class="sf-col-title">{% trans "資訊中心" %}</div>
+        <a href="{% url 'guide_arc_foreign' %}" class="sf-link">{% trans "簽證指南" %}</a>
+        <a href="{% url 'guide_housing_ncu' %}" class="sf-link">{% trans "住宿資訊" %}</a>
+        <a href="{% url 'guide_nhi' %}" class="sf-link">{% trans "健保說明" %}</a>
+        <a href="{% url 'guide_index' %}" class="sf-link">{% trans "生活指南" %}</a>
+      </div>
+      <div class="sf-col">
+        <div class="sf-col-title">{% trans "關於 StudyGo" %}</div>
+        <a href="{% url 'dashboard' %}#sec-faq" class="sf-link">{% trans "使用說明" %}</a>
+        <a href="{% url 'dashboard' %}#sec-faq" class="sf-link">{% trans "常見問題" %}</a>
+        <a href="#" class="sf-link">{% trans "版本更新" %}</a>
+        <a href="#" class="sf-link">{% trans "意見回饋" %}</a>
+      </div>
+      <div class="sf-col">
+        <div class="sf-col-title">{% trans "電子報訂閱" %}</div>
+        <p class="sf-sub-desc">{% trans "獲取最新留學資訊與活動通知" %}</p>
+        <div class="sf-email-wrap">
+          <input type="email" class="sf-email-input" placeholder="{% trans '您的 Email' %}">
+          <button class="sf-email-btn">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="sf-bottom">
+      <div class="sf-bottom-left">
+        <div class="sf-bottom-logo">
+          <img src="{% static 'image/taiwan_globe.png' %}" alt="StudyGo" style="width:32px;height:32px;border-radius:8px;">
+          <span>StudyGo Taiwan</span>
+        </div>
+        <div class="sf-contact">
+          <span>{% trans "聯絡資訊" %}</span>
+          <span style="font-weight:700;">{% trans "如有任何使用問題或建議，歡迎隨時與我們聯繫" %}</span>
+          <span>✉ hello@studygo.tw</span>
+        </div>
+      </div>
+      <div class="sf-bottom-right">
+        <span class="sf-social">📷</span>
+        <span class="sf-social">📘</span>
+        <span class="sf-social">💬</span>
+        <span class="sf-social">✉</span>
+        <div style="margin-top:8px;font-size:12px;color:#888;">© StudyGo Taiwan 2026. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

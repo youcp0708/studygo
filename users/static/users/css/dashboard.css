@@ -1,0 +1,289 @@
+/* dashboard.css — new landing page styles */
+
+/* ── Shared Layout ── */
+.db-wrap { width: min(1200px, 94%); margin: 0 auto; }
+.db-section { padding: 72px 0; }
+.db-bg-gray { background: #f9f9f9; }
+
+/* navbar additions moved to users.css */
+
+/* ── Hero ── */
+.db-hero {
+  background: linear-gradient(160deg, #fff8f6 0%, #fff 60%);
+  padding: 72px 0 0; position: relative; overflow: hidden;
+}
+.db-hero-inner {
+  width: min(1200px, 94%); margin: 0 auto; padding-bottom: 40px;
+  position: relative; z-index: 1;
+}
+.db-hero h1 {
+  font-size: 52px; font-weight: 900; line-height: 1.15;
+  color: #1a1a1a; margin: 0 0 16px;
+}
+.db-brand { color: var(--primary); }
+.db-hero p { font-size: 16px; color: var(--muted); line-height: 1.7; margin: 0 0 28px; }
+.db-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.db-btn-dark {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #2d2d2d; color: #fff;
+  padding: 12px 22px; border-radius: 99px; font-size: 14px; font-weight: 700;
+  text-decoration: none; transition: background .15s;
+}
+.db-btn-dark:hover { background: #444; }
+.db-btn-outline-dark {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: transparent; color: #2d2d2d;
+  border: 2px solid #d0d0d0; padding: 10px 22px;
+  border-radius: 99px; font-size: 14px; font-weight: 700;
+  text-decoration: none; transition: border-color .15s, color .15s;
+}
+.db-btn-outline-dark:hover { border-color: var(--primary); color: var(--primary); }
+.db-hero-watermark {
+  position: absolute; right: 4%; top: 50%; transform: translateY(-50%);
+  font-size: 120px; font-weight: 900; color: rgba(220, 80, 60, .07);
+  letter-spacing: -6px; pointer-events: none; user-select: none;
+  line-height: 1;
+}
+
+/* ── Stats row ── */
+.db-stats-row {
+  width: min(1200px, 94%); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  padding-bottom: 48px;
+}
+.db-stat-card {
+  background: #fff; border: 1.5px solid var(--line);
+  border-radius: 20px; padding: 20px 22px;
+  display: flex; gap: 16px; align-items: flex-start;
+  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+}
+.db-stat-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.db-stat-body { flex: 1; min-width: 0; }
+.db-stat-label { font-size: 12px; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+.db-stat-val { font-size: 22px; font-weight: 900; color: var(--dark); line-height: 1.2; }
+.db-stat-num { font-size: 28px; font-weight: 900; line-height: 1; }
+.db-stat-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.db-stat-bar {
+  height: 6px; background: var(--bg); border-radius: 99px;
+  margin-top: 10px; overflow: hidden;
+}
+.db-stat-bar-fill { height: 100%; border-radius: 99px; background: var(--primary); transition: width .6s ease; }
+.db-bar-success { background: var(--success); width: 50%; }
+.db-bar-success.db-bar-full { width: 100%; }
+.db-stat-locked { align-items: center; justify-content: center; opacity: .7; }
+.db-lock-msg { font-size: 13px; color: var(--muted); text-align: center; }
+.db-lock-msg a { color: var(--primary); text-decoration: none; font-weight: 700; }
+.db-stat-unauth { flex-direction: column; gap: 0; }
+.db-stat-unauth .db-stat-icon { margin-bottom: 10px; }
+.db-unauth-tip {
+  margin-top: 10px; font-size: 12px; color: var(--muted);
+  background: rgba(255,255,255,.95); border-radius: 8px;
+  padding: 6px 10px; border: 1px solid var(--line);
+}
+.db-unauth-tip a { color: var(--primary); font-weight: 800; text-decoration: none; }
+.db-unauth-tip a:hover { text-decoration: underline; }
+
+/* ── Section typography ── */
+.db-kicker {
+  display: inline-block; background: #fde8e8; color: #e05252;
+  font-size: 12px; font-weight: 800; letter-spacing: .5px;
+  padding: 4px 14px; border-radius: 99px; margin-bottom: 12px;
+}
+.db-sec-h2 { font-size: 36px; font-weight: 900; color: #1a1a1a; line-height: 1.2; margin: 0 0 32px; }
+.db-accent { color: var(--primary); }
+.db-sec-hd2 { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 32px; }
+.db-sec-hd2 .db-sec-h2 { margin-bottom: 0; }
+.db-sec-sub { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 280px; text-align: right; margin: 0; }
+
+/* ── 留學流程 Stepper ── */
+.db-stepper {
+  display: flex; align-items: flex-start; gap: 0;
+  margin-bottom: 40px; flex-wrap: nowrap;
+}
+.db-step {
+  flex: 1; text-align: center; position: relative;
+}
+.db-step-num {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: #e8e8e8; color: #888;
+  font-size: 16px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 12px; transition: all .3s;
+}
+.db-step.db-done .db-step-num { background: var(--primary-soft); color: var(--primary); }
+.db-step.db-active .db-step-num { background: var(--primary); color: #fff; box-shadow: 0 4px 16px rgba(var(--primary-rgb, 87,152,132),.35); }
+.db-step-gray { background: #e8e8e8 !important; color: #aaa !important; }
+.db-step-label { font-size: 14px; font-weight: 800; color: #1a1a1a; margin-bottom: 4px; }
+.db-step.db-active .db-step-label { color: var(--primary); }
+.db-step-sub { font-size: 12px; color: var(--muted); line-height: 1.5; padding: 0 6px; }
+.db-step-line {
+  flex: 0 0 60px; height: 2px; background: #e0e0e0;
+  margin-top: 26px; transition: background .3s;
+}
+.db-step-line.db-line-done { background: var(--primary-soft); }
+.db-stepper-locked .db-step-num { background: #efefef; color: #bbb; }
+.db-stepper-locked .db-step-label { color: #aaa; }
+.db-locked-banner {
+  text-align: center; padding: 16px; background: #fff;
+  border: 1.5px dashed var(--line); border-radius: 14px;
+  font-size: 14px; color: var(--muted);
+}
+.db-locked-banner a { color: var(--primary); font-weight: 700; text-decoration: none; }
+
+/* ── 任務清單 Layout ── */
+.db-tasks-layout {
+  display: grid; grid-template-columns: 280px 1fr; gap: 24px;
+  align-items: start;
+}
+.db-profile-card {
+  background: #fff; border: 1.5px solid var(--line);
+  border-radius: 20px; padding: 28px 22px; text-align: center;
+}
+.db-prof-avatar {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--primary-soft); color: var(--primary-dark);
+  font-size: 28px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 12px;
+}
+.db-prof-name { font-size: 17px; font-weight: 900; color: var(--dark); }
+.db-prof-email { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+.db-prof-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 16px; }
+.db-tag {
+  font-size: 12px; font-weight: 700; padding: 3px 10px;
+  border-radius: 99px;
+}
+.db-tag.blue   { background: #dbeafe; color: #2563eb; }
+.db-tag.coral  { background: #fee2e2; color: #e05252; }
+.db-tag.green  { background: var(--primary-soft); color: var(--primary-dark); }
+.db-prof-progress { background: var(--bg); border-radius: 12px; padding: 12px; margin-bottom: 14px; }
+.db-prof-prog-row { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; }
+.db-prof-sub { font-size: 12px; color: var(--muted); margin-top: 6px; }
+.db-prof-counters {
+  display: flex; justify-content: center; gap: 24px; align-items: center;
+}
+.db-counter-val { font-size: 24px; font-weight: 900; color: var(--dark); }
+.db-counter-label { font-size: 12px; color: var(--muted); }
+.db-counter-divider { width: 1px; height: 36px; background: var(--line); }
+
+.db-task-panel {
+  background: #fff; border: 1.5px solid var(--line);
+  border-radius: 20px; padding: 24px;
+}
+.db-task-panel-hd {
+  font-size: 15px; font-weight: 800; color: var(--dark);
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1.5px solid var(--line);
+}
+.db-task-list { display: flex; flex-direction: column; gap: 10px; min-height: 120px; }
+.db-full-list-btn {
+  display: block; text-align: center; margin-top: 16px;
+  padding: 12px; border: 2px solid var(--line); border-radius: 12px;
+  font-size: 14px; font-weight: 700; color: var(--dark); text-decoration: none;
+  transition: border-color .15s, color .15s;
+}
+.db-full-list-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+.db-locked-section {
+  text-align: center; padding: 60px 20px;
+  background: #fff; border: 1.5px dashed var(--line); border-radius: 20px;
+}
+.db-locked-icon { font-size: 48px; margin-bottom: 12px; }
+.db-locked-section h3 { font-size: 20px; font-weight: 900; margin-bottom: 8px; }
+.db-locked-section p { font-size: 14px; color: var(--muted); }
+
+/* ── 資訊中心 Grid ── */
+.db-guide-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.db-guide-card {
+  background: #fff; border: 1.5px solid var(--line);
+  border-radius: 18px; padding: 24px 20px;
+  text-decoration: none; color: inherit;
+  transition: box-shadow .2s, transform .2s;
+}
+.db-guide-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.07); transform: translateY(-2px); }
+.db-guide-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; margin-bottom: 14px;
+}
+.db-guide-title { font-size: 16px; font-weight: 900; color: var(--dark); margin-bottom: 8px; }
+.db-guide-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* ── 學長姐分享 ── */
+.db-alumni-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.db-alumni-card {
+  background: #fff; border: 1.5px solid var(--line); border-radius: 20px;
+  padding: 22px 20px 40px; position: relative; overflow: hidden;
+  transition: box-shadow .2s, transform .2s;
+}
+.db-alumni-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.07); transform: translateY(-2px); }
+.db-alumni-top { display: flex; gap: 14px; margin-bottom: 12px; align-items: flex-start; }
+.db-alumni-av {
+  width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; font-weight: 900; color: #fff;
+}
+.db-alumni-name { font-size: 15px; font-weight: 900; color: var(--dark); margin-bottom: 2px; }
+.db-alumni-loc  { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+.db-alumni-uni  { font-size: 12px; color: var(--muted); }
+.db-alumni-prog { font-size: 12px; font-weight: 800; color: #e05252; margin-top: 2px; }
+.db-alumni-stars { font-size: 16px; color: #f59e0b; margin-bottom: 10px; }
+.db-alumni-q { font-size: 13px; color: var(--muted); line-height: 1.8; margin: 0; }
+.db-alumni-qm {
+  position: absolute; bottom: 8px; right: 16px;
+  font-size: 52px; color: #fde8e8; font-family: Georgia, serif;
+  line-height: 1; font-weight: 900; pointer-events: none; user-select: none;
+}
+
+/* ── 常見問題 ── */
+.db-faq-wrap { max-width: 800px; }
+.db-faq-list { display: flex; flex-direction: column; gap: 12px; }
+.db-faq-item {
+  background: #fff; border: 1.5px solid var(--line);
+  border-radius: 14px; overflow: hidden;
+}
+.db-faq-q {
+  padding: 16px 20px; font-size: 15px; font-weight: 700; color: var(--dark);
+  cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+  user-select: none;
+}
+.db-faq-q:hover { background: var(--bg); }
+.db-faq-arr { font-size: 18px; color: var(--muted); transition: transform .25s; flex-shrink: 0; margin-left: 12px; }
+.db-faq-item.open .db-faq-arr { transform: rotate(90deg); }
+.db-faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height .3s ease, padding .3s ease;
+  font-size: 14px; color: var(--muted); line-height: 1.8;
+  border-top: 0px solid var(--line); padding: 0 20px;
+}
+.db-faq-item.open .db-faq-a {
+  max-height: 300px; padding: 14px 20px 16px;
+  border-top: 1px solid var(--line);
+}
+
+/* footer styles moved to users.css */
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .site-nav { display: none; }
+  .db-hero h1 { font-size: 38px; }
+  .db-stats-row { grid-template-columns: 1fr; }
+  .db-tasks-layout { grid-template-columns: 1fr; }
+  .db-guide-grid  { grid-template-columns: repeat(2, 1fr); }
+  .db-alumni-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .db-hero h1 { font-size: 28px; }
+  .db-hero-watermark { display: none; }
+  .db-stepper { flex-wrap: wrap; }
+  .db-step-line { display: none; }
+  .db-guide-grid  { grid-template-columns: 1fr; }
+  .db-alumni-grid { grid-template-columns: 1fr; }
+  .db-sec-h2 { font-size: 26px; }
+}
