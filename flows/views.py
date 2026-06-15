@@ -140,12 +140,26 @@ def init_student_tasks_view(request):
         if task.admission_status and task.admission_status != profile.admission_status:
             continue
         # ── 進階個人化條件（對應 Module 1 問答）──
-        if task.require_taiwan_id is not None and task.require_taiwan_id != profile.has_taiwan_id:
+        def _safe_bool_eq(task_val, profile_val):
+            if task_val is None:
+                return True # no restriction
+            if profile_val is None:
+                # If task has a restriction, but profile hasn't answered, 
+                # we exclude it to be safe, or we could include it?
+                # Usually if a task requires "False", and profile is "None", it shouldn't match.
+                return False
+            # Normalize to boolean
+            p_val = profile_val
+            if isinstance(profile_val, str):
+                p_val = str(profile_val).lower() in ('true', '1', 't', 'y', 'yes')
+            return bool(task_val) == bool(p_val)
+
+        if not _safe_bool_eq(task.require_taiwan_id, profile.has_taiwan_id):
             continue
-        if task.require_deferred is not None and task.require_deferred != profile.is_deferred:
+        if not _safe_bool_eq(task.require_deferred, profile.is_deferred):
             continue
-        if task.require_indo_prep is not None and task.require_indo_prep != profile.has_indo_prep:
-            continue
+        # if not _safe_bool_eq(task.require_indo_prep, profile.has_indo_prep):
+        #     continue
         eligible_tasks.append(task)
 
     # ── 將任務去重，同 title 只取最精準（分數最高）的一筆 ──
@@ -159,7 +173,7 @@ def init_student_tasks_view(request):
         # 進階個人化條件具有高精確度，給予更大的權重
         if t.require_taiwan_id is not None: score += 32
         if t.require_deferred is not None: score += 32
-        if t.require_indo_prep is not None: score += 32
+        # if t.require_indo_prep is not None: score += 32
         return score
 
     best_tasks = {}

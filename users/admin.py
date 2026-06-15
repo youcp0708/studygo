@@ -45,7 +45,7 @@ class CustomUserAdmin(BaseUserAdmin):
 @admin.register(StudentProfile)
 class StudentProfileAdmin(admin.ModelAdmin):
     list_display   = ('user', 'region', 'nationality', 'university', 'identity_type',
-                      'admission_status', 'created_at')
+                      'admission_status', 'has_taiwan_id', 'is_deferred', 'created_at')
     list_filter    = ('region', 'nationality', 'identity_type', 'admission_status')
     search_fields  = ('user__name', 'user__email', 'university')
     ordering       = ('-created_at',)
