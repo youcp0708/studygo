@@ -210,6 +210,14 @@ def init_student_tasks_view(request):
         StudentTask.objects.create(student=profile, task_id=task_id)
         created_count += 1
 
+    # ── 3. 自動完成「入台前」任務（如果學生選擇「已入台」）──
+    if profile.admission_status == 'arrived':
+        StudentTask.objects.filter(
+            student=profile,
+            task__stage__order=1,
+            status__in=['not_started', 'in_progress']
+        ).update(status='completed', completed_at=timezone.now())
+
     return success_response({
         'created_count': created_count,
         'removed_count': removed_count,
