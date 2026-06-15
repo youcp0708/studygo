@@ -275,10 +275,16 @@ class Task(models.Model):
                 'deadline_text':      self.deadline_text,
             }
 
+        fallback_occurred = False
         # Return translated field, falling back to Chinese if the translated field is empty
         def pick(base_val, field_name):
+            nonlocal fallback_occurred
             translated = getattr(self, field_name, '') or ''
-            return translated if translated.strip() else (base_val or '')
+            if translated.strip():
+                return translated
+            if base_val and str(base_val).strip():
+                fallback_occurred = True
+            return base_val or ''
 
         return {
             'title':              pick(self.title,              f'title{s}'),
@@ -289,6 +295,7 @@ class Task(models.Model):
             'apply_map_url':      self.apply_map_url,
             'official_url':       self.official_url,
             'deadline_text':      pick(self.deadline_text,      f'deadline_text{s}'),
+            'has_fallback':       fallback_occurred,
         }
 
 
@@ -477,13 +484,20 @@ class Tip(models.Model):
                 'content': self.content,
             }
 
+        fallback_occurred = False
         def pick(base_val, field_name):
+            nonlocal fallback_occurred
             translated = getattr(self, field_name, '') or ''
-            return translated if translated.strip() else (base_val or '')
+            if translated.strip():
+                return translated
+            if base_val and str(base_val).strip():
+                fallback_occurred = True
+            return base_val or ''
 
         return {
             'title': pick(self.title, f'title{s}'),
             'content': pick(self.content, f'content{s}'),
+            'has_fallback': fallback_occurred,
         }
 
 class TipLink(models.Model):
