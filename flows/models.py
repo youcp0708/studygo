@@ -519,6 +519,28 @@ class TipLink(models.Model):
         verbose_name="鏈結顯示文字",
         help_text="留空則直接使用 URL 作為顯示文字"
     )
+    # ── 多語言：鏈結文字 ──
+    label_en = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 English")
+    label_my = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Burmese")
+    label_id = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Indonesian")
+    label_ms = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Malay")
+    label_th = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Thai")
+    label_ja = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Japanese")
+    label_ko = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Korean")
+    label_vi = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Vietnamese")
+
+    def get_localized_label(self, lang_code):
+        suffix_map = {
+            'en': '_en', 'my': '_my', 'id': '_id',
+            'ms': '_ms', 'th': '_th', 'ja': '_ja',
+            'ko': '_ko', 'vi': '_vi',
+        }
+        s = suffix_map.get(lang_code)
+        if s is None:
+            return self.label
+            
+        translated = getattr(self, f'label{s}', '') or ''
+        return translated if translated.strip() else self.label
 
     class Meta:
         db_table = "flows_tip_link"

@@ -602,10 +602,18 @@ def get_tips_view(request):
     tips_data = []
     for tip in tips:
         localized = tip.get_localized(short_lang)
+        links_data = []
+        for link in tip.links.all():
+            links_data.append({
+                'id': link.id,
+                'url': link.url,
+                'label': link.get_localized_label(short_lang)
+            })
+
         tips_data.append({
             'id': tip.id,
             **localized,
-            'links': TipLinkSerializer(tip.links.all(), many=True).data,
+            'links': links_data,
         })
 
     return success_response({'tips': tips_data})

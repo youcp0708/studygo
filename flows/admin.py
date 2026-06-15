@@ -329,7 +329,11 @@ class ReminderAdmin(admin.ModelAdmin):
 class TipLinkInline(admin.TabularInline):
     model = TipLink
     extra = 1
-    fields = ('url', 'label')
+    fields = (
+        'url', 'label',
+        'label_en', 'label_my', 'label_id', 'label_ms',
+        'label_th', 'label_ja', 'label_ko', 'label_vi'
+    )
     verbose_name = "小貼士鏈結"
     verbose_name_plural = "小貼士鏈結"
 
