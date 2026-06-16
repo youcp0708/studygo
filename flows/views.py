@@ -598,9 +598,19 @@ def get_tips_view(request):
     if short_lang not in SUPPORTED:
         short_lang = ''
 
+    user = request.user
+    try:
+        profile = user.student_profile
+    except StudentProfile.DoesNotExist:
+        profile = None
+
     tips = Tip.objects.filter(is_active=True).order_by('order')
     tips_data = []
     for tip in tips:
+        # ── 篩選：如果 Tip 有指定身份，且學生身份不符，則跳過 ──
+        if profile and tip.identity_type and profile.identity_type not in tip.identity_type:
+            continue
+            
         localized = tip.get_localized(short_lang)
         links_data = []
         for link in tip.links.all():

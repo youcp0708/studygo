@@ -434,6 +434,15 @@ class Tip(models.Model):
     # ── 中文（預設）──
     title = models.CharField(max_length=200, verbose_name="標題")
     content = models.TextField(blank=True, verbose_name="內容說明")
+    
+    identity_type = MultiSelectField(
+        choices=StudentProfile.IDENTITY_CHOICES,
+        blank=True,
+        null=True,
+        verbose_name="適用身份類型",
+        help_text="留空表示適用於所有身份"
+    )
+
     is_active = models.BooleanField(default=True, verbose_name="是否啟用")
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
 

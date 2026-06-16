@@ -350,15 +350,21 @@ class TipAdmin(admin.ModelAdmin):
         'title_ja',
         'title_ko',
         'title_vi',
+        'display_identity_type',
         'is_active',
         'order',
     )
+
+    def display_identity_type(self, obj):
+        return obj.get_identity_type_display() if obj.identity_type else '-'
+    display_identity_type.short_description = '適用身份類型'
 
     fieldsets = (
         ('基本資料', {
             'fields': (
                 'title',
                 'content',
+                'identity_type',
                 'is_active',
                 'order',
             )
