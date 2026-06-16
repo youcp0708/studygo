@@ -5,14 +5,13 @@ flows/views.py
 
 from django.utils import timezone
 from django.utils.translation import get_language
-from django.shortcuts import render
+
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from users.models import StudentProfile
-
 
 # ==========================================
 # 前端網頁視圖 (Web Views)
@@ -429,7 +428,7 @@ def bulk_update_task_status_view(request):
         'not_started': 'not_started',
         'in_progress': 'in_progress'
     }
-    
+
     new_status = status_map[action]
 
     tasks = StudentTask.objects.filter(id__in=task_ids, student=profile)
@@ -597,14 +596,32 @@ def get_tips_view(request):
     if short_lang not in SUPPORTED:
         short_lang = ''
 
+    user = request.user
+    try:
+        profile = user.student_profile
+    except StudentProfile.DoesNotExist:
+        profile = None
+
     tips = Tip.objects.filter(is_active=True).order_by('order')
     tips_data = []
     for tip in tips:
+        # ── 篩選：如果 Tip 有指定身份，且學生身份不符，則跳過 ──
+        if profile and tip.identity_type and profile.identity_type not in tip.identity_type:
+            continue
+            
         localized = tip.get_localized(short_lang)
+        links_data = []
+        for link in tip.links.all():
+            links_data.append({
+                'id': link.id,
+                'url': link.url,
+                'label': link.get_localized_label(short_lang)
+            })
+
         tips_data.append({
             'id': tip.id,
             **localized,
-            'links': TipLinkSerializer(tip.links.all(), many=True).data,
+            'links': links_data,
         })
 
     return success_response({'tips': tips_data})

@@ -329,7 +329,11 @@ class ReminderAdmin(admin.ModelAdmin):
 class TipLinkInline(admin.TabularInline):
     model = TipLink
     extra = 1
-    fields = ('url', 'label')
+    fields = (
+        'url', 'label',
+        'label_en', 'label_my', 'label_id', 'label_ms',
+        'label_th', 'label_ja', 'label_ko', 'label_vi'
+    )
     verbose_name = "小貼士鏈結"
     verbose_name_plural = "小貼士鏈結"
 
@@ -346,15 +350,21 @@ class TipAdmin(admin.ModelAdmin):
         'title_ja',
         'title_ko',
         'title_vi',
+        'display_identity_type',
         'is_active',
         'order',
     )
+
+    def display_identity_type(self, obj):
+        return obj.get_identity_type_display() if obj.identity_type else '-'
+    display_identity_type.short_description = '適用身份類型'
 
     fieldsets = (
         ('基本資料', {
             'fields': (
                 'title',
                 'content',
+                'identity_type',
                 'is_active',
                 'order',
             )

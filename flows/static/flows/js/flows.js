@@ -480,6 +480,7 @@ async function renderMyTasks() {
               <div class="task-title">
                 ${loc.title || window.UI_STRINGS.unnamedTask}
                 ${requiredBadge}
+                ${loc.has_fallback ? `<span class="task-badge" style="background:#fef3c7;color:#d97706;border:1px solid #fcd34d;">Untranslated</span>` : ''}
               </div>
               <div class="task-desc" style="white-space: pre-wrap;">${loc.description || ''}</div>
             </div>
@@ -547,7 +548,10 @@ async function renderTips() {
     tips.forEach(tip => {
       html += `
         <div class="tip-item">
-          <div class="tip-item-title">${tip.title}</div>
+          <div class="tip-item-title">
+            ${tip.title}
+            ${tip.has_fallback ? `<span class="task-badge" style="background:#fef3c7;color:#d97706;border:1px solid #fcd34d;">Untranslated</span>` : ''}
+          </div>
           ${tip.content ? `<div class="tip-item-content">${tip.content}</div>` : ''}
       `;
 

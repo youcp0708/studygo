@@ -275,10 +275,16 @@ class Task(models.Model):
                 'deadline_text':      self.deadline_text,
             }
 
+        fallback_occurred = False
         # Return translated field, falling back to Chinese if the translated field is empty
         def pick(base_val, field_name):
+            nonlocal fallback_occurred
             translated = getattr(self, field_name, '') or ''
-            return translated if translated.strip() else (base_val or '')
+            if translated.strip():
+                return translated
+            if base_val and str(base_val).strip():
+                fallback_occurred = True
+            return base_val or ''
 
         return {
             'title':              pick(self.title,              f'title{s}'),
@@ -289,6 +295,7 @@ class Task(models.Model):
             'apply_map_url':      self.apply_map_url,
             'official_url':       self.official_url,
             'deadline_text':      pick(self.deadline_text,      f'deadline_text{s}'),
+            'has_fallback':       fallback_occurred,
         }
 
 
@@ -474,6 +481,15 @@ class Tip(models.Model):
     # ── 中文（預設）──
     title = models.CharField(max_length=200, verbose_name="標題")
     content = models.TextField(blank=True, verbose_name="內容說明")
+    
+    identity_type = MultiSelectField(
+        choices=StudentProfile.IDENTITY_CHOICES,
+        blank=True,
+        null=True,
+        verbose_name="適用身份類型",
+        help_text="留空表示適用於所有身份"
+    )
+
     is_active = models.BooleanField(default=True, verbose_name="是否啟用")
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
 
@@ -524,13 +540,20 @@ class Tip(models.Model):
                 'content': self.content,
             }
 
+        fallback_occurred = False
         def pick(base_val, field_name):
+            nonlocal fallback_occurred
             translated = getattr(self, field_name, '') or ''
-            return translated if translated.strip() else (base_val or '')
+            if translated.strip():
+                return translated
+            if base_val and str(base_val).strip():
+                fallback_occurred = True
+            return base_val or ''
 
         return {
             'title': pick(self.title, f'title{s}'),
             'content': pick(self.content, f'content{s}'),
+            'has_fallback': fallback_occurred,
         }
 
 class TipLink(models.Model):
@@ -552,6 +575,28 @@ class TipLink(models.Model):
         verbose_name="鏈結顯示文字",
         help_text="留空則直接使用 URL 作為顯示文字"
     )
+    # ── 多語言：鏈結文字 ──
+    label_en = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 English")
+    label_my = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Burmese")
+    label_id = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Indonesian")
+    label_ms = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Malay")
+    label_th = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Thai")
+    label_ja = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Japanese")
+    label_ko = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Korean")
+    label_vi = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Vietnamese")
+
+    def get_localized_label(self, lang_code):
+        suffix_map = {
+            'en': '_en', 'my': '_my', 'id': '_id',
+            'ms': '_ms', 'th': '_th', 'ja': '_ja',
+            'ko': '_ko', 'vi': '_vi',
+        }
+        s = suffix_map.get(lang_code)
+        if s is None:
+            return self.label
+            
+        translated = getattr(self, f'label{s}', '') or ''
+        return translated if translated.strip() else self.label
 
     class Meta:
         db_table = "flows_tip_link"
