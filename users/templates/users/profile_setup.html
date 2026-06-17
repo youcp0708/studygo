@@ -170,8 +170,53 @@
 
             <div class="field">
               <label>{% trans "系所" %}</label>
-              <input type="text" name="department" id="setupDept" placeholder="{% trans '例如：資訊工程學系' %}"
-                oninput="updatePreview()" />
+              <select name="department" id="setupDept" onchange="updatePreview()" required>
+                <option value="">{% trans "請選擇系所" %}</option>
+                <optgroup label="{% trans '文學院' %}">
+                  <option value="文學院學士班">文學院學士班</option>
+                  <option value="中國文學系">中國文學系</option>
+                  <option value="英美語文學系">英美語文學系</option>
+                  <option value="法國語文學系">法國語文學系</option>
+                </optgroup>
+                <optgroup label="{% trans '理學院' %}">
+                  <option value="理學院學士班">理學院學士班</option>
+                  <option value="物理學系">物理學系</option>
+                  <option value="數學系">數學系</option>
+                  <option value="化學學系">化學學系</option>
+                  <option value="光電科學與工程學系">光電科學與工程學系</option>
+                </optgroup>
+                <optgroup label="{% trans '工學院' %}">
+                  <option value="工學院學士班">工學院學士班</option>
+                  <option value="化學工程與材料工程學系">化學工程與材料工程學系</option>
+                  <option value="土木工程學系">土木工程學系</option>
+                  <option value="機械工程學系">機械工程學系</option>
+                </optgroup>
+                <optgroup label="{% trans '管理學院' %}">
+                  <option value="企業管理學系">企業管理學系</option>
+                  <option value="資訊管理學系">資訊管理學系</option>
+                  <option value="財務金融學系">財務金融學系</option>
+                  <option value="經濟學系">經濟學系</option>
+                </optgroup>
+                <optgroup label="{% trans '資訊電機學院' %}">
+                  <option value="資訊電機學院學士班">資訊電機學院學士班</option>
+                  <option value="電機工程學系">電機工程學系</option>
+                  <option value="資訊工程學系">資訊工程學系</option>
+                  <option value="通訊工程學系">通訊工程學系</option>
+                </optgroup>
+                <optgroup label="{% trans '地球科學學院' %}">
+                  <option value="地球科學學院學士班">地球科學學院學士班</option>
+                  <option value="地球科學學系">地球科學學系</option>
+                  <option value="大氣科學學系">大氣科學學系</option>
+                  <option value="太空科學與工程學系">太空科學與工程學系</option>
+                </optgroup>
+                <optgroup label="{% trans '客家學院' %}">
+                  <option value="客家語文暨社會科學學系">客家語文暨社會科學學系</option>
+                </optgroup>
+                <optgroup label="{% trans '生醫理工學院' %}">
+                  <option value="生命科學系">生命科學系</option>
+                  <option value="生醫科學與工程學系">生醫科學與工程學系</option>
+                </optgroup>
+              </select>
             </div>
           </div>
 
@@ -287,26 +332,6 @@
             <span class="opt-icon">❌</span>
             <span class="opt-label">{% trans "否" %}</span>
             <span class="opt-desc">{% trans "我不是延遲入學" %}</span>
-          </button>
-        </div>
-      </div>
-
-      {# Q3: 印輔班（僅印尼學生） #}
-      <div class="quiz-card" id="quizQ3">
-        <span class="quiz-icon">🇮🇩</span>
-        <span class="quiz-question-number">QUESTION 3</span>
-        <h3>{% trans "您是否有上印輔班？" %}</h3>
-        <p class="quiz-subtitle">{% trans "印尼學生若參加過印尼語輔導班（印輔班），流程會有些許不同" %}</p>
-        <div class="quiz-options">
-          <button type="button" class="quiz-option" onclick="answerQuiz('has_indo_prep', true)">
-            <span class="opt-icon">✅</span>
-            <span class="opt-label">{% trans "是" %}</span>
-            <span class="opt-desc">{% trans "我有上印輔班" %}</span>
-          </button>
-          <button type="button" class="quiz-option" onclick="answerQuiz('has_indo_prep', false)">
-            <span class="opt-icon">❌</span>
-            <span class="opt-label">{% trans "否" %}</span>
-            <span class="opt-desc">{% trans "我沒有上印輔班" %}</span>
           </button>
         </div>
       </div>
