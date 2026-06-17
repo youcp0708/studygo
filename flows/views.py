@@ -5,14 +5,13 @@ flows/views.py
 
 from django.utils import timezone
 from django.utils.translation import get_language
-from django.shortcuts import render
+
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from users.models import StudentProfile
-
 
 # ==========================================
 # 前端網頁視圖 (Web Views)
@@ -139,6 +138,27 @@ def init_student_tasks_view(request):
             continue
         if task.admission_status and task.admission_status != profile.admission_status:
             continue
+        # ── 進階個人化條件（對應 Module 1 問答）──
+        def _safe_bool_eq(task_val, profile_val):
+            if task_val is None:
+                return True # no restriction
+            if profile_val is None:
+                # If task has a restriction, but profile hasn't answered, 
+                # we exclude it to be safe, or we could include it?
+                # Usually if a task requires "False", and profile is "None", it shouldn't match.
+                return False
+            # Normalize to boolean
+            p_val = profile_val
+            if isinstance(profile_val, str):
+                p_val = str(profile_val).lower() in ('true', '1', 't', 'y', 'yes')
+            return bool(task_val) == bool(p_val)
+
+        if not _safe_bool_eq(task.require_taiwan_id, profile.has_taiwan_id):
+            continue
+        if not _safe_bool_eq(task.require_deferred, profile.is_deferred):
+            continue
+        # if not _safe_bool_eq(task.require_indo_prep, profile.has_indo_prep):
+        #     continue
         eligible_tasks.append(task)
 
     # ── 將任務去重，同 title 只取最精準（分數最高）的一筆 ──
@@ -149,6 +169,10 @@ def init_student_tasks_view(request):
         if t.region: score += 4
         if t.identity_type: score += 2
         if t.admission_status: score += 1
+        # 進階個人化條件具有高精確度，給予更大的權重
+        if t.require_taiwan_id is not None: score += 32
+        if t.require_deferred is not None: score += 32
+        # if t.require_indo_prep is not None: score += 32
         return score
 
     best_tasks = {}
@@ -184,6 +208,14 @@ def init_student_tasks_view(request):
     for task_id in to_create_ids:
         StudentTask.objects.create(student=profile, task_id=task_id)
         created_count += 1
+
+    # ── 3. 自動完成「入台前」任務（如果學生選擇「已入台」）──
+    if profile.admission_status == 'arrived':
+        StudentTask.objects.filter(
+            student=profile,
+            task__stage__order=1,
+            status__in=['not_started', 'in_progress']
+        ).update(status='completed', completed_at=timezone.now())
 
     return success_response({
         'created_count': created_count,
@@ -396,7 +428,7 @@ def bulk_update_task_status_view(request):
         'not_started': 'not_started',
         'in_progress': 'in_progress'
     }
-    
+
     new_status = status_map[action]
 
     tasks = StudentTask.objects.filter(id__in=task_ids, student=profile)
@@ -564,14 +596,32 @@ def get_tips_view(request):
     if short_lang not in SUPPORTED:
         short_lang = ''
 
+    user = request.user
+    try:
+        profile = user.student_profile
+    except StudentProfile.DoesNotExist:
+        profile = None
+
     tips = Tip.objects.filter(is_active=True).order_by('order')
     tips_data = []
     for tip in tips:
+        # ── 篩選：如果 Tip 有指定身份，且學生身份不符，則跳過 ──
+        if profile and tip.identity_type and profile.identity_type not in tip.identity_type:
+            continue
+            
         localized = tip.get_localized(short_lang)
+        links_data = []
+        for link in tip.links.all():
+            links_data.append({
+                'id': link.id,
+                'url': link.url,
+                'label': link.get_localized_label(short_lang)
+            })
+
         tips_data.append({
             'id': tip.id,
             **localized,
-            'links': TipLinkSerializer(tip.links.all(), many=True).data,
+            'links': links_data,
         })
 
     return success_response({'tips': tips_data})

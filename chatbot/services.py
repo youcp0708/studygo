@@ -677,129 +677,129 @@ INFO_PAGE_MAP = {
     'arc': {
         'overseas': {
             'title': '僑生 ARC 辦理',
-            'url': '/flows/guides/arc-overseas/',
+            'url': '/guides/arc-overseas/',
         },
         'foreign': {
             'title': '外籍生 ARC 辦理',
-            'url': '/flows/guides/arc-foreign/',
+            'url': '/guides/arc-foreign/',
         },
         'exchange': {
             'title': '交換生居留說明',
-            'url': '/flows/guides/arc-exchange/',
+            'url': '/guides/arc-exchange/',
         },
     },
     'housing': {
         'all': {
             'title': '中央大學住宿申請',
-            'url': '/flows/guides/housing-ncu/',
+            'url': '/guides/housing-ncu/',
         },
     },
     'nhi': {
         'all': {
             'title': '全民健保申請',
-            'url': '/flows/guides/nhi/',
+            'url': '/guides/nhi/',
         },
     },
     'bank': {
         'all': {
             'title': '銀行開戶指南',
-            'url': '/flows/guides/bank/',
+            'url': '/guides/bank/',
         },
     },
     'sim': {
         'all': {
             'title': '手機門號申辦',
-            'url': '/flows/guides/sim/',
+            'url': '/guides/sim/',
         },
     },
     'work_permit': {
         'all': {
             'title': '工作許可申請指南',
-            'url': '/flows/guides/work-permit/',
+            'url': '/guides/work-permit/',
         },
     },
     'medical': {
         'all': {
             'title': '就醫指南',
-            'url': '/flows/guides/medical/',
+            'url': '/guides/medical/',
         },
     },
     'course': {
         'all': {
             'title': '課程與選課說明',
-            'url': '/flows/guides/course/',
+            'url': '/guides/course/',
         },
     },
     'graduation': {
         'all': {
             'title': '畢業流程說明',
-            'url': '/flows/guides/graduation/',
+            'url': '/guides/graduation/',
         },
     },
     'systems': {
         'all': {
             'title': '校園系統使用指南',
-            'url': '/flows/guides/systems/',
+            'url': '/guides/systems/',
         },
     },
     'emergency': {
         'all': {
             'title': '緊急求助資訊',
-            'url': '/flows/guides/emergency/',
+            'url': '/guides/emergency/',
         },
     },
     'library': {
         'all': {
             'title': '圖書館使用指南',
-            'url': '/flows/guides/library/',
+            'url': '/guides/library/',
         },
     },
     'enrollment': {
         'all': {
             'title': '入學報到流程',
-            'url': '/flows/guides/enrollment/',
+            'url': '/guides/enrollment/',
         },
     },
     'mental_health': {
         'all': {
             'title': '心理健康與諮商資源',
-            'url': '/flows/guides/mental-health/',
+            'url': '/guides/mental-health/',
         },
     },
     'scholarship': {
         'all': {
             'title': '獎學金申請指南',
-            'url': '/flows/guides/scholarship/',
+            'url': '/guides/scholarship/',
         },
     },
     'admin_docs': {
         'all': {
             'title': '行政文件申請指南',
-            'url': '/flows/guides/admin-docs/',
+            'url': '/guides/admin-docs/',
         },
     },
     'regulations': {
         'all': {
             'title': '相關法規與規章',
-            'url': '/flows/guides/regulations/',
+            'url': '/guides/regulations/',
         },
     },
     'admissions': {
         'all': {
             'title': '入學申請指南',
-            'url': '/flows/guides/admissions/',
+            'url': '/guides/admissions/',
         },
     },
     'bus': {
         'all': {
             'title': '校園交通與公車資訊',
-            'url': '/flows/guides/bus-ncu/',
+            'url': '/guides/bus-ncu/',
         },
     },
     'map': {
         'all': {
             'title': '校園地圖',
-            'url': '/flows/guides/map/',
+            'url': '/guides/map/',
         },
     },
 }

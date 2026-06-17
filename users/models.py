@@ -234,7 +234,7 @@ class StudentProfile(models.Model):
     # ── 問答區域欄位（供後續流程模塊使用）──
     has_taiwan_id = models.BooleanField(null=True, blank=True, verbose_name='是否擁有台灣身份證')
     is_deferred   = models.BooleanField(null=True, blank=True, verbose_name='是否延遲入學')
-    has_indo_prep = models.BooleanField(null=True, blank=True, verbose_name='是否上印輔班')
+    # has_indo_prep = models.BooleanField(null=True, blank=True, verbose_name='是否上印輔班')
 
     
 

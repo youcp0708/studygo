@@ -111,6 +111,9 @@ class TaskAdmin(admin.ModelAdmin):
         'display_nationality',
         'university',
         'admission_status',
+        'require_taiwan_id',
+        'require_deferred',
+        # 'require_indo_prep',
         'deadline_type',
         'deadline_days',
         'is_required',
@@ -137,6 +140,14 @@ class TaskAdmin(admin.ModelAdmin):
                 'is_required',
                 'order',
             )
+        }),
+        ('進階個人化條件 (對應註冊問答)', {
+            'fields': (
+                'require_taiwan_id',
+                'require_deferred',
+                # 'require_indo_prep',
+            ),
+            'description': '這些條件對應模塊一註冊時的問答。留空=不限制，是=僅回答「是」的學生可見，否=僅回答「否」的學生可見。'
         }),
         ('期限設定', {
             'fields': (
@@ -227,6 +238,9 @@ class TaskAdmin(admin.ModelAdmin):
         'nationality',
         'university',
         'admission_status',
+        'require_taiwan_id',
+        'require_deferred',
+        # 'require_indo_prep',
         'deadline_type',
         'is_required',
     )
@@ -315,7 +329,11 @@ class ReminderAdmin(admin.ModelAdmin):
 class TipLinkInline(admin.TabularInline):
     model = TipLink
     extra = 1
-    fields = ('url', 'label')
+    fields = (
+        'url', 'label',
+        'label_en', 'label_my', 'label_id', 'label_ms',
+        'label_th', 'label_ja', 'label_ko', 'label_vi'
+    )
     verbose_name = "小貼士鏈結"
     verbose_name_plural = "小貼士鏈結"
 
@@ -332,15 +350,21 @@ class TipAdmin(admin.ModelAdmin):
         'title_ja',
         'title_ko',
         'title_vi',
+        'display_identity_type',
         'is_active',
         'order',
     )
+
+    def display_identity_type(self, obj):
+        return obj.get_identity_type_display() if obj.identity_type else '-'
+    display_identity_type.short_description = '適用身份類型'
 
     fieldsets = (
         ('基本資料', {
             'fields': (
                 'title',
                 'content',
+                'identity_type',
                 'is_active',
                 'order',
             )

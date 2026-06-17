@@ -60,7 +60,10 @@
       "WebFetch(domain:oia.ncku.edu.tw)",
       "Bash(pip install *)",
       "Bash(python manage.py makemessages -l en)",
-      "Bash(python manage.py compilemessages -l en)"
+      "Bash(python manage.py compilemessages -l en)",
+      "Bash(python manage.py show_urls)",
+      "Bash(python add_bank_translations.py)",
+      "Bash(python add_nhi_translations.py)"
     ]
   }
 }

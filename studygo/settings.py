@@ -133,6 +133,18 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '300/day',
+        'user': '1000/day',
+        'login': '10/minute',           # 每分鐘最多 10 次登入嘗試
+        'register': '20/hour',          # 每小時最多 20 次註冊
+        'password_reset': '5/hour',     # 每小時最多 5 次重設密碼請求
+        'resend_verification': '5/hour', # 每小時最多 5 次重發驗證信
+    },
 }
 
 # ── CORS（前後端分離時使用）──
@@ -172,6 +184,11 @@ SESSION_COOKIE_HTTPONLY= True
 
 # ── CSRF ──
 CSRF_COOKIE_SAMESITE = 'Lax'
+
+# ── IP 來源設定 ──
+# 只有確認部署在可信任的 Reverse Proxy（如 Nginx）後面時才設為 True
+# 設為 False 時一律使用 REMOTE_ADDR，避免 X-Forwarded-For 被偽造
+TRUST_X_FORWARDED_FOR = os.environ.get('TRUST_X_FORWARDED_FOR', 'False') == 'True'
 
 # ── Google Sign-In 彈窗修復 ──
 # Django 5.x 預設 COOP: same-origin 會阻擋 GSI popup 回傳 credential

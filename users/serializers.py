@@ -31,12 +31,10 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def validate_email(self, value):
         try:
-            existing = CustomUser.objects.get(email=value)
+            CustomUser.objects.get(email=value)
+            raise serializers.ValidationError('此電子郵件無法使用')
         except CustomUser.DoesNotExist:
             return value
-        if existing.is_active:
-            raise serializers.ValidationError('此電子郵件已被註冊')
-        raise serializers.ValidationError('此電子郵件已被停用，無法重新註冊')
 
     def create(self, validated_data):
         validated_data.pop('password2')
@@ -86,7 +84,7 @@ class StudentProfileSerializer(serializers.ModelSerializer):
             'identity_type', 'identity_type_display',
             'admission_status', 'admission_status_display',
             'expected_arrival', 'preferred_language',
-            'has_taiwan_id', 'is_deferred', 'has_indo_prep',
+            'has_taiwan_id', 'is_deferred', # 'has_indo_prep',
             'created_at', 'updated_at',
         )
         read_only_fields = ('id', 'created_at', 'updated_at',
@@ -162,7 +160,7 @@ class UpdateBasicInfoSerializer(serializers.Serializer):
     preferred_language = serializers.CharField(max_length=10, required=False)
     has_taiwan_id = serializers.BooleanField(required=False, allow_null=True, default=None)
     is_deferred   = serializers.BooleanField(required=False, allow_null=True, default=None)
-    has_indo_prep = serializers.BooleanField(required=False, allow_null=True, default=None)
+    # has_indo_prep = serializers.BooleanField(required=False, allow_null=True, default=None)
 
     def validate_university(self, value):
         if value:
