@@ -870,6 +870,9 @@ function startLoginSlider() {
    20. 頁面初始化：檢查是否已登入
 ════════════════════════════════════════ */
 async function initApp() {
+  // ── 公開首頁：不需登入 ──
+  if (document.getElementById('homePage')) return;
+
   // ── Login 頁面 ──
   if (document.getElementById('loginPage')) {
     const params = new URLSearchParams(window.location.search);
