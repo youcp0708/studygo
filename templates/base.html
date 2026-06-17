@@ -44,7 +44,7 @@
 
   {# ── NavBar ── #}
   <nav class="navbar site-header">
-    <a href="{% url 'dashboard' %}" class="brand" style="text-decoration:none;">
+    <a href="{% url 'index' %}" class="brand" style="text-decoration:none;">
       <img src="{% static 'image/taiwan_globe.png' %}?v={% now 'U' %}" alt="StudyGo Taiwan Logo" class="brand-icon">
       <div class="brand-text">
         <h1>StudyGo <span style="font-weight:400;font-size:13px;color:var(--muted);">Taiwan</span></h1>
@@ -54,23 +54,22 @@
     {# ── 中間導覽列 ── #}
     {% block site_nav %}
     <div class="site-nav">
-      <a href="{% url 'dashboard' %}" class="site-nav-link">{% trans "首頁" %}</a>
+      <a href="{% url 'index' %}" class="site-nav-link">{% trans "首頁" %}</a>
       <span class="site-nav-dot">◈</span>
-      <a href="{% url 'dashboard' %}#sec-flow" class="site-nav-link">{% trans "留學流程" %}</a>
+      <a href="{% url 'index' %}#sec-flow" class="site-nav-link">{% trans "留學流程" %}</a>
       <span class="site-nav-dot">◈</span>
       <a href="{% url 'my_flows' %}" class="site-nav-link">{% trans "任務清單" %}</a>
       <span class="site-nav-dot">◈</span>
       <a href="{% url 'guide_index' %}" class="site-nav-link">{% trans "資訊中心" %}</a>
       <span class="site-nav-dot">◈</span>
-      <a href="{% url 'dashboard' %}#sec-alumni" class="site-nav-link">{% trans "學長姐分享" %}</a>
+      <a href="{% url 'index' %}#sec-alumni" class="site-nav-link">{% trans "學長姐分享" %}</a>
       <span class="site-nav-dot">◈</span>
-      <a href="{% url 'dashboard' %}#sec-faq" class="site-nav-link">{% trans "常見問題" %}</a>
+      <a href="{% url 'index' %}#sec-faq" class="site-nav-link">{% trans "常見問題" %}</a>
     </div>
     {% endblock site_nav %}
 
     <div class="nav-right">
 
-      {% if user.is_authenticated and user.student_profile %}
       <div class="search-wrap" id="searchWrap">
         <div class="search-box" id="searchBox">
           <button type="button" class="search-btn" id="searchBtn" aria-label="{% trans '搜尋' %}">
@@ -84,7 +83,6 @@
         </div>
         <div class="search-dropdown" id="searchDropdown"></div>
       </div>
-      {% endif %}
 
       {# ── Language Switcher ── #}
       {% get_current_language as CURRENT_LANGUAGE %}
@@ -605,10 +603,10 @@
     <div class="sf-cols">
       <div class="sf-col">
         <div class="sf-col-title">{% trans "留學流程" %}</div>
-        <a href="{% url 'dashboard' %}#sec-flow" class="sf-link">{% trans "申請前準備" %}</a>
-        <a href="{% url 'dashboard' %}#sec-flow" class="sf-link">{% trans "入學申請" %}</a>
-        <a href="{% url 'dashboard' %}#sec-flow" class="sf-link">{% trans "抵台前準備" %}</a>
-        <a href="{% url 'dashboard' %}#sec-flow" class="sf-link">{% trans "抵達後事項" %}</a>
+        <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "申請前準備" %}</a>
+        <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "入學申請" %}</a>
+        <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "抵台前準備" %}</a>
+        <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "抵達後事項" %}</a>
       </div>
       <div class="sf-col">
         <div class="sf-col-title">{% trans "資訊中心" %}</div>
@@ -619,8 +617,8 @@
       </div>
       <div class="sf-col">
         <div class="sf-col-title">{% trans "關於 StudyGo" %}</div>
-        <a href="{% url 'dashboard' %}#sec-faq" class="sf-link">{% trans "使用說明" %}</a>
-        <a href="{% url 'dashboard' %}#sec-faq" class="sf-link">{% trans "常見問題" %}</a>
+        <a href="{% url 'index' %}#sec-faq" class="sf-link">{% trans "使用說明" %}</a>
+        <a href="{% url 'index' %}#sec-faq" class="sf-link">{% trans "常見問題" %}</a>
         <a href="#" class="sf-link">{% trans "版本更新" %}</a>
         <a href="#" class="sf-link">{% trans "意見回饋" %}</a>
       </div>
