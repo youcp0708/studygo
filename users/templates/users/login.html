@@ -4,8 +4,9 @@
 
 {% block title %}{% trans "登入 / 註冊" %} — StudyGo Taiwan{% endblock %}
 
-{# 登入頁不顯示「在台指南」下拉選單 #}
-{% block navbar_guide %}{% endblock %}
+{# 登入頁不顯示導覽列與開始流程按鈕 #}
+{% block site_nav %}{% endblock site_nav %}
+{% block nav_cta %}{% endblock nav_cta %}
 
 {% block content %}
 <section id="loginPage" class="page" style="padding:0 38px 48px;">
