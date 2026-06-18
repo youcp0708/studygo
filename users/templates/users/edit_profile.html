@@ -70,8 +70,8 @@
           <div class="field-row">
 
             <div class="field">
-              <label>{% trans "身份別" %}</label>
-              <select name="identity_type" id="editIdentity">
+              <label>{% trans "身份別（不可更改）" %}</label>
+              <select name="identity_type" id="editIdentity" disabled>
                 <option value="overseas_chinese" {% if profile.identity_type == "overseas_chinese" %}selected{% endif %}>
                   {% trans "僑生" %}
                 </option>

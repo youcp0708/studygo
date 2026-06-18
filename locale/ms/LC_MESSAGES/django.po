@@ -7491,3 +7491,70 @@ msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示�
 msgstr ""
 "Cari dari \"Universiti Pusat Negara\" untuk merancang laluan transit "
 "dengan masa berlepas masa nyata."
+
+msgid "所屬地區"
+msgstr "Wilayah"
+
+msgid "請選擇地區"
+msgstr "Sila pilih wilayah anda"
+
+msgid "東亞"
+msgstr "Asia Timur"
+
+msgid "東南亞"
+msgstr "Asia Tenggara"
+
+msgid "南亞"
+msgstr "Asia Selatan"
+
+msgid "中東"
+msgstr "Timur Tengah"
+
+msgid "歐洲"
+msgstr "Eropah"
+
+msgid "北美洲"
+msgstr "Amerika Utara"
+
+msgid "中南美洲"
+msgstr "Amerika Latin"
+
+msgid "非洲"
+msgstr "Afrika"
+
+msgid "大洋洲"
+msgstr "Oceania"
+
+msgid "謹慎選擇，提交後無法更改"
+msgstr "Pilih dengan teliti — tidak boleh diubah selepas dihantar"
+
+msgid "必填"
+msgstr "Wajib diisi"
+
+msgid "請選擇系所"
+msgstr "Sila pilih jabatan anda"
+
+msgid "不確定抵達日期，建議先選擇9月1日"
+msgstr "Tidak pasti tarikh ketibaan? Cadangkan pilih 1 September dahulu"
+
+msgid "下一步"
+msgstr "Langkah Seterusnya"
+
+msgid "（海外華裔學生）"
+msgstr "(Pelajar warga Tionghoa luar negara)"
+
+msgid "（外國籍學生）"
+msgstr "(Pelajar warga asing)"
+
+msgid "（香港、澳門學生）"
+msgstr "(Pelajar Hong Kong/Macau)"
+
+msgid "請先選擇地區"
+msgstr "Sila pilih wilayah dahulu"
+
+msgid "請選擇入學狀態"
+msgstr "Sila pilih status kemasukan anda"
+
+msgid "請填寫預計抵台日期"
+msgstr "Sila isikan tarikh ketibaan dijangka di Taiwan"
+

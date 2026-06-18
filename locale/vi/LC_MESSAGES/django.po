@@ -5667,7 +5667,6 @@ msgstr ""
 "Sau khi kết quả miễn tín chỉ được công bố, nếu các môn được miễn vẫn còn "
 "trong danh sách đăng ký, hãy tự rút. Sinh viên chuyển tiếp phải tự đăng ký "
 "trong kỳ thêm/rút; hệ thống sẽ không tự động đăng ký."
-<<<<<<< HEAD
 msgid "勞動部外國人在台工作服務網 ↗"
 msgstr "Mạng dịch vụ lao động nước ngoài tại Đài Loan, Bộ Lao động ↗"
 
@@ -5926,7 +5925,6 @@ msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示�
 msgstr ""
 "Tìm kiếm từ \"Đại học Trung ương Quốc gia\" để lập kế hoạch tuyến giao "
 "thông với giờ khởi hành theo thời gian thực."
-=======
 
 msgid "休學・復學・轉系・雙主修　辦理規定與注意事項"
 msgstr "Nghỉ học · Phục học · Chuyển ngành · Song ngành — Quy định và thủ tục"
@@ -7196,4 +7194,64 @@ msgstr "Số nội bộ 57081"
 
 msgid "承辦人：徐心荷小姐"
 msgstr "Người liên hệ: Cô Xu Xinhe"
->>>>>>> new/07
+
+msgid "所屬地區"
+msgstr "Khu vực"
+
+msgid "請選擇地區"
+msgstr "Vui lòng chọn khu vực của bạn"
+
+msgid "東亞"
+msgstr "Đông Á"
+
+msgid "東南亞"
+msgstr "Đông Nam Á"
+
+msgid "南亞"
+msgstr "Nam Á"
+
+msgid "中東"
+msgstr "Trung Đông"
+
+msgid "歐洲"
+msgstr "Châu Âu"
+
+msgid "北美洲"
+msgstr "Bắc Mỹ"
+
+msgid "中南美洲"
+msgstr "Mỹ Latinh"
+
+msgid "非洲"
+msgstr "Châu Phi"
+
+msgid "大洋洲"
+msgstr "Châu Đại Dương"
+
+msgid "謹慎選擇，提交後無法更改"
+msgstr "Hãy chọn cẩn thận — không thể thay đổi sau khi gửi"
+
+msgid "請選擇系所"
+msgstr "Vui lòng chọn khoa/ngành của bạn"
+
+msgid "不確定抵達日期，建議先選擇9月1日"
+msgstr "Chưa chắc về ngày đến? Hãy chọn tạm ngày 1 tháng 9"
+
+msgid "（海外華裔學生）"
+msgstr "(Sinh viên Hoa kiều)"
+
+msgid "（外國籍學生）"
+msgstr "(Sinh viên nước ngoài)"
+
+msgid "（香港、澳門學生）"
+msgstr "(Sinh viên Hồng Kông/Ma Cao)"
+
+msgid "請先選擇地區"
+msgstr "Vui lòng chọn khu vực trước"
+
+msgid "請選擇入學狀態"
+msgstr "Vui lòng chọn trạng thái nhập học"
+
+msgid "請填寫預計抵台日期"
+msgstr "Vui lòng điền ngày dự kiến đến Đài Loan"
+

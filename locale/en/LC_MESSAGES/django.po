@@ -4267,10 +4267,9 @@ msgstr ""
 "visa reapplication. The ARC is essential for NHI enrollment, bank "
 "account opening, and other procedures — apply promptly."
 
-<<<<<<< HEAD
 msgid "僑生1年居留證（線上繳費）"
 msgstr "Overseas Chinese student 1-year ARC (online payment)"
-=======
+
 msgid "休學・復學・轉系・雙主修　辦理規定與注意事項"
 msgstr ""
 "Leave of Absence · Reinstatement · Department Transfer · Double Major — "
@@ -5560,7 +5559,6 @@ msgstr "Contact person: Ms. Xu Xinhe"
 #~ msgstr ""
 #~ "Enter your question, and the system will organize suggestions based on your "
 #~ "identity and status."
->>>>>>> new/07
 
 msgid "1 年"
 msgstr "1 year"
@@ -6214,6 +6212,72 @@ msgstr "OCAC Regulations Section ↗"
 
 msgid "行政院僑務委員會"
 msgstr "Executive Yuan Overseas Community Affairs Council"
+
+msgid "所屬地區"
+msgstr "Region"
+
+msgid "請先選擇地區"
+msgstr "Please select a region first"
+
+msgid "請選擇入學狀態"
+msgstr "Please select your admission status"
+
+msgid "請填寫預計抵台日期"
+msgstr "Please fill in your expected arrival date"
+
+msgid "請選擇地區"
+msgstr "Please select your region"
+
+msgid "東亞"
+msgstr "East Asia"
+
+msgid "東南亞"
+msgstr "Southeast Asia"
+
+msgid "南亞"
+msgstr "South Asia"
+
+msgid "中東"
+msgstr "Middle East"
+
+msgid "歐洲"
+msgstr "Europe"
+
+msgid "北美洲"
+msgstr "North America"
+
+msgid "中南美洲"
+msgstr "Latin America"
+
+msgid "非洲"
+msgstr "Africa"
+
+msgid "大洋洲"
+msgstr "Oceania"
+
+msgid "謹慎選擇，提交後無法更改"
+msgstr "Choose carefully — this cannot be changed after submission"
+
+msgid "必填"
+msgstr "Required"
+
+msgid "請選擇系所"
+msgstr "Please select your department"
+
+msgid "不確定抵達日期，建議先選擇9月1日"
+msgstr "Not sure of your arrival date? We suggest selecting September 1st"
+
+msgid "下一步"
+msgstr "Next Step"
+
+msgid "（海外華裔學生）"
+msgstr "(Overseas Chinese student)"
+
+msgid "（外國籍學生）"
+msgstr "(Foreign student)"
+
+msgid "（香港、澳門學生）"
+msgstr "(Hong Kong/Macau student)"
 
 msgid "教育部－主管法規查詢系統"
 msgstr "Ministry of Education — Competent Authority Regulation Search System"

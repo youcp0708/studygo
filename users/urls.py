@@ -85,12 +85,12 @@ def dashboard_page(request):
 
 
 def edit_profile_page(request):
-    """編輯個人資料頁 — 需要 session 登入"""
+    """編輯個人資料頁 — 需要 session 登入，且需已完成 profile setup"""
     if not request.user.is_authenticated:
         return redirect('login_page')
-    context = {'user': request.user}
-    if hasattr(request.user, 'student_profile'):
-        context['profile'] = request.user.student_profile
+    if not hasattr(request.user, 'student_profile'):
+        return redirect('profile_setup')
+    context = {'user': request.user, 'profile': request.user.student_profile}
     return render(request, 'users/edit_profile.html', context)
 
 

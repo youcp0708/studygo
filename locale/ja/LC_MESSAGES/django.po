@@ -6540,3 +6540,70 @@ msgstr "地図"
 
 msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示即時班次。"
 msgstr "「国立中央大学」から検索し、リアルタイム出発時刻付きで交通ルートを計画。"
+
+msgid "所屬地區"
+msgstr "地域"
+
+msgid "請選擇地區"
+msgstr "地域を選択してください"
+
+msgid "東亞"
+msgstr "東アジア"
+
+msgid "東南亞"
+msgstr "東南アジア"
+
+msgid "南亞"
+msgstr "南アジア"
+
+msgid "中東"
+msgstr "中東"
+
+msgid "歐洲"
+msgstr "ヨーロッパ"
+
+msgid "北美洲"
+msgstr "北米"
+
+msgid "中南美洲"
+msgstr "ラテンアメリカ"
+
+msgid "非洲"
+msgstr "アフリカ"
+
+msgid "大洋洲"
+msgstr "オセアニア"
+
+msgid "謹慎選擇，提交後無法更改"
+msgstr "慎重に選択してください — 提出後は変更できません"
+
+msgid "必填"
+msgstr "必須"
+
+msgid "請選擇系所"
+msgstr "学部・学科を選択してください"
+
+msgid "不確定抵達日期，建議先選擇9月1日"
+msgstr "到着日が未定の場合は、ひとまず9月1日を選択することをお勧めします"
+
+msgid "下一步"
+msgstr "次のステップ"
+
+msgid "（海外華裔學生）"
+msgstr "（華僑学生）"
+
+msgid "（外國籍學生）"
+msgstr "（外国籍学生）"
+
+msgid "（香港、澳門學生）"
+msgstr "（香港・マカオの学生）"
+
+msgid "請先選擇地區"
+msgstr "まず地域を選択してください"
+
+msgid "請選擇入學狀態"
+msgstr "入学状況を選択してください"
+
+msgid "請填寫預計抵台日期"
+msgstr "台湾への到着予定日を入力してください"
+

@@ -7434,3 +7434,70 @@ msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示�
 msgstr ""
 "Cari dari \"National Central University\" untuk merencanakan rute "
 "transit dengan waktu keberangkatan langsung."
+
+msgid "所屬地區"
+msgstr "Wilayah"
+
+msgid "請選擇地區"
+msgstr "Silakan pilih wilayah Anda"
+
+msgid "東亞"
+msgstr "Asia Timur"
+
+msgid "東南亞"
+msgstr "Asia Tenggara"
+
+msgid "南亞"
+msgstr "Asia Selatan"
+
+msgid "中東"
+msgstr "Timur Tengah"
+
+msgid "歐洲"
+msgstr "Eropa"
+
+msgid "北美洲"
+msgstr "Amerika Utara"
+
+msgid "中南美洲"
+msgstr "Amerika Latin"
+
+msgid "非洲"
+msgstr "Afrika"
+
+msgid "大洋洲"
+msgstr "Oseania"
+
+msgid "謹慎選擇，提交後無法更改"
+msgstr "Pilih dengan cermat — tidak dapat diubah setelah dikirim"
+
+msgid "必填"
+msgstr "Wajib diisi"
+
+msgid "請選擇系所"
+msgstr "Silakan pilih jurusan Anda"
+
+msgid "不確定抵達日期，建議先選擇9月1日"
+msgstr "Belum yakin tanggal kedatangan? Disarankan memilih 1 September untuk sementara"
+
+msgid "下一步"
+msgstr "Langkah Berikutnya"
+
+msgid "（海外華裔學生）"
+msgstr "(Mahasiswa keturunan Tionghoa)"
+
+msgid "（外國籍學生）"
+msgstr "(Mahasiswa asing)"
+
+msgid "（香港、澳門學生）"
+msgstr "(Mahasiswa Hong Kong/Makau)"
+
+msgid "請先選擇地區"
+msgstr "Silakan pilih wilayah terlebih dahulu"
+
+msgid "請選擇入學狀態"
+msgstr "Silakan pilih status masuk Anda"
+
+msgid "請填寫預計抵台日期"
+msgstr "Silakan isi perkiraan tanggal kedatangan Anda di Taiwan"
+

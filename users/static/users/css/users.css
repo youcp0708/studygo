@@ -386,6 +386,47 @@
     margin-top: 4px;
   }
 
+  .help-tip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--muted);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: help;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .help-tip-text {
+    display: none;
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #24413d;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    white-space: nowrap;
+    padding: 8px 12px;
+    border-radius: 8px;
+    z-index: 10;
+  }
+
+  .help-tip:hover .help-tip-text,
+  .help-tip:focus .help-tip-text {
+    display: block;
+  }
+
   .field-row {
     display: grid;
     grid-template-columns: 1fr 1fr;

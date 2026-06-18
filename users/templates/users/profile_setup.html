@@ -38,7 +38,7 @@
           <div class="setup-section-title">{% trans "基本資訊" %}</div>
           <div class="field-row">
             <div class="field">
-              <label>{% trans "所屬地區" %} Region</label>
+              <label>{% trans "所屬地區" %} Region <span style="color:red;">*</span></label> 
               <select name="region" id="setupRegion" required onchange="handleRegionChange(); updatePreview()">
                 <option value="">{% trans "請選擇地區" %}</option>
                 <option value="East Asia">🌏 {% trans "東亞" %}</option>
@@ -55,7 +55,7 @@
             </div>
 
             <div class="field">
-              <label>{% trans "國籍" %} Nationality</label>
+              <label>{% trans "國籍" %} Nationality <span style="color:red;">*</span></label> 
               <select name="nationality" id="setupNationality" required onchange="updatePreview()">
                 <option value="">{% trans "請先選擇地區" %}</option>
               </select>
@@ -66,7 +66,7 @@
           <div class="field-row">
 
             <div class="field">
-              <label>{% trans "就讀學校" %}</label>
+              <label>{% trans "就讀學校" %} <span style="color:red;">*</span></label>
               <select name="university" id="setupUniversity" required onchange="updatePreview()">
                 <option value="">{% trans "請選擇就讀學校" %}</option>
 
@@ -134,6 +134,7 @@
               <option value="hong_kong_macau">{% trans "港澳生" %}</option>
             </select>
             <div class="field-hint">{% trans "身份別將影響您的流程任務內容" %}</div>
+            <div class="field-hint" style="color:var(--danger);font-weight:900;">⚠️ {% trans "謹慎選擇，提交後無法更改" %}</div>
             <div class="field-error hidden" id="identityErr"></div>
           </div>
 
@@ -162,7 +163,7 @@
           <div class="setup-section-title">{% trans "時間規劃" %}</div>
           <div class="field-row">
             <div class="field">
-              <label>{% trans "預計抵台日期" %} <span style="color:red;">*</span></label>
+              <label>{% trans "預計抵台日期" %} <span style="color:red;">*</span> <span class="help-tip" tabindex="0">?<span class="help-tip-text">{% trans "不確定抵達日期，建議先選擇9月1日" %}</span></span></label>
               <input type="date" name="expected_arrival" id="setupArrival" onchange="updatePreview()" required />
               <div class="field-hint">{% trans "必填" %}</div>
               <div class="field-error hidden" id="arrivalErr"></div>
@@ -269,7 +270,7 @@
                       border-radius:14px;font-size:13px;color:#3a6b62;line-height:1.7;">
             💡 {% trans "資料儲存後，系統將根據您的" %}
             <b>{% trans "國籍" %}</b>、<b>{% trans "身份別" %}</b>
-            {% trans "與" %}<b>{% trans "入學狀態" %}</b>
+            {% trans "與" %}<b> {% trans "入學狀態" %}</b>
             {% trans "自動生成個人化任務流程。" %}
           </div>
         </div>
@@ -343,6 +344,19 @@
 </div>
 
 <script>
+  window.I18N_PROFILE_SETUP = {
+    selectNationality: "{% trans '請選擇國籍' %}",
+    selectRegionFirst: "{% trans '請先選擇地區' %}",
+    nationalityNotSelected: "{% trans '國籍未選' %}",
+    identityNotSelected: "{% trans '身份別未選' %}",
+    statusNotSelected: "{% trans '狀態未選' %}",
+    selectRegion: "{% trans '請選擇地區' %}",
+    selectUniversity: "{% trans '請選擇就讀學校' %}",
+    selectIdentity: "{% trans '請選擇身份別' %}",
+    selectAdmissionStatus: "{% trans '請選擇入學狀態' %}",
+    fillArrivalDate: "{% trans '請填寫預計抵台日期' %}",
+  };
+
   window._tempUser = {
     name: "{{ user.name|escapejs }}",
     email: "{{ user.email|escapejs }}"
@@ -418,7 +432,7 @@
 
     const defaultOption = document.createElement("option");
     defaultOption.value = "";
-    defaultOption.textContent = region ? "請選擇國籍" : "請先選擇地區";
+    defaultOption.textContent = region ? window.I18N_PROFILE_SETUP.selectNationality : window.I18N_PROFILE_SETUP.selectRegionFirst;
     nationalitySelect.appendChild(defaultOption);
 
     countries.forEach(function(country) {

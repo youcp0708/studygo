@@ -82,7 +82,7 @@ window.handleRegionChange = function(regionId = 'setupRegion', nationalityId = '
   const region = regionSelect.value;
   const currentVal = natSelect.getAttribute('data-selected') || natSelect.value;
   
-  natSelect.innerHTML = '<option value="">請選擇國籍</option>';
+  natSelect.innerHTML = `<option value="">${window.I18N_PROFILE_SETUP?.selectNationality || '請選擇國籍'}</option>`;
   
   if (region && REGION_COUNTRY_MAP[region]) {
     REGION_COUNTRY_MAP[region].forEach(c => {
@@ -379,12 +379,12 @@ function startProfileQuiz(e) {
   const arrival     = document.getElementById('setupArrival')?.value || '';
 
   let ok = true;
-  if (!region) { showError('regionErr', '請選擇地區'); ok = false; }
-  if (!nationality) { showError('nationalityErr', '請選擇國籍'); ok = false; }
-  if (!university)  { showError('universityErr', '請選擇就讀學校'); ok = false; }
-  if (!identity)    { showError('identityErr', '請選擇身份別'); ok = false; }
-  if (!status)      { showError('statusErr', '請選擇入學狀態'); ok = false; }
-  if (!arrival)     { showError('arrivalErr', '請填寫預計抵台日期'); ok = false; }
+  if (!region) { showError('regionErr', window.I18N_PROFILE_SETUP?.selectRegion || '請選擇地區'); ok = false; }
+  if (!nationality) { showError('nationalityErr', window.I18N_PROFILE_SETUP?.selectNationality || '請選擇國籍'); ok = false; }
+  if (!university)  { showError('universityErr', window.I18N_PROFILE_SETUP?.selectUniversity || '請選擇就讀學校'); ok = false; }
+  if (!identity)    { showError('identityErr', window.I18N_PROFILE_SETUP?.selectIdentity || '請選擇身份別'); ok = false; }
+  if (!status)      { showError('statusErr', window.I18N_PROFILE_SETUP?.selectAdmissionStatus || '請選擇入學狀態'); ok = false; }
+  if (!arrival)     { showError('arrivalErr', window.I18N_PROFILE_SETUP?.fillArrivalDate || '請填寫預計抵台日期'); ok = false; }
   if (!ok) {
     const firstErr = document.querySelector('.field-error:not(.hidden)');
     if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -750,9 +750,9 @@ function updatePreview() {
     set('prevName', user.name);
     set('prevEmail', user.email);
   }
-  set('prevNationality', g('setupNationality')?.value || '國籍未選');
-  set('prevIdentity', IDENTITY_LABELS[g('setupIdentity')?.value] || '身份別未選');
-  set('prevStatus', STATUS_LABELS[g('admissionStatusVal')?.value] || '狀態未選');
+  set('prevNationality', g('setupNationality')?.value || window.I18N_PROFILE_SETUP?.nationalityNotSelected || '國籍未選');
+  set('prevIdentity', IDENTITY_LABELS[g('setupIdentity')?.value] || window.I18N_PROFILE_SETUP?.identityNotSelected || '身份別未選');
+  set('prevStatus', STATUS_LABELS[g('admissionStatusVal')?.value] || window.I18N_PROFILE_SETUP?.statusNotSelected || '狀態未選');
   const univSel = g('setupUniversity');
   const univLabel = univSel?.options[univSel.selectedIndex]?.text || univSel?.value || '—';
   set('prevUniv', univLabel !== '請選擇就讀學校' ? univLabel : '—');
