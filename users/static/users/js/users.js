@@ -362,6 +362,151 @@ let _quizAnswers  = {};            // 問答結果
 let _quizStep     = 0;             // 當前題目 index
 let _quizSequence = [];            // 實際要顯示的題目 ID 序列
 let _quizTransitioning = false;
+let _quizActive = false;           // 問答 overlay 是否正在開啟
+
+const SETUP_DRAFT_KEY = 'profileSetupDraft';
+
+/** 將目前的表單與問答進度存進 localStorage，避免重新整理或切換語言後資料消失 */
+function saveSetupDraft() {
+  const g = id => document.getElementById(id);
+  if (!g('profileSetupForm')) {
+    console.log('[draft] 找不到 profileSetupForm，跳過儲存');
+    return;
+  }
+  const draft = {
+    region: g('setupRegion')?.value || '',
+    nationality: g('setupNationality')?.value || '',
+    university: g('setupUniversity')?.value || '',
+    department: g('setupDept')?.value || '',
+    identity_type: g('setupIdentity')?.value || '',
+    admission_status: g('admissionStatusVal')?.value || '',
+    expected_arrival: g('setupArrival')?.value || '',
+    quizActive: _quizActive,
+    quizStep: _quizStep,
+    quizAnswers: _quizAnswers,
+  };
+  localStorage.setItem(SETUP_DRAFT_KEY, JSON.stringify(draft));
+  console.log('[draft] 已儲存', draft);
+}
+
+function clearSetupDraft() {
+  localStorage.removeItem(SETUP_DRAFT_KEY);
+}
+
+/** 標示目前這題已選過的答案，並更新「下一題」按鈕的可用狀態 */
+function _refreshQuizCardUI() {
+  const cardId = _quizSequence[_quizStep];
+  const card = document.getElementById(cardId);
+  if (!card) return;
+
+  const field = card.querySelector('.quiz-option')?.dataset.field;
+  const answered = field !== undefined && _quizAnswers[field] !== undefined;
+
+  card.querySelectorAll('.quiz-option').forEach(btn => {
+    const matches = answered && String(_quizAnswers[field]) === btn.dataset.value;
+    btn.classList.toggle('selected', matches);
+  });
+
+  const nextBtn = card.querySelector('.quiz-nav-btn[onclick="quizGoNext()"]');
+  if (nextBtn) nextBtn.disabled = !answered;
+}
+
+/** 關閉問答 overlay，返回填寫個人資料畫面（已填的表單與已作答的題目都會保留） */
+function returnToProfileForm() {
+  const overlay = document.getElementById('quizOverlay');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+  document.querySelectorAll('.quiz-card').forEach(c => c.classList.remove('visible', 'exit'));
+  _quizActive = false;
+  _quizTransitioning = false;
+  saveSetupDraft();
+}
+
+/** 回到上一題（不會清除已作答的答案） */
+function quizGoBack() {
+  if (_quizTransitioning || _quizStep === 0) return;
+  const currentCard = document.getElementById(_quizSequence[_quizStep]);
+  currentCard.classList.remove('visible');
+  _quizStep -= 1;
+  _updateQuizDots(_quizStep);
+  document.getElementById(_quizSequence[_quizStep]).classList.add('visible');
+  _refreshQuizCardUI();
+  saveSetupDraft();
+}
+
+/** 前進到下一題（僅在目前題目已作答時可用） */
+function quizGoNext() {
+  if (_quizTransitioning) return;
+  const field = document.getElementById(_quizSequence[_quizStep])?.querySelector('.quiz-option')?.dataset.field;
+  if (field === undefined || _quizAnswers[field] === undefined) return;
+  if (_quizStep + 1 >= _quizSequence.length) return;
+
+  const currentCard = document.getElementById(_quizSequence[_quizStep]);
+  currentCard.classList.remove('visible');
+  _quizStep += 1;
+  _updateQuizDots(_quizStep);
+  document.getElementById(_quizSequence[_quizStep]).classList.add('visible');
+  _refreshQuizCardUI();
+  saveSetupDraft();
+}
+
+/** 頁面載入時，若有暫存資料則還原表單欄位與問答進度 */
+function restoreSetupDraft() {
+  console.log('[draft] restoreSetupDraft 有執行');
+  const raw = localStorage.getItem(SETUP_DRAFT_KEY);
+  if (!raw) {
+    console.log('[draft] localStorage 沒有暫存資料');
+    return false;
+  }
+  let draft;
+  try { draft = JSON.parse(raw); } catch (e) {
+    console.log('[draft] 暫存資料解析失敗', e);
+    return false;
+  }
+  console.log('[draft] 還原暫存資料', draft);
+
+  const g = id => document.getElementById(id);
+  if (draft.region && g('setupRegion')) g('setupRegion').value = draft.region;
+  if (typeof updateSetupNationality === 'function') updateSetupNationality();
+  if (draft.nationality && g('setupNationality')) g('setupNationality').value = draft.nationality;
+  if (draft.university && g('setupUniversity')) g('setupUniversity').value = draft.university;
+  if (draft.department && g('setupDept')) g('setupDept').value = draft.department;
+  if (draft.identity_type && g('setupIdentity')) g('setupIdentity').value = draft.identity_type;
+  if (draft.expected_arrival && g('setupArrival')) g('setupArrival').value = draft.expected_arrival;
+  if (draft.admission_status) {
+    const card = document.querySelector(`.status-card[data-val="${draft.admission_status}"]`);
+    if (card) selectStatus(card);
+  }
+  updatePreview();
+
+  if (draft.quizActive) {
+    _quizFormData = {
+      region: draft.region,
+      nationality: draft.nationality,
+      university: draft.university,
+      identity_type: draft.identity_type,
+      admission_status: draft.admission_status,
+      department: draft.department,
+      expected_arrival: draft.expected_arrival,
+    };
+    _quizAnswers = draft.quizAnswers || {};
+    _quizSequence = ['quizQ1', 'quizQ2'];
+    _quizStep = draft.quizStep || 0;
+    _quizActive = true;
+
+    _buildQuizProgress(_quizSequence.length);
+    const overlay = g('quizOverlay');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    document.getElementById(_quizSequence[_quizStep]).classList.add('visible');
+    _updateQuizDots(_quizStep);
+    _refreshQuizCardUI();
+  }
+
+  // updatePreview() 在還原問答狀態前已先存了一次草稿，這裡用最終狀態覆寫回去
+  saveSetupDraft();
+  return true;
+}
 
 /**
  * Step 1: 驗證原有表單，進入問答模式
@@ -406,6 +551,8 @@ function startProfileQuiz(e) {
 
   _quizStep = 0;
   _quizAnswers = {};
+  _quizActive = true;
+  saveSetupDraft();
 
   // 設定進度指示器
   _buildQuizProgress(_quizSequence.length);
@@ -420,6 +567,7 @@ function startProfileQuiz(e) {
     const firstCard = document.getElementById(_quizSequence[0]);
     firstCard.classList.add('visible');
     _updateQuizDots(0);
+    _refreshQuizCardUI();
   }, 200);
 }
 
@@ -467,6 +615,7 @@ function answerQuiz(field, value) {
   _quizTransitioning = true;
 
   _quizAnswers[field] = value;
+  saveSetupDraft();
 
   const currentCard = document.getElementById(_quizSequence[_quizStep]);
   const nextStep    = _quizStep + 1;
@@ -488,9 +637,11 @@ function answerQuiz(field, value) {
     // Fade in 下一題
     _quizStep = nextStep;
     _updateQuizDots(nextStep);
+    saveSetupDraft();
     const nextCard = document.getElementById(_quizSequence[nextStep]);
     setTimeout(() => {
       nextCard.classList.add('visible');
+      _refreshQuizCardUI();
       _quizTransitioning = false;
     }, 80);
   }, 380);
@@ -512,6 +663,8 @@ async function submitProfileWithQuiz() {
     if (overlay) overlay.classList.remove('active');
     document.body.style.overflow = '';
     _quizTransitioning = false;
+    _quizActive = false;
+    saveSetupDraft();
   };
 
   let apiOk, data;
@@ -532,6 +685,7 @@ async function submitProfileWithQuiz() {
     return;
   }
 
+  clearSetupDraft();
   showToast('資料已儲存！個人化流程已生成 🎉', 'success');
   setTimeout(() => { window.location.href = '/dashboard/'; }, 800);
 }
@@ -750,14 +904,18 @@ function updatePreview() {
     set('prevName', user.name);
     set('prevEmail', user.email);
   }
+  const identityVal = g('setupIdentity')?.value;
+  const statusVal = g('admissionStatusVal')?.value;
   set('prevNationality', g('setupNationality')?.value || window.I18N_PROFILE_SETUP?.nationalityNotSelected || '國籍未選');
-  set('prevIdentity', IDENTITY_LABELS[g('setupIdentity')?.value] || window.I18N_PROFILE_SETUP?.identityNotSelected || '身份別未選');
-  set('prevStatus', STATUS_LABELS[g('admissionStatusVal')?.value] || window.I18N_PROFILE_SETUP?.statusNotSelected || '狀態未選');
+  set('prevIdentity', window.I18N_PROFILE_SETUP?.identityLabels?.[identityVal] || IDENTITY_LABELS[identityVal] || window.I18N_PROFILE_SETUP?.identityNotSelected || '身份別未選');
+  set('prevStatus', window.I18N_PROFILE_SETUP?.statusLabels?.[statusVal] || STATUS_LABELS[statusVal] || window.I18N_PROFILE_SETUP?.statusNotSelected || '狀態未選');
   const univSel = g('setupUniversity');
   const univLabel = univSel?.options[univSel.selectedIndex]?.text || univSel?.value || '—';
   set('prevUniv', univLabel !== '請選擇就讀學校' ? univLabel : '—');
   set('prevDept', g('setupDept')?.value || '—');
   set('prevArrival', g('setupArrival')?.value || '—');
+
+  if (typeof saveSetupDraft === 'function') saveSetupDraft();
 }
 
 function _prefillSetupPreview(user) {

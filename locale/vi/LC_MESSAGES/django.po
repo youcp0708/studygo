@@ -1032,9 +1032,7 @@ msgid "您是否擁有台灣身份證？"
 msgstr "Bạn có thẻ căn cước Đài Loan không?"
 
 msgid "此資訊將影響後續的居留證申辦流程與相關步驟"
-msgstr ""
-"Thông tin này sẽ ảnh hưởng đến quy trình xin thẻ cư trú và các bước liên "
-"quan"
+msgstr "Thông tin này sẽ ảnh hưởng đến quy trình xin thẻ ARC và các bước tiếp theo"
 
 msgid "是"
 msgstr "Có"
@@ -1053,8 +1051,7 @@ msgid "您是否為延遲入學？"
 msgstr "Bạn có nhập học muộn không?"
 
 msgid "延遲入學生可能有不同的報到與註冊時程安排"
-msgstr ""
-"Sinh viên nhập học muộn có thể có lịch nhận phòng và đăng ký khác biệt"
+msgstr "Sinh viên nhập học muộn có thể có lịch trình nhập học và đăng ký khác"
 
 msgid "我是延遲入學"
 msgstr "Tôi nhập học muộn"
@@ -7254,4 +7251,18 @@ msgstr "Vui lòng chọn trạng thái nhập học"
 
 msgid "請填寫預計抵台日期"
 msgstr "Vui lòng điền ngày dự kiến đến Đài Loan"
+
+
+msgid "上一題"
+msgstr "Câu trước"
+
+msgid "下一題"
+msgstr "Câu tiếp theo"
+
+
+msgid "入境前準備"
+msgstr "Chuẩn bị trước khi nhập cảnh"
+
+msgid "已抵臺就學"
+msgstr "Đã đến Đài Loan và đang học"
 

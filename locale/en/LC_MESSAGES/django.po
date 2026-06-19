@@ -6281,3 +6281,47 @@ msgstr "(Hong Kong/Macau student)"
 
 msgid "教育部－主管法規查詢系統"
 msgstr "Ministry of Education — Competent Authority Regulation Search System"
+
+msgid "您是否擁有台灣身份證？"
+msgstr "Do you have a Taiwan ID card?"
+
+msgid "此資訊將影響後續的居留證申辦流程與相關步驟"
+msgstr "This information will affect your subsequent ARC application process and related steps"
+
+msgid "我有台灣身份證"
+msgstr "I have a Taiwan ID card"
+
+msgid "我沒有台灣身份證"
+msgstr "I don't have a Taiwan ID card"
+
+msgid "您是否為延遲入學？"
+msgstr "Are you a deferred admission student?"
+
+msgid "延遲入學生可能有不同的報到與註冊時程安排"
+msgstr "Deferred admission students may have a different check-in and registration schedule"
+
+msgid "我是延遲入學"
+msgstr "I am a deferred admission student"
+
+msgid "我不是延遲入學"
+msgstr "I am not a deferred admission student"
+
+msgid "是"
+msgstr "Yes"
+
+msgid "否"
+msgstr "No"
+
+msgid "上一題"
+msgstr "Previous"
+
+msgid "下一題"
+msgstr "Next"
+
+
+msgid "入境前準備"
+msgstr "Pre-arrival Preparation"
+
+msgid "已抵臺就學"
+msgstr "Arrived in Taiwan"
+

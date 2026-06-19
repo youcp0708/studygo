@@ -2283,6 +2283,7 @@
 
   /* 問題卡片 */
   .quiz-card {
+    position: relative;
     grid-area: 1 / 1;
     background: rgba(255, 255, 255, .92);
     backdrop-filter: blur(20px);
@@ -2392,6 +2393,39 @@
     font-size: 12px;
     color: var(--muted);
     font-weight: 600;
+  }
+
+  .quiz-option.selected {
+    border-color: var(--primary);
+    background: var(--primary-soft);
+  }
+
+  .quiz-nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  .quiz-nav-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background .15s, color .15s;
+  }
+
+  .quiz-nav-btn:hover:not(:disabled) {
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+  }
+
+  .quiz-nav-btn:disabled {
+    opacity: .4;
+    cursor: default;
   }
 
   /* 完成狀態 */

@@ -7501,3 +7501,47 @@ msgstr "Silakan pilih status masuk Anda"
 msgid "請填寫預計抵台日期"
 msgstr "Silakan isi perkiraan tanggal kedatangan Anda di Taiwan"
 
+
+msgid "您是否擁有台灣身份證？"
+msgstr "Apakah Anda memiliki KTP Taiwan?"
+
+msgid "此資訊將影響後續的居留證申辦流程與相關步驟"
+msgstr "Informasi ini akan memengaruhi proses pengajuan ARC dan langkah-langkah selanjutnya"
+
+msgid "我有台灣身份證"
+msgstr "Saya memiliki KTP Taiwan"
+
+msgid "我沒有台灣身份證"
+msgstr "Saya tidak memiliki KTP Taiwan"
+
+msgid "您是否為延遲入學？"
+msgstr "Apakah Anda mahasiswa dengan penundaan masuk?"
+
+msgid "延遲入學生可能有不同的報到與註冊時程安排"
+msgstr "Mahasiswa dengan penundaan masuk mungkin memiliki jadwal lapor diri dan pendaftaran yang berbeda"
+
+msgid "我是延遲入學"
+msgstr "Saya mahasiswa dengan penundaan masuk"
+
+msgid "我不是延遲入學"
+msgstr "Saya bukan mahasiswa dengan penundaan masuk"
+
+msgid "是"
+msgstr "Ya"
+
+msgid "否"
+msgstr "Tidak"
+
+msgid "上一題"
+msgstr "Sebelumnya"
+
+msgid "下一題"
+msgstr "Selanjutnya"
+
+
+msgid "入境前準備"
+msgstr "Persiapan sebelum kedatangan"
+
+msgid "已抵臺就學"
+msgstr "Sudah tiba di Taiwan dan sedang belajar"
+

@@ -161,7 +161,7 @@
   {% block content %}{% endblock %}
 
   {# ── Scripts ── #}
-  <script src="{% static 'users/js/users.js' %}"></script>
+  <script src="{% static 'users/js/users.js' %}?v={% now 'U' %}"></script>
   {% if user.is_authenticated %}
   <script src="{% static 'flows/js/flows.js' %}?v={% now 'U' %}"></script>
   {% endif %}
