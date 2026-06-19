@@ -29,8 +29,13 @@ def _authenticated_redirect(request):
 
 
 def index_view(request):
-    if request.user.is_authenticated:
-        return _authenticated_redirect(request)
+    user = request.user
+    if user.is_authenticated:
+        if not user.email_verified:
+            return render(request, 'users/login.html', _login_context())
+        if not hasattr(user, 'student_profile'):
+            return redirect('profile_setup')
+        return render(request, 'users/home.html', {'user': user, 'profile': user.student_profile})
     return render(request, 'users/home.html')
 
 
