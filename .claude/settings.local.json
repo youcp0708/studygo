@@ -69,10 +69,16 @@
       "Bash(xargs ls -la)",
       "Bash(xargs grep -l \"dashboard\\\\|home\\\\|index\")",
       "Bash(xargs grep -l \"my_flows\")",
-      "Bash(cd \"c:\\\\Users\\\\User\\\\Downloads\\\\studygo\" && cp users/templates/users/dashboard.html users/templates/users/home.html)"
+      "Bash(cd \"c:\\\\Users\\\\User\\\\Downloads\\\\studygo\" && cp users/templates/users/dashboard.html users/templates/users/home.html)",
+      "Bash(cd \"c:\\\\Users\\\\User\\\\Downloads\\\\studygo\" && grep -oP '\\(?<={% trans \"\\)[^\"]+' users/templates/users/home.html | sort -u > /tmp/home_strings.txt && wc -l /tmp/home_strings.txt)",
+      "Read(//tmp/**)",
+      "Bash(python _check_missing.py)",
+      "Bash(cd \"c:\\\\Users\\\\User\\\\Downloads\\\\studygo\" && cp /tmp/missing_en.txt ./_missing_en.txt && wc -l _missing_en.txt)",
+      "Bash(python _merge_i18n.py)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\User\\Downloads\\studygo\\users\\templates\\users"
+      "c:\\Users\\User\\Downloads\\studygo\\users\\templates\\users",
+      "\\tmp"
     ]
   }
 }

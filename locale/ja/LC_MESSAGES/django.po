@@ -3468,7 +3468,6 @@ msgstr "等第"
 msgid "分數範圍"
 msgstr "点数範囲"
 
-
 msgid "外籍生辦理居留證（ARC）"
 msgstr "外国人留学生のARC（外国人居留証）申請"
 
@@ -3761,7 +3760,6 @@ msgstr "ARCを受け取った後、ARCと学校の健康保険加入書類を持
 msgid "提供多語言諮詢服務，解答居留、就業、生活等問題。"
 msgstr "居留・就労・生活などに関する多言語相談サービスを提供。"
 
-
 msgid "僑生專屬服務"
 msgstr "海外華僑学生専用サービス"
 
@@ -3861,8 +3859,8 @@ msgid "抵台後完成體檢並整理文件"
 msgstr "到着後に健康診断を完了し、書類を準備する"
 
 msgid ""
-"確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約 "
-"NT$780）。"
+"確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約"
+" NT$780）。"
 msgstr ""
 "パスポート・入学通知書・在学証明書など必要書類を確認してください。健康診断は学校認定病院で受けてください（国際事務処がリストを提供できます）。香港・マカオ出身でない学生や有効な居留証を持つ香港・マカオ学生はキャンパス内健康診断（約NT$780）を受けられます。"
 
@@ -3948,7 +3946,8 @@ msgstr ""
 msgid "我是台灣的僑生（台灣護照）的僑生也需要辦居留證嗎？"
 msgstr "台湾パスポートを持つ海外華僑学生も居留証が必要ですか？"
 
-msgid "不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。"
+msgid ""
+"不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。"
 msgstr ""
 "不要です。中華民国（台湾パスポート）で台湾に入境する海外華僑学生は完全な市民権を持っており、居留証は必要ありません。このページは外国パスポートで台湾に入学する海外華僑学生（海外永住者など）向けのサービスです。"
 
@@ -4010,7 +4009,6 @@ msgstr "居留・就労・生活などに関する多言語相談を提供して
 
 msgid "僑生1年居留證（線上繳費）"
 msgstr "海外華僑学生1年居留証（オンライン支払い）"
-
 
 msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
 msgstr "NCU各寮ゾーンの情報、申請手続き、部屋の設備、費用を案内し、外国人・華僑・交換留学生が校内住宿を事前に申請できるようサポートします。"
@@ -4249,7 +4247,6 @@ msgstr "東 / 西 / 南 / 北 各ゾーン緊急専用回線"
 msgid "緊急設施損壞、安全事件聯繫"
 msgstr "緊急設備故障・安全事案の連絡先"
 
-
 msgid "僑生・外籍生必讀"
 msgstr "海外華僑・外国人留学生必読"
 
@@ -4352,7 +4349,6 @@ msgstr "行政院海外同胞事務委員会（OCAC）"
 
 msgid "教育部－主管法規查詢系統"
 msgstr "教育部 — 法規データベース"
-
 
 msgid "僑生・外籍生必知"
 msgstr "華僑・留学生が知っておくべきこと"
@@ -4626,6 +4622,7 @@ msgid ""
 msgstr ""
 "各研究所の英語基準は各学院が定め、学位口試申請前に提出が必要です。工学院はTOEIC 600 / TOEFL iBT 64 / IELTS "
 "5.0以上が必要。詳細は各学科にお問い合わせください。"
+
 msgid "學生證"
 msgstr "学生証"
 
@@ -6144,173 +6141,6 @@ msgstr "内線57081"
 msgid "承辦人：徐心荷小姐"
 msgstr "担当者：徐心荷さん"
 
-#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
-#~ msgstr "質問を入力してください。システムがあなたの身分と状態に基づいて提案を整理します。"
-
-#~ msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
-#~ msgstr "ビザ、滞在許可、健康保険、宿泊、登録、入国後の手続きなど、台湾に留学するための手続きについて相談できます。"
-
-#~ msgid "繁體中文"
-#~ msgstr "繁体字中国語"
-
-#~ msgid "English"
-#~ msgstr "英語"
-
-#~ msgid "日本語"
-#~ msgstr "日本語"
-
-#~ msgid "မြန်မာဘာသာ"
-#~ msgstr "ミャンマー語"
-
-#~ msgid "Bahasa Indonesia"
-#~ msgstr "インドネシア語"
-
-#~ msgid "ภาษาไทย"
-#~ msgstr "タイ語"
-
-#~ msgid "Bahasa Melayu"
-#~ msgstr "マレー語"
-
-#~ msgid "   同學"
-#~ msgstr "同級生"
-
-#~ msgid "電子郵件為必填欄位"
-#~ msgstr "メールアドレスは必須項目です"
-
-#~ msgid "系統管理員"
-#~ msgstr "システム管理者"
-
-#~ msgid "角色"
-#~ msgstr "役割"
-
-#~ msgid "啟用狀態"
-#~ msgstr "有効状態"
-
-#~ msgid "工作人員狀態"
-#~ msgstr "スタッフ状態"
-
-#~ msgid "建立時間"
-#~ msgstr "作成日時"
-
-#~ msgid "最後登入IP"
-#~ msgstr "最終ログインIP"
-
-#~ msgid "Email 已驗證"
-#~ msgstr "メール認証済み"
-
-#~ msgid "使用者"
-#~ msgstr "ユーザー"
-
-#~ msgid "僑生（海外華裔）"
-#~ msgstr "華僑学生（海外華人）"
-
-#~ msgid "外籍生（一般外國學生）"
-#~ msgstr "外国人留学生"
-
-#~ msgid "僑大先修生"
-#~ msgstr "華僑大学予科生"
-
-#~ msgid "已收到錄取通知"
-#~ msgstr "合格通知を受け取り済み"
-
-#~ msgid "入境前準備中"
-#~ msgstr "入国前準備中"
-
-#~ msgid "已抵臺就學中"
-#~ msgstr "すでに台湾に到着し就学中"
-
-#~ msgid "使用者帳號"
-#~ msgstr "ユーザーアカウント"
-
-#~ msgid "頭像"
-#~ msgstr "プロフィール画像"
-
-#~ msgid "慣用語言"
-#~ msgstr "優先言語"
-
-#~ msgid "更新時間"
-#~ msgstr "更新日時"
-
-#~ msgid "學生資料"
-#~ msgstr "学生プロフィール"
-
-#~ msgid "驗證 Token"
-#~ msgstr "認証トークン"
-
-#~ msgid "是否已使用"
-#~ msgstr "使用済み"
-
-#~ msgid "Email 驗證 Token"
-#~ msgstr "メール認証トークン"
-
-#~ msgid "IP 位址"
-#~ msgstr "IPアドレス"
-
-#~ msgid "使用者代理"
-#~ msgstr "ユーザーエージェント"
-
-#~ msgid "登入時間"
-#~ msgstr "ログイン日時"
-
-#~ msgid "是否成功"
-#~ msgstr "成功"
-
-#, python-format
-#~ msgid "你好，%(name)s 👋"
-#~ msgstr "こんにちは、%(name)s 👋"
-
-#~ msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
-#~ msgstr "、StudyGo Taiwanへようこそ。あなた専用の台湾留学プロセスが準備できました。"
-
-#~ msgid "個人化流程生成後顯示"
-#~ msgstr "個人化プロセスの生成後に表示されます"
-
-#~ msgid "連接模塊三後顯示"
-#~ msgstr "モジュール3接続後に表示されます"
-
-#~ msgid "信箱已驗證"
-#~ msgstr "メール認証済み"
-
-#~ msgid "信箱未驗證"
-#~ msgstr "メール未認証"
-
-#~ msgid "任務清單由模塊二提供"
-#~ msgstr "タスクリストはモジュール2によって提供されます"
-
-#~ msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
-#~ msgstr "モジュール2（プロセスとタスク管理）が完了すると、ここにあなた専用のタスクリストが表示されます。"
-
-#~ msgid "例如：國立臺灣大學"
-#~ msgstr "例：国立台湾大学"
-
-#~ msgid "準備來臺流程"
-#~ msgstr "台湾渡航プロセスの準備"
-
-#~ msgid ""
-#~ "\n"
-#~ "            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與\n"
-#~ "            <b>入學狀態</b> 自動生成個人化任務流程。\n"
-#~ "            "
-#~ msgstr ""
-#~ "\n"
-#~ "            情報が保存されると、システムはあなたの <b>国籍</b>、<b>身分種別</b>、\n"
-#~ "            <b>入学状況</b> に基づいて、個人化されたタスクプロセスを自動生成します。\n"
-#~ "            "
-
-#~ msgid "未讀的通知"
-#~ msgstr "未読の通知"
-
-#~ msgid "回到儀表板"
-#~ msgstr "ダッシュボードに戻る"
-
-#~ msgid "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
-#~ msgstr "あなたのプロフィールに基づいて、入国前、入国後、ビザ、居留証、健康保険、生活情報を整理します。"
-
-#~ msgid "你好，"
-#~ msgstr "こんにちは、"
-
-#~ msgid "我的帳戶"
-#~ msgstr "マイアカウント"
 msgid "勞動部外國人在台工作服務網 ↗"
 msgstr "労働部 外国人在台就労サービスネット ↗"
 
@@ -6319,7 +6149,6 @@ msgstr "労働部労働力発展署 ↗"
 
 msgid "NCU 國際事務處 ↗"
 msgstr "NCU 国際事務処 ↗"
-
 
 msgid "中央大學 × 公共交通"
 msgstr "国立中央大学 × 公共交通"
@@ -6540,3 +6369,532 @@ msgstr "地図"
 
 msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示即時班次。"
 msgstr "「国立中央大学」から検索し、リアルタイム出発時刻付きで交通ルートを計画。"
+
+#: users/templates/users/home.html:0
+msgid "一次搞定"
+msgstr "ワンストップで完結"
+
+#: users/templates/users/home.html:0
+msgid "不會中文可以來台灣留學嗎？"
+msgstr "中国語が話せなくても台湾に留学できますか？"
+
+#: users/templates/users/home.html:0
+msgid "不遺漏任何步驟"
+msgstr "一つのステップも見逃さない"
+
+#: users/templates/users/home.html:0
+msgid "了解更多"
+msgstr "詳しく見る"
+
+#: users/templates/users/home.html:0
+msgid "任務清單"
+msgstr "タスクリスト"
+
+#: users/templates/users/home.html:0
+msgid "住宿資訊"
+msgstr "住居情報"
+
+#: users/templates/users/home.html:0
+msgid "你好！"
+msgstr "こんにちは！"
+
+#: users/templates/users/home.html:0
+msgid "你必須登入才可以使用任務清單"
+msgstr "タスクリストを使うにはログインが必要です"
+
+#: users/templates/users/home.html:0
+msgid "來聽聽"
+msgstr "聞いてみよう"
+
+#: users/templates/users/home.html:0
+msgid "來自世界各地的學長姐，分享他們在台灣最真實的留學體驗與心得"
+msgstr "世界各国の先輩たちが台湾でのリアルな留学体験を共有"
+
+#: users/templates/users/home.html:0
+msgid "健保說明"
+msgstr "国民健康保険ガイド"
+
+#: users/templates/users/home.html:0
+msgid "全民健保什麼時候可以加入？"
+msgstr "国民健康保険にはいつ加入できますか？"
+
+#: users/templates/users/home.html:0
+msgid "全民健保加入資格、保費計算方式、就醫流程與各地醫院資訊查詢。"
+msgstr "国民健康保険の加入資格、保険料の計算方法、受診の流れ、各地の病院情報を確認。"
+
+#: users/templates/users/home.html:0
+msgid "半導體研究碩士"
+msgstr "半導体研究修士"
+
+#: users/templates/users/home.html:0
+msgid "即將到期"
+msgstr "もうすぐ期限"
+
+#: users/templates/users/home.html:0
+msgid "可以邊讀書邊打工嗎？"
+msgstr "勉強しながらアルバイトはできますか？"
+
+#: users/templates/users/home.html:0
+msgid ""
+"可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 "
+"以上），或在僑先部完成一年預科中文課程。"
+msgstr ""
+"可能です！台湾の多くの大学が英語で学べる学士・大学院プログラムを提供しています。中国語で学ぶ場合、通常は入学前に一定の中国語レベル（TOCFL "
+"B1以上など）が必要、または僑生先修部で1年間の予科中国語コースを修了します。"
+
+#: users/templates/users/home.html:0
+msgid "可以，但需申請工作許可。持有效居留證（ARC）的外籍學生，入學後可向學校申請工讀許可，每週工時上限為 20 小時。寒暑假期間可申請全時工作。"
+msgstr ""
+"可能ですが、就労許可の申請が必要です。有効なARC（居留証）を持つ外国人留学生は、入学後に学校を通じてアルバイト許可を申請でき、週20時間が上限です。夏休み・冬休み期間はフルタイム勤務が可能です。"
+
+#: users/templates/users/home.html:0
+msgid "四個階段"
+msgstr "4つのステージ"
+
+#: users/templates/users/home.html:0
+msgid "國立中央大學"
+msgstr "国立中央大学"
+
+#: users/templates/users/home.html:0
+msgid "國立成功大學"
+msgstr "国立成功大学"
+
+#: users/templates/users/home.html:0
+msgid "國立政治大學"
+msgstr "国立政治大学"
+
+#: users/templates/users/home.html:0
+msgid "國立清華大學"
+msgstr "国立清華大学"
+
+#: users/templates/users/home.html:0
+msgid "國立臺灣大學"
+msgstr "国立台湾大学"
+
+#: users/templates/users/home.html:0
+msgid "國立臺灣師範大學"
+msgstr "国立台湾師範大学"
+
+#: users/templates/users/home.html:0
+msgid "國立陽明交通大學"
+msgstr "国立陽明交通大学"
+
+#: users/templates/users/home.html:0
+msgid "國際企業管理碩士"
+msgstr "国際企業経営修士"
+
+#: users/templates/users/home.html:0
+msgid "國際傳播學士班"
+msgstr "国際コミュニケーション学士"
+
+#: users/templates/users/home.html:0
+msgid "大眾交通"
+msgstr "公共交通"
+
+#: users/templates/users/home.html:0
+msgid "學生簽證如何辦理？"
+msgstr "学生ビザはどのように申請しますか？"
+
+#: users/templates/users/home.html:0
+msgid "學生簽證申請流程、所需文件、辦理地點與注意事項，一次搞懂不迷路。"
+msgstr "学生ビザの申請手続き、必要書類、申請場所と注意事項を一度に分かりやすく解説。"
+
+#: users/templates/users/home.html:0
+msgid ""
+"學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 "
+"NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
+msgstr ""
+"学費は学校や専攻により異なります。国立大学の学部は1学期あたりNT$20,000～50,000、大学院はNT$25,000～60,000程度です。生活費（住居、食費、交通費）は月にNT$10,000～20,000程度。奨学金を活用すれば台湾留学は比較的手頃です。"
+
+#: users/templates/users/home.html:0
+msgid "學長姐分享"
+msgstr "先輩の体験談"
+
+#: users/templates/users/home.html:0
+msgid "學長姐怎麼說"
+msgstr "先輩たちの声"
+
+#: users/templates/users/home.html:0
+msgid "專為僑外籍生打造的來台留學流程指南平台。"
+msgstr "華僑・外国籍学生のために作られた台湾留学ガイドプラットフォーム。"
+
+#: users/templates/users/home.html:0
+msgid "待辦任務"
+msgstr "未完了タスク"
+
+#: users/templates/users/home.html:0
+msgid "後可查看個人化流程進度"
+msgstr "してパーソナライズされた進捗を確認"
+
+#: users/templates/users/home.html:0
+msgid "後才可以使用"
+msgstr "してから利用できます"
+
+#: users/templates/users/home.html:0
+msgid "從簽證到住宿、從健保到交通，所有外籍生在台必備的重要資訊都在這裡"
+msgstr "ビザから住居、健康保険から交通まで、台湾の外国人留学生に必要な重要情報がすべてここに"
+
+#: users/templates/users/home.html:0
+msgid ""
+"從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 "
+"個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
+msgstr ""
+"申請開始から正式入学まで通常3～8ヶ月かかります。早めの準備をお勧めします：資格確認（6～12ヶ月前）、書類準備（4～6ヶ月前）、申請提出（3～4ヶ月前）、合格待ち（1～2ヶ月）、ビザ手続き（1～2ヶ月）。"
+
+#: users/templates/users/home.html:0
+msgid "悠遊卡/一卡通使用教學、捷運公車路線查詢、YouBike 租借與火車訂票。"
+msgstr "EasyCard/iPASSの使い方、MRT・バス路線検索、YouBikeレンタルと電車予約。"
+
+#: users/templates/users/home.html:0
+msgid "您想了解的都在這"
+msgstr "知りたいことがすべてここに"
+
+#: users/templates/users/home.html:0
+msgid "手機門號"
+msgstr "携帯番号"
+
+#: users/templates/users/home.html:0
+msgid "抵台前準備"
+msgstr "台湾到着前の準備"
+
+#: users/templates/users/home.html:0
+msgid "抵達後事項"
+msgstr "到着後の手続き"
+
+#: users/templates/users/home.html:0
+msgid "持有效居留證（ARC），在台灣合法居留滿 6 個月後可強制加入全民健保。若有效工作許可可提前加保。加保後門診費用大幅降低。"
+msgstr ""
+"有効なARCを持ち、台湾で6ヶ月間合法的に居住すると国民健康保険への加入が義務になります。有効な就労許可があれば早期加入も可能です。加入後は外来診療費が大幅に下がります。"
+
+#: users/templates/users/home.html:0
+msgid "掌握留學全流程"
+msgstr "留学の全プロセスを把握"
+
+#: users/templates/users/home.html:0
+msgid "推薦外籍生友善銀行、開戶所需文件、線上轉帳與提款卡申請教學。"
+msgstr "外国人留学生に優しい銀行、開設に必要な書類、オンライン振込とキャッシュカード申請ガイド。"
+
+#: users/templates/users/home.html:0
+msgid ""
+"收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident "
+"Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
+msgstr ""
+"台湾の学校から入学許可書を受け取ったら、許可書を持って現地の台湾代表機関で居留ビザ（Resident "
+"Visa）を申請します。パスポート、入学許可書、財力証明、健康診断書などを準備してください。"
+
+#: users/templates/users/home.html:0
+msgid "校內宿舍申請流程、校外租屋平台推薦、租房合約注意事項與常見陷阱。"
+msgstr "学内寮の申請手続き、学外賃貸プラットフォームの紹介、賃貸契約の注意点とよくある落とし穴。"
+
+#: users/templates/users/home.html:0
+msgid "機械工程學士班"
+msgstr "機械工学学士"
+
+#: users/templates/users/home.html:0
+msgid "歡迎使用"
+msgstr "ご利用ありがとうございます"
+
+#: users/templates/users/home.html:0
+msgid "申請中"
+msgstr "申請中"
+
+#: users/templates/users/home.html:0
+msgid "申請入學"
+msgstr "入学申請"
+
+#: users/templates/users/home.html:0
+msgid "申請前準備"
+msgstr "申請前の準備"
+
+#: users/templates/users/home.html:0
+msgid "申請台灣大學需要準備哪些文件？"
+msgstr "台湾の大学に申請するにはどんな書類が必要ですか？"
+
+#: users/templates/users/home.html:0
+msgid "申請流程需要多久時間？"
+msgstr "申請プロセスはどのくらい時間がかかりますか？"
+
+#: users/templates/users/home.html:0
+msgid "留學台灣的費用大約多少？"
+msgstr "台湾留学の費用はどのくらいですか？"
+
+#: users/templates/users/home.html:0
+msgid "留學流程"
+msgstr "留学プロセス"
+
+#: users/templates/users/home.html:0
+msgid "登入後即可查看個人化的留學任務清單、追蹤進度，以及設定提醒。"
+msgstr "ログインしてパーソナライズされた留学タスクリストを確認、進捗を追跡、リマインダーを設定できます。"
+
+#: users/templates/users/home.html:0
+msgid "目前進度"
+msgstr "現在の進捗"
+
+#: users/templates/users/home.html:0
+msgid "確認資格、選擇學校與科系、準備學歷文件與財力證明"
+msgstr "資格確認、学校・学科の選択、学歴書類と財力証明の準備"
+
+#: users/templates/users/home.html:0
+msgid "簽證指南"
+msgstr "ビザガイド"
+
+#: users/templates/users/home.html:0
+msgid "線上申請系統填寫、繳交文件、等待入學許可"
+msgstr "オンライン申請システムへの入力、書類提出、入学許可待ち"
+
+#: users/templates/users/home.html:0
+msgid "華語文教學碩士"
+msgstr "華語教育修士"
+
+#: users/templates/users/home.html:0
+msgid "詢問AI小幫手"
+msgstr "AIアシスタントに質問"
+
+#: users/templates/users/home.html:0
+msgid "資訊工程博士班"
+msgstr "情報工学博士"
+
+#: users/templates/users/home.html:0
+msgid "跟著我們一步步完成留學準備，掌握所有關鍵資訊。"
+msgstr "私たちと一緒にステップごとに留学準備を進め、すべての重要情報を把握しましょう。"
+
+#: users/templates/users/home.html:0
+msgid "跟著清單走"
+msgstr "リストに従って"
+
+#: users/templates/users/home.html:0
+msgid "辦理居留證、健保、銀行開戶、手機門號、學校註冊"
+msgstr "ARC、健康保険、銀行口座開設、携帯番号、学校登録の手続き"
+
+#: users/templates/users/home.html:0
+msgid "辦理簽證、預訂機票、安排住宿、準備入境文件"
+msgstr "ビザ手続き、フライト予約、住居手配、入国書類準備"
+
+#: users/templates/users/home.html:0
+msgid "重要資訊"
+msgstr "重要な情報"
+
+#: users/templates/users/home.html:0
+msgid "銀行開戶"
+msgstr "銀行口座開設"
+
+#: users/templates/users/home.html:0
+msgid "電信業者比較、預付卡 vs 月租方案、門號申請所需證件與流程。"
+msgstr "通信業者の比較、プリペイドカード vs 月額プラン、番号申請に必要な書類と手続き。"
+
+#: users/templates/users/home.html:0
+msgid "項任務"
+msgstr "件のタスク"
+
+#: users/templates/users/home.html:0
+msgid "，您的個人化來臺就學流程已準備好。"
+msgstr "、あなた専用の台湾留学プロセスが準備できました。"
+
+#: users/templates/users/home.html:0
+msgid ""
+"一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
+msgstr ""
+"一般的に必要な書類：パスポート、学歴証明（高校/大学卒業証書）、成績証明書、語学能力証明（中国語または英語）、財力証明、健康診断書、推薦状（一部の学校で必要）、研究計画書（大学院）。学校により要件が異なるため、各校の募集要項をご確認ください。"
+
+#: users/templates/users/home.html:0
+msgid ""
+"「剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。StudyGo "
+"上的流程整理讓我在申請階段就對整個時程很有把握，少走了好多彎路！」"
+msgstr ""
+"「台湾に来たばかりの頃はとても緊張しましたが、学校の国際処はとても親切で、出迎えから寮の入居まで専任スタッフがサポートしてくれました。StudyGoの流程整理のおかげで申請段階からスケジュールに自信が持てて、回り道をせずに済みました！」"
+
+#: users/templates/users/home.html:0
+msgid ""
+"「台灣的工程教育真的世界一流！教授們都很願意指導外籍生，實驗室設備也很完整。StudyGo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」"
+msgstr ""
+"「台湾の工学教育は本当に世界一流です！教授たちは外国人留学生の指導に熱心で、実験設備も充実しています。StudyGoのビザガイドのおかげで調べる時間を大幅に節約でき、手順通りに進めるだけで済みました。」"
+
+#: users/templates/users/home.html:0
+msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」"
+msgstr ""
+"「華人の血を引いているので、なぜ台湾に来たのかとよく聞かれます。実は台湾のメディア環境と創作の自由度は本当に違うんです。政治大学のキャンパスライフは多彩で充実していて、私が下した最高の選択でした！」"
+
+#: users/templates/users/home.html:0
+msgid "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。StudyGo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
+msgstr ""
+"「清華大学情報工学科は産学連携の機会が多く、在学中に新竹サイエンスパークでインターンする機会がありました。StudyGoの住居情報と健康保険手続きの説明がとても役立ち、研究に専念できました。」"
+
+#: users/templates/users/home.html:0
+msgid ""
+"「台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。陽明交大的研究環境和業界連結都非常完善。StudyGo 的 ARC "
+"辦理指南讓我順利完成所有手續。」"
+msgstr ""
+"「台湾の半導体産業は世界トップクラスで、ここで研究を深めることは最も正しい選択でした。陽明交通大学の研究環境と産業界とのつながりは非常に充実しています。StudyGoのARC手続きガイドのおかげで、すべての手続きを順調に完了できました。」"
+
+#: users/templates/users/home.html:0
+msgid "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。StudyGo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
+msgstr ""
+"「中国語を学びに来たことは私が下した最高の決断でした！師範大学の中国語センターの教え方は生き生きとしていて、毎日実際に活用できます。StudyGoの渡航前準備リストのおかげで、出発前に全く慌てませんでした。」"
+
+#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
+#~ msgstr "質問を入力してください。システムがあなたの身分と状態に基づいて提案を整理します。"
+
+#~ msgid "你可以問我來臺就學的流程，例如簽證、居留證、健保、住宿、註冊或入境後要做什麼"
+#~ msgstr "ビザ、滞在許可、健康保険、宿泊、登録、入国後の手続きなど、台湾に留学するための手続きについて相談できます。"
+
+#~ msgid "繁體中文"
+#~ msgstr "繁体字中国語"
+
+#~ msgid "English"
+#~ msgstr "英語"
+
+#~ msgid "日本語"
+#~ msgstr "日本語"
+
+#~ msgid "မြန်မာဘာသာ"
+#~ msgstr "ミャンマー語"
+
+#~ msgid "Bahasa Indonesia"
+#~ msgstr "インドネシア語"
+
+#~ msgid "ภาษาไทย"
+#~ msgstr "タイ語"
+
+#~ msgid "Bahasa Melayu"
+#~ msgstr "マレー語"
+
+#~ msgid "   同學"
+#~ msgstr "同級生"
+
+#~ msgid "電子郵件為必填欄位"
+#~ msgstr "メールアドレスは必須項目です"
+
+#~ msgid "系統管理員"
+#~ msgstr "システム管理者"
+
+#~ msgid "角色"
+#~ msgstr "役割"
+
+#~ msgid "啟用狀態"
+#~ msgstr "有効状態"
+
+#~ msgid "工作人員狀態"
+#~ msgstr "スタッフ状態"
+
+#~ msgid "建立時間"
+#~ msgstr "作成日時"
+
+#~ msgid "最後登入IP"
+#~ msgstr "最終ログインIP"
+
+#~ msgid "Email 已驗證"
+#~ msgstr "メール認証済み"
+
+#~ msgid "使用者"
+#~ msgstr "ユーザー"
+
+#~ msgid "僑生（海外華裔）"
+#~ msgstr "華僑学生（海外華人）"
+
+#~ msgid "外籍生（一般外國學生）"
+#~ msgstr "外国人留学生"
+
+#~ msgid "僑大先修生"
+#~ msgstr "華僑大学予科生"
+
+#~ msgid "已收到錄取通知"
+#~ msgstr "合格通知を受け取り済み"
+
+#~ msgid "入境前準備中"
+#~ msgstr "入国前準備中"
+
+#~ msgid "已抵臺就學中"
+#~ msgstr "すでに台湾に到着し就学中"
+
+#~ msgid "使用者帳號"
+#~ msgstr "ユーザーアカウント"
+
+#~ msgid "頭像"
+#~ msgstr "プロフィール画像"
+
+#~ msgid "慣用語言"
+#~ msgstr "優先言語"
+
+#~ msgid "更新時間"
+#~ msgstr "更新日時"
+
+#~ msgid "學生資料"
+#~ msgstr "学生プロフィール"
+
+#~ msgid "驗證 Token"
+#~ msgstr "認証トークン"
+
+#~ msgid "是否已使用"
+#~ msgstr "使用済み"
+
+#~ msgid "Email 驗證 Token"
+#~ msgstr "メール認証トークン"
+
+#~ msgid "IP 位址"
+#~ msgstr "IPアドレス"
+
+#~ msgid "使用者代理"
+#~ msgstr "ユーザーエージェント"
+
+#~ msgid "登入時間"
+#~ msgstr "ログイン日時"
+
+#~ msgid "是否成功"
+#~ msgstr "成功"
+
+#, python-format
+#~ msgid "你好，%(name)s 👋"
+#~ msgstr "こんにちは、%(name)s 👋"
+
+#~ msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+#~ msgstr "、StudyGo Taiwanへようこそ。あなた専用の台湾留学プロセスが準備できました。"
+
+#~ msgid "個人化流程生成後顯示"
+#~ msgstr "個人化プロセスの生成後に表示されます"
+
+#~ msgid "連接模塊三後顯示"
+#~ msgstr "モジュール3接続後に表示されます"
+
+#~ msgid "信箱已驗證"
+#~ msgstr "メール認証済み"
+
+#~ msgid "信箱未驗證"
+#~ msgstr "メール未認証"
+
+#~ msgid "任務清單由模塊二提供"
+#~ msgstr "タスクリストはモジュール2によって提供されます"
+
+#~ msgid "完成模塊二（流程與任務管理）後，這裡將顯示您的個人化任務清單。"
+#~ msgstr "モジュール2（プロセスとタスク管理）が完了すると、ここにあなた専用のタスクリストが表示されます。"
+
+#~ msgid "例如：國立臺灣大學"
+#~ msgstr "例：国立台湾大学"
+
+#~ msgid "準備來臺流程"
+#~ msgstr "台湾渡航プロセスの準備"
+
+#~ msgid ""
+#~ "\n"
+#~ "            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與\n"
+#~ "            <b>入學狀態</b> 自動生成個人化任務流程。\n"
+#~ "            "
+#~ msgstr ""
+#~ "\n"
+#~ "            情報が保存されると、システムはあなたの <b>国籍</b>、<b>身分種別</b>、\n"
+#~ "            <b>入学状況</b> に基づいて、個人化されたタスクプロセスを自動生成します。\n"
+#~ "            "
+
+#~ msgid "未讀的通知"
+#~ msgstr "未読の通知"
+
+#~ msgid "回到儀表板"
+#~ msgstr "ダッシュボードに戻る"
+
+#~ msgid "依照你的個人資料，協助整理入境前、入境後、簽證、居留證、健保與生活資訊。"
+#~ msgstr "あなたのプロフィールに基づいて、入国前、入国後、ビザ、居留証、健康保険、生活情報を整理します。"
+
+#~ msgid "你好，"
+#~ msgstr "こんにちは、"
+
+#~ msgid "我的帳戶"
+#~ msgstr "マイアカウント"
