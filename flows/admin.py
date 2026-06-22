@@ -326,12 +326,14 @@ class ReminderAdmin(admin.ModelAdmin):
     ordering = ('-created_at',)
 
 
-class TipLinkInline(admin.TabularInline):
+class TipLinkInline(admin.StackedInline):
     model = TipLink
     extra = 1
     fields = (
-        'url', 'label',
-        'label_en', 'label_my', 'label_id', 'label_ms',
+        'url',
+        'category', 'category_en', 'category_my', 'category_id', 'category_ms',
+        'category_th', 'category_ja', 'category_ko', 'category_vi',
+        'label', 'label_en', 'label_my', 'label_id', 'label_ms',
         'label_th', 'label_ja', 'label_ko', 'label_vi'
     )
     verbose_name = "小貼士鏈結"

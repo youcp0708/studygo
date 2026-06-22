@@ -538,6 +538,35 @@ class TipLink(models.Model):
     label_ko = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Korean")
     label_vi = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Vietnamese")
 
+    # ── 鏈結分類 ──
+    category = models.CharField(
+        max_length=100, 
+        blank=True, 
+        verbose_name="鏈結分類",
+        help_text="可自訂分類名稱，例如：官方網站、參考資料等"
+    )
+    category_en = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 English")
+    category_my = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Burmese")
+    category_id = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Indonesian")
+    category_ms = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Malay")
+    category_th = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Thai")
+    category_ja = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Japanese")
+    category_ko = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Korean")
+    category_vi = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Vietnamese")
+
+    def get_localized_category(self, lang_code):
+        suffix_map = {
+            'en': '_en', 'my': '_my', 'id': '_id',
+            'ms': '_ms', 'th': '_th', 'ja': '_ja',
+            'ko': '_ko', 'vi': '_vi',
+        }
+        s = suffix_map.get(lang_code)
+        if s is None:
+            return self.category
+            
+        translated = getattr(self, f'category{s}', '') or ''
+        return translated if translated.strip() else self.category
+
     def get_localized_label(self, lang_code):
         suffix_map = {
             'en': '_en', 'my': '_my', 'id': '_id',

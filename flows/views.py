@@ -617,7 +617,8 @@ def get_tips_view(request):
             links_data.append({
                 'id': link.id,
                 'url': link.url,
-                'label': link.get_localized_label(short_lang)
+                'label': link.get_localized_label(short_lang),
+                'category': link.get_localized_category(short_lang)
             })
 
         tips_data.append({

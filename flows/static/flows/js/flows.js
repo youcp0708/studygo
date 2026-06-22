@@ -537,10 +537,39 @@ async function renderTips() {
       `;
 
       if (Array.isArray(tip.links) && tip.links.length > 0) {
+        const categories = {};
+        const uncategorized = [];
+        
         tip.links.forEach(l => {
-          const label = l.label || l.url;
-          html += `<a href="${l.url}" target="_blank" class="tip-item-link">${label} →</a>`;
+          if (l.category && l.category.trim() !== '') {
+            if (!categories[l.category]) categories[l.category] = [];
+            categories[l.category].push(l);
+          } else {
+            uncategorized.push(l);
+          }
         });
+
+        // 渲染有分類的鏈結
+        for (const [cat, links] of Object.entries(categories)) {
+          html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600;">${cat}</div>`;
+          links.forEach(l => {
+            const label = l.label || l.url;
+            html += `<a href="${l.url}" target="_blank" class="tip-item-link" style="margin-left: 4px;">${label} →</a>`;
+          });
+        }
+
+        // 渲染未分類的鏈結
+        if (uncategorized.length > 0) {
+          // 如果有其他分類，就給未分類加個標題，否則直接顯示
+          if (Object.keys(categories).length > 0) {
+            html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600;">🔗 其他 / Other</div>`;
+          }
+          uncategorized.forEach(l => {
+            const label = l.label || l.url;
+            const margin = Object.keys(categories).length > 0 ? 'margin-left: 4px;' : '';
+            html += `<a href="${l.url}" target="_blank" class="tip-item-link" style="${margin}">${label} →</a>`;
+          });
+        }
       }
 
       html += `</div>`;
