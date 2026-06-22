@@ -331,7 +331,7 @@ class TipLinkInline(admin.StackedInline):
     extra = 1
     fields = (
         'url',
-        'category', 'category_en', 'category_my', 'category_id', 'category_ms',
+        'category_icon', 'category', 'category_en', 'category_my', 'category_id', 'category_ms',
         'category_th', 'category_ja', 'category_ko', 'category_vi',
         'label', 'label_en', 'label_my', 'label_id', 'label_ms',
         'label_th', 'label_ja', 'label_ko', 'label_vi'

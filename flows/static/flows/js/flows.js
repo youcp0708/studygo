@@ -551,7 +551,9 @@ async function renderTips() {
 
         // 渲染有分類的鏈結
         for (const [cat, links] of Object.entries(categories)) {
-          html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600;">${cat}</div>`;
+          const firstIcon = links[0].category_icon;
+          const iconHtml = firstIcon ? `<span class="material-symbols-outlined" style="vertical-align: middle; font-size: 1.1rem; margin-right: 4px; margin-bottom: 2px;">${firstIcon}</span>` : '';
+          html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600; display: flex; align-items: center;">${iconHtml}${cat}</div>`;
           links.forEach(l => {
             const label = l.label || l.url;
             html += `<a href="${l.url}" target="_blank" class="tip-item-link" style="margin-left: 4px;">${label} →</a>`;

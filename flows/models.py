@@ -545,6 +545,12 @@ class TipLink(models.Model):
         verbose_name="鏈結分類",
         help_text="可自訂分類名稱，例如：官方網站、參考資料等"
     )
+    category_icon = models.CharField(
+        max_length=50,
+        blank=True,
+        verbose_name="分類圖示",
+        help_text="請輸入 Google Material Icon 名稱，例如: restaurant"
+    )
     category_en = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 English")
     category_my = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Burmese")
     category_id = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Indonesian")
