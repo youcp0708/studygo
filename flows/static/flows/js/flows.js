@@ -137,7 +137,7 @@ async function renderDashboardProgress() {
           <div style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;">
             <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
             <div style="flex:1;">
-              <div style="font-weight:700;font-size:14px;">${task.task_detail ? task.task_detail.title : '未命名任務'}</div>
+              <div style="font-weight:700;font-size:14px;">${task.localized ? task.localized.title : (task.task_detail ? task.task_detail.title : '未命名任務')}</div>
               <div style="font-size:12px;color:var(--muted);">${task.stage_name || '流程階段'}</div>
             </div>
           </div>
