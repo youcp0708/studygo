@@ -509,6 +509,24 @@ class Tip(models.Model):
             'has_fallback': fallback_occurred,
         }
 
+class TipLinkCategory(models.Model):
+    name = models.CharField(max_length=100, verbose_name="分類名稱")
+    name_en = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 English")
+    icon = models.CharField(
+        max_length=50,
+        blank=True,
+        verbose_name="分類圖示",
+        help_text="請輸入 Google Material Icon 名稱，例如: restaurant"
+    )
+
+    class Meta:
+        db_table = "flows_tip_link_category"
+        verbose_name = "小貼士連結分類"
+        verbose_name_plural = "小貼士連結分類"
+
+    def __str__(self):
+        return self.name
+
 class TipLink(models.Model):
     """
     一筆小貼士的可重複鏈結。
@@ -538,40 +556,29 @@ class TipLink(models.Model):
     label_ko = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Korean")
     label_vi = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Vietnamese")
 
-    # ── 鏈結分類 ──
-    category = models.CharField(
-        max_length=100, 
-        blank=True, 
-        verbose_name="鏈結分類",
-        help_text="可自訂分類名稱，例如：官方網站、參考資料等"
-    )
-    category_icon = models.CharField(
-        max_length=50,
+    # ── 鏈結分類 (下拉選單) ──
+    link_category = models.ForeignKey(
+        TipLinkCategory,
+        on_delete=models.SET_NULL,
+        null=True,
         blank=True,
-        verbose_name="分類圖示",
-        help_text="請輸入 Google Material Icon 名稱，例如: restaurant"
+        verbose_name="鏈結分類",
+        help_text="請選擇分類，若不需分類請留空"
     )
-    category_en = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 English")
-    category_my = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Burmese")
-    category_id = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Indonesian")
-    category_ms = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Malay")
-    category_th = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Thai")
-    category_ja = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Japanese")
-    category_ko = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Korean")
-    category_vi = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 Vietnamese")
+
+    @property
+    def category_icon(self):
+        return self.link_category.icon if self.link_category else ""
 
     def get_localized_category(self, lang_code):
-        suffix_map = {
-            'en': '_en', 'my': '_my', 'id': '_id',
-            'ms': '_ms', 'th': '_th', 'ja': '_ja',
-            'ko': '_ko', 'vi': '_vi',
-        }
-        s = suffix_map.get(lang_code)
-        if s is None:
-            return self.category
+        if not self.link_category:
+            return ""
+        
+        if not lang_code or lang_code.startswith('zh'):
+            return self.link_category.name
             
-        translated = getattr(self, f'category{s}', '') or ''
-        return translated if translated.strip() else self.category
+        translated = self.link_category.name_en or ''
+        return translated if translated.strip() else self.link_category.name
 
     def get_localized_label(self, lang_code):
         suffix_map = {

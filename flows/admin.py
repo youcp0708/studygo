@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import FlowStage, Task, StudentTask, Reminder, Tip, TipLink
+from .models import FlowStage, Task, StudentTask, Reminder, Tip, TipLink, TipLinkCategory
 
 
 @admin.register(FlowStage)
@@ -326,15 +326,19 @@ class ReminderAdmin(admin.ModelAdmin):
     ordering = ('-created_at',)
 
 
+@admin.register(TipLinkCategory)
+class TipLinkCategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'name_en', 'icon')
+    search_fields = ('name', 'name_en')
+
 class TipLinkInline(admin.StackedInline):
     model = TipLink
     extra = 1
     fields = (
         'url',
-        'category_icon', 'category', 'category_en', 'category_my', 'category_id', 'category_ms',
-        'category_th', 'category_ja', 'category_ko', 'category_vi',
-        'label', 'label_en', 'label_my', 'label_id', 'label_ms',
-        'label_th', 'label_ja', 'label_ko', 'label_vi'
+        'link_category',
+        ('label', 'label_en', 'label_my', 'label_id', 'label_ms',
+         'label_th', 'label_ja', 'label_ko', 'label_vi')
     )
     verbose_name = "小貼士鏈結"
     verbose_name_plural = "小貼士鏈結"
