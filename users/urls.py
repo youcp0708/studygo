@@ -31,7 +31,7 @@ def _authenticated_redirect(request):
 def index_view(request):
     if request.user.is_authenticated:
         return _authenticated_redirect(request)
-    return redirect('dashboard')
+    return render(request, 'users/home.html')
 
 
 def login_page(request):
@@ -73,17 +73,14 @@ def profile_setup_page(request):
 
 
 def dashboard_page(request):
-    """儀表板首頁 — 已登入顯示個人化內容，未登入顯示公開版"""
-    context = {'user': request.user}
-    if request.user.is_authenticated:
-        if not request.user.email_verified:
-            return redirect('login_page')
-        if not hasattr(request.user, 'student_profile') or request.user.student_profile is None:
-            return redirect('profile_setup')
-        profile = request.user.student_profile
-        context['profile'] = profile
-        context['flow_step'] = 4 if profile.admission_status == 'arrived' else 2
-        context['admission_progress'] = 100 if profile.admission_status == 'arrived' else 50
+    """儀表板首頁 — 需要 session 登入"""
+    if not request.user.is_authenticated:
+        return redirect('login_page')
+    if not request.user.email_verified:
+        return redirect('login_page')
+    if not hasattr(request.user, 'student_profile') or request.user.student_profile is None:
+        return redirect('profile_setup')
+    context = {'user': request.user, 'profile': request.user.student_profile}
     return render(request, 'users/dashboard.html', context)
 
 

@@ -68,7 +68,11 @@
       "Bash(xargs grep -l \"Nguyen\\\\|Budi\\\\|testimonial\\\\|學長\")",
       "Bash(xargs ls -la)",
       "Bash(xargs grep -l \"dashboard\\\\|home\\\\|index\")",
-      "Bash(xargs grep -l \"my_flows\")"
+      "Bash(xargs grep -l \"my_flows\")",
+      "Bash(cd \"c:\\\\Users\\\\User\\\\Downloads\\\\studygo\" && cp users/templates/users/dashboard.html users/templates/users/home.html)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\User\\Downloads\\studygo\\users\\templates\\users"
     ]
   }
 }
