@@ -31,7 +31,7 @@ def _authenticated_redirect(request):
 def index_view(request):
     if request.user.is_authenticated:
         return _authenticated_redirect(request)
-    return render(request, 'users/login.html', _login_context())
+    return render(request, 'users/home.html')
 
 
 def login_page(request):

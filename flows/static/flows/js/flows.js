@@ -233,14 +233,14 @@ async function renderProgressChart() {
         const { ctx } = chart;
         const meta = chart.getDatasetMeta(0);
         if (!meta || !meta.data || meta.data.length === 0) return;
-        
+
         const arc = meta.data[0];
         const x = arc.x;
         const y = arc.y;
         const innerRadius = arc.innerRadius;
 
         ctx.save();
-        
+
         // 1. 繪製內圈半圓底色
         ctx.beginPath();
         // 畫半圓: 從 PI (左) 到 0 (右)
@@ -255,10 +255,10 @@ async function renderProgressChart() {
         ctx.fillStyle = '#1f2937';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        
+
         // 將文字放在半圓內的視覺中心 (大約是半徑的一半高度)
         ctx.fillText(text, x, y - (innerRadius * 0.4));
-        
+
         ctx.restore();
       }
     };
@@ -311,6 +311,7 @@ window.toggleTaskCompletion = async function (taskId, event) {
     showToast(newStatus === 'completed' ? '任務已完成' : '已取消完成', 'success');
     renderMyTasks();
     renderDashboardProgress();
+    renderReminders();
   } else {
     showToast('狀態更新失敗', 'error');
     checkbox.checked = !checkbox.checked; // revert
@@ -324,6 +325,7 @@ window.changeTaskStatus = async function (taskId, status, event) {
     showToast('狀態更新成功', 'success');
     renderMyTasks();
     renderDashboardProgress();
+    renderReminders();
   }
 };
 
@@ -471,7 +473,7 @@ async function renderMyTasks() {
       ].join('');
 
       contentHtml += `
-        <div class="task-item ${isDone ? 'completed' : ''}">
+        <div id="task-${task.id}" class="task-item ${isDone ? 'completed' : ''}">
           <div class="task-item-row" onclick="toggleTaskDetails(${task.id})">
             <input type="checkbox" id="chk-${task.id}" onclick="toggleTaskCompletion(${task.id}, event)" ${isDone ? 'checked' : ''}>
             <div class="task-content">
@@ -503,6 +505,23 @@ async function renderMyTasks() {
 
   tabsHtml += `</div>`;
   container.innerHTML = tabsHtml + contentHtml;
+
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#task-')) {
+    const target = document.querySelector(hash);
+    if (target) {
+      const section = target.closest('.stage-section');
+      if (section) {
+        const sections = document.querySelectorAll('.stage-section:not(.skeleton)');
+        const tabIndex = Array.from(sections).indexOf(section);
+        if (tabIndex !== -1) switchFlowTab(tabIndex);
+      }
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.classList.add('task-highlight');
+      }, 150);
+    }
+  }
 }
 
 

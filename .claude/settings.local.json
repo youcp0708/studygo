@@ -60,7 +60,19 @@
       "WebFetch(domain:oia.ncku.edu.tw)",
       "Bash(pip install *)",
       "Bash(python manage.py makemessages -l en)",
-      "Bash(python manage.py compilemessages -l en)"
+      "Bash(python manage.py compilemessages -l en)",
+      "Bash(python manage.py show_urls)",
+      "Bash(python add_bank_translations.py)",
+      "Bash(python add_nhi_translations.py)",
+      "Bash(xargs grep -l \"學長姐\\\\|Nguyen\\\\|testimonial\")",
+      "Bash(xargs grep -l \"Nguyen\\\\|Budi\\\\|testimonial\\\\|學長\")",
+      "Bash(xargs ls -la)",
+      "Bash(xargs grep -l \"dashboard\\\\|home\\\\|index\")",
+      "Bash(xargs grep -l \"my_flows\")",
+      "Bash(cd \"c:\\\\Users\\\\User\\\\Downloads\\\\studygo\" && cp users/templates/users/dashboard.html users/templates/users/home.html)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\User\\Downloads\\studygo\\users\\templates\\users"
     ]
   }
 }

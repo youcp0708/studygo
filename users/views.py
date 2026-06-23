@@ -3,9 +3,12 @@ users/views.py
 API Views — 對應 Activity Diagram 與 Sequence Diagram 的後端邏輯
 """
 
+import hashlib
 import secrets
 import logging
 from django.contrib.auth import login, logout
+from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError as DjangoValidationError
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
@@ -15,10 +18,11 @@ from django.conf import settings
 from django.utils import timezone
 
 from rest_framework import status
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes, throttle_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
+from .throttles import LoginThrottle, RegisterThrottle, PasswordResetThrottle, ResendVerificationThrottle
 
 from .models import CustomUser, StudentProfile, EmailVerificationToken, LoginLog
 from flows.models import Reminder
@@ -36,10 +40,11 @@ from .serializers import (
 # HELPER
 # ══════════════════════════════════════════
 def get_client_ip(request):
-    """取得真實 IP（透過 Nginx/Proxy 時需讀 HTTP_X_FORWARDED_FOR）"""
-    x_forwarded = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded:
-        return x_forwarded.split(',')[0].strip()
+    """取得客戶端 IP。僅在 settings.TRUST_X_FORWARDED_FOR=True 時才讀取 Proxy header。"""
+    if getattr(settings, 'TRUST_X_FORWARDED_FOR', False):
+        x_forwarded = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded:
+            return x_forwarded.split(',')[0].strip()
     return request.META.get('REMOTE_ADDR')
 
 def success_response(data=None, message='成功', status_code=200):
@@ -58,6 +63,7 @@ def error_response(message='發生錯誤', errors=None, status_code=400):
 # ══════════════════════════════════════════
 @api_view(['POST'])
 @permission_classes([AllowAny])
+@throttle_classes([RegisterThrottle])
 def register_view(request):
     """
     Request Body:
@@ -99,6 +105,7 @@ def register_view(request):
 # ══════════════════════════════════════════
 @api_view(['POST'])
 @permission_classes([AllowAny])
+@throttle_classes([LoginThrottle])
 def login_view(request):
     """
     Request Body:
@@ -110,8 +117,14 @@ def login_view(request):
     """
     serializer = LoginSerializer(data=request.data)
     if not serializer.is_valid():
-        # 記錄失敗登入
-        _log_login(None, request, success=False)
+        email = request.data.get('email', '')
+        failed_user = None
+        if email:
+            try:
+                failed_user = CustomUser.objects.get(email=email)
+            except CustomUser.DoesNotExist:
+                logger.warning('登入失敗（帳號不存在）: ip=%s email=%s', get_client_ip(request), email)
+        _log_login(failed_user, request, success=False)
         return error_response('登入失敗', serializer.errors, 401)
 
     user  = serializer.validated_data['user']
@@ -286,6 +299,7 @@ def change_password_view(request):
 # ══════════════════════════════════════════
 @api_view(['POST'])
 @permission_classes([AllowAny])
+@throttle_classes([PasswordResetThrottle])
 def password_reset_request_view(request):
     """
     Request Body: { "email": "a@b.com" }
@@ -311,6 +325,7 @@ def password_reset_request_view(request):
 # ══════════════════════════════════════════
 @api_view(['POST'])
 @permission_classes([AllowAny])
+@throttle_classes([PasswordResetThrottle])
 def password_reset_confirm_view(request):
     """
     Request Body:
@@ -329,8 +344,10 @@ def password_reset_confirm_view(request):
     if not default_token_generator.check_token(user, token):
         return error_response('重設連結已過期或無效', status_code=400)
 
-    if len(new_pw) < 8:
-        return error_response('新密碼至少需 8 個字元')
+    try:
+        validate_password(new_pw, user)
+    except DjangoValidationError as e:
+        return error_response('密碼強度不足', {'new_password': list(e.messages)})
 
     user.set_password(new_pw)
     user.save()
@@ -343,8 +360,9 @@ def password_reset_confirm_view(request):
 # 點擊信件連結後重導至登入頁（瀏覽器友善）
 # ══════════════════════════════════════════
 def verify_email_view(request, token):
+    token_hash = hashlib.sha256(token.encode()).hexdigest()
     try:
-        ev_token = EmailVerificationToken.objects.get(token=token, is_used=False)
+        ev_token = EmailVerificationToken.objects.get(token=token_hash, is_used=False)
     except EmailVerificationToken.DoesNotExist:
         return HttpResponseRedirect('/login/?verified=fail')
 
@@ -389,7 +407,7 @@ def google_login_view(request):
         )
     except ValueError as e:
         logger.warning('Google ID Token 驗證失敗: %s', e)
-        return error_response(f'Google 憑證無效或已過期：{e}', status_code=401)
+        return error_response('Google 憑證無效或已過期', status_code=401)
 
     email = idinfo.get('email')
     name  = idinfo.get('name') or email.split('@')[0]
@@ -451,6 +469,7 @@ def delete_account_view(request):
 # ══════════════════════════════════════════
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
+@throttle_classes([ResendVerificationThrottle])
 def resend_verification_view(request):
     user = request.user
     if user.email_verified:
@@ -483,9 +502,10 @@ def login_logs_view(request):
 # ══════════════════════════════════════════
 def _send_verification_email(user, request):
     """產生並寄送 Email 驗證信"""
-    token = secrets.token_urlsafe(48)
-    EmailVerificationToken.objects.create(user=user, token=token)
-    link = f"{request.scheme}://{request.get_host()}/api/users/verify-email/{token}/"
+    raw_token = secrets.token_urlsafe(48)
+    token_hash = hashlib.sha256(raw_token.encode()).hexdigest()
+    EmailVerificationToken.objects.create(user=user, token=token_hash)
+    link = f"{request.scheme}://{request.get_host()}/api/users/verify-email/{raw_token}/"
     send_mail(
         subject='【StudyGo Taiwan】請驗證您的電子信箱',
         message=f'您好 {user.name}，\n\n請點擊以下連結完成驗證：\n{link}\n\n連結有效期限為 24 小時。',
@@ -510,10 +530,11 @@ def _send_password_reset_email(user, request):
 
 
 def _log_login(user, request, success=True):
+    ip = get_client_ip(request)
+    ua = request.META.get('HTTP_USER_AGENT', '')[:500]
     if user:
-        LoginLog.objects.create(
-            user=user,
-            ip_address=get_client_ip(request),
-            user_agent=request.META.get('HTTP_USER_AGENT', '')[:500],
-            success=success,
-        )
+        LoginLog.objects.create(user=user, ip_address=ip, user_agent=ua, success=success)
+        if not success:
+            logger.warning('登入失敗: user=%s ip=%s', user.email, ip)
+    else:
+        logger.warning('登入失敗（未知使用者）: ip=%s', ip)

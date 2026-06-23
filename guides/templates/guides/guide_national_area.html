@@ -4,69 +4,7 @@
 {% block title %}{% trans "各國專區" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
-<style>
-  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
-
-  .guide-hero {
-    background: linear-gradient(135deg, #1d4ed8 0%, #0e7490 100%);
-    color:#fff; padding:36px 44px 32px; border-radius:20px;
-    margin-bottom:32px; position:relative; overflow:hidden;
-  }
-  .guide-hero .bg-text {
-    position:absolute; right:24px; top:50%; transform:translateY(-50%);
-    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
-    pointer-events:none; user-select:none;
-  }
-  .guide-hero .hero-badge {
-    display:inline-block; background:rgba(255,255,255,.18);
-    border:1px solid rgba(255,255,255,.35); border-radius:99px;
-    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
-  }
-  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
-  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:520px; margin:0; }
-
-  .section-title {
-    font-size:17px; font-weight:900; color:var(--primary-dark);
-    margin:28px 0 14px; padding-bottom:10px;
-    border-bottom:2.5px solid var(--primary-soft);
-    display:flex; align-items:center; gap:8px;
-  }
-
-  .country-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(160px, 1fr));
-    gap:16px;
-    margin-bottom:32px;
-  }
-  .country-card {
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    gap:10px; padding:24px 12px; text-align:center;
-    background:#fff; border:1.5px solid var(--line); border-radius:16px;
-    text-decoration:none; color:var(--dark);
-    transition:border-color .15s, box-shadow .15s, transform .15s;
-  }
-  .country-card:hover {
-    border-color:var(--primary); box-shadow:0 4px 16px rgba(99,102,241,.12);
-    transform:translateY(-2px); color:var(--primary);
-  }
-  .country-flag { font-size:40px; line-height:1; }
-  .country-name { font-size:15px; font-weight:700; }
-  .country-arrow { font-size:11px; color:var(--muted); margin-top:-4px; }
-
-  .info-note {
-    background:#eff6ff; border:1.5px solid #bae6fd; border-radius:12px;
-    padding:14px 18px; font-size:14px; line-height:1.7; color:#0369a1;
-    margin-bottom:28px; display:flex; gap:12px; align-items:flex-start;
-  }
-  .info-note-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
-
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px;
-    font-size:14px; color:var(--muted); text-decoration:none;
-    margin-bottom:24px; transition:color .15s;
-  }
-  .back-link:hover { color:var(--primary); }
-</style>
+<link rel="stylesheet" href="{% static 'guides/css/guide_national_area.css' %}?v={% now 'U' %}">
 {% endblock %}
 
 {% block content %}

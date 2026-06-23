@@ -11,17 +11,23 @@ from django.utils import timezone
 class ChatSession(models.Model):
     """一位使用者可有多個聊天對話。"""
 
+    AI_MODE_CHOICES = [
+        ("helper", "StudyGo AI 小幫手"),
+        ("friend", "StudyGo AI 聊天好朋友"),
+    ]
+
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name='chat_sessions',
-        verbose_name='使用者',
+        related_name="chat_sessions"
     )
 
-    title = models.CharField(
-        max_length=120,
-        default='新的對話',
-        verbose_name='對話標題'
+    title = models.CharField(max_length=100, default="新的聊天")
+    ai_mode = models.CharField(
+        max_length=20,
+        choices=AI_MODE_CHOICES,
+        default="helper",
+        verbose_name="AI 模式"
     )
 
     is_pinned = models.BooleanField(
@@ -38,6 +44,7 @@ class ChatSession(models.Model):
         auto_now=True,
         verbose_name='更新時間'
     )
+
 
     class Meta:
         db_table = 'chatbot_chatsession'
@@ -192,7 +199,19 @@ class ChatKnowledge(models.Model):
     title_th = models.CharField(max_length=200, blank=True, verbose_name='泰文標題')
     title_ja = models.CharField(max_length=200, blank=True, verbose_name='日文標題')
     title_ko = models.CharField(max_length=200, blank=True, verbose_name='韓文標題')
-    title_vi = models.CharField(max_length=200, blank=True, verbose_name='越南文標題')
+
+    BOT_TYPE_CHOICES = [
+    ("helper", "StudyGo AI 小幫手"),
+    ("friend", "StudyGo AI 聊天好朋友"),
+    ("both", "兩者都可使用"),
+]
+
+    bot_type = models.CharField(
+        max_length=20,
+        choices=BOT_TYPE_CHOICES,
+        default="helper",
+        verbose_name="適用 AI"
+    )
 
     keywords = models.CharField(
         max_length=500,
@@ -209,7 +228,6 @@ class ChatKnowledge(models.Model):
     content_th = models.TextField(blank=True, verbose_name='泰文內容')
     content_ja = models.TextField(blank=True, verbose_name='日文內容')
     content_ko = models.TextField(blank=True, verbose_name='韓文內容')
-    content_vi = models.TextField(blank=True, verbose_name='越南文內容')
 
     is_active = models.BooleanField(default=True, verbose_name='是否啟用')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')
@@ -234,7 +252,6 @@ class ChatKnowledge(models.Model):
             'th': self.title_th,
             'ja': self.title_ja,
             'ko': self.title_ko,
-            'vi': self.title_vi,
         }
         return lang_map.get((lang_code or '').lower(), '') or self.title
 
@@ -248,6 +265,5 @@ class ChatKnowledge(models.Model):
             'th': self.content_th,
             'ja': self.content_ja,
             'ko': self.content_ko,
-            'vi': self.content_vi,
         }
         return lang_map.get((lang_code or '').lower(), '') or self.content

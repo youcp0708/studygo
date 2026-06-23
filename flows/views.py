@@ -5,14 +5,13 @@ flows/views.py
 
 from django.utils import timezone
 from django.utils.translation import get_language
-from django.shortcuts import render
+
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from users.models import StudentProfile
-
 
 # ==========================================
 # 前端網頁視圖 (Web Views)
@@ -212,7 +211,6 @@ def init_student_tasks_view(request):
 
     # ── 3. 自動完成「入台前」任務（如果學生選擇「已入台」）──
     if profile.admission_status == 'arrived':
-        from django.utils import timezone
         StudentTask.objects.filter(
             student=profile,
             task__stage__order=1,
@@ -430,7 +428,7 @@ def bulk_update_task_status_view(request):
         'not_started': 'not_started',
         'in_progress': 'in_progress'
     }
-    
+
     new_status = status_map[action]
 
     tasks = StudentTask.objects.filter(id__in=task_ids, student=profile)

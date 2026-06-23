@@ -4,97 +4,7 @@
 {% block title %}{% trans "在台開設銀行帳戶" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
-<style>
-  :root { --border: var(--line); --dark: var(--primary-dark); --warning: #ca8a04; --warning-soft: #fef9c3; }
-  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
-
-  .guide-hero {
-    background: linear-gradient(135deg, #1e3a5f 0%, #065f46 100%);
-    color:#fff; padding:36px 44px 32px; border-radius:20px;
-    margin-bottom:32px; position:relative; overflow:hidden;
-  }
-  .guide-hero .bg-text {
-    position:absolute; right:24px; top:50%; transform:translateY(-50%);
-    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
-    pointer-events:none; user-select:none;
-  }
-  .guide-hero .hero-badge {
-    display:inline-block; background:rgba(255,255,255,.18);
-    border:1px solid rgba(255,255,255,.35); border-radius:99px;
-    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
-  }
-  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
-  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:520px; margin:0; }
-
-  .section-title {
-    font-size:17px; font-weight:900; color:var(--primary-dark);
-    margin:28px 0 14px; padding-bottom:10px;
-    border-bottom:2.5px solid var(--primary-soft);
-    display:flex; align-items:center; gap:8px;
-  }
-
-  .alert {
-    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
-    margin-bottom:14px; display:flex; gap:12px; align-items:flex-start;
-  }
-  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
-  .alert-info    { background:#eff6ff; border:1.5px solid #bae6fd; }
-  .alert-info strong { color:#0369a1; }
-  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
-  .alert-warning strong { color:var(--warning); }
-  .alert-success { background:#f0fdf4; border:1.5px solid #86efac; }
-  .alert-success strong { color:#15803d; }
-
-  .bank-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; margin-bottom:28px; }
-  .bank-card {
-    background:#fff; border:1.5px solid var(--border); border-radius:14px; padding:18px;
-    display:flex; flex-direction:column; gap:8px;
-  }
-  .bank-card.recommended { border-color:var(--primary); }
-  .bank-name { font-size:15px; font-weight:900; color:var(--dark); display:flex; align-items:center; gap:8px; }
-  .bank-tag {
-    font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px;
-    background:var(--primary-soft); color:var(--primary-dark); flex-shrink:0;
-  }
-  .bank-tag-green { background:#dcfce7; color:#15803d; }
-  .bank-desc { font-size:13px; color:var(--muted); line-height:1.6; }
-
-  .doc-list { display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
-  .doc-item {
-    display:flex; align-items:center; gap:10px;
-    padding:12px 16px; border-radius:10px; border:1.5px solid var(--border);
-    background:#fff; font-size:14px; font-weight:600; color:var(--dark);
-  }
-  .doc-icon { font-size:18px; flex-shrink:0; }
-  .doc-badge {
-    font-size:11px; font-weight:700; padding:1px 8px; border-radius:99px;
-    margin-left:auto; flex-shrink:0;
-  }
-  .badge-req { background:var(--primary-soft); color:var(--primary-dark); }
-  .badge-opt { background:var(--bg); color:var(--muted); }
-
-  .step-list { list-style:none; padding:0; margin:0 0 28px; }
-  .step-item { display:flex; gap:16px; margin-bottom:20px; position:relative; }
-  .step-item:not(:last-child)::after {
-    content:''; position:absolute; left:19px; top:42px; bottom:-20px;
-    width:2px; background:var(--primary-soft);
-  }
-  .step-num {
-    width:40px; height:40px; border-radius:50%; background:var(--primary);
-    color:#fff; font-size:16px; font-weight:900;
-    display:flex; align-items:center; justify-content:center;
-    flex-shrink:0; z-index:1; position:relative;
-  }
-  .step-body { flex:1; padding-top:4px; }
-  .step-title { font-size:15px; font-weight:800; color:var(--dark); margin-bottom:4px; }
-  .step-desc  { font-size:14px; color:var(--muted); line-height:1.7; }
-
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }
-</style>
+<link rel="stylesheet" href="{% static 'guides/css/guide_bank.css' %}?v={% now 'U' %}">
 {% endblock %}
 
 {% block content %}
@@ -104,9 +14,9 @@
 
   <div class="guide-hero">
     <div class="bg-text">BANK</div>
-    <div class="hero-badge">領獎學金・生活必備</div>
+    <div class="hero-badge">{% trans "領獎學金・生活必備" %}</div>
     <h2>🏦 {% trans "在台開設銀行帳戶" %}</h2>
-    <p>在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。</p>
+    <p>{% trans "在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。" %}</p>
   </div>
 
   <!-- ── 推薦銀行 ── -->
@@ -114,31 +24,31 @@
   <div class="bank-grid">
 
     <div class="bank-card recommended">
-      <div class="bank-name">📮 中華郵政（郵局）<span class="bank-tag bank-tag-green">外籍生首選</span></div>
+      <div class="bank-name">📮 {% trans "中華郵政（郵局）" %}<span class="bank-tag bank-tag-green">{% trans "外籍生首選" %}</span></div>
       <div class="bank-desc" style="color:var(--dark);">
-        <div style="margin-bottom:8px;">全台門市最廣，外籍生開戶最友善，<strong>當日即可拿到存摺與提款卡</strong>，不像一般銀行需等 3–5 個工作天審核。</div>
+        <div style="margin-bottom:8px;">{% trans "全台門市最廣，外籍生開戶最友善，" %}<strong>{% trans "當日即可拿到存摺與提款卡" %}</strong>{% trans "，不像一般銀行需等 3–5 個工作天審核。" %}</div>
         <div style="font-size:12px;line-height:1.9;border-top:1px solid var(--border);padding-top:8px;">
-          ✅ <strong>優點：</strong>當日領卡、未有 ARC 也可辦（持統一證號）、存款有政府保障<br>
-          ❌ <strong>缺點：</strong>ATM 主要在郵局內，跨行提款每次 NT$5+，轉帳超額 NT$8–15；App 功能較基本<br>
-          📌 多人同行請提前預約，避免等候過久<br>
-          🕔 多數郵局營業至 <strong>17:00</strong>，部分郵局更晚（比銀行多 1.5 小時）
+          ✅ <strong>{% trans "優點：" %}</strong>{% trans "當日領卡、未有 ARC 也可辦（持統一證號）、存款有政府保障" %}<br>
+          ❌ <strong>{% trans "缺點：" %}</strong>{% trans "ATM 主要在郵局內，跨行提款每次 NT$5+，轉帳超額 NT$8–15；App 功能較基本" %}<br>
+          📌 {% trans "多人同行請提前預約，避免等候過久" %}<br>
+          🕔 {% trans "多數郵局營業至 17:00，部分郵局更晚（比銀行多 1.5 小時）" %}
         </div>
       </div>
     </div>
 
     <div class="bank-card recommended">
-      <div class="bank-name">🏛 台灣銀行<span class="bank-tag">獎學金首選</span></div>
-      <div class="bank-desc">政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。</div>
+      <div class="bank-name">🏛 {% trans "台灣銀行" %}<span class="bank-tag">{% trans "獎學金首選" %}</span></div>
+      <div class="bank-desc">{% trans "政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。" %}</div>
     </div>
 
     <div class="bank-card">
-      <div class="bank-name">💳 玉山銀行</div>
-      <div class="bank-desc">線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。</div>
+      <div class="bank-name">💳 {% trans "玉山銀行" %}</div>
+      <div class="bank-desc">{% trans "線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。" %}</div>
     </div>
 
     <div class="bank-card">
-      <div class="bank-name">🏢 國泰世華銀行</div>
-      <div class="bank-desc">ATM 據點多，與多家電商合作，網路銀行功能完整，學生使用廣泛。</div>
+      <div class="bank-name">🏢 {% trans "國泰世華銀行" %}</div>
+      <div class="bank-desc">{% trans "ATM 據點多，與多家電商合作，網路銀行功能完整，學生使用廣泛。" %}</div>
     </div>
 
   </div>
@@ -146,26 +56,26 @@
   <!-- ── 所需文件 ── -->
   <div class="section-title">📋 {% trans "所需文件（郵局）" %}</div>
   <div class="doc-list">
-    <div class="doc-item"><span class="doc-icon">🛂</span>護照正本<span class="doc-badge badge-req">雙證件之一</span></div>
+    <div class="doc-item"><span class="doc-icon">🛂</span>{% trans "護照正本" %}<span class="doc-badge badge-req">{% trans "雙證件之一" %}</span></div>
     <div class="doc-item">
       <span class="doc-icon">🪪</span>
-      <span>居留證（ARC）正本 <em style="font-size:12px;color:var(--muted);">或 統一證號基資表（尚未領 ARC 者）</em></span>
-      <span class="doc-badge badge-req">雙證件之一</span>
+      <span>{% trans "居留證（ARC）正本" %} <em style="font-size:12px;color:var(--muted);">{% trans "或 統一證號基資表（尚未領 ARC 者）" %}</em></span>
+      <span class="doc-badge badge-req">{% trans "雙證件之一" %}</span>
     </div>
     <div class="doc-item">
       <span class="doc-icon">🖊</span>
-      <span><strong>木頭刻印章</strong>（英文姓名）<em style="font-size:12px;color:var(--muted);">— 原子章、橡皮章不可用</em></span>
-      <span class="doc-badge badge-req">必備</span>
+      <span>{% trans "木頭刻印章（英文姓名）" %} <em style="font-size:12px;color:var(--muted);">{% trans "— 原子章、橡皮章不可用" %}</em></span>
+      <span class="doc-badge badge-req">{% trans "必備" %}</span>
     </div>
-    <div class="doc-item"><span class="doc-icon">💵</span>現金 NT$100（不收刷卡）<span class="doc-badge badge-req">必備</span></div>
-    <div class="doc-item"><span class="doc-icon">📱</span>台灣本人手機號碼（辦 Visa 卡時需要）<span class="doc-badge badge-opt">視需求</span></div>
+    <div class="doc-item"><span class="doc-icon">💵</span>{% trans "現金 NT$100（不收刷卡）" %}<span class="doc-badge badge-req">{% trans "必備" %}</span></div>
+    <div class="doc-item"><span class="doc-icon">📱</span>{% trans "台灣本人手機號碼（辦 Visa 卡時需要）" %}<span class="doc-badge badge-opt">{% trans "視需求" %}</span></div>
   </div>
 
   <!-- 木頭印章提示 -->
   <div class="alert alert-warning" style="margin-bottom:28px;">
     <div class="alert-icon">🖊</div>
     <div>
-      <strong>木頭印章哪裡買？</strong>學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，<strong>請與存摺分開保管</strong>。
+      <strong>{% trans "木頭印章哪裡買？" %}</strong>{% trans "學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存摺分開保管。" %}
     </div>
   </div>
 
@@ -174,13 +84,13 @@
   <div class="alert alert-info" style="margin-bottom:12px;">
     <div class="alert-icon">ℹ️</div>
     <div>
-      <strong>已領有居留證（ARC）者：</strong>居留證號即為統一證號，<strong>無須另行申請</strong>，直接帶 ARC 正本開戶即可。
+      <strong>{% trans "已領有居留證（ARC）者：" %}</strong>{% trans "居留證號即為統一證號，無須另行申請，直接帶 ARC 正本開戶即可。" %}
     </div>
   </div>
   <div class="alert alert-warning" style="margin-bottom:28px;">
     <div class="alert-icon">⚠️</div>
     <div>
-      <strong>尚未取得居留證者（部分港澳生）：</strong>需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。
+      <strong>{% trans "尚未取得居留證者（部分港澳生）：" %}</strong>{% trans "需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。" %}
     </div>
   </div>
 
@@ -189,7 +99,7 @@
   <div class="alert alert-success" style="margin-bottom:28px;">
     <div class="alert-icon">💳</div>
     <div>
-      <strong>建議選擇有 VISA 功能的 Debit Card（扣帳卡）：</strong>可 ATM 提款，也能直接刷卡消費、網購。郵局提供 <strong>VISA + 悠遊卡</strong> 或 <strong>VISA + 一卡通</strong> 兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。
+      <strong>{% trans "建議選擇有 VISA 功能的 Debit Card（扣帳卡）：" %}</strong>{% trans "可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。" %}
     </div>
   </div>
 
@@ -198,31 +108,31 @@
   <div class="alert alert-info">
     <div class="alert-icon">📱</div>
     <div>
-      <strong>建議先辦好 SIM 卡再去開戶：</strong>開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。
+      <strong>{% trans "建議先辦好 SIM 卡再去開戶：" %}</strong>{% trans "開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。" %}
     </div>
   </div>
   <div class="alert alert-info">
     <div class="alert-icon">🕔</div>
     <div>
-      <strong>注意營業時間 + 預留足夠時間：</strong>一般銀行週一至週五 <strong>09:00–15:30</strong>，郵局多至 <strong>17:00</strong>。外籍生開戶流程通常需 <strong>1 小時以上</strong>，請勿太晚抵達，以免被請回。
+      <strong>{% trans "注意營業時間 + 預留足夠時間：" %}</strong>{% trans "一般銀行週一至週五 09:00–15:30，郵局多至 17:00。外籍生開戶流程通常需 1 小時以上，請勿太晚抵達，以免被請回。" %}
     </div>
   </div>
   <div class="alert alert-info">
     <div class="alert-icon">📅</div>
     <div>
-      <strong>台灣日期格式：先寫月份、再寫日子</strong> — 2 月 1 日 = 2025/2/1（與部分地區習慣相反），簽文件時請注意。
+      <strong>{% trans "台灣日期格式：先寫月份、再寫日子" %}</strong>{% trans " — 2 月 1 日 = 2025/2/1（與部分地區習慣相反），簽文件時請注意。" %}
     </div>
   </div>
   <div class="alert alert-info">
     <div class="alert-icon">🏫</div>
     <div>
-      <strong>建議前往學校附近郵局：</strong>大學周邊郵局對僑外生開戶經驗豐富，審核較快，手續更熟練。
+      <strong>{% trans "建議前往學校附近郵局：" %}</strong>{% trans "大學周邊郵局對僑外生開戶經驗豐富，審核較快，手續更熟練。" %}
     </div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-icon">⚠️</div>
     <div>
-      <strong>ARC 到期後記得更新帳戶資料：</strong>ARC 換新後需至銀行更新證件資料，避免帳戶被凍結。
+      <strong>{% trans "ARC 到期後記得更新帳戶資料：" %}</strong>{% trans "ARC 換新後需至銀行更新證件資料，避免帳戶被凍結。" %}
     </div>
   </div>
 
@@ -232,13 +142,13 @@
     <div style="background:#fff1f2;border:1.5px solid #fca5a5;border-radius:12px;padding:14px 18px;font-size:14px;line-height:1.8;display:flex;gap:12px;align-items:flex-start;">
       <span style="font-size:20px;flex-shrink:0;">🚫</span>
       <div>
-        <strong style="color:#dc2626;">絕對不要將帳戶借給他人：</strong>依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。
+        <strong style="color:#dc2626;">{% trans "絕對不要將帳戶借給他人：" %}</strong>{% trans "依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。" %}
       </div>
     </div>
     <div style="background:#fff1f2;border:1.5px solid #fca5a5;border-radius:12px;padding:14px 18px;font-size:14px;line-height:1.8;display:flex;gap:12px;align-items:flex-start;">
       <span style="font-size:20px;flex-shrink:0;">📊</span>
       <div>
-        <strong style="color:#dc2626;">不要短期內在多家銀行開戶：</strong>台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。
+        <strong style="color:#dc2626;">{% trans "不要短期內在多家銀行開戶：" %}</strong>{% trans "台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。" %}
       </div>
     </div>
   </div>

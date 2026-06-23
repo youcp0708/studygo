@@ -4,110 +4,7 @@
 {% block title %}{% trans "台灣門號申辦" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
-<style>
-  :root { --border: var(--line); --dark: var(--primary-dark); --warning: #ca8a04; --warning-soft: #fef9c3; }
-  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
-
-  .guide-hero {
-    background: linear-gradient(135deg, #7c3aed 0%, #be185d 100%);
-    color:#fff; padding:36px 44px 32px; border-radius:20px;
-    margin-bottom:32px; position:relative; overflow:hidden;
-  }
-  .guide-hero .bg-text {
-    position:absolute; right:24px; top:50%; transform:translateY(-50%);
-    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
-    pointer-events:none; user-select:none;
-  }
-  .guide-hero .hero-badge {
-    display:inline-block; background:rgba(255,255,255,.18);
-    border:1px solid rgba(255,255,255,.35); border-radius:99px;
-    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
-  }
-  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
-  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:520px; margin:0; }
-
-  .section-title {
-    font-size:17px; font-weight:900; color:var(--primary-dark);
-    margin:28px 0 14px; padding-bottom:10px;
-    border-bottom:2.5px solid var(--primary-soft);
-    display:flex; align-items:center; gap:8px;
-  }
-
-  .alert {
-    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
-    margin-bottom:14px; display:flex; gap:12px; align-items:flex-start;
-  }
-  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
-  .alert-info    { background:#eff6ff; border:1.5px solid #bae6fd; }
-  .alert-info strong { color:#0369a1; }
-  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
-  .alert-warning strong { color:var(--warning); }
-  .alert-success { background:#f0fdf4; border:1.5px solid #86efac; }
-  .alert-success strong { color:#15803d; }
-
-  .plan-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-bottom:28px; }
-  .plan-card {
-    background:#fff; border:1.5px solid var(--border); border-radius:14px; padding:20px;
-    display:flex; flex-direction:column; gap:8px;
-  }
-  .plan-card.recommended { border-color:#7c3aed; }
-  .plan-head { display:flex; align-items:center; gap:10px; }
-  .plan-icon { font-size:28px; }
-  .plan-name { font-size:16px; font-weight:900; color:var(--dark); }
-  .plan-tag  {
-    font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px;
-    background:#f5f3ff; color:#6d28d9; margin-left:auto; flex-shrink:0;
-  }
-  .plan-tag-green { background:#dcfce7; color:#15803d; }
-  .plan-desc { font-size:13px; color:var(--muted); line-height:1.6; }
-  .plan-req  { font-size:12px; font-weight:700; color:var(--dark); margin-top:4px; }
-
-  .carrier-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin-bottom:24px; }
-  .carrier-card {
-    background:#fff; border:1.5px solid var(--border); border-radius:12px; padding:14px 16px;
-    display:flex; align-items:center; gap:10px;
-  }
-  .carrier-icon { font-size:24px; flex-shrink:0; }
-  .carrier-info { flex:1; }
-  .carrier-name { font-size:14px; font-weight:800; color:var(--dark); }
-  .carrier-note { font-size:12px; color:var(--muted); }
-
-  .doc-list { display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
-  .doc-item {
-    display:flex; align-items:center; gap:10px;
-    padding:12px 16px; border-radius:10px; border:1.5px solid var(--border);
-    background:#fff; font-size:14px; font-weight:600; color:var(--dark);
-  }
-  .doc-icon { font-size:18px; flex-shrink:0; }
-  .doc-badge {
-    font-size:11px; font-weight:700; padding:1px 8px; border-radius:99px;
-    margin-left:auto; flex-shrink:0;
-  }
-  .badge-req { background:var(--primary-soft); color:var(--primary-dark); }
-  .badge-opt { background:var(--bg); color:var(--muted); }
-
-  .step-list { list-style:none; padding:0; margin:0 0 28px; }
-  .step-item { display:flex; gap:16px; margin-bottom:20px; position:relative; }
-  .step-item:not(:last-child)::after {
-    content:''; position:absolute; left:19px; top:42px; bottom:-20px;
-    width:2px; background:var(--primary-soft);
-  }
-  .step-num {
-    width:40px; height:40px; border-radius:50%; background:var(--primary);
-    color:#fff; font-size:16px; font-weight:900;
-    display:flex; align-items:center; justify-content:center;
-    flex-shrink:0; z-index:1; position:relative;
-  }
-  .step-body { flex:1; padding-top:4px; }
-  .step-title { font-size:15px; font-weight:800; color:var(--dark); margin-bottom:4px; }
-  .step-desc  { font-size:14px; color:var(--muted); line-height:1.7; }
-
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }
-</style>
+<link rel="stylesheet" href="{% static 'guides/css/guide_sim.css' %}?v={% now 'U' %}">
 {% endblock %}
 
 {% block content %}
@@ -117,15 +14,15 @@
 
   <div class="guide-hero">
     <div class="bg-text">SIM</div>
-    <div class="hero-badge">抵台第一件事</div>
+    <div class="hero-badge">{% trans "抵台第一件事" %}</div>
     <h2>📱 {% trans "台灣門號申辦指南" %}</h2>
-    <p>台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。</p>
+    <p>{% trans "台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。" %}</p>
   </div>
 
   <div class="alert alert-success">
     <div class="alert-icon">💡</div>
     <div>
-      <strong>剛抵台、還沒拿到 ARC？</strong>可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。
+      <strong>{% trans "剛抵台、還沒拿到 ARC？" %}</strong>{% trans "可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。" %}
     </div>
   </div>
 
@@ -136,29 +33,27 @@
     <div class="plan-card">
       <div class="plan-head">
         <div class="plan-icon">🎫</div>
-        <div class="plan-name">預付卡（易付卡）</div>
-        <span class="plan-tag plan-tag-green">無 ARC 可辦</span>
+        <div class="plan-name">{% trans "預付卡（易付卡）" %}</div>
+        <span class="plan-tag plan-tag-green">{% trans "無 ARC 可辦" %}</span>
       </div>
       <div class="plan-desc">
-        只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。
-        適合剛抵台、ARC 尚未核發的過渡期使用。
+        {% trans "只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核發的過渡期使用。" %}
       </div>
-      <div class="plan-req">📋 需要：護照</div>
-      <div class="plan-req">💰 費用：約 NT$300 起（含一個月通話 + 數據）</div>
+      <div class="plan-req">📋 {% trans "需要：護照" %}</div>
+      <div class="plan-req">💰 {% trans "費用：約 NT$300 起（含一個月通話 + 數據）" %}</div>
     </div>
 
     <div class="plan-card recommended">
       <div class="plan-head">
         <div class="plan-icon">📃</div>
-        <div class="plan-name">月租方案（後付型）</div>
-        <span class="plan-tag">ARC 後辦理</span>
+        <div class="plan-name">{% trans "月租方案（後付型）" %}</div>
+        <span class="plan-tag">{% trans "ARC 後辦理" %}</span>
       </div>
       <div class="plan-desc">
-        費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。
-        多數學生取得 ARC 後即改辦月租。
+        {% trans "費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。多數學生取得 ARC 後即改辦月租。" %}
       </div>
-      <div class="plan-req">📋 需要：ARC + 護照 + 銀行帳戶（或信用卡）</div>
-      <div class="plan-req">💰 費用：約 NT$399～699/月（依方案）</div>
+      <div class="plan-req">📋 {% trans "需要：ARC + 護照 + 銀行帳戶（或信用卡）" %}</div>
+      <div class="plan-req">💰 {% trans "費用：約 NT$399～699/月（依方案）" %}</div>
     </div>
 
   </div>
@@ -169,29 +64,29 @@
     <div class="carrier-card">
       <div class="carrier-icon">📶</div>
       <div class="carrier-info">
-        <div class="carrier-name">中華電信</div>
-        <div class="carrier-note">涵蓋範圍最廣，山區及偏遠地帶訊號最佳</div>
+        <div class="carrier-name">{% trans "中華電信" %}</div>
+        <div class="carrier-note">{% trans "涵蓋範圍最廣，山區及偏遠地帶訊號最佳" %}</div>
       </div>
     </div>
     <div class="carrier-card">
       <div class="carrier-icon">📶</div>
       <div class="carrier-info">
-        <div class="carrier-name">台灣大哥大</div>
-        <div class="carrier-note">都會區訊號佳，學生方案較多</div>
+        <div class="carrier-name">{% trans "台灣大哥大" %}</div>
+        <div class="carrier-note">{% trans "都會區訊號佳，學生方案較多" %}</div>
       </div>
     </div>
     <div class="carrier-card">
       <div class="carrier-icon">📶</div>
       <div class="carrier-info">
-        <div class="carrier-name">遠傳電信</div>
-        <div class="carrier-note">北部訊號穩定，資費具競爭力</div>
+        <div class="carrier-name">{% trans "遠傳電信" %}</div>
+        <div class="carrier-note">{% trans "北部訊號穩定，資費具競爭力" %}</div>
       </div>
     </div>
     <div class="carrier-card">
       <div class="carrier-icon">📶</div>
       <div class="carrier-info">
-        <div class="carrier-name">亞太電信</div>
-        <div class="carrier-note">資費較低，適合純數據需求</div>
+        <div class="carrier-name">{% trans "亞太電信" %}</div>
+        <div class="carrier-note">{% trans "資費較低，適合純數據需求" %}</div>
       </div>
     </div>
   </div>
@@ -199,10 +94,10 @@
   <!-- ── 月租方案所需文件 ── -->
   <div class="section-title">📋 {% trans "月租方案所需文件" %}</div>
   <div class="doc-list">
-    <div class="doc-item"><span class="doc-icon">🪪</span>居留證（ARC）正本<span class="doc-badge badge-req">必備</span></div>
-    <div class="doc-item"><span class="doc-icon">🛂</span>護照正本<span class="doc-badge badge-req">必備</span></div>
-    <div class="doc-item"><span class="doc-icon">🏦</span>台灣銀行帳戶 或 信用卡（扣繳費用）<span class="doc-badge badge-req">必備其一</span></div>
-    <div class="doc-item"><span class="doc-icon">🎓</span>學生證（部分業者提供學生優惠）<span class="doc-badge badge-opt">建議攜帶</span></div>
+    <div class="doc-item"><span class="doc-icon">🪪</span>{% trans "居留證（ARC）正本" %}<span class="doc-badge badge-req">{% trans "必備" %}</span></div>
+    <div class="doc-item"><span class="doc-icon">🛂</span>{% trans "護照正本" %}<span class="doc-badge badge-req">{% trans "必備" %}</span></div>
+    <div class="doc-item"><span class="doc-icon">🏦</span>{% trans "台灣銀行帳戶 或 信用卡（扣繳費用）" %}<span class="doc-badge badge-req">{% trans "必備其一" %}</span></div>
+    <div class="doc-item"><span class="doc-icon">🎓</span>{% trans "學生證（部分業者提供學生優惠）" %}<span class="doc-badge badge-opt">{% trans "建議攜帶" %}</span></div>
   </div>
 
   <!-- ── 辦理步驟 ── -->
@@ -211,63 +106,59 @@
     <li class="step-item">
       <div class="step-num">1</div>
       <div class="step-body">
-        <div class="step-title">選擇電信業者與方案</div>
+        <div class="step-title">{% trans "選擇電信業者與方案" %}</div>
         <div class="step-desc">
-          前往各大電信官網比較方案（通話 + 數據）。
-          若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。
+          {% trans "前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。" %}
         </div>
       </div>
     </li>
     <li class="step-item">
       <div class="step-num">2</div>
       <div class="step-body">
-        <div class="step-title">前往電信門市</div>
+        <div class="step-title">{% trans "前往電信門市" %}</div>
         <div class="step-desc">
-          攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。
-          告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。
+          {% trans "攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。" %}
         </div>
       </div>
     </li>
     <li class="step-item">
       <div class="step-num">3</div>
       <div class="step-body">
-        <div class="step-title">選擇門號與 SIM 卡規格</div>
+        <div class="step-title">{% trans "選擇門號與 SIM 卡規格" %}</div>
         <div class="step-desc">
-          可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。
-          確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。
+          {% trans "可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。" %}
         </div>
       </div>
     </li>
     <li class="step-item">
       <div class="step-num">4</div>
       <div class="step-body">
-        <div class="step-title">插卡啟用，設定網路</div>
+        <div class="step-title">{% trans "插卡啟用，設定網路" %}</div>
         <div class="step-desc">
-          插入 SIM 卡後，系統通常自動完成 APN 設定。
-          若無法上網，可請門市人員協助手動設定 APN。
+          {% trans "插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設定 APN。" %}
         </div>
       </div>
     </li>
   </ul>
 
   <!-- ── 注意事項 ── -->
-  <div class="section-title">💡 注意事項</div>
+  <div class="section-title">💡 {% trans "注意事項" %}</div>
   <div class="alert alert-info">
     <div class="alert-icon">📍</div>
     <div>
-      <strong>中央大學附近：</strong>中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。
+      <strong>{% trans "中央大學附近：" %}</strong>{% trans "中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。" %}
     </div>
   </div>
   <div class="alert alert-info">
     <div class="alert-icon">🌏</div>
     <div>
-      <strong>保留原國際漫遊號碼：</strong>許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。
+      <strong>{% trans "保留原國際漫遊號碼：" %}</strong>{% trans "許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。" %}
     </div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-icon">⚠️</div>
     <div>
-      <strong>月租方案需綁定扣款帳戶：</strong>銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。
+      <strong>{% trans "月租方案需綁定扣款帳戶：" %}</strong>{% trans "銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。" %}
     </div>
   </div>
 

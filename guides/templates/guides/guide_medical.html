@@ -4,146 +4,7 @@
 {% block title %}{% trans "醫療資訊" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
-<style>
-  :root { --border: var(--line); --dark: var(--primary-dark); --warning: #ca8a04; --warning-soft: #fef9c3; }
-  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
-
-  .guide-hero {
-    background: linear-gradient(135deg, #0f766e 0%, #0c4a6e 100%);
-    color:#fff; padding:36px 44px 32px; border-radius:20px;
-    margin-bottom:32px; position:relative; overflow:hidden;
-  }
-  .guide-hero .bg-text {
-    position:absolute; right:24px; top:50%; transform:translateY(-50%);
-    font-size:76px; font-weight:900; opacity:.07; letter-spacing:-4px;
-    pointer-events:none; user-select:none;
-  }
-  .guide-hero .hero-badge {
-    display:inline-block; background:rgba(255,255,255,.18);
-    border:1px solid rgba(255,255,255,.35); border-radius:99px;
-    padding:4px 14px; font-size:12px; font-weight:700; margin-bottom:12px;
-  }
-  .guide-hero h2 { font-size:26px; font-weight:900; margin-bottom:8px; }
-  .guide-hero p  { opacity:.85; font-size:14px; line-height:1.7; max-width:540px; margin:0; }
-
-  .section-title {
-    font-size:17px; font-weight:900; color:var(--primary-dark);
-    margin:28px 0 14px; padding-bottom:10px;
-    border-bottom:2.5px solid var(--primary-soft);
-    display:flex; align-items:center; gap:8px;
-  }
-
-  .alert {
-    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
-    margin-bottom:14px; display:flex; gap:12px; align-items:flex-start;
-  }
-  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
-  .alert-info    { background:#eff6ff; border:1.5px solid #bae6fd; }
-  .alert-info strong { color:#0369a1; }
-  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
-  .alert-warning strong { color:var(--warning); }
-  .alert-danger  { background:#fff1f2; border:1.5px solid #fca5a5; }
-  .alert-danger strong { color:#dc2626; }
-  .alert-success { background:#f0fdf4; border:1.5px solid #86efac; }
-  .alert-success strong { color:#15803d; }
-
-  /* ── 分級醫療流程 ── */
-  .tier-flow {
-    display:flex; align-items:stretch; gap:0; margin-bottom:28px;
-    border-radius:14px; overflow:hidden; border:1.5px solid var(--border);
-  }
-  .tier-step {
-    flex:1; padding:18px 14px; text-align:center;
-    display:flex; flex-direction:column; align-items:center; gap:6px;
-  }
-  .tier-step:not(:last-child) { border-right:1.5px solid var(--border); }
-  .tier-icon { font-size:28px; }
-  .tier-title { font-size:13px; font-weight:900; color:var(--dark); }
-  .tier-cost  { font-size:12px; font-weight:700; padding:2px 8px; border-radius:99px; }
-  .cost-low  { background:#dcfce7; color:#15803d; }
-  .cost-mid  { background:#fef9c3; color:#ca8a04; }
-  .cost-high { background:#fee2e2; color:#dc2626; }
-  .tier-desc  { font-size:11px; color:var(--muted); line-height:1.5; }
-  .tier-arrow {
-    display:flex; align-items:center; padding:0 4px;
-    font-size:20px; color:var(--muted); flex-shrink:0;
-  }
-  @media (max-width:600px) {
-    .tier-flow { flex-direction:column; }
-    .tier-step:not(:last-child) { border-right:none; border-bottom:1.5px solid var(--border); }
-    .tier-arrow { display:none; }
-  }
-
-  /* ── 衛保組 info card ── */
-  .health-center-card {
-    background:#fff; border:2px solid #0f766e; border-radius:16px;
-    padding:22px 24px; margin-bottom:28px;
-    display:grid; grid-template-columns:1fr 1fr; gap:16px;
-  }
-  @media (max-width:500px) { .health-center-card { grid-template-columns:1fr; } }
-  .hc-item { display:flex; flex-direction:column; gap:4px; }
-  .hc-label { font-size:11px; font-weight:800; color:#0f766e; text-transform:uppercase; letter-spacing:.5px; }
-  .hc-val   { font-size:14px; font-weight:700; color:var(--dark); }
-  .hc-sub   { font-size:12px; color:var(--muted); }
-
-  /* ── 醫院卡 ── */
-  .hospital-list { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
-  .hospital-card {
-    background:#fff; border:1.5px solid var(--border); border-radius:14px;
-    padding:16px 18px; display:flex; gap:14px; align-items:flex-start;
-  }
-  .hospital-card.featured { border-color:var(--primary); }
-  .hosp-icon { font-size:28px; flex-shrink:0; }
-  .hosp-info { flex:1; }
-  .hosp-name { font-size:15px; font-weight:900; color:var(--dark); margin-bottom:2px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-  .hosp-tag  { font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; background:var(--primary-soft); color:var(--primary-dark); }
-  .hosp-detail { font-size:13px; color:var(--muted); line-height:1.7; }
-  a.hosp-link {
-    display:inline-flex; align-items:center; gap:4px;
-    font-size:12px; font-weight:700; color:var(--primary);
-    text-decoration:none; margin-top:4px;
-  }
-  a.hosp-link:hover { color:var(--primary-dark); }
-
-  /* ── 急診大框 ── */
-  .emergency-box {
-    background:#fff1f2; border:2px solid #ef4444; border-radius:16px;
-    padding:22px 24px; margin-bottom:28px;
-  }
-  .emergency-nums { display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
-  .emer-num {
-    flex:1; min-width:140px; background:#fff; border:1.5px solid #fca5a5;
-    border-radius:12px; padding:14px 16px; text-align:center;
-  }
-  .emer-num .en-num  { font-size:32px; font-weight:900; color:#dc2626; line-height:1; }
-  .emer-num .en-label{ font-size:12px; font-weight:700; color:var(--dark); margin-top:4px; }
-  .emer-num .en-sub  { font-size:11px; color:var(--muted); margin-top:2px; }
-
-  /* ── 費用表 ── */
-  .fee-table-wrap { overflow-x:auto; margin-bottom:28px; }
-  .fee-table {
-    width:100%; border-collapse:collapse; font-size:14px; min-width:380px;
-  }
-  .fee-table th {
-    background:var(--primary); color:#fff;
-    padding:11px 16px; font-weight:800; font-size:13px; text-align:center;
-  }
-  .fee-table th:first-child { border-radius:12px 0 0 0; }
-  .fee-table th:last-child  { border-radius:0 12px 0 0; }
-  .fee-table td {
-    padding:12px 16px; border-bottom:1px solid var(--border);
-    vertical-align:middle; text-align:center; line-height:1.6;
-  }
-  .fee-table tr:last-child td { border-bottom:none; }
-  .fee-table tr:nth-child(even) td { background:#fafafa; }
-  .fee-table .row-label { font-weight:800; color:var(--dark); text-align:left; }
-
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }
-</style>
+<link rel="stylesheet" href="{% static 'guides/css/guide_medical.css' %}?v={% now 'U' %}">
 {% endblock %}
 
 {% block content %}
@@ -153,112 +14,112 @@
 
   <div class="guide-hero">
     <div class="bg-text">MED</div>
-    <div class="hero-badge">衛保組・診所・醫院・急診</div>
+    <div class="hero-badge">{% trans "衛保組・診所・醫院・急診" %}</div>
     <h2>🏥 {% trans "醫療資訊" %}</h2>
-    <p>台灣採分級醫療制度，小病先看診所、大病再轉醫院。持健保卡就醫費用大幅降低，急救請撥 119。</p>
+    <p>{% trans "台灣採分級醫療制度，小病先看診所、大病再轉醫院。持健保卡就醫費用大幅降低，急救請撥 119。" %}</p>
   </div>
 
   <!-- ── 分級醫療 ── -->
-  <div class="section-title">📊 台灣分級醫療制度</div>
+  <div class="section-title">📊 {% trans "台灣分級醫療制度" %}</div>
   <div class="tier-flow">
     <div class="tier-step" style="background:#f0fdf4;">
       <div class="tier-icon">🏥</div>
-      <div class="tier-title">衛保組 / 診所</div>
-      <div class="tier-cost cost-low">健保約 NT$150–200</div>
-      <div class="tier-desc">一般感冒、輕傷、慢性病、<br>定期回診</div>
+      <div class="tier-title">{% trans "衛保組 / 診所" %}</div>
+      <div class="tier-cost cost-low">{% trans "健保約 NT$150–200" %}</div>
+      <div class="tier-desc">{% trans "一般感冒、輕傷、慢性病、定期回診" %}</div>
     </div>
     <div class="tier-arrow">→</div>
     <div class="tier-step" style="background:#fefce8;">
       <div class="tier-icon">🏨</div>
-      <div class="tier-title">地區醫院（門診）</div>
-      <div class="tier-cost cost-mid">健保約 NT$240–360</div>
-      <div class="tier-desc">需要進一步檢查、<br>診所無法處理者</div>
+      <div class="tier-title">{% trans "地區醫院（門診）" %}</div>
+      <div class="tier-cost cost-mid">{% trans "健保約 NT$240–360" %}</div>
+      <div class="tier-desc">{% trans "需要進一步檢查、診所無法處理者" %}</div>
     </div>
     <div class="tier-arrow">→</div>
     <div class="tier-step" style="background:#fff1f2;">
       <div class="tier-icon">🚑</div>
-      <div class="tier-title">醫學中心（急診）</div>
-      <div class="tier-cost cost-high">健保約 NT$450–600</div>
-      <div class="tier-desc">嚴重外傷、危及生命、<br>需要手術</div>
+      <div class="tier-title">{% trans "醫學中心（急診）" %}</div>
+      <div class="tier-cost cost-high">{% trans "健保約 NT$450–600" %}</div>
+      <div class="tier-desc">{% trans "嚴重外傷、危及生命、需要手術" %}</div>
     </div>
   </div>
   <div class="alert alert-success">
     <div class="alert-icon">💡</div>
     <div>
-      <strong>小病先看診所：</strong>台灣分級醫療制度下，直接去大醫院門診的部分負擔比診所高 2–3 倍。輕症先到診所就診，若需轉診，醫師會開立轉診單，可享受較低的部分負擔。
+      <strong>{% trans "小病先看診所：" %}</strong>{% trans "台灣分級醫療制度下，直接去大醫院門診的部分負擔比診所高 2–3 倍。輕症先到診所就診，若需轉診，醫師會開立轉診單，可享受較低的部分負擔。" %}
     </div>
   </div>
 
   <!-- ── 校內衛保組 ── -->
-  <div class="section-title">🏥 校內衛保組（NCU）</div>
+  <div class="section-title">🏥 {% trans "校內衛保組（NCU）" %}</div>
   <div class="health-center-card">
     <div class="hc-item">
-      <div class="hc-label">📍 地點</div>
-      <div class="hc-val">中正圖書館（舊圖）1 樓</div>
+      <div class="hc-label">📍 {% trans "地點" %}</div>
+      <div class="hc-val">{% trans "中正圖書館（舊圖）1 樓" %}</div>
     </div>
     <div class="hc-item">
-      <div class="hc-label">📞 電話</div>
+      <div class="hc-label">📞 {% trans "電話" %}</div>
       <div class="hc-val"><a href="tel:034227151" style="color:var(--primary);text-decoration:none;">03-4227151</a></div>
-      <div class="hc-sub">分機 57271</div>
+      <div class="hc-sub">{% trans "分機 57271" %}</div>
     </div>
     <div class="hc-item">
-      <div class="hc-label">🕐 服務時間</div>
-      <div class="hc-val">週一至週五</div>
-      <div class="hc-sub">08:00–17:00（寒暑假可能調整）</div>
+      <div class="hc-label">🕐 {% trans "服務時間" %}</div>
+      <div class="hc-val">{% trans "週一至週五" %}</div>
+      <div class="hc-sub">{% trans "08:00–17:00（寒暑假可能調整）" %}</div>
     </div>
     <div class="hc-item">
-      <div class="hc-label">🩺 服務項目</div>
-      <div class="hc-val">基本診療・諮詢・轉介</div>
-      <div class="hc-sub">量血壓、用藥諮詢、轉診協助、新生體檢</div>
+      <div class="hc-label">🩺 {% trans "服務項目" %}</div>
+      <div class="hc-val">{% trans "基本診療・諮詢・轉介" %}</div>
+      <div class="hc-sub">{% trans "量血壓、用藥諮詢、轉診協助、新生體檢" %}</div>
     </div>
   </div>
   <div class="alert alert-info">
     <div class="alert-icon">ℹ️</div>
     <div>
-      衛保組適合輕症初診，如感冒、發燒、輕傷等。若需進一步診療，衛保組可協助轉介至校外診所或醫院。<strong>非上班時間請直接前往校外診所或急診。</strong>
+      {% trans "衛保組適合輕症初診，如感冒、發燒、輕傷等。若需進一步診療，衛保組可協助轉介至校外診所或醫院。" %}<strong>{% trans "非上班時間請直接前往校外診所或急診。" %}</strong>
     </div>
   </div>
 
   <!-- ── 校外診所 ── -->
-  <div class="section-title">🩺 校外診所（後門商圈 / 中壢周邊）</div>
+  <div class="section-title">🩺 {% trans "校外診所（後門商圈 / 中壢周邊）" %}</div>
   <div class="alert alert-info" style="margin-bottom:16px;">
     <div class="alert-icon">🗺</div>
     <div>
-      中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別用 Google Maps 搜尋「中壢 內科診所」、「中壢 耳鼻喉科」等。
+      {% trans "中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別用 Google Maps 搜尋「中壢 內科診所」、「中壢 耳鼻喉科」等。" %}
     </div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-icon">⏰</div>
     <div>
-      <strong>診所看診時間：</strong>多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班制，非所有診所皆有晚診。建議事先電話確認或查詢 Google 地圖上的即時等候人數。
+      <strong>{% trans "診所看診時間：" %}</strong>{% trans "多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班制，非所有診所皆有晚診。建議事先電話確認或查詢 Google 地圖上的即時等候人數。" %}
     </div>
   </div>
 
   <!-- ── 周邊醫院 ── -->
-  <div class="section-title">🏨 周邊醫院</div>
+  <div class="section-title">🏨 {% trans "周邊醫院" %}</div>
   <div class="hospital-list">
 
     <div class="hospital-card featured">
       <div class="hosp-icon">🏥</div>
       <div class="hosp-info">
-        <div class="hosp-name">壢新醫院<span class="hosp-tag">最近・急診24H</span></div>
+        <div class="hosp-name">{% trans "壢新醫院" %}<span class="hosp-tag">{% trans "最近・急診24H" %}</span></div>
         <div class="hosp-detail">
-          📍 桃園市中壢區延平路150號<br>
+          📍 {% trans "桃園市中壢區延平路150號" %}<br>
           📞 <a href="tel:034625111" style="color:var(--primary);text-decoration:none;">03-4625111</a><br>
-          🚌 從中大搭公車約 15–20 分鐘；設有急診室（24 小時）
+          🚌 {% trans "從中大搭公車約 15–20 分鐘；設有急診室（24 小時）" %}
         </div>
-        <a class="hosp-link" href="https://www.lixin.org.tw" target="_blank" rel="noopener">🔗 壢新醫院官網 ↗</a>
+        <a class="hosp-link" href="https://www.lixin.org.tw" target="_blank" rel="noopener">🔗 {% trans "壢新醫院官網 ↗" %}</a>
       </div>
     </div>
 
     <div class="hospital-card">
       <div class="hosp-icon">🏥</div>
       <div class="hosp-info">
-        <div class="hosp-name">衛福部桃園醫院中壢院區</div>
+        <div class="hosp-name">{% trans "衛福部桃園醫院中壢院區" %}</div>
         <div class="hosp-detail">
-          📍 桃園市中壢區中山東路二段16號<br>
+          📍 {% trans "桃園市中壢區中山東路二段16號" %}<br>
           📞 <a href="tel:034752525" style="color:var(--primary);text-decoration:none;">03-4752525</a><br>
-          🏛 公立醫院，設有門診及急診
+          🏛 {% trans "公立醫院，設有門診及急診" %}
         </div>
       </div>
     </div>
@@ -266,89 +127,89 @@
     <div class="hospital-card">
       <div class="hosp-icon">🏥</div>
       <div class="hosp-info">
-        <div class="hosp-name">林口長庚醫院<span class="hosp-tag" style="background:#dcfce7;color:#15803d;">醫學中心</span></div>
+        <div class="hosp-name">{% trans "林口長庚醫院" %}<span class="hosp-tag" style="background:#dcfce7;color:#15803d;">{% trans "醫學中心" %}</span></div>
         <div class="hosp-detail">
-          📍 桃園市龜山區舒民路5號<br>
+          📍 {% trans "桃園市龜山區舒民路5號" %}<br>
           📞 <a href="tel:033281200" style="color:var(--primary);text-decoration:none;">03-3281200</a><br>
-          🚌 中大搭車約 40 分鐘；台灣最大醫院之一，有多語言服務
+          🚌 {% trans "中大搭車約 40 分鐘；台灣最大醫院之一，有多語言服務" %}
         </div>
-        <a class="hosp-link" href="https://www.cgmh.org.tw" target="_blank" rel="noopener">🔗 長庚醫院官網 ↗</a>
+        <a class="hosp-link" href="https://www.cgmh.org.tw" target="_blank" rel="noopener">🔗 {% trans "長庚醫院官網 ↗" %}</a>
       </div>
     </div>
 
   </div>
 
   <!-- ── 急診 ── -->
-  <div class="section-title">🚨 急診 / 緊急情況</div>
+  <div class="section-title">🚨 {% trans "急診 / 緊急情況" %}</div>
   <div class="emergency-box">
-    <div style="font-size:15px;font-weight:900;color:#dc2626;margin-bottom:4px;">危及生命・嚴重受傷・無法自行就醫</div>
-    <div style="font-size:13px;color:var(--dark);line-height:1.7;">請立即撥打緊急電話，或由旁人送至最近有急診的醫院（壢新醫院）。急診 24 小時全年無休。</div>
+    <div style="font-size:15px;font-weight:900;color:#dc2626;margin-bottom:4px;">{% trans "危及生命・嚴重受傷・無法自行就醫" %}</div>
+    <div style="font-size:13px;color:var(--dark);line-height:1.7;">{% trans "請立即撥打緊急電話，或由旁人送至最近有急診的醫院（壢新醫院）。急診 24 小時全年無休。" %}</div>
     <div class="emergency-nums">
       <div class="emer-num">
         <div class="en-num">119</div>
-        <div class="en-label">救護車・火災</div>
-        <div class="en-sub">免費撥打，全球手機可用</div>
+        <div class="en-label">{% trans "救護車・火災" %}</div>
+        <div class="en-sub">{% trans "免費撥打，全球手機可用" %}</div>
       </div>
       <div class="emer-num">
         <div class="en-num">110</div>
-        <div class="en-label">警察局</div>
-        <div class="en-sub">報案・協助</div>
+        <div class="en-label">{% trans "警察局" %}</div>
+        <div class="en-sub">{% trans "報案・協助" %}</div>
       </div>
       <div class="emer-num">
         <div class="en-num">112</div>
-        <div class="en-label">國際緊急號碼</div>
-        <div class="en-sub">任何手機（含無 SIM 卡）皆可撥打</div>
+        <div class="en-label">{% trans "國際緊急號碼" %}</div>
+        <div class="en-sub">{% trans "任何手機（含無 SIM 卡）皆可撥打" %}</div>
       </div>
       <div class="emer-num">
         <div class="en-num" style="font-size:20px;margin-top:4px;">1925</div>
-        <div class="en-label">外來人士生活諮詢</div>
-        <div class="en-sub">多語言，含醫療協助</div>
+        <div class="en-label">{% trans "外來人士生活諮詢" %}</div>
+        <div class="en-sub">{% trans "多語言，含醫療協助" %}</div>
       </div>
     </div>
   </div>
   <div class="alert alert-warning">
     <div class="alert-icon">💰</div>
     <div>
-      <strong>急診部分負擔較高：</strong>非緊急狀況直接掛急診，健保部分負擔為 NT$450–600（比診所高 3 倍以上）。輕症建議前往診所就診，急診留給真正緊急的情況。
+      <strong>{% trans "急診部分負擔較高：" %}</strong>{% trans "非緊急狀況直接掛急診，健保部分負擔為 NT$450–600（比診所高 3 倍以上）。輕症建議前往診所就診，急診留給真正緊急的情況。" %}
     </div>
   </div>
 
   <!-- ── 就醫費用 ── -->
-  <div class="section-title">💰 健保就醫費用對照</div>
+  <div class="section-title">💰 {% trans "健保就醫費用對照" %}</div>
   <div class="fee-table-wrap">
     <table class="fee-table">
       <thead>
         <tr>
-          <th style="text-align:left;width:30%;">就醫地點</th>
-          <th>持健保卡</th>
-          <th>未持健保卡</th>
+          <th style="text-align:left;width:30%;">{% trans "就醫地點" %}</th>
+          <th>{% trans "持健保卡" %}</th>
+          <th>{% trans "未持健保卡" %}</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="row-label">衛保組（校內）</td>
-          <td style="color:#15803d;font-weight:700;">免費 / 極低費</td>
-          <td>視項目收費</td>
+          <td class="row-label">{% trans "衛保組（校內）" %}</td>
+          <td style="color:#15803d;font-weight:700;">{% trans "免費 / 極低費" %}</td>
+          <td>{% trans "視項目收費" %}</td>
         </tr>
         <tr>
-          <td class="row-label">診所</td>
-          <td style="color:#15803d;font-weight:700;">約 NT$150–200</td>
-          <td>全額自費（NT$500–1,000+）</td>
+          <td class="row-label">{% trans "診所" %}</td>
+          <td style="color:#15803d;font-weight:700;">{% trans "約 NT$150–200" %}</td>
+          <td>{% trans "全額自費（NT$500–1,000+）" %}</td>
         </tr>
         <tr>
-          <td class="row-label">地區醫院門診</td>
-          <td style="color:#ca8a04;font-weight:700;">約 NT$240–360</td>
-          <td>全額自費（NT$1,000+）</td>
+          <td class="row-label">{% trans "地區醫院門診" %}</td>
+          <td style="color:#ca8a04;font-weight:700;">{% trans "約 NT$240–360" %}</td>
+          <td>{% trans "全額自費（NT$1,000+）" %}</td>
         </tr>
         <tr>
-          <td class="row-label">醫學中心門診</td>
-          <td style="color:#ca8a04;font-weight:700;">約 NT$360–480</td>
-          <td>全額自費（NT$2,000+）</td>
+          <td class="row-label">{% trans "醫學中心門診" %}</td>
+          <td style="color:#ca8a04;font-weight:700;">{% trans "約 NT$360–480" %}</td>
+          <td>{% trans "全額自費（NT$2,000+）" %}</td>
         </tr>
         <tr>
-          <td class="row-label">急診</td>
-          <td style="color:#dc2626;font-weight:700;">約 NT$450–600</td>
-          <td>全額自費（視治療而定）</td>
+          <td class="row-label">{% trans "急診" %}</td>
+          <td style="color:#dc2626;font-weight:700;">{% trans "約 NT$450–600" %}</td>
+          <td>{% trans "全額自費（視治療而定）" %}</td>
         </tr>
       </tbody>
     </table>
@@ -356,22 +217,22 @@
   <div class="alert alert-info">
     <div class="alert-icon">📱</div>
     <div>
-      <strong>下載「健保快易通」App：</strong>可顯示數位健保卡、查詢就醫紀錄與健保狀態，出門忘帶實體健保卡時可使用。
+      <strong>{% trans "下載「健保快易通」App：" %}</strong>{% trans "可顯示數位健保卡、查詢就醫紀錄與健保狀態，出門忘帶實體健保卡時可使用。" %}
     </div>
   </div>
 
   <!-- ── 校安緊急聯絡 ── -->
-  <div class="section-title">📞 NCU 校安緊急聯絡</div>
+  <div class="section-title">📞 {% trans "NCU 校安緊急聯絡" %}</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:28px;">
     <div style="background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;">
-      <div style="font-size:13px;font-weight:800;color:var(--muted);margin-bottom:6px;">🏫 校安中心</div>
-      <div style="font-size:15px;font-weight:900;color:var(--dark);">03-4227151 分機 57212</div>
-      <div style="font-size:12px;color:var(--muted);margin-top:4px;">24 小時校安專線：<a href="tel:0322805666" style="color:var(--primary);text-decoration:none;font-weight:700;">03-2805666</a></div>
+      <div style="font-size:13px;font-weight:800;color:var(--muted);margin-bottom:6px;">🏫 {% trans "校安中心" %}</div>
+      <div style="font-size:15px;font-weight:900;color:var(--dark);">03-4227151 {% trans "分機 57212" %}</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:4px;">{% trans "24 小時校安專線：" %}<a href="tel:0322805666" style="color:var(--primary);text-decoration:none;font-weight:700;">03-2805666</a></div>
     </div>
     <div style="background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;">
-      <div style="font-size:13px;font-weight:800;color:var(--muted);margin-bottom:6px;">🌐 國際事務處</div>
-      <div style="font-size:15px;font-weight:900;color:var(--dark);">03-4227151 分機 57081</div>
-      <div style="font-size:12px;color:var(--muted);margin-top:4px;">承辦人：徐心荷小姐</div>
+      <div style="font-size:13px;font-weight:800;color:var(--muted);margin-bottom:6px;">🌐 {% trans "國際事務處" %}</div>
+      <div style="font-size:15px;font-weight:900;color:var(--dark);">03-4227151 {% trans "分機 57081" %}</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:4px;">{% trans "承辦人：徐心荷小姐" %}</div>
     </div>
   </div>
 

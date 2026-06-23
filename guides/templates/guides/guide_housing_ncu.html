@@ -4,187 +4,7 @@
 {% block title %}{% trans "中央大學住宿服務" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
-<style>
-  :root {
-    --border: var(--line);
-    --dark:   var(--primary-dark);
-    --warning: #ca8a04;
-    --warning-soft: #fef9c3;
-  }
-  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
-
-  .guide-hero {
-    background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
-    color:#fff; padding:40px 48px 36px; border-radius:20px;
-    margin-bottom:36px; position:relative; overflow:hidden;
-  }
-  .guide-hero .bg-text {
-    position:absolute; right:24px; top:50%; transform:translateY(-50%);
-    font-size:100px; font-weight:900; opacity:.06; letter-spacing:-4px;
-    pointer-events:none; user-select:none;
-  }
-  .guide-hero .hero-badge {
-    display:inline-block; background:rgba(255,255,255,.18);
-    border:1px solid rgba(255,255,255,.35); border-radius:99px;
-    padding:4px 14px; font-size:12px; font-weight:700; letter-spacing:.5px; margin-bottom:14px;
-  }
-  .guide-hero h2 { font-size:28px; font-weight:900; margin-bottom:10px; }
-  .guide-hero p  { opacity:.88; font-size:15px; line-height:1.7; max-width:580px; }
-  .hero-meta { display:flex; gap:14px; flex-wrap:wrap; margin-top:22px; }
-  .hero-meta-item {
-    display:flex; align-items:center; gap:6px; font-size:13px; opacity:.9;
-    background:rgba(255,255,255,.13); padding:6px 14px; border-radius:99px;
-  }
-
-  .section-title {
-    font-size:18px; font-weight:900; color:var(--primary-dark);
-    margin-bottom:16px; padding-bottom:10px;
-    border-bottom:2.5px solid var(--primary-soft);
-    display:flex; align-items:center; gap:8px;
-  }
-
-  .alert {
-    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
-    margin-bottom:20px; display:flex; gap:12px; align-items:flex-start;
-  }
-  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
-  .alert-info    { background:var(--blue-soft);    border:1.5px solid #bae6fd; }
-  .alert-info strong { color:#0369a1; }
-  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
-  .alert-warning strong { color:var(--warning); }
-  .alert-success { background:var(--success-soft); border:1.5px solid #86efac; }
-  .alert-success strong { color:var(--success); }
-  .alert-purple  { background:#f5f3ff; border:1.5px solid #c4b5fd; }
-  .alert-purple strong { color:#6d28d9; }
-
-  .info-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-bottom:36px; }
-  .info-card { background:#fff; border:1.5px solid var(--border); border-radius:14px; padding:20px; text-align:center; }
-  .info-card .i-icon  { font-size:28px; margin-bottom:8px; }
-  .info-card .i-label { font-size:13px; color:var(--muted); font-weight:700; margin-bottom:4px; }
-  .info-card .i-val   { font-size:18px; font-weight:900; color:var(--primary-dark); line-height:1.2; }
-  .info-card .i-sub   { font-size:12px; color:var(--muted); margin-top:4px; line-height:1.4; }
-
-  .priority-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px; }
-  .priority-card {
-    flex:1; min-width:240px; background:#fff; border:1.5px solid var(--border);
-    border-radius:14px; padding:18px;
-  }
-  .priority-card.first { border-left:4px solid #7c3aed; }
-  .priority-card.second { border-left:4px solid var(--muted); }
-  .priority-label {
-    font-size:13px; font-weight:800; padding:2px 10px; border-radius:99px;
-    display:inline-block; margin-bottom:10px;
-  }
-  .label-first  { background:#f5f3ff; color:#6d28d9; }
-  .label-second { background:var(--bg); color:var(--muted); }
-  .priority-card h4 { font-size:14px; font-weight:800; color:var(--dark); margin-bottom:6px; }
-  .priority-card ul { margin:0; padding-left:18px; font-size:14px; color:var(--muted); line-height:1.8; }
-
-  .dorm-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px; margin-bottom:36px; }
-  .dorm-card {
-    background:#fff; border:1.5px solid var(--border); border-radius:14px; padding:16px;
-    display:flex; flex-direction:column; gap:6px;
-    animation: fadeInUp .35s ease both;
-  }
-  @keyframes fadeInUp {
-    from { opacity:0; transform:translateY(10px); }
-    to   { opacity:1; transform:translateY(0); }
-  }
-
-  /* ── Skeleton ── */
-  @keyframes shimmer {
-    0%   { background-position: -400px 0; }
-    100% { background-position:  400px 0; }
-  }
-  .skel-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px; margin-bottom:36px; }
-  .skel-card {
-    background:#fff; border:1.5px solid var(--line); border-radius:14px; padding:16px;
-    display:flex; flex-direction:column; gap:8px;
-  }
-  .skel-line {
-    border-radius:6px; height:14px;
-    background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);
-    background-size:800px 100%;
-    animation: shimmer 1.4s infinite linear;
-  }
-  .skel-line.s-badge  { height:20px; width:52px; border-radius:99px; }
-  .skel-line.s-title  { height:16px; width:75%; }
-  .skel-line.s-sub    { height:13px; width:55%; }
-  .skel-line.s-tag    { height:20px; width:68px; border-radius:99px; }
-  .dorm-card .dorm-name { font-size:15px; font-weight:900; color:var(--dark); }
-  .dorm-card .dorm-zone {
-    font-size:13px; font-weight:700; padding:2px 8px; border-radius:99px;
-    display:inline-block; width:fit-content;
-  }
-  .zone-east   { background:#fef9c3; color:#a16207; }
-  .zone-west   { background:#dcfce7; color:#15803d; }
-  .zone-south  { background:#fee2e2; color:#b91c1c; }
-  .zone-north  { background:#eff6ff; color:#1d4ed8; }
-  .dorm-card .dorm-gender {
-    font-size:13px; color:var(--muted);
-    display:flex; align-items:center; gap:4px;
-  }
-  .dorm-card .dorm-target {
-    font-size:13px; font-weight:700; padding:2px 8px; border-radius:99px;
-    background:var(--primary-soft); color:var(--primary-dark); width:fit-content;
-  }
-
-  .equip-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; margin-bottom:28px; }
-  .equip-chip {
-    background:#fff; border:1.5px solid var(--border); border-radius:12px;
-    padding:10px 14px; font-size:13px; font-weight:700; color:var(--dark);
-    display:flex; align-items:center; gap:8px;
-  }
-  .equip-chip.partial { opacity:.65; }
-  .equip-chip.banned  { background:#fef2f2; border-color:#fecaca; color:#b91c1c; text-decoration:line-through; }
-
-  .faq-link-card {
-    display:flex; align-items:center; justify-content:space-between;
-    background:#fff; border:1.5px solid var(--line); border-radius:16px;
-    padding:20px 24px; text-decoration:none; color:inherit;
-    transition:border-color .2s, box-shadow .2s, transform .15s;
-    margin-bottom:36px; gap:20px;
-  }
-  .faq-link-card:hover {
-    border-color:var(--primary); box-shadow:0 6px 24px rgba(99,102,241,.12);
-    transform:translateY(-2px);
-  }
-  .faq-link-left { display:flex; align-items:center; gap:16px; }
-  .faq-link-icon { font-size:40px; flex-shrink:0; }
-  .faq-link-title { font-size:16px; font-weight:900; color:var(--primary-dark); margin-bottom:4px; }
-  .faq-link-desc  { font-size:13px; color:var(--muted); line-height:1.6; }
-  .faq-link-arrow {
-    font-size:22px; color:var(--primary); flex-shrink:0;
-    transition:transform .2s;
-  }
-  .faq-link-card:hover .faq-link-arrow { transform:translateX(4px); }
-
-  .contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-bottom:0; }
-  .contact-card {
-    background:#fff; border:1.5px solid var(--border); border-radius:14px; padding:18px;
-    display:flex; gap:14px; align-items:flex-start;
-    transition:border-color .15s, box-shadow .15s;
-  }
-  a.contact-card:hover {
-    border-color:var(--primary); box-shadow:0 4px 16px rgba(99,102,241,.1);
-  }
-  .contact-icon { font-size:26px; flex-shrink:0; }
-  .contact-info { flex:1; }
-  .contact-name { font-size:14px; font-weight:800; color:var(--dark); margin-bottom:4px; }
-  .contact-val  { font-size:14px; color:var(--muted); line-height:1.6; }
-  .contact-val strong { color:var(--primary-dark); }
-
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }
-
-  @media (max-width:600px) {
-    .guide-hero { padding:28px 24px 24px; }
-    .guide-hero h2 { font-size:22px; }
-  }
-</style>
+<link rel="stylesheet" href="{% static 'guides/css/guide_housing_ncu.css' %}?v={% now 'U' %}">
 {% endblock %}
 
 {% block content %}
@@ -194,15 +14,14 @@
 
   <div class="guide-hero">
     <div class="bg-text">DORM</div>
-    <div class="hero-badge">中央大學住宿服務</div>
+    <div class="hero-badge">{% trans "中央大學住宿服務" %}</div>
     <h2>🏠 {% trans "中央大學校內住宿服務" %}</h2>
     <p>
-      整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，
-      幫助外籍生、僑生及交換學生預先申請校內住宿。
+      {% trans "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。" %}
     </p>
     <div class="hero-meta">
-      <div class="hero-meta-item">🏠 4 大宿舍區</div>
-      <div class="hero-meta-item">⭐ 外僑優先抽籤</div>
+      <div class="hero-meta-item">🏠 {% trans "4 大宿舍區" %}</div>
+      <div class="hero-meta-item">⭐ {% trans "外僑優先抽籤" %}</div>
       <div class="hero-meta-item">📞 03-4263926</div>
     </div>
   </div>
@@ -211,51 +30,51 @@
   <div class="info-row">
     <div class="info-card">
       <div class="i-icon">🏠</div>
-      <div class="i-label">宿舍分區</div>
-      <div class="i-val">東 / 西 / 南 / 北</div>
-      <div class="i-sub">四大分區，遍佈校內</div>
+      <div class="i-label">{% trans "宿舍分區" %}</div>
+      <div class="i-val">{% trans "東 / 西 / 南 / 北" %}</div>
+      <div class="i-sub">{% trans "四大分區，遍佈校內" %}</div>
     </div>
     <div class="info-card">
       <div class="i-icon">🌏</div>
-      <div class="i-label">國際宿舍</div>
-      <div class="i-val">東區</div>
-      <div class="i-sub">外僑生專屬宿舍</div>
+      <div class="i-label">{% trans "國際宿舍" %}</div>
+      <div class="i-val">{% trans "東區" %}</div>
+      <div class="i-sub">{% trans "外僑生專屬宿舍" %}</div>
     </div>
     <div class="info-card">
       <div class="i-icon">📅</div>
-      <div class="i-label">住宿學期</div>
-      <div class="i-val">上 9月─1月<br>下 2月─8月</div>
-      <div class="i-sub">含寒假（不需遷出）</div>
+      <div class="i-label">{% trans "住宿學期" %}</div>
+      <div class="i-val">{% trans "上 9月─1月" %}<br>{% trans "下 2月─8月" %}</div>
+      <div class="i-sub">{% trans "含寒假（不需遷出）" %}</div>
     </div>
     <div class="info-card">
       <div class="i-icon">📞</div>
-      <div class="i-label">行政電話</div>
+      <div class="i-label">{% trans "行政電話" %}</div>
       <div class="i-val">03-4263926</div>
-      <div class="i-sub">各分區 24 小時總線</div>
+      <div class="i-sub">{% trans "各分區 24 小時總線" %}</div>
     </div>
   </div>
 
   <div class="section-title">⭐ {% trans "申請優先順位" %}</div>
   <div class="priority-row">
     <div class="priority-card first">
-      <span class="priority-label label-first">第一順位 ── 優先保證</span>
-      <h4>以下身份優先獲得宿舍</h4>
+      <span class="priority-label label-first">{% trans "第一順位 ── 優先保證" %}</span>
+      <h4>{% trans "以下身份優先獲得宿舍" %}</h4>
       <ul>
-        <li>外籍生（Foreign Students）</li>
-        <li>僑生（Overseas Chinese Students）</li>
-        <li>低（中）收入收學生</li>
-        <li>身心障礙學生</li>
-        <li>特殊弱勢家庭學生</li>
+        <li>{% trans "外籍生（Foreign Students）" %}</li>
+        <li>{% trans "僑生（Overseas Chinese Students）" %}</li>
+        <li>{% trans "低（中）收入收學生" %}</li>
+        <li>{% trans "身心障礙學生" %}</li>
+        <li>{% trans "特殊弱勢家庭學生" %}</li>
       </ul>
     </div>
     <div class="priority-card second">
-      <span class="priority-label label-second">第二順位</span>
-      <h4>一般學生（本島）</h4>
+      <span class="priority-label label-second">{% trans "第二順位" %}</span>
+      <h4>{% trans "一般學生（本島）" %}</h4>
       <ul>
-        <li>大學部學生</li>
-        <li>碩博士生（無保證宿舍）</li>
-        <li>以抽籤決定是否取得床位</li>
-        <li>依抽籤號碼依公告排序</li>
+        <li>{% trans "大學部學生" %}</li>
+        <li>{% trans "碩博士生（無保證宿舍）" %}</li>
+        <li>{% trans "以抽籤決定是否取得床位" %}</li>
+        <li>{% trans "依抽籤號碼依公告排序" %}</li>
       </ul>
     </div>
   </div>
@@ -264,18 +83,18 @@
 
   <div style="margin-bottom:16px;">
     <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
-      <span style="font-size:13px;color:var(--muted);font-weight:700;">分區：</span>
+      <span style="font-size:13px;color:var(--muted);font-weight:700;">{% trans "分區：" %}</span>
       <span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#a16207;display:inline-block;"></span>東區
+        <span style="width:10px;height:10px;border-radius:50%;background:#a16207;display:inline-block;"></span>{% trans "東區" %}
       </span>
       <span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#15803d;display:inline-block;"></span>西區
+        <span style="width:10px;height:10px;border-radius:50%;background:#15803d;display:inline-block;"></span>{% trans "西區" %}
       </span>
       <span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#b91c1c;display:inline-block;"></span>南區
+        <span style="width:10px;height:10px;border-radius:50%;background:#b91c1c;display:inline-block;"></span>{% trans "南區" %}
       </span>
       <span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#1d4ed8;display:inline-block;"></span>北區
+        <span style="width:10px;height:10px;border-radius:50%;background:#1d4ed8;display:inline-block;"></span>{% trans "北區" %}
       </span>
     </div>
   </div>
@@ -293,122 +112,123 @@
 
   <div class="dorm-grid" id="dormGrid" style="display:none;">
     <div class="dorm-card">
-      <span class="dorm-zone zone-east">東區</span>
-      <div class="dorm-name">🌏 國際宿舍</div>
-      <div class="dorm-gender">👩 女生宿舍</div>
-      <span class="dorm-target">外僑生專屬</span>
+      <span class="dorm-zone zone-east">{% trans "東區" %}</span>
+      <div class="dorm-name">🌏 {% trans "國際宿舍" %}</div>
+      <div class="dorm-gender">👩 {% trans "女生宿舍" %}</div>
+      <span class="dorm-target">{% trans "外僑生專屬" %}</span>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-east">東區</span>
-      <div class="dorm-name">女14舍</div>
-      <div class="dorm-gender">👩 女生宿舍</div>
+      <span class="dorm-zone zone-east">{% trans "東區" %}</span>
+      <div class="dorm-name">{% trans "女14舍" %}</div>
+      <div class="dorm-gender">👩 {% trans "女生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-east">東區</span>
-      <div class="dorm-name">男11舍</div>
-      <div class="dorm-gender">👨 男生宿舍</div>
+      <span class="dorm-zone zone-east">{% trans "東區" %}</span>
+      <div class="dorm-name">{% trans "男11舍" %}</div>
+      <div class="dorm-gender">👨 {% trans "男生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-east">東區</span>
-      <div class="dorm-name">男5舍</div>
-      <div class="dorm-gender">👨 男生宿舍</div>
+      <span class="dorm-zone zone-east">{% trans "東區" %}</span>
+      <div class="dorm-name">{% trans "男5舍" %}</div>
+      <div class="dorm-gender">👨 {% trans "男生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-west">西區</span>
-      <div class="dorm-name">女1舍</div>
-      <div class="dorm-gender">👩 女生宿舍</div>
+      <span class="dorm-zone zone-west">{% trans "西區" %}</span>
+      <div class="dorm-name">{% trans "女1舍" %}</div>
+      <div class="dorm-gender">👩 {% trans "女生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-west">西區</span>
-      <div class="dorm-name">女2舍</div>
-      <div class="dorm-gender">👩 女生宿舍</div>
+      <span class="dorm-zone zone-west">{% trans "西區" %}</span>
+      <div class="dorm-name">{% trans "女2舍" %}</div>
+      <div class="dorm-gender">👩 {% trans "女生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-west">西區</span>
-      <div class="dorm-name">女3舍</div>
-      <div class="dorm-gender">👩 女生宿舍</div>
+      <span class="dorm-zone zone-west">{% trans "西區" %}</span>
+      <div class="dorm-name">{% trans "女3舍" %}</div>
+      <div class="dorm-gender">👩 {% trans "女生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-west">西區</span>
-      <div class="dorm-name">女4舍</div>
-      <div class="dorm-gender">👩 女生宿舍</div>
+      <span class="dorm-zone zone-west">{% trans "西區" %}</span>
+      <div class="dorm-name">{% trans "女4舍" %}</div>
+      <div class="dorm-gender">👩 {% trans "女生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-west">西區</span>
-      <div class="dorm-name">男3舍</div>
-      <div class="dorm-gender">👨 男生宿舍</div>
+      <span class="dorm-zone zone-west">{% trans "西區" %}</span>
+      <div class="dorm-name">{% trans "男3舍" %}</div>
+      <div class="dorm-gender">👨 {% trans "男生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-south">南區</span>
-      <div class="dorm-name">男6舍</div>
-      <div class="dorm-gender">👨 男生宿舍</div>
+      <span class="dorm-zone zone-south">{% trans "南區" %}</span>
+      <div class="dorm-name">{% trans "男6舍" %}</div>
+      <div class="dorm-gender">👨 {% trans "男生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-south">南區</span>
-      <div class="dorm-name">男7舍</div>
-      <div class="dorm-gender">👨 男生宿舍</div>
+      <span class="dorm-zone zone-south">{% trans "南區" %}</span>
+      <div class="dorm-name">{% trans "男7舍" %}</div>
+      <div class="dorm-gender">👨 {% trans "男生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-south">南區</span>
-      <div class="dorm-name">男13舍</div>
-      <div class="dorm-gender">👨 男生宿舍</div>
+      <span class="dorm-zone zone-south">{% trans "南區" %}</span>
+      <div class="dorm-name">{% trans "男13舍" %}</div>
+      <div class="dorm-gender">👨 {% trans "男生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-north">北區</span>
-      <div class="dorm-name">男9A舍</div>
-      <div class="dorm-gender">👨 男生宿舍</div>
+      <span class="dorm-zone zone-north">{% trans "北區" %}</span>
+      <div class="dorm-name">{% trans "男9A舍" %}</div>
+      <div class="dorm-gender">👨 {% trans "男生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-north">北區</span>
-      <div class="dorm-name">男9B舍</div>
-      <div class="dorm-gender">👨 男生宿舍</div>
+      <span class="dorm-zone zone-north">{% trans "北區" %}</span>
+      <div class="dorm-name">{% trans "男9B舍" %}</div>
+      <div class="dorm-gender">👨 {% trans "男生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-north">北區</span>
-      <div class="dorm-name">男12舍</div>
-      <div class="dorm-gender">👨 男生宿舍</div>
+      <span class="dorm-zone zone-north">{% trans "北區" %}</span>
+      <div class="dorm-name">{% trans "男12舍" %}</div>
+      <div class="dorm-gender">👨 {% trans "男生宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-north">北區</span>
-      <div class="dorm-name">和平屋</div>
-      <div class="dorm-gender">🏳️‍🌈 性別友善宿舍</div>
+      <span class="dorm-zone zone-north">{% trans "北區" %}</span>
+      <div class="dorm-name">{% trans "和平屋" %}</div>
+      <div class="dorm-gender">🏳️‍🌈 {% trans "性別友善宿舍" %}</div>
     </div>
     <div class="dorm-card">
-      <span class="dorm-zone zone-north">北區</span>
-      <div class="dorm-name">中大會館</div>
-      <div class="dorm-gender">🏳️‍🌈 性別友善宿舍</div>
-      <span class="dorm-target">訪客 / 短住</span>
+      <span class="dorm-zone zone-north">{% trans "北區" %}</span>
+      <div class="dorm-name">{% trans "中大會館" %}</div>
+      <div class="dorm-gender">🏳️‍🌈 {% trans "性別友善宿舍" %}</div>
+      <span class="dorm-target">{% trans "訪客 / 短住" %}</span>
     </div>
   </div>
 
   <div class="section-title">🛏 {% trans "房間設備" %}</div>
   <div class="equip-grid" style="margin-bottom:20px;">
-    <div class="equip-chip">🛏 床架</div>
-    <div class="equip-chip">🪟 衣櫃</div>
-    <div class="equip-chip">🪑 書桌 + 書椅</div>
-    <div class="equip-chip">📦 置物架</div>
-    <div class="equip-chip">🔒 鎖頭</div>
-    <div class="equip-chip">❄️ 冷氣</div>
-    <div class="equip-chip partial">💡 桌燈（部分）</div>
-    <div class="equip-chip partial">🌀 電風扇（部分）</div>
-    <div class="equip-chip">📶 網路孔</div>
+    <div class="equip-chip">🛏 {% trans "床架" %}</div>
+    <div class="equip-chip">🪟 {% trans "衣櫃" %}</div>
+    <div class="equip-chip">🪑 {% trans "書桌 + 書椅" %}</div>
+    <div class="equip-chip">📦 {% trans "置物架" %}</div>
+    <div class="equip-chip">🔒 {% trans "鎖頭" %}</div>
+    <div class="equip-chip">❄️ {% trans "冷氣" %}</div>
+    <div class="equip-chip partial">💡 {% trans "桌燈（部分）" %}</div>
+    <div class="equip-chip partial">🌀 {% trans "電風扇（部分）" %}</div>
+    <div class="equip-chip">📶 {% trans "網路孔" %}</div>
   </div>
-  <div style="font-size:13px;font-weight:800;color:var(--dark);margin-bottom:10px;">🚫 禁用電器</div>
+  <div style="font-size:13px;font-weight:800;color:var(--dark);margin-bottom:10px;">🚫 {% trans "禁用電器" %}</div>
   <div class="equip-grid" style="margin-bottom:36px;">
-    <div class="equip-chip banned">🍳 電磁爐（全面禁用）</div>
-    <div class="equip-chip banned">🍳 電爐 / 電磁盤</div>
-    <div class="equip-chip banned">☕ 熱水壺 / 快煮壺</div>
-    <div class="equip-chip banned">🔌 延長線過載</div>
+    <div class="equip-chip banned">🍳 {% trans "電磁爐（全面禁用）" %}</div>
+    <div class="equip-chip banned">🍳 {% trans "電爐 / 電磁盤" %}</div>
+    <div class="equip-chip banned">☕ {% trans "熱水壺 / 快煮壺" %}</div>
+    <div class="equip-chip banned">🔌 {% trans "延長線過載" %}</div>
   </div>
+
   <div class="section-title">❓ {% trans "常見問題" %}</div>
   <a class="faq-link-card" href="https://shsd.ncu.edu.tw/Home/QA" target="_blank" rel="noopener">
     <div class="faq-link-left">
       <div class="faq-link-icon">❓</div>
       <div>
-        <div class="faq-link-title">住宿服務組常見問題（官方）</div>
+        <div class="faq-link-title">{% trans "住宿服務組常見問題（官方）" %}</div>
         <div class="faq-link-desc">
-          退宿費用、寒暑假規定、換宿申請、床墊、研究生住宿……<br>
-          完整 Q&amp;A 由住宿服務組官方維護，內容最新最準確。
+          {% trans "退宿費用、寒暑假規定、換宿申請、床墊、研究生住宿……" %}<br>
+          {% trans "完整 Q&A 由住宿服務組官方維護，內容最新最準確。" %}
         </div>
       </div>
     </div>
@@ -420,29 +240,29 @@
     <a class="contact-card" href="tel:034263926" style="text-decoration:none;color:inherit;">
       <div class="contact-icon">📞</div>
       <div class="contact-info">
-        <div class="contact-name">行政諮詢電話</div>
-        <div class="contact-val"><strong>03-4263926</strong><br>一般住宿申請、退宿、換宿等問題</div>
+        <div class="contact-name">{% trans "行政諮詢電話" %}</div>
+        <div class="contact-val"><strong>03-4263926</strong><br>{% trans "一般住宿申請、退宿、換宿等問題" %}</div>
       </div>
     </a>
     <a class="contact-card" href="mailto:ncu57290@cc.ncu.edu.tw" style="text-decoration:none;color:inherit;">
       <div class="contact-icon">📧</div>
       <div class="contact-info">
-        <div class="contact-name">公告信箱</div>
-        <div class="contact-val"><strong>ncu57290@cc.ncu.edu.tw</strong><br>文件申請、書面問題</div>
+        <div class="contact-name">{% trans "公告信箱" %}</div>
+        <div class="contact-val"><strong>ncu57290@cc.ncu.edu.tw</strong><br>{% trans "文件申請、書面問題" %}</div>
       </div>
     </a>
     <a class="contact-card" href="https://shsd.ncu.edu.tw" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
       <div class="contact-icon">🌐</div>
       <div class="contact-info">
-        <div class="contact-name">住宿服務組官網</div>
-        <div class="contact-val"><strong>shsd.ncu.edu.tw</strong><br>最新公告、申請系統、規章下載</div>
+        <div class="contact-name">{% trans "住宿服務組官網" %}</div>
+        <div class="contact-val"><strong>shsd.ncu.edu.tw</strong><br>{% trans "最新公告、申請系統、規章下載" %}</div>
       </div>
     </a>
     <div class="contact-card">
       <div class="contact-icon">🚨</div>
       <div class="contact-info">
-        <div class="contact-name">24 小時緊急總線</div>
-        <div class="contact-val">東 / 西 / 南 / 北 各分區緊急專線<br>緊急設施損壞、安全事件聯繫</div>
+        <div class="contact-name">{% trans "24 小時緊急總線" %}</div>
+        <div class="contact-val">{% trans "東 / 西 / 南 / 北 各分區緊急專線" %}<br>{% trans "緊急設施損壞、安全事件聯繫" %}</div>
       </div>
     </div>
   </div>

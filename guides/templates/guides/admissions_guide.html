@@ -4,206 +4,7 @@
 {% block title %}{% trans "招生簡章" %} — StudyGo Taiwan{% endblock %}
 
 {% block extra_css %}
-<style>
-  :root {
-    --border: var(--line);
-    --dark:   var(--primary-dark);
-    --warning: #ca8a04;
-    --warning-soft: #fef9c3;
-  }
-  .guide-wrap { width:min(1440px,96%); margin:0 auto; padding:0 0 72px; }
-
-  /* ── Hero ── */
-  .guide-hero {
-    background: linear-gradient(135deg, #0f4c81 0%, #1e3a5f 100%);
-    color:#fff; padding:40px 48px 36px; border-radius:20px;
-    margin-bottom:36px; position:relative; overflow:hidden;
-  }
-  .guide-hero .bg-text {
-    position:absolute; right:28px; top:50%; transform:translateY(-50%);
-    font-size:80px; font-weight:900; opacity:.07; letter-spacing:-4px;
-    pointer-events:none; user-select:none;
-  }
-  .guide-hero .hero-badge {
-    display:inline-block; background:rgba(255,255,255,.18);
-    border:1px solid rgba(255,255,255,.35); border-radius:99px;
-    padding:4px 14px; font-size:12px; font-weight:700; letter-spacing:.5px; margin-bottom:14px;
-  }
-  .guide-hero h2 { font-size:28px; font-weight:900; margin-bottom:10px; }
-  .guide-hero p  { opacity:.88; font-size:15px; line-height:1.7; max-width:600px; }
-  .hero-meta { display:flex; gap:14px; flex-wrap:wrap; margin-top:22px; }
-  .hero-meta-item {
-    display:flex; align-items:center; gap:6px; font-size:13px; opacity:.9;
-    background:rgba(255,255,255,.12); padding:6px 14px; border-radius:99px;
-  }
-
-  /* ── Section Title ── */
-  .section-title {
-    font-size:18px; font-weight:900; color:var(--primary-dark);
-    margin:32px 0 16px; padding-bottom:10px;
-    border-bottom:2.5px solid var(--primary-soft);
-    display:flex; align-items:center; gap:8px;
-  }
-
-  /* ── Alert ── */
-  .alert {
-    border-radius:12px; padding:14px 18px; font-size:14px; line-height:1.7;
-    margin-bottom:20px; display:flex; gap:12px; align-items:flex-start;
-  }
-  .alert-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
-  .alert-warning { background:var(--warning-soft); border:1.5px solid #fde68a; }
-  .alert-warning strong { color:var(--warning); }
-  .alert-info    { background:var(--blue-soft);    border:1.5px solid #bae6fd; }
-  .alert-info strong { color:#0369a1; }
-  .alert-success { background:var(--success-soft); border:1.5px solid #86efac; }
-  .alert-success strong { color:var(--success); }
-
-  /* ── Program Tabs ── */
-  .prog-tabs { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:24px; }
-  .prog-tab {
-    padding:10px 22px; border-radius:99px; font-size:14px; font-weight:700;
-    border:2px solid var(--line); cursor:pointer; background:#fff;
-    color:var(--muted); transition:all .2s;
-  }
-  .prog-tab.active, .prog-tab:hover {
-    background:var(--primary); border-color:var(--primary); color:#fff;
-  }
-  .prog-panel { display:none; }
-  .prog-panel.active { display:block; }
-
-  /* ── Category Cards ── */
-  .cat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-bottom:32px; }
-  .cat-card {
-    background:#fff; border:1.5px solid var(--line); border-radius:18px;
-    padding:24px 22px; position:relative; overflow:hidden;
-    transition:box-shadow .2s, transform .2s;
-  }
-  .cat-card:hover { box-shadow:0 8px 32px rgba(0,0,0,.08); transform:translateY(-2px); }
-  .cat-card-accent {
-    position:absolute; top:0; left:0; right:0; height:4px; border-radius:18px 18px 0 0;
-  }
-  .accent-green  { background:linear-gradient(90deg,#059669,#34d399); }
-  .accent-blue   { background:linear-gradient(90deg,#0f4c81,#38bdf8); }
-  .accent-purple { background:linear-gradient(90deg,#7c3aed,#c084fc); }
-  .accent-orange { background:linear-gradient(90deg,#ea580c,#fb923c); }
-  .accent-rose   { background:linear-gradient(90deg,#be123c,#fb7185); }
-  .accent-teal   { background:linear-gradient(90deg,#0d9488,#5eead4); }
-  .cat-icon  { font-size:32px; margin-bottom:12px; }
-  .cat-title { font-size:16px; font-weight:900; color:var(--dark); margin-bottom:6px; }
-  .cat-desc  { font-size:13px; color:var(--muted); line-height:1.7; margin-bottom:14px; }
-  .cat-tags  { display:flex; flex-wrap:wrap; gap:6px; }
-  .cat-tag   {
-    font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px;
-    background:var(--bg); color:var(--muted);
-  }
-  .cat-tag.hl { background:var(--primary-soft); color:var(--primary-dark); }
-
-  /* ── Info Row ── */
-  .info-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-bottom:28px; }
-  .info-card { background:#fff; border:1.5px solid var(--line); border-radius:14px; padding:20px; text-align:center; }
-  .info-card .i-icon  { font-size:28px; margin-bottom:8px; }
-  .info-card .i-label { font-size:12px; color:var(--muted); font-weight:700; margin-bottom:4px; }
-  .info-card .i-val   { font-size:20px; font-weight:900; color:var(--primary-dark); }
-  .info-card .i-sub   { font-size:12px; color:var(--muted); margin-top:4px; }
-
-  /* ── Region Cards ── */
-  .region-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-bottom:32px; }
-  .region-card {
-    background:#fff; border:1.5px solid var(--line); border-radius:16px;
-    overflow:hidden;
-  }
-  .region-head {
-    padding:16px 20px; display:flex; align-items:center; gap:12px;
-    background:var(--bg); border-bottom:1.5px solid var(--line);
-  }
-  .region-flag { font-size:26px; }
-  .region-name { font-size:15px; font-weight:900; color:var(--dark); }
-  .region-body { padding:16px 20px; }
-  .region-row  { display:flex; justify-content:space-between; align-items:baseline; padding:7px 0; border-bottom:1px solid var(--line); font-size:13px; }
-  .region-row:last-child { border-bottom:none; }
-  .region-row-label { color:var(--muted); font-weight:600; }
-  .region-row-val   { font-weight:800; color:var(--dark); text-align:right; max-width:55%; }
-
-  /* ── Timeline ── */
-  .timeline { position:relative; padding-left:0; list-style:none; margin-bottom:36px; }
-  .timeline-item { display:flex; gap:20px; margin-bottom:24px; position:relative; }
-  .timeline-item:not(:last-child)::before {
-    content:''; position:absolute; left:23px; top:48px; bottom:-24px;
-    width:2px; background:var(--primary-soft);
-  }
-  .step-num {
-    width:48px; height:48px; border-radius:50%; background:var(--primary);
-    color:#fff; font-size:18px; font-weight:900;
-    display:flex; align-items:center; justify-content:center;
-    flex-shrink:0; position:relative; z-index:1;
-  }
-  .step-body { flex:1; padding-top:6px; }
-  .step-title { font-size:16px; font-weight:800; color:var(--dark); margin-bottom:4px; }
-  .step-desc  { font-size:14px; color:var(--muted); line-height:1.7; }
-  .step-tag {
-    display:inline-block; margin-top:6px; padding:2px 10px;
-    border-radius:99px; font-size:11px; font-weight:700;
-  }
-  .tag-time  { background:var(--warning-soft); color:var(--warning); }
-  .tag-tip   { background:var(--success-soft); color:var(--success); }
-  .tag-doc   { background:var(--blue-soft); color:#0369a1; }
-
-  /* ── Fee Table ── */
-  .fee-table { width:100%; border-collapse:collapse; margin-bottom:28px; font-size:14px; }
-  .fee-table th {
-    background:var(--primary); color:#fff; padding:12px 16px; text-align:left;
-    font-weight:800; font-size:13px;
-  }
-  .fee-table th:first-child { border-radius:12px 0 0 0; }
-  .fee-table th:last-child  { border-radius:0 12px 0 0; }
-  .fee-table td { padding:12px 16px; border-bottom:1px solid var(--line); color:var(--dark); }
-  .fee-table tr:last-child td { border-bottom:none; }
-  .fee-table tr:nth-child(even) td { background:var(--bg); }
-  .fee-table .fee-note { font-size:12px; color:var(--muted); margin-top:2px; }
-
-  /* ── FAQ ── */
-  .faq-list { margin-bottom:36px; }
-  .faq-item { background:#fff; border:1.5px solid var(--line); border-radius:14px; margin-bottom:10px; overflow:hidden; }
-  .faq-q {
-    padding:16px 20px; font-size:14px; font-weight:800; color:var(--dark);
-    cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none;
-  }
-  .faq-q:hover { background:var(--bg); }
-  .faq-arrow { transition:transform .25s; font-size:12px; color:var(--muted); flex-shrink:0; margin-left:12px; }
-  .faq-item.open .faq-arrow { transform:rotate(180deg); }
-  .faq-a { max-height:0; overflow:hidden; transition:max-height .3s ease; }
-  .faq-a-inner {
-    padding:14px 20px 16px; font-size:14px; color:var(--muted); line-height:1.8;
-    border-top:1px solid var(--line);
-  }
-
-  /* ── Contact ── */
-  .contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-bottom:0; }
-  .contact-card {
-    background:#fff; border:1.5px solid var(--line); border-radius:14px;
-    padding:20px 18px; display:flex; gap:14px; align-items:flex-start;
-  }
-  .contact-icon { font-size:26px; flex-shrink:0; }
-  .contact-info { flex:1; }
-  .contact-name { font-size:14px; font-weight:800; color:var(--dark); margin-bottom:4px; }
-  .contact-val  { font-size:13px; color:var(--muted); line-height:1.6; }
-  .contact-val a { color:var(--primary); text-decoration:none; font-weight:700; }
-  .contact-val a:hover { text-decoration:underline; }
-
-  /* ── Back link ── */
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px;
-    padding:6px 0; cursor:pointer; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }
-
-  @media (max-width:640px) {
-    .guide-hero { padding:28px 22px 24px; }
-    .guide-hero h2 { font-size:22px; }
-    .guide-hero .bg-text { font-size:52px; }
-  }
-</style>
+<link rel="stylesheet" href="{% static 'guides/css/admissions_guide.css' %}?v={% now 'U' %}">
 {% endblock %}
 
 {% block content %}
@@ -699,6 +500,154 @@
           <span class="region-row-label">{% trans "承辦窗口" %}</span>
           <span class="region-row-val">{% trans "海聯會或各地台灣辦事處" %}</span>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 學長姐分享 -->
+  <div class="testimonial-section">
+    <div class="testimonial-header">
+      <div class="testimonial-title-col">
+        <div class="ts-kicker">{% trans "學長姐分享" %}</div>
+        <h2 class="ts-heading">{% trans "來聽聽" %}<br><span class="ts-heading-accent">{% trans "學長姐怎麼說" %}</span></h2>
+      </div>
+      <p class="ts-subtitle">{% trans "來自世界各地的學長姐，分享他們在台灣最真實的留學體驗與心得" %}</p>
+    </div>
+
+    <div class="ts-grid">
+      <div class="ts-card">
+        <div class="ts-card-top">
+          <div class="ts-avatar" style="background:linear-gradient(135deg,#a8edea,#fed6e3);">N</div>
+          <div class="ts-info">
+            <div class="ts-name">Nguyen Thi Minh</div>
+            <div class="ts-location">📍 {% trans "越南" %}</div>
+            <div class="ts-university">{% trans "國立臺灣大學" %}</div>
+            <div class="ts-program">{% trans "國際企業管理碩士" %}</div>
+          </div>
+        </div>
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-quote">{% trans "「剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。StudyGo 上的流程整理讓我在申請階段就對整個時程很有把握，少走了好多彎路！」" %}</p>
+        <div class="ts-quote-mark">"</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-card-top">
+          <div class="ts-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2);">B</div>
+          <div class="ts-info">
+            <div class="ts-name">Budi Santoso</div>
+            <div class="ts-location">📍 {% trans "印尼" %}</div>
+            <div class="ts-university">{% trans "國立成功大學" %}</div>
+            <div class="ts-program">{% trans "機械工程學士班" %}</div>
+          </div>
+        </div>
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-quote">{% trans "「台灣的工程教育真的世界一流！教授們都很願意指導外籍生，實驗室設備也很完整。StudyGo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」" %}</p>
+        <div class="ts-quote-mark">"</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-card-top">
+          <div class="ts-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);">M</div>
+          <div class="ts-info">
+            <div class="ts-name">Maria Santos</div>
+            <div class="ts-location">📍 {% trans "菲律賓" %}</div>
+            <div class="ts-university">{% trans "國立臺灣師範大學" %}</div>
+            <div class="ts-program">{% trans "華語文教學碩士" %}</div>
+          </div>
+        </div>
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-quote">{% trans "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。StudyGo 的行前準備清單讓我出發前完全不會手忙腳亂。」" %}</p>
+        <div class="ts-quote-mark">"</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-card-top">
+          <div class="ts-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">K</div>
+          <div class="ts-info">
+            <div class="ts-name">Krit Amnuay</div>
+            <div class="ts-location">📍 {% trans "泰國" %}</div>
+            <div class="ts-university">{% trans "國立清華大學" %}</div>
+            <div class="ts-program">{% trans "資訊工程博士班" %}</div>
+          </div>
+        </div>
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-quote">{% trans "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。StudyGo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」" %}</p>
+        <div class="ts-quote-mark">"</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-card-top">
+          <div class="ts-avatar" style="background:linear-gradient(135deg,#43e97b,#38f9d7);">S</div>
+          <div class="ts-info">
+            <div class="ts-name">Sarah Lim</div>
+            <div class="ts-location">📍 {% trans "馬來西亞" %}</div>
+            <div class="ts-university">{% trans "國立政治大學" %}</div>
+            <div class="ts-program">{% trans "國際傳播學士班" %}</div>
+          </div>
+        </div>
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-quote">{% trans "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」" %}</p>
+        <div class="ts-quote-mark">"</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-card-top">
+          <div class="ts-avatar" style="background:linear-gradient(135deg,#fa709a,#fee140);">田</div>
+          <div class="ts-info">
+            <div class="ts-name">田中健太</div>
+            <div class="ts-location">📍 {% trans "日本" %}</div>
+            <div class="ts-university">{% trans "國立陽明交通大學" %}</div>
+            <div class="ts-program">{% trans "半導體研究碩士" %}</div>
+          </div>
+        </div>
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-quote">{% trans "「台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。陽明交大的研究環境和業界連結都非常完善。StudyGo 的 ARC 辦理指南讓我順利完成所有手續。」" %}</p>
+        <div class="ts-quote-mark">"</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-card-top">
+          <div class="ts-avatar" style="background:linear-gradient(135deg,#f6d365,#fda085);">P</div>
+          <div class="ts-info">
+            <div class="ts-name">Priya Sharma</div>
+            <div class="ts-location">📍 {% trans "印度" %}</div>
+            <div class="ts-university">{% trans "國立臺灣大學" %}</div>
+            <div class="ts-program">{% trans "電機工程碩士" %}</div>
+          </div>
+        </div>
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-quote">{% trans "「在印度時就聽說台灣的理工科研究環境非常好。台大電機系的資源豐富，指導教授對國際生非常友善。StudyGo 讓我提前了解所有手續，到台灣後完全不慌亂。」" %}</p>
+        <div class="ts-quote-mark">"</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-card-top">
+          <div class="ts-avatar" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb);">M</div>
+          <div class="ts-info">
+            <div class="ts-name">Mia Htun</div>
+            <div class="ts-location">📍 {% trans "緬甸" %}</div>
+            <div class="ts-university">{% trans "國立成功大學" %}</div>
+            <div class="ts-program">{% trans "醫學系學士班" %}</div>
+          </div>
+        </div>
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-quote">{% trans "「從緬甸來台灣念醫學系是很大的挑戰，但成大的師長和同學都非常熱情。StudyGo 的住宿申請和健保辦理步驟讓我少走很多彎路，強力推薦給每位境外生！」" %}</p>
+        <div class="ts-quote-mark">"</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-card-top">
+          <div class="ts-avatar" style="background:linear-gradient(135deg,#0ba360,#3cba92);">C</div>
+          <div class="ts-info">
+            <div class="ts-name">Carlos Rodriguez</div>
+            <div class="ts-location">📍 {% trans "墨西哥" %}</div>
+            <div class="ts-university">{% trans "國立清華大學" %}</div>
+            <div class="ts-program">{% trans "化學工程博士班" %}</div>
+          </div>
+        </div>
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-quote">{% trans "「很多人沒想到我會從墨西哥來台灣讀博士，但清大的化工研究在全球都很有名。台灣的生活費比歐美低很多，食物又好吃，StudyGo 幫我快速了解所有行政流程！」" %}</p>
+        <div class="ts-quote-mark">"</div>
       </div>
     </div>
   </div>

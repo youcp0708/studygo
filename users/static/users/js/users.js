@@ -74,6 +74,7 @@ const REGION_COUNTRY_MAP = {
 };
 
 window.handleRegionChange = function(regionId = 'setupRegion', nationalityId = 'setupNationality') {
+  console.log("handleRegionChange 有執行");
   const regionSelect = document.getElementById(regionId);
   const natSelect = document.getElementById(nationalityId);
   if (!regionSelect || !natSelect) return;
@@ -366,6 +367,7 @@ let _quizTransitioning = false;
  * Step 1: 驗證原有表單，進入問答模式
  */
 function startProfileQuiz(e) {
+  console.log("startProfileQuiz 有執行");
   e.preventDefault();
   clearErrors(['nationalityErr', 'universityErr', 'identityErr', 'statusErr', 'arrivalErr']);
 
@@ -400,11 +402,7 @@ function startProfileQuiz(e) {
     expected_arrival: arrival,
   };
 
-  // 決定題目序列：Q1、Q2 必出；Q3 僅限印尼
   _quizSequence = ['quizQ1', 'quizQ2'];
-  if (nationality === 'Indonesia') {
-    _quizSequence.push('quizQ3');
-  }
 
   _quizStep = 0;
   _quizAnswers = {};
@@ -502,21 +500,31 @@ function answerQuiz(field, value) {
  * Step 3: 合併表單 + 問答資料，提交至 API
  */
 async function submitProfileWithQuiz() {
+  console.log("submitProfileWithQuiz 有執行");
   const body = {
     ..._quizFormData,
     has_taiwan_id: _quizAnswers.has_taiwan_id ?? null,
     is_deferred:   _quizAnswers.is_deferred ?? null,
-    has_indo_prep: _quizAnswers.has_indo_prep ?? null,
   };
 
-  const { ok: apiOk, data } = await apiFetch('/api/users/profile/', 'POST', body);
-
-  if (!apiOk) {
-    // 關閉 overlay，顯示錯誤
+  const closeOverlay = () => {
     const overlay = document.getElementById('quizOverlay');
-    overlay.classList.remove('active');
+    if (overlay) overlay.classList.remove('active');
     document.body.style.overflow = '';
     _quizTransitioning = false;
+  };
+
+  let apiOk, data;
+  try {
+    ({ ok: apiOk, data } = await apiFetch('/api/users/profile/', 'POST', body));
+  } catch (err) {
+    closeOverlay();
+    showToast('網路錯誤，請確認連線後再試', 'error');
+    return;
+  }
+
+  if (!apiOk) {
+    closeOverlay();
     const msg = (data?.errors && Object.keys(data.errors).length > 0)
       ? Object.values(data.errors).flat().join('、')
       : (data?.message || '儲存失敗，請稍後再試');
@@ -857,6 +865,9 @@ function startLoginSlider() {
    20. 頁面初始化：檢查是否已登入
 ════════════════════════════════════════ */
 async function initApp() {
+  // ── 公開首頁：不需登入 ──
+  if (document.getElementById('homePage')) return;
+
   // ── Login 頁面 ──
   if (document.getElementById('loginPage')) {
     const params = new URLSearchParams(window.location.search);
@@ -995,4 +1006,27 @@ async function handleGoogleLogin(response) {
 }
 
 // 啟動
-document.addEventListener('DOMContentLoaded', initApp);
+//document.addEventListener('DOMContentLoaded', initApp);
+document.addEventListener('DOMContentLoaded', () => {
+  initApp();
+
+  const profileSetupForm = document.getElementById('profileSetupForm');
+
+  if (profileSetupForm) {
+    profileSetupForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      startProfileQuiz(e);
+    });
+  }
+
+  const setupRegion = document.getElementById('setupRegion');
+
+  if (setupRegion) {
+    handleRegionChange('setupRegion', 'setupNationality');
+
+    setupRegion.addEventListener('change', () => {
+      handleRegionChange('setupRegion', 'setupNationality');
+      updatePreview();
+    });
+  }
+});

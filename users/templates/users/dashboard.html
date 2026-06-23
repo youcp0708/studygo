@@ -1,9 +1,75 @@
-{# users/templates/users/dashboard.html — 儀表板 #}
-{% extends "base.html" %}
+{# users/templates/users/dashboard.html — 儀表板（獨立頁，不使用 base.html）#}
 {% load static i18n %}
-{% block title %}{% trans "儀表板" %} — StudyGo Taiwan{% endblock %}
+{% get_current_language as CURRENT_LANGUAGE %}
+<!DOCTYPE html>
+<html lang="{{ CURRENT_LANGUAGE|default:'zh-hant' }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% trans "儀表板" %} — StudyGo Taiwan</title>
+  <link rel="icon" type="image/png" href="{% static '/image/image-removebg-preview.png' %}">
+  <link rel="stylesheet" href="{% static 'users/css/users.css' %}?v={% now 'U' %}" />
+</head>
+<body>
 
-{% block content %}
+  {# ── Toast Container ── #}
+  <div class="toast-container" id="toastContainer"></div>
+
+  {# ── Confirm Modal ── #}
+  <div class="modal-overlay hidden" id="confirmModal">
+    <div class="modal-box">
+      <div class="modal-icon" id="modalIcon">⚠️</div>
+      <h3 id="modalTitle">{% trans "確認操作" %}</h3>
+      <p id="modalMsg">{% trans "您確定要執行此操作嗎？" %}</p>
+      <div class="modal-actions">
+        <button class="btn-outline-sm" onclick="closeModal()">{% trans "取消" %}</button>
+        <button class="btn-danger-sm" id="modalConfirmBtn">{% trans "確認" %}</button>
+      </div>
+    </div>
+  </div>
+
+  {# ── Dashboard Navbar ── #}
+  <nav class="navbar site-header">
+    <a href="{% url 'index' %}" class="brand" style="text-decoration:none;">
+      <img src="{% static 'image/taiwan_globe.png' %}?v={% now 'U' %}" alt="StudyGo Taiwan Logo" class="brand-icon">
+      <div class="brand-text">
+        <h1>StudyGo <span style="font-weight:400;font-size:13px;color:var(--muted);">Taiwan</span></h1>
+      </div>
+    </a>
+
+    <div class="site-nav">
+      <a href="{% url 'my_flows' %}" class="site-nav-link">{% trans "任務清單" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="{% url 'guide_index' %}" class="site-nav-link">{% trans "資訊中心" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="/chatbot/" class="site-nav-link">🤖 AI</a>
+    </div>
+
+    <div class="nav-right">
+      <div style="position:relative;display:inline-block;">
+        <button id="reminderBtn"
+          style="position:relative;cursor:pointer;background:white;border:1px solid var(--border);color:var(--text);padding:8px;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05);"
+          onclick="toggleReminderDropdown()">
+          🔔<span id="reminderBadge"
+            style="display:none;position:absolute;top:-4px;right:-4px;background:red;color:white;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
+        </button>
+        <div id="reminderDropdown" data-no-reminders="{% trans '沒有未讀通知 🎉' %}" data-mark-read="{% trans '標記為已讀' %}"
+          style="display:none;position:absolute;top:100%;right:-50px;width:320px;background:white;border:1px solid var(--border,#eee);border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1);z-index:1000;margin-top:12px;max-height:400px;overflow-y:auto;text-align:left;">
+          <div style="padding:12px 16px;border-bottom:1px solid var(--border,#eee);font-weight:bold;color:var(--text,#333);">
+            🔔 {% trans "通知" %}</div>
+          <div id="reminderList">
+            <div style="padding:16px;text-align:center;color:var(--muted,#888);">{% trans "載入中..." %}</div>
+          </div>
+        </div>
+      </div>
+      <a href="{% url 'edit_profile' %}" class="nav-user-btn">
+        <span class="nav-user-avatar">{% if user.name %}{{ user.name|first|upper }}{% else %}U{% endif %}</span>
+        {% if user.name %}{{ user.name }}{% else %}{{ user.email }}{% endif %}
+      </a>
+      <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;">{% trans "登出" %}</a>
+    </div>
+  </nav>
+
 <section id="profileDash" class="page" style="padding:0 0 48px;">
 
   {# Hero #}
@@ -120,7 +186,6 @@
 
         <div id="dashRecentTasks" data-no-tasks="🎉 {% trans '太棒了！您目前沒有待辦任務。' %}"
           style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
-          <!-- JS 動態插入近期任務 -->
           <div style="text-align:center;padding:32px 0;color:var(--muted);">
             <div class="spinner" style="border-color: var(--primary) transparent var(--primary) transparent;"></div>
             <div style="margin-top: 12px;">{% trans "載入任務中..." %}</div>
@@ -134,7 +199,11 @@
       </div>
     </div>
 
-
   </div>
 </section>
-{% endblock %}
+
+<script src="{% static 'users/js/users.js' %}"></script>
+<script src="{% static 'flows/js/flows.js' %}?v={% now 'U' %}"></script>
+
+</body>
+</html>

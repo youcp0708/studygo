@@ -1,0 +1,65 @@
+🔴 CRITICAL — 立即處理
+1. .env 檔案洩露真實憑證
+.env 裡有明文的真實 API key：
+
+Gmail 帳號 + App Password
+Google OAuth Client ID
+OpenAI API Key（sk-proj-...）
+Google Maps API Key
+行動：立刻到各平台 revoke 這些 key，重新產生新的。
+
+2. 資料庫密碼寫死在 settings.py（第 72-81 行）
+USER 和 PASSWORD 直接寫在程式碼裡，應改用 os.getenv()。
+
+3. DEBUG = True（settings.py 第 18 行）
+上線時若 DEBUG 開著，出錯時會把完整 stack trace、環境變數、資料庫 query 全部顯示給使用者看。
+
+4. SECRET_KEY 是假的佔位符（第 16 行）
+
+SECRET_KEY = 'django-insecure-請替換成隨機字串-production-key-here'
+Session token、CSRF token、密碼重設 token 全部依賴這個 key。
+
+🟠 HIGH — 優先處理
+5. ALLOWED_HOSTS = ['*']（第 20 行）
+允許任何 Host header，容易被用來做 Host Header Injection 攻擊。
+
+6. SESSION_COOKIE_SECURE = False（settings.py）
+Session cookie 不加密傳輸，HTTP 下可被中間人攔截。
+
+7. X-Forwarded-For IP 未驗證（users/views.py 第 38-43 行）
+使用者可以偽造 IP，影響所有依賴 IP 的安全邏輯（登入記錄、封鎖等）。
+
+🟡 MEDIUM — 計劃性修復
+8. 所有認證端點沒有 Rate Limiting
+以下端點可被暴力破解：
+
+POST /api/users/login/
+POST /api/users/register/
+POST /api/users/password-reset/
+POST /api/users/password-reset/confirm/
+建議在 DRF 設定加入 DEFAULT_THROTTLE_CLASSES。
+
+9. Serializer 用 fields = '__all__'（flows/serializers.py）
+TaskSerializer 等暴露所有欄位，包含不應該給前端的內部欄位。改用明確的 fields = [...] 清單。
+
+10. Google Maps API Key 傳給前端（guides/views.py 第 117-127 行）
+maps_api_key 直接 render 進 HTML，任何人都可以在頁面原始碼看到。
+
+11. Email 驗證 token 以明文存資料庫（users/views.py 第 484-487 行）
+若資料庫洩露，所有驗證 token 直接可用。建議存 hash。
+
+12. print() 除錯輸出殘留在 production code
+chatbot/views.py（多處 [DEBUG] print）
+flows/views.py（[DEBUG] get_language=...）
+chatbot/services.py（多處）
+若 log 沒有妥善保護，這些輸出會洩露內部邏輯。
+
+13. 缺乏操作稽核記錄（Audit Log）
+學生資料修改、任務狀態變更等敏感操作，沒有記錄是誰在什麼時間做了什麼。
+
+🟢 LOW — 長期改善
+14. 登入失敗記錄不完整（users/views.py 第 113-129 行）
+目前只記錄部分失敗狀況，難以偵測暴力破解。
+
+15. Silent exception（except Exception: pass）多處
+錯誤被靜默吞掉，安全問題可能被掩蓋，建議改用 logger.exception()。
