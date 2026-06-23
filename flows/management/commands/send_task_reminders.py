@@ -30,21 +30,21 @@ class Command(BaseCommand):
             due_date = student_task.due_date
 
             if due_date < today:
-                subject = f"【StudyGo Taiwan 提醒】任務已逾期：{task_title}"
-                body = f"您好 {user.name}，\n\n您的任務「{task_title}」已經逾期（截止日：{due_date}）。\n請盡快登入系統完成任務！\n\nStudyGo Taiwan 團隊"
+                subject = f"【ReadyTo Taiwan 提醒】任務已逾期：{task_title}"
+                body = f"您好 {user.name}，\n\n您的任務「{task_title}」已經逾期（截止日：{due_date}）。\n請盡快登入系統完成任務！\n\nReadyTo Taiwan 團隊"
             elif due_date == today:
-                subject = f"【StudyGo Taiwan 提醒】任務今日到期：{task_title}"
-                body = f"您好 {user.name}，\n\n您的任務「{task_title}」將於今日（{due_date}）到期。\n請盡快登入系統完成任務！\n\nStudyGo Taiwan 團隊"
+                subject = f"【ReadyTo Taiwan 提醒】任務今日到期：{task_title}"
+                body = f"您好 {user.name}，\n\n您的任務「{task_title}」將於今日（{due_date}）到期。\n請盡快登入系統完成任務！\n\nReadyTo Taiwan 團隊"
             else:
                 days_left = (due_date - today).days
-                subject = f"【StudyGo Taiwan 提醒】任務即將到期：{task_title}"
-                body = f"您好 {user.name}，\n\n您的任務「{task_title}」還有 {days_left} 天到期（{due_date}）。\n請記得登入系統完成任務喔！\n\nStudyGo Taiwan 團隊"
+                subject = f"【ReadyTo Taiwan 提醒】任務即將到期：{task_title}"
+                body = f"您好 {user.name}，\n\n您的任務「{task_title}」還有 {days_left} 天到期（{due_date}）。\n請記得登入系統完成任務喔！\n\nReadyTo Taiwan 團隊"
 
             try:
                 send_mail(
                     subject,
                     body,
-                    settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'noreply@studygotaiwan.com',
+                    settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'noreply@readytotaiwan.com',
                     [user.email],
                     fail_silently=False,
                 )

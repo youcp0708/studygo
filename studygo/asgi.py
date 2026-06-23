@@ -1,6 +1,6 @@
 """
 studygo/asgi.py
-ASGI config for studygo project.
+ASGI config for readyto project.
 """
 
 import os

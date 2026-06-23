@@ -75,8 +75,8 @@ msgstr "No chat history yet"
 #: .\chatbot\templates\chatbot\chatbot.html:81
 #: .\chatbot\templates\chatbot\chatbot.html:94
 #: .\chatbot\templates\chatbot\chatbot.html:146
-msgid "StudyGo AI 小幫手"
-msgstr "StudyGo AI Assistant"
+msgid "ReadyTo Taiwan AI 小幫手"
+msgstr "ReadyTo Taiwan AI Assistant"
 
 #: .\chatbot\templates\chatbot\chatbot.html:96
 msgid "你好 !"
@@ -1518,9 +1518,9 @@ msgid "境外生"
 msgstr "International Student"
 
 #: .\users\templates\users\dashboard.html:15
-msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+msgid "歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。"
 msgstr ""
-"Welcome to StudyGo Taiwan, your personalized process for studying in Taiwan "
+"Welcome to ReadyTo Taiwan, your personalized process for studying in Taiwan "
 "is ready."
 
 #: .\users\templates\users\dashboard.html:18
@@ -1846,8 +1846,8 @@ msgid "歡迎回來"
 msgstr "Welcome Back"
 
 #: .\users\templates\users\login.html:102
-msgid "請登入您的 StudyGo 帳戶"
-msgstr "Please log in to your StudyGo account"
+msgid "請登入您的 ReadyTo Taiwan 帳戶"
+msgstr "Please log in to your ReadyTo Taiwan account"
 
 #: .\users\templates\users\login.html:115
 #: .\users\templates\users\login.html:177
@@ -1885,8 +1885,8 @@ msgid "建立帳號"
 msgstr "Create Account"
 
 #: .\users\templates\users\login.html:159
-msgid "填寫基本資料，開始使用 StudyGo Taiwan"
-msgstr "Fill in your basic information to start using StudyGo Taiwan"
+msgid "填寫基本資料，開始使用 ReadyTo Taiwan"
+msgstr "Fill in your basic information to start using ReadyTo Taiwan"
 
 #: .\users\templates\users\login.html:188
 msgid "請輸入密碼"

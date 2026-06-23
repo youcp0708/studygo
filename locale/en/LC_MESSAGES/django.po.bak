@@ -81,8 +81,8 @@ msgstr ""
 #: .\chatbot\templates\chatbot\chatbot.html:88
 #: .\chatbot\templates\chatbot\chatbot.html:101
 #: .\chatbot\templates\chatbot\chatbot.html:154
-msgid "StudyGo AI 小幫手"
-msgstr "StudyGo AI Assistant"
+msgid "ReadyTo Taiwan AI 小幫手"
+msgstr "ReadyTo Taiwan AI Assistant"
 
 #: .\chatbot\templates\chatbot\chatbot.html:103
 msgid "你好 !"
@@ -220,31 +220,31 @@ msgstr ""
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
 msgstr ""
 
-#: .\studygo\settings.py:172
+#: .\readyto\settings.py:172
 msgid "繁體中文"
 msgstr "Traditional Chinese"
 
-#: .\studygo\settings.py:173
+#: .\readyto\settings.py:173
 msgid "English"
 msgstr "English"
 
-#: .\studygo\settings.py:174
+#: .\readyto\settings.py:174
 msgid "日本語"
 msgstr "Japanese"
 
-#: .\studygo\settings.py:175
+#: .\readyto\settings.py:175
 msgid "မြန်မာဘာသာ"
 msgstr "Burmese"
 
-#: .\studygo\settings.py:176
+#: .\readyto\settings.py:176
 msgid "Bahasa Indonesia"
 msgstr "Indonesian"
 
-#: .\studygo\settings.py:177
+#: .\readyto\settings.py:177
 msgid "ภาษาไทย"
 msgstr "Thai"
 
-#: .\studygo\settings.py:178
+#: .\readyto\settings.py:178
 msgid "Bahasa Melayu"
 msgstr "Malay"
 
@@ -510,9 +510,9 @@ msgid "境外生"
 msgstr "International Student"
 
 #: .\users\templates\users\dashboard.html:23
-msgid "，歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+msgid "，歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。"
 msgstr ""
-", welcome to StudyGo Taiwan. Your personalized study-in-Taiwan process is "
+", welcome to ReadyTo Taiwan. Your personalized study-in-Taiwan process is "
 "ready."
 
 #: .\users\templates\users\dashboard.html:28
@@ -799,8 +799,8 @@ msgid "歡迎回來"
 msgstr "Welcome Back"
 
 #: .\users\templates\users\login.html:99
-msgid "請登入您的 StudyGo 帳戶"
-msgstr "Please log in to your StudyGo account"
+msgid "請登入您的 ReadyTo Taiwan 帳戶"
+msgstr "Please log in to your ReadyTo Taiwan account"
 
 #: .\users\templates\users\login.html:112
 #: .\users\templates\users\login.html:174
@@ -838,8 +838,8 @@ msgid "建立帳號"
 msgstr "Create Account"
 
 #: .\users\templates\users\login.html:156
-msgid "填寫基本資料，開始使用 StudyGo Taiwan"
-msgstr "Fill in your basic information to start using StudyGo Taiwan"
+msgid "填寫基本資料，開始使用 ReadyTo Taiwan"
+msgstr "Fill in your basic information to start using ReadyTo Taiwan"
 
 #: .\users\templates\users\login.html:185
 msgid "請輸入密碼"

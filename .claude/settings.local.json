@@ -10,7 +10,7 @@
       "WebFetch(domain:coa.immigration.gov.tw)",
       "Bash(python -c ' *)",
       "Bash(python add_i18n.py)",
-      "Bash(del \"C:\\\\Users\\\\User\\\\Downloads\\\\studygo\\\\add_i18n.py\")",
+      "Bash(del \"C:\\\\Users\\\\User\\\\Downloads\\\\readyto\\\\add_i18n.py\")",
       "Bash(python -)",
       "WebFetch(domain:www.nhi.gov.tw)",
       "WebFetch(domain:law77600.com)",
@@ -41,7 +41,7 @@
       "WebFetch(domain:love.adm.ncu.edu.tw)",
       "WebFetch(domain:ccs.ncu.edu.tw)",
       "WebFetch(domain:osa.ncu.edu.tw)",
-      "WebFetch(domain:www.studyintaiwan.org)",
+      "WebFetch(domain:www.readytoaiwan.org)",
       "WebFetch(domain:www.oia.ncu.edu.tw)",
       "WebFetch(domain:www.csie.ncu.edu.tw)",
       "WebFetch(domain:www.ocac.gov.tw)",
@@ -69,10 +69,10 @@
       "Bash(xargs ls -la)",
       "Bash(xargs grep -l \"dashboard\\\\|home\\\\|index\")",
       "Bash(xargs grep -l \"my_flows\")",
-      "Bash(cd \"c:\\\\Users\\\\User\\\\Downloads\\\\studygo\" && cp users/templates/users/dashboard.html users/templates/users/home.html)"
+      "Bash(cd \"c:\\\\Users\\\\User\\\\Downloads\\\\readytoaiwan\" && cp users/templates/users/dashboard.html users/templates/users/home.html)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\User\\Downloads\\studygo\\users\\templates\\users"
+      "c:\\Users\\User\\Downloads\\readytoaiwan\\users\\templates\\users"
     ]
   }
 }

@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% trans "儀表板" %} — StudyGo Taiwan</title>
+  <title>{% trans "儀表板" %} — ReadyTo Taiwan</title>
   <link rel="icon" type="image/png" href="{% static '/image/image-removebg-preview.png' %}">
   <link rel="stylesheet" href="{% static 'users/css/users.css' %}?v={% now 'U' %}" />
 </head>
@@ -31,9 +31,9 @@
   {# ── Dashboard Navbar ── #}
   <nav class="navbar site-header">
     <a href="{% url 'index' %}" class="brand" style="text-decoration:none;">
-      <img src="{% static 'image/taiwan_globe.png' %}?v={% now 'U' %}" alt="StudyGo Taiwan Logo" class="brand-icon">
+      <img src="{% static 'image/ReadyToTaiwan_logo_2.png' %}?v={% now 'U' %}" alt="ReadyTo Taiwan Logo" class="brand-icon">
       <div class="brand-text">
-        <h1>StudyGo <span style="font-weight:400;font-size:13px;color:var(--muted);">Taiwan</span></h1>
+        <h1>ReadyTo <span style="font-weight:400;font-size:13px;color:var(--muted);">Taiwan</span></h1>
       </div>
     </a>
 
@@ -78,7 +78,7 @@
     <h2>{% trans "你好" %} {{ user.name }} </h2>
     <p>
       {% if profile %}{{ profile.get_identity_type_display }}{% else %}{% trans "境外生" %}{% endif %}
-      {% trans "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。" %}
+      {% trans "歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。" %}
     </p>
     <div class="dash-actions">
       <a href="{% url 'my_flows' %}" class="dash-btn dash-btn-outline">📋 {% trans "查看任務清單" %}</a>

@@ -16,12 +16,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='chatknowledge',
             name='bot_type',
-            field=models.CharField(choices=[('helper', 'StudyGo AI 小幫手'), ('friend', 'StudyGo AI 聊天好朋友'), ('both', '兩者都可使用')], default='helper', max_length=20, verbose_name='適用 AI'),
+            field=models.CharField(choices=[('helper', 'ReadyTo Taiwan AI 小幫手'), ('friend', 'ReadyTo Taiwan AI 聊天好朋友'), ('both', '兩者都可使用')], default='helper', max_length=20, verbose_name='適用 AI'),
         ),
         migrations.AddField(
             model_name='chatsession',
             name='ai_mode',
-            field=models.CharField(choices=[('helper', 'StudyGo AI 小幫手'), ('friend', 'StudyGo AI 聊天好朋友')], default='helper', max_length=20, verbose_name='AI 模式'),
+            field=models.CharField(choices=[('helper', 'ReadyTo Taiwan AI 小幫手'), ('friend', 'ReadyTo Taiwan AI 聊天好朋友')], default='helper', max_length=20, verbose_name='AI 模式'),
         ),
         migrations.AlterField(
             model_name='chatknowledge',
