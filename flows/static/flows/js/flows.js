@@ -443,6 +443,13 @@ async function renderMyTasks() {
               ${deadlineInfo.text ? `<div style="margin-top:4px; font-size:13px; color:#555;">${deadlineInfo.text}</div>` : ''}
             </div>`;
         }
+      } else if (deadlineInfo.type === 'absolute') {
+        deadlineHtml = `
+          <div class="deadline-block">
+            <div class="detail-label">${window.UI_STRINGS.deadline}</div>
+            <div class="detail-value" style="font-size:15px; font-weight:700; color:#059669;">${deadlineInfo.calculated_due_date || ''}</div>
+            ${deadlineInfo.text ? `<div style="margin-top:4px; font-size:13px; color:#555;">${deadlineInfo.text}</div>` : ''}
+          </div>`;
       }
 
       // ── 只顯示有資料的欄位 ──
