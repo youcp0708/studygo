@@ -573,10 +573,12 @@ async function renderTips() {
           const firstIcon = links[0].category_icon;
           const iconHtml = firstIcon ? `<span class="material-symbols-outlined" style="vertical-align: middle; font-size: 1.1rem; margin-right: 4px; margin-bottom: 2px;">${firstIcon}</span>` : '';
           html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600; display: flex; align-items: center;">${iconHtml}${cat}</div>`;
-          links.forEach(l => {
+          // 所有有分類的連結都排在同一行，並用逗號分隔
+          const catLinksHtml = links.map(l => {
             const label = l.label || l.url;
-            html += `<a href="${l.url}" target="_blank" class="tip-item-link" style="margin-left: 4px;">${label} →</a>`;
-          });
+            return `<a href="${l.url}" target="_blank" class="tip-item-link" style="margin-left: 4px;">${label}</a>`;
+          }).join('<span style="color: var(--text-color); margin: 0 4px;">,</span>');
+          html += `<div style="margin-top: 4px; line-height: 1.8;">${catLinksHtml}</div>`;
         }
 
         // 渲染未分類的鏈結
@@ -585,11 +587,13 @@ async function renderTips() {
           if (Object.keys(categories).length > 0) {
             html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600;">🔗 其他 / Other</div>`;
           }
+          html += `<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 4px;">`;
           uncategorized.forEach(l => {
             const label = l.label || l.url;
             const margin = Object.keys(categories).length > 0 ? 'margin-left: 4px;' : '';
-            html += `<a href="${l.url}" target="_blank" class="tip-item-link" style="${margin}">${label} →</a>`;
+            html += `<a href="${l.url}" target="_blank" class="tip-item-link" style="${margin}">🔗 ${label}</a>`;
           });
+          html += `</div>`;
         }
       }
 
