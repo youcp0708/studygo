@@ -198,7 +198,8 @@ class Task(models.Model):
     DEADLINE_TYPE_CHOICES = [
         ('none',         '無截止日期'),
         ('text_only',    '只顯示文字說明'),
-        ('from_arrival', '依抵台日期自動計算'),
+        ('from_arrival', '依抵台日期自動計算（正數為抵台後，負數為抵台前）'),
+        ('absolute',     '固定截止日期'),
     ]
     deadline_type = models.CharField(
         max_length=20,
@@ -206,10 +207,15 @@ class Task(models.Model):
         default='none',
         verbose_name="期限類型"
     )
-    deadline_days = models.PositiveIntegerField(
+    deadline_days = models.IntegerField(
         null=True, blank=True,
         verbose_name="計算天數（僅限 from_arrival 使用）",
-        help_text="抵台後幾天內必須完成"
+        help_text="計算天數（正數為抵台後，負數為抵台前）"
+    )
+    deadline_date = models.DateField(
+        null=True, blank=True,
+        verbose_name="固定截止日期",
+        help_text="特定截止日期（僅限 absolute 使用）"
     )
     # ── 辦理時程文字（多語言）──
     deadline_text    = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字")

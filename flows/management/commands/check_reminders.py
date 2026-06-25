@@ -21,19 +21,32 @@ class Command(BaseCommand):
         today = timezone.now().date()
         target_date = today + timedelta(days=days_ahead)
 
-        # 篩選未完成、且期限類型為 'from_arrival' 且必要日期欄位均有資料的學生的任務
+        # 篩選未完成、且符合期限條件的學生任務
+        from django.db.models import Q
         pending_tasks = StudentTask.objects.filter(
-            status__in=['not_started', 'in_progress'],
-            task__deadline_type='from_arrival',
-            task__deadline_days__isnull=False,
-            student__expected_arrival__isnull=False
+            status__in=['not_started', 'in_progress']
+        ).filter(
+            Q(task__deadline_type='from_arrival', task__deadline_days__isnull=False, student__expected_arrival__isnull=False) |
+            Q(task__deadline_type='absolute', task__deadline_date__isnull=False)
         ).select_related('student__user', 'task')
 
         created_count = 0
 
         for st in pending_tasks:
-            # 動態計算到期日：預計抵台日 + 任務截止天數
-            due_date = st.student.expected_arrival + timedelta(days=st.task.deadline_days)
+            # 依期限類型計算截止日
+            if st.task.deadline_type == 'from_arrival':
+                due_date = st.student.expected_arrival + timedelta(days=st.task.deadline_days)
+            else:  # absolute
+                due_date = st.task.deadline_date
+
+            # 如果截止日期已變更，且有未讀的舊提醒（內容不含當前的截止日期），將其刪除以防誤導
+            old_unread_reminders = Reminder.objects.filter(
+                student_task=st,
+                is_read=False
+            )
+            for r in old_unread_reminders:
+                if str(due_date) not in r.message:
+                    r.delete()
 
             # 僅處理即將到期或已逾期的任務
             if due_date > target_date:
@@ -80,13 +93,13 @@ class Command(BaseCommand):
                     f'StudyGo Taiwan Team'
                 )
 
-            # 檢查是否已經有未讀的提醒，避免重複產生
-            existing_reminder = Reminder.objects.filter(
+            # 檢查是否已經有針對此截止日期的提醒（不論已讀或未讀，避免對同一個截止日重複產生與發送）
+            has_current_reminder = Reminder.objects.filter(
                 student_task=st,
-                is_read=False
+                message__contains=str(due_date)
             ).exists()
 
-            if not existing_reminder:
+            if not has_current_reminder:
                 Reminder.objects.create(
                     student=st.student,
                     student_task=st,

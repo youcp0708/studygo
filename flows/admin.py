@@ -97,14 +97,6 @@ class TaskAdmin(admin.ModelAdmin):
         'id',
         'title',
         'task_code',
-        'title_en',
-        'title_my',
-        'title_id',
-        'title_ms',
-        'title_th',
-        'title_ja',
-        'title_ko',
-        'title_vi',
         'stage',
         'display_region',
         'display_identity_type',
@@ -116,6 +108,17 @@ class TaskAdmin(admin.ModelAdmin):
         # 'require_indo_prep',
         'deadline_type',
         'deadline_days',
+        'deadline_date',
+        'deadline_text',
+        'is_required',
+        'order',
+    )
+
+    list_editable = (
+        'deadline_type',
+        'deadline_days',
+        'deadline_date',
+        'deadline_text',
         'is_required',
         'order',
     )
@@ -153,9 +156,10 @@ class TaskAdmin(admin.ModelAdmin):
             'fields': (
                 'deadline_type',
                 'deadline_days',
+                'deadline_date',
                 'deadline_text',
             ),
-            'description': '「期限類型」選擇：無截止日期 / 只顯示文字說明 / 依抵台日期自動計算。若選擇「依抵台日期自動計算」，請填入「計算天數」。'
+            'description': '「期限類型」選擇：無截止日期 / 只顯示文字說明 / 依抵台日期自動計算 / 固定截止日期。若選擇「依抵台日期自動計算」，請填入「計算天數（正數為抵台後，負數為抵台前）」；若選擇「固定截止日期」，請填入「固定截止日期」。'
         }),
         ('英文 English', {
             'fields': (
@@ -272,6 +276,12 @@ class TaskAdmin(admin.ModelAdmin):
     def display_nationality(self, obj):
         return obj.get_nationality_display() if obj.nationality else '-'
     display_nationality.short_description = '適用國籍'
+
+    def formfield_for_dbfield(self, db_field, request, **kwargs):
+        if db_field.name == 'deadline_date':
+            from django import forms
+            kwargs['widget'] = forms.DateInput(attrs={'type': 'date'}, format='%Y-%m-%d')
+        return super().formfield_for_dbfield(db_field, request, **kwargs)
 
 
 @admin.register(StudentTask)

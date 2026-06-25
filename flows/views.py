@@ -307,6 +307,9 @@ def my_tasks_view(request):
                         ).strftime('%Y/%m/%d')
                     else:
                         arrival_missing = True
+                elif dl_type == 'absolute':
+                    if t.deadline_date:
+                        calculated_due_date = t.deadline_date.strftime('%Y/%m/%d')
 
                 task_data['localized'] = localized
                 task_data['deadline_info'] = {

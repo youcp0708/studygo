@@ -80,6 +80,14 @@ DATABASES = {
     }
 }
 
+import sys
+if 'test' in sys.argv:
+    DATABASES['default'] = {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+
+
 # ── 密碼驗證 ──
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
@@ -159,8 +167,12 @@ CORS_ALLOW_CREDENTIALS = True
 #   $env:EMAIL_HOST_USER="your@gmail.com"
 #   $env:EMAIL_HOST_PASSWORD="your_app_password"   ← Gmail 應用程式密碼（非帳號密碼）
 # 若未設定 EMAIL_HOST_USER，自動退回 console 模式（印到終端機）
+#
+# 強制使用 console 模式，不發送真實信件給使用者（若要正式發信請改為 False）
+FORCE_CONSOLE_EMAIL = True
+
 _email_user = os.environ.get('EMAIL_HOST_USER', '')
-if _email_user:
+if _email_user and not FORCE_CONSOLE_EMAIL:
     EMAIL_BACKEND       = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST          = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
     EMAIL_PORT          = int(os.environ.get('EMAIL_PORT', 587))
