@@ -15,15 +15,15 @@
     // 清除前端 Token
     localStorage.removeItem('authToken');
 
-    // 跳轉到登入頁面
-    window.location.href = '/login/';
+    // 跳轉回首頁
+    window.location.href = '/';
   </script>
 
   <noscript>
-    <meta http-equiv="refresh" content="0;url=/login/" />
+    <meta http-equiv="refresh" content="0;url=/" />
     <p>
       {% trans "登出成功，" %}
-      <a href="/login/">{% trans "點此返回登入頁面" %}</a>
+      <a href="/">{% trans "點此返回首頁" %}</a>
     </p>
   </noscript>
 </body>

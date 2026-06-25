@@ -427,6 +427,13 @@
     display: block;
   }
 
+  .help-tip-text.wide {
+    white-space: normal;
+    width: 280px;
+    text-align: left;
+    line-height: 1.6;
+  }
+
   .field-row {
     display: grid;
     grid-template-columns: 1fr 1fr;

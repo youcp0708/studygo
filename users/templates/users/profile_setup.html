@@ -125,7 +125,11 @@
             </div>
           </div>
 
-          <div class="setup-section-title">{% trans "身份別" %}</div>
+          <div class="setup-section-title">{% trans "身份別" %} <span class="help-tip" tabindex="0">?<span class="help-tip-text wide">
+            <b>{% trans "僑生" %}</b>：{% trans "指長期居住海外，具有華裔背景，並依僑生相關規定申請來臺就讀大專校院的學生。" %}<br><br>
+            <b>{% trans "外籍生" %}</b>：{% trans "指不具中華民國國籍，依外國學生身分申請並來臺就讀各級學校的學生。" %}<br><br>
+            <b>{% trans "港澳生" %}</b>：{% trans "指具有香港或澳門居民身分，依港澳學生來臺就學辦法申請入學的學生。" %}
+          </span></span></div>
           <div class="field">
             <select name="identity_type" id="setupIdentity" required onchange="updatePreview()">
               <option value="">{% trans "請選擇身份別" %}</option>
