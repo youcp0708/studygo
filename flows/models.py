@@ -198,7 +198,8 @@ class Task(models.Model):
     DEADLINE_TYPE_CHOICES = [
         ('none',         '無截止日期'),
         ('text_only',    '只顯示文字說明'),
-        ('from_arrival', '依抵台日期自動計算'),
+        ('from_arrival', '依抵台日期自動計算（正數為抵台後，負數為抵台前）'),
+        ('absolute',     '固定截止日期'),
     ]
     deadline_type = models.CharField(
         max_length=20,
@@ -206,10 +207,15 @@ class Task(models.Model):
         default='none',
         verbose_name="期限類型"
     )
-    deadline_days = models.PositiveIntegerField(
+    deadline_days = models.IntegerField(
         null=True, blank=True,
         verbose_name="計算天數（僅限 from_arrival 使用）",
-        help_text="抵台後幾天內必須完成"
+        help_text="計算天數（正數為抵台後，負數為抵台前）"
+    )
+    deadline_date = models.DateField(
+        null=True, blank=True,
+        verbose_name="固定截止日期",
+        help_text="特定截止日期（僅限 absolute 使用）"
     )
     # ── 辦理時程文字（多語言）──
     deadline_text    = models.CharField(max_length=300, blank=True, verbose_name="辦理時程文字")
@@ -556,6 +562,24 @@ class Tip(models.Model):
             'has_fallback': fallback_occurred,
         }
 
+class TipLinkCategory(models.Model):
+    name = models.CharField(max_length=100, verbose_name="分類名稱")
+    name_en = models.CharField(max_length=100, blank=True, verbose_name="分類名稱 English")
+    icon = models.CharField(
+        max_length=50,
+        blank=True,
+        verbose_name="分類圖示",
+        help_text="請輸入 Google Material Icon 名稱，例如: restaurant"
+    )
+
+    class Meta:
+        db_table = "flows_tip_link_category"
+        verbose_name = "小貼士連結分類"
+        verbose_name_plural = "小貼士連結分類"
+
+    def __str__(self):
+        return self.name
+
 class TipLink(models.Model):
     """
     一筆小貼士的可重複鏈結。
@@ -584,6 +608,30 @@ class TipLink(models.Model):
     label_ja = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Japanese")
     label_ko = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Korean")
     label_vi = models.CharField(max_length=120, blank=True, verbose_name="鏈結文字 Vietnamese")
+
+    # ── 鏈結分類 (下拉選單) ──
+    link_category = models.ForeignKey(
+        TipLinkCategory,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name="鏈結分類",
+        help_text="請選擇分類，若不需分類請留空"
+    )
+
+    @property
+    def category_icon(self):
+        return self.link_category.icon if self.link_category else ""
+
+    def get_localized_category(self, lang_code):
+        if not self.link_category:
+            return ""
+        
+        if not lang_code or lang_code.startswith('zh'):
+            return self.link_category.name
+            
+        translated = self.link_category.name_en or ''
+        return translated if translated.strip() else self.link_category.name
 
     def get_localized_label(self, lang_code):
         suffix_map = {

@@ -1,4 +1,10 @@
-from django.db import migrations, models
+from django.db import migrations, models, connection
+
+def run_db_ops(apps, schema_editor):
+    if 'sqlite' not in connection.vendor:
+        schema_editor.execute("UPDATE flows_student_task SET note = '' WHERE note IS NULL;")
+        schema_editor.execute("ALTER TABLE flows_student_task ALTER COLUMN note SET DEFAULT '';")
+        schema_editor.execute("ALTER TABLE flows_student_task ALTER COLUMN note SET NOT NULL;")
 
 
 class Migration(migrations.Migration):
@@ -19,14 +25,11 @@ class Migration(migrations.Migration):
                 ),
             ],
             database_operations=[
-                migrations.RunSQL(
-                    sql=(
-                        "UPDATE flows_student_task SET note = '' WHERE note IS NULL; "
-                        "ALTER TABLE flows_student_task ALTER COLUMN note SET DEFAULT ''; "
-                        "ALTER TABLE flows_student_task ALTER COLUMN note SET NOT NULL;"
-                    ),
-                    reverse_sql=migrations.RunSQL.noop,
+                migrations.RunPython(
+                    run_db_ops,
+                    reverse_code=migrations.RunPython.noop,
                 ),
             ],
         ),
     ]
+

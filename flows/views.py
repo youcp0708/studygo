@@ -307,6 +307,9 @@ def my_tasks_view(request):
                         ).strftime('%Y/%m/%d')
                     else:
                         arrival_missing = True
+                elif dl_type == 'absolute':
+                    if t.deadline_date:
+                        calculated_due_date = t.deadline_date.strftime('%Y/%m/%d')
 
                 task_data['localized'] = localized
                 task_data['deadline_info'] = {
@@ -615,7 +618,9 @@ def get_tips_view(request):
             links_data.append({
                 'id': link.id,
                 'url': link.url,
-                'label': link.get_localized_label(short_lang)
+                'label': link.get_localized_label(short_lang),
+                'category': link.get_localized_category(short_lang),
+                'category_icon': link.category_icon
             })
 
         tips_data.append({

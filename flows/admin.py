@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import FlowStage, Task, StudentTask, Reminder, Tip, TipLink
+from .models import FlowStage, Task, StudentTask, Reminder, Tip, TipLink, TipLinkCategory
 
 
 @admin.register(FlowStage)
@@ -97,14 +97,6 @@ class TaskAdmin(admin.ModelAdmin):
         'id',
         'title',
         'task_code',
-        'title_en',
-        'title_my',
-        'title_id',
-        'title_ms',
-        'title_th',
-        'title_ja',
-        'title_ko',
-        'title_vi',
         'stage',
         'display_region',
         'display_identity_type',
@@ -116,6 +108,17 @@ class TaskAdmin(admin.ModelAdmin):
         # 'require_indo_prep',
         'deadline_type',
         'deadline_days',
+        'deadline_date',
+        'deadline_text',
+        'is_required',
+        'order',
+    )
+
+    list_editable = (
+        'deadline_type',
+        'deadline_days',
+        'deadline_date',
+        'deadline_text',
         'is_required',
         'order',
     )
@@ -153,9 +156,10 @@ class TaskAdmin(admin.ModelAdmin):
             'fields': (
                 'deadline_type',
                 'deadline_days',
+                'deadline_date',
                 'deadline_text',
             ),
-            'description': '「期限類型」選擇：無截止日期 / 只顯示文字說明 / 依抵台日期自動計算。若選擇「依抵台日期自動計算」，請填入「計算天數」。'
+            'description': '「期限類型」選擇：無截止日期 / 只顯示文字說明 / 依抵台日期自動計算 / 固定截止日期。若選擇「依抵台日期自動計算」，請填入「計算天數（正數為抵台後，負數為抵台前）」；若選擇「固定截止日期」，請填入「固定截止日期」。'
         }),
         ('英文 English', {
             'fields': (
@@ -273,6 +277,12 @@ class TaskAdmin(admin.ModelAdmin):
         return obj.get_nationality_display() if obj.nationality else '-'
     display_nationality.short_description = '適用國籍'
 
+    def formfield_for_dbfield(self, db_field, request, **kwargs):
+        if db_field.name == 'deadline_date':
+            from django import forms
+            kwargs['widget'] = forms.DateInput(attrs={'type': 'date'}, format='%Y-%m-%d')
+        return super().formfield_for_dbfield(db_field, request, **kwargs)
+
 
 @admin.register(StudentTask)
 class StudentTaskAdmin(admin.ModelAdmin):
@@ -326,13 +336,19 @@ class ReminderAdmin(admin.ModelAdmin):
     ordering = ('-created_at',)
 
 
-class TipLinkInline(admin.TabularInline):
+@admin.register(TipLinkCategory)
+class TipLinkCategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'name_en', 'icon')
+    search_fields = ('name', 'name_en')
+
+class TipLinkInline(admin.StackedInline):
     model = TipLink
     extra = 1
     fields = (
-        'url', 'label',
-        'label_en', 'label_my', 'label_id', 'label_ms',
-        'label_th', 'label_ja', 'label_ko', 'label_vi'
+        'url',
+        'link_category',
+        ('label', 'label_en', 'label_my', 'label_id', 'label_ms',
+         'label_th', 'label_ja', 'label_ko', 'label_vi')
     )
     verbose_name = "小貼士鏈結"
     verbose_name_plural = "小貼士鏈結"

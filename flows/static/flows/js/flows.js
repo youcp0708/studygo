@@ -443,6 +443,13 @@ async function renderMyTasks() {
               ${deadlineInfo.text ? `<div style="margin-top:4px; font-size:13px; color:#555;">${deadlineInfo.text}</div>` : ''}
             </div>`;
         }
+      } else if (deadlineInfo.type === 'absolute') {
+        deadlineHtml = `
+          <div class="deadline-block">
+            <div class="detail-label">${window.UI_STRINGS.deadline}</div>
+            <div class="detail-value" style="font-size:15px; font-weight:700; color:#059669;">${deadlineInfo.calculated_due_date || ''}</div>
+            ${deadlineInfo.text ? `<div style="margin-top:4px; font-size:13px; color:#555;">${deadlineInfo.text}</div>` : ''}
+          </div>`;
       }
 
       // ── 只顯示有資料的欄位 ──
@@ -556,10 +563,45 @@ async function renderTips() {
       `;
 
       if (Array.isArray(tip.links) && tip.links.length > 0) {
+        const categories = {};
+        const uncategorized = [];
+        
         tip.links.forEach(l => {
-          const label = l.label || l.url;
-          html += `<a href="${l.url}" target="_blank" class="tip-item-link">${label} →</a>`;
+          if (l.category && l.category.trim() !== '') {
+            if (!categories[l.category]) categories[l.category] = [];
+            categories[l.category].push(l);
+          } else {
+            uncategorized.push(l);
+          }
         });
+
+        // 渲染有分類的鏈結
+        for (const [cat, links] of Object.entries(categories)) {
+          const firstIcon = links[0].category_icon;
+          const iconHtml = firstIcon ? `<span class="material-symbols-outlined" style="vertical-align: middle; font-size: 1.1rem; margin-right: 4px; margin-bottom: 2px;">${firstIcon}</span>` : '';
+          html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600; display: flex; align-items: center;">${iconHtml}${cat}</div>`;
+          // 所有有分類的連結都排在同一行，並用逗號分隔
+          const catLinksHtml = links.map(l => {
+            const label = l.label || l.url;
+            return `<a href="${l.url}" target="_blank" class="tip-item-link" style="margin-left: 4px;">${label}</a>`;
+          }).join('<span style="color: var(--text-color); margin: 0 4px;">,</span>');
+          html += `<div style="margin-top: 4px; line-height: 1.8;">${catLinksHtml}</div>`;
+        }
+
+        // 渲染未分類的鏈結
+        if (uncategorized.length > 0) {
+          // 如果有其他分類，就給未分類加個標題，否則直接顯示
+          if (Object.keys(categories).length > 0) {
+            html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600;">🔗 其他 / Other</div>`;
+          }
+          html += `<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 4px;">`;
+          uncategorized.forEach(l => {
+            const label = l.label || l.url;
+            const margin = Object.keys(categories).length > 0 ? 'margin-left: 4px;' : '';
+            html += `<a href="${l.url}" target="_blank" class="tip-item-link" style="${margin}">🔗 ${label}</a>`;
+          });
+          html += `</div>`;
+        }
       }
 
       html += `</div>`;
