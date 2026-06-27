@@ -508,9 +508,9 @@ def _send_verification_email(user, request):
     EmailVerificationToken.objects.create(user=user, token=token_hash)
     link = f"{request.scheme}://{request.get_host()}/api/users/verify-email/{raw_token}/"
     send_mail(
-        subject='【StudyGo Taiwan】請驗證您的電子信箱',
+        subject='【ReadyTo Taiwan】請驗證您的電子信箱',
         message=f'您好 {user.name}，\n\n請點擊以下連結完成驗證：\n{link}\n\n連結有效期限為 24 小時。',
-        from_email=settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'noreply@studygo.tw',
+        from_email=settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'noreply@readytotaiwan.tw',
         recipient_list=[user.email],
         fail_silently=True,
     )
@@ -522,9 +522,9 @@ def _send_password_reset_email(user, request):
     token = default_token_generator.make_token(user)
     link  = f"{request.scheme}://{request.get_host()}/reset-password?uid={uid}&token={token}"
     send_mail(
-        subject='【StudyGo Taiwan】密碼重設申請',
+        subject='【ReadyTo Taiwan】密碼重設申請',
         message=f'您好 {user.name}，\n\n請點擊以下連結重設密碼：\n{link}\n\n若非本人操作，請忽略此信。',
-        from_email=settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'noreply@studygo.tw',
+        from_email=settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'noreply@readytotaiwan.tw',
         recipient_list=[user.email],
         fail_silently=True,
     )

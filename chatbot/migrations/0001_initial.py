@@ -1,4 +1,4 @@
-# Generated for StudyGo chatbot module
+# Generated for ReadyToTaiwan chatbot module
 
 import django.db.models.deletion
 import django.utils.timezone

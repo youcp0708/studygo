@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 {% load static i18n %}
 
-{% block title %}{% trans "登入 / 註冊" %} — StudyGo Taiwan{% endblock %}
+{% block title %}{% trans "登入 / 註冊" %} — ReadyTo Taiwan{% endblock %}
 
 {# 登入頁不顯示導覽列與開始流程按鈕 #}
 {% block site_nav %}{% endblock site_nav %}
@@ -19,7 +19,7 @@
         {# Slide 1: 流程提醒 #}
         <div class="login-slide active" data-slide="0">
           <div class="slide-copy">
-            <div class="login-kicker">StudyGo Taiwan</div>
+            <div class="login-kicker">ReadyTo Taiwan</div>
             <h2>{% trans "流程提醒" %}</h2>
             <p>{% trans "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。" %}</p>
           </div>
@@ -38,7 +38,7 @@
         {# Slide 2: 資訊管理 #}
         <div class="login-slide" data-slide="1">
           <div class="slide-copy">
-            <div class="login-kicker">StudyGo Taiwan</div>
+            <div class="login-kicker">ReadyTo Taiwan</div>
             <h2>{% trans "資訊管理" %}</h2>
             <p>{% trans "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。" %}</p>
           </div>
@@ -61,7 +61,7 @@
         {# Slide 3: AI 聊天機器人 #}
         <div class="login-slide" data-slide="2">
           <div class="slide-copy">
-            <div class="login-kicker">StudyGo Taiwan</div>
+            <div class="login-kicker">ReadyTo Taiwan</div>
             <h2>{% trans "AI 聊天機器人" %}</h2>
             <p>{% trans "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。" %}</p>
           </div>
@@ -100,7 +100,7 @@
 
           <div class="auth-body">
             <div class="auth-title">{% trans "歡迎回來" %} 👋</div>
-            <div class="auth-sub">{% trans "請登入您的 StudyGo 帳戶" %}</div>
+            <div class="auth-sub">{% trans "請登入您的 ReadyTo Taiwan 帳戶" %}</div>
 
             <form id="loginForm" onsubmit="handleLogin(event)">
               {% csrf_token %}
@@ -157,7 +157,7 @@
 
           <div class="auth-body">
             <div class="auth-title">{% trans "建立帳號" %} 🎓</div>
-            <div class="auth-sub">{% trans "填寫基本資料，開始使用 StudyGo Taiwan" %}</div>
+            <div class="auth-sub">{% trans "填寫基本資料，開始使用 ReadyTo Taiwan" %}</div>
 
             <form id="registerForm" onsubmit="handleRegister(event)">
               {% csrf_token %}

@@ -531,6 +531,20 @@ async function renderMyTasks() {
   }
 }
 
+window.toggleTipCategory = function (id) {
+  const panel = document.getElementById(`tip-panel-${id}`);
+  const arrow = document.getElementById(`tip-arrow-${id}`);
+
+  if (!panel) return;
+
+  const isOpen = panel.style.display === 'block';
+
+  panel.style.display = isOpen ? 'none' : 'block';
+
+  if (arrow) {
+    arrow.textContent = isOpen ? 'expand_more' : 'expand_less';
+  }
+};
 
 /* ════════════════════════════════════════
    4. 渲染小貼士
@@ -549,10 +563,10 @@ async function renderTips() {
     if (tips.length === 0) return;
 
     tipsCard.style.display = 'block';
-    const visitText = window.UI_STRINGS?.visitLink || '前往查看';
 
     let html = '';
-    tips.forEach(tip => {
+
+    tips.forEach((tip, tipIndex) => {
       html += `
         <div class="tip-item">
           <div class="tip-item-title">
@@ -565,7 +579,7 @@ async function renderTips() {
       if (Array.isArray(tip.links) && tip.links.length > 0) {
         const categories = {};
         const uncategorized = [];
-        
+
         tip.links.forEach(l => {
           if (l.category && l.category.trim() !== '') {
             if (!categories[l.category]) categories[l.category] = [];
@@ -575,33 +589,55 @@ async function renderTips() {
           }
         });
 
-        // 渲染有分類的鏈結
-        for (const [cat, links] of Object.entries(categories)) {
-          const firstIcon = links[0].category_icon;
-          const iconHtml = firstIcon ? `<span class="material-symbols-outlined" style="vertical-align: middle; font-size: 1.1rem; margin-right: 4px; margin-bottom: 2px;">${firstIcon}</span>` : '';
-          html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600; display: flex; align-items: center;">${iconHtml}${cat}</div>`;
-          // 所有有分類的連結都排在同一行，並用逗號分隔
-          const catLinksHtml = links.map(l => {
-            const label = l.label || l.url;
-            return `<a href="${l.url}" target="_blank" class="tip-item-link" style="margin-left: 4px;">${label}</a>`;
-          }).join('<span style="color: var(--text-color); margin: 0 4px;">,</span>');
-          html += `<div style="margin-top: 4px; line-height: 1.8;">${catLinksHtml}</div>`;
-        }
+        html += `<div class="tip-accordion-list">`;
 
-        // 渲染未分類的鏈結
+        Object.entries(categories).forEach(([cat, links], catIndex) => {
+          const panelId = `${tipIndex}-${catIndex}`;
+          const firstIcon = links[0].category_icon;
+
+          const iconHtml = firstIcon
+            ? `<span class="material-symbols-outlined tip-category-icon">${firstIcon}</span>`
+            : '';
+
+          html += `
+            <div class="tip-accordion-item">
+              <button type="button" class="tip-category-btn" onclick="toggleTipCategory('${panelId}')">
+                <span class="tip-category-left">
+                  ${iconHtml}
+                  <span>${cat}</span>
+                </span>
+                <span id="tip-arrow-${panelId}" class="material-symbols-outlined tip-category-arrow">expand_more</span>
+              </button>
+
+              <div id="tip-panel-${panelId}" class="tip-category-panel" style="display:none;">
+                <div class="tip-link-list">
+          `;
+
+          links.forEach(l => {
+            const label = l.label || l.url;
+            html += `<a href="${l.url}" target="_blank" class="tip-app-link">${label}</a>`;
+          });
+
+          html += `
+                </div>
+              </div>
+            </div>
+          `;
+        });
+
         if (uncategorized.length > 0) {
-          // 如果有其他分類，就給未分類加個標題，否則直接顯示
-          if (Object.keys(categories).length > 0) {
-            html += `<div style="font-size: 0.85rem; color: var(--text-color); opacity: 0.7; margin: 10px 0 4px 0; font-weight: 600;">🔗 其他 / Other</div>`;
-          }
-          html += `<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 4px;">`;
+          html += `<div class="tip-link-list tip-uncategorized-links">`;
+
           uncategorized.forEach(l => {
             const label = l.label || l.url;
-            const margin = Object.keys(categories).length > 0 ? 'margin-left: 4px;' : '';
-            html += `<a href="${l.url}" target="_blank" class="tip-item-link" style="${margin}">🔗 ${label}</a>`;
+            html += `
+              <a href="${l.url}" target="_blank" class="tip-app-link">${label}</a>`;
           });
+
           html += `</div>`;
         }
+
+        html += `</div>`;
       }
 
       html += `</div>`;
@@ -612,7 +648,6 @@ async function renderTips() {
     console.error('Failed to render tips:', err);
   }
 }
-
 
 /* ════════════════════════════════════════
    5. 讀取並渲染通知

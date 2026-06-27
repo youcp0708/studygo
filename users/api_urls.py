@@ -1,7 +1,7 @@
 """
 users/api_urls.py
 API 路由 — 對應前端 JS 中所有 fetch() 呼叫的 URL
-掛載於 studygo/urls.py → path('api/', include('users.api_urls'))
+掛載於 readyto/urls.py → path('api/', include('users.api_urls'))
 """
 
 from django.urls import path

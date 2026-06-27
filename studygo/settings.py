@@ -182,7 +182,7 @@ if _email_user and not FORCE_CONSOLE_EMAIL:
     DEFAULT_FROM_EMAIL  = os.environ.get('DEFAULT_FROM_EMAIL', _email_user)
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'noreply@studygo.tw'
+    DEFAULT_FROM_EMAIL = 'noreply@readytotaiwan.tw'
 
 # ── Google OAuth ──
 # 在 Google Cloud Console 建立 OAuth 2.0 用戶端 ID 後填入：

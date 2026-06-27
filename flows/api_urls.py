@@ -1,7 +1,7 @@
 """
 flows/api_urls.py
 流程模塊 API 路由
-掛載於 studygo/urls.py → path('api/', include('flows.api_urls'))
+掛載於 readyto/urls.py → path('api/', include('flows.api_urls'))
 """
 
 from django.urls import path

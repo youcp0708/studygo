@@ -1,7 +1,7 @@
 """
 users/urls.py
 前端頁面路由（返回 HTML 模板）
-掛載於 studygo/urls.py → path('', include('users.urls'))
+掛載於 readyto/urls.py → path('', include('users.urls'))
 """
 
 from django.urls import path
