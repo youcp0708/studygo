@@ -35,6 +35,7 @@
   const fileInput = document.getElementById('fileInput');
   const cameraInput = document.getElementById('cameraInput');
   const attachmentPreview = document.getElementById('attachmentPreview');
+  const micBtn = document.getElementById('micBtn');
 
   let selectedAttachments = [];
 
@@ -453,6 +454,96 @@
         !event.target.closest('.attach-toggle-btn')
       ) {
         attachMenu.classList.remove('open');
+      }
+    });
+  }
+
+  const SPEECH_LANG_MAP = {
+    'zh-hant': 'zh-TW',
+    'zh-hans': 'zh-CN',
+    'zh': 'zh-TW',
+    'en': 'en-US',
+    'my': 'my-MM',
+    'th': 'th-TH',
+    'ms': 'ms-MY',
+    'id': 'id-ID',
+    'ja': 'ja-JP',
+    'vi': 'vi-VN',
+    'ko': 'ko-KR',
+  };
+
+  function getSpeechLang() {
+    const htmlLang = (document.documentElement.lang || 'zh-hant').toLowerCase();
+    return SPEECH_LANG_MAP[htmlLang] || 'zh-TW';
+  }
+
+  function setupSpeechRecognition() {
+    if (!micBtn || !input) return;
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      micBtn.style.display = 'none';
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = true;
+
+    let isRecording = false;
+    let baseText = '';
+
+    recognition.addEventListener('start', function () {
+      isRecording = true;
+      baseText = input.value;
+      micBtn.classList.add('recording');
+    });
+
+    recognition.addEventListener('result', function (event) {
+      let finalText = '';
+      let interimText = '';
+
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          finalText += transcript;
+        } else {
+          interimText += transcript;
+        }
+      }
+
+      if (finalText) {
+        baseText = `${baseText}${finalText}`.trim() + ' ';
+      }
+
+      input.value = (baseText + interimText).slice(0, 1200);
+      updateCount();
+    });
+
+    recognition.addEventListener('error', function () {
+      isRecording = false;
+      micBtn.classList.remove('recording');
+    });
+
+    recognition.addEventListener('end', function () {
+      isRecording = false;
+      micBtn.classList.remove('recording');
+    });
+
+    micBtn.addEventListener('click', function () {
+      if (isRecording) {
+        recognition.stop();
+        return;
+      }
+
+      recognition.lang = getSpeechLang();
+
+      try {
+        recognition.start();
+      } catch (error) {
+        isRecording = false;
+        micBtn.classList.remove('recording');
       }
     });
   }
@@ -919,6 +1010,7 @@
 
   setupHistoryMenu();
   setupAttachmentButtons();
+  setupSpeechRecognition();
   setupHistorySearch();
   setupTaiwanTipRotator();
   setupAIModeSwitcher();
