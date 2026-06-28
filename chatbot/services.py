@@ -9,6 +9,8 @@ chatbot/services.py
 4. 個人化回答後面自動加入資訊區頁面與附件連結。
 """
 
+import base64
+import mimetypes
 import re
 
 import requests as http_requests
@@ -277,7 +279,7 @@ You MUST write your entire response in {language_en} only. No other language is 
 
     if ai_mode == "friend":
         return f"""
-你是 StudyGo AI 聊天好朋友，服務對象是來臺灣就學的境外學生。
+你是 ReadyTo AI 聊天好朋友，服務對象是來臺灣就學的境外學生。
 
 {language_rule}
 
@@ -1228,7 +1230,7 @@ def search_knowledge_base(question, language_code='zh-hant', limit=3, ai_mode="h
 
 def detect_friend_emotion_hint(question):
     """
-    給 StudyGo AI 聊天好朋友使用的初步情緒提示。
+    給 ReadyTo AI 聊天好朋友使用的初步情緒提示。
     注意：這只是提示，不是診斷，最後仍由 AI 根據上下文自然判斷。
     """
     text = (question or '').strip().lower()
@@ -1645,8 +1647,69 @@ def local_fallback_reply(question, user, language_code='zh-hant'):
 
 
 
-def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
+def build_attachment_input_content(attachments):
+    """
+    將使用者上傳的附件轉成 OpenAI Responses API 可用的 content blocks。
+
+    - 圖片／拍照：以 base64 data URL 提供給模型的視覺輸入。
+    - PDF：以 base64 file_data 提供給模型的檔案輸入。
+    - 可解碼成文字的檔案（txt/csv/md/json 等）：直接把文字內容放進 prompt。
+    - 其他無法讀取內容的檔案：只在摘要中列出檔名，提示模型無法讀取內容。
+    """
+    content_blocks = []
+    summary_lines = []
+
+    for attachment in attachments:
+        name = attachment.original_name or attachment.file.name
+
+        attachment.file.open('rb')
+        try:
+            data = attachment.file.read()
+        finally:
+            attachment.file.close()
+
+        mime_type, _ = mimetypes.guess_type(name)
+        mime_type = mime_type or 'application/octet-stream'
+
+        if attachment.attachment_type in ('image', 'camera') or mime_type.startswith('image/'):
+            b64 = base64.b64encode(data).decode('utf-8')
+            content_blocks.append({
+                'type': 'input_image',
+                'image_url': f'data:{mime_type};base64,{b64}',
+            })
+            summary_lines.append(f'【圖片附件】{name}')
+        elif mime_type == 'application/pdf':
+            b64 = base64.b64encode(data).decode('utf-8')
+            content_blocks.append({
+                'type': 'input_file',
+                'filename': name,
+                'file_data': f'data:{mime_type};base64,{b64}',
+            })
+            summary_lines.append(f'【PDF 附件】{name}')
+        else:
+            try:
+                text = data.decode('utf-8')
+            except UnicodeDecodeError:
+                text = None
+
+            if text is not None:
+                if len(text) > 8000:
+                    text = text[:8000] + '\n...(內容過長，已截斷)'
+                content_blocks.append({
+                    'type': 'input_text',
+                    'text': f'【檔案附件：{name}】\n{text}',
+                })
+                summary_lines.append(f'【檔案附件】{name}')
+            else:
+                summary_lines.append(f'【檔案附件，目前無法讀取此格式內容】{name}')
+
+    return content_blocks, '\n'.join(summary_lines)
+
+
+def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", attachments=None):
     """產生 AI 回覆。helper 使用兩段格式；friend 使用自然聊天格式。"""
+
+    attachments = attachments or []
 
     if ai_mode not in ["helper", "friend"]:
         ai_mode = "helper"
@@ -1751,7 +1814,8 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
         }
 
     # helper 模式：如果知識庫直接命中，就用穩定的本地知識庫答案，避免多花 API。
-    if ai_mode == "helper" and (
+    # 但如果學生有上傳附件，必須走 OpenAI 才能讀取附件內容，不能用這個本地捷徑。
+    if ai_mode == "helper" and not attachments and (
         knowledge_context
         and '目前沒有找到直接相關的知識庫資料' not in knowledge_context
         and '目前沒有可用的知識庫資料' not in knowledge_context
@@ -1767,6 +1831,12 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
             'source': 'knowledge_base_direct',
             'model': 'local-knowledge',
         }
+
+    content_blocks, attachment_summary = build_attachment_input_content(attachments)
+    attachment_note = (
+        f'\n\n學生上傳了以下附件，請根據附件實際內容回答，不要假設或編造看不到的內容：\n{attachment_summary}'
+        if attachment_summary else ''
+    )
 
     if ai_mode == "friend":
         input_text = f"""
@@ -1788,9 +1858,9 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 {history_text}
 
 學生最新想聊的內容：
-{question}
+{question}{attachment_note}
 
-請用 StudyGo AI 聊天好朋友的身份回答。
+請用 ReadyTo AI 聊天好朋友的身份回答。
 
 你的核心角色：
 你不是行政流程機器人，而是像一位真誠、會聽人說話、有情緒反應的朋友。
@@ -1901,7 +1971,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
 {history_text}
 
 學生最新問題：
-{question}
+{question}{attachment_note}
 
 【危機求助資源】若學生透露自傷、想死、危險等內容，必須將以下資源原文輸出，電話連結格式不得更改：
 {crisis_resources}
@@ -1918,10 +1988,18 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper"):
     try:
         client = OpenAI(api_key=api_key)
 
+        if content_blocks:
+            api_input = [{
+                'role': 'user',
+                'content': [{'type': 'input_text', 'text': input_text}] + content_blocks,
+            }]
+        else:
+            api_input = input_text
+
         response = client.responses.create(
             model=model,
             instructions=build_system_instructions(language_code, language_source, ai_mode),
-            input=input_text,
+            input=api_input,
         )
 
         reply = (response.output_text or '').strip()

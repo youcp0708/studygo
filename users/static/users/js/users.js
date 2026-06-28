@@ -799,7 +799,7 @@ async function deleteAccount() {
   const { ok, data } = await apiFetch('/api/users/delete/', 'DELETE');
   if (ok) {
     localStorage.removeItem('authToken');
-    showToast('帳號已停用，感謝您使用 StudyGo Taiwan', 'info', 2000);
+    showToast('帳號已停用，感謝您使用 ReadyTo Taiwan', 'info', 2000);
     setTimeout(() => { window.location.href = '/login/?deleted=1'; }, 2000);
   } else {
     showToast(data?.message || '刪除失敗', 'error');
@@ -834,7 +834,7 @@ function populateDashboard(user, profile) {
   const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
 
   set('dashGreeting', `你好，${user.name} 👋`);
-  set('dashSubtitle', `${IDENTITY_LABELS[profile?.identity_type] || '境外生'}，歡迎使用 StudyGo Taiwan。`);
+  set('dashSubtitle', `${IDENTITY_LABELS[profile?.identity_type] || '境外生'}，歡迎使用 ReadyTo Taiwan。`);
   set('dashAvatar', initials);
   set('dashName', user.name);
   set('dashEmail', user.email);
@@ -1049,7 +1049,7 @@ async function initApp() {
     } else if (verified === 'expired') {
       showToast('驗證連結已過期，請重新申請', 'error');
     }
-    if (params.get('deleted') === '1') showToast('帳號已停用，感謝您使用 StudyGo Taiwan', 'info', 5000);
+    if (params.get('deleted') === '1') showToast('帳號已停用，感謝您使用 ReadyTo Taiwan', 'info', 5000);
     if (params.get('need_verify') === '1') showToast('請先驗證電子信箱才能繼續', 'error');
 
     // 若有待驗證狀態（且非剛完成驗證），顯示驗證等待面板

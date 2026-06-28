@@ -69,12 +69,12 @@ class Command(BaseCommand):
                     days_left = (due_date - today).days
                     message = f'您的任務「{task_title}」將於 {days_left} 天後到期（{due_date}）。'
                 
-                email_subject = f'【StudyGo Taiwan 提醒】您的任務狀態提醒'
+                email_subject = f'【ReadyTo Taiwan 提醒】您的任務狀態提醒'
                 email_body = (
                     f'{st.student.user.name} 您好，\n\n'
                     f'{message}\n\n'
                     f'請登入系統完成您的任務！\n\n'
-                    f'StudyGo Taiwan 團隊'
+                    f'ReadyTo Taiwan 團隊'
                 )
             else:
                 if due_date < today:
@@ -85,12 +85,12 @@ class Command(BaseCommand):
                     days_left = (due_date - today).days
                     message = f'Your task "{task_title}" will expire in {days_left} day(s) (Deadline: {due_date}).'
                 
-                email_subject = f'[StudyGo Taiwan] Task Reminder Notification'
+                email_subject = f'[ReadyTo Taiwan] Task Reminder Notification'
                 email_body = (
                     f'Hello {st.student.user.name},\n\n'
                     f'{message}\n\n'
                     f'Please log in to the system to complete your task!\n\n'
-                    f'StudyGo Taiwan Team'
+                    f'ReadyTo Taiwan Team'
                 )
 
             # 檢查是否已經有針對此截止日期的提醒（不論已讀或未讀，避免對同一個截止日重複產生與發送）

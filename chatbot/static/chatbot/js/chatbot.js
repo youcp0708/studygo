@@ -11,8 +11,8 @@
   let currentAIMode = page.dataset.aiMode || 'helper';
 
   const AI_MODE_NAMES = {
-    helper: i18n.assistantName || 'StudyGo AI 小幫手',
-    friend: i18n.friendName || 'StudyGo AI 聊天好朋友',
+    helper: i18n.assistantName || 'ReadyTo AI 小幫手',
+    friend: i18n.friendName || 'ReadyTo AI 聊天好朋友',
   };
 
   const AI_MODE_PLACEHOLDERS = {
@@ -33,7 +33,6 @@
   const attachToggleBtn = document.getElementById('attachToggleBtn');
   const attachMenu = document.getElementById('attachMenu');
   const fileInput = document.getElementById('fileInput');
-  const imageInput = document.getElementById('imageInput');
   const cameraInput = document.getElementById('cameraInput');
   const attachmentPreview = document.getElementById('attachmentPreview');
 
@@ -224,7 +223,36 @@
     tick();
   }
 
-  function addMessage(role, content, time, shouldScroll = true, animate = false) {
+  function renderAttachmentsInto(bubble, attachments) {
+    if (!attachments || attachments.length === 0) return;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'message-attachments';
+
+    attachments.forEach((att) => {
+      const link = document.createElement('a');
+      link.href = att.url;
+      link.target = '_blank';
+      link.rel = 'noopener';
+
+      if (att.type === 'file') {
+        link.className = 'message-attachment-file';
+        link.textContent = `📎 ${att.name}`;
+      } else {
+        const img = document.createElement('img');
+        img.src = att.url;
+        img.alt = att.name || '';
+        img.className = 'message-attachment-image';
+        link.appendChild(img);
+      }
+
+      wrap.appendChild(link);
+    });
+
+    bubble.appendChild(wrap);
+  }
+
+  function addMessage(role, content, time, shouldScroll = true, animate = false, attachments = []) {
     if (!messagesEl) return;
 
     const row = document.createElement('div');
@@ -262,6 +290,7 @@
     }
 
     bubble.appendChild(body);
+    renderAttachmentsInto(bubble, attachments);
 
     if (!shouldAnimate && time) {
       const timeEl = document.createElement('div');
@@ -354,9 +383,13 @@
 
   function addSelectedFiles(fileList, type) {
     Array.from(fileList).forEach((file) => {
+      const resolvedType = type === 'file' && file.type.startsWith('image/')
+        ? 'image'
+        : type;
+
       selectedAttachments.push({
         file: file,
-        type: type,
+        type: resolvedType,
       });
     });
 
@@ -382,10 +415,6 @@
         fileInput.click();
       }
 
-      if (type === 'image' && imageInput) {
-        imageInput.click();
-      }
-
       if (type === 'camera' && cameraInput) {
         cameraInput.click();
       }
@@ -397,13 +426,6 @@
       fileInput.addEventListener('change', function () {
         addSelectedFiles(fileInput.files, 'file');
         fileInput.value = '';
-      });
-    }
-
-    if (imageInput) {
-      imageInput.addEventListener('change', function () {
-        addSelectedFiles(imageInput.files, 'image');
-        imageInput.value = '';
       });
     }
 
@@ -533,10 +555,16 @@
 
     clearWelcomeIfNeeded();
 
+    const attachmentsForDisplay = selectedAttachments.map((item) => ({
+      type: item.type,
+      url: URL.createObjectURL(item.file),
+      name: item.file.name,
+    }));
+
     if (message) {
-      addMessage('user', message, null, true);
+      addMessage('user', message, null, true, false, attachmentsForDisplay);
     } else {
-      addMessage('user', t('uploadedAttachment', '已上傳附件'), null, true);
+      addMessage('user', t('uploadedAttachment', '已上傳附件'), null, true, false, attachmentsForDisplay);
     }
 
     input.value = '';

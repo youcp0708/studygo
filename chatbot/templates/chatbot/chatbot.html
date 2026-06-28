@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static i18n %}
-{% block title %}{% trans "AI 聊天機器人" %} — StudyGo Taiwan{% endblock %}
+{% block title %}{% trans "AI 聊天機器人" %} — ReadyTo Taiwan{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}?v={% now 'U' %}">
@@ -23,14 +23,14 @@
           <button class="ai-mode-card {% if current_ai_mode != 'friend' %}active{% endif %}" data-mode="helper"
             type="button">
             <div class="bot-avatar bot-avatar-dark">🤖</div>
-            <h2>{% trans "StudyGo AI 小幫手" %}</h2>
+            <h2>{% trans "ReadyTo AI 小幫手" %}</h2>
             <!--<p>{% trans "我是協助管理來臺任務、查詢疑問、提供建議的小幫手。" %}</p>-->
           </button>
 
           <button class="ai-mode-card {% if current_ai_mode == 'friend' %}active{% endif %}" data-mode="friend"
             type="button">
             <div class="bot-avatar bot-avatar-light">🤖</div>
-            <h2>{% trans "StudyGo AI 聊天好朋友" %}</h2>
+            <h2>{% trans "ReadyTo AI 聊天好朋友" %}</h2>
             <!--<p>{% trans "我是陪你聊天協助、處理生活適應與心理壓力的好朋友。" %}</p>-->
           </button>
 
@@ -97,14 +97,31 @@
             {% if message.role != 'user' %}
             <div class="message-name js-ai-name">
               {% if current_ai_mode == "friend" %}
-              {% trans "StudyGo AI 聊天好朋友" %}
+              {% trans "ReadyTo AI 聊天好朋友" %}
               {% else %}
-              {% trans "StudyGo AI 小幫手" %}
+              {% trans "ReadyTo AI 小幫手" %}
               {% endif %}
             </div>
             {% endif %}
 
             <div class="message-content">{{ message.content }}</div>
+
+            {% with atts=message.attachments.all %}
+            {% if atts %}
+            <div class="message-attachments">
+              {% for att in atts %}
+              {% if att.attachment_type == 'file' %}
+              <a href="{{ att.file.url }}" target="_blank" rel="noopener" class="message-attachment-file">📎 {{ att.original_name }}</a>
+              {% else %}
+              <a href="{{ att.file.url }}" target="_blank" rel="noopener">
+                <img src="{{ att.file.url }}" alt="{{ att.original_name }}" class="message-attachment-image">
+              </a>
+              {% endif %}
+              {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
             <div class="message-time">{{ message.created_at|date:"Y-m-d H:i" }}</div>
           </div>
         </div>
@@ -115,9 +132,9 @@
           <div class="message-bubble">
             <div class="message-name js-ai-name">
               {% if current_ai_mode == "friend" %}
-              {% trans "StudyGo AI 聊天好朋友" %}
+              {% trans "ReadyTo AI 聊天好朋友" %}
               {% else %}
-              {% trans "StudyGo AI 小幫手" %}
+              {% trans "ReadyTo AI 小幫手" %}
               {% endif %}
             </div>
             <div class="message-content">
@@ -143,8 +160,7 @@
           </button>
 
           <div id="attachMenu" class="attach-menu">
-            <button type="button" data-upload-type="file">📎 {% trans "上傳檔案" %}</button>
-            <button type="button" data-upload-type="image">🖼️ {% trans "上傳圖片" %}</button>
+            <button type="button" data-upload-type="file">📎 {% trans "上傳檔案或照片" %}</button>
             <button type="button" data-upload-type="camera">📷 {% trans "拍照" %}</button>
           </div>
 
@@ -159,7 +175,6 @@
         </div>
 
         <input id="fileInput" type="file" multiple hidden>
-        <input id="imageInput" type="file" accept="image/*" multiple hidden>
         <input id="cameraInput" type="file" accept="image/*" capture="environment" hidden>
       </form>
     </main>
@@ -170,8 +185,8 @@
 
 {% block extra_js %}
 {% trans "我" as txt_me %}
-{% trans "StudyGo AI 小幫手" as txt_assistant_name %}
-{% trans "StudyGo AI 聊天好朋友" as txt_friend_name %}
+{% trans "ReadyTo AI 小幫手" as txt_assistant_name %}
+{% trans "ReadyTo AI 聊天好朋友" as txt_friend_name %}
 {% trans "已上傳附件" as txt_uploaded_attachment %}
 {% trans "找不到 message API" as txt_missing_message_api %}
 {% trans "送出失敗，請稍後再試。" as txt_send_failed %}

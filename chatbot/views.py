@@ -65,7 +65,7 @@ def chatbot_page(request):
 
         if active_session:
             current_ai_mode = normalize_ai_mode(getattr(active_session, "ai_mode", "helper"))
-            messages = active_session.messages.all()
+            messages = active_session.messages.all().prefetch_related('attachments')
 
     sessions = ChatSession.objects.filter(
         user=request.user,
@@ -174,24 +174,28 @@ def chat_message_api(request):
         session.title = new_title
         session.save(update_fields=["title", "updated_at"])
 
+    created_attachments = []
+
     for index, uploaded_file in enumerate(attachments):
         attachment_type = 'file'
 
         if index < len(attachment_types):
             attachment_type = attachment_types[index]
 
-        ChatAttachment.objects.create(
+        attachment = ChatAttachment.objects.create(
             message=user_msg,
             file=uploaded_file,
             attachment_type=attachment_type,
             original_name=uploaded_file.name,
         )
+        created_attachments.append(attachment)
 
     ai_result = generate_ai_reply(
         user=request.user,
         question=message,
         recent_messages=recent_messages,
         ai_mode=ai_mode,
+        attachments=created_attachments,
     )
 
     print("[DEBUG] ai_result source:", ai_result.get("source"))
@@ -235,6 +239,14 @@ def chat_message_api(request):
             'role': user_msg.role,
             'content': user_msg.content,
             'created_at': user_msg.created_at.strftime('%Y-%m-%d %H:%M'),
+            'attachments': [
+                {
+                    'url': attachment.file.url,
+                    'type': attachment.attachment_type,
+                    'name': attachment.original_name,
+                }
+                for attachment in created_attachments
+            ],
         },
         # 新版：多則 AI 訊息
         'assistant_messages': assistant_messages,
