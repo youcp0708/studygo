@@ -78,6 +78,17 @@
     padding: 0 40px;
   }
 
+.nav-notification-icon {
+  font-size: 22px;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.nav-notification-title-icon {
+  font-size: 20px;
+  color: var(--primary);
+  line-height: 1;
+}
 
   .brand {
     display: flex;

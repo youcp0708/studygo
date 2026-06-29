@@ -9,6 +9,7 @@
   <title>{% trans "儀表板" %} — ReadyTo Taiwan</title>
   <link rel="icon" type="image/png" href="{% static '/image/image-removebg-preview.png' %}">
   <link rel="stylesheet" href="{% static 'users/css/users.css' %}?v={% now 'U' %}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
 
@@ -113,18 +114,23 @@
         <button id="reminderBtn"
           style="position:relative;cursor:pointer;background:white;border:1px solid var(--border);color:var(--text);padding:8px;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05);"
           onclick="toggleReminderDropdown()">
-          🔔<span id="reminderBadge"
+          <span class="material-symbols-outlined nav-notification-icon">notifications</span>
+          
+          <span id="reminderBadge"
             style="display:none;position:absolute;top:-4px;right:-4px;background:red;color:white;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
         </button>
-        <div id="reminderDropdown" data-no-reminders="{% trans '沒有未讀通知 🎉' %}" data-mark-read="{% trans '標記為已讀' %}"
+        <div id="reminderDropdown" data-no-reminders="{% trans '沒有未讀通知' %}" data-mark-read="{% trans '標記為已讀' %}"
           style="display:none;position:absolute;top:100%;right:-50px;width:320px;background:white;border:1px solid var(--border,#eee);border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1);z-index:1000;margin-top:12px;max-height:400px;overflow-y:auto;text-align:left;">
-          <div style="padding:12px 16px;border-bottom:1px solid var(--border,#eee);font-weight:bold;color:var(--text,#333);">
-            🔔 {% trans "通知" %}</div>
+          <div style="padding:12px 16px;border-bottom:1px solid var(--border,#eee);font-weight:bold;color:var(--text,#333);display:flex;align-items:center;gap:6px;">
+            <span class="material-symbols-outlined nav-notification-title-icon">notifications</span>
+            <span>{% trans "通知" %}</span>
+          </div>
           <div id="reminderList">
             <div style="padding:16px;text-align:center;color:var(--muted,#888);">{% trans "載入中..." %}</div>
           </div>
         </div>
       </div>
+
       <a href="{% url 'edit_profile' %}" class="nav-user-btn">
         <span class="nav-user-avatar">{% if user.name %}{{ user.name|first|upper }}{% else %}U{% endif %}</span>
         {% if user.name %}{{ user.name }}{% else %}{{ user.email }}{% endif %}
@@ -247,7 +253,7 @@
       <div class="edit-panel">
         <h3>📌 {% trans "近期待辦任務" %}</h3>
 
-        <div id="dashRecentTasks" data-no-tasks="🎉 {% trans '太棒了！您目前沒有待辦任務。' %}"
+        <div id="dashRecentTasks" data-no-tasks=" {% trans '太棒了！您目前沒有待辦任務。' %}"
           style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
           <div style="text-align:center;padding:32px 0;color:var(--muted);">
             <div class="spinner" style="border-color: var(--primary) transparent var(--primary) transparent;"></div>
