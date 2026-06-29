@@ -183,6 +183,11 @@ window.switchFlowTab = function (activeIndex) {
   sections.forEach((sec, idx) => {
     if (idx === activeIndex) {
       sec.classList.add('active');
+      const progressText = sec.getAttribute('data-progress');
+      const topProgress = document.getElementById('topProgressText');
+      if (topProgress && progressText) {
+        topProgress.textContent = progressText;
+      }
     } else {
       sec.classList.remove('active');
     }
@@ -382,8 +387,9 @@ async function renderMyTasks() {
     currentActiveTabIndex = 0;
   }
 
-  let tabsHtml = `<div class="flows-tabs">`;
+  let tabsHtml = `<div class="flows-top-row"><div class="flows-tabs">`;
   let contentHtml = ``;
+  let activeProgressText = '';
 
   stages.forEach((stage, index) => {
     const isActive = index === currentActiveTabIndex ? 'active' : '';
@@ -393,13 +399,13 @@ async function renderMyTasks() {
     const total = tasks.length;
     const completed = tasks.filter(t => t.status === 'completed').length;
     const progressText = `${completed} / ${total} ${window.UI_STRINGS.completedProgress}`;
+    if (isActive) {
+      activeProgressText = progressText;
+    }
 
     contentHtml += `
-      <div class="stage-section ${isActive}">
-        <div class="stage-header">
-          <div class="stage-progress">${progressText}</div>
-        </div>
-        <div class="task-list">
+      <div class="stage-section ${isActive}" data-progress="${progressText}">
+      <div class="task-list">
     `;
 
     tasks.forEach(task => {
@@ -510,7 +516,7 @@ async function renderMyTasks() {
     contentHtml += `</div></div>`;
   });
 
-  tabsHtml += `</div>`;
+  tabsHtml += `</div><div class="stage-progress" id="topProgressText" style="white-space: nowrap; font-weight: 700;">${activeProgressText}</div></div>`;
   container.innerHTML = tabsHtml + contentHtml;
 
   const hash = window.location.hash;
