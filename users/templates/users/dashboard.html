@@ -129,7 +129,12 @@
         <span class="nav-user-avatar">{% if user.name %}{{ user.name|first|upper }}{% else %}U{% endif %}</span>
         {% if user.name %}{{ user.name }}{% else %}{{ user.email }}{% endif %}
       </a>
-      <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;">{% trans "登出" %}</a>
+      {% trans "確定要登出嗎？登出後將返回登入頁面。" as logout_confirm %}
+      <a href="{% url 'logout_page' %}"
+        class="btn-danger-sm"
+        style="text-decoration:none;"
+        onclick="return confirm('{{ logout_confirm }}')">
+        {% trans "登出" %}</a>
     </div>
   </nav>
 
@@ -155,7 +160,7 @@
     {# 狀態摘要 #}
     <div class="dash-grid">
       <div class="dash-info-card">
-        <div class="dic-icon dic-green">📋</div>
+        <div class="dic-icon dic-green">✅</div>
         <h4>{% trans "任務完成率" %}</h4>
         <div class="val" id="dashCompletionRate" data-completed-text="{% trans '已完成' %}"
           data-items-text="{% trans '項' %}">—%</div>
@@ -235,11 +240,6 @@
         </div>
         <div class="profile-actions">
           <a href="{% url 'edit_profile' %}" class="btn-outline-sm">✏️ {% trans "編輯資料" %}</a>
-          {% trans "確定要登出嗎？登出後將返回登入頁面。" as logout_confirm %}
-          <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;"
-            onclick="return confirm('{{ logout_confirm }}')">
-            🚪 {% trans "登出" %}
-          </a>
         </div>
       </div>
 

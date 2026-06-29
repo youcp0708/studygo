@@ -41,7 +41,7 @@ async function renderDashboardProgress() {
 
       const total = stages.reduce((sum, stage) => sum + (stage.total || 0), 0);
       const completed = stages.reduce((sum, stage) => sum + (stage.completed || 0), 0);
-      const percent = data.data.overall_percent || 0;
+      const percent = Math.round(Number(data.data.overall_percent || 0)); 
 
       const completedText = dashCompletion.getAttribute('data-completed-text') || '已完成';
       const itemsText = dashCompletion.getAttribute('data-items-text') || '項';
@@ -738,21 +738,29 @@ window.markReminderRead = async function (id) {
    初始化
 ════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', async () => {
-  // 當在 Dashboard 或 Flows 頁面時，確保有任務
-  if (document.getElementById('profileDash') || document.getElementById('flowsContainer')) {
+  const hasDashboardWidgets =
+    document.getElementById('dashCompletionRate') ||
+    document.getElementById('dashOverdueCount') ||
+    document.getElementById('dashRecentTasks');
+
+  const hasFlowsPage = document.getElementById('flowsContainer');
+
+  // 首頁、Dashboard、任務頁都先確保任務已初始化
+  if (hasDashboardWidgets || hasFlowsPage) {
     await initUserTasks();
   }
 
-  if (document.getElementById('profileDash')) {
+  // 只要頁面有完成率 / 提醒 / 近期待辦，就更新 Dashboard 資料
+  if (hasDashboardWidgets) {
     await renderDashboardProgress();
   }
 
-  if (document.getElementById('flowsContainer')) {
+  if (hasFlowsPage) {
     await renderMyTasks();
     await renderTips();
   }
 
-  if (document.getElementById('reminderBtn') || document.getElementById('profileDash')) {
+  if (document.getElementById('reminderBtn') || hasDashboardWidgets) {
     await renderReminders();
   }
 });

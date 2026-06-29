@@ -437,11 +437,28 @@
 @media (max-width: 820px) {
   .flows-layout {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
+  /* 手機版：讓右欄裡的卡片可以分開排序 */
   .flows-sidebar {
     position: static;
-    order: -1;
+    display: contents;
+  }
+
+  /* 完成進度放在上面 */
+  #chartCard {
+    order: 1;
+  }
+
+  /* 任務流程放中間 */
+  .flows-main {
+    order: 2;
+  }
+
+  /* 小貼士放在任務流程下面 */
+  #tipsCard {
+    order: 3;
   }
 
   .flows-page {
@@ -452,7 +469,6 @@
     font-size: 24px;
   }
 }
-
 
 /* ═══════════════════════════════════════════
    Utility Classes (從 HTML 移出的 Inline Styles)

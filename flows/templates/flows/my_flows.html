@@ -35,7 +35,7 @@
     {# ── 右欄：進度圖表 + 小貼士 ── #}
     <div class="flows-sidebar">
       <div class="sidebar-card hidden-card" id="chartCard">
-        <h3 class="sidebar-card-title">{% trans "完成進度" %}</h3>
+        <h3 class="sidebar-card-title">{% trans "任務完成率" %}</h3>
         <div class="chart-container" id="chartContainer">
           <canvas id="progressChart"></canvas>
         </div>
@@ -58,16 +58,16 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   window.UI_STRINGS = {
-    requiredDocs: '{% trans "📋 需要的文件" %}',
-    applyLocation: '{% trans "📍 辦理地點" %}',
-    viewOnMap: '{% trans "🗺️ 在地圖上查看" %}',
-    officialWebsite: '{% trans "🌐 官方網站" %}',
+    requiredDocs: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">description</span>{% trans "需要的文件" %}',
+    applyLocation: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">place</span>{% trans "辦理地點" %}',
+    viewOnMap: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">map</span>{% trans "在地圖上查看" %}',
+    officialWebsite: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">language</span>{% trans "官方網站" %}',
     visitOfficialWebsite: '{% trans "點此前往官方網站" %}',
-    taskSchedule: '{% trans "📅 辦理時程" %}',
-    deadlineWarning: '{% trans "⚠️ 截止日期" %}',
+    taskSchedule: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">event_note</span>{% trans "辦理時程" %}',
+    deadlineWarning: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px; color:#ff9800;">warning</span>{% trans "截止日期" %}',
     fillArrivalDatePrompt: '{% trans "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。" %}',
-    deadline: '{% trans "📅 截止日期" %}',
-    taskNotes: '{% trans "任務備註" %}',
+    deadline: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">event</span>{% trans "截止日期" %}',
+    taskNotes: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">edit_note</span>{% trans "任務備註" %}',
     enterNotesPlaceholder: '{% trans "在這裡輸入您的備註..." %}',
     saveNotesBtn: '{% trans "儲存備註" %}',
     completedBadge: '{% trans "已完成" %}',
