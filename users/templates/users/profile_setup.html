@@ -38,7 +38,7 @@
           <div class="setup-section-title">{% trans "基本資訊" %}</div>
           <div class="field-row">
             <div class="field">
-              <label>{% trans "所屬地區" %} Region</label>
+              <label>{% trans "所屬地區" %} Region <span style="color:red;">*</span></label> 
               <select name="region" id="setupRegion" required onchange="handleRegionChange(); updatePreview()">
                 <option value="">{% trans "請選擇地區" %}</option>
                 <option value="East Asia">🌏 {% trans "東亞" %}</option>
@@ -55,7 +55,7 @@
             </div>
 
             <div class="field">
-              <label>{% trans "國籍" %} Nationality</label>
+              <label>{% trans "國籍" %} Nationality <span style="color:red;">*</span></label> 
               <select name="nationality" id="setupNationality" required onchange="updatePreview()">
                 <option value="">{% trans "請先選擇地區" %}</option>
               </select>
@@ -66,7 +66,7 @@
           <div class="field-row">
 
             <div class="field">
-              <label>{% trans "就讀學校" %}</label>
+              <label>{% trans "就讀學校" %} <span style="color:red;">*</span></label>
               <select name="university" id="setupUniversity" required onchange="updatePreview()">
                 <option value="">{% trans "請選擇就讀學校" %}</option>
 
@@ -125,7 +125,11 @@
             </div>
           </div>
 
-          <div class="setup-section-title">{% trans "身份別" %}</div>
+          <div class="setup-section-title">{% trans "身份別" %} <span class="help-tip" tabindex="0">?<span class="help-tip-text wide">
+            <b>{% trans "僑生" %}</b>：{% trans "指長期居住海外，具有華裔背景，並依僑生相關規定申請來臺就讀大專校院的學生。" %}<br><br>
+            <b>{% trans "外籍生" %}</b>：{% trans "指不具中華民國國籍，依外國學生身分申請並來臺就讀各級學校的學生。" %}<br><br>
+            <b>{% trans "港澳生" %}</b>：{% trans "指具有香港或澳門居民身分，依港澳學生來臺就學辦法申請入學的學生。" %}
+          </span></span></div>
           <div class="field">
             <select name="identity_type" id="setupIdentity" required onchange="updatePreview()">
               <option value="">{% trans "請選擇身份別" %}</option>
@@ -134,6 +138,7 @@
               <option value="hong_kong_macau">{% trans "港澳生" %}</option>
             </select>
             <div class="field-hint">{% trans "身份別將影響您的流程任務內容" %}</div>
+            <div class="field-hint" style="color:var(--danger);font-weight:900;">⚠️ {% trans "謹慎選擇，提交後無法更改" %}</div>
             <div class="field-error hidden" id="identityErr"></div>
           </div>
 
@@ -162,7 +167,7 @@
           <div class="setup-section-title">{% trans "時間規劃" %}</div>
           <div class="field-row">
             <div class="field">
-              <label>{% trans "預計抵台日期" %} <span style="color:red;">*</span></label>
+              <label>{% trans "預計抵台日期" %} <span style="color:red;">*</span> <span class="help-tip" tabindex="0">?<span class="help-tip-text">{% trans "不確定抵達日期，建議先選擇9月1日" %}</span></span></label>
               <input type="date" name="expected_arrival" id="setupArrival" onchange="updatePreview()" required />
               <div class="field-hint">{% trans "必填" %}</div>
               <div class="field-error hidden" id="arrivalErr"></div>
@@ -269,7 +274,7 @@
                       border-radius:14px;font-size:13px;color:#3a6b62;line-height:1.7;">
             💡 {% trans "資料儲存後，系統將根據您的" %}
             <b>{% trans "國籍" %}</b>、<b>{% trans "身份別" %}</b>
-            {% trans "與" %}<b>{% trans "入學狀態" %}</b>
+            {% trans "與" %}<b> {% trans "入學狀態" %}</b>
             {% trans "自動生成個人化任務流程。" %}
           </div>
         </div>
@@ -282,6 +287,7 @@
 
 {# ── 問答覆蓋層 ── #}
 <div id="quizOverlay" class="quiz-overlay">
+  <button type="button" class="back-link" onclick="returnToProfileForm()" style="position:absolute;top:24px;left:24px;z-index:2;background:none;border:none;cursor:pointer;">← {% trans "返回" %}</button>
   <div class="quiz-container">
 
     {# 進度指示器 #}
@@ -294,45 +300,133 @@
     </div>
 
     {# 卡片堆疊區（absolute 疊放，只有 .visible 顯示） #}
+    {% get_current_language as CURRENT_LANGUAGE %}
     <div class="quiz-cards-wrap">
 
       {# Q1: 台灣身份證 #}
       <div class="quiz-card" id="quizQ1">
+        <div class="lang-wrap" id="langWrapQ1" style="position:absolute;top:20px;right:20px;">
+          <button type="button" class="lang-btn" id="langBtnQ1" onclick="toggleLangMenuQuiz('Q1')" aria-label="Change Language">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span class="lang-label">
+              {% if CURRENT_LANGUAGE == 'zh-hant' %}繁中
+              {% elif CURRENT_LANGUAGE == 'en' %}EN
+              {% elif CURRENT_LANGUAGE == 'vi' %}VI
+              {% elif CURRENT_LANGUAGE == 'id' %}ID
+              {% elif CURRENT_LANGUAGE == 'ms' %}MS
+              {% elif CURRENT_LANGUAGE == 'th' %}TH
+              {% elif CURRENT_LANGUAGE == 'ja' %}日本
+              {% elif CURRENT_LANGUAGE == 'ko' %}한국
+              {% elif CURRENT_LANGUAGE == 'my' %}MM
+              {% else %}{{ CURRENT_LANGUAGE }}
+              {% endif %}
+            </span>
+          </button>
+          <div class="lang-menu" id="langMenuQ1">
+            <form action="{% url 'set_language' %}" method="post" id="langFormQ1" style="display:none;">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.get_full_path }}">
+              <input type="hidden" name="language" id="langInputQ1" value="">
+            </form>
+            <div class="lang-grid">
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'zh-hant' %}active{% endif %}" onclick="selectLangQuiz('zh-hant','Q1')">🇹🇼 繁體中文</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'en' %}active{% endif %}" onclick="selectLangQuiz('en','Q1')">🇬🇧 English</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'vi' %}active{% endif %}" onclick="selectLangQuiz('vi','Q1')">🇻🇳 Tiếng Việt</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'id' %}active{% endif %}" onclick="selectLangQuiz('id','Q1')">🇮🇩 Indonesia</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ms' %}active{% endif %}" onclick="selectLangQuiz('ms','Q1')">🇲🇾 Melayu</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'th' %}active{% endif %}" onclick="selectLangQuiz('th','Q1')">🇹🇭 ภาษาไทย</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ja' %}active{% endif %}" onclick="selectLangQuiz('ja','Q1')">🇯🇵 日本語</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ko' %}active{% endif %}" onclick="selectLangQuiz('ko','Q1')">🇰🇷 한국어</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'my' %}active{% endif %}" onclick="selectLangQuiz('my','Q1')">🇲🇲 မြန်မာ</button>
+            </div>
+          </div>
+        </div>
         <span class="quiz-icon">🪪</span>
         <span class="quiz-question-number">QUESTION 1</span>
         <h3>{% trans "您是否擁有台灣身份證？" %}</h3>
         <p class="quiz-subtitle">{% trans "此資訊將影響後續的居留證申辦流程與相關步驟" %}</p>
         <div class="quiz-options">
-          <button type="button" class="quiz-option" onclick="answerQuiz('has_taiwan_id', true)">
+          <button type="button" class="quiz-option" data-field="has_taiwan_id" data-value="true" onclick="answerQuiz('has_taiwan_id', true)">
             <span class="opt-icon">✅</span>
             <span class="opt-label">{% trans "是" %}</span>
             <span class="opt-desc">{% trans "我有台灣身份證" %}</span>
           </button>
-          <button type="button" class="quiz-option" onclick="answerQuiz('has_taiwan_id', false)">
+          <button type="button" class="quiz-option" data-field="has_taiwan_id" data-value="false" onclick="answerQuiz('has_taiwan_id', false)">
             <span class="opt-icon">❌</span>
             <span class="opt-label">{% trans "否" %}</span>
             <span class="opt-desc">{% trans "我沒有台灣身份證" %}</span>
           </button>
         </div>
+        <div class="quiz-nav-buttons">
+          <button type="button" class="quiz-nav-btn" id="quizBackQ1" onclick="quizGoBack()" style="visibility:hidden;">← {% trans "上一題" %}</button>
+          <button type="button" class="quiz-nav-btn" id="quizNextQ1" onclick="quizGoNext()" disabled>{% trans "下一題" %} →</button>
+        </div>
       </div>
 
       {# Q2: 延遲入學 #}
       <div class="quiz-card" id="quizQ2">
+        <div class="lang-wrap" id="langWrapQ2" style="position:absolute;top:20px;right:20px;">
+          <button type="button" class="lang-btn" id="langBtnQ2" onclick="toggleLangMenuQuiz('Q2')" aria-label="Change Language">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span class="lang-label">
+              {% if CURRENT_LANGUAGE == 'zh-hant' %}繁中
+              {% elif CURRENT_LANGUAGE == 'en' %}EN
+              {% elif CURRENT_LANGUAGE == 'vi' %}VI
+              {% elif CURRENT_LANGUAGE == 'id' %}ID
+              {% elif CURRENT_LANGUAGE == 'ms' %}MS
+              {% elif CURRENT_LANGUAGE == 'th' %}TH
+              {% elif CURRENT_LANGUAGE == 'ja' %}日本
+              {% elif CURRENT_LANGUAGE == 'ko' %}한국
+              {% elif CURRENT_LANGUAGE == 'my' %}MM
+              {% else %}{{ CURRENT_LANGUAGE }}
+              {% endif %}
+            </span>
+          </button>
+          <div class="lang-menu" id="langMenuQ2">
+            <form action="{% url 'set_language' %}" method="post" id="langFormQ2" style="display:none;">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.get_full_path }}">
+              <input type="hidden" name="language" id="langInputQ2" value="">
+            </form>
+            <div class="lang-grid">
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'zh-hant' %}active{% endif %}" onclick="selectLangQuiz('zh-hant','Q2')">🇹🇼 繁體中文</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'en' %}active{% endif %}" onclick="selectLangQuiz('en','Q2')">🇬🇧 English</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'vi' %}active{% endif %}" onclick="selectLangQuiz('vi','Q2')">🇻🇳 Tiếng Việt</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'id' %}active{% endif %}" onclick="selectLangQuiz('id','Q2')">🇮🇩 Indonesia</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ms' %}active{% endif %}" onclick="selectLangQuiz('ms','Q2')">🇲🇾 Melayu</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'th' %}active{% endif %}" onclick="selectLangQuiz('th','Q2')">🇹🇭 ภาษาไทย</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ja' %}active{% endif %}" onclick="selectLangQuiz('ja','Q2')">🇯🇵 日本語</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ko' %}active{% endif %}" onclick="selectLangQuiz('ko','Q2')">🇰🇷 한국어</button>
+              <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'my' %}active{% endif %}" onclick="selectLangQuiz('my','Q2')">🇲🇲 မြန်မာ</button>
+            </div>
+          </div>
+        </div>
         <span class="quiz-icon">📅</span>
         <span class="quiz-question-number">QUESTION 2</span>
         <h3>{% trans "您是否為延遲入學？" %}</h3>
         <p class="quiz-subtitle">{% trans "延遲入學生可能有不同的報到與註冊時程安排" %}</p>
         <div class="quiz-options">
-          <button type="button" class="quiz-option" onclick="answerQuiz('is_deferred', true)">
+          <button type="button" class="quiz-option" data-field="is_deferred" data-value="true" onclick="answerQuiz('is_deferred', true)">
             <span class="opt-icon">✅</span>
             <span class="opt-label">{% trans "是" %}</span>
             <span class="opt-desc">{% trans "我是延遲入學" %}</span>
           </button>
-          <button type="button" class="quiz-option" onclick="answerQuiz('is_deferred', false)">
+          <button type="button" class="quiz-option" data-field="is_deferred" data-value="false" onclick="answerQuiz('is_deferred', false)">
             <span class="opt-icon">❌</span>
             <span class="opt-label">{% trans "否" %}</span>
             <span class="opt-desc">{% trans "我不是延遲入學" %}</span>
           </button>
+        </div>
+        <div class="quiz-nav-buttons">
+          <button type="button" class="quiz-nav-btn" id="quizBackQ2" onclick="quizGoBack()">← {% trans "上一題" %}</button>
         </div>
       </div>
 
@@ -343,10 +437,55 @@
 </div>
 
 <script>
+  window.I18N_PROFILE_SETUP = {
+    selectNationality: "{% trans '請選擇國籍' %}",
+    selectRegionFirst: "{% trans '請先選擇地區' %}",
+    nationalityNotSelected: "{% trans '國籍未選' %}",
+    identityNotSelected: "{% trans '身份別未選' %}",
+    statusNotSelected: "{% trans '狀態未選' %}",
+    selectRegion: "{% trans '請選擇地區' %}",
+    selectUniversity: "{% trans '請選擇就讀學校' %}",
+    selectIdentity: "{% trans '請選擇身份別' %}",
+    selectAdmissionStatus: "{% trans '請選擇入學狀態' %}",
+    fillArrivalDate: "{% trans '請填寫預計抵台日期' %}",
+    identityLabels: {
+      overseas_chinese: "{% trans '僑生' %}",
+      foreign_student: "{% trans '外籍生' %}",
+      hong_kong_macau: "{% trans '港澳生' %}",
+    },
+    statusLabels: {
+      pre_arrival: "{% trans '入境前準備' %}",
+      arrived: "{% trans '已抵臺就學' %}",
+    },
+  };
+
   window._tempUser = {
     name: "{{ user.name|escapejs }}",
     email: "{{ user.email|escapejs }}"
   };
+
+  function toggleLangMenuQuiz(suffix) {
+    var menu = document.getElementById('langMenu' + suffix);
+    var btn = document.getElementById('langBtn' + suffix);
+    var open = menu.classList.toggle('open');
+    btn.classList.toggle('active', open);
+    if (open) {
+      setTimeout(function () {
+        document.addEventListener('click', function _closeOutside(e) {
+          var wrap = document.getElementById('langWrap' + suffix);
+          if (wrap && !wrap.contains(e.target)) {
+            menu.classList.remove('open');
+            btn.classList.remove('active');
+            document.removeEventListener('click', _closeOutside);
+          }
+        });
+      }, 0);
+    }
+  }
+  function selectLangQuiz(code, suffix) {
+    document.getElementById('langInput' + suffix).value = code;
+    document.getElementById('langForm' + suffix).submit();
+  }
 
   const SETUP_REGION_COUNTRY_MAP = {
     "East Asia": [
@@ -418,7 +557,7 @@
 
     const defaultOption = document.createElement("option");
     defaultOption.value = "";
-    defaultOption.textContent = region ? "請選擇國籍" : "請先選擇地區";
+    defaultOption.textContent = region ? window.I18N_PROFILE_SETUP.selectNationality : window.I18N_PROFILE_SETUP.selectRegionFirst;
     nationalitySelect.appendChild(defaultOption);
 
     countries.forEach(function(country) {
@@ -445,6 +584,10 @@
 
     if (regionSelect) {
       regionSelect.addEventListener("change", updateSetupNationality);
+    }
+
+    const restored = (typeof restoreSetupDraft === "function") && restoreSetupDraft();
+    if (!restored && regionSelect) {
       updateSetupNationality();
     }
   });

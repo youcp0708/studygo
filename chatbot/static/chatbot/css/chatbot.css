@@ -428,6 +428,41 @@ body {
   color: rgba(255, 255, 255, .76);
 }
 
+.message-attachments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.message-attachment-image {
+  max-width: 220px;
+  max-height: 220px;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+.message-attachment-file {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: #eef6f2;
+  border: 1px solid var(--line);
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.message-row.user .message-attachment-file {
+  background: rgba(255, 255, 255, .18);
+  border-color: rgba(255, 255, 255, .3);
+  color: #fff;
+}
+
 /* AI 回覆中動畫 */
 .typing-dots {
   display: inline-flex;
@@ -559,6 +594,41 @@ body {
 
 .attach-toggle-btn:hover {
   background: #f3f6f5;
+}
+
+/* 語音輸入按鈕 */
+.mic-btn {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+.mic-btn:hover {
+  background: #f3f6f5;
+}
+
+.mic-btn.recording {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #000;
+  animation: micPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes micPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, .35);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(220, 38, 38, .12);
+  }
 }
 
 .attach-menu {
@@ -1170,7 +1240,7 @@ html[lang="my"] .bot-profile-card p {
   color: #1d4ed8 !important;
 }
 
-/* ===== AI mode switcher: StudyGo AI 小幫手 / 聊天好朋友 ===== */
+/* ===== AI mode switcher: ReadyTo AI 小幫手 / 聊天好朋友 ===== */
 
 .ai-mode-switcher {
   display: flex;
@@ -1378,7 +1448,7 @@ html[lang="my"] .bot-profile-card p {
 
 /* ===== 返回按鈕跟著 AI 模式變色 ===== */
 
-/* StudyGo AI 小幫手：深綠色 */
+/* ReadyTo AI 小幫手：深綠色 */
 .chatbot-page.ai-mode-helper .bot-card-back-link {
   background: linear-gradient(135deg, #0f5f52, #2d7d6d) !important;
   color: #ffffff !important;
@@ -1390,7 +1460,7 @@ html[lang="my"] .bot-profile-card p {
   background: linear-gradient(135deg, #0b4f45, #236f61) !important;
 }
 
-/* StudyGo AI 聊天好朋友：薄荷淺綠色 */
+/* ReadyTo AI 聊天好朋友：薄荷淺綠色 */
 .chatbot-page.ai-mode-friend .bot-card-back-link {
   background: #d9f3e9 !important;
   color: #075f55 !important;

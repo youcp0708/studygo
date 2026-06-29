@@ -249,6 +249,7 @@ def profile_update_view(request):
 
     data = serializer.validated_data
     data.pop('university', None)  # 學校與帳號永久綁定，不允許修改
+    data.pop('identity_type', None)  # 身份別建立後不允許修改
 
     # 更新 CustomUser.name
     if 'name' in data:

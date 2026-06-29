@@ -38,14 +38,77 @@
     </a>
 
     <div class="site-nav">
+      <a href="{% url 'index' %}" class="site-nav-link">{% trans "首頁" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="{% url 'dashboard' %}" class="site-nav-link">{% trans "儀表板" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="{% url 'index' %}#sec-flow" class="site-nav-link">{% trans "留學流程" %}</a>
+      <span class="site-nav-dot">◈</span>
       <a href="{% url 'my_flows' %}" class="site-nav-link">{% trans "任務清單" %}</a>
       <span class="site-nav-dot">◈</span>
       <a href="{% url 'guide_index' %}" class="site-nav-link">{% trans "資訊中心" %}</a>
       <span class="site-nav-dot">◈</span>
-      <a href="/chatbot/" class="site-nav-link">🤖 AI</a>
+      <a href="{% url 'index' %}#sec-alumni" class="site-nav-link">{% trans "學長姐分享" %}</a>
+      <span class="site-nav-dot">◈</span>
+      <a href="{% url 'index' %}#sec-faq" class="site-nav-link">{% trans "常見問題" %}</a>
     </div>
 
     <div class="nav-right">
+      <div class="search-wrap" id="searchWrap">
+        <div class="search-box" id="searchBox">
+          <button type="button" class="search-btn" id="searchBtn" aria-label="{% trans '搜尋' %}">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8.5" cy="8.5" r="5.5"/>
+              <line x1="13" y1="13" x2="18" y2="18"/>
+            </svg>
+          </button>
+          <input type="text" class="search-input" id="searchInput" placeholder="{% trans '搜尋指南...' %}"
+            autocomplete="off">
+        </div>
+        <div class="search-dropdown" id="searchDropdown"></div>
+      </div>
+
+      <div class="lang-wrap" id="langWrap">
+        <button type="button" class="lang-btn" id="langBtn" onclick="toggleLangMenu()" aria-label="Change Language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="lang-label">
+            {% if CURRENT_LANGUAGE == 'zh-hant' %}繁中
+            {% elif CURRENT_LANGUAGE == 'en' %}EN
+            {% elif CURRENT_LANGUAGE == 'vi' %}VI
+            {% elif CURRENT_LANGUAGE == 'id' %}ID
+            {% elif CURRENT_LANGUAGE == 'ms' %}MS
+            {% elif CURRENT_LANGUAGE == 'th' %}TH
+            {% elif CURRENT_LANGUAGE == 'ja' %}日本
+            {% elif CURRENT_LANGUAGE == 'ko' %}한국
+            {% elif CURRENT_LANGUAGE == 'my' %}MM
+            {% else %}{{ CURRENT_LANGUAGE }}
+            {% endif %}
+          </span>
+        </button>
+        <div class="lang-menu" id="langMenu">
+          <form action="{% url 'set_language' %}" method="post" id="langForm" style="display:none;">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.get_full_path }}">
+            <input type="hidden" name="language" id="langInput" value="">
+          </form>
+          <div class="lang-grid">
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'zh-hant' %}active{% endif %}" onclick="selectLang('zh-hant')">🇹🇼 繁體中文</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'en' %}active{% endif %}" onclick="selectLang('en')">🇬🇧 English</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'vi' %}active{% endif %}" onclick="selectLang('vi')">🇻🇳 Tiếng Việt</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'id' %}active{% endif %}" onclick="selectLang('id')">🇮🇩 Indonesia</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ms' %}active{% endif %}" onclick="selectLang('ms')">🇲🇾 Melayu</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'th' %}active{% endif %}" onclick="selectLang('th')">🇹🇭 ภาษาไทย</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ja' %}active{% endif %}" onclick="selectLang('ja')">🇯🇵 日本語</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'ko' %}active{% endif %}" onclick="selectLang('ko')">🇰🇷 한국어</button>
+            <button type="button" class="lang-opt {% if CURRENT_LANGUAGE == 'my' %}active{% endif %}" onclick="selectLang('my')">🇲🇲 မြန်မာ</button>
+          </div>
+        </div>
+      </div>
+
       <div style="position:relative;display:inline-block;">
         <button id="reminderBtn"
           style="position:relative;cursor:pointer;background:white;border:1px solid var(--border);color:var(--text);padding:8px;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05);"
@@ -202,8 +265,11 @@
   </div>
 </section>
 
-<script src="{% static 'users/js/users.js' %}"></script>
+<script src="{% static 'users/js/users.js' %}?v={% now 'U' %}"></script>
 <script src="{% static 'flows/js/flows.js' %}?v={% now 'U' %}"></script>
+<script>
+  initGuidesSearch('{{ CURRENT_LANGUAGE|default:"zh-hant" }}');
+</script>
 
 </body>
 </html>

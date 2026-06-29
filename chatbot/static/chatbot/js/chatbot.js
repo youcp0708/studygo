@@ -11,8 +11,8 @@
   let currentAIMode = page.dataset.aiMode || 'helper';
 
   const AI_MODE_NAMES = {
-    helper: i18n.assistantName || 'StudyGo AI 小幫手',
-    friend: i18n.friendName || 'StudyGo AI 聊天好朋友',
+    helper: i18n.assistantName || 'ReadyTo AI 小幫手',
+    friend: i18n.friendName || 'ReadyTo AI 聊天好朋友',
   };
 
   const AI_MODE_PLACEHOLDERS = {
@@ -33,9 +33,9 @@
   const attachToggleBtn = document.getElementById('attachToggleBtn');
   const attachMenu = document.getElementById('attachMenu');
   const fileInput = document.getElementById('fileInput');
-  const imageInput = document.getElementById('imageInput');
   const cameraInput = document.getElementById('cameraInput');
   const attachmentPreview = document.getElementById('attachmentPreview');
+  const micBtn = document.getElementById('micBtn');
 
   let selectedAttachments = [];
 
@@ -224,7 +224,36 @@
     tick();
   }
 
-  function addMessage(role, content, time, shouldScroll = true, animate = false) {
+  function renderAttachmentsInto(bubble, attachments) {
+    if (!attachments || attachments.length === 0) return;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'message-attachments';
+
+    attachments.forEach((att) => {
+      const link = document.createElement('a');
+      link.href = att.url;
+      link.target = '_blank';
+      link.rel = 'noopener';
+
+      if (att.type === 'file') {
+        link.className = 'message-attachment-file';
+        link.textContent = `📎 ${att.name}`;
+      } else {
+        const img = document.createElement('img');
+        img.src = att.url;
+        img.alt = att.name || '';
+        img.className = 'message-attachment-image';
+        link.appendChild(img);
+      }
+
+      wrap.appendChild(link);
+    });
+
+    bubble.appendChild(wrap);
+  }
+
+  function addMessage(role, content, time, shouldScroll = true, animate = false, attachments = []) {
     if (!messagesEl) return;
 
     const row = document.createElement('div');
@@ -262,6 +291,7 @@
     }
 
     bubble.appendChild(body);
+    renderAttachmentsInto(bubble, attachments);
 
     if (!shouldAnimate && time) {
       const timeEl = document.createElement('div');
@@ -354,9 +384,13 @@
 
   function addSelectedFiles(fileList, type) {
     Array.from(fileList).forEach((file) => {
+      const resolvedType = type === 'file' && file.type.startsWith('image/')
+        ? 'image'
+        : type;
+
       selectedAttachments.push({
         file: file,
-        type: type,
+        type: resolvedType,
       });
     });
 
@@ -382,10 +416,6 @@
         fileInput.click();
       }
 
-      if (type === 'image' && imageInput) {
-        imageInput.click();
-      }
-
       if (type === 'camera' && cameraInput) {
         cameraInput.click();
       }
@@ -397,13 +427,6 @@
       fileInput.addEventListener('change', function () {
         addSelectedFiles(fileInput.files, 'file');
         fileInput.value = '';
-      });
-    }
-
-    if (imageInput) {
-      imageInput.addEventListener('change', function () {
-        addSelectedFiles(imageInput.files, 'image');
-        imageInput.value = '';
       });
     }
 
@@ -431,6 +454,96 @@
         !event.target.closest('.attach-toggle-btn')
       ) {
         attachMenu.classList.remove('open');
+      }
+    });
+  }
+
+  const SPEECH_LANG_MAP = {
+    'zh-hant': 'zh-TW',
+    'zh-hans': 'zh-CN',
+    'zh': 'zh-TW',
+    'en': 'en-US',
+    'my': 'my-MM',
+    'th': 'th-TH',
+    'ms': 'ms-MY',
+    'id': 'id-ID',
+    'ja': 'ja-JP',
+    'vi': 'vi-VN',
+    'ko': 'ko-KR',
+  };
+
+  function getSpeechLang() {
+    const htmlLang = (document.documentElement.lang || 'zh-hant').toLowerCase();
+    return SPEECH_LANG_MAP[htmlLang] || 'zh-TW';
+  }
+
+  function setupSpeechRecognition() {
+    if (!micBtn || !input) return;
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      micBtn.style.display = 'none';
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = true;
+
+    let isRecording = false;
+    let baseText = '';
+
+    recognition.addEventListener('start', function () {
+      isRecording = true;
+      baseText = input.value;
+      micBtn.classList.add('recording');
+    });
+
+    recognition.addEventListener('result', function (event) {
+      let finalText = '';
+      let interimText = '';
+
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          finalText += transcript;
+        } else {
+          interimText += transcript;
+        }
+      }
+
+      if (finalText) {
+        baseText = `${baseText}${finalText}`.trim() + ' ';
+      }
+
+      input.value = (baseText + interimText).slice(0, 1200);
+      updateCount();
+    });
+
+    recognition.addEventListener('error', function () {
+      isRecording = false;
+      micBtn.classList.remove('recording');
+    });
+
+    recognition.addEventListener('end', function () {
+      isRecording = false;
+      micBtn.classList.remove('recording');
+    });
+
+    micBtn.addEventListener('click', function () {
+      if (isRecording) {
+        recognition.stop();
+        return;
+      }
+
+      recognition.lang = getSpeechLang();
+
+      try {
+        recognition.start();
+      } catch (error) {
+        isRecording = false;
+        micBtn.classList.remove('recording');
       }
     });
   }
@@ -533,10 +646,16 @@
 
     clearWelcomeIfNeeded();
 
+    const attachmentsForDisplay = selectedAttachments.map((item) => ({
+      type: item.type,
+      url: URL.createObjectURL(item.file),
+      name: item.file.name,
+    }));
+
     if (message) {
-      addMessage('user', message, null, true);
+      addMessage('user', message, null, true, false, attachmentsForDisplay);
     } else {
-      addMessage('user', t('uploadedAttachment', '已上傳附件'), null, true);
+      addMessage('user', t('uploadedAttachment', '已上傳附件'), null, true, false, attachmentsForDisplay);
     }
 
     input.value = '';
@@ -891,6 +1010,7 @@
 
   setupHistoryMenu();
   setupAttachmentButtons();
+  setupSpeechRecognition();
   setupHistorySearch();
   setupTaiwanTipRotator();
   setupAIModeSwitcher();

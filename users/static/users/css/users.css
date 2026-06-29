@@ -2,7 +2,7 @@
   /*
  * users/static/users/css/users.css
  * 使用者管理模塊專屬樣式
- * 繼承自 studyGo-TaiWan 主視覺設計
+ * 繼承自 ReadyTo-Taiwan 主視覺設計
  */
 
   /* ── CSS 變數（與主網站一致）── */
@@ -384,6 +384,54 @@
     font-size: 12px;
     color: var(--muted);
     margin-top: 4px;
+  }
+
+  .help-tip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--muted);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: help;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .help-tip-text {
+    display: none;
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #24413d;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    white-space: nowrap;
+    padding: 8px 12px;
+    border-radius: 8px;
+    z-index: 10;
+  }
+
+  .help-tip:hover .help-tip-text,
+  .help-tip:focus .help-tip-text {
+    display: block;
+  }
+
+  .help-tip-text.wide {
+    white-space: normal;
+    width: 280px;
+    text-align: left;
+    line-height: 1.6;
   }
 
   .field-row {
@@ -2242,6 +2290,7 @@
 
   /* 問題卡片 */
   .quiz-card {
+    position: relative;
     grid-area: 1 / 1;
     background: rgba(255, 255, 255, .92);
     backdrop-filter: blur(20px);
@@ -2351,6 +2400,39 @@
     font-size: 12px;
     color: var(--muted);
     font-weight: 600;
+  }
+
+  .quiz-option.selected {
+    border-color: var(--primary);
+    background: var(--primary-soft);
+  }
+
+  .quiz-nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  .quiz-nav-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background .15s, color .15s;
+  }
+
+  .quiz-nav-btn:hover:not(:disabled) {
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+  }
+
+  .quiz-nav-btn:disabled {
+    opacity: .4;
+    cursor: default;
   }
 
   /* 完成狀態 */

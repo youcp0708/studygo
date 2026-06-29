@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static i18n %}
 {% get_current_language as CURRENT_LANGUAGE %}
-{% block title %}{% trans "搜尋" %} — StudyGo Taiwan{% endblock %}
+{% block title %}{% trans "搜尋" %} — ReadyTo Taiwan{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'guides/css/guide_search.css' %}?v={% now 'U' %}">
@@ -17,7 +17,7 @@
 
 <div class="gs-bar-wrap">
   <div class="gs-bar-inner">
-    <a class="gs-logo" href="{% url 'guide_index' %}">StudyGo 🔍</a>
+    <a class="gs-logo" href="{% url 'guide_index' %}">ReadyTo 🔍</a>
     <div class="gs-input-wrap">
       <input class="gs-input" id="gsInput" value="{{ q|escapejs }}" placeholder="{% trans '搜尋所有指南內容...' %}"
         autocomplete="off">

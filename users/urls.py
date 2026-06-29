@@ -29,8 +29,12 @@ def _authenticated_redirect(request):
 
 
 def index_view(request):
-    if request.user.is_authenticated:
-        return _authenticated_redirect(request)
+    user = request.user
+    if user.is_authenticated:
+        if not user.email_verified:
+            return render(request, 'users/login.html', _login_context())
+        profile = user.student_profile if hasattr(user, 'student_profile') else None
+        return render(request, 'users/home.html', {'user': user, 'profile': profile})
     return render(request, 'users/home.html')
 
 
@@ -85,12 +89,12 @@ def dashboard_page(request):
 
 
 def edit_profile_page(request):
-    """編輯個人資料頁 — 需要 session 登入"""
+    """編輯個人資料頁 — 需要 session 登入，且需已完成 profile setup"""
     if not request.user.is_authenticated:
         return redirect('login_page')
-    context = {'user': request.user}
-    if hasattr(request.user, 'student_profile'):
-        context['profile'] = request.user.student_profile
+    if not hasattr(request.user, 'student_profile'):
+        return redirect('profile_setup')
+    context = {'user': request.user, 'profile': request.user.student_profile}
     return render(request, 'users/edit_profile.html', context)
 
 

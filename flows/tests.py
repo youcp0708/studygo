@@ -1,6 +1,8 @@
 from django.test import TestCase
 from users.models import CustomUser, StudentProfile
 from flows.models import FlowStage, Task, StudentTask, Reminder
+from datetime import date
+
 
 
 def make_student(email="test@test.com"):
@@ -80,3 +82,85 @@ class ReminderSignalTest(TestCase):
         self.st2.save()
         self.st2.save()  # signal fires again, but duplicate should be suppressed
         self.assertEqual(Reminder.objects.filter(student=self.student).count(), 1)
+
+
+class CheckRemindersCommandTest(TestCase):
+    def setUp(self):
+        self.student = make_student(email="test_reminder@example.com")
+        self.stage = FlowStage.objects.create(name="Stage 1", order=1)
+        self.task = Task.objects.create(
+            stage=self.stage,
+            title="Task with Deadline",
+            deadline_type="absolute",
+            deadline_date=date(2026, 6, 28),
+            order=1
+        )
+        self.st = StudentTask.objects.create(
+            student=self.student,
+            task=self.task,
+            status="not_started"
+        )
+
+    def test_command_creates_reminder_and_handles_deadline_change(self):
+        from django.core.management import call_command
+        from django.utils import timezone
+        from datetime import timedelta
+        today = timezone.now().date()
+
+        # Set deadline to today + 2 days (within 3 days warning window)
+        self.task.deadline_date = today + timedelta(days=2)
+        self.task.save()
+
+        # 1. Run check_reminders command. Since --days defaults to 3, it should trigger.
+        call_command('check_reminders')
+
+        # Verify 1 reminder is created
+        self.assertEqual(Reminder.objects.filter(student_task=self.st).count(), 1)
+        reminder = Reminder.objects.get(student_task=self.st)
+        self.assertFalse(reminder.is_read)
+        self.assertIn(str(self.task.deadline_date), reminder.message)
+
+        # 2. Running it again should NOT create a duplicate reminder
+        call_command('check_reminders')
+        self.assertEqual(Reminder.objects.filter(student_task=self.st).count(), 1)
+
+        # 3. Even if the reminder is marked as read, running it again with the same deadline should NOT duplicate
+        reminder.is_read = True
+        reminder.save()
+        call_command('check_reminders')
+        self.assertEqual(Reminder.objects.filter(student_task=self.st).count(), 1)
+
+        # 4. Now, change the deadline to today + 1 day (deadline changed!)
+        self.task.deadline_date = today + timedelta(days=1)
+        self.task.save()
+
+        # Run command again. It should create a NEW reminder for the new deadline
+        call_command('check_reminders')
+        self.assertEqual(Reminder.objects.filter(student_task=self.st).count(), 2)
+
+        # The new reminder should be unread, and contain the new deadline date
+        new_reminder = Reminder.objects.filter(student_task=self.st, is_read=False).first()
+        self.assertIsNotNone(new_reminder)
+        self.assertIn(str(self.task.deadline_date), new_reminder.message)
+
+    def test_command_cleans_up_old_unread_reminders_on_deadline_change(self):
+        from django.core.management import call_command
+        from django.utils import timezone
+        from datetime import timedelta
+        today = timezone.now().date()
+
+        self.task.deadline_date = today + timedelta(days=2)
+        self.task.save()
+
+        # Run command to create the initial reminder
+        call_command('check_reminders')
+        self.assertEqual(Reminder.objects.filter(student_task=self.st, is_read=False).count(), 1)
+
+        # Change the deadline to a future date outside the window (e.g. today + 10 days)
+        self.task.deadline_date = today + timedelta(days=10)
+        self.task.save()
+
+        # Run command again. The old unread reminder should be deleted, and no new reminder should be created
+        call_command('check_reminders')
+        self.assertEqual(Reminder.objects.filter(student_task=self.st).count(), 0)
+

@@ -6540,3 +6540,114 @@ msgstr "地図"
 
 msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示即時班次。"
 msgstr "「国立中央大学」から検索し、リアルタイム出発時刻付きで交通ルートを計画。"
+
+msgid "所屬地區"
+msgstr "地域"
+
+msgid "請選擇地區"
+msgstr "地域を選択してください"
+
+msgid "東亞"
+msgstr "東アジア"
+
+msgid "東南亞"
+msgstr "東南アジア"
+
+msgid "南亞"
+msgstr "南アジア"
+
+msgid "中東"
+msgstr "中東"
+
+msgid "歐洲"
+msgstr "ヨーロッパ"
+
+msgid "北美洲"
+msgstr "北米"
+
+msgid "中南美洲"
+msgstr "ラテンアメリカ"
+
+msgid "非洲"
+msgstr "アフリカ"
+
+msgid "大洋洲"
+msgstr "オセアニア"
+
+msgid "謹慎選擇，提交後無法更改"
+msgstr "慎重に選択してください — 提出後は変更できません"
+
+msgid "必填"
+msgstr "必須"
+
+msgid "請選擇系所"
+msgstr "学部・学科を選択してください"
+
+msgid "不確定抵達日期，建議先選擇9月1日"
+msgstr "到着日が未定の場合は、ひとまず9月1日を選択することをお勧めします"
+
+msgid "下一步"
+msgstr "次のステップ"
+
+msgid "（海外華裔學生）"
+msgstr "（華僑学生）"
+
+msgid "（外國籍學生）"
+msgstr "（外国籍学生）"
+
+msgid "（香港、澳門學生）"
+msgstr "（香港・マカオの学生）"
+
+msgid "請先選擇地區"
+msgstr "まず地域を選択してください"
+
+msgid "請選擇入學狀態"
+msgstr "入学状況を選択してください"
+
+msgid "請填寫預計抵台日期"
+msgstr "台湾への到着予定日を入力してください"
+
+
+msgid "您是否擁有台灣身份證？"
+msgstr "台湾の身分証明書をお持ちですか？"
+
+msgid "此資訊將影響後續的居留證申辦流程與相關步驟"
+msgstr "この情報は、今後のARC申請手続きや関連するステップに影響します"
+
+msgid "我有台灣身份證"
+msgstr "台湾の身分証明書を持っています"
+
+msgid "我沒有台灣身份證"
+msgstr "台湾の身分証明書を持っていません"
+
+msgid "您是否為延遲入學？"
+msgstr "入学を延期していますか？"
+
+msgid "延遲入學生可能有不同的報到與註冊時程安排"
+msgstr "入学延期の学生は、登校・登録のスケジュールが異なる場合があります"
+
+msgid "我是延遲入學"
+msgstr "入学を延期しています"
+
+msgid "我不是延遲入學"
+msgstr "入学を延期していません"
+
+msgid "是"
+msgstr "はい"
+
+msgid "否"
+msgstr "いいえ"
+
+msgid "上一題"
+msgstr "前の質問"
+
+msgid "下一題"
+msgstr "次の質問"
+
+
+msgid "入境前準備"
+msgstr "入境前の準備"
+
+msgid "已抵臺就學"
+msgstr "台湾に到着し就学中"
+
