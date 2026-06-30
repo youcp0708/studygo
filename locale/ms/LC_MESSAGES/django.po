@@ -5742,8 +5742,6 @@ msgstr ""
 msgid "，再以此入台就讀。"
 msgstr ", kemudian gunakan ini untuk memasuki Taiwan bagi tujuan pengajian."
 
-
-
 msgid "外籍生辦理居留證（ARC）"
 msgstr "Permohonan ARC (Kad Izin Tinggal) untuk Pelajar Asing"
 
@@ -6120,7 +6118,6 @@ msgstr ""
 "Menyediakan perkhidmatan perundingan pelbagai bahasa untuk isu tinggal, "
 "pekerjaan, dan kehidupan harian."
 
-
 msgid "僑生專屬服務"
 msgstr "Perkhidmatan Khas Pelajar Diaspora Cina"
 
@@ -6467,7 +6464,6 @@ msgstr ""
 msgid "僑生1年居留證（線上繳費）"
 msgstr "ARC 1 Tahun untuk Pelajar Diaspora Cina (bayaran dalam talian)"
 
-
 msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
 msgstr ""
 "Panduan maklumat zon asrama NCU, proses permohonan, peralatan bilik, dan "
@@ -6714,7 +6710,6 @@ msgstr "Talian kecemasan zon Timur / Barat / Selatan / Utara"
 msgid "緊急設施損壞、安全事件聯繫"
 msgstr "Untuk kerosakan kemudahan mendesak atau insiden keselamatan"
 
-
 msgid "僑生・外籍生必讀"
 msgstr "Wajib Dibaca oleh Pelajar Diaspora Cina & Antarabangsa"
 
@@ -6836,7 +6831,6 @@ msgstr "Suruhanjaya Hal Ehwal Rakan Negara Luar Negara (OCAC)"
 msgid "教育部－主管法規查詢系統"
 msgstr "Kementerian Pendidikan — Sistem Pangkalan Data Peraturan"
 
-
 msgid "僑生・外籍生必知"
 msgstr ""
 "Maklumat Penting untuk Pelajar Tionghoa Perantauan & Pelajar "
@@ -6854,9 +6848,6 @@ msgstr ""
 
 msgid "重點一覽"
 msgstr "Ringkasan Utama"
-
-msgid "項目"
-msgstr "Item"
 
 msgid "內容"
 msgstr "Butiran"
@@ -7240,7 +7231,6 @@ msgstr "Agensi Pembangunan Tenaga Kerja, Kementerian Buruh ↗"
 msgid "NCU 國際事務處 ↗"
 msgstr "Pejabat Hal Ehwal Antarabangsa NCU ↗"
 
-
 msgid "中央大學 × 公共交通"
 msgstr "Universiti Pusat Negara × Pengangkutan Awam"
 
@@ -7558,7 +7548,6 @@ msgstr "Sila pilih status kemasukan anda"
 msgid "請填寫預計抵台日期"
 msgstr "Sila isikan tarikh ketibaan dijangka di Taiwan"
 
-
 msgid "您是否擁有台灣身份證？"
 msgstr "Adakah anda mempunyai kad pengenalan Taiwan?"
 
@@ -7595,10 +7584,47 @@ msgstr "Sebelumnya"
 msgid "下一題"
 msgstr "Seterusnya"
 
-
 msgid "入境前準備"
 msgstr "Persediaan sebelum ketibaan"
 
 msgid "已抵臺就學"
 msgstr "Telah tiba di Taiwan dan sedang belajar"
 
+msgid "小老師"
+msgstr "Tutor"
+
+msgid "朋友"
+msgstr "Kawan"
+
+msgid "學長姐"
+msgstr "Kakak Senior"
+
+msgid "好朋友"
+msgstr "Sahabat Baik"
+
+msgid "課業輔助"
+msgstr "Bantuan Akademik"
+
+msgid "生活指導"
+msgstr "Panduan Kehidupan"
+
+msgid "瘋玩"
+msgstr "Gila Seronok"
+
+msgid "安靜陪伴"
+msgstr "Teman yang Pendiam"
+
+msgid "沉穩可靠"
+msgstr "Tenang & Boleh Dipercayai"
+
+msgid "火爆脾氣"
+msgstr "Mudah Marah"
+
+msgid "語音輸入"
+msgstr "Input Suara"
+
+msgid "重新命名："
+msgstr "Tukar nama:"
+
+msgid "重新命名性格："
+msgstr "Tukar nama personaliti:"

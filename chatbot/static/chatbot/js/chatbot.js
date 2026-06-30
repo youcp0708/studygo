@@ -11,8 +11,8 @@
   let currentAIMode = page.dataset.aiMode || 'helper';
 
   const AI_MODE_NAMES = {
-    helper: i18n.assistantName || 'ReadyTo AI 小幫手',
-    friend: i18n.friendName || 'ReadyTo AI 聊天好朋友',
+    helper: i18n.assistantName || 'ReadyTo 任務小幫手',
+    friend: i18n.friendName || 'ReadyTo 聊天好朋友',
   };
 
   const AI_MODE_PLACEHOLDERS = {
@@ -38,12 +38,16 @@
   const micBtn = document.getElementById('micBtn');
 
   let selectedAttachments = [];
+  let selectedRole = localStorage.getItem('chatbot_role') || '';
+  let selectedPersonality = localStorage.getItem('chatbot_personality') || '';
+  let selectedRoleColor = localStorage.getItem('chatbot_role_color') || '';
 
   function t(key, fallback) {
     return i18n[key] || fallback;
   }
 
   function getCurrentAIName() {
+    if (selectedRole) return getCurrentRoleDisplayName();
     return AI_MODE_NAMES[currentAIMode] || AI_MODE_NAMES.helper;
   }
 
@@ -261,9 +265,11 @@
 
     const avatar = document.createElement('div');
     avatar.className = 'message-avatar';
-    avatar.textContent = role === 'user' ? '🧑' : '🤖';
+    avatar.textContent = role === 'user' ? (i18n.userInitial || '我') : '🤖';
 
-    if (role !== 'user') {
+    if (role === 'user') {
+      avatar.classList.add('user-initial');
+    } else {
       avatar.classList.add('js-ai-avatar', currentAIMode);
     }
 
@@ -548,6 +554,238 @@
     });
   }
 
+  function updateRoleBadge() {
+    const btn = document.getElementById('roleSelectorBtn');
+    const label = document.getElementById('roleSelectorLabel');
+    if (!btn || !label) return;
+
+    if (selectedRole) {
+      label.textContent = getCurrentRoleDisplayName();
+      btn.style.color = selectedRoleColor;
+      btn.style.borderColor = selectedRoleColor;
+    } else {
+      label.textContent = i18n.role || '角色';
+      btn.style.color = '';
+      btn.style.borderColor = '';
+    }
+
+    const aiName = getCurrentAIName();
+    document.querySelectorAll('.js-ai-name').forEach(function (el) {
+      el.textContent = aiName;
+    });
+  }
+
+  const ROLE_PERSONALITIES = {
+    '朋友': [
+      { key: '好朋友',   label: i18n.pBestFriend || '好朋友',   color: '#22c55e', renamable: true  },
+      { key: '瘋玩',     label: i18n.pFun        || '瘋玩',     color: '#f97316', renamable: false },
+      { key: '安靜陪伴', label: i18n.pQuiet      || '安靜陪伴', color: '#8b5cf6', renamable: false },
+      { key: '沉穩可靠', label: i18n.pCalm       || '沉穩可靠', color: '#0d9488', renamable: false },
+      { key: '火爆脾氣', label: i18n.pHot        || '火爆脾氣', color: '#dc2626', renamable: false },
+    ],
+  };
+
+  function getFriendRoleName() {
+    const custom = localStorage.getItem('chatbot_friend_role_name');
+    if (custom) return custom;
+    // 讀 HTML 已翻譯的文字（由 {% trans %} 渲染）
+    const label = document.getElementById('friendRoleLabel');
+    return (label && label.textContent.trim()) || i18n.roleFriend || '朋友';
+  }
+
+  function saveFriendRoleName(name) {
+    localStorage.setItem('chatbot_friend_role_name', name);
+  }
+
+  function getRenamablePersonalityName(key, defaultLabel) {
+    const saved = JSON.parse(localStorage.getItem('chatbot_friend_names') || '{}');
+    return saved[key] || defaultLabel || key;
+  }
+
+  function saveRenamablePersonalityName(key, name) {
+    const saved = JSON.parse(localStorage.getItem('chatbot_friend_names') || '{}');
+    saved[key] = name;
+    localStorage.setItem('chatbot_friend_names', JSON.stringify(saved));
+  }
+
+  function getCurrentRoleDisplayName() {
+    if (!selectedRole) return '';
+    if (selectedRole === '朋友')   return getFriendRoleName();
+    if (selectedRole === '小老師') return i18n.roleTutor  || selectedRole;
+    if (selectedRole === '學長姐') return i18n.roleSenior || selectedRole;
+    return selectedRole;
+  }
+
+  function selectPersonality(role, personality, color) {
+    selectedRole = role;
+    selectedPersonality = personality;
+    selectedRoleColor = color;
+    localStorage.setItem('chatbot_role', role);
+    localStorage.setItem('chatbot_personality', personality);
+    localStorage.setItem('chatbot_role_color', color);
+    updateRoleBadge();
+  }
+
+  function buildSubmenu(role) {
+    const submenu = document.getElementById('roleSubmenu');
+    if (!submenu) return;
+
+    const personalities = ROLE_PERSONALITIES[role];
+    if (!personalities) {
+      submenu.classList.remove('visible');
+      submenu.innerHTML = '';
+      return;
+    }
+
+    submenu.innerHTML = '';
+    submenu.classList.add('visible');
+
+    personalities.forEach(function ({ key, label, color, renamable }) {
+      const displayName = renamable ? getRenamablePersonalityName(key, label) : label;
+
+      const item = document.createElement('div');
+      item.className = 'submenu-item';
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'personality-btn';
+      btn.dataset.role = role;
+      btn.dataset.personality = key;
+      btn.dataset.color = color;
+      btn.style.setProperty('--personality-color', color);
+      btn.textContent = displayName;
+
+      if (selectedRole === role && selectedPersonality === key) {
+        btn.classList.add('selected');
+      }
+
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        selectPersonality(role, key, color);
+        closeRoleMenu();
+      });
+
+      item.appendChild(btn);
+
+      if (renamable) {
+        const renameBtn = document.createElement('button');
+        renameBtn.type = 'button';
+        renameBtn.className = 'personality-rename-btn';
+        renameBtn.title = i18n.rename || '重新命名';
+        renameBtn.textContent = i18n.rename || '重新命名';
+
+        renameBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const current = getRenamablePersonalityName(key, label);
+          const newName = prompt(i18n.renamePersonality || '重新命名性格：', current);
+          if (newName && newName.trim()) {
+            saveRenamablePersonalityName(key, newName.trim());
+            btn.textContent = newName.trim();
+          }
+        });
+
+        item.appendChild(renameBtn);
+      }
+
+      submenu.appendChild(item);
+    });
+  }
+
+  function closeRoleMenu() {
+    const roleSelector = document.getElementById('roleSelector');
+    const roleSelectorBtn = document.getElementById('roleSelectorBtn');
+    const submenu = document.getElementById('roleSubmenu');
+    if (roleSelector) roleSelector.classList.remove('open');
+    if (roleSelectorBtn) roleSelectorBtn.setAttribute('aria-expanded', 'false');
+    if (submenu) {
+      submenu.classList.remove('visible');
+      submenu.innerHTML = '';
+    }
+  }
+
+  function setupRoleSelector() {
+    const roleSelector = document.getElementById('roleSelector');
+    const roleSelectorBtn = document.getElementById('roleSelectorBtn');
+    const roleMenu = document.getElementById('roleMenu');
+    const roleListPanel = roleMenu && roleMenu.querySelector('.role-list-panel');
+    if (!roleSelector || !roleSelectorBtn || !roleMenu || !roleListPanel) return;
+
+    // 只在有自訂名稱時才覆寫（沒有自訂就讓 HTML {% trans %} 的翻譯維持原樣）
+    const friendRoleLabel = document.getElementById('friendRoleLabel');
+    const customFriendName = localStorage.getItem('chatbot_friend_role_name');
+    if (friendRoleLabel && customFriendName) {
+      friendRoleLabel.textContent = customFriendName;
+    }
+    if (selectedRole) updateRoleBadge();
+
+    // Toggle menu
+    roleSelectorBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const isOpen = roleSelector.classList.toggle('open');
+      roleSelectorBtn.setAttribute('aria-expanded', String(isOpen));
+      if (!isOpen) {
+        const submenu = document.getElementById('roleSubmenu');
+        if (submenu) { submenu.classList.remove('visible'); submenu.innerHTML = ''; }
+      }
+    });
+
+    // Hover role item → show submenu (用 mouseenter 避免子元素觸發重建)
+    let currentSubMenuRole = '';
+
+    roleListPanel.querySelectorAll('.role-item').forEach(function (item) {
+      item.addEventListener('mouseenter', function () {
+        const role = item.dataset.role;
+        if (role === currentSubMenuRole) return;
+        currentSubMenuRole = role;
+
+        if (ROLE_PERSONALITIES[role]) {
+          buildSubmenu(role);
+          roleListPanel.querySelectorAll('.role-item').forEach(function (el) {
+            el.classList.toggle('active', el === item);
+          });
+        } else {
+          const submenu = document.getElementById('roleSubmenu');
+          if (submenu) { submenu.classList.remove('visible'); submenu.innerHTML = ''; }
+          roleListPanel.querySelectorAll('.role-item').forEach(function (el) {
+            el.classList.remove('active');
+          });
+        }
+      });
+    });
+
+    roleMenu.addEventListener('mouseleave', function () {
+      currentSubMenuRole = '';
+    });
+
+    // 朋友 rename button
+    roleListPanel.addEventListener('click', function (e) {
+      const renameBtn = e.target.closest('.role-item-rename-btn');
+      if (renameBtn) {
+        e.stopPropagation();
+        const current = getFriendRoleName();
+        const newName = prompt(i18n.renameRole || '重新命名：', current);
+        if (newName && newName.trim()) {
+          saveFriendRoleName(newName.trim());
+          const label = document.getElementById('friendRoleLabel');
+          if (label) label.textContent = newName.trim();
+          if (selectedRole === '朋友') updateRoleBadge();
+        }
+        return;
+      }
+
+      // Click 學長姐 directly
+      const item = e.target.closest('.role-item--direct');
+      if (!item) return;
+      selectPersonality(item.dataset.role, item.dataset.personality || '', item.dataset.color || '#d97706');
+      closeRoleMenu();
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (!roleSelector.contains(e.target)) closeRoleMenu();
+    });
+  }
+
   function setupHistorySearch() {
     if (!historySearchInput || !historyList) return;
 
@@ -669,6 +907,11 @@
 
       formData.append('message', message || t('uploadedAttachment', '已上傳附件'));
       formData.append('ai_mode', currentAIMode);
+
+      if (selectedRole) {
+        formData.append('role', selectedRole);
+        formData.append('personality', selectedPersonality);
+      }
 
       if (activeSessionId) {
         formData.append('session_id', activeSessionId);
@@ -1011,6 +1254,7 @@
   setupHistoryMenu();
   setupAttachmentButtons();
   setupSpeechRecognition();
+  setupRoleSelector();
   setupHistorySearch();
   setupTaiwanTipRotator();
   setupAIModeSwitcher();
