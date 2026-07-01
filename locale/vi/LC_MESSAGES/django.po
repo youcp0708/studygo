@@ -3073,7 +3073,6 @@ msgstr "Thư viện"
 msgid "個指南"
 msgstr "hướng dẫn"
 
-
 msgid "外籍生辦理居留證（ARC）"
 msgstr "Xin cấp ARC (Thẻ Cư Trú) cho Sinh Viên Nước Ngoài"
 
@@ -3436,7 +3435,6 @@ msgstr ""
 "Cung cấp dịch vụ tư vấn đa ngôn ngữ về vấn đề cư trú, việc làm và sinh "
 "hoạt hàng ngày."
 
-
 msgid "僑生專屬服務"
 msgstr "Dịch vụ dành riêng cho sinh viên Hoa kiều"
 
@@ -3770,7 +3768,6 @@ msgstr ""
 msgid "僑生1年居留證（線上繳費）"
 msgstr "ARC 1 năm cho Sinh viên Hoa kiều (thanh toán trực tuyến)"
 
-
 msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
 msgstr ""
 "Hướng dẫn thông tin các khu ký túc xá NCU, quy trình đăng ký, trang "
@@ -4013,7 +4010,6 @@ msgstr "Đường dây khẩn cấp khu Đông / Tây / Nam / Bắc"
 msgid "緊急設施損壞、安全事件聯繫"
 msgstr "Liên hệ cho sự cố hư hỏng cơ sở vật chất khẩn cấp hoặc sự cố an ninh"
 
-
 msgid "僑生・外籍生必讀"
 msgstr "Bắt buộc đọc cho sinh viên Hoa kiều và quốc tế"
 
@@ -4132,7 +4128,6 @@ msgstr "Ủy ban Công vụ Người Hoa Hải ngoại (OCAC)"
 
 msgid "教育部－主管法規查詢系統"
 msgstr "Bộ Giáo dục — Hệ thống Cơ sở Dữ liệu Quy định"
-
 
 msgid "工作許可證"
 msgstr "Giấy phép lao động"
@@ -5673,7 +5668,6 @@ msgstr "Cơ quan Phát triển Lao động, Bộ Lao động ↗"
 msgid "NCU 國際事務處 ↗"
 msgstr "Văn phòng Hợp tác Quốc tế NCU ↗"
 
-
 msgid "中央大學 × 公共交通"
 msgstr "Đại học Trung ương Quốc gia × Giao thông công cộng"
 
@@ -6752,9 +6746,6 @@ msgstr ""
 msgid "全民健保投保規定"
 msgstr "Quy định đăng ký NHI"
 
-msgid "項目"
-msgstr "Mục"
-
 msgid "僑外生就學期間"
 msgstr "Trong thời gian học tập (sinh viên Hoa kiều/nước ngoài)"
 
@@ -7252,13 +7243,11 @@ msgstr "Vui lòng chọn trạng thái nhập học"
 msgid "請填寫預計抵台日期"
 msgstr "Vui lòng điền ngày dự kiến đến Đài Loan"
 
-
 msgid "上一題"
 msgstr "Câu trước"
 
 msgid "下一題"
 msgstr "Câu tiếp theo"
-
 
 msgid "入境前準備"
 msgstr "Chuẩn bị trước khi nhập cảnh"
@@ -7266,3 +7255,41 @@ msgstr "Chuẩn bị trước khi nhập cảnh"
 msgid "已抵臺就學"
 msgstr "Đã đến Đài Loan và đang học"
 
+msgid "小老師"
+msgstr "Gia sư"
+
+msgid "朋友"
+msgstr "Bạn bè"
+
+msgid "學長姐"
+msgstr "Đàn anh chị"
+
+msgid "好朋友"
+msgstr "Bạn thân"
+
+msgid "課業輔助"
+msgstr "Hỗ trợ học tập"
+
+msgid "生活指導"
+msgstr "Hướng dẫn cuộc sống"
+
+msgid "瘋玩"
+msgstr "Vui chơi thỏa thích"
+
+msgid "安靜陪伴"
+msgstr "Đồng hành thầm lặng"
+
+msgid "沉穩可靠"
+msgstr "Bình tĩnh & đáng tin"
+
+msgid "火爆脾氣"
+msgstr "Nóng tính"
+
+msgid "語音輸入"
+msgstr "Nhập bằng giọng nói"
+
+msgid "重新命名："
+msgstr "Đổi tên:"
+
+msgid "重新命名性格："
+msgstr "Đổi tên tính cách:"

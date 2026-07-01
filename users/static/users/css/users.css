@@ -522,9 +522,9 @@
   .btn-danger-sm {
     padding: 8px 18px;
     border-radius: 99px;
-    border: 2px solid var(--danger);
-    background: #fff;
-    color: var(--danger);
+    border: 2px solid #000;
+    background: #000;
+    color: #fff;
     font-weight: 900;
     font-size: 14px;
     transition: all .2s;
@@ -532,7 +532,8 @@
   }
 
   .btn-danger-sm:hover {
-    background: var(--danger-soft);
+    background: #222;
+    border-color: #222;
   }
 
   .btn-link {

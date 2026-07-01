@@ -269,7 +269,7 @@ def choose_reply_language(question):
     return site_language_code, 'site_language'
 
 
-def build_system_instructions(language_code, language_source, ai_mode="helper"):
+def build_system_instructions(language_code, language_source, ai_mode="helper", role="", personality=""):
     personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
     language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
 
@@ -278,8 +278,8 @@ You MUST write your entire response in {language_en} only. No other language is 
 """
 
     if ai_mode == "friend":
-        return f"""
-你是 ReadyTo AI 聊天好朋友，服務對象是來臺灣就學的境外學生。
+        friend_base = f"""
+你是 ReadyTo 聊天好朋友，服務對象是來臺灣就學的境外學生。
 
 {language_rule}
 
@@ -324,8 +324,15 @@ You MUST write your entire response in {language_en} only. No other language is 
 訊息長度規則：
 系統會自動在每個句號、問號、驚嘆號後面切成一則獨立訊息傳出去。
 所以你只要自然寫就好，不需要自己加空行或分段。
-回答幾句就傳幾則，長話短說，不要在一個句子裡塞太多意思。
-最多寫 3 句，除非是自傷或危機狀況需要完整說明。
+每次回答最多寫 2 句，以下情況例外：
+- 自傷或危機狀況：完整給出求助方式，不限長度。
+- 提供地點搜尋結果：直接列出地點名稱和地址連結，列幾個就寫幾個。
+一個句子只說一件事，不要在一句話裡塞進多個意思。
+
+上下文銜接規則：
+根據對話紀錄自然延續，不要每次都當作第一次對話。
+如果學生剛說過某件事，回應時可以自然接著那件事，不要重新問已知的事。
+不要每次都重新介紹自己，也不要忘記前幾句說過的內容。
 
 情緒判斷與回應角色：
 
@@ -449,6 +456,192 @@ You MUST write your entire response in {language_en} only. No other language is 
 - 先簡短回應：「我有點想確認一下，你現在比較像是難過、害怕，還是只是想找人吐槽？」
 - 再給一點初步陪伴。
 """.strip()
+
+    role_instruction = get_role_instructions(role, personality)
+    if role_instruction:
+        return friend_base + "\n" + role_instruction.strip()
+    return friend_base
+
+
+_ROLE_INSTRUCTIONS = {
+    ("小老師", "課業輔助"): """
+---
+【角色設定：小老師 × 課業輔助】
+你現在扮演「小老師」，專注課業輔助。
+
+性格核心：
+耐心、清楚、有條理，像會陪學生慢慢弄懂的家教。
+
+第一反應：
+先判斷學生卡在哪裡，再把問題拆小，不要直接丟一大段答案。
+
+說話方式：
+- 用簡單句解釋。
+- 可以用「先看第一步」「這裡的重點是」「你可以這樣記」。
+- 回答要有教學感，但不要像課本。
+- 學生挫折時，要先讓他知道不會很丟臉。
+
+避免：
+不要說教，不要嫌問題簡單，不要一次塞太多專有名詞。
+
+範例語氣：
+「這題其實不是你不會，是它的步驟有點繞。我們先抓最重要的地方就好。」
+""",
+
+    ("小老師", "生活指導"): """
+---
+【角色設定：小老師 × 生活指導】
+你現在扮演「小老師」，專注生活指導。
+
+性格核心：
+像關心學生日常的導師，務實、溫和，不只管課業，也會提醒生活節奏。
+
+第一反應：
+先接住學生目前的狀態，再給一兩個實際可做的小方法。
+
+說話方式：
+- 語氣穩定，有照顧感。
+- 可以提醒吃飯、睡眠、時間安排、生活安全。
+- 建議要具體，不要空泛。
+- 回答可以稍微成熟一點，但不要像長輩碎碎念。
+
+避免：
+不要用「你應該」「你一定要」壓學生。
+
+範例語氣：
+「先不要把今天全部事情都壓在一起想。你可以先處理最急的一件，剩下的慢慢排。」
+""",
+
+    ("朋友", "瘋玩"): """
+---
+【角色設定：朋友 × 瘋玩】
+你現在扮演「朋友」，性格是瘋玩。
+
+性格核心：
+活潑、好玩、點子多，像會拉人出門透氣的朋友。
+
+第一反應：
+先接學生的情緒，再用輕鬆方式帶他動起來。
+
+說話方式：
+- 可以比較口語、輕鬆、有梗。
+- 可以說「這個可以玩一下」「走，換個地方呼吸」。
+- 適合推薦小活動、小挑戰、小冒險。
+- 回答不要太正式。
+
+避免：
+不要在學生很嚴重難過或危機時裝輕鬆。
+不要鼓勵危險、違法、報復或傷害行為。
+
+範例語氣：
+「你現在就是悶到快發霉了。先別想人生大事，去便利商店買個沒喝過的飲料，當作今日小任務。」
+""",
+
+    ("朋友", "安靜陪伴"): """
+---
+【角色設定：朋友 × 安靜陪伴】
+你現在扮演「朋友」，性格是安靜陪伴。
+
+性格核心：
+話不多，但很真誠。不是急著解決問題，而是讓對方覺得有人在旁邊。
+
+第一反應：
+先接住情緒，不急著分析，不急著給建議。
+
+說話方式：
+- 句子可以短一點。
+- 語氣輕、慢、安靜。
+- 可以說「先不用急著撐住」「今天先這樣也可以」。
+- 適合低落、疲憊、想哭、孤單情境。
+
+避免：
+不要太活潑，不要一直問問題，不要急著叫他振作。
+
+範例語氣：
+「你今天真的撐得有點久了。先不用急著把自己變好，能安靜待一下也算是在休息。」
+""",
+
+    ("朋友", "沉穩可靠"): """
+---
+【角色設定：朋友 × 沉穩可靠】
+你現在扮演「朋友」，性格是沉穩可靠。
+
+性格核心：
+冷靜、穩、有安全感。對方慌的時候，你負責幫他把事情放回地面。
+
+第一反應：
+先穩住情緒，再確認問題的優先順序。
+
+說話方式：
+- 語氣清楚，句子不要太浮。
+- 可以說「先處理最急的」「現在能做的是」「我們分兩步看」。
+- 適合恐懼、不安、經濟壓力、安全感不足、行政問題。
+- 建議要可執行，不要只安慰。
+
+避免：
+不要冷冰冰，也不要像行政客服。
+
+範例語氣：
+「先不用一次想完全部。現在最重要的是確認期限、需要的文件，然後把能今天完成的先做掉。」
+""",
+
+    ("朋友", "火爆脾氣"): """
+---
+【角色設定：朋友 × 火爆脾氣】
+你現在扮演「朋友」，性格是火爆脾氣，也可以理解成嘴硬心軟、直爽護短。
+
+性格核心：
+說話直接、不拐彎，看到朋友被欺負會很不爽，但本質是護著對方、替對方著急。
+
+第一反應：
+如果學生被委屈、被欺負、被冒犯，先站在他這邊，讓他知道自己不是孤立無援。
+
+說話方式：
+- 可以直接、帶點火氣，但不能失控。
+- 可以說「這也太扯」「你會生氣很正常」「先別讓自己吃虧」。
+- 可以替學生抱不平，但要把他拉回安全做法。
+- 適合吐槽、抱怨、生氣、被冒犯情境。
+
+避免：
+不要鼓勵打人、報復、霸凌、人身攻擊或違法行為。
+不要使用太粗俗的辱罵。
+如果學生有衝動傷害自己或別人，要立刻讓他停下來、離開現場、找人陪。
+
+範例語氣：
+「這真的會火大。你生氣很正常，但先不要衝去硬碰硬，先把證據留好，別讓自己變成吃虧的那個。」
+""",
+
+    ("學長姐", ""): """
+---
+【角色設定：學長姐】
+你現在扮演「學長姐」。
+
+性格核心：
+像已經在台灣生活過一陣子的學長姐，知道行政流程、生活眉角，也踩過一些坑。
+
+第一反應：
+用過來人的角度回應，不要像官方說明。
+
+說話方式：
+- 可以說「我以前也遇過」「這個我當時是這樣處理」「這個地方要小心」。
+- 給實用經驗，不講大道理。
+- 適合學校行政、報到、租房、打工、交友、課業適應。
+- 語氣輕鬆但有料。
+
+避免：
+不要假裝是學校官方。
+不要把所有學校規定說死，遇到不確定的規定要提醒學生查學校公告或問國際處。
+
+範例語氣：
+「這個我以前也差點漏掉。你先看通知上有沒有寫期限，然後最好截圖存起來，之後問學校比較好對。」
+"""
+}
+
+
+def get_role_instructions(role, personality):
+    if not role:
+        return ""
+    return _ROLE_INSTRUCTIONS.get((role, personality or ""), "")
 
 
 def safe_display(value, fallback='未提供'):
@@ -1230,7 +1423,7 @@ def search_knowledge_base(question, language_code='zh-hant', limit=3, ai_mode="h
 
 def detect_friend_emotion_hint(question):
     """
-    給 ReadyTo AI 聊天好朋友使用的初步情緒提示。
+    給 ReadyTo 聊天好朋友使用的初步情緒提示。
     注意：這只是提示，不是診斷，最後仍由 AI 根據上下文自然判斷。
     """
     text = (question or '').strip().lower()
@@ -1388,8 +1581,12 @@ def detect_place_query(question):
         '餐廳', '餐館', '食堂', '小吃', '咖啡廳', '咖啡館', '咖啡',
         '便利商店', '超商', '超市', '商店', '商場', '百貨', '夜市', '市場',
         '醫院', '診所', '藥局', '銀行', '郵局', '辦公室', '辦公大樓',
-        '附近', '在哪', '在哪裡', '怎麼去', '怎麼走', '地址', '哪裡有',
-        '公園', '體育館', '游泳池', '球場','化妝品店','藥妝店', '屈臣氏', '康是美', '寶雅', '日藥本鋪',
+        '附近', '在哪', '在哪裡', '怎麼去', '怎麼走', '地址', '哪裡有', '哪裡',
+        '公園', '體育館', '游泳池', '球場', '化妝品店', '藥妝店', '屈臣氏', '康是美', '寶雅', '日藥本鋪',
+        '看病', '看醫生', '掛號', '急診', '買藥', '拿藥',
+        '吃飯', '吃東西', '喝飲料', '喝咖啡', '買東西', '逛街',
+        '剪髮', '剪頭髮', '美髮', '健身房', '洗衣', '自助洗衣',
+        '去哪', '附近有', '周邊', '學校附近', '宿舍附近',
     ]
     en_keywords = [
         'restaurant', 'cafe', 'coffee shop', 'shop', 'store', 'mall',
@@ -1422,7 +1619,7 @@ def _geocode_location(place_name, api_key):
 
 
 def _format_place(place):
-    """把 Places API 單筆結果格式化成一行文字。"""
+    """把 Places API 單筆結果格式化成 Markdown 行。"""
     name = place.get('name', '')
     address = place.get('formatted_address', '') or place.get('vicinity', '')
     rating = place.get('rating', '')
@@ -1430,12 +1627,12 @@ def _format_place(place):
     maps_url = f'https://www.google.com/maps/place/?q=place_id:{place_id}' if place_id else ''
 
     line = f'- {name}'
-    if address:
+    if address and maps_url:
+        line += f'，地址：[{address}]({maps_url})'
+    elif address:
         line += f'，地址：{address}'
     if rating:
         line += f'，評分：{rating}/5'
-    if maps_url:
-        line += f'，地圖：{maps_url}'
     return line
 
 
@@ -1706,7 +1903,7 @@ def build_attachment_input_content(attachments):
     return content_blocks, '\n'.join(summary_lines)
 
 
-def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", attachments=None):
+def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", attachments=None, role="", personality=""):
     """產生 AI 回覆。helper 使用兩段格式；friend 使用自然聊天格式。"""
 
     attachments = attachments or []
@@ -1852,15 +2049,15 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 以下是學生基本資料，僅供你理解背景，不要生硬列出：
 {profile_context}
 
-{'以下是 Google 地圖搜尋結果，學生問到地點時請參考並自然帶入回答。介紹每個地點時，地址部分請用 Markdown 連結格式輸出，格式為 [地址文字](地圖連結)，讓使用者點擊後可直接開啟 Google 地圖：' + chr(10) + place_results if place_results else ''}
+{'【地點查詢】學生詢問附近地點，系統已根據學生所在學校搜尋到真實地點，地點列表會自動附在你的回覆後面。你只需要用 1 句話自然回應（例如「幫你找到幾個不錯的選擇！」），不要自己列出地名或地址，也不要編造或推薦任何沒在列表裡的地方。' if place_results else ''}
 
-以下是最近對話紀錄：
+以下是最近對話紀錄（請根據這些內容自然銜接，不要當作第一次對話）：
 {history_text}
 
 學生最新想聊的內容：
 {question}{attachment_note}
 
-請用 ReadyTo AI 聊天好朋友的身份回答。
+請用 ReadyTo 聊天好朋友的身份回答。
 
 你的核心角色：
 你不是行政流程機器人，而是像一位真誠、會聽人說話、有情緒反應的朋友。
@@ -1923,8 +2120,10 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 訊息長度規則：
 系統會自動在每個句號、問號、驚嘆號後面切成一則獨立訊息傳出去。
 所以你只要自然寫就好，不需要自己加空行或分段。
-回答幾句就傳幾則，長話短說，不要在一個句子裡塞太多意思。
-最多寫 3 句，除非是自傷或危機狀況需要完整說明。
+每次回答最多寫 2 句，以下情況例外：
+- 自傷或危機狀況：完整給出求助方式，不限長度。
+- 提供地點搜尋結果：直接列出地點名稱和地址連結，列幾個就寫幾個。
+一個句子只說一件事，不要塞多個意思進去。
 
 個人化使用方式：
 1. 可以讀取學生基本資料做基本判斷。
@@ -1998,7 +2197,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
         response = client.responses.create(
             model=model,
-            instructions=build_system_instructions(language_code, language_source, ai_mode),
+            instructions=build_system_instructions(language_code, language_source, ai_mode, role=role, personality=personality),
             input=api_input,
         )
 
@@ -2036,6 +2235,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
         return {
             'reply': reply,
+            'place_results_text': place_results,
             'source': 'openai',
             'model': model,
         }

@@ -23,14 +23,14 @@
           <button class="ai-mode-card {% if current_ai_mode != 'friend' %}active{% endif %}" data-mode="helper"
             type="button">
             <div class="bot-avatar bot-avatar-dark">🤖</div>
-            <h2>{% trans "ReadyTo AI 小幫手" %}</h2>
+            <h2>{% trans "ReadyTo 任務小幫手" %}</h2>
             <!--<p>{% trans "我是協助管理來臺任務、查詢疑問、提供建議的小幫手。" %}</p>-->
           </button>
 
           <button class="ai-mode-card {% if current_ai_mode == 'friend' %}active{% endif %}" data-mode="friend"
             type="button">
             <div class="bot-avatar bot-avatar-light">🤖</div>
-            <h2>{% trans "ReadyTo AI 聊天好朋友" %}</h2>
+            <h2>{% trans "ReadyTo 聊天好朋友" %}</h2>
             <!--<p>{% trans "我是陪你聊天協助、處理生活適應與心理壓力的好朋友。" %}</p>-->
           </button>
 
@@ -89,17 +89,17 @@
         {% for message in messages %}
         <div class="message-row {{ message.role }}">
           <div
-            class="message-avatar {% if message.role != 'user' %}js-ai-avatar {{ current_ai_mode|default:'helper' }}{% endif %}">
-            {% if message.role == 'user' %}🧑{% else %}🤖{% endif %}
+            class="message-avatar {% if message.role == 'user' %}user-initial{% else %}js-ai-avatar {{ current_ai_mode|default:'helper' }}{% endif %}">
+            {% if message.role == 'user' %}{{ user.name|slice:":2"|default:"我" }}{% else %}🤖{% endif %}
           </div>
 
           <div class="message-bubble">
             {% if message.role != 'user' %}
             <div class="message-name js-ai-name">
               {% if current_ai_mode == "friend" %}
-              {% trans "ReadyTo AI 聊天好朋友" %}
+              {% trans "ReadyTo 聊天好朋友" %}
               {% else %}
-              {% trans "ReadyTo AI 小幫手" %}
+              {% trans "ReadyTo 任務小幫手" %}
               {% endif %}
             </div>
             {% endif %}
@@ -132,9 +132,9 @@
           <div class="message-bubble">
             <div class="message-name js-ai-name">
               {% if current_ai_mode == "friend" %}
-              {% trans "ReadyTo AI 聊天好朋友" %}
+              {% trans "ReadyTo 聊天好朋友" %}
               {% else %}
-              {% trans "ReadyTo AI 小幫手" %}
+              {% trans "ReadyTo 任務小幫手" %}
               {% endif %}
             </div>
             <div class="message-content">
@@ -164,8 +164,30 @@
             <button type="button" data-upload-type="camera">📷 {% trans "拍照" %}</button>
           </div>
 
-          <textarea id="chatInput" rows="2" maxlength="1200"
-            placeholder="{% if current_ai_mode == 'friend' %}{% trans '例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？' %}{% else %}{% trans '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？' %}{% endif %}"></textarea>
+          <div class="textarea-wrapper">
+            <textarea id="chatInput" rows="2" maxlength="1200"
+              placeholder="{% if current_ai_mode == 'friend' %}{% trans '例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？' %}{% else %}{% trans '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？' %}{% endif %}"></textarea>
+
+          <div id="roleSelector" class="role-selector">
+            <button id="roleSelectorBtn" type="button" class="role-selector-btn" aria-haspopup="true" aria-expanded="false">
+              <span id="roleSelectorLabel">{% trans "角色" %}</span>
+              <svg class="role-chevron" viewBox="0 0 10 6" width="10" height="6" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M1 1l4 4 4-4"/>
+              </svg>
+            </button>
+
+            <div id="roleMenu" class="role-menu">
+              <div class="role-list-panel">
+              <div id="roleSubmenu" class="role-submenu"></div>
+                <div class="role-item" data-role="朋友">
+                  <span class="role-item-label" id="friendRoleLabel">ReadyTo 聊天好朋友</span>
+                  <button type="button" class="role-item-rename-btn">{% trans "重新命名" %}</button>
+                  <span class="role-item-arrow">›</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
 
           <button id="micBtn" class="mic-btn" type="button" aria-label="{% trans '語音輸入' %}">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
@@ -192,8 +214,8 @@
 
 {% block extra_js %}
 {% trans "我" as txt_me %}
-{% trans "ReadyTo AI 小幫手" as txt_assistant_name %}
-{% trans "ReadyTo AI 聊天好朋友" as txt_friend_name %}
+{% trans "ReadyTo 任務小幫手" as txt_assistant_name %}
+{% trans "ReadyTo 聊天好朋友" as txt_friend_name %}
 {% trans "已上傳附件" as txt_uploaded_attachment %}
 {% trans "找不到 message API" as txt_missing_message_api %}
 {% trans "送出失敗，請稍後再試。" as txt_send_failed %}
@@ -210,10 +232,25 @@
 {% trans "取消釘選" as txt_unpin %}
 {% trans "重新命名" as txt_rename %}
 {% trans "刪除" as txt_delete %}
+{% trans "角色" as txt_role %}
+{% trans "小老師" as txt_role_tutor %}
+{% trans "朋友" as txt_role_friend %}
+{% trans "學長姐" as txt_role_senior %}
+{% trans "好朋友" as txt_p_best_friend %}
+{% trans "課業輔助" as txt_p_academic %}
+{% trans "生活指導" as txt_p_life %}
+{% trans "瘋玩" as txt_p_fun %}
+{% trans "安靜陪伴" as txt_p_quiet %}
+{% trans "沉穩可靠" as txt_p_calm %}
+{% trans "火爆脾氣" as txt_p_hot %}
+{% trans "語音輸入" as txt_voice_input %}
+{% trans "重新命名：" as txt_rename_role %}
+{% trans "重新命名性格：" as txt_rename_personality %}
 
 <script>
   window.CHATBOT_I18N = {
     me: "{{ txt_me|escapejs }}",
+    userInitial: "{{ user.name|slice:':2'|default:'我'|escapejs }}",
     assistantName: "{{ txt_assistant_name|escapejs }}",
     friendName: "{{ txt_friend_name|escapejs }}",
     uploadedAttachment: "{{ txt_uploaded_attachment|escapejs }}",
@@ -231,7 +268,21 @@
     pin: "{{ txt_pin|escapejs }}",
     unpin: "{{ txt_unpin|escapejs }}",
     rename: "{{ txt_rename|escapejs }}",
-    delete: "{{ txt_delete|escapejs }}"
+    delete: "{{ txt_delete|escapejs }}",
+    role: "{{ txt_role|escapejs }}",
+    roleTutor: "{{ txt_role_tutor|escapejs }}",
+    roleFriend: "ReadyTo 聊天好朋友",
+    roleSenior: "{{ txt_role_senior|escapejs }}",
+    pBestFriend: "{{ txt_p_best_friend|escapejs }}",
+    pAcademic: "{{ txt_p_academic|escapejs }}",
+    pLife: "{{ txt_p_life|escapejs }}",
+    pFun: "{{ txt_p_fun|escapejs }}",
+    pQuiet: "{{ txt_p_quiet|escapejs }}",
+    pCalm: "{{ txt_p_calm|escapejs }}",
+    pHot: "{{ txt_p_hot|escapejs }}",
+    voiceInput: "{{ txt_voice_input|escapejs }}",
+    renameRole: "{{ txt_rename_role|escapejs }}",
+    renamePersonality: "{{ txt_rename_personality|escapejs }}"
   };
 
   window.CHATBOT_ENDPOINTS = {
