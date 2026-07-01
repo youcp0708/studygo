@@ -161,7 +161,12 @@
         <span class="nav-user-avatar">{% if user.name %}{{ user.name|first|upper }}{% else %}U{% endif %}</span>
         {% if user.name %}{{ user.name }}{% else %}{{ user.email }}{% endif %}
       </a>
-      <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;">{% trans "登出" %}</a>
+
+      {% trans "確定要登出嗎？登出後將返回登入頁面。" as logout_confirm %}
+      <a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;"
+        onclick="return confirm('{{ logout_confirm }}')">
+        {% trans "登出" %}
+      </a>
       {% else %}
       <a href="{% url 'login_page' %}" class="nav-start-btn">{% trans "開始流程" %} →</a>
       {% endif %}
@@ -172,6 +177,64 @@
   {# ── Page Content ── #}
   {% block content %}{% endblock %}
 
+
+  <footer class="site-footer">
+    <div class="sf-inner">
+
+      <div class="sf-main">
+        <div class="sf-brand-block">
+          <div class="sf-brand-row">
+            <img src="{% static 'image/ReadyToTaiwan_logo_2.png' %}" alt="ReadyTo Taiwan" class="sf-brand-logo">
+            <span class="sf-brand-name">ReadyTo Taiwan</span>
+          </div>
+          <p class="sf-brand-desc">
+            {% trans "專為僑外籍生打造的來台留學流程指南平台，協助學生一步步完成留學準備與抵台後事項。" %}
+          </p>
+        </div>
+
+        <div class="sf-col">
+          <div class="sf-col-title">{% trans "留學流程" %}</div>
+          <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "申請前準備" %}</a>
+          <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "入學申請" %}</a>
+          <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "抵台前準備" %}</a>
+          <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "抵達後事項" %}</a>
+        </div>
+
+        <div cass="sf-col">
+          <div class="sf-col-title">{% trans "資訊中心" %}</div>
+          <a href="{% url 'guide_arc_foreign' %}" class="sf-link">{% trans "簽證指南" %}</a>
+          <a href="{% url 'guide_housing_ncu' %}" class="sf-link">{% trans "住宿資訊" %}</a>
+          <a href="{% url 'guide_nhi' %}" class="sf-link">{% trans "健保說明" %}</a>
+          <a href="{% url 'guide_index' %}" class="sf-link">{% trans "生活指南" %}</a>
+        </div>
+
+        <div class="sf-col">
+          <div class="sf-col-title">{% trans "支援服務" %}</div>
+          <a href="{% url 'index' %}#sec-faq" class="sf-link">{% trans "使用說明" %}</a>
+          <a href="{% url 'index' %}#sec-faq" class="sf-link">{% trans "常見問題" %}</a>
+          <a href="{% url 'my_flows' %}" class="sf-link">{% trans "任務清單" %}</a>
+          <a href="{% url 'chatbot:page' %}" class="sf-link">{% trans "AI 小幫手" %}</a>
+        </div>
+      </div>
+
+      <div class="sf-bottom">
+        <div class="sf-contact-line">
+          <span>{% trans "聯絡我們" %}</span>
+          <a href="mailto:readytotaiwan@gmail.com" class="sf-contact-email">
+            <span class="material-symbols-outlined sf-footer-icon">mail</span>
+            readytotaiwan@gmail.com
+          </a>
+        </div>
+
+        <div class="sf-bottom-actions">
+          <a href="{% url 'index' %}#sec-faq" class="sf-text-link">{% trans "意見回饋" %}</a>
+          <span class="sf-divider">|</span>
+          <span class="sf-copy">© ReadyTo Taiwan 2026. All rights reserved.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
   {# ── Scripts ── #}
   <script src="{% static 'users/js/users.js' %}?v={% now 'U' %}"></script>
   {% if user.is_authenticated %}
@@ -183,64 +246,6 @@
   </script>
 
   {% block extra_js %}{% endblock %}
-
-  {# ── Footer ── #}
-  <footer class="site-footer">
-    <div class="sf-top">
-      <p class="sf-tagline">{% trans "專為僑外籍生打造的來台留學流程指南平台，協助您一步步完成留學準備" %}</p>
-    </div>
-    <div class="sf-cols">
-      <div class="sf-col">
-        <div class="sf-col-title">{% trans "留學流程" %}</div>
-        <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "申請前準備" %}</a>
-        <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "入學申請" %}</a>
-        <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "抵台前準備" %}</a>
-        <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "抵達後事項" %}</a>
-      </div>
-      <div class="sf-col">
-        <div class="sf-col-title">{% trans "資訊中心" %}</div>
-        <a href="{% url 'guide_arc_foreign' %}" class="sf-link">{% trans "簽證指南" %}</a>
-        <a href="{% url 'guide_housing_ncu' %}" class="sf-link">{% trans "住宿資訊" %}</a>
-        <a href="{% url 'guide_nhi' %}" class="sf-link">{% trans "健保說明" %}</a>
-        <a href="{% url 'guide_index' %}" class="sf-link">{% trans "生活指南" %}</a>
-      </div>
-      <div class="sf-col">
-        <div class="sf-col-title">{% trans "關於 ReadyTo Taiwan" %}</div>
-        <a href="{% url 'index' %}#sec-faq" class="sf-link">{% trans "使用說明" %}</a>
-        <a href="{% url 'index' %}#sec-faq" class="sf-link">{% trans "常見問題" %}</a>
-        <a href="#" class="sf-link">{% trans "版本更新" %}</a>
-        <a href="#" class="sf-link">{% trans "意見回饋" %}</a>
-      </div>
-      <div class="sf-col">
-        <div class="sf-col-title">{% trans "電子報訂閱" %}</div>
-        <p class="sf-sub-desc">{% trans "獲取最新留學資訊與活動通知" %}</p>
-        <div class="sf-email-wrap">
-          <input type="email" class="sf-email-input" placeholder="{% trans '您的 Email' %}">
-          <button class="sf-email-btn">→</button>
-        </div>
-      </div>
-    </div>
-    <div class="sf-bottom">
-      <div class="sf-bottom-left">
-        <div class="sf-bottom-logo">
-          <img src="{% static 'image/ReadyToTaiwan_logo_2.png' %}" alt="ReadyTo Taiwan" style="width:32px;height:32px;border-radius:8px;">
-          <span>ReadyTo Taiwan</span>
-        </div>
-        <div class="sf-contact">
-          <span>{% trans "聯絡資訊" %}</span>
-          <span style="font-weight:700;">{% trans "如有任何使用問題或建議，歡迎隨時與我們聯繫" %}</span>
-          <span>✉ readytotaiwan@gmail.com</span>
-        </div>
-      </div>
-      <div class="sf-bottom-right">
-        <span class="sf-social">📷</span>
-        <span class="sf-social">📘</span>
-        <span class="sf-social">💬</span>
-        <span class="sf-social">✉</span>
-        <div style="margin-top:8px;font-size:12px;color:#888;">© ReadyTo Taiwan 2026. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
 </body>
 
 </html>
