@@ -1,47 +1,41 @@
-name: Keep Alive
+name: Keep Alive (Supabase DB)
 
-# 用途：定期 ping 網站首頁，避免 Render / Zeabur 等免費方案因閒置而休眠。
-# 設定：到 GitHub repo → Settings → Secrets and variables → Actions → Variables
-#       新增一個 Repository variable：
-#         名稱 = SITE_URL
-#         值   = https://你的網域（例如 https://readytotaiwan.onrender.com）
+# 用途：每天對 Supabase 資料庫下一次輕量查詢，避免免費專案因閒置（約 7 天）被自動暫停。
+#
+# 設定：到 GitHub repo → Settings → Secrets and variables → Actions → Secrets 分頁
+#       新增一個 Repository secret：
+#         名稱 = SUPABASE_DB_URL
+#         值   = postgresql://使用者:密碼@主機:5432/postgres?sslmode=require
+#       （用 Secret 而非 Variable，因為連線字串含密碼；請填「輪替後」的新密碼）
 
 on:
   schedule:
-    # 每 10 分鐘執行一次。Render 免費方案閒置 15 分鐘才休眠，10 分鐘留有緩衝。
+    # 每天 UTC 03:00（＝台灣時間 11:00）執行一次。Supabase 約 7 天無活動才暫停，每天跑綽綽有餘。
     # 注意：GitHub 的排程在尖峰時可能延遲數分鐘，屬正常現象。
-    - cron: "*/10 * * * *"
+    - cron: "0 3 * * *"
   workflow_dispatch: {}   # 允許在 Actions 頁面手動觸發（測試用）
 
-# 避免上一次還沒跑完又被觸發時互相堆疊
 concurrency:
-  group: keep-alive
+  group: keep-alive-db
   cancel-in-progress: true
 
 jobs:
-  ping:
+  ping-db:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Ping site
+      - name: Run lightweight query
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
         run: |
-          if [ -z "${{ vars.SITE_URL }}" ]; then
-            echo "::error::尚未設定 Repository variable「SITE_URL」，請到 Settings → Secrets and variables → Actions → Variables 新增。"
+          if [ -z "$SUPABASE_DB_URL" ]; then
+            echo "::error::尚未設定 Repository secret「SUPABASE_DB_URL」，請到 Settings → Secrets and variables → Actions → Secrets 新增。"
             exit 1
           fi
 
-          echo "Pinging ${{ vars.SITE_URL }} ..."
+          # ubuntu-latest 內建 psql，不需額外安裝。
+          # 只做一個唯讀的計數查詢，不讀取、不修改任何使用者資料內容。
+          echo "Pinging Supabase database ..."
+          psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 -c "SELECT count(*) FROM users_customuser;"
 
-          # --retry：喚醒冷啟動時第一次可能超時，最多重試 5 次、每次間隔遞增
-          # --fail：HTTP 4xx/5xx 視為失敗
-          # -sS：安靜但仍顯示錯誤訊息
-          http_code=$(curl -sS --fail \
-            --retry 5 --retry-delay 15 --retry-all-errors \
-            --connect-timeout 30 --max-time 90 \
-            -o /dev/null -w "%{http_code}" \
-            "${{ vars.SITE_URL }}") || {
-              echo "::error::Ping 失敗，網站可能未正常運作。"
-              exit 1
-            }
-
-          echo "OK — HTTP $http_code"
+          echo "OK — 資料庫已保持活躍。"
