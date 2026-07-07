@@ -33,6 +33,9 @@ jobs:
             exit 1
           fi
 
+          # 去除貼上時可能夾帶的前後空白/換行（例如 sslmode=require\n 會導致 psql 解析失敗）
+          SUPABASE_DB_URL=$(printf '%s' "$SUPABASE_DB_URL" | tr -d '\r\n' | xargs)
+
           # ubuntu-latest 內建 psql，不需額外安裝。
           # 只做一個唯讀的計數查詢，不讀取、不修改任何使用者資料內容。
           echo "Pinging Supabase database ..."
