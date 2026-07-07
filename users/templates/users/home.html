@@ -183,32 +183,45 @@
           <span class="db-tag green">{{ profile.get_university_display|default:profile.university }}</span>
           {% endif %}
         </div>
-        <div class="db-prof-progress">
-          <div class="db-prof-prog-row">
-            <span>{% trans "目前進度" %}</span>
-            <span id="dbProfPct" style="color:var(--primary);font-weight:800;">—%</span>
+        <div style="margin-top:18px;padding:14px;background:var(--bg);border-radius:14px;text-align:left;">
+          <div class="preview-row">
+            <span>{% trans "系所" %}</span>
+            <span>
+              {% if profile %}
+                {{ profile.department|default:"—" }}
+              {% else %}
+                —
+              {% endif %}
+            </span>
           </div>
-          <div class="db-stat-bar" style="margin-top:6px;">
-            <div class="db-stat-bar-fill" id="dbProfBar" style="width:0%;background:var(--primary);"></div>
+
+          <div class="preview-row">
+            <span>{% trans "預計抵台" %}</span>
+            <span>
+              {% if profile and profile.expected_arrival %}
+                {{ profile.expected_arrival }}
+              {% else %}
+                —
+              {% endif %}
+            </span>
           </div>
-          <div class="db-prof-sub" id="dbProfSub">{% trans "載入中..." %}</div>
-        </div>
-        <div class="db-prof-counters">
-          <div>
-            <div class="db-counter-val" id="dbPendingCount">—</div>
-            <div class="db-counter-label">{% trans "待辦任務" %}</div>
-          </div>
-          <div class="db-counter-divider"></div>
-          <div>
-            <div class="db-counter-val" id="dbDueCount">—</div>
-            <div class="db-counter-label">{% trans "即將到期" %}</div>
+
+          <div class="preview-row">
+            <span>{% trans "帳號建立" %}</span>
+            <span>
+              {% if user.date_joined %}
+                {{ user.date_joined|date:"Y-m-d" }}
+              {% else %}
+                —
+              {% endif %}
+            </span>
           </div>
         </div>
       </div>
 
       <div class="db-task-panel">
-        <div class="db-task-panel-hd">⚡ {% trans "近期待辦任務" %}</div>
-        <div id="dashRecentTasks" data-no-tasks="🎉 {% trans '太棒了！您目前沒有待辦任務。' %}" class="db-task-list">
+        <div class="db-task-panel-hd">📌 {% trans "近期待辦任務" %}</div>
+        <div id="dashRecentTasks" data-no-tasks="{% trans '太棒了！您目前沒有待辦任務。' %}" class="db-task-list">
           <div style="text-align:center;padding:32px 0;color:var(--muted);">
             <div class="spinner" style="border-color:var(--primary) transparent var(--primary) transparent;"></div>
             <div style="margin-top:12px;">{% trans "載入任務中..." %}</div>

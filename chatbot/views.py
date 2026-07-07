@@ -100,9 +100,9 @@ def split_friend_reply(reply):
     if len(parts) <= 1:
         return [reply]
 
-    # 最多 3 則，超過就把剩餘合併進最後一則
-    if len(parts) > 3:
-        parts = parts[:2] + [''.join(parts[2:])]
+    # 最多 2 則，超過就把剩餘合併進最後一則
+    if len(parts) > 2:
+        parts = parts[:1] + [''.join(parts[1:])]
 
     return parts
 
@@ -116,6 +116,8 @@ def chat_message_api(request):
 
     ai_mode = normalize_ai_mode(request.data.get("ai_mode", "helper"))
     session_id = request.data.get('session_id')
+    role = (request.data.get('role') or '').strip()
+    personality = (request.data.get('personality') or '').strip()
 
     attachments = request.FILES.getlist('attachments')
     attachment_types = request.data.getlist('attachment_types')
@@ -196,6 +198,8 @@ def chat_message_api(request):
         recent_messages=recent_messages,
         ai_mode=ai_mode,
         attachments=created_attachments,
+        role=role,
+        personality=personality,
     )
 
     print("[DEBUG] ai_result source:", ai_result.get("source"))
@@ -204,6 +208,10 @@ def chat_message_api(request):
 
     if ai_mode == "friend":
         reply_parts = split_friend_reply(ai_result['reply'])
+        # 如果有真實地點搜尋結果，直接附加為獨立訊息，不依賴 AI 輸出
+        place_text = ai_result.get('place_results_text')
+        if place_text:
+            reply_parts.append(place_text)
     else:
         reply_parts = [ai_result['reply']]
 

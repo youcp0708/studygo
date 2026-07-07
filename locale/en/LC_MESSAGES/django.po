@@ -3229,9 +3229,6 @@ msgstr ""
 "of your target school and department. Graduate students transferring "
 "between programs must follow individual department regulations."
 
-
-
-
 msgid "中央大學 × 公共交通"
 msgstr "National Central University × Public Transport"
 
@@ -3859,7 +3856,6 @@ msgstr "NCU Office of International Affairs ↗"
 
 msgid "工作許可證"
 msgstr "Work Permit"
-
 
 msgid "外籍生辦理居留證（ARC）"
 msgstr "ARC Application for Foreign Students"
@@ -6318,10 +6314,50 @@ msgstr "Previous"
 msgid "下一題"
 msgstr "Next"
 
-
 msgid "入境前準備"
 msgstr "Pre-arrival Preparation"
 
 msgid "已抵臺就學"
 msgstr "Arrived in Taiwan"
 
+msgid "角色"
+msgstr "Role"
+
+msgid "小老師"
+msgstr "Tutor"
+
+msgid "朋友"
+msgstr "Friend"
+
+msgid "學長姐"
+msgstr "Senior Student"
+
+msgid "好朋友"
+msgstr "Best Friend"
+
+msgid "課業輔助"
+msgstr "Academic Support"
+
+msgid "生活指導"
+msgstr "Life Guidance"
+
+msgid "瘋玩"
+msgstr "Playful"
+
+msgid "安靜陪伴"
+msgstr "Quiet Companion"
+
+msgid "沉穩可靠"
+msgstr "Calm & Reliable"
+
+msgid "火爆脾氣"
+msgstr "Hot-tempered"
+
+msgid "語音輸入"
+msgstr "Voice Input"
+
+msgid "重新命名："
+msgstr "Rename:"
+
+msgid "重新命名性格："
+msgstr "Rename personality:"

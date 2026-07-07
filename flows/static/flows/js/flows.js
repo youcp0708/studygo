@@ -41,7 +41,7 @@ async function renderDashboardProgress() {
 
       const total = stages.reduce((sum, stage) => sum + (stage.total || 0), 0);
       const completed = stages.reduce((sum, stage) => sum + (stage.completed || 0), 0);
-      const percent = data.data.overall_percent || 0;
+      const percent = Math.round(Number(data.data.overall_percent || 0)); 
 
       const completedText = dashCompletion.getAttribute('data-completed-text') || '已完成';
       const itemsText = dashCompletion.getAttribute('data-items-text') || '項';
@@ -183,6 +183,11 @@ window.switchFlowTab = function (activeIndex) {
   sections.forEach((sec, idx) => {
     if (idx === activeIndex) {
       sec.classList.add('active');
+      const progressText = sec.getAttribute('data-progress');
+      const topProgress = document.getElementById('topProgressText');
+      if (topProgress && progressText) {
+        topProgress.textContent = progressText;
+      }
     } else {
       sec.classList.remove('active');
     }
@@ -382,8 +387,9 @@ async function renderMyTasks() {
     currentActiveTabIndex = 0;
   }
 
-  let tabsHtml = `<div class="flows-tabs">`;
+  let tabsHtml = `<div class="flows-top-row"><div class="flows-tabs">`;
   let contentHtml = ``;
+  let activeProgressText = '';
 
   stages.forEach((stage, index) => {
     const isActive = index === currentActiveTabIndex ? 'active' : '';
@@ -393,13 +399,13 @@ async function renderMyTasks() {
     const total = tasks.length;
     const completed = tasks.filter(t => t.status === 'completed').length;
     const progressText = `${completed} / ${total} ${window.UI_STRINGS.completedProgress}`;
+    if (isActive) {
+      activeProgressText = progressText;
+    }
 
     contentHtml += `
-      <div class="stage-section ${isActive}">
-        <div class="stage-header">
-          <div class="stage-progress">${progressText}</div>
-        </div>
-        <div class="task-list">
+      <div class="stage-section ${isActive}" data-progress="${progressText}">
+      <div class="task-list">
     `;
 
     tasks.forEach(task => {
@@ -510,7 +516,7 @@ async function renderMyTasks() {
     contentHtml += `</div></div>`;
   });
 
-  tabsHtml += `</div>`;
+  tabsHtml += `</div><div class="stage-progress" id="topProgressText" style="white-space: nowrap; font-weight: 700;">${activeProgressText}</div></div>`;
   container.innerHTML = tabsHtml + contentHtml;
 
   const hash = window.location.hash;
@@ -738,21 +744,29 @@ window.markReminderRead = async function (id) {
    初始化
 ════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', async () => {
-  // 當在 Dashboard 或 Flows 頁面時，確保有任務
-  if (document.getElementById('profileDash') || document.getElementById('flowsContainer')) {
+  const hasDashboardWidgets =
+    document.getElementById('dashCompletionRate') ||
+    document.getElementById('dashOverdueCount') ||
+    document.getElementById('dashRecentTasks');
+
+  const hasFlowsPage = document.getElementById('flowsContainer');
+
+  // 首頁、Dashboard、任務頁都先確保任務已初始化
+  if (hasDashboardWidgets || hasFlowsPage) {
     await initUserTasks();
   }
 
-  if (document.getElementById('profileDash')) {
+  // 只要頁面有完成率 / 提醒 / 近期待辦，就更新 Dashboard 資料
+  if (hasDashboardWidgets) {
     await renderDashboardProgress();
   }
 
-  if (document.getElementById('flowsContainer')) {
+  if (hasFlowsPage) {
     await renderMyTasks();
     await renderTips();
   }
 
-  if (document.getElementById('reminderBtn') || document.getElementById('profileDash')) {
+  if (document.getElementById('reminderBtn') || hasDashboardWidgets) {
     await renderReminders();
   }
 });

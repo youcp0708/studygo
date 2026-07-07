@@ -375,6 +375,14 @@ body {
   background: var(--yellow-soft);
 }
 
+.message-avatar.user-initial {
+  background: var(--primary-soft) !important;
+  color: var(--primary-dark) !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0;
+}
+
 .message-avatar {
   flex: 0 0 42px;
   width: 42px;
@@ -543,7 +551,7 @@ body {
 }
 
 .chat-input-box textarea {
-  flex: 1;
+  width: 100%;
 }
 
 .input-footer {
@@ -594,6 +602,41 @@ body {
 
 .attach-toggle-btn:hover {
   background: #f3f6f5;
+}
+
+/* 語音輸入按鈕 */
+.mic-btn {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+.mic-btn:hover {
+  background: #f3f6f5;
+}
+
+.mic-btn.recording {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #000;
+  animation: micPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes micPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, .35);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(220, 38, 38, .12);
+  }
 }
 
 .attach-menu {
@@ -1060,6 +1103,221 @@ html[lang="my"] .bot-profile-card p {
 
 .chat-header {
   display: none !important;
+}
+
+/* ===== 角色選擇器 ===== */
+
+.textarea-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.textarea-wrapper textarea {
+  width: 100%;
+}
+
+.role-selector {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.role-selector-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: color 0.18s, background 0.18s;
+  white-space: nowrap;
+}
+
+.role-selector-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.role-chevron {
+  flex-shrink: 0;
+  transition: transform 0.18s ease;
+}
+
+.role-selector.open .role-chevron {
+  transform: rotate(180deg);
+}
+
+.role-menu {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 10px);
+  right: 0;
+  z-index: 9999;
+}
+
+.role-selector.open .role-menu {
+  display: block;
+}
+
+/* 角色清單（右側面板，作為子選單的定位基準） */
+.role-list-panel {
+  position: relative;
+  min-width: 160px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .16);
+  padding: 6px;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 900;
+  color: #374151;
+  cursor: pointer;
+  text-align: left;
+  gap: 8px;
+}
+
+.role-item:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.role-item.active {
+  color: var(--primary-dark);
+}
+
+.role-item-arrow {
+  color: #9ca3af;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.role-item-rename-btn {
+  flex: 0 0 auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #9ca3af;
+  line-height: 1;
+}
+
+.role-item-rename-btn:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.role-list-sep {
+  margin: 4px 6px;
+  border-top: 1px solid #f3f4f6;
+}
+
+/* 性格子選單（絕對定位在角色清單左側，不影響角色清單位置） */
+.role-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: calc(100% + 6px);
+  min-width: 160px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .16);
+  padding: 6px;
+}
+
+.role-submenu.visible {
+  display: block;
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+}
+
+.personality-btn {
+  flex: 1;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--personality-color, #94a3b8);
+  background: transparent;
+  color: var(--personality-color, #475569);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+
+.personality-btn:hover,
+.personality-btn.selected {
+  background: var(--personality-color, #94a3b8);
+  color: #fff;
+}
+
+/* 重新命名按鈕（朋友性格專用） */
+.personality-rename-btn {
+  flex: 0 0 auto;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 11px;
+  padding: 2px 5px;
+  cursor: pointer;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.personality-rename-btn:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* 角色選擇器只在聊天好朋友模式顯示 */
+.chatbot-page:not(.ai-mode-friend) .role-selector {
+  display: none !important;
+}
+
+/* 性格標籤 */
+.personality-btn {
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--personality-color, #94a3b8);
+  background: transparent;
+  color: var(--personality-color, #475569);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.personality-btn:hover {
+  background: var(--personality-color, #94a3b8);
+  color: #fff;
+}
+
+.personality-btn.selected {
+  background: var(--personality-color, #94a3b8);
+  color: #fff;
 }
 
 /* ===== 回到底部按鈕 ===== */
