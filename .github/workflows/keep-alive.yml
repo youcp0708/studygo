@@ -1,0 +1,47 @@
+name: Keep Alive
+
+# 用途：定期 ping 網站首頁，避免 Render / Zeabur 等免費方案因閒置而休眠。
+# 設定：到 GitHub repo → Settings → Secrets and variables → Actions → Variables
+#       新增一個 Repository variable：
+#         名稱 = SITE_URL
+#         值   = https://你的網域（例如 https://readytotaiwan.onrender.com）
+
+on:
+  schedule:
+    # 每 10 分鐘執行一次。Render 免費方案閒置 15 分鐘才休眠，10 分鐘留有緩衝。
+    # 注意：GitHub 的排程在尖峰時可能延遲數分鐘，屬正常現象。
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}   # 允許在 Actions 頁面手動觸發（測試用）
+
+# 避免上一次還沒跑完又被觸發時互相堆疊
+concurrency:
+  group: keep-alive
+  cancel-in-progress: true
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ping site
+        run: |
+          if [ -z "${{ vars.SITE_URL }}" ]; then
+            echo "::error::尚未設定 Repository variable「SITE_URL」，請到 Settings → Secrets and variables → Actions → Variables 新增。"
+            exit 1
+          fi
+
+          echo "Pinging ${{ vars.SITE_URL }} ..."
+
+          # --retry：喚醒冷啟動時第一次可能超時，最多重試 5 次、每次間隔遞增
+          # --fail：HTTP 4xx/5xx 視為失敗
+          # -sS：安靜但仍顯示錯誤訊息
+          http_code=$(curl -sS --fail \
+            --retry 5 --retry-delay 15 --retry-all-errors \
+            --connect-timeout 30 --max-time 90 \
+            -o /dev/null -w "%{http_code}" \
+            "${{ vars.SITE_URL }}") || {
+              echo "::error::Ping 失敗，網站可能未正常運作。"
+              exit 1
+            }
+
+          echo "OK — HTTP $http_code"
