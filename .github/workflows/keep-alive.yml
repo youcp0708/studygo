@@ -1,0 +1,44 @@
+name: Keep Alive (Supabase DB)
+
+# 用途：每天對 Supabase 資料庫下一次輕量查詢，避免免費專案因閒置（約 7 天）被自動暫停。
+#
+# 設定：到 GitHub repo → Settings → Secrets and variables → Actions → Secrets 分頁
+#       新增一個 Repository secret：
+#         名稱 = SUPABASE_DB_URL
+#         值   = postgresql://使用者:密碼@主機:5432/postgres?sslmode=require
+#       （用 Secret 而非 Variable，因為連線字串含密碼；請填「輪替後」的新密碼）
+
+on:
+  schedule:
+    # 每天 UTC 03:00（＝台灣時間 11:00）執行一次。Supabase 約 7 天無活動才暫停，每天跑綽綽有餘。
+    # 注意：GitHub 的排程在尖峰時可能延遲數分鐘，屬正常現象。
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}   # 允許在 Actions 頁面手動觸發（測試用）
+
+concurrency:
+  group: keep-alive-db
+  cancel-in-progress: true
+
+jobs:
+  ping-db:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Run lightweight query
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          if [ -z "$SUPABASE_DB_URL" ]; then
+            echo "::error::尚未設定 Repository secret「SUPABASE_DB_URL」，請到 Settings → Secrets and variables → Actions → Secrets 新增。"
+            exit 1
+          fi
+
+          # 去除貼上時可能夾帶的前後空白/換行（例如 sslmode=require\n 會導致 psql 解析失敗）
+          SUPABASE_DB_URL=$(printf '%s' "$SUPABASE_DB_URL" | tr -d '\r\n' | xargs)
+
+          # ubuntu-latest 內建 psql，不需額外安裝。
+          # 只做一個唯讀的計數查詢，不讀取、不修改任何使用者資料內容。
+          echo "Pinging Supabase database ..."
+          psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 -c "SELECT count(*) FROM users_customuser;"
+
+          echo "OK — 資料庫已保持活躍。"
