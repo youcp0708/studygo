@@ -11,12 +11,12 @@
   <title>{% block title %}ReadyTo Taiwan{% endblock %}</title>
   <link rel="icon" type="image/png" href="{% static '/image/image-removebg-preview.png' %}">
 
-  <link rel="stylesheet" href="{% static 'users/css/users.css' %}?v={% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'users/css/users.css' %}?v=19" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   {% block extra_css %}{% endblock %}
 </head>
 
-<body>
+<body class="{% block body_class %}{% endblock %}">
 
   {# ── Toast Container ── #}
   <div class="toast-container" id="toastContainer"></div>
@@ -46,32 +46,40 @@
   {# ── NavBar ── #}
   <nav class="navbar site-header">
     <a href="{% url 'index' %}" class="brand" style="text-decoration:none;">
-      <img src="{% static 'image/ReadyToTaiwan_logo_2.png' %}?v={% now 'U' %}" alt="ReadyTo Taiwan Logo" class="brand-icon">
+      <img src="{% static 'image/ReadyToTaiwan_logo_2.png' %}?v=1" alt="ReadyTo Taiwan Logo" class="brand-icon">
       <div class="brand-text">
         <h1>ReadyTo <span style="font-weight:400;font-size:13px;color:var(--muted);">Taiwan</span></h1>
       </div>
     </a>
 
-    {# ── 中間導覽列 ── #}
+    {# ── 手機版漢堡選單按鈕（≤900px 顯示，見 users.css 底部 media query）── #}
+    <button type="button" class="nav-hamburger" id="navHamburger" aria-label="Menu"
+      onclick="document.querySelector('.site-nav').classList.toggle('open'); this.classList.toggle('active');">
+      <span></span><span></span><span></span>
+    </button>
+
+    {# ── 中間導覽列（登入後才顯示）── #}
     {% block site_nav %}
     <div class="site-nav">
-      <a href="{% url 'index' %}" class="site-nav-link">{% trans "首頁" %}</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'index' %}" class="site-nav-link{% if request.path == '/' %} active{% endif %}">{% trans "首頁" %}</a>
       <span class="site-nav-dot">◈</span>
-      {% if user.is_authenticated and user.student_profile %}
-      <a href="{% url 'dashboard' %}" class="site-nav-link">{% trans "儀表板" %}</a>
+      {% if user.student_profile %}
+      <a href="{% url 'dashboard' %}" class="site-nav-link{% if request.path == '/dashboard/' %} active{% endif %}">{% trans "儀表板" %}</a>
       <span class="site-nav-dot">◈</span>
       {% endif %}
-      <a href="{% url 'index' %}#sec-flow" class="site-nav-link">{% trans "留學流程" %}</a>
+      <a href="{% url 'my_flows' %}" class="site-nav-link{% if '/flows/' in request.path %} active{% endif %}">{% trans "任務清單" %}</a>
       <span class="site-nav-dot">◈</span>
-      <a href="{% url 'my_flows' %}" class="site-nav-link">{% trans "任務清單" %}</a>
+      <a href="{% url 'guide_index' %}" class="site-nav-link{% if '/guides/' in request.path %} active{% endif %}">{% trans "資訊中心" %}</a>
       <span class="site-nav-dot">◈</span>
-      <a href="{% url 'guide_index' %}" class="site-nav-link">{% trans "資訊中心" %}</a>
-      <span class="site-nav-dot">◈</span>
+      {% if user.student_profile %}
+      <a href="{% url 'alumni' %}?tab=school" class="site-nav-link{% if '/alumni/' in request.path %} active{% endif %}">{% trans "學長姐分享" %}</a>
+      {% else %}
       <a href="{% url 'index' %}#sec-alumni" class="site-nav-link">{% trans "學長姐分享" %}</a>
+      {% endif %}
       <span class="site-nav-dot">◈</span>
-      <a href="{% url 'index' %}#sec-faq" class="site-nav-link">{% trans "常見問題" %}</a>
-      <span class="site-nav-dot">◈</span>
-      <a href="{% url 'chatbot:page' %}" class="site-nav-link">{% trans "詢問AI小幫手" %}</a>
+      <a href="{% url 'faq_page' %}" class="site-nav-link{% if request.path == '/faq/' %} active{% endif %}">{% trans "常見問題" %}</a>
+      {% endif %}
     </div>
     {% endblock site_nav %}
 
@@ -177,6 +185,21 @@
   {# ── Page Content ── #}
   {% block content %}{% endblock %}
 
+  {# ── AI 小幫手浮動小工具：FAB → 緊湊視窗（可全螢幕/最小化/關閉），狀態跨頁保留 ── #}
+  {% block chatbot_fab %}
+  {% if user.is_authenticated and user.student_profile %}
+  <div id="chatWidget" class="chat-widget" data-embed-url="{% url 'chatbot:page' %}">
+    <button type="button" class="chatbot-fab" id="chatFab" aria-label="{% trans '詢問AI小幫手' %}">
+      <span class="chatbot-fab-icon">{% include "_bot_icon.html" %}</span>
+      <span class="chatbot-fab-label">{% trans "詢問AI小幫手" %}</span>
+    </button>
+    <div class="chat-widget-panel" id="chatWidgetPanel" hidden>
+      <iframe id="chatWidgetFrame" class="chat-widget-frame" title="{% trans 'AI 小幫手' %}" src="about:blank"></iframe>
+    </div>
+  </div>
+  {% endif %}
+  {% endblock chatbot_fab %}
+
 
   <footer class="site-footer">
     <div class="sf-inner">
@@ -194,13 +217,11 @@
 
         <div class="sf-col">
           <div class="sf-col-title">{% trans "留學流程" %}</div>
-          <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "申請前準備" %}</a>
-          <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "入學申請" %}</a>
           <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "抵台前準備" %}</a>
           <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "抵達後事項" %}</a>
         </div>
 
-        <div cass="sf-col">
+        <div class="sf-col">
           <div class="sf-col-title">{% trans "資訊中心" %}</div>
           <a href="{% url 'guide_arc_foreign' %}" class="sf-link">{% trans "簽證指南" %}</a>
           <a href="{% url 'guide_housing_ncu' %}" class="sf-link">{% trans "住宿資訊" %}</a>
@@ -210,8 +231,8 @@
 
         <div class="sf-col">
           <div class="sf-col-title">{% trans "支援服務" %}</div>
-          <a href="{% url 'index' %}#sec-faq" class="sf-link">{% trans "使用說明" %}</a>
-          <a href="{% url 'index' %}#sec-faq" class="sf-link">{% trans "常見問題" %}</a>
+          <a href="{% url 'faq_page' %}" class="sf-link">{% trans "使用說明" %}</a>
+          <a href="{% url 'faq_page' %}" class="sf-link">{% trans "常見問題" %}</a>
           <a href="{% url 'my_flows' %}" class="sf-link">{% trans "任務清單" %}</a>
           <a href="{% url 'chatbot:page' %}" class="sf-link">{% trans "AI 小幫手" %}</a>
         </div>
@@ -227,7 +248,7 @@
         </div>
 
         <div class="sf-bottom-actions">
-          <a href="{% url 'index' %}#sec-faq" class="sf-text-link">{% trans "意見回饋" %}</a>
+          <a href="{% url 'faq_page' %}" class="sf-text-link">{% trans "意見回饋" %}</a>
           <span class="sf-divider">|</span>
           <span class="sf-copy">© ReadyTo Taiwan 2026. All rights reserved.</span>
         </div>
@@ -236,13 +257,136 @@
     </div>
   </footer>
   {# ── Scripts ── #}
-  <script src="{% static 'users/js/users.js' %}?v={% now 'U' %}"></script>
+  {# 共用 JS 訊息的多語字典：users.js 的 toast 文字由此取得，不再寫死中文 #}
+  {% trans "帳號建立成功！驗證信已寄出，請至信箱完成驗證" as t_account_created %}
+  {% trans "網路錯誤，請確認連線後再試" as t_network_error %}
+  {% trans "儲存失敗，請稍後再試" as t_save_failed %}
+  {% trans "資料已儲存！個人化流程已生成 🎉" as t_profile_saved %}
+  {% trans "個人資料已更新" as t_profile_updated %}
+  {% trans "密碼已更新，請重新登入" as t_password_updated %}
+  {% trans "帳號已停用，感謝您使用 ReadyTo Taiwan" as t_account_deactivated %}
+  {% trans "Email 驗證成功！請登入您的帳號" as t_email_verified %}
+  {% trans "驗證連結無效或已使用" as t_verify_invalid %}
+  {% trans "驗證連結已過期，請重新申請" as t_verify_expired %}
+  {% trans "請先驗證電子信箱才能繼續" as t_need_verify %}
+  {% trans "Google 登入失敗，未取得憑證" as t_google_failed %}
+  <script>
+    window.I18N_COMMON = {
+      accountCreated: "{{ t_account_created|escapejs }}",
+      networkError: "{{ t_network_error|escapejs }}",
+      saveFailed: "{{ t_save_failed|escapejs }}",
+      profileSaved: "{{ t_profile_saved|escapejs }}",
+      profileUpdated: "{{ t_profile_updated|escapejs }}",
+      passwordUpdated: "{{ t_password_updated|escapejs }}",
+      accountDeactivated: "{{ t_account_deactivated|escapejs }}",
+      emailVerified: "{{ t_email_verified|escapejs }}",
+      verifyInvalid: "{{ t_verify_invalid|escapejs }}",
+      verifyExpired: "{{ t_verify_expired|escapejs }}",
+      needVerify: "{{ t_need_verify|escapejs }}",
+      googleFailed: "{{ t_google_failed|escapejs }}"
+    };
+  </script>
+  <script src="{% static 'users/js/users.js' %}?v=1"></script>
   {% if user.is_authenticated %}
-  <script src="{% static 'flows/js/flows.js' %}?v={% now 'U' %}"></script>
+  <script src="{% static 'flows/js/flows.js' %}?v=1"></script>
   {% endif %}
 
   <script>
     initGuidesSearch('{{ CURRENT_LANGUAGE|default:"zh-hant" }}');
+  </script>
+
+  {# ── AI 浮動小工具控制 ── #}
+  <script>
+    (function () {
+      'use strict';
+      var widget = document.getElementById('chatWidget');
+      if (!widget) return;
+
+      var fab = document.getElementById('chatFab');
+      var panel = document.getElementById('chatWidgetPanel');
+      var frame = document.getElementById('chatWidgetFrame');
+      var embedUrl = widget.dataset.embedUrl || '/chatbot/';
+      var SESSION_KEY = 'chatWidgetSession';   // 最後對話 id（保留對話用）
+      var loaded = false;
+
+      function buildSrc() {
+        var sid = sessionStorage.getItem(SESSION_KEY);
+        var url = embedUrl + '?embed=1';
+        if (sid) url += '&session=' + encodeURIComponent(sid);
+        return url;
+      }
+
+      var STATE_KEY = 'chatWidgetState';  // 'compact' | 'full' | ''（隱藏）
+
+      function ensureLoaded() {
+        // 首次開啟、或曾被關閉（× 清空）→ 依保留的 session 載入
+        if (!loaded || frame.getAttribute('src') === 'about:blank') {
+          frame.src = buildSrc();
+          loaded = true;
+        }
+      }
+
+      // 套用某個狀態到畫面
+      function applyState(state) {
+        panel.classList.remove('compact', 'full');
+        if (state === 'compact' || state === 'full') {
+          ensureLoaded();
+          panel.hidden = false;
+          panel.classList.add(state);
+          widget.classList.add('open');
+          widget.classList.toggle('is-full', state === 'full');
+        } else {
+          panel.hidden = true;
+          widget.classList.remove('open', 'is-full');
+        }
+      }
+
+      // 切換狀態並記住（跨頁保留）
+      function go(state) {
+        if (state) sessionStorage.setItem(STATE_KEY, state);
+        else sessionStorage.removeItem(STATE_KEY);
+        applyState(state);
+      }
+
+      // × 關閉：清空 iframe 與保留的 session → 下次開啟為全新對話
+      function closeAll() {
+        go('');
+        frame.src = 'about:blank';
+        loaded = false;
+        sessionStorage.removeItem(SESSION_KEY);
+      }
+
+      // 點懸浮機器人：關閉中 → 預設開全螢幕；開啟中 → 最小化收合（保留對話）
+      fab.addEventListener('click', function () {
+        go(sessionStorage.getItem(STATE_KEY) ? '' : 'full');
+      });
+
+      // 接收 iframe（聊天頁 embed 模式）傳來的訊息
+      window.addEventListener('message', function (e) {
+        var data = e.data || {};
+        if (!data || typeof data !== 'object') return;
+        var cur = sessionStorage.getItem(STATE_KEY);
+        switch (data.type) {
+          case 'chat:minimize':
+            // − 最小化：全螢幕 → 緊湊；緊湊 → 收合到懸浮鈕
+            go(cur === 'full' ? 'compact' : '');
+            break;
+          case 'chat:maximize':
+            // ⛶ 展開 / 還原：緊湊 ↔ 全螢幕
+            go(cur === 'full' ? 'compact' : 'full');
+            break;
+          case 'chat:close':
+            closeAll();       // × 關閉 → 清除，下次開新對話
+            break;
+          case 'chat:session':
+            if (data.sessionId) sessionStorage.setItem(SESSION_KEY, String(data.sessionId));
+            break;
+        }
+      });
+
+      // 跨頁保留：每次載入頁面時，還原上次的視窗狀態（緊湊 / 全螢幕）
+      applyState(sessionStorage.getItem(STATE_KEY) || '');
+    })();
   </script>
 
   {% block extra_js %}{% endblock %}

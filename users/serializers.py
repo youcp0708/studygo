@@ -3,12 +3,37 @@ users/serializers.py
 DRF Serializers — 負責 request/response 資料驗證與序列化
 """
 
+from django.conf import settings
 from django.contrib.auth import authenticate
 from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 
 from .models import CustomUser, StudentProfile
+
+
+# ══════════════════════════════════════════
+# 身份別一致性檢查（共用）
+# 避免「港澳生選了越南國籍」「外籍生回答有台灣身份證」等矛盾組合，
+# 造成任務分流錯誤（學生看到不屬於自己身份的任務）。
+# ══════════════════════════════════════════
+HK_MACAU_NATIONALITIES = ('Hong Kong', 'Macau')
+
+
+def validate_identity_consistency(identity_type, nationality, has_taiwan_id):
+    """回傳 {欄位: 錯誤訊息} dict，空 dict 表示通過。"""
+    errors = {}
+
+    if identity_type == 'hong_kong_macau':
+        if nationality and nationality not in HK_MACAU_NATIONALITIES:
+            errors['nationality'] = '身份別為「港澳生」時，國籍必須選擇香港或澳門'
+    elif identity_type == 'foreign_student':
+        if nationality in HK_MACAU_NATIONALITIES:
+            errors['nationality'] = '香港 / 澳門居民請選擇「港澳生」身份別'
+        if has_taiwan_id is True:
+            errors['has_taiwan_id'] = '外籍生不會持有台灣身份證，請確認您的身份別是否選擇正確'
+
+    return errors
 
 
 # ══════════════════════════════════════════
@@ -56,7 +81,7 @@ class LoginSerializer(serializers.Serializer):
             raise serializers.ValidationError('電子郵件或密碼錯誤')
         if not user.is_active:
             raise serializers.ValidationError('此帳號已被停用')
-        if not user.email_verified:
+        if getattr(settings, 'REQUIRE_EMAIL_VERIFICATION', False) and not user.email_verified:
             raise serializers.ValidationError('請先至信箱完成 Email 驗證後再登入')
         attrs['user'] = user
         return attrs
@@ -120,6 +145,16 @@ class StudentProfileSerializer(serializers.ModelSerializer):
         if value not in valid:
             raise serializers.ValidationError('無效的學校選項')
         return value
+
+    def validate(self, attrs):
+        errors = validate_identity_consistency(
+            attrs.get('identity_type'),
+            attrs.get('nationality'),
+            attrs.get('has_taiwan_id'),
+        )
+        if errors:
+            raise serializers.ValidationError(errors)
+        return attrs
 
 
 # ══════════════════════════════════════════

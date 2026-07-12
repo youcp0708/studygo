@@ -108,6 +108,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// ── AI 小幫手懸浮按鈕：若上次是「最小化」離開（保留對話），點擊時回到原本畫面；
+//    若上次是「關閉」或從未進入過，就導向全新的空白對話。
+document.addEventListener('DOMContentLoaded', () => {
+  const fab = document.querySelector('.chatbot-fab');
+  if (!fab) return;
+
+  fab.addEventListener('click', function (event) {
+    const minimized = sessionStorage.getItem('chatbot_minimized') === '1';
+    if (!minimized) return; // 保留原本的純網址，開新對話
+
+    event.preventDefault();
+    const mode = sessionStorage.getItem('chatbot_active_mode') || 'helper';
+    const sessionId = sessionStorage.getItem(`chatbot_visit_session_${mode}`);
+    const base = fab.getAttribute('href');
+    const params = new URLSearchParams({ ai_mode: mode });
+    if (sessionId) params.set('session', sessionId);
+    window.location.href = `${base}?${params.toString()}`;
+  });
+});
+
+/** 共用多語訊息（由 base.html 的 I18N_COMMON 注入；缺字典時退回中文） */
+function tCommon(key, fallback) {
+  return (window.I18N_COMMON && window.I18N_COMMON[key]) || fallback;
+}
+
 /** 統一 fetch 封裝（自動帶 CSRF Token 與 JSON headers）*/
 async function apiFetch(url, method = 'GET', body = null) {
   const opts = {
@@ -335,7 +360,7 @@ async function handleRegister(e) {
 
   localStorage.setItem('authToken', data.token);
   localStorage.setItem('pendingVerifyEmail', email);
-  showToast('帳號建立成功！驗證信已寄出，請至信箱完成驗證', 'success');
+  showToast(tCommon('accountCreated', '帳號建立成功！驗證信已寄出，請至信箱完成驗證'), 'success');
   showVerifyEmailPanel(email);
 }
 
@@ -490,8 +515,11 @@ function restoreSetupDraft() {
       expected_arrival: draft.expected_arrival,
     };
     _quizAnswers = draft.quizAnswers || {};
-    _quizSequence = ['quizQ1', 'quizQ2'];
-    _quizStep = draft.quizStep || 0;
+    _quizSequence = _quizSequenceForIdentity(draft.identity_type);
+    if (draft.identity_type === 'foreign_student' && _quizAnswers.has_taiwan_id === undefined) {
+      _quizAnswers.has_taiwan_id = false;
+    }
+    _quizStep = Math.min(draft.quizStep || 0, _quizSequence.length - 1);
     _quizActive = true;
 
     _buildQuizProgress(_quizSequence.length);
@@ -506,6 +534,11 @@ function restoreSetupDraft() {
   // updatePreview() 在還原問答狀態前已先存了一次草稿，這裡用最終狀態覆寫回去
   saveSetupDraft();
   return true;
+}
+
+/** 依身份別決定問答題目：外籍生不問「是否有台灣身份證」 */
+function _quizSequenceForIdentity(identity) {
+  return identity === 'foreign_student' ? ['quizQ2'] : ['quizQ1', 'quizQ2'];
 }
 
 /**
@@ -547,10 +580,10 @@ function startProfileQuiz(e) {
     expected_arrival: arrival,
   };
 
-  _quizSequence = ['quizQ1', 'quizQ2'];
-
+  // 外籍生依定義不會持有台灣身份證：跳過 Q1，答案自動設為「否」
+  _quizSequence = _quizSequenceForIdentity(identity);
   _quizStep = 0;
-  _quizAnswers = {};
+  _quizAnswers = (identity === 'foreign_student') ? { has_taiwan_id: false } : {};
   _quizActive = true;
   saveSetupDraft();
 
@@ -672,7 +705,7 @@ async function submitProfileWithQuiz() {
     ({ ok: apiOk, data } = await apiFetch('/api/users/profile/', 'POST', body));
   } catch (err) {
     closeOverlay();
-    showToast('網路錯誤，請確認連線後再試', 'error');
+    showToast(tCommon('networkError', '網路錯誤，請確認連線後再試'), 'error');
     return;
   }
 
@@ -680,13 +713,13 @@ async function submitProfileWithQuiz() {
     closeOverlay();
     const msg = (data?.errors && Object.keys(data.errors).length > 0)
       ? Object.values(data.errors).flat().join('、')
-      : (data?.message || '儲存失敗，請稍後再試');
+      : (data?.message || tCommon('saveFailed', '儲存失敗，請稍後再試'));
     showToast(msg, 'error');
     return;
   }
 
   clearSetupDraft();
-  showToast('資料已儲存！個人化流程已生成 🎉', 'success');
+  showToast(tCommon('profileSaved', '資料已儲存！個人化流程已生成 🎉'), 'success');
   setTimeout(() => { window.location.href = '/dashboard/'; }, 800);
 }
 
@@ -718,7 +751,7 @@ async function handleEditBasic(e) {
     return;
   }
 
-  showToast('個人資料已更新', 'success');
+  showToast(tCommon('profileUpdated', '個人資料已更新'), 'success');
   setTimeout(() => { window.location.href = '/dashboard/'; }, 800);
 }
 
@@ -754,7 +787,7 @@ async function handleChangePw(e) {
 
   // 更新 Token
   if (data.data?.token) localStorage.setItem('authToken', data.data.token);
-  showToast('密碼已更新，請重新登入', 'success');
+  showToast(tCommon('passwordUpdated', '密碼已更新，請重新登入'), 'success');
   document.getElementById('changePwForm')?.reset();
   setTimeout(handleLogout, 2000);
 }
@@ -799,7 +832,7 @@ async function deleteAccount() {
   const { ok, data } = await apiFetch('/api/users/delete/', 'DELETE');
   if (ok) {
     localStorage.removeItem('authToken');
-    showToast('帳號已停用，感謝您使用 ReadyTo Taiwan', 'info', 2000);
+    showToast(tCommon('accountDeactivated', '帳號已停用，感謝您使用 ReadyTo Taiwan'), 'info', 2000);
     setTimeout(() => { window.location.href = '/login/?deleted=1'; }, 2000);
   } else {
     showToast(data?.message || '刪除失敗', 'error');
@@ -1043,14 +1076,14 @@ async function initApp() {
     if (verified === '1') {
       localStorage.removeItem('pendingVerifyEmail');
       localStorage.removeItem('authToken');
-      showToast('Email 驗證成功！請登入您的帳號', 'success');
+      showToast(tCommon('emailVerified', 'Email 驗證成功！請登入您的帳號'), 'success');
     } else if (verified === 'fail') {
-      showToast('驗證連結無效或已使用', 'error');
+      showToast(tCommon('verifyInvalid', '驗證連結無效或已使用'), 'error');
     } else if (verified === 'expired') {
-      showToast('驗證連結已過期，請重新申請', 'error');
+      showToast(tCommon('verifyExpired', '驗證連結已過期，請重新申請'), 'error');
     }
-    if (params.get('deleted') === '1') showToast('帳號已停用，感謝您使用 ReadyTo Taiwan', 'info', 5000);
-    if (params.get('need_verify') === '1') showToast('請先驗證電子信箱才能繼續', 'error');
+    if (params.get('deleted') === '1') showToast(tCommon('accountDeactivated', '帳號已停用，感謝您使用 ReadyTo Taiwan'), 'info', 5000);
+    if (params.get('need_verify') === '1') showToast(tCommon('needVerify', '請先驗證電子信箱才能繼續'), 'error');
 
     // 若有待驗證狀態（且非剛完成驗證），顯示驗證等待面板
     if (pendingEmail && verified !== '1') {
@@ -1144,7 +1177,7 @@ function initGoogleSignIn() {
 async function handleGoogleLogin(response) {
   const credential = response.credential;
   if (!credential) {
-    showToast('Google 登入失敗，未取得憑證', 'error');
+    showToast(tCommon('googleFailed', 'Google 登入失敗，未取得憑證'), 'error');
     return;
   }
 

@@ -131,8 +131,3 @@
   .fee-table tr:nth-child(even) td { background:#fafafa; }
   .fee-table .row-label { font-weight:800; color:var(--dark); text-align:left; }
 
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }

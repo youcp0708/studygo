@@ -209,7 +209,7 @@ def profile_setup_view(request):
         return error_response('尚未建立學生資料', status_code=404)
 
     # POST: 建立
-    if not user.email_verified:
+    if getattr(settings, 'REQUIRE_EMAIL_VERIFICATION', False) and not user.email_verified:
         return error_response('請先驗證您的電子信箱才能填寫個人資料', status_code=403)
 
     if hasattr(user, 'student_profile'):
@@ -250,6 +250,18 @@ def profile_update_view(request):
     data = serializer.validated_data
     data.pop('university', None)  # 學校與帳號永久綁定，不允許修改
     data.pop('identity_type', None)  # 身份別建立後不允許修改
+
+    # 身份別已鎖定，但國籍 / 問答可改 → 檢查改完後是否與既有身份別矛盾
+    if hasattr(user, 'student_profile'):
+        from .serializers import validate_identity_consistency
+        profile = user.student_profile
+        consistency_errors = validate_identity_consistency(
+            profile.identity_type,
+            data.get('nationality', profile.nationality),
+            data.get('has_taiwan_id', profile.has_taiwan_id),
+        )
+        if consistency_errors:
+            return error_response('資料驗證失敗', consistency_errors)
 
     # 更新 CustomUser.name
     if 'name' in data:

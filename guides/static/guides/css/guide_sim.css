@@ -95,8 +95,3 @@
   .step-title { font-size:15px; font-weight:800; color:var(--dark); margin-bottom:4px; }
   .step-desc  { font-size:14px; color:var(--muted); line-height:1.7; }
 
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }

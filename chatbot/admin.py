@@ -4,7 +4,7 @@ chatbot/admin.py
 """
 
 from django.contrib import admin
-from .models import ChatSession, ChatMessage, ChatAttachment, ChatKnowledge
+from .models import ChatSession, ChatMessage, ChatAttachment, ChatKnowledge, ChatFeedback
 
 
 class ChatAttachmentInline(admin.TabularInline):
@@ -52,10 +52,30 @@ class ChatMessageAdmin(admin.ModelAdmin):
         return False
 
 
+@admin.register(ChatFeedback)
+class ChatFeedbackAdmin(admin.ModelAdmin):
+    """回饋閉環：從 👎 訊息找出知識庫缺口，決定該補哪些內容"""
+    list_display = ('id', 'rating', 'user_email', 'message_snippet', 'created_at')
+    list_filter = ('rating', 'created_at')
+    search_fields = ('message__content', 'message__session__user__email')
+    readonly_fields = ('message', 'rating', 'created_at', 'updated_at')
+
+    def user_email(self, obj):
+        return obj.message.session.user.email
+    user_email.short_description = '學生'
+
+    def message_snippet(self, obj):
+        return obj.message.content[:60]
+    message_snippet.short_description = 'AI 回覆摘要'
+
+    def has_add_permission(self, request):
+        return False
+
+
 @admin.register(ChatKnowledge)
 class ChatKnowledgeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'category', 'is_active', 'updated_at')
-    list_filter = ('category', 'is_active', 'updated_at')
+    list_display = ('id', 'title', 'category', 'discipline', 'source_url', 'last_verified_at', 'is_active', 'updated_at')
+    list_filter = ('category', 'discipline', 'is_active', 'updated_at', 'last_verified_at')
     search_fields = (
         'title', 'title_en', 'title_my', 'title_id', 'title_ms', 'title_th', 'title_ja','title_ko','title_vi',
         'keywords',

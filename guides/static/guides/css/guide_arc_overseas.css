@@ -112,9 +112,3 @@
   .info-card .i-val   { font-size:20px; font-weight:900; color:var(--primary-dark); }
   .info-card .i-sub   { font-size:12px; color:var(--muted); margin-top:4px; }
 
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px;
-    padding:6px 0; cursor:pointer; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }

@@ -13,11 +13,12 @@ load_dotenv(BASE_DIR / ".env")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY", "")
 
-SECRET_KEY = 'django-insecure-請替換成隨機字串-production-key-here'
+# 機密設定一律放 .env，不寫死在程式碼（見 fix_security.txt）
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-dev-only-fallback-key')
 
-DEBUG = True  # 上線前改為 False
+DEBUG = os.getenv('DEBUG', 'True') == 'True'  # 上線時在 .env 設 DEBUG=False
 
-ALLOWED_HOSTS = ['*']  # 上線前改為實際網域
+ALLOWED_HOSTS = [h.strip() for h in os.getenv('ALLOWED_HOSTS', '*').split(',') if h.strip()]
 
 # ── 應用程式 ──
 INSTALLED_APPS = [
@@ -71,12 +72,12 @@ WSGI_APPLICATION = 'studygo.wsgi.application'
 # ── 資料庫 ──
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':     'postgres',
-        'USER':     'postgres.hpszxboxqzmvisydcnhz',
-        'PASSWORD': 'uq6pUJAfP8wGIlCZ',
-        'HOST':     'aws-1-ap-southeast-1.pooler.supabase.com',  # 你的 Supabase host
-        'PORT':     '5432',
+        'ENGINE':   os.getenv('DB_ENGINE', 'django.db.backends.postgresql'),
+        'NAME':     os.getenv('DB_NAME', 'postgres'),
+        'USER':     os.getenv('DB_USER', 'postgres.hpszxboxqzmvisydcnhz'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'uq6pUJAfP8wGIlCZ'),
+        'HOST':     os.getenv('DB_HOST', 'aws-1-ap-southeast-1.pooler.supabase.com'),  # 你的 Supabase host
+        'PORT':     os.getenv('DB_PORT', '5432'),
     }
 }
 
@@ -183,6 +184,11 @@ if _email_user and not FORCE_CONSOLE_EMAIL:
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'noreply@readytotaiwan.tw'
+
+# ── Email 驗證開關 ──
+# demo / 開發環境設 False：註冊後不強制驗證信箱即可登入與填寫資料
+# （console email 模式下真實使用者收不到驗證信，強制驗證會卡住整個流程）
+REQUIRE_EMAIL_VERIFICATION = os.getenv('REQUIRE_EMAIL_VERIFICATION', 'False') == 'True'
 
 # ── Google OAuth ──
 # 在 Google Cloud Console 建立 OAuth 2.0 用戶端 ID 後填入：

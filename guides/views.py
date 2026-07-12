@@ -75,11 +75,12 @@ def guide_admin_docs(request):
         'National Central University': 'ncu',
         'NCU': 'ncu',
     }
-    school_code = 'ncu'  # 預設
+    # 目前僅開放 NCU，查不到對應時一律退回 NCU，避免頁面拿到 'unknown' 而顯示空白
+    school_code = 'ncu'
     school_name = ''
     try:
         university = request.user.student_profile.university or ''
-        school_code = SCHOOL_MAP.get(university.strip(), 'unknown')
+        school_code = SCHOOL_MAP.get(university.strip(), 'ncu')
         school_name = university
     except Exception:
         pass

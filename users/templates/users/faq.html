@@ -1,0 +1,101 @@
+{# users/templates/users/faq.html — 常見問題（獨立頁面，依主題分類） #}
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "常見問題" %} — ReadyTo Taiwan{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'users/css/dashboard.css' %}?v=4">
+{% endblock %}
+
+{% block content %}
+<section class="db-section" style="padding-top:32px;">
+  <div class="db-wrap">
+    <div class="share-layout">
+
+      {# ── 左側：分類導覽 ── #}
+      <aside class="share-sidebar" id="faqSidebar">
+        <button type="button" class="share-tab active" data-cat="admission">{% trans "入學申請" %}</button>
+        <button type="button" class="share-tab" data-cat="docs">{% trans "證件與居留" %}</button>
+        <button type="button" class="share-tab" data-cat="cost">{% trans "費用與打工" %}</button>
+      </aside>
+
+      {# ── 右側：分類內容 ── #}
+      <main class="share-main">
+
+        <div class="faq-cat-block" data-cat="admission">
+          <div class="db-faq-list">
+            <div class="db-faq-item">
+              <div class="db-faq-q">{% trans "申請台灣大學需要準備哪些文件？" %}<span class="db-faq-arr">›</span></div>
+              <div class="db-faq-a">{% trans "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。" %}</div>
+            </div>
+            <div class="db-faq-item">
+              <div class="db-faq-q">{% trans "不會中文可以來台灣留學嗎？" %}<span class="db-faq-arr">›</span></div>
+              <div class="db-faq-a">{% trans "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課程。" %}</div>
+            </div>
+            <div class="db-faq-item">
+              <div class="db-faq-q">{% trans "申請流程需要多久時間？" %}<span class="db-faq-arr">›</span></div>
+              <div class="db-faq-a">{% trans "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。" %}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-cat-block" data-cat="docs" hidden>
+          <div class="db-faq-list">
+            <div class="db-faq-item">
+              <div class="db-faq-q">{% trans "學生簽證如何辦理？" %}<span class="db-faq-arr">›</span></div>
+              <div class="db-faq-a">{% trans "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。" %}</div>
+            </div>
+            <div class="db-faq-item">
+              <div class="db-faq-q">{% trans "全民健保什麼時候可以加入？" %}<span class="db-faq-arr">›</span></div>
+              <div class="db-faq-a">{% trans "持有效居留證（ARC），在台灣合法居留滿 6 個月後可強制加入全民健保。若有效工作許可可提前加保。加保後門診費用大幅降低。" %}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-cat-block" data-cat="cost" hidden>
+          <div class="db-faq-list">
+            <div class="db-faq-item">
+              <div class="db-faq-q">{% trans "留學台灣的費用大約多少？" %}<span class="db-faq-arr">›</span></div>
+              <div class="db-faq-a">{% trans "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。" %}</div>
+            </div>
+            <div class="db-faq-item">
+              <div class="db-faq-q">{% trans "可以邊讀書邊打工嗎？" %}<span class="db-faq-arr">›</span></div>
+              <div class="db-faq-a">{% trans "可以，但需申請工作許可。持有效居留證（ARC）的外籍學生，入學後可向學校申請工讀許可，每週工時上限為 20 小時。寒暑假期間可申請全時工作。" %}</div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function () {
+  document.querySelectorAll('.db-faq-q').forEach(function (q) {
+    q.addEventListener('click', function () {
+      var item = this.closest('.db-faq-item');
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.db-faq-item').forEach(function (i) { i.classList.remove('open'); });
+      if (!open) item.classList.add('open');
+    });
+  });
+
+  var sidebar = document.getElementById('faqSidebar');
+  var blocks = document.querySelectorAll('.faq-cat-block');
+  sidebar.addEventListener('click', function (event) {
+    var tab = event.target.closest('.share-tab');
+    if (!tab) return;
+    sidebar.querySelectorAll('.share-tab').forEach(function (el) {
+      el.classList.toggle('active', el === tab);
+    });
+    blocks.forEach(function (block) {
+      block.hidden = block.dataset.cat !== tab.dataset.cat;
+    });
+  });
+})();
+</script>
+{% endblock %}

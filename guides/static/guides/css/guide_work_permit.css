@@ -4,14 +4,6 @@
     padding: 32px 0 72px;
   }
 
-  /* ── Back link ── */
-  .back-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    color: var(--primary); font-size: 14px; font-weight: 700;
-    margin-bottom: 24px; text-decoration: none;
-  }
-  .back-link:hover { color: var(--primary-dark); }
-
   /* ── Hero ── */
   .guide-hero {
     background: linear-gradient(135deg, #1e3a5f 0%, #7c3aed 100%);

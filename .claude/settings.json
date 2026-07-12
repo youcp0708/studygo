@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-user-Downloads-studygo\\\\6efa7309-f45a-4fcc-8290-a143f6dae0e8\\\\scratchpad\\\\verify_colors.py\")",
+      "Bash(python manage.py shell -c ' *)",
+      "Bash(taskkill //F //PID 30776)",
+      "Bash(python manage.py test chatbot --verbosity=1)"
+    ]
+  }
+}

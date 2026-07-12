@@ -53,9 +53,3 @@
   }
   .info-note-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
 
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px;
-    font-size:14px; color:var(--muted); text-decoration:none;
-    margin-bottom:24px; transition:color .15s;
-  }
-  .back-link:hover { color:var(--primary); }

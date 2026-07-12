@@ -222,15 +222,33 @@
 .db-alumni-uni  { font-size: 12px; color: var(--muted); }
 .db-alumni-prog { font-size: 12px; font-weight: 800; color: #e05252; margin-top: 2px; }
 .db-alumni-stars { font-size: 16px; color: #f59e0b; margin-bottom: 10px; }
-.db-alumni-q { font-size: 13px; color: var(--muted); line-height: 1.8; margin: 0; }
+.db-alumni-q { font-size: 13px; color: var(--muted); line-height: 1.8; margin: 0; overflow-wrap: anywhere; word-break: break-word; }
+.db-alumni-q.clamped {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.db-alumni-toggle {
+  display: block; margin-top: 6px; background: none; border: none; padding: 0;
+  font-size: 12px; font-weight: 800; color: var(--primary); cursor: pointer;
+}
+.db-alumni-toggle:hover { text-decoration: underline; }
 .db-alumni-qm {
   position: absolute; bottom: 8px; right: 16px;
   font-size: 52px; color: #fde8e8; font-family: Georgia, serif;
   line-height: 1; font-weight: 900; pointer-events: none; user-select: none;
 }
 
+/* ── 儀表板：快速連結 ── */
+.dash-quicklinks {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+  max-width: 1100px; margin: 24px auto 0;
+}
+.dash-quicklinks .dash-info-card { transition: box-shadow .2s, transform .2s; }
+.dash-quicklinks .dash-info-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.08); transform: translateY(-2px); }
+@media (max-width: 1024px) { .dash-quicklinks { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .dash-quicklinks { grid-template-columns: 1fr; } }
+
 /* ── 常見問題 ── */
-.db-faq-wrap { max-width: 800px; }
 .db-faq-list { display: flex; flex-direction: column; gap: 12px; }
 .db-faq-item {
   background: #fff; border: 1.5px solid var(--line);
@@ -242,6 +260,7 @@
   user-select: none;
 }
 .db-faq-q:hover { background: var(--bg); }
+.db-faq-item.open .db-faq-q { font-weight: 900; color: var(--primary-dark); }
 .db-faq-arr { font-size: 18px; color: var(--muted); transition: transform .25s; flex-shrink: 0; margin-left: 12px; }
 .db-faq-item.open .db-faq-arr { transform: rotate(90deg); }
 .db-faq-a {
@@ -275,4 +294,204 @@
   .db-guide-grid  { grid-template-columns: 1fr; }
   .db-alumni-grid { grid-template-columns: 1fr; }
   .db-sec-h2 { font-size: 26px; }
+}
+
+/* ════════════════════════════════════════
+   互動式功能體驗區（sec-showcase）
+════════════════════════════════════════ */
+.sc-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 8px;
+}
+
+.sc-tabs { display: flex; flex-direction: column; gap: 12px; }
+
+.sc-tab {
+  display: flex; align-items: center; gap: 14px;
+  background: #fff; border: 2px solid var(--line, #e7ecea);
+  border-radius: 16px; padding: 16px 18px;
+  cursor: pointer; text-align: left;
+  transition: border-color .18s, transform .18s, box-shadow .18s;
+}
+.sc-tab:hover { transform: translateX(4px); }
+.sc-tab.active {
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px rgba(87, 152, 132, .18);
+}
+.sc-tab-icon { font-size: 26px; }
+.sc-tab-text b { display: block; font-size: 15.5px; color: #1a2a26; }
+.sc-tab-text small { display: block; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.sc-tab.active .sc-tab-text b { color: var(--primary-dark, #17534d); }
+
+.sc-stage {
+  background: #fff; border: 1px solid var(--line, #e7ecea);
+  border-radius: 20px; padding: 26px;
+  min-height: 380px; position: relative; overflow: hidden;
+}
+
+.sc-demo { display: none; animation: scFade .3s ease; }
+.sc-demo.active { display: block; }
+@keyframes scFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* Demo 1：任務 */
+.sc-demo-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.sc-demo-title { font-weight: 900; font-size: 16px; }
+.sc-progress-text { font-size: 13px; color: var(--muted); }
+.sc-progress-text b { color: var(--primary); font-size: 16px; }
+.sc-progress { height: 10px; background: #eef2f0; border-radius: 999px; overflow: hidden; margin-bottom: 18px; }
+.sc-progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), #7fd8c2); border-radius: 999px; transition: width .45s cubic-bezier(.34,1.3,.64,1); }
+.sc-task {
+  display: flex; align-items: center; gap: 12px;
+  background: #fafcfb; border: 1px solid var(--line, #e7ecea);
+  border-radius: 12px; padding: 13px 16px; margin-bottom: 10px;
+  cursor: pointer; transition: background .15s;
+}
+.sc-task:hover { background: #f2f7f5; }
+.sc-task input { width: 19px; height: 19px; accent-color: var(--primary); cursor: pointer; }
+.sc-task-name { flex: 1; font-weight: 700; font-size: 14.5px; }
+.sc-task.done .sc-task-name { text-decoration: line-through; color: var(--muted); }
+.sc-task-tag { font-size: 12px; background: #eef2f0; color: var(--muted); padding: 3px 10px; border-radius: 999px; }
+.sc-task-tag.warn { background: #fef3c7; color: #b45309; }
+.sc-hint { margin-top: 16px; font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* Demo 2：AI 對話 */
+.sc-chat { height: 230px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding: 4px; }
+.sc-msg { max-width: 82%; padding: 10px 14px; border-radius: 14px; font-size: 14px; line-height: 1.7; }
+.sc-msg.bot { background: #f0f6f3; border-bottom-left-radius: 4px; align-self: flex-start; }
+.sc-msg.user { background: var(--primary); color: #fff; border-bottom-right-radius: 4px; align-self: flex-end; }
+.sc-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.sc-chip {
+  background: #fff; border: 1px solid var(--primary); color: var(--primary-dark, #17534d);
+  border-radius: 999px; padding: 8px 14px; font-size: 13px; font-weight: 700; cursor: pointer;
+  transition: background .15s;
+}
+.sc-chip:hover { background: #eef7f4; }
+
+/* Demo 3：搜尋 */
+.sc-search {
+  width: 100%; box-sizing: border-box;
+  padding: 13px 16px; border: 2px solid var(--line, #e7ecea); border-radius: 12px;
+  font-size: 15px; margin-bottom: 16px;
+}
+.sc-search:focus { outline: none; border-color: var(--primary); }
+.sc-guides { display: flex; flex-wrap: wrap; gap: 10px; }
+.sc-guide {
+  background: #fafcfb; border: 1px solid var(--line, #e7ecea);
+  border-radius: 12px; padding: 12px 16px; font-size: 14px; font-weight: 700;
+}
+
+/* Demo 4：語言 */
+.sc-greeting {
+  min-height: 110px; display: flex; align-items: center; justify-content: center;
+  text-align: center; font-size: 22px; font-weight: 800; line-height: 1.7;
+  color: #17342f; background: #f0f6f3; border-radius: 16px; padding: 22px; margin-bottom: 18px;
+}
+.sc-greeting.pop { animation: greetPop .35s ease; }
+@keyframes greetPop { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+.sc-langs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.sc-lang {
+  background: #fff; border: 1px solid var(--line, #e7ecea); border-radius: 999px;
+  padding: 8px 16px; font-size: 13.5px; font-weight: 800; cursor: pointer; transition: all .15s;
+}
+.sc-lang:hover { border-color: var(--primary); }
+.sc-lang.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+@media (max-width: 860px) {
+  .sc-layout { grid-template-columns: 1fr; }
+  .sc-tabs { flex-direction: row; overflow-x: auto; padding-bottom: 4px; }
+  .sc-tab { min-width: 200px; }
+}
+
+/* ════════════════════════════════════════
+   互動式留學流程（點階段看重點）
+════════════════════════════════════════ */
+#flowStepper .db-step {
+  background: none; border: none; cursor: pointer; font: inherit;
+  padding: 12px 6px; border-radius: 16px;
+  transition: background .18s, transform .18s;
+}
+#flowStepper .db-step:hover { background: rgba(255, 255, 255, .75); transform: translateY(-3px); }
+#flowStepper .db-step.active .db-step-num {
+  background: var(--primary); color: #fff;
+  box-shadow: 0 6px 18px rgba(87, 152, 132, .4);
+  transform: scale(1.12);
+}
+#flowStepper .db-step.active .db-step-label { color: var(--primary); }
+
+.flow-detail {
+  background: #fff; border: 1px solid var(--line, #e7ecea);
+  border-radius: 18px; padding: 26px 30px; margin-bottom: 32px;
+}
+.flow-panel { display: none; animation: scFade .28s ease; }
+.flow-panel.active { display: block; }
+.flow-panel h3 { margin: 0 0 14px; font-size: 19px; }
+.flow-panel ul { margin: 0; padding-left: 4px; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+.flow-panel li {
+  position: relative; padding-left: 26px; font-size: 14.5px; line-height: 1.75; color: #3c4a45;
+}
+.flow-panel li::before {
+  content: "✓"; position: absolute; left: 0; top: 1px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--primary-soft, #dcefe8); color: var(--primary);
+  font-size: 11px; font-weight: 900; display: flex; align-items: center; justify-content: center;
+}
+
+/* 首頁學長姐卡片標題／日期（沿用分享區樣式） */
+.db-alumni-title { font-size: 16px; font-weight: 900; margin: 12px 0 6px; color: #24312c; }
+.db-alumni-date { margin-top: 10px; font-size: 12px; color: #9aa3a0; }
+
+@media (max-width: 700px) {
+  .flow-panel ul { grid-template-columns: 1fr; }
+  #flowStepper .db-step-sub { display: none; }
+}
+
+/* ════════════════════════════════════════
+   首頁靜態展示：留學流程兩階段卡片
+════════════════════════════════════════ */
+.flow-static-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+.flow-static-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line, #e7ecea);
+  border-radius: 18px;
+  padding: 26px 28px 24px;
+}
+.flow-static-num {
+  position: absolute;
+  top: 20px; right: 24px;
+  font-size: 34px; font-weight: 900;
+  color: var(--primary-soft, #dcefe8);
+  letter-spacing: 1px;
+}
+.flow-static-card h3 { margin: 0 0 14px; font-size: 19px; }
+.flow-static-card ul {
+  margin: 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.flow-static-card li {
+  position: relative; padding-left: 26px;
+  font-size: 14.5px; line-height: 1.7; color: #3c4a45;
+}
+.flow-static-card li::before {
+  content: "✓"; position: absolute; left: 0; top: 1px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--primary-soft, #dcefe8); color: var(--primary);
+  font-size: 11px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* 首頁指南卡：純展示，不可點（移除連結手勢與位移感） */
+.db-guide-static { cursor: default; }
+.db-guide-static:hover { transform: none; }
+
+@media (max-width: 760px) {
+  .flow-static-grid { grid-template-columns: 1fr; }
 }

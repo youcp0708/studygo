@@ -59,12 +59,6 @@
   .ref-card-name { font-size:13px; font-weight:800; color:var(--dark); margin-bottom:2px; }
   .ref-card-url  { font-size:11px; color:var(--muted); font-family:monospace; }
 
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px;
-    padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }
   .section-title {
     font-size:18px; font-weight:900; color:var(--primary-dark);
     margin:28px 0 14px; padding-bottom:10px;

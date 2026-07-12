@@ -5,6 +5,21 @@
 
 'use strict';
 
+/** 取得 i18n 字串（UI_STRINGS 由模板注入；不在任務頁時退回中文） */
+function flowsT(key, fallback) {
+  return (window.UI_STRINGS && window.UI_STRINGS[key]) || fallback;
+}
+
+/** HTML 跳脫：插入 innerHTML 的動態內容（使用者備註、通知訊息）一律先跳脫 */
+function escapeFlowsHtml(text) {
+  return String(text ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 /* ════════════════════════════════════════
    1. 任務初始化
    POST /api/flows/my-tasks/init/
@@ -87,12 +102,14 @@ async function renderDashboardProgress() {
         const tasks = stage.tasks || [];
 
         tasks.forEach(task => {
-          if (task.due_date && task.status !== 'completed') {
-            const due = new Date(task.due_date);
+          // 截止日由後端依 deadline 設定計算（deadline_info.calculated_due_date，格式 YYYY/MM/DD）
+          const dueStr = task.deadline_info && task.deadline_info.calculated_due_date;
+          if (dueStr && task.status !== 'completed') {
+            const due = new Date(dueStr);
             due.setHours(0, 0, 0, 0);
 
             // 今天以前或三天內到期都算「即將到期」
-            if (due <= threeDaysLater) {
+            if (!isNaN(due) && due <= threeDaysLater) {
               overdueCount++;
             }
           }
@@ -152,9 +169,10 @@ async function renderDashboardProgress() {
     }
 
     if (dashRecentTasks) {
+      const loadErrorText = dashRecentTasks.getAttribute('data-load-error') || '任務載入失敗，請重新整理頁面。';
       dashRecentTasks.innerHTML = `
         <div style="text-align:center;padding:16px 0;color:var(--muted);">
-          任務載入失敗，請重新整理頁面。
+          ${loadErrorText}
         </div>
       `;
     }
@@ -313,12 +331,17 @@ window.toggleTaskCompletion = async function (taskId, event) {
 
   const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { status: newStatus });
   if (ok) {
-    showToast(newStatus === 'completed' ? '任務已完成' : '已取消完成', 'success');
+    showToast(
+      newStatus === 'completed'
+        ? flowsT('taskCompletedToast', '任務已完成')
+        : flowsT('taskUncompletedToast', '已取消完成'),
+      'success'
+    );
     renderMyTasks();
     renderDashboardProgress();
     renderReminders();
   } else {
-    showToast('狀態更新失敗', 'error');
+    showToast(flowsT('statusUpdateFailedToast', '狀態更新失敗'), 'error');
     checkbox.checked = !checkbox.checked; // revert
   }
 };
@@ -327,7 +350,7 @@ window.changeTaskStatus = async function (taskId, status, event) {
   event.stopPropagation();
   const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { status });
   if (ok) {
-    showToast('狀態更新成功', 'success');
+    showToast(flowsT('statusUpdateSuccessToast', '狀態更新成功'), 'success');
     renderMyTasks();
     renderDashboardProgress();
     renderReminders();
@@ -346,15 +369,7 @@ window.saveTaskNote = async function (taskId, event) {
   const noteInput = document.getElementById(`note-${taskId}`);
   const note = noteInput ? noteInput.value : '';
   const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { note });
-  if (ok) showToast('備註已儲存', 'success');
-};
-
-window.saveTaskDate = async function (taskId, event) {
-  event.stopPropagation();
-  const dateInput = document.getElementById(`date-${taskId}`);
-  const due_date = dateInput ? dateInput.value : '';
-  const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { due_date });
-  if (ok) showToast('日期已儲存', 'success');
+  if (ok) showToast(flowsT('noteSavedToast', '備註已儲存'), 'success');
 };
 
 async function renderMyTasks() {
@@ -366,7 +381,7 @@ async function renderMyTasks() {
   const { ok, data } = await apiFetch('/api/flows/my-tasks/');
 
   if (!ok) {
-    container.innerHTML = `<div style="text-align:center;color:red;">載入失敗，請確認已登入並填寫學生資料。</div>`;
+    container.innerHTML = `<div style="text-align:center;color:red;">${flowsT('loadFailedText', '載入失敗，請確認已登入並填寫學生資料。')}</div>`;
     return;
   }
 
@@ -376,8 +391,8 @@ async function renderMyTasks() {
   if (!stages || stages.length === 0) {
     container.innerHTML = `
       <div style="text-align:center;padding:48px;background:white;border-radius:14px;border:1px solid #e5e8e6;">
-        <h3 style="margin-bottom:12px;">尚未產生任務</h3>
-        <p style="color:var(--muted);">請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。</p>
+        <h3 style="margin-bottom:12px;">${flowsT('noTasksTitle', '尚未產生任務')}</h3>
+        <p style="color:var(--muted);">${flowsT('noTasksHint', '請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。')}</p>
       </div>
     `;
     return;
@@ -420,10 +435,10 @@ async function renderMyTasks() {
       const officialUrl = loc.official_url
         ? `<a href="${loc.official_url}" target="_blank" style="color:var(--primary);text-decoration:underline;">${window.UI_STRINGS.visitOfficialWebsite}</a>`
         : null;
-      const noteVal = task.note || '';
+      const noteVal = escapeFlowsHtml(task.note || '');
       const requiredBadge = task.task_detail?.is_required
-        ? '<span class="task-badge required">必做</span>'
-        : '<span class="task-badge optional">建議</span>';
+        ? `<span class="task-badge required">${flowsT('requiredBadge', '必做')}</span>`
+        : `<span class="task-badge optional">${flowsT('optionalBadge', '建議')}</span>`;
 
       // ── 期限資訊區塊（deadline_text 已在後端本地化）──
       let deadlineHtml = '';
@@ -715,7 +730,7 @@ async function renderReminders() {
   reminders.forEach(r => {
     list.innerHTML += `
       <div id="reminder-${r.id}" style="padding:12px 16px; border-bottom:1px solid var(--border, #eee); display:flex; flex-direction:column; gap:4px; font-size:14px;">
-        <div style="color:var(--text); line-height:1.4;">${r.message}</div>
+        <div style="color:var(--text); line-height:1.4;">${escapeFlowsHtml(r.message)}</div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
           <span style="font-size:12px; color:var(--muted);">${new Date(r.created_at).toLocaleDateString()}</span>
           <button onclick="markReminderRead(${r.id})" style="background:none; border:none; color:var(--primary, #007bff); cursor:pointer; font-size:12px; padding:0;">${markReadText}</button>

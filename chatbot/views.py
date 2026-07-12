@@ -1,15 +1,20 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.clickjacking import xframe_options_sameorigin
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from .models import ChatSession, ChatMessage, ChatAttachment
-from .services import generate_ai_reply
+from .models import ChatSession, ChatMessage, ChatAttachment, ChatFeedback
+from .services import generate_ai_reply, contains_crisis_keywords, build_crisis_resources
 from django.utils import timezone
 from django.utils.translation import gettext as _
+
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def normalize_ai_mode(value):
@@ -41,6 +46,7 @@ def get_daily_taiwan_tip():
     return tips[index]
 
 
+@xframe_options_sameorigin  # 允許聊天頁被同源 iframe（浮動小工具）嵌入，仍防跨站點擊劫持
 @login_required(login_url='/login/')
 @ensure_csrf_cookie
 def chatbot_page(request):
@@ -81,6 +87,8 @@ def chatbot_page(request):
         'current_ai_mode': current_ai_mode,
         "taiwan_tip": get_daily_taiwan_tip(),
         "taiwan_tips": get_taiwan_tips(),
+        # embed=1：以浮動小工具（iframe）方式載入，隱藏站台導覽列與頁尾
+        'embed': request.GET.get('embed') == '1',
     }
 
     return render(request, 'chatbot/chatbot.html', context)
@@ -157,7 +165,9 @@ def chat_message_api(request):
         )
 
     if ai_mode == 'friend':
-        recent_messages = list(session.messages.order_by('created_at'))
+        # friend 模式需要較多上下文，但仍設上限避免長對話 token 成本失控
+        recent_messages = list(session.messages.order_by('-created_at')[:60])
+        recent_messages.reverse()
     else:
         recent_messages = list(session.messages.order_by('-created_at')[:10])
         recent_messages.reverse()
@@ -202,9 +212,7 @@ def chat_message_api(request):
         personality=personality,
     )
 
-    print("[DEBUG] ai_result source:", ai_result.get("source"))
-    print("[DEBUG] ai_result model:", ai_result.get("model"))
-    print("[DEBUG] ai_result reply:", ai_result.get("reply"))
+    logger.debug('ai_result source=%s model=%s', ai_result.get('source'), ai_result.get('model'))
 
     if ai_mode == "friend":
         reply_parts = split_friend_reply(ai_result['reply'])
@@ -212,6 +220,14 @@ def chat_message_api(request):
         place_text = ai_result.get('place_results_text')
         if place_text:
             reply_parts.append(place_text)
+
+        # 危機保底安全網：只要學生訊息命中危機關鍵字（9 語），
+        # 且 AI 回覆沒有帶出可撥打的求助電話，就由伺服器端強制附上，
+        # 不把學生的安全交給模型的自由發揮
+        if contains_crisis_keywords(message):
+            has_tel_link = any('tel:' in part for part in reply_parts)
+            if not has_tel_link:
+                reply_parts.append(build_crisis_resources(request.user))
     else:
         reply_parts = [ai_result['reply']]
 
@@ -258,6 +274,9 @@ def chat_message_api(request):
         },
         # 新版：多則 AI 訊息
         'assistant_messages': assistant_messages,
+
+        # 「你可能還想問」追問建議（helper 模式，由知識庫標題生成）
+        'suggestions': ai_result.get('suggestions', []),
 
         # 保留舊版欄位，避免前端其他地方壞掉
         'assistant_message': assistant_messages[0] if assistant_messages else None,
@@ -346,6 +365,47 @@ def pin_session_api(request):
         'data': {
             'is_pinned': session.is_pinned,
         }
+    })
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def feedback_api(request):
+    """
+    POST /chatbot/api/feedback/
+    Body: { "message_id": 123, "rating": "up" | "down" }
+    學生對 AI 回覆按 👍/👎，同一則訊息重複評價會覆蓋（可改變心意）。
+    """
+    message_id = request.data.get('message_id')
+    rating = request.data.get('rating')
+
+    if rating not in ['up', 'down']:
+        return Response({
+            'success': False,
+            'message': '無效的評價',
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+    message = ChatMessage.objects.filter(
+        id=message_id,
+        role='assistant',
+        session__user=request.user,   # 只能評價自己對話中的訊息
+    ).first()
+
+    if not message:
+        return Response({
+            'success': False,
+            'message': '找不到此訊息',
+        }, status=status.HTTP_404_NOT_FOUND)
+
+    feedback, _created = ChatFeedback.objects.update_or_create(
+        message=message,
+        defaults={'rating': rating},
+    )
+
+    return Response({
+        'success': True,
+        'message': '感謝你的回饋',
+        'data': {'rating': feedback.rating},
     })
 
 

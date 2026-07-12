@@ -1,0 +1,169 @@
+{# users/templates/users/alumni.html — 學長姐分享區（左側分頁導覽版型） #}
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "學長姐分享區" %} — ReadyTo Taiwan{% endblock %}
+
+{% block content %}
+<section class="db-section" style="padding-top:32px;">
+  <div class="db-wrap">
+
+    <div class="share-layout">
+
+      {# ── 左側分頁導覽 ── #}
+      <aside class="share-sidebar">
+        <a href="?tab=school" class="share-tab {% if tab == 'school' %}active{% endif %}">
+          {% trans "我的學校" %}
+        </a>
+        <a href="?tab=all" class="share-tab {% if tab == 'all' %}active{% endif %}">
+          {% trans "所有學校" %}
+        </a>
+        <a href="?tab=mine" class="share-tab {% if tab == 'mine' %}active{% endif %}">
+          {% trans "我的分享" %}
+        </a>
+      </aside>
+
+      {# ── 右側內容 ── #}
+      <main class="share-main">
+
+        {% if tab == 'mine' %}
+        {# ══ 我的分享：發佈表單 + 自己的分享 ══ #}
+        <div class="alumni-post-card">
+          <h3 class="alumni-post-title">{% trans "發佈我的分享" %}</h3>
+          <form method="post" action="{% url 'alumni' %}">
+            {% csrf_token %}
+            <div class="field">
+              <label>{% trans "標題" %} <span style="color:red;">*</span></label>
+              <input type="text" name="title" maxlength="200" required
+                placeholder="{% trans '問題主旨' %}">
+            </div>
+            <div class="field">
+              <label>{% trans "分享內容" %} <span style="color:red;">*</span></label>
+              <textarea name="content" rows="5" maxlength="1000" required
+                placeholder="{% trans '例如：宿舍申請的三個注意事項' %}"></textarea>
+            </div>
+            <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">
+              {% trans "將以你的學校和系所身份發佈：" %}{{ profile.get_university_display|default:profile.university }}{% if profile.department %} {{ profile.department }}{% endif %}
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;padding:13px;">{% trans "發佈分享" %}</button>
+          </form>
+        </div>
+
+        <div class="alumni-section-head">
+          <h3>{% trans "我發佈過的分享" %}</h3>
+          <span class="alumni-count">{{ shares|length }} {% trans "則分享" %}</span>
+        </div>
+        {% if shares %}
+        <div class="db-alumni-grid">
+          {% for share in shares %}
+          {% include "users/_alumni_card.html" with can_delete=True %}
+          {% endfor %}
+        </div>
+        {% else %}
+        <div class="alumni-empty">{% trans "你還沒有發佈過分享，上方表單就是你的起點！" %}</div>
+        {% endif %}
+
+        {% else %}
+        {# ══ 我的學校 / 所有學校：篩選列 + 分享列表 ══ #}
+        <form method="get" action="{% url 'alumni' %}" class="share-filter-bar">
+          <input type="hidden" name="tab" value="{{ tab }}">
+
+          {% if tab == 'all' %}
+          <select name="school" class="share-filter-select">
+            <option value="">{% trans "全部學校" %}</option>
+            {% for code, label in school_options %}
+            <option value="{{ code }}" {% if selected_school == code %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+          </select>
+          {% endif %}
+
+          <input type="text" name="dept" list="deptOptionsList" class="share-filter-select"
+            value="{{ selected_dept }}" placeholder="{% trans '全部系所' %}" autocomplete="off">
+          <datalist id="deptOptionsList">
+            {% for dept in dept_options %}
+            <option value="{{ dept }}"></option>
+            {% endfor %}
+          </datalist>
+
+          <input type="text" name="q" value="{{ q }}" class="share-filter-search"
+            placeholder="{% trans '搜尋分享內容，例如：宿舍、選課、打工…' %}">
+          <button type="submit" class="share-search-btn" aria-label="{% trans '搜尋' %}" title="{% trans '搜尋' %}">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8.5" cy="8.5" r="5.5"/>
+              <line x1="13" y1="13" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </form>
+
+        <div class="alumni-section-head">
+          {% if tab == 'school' %}
+          <h3>{% trans "我的學校" %} — {{ profile.get_university_display|default:profile.university }}</h3>
+          {% else %}
+          <h3>{% trans "所有學校" %}</h3>
+          {% endif %}
+          <span class="alumni-count">{{ shares|length }} {% trans "則分享" %}</span>
+        </div>
+
+        {% if shares %}
+        <div class="db-alumni-grid">
+          {% for share in shares %}
+          {% include "users/_alumni_card.html" %}
+          {% endfor %}
+        </div>
+        {% else %}
+        <div class="alumni-empty">
+          {% if q or selected_dept or selected_school %}
+          {% trans "找不到符合條件的分享，試著放寬篩選或換個關鍵字。" %}
+          {% else %}
+          {% trans "目前還沒有任何分享，成為第一位分享的學長姐吧！" %}
+          {% endif %}
+        </div>
+        {% endif %}
+        {% endif %}
+
+      </main>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function () {
+  document.querySelectorAll('.db-alumni-q.clamped').forEach(function (q) {
+    var btn = q.nextElementSibling;
+    if (!btn || !btn.classList.contains('db-alumni-toggle')) return;
+
+    // webkit-line-clamp 生效時 scrollHeight 會等於 clientHeight（兩者都是截斷後的高度），
+    // 無法直接比較；先暫時移除 clamp 量出完整高度，再比較是否真的超過兩行
+    q.classList.remove('clamped');
+    var fullHeight = q.scrollHeight;
+    q.classList.add('clamped');
+    if (fullHeight <= q.clientHeight + 1) return;
+    btn.hidden = false;
+
+    btn.addEventListener('click', function () {
+      var collapsed = q.classList.toggle('clamped');
+      btn.textContent = collapsed ? btn.dataset.expand : btn.dataset.collapse;
+    });
+  });
+
+  document.querySelectorAll('.db-alumni-edit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var card = btn.closest('.db-alumni-card');
+      card.querySelector('.db-alumni-view').hidden = true;
+      card.querySelector('.db-alumni-edit-form').hidden = false;
+    });
+  });
+
+  document.querySelectorAll('.db-alumni-edit-cancel').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var card = btn.closest('.db-alumni-card');
+      card.querySelector('.db-alumni-edit-form').hidden = true;
+      card.querySelector('.db-alumni-view').hidden = false;
+    });
+  });
+})();
+</script>
+{% endblock %}

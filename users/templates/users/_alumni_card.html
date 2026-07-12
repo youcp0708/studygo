@@ -1,0 +1,45 @@
+{# 學長姐分享卡片（alumni.html 三個分頁共用）。can_delete=True 時顯示編輯／刪除鈕（僅本人分享）。 #}
+{% load i18n %}
+<div class="db-alumni-card" data-share-id="{{ share.id }}">
+  <div class="db-alumni-top">
+    <div class="db-alumni-av">{{ share.user.name|first|upper }}</div>
+    <div>
+      <div class="db-alumni-name">{{ share.user.name }}</div>
+      {% if share.nationality %}<div class="db-alumni-loc">📍 {{ share.get_nationality_display }}</div>{% endif %}
+      <div class="db-alumni-uni">{{ share.get_university_display|default:share.university }}{% if share.program %} <span class="db-alumni-prog">{{ share.program }}</span>{% endif %}</div>
+    </div>
+    {% if can_delete %}
+    <div class="db-alumni-actions">
+      <button type="button" class="db-alumni-edit-btn" aria-label="{% trans '編輯' %}" title="{% trans '編輯' %}">✏️</button>
+      <form method="post" action="{% url 'alumni_delete' %}" class="db-alumni-del-form"
+        onsubmit="return confirm('{% trans '確定要刪除這則分享嗎？此動作無法復原。' %}');">
+        {% csrf_token %}
+        <input type="hidden" name="share_id" value="{{ share.id }}">
+        <button type="submit" class="db-alumni-del" aria-label="{% trans '刪除' %}" title="{% trans '刪除' %}">🗑</button>
+      </form>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="db-alumni-view">
+    {% if share.title %}<div class="db-alumni-title">{{ share.title }}</div>{% endif %}
+    <p class="db-alumni-q clamped">「{{ share.content }}」</p>
+    <button type="button" class="db-alumni-toggle" hidden
+      data-expand="{% trans '展開' %}" data-collapse="{% trans '收合' %}">{% trans "展開" %}</button>
+    <div class="db-alumni-date">{{ share.created_at|date:"Y-m-d" }}</div>
+  </div>
+
+  {% if can_delete %}
+  <form method="post" action="{% url 'alumni_edit' %}" class="db-alumni-edit-form" hidden>
+    {% csrf_token %}
+    <input type="hidden" name="share_id" value="{{ share.id }}">
+    <input type="text" name="title" maxlength="200" value="{{ share.title }}"
+      placeholder="{% trans '問題主旨' %}" class="db-alumni-edit-title">
+    <textarea name="content" rows="4" maxlength="1000" class="db-alumni-edit-content">{{ share.content }}</textarea>
+    <div class="db-alumni-edit-actions">
+      <button type="submit" class="btn-primary db-alumni-edit-save">{% trans "儲存" %}</button>
+      <button type="button" class="btn-outline-sm db-alumni-edit-cancel">{% trans "取消" %}</button>
+    </div>
+  </form>
+  {% endif %}
+</div>
