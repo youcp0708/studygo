@@ -13,7 +13,7 @@ load_dotenv(BASE_DIR / ".env")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY", "")
 
-SECRET_KEY = 'django-insecure-請替換成隨機字串-production-key-here'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = True  # 上線前改為 False
 
