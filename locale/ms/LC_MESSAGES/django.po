@@ -334,7 +334,7 @@ msgstr "Kadar Penyelesaian Tugasan"
 
 #: .\flows\templates\flows\my_flows.html:51
 msgid "小貼士"
-msgstr "Petua"
+msgstr "Tips"
 
 #: .\flows\templates\flows\my_flows.html:68
 #, fuzzy
