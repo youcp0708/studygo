@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-06 15:06+0800\n"
+"POT-Creation-Date: 2026-07-16 09:34+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -332,8 +332,6 @@ msgid "任務完成率"
 msgstr "タスク完了率"
 
 #: .\flows\templates\flows\my_flows.html:51
-#, fuzzy
-#| msgid "小老師"
 msgid "小貼士"
 msgstr "ヒント"
 
@@ -425,6 +423,15 @@ msgstr "未完了のタスク"
 #: .\flows\templates\flows\my_flows.html:87
 msgid "前往查看"
 msgstr ""
+
+#: .\flows\templates\flows\my_flows.html:88
+msgid "必做"
+msgstr "必須"
+
+#: .\flows\templates\flows\my_flows.html:89
+#: .\guides\templates\guides\guide_nhi.html:127
+msgid "建議"
+msgstr "推奨"
 
 #: .\guides\templates\guides\admissions_guide.html:4
 #: .\guides\templates\guides\admissions_guide.html:19
@@ -5402,6 +5409,7 @@ msgstr "緊急設備故障・安全事案の連絡先"
 #: .\templates\base.html:204 .\users\templates\users\dashboard.html:50
 #: .\users\templates\users\dashboard.html:159
 #: .\users\templates\users\home.html:23 .\users\templates\users\home.html:306
+#: .\users\templates\users\login.html:42
 msgid "資訊中心"
 msgstr "情報センター"
 
@@ -6879,10 +6887,6 @@ msgstr "在学証明（学生証または在学証明書）"
 #: .\guides\templates\guides\guide_nhi.html:127
 msgid "台灣銀行帳戶（保費扣繳用）"
 msgstr "台湾の銀行口座（保険料引き落とし用）"
-
-#: .\guides\templates\guides\guide_nhi.html:127
-msgid "建議"
-msgstr "推奨"
 
 #: .\guides\templates\guides\guide_nhi.html:128
 msgid "1 吋照片（部分單位需要）"
@@ -9661,10 +9665,6 @@ msgstr ""
 "入国後の重要なタスクを自動生成し、進捗状況で一歩ずつ完了できるように通知しま"
 "す。"
 
-#: .\users\templates\users\login.html:42
-msgid "資訊管理"
-msgstr "情報管理"
-
 #: .\users\templates\users\login.html:43
 msgid ""
 "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
@@ -10052,6 +10052,9 @@ msgstr "パスワードの再設定が完了しました。再度ログインし
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "再設定に失敗しました。リンクの有効期限が切れている可能性があります。"
+
+#~ msgid "資訊管理"
+#~ msgstr "情報管理"
 
 #~ msgid "AI 來臺就學小幫手"
 #~ msgstr "台湾留学AIアシスタント"

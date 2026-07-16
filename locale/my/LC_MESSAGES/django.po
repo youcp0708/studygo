@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-06 15:06+0800\n"
+"POT-Creation-Date: 2026-07-16 09:34+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -325,8 +325,6 @@ msgid "任務完成率"
 msgstr "တာဝန်ပြီးစီးမှုနှုန်း"
 
 #: .\flows\templates\flows\my_flows.html:51
-#, fuzzy
-#| msgid "小老師"
 msgid "小貼士"
 msgstr "အကြံပြုချက်များ"
 
@@ -418,6 +416,15 @@ msgstr "မပြီးစီးသေးသော တာဝန်များ"
 #: .\flows\templates\flows\my_flows.html:87
 msgid "前往查看"
 msgstr ""
+
+#: .\flows\templates\flows\my_flows.html:88
+msgid "必做"
+msgstr "မဖြစ်မနေလုပ်ရမည်"
+
+#: .\flows\templates\flows\my_flows.html:89
+#: .\guides\templates\guides\guide_nhi.html:127
+msgid "建議"
+msgstr "အကြံပြုထားသည်"
 
 #: .\guides\templates\guides\admissions_guide.html:4
 #: .\guides\templates\guides\admissions_guide.html:19
@@ -5472,6 +5479,7 @@ msgstr "အရေးပေါ်အဆောက်အဦပျက်စီးမ
 #: .\templates\base.html:204 .\users\templates\users\dashboard.html:50
 #: .\users\templates\users\dashboard.html:159
 #: .\users\templates\users\home.html:23 .\users\templates\users\home.html:306
+#: .\users\templates\users\login.html:42
 msgid "資訊中心"
 msgstr "သတင်းအချက်အလက်စင်တာ"
 
@@ -6967,10 +6975,6 @@ msgstr "မှတ်ပုံတင်ကြောင်း သက်သေ (က
 #: .\guides\templates\guides\guide_nhi.html:127
 msgid "台灣銀行帳戶（保費扣繳用）"
 msgstr "တိုင်ဝမ် ဘဏ်အကောင့် (ကာကွယ်မှုကြေး နုတ်ယူရန်)"
-
-#: .\guides\templates\guides\guide_nhi.html:127
-msgid "建議"
-msgstr "အကြံပြုသည်"
 
 #: .\guides\templates\guides\guide_nhi.html:128
 msgid "1 吋照片（部分單位需要）"
@@ -9771,10 +9775,6 @@ msgstr ""
 "ထိုင်ဝမ်မရောက်မီနှင့် ရောက်ရှိပြီးနောက် လုပ်ဆောင်ရမည့် အရေးကြီးတာဝန်များကို အလိုအလျောက် ဖန်တီးပေးပြီး "
 "တိုးတက်မှုအခြေအနေဖြင့် တစ်ဆင့်ချင်း သတိပေးပါမည်။"
 
-#: .\users\templates\users\login.html:42
-msgid "資訊管理"
-msgstr "သတင်းအချက်အလက် စီမံခန့်ခွဲမှု"
-
 #: .\users\templates\users\login.html:43
 msgid ""
 "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
@@ -10163,6 +10163,9 @@ msgstr "စကားဝှက် ပြန်လည်သတ်မှတ်မ�
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "ပြန်လည်သတ်မှတ်မှု မအောင်မြင်ပါ။ လင့်ခ်သည် သက်တမ်းကုန်နေနိုင်ပါသည်။"
+
+#~ msgid "資訊管理"
+#~ msgstr "သတင်းအချက်အလက် စီမံခန့်ခွဲမှု"
 
 #~ msgid "AI 來臺就學小幫手"
 #~ msgstr "ထိုင်ဝမ်တွင် ပညာသင်ရန် AI အကူအညီ"

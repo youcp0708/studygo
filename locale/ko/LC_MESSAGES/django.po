@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-06 15:06+0800\n"
+"POT-Creation-Date: 2026-07-16 09:34+0800\n"
 "PO-Revision-Date: 2026-05-07 00:00+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -330,8 +330,6 @@ msgid "任務完成率"
 msgstr "작업 완료율"
 
 #: .\flows\templates\flows\my_flows.html:51
-#, fuzzy
-#| msgid "小老師"
 msgid "小貼士"
 msgstr "팁"
 
@@ -423,6 +421,15 @@ msgstr "미완료 작업"
 #: .\flows\templates\flows\my_flows.html:87
 msgid "前往查看"
 msgstr ""
+
+#: .\flows\templates\flows\my_flows.html:88
+msgid "必做"
+msgstr "필수"
+
+#: .\flows\templates\flows\my_flows.html:89
+#: .\guides\templates\guides\guide_nhi.html:127
+msgid "建議"
+msgstr "권장"
 
 #: .\guides\templates\guides\admissions_guide.html:4
 #: .\guides\templates\guides\admissions_guide.html:19
@@ -5405,6 +5412,7 @@ msgstr "긴급 시설 손상 및 안전 사고 연락처"
 #: .\templates\base.html:204 .\users\templates\users\dashboard.html:50
 #: .\users\templates\users\dashboard.html:159
 #: .\users\templates\users\home.html:23 .\users\templates\users\home.html:306
+#: .\users\templates\users\login.html:42
 msgid "資訊中心"
 msgstr "정보센터"
 
@@ -6886,10 +6894,6 @@ msgstr "재학 증명 (학생증 또는 재학증명서)"
 #: .\guides\templates\guides\guide_nhi.html:127
 msgid "台灣銀行帳戶（保費扣繳用）"
 msgstr "대만 은행 계좌 (보험료 공제용)"
-
-#: .\guides\templates\guides\guide_nhi.html:127
-msgid "建議"
-msgstr "권장"
 
 #: .\guides\templates\guides\guide_nhi.html:128
 msgid "1 吋照片（部分單位需要）"
@@ -9676,10 +9680,6 @@ msgstr ""
 "시스템이 국적, 신분 유형 및 현재 상태에 따라 비자 신청, 입국 전, 입국 후의 중"
 "요한 작업을 자동으로 생성하고 진행 상황으로 단계별로 완료를 알려드립니다."
 
-#: .\users\templates\users\login.html:42
-msgid "資訊管理"
-msgstr "정보 관리"
-
 #: .\users\templates\users\login.html:43
 msgid ""
 "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
@@ -10078,6 +10078,9 @@ msgstr "비밀번호 재설정 성공. 다시 로그인해 주세요."
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "재설정 실패. 링크가 만료되었을 수 있습니다."
+
+#~ msgid "資訊管理"
+#~ msgstr "정보 관리"
 
 #~ msgid "AI 來臺就學小幫手"
 #~ msgstr "AI 대만 유학 도우미"
