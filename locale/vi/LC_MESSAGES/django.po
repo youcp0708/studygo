@@ -1205,7 +1205,7 @@ msgstr "Hải Liên Hội hoặc Văn phòng Đài Loan tại các địa phươ
 #: .\users\templates\users\dashboard.html:52
 #: .\users\templates\users\home.html:351
 msgid "學長姐分享"
-msgstr ""
+msgstr "Chia sẻ cựu sinh viên"
 
 #: .\guides\templates\guides\admissions_guide.html:512
 #: .\users\templates\users\home.html:352
@@ -8955,10 +8955,8 @@ msgid "確認"
 msgstr "Xác nhận"
 
 #: .\templates\base.html:58 .\users\templates\users\dashboard.html:42
-#, fuzzy
-#| msgid "頁"
 msgid "首頁"
-msgstr "trang"
+msgstr "Trang chủ"
 
 #: .\templates\base.html:61 .\users\templates\users\dashboard.html:9
 #: .\users\templates\users\dashboard.html:44
@@ -8969,19 +8967,17 @@ msgstr "Bảng điều khiển"
 #: .\users\templates\users\dashboard.html:46
 #: .\users\templates\users\home.html:129
 msgid "留學流程"
-msgstr ""
+msgstr "Quy trình du học"
 
 #: .\templates\base.html:66 .\templates\base.html:215
 #: .\users\templates\users\dashboard.html:48
 #: .\users\templates\users\home.html:170
-#, fuzzy
-#| msgid "查看任務清單"
 msgid "任務清單"
-msgstr "Xem danh sách nhiệm vụ"
+msgstr "Danh sách nhiệm vụ"
 
 #: .\templates\base.html:74 .\users\templates\users\home.html:24
 msgid "詢問AI小幫手"
-msgstr ""
+msgstr "Hỏi AI"
 
 #: .\templates\base.html:89 .\users\templates\users\dashboard.html:66
 msgid "搜尋指南..."
@@ -9017,7 +9013,7 @@ msgstr "Đăng xuất"
 
 #: .\templates\base.html:171
 msgid "開始流程"
-msgstr ""
+msgstr "Bắt đầu"
 
 #: .\templates\base.html:191
 msgid ""

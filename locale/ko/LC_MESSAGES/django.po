@@ -1189,7 +1189,7 @@ msgstr "해련회 또는 각지 대만 사무소"
 #: .\users\templates\users\dashboard.html:52
 #: .\users\templates\users\home.html:351
 msgid "學長姐分享"
-msgstr ""
+msgstr "선배 공유"
 
 #: .\guides\templates\guides\admissions_guide.html:512
 #: .\users\templates\users\home.html:352
@@ -5414,7 +5414,7 @@ msgstr "긴급 시설 손상 및 안전 사고 연락처"
 #: .\users\templates\users\home.html:23 .\users\templates\users\home.html:306
 #: .\users\templates\users\login.html:42
 msgid "資訊中心"
-msgstr "정보센터"
+msgstr "정보 센터"
 
 #: .\guides\templates\guides\guide_index.html:16
 #: .\users\templates\users\edit_profile.html:11
@@ -8669,10 +8669,8 @@ msgid "確認"
 msgstr "확인"
 
 #: .\templates\base.html:58 .\users\templates\users\dashboard.html:42
-#, fuzzy
-#| msgid "頁"
 msgid "首頁"
-msgstr "페이지"
+msgstr "홈"
 
 #: .\templates\base.html:61 .\users\templates\users\dashboard.html:9
 #: .\users\templates\users\dashboard.html:44
@@ -8683,19 +8681,17 @@ msgstr "대시보드"
 #: .\users\templates\users\dashboard.html:46
 #: .\users\templates\users\home.html:129
 msgid "留學流程"
-msgstr ""
+msgstr "유학 절차"
 
 #: .\templates\base.html:66 .\templates\base.html:215
 #: .\users\templates\users\dashboard.html:48
 #: .\users\templates\users\home.html:170
-#, fuzzy
-#| msgid "查看任務清單"
 msgid "任務清單"
-msgstr "할 일 목록 보기"
+msgstr "작업 목록"
 
 #: .\templates\base.html:74 .\users\templates\users\home.html:24
 msgid "詢問AI小幫手"
-msgstr ""
+msgstr "AI 도우미"
 
 #: .\templates\base.html:89 .\users\templates\users\dashboard.html:66
 msgid "搜尋指南..."
@@ -8729,7 +8725,7 @@ msgstr "로그아웃"
 
 #: .\templates\base.html:171
 msgid "開始流程"
-msgstr ""
+msgstr "시작하기"
 
 #: .\templates\base.html:191
 msgid ""

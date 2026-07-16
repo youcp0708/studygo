@@ -1226,7 +1226,7 @@ msgstr "ALATS or various Taiwan offices"
 #: .\users\templates\users\dashboard.html:52
 #: .\users\templates\users\home.html:351
 msgid "學長姐分享"
-msgstr ""
+msgstr "Alumni Sharing"
 
 #: .\guides\templates\guides\admissions_guide.html:512
 #: .\users\templates\users\home.html:352
@@ -8904,10 +8904,8 @@ msgid "確認"
 msgstr "Confirm"
 
 #: .\templates\base.html:58 .\users\templates\users\dashboard.html:42
-#, fuzzy
-#| msgid "鎖頭"
 msgid "首頁"
-msgstr "Lock"
+msgstr "Home"
 
 #: .\templates\base.html:61 .\users\templates\users\dashboard.html:9
 #: .\users\templates\users\dashboard.html:44
@@ -8918,19 +8916,17 @@ msgstr "Dashboard"
 #: .\users\templates\users\dashboard.html:46
 #: .\users\templates\users\home.html:129
 msgid "留學流程"
-msgstr ""
+msgstr "Study Flow"
 
 #: .\templates\base.html:66 .\templates\base.html:215
 #: .\users\templates\users\dashboard.html:48
 #: .\users\templates\users\home.html:170
-#, fuzzy
-#| msgid "查看任務清單"
 msgid "任務清單"
-msgstr "View Task List"
+msgstr "Task List"
 
 #: .\templates\base.html:74 .\users\templates\users\home.html:24
 msgid "詢問AI小幫手"
-msgstr ""
+msgstr "Ask AI"
 
 #: .\templates\base.html:89 .\users\templates\users\dashboard.html:66
 msgid "搜尋指南..."
@@ -8962,11 +8958,11 @@ msgstr ""
 
 #: .\templates\base.html:168 .\users\templates\users\dashboard.html:143
 msgid "登出"
-msgstr "Log Out"
+msgstr "Logout"
 
 #: .\templates\base.html:171
 msgid "開始流程"
-msgstr ""
+msgstr "Start"
 
 #: .\templates\base.html:191
 msgid ""

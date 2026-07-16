@@ -1201,7 +1201,7 @@ msgstr "ALATS သို့မဟုတ် အမျိုးမျိုးသ�
 #: .\users\templates\users\dashboard.html:52
 #: .\users\templates\users\home.html:351
 msgid "學長姐分享"
-msgstr ""
+msgstr "ကျောင်းသားဟောင်းဝေမျှခြင်း"
 
 #: .\guides\templates\guides\admissions_guide.html:512
 #: .\users\templates\users\home.html:352
@@ -2076,7 +2076,7 @@ msgstr "ပြီးဆုံးပါပြီ!"
 #: .\users\templates\users\dashboard.html:54
 #: .\users\templates\users\home.html:448
 msgid "常見問題"
-msgstr "မေးလေ့မေးထရှိသောမေးခွန်းများ"
+msgstr "အမေးများသောမေးခွန်းများ"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:250
 msgid "港澳生的居留證跟一般外籍生的 ARC 一樣嗎？"
@@ -5481,7 +5481,7 @@ msgstr "အရေးပေါ်အဆောက်အဦပျက်စီးမ
 #: .\users\templates\users\home.html:23 .\users\templates\users\home.html:306
 #: .\users\templates\users\login.html:42
 msgid "資訊中心"
-msgstr "သတင်းအချက်အလက်စင်တာ"
+msgstr "သတင်းအချက်အလက်ဗဟိုဌာန"
 
 #: .\guides\templates\guides\guide_index.html:16
 #: .\users\templates\users\edit_profile.html:11
@@ -8767,10 +8767,8 @@ msgid "確認"
 msgstr "အတည်ပြုရန်"
 
 #: .\templates\base.html:58 .\users\templates\users\dashboard.html:42
-#, fuzzy
-#| msgid "頁"
 msgid "首頁"
-msgstr "မျက်နှာ"
+msgstr "ပင်မစာမျက်နှာ"
 
 #: .\templates\base.html:61 .\users\templates\users\dashboard.html:9
 #: .\users\templates\users\dashboard.html:44
@@ -8781,19 +8779,17 @@ msgstr "ဒက်ရှ်ဘုတ်"
 #: .\users\templates\users\dashboard.html:46
 #: .\users\templates\users\home.html:129
 msgid "留學流程"
-msgstr ""
+msgstr "လေ့လာမှုလုပ်ငန်းစဉ်"
 
 #: .\templates\base.html:66 .\templates\base.html:215
 #: .\users\templates\users\dashboard.html:48
 #: .\users\templates\users\home.html:170
-#, fuzzy
-#| msgid "查看任務清單"
 msgid "任務清單"
-msgstr "တာဝန်စာရင်း ကြည့်ရန်"
+msgstr "အလုပ်စာရင်း"
 
 #: .\templates\base.html:74 .\users\templates\users\home.html:24
 msgid "詢問AI小幫手"
-msgstr ""
+msgstr "AI ကိုမေးပါ"
 
 #: .\templates\base.html:89 .\users\templates\users\dashboard.html:66
 msgid "搜尋指南..."
@@ -8827,7 +8823,7 @@ msgstr "ထွက်ရန်"
 
 #: .\templates\base.html:171
 msgid "開始流程"
-msgstr ""
+msgstr "စတင်ပါ"
 
 #: .\templates\base.html:191
 msgid ""

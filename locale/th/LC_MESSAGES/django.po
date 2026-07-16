@@ -1201,7 +1201,7 @@ msgstr "ALATS หรือสำนักงานต่างๆ ในไต�
 #: .\users\templates\users\dashboard.html:52
 #: .\users\templates\users\home.html:351
 msgid "學長姐分享"
-msgstr ""
+msgstr "ศิษย์เก่าแบ่งปัน"
 
 #: .\guides\templates\guides\admissions_guide.html:512
 #: .\users\templates\users\home.html:352
@@ -8673,10 +8673,8 @@ msgid "確認"
 msgstr "ยืนยัน"
 
 #: .\templates\base.html:58 .\users\templates\users\dashboard.html:42
-#, fuzzy
-#| msgid "頁"
 msgid "首頁"
-msgstr "หน้า"
+msgstr "หน้าแรก"
 
 #: .\templates\base.html:61 .\users\templates\users\dashboard.html:9
 #: .\users\templates\users\dashboard.html:44
@@ -8687,19 +8685,17 @@ msgstr "แดชบอร์ด"
 #: .\users\templates\users\dashboard.html:46
 #: .\users\templates\users\home.html:129
 msgid "留學流程"
-msgstr ""
+msgstr "ขั้นตอนการศึกษา"
 
 #: .\templates\base.html:66 .\templates\base.html:215
 #: .\users\templates\users\dashboard.html:48
 #: .\users\templates\users\home.html:170
-#, fuzzy
-#| msgid "查看任務清單"
 msgid "任務清單"
-msgstr "ดูรายการงาน"
+msgstr "รายการงาน"
 
 #: .\templates\base.html:74 .\users\templates\users\home.html:24
 msgid "詢問AI小幫手"
-msgstr ""
+msgstr "ถาม AI"
 
 #: .\templates\base.html:89 .\users\templates\users\dashboard.html:66
 msgid "搜尋指南..."
@@ -8733,7 +8729,7 @@ msgstr "ออกจากระบบ"
 
 #: .\templates\base.html:171
 msgid "開始流程"
-msgstr ""
+msgstr "เริ่มกระบวนการ"
 
 #: .\templates\base.html:191
 msgid ""
