@@ -108,8 +108,6 @@ msgid "新增附件"
 msgstr "Tambahkan Lampiran"
 
 #: .\chatbot\templates\chatbot\chatbot.html:163
-#, fuzzy
-#| msgid "上傳檔案"
 msgid "上傳檔案或照片"
 msgstr "Unggah File"
 
@@ -119,7 +117,7 @@ msgstr "Ambil Foto"
 
 #: .\chatbot\templates\chatbot\chatbot.html:169
 msgid "例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？"
-msgstr ""
+msgstr "Contoh: Belakangan ini saya stres berat dan agak rindu rumah, bisa temani saya mengobrol?"
 
 #: .\chatbot\templates\chatbot\chatbot.html:169
 msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
@@ -339,26 +337,18 @@ msgid "小貼士"
 msgstr "Tips"
 
 #: .\flows\templates\flows\my_flows.html:68
-#, fuzzy
-#| msgid "📋 需要的文件"
 msgid "需要的文件"
 msgstr "📋 Dokumen yang diperlukan"
 
 #: .\flows\templates\flows\my_flows.html:69
-#, fuzzy
-#| msgid "📍 辦理地點"
 msgid "辦理地點"
 msgstr "📍 Lokasi aplikasi"
 
 #: .\flows\templates\flows\my_flows.html:70
-#, fuzzy
-#| msgid "🗺️ 在地圖上查看"
 msgid "在地圖上查看"
 msgstr "🗺️ Lihat di peta"
 
 #: .\flows\templates\flows\my_flows.html:71
-#, fuzzy
-#| msgid "🌐 官方網站"
 msgid "官方網站"
 msgstr "🌐 Situs web resmi"
 
@@ -367,15 +357,11 @@ msgid "點此前往官方網站"
 msgstr "Klik di sini untuk membuka situs resminya"
 
 #: .\flows\templates\flows\my_flows.html:73
-#, fuzzy
-#| msgid "📅 辦理時程"
 msgid "辦理時程"
 msgstr "📅 Jadwal pemrosesan"
 
 #: .\flows\templates\flows\my_flows.html:74
 #: .\flows\templates\flows\my_flows.html:76
-#, fuzzy
-#| msgid "📅 截止日期"
 msgid "截止日期"
 msgstr "📅 Batas waktu"
 
@@ -1022,14 +1008,10 @@ msgid ""
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:310
-#, fuzzy
-#| msgid "香港 / 澳門永久居民身份證"
 msgid "港澳居民身份"
-msgstr "KTP Penduduk Tetap Hong Kong / Makau"
+msgstr "Identitas Penduduk Hong Kong/Makau"
 
 #: .\guides\templates\guides\admissions_guide.html:312
-#, fuzzy
-#| msgid "HKDSE / 澳門高中畢業"
 msgid "HKDSE / 澳門高中"
 msgstr "Lulusan SMA HKDSE / Makau"
 
@@ -1049,10 +1031,6 @@ msgid "統一報名"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:329
-#, fuzzy
-#| msgid ""
-#| "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公"
-#| "告，8 月底至 9 月初入學報到。"
 msgid ""
 "海聯會港澳組通常於每年 1～2 月開放網路報名，截止日期約為 2 月底。錄取結果約 5"
 "～6 月公告，9 月初入學報到。"
@@ -1063,10 +1041,8 @@ msgstr ""
 "akan dilakukan dari akhir Agustus hingga awal September."
 
 #: .\guides\templates\guides\admissions_guide.html:331
-#, fuzzy
-#| msgid "1～3 月報名"
 msgid "1～2 月報名"
-msgstr "Pendaftaran bulan Januari s/d Maret"
+msgstr "Pendaftaran bulan Januari–Februari"
 
 #: .\guides\templates\guides\admissions_guide.html:340
 msgid ""
@@ -1235,17 +1211,17 @@ msgstr "Berbagi Alumni"
 #: .\guides\templates\guides\admissions_guide.html:512
 #: .\users\templates\users\home.html:352
 msgid "來聽聽"
-msgstr ""
+msgstr "Dengarkan Cerita dari"
 
 #: .\guides\templates\guides\admissions_guide.html:512
 #: .\users\templates\users\home.html:352
 msgid "學長姐怎麼說"
-msgstr ""
+msgstr "Kata Para Senior"
 
 #: .\guides\templates\guides\admissions_guide.html:514
 #: .\users\templates\users\home.html:354
 msgid "來自世界各地的學長姐，分享他們在台灣最真實的留學體驗與心得"
-msgstr ""
+msgstr "Senior dari seluruh dunia berbagi pengalaman studi paling nyata di Taiwan"
 
 #: .\guides\templates\guides\admissions_guide.html:523
 #: .\guides\templates\guides\guide_national_area.html:76 .\users\models.py:129
@@ -1256,15 +1232,13 @@ msgstr "Vietnam"
 #: .\guides\templates\guides\admissions_guide.html:524
 #: .\guides\templates\guides\admissions_guide.html:614
 #: .\users\templates\users\home.html:363
-#, fuzzy
-#| msgid "例如：國立臺灣大學"
 msgid "國立臺灣大學"
-msgstr "Contoh: National Taiwan University"
+msgstr "Universitas Nasional Taiwan"
 
 #: .\guides\templates\guides\admissions_guide.html:525
 #: .\users\templates\users\home.html:364
 msgid "國際企業管理碩士"
-msgstr ""
+msgstr "Magister Manajemen Bisnis Internasional"
 
 #: .\guides\templates\guides\admissions_guide.html:529
 #: .\users\templates\users\home.html:368
@@ -1278,12 +1252,12 @@ msgstr ""
 #: .\guides\templates\guides\admissions_guide.html:629
 #: .\users\templates\users\home.html:377
 msgid "國立成功大學"
-msgstr ""
+msgstr "Universitas Nasional Cheng Kung"
 
 #: .\guides\templates\guides\admissions_guide.html:540
 #: .\users\templates\users\home.html:378
 msgid "機械工程學士班"
-msgstr ""
+msgstr "Sarjana Teknik Mesin"
 
 #: .\guides\templates\guides\admissions_guide.html:544
 #: .\users\templates\users\home.html:382
@@ -1300,10 +1274,8 @@ msgstr "Filipina"
 
 #: .\guides\templates\guides\admissions_guide.html:554
 #: .\users\templates\users\home.html:391
-#, fuzzy
-#| msgid "例如：國立臺灣大學"
 msgid "國立臺灣師範大學"
-msgstr "Contoh: National Taiwan University"
+msgstr "Universitas Normal Nasional Taiwan"
 
 #: .\guides\templates\guides\admissions_guide.html:555
 #: .\users\templates\users\home.html:392
@@ -1367,12 +1339,12 @@ msgstr "Jepang"
 #: .\guides\templates\guides\admissions_guide.html:599
 #: .\users\templates\users\home.html:433
 msgid "國立陽明交通大學"
-msgstr ""
+msgstr "Universitas Nasional Yang Ming Chiao Tung"
 
 #: .\guides\templates\guides\admissions_guide.html:600
 #: .\users\templates\users\home.html:434
 msgid "半導體研究碩士"
-msgstr ""
+msgstr "Magister Riset Semikonduktor"
 
 #: .\guides\templates\guides\admissions_guide.html:604
 #: .\users\templates\users\home.html:438
@@ -1382,10 +1354,8 @@ msgid ""
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:613 .\users\models.py:136
-#, fuzzy
-#| msgid "印尼"
 msgid "印度"
-msgstr "Indonesia"
+msgstr "India"
 
 #: .\guides\templates\guides\admissions_guide.html:615
 msgid "電機工程碩士"
@@ -3423,8 +3393,6 @@ msgstr ""
 "perbankan online yang komprehensif, banyak digunakan mahasiswa."
 
 #: .\guides\templates\guides\guide_bank.html:57
-#, fuzzy
-#| msgid "所需文件"
 msgid "所需文件（郵局）"
 msgstr "Dokumen yang Diperlukan"
 
@@ -5713,8 +5681,6 @@ msgid "申請資格、時程、所需文件與注意事項整理"
 msgstr "Kelayakan, jadwal, dokumen yang diperlukan, dan catatan penting"
 
 #: .\guides\templates\guides\guide_index.html:53
-#, fuzzy
-#| msgid "證件・住宿・交通"
 msgid "證件・住宿"
 msgstr "Dokumen・Hunian・Transportasi"
 
@@ -6203,16 +6169,12 @@ msgid "K書中心・開館時間"
 msgstr "Study Center · Jam Buka"
 
 #: .\guides\templates\guides\guide_map.html:17
-#, fuzzy
-#| msgid "學校・醫院・交通"
 msgid "學校・美食・醫院・交通"
 msgstr "Kampus · Rumah Sakit · Transportasi"
 
 #: .\guides\templates\guides\guide_map.html:19
-#, fuzzy
-#| msgid "中央大學周邊重要地點，點選快速定位及導航"
 msgid "中央大學周邊重要地點，點選按鈕即可在地圖上定位"
-msgstr "Lokasi penting sekitar NCU — klik untuk navigasi"
+msgstr "Lokasi penting sekitar NCU — klik tombol untuk menemukan lokasinya di peta"
 
 #: .\guides\templates\guides\guide_map.html:23
 msgid "快速定位"
@@ -6713,10 +6675,8 @@ msgid "承辦人：徐心荷小姐"
 msgstr "Narahubung: Nona Xu Xinhe"
 
 #: .\guides\templates\guides\guide_mental_health.html:18
-#, fuzzy
-#| msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
 msgid "諮商中心預約・常見困擾・24 小時求助熱線"
-msgstr "Janji konseling, stres, masalah hubungan, dan hotline 24 jam"
+msgstr "Janji Temu Pusat Konseling, Masalah Umum & Hotline Bantuan 24 Jam"
 
 #: .\guides\templates\guides\guide_mental_health.html:22
 msgid ""
@@ -6729,14 +6689,10 @@ msgid "諮商輔導中心"
 msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:36
-#, fuzzy
-#| msgid "週一至週五 10:00–15:00"
 msgid "週一至週五 09:00–17:00"
 msgstr "Sen–Jum 10:00–15:00"
 
 #: .\guides\templates\guides\guide_mental_health.html:43
-#, fuzzy
-#| msgid "費用說明"
 msgid "費用"
 msgstr "Deskripsi biaya"
 
@@ -6786,10 +6742,8 @@ msgid "Portal → 學生服務 → 學生輔導服務 → 個別諮商，或直�
 msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:83
-#, fuzzy
-#| msgid "建議線上預約"
 msgid "填寫線上預約表單"
-msgstr "Janji temu online direkomendasikan"
+msgstr "Isi Formulir Janji Temu Online"
 
 #: .\guides\templates\guides\guide_mental_health.html:84
 msgid "簡單描述來訪原因（不需要詳細，幾句話即可）"
@@ -6864,10 +6818,8 @@ msgid "方向迷失、身份認同、生涯規劃"
 msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:140
-#, fuzzy
-#| msgid "24 小時緊急總線"
 msgid "24 小時求助熱線"
-msgstr "Saluran Darurat 24 Jam"
+msgstr "Hotline Bantuan 24 Jam"
 
 #: .\guides\templates\guides\guide_mental_health.html:145
 msgid "24H・心理危機・自殺防治"
@@ -7456,21 +7408,15 @@ msgid "教育部－主管法規查詢系統"
 msgstr "Kementerian Pendidikan — Sistem Basis Data Peraturan"
 
 #: .\guides\templates\guides\guide_scholarship.html:18
-#, fuzzy
-#| msgid "僑生獎學金、清寒補助、校內外各項申請指南"
 msgid "僑生獎學金・清寒補助・校內外各項申請指南"
 msgstr ""
 "Beasiswa mahasiswa Tionghoa perantau, bantuan keuangan, dan panduan daftar"
 
 #: .\guides\templates\guides\guide_scholarship.html:22
-#, fuzzy
-#| msgid "申請管道"
 msgid "申請管道快覽"
 msgstr "Saluran aplikasi"
 
 #: .\guides\templates\guides\guide_scholarship.html:26
-#, fuzzy
-#| msgid "國際事務處（OIA）"
 msgid "NCU 國際事務處（OIA）"
 msgstr "Kantor Urusan Internasional (OIA)"
 
@@ -7513,24 +7459,16 @@ msgid "金額"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:55
-#, fuzzy
-#| msgid "期間"
 msgid "期限"
-msgstr "Periode"
+msgstr "Batas Waktu"
 
 #: .\guides\templates\guides\guide_scholarship.html:56
-#, fuzzy
-#| msgid "備註"
 msgid "備注"
-msgstr "Komentar"
+msgstr "Catatan"
 
 #: .\guides\templates\guides\guide_scholarship.html:61
-#, fuzzy
-#| msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
 msgid "教育部清寒僑生助學金"
-msgstr ""
-"Pedoman Kemendikbud untuk Memberikan Bantuan Keuangan kepada Mahasiswa "
-"Diaspora Tionghoa Kurang Mampu"
+msgstr "Bantuan Keuangan Kemendikbud untuk Mahasiswa Tionghoa Perantauan Kurang Mampu"
 
 #: .\guides\templates\guides\guide_scholarship.html:63
 msgid "1 學年（9 月至翌年 8 月）"
@@ -7588,20 +7526,16 @@ msgid ""
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:97
-#, fuzzy
-#| msgid "等第"
 msgid "等級"
-msgstr "Nilai"
+msgstr "Tingkat"
 
 #: .\guides\templates\guides\guide_scholarship.html:98
 msgid "年額"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:99
-#, fuzzy
-#| msgid "申請資格（年級）"
 msgid "申請資格（成績）"
-msgstr "Kelayakan (berdasarkan tahun)"
+msgstr "Kelayakan (berdasarkan nilai)"
 
 #: .\guides\templates\guides\guide_scholarship.html:100
 msgid "續領條件"
@@ -7628,10 +7562,8 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:117
 #: .\guides\templates\guides\guide_scholarship.html:151
 #: .\guides\templates\guides\guide_scholarship.html:163
-#, fuzzy
-#| msgid "1 年"
 msgid "4 年"
-msgstr "1 Tahun"
+msgstr "4 Tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:113
 msgid "傑出"
@@ -7655,10 +7587,8 @@ msgid "不得同時領取其他政府獎學金"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:129
-#, fuzzy
-#| msgid "教育部臺灣獎學金"
 msgid "教育部台灣獎學金（外籍生）"
-msgstr "Beasiswa Kementerian Pendidikan Taiwan"
+msgstr "Beasiswa Kemendikbud Taiwan (Mahasiswa Asing)"
 
 #: .\guides\templates\guides\guide_scholarship.html:132
 msgid ""
@@ -7667,10 +7597,8 @@ msgid ""
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:140
-#, fuzzy
-#| msgid "計學分"
 msgid "學制"
-msgstr "Dihitung SKS"
+msgstr "Jenis Program"
 
 #: .\guides\templates\guides\guide_scholarship.html:141
 msgid "每月生活費"
@@ -7685,8 +7613,6 @@ msgid "最長年限"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:148
-#, fuzzy
-#| msgid "學士班"
 msgid "學士"
 msgstr "Gelar sarjana"
 
@@ -7697,16 +7623,12 @@ msgid "每學期最高 NT$40,000"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:154
-#, fuzzy
-#| msgid "碩士畢業"
 msgid "碩士"
 msgstr "gelar master"
 
 #: .\guides\templates\guides\guide_scholarship.html:157
-#, fuzzy
-#| msgid "1 年"
 msgid "2 年"
-msgstr "1 Tahun"
+msgstr "2 Tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:160
 msgid "博士"
@@ -7805,8 +7727,6 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
-#, fuzzy
-#| msgid "每學期"
 msgid "學期"
 msgstr "setiap semester"
 
@@ -7871,8 +7791,6 @@ msgid "行天宮獎學金"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:291
-#, fuzzy
-#| msgid "1 年"
 msgid "年"
 msgstr "1 Tahun"
 
@@ -7889,8 +7807,6 @@ msgid "孺鴻教育獎學金"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:298
-#, fuzzy
-#| msgid "約每年 3 月"
 msgid "每年 3 月"
 msgstr "Sekitar bulan Maret setiap tahunnya"
 
@@ -7942,8 +7858,6 @@ msgid ""
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:328
-#, fuzzy
-#| msgid "重要提醒："
 msgid "重要提醒"
 msgstr "Pengingat penting:"
 
@@ -8958,8 +8872,6 @@ msgstr ""
 "tidak dapat digunakan kembali."
 
 #: .\guides\templates\guides\guide_work_permit.html:248
-#, fuzzy
-#| msgid "許可期限最長 "
 msgid "許可期限最長 6 個月："
 msgstr "Masa Berlaku Izin Maksimum "
 
@@ -9078,8 +8990,6 @@ msgid "搜尋指南..."
 msgstr "Cari panduan..."
 
 #: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
-#, fuzzy
-#| msgid "沒有未讀通知 🎉"
 msgid "沒有未讀通知"
 msgstr "Tidak ada pemberitahuan belum dibaca 🎉"
 
@@ -9113,59 +9023,57 @@ msgstr "Mulai"
 msgid ""
 "專為僑外籍生打造的來台留學流程指南平台，協助學生一步步完成留學準備與抵台後事"
 "項。"
-msgstr ""
+msgstr "Platform panduan proses studi di Taiwan yang dirancang khusus untuk mahasiswa Tionghoa perantauan dan mahasiswa asing, membantu mahasiswa menyelesaikan persiapan studi dan hal-hal setelah tiba secara bertahap."
 
 #: .\templates\base.html:197 .\users\templates\users\home.html:136
 #: .\users\templates\users\home.html:281
 msgid "申請前準備"
-msgstr ""
+msgstr "Persiapan Sebelum Mengajukan"
 
 #: .\templates\base.html:199 .\users\templates\users\home.html:148
 #: .\users\templates\users\home.html:274 .\users\templates\users\home.html:288
 msgid "抵台前準備"
-msgstr ""
+msgstr "Persiapan Sebelum Kedatangan"
 
 #: .\templates\base.html:200 .\users\templates\users\home.html:154
 msgid "抵達後事項"
-msgstr ""
+msgstr "Setelah Tiba"
 
 #: .\templates\base.html:205 .\users\templates\users\home.html:314
 msgid "簽證指南"
-msgstr ""
+msgstr "Panduan Visa"
 
 #: .\templates\base.html:206 .\users\templates\users\home.html:319
 msgid "住宿資訊"
-msgstr ""
+msgstr "Informasi Tempat Tinggal"
 
 #: .\templates\base.html:207 .\users\templates\users\home.html:324
 msgid "健保說明"
-msgstr ""
+msgstr "Panduan Asuransi Kesehatan Nasional"
 
 #: .\templates\base.html:208
 msgid "生活指南"
-msgstr ""
+msgstr "Panduan Kehidupan"
 
 #: .\templates\base.html:212
 msgid "支援服務"
-msgstr ""
+msgstr "Layanan Dukungan"
 
 #: .\templates\base.html:213
 msgid "使用說明"
-msgstr ""
+msgstr "Panduan Penggunaan"
 
 #: .\templates\base.html:216
-#, fuzzy
-#| msgid "詢問 AI 小幫手"
 msgid "AI 小幫手"
 msgstr "Tanya Asisten AI"
 
 #: .\templates\base.html:222
 msgid "聯絡我們"
-msgstr ""
+msgstr "Hubungi Kami"
 
 #: .\templates\base.html:230
 msgid "意見回饋"
-msgstr ""
+msgstr "Umpan Balik"
 
 #: .\users\models.py:95 .\users\templates\users\edit_profile.html:76
 #: .\users\templates\users\home.html:241
@@ -9262,10 +9170,8 @@ msgid "英國"
 msgstr ""
 
 #: .\users\models.py:145
-#, fuzzy
-#| msgid "泰國"
 msgid "法國"
-msgstr "Thailand"
+msgstr "Prancis"
 
 #: .\users\models.py:146
 msgid "德國"
@@ -9284,8 +9190,6 @@ msgid "美國"
 msgstr ""
 
 #: .\users\models.py:151
-#, fuzzy
-#| msgid "美國／加拿大"
 msgid "加拿大"
 msgstr "Amerika / Kanada"
 
@@ -9298,10 +9202,8 @@ msgid "阿根廷"
 msgstr ""
 
 #: .\users\models.py:157
-#, fuzzy
-#| msgid "南亞"
 msgid "南非"
-msgstr "Asia Selatan"
+msgstr "Afrika Selatan"
 
 #: .\users\models.py:158
 msgid "埃及"
@@ -9312,20 +9214,16 @@ msgid "奈及利亞"
 msgstr ""
 
 #: .\users\models.py:161
-#, fuzzy
-#| msgid "歐洲"
 msgid "澳洲"
-msgstr "Eropa"
+msgstr "Australia"
 
 #: .\users\models.py:162
 msgid "紐西蘭"
 msgstr ""
 
 #: .\users\models.py:169
-#, fuzzy
-#| msgid "例如：國立臺灣大學"
 msgid "國立臺灣大學（NTU）"
-msgstr "Contoh: National Taiwan University"
+msgstr "Universitas Nasional Taiwan (NTU)"
 
 #: .\users\models.py:170
 msgid "國立政治大學（NCCU）"
@@ -9348,10 +9246,8 @@ msgid "國立中興大學（NCHU）"
 msgstr ""
 
 #: .\users\models.py:175
-#, fuzzy
-#| msgid "中央大學（正門）"
 msgid "國立中央大學（NCU）"
-msgstr "NCU (Gerbang Utama)"
+msgstr "Universitas Nasional Central (NCU)"
 
 #: .\users\models.py:176
 msgid "國立中山大學（NSYSU）"
@@ -9478,8 +9374,6 @@ msgid "境外生"
 msgstr "Mahasiswa Internasional"
 
 #: .\users\templates\users\dashboard.html:155
-#, fuzzy
-#| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
 msgid "歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。"
 msgstr ""
 "Selamat datang di StudyGo Taiwan, proses pribadi Anda untuk belajar di "
@@ -9609,7 +9503,7 @@ msgstr "Kewarganegaraan"
 
 #: .\users\templates\users\edit_profile.html:73
 msgid "身份別（不可更改）"
-msgstr ""
+msgstr "Jenis Identitas (Tidak dapat diubah)"
 
 #: .\users\templates\users\edit_profile.html:90
 #: .\users\templates\users\profile_setup.html:69
@@ -9631,7 +9525,7 @@ msgstr "Silakan pilih jurusan Anda"
 #: .\users\templates\users\edit_profile.html:132
 #: .\users\templates\users\profile_setup.html:205
 msgid "資訊電機學院"
-msgstr ""
+msgstr "Fakultas Teknik Elektro dan Informatika"
 
 #: .\users\templates\users\edit_profile.html:157
 #: .\users\templates\users\profile_setup.html:145
@@ -9762,18 +9656,14 @@ msgid "來臺就學小幫手"
 msgstr "Asisten Studi di Taiwan"
 
 #: .\users\templates\users\home.html:16 .\users\templates\users\home.html:27
-#, fuzzy
-#| msgid "你好，"
 msgid "你好！"
 msgstr "Halo, "
 
 #: .\users\templates\users\home.html:16 .\users\templates\users\home.html:27
 msgid "歡迎使用"
-msgstr ""
+msgstr "Selamat Datang di"
 
 #: .\users\templates\users\home.html:18
-#, fuzzy
-#| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
 msgid "，您的個人化來臺就學流程已準備好。"
 msgstr ""
 "Selamat datang di StudyGo Taiwan, proses pribadi Anda untuk belajar di "
@@ -9781,7 +9671,7 @@ msgstr ""
 
 #: .\users\templates\users\home.html:19 .\users\templates\users\home.html:30
 msgid "跟著我們一步步完成留學準備，掌握所有關鍵資訊。"
-msgstr ""
+msgstr "Ikuti kami langkah demi langkah untuk menyelesaikan persiapan studi Anda dan kuasai semua informasi penting."
 
 #: .\users\templates\users\home.html:29
 msgid "專為僑外籍生打造的來台留學流程指南平台。"
@@ -9799,22 +9689,18 @@ msgstr ""
 #: .\users\templates\users\home.html:48 .\users\templates\users\home.html:87
 #: .\users\templates\users\home.html:517
 msgid "項任務"
-msgstr ""
+msgstr "tugas"
 
 #: .\users\templates\users\home.html:89 .\users\templates\users\home.html:107
 #: .\users\templates\users\home.html:119
 msgid "示範資料"
-msgstr ""
+msgstr "Data Contoh"
 
 #: .\users\templates\users\home.html:115
-#, fuzzy
-#| msgid "申請截止"
 msgid "申請中"
-msgstr "Batas waktu pendaftaran"
+msgstr "Sedang Dibuka"
 
 #: .\users\templates\users\home.html:116 .\users\templates\users\home.html:242
-#, fuzzy
-#| msgid "中央大學"
 msgid "國立中央大學"
 msgstr "Universitas Pusat Nasional"
 
@@ -9824,7 +9710,7 @@ msgstr ""
 
 #: .\users\templates\users\home.html:130
 msgid "掌握留學全流程"
-msgstr ""
+msgstr "Kuasai Seluruh Proses Studi ke Luar Negeri"
 
 #: .\users\templates\users\home.html:137
 msgid "確認資格、選擇學校與科系、準備學歷文件與財力證明"
@@ -9862,109 +9748,99 @@ msgstr ""
 
 #: .\users\templates\users\home.html:171
 msgid "跟著清單走"
-msgstr ""
+msgstr "Ikuti Daftar Periksa"
 
 #: .\users\templates\users\home.html:171
 msgid "不遺漏任何步驟"
-msgstr ""
+msgstr "Tidak Ada Langkah yang Terlewat"
 
 #: .\users\templates\users\home.html:237
 msgid "王小明"
-msgstr ""
+msgstr "Wang Xiao-Ming"
 
 #: .\users\templates\users\home.html:246
 msgid "目前進度"
-msgstr ""
+msgstr "Progres Saat Ini"
 
 #: .\users\templates\users\home.html:252
 msgid "已完成 8 / 20 項任務"
-msgstr ""
+msgstr "8 / 20 Tugas Selesai"
 
 #: .\users\templates\users\home.html:257
-#, fuzzy
-#| msgid "近期待辦任務"
 msgid "待辦任務"
 msgstr "Tugas Mendatang"
 
 #: .\users\templates\users\home.html:262
-#, fuzzy
-#| msgid "即將到期任務"
 msgid "即將到期"
 msgstr "Tugas yang Segera Jatuh Tempo"
 
 #: .\users\templates\users\home.html:273
 msgid "申請學生簽證"
-msgstr ""
+msgstr "Mengajukan Visa Pelajar"
 
 #: .\users\templates\users\home.html:280
-#, fuzzy
-#| msgid "財力證明"
 msgid "準備財力證明文件"
 msgstr "Bukti Keuangan"
 
 #: .\users\templates\users\home.html:287
 msgid "預訂來台機票"
-msgstr ""
+msgstr "Memesan Tiket Pesawat ke Taiwan"
 
 #: .\users\templates\users\home.html:293
 msgid "以上為示範資料，"
 msgstr ""
 
 #: .\users\templates\users\home.html:293
-#, fuzzy
-#| msgid "我的個人化任務清單"
 msgid "後可查看您的個人化任務清單"
-msgstr "Daftar tugas pribadi saya"
+msgstr "kemudian Anda dapat melihat daftar tugas personal Anda"
 
 #: .\users\templates\users\home.html:307
 msgid "重要資訊"
-msgstr ""
+msgstr "Informasi Penting"
 
 #: .\users\templates\users\home.html:307
 msgid "一次搞定"
-msgstr ""
+msgstr "Selesai Sekaligus"
 
 #: .\users\templates\users\home.html:309
 msgid "從簽證到住宿、從健保到交通，所有外籍生在台必備的重要資訊都在這裡"
-msgstr ""
+msgstr "Dari visa hingga tempat tinggal, dari asuransi kesehatan hingga transportasi — semua informasi penting bagi mahasiswa asing di Taiwan ada di sini"
 
 #: .\users\templates\users\home.html:315
 msgid "學生簽證申請流程、所需文件、辦理地點與注意事項，一次搞懂不迷路。"
-msgstr ""
+msgstr "Proses pengajuan visa pelajar, dokumen yang diperlukan, lokasi, dan hal-hal penting — pahami sekaligus tanpa bingung."
 
 #: .\users\templates\users\home.html:320
 msgid "校內宿舍申請流程、校外租屋平台推薦、租房合約注意事項與常見陷阱。"
-msgstr ""
+msgstr "Proses pengajuan asrama kampus, rekomendasi platform sewa di luar kampus, hal-hal penting dalam kontrak sewa, dan jebakan umum."
 
 #: .\users\templates\users\home.html:325
 msgid "全民健保加入資格、保費計算方式、就醫流程與各地醫院資訊查詢。"
-msgstr ""
+msgstr "Kelayakan Asuransi Kesehatan Nasional, cara perhitungan premi, proses berobat, dan informasi rumah sakit per wilayah."
 
 #: .\users\templates\users\home.html:329
-#, fuzzy
-#| msgid "台灣銀行開戶"
 msgid "銀行開戶"
 msgstr "Buka Rekening Bank di Taiwan"
 
 #: .\users\templates\users\home.html:330
 msgid "推薦外籍生友善銀行、開戶所需文件、線上轉帳與提款卡申請教學。"
-msgstr ""
+msgstr "Rekomendasi bank yang ramah bagi mahasiswa asing, dokumen untuk membuka rekening, transfer online, dan panduan pengajuan kartu debit."
 
 #: .\users\templates\users\home.html:334
 msgid "手機門號"
-msgstr ""
+msgstr "Nomor Ponsel"
 
 #: .\users\templates\users\home.html:335
 msgid "電信業者比較、預付卡 vs 月租方案、門號申請所需證件與流程。"
-msgstr ""
+msgstr "Perbandingan operator telekomunikasi, kartu prabayar vs paket bulanan, dokumen dan proses pengajuan nomor."
 
 #: .\users\templates\users\home.html:339
 msgid "大眾交通"
-msgstr ""
+msgstr "Transportasi Umum"
 
 #: .\users\templates\users\home.html:340
 msgid "悠遊卡/一卡通使用教學、捷運公車路線查詢、YouBike 租借與火車訂票。"
-msgstr ""
+msgstr "Panduan penggunaan EasyCard/iPASS, pencarian rute MRT dan bus, sewa YouBike, dan pemesanan tiket kereta."
 
 #: .\users\templates\users\home.html:449
 msgid "您想了解的都在這"
@@ -9972,79 +9848,77 @@ msgstr ""
 
 #: .\users\templates\users\home.html:452
 msgid "申請台灣大學需要準備哪些文件？"
-msgstr ""
+msgstr "Dokumen apa saja yang diperlukan untuk mendaftar ke universitas Taiwan?"
 
 #: .\users\templates\users\home.html:453
 msgid ""
 "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文"
 "或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究"
 "所）。各校要求略有不同，請以各校招生簡章為準。"
-msgstr ""
+msgstr "Umumnya Anda memerlukan: paspor, bukti pendidikan (ijazah SMA/universitas), transkrip nilai, bukti kemampuan bahasa (Mandarin atau Inggris), bukti keuangan, laporan cek kesehatan, surat rekomendasi (diperlukan oleh beberapa sekolah), dan rencana studi (untuk program pascasarjana). Persyaratan berbeda di setiap sekolah, silakan merujuk pada buku panduan penerimaan masing-masing sekolah."
 
 #: .\users\templates\users\home.html:456
 msgid "不會中文可以來台灣留學嗎？"
-msgstr ""
+msgstr "Bisakah saya kuliah di Taiwan jika tidak bisa bahasa Mandarin?"
 
 #: .\users\templates\users\home.html:457
 msgid ""
 "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常"
 "入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課"
 "程。"
-msgstr ""
+msgstr "Bisa! Banyak universitas di Taiwan menawarkan program sarjana dan pascasarjana berbahasa Inggris. Untuk program berbahasa Mandarin, biasanya diperlukan tingkat kemampuan bahasa Mandarin tertentu sebelum mendaftar (misalnya TOCFL B1 ke atas), atau menyelesaikan program persiapan bahasa Mandarin selama satu tahun."
 
 #: .\users\templates\users\home.html:460
 msgid "留學台灣的費用大約多少？"
-msgstr ""
+msgstr "Berapa perkiraan biaya studi di Taiwan?"
 
 #: .\users\templates\users\home.html:461
 msgid ""
 "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 "
 "NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學"
 "金補助，台灣留學費用相對親民。"
-msgstr ""
+msgstr "Biaya kuliah bervariasi tergantung sekolah dan jurusan. Program sarjana di universitas negeri sekitar NT$20.000–50.000 per semester, pascasarjana sekitar NT$25.000–60.000. Biaya hidup (tempat tinggal, makan, transportasi) sekitar NT$10.000–20.000 per bulan. Dengan adanya beasiswa, biaya studi di Taiwan relatif terjangkau."
 
 #: .\users\templates\users\home.html:464
 msgid "學生簽證如何辦理？"
-msgstr ""
+msgstr "Bagaimana cara mengajukan visa pelajar?"
 
 #: .\users\templates\users\home.html:465
 msgid ""
 "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證"
 "（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
-msgstr ""
+msgstr "Setelah menerima surat penerimaan dari sekolah di Taiwan, bawa surat tersebut ke kantor perwakilan Taiwan di wilayah Anda untuk mengajukan Visa Tinggal pelajar (Resident Visa). Siapkan paspor, surat penerimaan, bukti keuangan, dan dokumen pemeriksaan kesehatan untuk mengajukan."
 
 #: .\users\templates\users\home.html:468
-#, fuzzy
-#| msgid "在台期間可以打工嗎？"
 msgid "可以邊讀書邊打工嗎？"
-msgstr "Bisakah saya bekerja paruh waktu saat belajar di Taiwan?"
+msgstr "Bisakah saya kerja paruh waktu sambil kuliah?"
 
 #: .\users\templates\users\home.html:469
 msgid ""
 "可以，但需申請工作許可。持有效居留證（ARC）的外籍學生，入學後可向學校申請工讀"
 "許可，每週工時上限為 20 小時。寒暑假期間可申請全時工作。"
-msgstr ""
+msgstr "Bisa, tetapi perlu mengajukan izin kerja. Mahasiswa asing dengan ARC yang berlaku dapat mengajukan izin kerja-studi ke sekolah setelah terdaftar, maksimal 20 jam per minggu. Kerja penuh waktu diizinkan selama libur musim dingin dan musim panas."
 
 #: .\users\templates\users\home.html:472
 msgid "全民健保什麼時候可以加入？"
-msgstr ""
+msgstr "Kapan saya bisa bergabung dengan Asuransi Kesehatan Nasional?"
 
 #: .\users\templates\users\home.html:473
 msgid ""
 "持有效居留證（ARC），在台灣合法居留滿 6 個月後可強制加入全民健保。若有效工作"
 "許可可提前加保。加保後門診費用大幅降低。"
-msgstr ""
+msgstr "Dengan ARC yang berlaku, Anda wajib bergabung dengan Asuransi Kesehatan Nasional setelah tinggal legal di Taiwan selama 6 bulan. Dengan izin kerja yang berlaku, Anda bisa mendaftar lebih awal. Biaya rawat jalan turun signifikan setelah terdaftar."
 
 #: .\users\templates\users\home.html:476
 msgid "申請流程需要多久時間？"
-msgstr ""
+msgstr "Berapa lama proses pengajuannya?"
 
 #: .\users\templates\users\home.html:477
 msgid ""
 "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個"
 "月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個"
 "月）、辦理簽證（1–2 個月）。"
-msgstr ""
+msgstr "Dari mulai pengajuan hingga resmi terdaftar biasanya memerlukan 3–8 bulan. Disarankan mempersiapkan lebih awal: memastikan kelayakan (6–12 bulan sebelumnya), menyiapkan dokumen (4–6 bulan sebelumnya), mengajukan pendaftaran (3–4 bulan sebelumnya), menunggu penerimaan (1–2 bulan), mengurus visa (1–2 bulan)."
 
 #: .\users\templates\users\login.html:5
 msgid "登入 / 註冊"
@@ -10104,10 +9978,8 @@ msgid "歡迎回來"
 msgstr "Selamat Datang Kembali"
 
 #: .\users\templates\users\login.html:103
-#, fuzzy
-#| msgid "請登入您的 StudyGo 帳戶"
 msgid "請登入您的 ReadyTo Taiwan 帳戶"
-msgstr "Silakan login ke akun StudyGo Anda"
+msgstr "Silakan login ke akun ReadyTo Taiwan Anda"
 
 #: .\users\templates\users\login.html:118
 msgid "輸入密碼"
@@ -10136,8 +10008,6 @@ msgid "建立帳號"
 msgstr "Buat Akun"
 
 #: .\users\templates\users\login.html:160
-#, fuzzy
-#| msgid "填寫基本資料，開始使用 StudyGo Taiwan"
 msgid "填寫基本資料，開始使用 ReadyTo Taiwan"
 msgstr "Isi informasi dasar untuk mulai menggunakan StudyGo Taiwan"
 
@@ -10222,10 +10092,8 @@ msgid "登出成功，"
 msgstr "Berhasil keluar, "
 
 #: .\users\templates\users\logout_redirect.html:26
-#, fuzzy
-#| msgid "點此返回登入頁面"
 msgid "點此返回首頁"
-msgstr "klik di sini untuk kembali ke halaman login"
+msgstr "klik di sini untuk kembali ke beranda"
 
 #: .\users\templates\users\profile_setup.html:5
 #: .\users\templates\users\profile_setup.html:34
@@ -11105,3 +10973,222 @@ msgstr "Reset gagal. Tautan mungkin sudah kedaluwarsa."
 
 #~ msgid "（香港、澳門學生）"
 #~ msgstr "(Mahasiswa Hong Kong/Makau)"
+
+msgid "ARC 居留證"
+msgstr "Izin Tinggal ARC"
+
+msgid "ARC 線上申請一次就過的技巧"
+msgstr "Tips Mengajukan ARC Online agar Langsung Disetujui"
+
+msgid "ARC 辦理一次就過"
+msgstr "Ajukan ARC Anda dan Langsung Disetujui"
+
+msgid "「任務小幫手」熟悉你的任務進度與截止日，用 9 種語言回答簽證、居留證等行政問題並附官方來源；「聊天好朋友」則在你想家、壓力大時陪你聊聊，還能幫你找學校附近的餐廳與商店。"
+msgstr "\"Task Assistant\" mengenal progres tugas dan tenggat waktu Anda, menjawab pertanyaan administratif seperti visa dan ARC dalam 9 bahasa disertai sumber resmi; \"Chat Companion\" menemani Anda mengobrol saat rindu rumah atau stres, bahkan bisa membantu mencari restoran dan toko di sekitar kampus."
+
+msgid "以上為示範內容，登入後可查看您的個人化流程進度。"
+msgstr "Konten di atas adalah contoh. Masuk untuk melihat progres personal Anda."
+
+msgid "以上為示範資料，登入後可查看您的個人化任務清單。"
+msgstr "Data di atas adalah contoh. Masuk untuk melihat daftar tugas personal Anda."
+
+msgid "任務小幫手"
+msgstr "Task Assistant"
+
+msgid "你需要 3 份文件：入學許可、財力證明、護照。我已幫你加進任務清單 ✅"
+msgstr "Anda memerlukan 3 dokumen: surat penerimaan, bukti keuangan, dan paspor. Sudah saya tambahkan ke daftar tugas Anda ✅"
+
+msgid "來自世界各地的學長姐分享最真實的留學經驗：看看「你的學校」的前輩怎麼走過這段路，也能瀏覽所有學校的心得；完成註冊後，你也可以發佈自己的故事，成為學弟妹的引路人。"
+msgstr "Senior dari seluruh dunia berbagi pengalaman studi paling nyata: lihat bagaimana senior dari \"sekolahmu\" melewati perjalanan ini, atau jelajahi pengalaman dari semua sekolah. Setelah mendaftar, Anda juga bisa membagikan cerita Anda sendiri dan menjadi penunjuk jalan bagi adik kelas."
+
+msgid "個人化任務清單"
+msgstr "Daftar Tugas Personal"
+
+msgid "入境 30 天內線上申請 ARC 居留證"
+msgstr "Ajukan ARC Secara Online dalam 30 Hari Setelah Masuk"
+
+msgid "全民健保"
+msgstr "Asuransi Kesehatan Nasional"
+
+msgid "兩個階段"
+msgstr "Dua Tahap"
+
+msgid "剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。ReadyTo 上的流程整理讓我在申請階段就對整個時程很有把握！"
+msgstr "Saya sangat gugup saat pertama tiba di Taiwan, tapi Kantor Urusan Internasional kampus sangat perhatian — mulai dari penjemputan di bandara hingga penempatan di asrama selalu ada yang membantu. Daftar yang tersusun rapi di ReadyTo membuat saya yakin dengan seluruh linimasa sejak tahap pendaftaran!"
+
+msgid "剩 12 天"
+msgstr "Tersisa 12 Hari"
+
+msgid "台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。ReadyTo 的 ARC 辦理指南讓我順利完成所有手續。"
+msgstr "Industri semikonduktor Taiwan bertaraf dunia, dan datang ke sini untuk studi lanjut adalah pilihan yang paling tepat. Panduan ARC dari ReadyTo membantu saya menyelesaikan semua prosedur dengan lancar."
+
+msgid "台灣的工程教育真的世界一流！教授們都很願意指導外籍生。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。"
+msgstr "Pendidikan teknik di Taiwan benar-benar kelas dunia! Para profesor sangat bersedia membimbing mahasiswa asing. Panduan visa dari ReadyTo menghemat banyak waktu riset saya — tinggal ikuti langkahnya dan selesai."
+
+msgid "回答幾個問題，系統就會依你的身分別、國籍與入學狀態生成專屬任務清單：每項任務附上所需文件、辦理地點與地圖，並依你的抵臺日期自動計算截止日，到期前以站內通知與 Email 提醒你。"
+msgstr "Jawab beberapa pertanyaan, sistem akan membuat daftar tugas khusus sesuai jenis identitas, kewarganegaraan, dan status pendaftaran Anda: setiap tugas dilengkapi dokumen yang diperlukan, lokasi, dan peta, dengan tenggat waktu dihitung otomatis dari tanggal kedatangan Anda, serta pengingat melalui notifikasi aplikasi dan email sebelum jatuh tempo."
+
+msgid "國際處超貼心，申請時程好掌握"
+msgstr "Kantor Urusan Internasional Sangat Perhatian, Linimasa Mudah Dipantau"
+
+msgid "填好抵臺日期，系統自動排任務"
+msgstr "Isi Tanggal Kedatangan, Sistem Menjadwalkan Tugas Secara Otomatis"
+
+msgid "學校報到註冊、辦學生證與選課"
+msgstr "Registrasi Sekolah, Kartu Mahasiswa, dan Pemilihan Mata Kuliah"
+
+msgid "學長姐分享區"
+msgstr "Zona Berbagi Senior"
+
+msgid "完成進度"
+msgstr "Progres Penyelesaian"
+
+msgid "宿舍申請"
+msgstr "Pengajuan Asrama"
+
+msgid "宿舍申請要早點排隊！"
+msgstr "Ajukan Asrama Lebih Awal!"
+
+msgid "專為僑生、外籍生與港澳生打造的來台留學流程指南平台。"
+msgstr "Platform panduan proses studi di Taiwan yang dirancang khusus untuk mahasiswa Tionghoa perantauan, mahasiswa asing, serta mahasiswa Hong Kong/Makau."
+
+msgid "居留滿 6 個月加入全民健保"
+msgstr "Bergabung dengan Asuransi Kesehatan Nasional Setelah 6 Bulan Tinggal"
+
+msgid "居留證 ARC"
+msgstr "Izin Tinggal ARC"
+
+msgid "工作許可"
+msgstr "Izin Kerja"
+
+msgid "想家很正常，要不要聊聊？也可以幫你找學校附近的家鄉味 🍜"
+msgstr "Wajar kalau rindu rumah, mau ngobrol? Saya juga bisa membantu mencari rasa kampung halaman di dekat sekolah 🍜"
+
+msgid "我的任務清單"
+msgstr "Daftar Tugas Saya"
+
+msgid "我的學校"
+msgstr "Sekolah Saya"
+
+msgid "截止日提醒"
+msgstr "Pengingat Tenggat Waktu"
+
+msgid "所有學校"
+msgstr "Semua Sekolah"
+
+msgid "抵臺前準備"
+msgstr "Persiapan Sebelum Kedatangan"
+
+msgid "文件與地圖"
+msgstr "Dokumen & Peta"
+
+msgid "最近有點想家…"
+msgstr "Belakangan ini agak rindu rumah…"
+
+msgid "獎學金"
+msgstr "Beasiswa"
+
+msgid "申請入學許可"
+msgstr "Mengajukan Surat Penerimaan"
+
+msgid "申請學校宿舍或安排租屋"
+msgstr "Mengajukan Asrama Sekolah atau Mengatur Sewa Rumah"
+
+msgid "發佈心得"
+msgstr "Bagikan Pengalaman"
+
+msgid "簽證指南幫我省下超多時間"
+msgstr "Panduan Visa Menghemat Banyak Waktu Saya"
+
+msgid "簽證要先準備什麼？"
+msgstr "Apa yang perlu disiapkan untuk visa terlebih dahulu?"
+
+msgid "聊天好朋友"
+msgstr "Chat Companion"
+
+msgid "自動生成"
+msgstr "Dibuat Otomatis"
+
+msgid "課業小老師"
+msgstr "Tutor Akademik"
+
+msgid "證件與居留"
+msgstr "Dokumen & Izin Tinggal"
+
+msgid "費用與打工"
+msgstr "Biaya & Kerja Paruh Waktu"
+
+msgid "辦理 ARC 居留證"
+msgstr "Mengurus Izin Tinggal ARC"
+
+msgid "辦理學生簽證"
+msgstr "Mengurus Visa Pelajar"
+
+msgid "辦理居留簽證（憑入學許可）"
+msgstr "Mengajukan Visa Tinggal (dengan Surat Penerimaan)"
+
+msgid "銀行開戶、辦手機門號"
+msgstr "Membuka Rekening Bank, Mendapatkan Nomor Ponsel"
+
+msgid "雙 AI 夥伴"
+msgstr "Dua Pendamping AI"
+
+msgid "預訂機票、準備入境文件與體檢報告"
+msgstr "Memesan Tiket Pesawat, Menyiapkan Dokumen Masuk dan Laporan Cek Kesehatan"
+
+msgid "顯示第四張介紹"
+msgstr "Tampilkan Slide Perkenalan Keempat"
+
+msgid "Email 驗證成功！請登入您的帳號"
+msgstr "Verifikasi email berhasil! Silakan masuk ke akun Anda"
+
+msgid "Google 登入失敗，未取得憑證"
+msgstr "Login Google gagal, kredensial tidak diterima"
+
+msgid "個人資料已更新"
+msgstr "Profil berhasil diperbarui"
+
+msgid "儲存失敗，請稍後再試"
+msgstr "Gagal menyimpan, silakan coba lagi nanti"
+
+msgid "密碼已更新，請重新登入"
+msgstr "Kata sandi diperbarui, silakan masuk kembali"
+
+msgid "帳號已停用，感謝您使用 ReadyTo Taiwan"
+msgstr "Akun dinonaktifkan, terima kasih telah menggunakan ReadyTo Taiwan"
+
+msgid "帳號建立成功！驗證信已寄出，請至信箱完成驗證"
+msgstr "Akun berhasil dibuat! Email verifikasi telah dikirim, silakan cek kotak masuk untuk menyelesaikan verifikasi"
+
+msgid "網路錯誤，請確認連線後再試"
+msgstr "Kesalahan jaringan, silakan periksa koneksi Anda dan coba lagi"
+
+msgid "請先驗證電子信箱才能繼續"
+msgstr "Silakan verifikasi email Anda untuk melanjutkan"
+
+msgid "資料已儲存！個人化流程已生成 🎉"
+msgstr "Data tersimpan! Alur personal Anda telah dibuat 🎉"
+
+msgid "驗證連結已過期，請重新申請"
+msgstr "Tautan verifikasi telah kedaluwarsa, silakan ajukan ulang"
+
+msgid "驗證連結無效或已使用"
+msgstr "Tautan verifikasi tidak valid atau sudah digunakan"
+
+msgid "任務載入失敗，請重新整理頁面。"
+msgstr "Gagal memuat tugas. Silakan segarkan halaman."
+
+msgid "快速找到解答"
+msgstr "Temukan Jawaban dengan Cepat"
+
+msgid "有問題直接問"
+msgstr "Tanyakan Langsung Jika Ada Pertanyaan"
+
+msgid "看看其他學生的經驗"
+msgstr "Lihat Pengalaman Mahasiswa Lain"
+
+msgid "簽證、住宿、健保等指南"
+msgstr "Panduan visa, tempat tinggal, asuransi kesehatan, dan lainnya"
+
+msgid "預設（無角色）"
+msgstr "Default (Tanpa Peran)"

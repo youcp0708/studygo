@@ -283,6 +283,11 @@
   window.GOOGLE_CLIENT_ID = '{{ google_client_id }}';
 </script>
 {% if google_client_id %}
-<script src="https://accounts.google.com/gsi/client" async defer></script>
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'zh-hant' %}
+<script src="https://accounts.google.com/gsi/client?hl=zh-TW" async defer></script>
+{% else %}
+<script src="https://accounts.google.com/gsi/client?hl={{ CURRENT_LANGUAGE }}" async defer></script>
+{% endif %}
 {% endif %}
 {% endblock %}
