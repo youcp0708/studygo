@@ -35,7 +35,7 @@ msgstr "ပြန်သွားရန်"
 #: .\chatbot\templates\chatbot\chatbot.html:137
 #: .\chatbot\templates\chatbot\chatbot.html:217
 msgid "ReadyTo 任務小幫手"
-msgstr ""
+msgstr "ReadyTo အလုပ်လက်ထောက်"
 
 #: .\chatbot\templates\chatbot\chatbot.html:27
 msgid "我是協助管理來臺任務、查詢疑問、提供建議的小幫手。"
@@ -46,7 +46,7 @@ msgstr ""
 #: .\chatbot\templates\chatbot\chatbot.html:135
 #: .\chatbot\templates\chatbot\chatbot.html:218
 msgid "ReadyTo 聊天好朋友"
-msgstr ""
+msgstr "ReadyTo စကားပြော သူငယ်ချင်း"
 
 #: .\chatbot\templates\chatbot\chatbot.html:34
 msgid "我是陪你聊天協助、處理生活適應與心理壓力的好朋友。"

@@ -32,6 +32,23 @@ msgstr "戻る"
 msgid "AI 來臺就學小幫手"
 msgstr "台湾留学AIアシスタント"
 
+#: .\chatbot\templates\chatbot\chatbot.html:21
+#: .\chatbot\templates\chatbot\chatbot.html:39
+#: .\chatbot\templates\chatbot\chatbot.html:115
+#: .\chatbot\templates\chatbot\chatbot.html:150
+#: .\chatbot\templates\chatbot\chatbot.html:241
+msgid "ReadyTo 任務小幫手"
+msgstr "ReadyTo タスクアシスタント"
+
+#: .\chatbot\templates\chatbot\chatbot.html:21
+#: .\chatbot\templates\chatbot\chatbot.html:46
+#: .\chatbot\templates\chatbot\chatbot.html:113
+#: .\chatbot\templates\chatbot\chatbot.html:148
+#: .\chatbot\templates\chatbot\chatbot.html:206
+#: .\chatbot\templates\chatbot\chatbot.html:242
+msgid "ReadyTo 聊天好朋友"
+msgstr "ReadyTo チャットフレンド"
+
 #: .\chatbot\templates\chatbot\chatbot.html:28
 msgid "聊天記錄"
 msgstr "チャット履歴"
@@ -67,6 +84,63 @@ msgstr "名前を変更"
 #: .\chatbot\templates\chatbot\chatbot.html:162
 msgid "刪除"
 msgstr "削除"
+
+#: .\chatbot\templates\chatbot\chatbot.html:186
+#: .\chatbot\templates\chatbot\chatbot.html:259
+msgid "角色"
+msgstr "役割"
+
+#: .\chatbot\templates\chatbot\chatbot.html:199
+#: .\chatbot\templates\chatbot\chatbot.html:260
+msgid "小老師"
+msgstr "先生役"
+
+#: .\chatbot\templates\chatbot\chatbot.html:205
+#: .\chatbot\templates\chatbot\chatbot.html:261
+msgid "朋友"
+msgstr "友達"
+
+#: .\chatbot\templates\chatbot\chatbot.html:206
+#: .\chatbot\templates\chatbot\chatbot.html:262
+msgid "好朋友"
+msgstr "親友"
+
+#: .\chatbot\templates\chatbot\chatbot.html:263
+msgid "課業輔助"
+msgstr "学業サポート"
+
+#: .\chatbot\templates\chatbot\chatbot.html:264
+msgid "生活指導"
+msgstr "生活指導"
+
+#: .\chatbot\templates\chatbot\chatbot.html:265
+msgid "瘋玩"
+msgstr "はしゃぎ屋"
+
+#: .\chatbot\templates\chatbot\chatbot.html:266
+msgid "安靜陪伴"
+msgstr "物静かな寄り添い"
+
+#: .\chatbot\templates\chatbot\chatbot.html:267
+msgid "沉穩可靠"
+msgstr "落ち着いて頼れる"
+
+#: .\chatbot\templates\chatbot\chatbot.html:268
+msgid "火爆脾氣"
+msgstr "怒りっぽい"
+
+#: .\chatbot\templates\chatbot\chatbot.html:216
+#: .\chatbot\templates\chatbot\chatbot.html:269
+msgid "語音輸入"
+msgstr "音声入力"
+
+#: .\chatbot\templates\chatbot\chatbot.html:270
+msgid "重新命名："
+msgstr "名前を変更："
+
+#: .\chatbot\templates\chatbot\chatbot.html:271
+msgid "重新命名性格："
+msgstr "性格の名前を変更："
 
 #: .\chatbot\templates\chatbot\chatbot.html:62
 msgid "目前沒有聊天記錄"

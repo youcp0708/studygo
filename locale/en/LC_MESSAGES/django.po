@@ -34,8 +34,6 @@ msgstr "Back"
 #: .\chatbot\templates\chatbot\chatbot.html:102
 #: .\chatbot\templates\chatbot\chatbot.html:137
 #: .\chatbot\templates\chatbot\chatbot.html:217
-#, fuzzy
-#| msgid "ReadyTo Taiwan AI 小幫手"
 msgid "ReadyTo 任務小幫手"
 msgstr "ReadyTo Taiwan AI Assistant"
 
@@ -48,7 +46,7 @@ msgstr ""
 #: .\chatbot\templates\chatbot\chatbot.html:135
 #: .\chatbot\templates\chatbot\chatbot.html:218
 msgid "ReadyTo 聊天好朋友"
-msgstr ""
+msgstr "ReadyTo Chat Companion"
 
 #: .\chatbot\templates\chatbot\chatbot.html:34
 msgid "我是陪你聊天協助、處理生活適應與心理壓力的好朋友。"

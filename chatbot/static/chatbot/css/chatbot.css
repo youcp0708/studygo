@@ -966,7 +966,9 @@ html[lang="th"] .bot-profile-card h2,
 html[lang="ms"] .bot-profile-card h2,
 html[lang="id"] .bot-profile-card h2,
 html[lang="en"] .bot-profile-card h2,
-html[lang="ja"] .bot-profile-card h2 {
+html[lang="ja"] .bot-profile-card h2,
+html[lang="ko"] .bot-profile-card h2,
+html[lang="vi"] .bot-profile-card h2 {
   font-size: 18px !important;
   line-height: 1.45 !important;
   word-break: break-word;
@@ -1787,6 +1789,13 @@ body.chat-embed .chat-embed-header .ceh-title {
   gap: 9px;
   font-size: 15px;
   font-weight: 800;
+  min-width: 0;
+}
+
+body.chat-embed .chat-embed-header .ceh-title .js-ai-name {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.3;
 }
 
 body.chat-embed .chat-embed-header .ceh-ava {
