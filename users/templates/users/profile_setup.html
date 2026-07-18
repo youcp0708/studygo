@@ -175,59 +175,22 @@
 
             <div class="field">
               <label>{% trans "系所" %}</label>
+              {# 系所清單由資料庫提供（Django Admin「系所」可管理），不再寫死在前端 #}
               <select name="department" id="setupDept" onchange="updatePreview()" required>
                 <option value="">{% trans "請選擇系所" %}</option>
-                <optgroup label="{% trans '文學院' %}">
-                  <option value="文學院學士班">文學院學士班</option>
-                  <option value="中國文學系">中國文學系</option>
-                  <option value="英美語文學系">英美語文學系</option>
-                  <option value="法國語文學系">法國語文學系</option>
-                </optgroup>
-                <optgroup label="{% trans '理學院' %}">
-                  <option value="理學院學士班">理學院學士班</option>
-                  <option value="物理學系">物理學系</option>
-                  <option value="數學系">數學系</option>
-                  <option value="化學學系">化學學系</option>
-                  <option value="光電科學與工程學系">光電科學與工程學系</option>
-                </optgroup>
-                <optgroup label="{% trans '工學院' %}">
-                  <option value="工學院學士班">工學院學士班</option>
-                  <option value="化學工程與材料工程學系">化學工程與材料工程學系</option>
-                  <option value="土木工程學系">土木工程學系</option>
-                  <option value="機械工程學系">機械工程學系</option>
-                </optgroup>
-                <optgroup label="{% trans '管理學院' %}">
-                  <option value="企業管理學系">企業管理學系</option>
-                  <option value="資訊管理學系">資訊管理學系</option>
-                  <option value="財務金融學系">財務金融學系</option>
-                  <option value="經濟學系">經濟學系</option>
-                </optgroup>
-                <optgroup label="{% trans '資訊電機學院' %}">
-                  <option value="資訊電機學院學士班">資訊電機學院學士班</option>
-                  <option value="電機工程學系">電機工程學系</option>
-                  <option value="資訊工程學系">資訊工程學系</option>
-                  <option value="通訊工程學系">通訊工程學系</option>
-                </optgroup>
-                <optgroup label="{% trans '地球科學學院' %}">
-                  <option value="地球科學學院學士班">地球科學學院學士班</option>
-                  <option value="地球科學學系">地球科學學系</option>
-                  <option value="大氣科學學系">大氣科學學系</option>
-                  <option value="太空科學與工程學系">太空科學與工程學系</option>
-                </optgroup>
-                <optgroup label="{% trans '客家學院' %}">
-                  <option value="客家語文暨社會科學學系">客家語文暨社會科學學系</option>
-                </optgroup>
-                <optgroup label="{% trans '生醫理工學院' %}">
-                  <option value="生命科學系">生命科學系</option>
-                  <option value="生醫科學與工程學系">生醫科學與工程學系</option>
-                </optgroup>
+                {% for faculty in faculties %}
+                {% if faculty.label %}<optgroup label="{{ faculty.label }}">{% endif %}
+                  {% for dept in faculty.departments %}
+                  <option value="{{ dept.value }}">{{ dept.label }}</option>
+                  {% endfor %}
+                {% if faculty.label %}</optgroup>{% endif %}
+                {% endfor %}
               </select>
             </div>
           </div>
 
           <div style="display:flex;gap:14px;margin-top:24px;">
-            <a href="{% url 'login_page' %}" class="btn-outline-sm"
-              style="padding:13px 24px;border-radius:10px;font-size:15px;">
+            <a href="{% url 'login_page' %}" class="site-back">
               ← {% trans "返回" %}
             </a>
 
@@ -287,7 +250,7 @@
 
 {# ── 問答覆蓋層 ── #}
 <div id="quizOverlay" class="quiz-overlay">
-  <button type="button" class="back-link" onclick="returnToProfileForm()" style="position:absolute;top:24px;left:24px;z-index:2;background:none;border:none;cursor:pointer;">← {% trans "返回" %}</button>
+  <button type="button" class="back-link" onclick="returnToProfileForm()" style="position:absolute;top:24px;left:24px;z-index:2;">← {% trans "返回" %}</button>
   <div class="quiz-container">
 
     {# 進度指示器 #}
@@ -487,57 +450,58 @@
     document.getElementById('langForm' + suffix).submit();
   }
 
+  {# 國籍標籤走 i18n（與 StudentProfile.NATIONALITY_CHOICES 的 msgid 一致），非中文使用者不再看到中文國名 #}
   const SETUP_REGION_COUNTRY_MAP = {
     "East Asia": [
-      { value: "Japan", label: "🇯🇵 日本" },
-      { value: "Korea", label: "🇰🇷 韓國" },
-      { value: "Macau", label: "🇲🇴 澳門" },
-      { value: "Hong Kong", label: "🇭🇰 香港" }
+      { value: "Japan", label: "🇯🇵 {% trans '日本' %}" },
+      { value: "Korea", label: "🇰🇷 {% trans '韓國' %}" },
+      { value: "Macau", label: "🇲🇴 {% trans '澳門' %}" },
+      { value: "Hong Kong", label: "🇭🇰 {% trans '香港' %}" }
     ],
     "Southeast Asia": [
-      { value: "Indonesia", label: "🇮🇩 印尼" },
-      { value: "Malaysia", label: "🇲🇾 馬來西亞" },
-      { value: "Vietnam", label: "🇻🇳 越南" },
-      { value: "Thailand", label: "🇹🇭 泰國" },
-      { value: "Philippines", label: "🇵🇭 菲律賓" },
-      { value: "Cambodia", label: "🇰🇭 柬埔寨" },
-      { value: "Myanmar", label: "🇲🇲 緬甸" },
-      { value: "Singapore", label: "🇸🇬 新加坡" }
+      { value: "Indonesia", label: "🇮🇩 {% trans '印尼' %}" },
+      { value: "Malaysia", label: "🇲🇾 {% trans '馬來西亞' %}" },
+      { value: "Vietnam", label: "🇻🇳 {% trans '越南' %}" },
+      { value: "Thailand", label: "🇹🇭 {% trans '泰國' %}" },
+      { value: "Philippines", label: "🇵🇭 {% trans '菲律賓' %}" },
+      { value: "Cambodia", label: "🇰🇭 {% trans '柬埔寨' %}" },
+      { value: "Myanmar", label: "🇲🇲 {% trans '緬甸' %}" },
+      { value: "Singapore", label: "🇸🇬 {% trans '新加坡' %}" }
     ],
     "South Asia": [
-      { value: "India", label: "🇮🇳 印度" },
-      { value: "Pakistan", label: "🇵🇰 巴基斯坦" },
-      { value: "Bangladesh", label: "🇧🇩 孟加拉" }
+      { value: "India", label: "🇮🇳 {% trans '印度' %}" },
+      { value: "Pakistan", label: "🇵🇰 {% trans '巴基斯坦' %}" },
+      { value: "Bangladesh", label: "🇧🇩 {% trans '孟加拉' %}" }
     ],
     "Middle East": [
-      { value: "Saudi Arabia", label: "🇸🇦 沙烏地阿拉伯" },
-      { value: "UAE", label: "🇦🇪 阿拉伯聯合大公國" },
-      { value: "Turkey", label: "🇹🇷 土耳其" }
+      { value: "Saudi Arabia", label: "🇸🇦 {% trans '沙烏地阿拉伯' %}" },
+      { value: "UAE", label: "🇦🇪 {% trans '阿拉伯聯合大公國' %}" },
+      { value: "Turkey", label: "🇹🇷 {% trans '土耳其' %}" }
     ],
     "Europe": [
-      { value: "UK", label: "🇬🇧 英國" },
-      { value: "France", label: "🇫🇷 法國" },
-      { value: "Germany", label: "🇩🇪 德國" },
-      { value: "Italy", label: "🇮🇹 義大利" },
-      { value: "Spain", label: "🇪🇸 西班牙" }
+      { value: "UK", label: "🇬🇧 {% trans '英國' %}" },
+      { value: "France", label: "🇫🇷 {% trans '法國' %}" },
+      { value: "Germany", label: "🇩🇪 {% trans '德國' %}" },
+      { value: "Italy", label: "🇮🇹 {% trans '義大利' %}" },
+      { value: "Spain", label: "🇪🇸 {% trans '西班牙' %}" }
     ],
     "North America": [
-      { value: "USA", label: "🇺🇸 美國" },
-      { value: "Canada", label: "🇨🇦 加拿大" }
+      { value: "USA", label: "🇺🇸 {% trans '美國' %}" },
+      { value: "Canada", label: "🇨🇦 {% trans '加拿大' %}" }
     ],
     "Latin America": [
-      { value: "Brazil", label: "🇧🇷 巴西" },
-      { value: "Mexico", label: "🇲🇽 墨西哥" },
-      { value: "Argentina", label: "🇦🇷 阿根廷" }
+      { value: "Brazil", label: "🇧🇷 {% trans '巴西' %}" },
+      { value: "Mexico", label: "🇲🇽 {% trans '墨西哥' %}" },
+      { value: "Argentina", label: "🇦🇷 {% trans '阿根廷' %}" }
     ],
     "Africa": [
-      { value: "South Africa", label: "🇿🇦 南非" },
-      { value: "Egypt", label: "🇪🇬 埃及" },
-      { value: "Nigeria", label: "🇳🇬 奈及利亞" }
+      { value: "South Africa", label: "🇿🇦 {% trans '南非' %}" },
+      { value: "Egypt", label: "🇪🇬 {% trans '埃及' %}" },
+      { value: "Nigeria", label: "🇳🇬 {% trans '奈及利亞' %}" }
     ],
     "Oceania": [
-      { value: "Australia", label: "🇦🇺 澳洲" },
-      { value: "New Zealand", label: "🇳🇿 紐西蘭" }
+      { value: "Australia", label: "🇦🇺 {% trans '澳洲' %}" },
+      { value: "New Zealand", label: "🇳🇿 {% trans '紐西蘭' %}" }
     ]
   };
 
@@ -570,7 +534,7 @@
     if (region) {
       const otherOption = document.createElement("option");
       otherOption.value = "Other";
-      otherOption.textContent = "🌍 其他";
+      otherOption.textContent = "🌍 {% trans '其他' %}";
       nationalitySelect.appendChild(otherOption);
     }
 

@@ -3,33 +3,46 @@
 {% block title %}{% trans "AI 聊天機器人" %} — ReadyTo Taiwan{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}?v={% now 'U' %}">
+<link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}?v=13">
 {% endblock %}
 
+{% block chatbot_fab %}{% endblock chatbot_fab %}
+{% block body_class %}{% if embed %}chat-embed{% endif %}{% endblock %}
+
 {% block content %}
-<section class="chatbot-page" data-session-id="{% if active_session %}{{ active_session.id }}{% endif %}"
-  data-ai-mode="{{ current_ai_mode|default:'helper' }}">
+<section class="chatbot-page {% if embed %}chatbot-embed{% endif %}" data-session-id="{% if active_session %}{{ active_session.id }}{% endif %}"
+  data-ai-mode="{{ current_ai_mode|default:'helper' }}" data-dashboard-url="{% url 'dashboard' %}"
+  data-embed="{% if embed %}1{% else %}0{% endif %}">
+
+  {# 緊湊視窗頂部標題列（embed 模式顯示：機器人名稱 + 展開/最小化/關閉） #}
+  <div class="chat-embed-header">
+    <span class="ceh-title">
+      <span class="ceh-ava js-ai-avatar {{ current_ai_mode|default:'helper' }}">{% include "_bot_icon.html" %}</span>
+      <span class="js-ai-name">{% if current_ai_mode == "friend" %}{% trans "ReadyTo 聊天好朋友" %}{% else %}{% trans "ReadyTo 任務小幫手" %}{% endif %}</span>
+    </span>
+    <div class="chat-window-controls">
+      <button type="button" id="chatWinMaximize" class="win-ctrl-btn" title="{% trans '展開 / 還原' %}" aria-label="{% trans '展開 / 還原' %}">⛶</button>
+      <button type="button" id="chatWinClose" class="win-ctrl-btn win-ctrl-close" title="{% trans '關閉' %}" aria-label="{% trans '關閉' %}">✕</button>
+    </div>
+  </div>
+
   <div class="chatbot-layout">
 
     <aside class="chatbot-sidebar">
 
       <div class="bot-profile-card">
-        <a class="bot-card-back-link" href="{% url 'dashboard' %}">
-          ← {% trans "返回" %}
-        </a>
-
         <div class="ai-mode-switcher">
 
           <button class="ai-mode-card {% if current_ai_mode != 'friend' %}active{% endif %}" data-mode="helper"
             type="button">
-            <div class="bot-avatar bot-avatar-dark">🤖</div>
+            <div class="bot-avatar bot-avatar-dark">{% include "_bot_icon.html" %}</div>
             <h2>{% trans "ReadyTo 任務小幫手" %}</h2>
             <!--<p>{% trans "我是協助管理來臺任務、查詢疑問、提供建議的小幫手。" %}</p>-->
           </button>
 
           <button class="ai-mode-card {% if current_ai_mode == 'friend' %}active{% endif %}" data-mode="friend"
             type="button">
-            <div class="bot-avatar bot-avatar-light">🤖</div>
+            <div class="bot-avatar bot-avatar-light">{% include "_bot_icon.html" %}</div>
             <h2>{% trans "ReadyTo 聊天好朋友" %}</h2>
             <!--<p>{% trans "我是陪你聊天協助、處理生活適應與心理壓力的好朋友。" %}</p>-->
           </button>
@@ -59,7 +72,7 @@
             class="chat-history-item {% if active_session and session.id == active_session.id %}active{% endif %} {% if session.is_pinned %}pinned{% endif %}"
             data-session-id="{{ session.id }}" data-ai-mode="{{ session.ai_mode|default:'helper' }}">
 
-            <a class="history-title" href="{% url 'chatbot:page' %}?session={{ session.id }}">
+            <a class="history-title" href="{% url 'chatbot:page' %}?session={{ session.id }}{% if embed %}&embed=1{% endif %}">
               <span class="pin-mark">{% if session.is_pinned %}📌{% endif %}</span>
               <span class="history-text">{{ session.title }}</span>
             </a>
@@ -90,7 +103,7 @@
         <div class="message-row {{ message.role }}">
           <div
             class="message-avatar {% if message.role == 'user' %}user-initial{% else %}js-ai-avatar {{ current_ai_mode|default:'helper' }}{% endif %}">
-            {% if message.role == 'user' %}{{ user.name|slice:":2"|default:"我" }}{% else %}🤖{% endif %}
+            {% if message.role == 'user' %}{{ user.name|slice:":2"|default:"我" }}{% else %}{% include "_bot_icon.html" %}{% endif %}
           </div>
 
           <div class="message-bubble">
@@ -111,7 +124,7 @@
             <div class="message-attachments">
               {% for att in atts %}
               {% if att.attachment_type == 'file' %}
-              <a href="{{ att.file.url }}" target="_blank" rel="noopener" class="message-attachment-file">📎 {{ att.original_name }}</a>
+              <a href="{{ att.file.url }}" target="_blank" rel="noopener" class="message-attachment-file">{{ att.original_name }}</a>
               {% else %}
               <a href="{{ att.file.url }}" target="_blank" rel="noopener">
                 <img src="{{ att.file.url }}" alt="{{ att.original_name }}" class="message-attachment-image">
@@ -128,7 +141,7 @@
         {% endfor %}
         {% else %}
         <div class="message-row assistant welcome-message">
-          <div class="message-avatar js-ai-avatar {{ current_ai_mode|default:'helper' }}">🤖</div>
+          <div class="message-avatar js-ai-avatar {{ current_ai_mode|default:'helper' }}">{% include "_bot_icon.html" %}</div>
           <div class="message-bubble">
             <div class="message-name js-ai-name">
               {% if current_ai_mode == "friend" %}
@@ -166,7 +179,7 @@
 
           <div class="textarea-wrapper">
             <textarea id="chatInput" rows="2" maxlength="1200"
-              placeholder="{% if current_ai_mode == 'friend' %}{% trans '例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？' %}{% else %}{% trans '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？' %}{% endif %}"></textarea>
+              placeholder="{% if current_ai_mode == 'friend' %}{% trans '例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？' %}{% else %}{% trans '例如：簽證要先準備什麼？' %}{% endif %}"></textarea>
 
           <div id="roleSelector" class="role-selector">
             <button id="roleSelectorBtn" type="button" class="role-selector-btn" aria-haspopup="true" aria-expanded="false">
@@ -179,11 +192,22 @@
             <div id="roleMenu" class="role-menu">
               <div class="role-list-panel">
               <div id="roleSubmenu" class="role-submenu"></div>
+                <div class="role-item role-item--direct" data-role="" data-personality="" data-color="">
+                  <span class="role-item-label">↺ {% trans "預設（無角色）" %}</span>
+                </div>
+                {% if current_ai_mode == 'helper' %}
+                <div class="role-item" data-role="小老師">
+                  <span class="role-item-label">{% trans "小老師" %}</span>
+                  <span class="role-item-arrow">›</span>
+                </div>
+                {% endif %}
+                {% if current_ai_mode == 'friend' %}
                 <div class="role-item" data-role="朋友">
-                  <span class="role-item-label" id="friendRoleLabel">ReadyTo 聊天好朋友</span>
+                  <span class="role-item-label" id="friendRoleLabel">{% trans "ReadyTo 聊天好朋友" %}</span>
                   <button type="button" class="role-item-rename-btn">{% trans "重新命名" %}</button>
                   <span class="role-item-arrow">›</span>
                 </div>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -235,7 +259,6 @@
 {% trans "角色" as txt_role %}
 {% trans "小老師" as txt_role_tutor %}
 {% trans "朋友" as txt_role_friend %}
-{% trans "學長姐" as txt_role_senior %}
 {% trans "好朋友" as txt_p_best_friend %}
 {% trans "課業輔助" as txt_p_academic %}
 {% trans "生活指導" as txt_p_life %}
@@ -246,6 +269,9 @@
 {% trans "語音輸入" as txt_voice_input %}
 {% trans "重新命名：" as txt_rename_role %}
 {% trans "重新命名性格：" as txt_rename_personality %}
+{% trans "已收到回饋，謝謝！" as txt_feedback_thanks %}
+{% trans "例如：簽證要先準備什麼？" as txt_ph_helper %}
+{% trans "例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？" as txt_ph_friend %}
 
 <script>
   window.CHATBOT_I18N = {
@@ -271,8 +297,7 @@
     delete: "{{ txt_delete|escapejs }}",
     role: "{{ txt_role|escapejs }}",
     roleTutor: "{{ txt_role_tutor|escapejs }}",
-    roleFriend: "ReadyTo 聊天好朋友",
-    roleSenior: "{{ txt_role_senior|escapejs }}",
+    roleFriend: "{{ txt_friend_name|escapejs }}",
     pBestFriend: "{{ txt_p_best_friend|escapejs }}",
     pAcademic: "{{ txt_p_academic|escapejs }}",
     pLife: "{{ txt_p_life|escapejs }}",
@@ -282,7 +307,10 @@
     pHot: "{{ txt_p_hot|escapejs }}",
     voiceInput: "{{ txt_voice_input|escapejs }}",
     renameRole: "{{ txt_rename_role|escapejs }}",
-    renamePersonality: "{{ txt_rename_personality|escapejs }}"
+    renamePersonality: "{{ txt_rename_personality|escapejs }}",
+    feedbackThanks: "{{ txt_feedback_thanks|escapejs }}",
+    placeholderHelper: "{{ txt_ph_helper|escapejs }}",
+    placeholderFriend: "{{ txt_ph_friend|escapejs }}"
   };
 
   window.CHATBOT_ENDPOINTS = {
@@ -291,7 +319,8 @@
     createSession: "{% url 'chatbot:create_session_api' %}",
     renameSession: "{% url 'chatbot:rename_session_api' %}",
     pinSession: "{% url 'chatbot:pin_session_api' %}",
-    deleteSession: "{% url 'chatbot:delete_session_api' %}"
+    deleteSession: "{% url 'chatbot:delete_session_api' %}",
+    feedback: "{% url 'chatbot:feedback_api' %}"
   };
 </script>
 
@@ -311,5 +340,5 @@
     }
   });
 </script>
-<script src="{% static 'chatbot/js/chatbot.js' %}?v={% now 'U' %}"></script>
+<script src="{% static 'chatbot/js/chatbot.js' %}?v=14"></script>
 {% endblock %}

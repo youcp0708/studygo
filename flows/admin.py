@@ -16,6 +16,7 @@ class FlowStageAdmin(admin.ModelAdmin):
         'name_ko',
         'name_vi',
         'order',
+        'is_pre_arrival',
     )
 
     fieldsets = (
@@ -24,6 +25,7 @@ class FlowStageAdmin(admin.ModelAdmin):
                 'name',
                 'description',
                 'order',
+                'is_pre_arrival',
             )
         }),
         ('英文 English', {

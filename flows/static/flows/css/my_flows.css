@@ -9,65 +9,6 @@
   padding: 32px 24px 64px;
 }
 
-.flows-back-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 38px;
-  padding: 0 16px;
-  margin-bottom: 22px;
-  border: 1px solid var(--primary);
-  border-radius: 999px;
-  background: var(--primary);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 900;
-  text-decoration: none;
-  box-shadow: 0 8px 18px rgba(23, 83, 77, .12);
-}
-
-.flows-back-link:hover {
-  background: var(--primary-dark);
-  border-color: var(--primary-dark);
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-.flows-header {
-  text-align: center;
-  margin-bottom: 36px;
-}
-
-.flows-header h2 {
-  font-size: 28px;
-  color: var(--text-dark);
-  margin-bottom: 8px;
-}
-
-.flows-page-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  line-height: 1.2;
-}
-
-.flows-title-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 34px;
-  color: var(--primary);
-  line-height: 1;
-  transform: translateY(4px);
-}
-
-.flows-header p {
-  font-size: 15px;
-  color: var(--muted);
-}
-
-
 /* ═══════════════════════════════════════════
    雙欄佈局
    ═══════════════════════════════════════════ */
@@ -502,23 +443,11 @@
   .flows-page {
     padding: 20px 16px 48px;
   }
-
-  .flows-header h2 {
-    font-size: 24px;
-  }
 }
 
 /* ═══════════════════════════════════════════
    Utility Classes (從 HTML 移出的 Inline Styles)
    ═══════════════════════════════════════════ */
-.flows-back-container {
-  margin-bottom: 22px;
-}
-
-.flows-back-link-no-margin {
-  margin-bottom: 0 !important;
-}
-
 .skeleton-tab {
   width: 100px;
   height: 40px;

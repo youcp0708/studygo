@@ -11,4 +11,5 @@ urlpatterns = [
     path('api/session/rename/', views.rename_session_api, name='rename_session_api'),
     path('api/session/pin/', views.pin_session_api, name='pin_session_api'),
     path('api/session/delete/', views.delete_session_api, name='delete_session_api'),
+    path('api/feedback/', views.feedback_api, name='feedback_api'),
 ]

@@ -3,8 +3,12 @@ flows/views.py
 流程模塊 API Views
 """
 
+import logging
+
 from django.utils import timezone
 from django.utils.translation import get_language
+
+logger = logging.getLogger(__name__)
 
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
@@ -179,8 +183,9 @@ def init_student_tasks_view(request):
     for task in eligible_tasks:
         score = get_specificity_score(task)
         # 有 task_code 就用 task_code 判斷同一任務
-        # 沒有 task_code 就先用 title 判斷，避免舊資料出問題
-        code = task.task_code or task.title
+        # 沒有 task_code 就退回用 (title, stage) 判斷——
+        # 加上 stage 是避免不同階段的同名任務（如兩個「繳交文件」）被誤去重
+        code = task.task_code or (task.title, task.stage_id)
 
         if code not in best_tasks or score > best_tasks[code]['score']:
             best_tasks[code] = {
@@ -195,11 +200,12 @@ def init_student_tasks_view(request):
     existing_task_ids = set(existing_student_tasks.values_list('task_id', flat=True))
 
     # ── 1. 移除不再符合條件的舊任務 ──
+    # 只刪「未開始」的，避免 admin 調整任務條件時，把學生已有的進度與備註一併刪除
     to_remove_ids = existing_task_ids - eligible_task_ids
     removed_count = 0
     if to_remove_ids:
         removed_count, _ = StudentTask.objects.filter(
-            student=profile, task_id__in=to_remove_ids
+            student=profile, task_id__in=to_remove_ids, status='not_started'
         ).delete()
 
     # ── 2. 新增符合條件但尚未建立的任務 ──
@@ -210,10 +216,11 @@ def init_student_tasks_view(request):
         created_count += 1
 
     # ── 3. 自動完成「入台前」任務（如果學生選擇「已入台」）──
+    # 以 FlowStage.is_pre_arrival 判斷（Admin 可設定），不再寫死 order=1
     if profile.admission_status == 'arrived':
         StudentTask.objects.filter(
             student=profile,
-            task__stage__order=1,
+            task__stage__is_pre_arrival=True,
             status__in=['not_started', 'in_progress']
         ).update(status='completed', completed_at=timezone.now())
 
@@ -284,7 +291,7 @@ def my_tasks_view(request):
             SUPPORTED = {'en', 'my', 'id', 'ms', 'th', 'ja', 'ko', 'vi'}
             if short_lang not in SUPPORTED:
                 short_lang = ''  # 空字串 = 使用中文預設
-            print(f"[DEBUG] get_language()={active_lang!r}, short_lang={short_lang!r}")
+            logger.debug('my_tasks_view lang=%r short=%r', active_lang, short_lang)
 
             for st in qs:
                 task_data = StudentTaskSerializer(st).data
@@ -605,7 +612,12 @@ def get_tips_view(request):
     except StudentProfile.DoesNotExist:
         profile = None
 
-    tips = Tip.objects.filter(is_active=True).order_by('order')
+    # prefetch 連結與分類，避免每個 Tip 都各打一次資料庫（N+1）
+    tips = (
+        Tip.objects.filter(is_active=True)
+        .prefetch_related('links__link_category')
+        .order_by('order')
+    )
     tips_data = []
     for tip in tips:
         # ── 篩選：如果 Tip 有指定身份，且學生身份不符，則跳過 ──

@@ -270,6 +270,118 @@ class StudentProfile(models.Model):
 
 
 # ══════════════════════════════════════════
+# 18 學群分類（台灣大考中心 / 升學輔導通用分類）
+# 供「系所 → 學群」對應，AI 小老師依學群載入對應課業知識
+# ══════════════════════════════════════════
+DISCIPLINE_CHOICES = [
+    ('info',             '資訊學群'),
+    ('engineering',      '工程學群'),
+    ('math_science',     '數理化學群'),
+    ('medical',          '醫藥衛生學群'),
+    ('life_science',     '生命科學學群'),
+    ('bio_resource',     '生物資源學群'),
+    ('earth_env',        '地球與環境學群'),
+    ('architecture',     '建築與設計學群'),
+    ('arts',             '藝術學群'),
+    ('social_psy',       '社會與心理學群'),
+    ('mass_comm',        '大眾傳播學群'),
+    ('foreign_lang',     '外語學群'),
+    ('humanities',       '文史哲學群'),
+    ('education',        '教育學群'),
+    ('law_politics',     '法政學群'),
+    ('management',       '管理學群'),
+    ('finance',          '財經學群'),
+    ('recreation_sport', '遊憩與運動學群'),
+]
+
+
+# ══════════════════════════════════════════
+# DEPARTMENT（系所）
+# 供註冊「填寫個人資料」頁的系所下拉選單使用，
+# 由 Django Admin 管理，不再寫死在前端模板。
+# ══════════════════════════════════════════
+class Department(models.Model):
+    university = models.CharField(
+        max_length=200,
+        choices=StudentProfile.UNIVERSITY_CHOICES,
+        verbose_name='所屬學校',
+    )
+    faculty    = models.CharField(max_length=100, blank=True, verbose_name='學院')
+    faculty_en = models.CharField(max_length=100, blank=True, verbose_name='學院 English')
+    name       = models.CharField(max_length=200, verbose_name='系所名稱')
+    name_en    = models.CharField(max_length=200, blank=True, verbose_name='系所名稱 English')
+    discipline = models.CharField(
+        max_length=30, choices=DISCIPLINE_CHOICES, blank=True,
+        verbose_name='所屬學群',
+        help_text='AI 小老師會依此學群載入對應的課業輔導知識',
+    )
+    order      = models.PositiveIntegerField(default=0, verbose_name='排序')
+    is_active  = models.BooleanField(default=True, verbose_name='是否啟用')
+
+    class Meta:
+        db_table = 'users_department'
+        ordering = ['university', 'order', 'id']
+        verbose_name = '系所'
+        verbose_name_plural = '系所'
+
+    def __str__(self):
+        return f'{self.university} - {self.name}'
+
+    def get_localized_name(self, lang_code):
+        """系所名稱本地化：非中文語系優先顯示英文，沒填英文則回中文。"""
+        if lang_code and not lang_code.startswith('zh') and self.name_en.strip():
+            return self.name_en
+        return self.name
+
+    def get_localized_faculty(self, lang_code):
+        if lang_code and not lang_code.startswith('zh') and self.faculty_en.strip():
+            return self.faculty_en
+        return self.faculty
+
+
+# ══════════════════════════════════════════
+# ALUMNI SHARE（學長姐分享）
+# 學生發佈留學經驗分享；分享頁分「我的學校」與「所有學校」兩區，
+# 同一篇分享會同時出現在自己學校區與所有學校區。
+# ══════════════════════════════════════════
+class AlumniShare(models.Model):
+    RATING_CHOICES = [(i, '★' * i) for i in range(1, 6)]
+
+    user = models.ForeignKey(
+        CustomUser,
+        on_delete=models.CASCADE,
+        related_name='alumni_shares',
+        verbose_name='發佈者',
+    )
+    # 發佈當下從 StudentProfile 快照，之後改個人資料不影響已發佈的分享
+    university  = models.CharField(max_length=200, choices=StudentProfile.UNIVERSITY_CHOICES,
+                                   verbose_name='學校')
+    nationality = models.CharField(max_length=50, choices=StudentProfile.NATIONALITY_CHOICES,
+                                   blank=True, verbose_name='國籍')
+    program     = models.CharField(max_length=200, blank=True, verbose_name='就讀系所 / 學程')
+    title       = models.CharField(max_length=200, blank=True, verbose_name='標題')
+    content     = models.TextField(max_length=1000, verbose_name='分享內容')
+    rating      = models.PositiveSmallIntegerField(choices=RATING_CHOICES, default=5,
+                                                   verbose_name='推薦指數')
+    is_active   = models.BooleanField(default=True, verbose_name='是否顯示',
+                                      help_text='管理員可取消勾選以下架不當內容')
+    created_at  = models.DateTimeField(auto_now_add=True, verbose_name='發佈時間')
+
+    class Meta:
+        db_table = 'users_alumni_share'
+        ordering = ['-created_at']
+        verbose_name = '學長姐分享'
+        verbose_name_plural = '學長姐分享'
+
+    def __str__(self):
+        return f'{self.user.name} ({self.university}) - {self.content[:30]}'
+
+    @property
+    def stars(self):
+        return '★' * self.rating + '☆' * (5 - self.rating)
+
+
+# ══════════════════════════════════════════
 # EMAIL VERIFICATION TOKEN
 # ══════════════════════════════════════════
 class EmailVerificationToken(models.Model):

@@ -6,7 +6,7 @@ Django Admin 設定 — 系統管理員（Admin 角色）使用
 
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import CustomUser, StudentProfile, LoginLog, EmailVerificationToken
+from .models import CustomUser, StudentProfile, LoginLog, EmailVerificationToken, Department, AlumniShare
 
 
 # ══════════════════════════════════════════
@@ -58,6 +58,31 @@ class StudentProfileAdmin(admin.ModelAdmin):
     def mark_as_arrived(self, request, queryset):
         queryset.update(admission_status='arrived')
         self.message_user(request, f'已更新 {queryset.count()} 筆學生狀態')
+
+
+# ══════════════════════════════════════════
+# Alumni Share Admin（學長姐分享審核 / 下架）
+# ══════════════════════════════════════════
+@admin.register(AlumniShare)
+class AlumniShareAdmin(admin.ModelAdmin):
+    list_display  = ('user', 'university', 'nationality', 'program', 'rating', 'is_active', 'created_at')
+    list_filter   = ('university', 'rating', 'is_active', 'created_at')
+    list_editable = ('is_active',)
+    search_fields = ('user__name', 'user__email', 'content', 'program')
+    ordering      = ('-created_at',)
+    readonly_fields = ('created_at',)
+
+
+# ══════════════════════════════════════════
+# Department Admin（系所清單，供註冊頁下拉選單使用）
+# ══════════════════════════════════════════
+@admin.register(Department)
+class DepartmentAdmin(admin.ModelAdmin):
+    list_display  = ('university', 'faculty', 'name', 'name_en', 'discipline', 'order', 'is_active')
+    list_filter   = ('university', 'faculty', 'discipline', 'is_active')
+    list_editable = ('discipline', 'order', 'is_active')
+    search_fields = ('name', 'name_en', 'faculty')
+    ordering      = ('university', 'order')
 
 
 # ══════════════════════════════════════════

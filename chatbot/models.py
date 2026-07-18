@@ -7,6 +7,8 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
+from users.models import DISCIPLINE_CHOICES
+
 
 class ChatSession(models.Model):
     """一位使用者可有多個聊天對話。"""
@@ -133,6 +135,41 @@ class ChatAttachment(models.Model):
         return self.original_name or str(self.file)
 
 
+class ChatFeedback(models.Model):
+    """
+    學生對 AI 回覆的評價（👍 / 👎）。
+    管理者可在後台分析：哪些問題答不好 → 知識庫該補哪些內容（回饋閉環）。
+    """
+
+    RATING_CHOICES = [
+        ('up',   '👍 有幫助'),
+        ('down', '👎 沒幫助'),
+    ]
+
+    message = models.OneToOneField(
+        ChatMessage,
+        on_delete=models.CASCADE,
+        related_name='feedback',
+        verbose_name='被評價的訊息',
+    )
+    rating = models.CharField(
+        max_length=10,
+        choices=RATING_CHOICES,
+        verbose_name='評價',
+    )
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='更新時間')
+
+    class Meta:
+        db_table = 'chatbot_feedback'
+        ordering = ['-created_at']
+        verbose_name = 'AI 回覆評價'
+        verbose_name_plural = 'AI 回覆評價'
+
+    def __str__(self):
+        return f'{self.get_rating_display()} - {self.message.content[:30]}'
+
+
 class ChatKnowledge(models.Model):
     """聊天機器人知識庫 / FAQ：給 AI 一般回答參考，可支援多語言。"""
 
@@ -190,6 +227,17 @@ class ChatKnowledge(models.Model):
         verbose_name='分類',
     )
 
+    # 學群標籤：留空＝不分學群（所有人適用）；
+    # 有值時，AI 小老師會依學生系所對應的學群優先載入這些知識
+    discipline = models.CharField(
+        max_length=30,
+        choices=DISCIPLINE_CHOICES,
+        blank=True,
+        default='',
+        verbose_name='適用學群',
+        help_text='對應學生系所的 18 學群分類，留空表示不分學群',
+    )
+
     title = models.CharField(max_length=200, verbose_name='繁體中文標題')
     title_en = models.CharField(max_length=200, blank=True, verbose_name='英文標題')
     title_vi = models.CharField(max_length=200, blank=True, verbose_name='越文標題')
@@ -228,6 +276,17 @@ class ChatKnowledge(models.Model):
     content_th = models.TextField(blank=True, verbose_name='泰文內容')
     content_ja = models.TextField(blank=True, verbose_name='日文內容')
     content_ko = models.TextField(blank=True, verbose_name='韓文內容')
+
+    source_url = models.URLField(
+        blank=True,
+        verbose_name='官方來源連結',
+        help_text='此知識的官方出處（移民署 / 學校公告等），會附在 AI 回答後供學生查證',
+    )
+    last_verified_at = models.DateField(
+        null=True, blank=True,
+        verbose_name='最後查核日期',
+        help_text='管理員最後一次確認此內容仍正確的日期',
+    )
 
     is_active = models.BooleanField(default=True, verbose_name='是否啟用')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')

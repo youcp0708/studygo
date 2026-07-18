@@ -14,10 +14,12 @@
   .gsc-hero p  { opacity:.85; font-size:15px; margin:0; }
 
   .gsc-back {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--primary-dark); color:#fff;
+    font-size:13px; font-weight:700; margin-bottom:20px;
+    padding:8px 18px; border-radius:999px; text-decoration:none;
   }
-  .gsc-back:hover { color:var(--primary-dark); }
+  .gsc-back:hover { background:var(--primary); color:#fff; }
 
   .gsc-label {
     font-size:15px; font-weight:900; color:var(--primary-dark);

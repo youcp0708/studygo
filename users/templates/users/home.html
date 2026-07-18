@@ -1,91 +1,36 @@
-{# users/templates/users/home.html — 首頁 / Landing Page #}
+{# users/templates/users/home.html — 首頁 / Landing Page（純展示，不可互動） #}
 {% extends "base.html" %}
 {% load static i18n %}
 {% block title %}ReadyTo Taiwan — {% trans "來臺就學小幫手" %}{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'users/css/dashboard.css' %}?v={% now 'U' %}">
+<link rel="stylesheet" href="{% static 'users/css/dashboard.css' %}?v=7">
 {% endblock %}
 
 {% block content %}
 
-{# ── Hero ── #}
+{# ── Hero（純展示，無按鈕）── #}
 <section class="db-hero" id="homePage">
   <div class="db-hero-inner">
-    {% if user.is_authenticated %}
     <h1>{% trans "你好！" %}<br>{% trans "歡迎使用" %} <span class="db-brand">ReadyTo</span></h1>
     <p>
-      {% if profile %}{{ profile.get_identity_type_display }}{% trans "，您的個人化來臺就學流程已準備好。" %}{% endif %}<br>
+      {% trans "專為僑生、外籍生與港澳生打造的來台留學流程指南平台。" %}<br>
       {% trans "跟著我們一步步完成留學準備，掌握所有關鍵資訊。" %}
     </p>
-    <div class="db-hero-btns">
-      <a href="{% url 'my_flows' %}" class="db-btn-dark">☰ {% trans "查看任務清單" %}</a>
-      <a href="{% url 'guide_index' %}" class="db-btn-outline-dark">📚 {% trans "資訊中心" %}</a>
-      <a href="/chatbot/" class="db-btn-outline-dark">🤖 {% trans "詢問AI小幫手" %}</a>
-    </div>
-    {% else %}
-    <h1>{% trans "你好！" %}<br>{% trans "歡迎使用" %} <span class="db-brand">ReadyTo</span></h1>
-    <p>
-      {% trans "專為僑外籍生打造的來台留學流程指南平台。" %}<br>
-      {% trans "跟著我們一步步完成留學準備，掌握所有關鍵資訊。" %}
-    </p>
-    <div class="db-hero-btns">
-      <a href="{% url 'login_page' %}" class="db-btn-dark">{% trans "開始使用" %} →</a>
-      <a href="#sec-guides" class="db-btn-outline-dark">{% trans "了解更多" %}</a>
-    </div>
-    {% endif %}
   </div>
   <div class="db-hero-watermark">TAIWAN</div>
 
-  {# Stats row #}
+  {# Stats row（示範資料） #}
   <div class="db-stats-row">
-    {% if user.is_authenticated %}
-    <div class="db-stat-card">
-      <div class="db-stat-icon" style="background:#fee2e2;">✅</div>
-      <div class="db-stat-body">
-        <div class="db-stat-label">{% trans "任務完成率" %}</div>
-        <div class="db-stat-val" id="dashCompletionRate"
-          data-completed-text="{% trans '已完成' %}" data-items-text="{% trans '項任務' %}">—%</div>
-        <div class="db-stat-bar"><div class="db-stat-bar-fill" id="dashBarFill" style="width:0%"></div></div>
-      </div>
-    </div>
-    <div class="db-stat-card">
-      <div class="db-stat-icon" style="background:#fef9c3;">⏰</div>
-      <div class="db-stat-body">
-        <div class="db-stat-label">{% trans "即將到期 / 提醒" %}</div>
-        <div style="display:flex;gap:20px;margin-top:4px;align-items:center;">
-          <div>
-            <div class="db-stat-num" id="dashOverdueCount" style="color:var(--danger);">—</div>
-            <div class="db-stat-sub">{% trans "即將到期任務" %}</div>
-          </div>
-          <div style="width:1px;height:36px;background:var(--line);"></div>
-          <div>
-            <div class="db-stat-num" id="dashUnreadCount" style="color:var(--warning);">{{ unread_count|default:0 }}</div>
-            <div class="db-stat-sub">{% trans "未讀通知" %}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="db-stat-card">
-      <div class="db-stat-icon" style="background:#d1fae5;">🪪</div>
-      <div class="db-stat-body">
-        <div class="db-stat-label">{% trans "目前入學狀態" %}</div>
-        <div class="db-stat-val" style="font-size:20px;margin-bottom:4px;">
-          {% if profile %}{{ profile.get_admission_status_display }}{% else %}—{% endif %}
-        </div>
-        <div class="db-stat-sub">{% if profile %}{{ profile.get_university_display|default:profile.university }}{% endif %}</div>
-        <div class="db-stat-bar" style="margin-top:6px;">
-          <div class="db-stat-bar-fill db-bar-success {% if admission_progress == 100 %}db-bar-full{% endif %}"></div>
-        </div>
-      </div>
-    </div>
-    {% else %}
     <div class="db-stat-card db-stat-unauth">
       <div class="db-stat-icon" style="background:#fee2e2;">✅</div>
       <div class="db-stat-body">
         <div class="db-stat-label">{% trans "任務完成率" %}</div>
-        <div class="db-stat-val">40%<br><span style="font-size:14px;font-weight:600;color:var(--muted);">{% trans "已完成" %} 8 / 20 {% trans "項任務" %}</span></div>
-        <div class="db-stat-bar" style="margin-top:10px;"><div class="db-stat-bar-fill" style="width:40%;"></div></div>
+        <div class="db-stat-val">40%<br><span style="font-size:14px;font-weight:600;color:var(--muted);">{% trans "已完成"
+            %} 8 / 20 {% trans "項任務" %}</span></div>
+        <div class="db-stat-bar" style="margin-top:10px;">
+          <div class="db-stat-bar-fill" style="width:40%;"></div>
+        </div>
         <div class="db-demo-tag">{% trans "示範資料" %}</div>
       </div>
     </div>
@@ -100,7 +45,7 @@
           </div>
           <div style="width:1px;height:36px;background:var(--line);"></div>
           <div>
-            <div class="db-stat-num" style="color:var(--warning);">0</div>
+            <div class="db-stat-num" style="color:var(--warning);">3</div>
             <div class="db-stat-sub">{% trans "未讀通知" %}</div>
           </div>
         </div>
@@ -112,125 +57,56 @@
       <div class="db-stat-body">
         <div class="db-stat-label">{% trans "目前入學狀態" %}</div>
         <div>
-          <div class="db-stat-val" style="font-size:20px;margin-bottom:4px;">{% trans "申請中" %}</div>
+          <div class="db-stat-val" style="font-size:20px;margin-bottom:4px;">{% trans "抵臺前準備" %}</div>
           <div class="db-stat-sub">{% trans "國立中央大學" %}</div>
-          <div class="db-stat-bar" style="margin-top:6px;"><div class="db-stat-bar-fill" style="width:50%;background:var(--success);"></div></div>
+          <div class="db-stat-bar" style="margin-top:6px;">
+            <div class="db-stat-bar-fill" style="width:50%;background:var(--success);"></div>
+          </div>
         </div>
         <div class="db-demo-tag">{% trans "示範資料" %}</div>
       </div>
     </div>
-    {% endif %}
   </div>
 </section>
 
-{# ── 留學流程 ── #}
+{# ── 留學流程（靜態展示兩階段）── #}
 <section class="db-section db-bg-gray" id="sec-flow">
   <div class="db-wrap">
     <div class="db-kicker">{% trans "留學流程" %}</div>
-    <h2 class="db-sec-h2">{% trans "四個階段" %}<br><span class="db-accent">{% trans "掌握留學全流程" %}</span></h2>
+    <h2 class="db-sec-h2">{% trans "兩個階段" %}<br><span class="db-accent">{% trans "掌握留學全流程" %}</span></h2>
 
-    {% with s=flow_step|default:2 %}
-    <div class="db-stepper">
-      <div class="db-step {% if s > 1 %}db-done{% endif %} {% if s == 1 %}db-active{% endif %}">
-        <div class="db-step-num">{% if s > 1 %}✓{% else %}01{% endif %}</div>
-        <div class="db-step-label">{% trans "申請前準備" %}</div>
-        <div class="db-step-sub">{% trans "確認資格、選擇學校與科系、準備學歷文件與財力證明" %}</div>
+    <div class="flow-static-grid">
+      <div class="flow-static-card">
+        <div class="flow-static-num">01</div>
+        <h3>✈️ {% trans "抵台前準備" %}</h3>
+        <ul>
+          <li>{% trans "辦理居留簽證（憑入學許可）" %}</li>
+          <li>{% trans "申請學校宿舍或安排租屋" %}</li>
+          <li>{% trans "預訂機票、準備入境文件與體檢報告" %}</li>
+          <li>{% trans "填好抵臺日期，系統自動排任務" %}</li>
+        </ul>
       </div>
-      <div class="db-step-line {% if s > 1 %}db-line-done{% endif %}"></div>
-      <div class="db-step {% if s > 2 %}db-done{% endif %} {% if s == 2 %}db-active{% endif %}">
-        <div class="db-step-num">{% if s > 2 %}✓{% else %}02{% endif %}</div>
-        <div class="db-step-label">{% trans "申請入學" %}</div>
-        <div class="db-step-sub">{% trans "線上申請系統填寫、繳交文件、等待入學許可" %}</div>
-      </div>
-      <div class="db-step-line {% if s > 2 %}db-line-done{% endif %}"></div>
-      <div class="db-step {% if s > 3 %}db-done{% endif %} {% if s == 3 %}db-active{% endif %}">
-        <div class="db-step-num">{% if s > 3 %}✓{% else %}03{% endif %}</div>
-        <div class="db-step-label">{% trans "抵台前準備" %}</div>
-        <div class="db-step-sub">{% trans "辦理簽證、預訂機票、安排住宿、準備入境文件" %}</div>
-      </div>
-      <div class="db-step-line {% if s > 3 %}db-line-done{% endif %}"></div>
-      <div class="db-step {% if s == 4 %}db-active{% endif %}">
-        <div class="db-step-num">{% if s > 4 %}✓{% else %}04{% endif %}</div>
-        <div class="db-step-label">{% trans "抵達後事項" %}</div>
-        <div class="db-step-sub">{% trans "辦理居留證、健保、銀行開戶、手機門號、學校註冊" %}</div>
+      <div class="flow-static-card">
+        <div class="flow-static-num">02</div>
+        <h3>🏡 {% trans "抵達後事項" %}</h3>
+        <ul>
+          <li>{% trans "入境 30 天內線上申請 ARC 居留證" %}</li>
+          <li>{% trans "學校報到註冊、辦學生證與選課" %}</li>
+          <li>{% trans "銀行開戶、辦手機門號" %}</li>
+          <li>{% trans "居留滿 6 個月加入全民健保" %}</li>
+        </ul>
       </div>
     </div>
-    {% endwith %}
-    {% if not user.is_authenticated %}
-    <div class="db-demo-banner">
-      {% trans "以上為示範進度，" %}<a href="{% url 'login_page' %}">{% trans "登入" %}</a>{% trans "後可查看您的個人化流程進度" %}
-    </div>
-    {% endif %}
+    <div class="db-demo-banner">{% trans "以上為示範內容，登入後可查看您的個人化流程進度。" %}</div>
   </div>
 </section>
 
-{# ── 任務清單 ── #}
+{# ── 任務清單（示範資料）── #}
 <section class="db-section" id="sec-tasks">
   <div class="db-wrap">
     <div class="db-kicker">{% trans "任務清單" %}</div>
     <h2 class="db-sec-h2">{% trans "跟著清單走" %}<br><span class="db-accent">{% trans "不遺漏任何步驟" %}</span></h2>
 
-    {% if user.is_authenticated %}
-    <div class="db-tasks-layout">
-      <div class="db-profile-card">
-        <div class="db-prof-avatar">{{ user.name|first|upper }}</div>
-        <div class="db-prof-name">{{ user.name }}</div>
-        <div class="db-prof-email">{{ user.email }}</div>
-        <div class="db-prof-tags">
-          {% if profile %}
-          <span class="db-tag blue">🌏 {{ profile.get_nationality_display }}</span>
-          <span class="db-tag coral">{{ profile.get_identity_type_display }}</span>
-          <span class="db-tag green">{{ profile.get_university_display|default:profile.university }}</span>
-          {% endif %}
-        </div>
-        <div style="margin-top:18px;padding:14px;background:var(--bg);border-radius:14px;text-align:left;">
-          <div class="preview-row">
-            <span>{% trans "系所" %}</span>
-            <span>
-              {% if profile %}
-                {{ profile.department|default:"—" }}
-              {% else %}
-                —
-              {% endif %}
-            </span>
-          </div>
-
-          <div class="preview-row">
-            <span>{% trans "預計抵台" %}</span>
-            <span>
-              {% if profile and profile.expected_arrival %}
-                {{ profile.expected_arrival }}
-              {% else %}
-                —
-              {% endif %}
-            </span>
-          </div>
-
-          <div class="preview-row">
-            <span>{% trans "帳號建立" %}</span>
-            <span>
-              {% if user.date_joined %}
-                {{ user.date_joined|date:"Y-m-d" }}
-              {% else %}
-                —
-              {% endif %}
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="db-task-panel">
-        <div class="db-task-panel-hd">📌 {% trans "近期待辦任務" %}</div>
-        <div id="dashRecentTasks" data-no-tasks="{% trans '太棒了！您目前沒有待辦任務。' %}" class="db-task-list">
-          <div style="text-align:center;padding:32px 0;color:var(--muted);">
-            <div class="spinner" style="border-color:var(--primary) transparent var(--primary) transparent;"></div>
-            <div style="margin-top:12px;">{% trans "載入任務中..." %}</div>
-          </div>
-        </div>
-        <a href="{% url 'my_flows' %}" class="db-full-list-btn">{% trans "查看全部任務清單" %} →</a>
-      </div>
-    </div>
-    {% else %}
     <div class="db-tasks-layout">
       <div class="db-profile-card">
         <div class="db-prof-avatar">王</div>
@@ -265,23 +141,26 @@
       </div>
 
       <div class="db-task-panel">
-        <div class="db-task-panel-hd">⚡ {% trans "近期待辦任務" %}</div>
+        <div class="db-task-panel-hd">📌 {% trans "近期待辦任務" %}</div>
         <div class="db-task-list">
-          <div style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;">
+          <div
+            style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;">
             <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
             <div style="flex:1;">
               <div style="font-weight:700;font-size:14px;">{% trans "申請學生簽證" %}</div>
               <div style="font-size:12px;color:var(--muted);">{% trans "抵台前準備" %}</div>
             </div>
           </div>
-          <div style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;margin-top:8px;">
+          <div
+            style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;margin-top:8px;">
             <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
             <div style="flex:1;">
               <div style="font-weight:700;font-size:14px;">{% trans "準備財力證明文件" %}</div>
               <div style="font-size:12px;color:var(--muted);">{% trans "申請前準備" %}</div>
             </div>
           </div>
-          <div style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;margin-top:8px;">
+          <div
+            style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;margin-top:8px;">
             <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
             <div style="flex:1;">
               <div style="font-weight:700;font-size:14px;">{% trans "預訂來台機票" %}</div>
@@ -289,16 +168,13 @@
             </div>
           </div>
         </div>
-        <div class="db-demo-banner" style="margin-top:16px;">
-          {% trans "以上為示範資料，" %}<a href="{% url 'login_page' %}">{% trans "登入" %}</a>{% trans "後可查看您的個人化任務清單" %}
-        </div>
+        <div class="db-demo-banner" style="margin-top:16px;">{% trans "以上為示範資料，登入後可查看您的個人化任務清單。" %}</div>
       </div>
     </div>
-    {% endif %}
   </div>
 </section>
 
-{# ── 資訊中心 ── #}
+{# ── 資訊中心（純展示，卡片不可點）── #}
 <section class="db-section db-bg-gray" id="sec-guides">
   <div class="db-wrap">
     <div class="db-sec-hd2">
@@ -309,41 +185,41 @@
       <p class="db-sec-sub">{% trans "從簽證到住宿、從健保到交通，所有外籍生在台必備的重要資訊都在這裡" %}</p>
     </div>
     <div class="db-guide-grid">
-      <a href="{% url 'guide_arc_foreign' %}" class="db-guide-card">
+      <div class="db-guide-card db-guide-static">
         <div class="db-guide-icon" style="background:#fef3c7;color:#d97706;">🪪</div>
         <div class="db-guide-title">{% trans "簽證指南" %}</div>
         <div class="db-guide-desc">{% trans "學生簽證申請流程、所需文件、辦理地點與注意事項，一次搞懂不迷路。" %}</div>
-      </a>
-      <a href="{% url 'guide_housing_ncu' %}" class="db-guide-card">
+      </div>
+      <div class="db-guide-card db-guide-static">
         <div class="db-guide-icon" style="background:#d1fae5;color:#059669;">🏠</div>
         <div class="db-guide-title">{% trans "住宿資訊" %}</div>
         <div class="db-guide-desc">{% trans "校內宿舍申請流程、校外租屋平台推薦、租房合約注意事項與常見陷阱。" %}</div>
-      </a>
-      <a href="{% url 'guide_nhi' %}" class="db-guide-card">
+      </div>
+      <div class="db-guide-card db-guide-static">
         <div class="db-guide-icon" style="background:#fce7f3;color:#db2777;">❤️</div>
         <div class="db-guide-title">{% trans "健保說明" %}</div>
         <div class="db-guide-desc">{% trans "全民健保加入資格、保費計算方式、就醫流程與各地醫院資訊查詢。" %}</div>
-      </a>
-      <a href="{% url 'guide_bank' %}" class="db-guide-card">
+      </div>
+      <div class="db-guide-card db-guide-static">
         <div class="db-guide-icon" style="background:#dbeafe;color:#2563eb;">🏦</div>
         <div class="db-guide-title">{% trans "銀行開戶" %}</div>
         <div class="db-guide-desc">{% trans "推薦外籍生友善銀行、開戶所需文件、線上轉帳與提款卡申請教學。" %}</div>
-      </a>
-      <a href="{% url 'guide_sim' %}" class="db-guide-card">
+      </div>
+      <div class="db-guide-card db-guide-static">
         <div class="db-guide-icon" style="background:#ede9fe;color:#7c3aed;">📱</div>
         <div class="db-guide-title">{% trans "手機門號" %}</div>
         <div class="db-guide-desc">{% trans "電信業者比較、預付卡 vs 月租方案、門號申請所需證件與流程。" %}</div>
-      </a>
-      <a href="{% url 'guide_bus_ncu' %}" class="db-guide-card">
+      </div>
+      <div class="db-guide-card db-guide-static">
         <div class="db-guide-icon" style="background:#ffedd5;color:#ea580c;">🚌</div>
         <div class="db-guide-title">{% trans "大眾交通" %}</div>
         <div class="db-guide-desc">{% trans "悠遊卡/一卡通使用教學、捷運公車路線查詢、YouBike 租借與火車訂票。" %}</div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
 
-{# ── 學長姐分享 ── #}
+{# ── 學長姐分享（純展示，示範資料）── #}
 <section class="db-section" id="sec-alumni">
   <div class="db-wrap">
     <div class="db-sec-hd2">
@@ -356,28 +232,32 @@
     <div class="db-alumni-grid">
       <div class="db-alumni-card">
         <div class="db-alumni-top">
-          <div class="db-alumni-av" style="background:linear-gradient(135deg,#a8edea,#fed6e3);">N</div>
+          <div class="db-alumni-av av-g0">N</div>
           <div>
             <div class="db-alumni-name">Nguyen Thi Minh</div>
             <div class="db-alumni-loc">📍 {% trans "越南" %}</div>
-            <div class="db-alumni-uni">{% trans "國立中央大學" %}</div>
-            <div class="db-alumni-prog">{% trans "企業管理碩士" %}</div>
+            <div class="db-alumni-uni">{% trans "國立臺灣大學" %}</div>
+            <div class="db-alumni-prog">{% trans "國際企業管理碩士" %}</div>
           </div>
         </div>
-        <p class="db-alumni-q">{% trans "「剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。ReadyTo 上的流程整理讓我在申請階段就對整個時程很有把握，少走了好多彎路！」" %}</p>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。ReadyTo
+          上的流程整理讓我在申請階段就對整個時程很有把握，少走了好多彎路！」" %}</p>
         <div class="db-alumni-qm">"</div>
       </div>
       <div class="db-alumni-card">
         <div class="db-alumni-top">
-          <div class="db-alumni-av" style="background:linear-gradient(135deg,#667eea,#764ba2);">B</div>
+          <div class="db-alumni-av av-g1">B</div>
           <div>
             <div class="db-alumni-name">Budi Santoso</div>
             <div class="db-alumni-loc">📍 {% trans "印尼" %}</div>
-            <div class="db-alumni-uni">{% trans "國立中央大學" %}</div>
-            <div class="db-alumni-prog">{% trans "機械工程學系" %}</div>
+            <div class="db-alumni-uni">{% trans "國立成功大學" %}</div>
+            <div class="db-alumni-prog">{% trans "機械工程學士班" %}</div>
           </div>
         </div>
-        <p class="db-alumni-q">{% trans "「中大的工程教育真的很扎實！教授們都很願意指導外籍生，實驗室設備也很完整。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」" %}</p>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「台灣的工程教育真的世界一流！教授們都很願意指導外籍生，實驗室設備也很完整。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」" %}
+        </p>
         <div class="db-alumni-qm">"</div>
       </div>
       <div class="db-alumni-card">
@@ -386,11 +266,12 @@
           <div>
             <div class="db-alumni-name">Maria Santos</div>
             <div class="db-alumni-loc">📍 {% trans "菲律賓" %}</div>
-            <div class="db-alumni-uni">{% trans "國立中央大學" %}</div>
-            <div class="db-alumni-prog">{% trans "學習與教學研究所" %}</div>
+            <div class="db-alumni-uni">{% trans "國立臺灣師範大學" %}</div>
+            <div class="db-alumni-prog">{% trans "華語文教學碩士" %}</div>
           </div>
         </div>
-        <p class="db-alumni-q">{% trans "「來中大交流是我做過最棒的決定！中大的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」" %}</p>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」" %}</p>
         <div class="db-alumni-qm">"</div>
       </div>
       <div class="db-alumni-card">
@@ -399,11 +280,12 @@
           <div>
             <div class="db-alumni-name">Krit Amnuay</div>
             <div class="db-alumni-loc">📍 {% trans "泰國" %}</div>
-            <div class="db-alumni-uni">{% trans "國立中央大學" %}</div>
-            <div class="db-alumni-prog">{% trans "資訊工程學系博士班" %}</div>
+            <div class="db-alumni-uni">{% trans "國立清華大學" %}</div>
+            <div class="db-alumni-prog">{% trans "資訊工程博士班" %}</div>
           </div>
         </div>
-        <p class="db-alumni-q">{% trans "「中大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」" %}</p>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」" %}</p>
         <div class="db-alumni-qm">"</div>
       </div>
       <div class="db-alumni-card">
@@ -412,11 +294,12 @@
           <div>
             <div class="db-alumni-name">Sarah Lim</div>
             <div class="db-alumni-loc">📍 {% trans "馬來西亞" %}</div>
-            <div class="db-alumni-uni">{% trans "國立中央大學" %}</div>
-            <div class="db-alumni-prog">{% trans "國際企業學士班" %}</div>
+            <div class="db-alumni-uni">{% trans "國立政治大學" %}</div>
+            <div class="db-alumni-prog">{% trans "國際傳播學士班" %}</div>
           </div>
         </div>
-        <p class="db-alumni-q">{% trans "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。中大的校園生活多元豐富，是我做過最好的選擇！」" %}</p>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」" %}</p>
         <div class="db-alumni-qm">"</div>
       </div>
       <div class="db-alumni-card">
@@ -425,11 +308,13 @@
           <div>
             <div class="db-alumni-name">田中健太</div>
             <div class="db-alumni-loc">📍 {% trans "日本" %}</div>
-            <div class="db-alumni-uni">{% trans "國立中央大學" %}</div>
-            <div class="db-alumni-prog">{% trans "光電科學與工程學系碩士" %}</div>
+            <div class="db-alumni-uni">{% trans "國立陽明交通大學" %}</div>
+            <div class="db-alumni-prog">{% trans "半導體研究碩士" %}</div>
           </div>
         </div>
-        <p class="db-alumni-q">{% trans "「中大的光電領域是國內數一數二的，來這裡深造是最正確的選擇。中大的研究環境和產學連結都非常完善。ReadyTo 的 ARC 辦理指南讓我順利完成所有手續。」" %}</p>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。陽明交大的研究環境和業界連結都非常完善。ReadyTo 的 ARC
+          辦理指南讓我順利完成所有手續。」" %}</p>
         <div class="db-alumni-qm">"</div>
       </div>
     </div>
@@ -444,19 +329,23 @@
     <div class="db-faq-list">
       <div class="db-faq-item">
         <div class="db-faq-q">{% trans "申請台灣大學需要準備哪些文件？" %}<span class="db-faq-arr">›</span></div>
-        <div class="db-faq-a">{% trans "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。" %}</div>
+        <div class="db-faq-a">{% trans
+          "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。" %}</div>
       </div>
       <div class="db-faq-item">
         <div class="db-faq-q">{% trans "不會中文可以來台灣留學嗎？" %}<span class="db-faq-arr">›</span></div>
-        <div class="db-faq-a">{% trans "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課程。" %}</div>
+        <div class="db-faq-a">{% trans "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1
+          以上），或在僑先部完成一年預科中文課程。" %}</div>
       </div>
       <div class="db-faq-item">
         <div class="db-faq-q">{% trans "留學台灣的費用大約多少？" %}<span class="db-faq-arr">›</span></div>
-        <div class="db-faq-a">{% trans "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。" %}</div>
+        <div class="db-faq-a">{% trans "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月
+          NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。" %}</div>
       </div>
       <div class="db-faq-item">
         <div class="db-faq-q">{% trans "學生簽證如何辦理？" %}<span class="db-faq-arr">›</span></div>
-        <div class="db-faq-a">{% trans "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。" %}</div>
+        <div class="db-faq-a">{% trans "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
+          %}</div>
       </div>
       <div class="db-faq-item">
         <div class="db-faq-q">{% trans "可以邊讀書邊打工嗎？" %}<span class="db-faq-arr">›</span></div>
@@ -468,68 +357,11 @@
       </div>
       <div class="db-faq-item">
         <div class="db-faq-q">{% trans "申請流程需要多久時間？" %}<span class="db-faq-arr">›</span></div>
-        <div class="db-faq-a">{% trans "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。" %}</div>
+        <div class="db-faq-a">{% trans "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4
+          個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。" %}</div>
       </div>
     </div>
   </div>
 </section>
 
-{% endblock %}
-
-{% block extra_js %}
-<script>
-(function () {
-  // FAQ toggle
-  document.querySelectorAll('.db-faq-q').forEach(function (q) {
-    q.addEventListener('click', function () {
-      var item = this.closest('.db-faq-item');
-      var open = item.classList.contains('open');
-      document.querySelectorAll('.db-faq-item').forEach(function (i) { i.classList.remove('open'); });
-      if (!open) item.classList.add('open');
-    });
-  });
-
-  // Sync hero completion bar + profile card when flows.js updates dashCompletionRate
-  var rateEl   = document.getElementById('dashCompletionRate');
-  var heroBar  = document.getElementById('dashBarFill');
-  var profBar  = document.getElementById('dbProfBar');
-  var profPct  = document.getElementById('dbProfPct');
-  var profSub  = document.getElementById('dbProfSub');
-  var pendEl   = document.getElementById('dbPendingCount');
-  var dueEl    = document.getElementById('dbDueCount');
-  var overdueEl = document.getElementById('dashOverdueCount');
-
-  if (rateEl) {
-    var obs = new MutationObserver(function () {
-      var txt = rateEl.textContent || '0';
-      var pct = parseInt(txt) || 0;
-      if (heroBar) heroBar.style.width = pct + '%';
-      if (profBar) profBar.style.width = pct + '%';
-      if (profPct) profPct.textContent = pct + '%';
-      // Extract "已完成 X / Y 項任務" substring for profSub
-      var match = txt.match(/(\d+\s*\/\s*\d+)/);
-      if (match && profSub) profSub.textContent = '{% trans "已完成" %} ' + match[1] + ' {% trans "項任務" %}';
-    });
-    obs.observe(rateEl, { childList: true, subtree: true, characterData: true });
-  }
-
-  // Sync pending/due counts from dashOverdueCount once it's set
-  if (overdueEl) {
-    var obs2 = new MutationObserver(function () {
-      if (dueEl) dueEl.textContent = overdueEl.textContent;
-    });
-    obs2.observe(overdueEl, { childList: true, subtree: true, characterData: true });
-  }
-
-  // Approximate pending count: count items in dashRecentTasks once rendered
-  var tasksEl = document.getElementById('dashRecentTasks');
-  if (tasksEl && pendEl) {
-    var obs3 = new MutationObserver(function () {
-      var cnt = tasksEl.querySelectorAll('div[style*="border"]').length;
-      if (cnt > 0) pendEl.textContent = cnt + '+';
-    });
-    obs3.observe(tasksEl, { childList: true, subtree: true });
-  }
-})();
-</script>
 {% endblock %}

@@ -7,17 +7,86 @@
   const endpoints = window.CHATBOT_ENDPOINTS || {};
   const i18n = window.CHATBOT_I18N || {};
 
+  // 機器人圖示（頭 + 身體），取代單純的表情符號，與伺服器端 templates/_bot_icon.html 一致
+  const BOT_ICON_SVG = '<svg class="bot-icon-svg" viewBox="0 0 64 64" aria-hidden="true">'
+    + '<circle cx="32" cy="5" r="3" fill="currentColor" />'
+    + '<rect x="30" y="8" width="4" height="8" rx="2" fill="currentColor" />'
+    + '<circle cx="13" cy="26" r="6" fill="currentColor" />'
+    + '<circle cx="51" cy="26" r="6" fill="currentColor" />'
+    + '<circle cx="32" cy="26" r="16" fill="currentColor" />'
+    + '<circle cx="25" cy="26" r="6.5" fill="#fff" />'
+    + '<circle cx="39" cy="26" r="6.5" fill="#fff" />'
+    + '<circle cx="25" cy="27" r="3" fill="#17534d" />'
+    + '<circle cx="39" cy="27" r="3" fill="#17534d" />'
+    + '<rect x="26" y="34" width="12" height="3" rx="1.5" fill="#fff" opacity=".85" />'
+    + '<rect x="16" y="44" width="32" height="18" rx="9" fill="currentColor" />'
+    + '<rect x="8" y="47" width="8" height="13" rx="4" fill="currentColor" opacity=".9" />'
+    + '<rect x="48" y="47" width="8" height="13" rx="4" fill="currentColor" opacity=".9" />'
+    + '<circle cx="32" cy="53" r="3" fill="#fff" opacity=".6" />'
+    + '</svg>';
+
   let activeSessionId = page.dataset.sessionId || null;
   let currentAIMode = page.dataset.aiMode || 'helper';
+
+  // 是否被嵌在浮動小工具的 iframe 內（embed 模式）
+  const isEmbed = page.dataset.embed === '1' || window.self !== window.top;
+
+  // 向父視窗（浮動小工具）發送訊息；非 embed 時無作用
+  function postToParent(type, extra) {
+    if (!isEmbed) return;
+    try {
+      window.parent.postMessage(Object.assign({ type: type }, extra || {}), window.location.origin);
+    } catch (e) { /* 忽略跨域錯誤 */ }
+  }
+
+  // 建立聊天頁網址：embed 模式一律保留 embed=1，避免 iframe 內跳轉載入到完整版頁面（版面會爆掉）
+  function chatUrl(params) {
+    var qs = new URLSearchParams();
+    if (params) {
+      Object.keys(params).forEach(function (k) {
+        if (params[k] !== undefined && params[k] !== null && params[k] !== '') qs.set(k, params[k]);
+      });
+    }
+    if (isEmbed) qs.set('embed', '1');
+    var s = qs.toString();
+    return (endpoints.page || '/chatbot/') + (s ? '?' + s : '');
+  }
+
+  // 記住「這次造訪」中每個模式最後停留的聊天，只在兩個機器人之間切換時使用；
+  // 用 sessionStorage（不是 localStorage）是為了讓它天然限定在目前分頁的這次造訪。
+  // 只要是從懸浮按鈕進來的全新網址（沒有 ai_mode、也沒有 session 參數），就視為新的一次造訪，
+  // 把上次造訪殘留的紀錄清掉，兩個機器人都會是新對話；之後在這次造訪中傳過訊息的模式，
+  // 才會在互相切換時回到剛剛那個對話。
+  function lastSessionKey(mode) {
+    return `chatbot_visit_session_${mode}`;
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const isFreshEntry = !urlParams.has('ai_mode') && !urlParams.has('session');
+
+  if (isFreshEntry) {
+    sessionStorage.removeItem(lastSessionKey('helper'));
+    sessionStorage.removeItem(lastSessionKey('friend'));
+  }
+
+  if (activeSessionId) {
+    sessionStorage.setItem(lastSessionKey(currentAIMode), activeSessionId);
+    // 載入既有對話時，先讓父視窗記住 session（保留對話用）
+    postToParent('chat:session', { sessionId: activeSessionId });
+  }
+
+  // 記住目前正在使用的模式，供懸浮按鈕「最小化後恢復」時判斷要回到哪個機器人
+  sessionStorage.setItem('chatbot_active_mode', currentAIMode);
 
   const AI_MODE_NAMES = {
     helper: i18n.assistantName || 'ReadyTo 任務小幫手',
     friend: i18n.friendName || 'ReadyTo 聊天好朋友',
   };
 
+  // placeholder 由模板的 {% trans %} 注入，跟著介面語言走
   const AI_MODE_PLACEHOLDERS = {
-    helper: '例如：我從緬甸來臺讀學士班，簽證要先準備什麼？',
-    friend: '例如：我最近壓力很大，有點想家。',
+    helper: i18n.placeholderHelper || '例如：簽證要先準備什麼？',
+    friend: i18n.placeholderFriend || '例如：我最近壓力很大，有點想家。',
   };
 
   const messagesEl = document.getElementById('chatMessages');
@@ -37,10 +106,19 @@
   const attachmentPreview = document.getElementById('attachmentPreview');
   const micBtn = document.getElementById('micBtn');
 
+  const MODE_ROLES = { helper: ['小老師'], friend: ['朋友'] };
+
   let selectedAttachments = [];
   let selectedRole = localStorage.getItem('chatbot_role') || '';
   let selectedPersonality = localStorage.getItem('chatbot_personality') || '';
   let selectedRoleColor = localStorage.getItem('chatbot_role_color') || '';
+
+  // 角色人格是各模式各自的設定，不能把上一個模式選的角色帶到另一個模式顯示
+  if (selectedRole && !MODE_ROLES[currentAIMode].includes(selectedRole)) {
+    selectedRole = '';
+    selectedPersonality = '';
+    selectedRoleColor = '';
+  }
 
   function t(key, fallback) {
     return i18n[key] || fallback;
@@ -152,21 +230,31 @@
       .replaceAll("'", '&#039;');
   }
 
+  const ANSWER_LABEL_LINE = /^[^\n:：]{1,40}[:：]$/;
+
   function renderMessageContent(content) {
     const normalized = normalizeMessageContent(content);
-    const safeText = escapeHtml(normalized);
+    let labelCount = 0;
 
-    return safeText
-      .replace(
-        /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)/g,
-        (_match, label, href) => {
-          if (href.startsWith('tel:')) {
-            return `<a href="${href}" class="chat-link chat-link--tel">📞 ${label}</a>`;
+    return normalized
+      .split('\n')
+      .map((line) => {
+        const safeLine = escapeHtml(line).replace(
+          /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)/g,
+          (_match, label, href) => {
+            if (href.startsWith('tel:')) {
+              return `<a href="${href}" class="chat-link chat-link--tel">📞 ${label}</a>`;
+            }
+            return `<a href="${href}" class="chat-link">${label}</a>`;
           }
-          return `<a href="${href}" class="chat-link">${label}</a>`;
-        }
-      )
-      .replace(/\n/g, '<br>');
+        );
+        if (!ANSWER_LABEL_LINE.test(line.trim())) return safeLine;
+
+        labelCount += 1;
+        const variant = labelCount === 1 ? 'personal' : 'general';
+        return `<span class="answer-label answer-label--${variant}">${safeLine}</span>`;
+      })
+      .join('<br>');
   }
 
   function renderExistingMessageLinks() {
@@ -178,8 +266,6 @@
       if (el.dataset.renderedLinks === 'true') return;
 
       const rawText = el.textContent || '';
-
-      if (!rawText.includes('](')) return;
 
       el.innerHTML = renderMessageContent(rawText);
       el.dataset.renderedLinks = 'true';
@@ -203,7 +289,7 @@
   function typewriterEffect(bodyEl, bubbleEl, content, time, shouldScroll) {
     const normalized = normalizeMessageContent(content);
     let i = 0;
-    const speed = 65;
+    const speed = 18;
 
     function tick() {
       if (i < normalized.length) {
@@ -242,7 +328,7 @@
 
       if (att.type === 'file') {
         link.className = 'message-attachment-file';
-        link.textContent = `📎 ${att.name}`;
+        link.textContent = att.name;
       } else {
         const img = document.createElement('img');
         img.src = att.url;
@@ -257,7 +343,43 @@
     bubble.appendChild(wrap);
   }
 
-  function addMessage(role, content, time, shouldScroll = true, animate = false, attachments = []) {
+  const FEEDBACK_ICONS = {
+    up: '<svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>',
+    down: '<svg viewBox="0 0 24 24"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>',
+  };
+
+  function attachFeedbackButtons(bubble, messageId) {
+    if (!endpoints.feedback || !messageId) return;
+
+    const box = document.createElement('div');
+    box.className = 'msg-feedback';
+
+    ['up', 'down'].forEach((rating) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'feedback-btn';
+      btn.dataset.rating = rating;
+      btn.innerHTML = FEEDBACK_ICONS[rating];
+      btn.title = t('feedbackThanks', '已收到回饋，謝謝！');
+
+      btn.addEventListener('click', async function () {
+        const result = await requestJSON(endpoints.feedback, 'POST', {
+          message_id: messageId,
+          rating: rating,
+        });
+        if (result.ok && result.data.success) {
+          box.querySelectorAll('.feedback-btn').forEach((b) => b.classList.remove('selected'));
+          btn.classList.add('selected');
+        }
+      });
+
+      box.appendChild(btn);
+    });
+
+    bubble.appendChild(box);
+  }
+
+  function addMessage(role, content, time, shouldScroll = true, animate = false, attachments = [], messageId = null) {
     if (!messagesEl) return;
 
     const row = document.createElement('div');
@@ -265,7 +387,11 @@
 
     const avatar = document.createElement('div');
     avatar.className = 'message-avatar';
-    avatar.textContent = role === 'user' ? (i18n.userInitial || '我') : '🤖';
+    if (role === 'user') {
+      avatar.textContent = i18n.userInitial || '我';
+    } else {
+      avatar.innerHTML = BOT_ICON_SVG;
+    }
 
     if (role === 'user') {
       avatar.classList.add('user-initial');
@@ -286,8 +412,9 @@
     const body = document.createElement('div');
     body.className = 'message-content';
 
-    // Skip typewriter for messages with Markdown links so tel: links render immediately
-    const shouldAnimate = animate && role !== 'user' && !content.includes('](');
+    // Skip typewriter for messages with Markdown links so tel: links render immediately,
+    // and for long answers so users don't wait through the animation
+    const shouldAnimate = animate && role !== 'user' && !content.includes('](') && content.length <= 280;
 
     if (shouldAnimate) {
       body.textContent = '';
@@ -298,6 +425,10 @@
 
     bubble.appendChild(body);
     renderAttachmentsInto(bubble, attachments);
+
+    if (role === 'assistant' && messageId) {
+      attachFeedbackButtons(bubble, messageId);
+    }
 
     if (!shouldAnimate && time) {
       const timeEl = document.createElement('div');
@@ -329,7 +460,7 @@
     row.id = 'typingRow';
 
     row.innerHTML = `
-      <div class="message-avatar js-ai-avatar ${currentAIMode}">🤖</div>
+      <div class="message-avatar js-ai-avatar ${currentAIMode}">${BOT_ICON_SVG}</div>
       <div class="message-bubble">
         <div class="message-name js-ai-name">${getCurrentAIName()}</div>
         <div class="typing-dots">
@@ -576,6 +707,10 @@
   }
 
   const ROLE_PERSONALITIES = {
+    '小老師': [
+      { key: '課業輔助', label: i18n.pAcademic || '課業輔助', color: '#2563eb', renamable: false },
+      { key: '生活指導', label: i18n.pLife     || '生活指導', color: '#0891b2', renamable: false },
+    ],
     '朋友': [
       { key: '好朋友',   label: i18n.pBestFriend || '好朋友',   color: '#22c55e', renamable: true  },
       { key: '瘋玩',     label: i18n.pFun        || '瘋玩',     color: '#f97316', renamable: false },
@@ -612,7 +747,6 @@
     if (!selectedRole) return '';
     if (selectedRole === '朋友')   return getFriendRoleName();
     if (selectedRole === '小老師') return i18n.roleTutor  || selectedRole;
-    if (selectedRole === '學長姐') return i18n.roleSenior || selectedRole;
     return selectedRole;
   }
 
@@ -773,7 +907,7 @@
         return;
       }
 
-      // Click 學長姐 directly
+      // Click a direct role item (no submenu)
       const item = e.target.closest('.role-item--direct');
       if (!item) return;
       selectPersonality(item.dataset.role, item.dataset.personality || '', item.dataset.color || '#d97706');
@@ -817,7 +951,7 @@
     item.dataset.aiMode = aiMode || currentAIMode;
 
     item.innerHTML = `
-      <a class="history-title" href="${endpoints.page}?session=${sessionId}">
+      <a class="history-title" href="${chatUrl({ session: sessionId })}">
         <span class="pin-mark">${isPinned ? '📌' : ''}</span>
         <span class="history-text"></span>
       </a>
@@ -949,6 +1083,9 @@
 
       activeSessionId = data.data.session_id;
       page.dataset.sessionId = activeSessionId;
+      sessionStorage.setItem(lastSessionKey(currentAIMode), activeSessionId);
+      // 對話已建立 → 通知父視窗記住，之後最小化再開啟能回到此對話
+      postToParent('chat:session', { sessionId: activeSessionId });
 
       addOrUpdateHistoryItem(
         activeSessionId,
@@ -958,11 +1095,7 @@
       );
 
       if (isNewSession && endpoints.page) {
-        window.history.replaceState(
-          {},
-          '',
-          `${endpoints.page}?session=${activeSessionId}`
-        );
+        window.history.replaceState({}, '', chatUrl({ session: activeSessionId }));
       }
 
       const assistantMessages = data.data.assistant_messages || [];
@@ -975,7 +1108,9 @@
               msg.content,
               msg.created_at,
               shouldAutoScrollAfterReply,
-              true
+              true,
+              [],
+              msg.id
             );
           }, index * 2000);
         });
@@ -985,7 +1120,9 @@
           data.data.assistant_message.content,
           data.data.assistant_message.created_at,
           shouldAutoScrollAfterReply,
-          true
+          true,
+          [],
+          data.data.assistant_message.id
         );
       }
 
@@ -1026,7 +1163,7 @@
       return;
     }
 
-    window.location.href = `${endpoints.page}?session=${result.data.data.session_id}`;
+    window.location.href = chatUrl({ session: result.data.data.session_id });
   }
 
   async function renameSession(item) {
@@ -1098,13 +1235,17 @@
 
     item.remove();
 
+    if (String(sessionStorage.getItem(lastSessionKey(currentAIMode))) === String(sessionId)) {
+      sessionStorage.removeItem(lastSessionKey(currentAIMode));
+    }
+
     if (wasActive) {
       const nextSessionId = result.data.data.next_session_id;
 
       if (nextSessionId) {
-        window.location.href = `${endpoints.page}?session=${nextSessionId}`;
+        window.location.href = chatUrl({ session: nextSessionId });
       } else {
-        window.location.href = `${endpoints.page}?ai_mode=${currentAIMode}`;
+        window.location.href = chatUrl({ ai_mode: currentAIMode });
       }
     }
   }
@@ -1182,6 +1323,37 @@
     }, 9000);
   }
 
+  function setupWindowControls() {
+    const dashboardUrl = page.dataset.dashboardUrl || '/dashboard/';
+    const maximizeBtn = document.getElementById('chatWinMaximize');
+    const closeBtn = document.getElementById('chatWinClose');
+
+    // 關閉：embed → 通知父視窗清除對話（下次為新對話）；獨立頁 → 回儀表板並清空
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        sessionStorage.removeItem('chatbot_minimized');
+        sessionStorage.removeItem(lastSessionKey('helper'));
+        sessionStorage.removeItem(lastSessionKey('friend'));
+        if (isEmbed) {
+          postToParent('chat:close');
+        } else {
+          window.location.href = dashboardUrl;
+        }
+      });
+    }
+
+    // 放大：embed → 通知父視窗前往完整聊天頁；獨立頁 → 全頁 / 置中窗格切換
+    if (maximizeBtn) {
+      maximizeBtn.addEventListener('click', function () {
+        if (isEmbed) {
+          postToParent('chat:maximize');
+        } else {
+          page.classList.toggle('chatbot-windowed');
+        }
+      });
+    }
+  }
+
   function setupAIModeSwitcher() {
     const modeCards = document.querySelectorAll('.ai-mode-card');
 
@@ -1194,7 +1366,10 @@
         if (!['helper', 'friend'].includes(mode)) return;
 
         if (mode !== currentAIMode && endpoints.page) {
-          window.location.href = `${endpoints.page}?ai_mode=${mode}`;
+          const lastSessionId = sessionStorage.getItem(lastSessionKey(mode));
+          window.location.href = lastSessionId
+            ? chatUrl({ session: lastSessionId, ai_mode: mode })
+            : chatUrl({ ai_mode: mode });
           return;
         }
 
@@ -1257,6 +1432,7 @@
   setupRoleSelector();
   setupHistorySearch();
   setupTaiwanTipRotator();
+  setupWindowControls();
   setupAIModeSwitcher();
   renderExistingMessageLinks();
   updateCount();

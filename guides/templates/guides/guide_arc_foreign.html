@@ -4,7 +4,7 @@
 {% block title %}{% trans "外籍生辦理居留證（ARC）" %} — ReadyTo Taiwan{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'guides/css/guide_arc_foreign.css' %}?v={% now 'U' %}">
+<link rel="stylesheet" href="{% static 'guides/css/guide_arc_foreign.css' %}?v=1">
 {% endblock %}
 
 {% block content %}
@@ -18,11 +18,11 @@
     <div class="hero-badge">🪪 {% trans "外籍生專屬" %}</div>
     <h2>🪪 {% trans "辦理外僑居留證（ARC）" %}</h2>
     <p>
-      {% trans "持外國護照以正式學籍入台就讀的外籍生，須在抵台後" %} <strong>15 天內</strong>
+      {% trans "持外國護照以正式學籍入台就讀的外籍生，須在抵台後" %} <strong>30 天內</strong>
       {% trans "向內政部移民署辦理外僑居留證（ARC），方能在台合法居留及完成就學程序。" %}
     </p>
     <div class="hero-meta">
-      <div class="hero-meta-item">⏱ {% trans "抵台後 15 天內辦理" %}</div>
+      <div class="hero-meta-item">⏱ {% trans "抵台後 30 天內辦理" %}</div>
       <div class="hero-meta-item">💳 {% trans "規費 NT$1,000 起" %}</div>
       <div class="hero-meta-item">⏳ {% trans "核發約 10 個工作天" %}</div>
       <div class="hero-meta-item">📍 {% trans "移民署各地服務站" %}</div>
@@ -35,7 +35,7 @@
     <div class="info-card">
       <div class="i-icon">📅</div>
       <div class="i-label">{% trans "辦理期限" %}</div>
-      <div class="i-val">{% trans "15 天" %}</div>
+      <div class="i-val">{% trans "30 天" %}</div>
       <div class="i-sub">{% trans "抵台後起算" %}</div>
     </div>
     <div class="info-card">

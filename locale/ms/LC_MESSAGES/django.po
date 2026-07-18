@@ -124,8 +124,9 @@ msgstr ""
 #: .\chatbot\templates\chatbot\chatbot.html:169
 msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
 msgstr ""
-"Contoh: Saya datang dari Myanmar ke Taiwan untuk mengikuti program sarjana "
-"muda. Apakah yang perlu saya sediakan dahulu untuk visa?"
+
+msgid "例如：簽證要先準備什麼？"
+msgstr "Contoh: Apakah yang perlu saya sediakan dahulu untuk visa?"
 
 #: .\chatbot\templates\chatbot\chatbot.html:173
 #: .\chatbot\templates\chatbot\chatbot.html:235

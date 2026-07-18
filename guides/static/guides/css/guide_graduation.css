@@ -120,8 +120,3 @@
   }
   .ext-link:hover { border-color:var(--primary); box-shadow:0 2px 8px rgba(0,80,160,.08); }
 
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px; padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }

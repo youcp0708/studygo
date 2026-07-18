@@ -4,7 +4,7 @@
 {% block title %}{% trans "港澳生在台居留說明" %} — ReadyTo Taiwan{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'guides/css/guide_arc_exchange.css' %}?v={% now 'U' %}">
+<link rel="stylesheet" href="{% static 'guides/css/guide_arc_exchange.css' %}?v=1">
 {% endblock %}
 
 {% block content %}
@@ -21,7 +21,7 @@
     </p>
     <div class="hero-meta">
       <div class="hero-meta-item">📄 {% trans "依港澳關係條例辦理" %}</div>
-      <div class="hero-meta-item">🪪 {% trans "抵台 15 天內辦居留" %}</div>
+      <div class="hero-meta-item">🪪 {% trans "抵台 30 天內辦居留" %}</div>
       <div class="hero-meta-item">📞 {% trans "移民署：0800-024-111" %}</div>
     </div>
   </div>
@@ -70,7 +70,7 @@
     <div class="info-card">
       <div class="i-icon">📅</div>
       <div class="i-label">{% trans "辦理期限" %}</div>
-      <div class="i-val">{% trans "15 天" %}</div>
+      <div class="i-val">{% trans "30 天" %}</div>
       <div class="i-sub">{% trans "抵台後起算" %}</div>
     </div>
     <div class="info-card">
@@ -215,7 +215,7 @@
         <div class="step-desc">
           {% trans "攜帶所有文件至移民署，現場核對文件、採集指紋並繳費。可由 OIA 統一帶隊辦理（若有安排），或自行前往。" %}
         </div>
-        <span class="step-tag tag-time">📅 {% trans "抵台 15 天內" %}</span>
+        <span class="step-tag tag-time">📅 {% trans "抵台 30 天內" %}</span>
         <span class="step-tag tag-place">📍 {% trans "移民署辦事處" %}</span>
         <span class="step-tag tag-fee">💰 NT$1,000 / $2,000 / $3,000</span>
       </div>

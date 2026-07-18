@@ -30,6 +30,11 @@ class FlowStage(models.Model):
     description_vi = models.TextField(blank=True, verbose_name="階段說明 Vietnamese")
 
     order = models.PositiveIntegerField(default=0, verbose_name="排序")
+    is_pre_arrival = models.BooleanField(
+        default=False,
+        verbose_name="是否為入臺前階段",
+        help_text="勾選後，選擇「已抵臺」的學生會自動將此階段的任務標記為已完成"
+    )
 
     class Meta:
         db_table = "flows_stage"
@@ -235,6 +240,11 @@ class Task(models.Model):
         db_table = "flows_task"
         ordering = ["stage__order", "order"]
 
+    def save(self, *args, **kwargs):
+        # task_code 用於同類任務去重，統一成小寫避免 admin 大小寫打錯導致去重失效
+        self.task_code = (self.task_code or '').strip().lower()
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return self.title
 
@@ -407,10 +417,10 @@ def auto_create_reminder_on_task_update(sender, instance, **kwargs):
         ).select_related('task', 'task__stage')
 
         if skipped_tasks.exists():
-            # 取得當前慣用語言 (支援 zh-hant, en, vi, id, ms, th, ja, ko, my)
-            from django.utils.translation import get_language
-            active_lang = get_language() or 'zh-hant'
-            lang = (active_lang.split('-')[0] if '-' in active_lang else active_lang).lower()
+            # 使用學生的慣用語言（而非觸發請求當下的介面語言），
+            # 避免提醒訊息語言固化後與學生慣用語言不一致
+            pref_lang = (instance.student.preferred_language or 'zh-hant').lower()
+            lang = (pref_lang.split('-')[0] if '-' in pref_lang else pref_lang)
 
             task_title = t.get_title_by_lang(lang)
             skipped_titles = [st.task.get_title_by_lang(lang) for st in skipped_tasks]

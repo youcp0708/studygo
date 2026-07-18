@@ -10,14 +10,18 @@ chatbot/services.py
 """
 
 import base64
+import logging
 import mimetypes
 import re
+from datetime import timedelta
 
 import requests as http_requests
 
 from django.conf import settings
 from django.db.models import Q
 from django.utils.translation import get_language
+
+logger = logging.getLogger(__name__)
 
 
 LANGUAGE_LABELS = {
@@ -59,16 +63,131 @@ ANSWER_LABELS = {
     'ko': ('개인 맞춤 답변', '일반 답변'),
 }
 
+# 知識庫直接命中（不走 AI）時的「個人化回答」段落文字，需支援全部 9 種語言
+KNOWLEDGE_DIRECT_PERSONAL = {
+    'zh-hant': '目前沒有足夠個人資料可判斷，請依你的身份別、國籍與學校公告確認。',
+    'en': 'There is not enough personal information to give a tailored judgement. Please confirm with your identity type, nationality, and your school announcements.',
+    'vi': 'Hiện chưa đủ thông tin cá nhân để đưa ra nhận định riêng. Vui lòng xác nhận theo loại thân phận, quốc tịch của bạn và thông báo của trường.',
+    'ja': '現在、個別に判断できる十分な個人情報がありません。ご自身の身分種別・国籍と学校の公告をご確認ください。',
+    'my': 'ကိုယ်ပိုင်အခြေအနေအရ ဆုံးဖြတ်ရန် အချက်အလက် မလုံလောက်ပါ။ သင့်အထောက်အထားအမျိုးအစား၊ နိုင်ငံသားနှင့် ကျောင်း၏ကြေညာချက်များအတိုင်း အတည်ပြုပါ။',
+    'id': 'Belum ada cukup data pribadi untuk memberikan penilaian khusus. Silakan konfirmasi sesuai jenis identitas, kewarganegaraan Anda, dan pengumuman kampus.',
+    'th': 'ยังมีข้อมูลส่วนตัวไม่เพียงพอสำหรับการประเมินเฉพาะบุคคล กรุณาตรวจสอบตามประเภทสถานะ สัญชาติของคุณ และประกาศของมหาวิทยาลัย',
+    'ms': 'Belum ada maklumat peribadi yang mencukupi untuk penilaian khusus. Sila sahkan mengikut jenis identiti, kewarganegaraan anda, dan pengumuman universiti.',
+    'ko': '맞춤 판단을 하기에 개인 정보가 충분하지 않습니다. 본인의 신분 유형, 국적 및 학교 공지사항을 확인해 주세요.',
+}
+
+# 任務狀態的多語顯示（本地個人化引擎使用）
+STATUS_LABELS = {
+    'zh-hant': {'not_started': '未開始', 'in_progress': '進行中', 'completed': '已完成'},
+    'en':      {'not_started': 'Not started', 'in_progress': 'In progress', 'completed': 'Completed'},
+    'vi':      {'not_started': 'Chưa bắt đầu', 'in_progress': 'Đang thực hiện', 'completed': 'Đã hoàn thành'},
+    'ja':      {'not_started': '未着手', 'in_progress': '進行中', 'completed': '完了'},
+    'my':      {'not_started': 'မစတင်ရသေး', 'in_progress': 'ဆောင်ရွက်နေဆဲ', 'completed': 'ပြီးမြောက်'},
+    'id':      {'not_started': 'Belum dimulai', 'in_progress': 'Sedang berjalan', 'completed': 'Selesai'},
+    'th':      {'not_started': 'ยังไม่เริ่ม', 'in_progress': 'กำลังดำเนินการ', 'completed': 'เสร็จสิ้น'},
+    'ms':      {'not_started': 'Belum bermula', 'in_progress': 'Sedang dijalankan', 'completed': 'Selesai'},
+    'ko':      {'not_started': '시작 전', 'in_progress': '진행 중', 'completed': '완료'},
+}
+
+# 本地個人化引擎的句型模板（不經過 AI，直接由學生真實任務資料組成 → 不會幻覺）
+PERSONAL_TASK_TEMPLATES = {
+    'zh-hant': {
+        'task':      '在你的個人任務清單中，「{title}」與這個問題相關，目前狀態：{status}。',
+        'due':       '截止日為 {date}，還剩 {days} 天。',
+        'due_today': '截止日就是今天（{date}），請盡快處理！',
+        'overdue':   '已於 {date} 逾期 {days} 天，建議優先處理。',
+        'progress':  '你的整體進度：{total} 項任務中已完成 {completed} 項（{percent}%）。',
+        'no_task':   '你的任務清單目前沒有與此問題直接相關的待辦任務。',
+    },
+    'en': {
+        'task':      'In your personal task list, "{title}" is related to this question. Current status: {status}.',
+        'due':       'The deadline is {date} ({days} days left).',
+        'due_today': 'The deadline is today ({date}) — please act soon!',
+        'overdue':   'It became overdue on {date} ({days} days ago). We recommend handling it first.',
+        'progress':  'Your overall progress: {completed} of {total} tasks completed ({percent}%).',
+        'no_task':   'There is no pending task in your list directly related to this question.',
+    },
+    'vi': {
+        'task':      'Trong danh sách nhiệm vụ của bạn, "{title}" liên quan đến câu hỏi này. Trạng thái hiện tại: {status}.',
+        'due':       'Hạn chót là {date} (còn {days} ngày).',
+        'due_today': 'Hạn chót là hôm nay ({date}) — hãy xử lý sớm!',
+        'overdue':   'Đã quá hạn từ {date} ({days} ngày trước). Bạn nên ưu tiên xử lý.',
+        'progress':  'Tiến độ tổng thể của bạn: đã hoàn thành {completed}/{total} nhiệm vụ ({percent}%).',
+        'no_task':   'Danh sách của bạn hiện không có nhiệm vụ nào liên quan trực tiếp đến câu hỏi này.',
+    },
+    'ja': {
+        'task':      'あなたのタスクリストでは「{title}」がこの質問に関連しています。現在の状態：{status}。',
+        'due':       '締切は {date}（残り {days} 日）です。',
+        'due_today': '締切は本日（{date}）です。早めに対応してください！',
+        'overdue':   '{date} に締切を過ぎています（{days} 日超過）。優先的に対応することをお勧めします。',
+        'progress':  '全体の進捗：{total} 件中 {completed} 件完了（{percent}%）。',
+        'no_task':   '現在、この質問に直接関連する未完了タスクはありません。',
+    },
+    'my': {
+        'task':      'သင့်တာဝန်စာရင်းတွင် "{title}" သည် ဤမေးခွန်းနှင့် သက်ဆိုင်ပါသည်။ လက်ရှိအခြေအနေ：{status}။',
+        'due':       'နောက်ဆုံးရက်မှာ {date} ဖြစ်ပြီး {days} ရက် ကျန်ပါသည်။',
+        'due_today': 'နောက်ဆုံးရက်မှာ ယနေ့ ({date}) ဖြစ်သည်။ အမြန်ဆောင်ရွက်ပါ！',
+        'overdue':   '{date} ကတည်းက ရက်လွန်နေပြီ ({days} ရက်)။ ဦးစားပေး ဆောင်ရွက်ရန် အကြံပြုပါသည်။',
+        'progress':  'စုစုပေါင်းတိုးတက်မှု：တာဝန် {total} ခုတွင် {completed} ခု ပြီးမြောက် ({percent}%)။',
+        'no_task':   'ဤမေးခွန်းနှင့် တိုက်ရိုက်သက်ဆိုင်သော မပြီးမြောက်သေးသည့်တာဝန် မရှိပါ။',
+    },
+    'id': {
+        'task':      'Dalam daftar tugas Anda, "{title}" terkait dengan pertanyaan ini. Status saat ini: {status}.',
+        'due':       'Tenggat waktunya {date} (tersisa {days} hari).',
+        'due_today': 'Tenggat waktunya hari ini ({date}) — segera selesaikan!',
+        'overdue':   'Sudah lewat tenggat sejak {date} ({days} hari). Sebaiknya diprioritaskan.',
+        'progress':  'Progres keseluruhan Anda: {completed} dari {total} tugas selesai ({percent}%).',
+        'no_task':   'Tidak ada tugas tertunda dalam daftar Anda yang terkait langsung dengan pertanyaan ini.',
+    },
+    'th': {
+        'task':      'ในรายการงานของคุณ "{title}" เกี่ยวข้องกับคำถามนี้ สถานะปัจจุบัน: {status}',
+        'due':       'กำหนดส่งคือ {date} (เหลืออีก {days} วัน)',
+        'due_today': 'กำหนดส่งคือวันนี้ ({date}) — รีบดำเนินการนะ!',
+        'overdue':   'เลยกำหนดมาตั้งแต่ {date} ({days} วันแล้ว) แนะนำให้จัดการก่อน',
+        'progress':  'ความคืบหน้าโดยรวม: ทำเสร็จ {completed} จาก {total} งาน ({percent}%)',
+        'no_task':   'ตอนนี้ไม่มีงานค้างในรายการของคุณที่เกี่ยวข้องโดยตรงกับคำถามนี้',
+    },
+    'ms': {
+        'task':      'Dalam senarai tugasan anda, "{title}" berkaitan dengan soalan ini. Status semasa: {status}.',
+        'due':       'Tarikh akhirnya {date} (tinggal {days} hari).',
+        'due_today': 'Tarikh akhirnya hari ini ({date}) — sila selesaikan segera!',
+        'overdue':   'Telah melepasi tarikh akhir sejak {date} ({days} hari). Disyorkan untuk diutamakan.',
+        'progress':  'Kemajuan keseluruhan anda: {completed} daripada {total} tugasan selesai ({percent}%).',
+        'no_task':   'Tiada tugasan tertunda dalam senarai anda yang berkaitan terus dengan soalan ini.',
+    },
+    'ko': {
+        'task':      '당신의 작업 목록에서 "{title}"이(가) 이 질문과 관련이 있습니다. 현재 상태: {status}.',
+        'due':       '마감일은 {date}이며 {days}일 남았습니다.',
+        'due_today': '마감일이 오늘({date})입니다. 서둘러 처리해 주세요!',
+        'overdue':   '{date}부터 {days}일 지연되었습니다. 우선 처리하는 것을 권장합니다.',
+        'progress':  '전체 진행률: {total}개 작업 중 {completed}개 완료 ({percent}%).',
+        'no_task':   '현재 이 질문과 직접 관련된 미완료 작업이 없습니다.',
+    },
+}
+
+# 知識庫來源連結的顯示文字
+SOURCE_LABELS = {
+    'zh-hant': '📌 官方來源：',
+    'en': '📌 Official source: ',
+    'vi': '📌 Nguồn chính thức: ',
+    'ja': '📌 公式ソース：',
+    'my': '📌 တရားဝင်ရင်းမြစ်：',
+    'id': '📌 Sumber resmi: ',
+    'th': '📌 แหล่งข้อมูลทางการ: ',
+    'ms': '📌 Sumber rasmi: ',
+    'ko': '📌 공식 출처: ',
+}
+
 TASK_LINK_LABELS = {
-    'zh-hant': '📋 查看相關任務：',
-    'en':      '📋 View related task: ',
-    'vi':      '📋 Xem nhiệm vụ liên quan: ',
-    'ja':      '📋 関連タスクを確認：',
-    'my':      '📋 သက်ဆိုင်သောတာဝန်ကို ကြည့်ရှုရန်：',
-    'id':      '📋 Lihat tugas terkait: ',
-    'th':      '📋 ดูภารกิจที่เกี่ยวข้อง: ',
-    'ms':      '📋 Lihat tugasan berkaitan: ',
-    'ko':      '📋 관련 과제 보기: ',
+    'zh-hant': '查看相關任務：',
+    'en':      'View related task: ',
+    'vi':      'Xem nhiệm vụ liên quan: ',
+    'ja':      '関連タスクを確認：',
+    'my':      'သက်ဆိုင်သောတာဝန်ကို ကြည့်ရှုရန်：',
+    'id':      'Lihat tugas terkait: ',
+    'th':      'ดูภารกิจที่เกี่ยวข้อง: ',
+    'ms':      'Lihat tugasan berkaitan: ',
+    'ko':      '관련 과제 보기: ',
 }
 
 # 各校校安中心 / 諮商輔導中心電話
@@ -221,16 +340,18 @@ def detect_question_language(text):
     if any(word in lower_text for word in vietnamese_markers):
         return 'vi'
 
+    # 印尼語與馬來語共用大量詞彙（saya, anda, bagaimana, dokumen, asrama...），
+    # 只用「兩種語言拼法不同」的獨有詞判斷，避免馬來使用者被誤判成印尼語
     indonesian_markers = [
-        'saya', 'anda', 'bagaimana', 'kapan', 'dokumen', 'kuliah',
-        'kesehatan', 'asrama', 'indonesia', 'imigrasi', 'beasiswa'
+        'kapan', 'kuliah', 'kesehatan', 'indonesia', 'imigrasi',
+        'beasiswa', 'universitas', 'bisa', 'butuh',
     ]
     if any(word in lower_text for word in indonesian_markers):
         return 'id'
 
     malay_markers = [
-        'saya', 'anda', 'bagaimana', 'bila', 'dokumen', 'pelajar',
-        'universiti', 'kesihatan', 'asrama', 'malaysia', 'biasiswa'
+        'bila', 'pelajar', 'universiti', 'kesihatan', 'malaysia',
+        'biasiswa', 'boleh', 'perlu',
     ]
     if any(word in lower_text for word in malay_markers):
         return 'ms'
@@ -269,7 +390,7 @@ def choose_reply_language(question):
     return site_language_code, 'site_language'
 
 
-def build_system_instructions(language_code, language_source, ai_mode="helper", role="", personality=""):
+def build_system_instructions(language_code, language_source, ai_mode="helper", role="", personality="", direct_mode=False):
     personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
     language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
 
@@ -291,11 +412,12 @@ You MUST write your entire response in {language_en} only. No other language is 
 重要原則：
 1. 不要使用「個人化回答 / 一般回答」兩段格式。
 2. 不要輸出「情緒分類：...」。
-3. 不要一開始就講道理，先自然接住學生當下那句話。
+3. 不要一開始就講道理，直接自然回應學生當下那句話。
 4. 回答要像平常朋友聊天，不要像客服、公告、心理文章或行政助理。
 5. 不要每次都條列式回答，除非學生明確要求整理。
 6. 不要假裝自己是心理師、醫生、學校官方單位或緊急救援人員。
 7. 不要做醫療診斷，不要說學生有憂鬱症、焦慮症等診斷。
+8. 不要用换句話說的方式重複肯定學生剛剛講的話或情緒，再接下一句。例如學生說「最近壓力很大」，不要回「壓力大真的很讓人疲憊，最近發生了什麼讓你特別感到有壓力的事嗎？」，直接回「最近發生了什麼讓你特別感到有壓力的事嗎？」就好。理解學生的狀況要放在你怎麼回應裡，不用先講一句總結他感受的話當開場。
 
 朋友聊天節奏：
 1. 一般情況採用「學生說一句，你回一小段」的節奏，不要一次講太多。
@@ -311,6 +433,7 @@ You MUST write your entire response in {language_en} only. No other language is 
 - 學生明確說「我不知道怎麼辦」，但你需要更多資訊才能幫他。
 其他情況一律直接回應，不要在結尾加問題。
 反問一定要簡短自然，不要像問卷或客服話術。
+反問前不要先加一句換句話說學生感受的開場白，問題本身就是回應，直接問就好。
 
 語氣規則：
 1. 預設不使用語助詞，例如「嗯」「啊」「呀」「哈哈」「嗯哼」「咦」等，一律省略。
@@ -456,11 +579,39 @@ You MUST write your entire response in {language_en} only. No other language is 
 - 先簡短回應：「我有點想確認一下，你現在比較像是難過、害怕，還是只是想找人吐槽？」
 - 再給一點初步陪伴。
 """.strip()
+        base_instructions = friend_base
+    elif ai_mode == "helper" and (role or '').strip() == '小老師':
+        base_instructions = f"""
+你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生，目前使用者選擇了「小老師」角色，專門提供課業與學習方面的協助。
+
+{language_rule}
+
+不要使用「{personal_label} / {general_label}」兩段格式，也不要輸出這兩個標題。
+直接用有教學感、像家教一樣的自然語氣回答學生的課業問題就好。
+""".strip()
+    elif direct_mode:
+        base_instructions = f"""
+你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生。
+
+{language_rule}
+
+這個問題在網站的任務清單和資訊中心都沒有相關資料，不要使用「{personal_label} / {general_label}」兩段格式，也不要輸出這兩個標題。
+直接針對學生的問題給出完整、精簡的回答就好。
+""".strip()
+    else:
+        base_instructions = f"""
+你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生。
+
+{language_rule}
+
+固定使用「{personal_label}」與「{general_label}」兩段格式回答，並盡量精簡。
+「{general_label}」除非情況特殊（例如需要列出多個步驟、法規細節或安全相關資訊），否則不要超過四行。
+""".strip()
 
     role_instruction = get_role_instructions(role, personality)
     if role_instruction:
-        return friend_base + "\n" + role_instruction.strip()
-    return friend_base
+        return base_instructions + "\n" + role_instruction.strip()
+    return base_instructions
 
 
 _ROLE_INSTRUCTIONS = {
@@ -510,6 +661,31 @@ _ROLE_INSTRUCTIONS = {
 
 範例語氣：
 「先不要把今天全部事情都壓在一起想。你可以先處理最急的一件，剩下的慢慢排。」
+""",
+
+    ("朋友", "好朋友"): """
+---
+【角色設定：朋友 × 好朋友】
+你現在扮演「朋友」，性格是好朋友（預設的知心朋友）。
+
+性格核心：
+真誠、自然、平衡——不會太吵也不會太安靜，像認識很久、可以放心說話的朋友。
+
+第一反應：
+先接住學生此刻的情緒或話題，再自然回應，不急著給建議。
+
+說話方式：
+- 語氣自然、放鬆，像日常聊天。
+- 學生開心就一起開心，難過就先陪著，需要建議時才給建議。
+- 可以分享看法，但不說教。
+- 回答長度跟著學生的訊息走：他說一句，你回一小段。
+
+避免：
+不要像客服，不要條列式，不要每句都反問。
+不要先換句話說重複學生剛剛講的感受再接問題。
+
+範例語氣：
+「想先講講發生什麼事嗎？還是想先聊點別的轉換一下？」
 """,
 
     ("朋友", "瘋玩"): """
@@ -610,38 +786,33 @@ _ROLE_INSTRUCTIONS = {
 範例語氣：
 「這真的會火大。你生氣很正常，但先不要衝去硬碰硬，先把證據留好，別讓自己變成吃虧的那個。」
 """,
-
-    ("學長姐", ""): """
----
-【角色設定：學長姐】
-你現在扮演「學長姐」。
-
-性格核心：
-像已經在台灣生活過一陣子的學長姐，知道行政流程、生活眉角，也踩過一些坑。
-
-第一反應：
-用過來人的角度回應，不要像官方說明。
-
-說話方式：
-- 可以說「我以前也遇過」「這個我當時是這樣處理」「這個地方要小心」。
-- 給實用經驗，不講大道理。
-- 適合學校行政、報到、租房、打工、交友、課業適應。
-- 語氣輕鬆但有料。
-
-避免：
-不要假裝是學校官方。
-不要把所有學校規定說死，遇到不確定的規定要提醒學生查學校公告或問國際處。
-
-範例語氣：
-「這個我以前也差點漏掉。你先看通知上有沒有寫期限，然後最好截圖存起來，之後問學校比較好對。」
-"""
 }
 
 
 def get_role_instructions(role, personality):
+    """
+    取得角色人格指令。找不到完全對應的 (role, personality) 時，
+    退回該角色的預設人格，避免使用者選了角色卻靜默失效。
+    """
     if not role:
         return ""
-    return _ROLE_INSTRUCTIONS.get((role, personality or ""), "")
+
+    role = (role or '').strip()
+    personality = (personality or '').strip()
+
+    instruction = _ROLE_INSTRUCTIONS.get((role, personality))
+    if instruction:
+        return instruction
+
+    # 角色存在但人格未知（例如使用者自訂名稱）→ 用該角色的預設人格
+    role_defaults = {
+        '朋友':   ('朋友', '好朋友'),
+        '小老師': ('小老師', '課業輔助'),
+    }
+    default_key = role_defaults.get(role)
+    if default_key:
+        return _ROLE_INSTRUCTIONS.get(default_key, "")
+    return ""
 
 
 def safe_display(value, fallback='未提供'):
@@ -736,6 +907,20 @@ def build_user_profile_context(user):
     return '\n'.join(lines)
 
 
+def compute_task_due_date(task, profile):
+    """
+    依 Task 的期限設定計算實際截止日（與 flows/views.py 的邏輯一致）。
+    回傳 date 或 None（無法計算 / 無截止日）。
+    """
+    if task.deadline_type == 'from_arrival':
+        if profile and profile.expected_arrival and task.deadline_days is not None:
+            return profile.expected_arrival + timedelta(days=task.deadline_days)
+        return None
+    if task.deadline_type == 'absolute':
+        return task.deadline_date
+    return None
+
+
 def build_student_flow_context(user, language_code='zh-hant'):
     """
     取得學生目前的個人化流程與任務狀態。
@@ -788,7 +973,9 @@ def build_student_flow_context(user, language_code='zh-hant'):
             task = item.task
             stage_name = task.stage.get_name_by_lang(language_code)
             task_title = task.get_title_by_lang(language_code)
-            due_date = getattr(item, 'due_date', None) or '未設定'
+            # 依期限設定實際計算截止日（StudentTask 本身沒有 due_date 欄位）
+            due = compute_task_due_date(task, profile)
+            due_date = due.strftime('%Y-%m-%d') if due else (task.deadline_text or '未設定')
             lines.append(
                 f'- [{stage_name}] {task_title}，狀態：{item.get_status_display()}，截止日：{due_date}'
             )
@@ -802,6 +989,99 @@ def build_student_flow_context(user, language_code='zh-hant'):
             lines.append(f'- {reminder.message}')
     else:
         lines.append('- 目前沒有未讀提醒。')
+
+    return '\n'.join(lines)
+
+
+# ══════════════════════════════════════════
+# 系所 → 學群識別（AI 小老師的學科背景引擎）
+# 第一層：Department 資料表（Admin 可維護）
+# 第二層：系所名稱關鍵字分類（涵蓋自由填寫或其他學校的系所）
+# ══════════════════════════════════════════
+DISCIPLINE_KEYWORD_MAP = [
+    # 順序有意義：先比對較特定的關鍵字（如「化學工程」要先於「化學」）
+    ('management',      ['企業管理', '企管', '工業管理', '工管', '資訊管理', '資管', '國際企業', '行銷', '運輸管理', '科技管理']),
+    ('finance',         ['財務金融', '財金', '經濟', '會計', '統計', '國際貿易', '財政', '保險', '精算']),
+    ('info',            ['資訊工程', '資工', '資訊科學', '軟體工程', '人工智慧', '資安', '資訊網路']),
+    ('engineering',     ['電機', '機械', '土木', '化學工程', '化工', '材料', '通訊', '光電', '航太', '造船', '環境工程', '工學院', '工程']),
+    ('medical',         ['醫學', '牙醫', '藥學', '護理', '公共衛生', '公衛', '醫檢', '物理治療', '職能治療', '生醫', '醫務']),
+    ('life_science',    ['生命科學', '生物科技', '生技', '生化', '分子生物', '生物系']),
+    ('bio_resource',    ['農藝', '園藝', '森林', '動物科學', '畜牧', '獸醫', '漁業', '食品', '農業', '植物']),
+    ('earth_env',       ['地球科學', '大氣', '地質', '海洋', '環境科學', '太空', '地理']),
+    ('architecture',    ['建築', '都市計畫', '景觀', '室內設計', '工業設計', '設計']),
+    ('arts',            ['音樂', '美術', '戲劇', '舞蹈', '藝術', '電影創作']),
+    ('social_psy',      ['社會學', '社會工作', '社工', '心理', '人類學', '客家', '社會科學']),
+    ('mass_comm',       ['新聞', '傳播', '廣告', '廣電', '公共關係', '媒體']),
+    ('foreign_lang',    ['外文', '英美語文', '英語', '英文', '日文', '日語', '法文', '法國語文', '德文', '西班牙', '韓文', '外國語文', '翻譯']),
+    ('humanities',      ['中國文學', '中文', '歷史', '哲學', '台灣文學', '臺灣文學', '文學院', '漢學']),
+    ('education',       ['教育', '師資', '幼兒教育', '特殊教育']),
+    ('law_politics',    ['法律', '法學', '政治', '外交', '公共行政', '行政管理']),
+    ('math_science',    ['物理', '數學', '化學', '理學院', '光電科學']),
+    ('recreation_sport',['體育', '運動', '休閒', '觀光', '餐旅', '旅遊']),
+]
+
+
+def get_student_discipline(user):
+    """
+    依學生填寫的系所判斷所屬學群。
+    回傳 (學群代碼, 學群中文名稱)；無法判斷時回傳 ('', '')。
+    """
+    profile = get_student_profile(user)
+    dept_name = (getattr(profile, 'department', '') or '').strip() if profile else ''
+    if not dept_name:
+        return '', ''
+
+    try:
+        from users.models import Department, DISCIPLINE_CHOICES
+        labels = dict(DISCIPLINE_CHOICES)
+        dept = Department.objects.filter(name=dept_name).exclude(discipline='').first()
+        if dept:
+            return dept.discipline, labels.get(dept.discipline, '')
+    except Exception:
+        labels = {}
+
+    for code, keywords in DISCIPLINE_KEYWORD_MAP:
+        if any(k in dept_name for k in keywords):
+            return code, labels.get(code, code)
+
+    return '', ''
+
+
+def build_tutor_context(user, language_code='zh-hant'):
+    """
+    小老師（課業輔助）的學科背景包：
+    系所 + 學群 + 該學群的課業知識 + 通用學習知識，注入 prompt 供 AI 針對系所回答。
+    """
+    profile = get_student_profile(user)
+    if not profile:
+        return ''
+
+    dept_name = (profile.department or '').strip()
+    code, label = get_student_discipline(user)
+
+    lines = [f'學生就讀系所：{dept_name or "未填寫"}']
+    if label:
+        lines.append(f'所屬學群：{label}')
+
+    try:
+        from .models import ChatKnowledge
+        entries = []
+        if code:
+            entries += list(
+                ChatKnowledge.objects.filter(is_active=True, discipline=code)[:3]
+            )
+        # 通用課業知識（選課制度、學習資源、讀書方法）
+        entries += list(
+            ChatKnowledge.objects.filter(
+                is_active=True, discipline='', category='course'
+            )[:3]
+        )
+        for entry in entries:
+            content = entry.get_content_by_lang(language_code)
+            if content:
+                lines.append(f'- {content}')
+    except Exception:
+        pass
 
     return '\n'.join(lines)
 
@@ -1201,9 +1481,10 @@ def get_personalized_info_page(user, question):
     return None
 
 
-def get_relevant_student_task(user, question, language_code='zh-hant'):
+def find_relevant_student_task(user, question):
     """
-    根據問題關鍵字，找出使用者最相關的未完成 StudentTask，回傳任務標題與連結。
+    根據問題關鍵字，找出使用者最相關的未完成 StudentTask 物件。
+    回傳 StudentTask 或 None。
     """
     profile = get_student_profile(user)
     if not profile:
@@ -1277,14 +1558,83 @@ def get_relevant_student_task(user, question, language_code='zh-hant'):
 
         for topic, keywords in matched_topics.items():
             if any(keyword_matches(k, task_text) for k in keywords):
-                loc = task.get_localized(language_code)
-                title = loc.get('title') or task.title or task.title_en or '任務'
-                return {
-                    'title': title,
-                    'url': f'/flows/my-tasks/#task-{student_task.id}',
-                }
+                return student_task
 
     return None
+
+
+def get_relevant_student_task(user, question, language_code='zh-hant'):
+    """
+    根據問題關鍵字，找出使用者最相關的未完成任務，回傳標題與連結（給回覆後的任務連結用）。
+    """
+    student_task = find_relevant_student_task(user, question)
+    if not student_task:
+        return None
+
+    task = student_task.task
+    loc = task.get_localized(language_code)
+    title = loc.get('title') or task.title or task.title_en or '任務'
+    return {
+        'title': title,
+        'url': f'/flows/my-tasks/#task-{student_task.id}',
+    }
+
+
+def build_local_personal_answer(user, question, language_code='zh-hant'):
+    """
+    本地個人化引擎：不經過 AI，直接以學生「真實」任務資料組出個人化回答。
+    - 找出與問題最相關的未完成任務 → 狀態 + 截止日倒數
+    - 附上整體進度
+    因為完全由資料庫組成，不會出現 AI 幻覺；知識庫直接命中時取代罐頭句。
+    回傳 str 或 None（沒有個人資料時）。
+    """
+    profile = get_student_profile(user)
+    if not profile:
+        return None
+
+    tpl = PERSONAL_TASK_TEMPLATES.get(language_code, PERSONAL_TASK_TEMPLATES['zh-hant'])
+    status_labels = STATUS_LABELS.get(language_code, STATUS_LABELS['zh-hant'])
+
+    try:
+        from flows.models import StudentTask
+        all_tasks = StudentTask.objects.filter(student=profile)
+        total = all_tasks.count()
+        completed = all_tasks.filter(status='completed').count()
+    except Exception:
+        return None
+
+    if total == 0:
+        return None
+
+    parts = []
+    student_task = find_relevant_student_task(user, question)
+
+    if student_task:
+        task = student_task.task
+        loc = task.get_localized(language_code)
+        title = loc.get('title') or task.title or '任務'
+        status_text = status_labels.get(student_task.status, student_task.status)
+        parts.append(tpl['task'].format(title=title, status=status_text))
+
+        due = compute_task_due_date(task, profile)
+        if due:
+            from django.utils import timezone
+            today = timezone.localdate()
+            days = (due - today).days
+            date_str = due.strftime('%Y-%m-%d')
+            if days > 0:
+                parts.append(tpl['due'].format(date=date_str, days=days))
+            elif days == 0:
+                parts.append(tpl['due_today'].format(date=date_str))
+            else:
+                parts.append(tpl['overdue'].format(date=date_str, days=abs(days)))
+    else:
+        parts.append(tpl['no_task'])
+
+    percent = round(completed / total * 100) if total else 0
+    parts.append(tpl['progress'].format(total=total, completed=completed, percent=percent))
+
+    return ' '.join(parts)
 
 
 def insert_info_links_after_personalized_answer(reply, info_page, personal_label, general_label, task_link=None, language_code='zh-hant'):
@@ -1310,7 +1660,7 @@ def insert_info_links_after_personalized_answer(reply, info_page, personal_label
         url = info_page.get('url')
         if title and url:
             separator = '\n' if links_text else '\n\n'
-            links_text += f'{separator}👉 前往資訊頁面：[{title}]({url})'
+            links_text += f'{separator}前往資訊頁面：[{title}]({url})'
 
     if not links_text:
         return reply
@@ -1323,103 +1673,166 @@ def insert_info_links_after_personalized_answer(reply, info_page, personal_label
     return reply + links_text
 
 
-def search_knowledge_base(question, language_code='zh-hant', limit=3, ai_mode="helper"):
+def search_knowledge_items(question, ai_mode="helper", limit=3):
     """
-    簡易 RAG：搜尋 chatbot 的 FAQ / 知識庫資料。
-    知識庫可以只填中文，但 keywords 建議放中文 + 英文，提高搜尋命中率。
+    簡易 RAG 檢索：回傳依「關聯度」排序的 ChatKnowledge 物件清單。
+    關聯度計分：標題/關鍵字命中 +3、內容命中 +1（跨 9 語欄位），
+    取代原本單純以更新時間排序，避免「最近改過但不相關」的資料排在前面。
     """
     try:
         from .models import ChatKnowledge
     except Exception:
-        return '目前沒有可用的知識庫資料。'
+        return []
 
     terms = extract_search_terms(question)
 
     cleaned_question = (question or '').strip()
     for word in ['是什麼', '是什么', '是啥', '？', '?', '請問', '我想知道']:
-        cleaned_question = cleaned_question.replace(word, '')
-        cleaned_question = cleaned_question.strip()
-
-        if cleaned_question:
-            terms.append(cleaned_question)
-
-        if '海聯招' in question:
-            terms.extend(['海聯招', '海外聯招', '海外聯合招生'])
-
-    if not terms:
-        return '目前沒有可用的知識庫資料。'
+        cleaned_question = cleaned_question.replace(word, '').strip()
+    if cleaned_question:
+        terms.append(cleaned_question)
+    if '海聯招' in (question or ''):
+        terms.extend(['海聯招', '海外聯招', '海外聯合招生'])
 
     terms = list(dict.fromkeys([term for term in terms if term]))
-    print("[DEBUG] search terms:", terms)
+    if not terms:
+        return []
+    logger.debug('knowledge search terms: %s', terms)
 
-    model_fields = {field.name for field in ChatKnowledge._meta.get_fields()}
+    LANG_SUFFIXES = ['', '_en', '_vi', '_my', '_id', '_ms', '_th', '_ja', '_ko']
 
     query = Q()
     for term in terms:
-        query |= Q(title__icontains=term)
         query |= Q(keywords__icontains=term)
-        query |= Q(content__icontains=term)
-        query |= Q(title_en__icontains=term)
-        query |= Q(content_en__icontains=term)
-        query |= Q(title_my__icontains=term)
-        query |= Q(content_my__icontains=term)
-        query |= Q(title_id__icontains=term)
-        query |= Q(content_id__icontains=term)
-        query |= Q(title_ms__icontains=term)
-        query |= Q(content_ms__icontains=term)
-        query |= Q(title_th__icontains=term)
-        query |= Q(content_th__icontains=term)
-        query |= Q(title_ja__icontains=term)
-        query |= Q(content_ja__icontains=term)
-        query |= Q(title_ko__icontains=term)
-        query |= Q(content_ko__icontains=term)
-        query |= Q(title_vi__icontains=term)
-        query |= Q(content_vi__icontains=term)
-
-        optional_fields = [
-            ('title_en', 'content_en'),
-            ('title_vi', 'content_vi'),
-            ('title_my', 'content_my'),
-            ('title_id', 'content_id'),
-            ('title_ms', 'content_ms'),
-            ('title_th', 'content_th'),
-            ('title_ja', 'content_ja'),
-            ('title_ko', 'content_ko'),
-        ]
-
-        for title_field, content_field in optional_fields:
-            if title_field in model_fields:
-                query |= Q(**{f'{title_field}__icontains': term})
-            if content_field in model_fields:
-                query |= Q(**{f'{content_field}__icontains': term})
+        for s in LANG_SUFFIXES:
+            query |= Q(**{f'title{s}__icontains': term})
+            query |= Q(**{f'content{s}__icontains': term})
 
     try:
-        knowledge_qs = ChatKnowledge.objects.filter(is_active=True)
-
-        model_fields = {field.name for field in ChatKnowledge._meta.get_fields()}
-        if 'bot_type' in model_fields:
-            knowledge_qs = knowledge_qs.filter(
-                Q(bot_type=ai_mode) | Q(bot_type="both")
-            )
-
-        results = list(
-            knowledge_qs
-            .filter(query)
-            .order_by('-updated_at')[:limit]
+        knowledge_qs = ChatKnowledge.objects.filter(is_active=True).filter(
+            Q(bot_type=ai_mode) | Q(bot_type="both")
         )
+        # 先取一批候選，再在 Python 端做關聯度計分排序
+        candidates = list(knowledge_qs.filter(query)[:20])
     except Exception:
-        return '目前知識庫欄位與資料庫尚未同步，請確認 chatbot 的 migration 是否已完成。'
+        return []
 
-    if not results:
+    def relevance_score(item):
+        score = 0
+        title_text = ' '.join(
+            (getattr(item, f'title{s}', '') or '') for s in LANG_SUFFIXES
+        ).lower()
+        keyword_text = (item.keywords or '').lower()
+        content_text = ' '.join(
+            (getattr(item, f'content{s}', '') or '') for s in LANG_SUFFIXES
+        ).lower()
+        for term in terms:
+            t = term.lower()
+            if t in title_text or t in keyword_text:
+                score += 3
+            elif t in content_text:
+                score += 1
+        return score
+
+    candidates.sort(key=relevance_score, reverse=True)
+    return [c for c in candidates if relevance_score(c) > 0][:limit]
+
+
+def format_knowledge_context(items, language_code='zh-hant'):
+    """把知識庫項目組成給 AI / 直接回覆用的文字，附上官方來源連結。"""
+    if not items:
         return '目前沒有找到直接相關的知識庫資料。'
 
+    source_label = SOURCE_LABELS.get(language_code, SOURCE_LABELS['zh-hant'])
+
     lines = []
-    for item in results:
+    for item in items:
         content = item.get_content_by_lang(language_code)
         if content:
+            # 附上官方來源連結，讓學生可以查證（AI 回答可信度）
+            source_url = getattr(item, 'source_url', '')
+            if source_url:
+                content = f'{content}\n{source_label}{source_url}'
             lines.append(content)
 
-    return '\n\n'.join(lines).strip()
+    return '\n\n'.join(lines).strip() or '目前沒有找到直接相關的知識庫資料。'
+
+
+def search_knowledge_base(question, language_code='zh-hant', limit=3, ai_mode="helper"):
+    """
+    簡易 RAG：搜尋 chatbot 的 FAQ / 知識庫資料（相容舊介面）。
+    知識庫可以只填中文，但 keywords 建議放中文 + 英文，提高搜尋命中率。
+    """
+    items = search_knowledge_items(question, ai_mode=ai_mode, limit=limit)
+    return format_knowledge_context(items, language_code)
+
+
+def get_followup_suggestions(language_code='zh-hant', ai_mode='helper', matched_items=None, limit=3):
+    """
+    「你可能還想問」追問建議：取知識庫中跟目前問題同分類的其他條目標題（多語欄位）。
+    問題本身在知識庫裡沒有命中任何條目時，代表沒有跟這個問題相關的資料，直接不顯示建議，
+    不要用「最近更新」之類的條目硬湊，避免出現跟使用者問題無關的建議。
+    """
+    if ai_mode != 'helper':
+        return []
+
+    matched_items = matched_items or []
+    if not matched_items:
+        return []
+
+    try:
+        from .models import ChatKnowledge
+        matched_ids = [item.id for item in matched_items]
+        related = list(
+            ChatKnowledge.objects.filter(is_active=True)
+            .filter(Q(bot_type='helper') | Q(bot_type='both'))
+            .exclude(id__in=matched_ids)
+            .filter(category=matched_items[0].category)[:limit]
+        )
+    except Exception:
+        return []
+
+    suggestions = []
+    for item in related:
+        title = item.get_title_by_lang(language_code)
+        if title and title not in suggestions:
+            suggestions.append(title)
+    return suggestions
+
+
+# 危機關鍵字（9 語）：這是「保底安全網」——
+# 只要命中，views 層會強制附上求助資源，不依賴 AI 模型自行判斷
+CRISIS_KEYWORDS = [
+    # 中文
+    '想死', '不想活', '活不下去', '想消失', '自殺', '自杀',
+    '自傷', '自伤', '傷害自己', '伤害自己', '割腕',
+    '傷害別人', '伤害别人', '殺人', '杀人',
+    # English
+    'kill myself', 'suicide', 'self harm', 'self-harm', 'hurt myself',
+    'want to die', 'end my life',
+    # Tiếng Việt
+    'muốn chết', 'tự tử', 'tự sát', 'không muốn sống', 'tự làm đau',
+    # Bahasa Indonesia / Melayu
+    'bunuh diri', 'ingin mati', 'mau mati', 'nak mati', 'tak mahu hidup',
+    'tidak ingin hidup', 'menyakiti diri',
+    # ภาษาไทย
+    'อยากตาย', 'ฆ่าตัวตาย', 'ไม่อยากมีชีวิต', 'ทำร้ายตัวเอง',
+    # 日本語
+    '死にたい', '自殺', '消えたい', '自傷',
+    # 한국어
+    '죽고 싶', '자살', '사라지고 싶', '자해',
+    # မြန်မာ
+    'သေချင်', 'အသက်ရှင်ချင်မှမရှိ',
+]
+
+
+def contains_crisis_keywords(text):
+    """判斷訊息是否含自傷 / 危機字眼（9 語保底偵測）。"""
+    t = (text or '').strip().lower()
+    if not t:
+        return False
+    return any(word in t for word in CRISIS_KEYWORDS)
+
 
 def detect_friend_emotion_hint(question):
     """
@@ -1428,14 +1841,7 @@ def detect_friend_emotion_hint(question):
     """
     text = (question or '').strip().lower()
 
-    crisis_words = [
-        '想死', '不想活', '活不下去', '想消失', '自殺', '自杀',
-        '自傷', '自伤', '傷害自己', '伤害自己', '割腕',
-        '傷害別人', '伤害别人', '殺人', '杀人',
-        'kill myself', 'suicide', 'self harm', 'hurt myself',
-        'want to die', 'end my life'
-    ]
-    if any(word in text for word in crisis_words):
+    if contains_crisis_keywords(text):
         return '危機 / 自傷或傷人風險'
 
     if any(word in text for word in [
@@ -1671,11 +2077,11 @@ def search_google_places(query, language_code='zh-hant', location_hint='台灣')
                     timeout=5,
                 )
                 data = resp.json()
-                print("[DEBUG] Places Nearby status:", data.get('status'))
+                logger.debug('Places Nearby status: %s', data.get('status'))
                 if data.get('status') == 'OK':
                     results = data.get('results', [])[:3]
             except Exception as e:
-                print("[DEBUG] Places Nearby error:", e)
+                logger.warning('Places Nearby error: %s', e)
 
     # Nearby Search 沒有結果時，退回 Text Search
     if not results:
@@ -1687,11 +2093,11 @@ def search_google_places(query, language_code='zh-hant', location_hint='台灣')
                 timeout=5,
             )
             data = resp.json()
-            print("[DEBUG] Places Text status:", data.get('status'))
+            logger.debug('Places Text status: %s', data.get('status'))
             if data.get('status') == 'OK':
                 results = data.get('results', [])[:3]
         except Exception as e:
-            print("[DEBUG] Places Text error:", e)
+            logger.warning('Places Text error: %s', e)
 
     if not results:
         return None
@@ -1782,8 +2188,8 @@ def remove_existing_info_page_links(reply):
         return reply
 
     patterns = [
-        r'\n*👉\s*前往資訊頁面：\s*\[[^\]]+\]\([^)]+\)\s*',
-        r'\n*👉\s*前往資訊頁面：\s*【[^】]+】\([^)]+\)\s*',
+        r'\n*👉?\s*前往資訊頁面：\s*\[[^\]]+\]\([^)]+\)\s*',
+        r'\n*👉?\s*前往資訊頁面：\s*【[^】]+】\([^)]+\)\s*',
         r'\n*📎\s*附件下載：\s*\[[^\]]+\]\([^)]+\)\s*',
     ]
 
@@ -1913,7 +2319,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
     api_key = getattr(settings, 'OPENAI_API_KEY', '')
     model = getattr(settings, 'OPENAI_MODEL', 'gpt-4o-mini')
-    print("[DEBUG] api_key exists:", bool(api_key))
+    logger.debug('openai api_key configured: %s', bool(api_key))
 
     language_code, language_source = choose_reply_language(question)
     personal_label, general_label = ANSWER_LABELS.get(
@@ -1926,10 +2332,12 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
     profile_context = build_user_profile_context(user)
     crisis_resources = build_crisis_resources(user)
     flow_context = build_student_flow_context(user, language_code)
-    knowledge_context = search_knowledge_base(
-        question,
-        language_code,
-        ai_mode=ai_mode,
+
+    # RAG 檢索（依關聯度排序），items 同時供「你可能還想問」追問建議使用
+    knowledge_items = search_knowledge_items(question, ai_mode=ai_mode)
+    knowledge_context = format_knowledge_context(knowledge_items, language_code)
+    suggestions = get_followup_suggestions(
+        language_code, ai_mode=ai_mode, matched_items=knowledge_items
     )
 
     if not knowledge_context.strip():
@@ -1939,8 +2347,16 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
         history_text = build_history_text(recent_messages, max_user_messages=6)
     else:
         history_text = build_history_text(recent_messages)
+
+    # 小老師（課業輔助）角色：載入學生系所對應學群的課業知識背景包
+    is_tutor_role = ai_mode == 'helper' and (role or '').strip() == '小老師'
+    tutor_context = build_tutor_context(user, language_code) if is_tutor_role else ''
     info_page = get_personalized_info_page(user, question)
     task_link = get_relevant_student_task(user, question, language_code) if ai_mode == "helper" else None
+
+    # 任務清單和資訊中心都沒有相關資料時，helper 模式直接回答，不分個人化/一般回答兩段；
+    # 小老師角色一律用自然教學語氣回答，不套用個人化/一般回答兩段格式
+    direct_mode = ai_mode == "helper" and not is_tutor_role and not task_link and not info_page
 
     place_results = None
     if ai_mode == 'friend' and detect_place_query(question):
@@ -1955,9 +2371,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
                 location_hint = profile.university
             place_results = search_google_places(question, language_code, location_hint)
 
-    print("[DEBUG] ai_mode:", ai_mode)
-    print("[DEBUG] place_results:", place_results)
-    print("[DEBUG] knowledge_context:", knowledge_context)
+    logger.debug('ai_mode=%s, place_results=%s', ai_mode, bool(place_results))
 
     if not api_key:
         if ai_mode == "friend":
@@ -2011,22 +2425,49 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
         }
 
     # helper 模式：如果知識庫直接命中，就用穩定的本地知識庫答案，避免多花 API。
-    # 但如果學生有上傳附件，必須走 OpenAI 才能讀取附件內容，不能用這個本地捷徑。
-    if ai_mode == "helper" and not attachments and (
+    # 但如果學生有上傳附件，必須走 OpenAI 才能讀取附件內容，不能用這個本地捷徑；
+    # 小老師角色一律走 OpenAI，才能維持教學語氣與課業背景包，不要用這個直接回答的捷徑。
+    if ai_mode == "helper" and not attachments and not is_tutor_role and (
         knowledge_context
         and '目前沒有找到直接相關的知識庫資料' not in knowledge_context
         and '目前沒有可用的知識庫資料' not in knowledge_context
         and '目前知識庫欄位與資料庫尚未同步' not in knowledge_context
     ):
+        if direct_mode:
+            # 任務清單和資訊中心都沒有相關資料，不分段，直接用知識庫內容回答
+            return {
+                'reply': knowledge_context,
+                'source': 'knowledge_base_direct',
+                'model': 'local-knowledge',
+                'suggestions': suggestions,
+            }
+
+        # 本地個人化引擎：以學生「真實」任務狀態 + 截止日組出個人化段落（零幻覺）；
+        # 沒有個人資料時才退回多語罐頭句
+        personal_text = (
+            build_local_personal_answer(user, question, language_code)
+            or KNOWLEDGE_DIRECT_PERSONAL.get(language_code, KNOWLEDGE_DIRECT_PERSONAL['zh-hant'])
+        )
+        reply = (
+            f'{personal_label}：\n'
+            f'{personal_text}\n\n'
+            f'{general_label}：\n'
+            f'{knowledge_context}'
+        )
+        # 附上相關任務連結，讓學生可以一鍵跳到任務清單
+        reply = insert_info_links_after_personalized_answer(
+            reply=reply,
+            info_page=info_page,
+            personal_label=personal_label,
+            general_label=general_label,
+            task_link=task_link,
+            language_code=language_code,
+        )
         return {
-            'reply': (
-                f'{personal_label}：\n'
-                f'目前沒有足夠個人資料可判斷，請依你的身份別、國籍與學校公告確認。\n\n'
-                f'{general_label}：\n'
-                f'{knowledge_context}'
-            ),
+            'reply': reply,
             'source': 'knowledge_base_direct',
             'model': 'local-knowledge',
+            'suggestions': suggestions,
         }
 
     content_blocks, attachment_summary = build_attachment_input_content(attachments)
@@ -2068,10 +2509,11 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 1. 不要使用「{personal_label}」或「{general_label}」標題。
 2. 不要使用「個人化回答 / 一般回答」兩段格式。
 3. 不要輸出「情緒分類：...」。
-4. 不要一開始就講道理，先自然接住學生當下那句話。
+4. 不要一開始就講道理，直接自然回應學生當下那句話。
 5. 不要假裝自己是心理師、醫生、學校官方單位或緊急救援人員。
 6. 不要做醫療診斷，不要說學生有憂鬱症、焦慮症等診斷。
 7. 不要每次都條列式回答，除非學生明確要求整理。
+8. 不要用换句話說的方式重複肯定學生剛剛講的話或情緒，再接下一句。例如學生說「最近壓力很大」，不要回「壓力大真的很讓人疲憊，最近發生了什麼讓你特別感到有壓力的事嗎？」，直接回「最近發生了什麼讓你特別感到有壓力的事嗎？」就好。理解要放進你怎麼回應裡，不用先講一句總結他感受的話當開場。
 
 朋友聊天節奏：
 1. 一般情況要像朋友一來一回聊天：學生說一句，你回一小段，不要一次講完整篇文章。
@@ -2087,6 +2529,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 3. 只要你已經能夠給出回應，就不要在結尾硬加問題。
 4. 反問要自然，不要像問卷，不要每則訊息都以問號結尾。
 5. 估計每 3～4 則回覆才問一次，其他時候直接回應。
+6. 反問前不要先加一句換句話說學生感受的開場白，問題本身就是回應，直接問就好。
 
 語氣規則：
 1. 預設不使用語助詞，例如「嗯」「啊」「呀」「哈哈」「嗯哼」「咦」等，一律省略。
@@ -2147,11 +2590,59 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 {crisis_resources}
 - 不要承諾保密，不要說 AI 可以單獨處理危機。
 """.strip()
+    elif is_tutor_role:
+        input_text = f"""
+[LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only. Do not use any other language.
+
+不要使用「{personal_label} / {general_label}」兩段格式，也不要輸出這兩個標題，直接用有教學感的自然語氣回答。
+
+以下是學生基本資料，僅供你理解背景，不要生硬列出：
+{profile_context}
+
+{('【小老師課業背景包】以下是這位學生的系所、學群與對應的課業知識。回答課業問題時請結合這些內容：用他系所的課程舉例、推薦背景包中的免費學習資源；背景包沒有涵蓋的細節（如特定學校的課表），請誠實說明並建議他查詢系辦或課程大綱。' + chr(10) + tutor_context) if tutor_context else ''}
+
+以下是系統 FAQ / 知識庫搜尋結果，如果和學生的課業問題相關可以參考，不相關就不要勉強使用：
+{knowledge_context}
+
+以下是最近對話紀錄（請根據這些內容自然銜接，不要當作第一次對話）：
+{history_text}
+
+學生最新的課業問題：
+{question}{attachment_note}
+
+【危機求助資源】若學生透露自傷、想死、危險等內容，必須將以下資源原文輸出，電話連結格式不得更改：
+{crisis_resources}
+
+[REMINDER] Write your answer in {language_en} only. Answer directly in a warm, teaching tone. Do not split it into labeled sections.
+""".strip()
+    elif direct_mode:
+        input_text = f"""
+[LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only. Do not use any other language.
+
+這個問題在網站的任務清單和資訊中心都沒有找到相關資料，不要使用「{personal_label} / {general_label}」兩段格式，也不要輸出這兩個標題。
+
+以下是系統 FAQ / 知識庫搜尋結果，必須優先參考：
+{knowledge_context}
+
+如果知識庫有直接相關內容，必須根據知識庫回答，不要忽略。
+如果知識庫沒有找到相關資料，必須根據你自己對來臺就學流程的知識直接回答學生的問題，絕對不可以把「目前沒有找到直接相關的知識庫資料」或任何系統提示語直接輸出為答案。
+
+以下是最近對話紀錄，僅供上下文參考：
+{history_text}
+
+學生最新問題：
+{question}{attachment_note}
+
+【危機求助資源】若學生透露自傷、想死、危險等內容，必須將以下資源原文輸出，電話連結格式不得更改：
+{crisis_resources}
+
+[REMINDER] Write your answer in {language_en} only. Answer the question directly in one concise passage. Do not split it into labeled sections.
+""".strip()
     else:
         input_text = f"""
 [LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only. Do not use any other language.
 
-以下是學生自己的基本資料，供「{personal_label}」與「{general_label}」共同參考：
+以下是學生自己的基本資料，僅供「{personal_label}」參考：
 {profile_context}
 
 以下是學生目前的流程任務與提醒資料，僅供「{personal_label}」使用：
@@ -2164,7 +2655,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 {knowledge_context}
 
 如果知識庫有直接相關內容，「{general_label}」必須根據知識庫回答，不要忽略。
-如果知識庫沒有找到相關資料，「{general_label}」必須根據你自己對來臺就學流程的知識回答，並結合學生的身份、國籍與學校等個人資料給出更精準的回答，絕對不可以把「目前沒有找到直接相關的知識庫資料」或任何系統提示語直接輸出為答案。
+如果知識庫沒有找到相關資料，「{general_label}」必須根據你自己對來臺就學流程的知識直接回答學生的問題，不要參考學生的身份、國籍、學校等個人資料，絕對不可以把「目前沒有找到直接相關的知識庫資料」或任何系統提示語直接輸出為答案。
 
 以下是最近對話紀錄，僅供上下文參考：
 {history_text}
@@ -2197,7 +2688,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
         response = client.responses.create(
             model=model,
-            instructions=build_system_instructions(language_code, language_source, ai_mode, role=role, personality=personality),
+            instructions=build_system_instructions(language_code, language_source, ai_mode, role=role, personality=personality, direct_mode=direct_mode),
             input=api_input,
         )
 
@@ -2238,6 +2729,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
             'place_results_text': place_results,
             'source': 'openai',
             'model': model,
+            'suggestions': suggestions,
         }
 
     except Exception as exc:

@@ -36,6 +36,67 @@ body {
   box-sizing: border-box;
 }
 
+/* ── 視窗控制列（右上角：最小化／還原視窗／關閉）── */
+.chat-window-controls {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  z-index: 40;
+  display: flex;
+  gap: 4px;
+  background: var(--primary-dark);
+  border: none;
+  border-radius: 10px;
+  padding: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .18);
+}
+
+.win-ctrl-btn {
+  width: 30px;
+  height: 26px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s, color .15s;
+}
+
+.win-ctrl-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.win-ctrl-btn.win-ctrl-close:hover {
+  background: #e64545;
+  color: #fff;
+}
+
+/* 還原視窗：置中窗格版面（點擊 ▢ 切換） */
+.chatbot-page.chatbot-windowed {
+  height: auto;
+  min-height: calc(100vh - 88px);
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-page.chatbot-windowed .chatbot-layout {
+  width: min(1100px, 94%);
+  height: min(760px, 82vh);
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .18);
+}
+
 .chatbot-sidebar {
   height: 100%;
   padding: 6px 24px 24px;
@@ -1078,6 +1139,18 @@ html[lang="my"] .bot-profile-card p {
   text-indent: 0 !important;
 }
 
+.answer-label {
+  font-weight: 700 !important;
+}
+
+.answer-label--personal {
+  color: var(--primary-dark) !important;
+}
+
+.answer-label--general {
+  color: var(--primary-dark) !important;
+}
+
 .message-time {
   display: block !important;
   margin-top: 8px !important;
@@ -1122,6 +1195,7 @@ html[lang="my"] .bot-profile-card p {
   bottom: 8px;
   right: 8px;
 }
+
 
 .role-selector-btn {
   display: inline-flex;
@@ -1292,11 +1366,6 @@ html[lang="my"] .bot-profile-card p {
   color: #374151;
 }
 
-/* 角色選擇器只在聊天好朋友模式顯示 */
-.chatbot-page:not(.ai-mode-friend) .role-selector {
-  display: none !important;
-}
-
 /* 性格標籤 */
 .personality-btn {
   padding: 4px 12px;
@@ -1352,62 +1421,11 @@ html[lang="my"] .bot-profile-card p {
   transform: translateX(-50%) translateY(-2px);
 }
 
-/* ===== Back link inside AI profile card ===== */
-
-.chatbot-sidebar>.back-link {
-  display: none;
-}
-
-.bot-profile-card {
-  position: relative;
-  padding-top: 72px !important;
-}
-
-.bot-card-back-link {
-  position: absolute;
-  top: 18px;
-  left: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 38px;
-  padding: 0 16px;
-  border: 1px solid var(--primary);
-  border-radius: 999px;
-  background: var(--primary);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 900;
-  text-decoration: none;
-  box-shadow: 0 8px 18px rgba(23, 83, 77, .12);
-}
-
-.bot-card-back-link:hover {
-  background: var(--primary-dark);
-  border-color: var(--primary-dark);
-  color: #fff;
-  transform: translateY(-1px);
-}
-
 /* 左側只保留 AI 卡片 + 聊天記錄，不再為外部返回按鈕預留空間 */
 .chatbot-sidebar {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   gap: 18px;
-}
-
-/* 手機版避免按鈕和內容擠在一起 */
-@media (max-width: 760px) {
-  .bot-profile-card {
-    padding-top: 68px !important;
-  }
-
-  .bot-card-back-link {
-    top: 16px;
-    left: 16px;
-    font-size: 13px;
-    padding: 0 14px;
-  }
 }
 
 /* ===== Daily Taiwan Tip inside bot card ===== */
@@ -1427,7 +1445,7 @@ html[lang="my"] .bot-profile-card p {
 
 .bot-profile-card {
   justify-content: flex-start !important;
-  padding-top: 62px !important;
+  padding-top: 24px !important;
   padding-bottom: 24px !important;
   min-height: 260px;
 }
@@ -1669,28 +1687,138 @@ html[lang="my"] .bot-profile-card p {
   cursor: not-allowed;
 }
 
-/* ===== 返回按鈕跟著 AI 模式變色 ===== */
-
-/* ReadyTo AI 小幫手：深綠色 */
-.chatbot-page.ai-mode-helper .bot-card-back-link {
-  background: linear-gradient(135deg, #0f5f52, #2d7d6d) !important;
-  color: #ffffff !important;
-  border: none !important;
-  box-shadow: 0 10px 22px rgba(15, 95, 82, 0.24);
+/* ════════════════════════════════════════
+   AI 回覆評價（👍 / 👎）
+════════════════════════════════════════ */
+.msg-feedback {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
 }
 
-.chatbot-page.ai-mode-helper .bot-card-back-link:hover {
-  background: linear-gradient(135deg, #0b4f45, #236f61) !important;
+.feedback-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 2px 8px;
+  cursor: pointer;
+  opacity: .45;
+  transition: opacity .15s ease, background .15s ease;
 }
 
-/* ReadyTo AI 聊天好朋友：薄荷淺綠色 */
-.chatbot-page.ai-mode-friend .bot-card-back-link {
-  background: #d9f3e9 !important;
-  color: #075f55 !important;
-  border: none !important;
-  box-shadow: 0 10px 22px rgba(95, 174, 152, 0.18);
+.feedback-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.chatbot-page.ai-mode-friend .bot-card-back-link:hover {
-  background: #cdefe2 !important;
+.feedback-btn:hover {
+  opacity: 1;
+  background: #f0f4f2;
+}
+
+.feedback-btn.selected {
+  opacity: 1;
+  background: #e3f2ec;
+  border-color: #579884;
+}
+
+.feedback-btn.selected svg {
+  fill: #000;
+}
+
+/* ════════════════════════════════════════════════
+   EMBED 模式：聊天頁被嵌在浮動小工具的 iframe 內
+   頂部固定標題列（機器人名稱 + ⛶ − ×）；
+   iframe 窄（緊湊視窗 ~400px）→ 單欄、隱藏側欄，只顯示目前機器人；
+   iframe 寬（全螢幕）→ 顯示完整側欄（可切換機器人 / 聊天記錄）。
+════════════════════════════════════════════════ */
+body.chat-embed .site-header,
+body.chat-embed .site-footer,
+body.chat-embed .chat-widget,
+body.chat-embed #chatWidget {
+  display: none !important;
+}
+
+body.chat-embed {
+  background: #fff;
+}
+
+.chatbot-page.chatbot-embed {
+  position: static;
+  left: auto;
+  right: auto;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-embed .chatbot-layout {
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── 頂部標題列（只在 embed 顯示）── */
+.chat-embed-header { display: none; }
+
+body.chat-embed .chat-embed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  padding: 11px 12px 11px 16px;
+  background: var(--primary-dark, #17534d);
+  color: #fff;
+  z-index: 60;
+}
+
+body.chat-embed .chat-embed-header .ceh-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+body.chat-embed .chat-embed-header .ceh-ava {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.chat-embed .chat-embed-header .ceh-ava svg { width: 68%; height: 68%; }
+
+/* 標題列內的視窗控制鈕：改為透明扁平樣式 */
+body.chat-embed .chat-embed-header .chat-window-controls {
+  position: static;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  gap: 2px;
+}
+body.chat-embed .chat-embed-header .win-ctrl-btn {
+  width: 30px;
+  height: 28px;
+  font-size: 15px;
+  color: #fff;
+}
+body.chat-embed .chat-embed-header .win-ctrl-btn:hover { background: rgba(255, 255, 255, .18); }
+body.chat-embed .chat-embed-header .win-ctrl-btn.win-ctrl-close:hover { background: #e64545; }
+
+/* ── 緊湊視窗（iframe 窄）：隱藏側欄，只顯示目前機器人 ── */
+@media (max-width: 560px) {
+  .chatbot-embed .chatbot-sidebar { display: none; }
+  .chatbot-embed .chatbot-main { flex: 1; min-height: 0; border-left: none; }
 }

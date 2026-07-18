@@ -1,0 +1,26 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "studygo",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["C:\\Users\\user\\Downloads\\studygo\\manage.py", "runserver", "8015"],
+      "port": 8015,
+      "autoPort": false
+    },
+    {
+      "name": "reader",
+      "runtimeExecutable": "C:\\Users\\user\\Desktop\\4-E\\venv\\Scripts\\python.exe",
+      "runtimeArgs": ["C:\\Users\\user\\Desktop\\4-E\\manage.py", "runserver", "8010"],
+      "port": 8010,
+      "autoPort": false
+    },
+    {
+      "name": "panorama-tour",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\user\\Downloads\\教研大樓環景圖\\_range-server.js", "8020"],
+      "port": 8020,
+      "autoPort": false
+    }
+  ]
+}

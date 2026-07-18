@@ -1,227 +1,291 @@
-{# guides/templates/guides/guide_index.html — 資訊中心 #}
+{# guides/templates/guides/guide_index.html — 資訊中心（左側分類導覽版型） #}
 {% extends "base.html" %}
 {% load static i18n %}
 {% block title %}{% trans "資訊中心" %} — ReadyTo Taiwan{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'guides/css/guide_index.css' %}?v={% now 'U' %}">
+<link rel="stylesheet" href="{% static 'guides/css/guide_index.css' %}?v=6">
 {% endblock %}
 
 {% block content %}
 
-<!-- Hero -->
-<div class="gi-hero">
-  <div class="watermark">GUIDE</div>
-  <div style="max-width:min(1200px,96%);margin:0 auto;">
-    <a class="gi-back" href="{% url 'dashboard' %}">← {% trans "返回儀表板" %}</a>
-    <h1>📚 {% trans "資訊中心" %}</h1>
-    <p>{% trans "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。" %}</p>
-  </div>
-</div>
-
-<!-- Content -->
+<!-- Content：左側分類導覽 + 右側搜尋與指南卡片 -->
 <div class="gi-wrap">
+  <div class="share-layout">
 
-  <!-- 入學申請 -->
-  <div class="gi-section">
-    <div class="gi-section-icon cat-1">🌏</div>
-    <div class="gi-section-text">
-      <h2>{% trans "入學申請" %}</h2>
-      <div class="gi-count">2 {% trans "個指南" %}</div>
-    </div>
-    <div class="gi-section-line"></div>
-  </div>
-  <div class="gi-grid">
-    <a href="{% url 'guide_national_area' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🌏</div>
-      <div class="gi-title">{% trans "各國專區" %}</div>
-      <div class="gi-desc">{% trans "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等" %}</div>
-    </a>
-    <a href="{% url 'admissions_guide' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">📋</div>
-      <div class="gi-title">{% trans "入學申請指南" %}</div>
-      <div class="gi-desc">{% trans "申請資格、時程、所需文件與注意事項整理" %}</div>
-    </a>
-  </div>
+    {# ── 左側：分類導覽 ── #}
+    <aside class="share-sidebar" id="giSidebar">
+      <button type="button" class="share-tab active" data-cat="admission">{% trans "入學申請" %}</button>
+      <button type="button" class="share-tab" data-cat="docs">{% trans "證件・住宿" %}</button>
+      <button type="button" class="share-tab" data-cat="life">{% trans "生活類" %}</button>
+      <button type="button" class="share-tab" data-cat="study">{% trans "學業類" %}</button>
+      <button type="button" class="share-tab" data-cat="tools">{% trans "實用工具" %}</button>
+    </aside>
 
-  <!-- 證件・住宿・交通 -->
-  <div class="gi-section">
-    <div class="gi-section-icon cat-2">🪪</div>
-    <div class="gi-section-text">
-      <h2>{% trans "證件・住宿" %}</h2>
-      <div class="gi-count">6 {% trans "個指南" %}</div>
-    </div>
-    <div class="gi-section-line"></div>
-  </div>
-  <div class="gi-grid">
-    <a href="{% url 'guide_arc_foreign' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🪪</div>
-      <div class="gi-title">{% trans "外籍生 ARC 辦理" %}</div>
-      <div class="gi-desc">{% trans "外國護照入學者的居留證申請流程與文件清單" %}</div>
-    </a>
-    <a href="{% url 'guide_arc_overseas' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🌏</div>
-      <div class="gi-title">{% trans "僑生 ARC 辦理" %}</div>
-      <div class="gi-desc">{% trans "持外國護照入台的僑生居留證申請說明" %}</div>
-    </a>
-    <a href="{% url 'guide_arc_exchange' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🛂</div>
-      <div class="gi-title">{% trans "港澳生居留說明" %}</div>
-      <div class="gi-desc">{% trans "入出境許可證、居留申請流程與健保工讀說明" %}</div>
-    </a>
-    <a href="{% url 'guide_housing_ncu' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🏠</div>
-      <div class="gi-title">{% trans "中央大學住宿申請" %}</div>
-      <div class="gi-desc">{% trans "宿舍分區、設備、申請流程與外僑優先保證說明" %}</div>
-    </a>
-    <a href="{% url 'guide_regulations' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">⚖️</div>
-      <div class="gi-title">{% trans "來臺就學相關法規" %}</div>
-      <div class="gi-desc">{% trans "入學・居留・健保・工讀・學籍等重要法規說明" %}</div>
-    </a>
-    <a href="{% url 'guide_work_permit' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">💼</div>
-      <div class="gi-title">{% trans "工作許可證" %}</div>
-      <div class="gi-desc">{% trans "申請流程、每週工時上限、違規罰則說明" %}</div>
-    </a>
-  </div>
+    {# ── 右側：搜尋 + 指南卡片 ── #}
+    <main class="share-main">
 
-  <!-- 生活類 -->
-  <div class="gi-section">
-    <div class="gi-section-icon cat-3">🏡</div>
-    <div class="gi-section-text">
-      <h2>{% trans "生活類" %}</h2>
-      <div class="gi-count">7 {% trans "個指南" %}</div>
-    </div>
-    <div class="gi-section-line"></div>
-  </div>
-  <div class="gi-grid">
-    <a href="{% url 'guide_bus_ncu' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🚌</div>
-      <div class="gi-title">{% trans "中央大學公車指南" %}</div>
-      <div class="gi-desc">{% trans "主要路線、常見目的地與即時查詢連結" %}</div>
-    </a>
-    <a href="{% url 'guide_mental_health' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🌱</div>
-      <div class="gi-title">{% trans "心理支持" %}</div>
-      <div class="gi-desc">{% trans "諮商中心預約、壓力、人際困擾、24H 熱線" %}</div>
-    </a>
-    <a href="{% url 'guide_medical' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🏥</div>
-      <div class="gi-title">{% trans "醫療資訊" %}</div>
-      <div class="gi-desc">{% trans "衛保組、校外診所、周邊醫院、急診與緊急電話" %}</div>
-    </a>
-    <a href="{% url 'guide_scholarship' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🏆</div>
-      <div class="gi-title">{% trans "獎助學金" %}</div>
-      <div class="gi-desc">{% trans "僑生獎學金、清寒補助、校內外各項申請指南" %}</div>
-    </a>
-    <a href="{% url 'guide_nhi' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">💊</div>
-      <div class="gi-title">{% trans "全民健保申請" %}</div>
-      <div class="gi-desc">{% trans "ARC 核發後即可加保，門診費用大幅降低" %}</div>
-    </a>
-    <a href="{% url 'guide_bank' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🏦</div>
-      <div class="gi-title">{% trans "在台開設銀行帳戶" %}</div>
-      <div class="gi-desc">{% trans "統一證號說明、郵局・台灣銀行・玉山銀行開戶比較" %}</div>
-    </a>
-    <a href="{% url 'guide_sim' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">📱</div>
-      <div class="gi-title">{% trans "台灣門號申辦" %}</div>
-      <div class="gi-desc">{% trans "預付卡 vs 月租方案，各大電信業者說明" %}</div>
-    </a>
-  </div>
+      <div class="share-filter-bar">
+        <input type="text" id="giSearchInput" class="share-filter-search"
+          placeholder="{% trans '搜尋資訊，例如：簽證、居留證、健保…' %}" autocomplete="off">
+      </div>
 
-  <!-- 學業類 -->
-  <div class="gi-section">
-    <div class="gi-section-icon cat-4">📚</div>
-    <div class="gi-section-text">
-      <h2>{% trans "學業類" %}</h2>
-      <div class="gi-count">5 {% trans "個指南" %}</div>
-    </div>
-    <div class="gi-section-line"></div>
-  </div>
-  <div class="gi-grid">
-    <a href="{% url 'guide_admin_docs' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">📄</div>
-      <div class="gi-title">{% trans "行政文件" %}</div>
-      <div class="gi-desc">{% trans "在學證明、成績單、推薦信申請說明" %}</div>
-    </a>
-    <a href="{% url 'guide_enrollment' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🗂️</div>
-      <div class="gi-title">{% trans "學籍辦理" %}</div>
-      <div class="gi-desc">{% trans "休學、復學、轉系、雙主修規定與流程" %}</div>
-    </a>
-    <a href="{% url 'guide_course' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">📚</div>
-      <div class="gi-title">{% trans "課務資訊" %}</div>
-      <div class="gi-desc">{% trans "選課、加退選、人工加退選、停修流程與日程" %}</div>
-    </a>
-    <a href="{% url 'guide_graduation' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🎓</div>
-      <div class="gi-title">{% trans "成績與畢業門檻" %}</div>
-      <div class="gi-desc">{% trans "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準" %}</div>
-    </a>
-    <a href="{% url 'guide_systems' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🖥️</div>
-      <div class="gi-title">{% trans "校內系統" %}</div>
-      <div class="gi-desc">{% trans "Portal 帳號啟用、ee-class 課程平台、學生信箱設定" %}</div>
-    </a>
-  </div>
+      <!-- 入學申請 -->
+      <div class="gi-cat-block" data-cat="admission">
+        <div class="gi-section">
+          <div class="gi-section-text">
+            <h2>{% trans "入學申請" %}</h2>
+            <div class="gi-count">2 {% trans "個指南" %}</div>
+          </div>
+          <div class="gi-section-line"></div>
+        </div>
+        <div class="gi-grid">
+          <a href="{% url 'guide_national_area' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🌏</div>
+            <div class="gi-title">{% trans "各國專區" %}</div>
+            <div class="gi-desc">{% trans "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等" %}</div>
+          </a>
+          <a href="{% url 'admissions_guide' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">📋</div>
+            <div class="gi-title">{% trans "入學申請指南" %}</div>
+            <div class="gi-desc">{% trans "申請資格、時程、所需文件與注意事項整理" %}</div>
+          </a>
+        </div>
+      </div>
 
-  <!-- 實用工具 -->
-  <div class="gi-section">
-    <div class="gi-section-icon cat-5">🛠️</div>
-    <div class="gi-section-text">
-      <h2>{% trans "實用工具" %}</h2>
-      <div class="gi-count">3 {% trans "個指南" %}</div>
-    </div>
-    <div class="gi-section-line"></div>
+      <!-- 證件・住宿 -->
+      <div class="gi-cat-block" data-cat="docs">
+        <div class="gi-section">
+          <div class="gi-section-text">
+            <h2>{% trans "證件・住宿" %}</h2>
+            <div class="gi-count">6 {% trans "個指南" %}</div>
+          </div>
+          <div class="gi-section-line"></div>
+        </div>
+        <div class="gi-grid">
+          <a href="{% url 'guide_arc_foreign' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🪪</div>
+            <div class="gi-title">{% trans "外籍生 ARC 辦理" %}</div>
+            <div class="gi-desc">{% trans "外國護照入學者的居留證申請流程與文件清單" %}</div>
+          </a>
+          <a href="{% url 'guide_arc_overseas' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🌏</div>
+            <div class="gi-title">{% trans "僑生 ARC 辦理" %}</div>
+            <div class="gi-desc">{% trans "持外國護照入台的僑生居留證申請說明" %}</div>
+          </a>
+          <a href="{% url 'guide_arc_exchange' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🛂</div>
+            <div class="gi-title">{% trans "港澳生居留說明" %}</div>
+            <div class="gi-desc">{% trans "入出境許可證、居留申請流程與健保工讀說明" %}</div>
+          </a>
+          <a href="{% url 'guide_housing_ncu' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🏠</div>
+            <div class="gi-title">{% trans "中央大學住宿申請" %}</div>
+            <div class="gi-desc">{% trans "宿舍分區、設備、申請流程與外僑優先保證說明" %}</div>
+          </a>
+          <a href="{% url 'guide_regulations' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">⚖️</div>
+            <div class="gi-title">{% trans "來臺就學相關法規" %}</div>
+            <div class="gi-desc">{% trans "入學・居留・健保・工讀・學籍等重要法規說明" %}</div>
+          </a>
+          <a href="{% url 'guide_work_permit' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">💼</div>
+            <div class="gi-title">{% trans "工作許可證" %}</div>
+            <div class="gi-desc">{% trans "申請流程、每週工時上限、違規罰則說明" %}</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 生活類 -->
+      <div class="gi-cat-block" data-cat="life">
+        <div class="gi-section">
+          <div class="gi-section-text">
+            <h2>{% trans "生活類" %}</h2>
+            <div class="gi-count">7 {% trans "個指南" %}</div>
+          </div>
+          <div class="gi-section-line"></div>
+        </div>
+        <div class="gi-grid">
+          <a href="{% url 'guide_bus_ncu' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🚌</div>
+            <div class="gi-title">{% trans "中央大學公車指南" %}</div>
+            <div class="gi-desc">{% trans "主要路線、常見目的地與即時查詢連結" %}</div>
+          </a>
+          <a href="{% url 'guide_mental_health' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🌱</div>
+            <div class="gi-title">{% trans "心理支持" %}</div>
+            <div class="gi-desc">{% trans "諮商中心預約、壓力、人際困擾、24H 熱線" %}</div>
+          </a>
+          <a href="{% url 'guide_medical' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🏥</div>
+            <div class="gi-title">{% trans "醫療資訊" %}</div>
+            <div class="gi-desc">{% trans "衛保組、校外診所、周邊醫院、急診與緊急電話" %}</div>
+          </a>
+          <a href="{% url 'guide_scholarship' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🏆</div>
+            <div class="gi-title">{% trans "獎助學金" %}</div>
+            <div class="gi-desc">{% trans "僑生獎學金、清寒補助、校內外各項申請指南" %}</div>
+          </a>
+          <a href="{% url 'guide_nhi' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">💊</div>
+            <div class="gi-title">{% trans "全民健保申請" %}</div>
+            <div class="gi-desc">{% trans "ARC 核發後即可加保，門診費用大幅降低" %}</div>
+          </a>
+          <a href="{% url 'guide_bank' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🏦</div>
+            <div class="gi-title">{% trans "在台開設銀行帳戶" %}</div>
+            <div class="gi-desc">{% trans "統一證號說明、郵局・台灣銀行・玉山銀行開戶比較" %}</div>
+          </a>
+          <a href="{% url 'guide_sim' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">📱</div>
+            <div class="gi-title">{% trans "台灣門號申辦" %}</div>
+            <div class="gi-desc">{% trans "預付卡 vs 月租方案，各大電信業者說明" %}</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 學業類 -->
+      <div class="gi-cat-block" data-cat="study">
+        <div class="gi-section">
+          <div class="gi-section-text">
+            <h2>{% trans "學業類" %}</h2>
+            <div class="gi-count">5 {% trans "個指南" %}</div>
+          </div>
+          <div class="gi-section-line"></div>
+        </div>
+        <div class="gi-grid">
+          <a href="{% url 'guide_admin_docs' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">📄</div>
+            <div class="gi-title">{% trans "行政文件" %}</div>
+            <div class="gi-desc">{% trans "在學證明、成績單、推薦信申請說明" %}</div>
+          </a>
+          <a href="{% url 'guide_enrollment' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🗂️</div>
+            <div class="gi-title">{% trans "學籍辦理" %}</div>
+            <div class="gi-desc">{% trans "休學、復學、轉系、雙主修規定與流程" %}</div>
+          </a>
+          <a href="{% url 'guide_course' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">📚</div>
+            <div class="gi-title">{% trans "課務資訊" %}</div>
+            <div class="gi-desc">{% trans "選課、加退選、人工加退選、停修流程與日程" %}</div>
+          </a>
+          <a href="{% url 'guide_graduation' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🎓</div>
+            <div class="gi-title">{% trans "成績與畢業門檻" %}</div>
+            <div class="gi-desc">{% trans "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準" %}</div>
+          </a>
+          <a href="{% url 'guide_systems' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🖥️</div>
+            <div class="gi-title">{% trans "校內系統" %}</div>
+            <div class="gi-desc">{% trans "Portal 帳號啟用、ee-class 課程平台、學生信箱設定" %}</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 實用工具 -->
+      <div class="gi-cat-block" data-cat="tools">
+        <div class="gi-section">
+          <div class="gi-section-text">
+            <h2>{% trans "實用工具" %}</h2>
+            <div class="gi-count">3 {% trans "個指南" %}</div>
+          </div>
+          <div class="gi-section-line"></div>
+        </div>
+        <div class="gi-grid">
+          <a href="{% url 'guide_emergency' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🚨</div>
+            <div class="gi-title">{% trans "緊急聯絡" %}</div>
+            <div class="gi-desc">{% trans "110・119・112・校安中心・國際事務處" %}</div>
+          </a>
+          <a href="{% url 'guide_library' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">📖</div>
+            <div class="gi-title">{% trans "圖書館" %}</div>
+            <div class="gi-desc">{% trans "借書規則、K書中心、學術資料庫、列印費用" %}</div>
+          </a>
+          <a href="{% url 'guide_map' %}" class="gi-card">
+            <span class="gi-card-arrow">›</span>
+            <div class="gi-icon-badge">🗺️</div>
+            <div class="gi-title">{% trans "地圖導覽" %}</div>
+            <div class="gi-desc">{% trans "學校・醫院・車站・機場位置，一鍵導航" %}</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="alumni-empty" id="giNoResult" style="display:none;">
+        {% trans "找不到符合的指南，試著換個關鍵字。" %}
+      </div>
+
+    </main>
   </div>
-  <div class="gi-grid">
-    <a href="{% url 'guide_emergency' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🚨</div>
-      <div class="gi-title">{% trans "緊急聯絡" %}</div>
-      <div class="gi-desc">{% trans "110・119・112・校安中心・國際事務處" %}</div>
-    </a>
-    <a href="{% url 'guide_library' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">📖</div>
-      <div class="gi-title">{% trans "圖書館" %}</div>
-      <div class="gi-desc">{% trans "借書規則、K書中心、學術資料庫、列印費用" %}</div>
-    </a>
-    <a href="{% url 'guide_map' %}" class="gi-card">
-      <span class="gi-card-arrow">›</span>
-      <div class="gi-icon-badge">🗺️</div>
-      <div class="gi-title">{% trans "地圖導覽" %}</div>
-      <div class="gi-desc">{% trans "學校・醫院・車站・機場位置，一鍵導航" %}</div>
-    </a>
-  </div>
-
-
-
 </div>
+
+<script>
+  (function () {
+    'use strict';
+
+    const sidebar = document.getElementById('giSidebar');
+    const searchInput = document.getElementById('giSearchInput');
+    const blocks = document.querySelectorAll('.gi-cat-block');
+    const noResult = document.getElementById('giNoResult');
+    let currentCat = 'admission';
+
+    function applyFilter() {
+      const keyword = (searchInput.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+
+      blocks.forEach((block) => {
+        const inCat = currentCat === 'all' || block.dataset.cat === currentCat;
+        let blockVisible = 0;
+
+        block.querySelectorAll('.gi-card').forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          const match = inCat && (!keyword || text.includes(keyword));
+          card.style.display = match ? '' : 'none';
+          if (match) blockVisible++;
+        });
+
+        block.style.display = blockVisible > 0 ? '' : 'none';
+        visibleCount += blockVisible;
+      });
+
+      noResult.style.display = visibleCount === 0 ? '' : 'none';
+    }
+
+    sidebar.addEventListener('click', (event) => {
+      const tab = event.target.closest('.share-tab');
+      if (!tab) return;
+      currentCat = tab.dataset.cat;
+      sidebar.querySelectorAll('.share-tab').forEach((el) => {
+        el.classList.toggle('active', el === tab);
+      });
+      applyFilter();
+    });
+
+    searchInput.addEventListener('input', applyFilter);
+    applyFilter();
+  })();
+</script>
 
 {% endblock %}

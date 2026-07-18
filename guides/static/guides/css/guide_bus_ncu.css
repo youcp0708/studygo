@@ -166,12 +166,6 @@
   .app-chip .app-icon { font-size:22px; }
   .app-chip .app-sub { font-size:11px; color:var(--muted); font-weight:400; }
 
-  .back-link {
-    display:inline-flex; align-items:center; gap:6px; color:var(--primary);
-    font-size:14px; font-weight:700; margin-bottom:20px;
-    padding:6px 0; text-decoration:none;
-  }
-  .back-link:hover { color:var(--primary-dark); }
 
   @media (max-width:600px) {
     .guide-hero { padding:28px 24px 24px; }

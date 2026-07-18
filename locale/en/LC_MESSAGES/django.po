@@ -7177,7 +7177,8 @@ msgstr "Enrollment Regulations"
 
 #: .\guides\templates\guides\guide_regulations.html:28
 msgid "僑生回國就學及輔導辦法"
-msgstr "Regulations for Overseas Chinese Students Returning to Study in Taiwan"
+msgstr ""
+"Regulations for Overseas Chinese Students Returning to Study in Taiwan"
 
 #: .\guides\templates\guides\guide_regulations.html:29
 #: .\guides\templates\guides\guide_regulations.html:41

@@ -20,18 +20,19 @@
         <div class="login-slide active" data-slide="0">
           <div class="slide-copy">
             <div class="login-kicker">ReadyTo Taiwan</div>
-            <h2>{% trans "流程提醒" %}</h2>
-            <p>{% trans "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。" %}</p>
+            <h2>{% trans "個人化任務清單" %}</h2>
+            <p>{% trans "回答幾個問題，系統就會依你的身分別、國籍與入學狀態生成專屬任務清單：每項任務附上所需文件、辦理地點與地圖，並依你的抵臺日期自動計算截止日，到期前以站內通知與 Email 提醒你。" %}</p>
+          <div class="slide-tags"><span>⚡ {% trans "自動生成" %}</span><span>⏰ {% trans "截止日提醒" %}</span><span>📍 {% trans "文件與地圖" %}</span></div>
           </div>
-          <div class="abstract-illustration flow-abstract art-style">
-            <div class="progress-line"></div>
-            <div class="progress-fill"></div>
-            <div class="progress-node done n1">✓</div>
-            <div class="progress-node done n2">✓</div>
-            <div class="progress-node active n3"></div>
-            <div class="task-stack stack-1"></div>
-            <div class="task-stack stack-2"></div>
-            <div class="task-stack stack-3"></div>
+          <div class="slide-visual">
+            <div class="sv-window">
+              <div class="sv-window-bar"><span></span><span></span><span></span><b>{% trans "我的任務清單" %}</b></div>
+              <div class="sv-progress-row"><span>{% trans "完成進度" %}</span><b>67%</b></div>
+              <div class="sv-bar"><i style="width:67%"></i></div>
+              <div class="sv-task done"><span class="sv-check">✓</span>{% trans "申請入學許可" %}<em>{% trans "已完成" %}</em></div>
+              <div class="sv-task done"><span class="sv-check">✓</span>{% trans "辦理學生簽證" %}<em>{% trans "已完成" %}</em></div>
+              <div class="sv-task"><span class="sv-check"></span>{% trans "辦理 ARC 居留證" %}<em class="warn">{% trans "剩 12 天" %}</em></div>
+            </div>
           </div>
         </div>
 
@@ -42,37 +43,58 @@
             <h2>{% trans "資訊中心" %}</h2>
             <p>{% trans "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。" %}</p>
           </div>
-          <div class="abstract-illustration info-abstract art-style">
-            <div class="abstract-board large"></div>
-            <div class="abstract-card folder-card">
-              <span class="mini-icon">📁</span>
-              <div class="mini-lines"><b></b><b></b><b></b></div>
+          <div class="slide-visual">
+            <div class="sv-window">
+              <div class="sv-search">🔍 <span>{% trans "居留證 ARC" %}</span></div>
+              <div class="sv-guide-grid">
+                <div class="sv-guide"><i>🪪</i>{% trans "ARC 居留證" %}</div>
+                <div class="sv-guide"><i>💊</i>{% trans "全民健保" %}</div>
+                <div class="sv-guide"><i>🏠</i>{% trans "宿舍申請" %}</div>
+                <div class="sv-guide"><i>🏦</i>{% trans "銀行開戶" %}</div>
+                <div class="sv-guide"><i>💼</i>{% trans "工作許可" %}</div>
+                <div class="sv-guide"><i>🏆</i>{% trans "獎學金" %}</div>
+              </div>
             </div>
-            <div class="abstract-card search-card">
-              <span class="mini-icon">⌕</span>
-              <div class="pill"></div>
-            </div>
-            <div class="abstract-chip chip-a"></div>
-            <div class="abstract-chip chip-b"></div>
-            <div class="abstract-chip chip-c"></div>
           </div>
         </div>
 
-        {# Slide 3: AI 聊天機器人 #}
+        {# Slide 3: 雙 AI 夥伴 #}
         <div class="login-slide" data-slide="2">
           <div class="slide-copy">
             <div class="login-kicker">ReadyTo Taiwan</div>
-            <h2>{% trans "AI 聊天機器人" %}</h2>
-            <p>{% trans "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。" %}</p>
+            <h2>{% trans "雙 AI 夥伴" %}</h2>
+            <p>{% trans "「任務小幫手」熟悉你的任務進度與截止日，用 9 種語言回答簽證、居留證等行政問題並附官方來源；「聊天好朋友」則在你想家、壓力大時陪你聊聊，還能幫你找學校附近的餐廳與商店。" %}</p>
+          <div class="slide-tags"><span>🤖 {% trans "任務小幫手" %}</span><span>💬 {% trans "聊天好朋友" %}</span><span>🎓 {% trans "課業小老師" %}</span></div>
           </div>
-          <div class="abstract-illustration ai-abstract art-style">
-            <div class="robot-core">🤖</div>
-            <div class="chat-bubble bubble-left"></div>
-            <div class="chat-bubble bubble-right"></div>
-            <div class="chat-bubble bubble-bottom"></div>
-            <div class="signal-dot d1"></div>
-            <div class="signal-dot d2"></div>
-            <div class="signal-dot d3"></div>
+          <div class="slide-visual">
+            <div class="sv-window sv-chat">
+              <div class="sv-msg user">{% trans "簽證要先準備什麼？" %}</div>
+              <div class="sv-msg bot">{% trans "你需要 3 份文件：入學許可、財力證明、護照。我已幫你加進任務清單 ✅" %}</div>
+              <div class="sv-msg user">{% trans "最近有點想家…" %}</div>
+              <div class="sv-msg bot">{% trans "想家很正常，要不要聊聊？也可以幫你找學校附近的家鄉味 🍜" %}</div>
+            </div>
+          </div>
+        </div>
+
+        {# Slide 4: 學長姐分享區 #}
+        <div class="login-slide" data-slide="3">
+          <div class="slide-copy">
+            <div class="login-kicker">ReadyTo Taiwan</div>
+            <h2>{% trans "學長姐分享區" %}</h2>
+            <p>{% trans "來自世界各地的學長姐分享最真實的留學經驗：看看「你的學校」的前輩怎麼走過這段路，也能瀏覽所有學校的心得；完成註冊後，你也可以發佈自己的故事，成為學弟妹的引路人。" %}</p>
+          <div class="slide-tags"><span>🏫 {% trans "我的學校" %}</span><span>🌐 {% trans "所有學校" %}</span><span>✍️ {% trans "發佈心得" %}</span></div>
+          </div>
+          <div class="slide-visual">
+            <div class="sv-window">
+              <div class="sv-share">
+                <div class="sv-share-top"><span class="sv-av av1">N</span><div><b>Nguyen Minh</b><small>{% trans "國立臺灣大學" %}</small></div></div>
+                <div class="sv-share-title">{% trans "宿舍申請要早點排隊！" %}</div>
+              </div>
+              <div class="sv-share">
+                <div class="sv-share-top"><span class="sv-av av2">田</span><div><b>田中健太</b><small>{% trans "國立陽明交通大學" %}</small></div></div>
+                <div class="sv-share-title">{% trans "ARC 線上申請一次就過的技巧" %}</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -82,6 +104,7 @@
         <button class="slide-dot active" onclick="showLoginSlide(0)" aria-label="{% trans '顯示第一張介紹' %}"></button>
         <button class="slide-dot" onclick="showLoginSlide(1)" aria-label="{% trans '顯示第二張介紹' %}"></button>
         <button class="slide-dot" onclick="showLoginSlide(2)" aria-label="{% trans '顯示第三張介紹' %}"></button>
+        <button class="slide-dot" onclick="showLoginSlide(3)" aria-label="{% trans '顯示第四張介紹' %}"></button>
       </div>
     </div>
 
