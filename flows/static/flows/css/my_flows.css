@@ -556,16 +556,17 @@
 .tip-app-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 6px 14px;
-  border-radius: 999px;
+  border-radius: 14px;
   background: #eef6f3;
   color: #579783;
   font-size: 14px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.4;
   text-decoration: none;
-  white-space: nowrap;
+  word-break: break-word;
+  text-align: left;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
