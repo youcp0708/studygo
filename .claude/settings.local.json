@@ -175,10 +175,14 @@
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/tutor_move_probe.py\")",
       "Bash(PYTHONIOENCODING=utf-8 python manage.py shell -c ' *)",
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/role_visibility_probe.py\")",
-      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/role_select_full.py\")"
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/role_select_full.py\")",
+      "Bash(python -c \"import django,os,sys; print\\(django.VERSION\\)\")",
+      "Bash(PYTHONPATH=\"c:\\\\Users\\\\user\\\\Desktop\\\\studygo\" python /tmp/list_tips.py)",
+      "Bash(cd \"c:\\\\Users\\\\user\\\\Desktop\\\\studygo\" && rm -f _tip10_dump.json _all_links_dump.json _full_dump.json _apply_log.txt && rm -f /tmp/list_tips.py /tmp/dump_tip10.py /tmp/dump_all_links.py /tmp/full_dump.py /tmp/apply_tip_fixes.py && git status --short)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\User\\Downloads\\readytoaiwan\\users\\templates\\users"
+      "c:\\Users\\User\\Downloads\\readytoaiwan\\users\\templates\\users",
+      "\\tmp"
     ]
   }
 }
