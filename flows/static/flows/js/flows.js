@@ -421,9 +421,11 @@ async function renderMyTasks() {
         ? `<a href="${loc.official_url}" target="_blank" style="color:var(--primary);text-decoration:underline;">${window.UI_STRINGS.visitOfficialWebsite}</a>`
         : null;
       const noteVal = task.note || '';
+      const reqLabel = window.UI_STRINGS?.requiredLabel || '必做';
+      const optLabel = window.UI_STRINGS?.optionalLabel || '建議';
       const requiredBadge = task.task_detail?.is_required
-        ? '<span class="task-badge required">必做</span>'
-        : '<span class="task-badge optional">建議</span>';
+        ? `<span class="task-badge required">${reqLabel}</span>`
+        : `<span class="task-badge optional">${optLabel}</span>`;
 
       // ── 期限資訊區塊（deadline_text 已在後端本地化）──
       let deadlineHtml = '';
