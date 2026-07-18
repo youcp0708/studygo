@@ -365,6 +365,8 @@
   color: var(--text-dark);
   margin-bottom: 4px;
   line-height: 1.4;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .tip-item-content {
@@ -373,6 +375,8 @@
   line-height: 1.5;
   margin-bottom: 6px;
   white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .tip-item-link {
