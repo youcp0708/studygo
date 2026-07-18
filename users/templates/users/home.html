@@ -26,8 +26,11 @@
       <div class="db-stat-icon" style="background:#fee2e2;">✅</div>
       <div class="db-stat-body">
         <div class="db-stat-label">{% trans "任務完成率" %}</div>
-        <div class="db-stat-val">40%<br><span style="font-size:14px;font-weight:600;color:var(--muted);">{% trans "已完成" %} 8 / 20 {% trans "項任務" %}</span></div>
-        <div class="db-stat-bar" style="margin-top:10px;"><div class="db-stat-bar-fill" style="width:40%;"></div></div>
+        <div class="db-stat-val">40%<br><span style="font-size:14px;font-weight:600;color:var(--muted);">{% trans "已完成"
+            %} 8 / 20 {% trans "項任務" %}</span></div>
+        <div class="db-stat-bar" style="margin-top:10px;">
+          <div class="db-stat-bar-fill" style="width:40%;"></div>
+        </div>
         <div class="db-demo-tag">{% trans "示範資料" %}</div>
       </div>
     </div>
@@ -56,7 +59,9 @@
         <div>
           <div class="db-stat-val" style="font-size:20px;margin-bottom:4px;">{% trans "抵臺前準備" %}</div>
           <div class="db-stat-sub">{% trans "國立中央大學" %}</div>
-          <div class="db-stat-bar" style="margin-top:6px;"><div class="db-stat-bar-fill" style="width:50%;background:var(--success);"></div></div>
+          <div class="db-stat-bar" style="margin-top:6px;">
+            <div class="db-stat-bar-fill" style="width:50%;background:var(--success);"></div>
+          </div>
         </div>
         <div class="db-demo-tag">{% trans "示範資料" %}</div>
       </div>
@@ -138,21 +143,24 @@
       <div class="db-task-panel">
         <div class="db-task-panel-hd">📌 {% trans "近期待辦任務" %}</div>
         <div class="db-task-list">
-          <div style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;">
+          <div
+            style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;">
             <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
             <div style="flex:1;">
               <div style="font-weight:700;font-size:14px;">{% trans "申請學生簽證" %}</div>
               <div style="font-size:12px;color:var(--muted);">{% trans "抵台前準備" %}</div>
             </div>
           </div>
-          <div style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;margin-top:8px;">
+          <div
+            style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;margin-top:8px;">
             <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
             <div style="flex:1;">
               <div style="font-weight:700;font-size:14px;">{% trans "準備財力證明文件" %}</div>
               <div style="font-size:12px;color:var(--muted);">{% trans "申請前準備" %}</div>
             </div>
           </div>
-          <div style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;margin-top:8px;">
+          <div
+            style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;margin-top:8px;">
             <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
             <div style="flex:1;">
               <div style="font-weight:700;font-size:14px;">{% trans "預訂來台機票" %}</div>
@@ -219,7 +227,7 @@
         <div class="db-kicker">{% trans "學長姐分享" %}</div>
         <h2 class="db-sec-h2">{% trans "來聽聽" %}<br><span class="db-accent">{% trans "學長姐怎麼說" %}</span></h2>
       </div>
-      <p class="db-sec-sub">{% trans "來自世界各地的學長姐，分享他們在台灣最真實的留學體驗與心得" %}</p>
+      <p class="db-sec-sub">{% trans "來自世界各地、就讀國立中央大學的學長姐，分享他們最真實的留學體驗與心得" %}</p>
     </div>
     <div class="db-alumni-grid">
       <div class="db-alumni-card">
@@ -228,12 +236,14 @@
           <div>
             <div class="db-alumni-name">Nguyen Thi Minh</div>
             <div class="db-alumni-loc">📍 {% trans "越南" %}</div>
-            <div class="db-alumni-uni">{% trans "國立臺灣大學" %} <span class="db-alumni-prog">{% trans "國際企業管理碩士" %}</span></div>
+            <div class="db-alumni-uni">{% trans "國立臺灣大學" %}</div>
+            <div class="db-alumni-prog">{% trans "國際企業管理碩士" %}</div>
           </div>
         </div>
-        <div class="db-alumni-title">{% trans "國際處超貼心，申請時程好掌握" %}</div>
-        <p class="db-alumni-q">「{% trans "剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。ReadyTo 上的流程整理讓我在申請階段就對整個時程很有把握！" %}」</p>
-        <div class="db-alumni-date">{% trans "示範資料" %}</div>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。ReadyTo
+          上的流程整理讓我在申請階段就對整個時程很有把握，少走了好多彎路！」" %}</p>
+        <div class="db-alumni-qm">"</div>
       </div>
       <div class="db-alumni-card">
         <div class="db-alumni-top">
@@ -241,25 +251,114 @@
           <div>
             <div class="db-alumni-name">Budi Santoso</div>
             <div class="db-alumni-loc">📍 {% trans "印尼" %}</div>
-            <div class="db-alumni-uni">{% trans "國立成功大學" %} <span class="db-alumni-prog">{% trans "機械工程學士班" %}</span></div>
+            <div class="db-alumni-uni">{% trans "國立成功大學" %}</div>
+            <div class="db-alumni-prog">{% trans "機械工程學士班" %}</div>
           </div>
         </div>
-        <div class="db-alumni-title">{% trans "簽證指南幫我省下超多時間" %}</div>
-        <p class="db-alumni-q">「{% trans "台灣的工程教育真的世界一流！教授們都很願意指導外籍生。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。" %}」</p>
-        <div class="db-alumni-date">{% trans "示範資料" %}</div>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「台灣的工程教育真的世界一流！教授們都很願意指導外籍生，實驗室設備也很完整。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」" %}
+        </p>
+        <div class="db-alumni-qm">"</div>
       </div>
       <div class="db-alumni-card">
         <div class="db-alumni-top">
-          <div class="db-alumni-av av-g5">田</div>
+          <div class="db-alumni-av" style="background:linear-gradient(135deg,#f093fb,#f5576c);">M</div>
+          <div>
+            <div class="db-alumni-name">Maria Santos</div>
+            <div class="db-alumni-loc">📍 {% trans "菲律賓" %}</div>
+            <div class="db-alumni-uni">{% trans "國立臺灣師範大學" %}</div>
+            <div class="db-alumni-prog">{% trans "華語文教學碩士" %}</div>
+          </div>
+        </div>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」" %}</p>
+        <div class="db-alumni-qm">"</div>
+      </div>
+      <div class="db-alumni-card">
+        <div class="db-alumni-top">
+          <div class="db-alumni-av" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">K</div>
+          <div>
+            <div class="db-alumni-name">Krit Amnuay</div>
+            <div class="db-alumni-loc">📍 {% trans "泰國" %}</div>
+            <div class="db-alumni-uni">{% trans "國立清華大學" %}</div>
+            <div class="db-alumni-prog">{% trans "資訊工程博士班" %}</div>
+          </div>
+        </div>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」" %}</p>
+        <div class="db-alumni-qm">"</div>
+      </div>
+      <div class="db-alumni-card">
+        <div class="db-alumni-top">
+          <div class="db-alumni-av" style="background:linear-gradient(135deg,#43e97b,#38f9d7);">S</div>
+          <div>
+            <div class="db-alumni-name">Sarah Lim</div>
+            <div class="db-alumni-loc">📍 {% trans "馬來西亞" %}</div>
+            <div class="db-alumni-uni">{% trans "國立政治大學" %}</div>
+            <div class="db-alumni-prog">{% trans "國際傳播學士班" %}</div>
+          </div>
+        </div>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」" %}</p>
+        <div class="db-alumni-qm">"</div>
+      </div>
+      <div class="db-alumni-card">
+        <div class="db-alumni-top">
+          <div class="db-alumni-av" style="background:linear-gradient(135deg,#fa709a,#fee140);">田</div>
           <div>
             <div class="db-alumni-name">田中健太</div>
             <div class="db-alumni-loc">📍 {% trans "日本" %}</div>
-            <div class="db-alumni-uni">{% trans "國立陽明交通大學" %} <span class="db-alumni-prog">{% trans "半導體研究碩士" %}</span></div>
+            <div class="db-alumni-uni">{% trans "國立陽明交通大學" %}</div>
+            <div class="db-alumni-prog">{% trans "半導體研究碩士" %}</div>
           </div>
         </div>
-        <div class="db-alumni-title">{% trans "ARC 辦理一次就過" %}</div>
-        <p class="db-alumni-q">「{% trans "台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。ReadyTo 的 ARC 辦理指南讓我順利完成所有手續。" %}」</p>
-        <div class="db-alumni-date">{% trans "示範資料" %}</div>
+        <div class="db-alumni-stars">★★★★★</div>
+        <p class="db-alumni-q">{% trans "「台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。陽明交大的研究環境和業界連結都非常完善。ReadyTo 的 ARC
+          辦理指南讓我順利完成所有手續。」" %}</p>
+        <div class="db-alumni-qm">"</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── 常見問題 ── #}
+<section class="db-section db-bg-gray" id="sec-faq">
+  <div class="db-wrap db-faq-wrap">
+    <div class="db-kicker" style="text-align:center;">{% trans "常見問題" %}</div>
+    <h2 class="db-sec-h2" style="text-align:center;margin-bottom:40px;">{% trans "您想了解的都在這" %}</h2>
+    <div class="db-faq-list">
+      <div class="db-faq-item">
+        <div class="db-faq-q">{% trans "申請台灣大學需要準備哪些文件？" %}<span class="db-faq-arr">›</span></div>
+        <div class="db-faq-a">{% trans
+          "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。" %}</div>
+      </div>
+      <div class="db-faq-item">
+        <div class="db-faq-q">{% trans "不會中文可以來台灣留學嗎？" %}<span class="db-faq-arr">›</span></div>
+        <div class="db-faq-a">{% trans "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1
+          以上），或在僑先部完成一年預科中文課程。" %}</div>
+      </div>
+      <div class="db-faq-item">
+        <div class="db-faq-q">{% trans "留學台灣的費用大約多少？" %}<span class="db-faq-arr">›</span></div>
+        <div class="db-faq-a">{% trans "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月
+          NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。" %}</div>
+      </div>
+      <div class="db-faq-item">
+        <div class="db-faq-q">{% trans "學生簽證如何辦理？" %}<span class="db-faq-arr">›</span></div>
+        <div class="db-faq-a">{% trans "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
+          %}</div>
+      </div>
+      <div class="db-faq-item">
+        <div class="db-faq-q">{% trans "可以邊讀書邊打工嗎？" %}<span class="db-faq-arr">›</span></div>
+        <div class="db-faq-a">{% trans "可以，但需申請工作許可。持有效居留證（ARC）的外籍學生，入學後可向學校申請工讀許可，每週工時上限為 20 小時。寒暑假期間可申請全時工作。" %}</div>
+      </div>
+      <div class="db-faq-item">
+        <div class="db-faq-q">{% trans "全民健保什麼時候可以加入？" %}<span class="db-faq-arr">›</span></div>
+        <div class="db-faq-a">{% trans "持有效居留證（ARC），在台灣合法居留滿 6 個月後可強制加入全民健保。若有效工作許可可提前加保。加保後門診費用大幅降低。" %}</div>
+      </div>
+      <div class="db-faq-item">
+        <div class="db-faq-q">{% trans "申請流程需要多久時間？" %}<span class="db-faq-arr">›</span></div>
+        <div class="db-faq-a">{% trans "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4
+          個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。" %}</div>
       </div>
     </div>
   </div>

@@ -10131,6 +10131,5559 @@ msgstr "재설정 실패. 링크가 만료되었을 수 있습니다."
 #~ msgid "儲存資料並開始使用"
 #~ msgstr "정보를 저장하고 사용 시작"
 
+<<<<<<< HEAD
+#: flows/templates/flows/admissions_guide.html
+msgid "申請時程"
+msgstr "지원 일정"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
+msgstr ""
+"통상 매년 1~3월에 인터넷 원서 접수를 받으며, 지역마다 마감일이 다소 다릅니다. 합격 결과는 약 5~6월에 발표되며, 8월 말~9월 "
+"초에 입학 등록합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "1～3 月報名"
+msgstr "1~3월 원서 접수"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "5～6 月放榜"
+msgstr "5~6월 합격 발표"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "9 月入學"
+msgstr "9월 입학"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "獎助學金"
+msgstr "장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎學金或特定區域補助。"
+msgstr ""
+"교육부에서 화교 학생 장학금을 제공하며, 각 학교 및 지방 정부의 보조금도 있습니다. 우수 성적 화교 학생은 교육부 중국어 장학금 또는 "
+"특정 지역 보조금을 신청할 수 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部獎學金"
+msgstr "교육부 장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學校補助"
+msgstr "학교 보조금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生管道。修業成績合格者授予學士學位。"
+msgstr ""
+": 4년제 대학 과정(일부 학과는 5년)으로, 화교 학생은 해련회를 통해 지원하고, 외국인 학생은 각 학교의 독립 모집 채널을 "
+"이용합니다. 이수 성적 합격자에게 학사 학위를 수여합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生申請資格"
+msgstr "화교 학생 지원 자격"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西亞 SPM 成績、緬甸高中畢業等均可申請。"
+msgstr ""
+"화교 학생 신분을 갖추고 고등학교(고급 중등학교) 학업 성적이 합격이거나 동등 학력 증명을 보유해야 합니다. 말레이시아 SPM 성적, "
+"미얀마 고등학교 졸업 등도 지원 가능합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海聯會管道"
+msgstr "해련회 채널"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "同等學力"
+msgstr "동등 학력"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "外籍生申請資格"
+msgstr "외국인 학생 지원 자격"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力證明（HSK、TOCFL、TOEFL、IELTS 等）。"
+msgstr ""
+"외국 국적을 보유하고 고등학교(또는 동등) 학업 성적이 각 학교 최소 기준에 달해야 합니다. 일부 학과는 중국어 또는 영어 능력 "
+"증명(HSK, TOCFL, TOEFL, IELTS 등)을 요구합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各校獨立招生"
+msgstr "각 학교 독립 모집"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "語言能力"
+msgstr "언어 능력"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確認目標校系公告。"
+msgstr ""
+"해련회 채널은 통상 1~3월에 접수하며, 각 학교 독립 모집은 별도 일정(대부분 3~5월)이 있습니다. 목표 학교·학과의 공지를 미리 "
+"확인하는 것을 권장합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "1～3 月（海聯會）"
+msgstr "1~3월(해련회)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "3～5 月（各校）"
+msgstr "3~5월(각 학교)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎助。外籍生可申請教育部臺灣獎學金。"
+msgstr ""
+"교육부 화교 학생 장학금(월 약 NT$5,000~8,000), 각 학교의 입학 장학금 또는 성적 우수 장학금도 있습니다. 외국인 학생은 "
+"교육부 대만 장학금을 신청할 수 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "臺灣獎學金"
+msgstr "대만 장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學校獎助"
+msgstr "학교 장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有英文授課專班。"
+msgstr ""
+": 석사과정(2년)과 박사과정(3~5년)으로 구성되며, 각 대학원의 독립 모집을 통해 지원합니다. 일부 학교에는 영어 강의 전문 "
+"프로그램이 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "碩士班申請資格"
+msgstr "석사과정 지원 자격"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言能力證明（中文 / 英文）。"
+msgstr ""
+"대학(학사) 학위 취득 후 각 학교·학과 최소 기준 성적을 충족해야 합니다. 일부 학과는 관련 분야 배경 또는 언어 능력 "
+"증명(중국어/영어)을 요구합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學士畢業"
+msgstr "학사 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "相關領域"
+msgstr "관련 분야"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "博士班申請資格"
+msgstr "박사과정 지원 자격"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部分系所接受優秀碩士生直攻博士。"
+msgstr ""
+"석사 학위 취득(또는 동등 학력)과 연구 잠재력이 있어야 합니다. 일반적으로 연구 계획서 및 관련 추천서를 제출해야 합니다. 일부 학과는"
+" 우수 석사생의 박사 직접 진학을 허용합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "碩士畢業"
+msgstr "석사 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "研究計畫"
+msgstr "연구 계획"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "推薦信"
+msgstr "추천서"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截止日期及備審資料需求。"
+msgstr ""
+"각 대학원의 모집 일정은 다르며, 대부분 10월~3월에 이루어집니다. 목표 학과 공식 사이트를 직접 확인하여 마감일 및 심사 서류를 "
+"확인하는 것을 권장합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "依各所公告"
+msgstr "각 학과 공지에 따름"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "10 月～3 月"
+msgstr "10월~3월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）薪資，及科技部研究計畫補助。"
+msgstr ""
+"교육부 대만 장학금(외국인 대학원생), 교육부 화교 학생 장학금(화교 학생), 각 학교 연구 보조(RA) 급여 및 과학기술부 연구 계획 "
+"보조금."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "研究助理薪資"
+msgstr "연구 보조 급여"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外僑居留證（ARC）。"
+msgstr ""
+": 외국 국적을 보유하고 화교 학생 신분이 아닌 학생입니다. 각 대학의 독립 모집을 통해 지원하며, 입학 후 외국인 거류증(ARC)을 "
+"발급받아야 합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
+msgstr ""
+"외국 국적을 보유하고 해당 학제의 전제 학력(고등학교 또는 대학 졸업)을 이수해야 합니다. 각 학과 규정에 따라 중국어(TOCFL) 또는"
+" 영어(IELTS / TOEFL) 능력 증명이 필요할 수 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "外國國籍"
+msgstr "외국 국적"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "前置學歷"
+msgstr "전제 학력"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "所需備審文件"
+msgstr "필요 심사 서류"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書計畫）、推薦信（研究所）、體檢報告。"
+msgstr ""
+"여권, 최고 학력 성적표 및 졸업 증명서(중영문 공증 포함), 언어 능력 증명, 자기소개서(학업 계획서), 추천서(대학원), 건강 "
+"진단서."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學歷公證"
+msgstr "학력 공증"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "讀書計畫"
+msgstr "학업 계획서"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部臺灣獎學金"
+msgstr "교육부 대만 장학금"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，需透過台灣駐外機構或各大學推薦申請。"
+msgstr ""
+"월 생활비 NT$15,000~25,000(학제에 따라 다름), 학비 면제, 1~4년 신청 가능, 정원 제한이 있으며 대만 주재 해외 기관"
+" 또는 각 대학의 추천을 통해 신청해야 합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "NT$15,000~/月"
+msgstr "NT$15,000~/월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "免學雜費"
+msgstr "학비 면제"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "名額有限"
+msgstr "정원 제한"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "入台後必辦事項"
+msgstr "입대 후 필수 사항"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
+msgstr ""
+"학생 거류 비자로 입대 후 15일 이내에 외국인 거류증(ARC)을 발급받아야 하며, 이후 건강보험 가입, 은행 계좌 개설 등을 "
+"처리합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "15 天內辦 ARC"
+msgstr "15일 이내 ARC 발급"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "健保加保"
+msgstr "건강보험 가입"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依協議返校抵免，通常免繳台灣學雜費。"
+msgstr ""
+": 원 재학 학교와 대만 대학 간의 교환 협정에 따라 단기(반년 또는 1학년) 교환 학습을 합니다. 학점은 협정에 따라 귀교 후 인정받을"
+" 수 있으며, 대만 학비는 통상 면제됩니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "申請流程"
+msgstr "지원 절차"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申請，須先確認原校有締結交換協議。"
+msgstr ""
+"원 재학 학교의 교류 협력 사무소를 통해 추천을 받은 후, 대만 대학의 심사를 거칩니다. 대만 대학에 직접 지원할 수 없으며, 원 학교와"
+" 교환 협정이 체결되어 있는지 먼저 확인해야 합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "原校提名"
+msgstr "원 학교 추천"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "需締結協議"
+msgstr "협정 체결 필요"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "期程與截止"
+msgstr "일정 및 마감"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月截止。依各校締約條件而有不同。"
+msgstr ""
+"1학기(9월) 입학자는 통상 3~4월에 추천 마감, 2학기(2월) 입학자는 통상 10~11월에 마감합니다. 각 학교의 협정 조건에 따라 "
+"다릅니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "上學期：3～4 月"
+msgstr "1학기: 3~4월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "下學期：10～11 月"
+msgstr "2학기: 10~11월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "簽證與居留"
+msgstr "비자 및 거류"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入台，並辦理外僑居留證。"
+msgstr ""
+"단기(6개월 이내)는 관광 비자로 입대 가능하며 ARC가 필요 없습니다. 6개월 이상은 학생 거류 비자로 입대하고 외국인 거류증을 "
+"발급받아야 합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "≤6 月：觀光簽"
+msgstr "≤6개월: 관광 비자"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ">6 月：需 ARC"
+msgstr ">6개월: ARC 필요"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "費用說明"
+msgstr "비용 안내"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行負擔，每月約 NT$10,000～15,000。"
+msgstr ""
+"대부분의 교환 협정에 따라 대만 대학은 교환 학생의 학비를 면제합니다. 생활비(기숙사, 식사, 교통 등)는 자비로 부담해야 하며, 월 약"
+" NT$10,000~15,000입니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學雜費全免"
+msgstr "학비 전액 면제"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "生活費自理"
+msgstr "생활비 자부담"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各地區僑生申請資訊"
+msgstr "지역별 화교 학생 지원 정보"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
+msgstr ""
+"다음은 해외연합초생위원회(해련회)의 지역별 모집 사무소 정보입니다. 지역마다 학제가 달라 지원 자격과 마감일이 다를 수 있으니, 해련회 "
+"최신 공지를 기준으로 하시기 바랍니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "招生學制"
+msgstr "모집 학제"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "主要學歷要求"
+msgstr "주요 학력 요건"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "SPM / STPM / UEC / A-Level"
+msgstr "SPM / STPM / UEC / A-Level"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "報名截止（參考）"
+msgstr "원서 마감(참고)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "承辦窗口"
+msgstr "담당 창구"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "馬來西亞留台同學會"
+msgstr "말레이시아 대만 유학생 동문회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑先部 / 學士班"
+msgstr "화교 예비과 / 학사과"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "緬甸高中畢業（Matriculation）"
+msgstr "미얀마 고등학교 졸업(Matriculation)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "約每年 2～3 月"
+msgstr "매년 약 2~3월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "緬甸華校教師會"
+msgstr "미얀마 화교 학교 교사회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "SMA / SMK 高中畢業"
+msgstr "SMA / SMK 고등학교 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "印尼留台校友會"
+msgstr "인도네시아 대만 유학 동문회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "香港 / 澳門"
+msgstr "홍콩 / 마카오"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學士班 / 研究所"
+msgstr "학사과 / 대학원"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "HKDSE / 澳門高中畢業"
+msgstr "HKDSE / 마카오 고등학교 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "約每年 2 月"
+msgstr "매년 약 2월"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海聯會港澳組"
+msgstr "해련회 홍콩·마카오팀"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "泰北（北泰）"
+msgstr "태북(북태)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "泰北僑校高中畢業"
+msgstr "태북 화교 학교 고등학교 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "泰北各僑校教師會"
+msgstr "태북 각 화교 학교 교사회"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "日本 / 韓國 / 新加坡 / 菲律賓"
+msgstr "일본 / 한국 / 싱가포르 / 필리핀"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "各國高中 / 大學畢業"
+msgstr "각국 고등학교 / 대학 졸업"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海聯會或各地台灣辦事處"
+msgstr "해련회 또는 각지 대만 사무소"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "常見問題"
+msgstr "자주 묻는 질문"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "我是外籍生（非僑生），可以透過海聯會申請嗎？"
+msgstr "저는 외국인 학생(화교 학생 아님)입니다. 해련회를 통해 지원할 수 있나요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
+msgstr ""
+"불가합니다. 해련회 채널은 화교 학생 신분을 가진 지원자만 이용할 수 있습니다. 외국인 학생(외국 국적을 보유하나 화교 학생 인정 기준에"
+" 해당하지 않는 경우)은 각 대학의 국제 입학 사무소에 직접 지원해야 합니다. 각 학교의 모집 일정과 서류 요건은 각 학교 공식 사이트를"
+" 참고하세요."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生與外籍生有什麼不同？"
+msgstr "화교 학생과 외국인 학생의 차이점은 무엇인가요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩者身份認定不同，適用的招生管道與優惠也不同。"
+msgstr ""
+"'화교 학생'은 중화민국 국적 또는 화인 혈통을 지니고 장기간 해외 거주하며 현지에서 교육을 받은 자로, 교육부 규정에 따라 인정되며 "
+"화교 장학금, 화교 예비과 등 특별 채널을 이용할 수 있습니다. '외국인 학생'은 비중화민국 국적 여권으로 입학하는 자로, 통상 각 "
+"학교의 독립 모집 채널을 통해 지원하며 교육부 대만 장학금을 신청할 수 있습니다. 두 신분은 인정 기준, 적용 채널, 혜택이 서로 "
+"다릅니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "可以同時申請多所學校嗎？"
+msgstr "여러 학교에 동시에 지원할 수 있나요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"海聯會管道可填寫多個志願（學校 + "
+"系所），系統依志願序分發，通常一個申請可含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即可，但需留意各校的申請費及文件要求可能不同。"
+msgstr ""
+"해련회 채널은 여러 지망(학교 + 학과)을 입력할 수 있으며, 시스템이 지망 순서에 따라 배정합니다. 통상 하나의 지원서로 여러 지망을 "
+"포함할 수 있습니다. 외국인 학생이 각 학교에 개별 지원할 때는 마감일 전에 각 학교에 별도로 지원서를 제출하면 되며, 각 학교의 "
+"지원비와 서류 요건이 다를 수 있으니 유의하세요."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "中文不夠好，可以申請中文授課的系所嗎？"
+msgstr "중국어가 부족한데, 중국어로 강의하는 학과에 지원할 수 있나요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 "
+"以上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授課的系所或語言先修課程。"
+msgstr ""
+"중국어 능력 요건은 학과마다 다릅니다. 일부 학과는 최소 중국어 검정 기준(예: TOCFL B1 이상)을 설정하며, 일부는 입학 후 "
+"중국어 어학 과정 수강으로 보완을 인정합니다. 목표 학과의 최신 모집 요강을 확인하거나 학교 국제 사무처에 문의하는 것을 권장합니다. "
+"중국어가 아직 기준에 미치지 못한다면, 영어 전용 강의 학과 또는 어학 준비 과정 지원도 고려해 보세요."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "申請獎學金需要另外申請嗎？"
+msgstr "장학금 신청은 별도로 해야 하나요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說明。"
+msgstr ""
+"교육부 대만 장학금은 입학 지원 시 또는 입학 후 별도로 신청해야 하며, 통상 대만 주재 해외 기관이나 학교에 직접 신청합니다. 정원이 "
+"제한되어 있어 경쟁이 치열합니다. 화교 학생 장학금은 일부가 해련회나 학교에서 자동 심사하며, 일부는 별도 신청서 작성이 필요합니다. "
+"학교 자체 입학 장학금은 통상 합격 통지서에 안내되어 있습니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "我已在台灣就讀，可以轉學嗎？"
+msgstr "현재 대만에서 재학 중인데, 전학이 가능한가요?"
+
+#: flows/templates/flows/admissions_guide.html
+msgid ""
+"可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
+msgstr ""
+"가능합니다만, 전학 지원은 학년 제한(주로 2학년, 3학년으로 제한)이 있으며, 원 학교 성적표와 학적 포기 증명서가 필요합니다. 각 "
+"학교의 전학 모집 일정은 달라 통상 매 학년 말 전후에 진행합니다. 자세한 내용은 목표 학교·학과의 전학 시험 요강을 확인하세요. "
+"대학원생의 전과는 각 학과 규정에 따라 진행합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "重要聯絡與資源"
+msgstr "주요 연락처 및 자원"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "海外聯合招生委員會（海聯會）"
+msgstr "해외연합초생위원회(해련회)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生申請主要管道，提供報名、志願填寫、成績查詢。"
+msgstr "화교 학생 지원의 주요 채널로, 원서 접수, 지망 입력, 성적 조회를 제공합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "教育部學生事務及特教司"
+msgstr "교육부 학생사무 및 특수교육과"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "僑生獎學金、臺灣獎學金主管機關，提供獎助學金申請辦法。"
+msgstr "화교 학생 장학금, 대만 장학금 주관 기관으로, 장학금 신청 방법을 제공합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "學校國際事務處（OIA）"
+msgstr "학교 국제사무처(OIA)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "入學後主要聯繫窗口，提供簽證協助、ARC 辦理、生活輔導、獎學金申請。"
+msgstr "입학 후 주요 연락 창구로, 비자 지원, ARC 발급, 생활 안내, 장학금 신청을 제공합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "台灣駐外機構（辦理學生簽證）"
+msgstr "대만 주재 해외 기관(학생 비자 발급)"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "確認錄取後，向所在地台灣駐外辦事處申請學生居留簽證（Resident Visa）。"
+msgstr "합격 확인 후, 거주지의 대만 주재 사무소에 학생 거류 비자(Resident Visa)를 신청합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "外來人士在台生活諮詢專線"
+msgstr "외국인 대만 생활 상담 전화"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
+msgstr ""
+"다국어(영어, 일어, 한국어, 베트남어, 태국어, 인도네시아어 등) 상담 서비스를 제공하며, 대만 생활 및 학업 관련 질문에 답변합니다."
+
+#: flows/templates/flows/admissions_guide.html
+msgid "免費電話：1925"
+msgstr "무료 전화: 1925"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "全民健康保險署"
+msgstr "국민건강보험공단"
+
+#: flows/templates/flows/admissions_guide.html
+msgid "持 ARC 在台居留超過 4 個月者須加入全民健保，由學校協助辦理加保手續。"
+msgstr "ARC를 보유하고 대만에 4개월 이상 거류하는 자는 국민건강보험에 가입해야 하며, 학교가 가입 절차를 지원합니다."
+
+#: flows/templates/flows/
+msgid "港澳生在台居留說明"
+msgstr "홍콩·마카오 학생 대만 거류 안내"
+
+#: flows/templates/flows/
+msgid ""
+"香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般外籍生不同。本頁整理港澳生常見的入台文件、居留證申請流程及注意事項。"
+msgstr ""
+"홍콩·마카오 학생은 '홍콩마카오관계조례'에 따라 대만에 유학하며, 입대 방법 및 거류 허가 신청 절차가 일반 외국인 학생과 다릅니다. 이"
+" 페이지는 홍콩·마카오 학생의 공통적인 입대 서류, ARC 신청 절차, 주의사항을 정리합니다."
+
+#: flows/templates/flows/
+msgid "依港澳關係條例辦理"
+msgstr "홍콩마카오관계조례에 따라 처리"
+
+#: flows/templates/flows/
+msgid "抵台 15 天內辦居留"
+msgstr "대만 도착 후 15일 이내 거류 신청"
+
+#: flows/templates/flows/
+msgid "移民署：0800-024-111"
+msgstr "이민서: 0800-024-111"
+
+#: flows/templates/flows/
+msgid "港澳生受到特別保障："
+msgstr "홍콩·마카오 학생이 받는 특별 보호:"
+
+#: flows/templates/flows/
+msgid "香港及澳門居民依《香港澳門關係條例》在台就學，享有許多類似本國生的優惠待遇（如宿舍優先、獎學金資格等），但居留申請程序仍須透過移民署辦理。"
+msgstr ""
+"'홍콩마카오관계조례'에 따라 대만에서 학업을 이어가는 홍콩·마카오 거민은 내국인 학생과 유사한 많은 혜택(기숙사 우선 배정, 장학금 자격"
+" 등)을 누리지만, 거류 신청 절차는 여전히 이민서를 통해 진행해야 합니다."
+
+#: flows/templates/flows/
+msgid "兩種入台方式"
+msgstr "두 가지 입대 방법"
+
+#: flows/templates/flows/
+msgid "持港澳身份入台"
+msgstr "홍콩·마카오 신분으로 입대"
+
+#: flows/templates/flows/
+msgid "使用臺灣入出境許可證"
+msgstr "대만 입출경 허가증 사용"
+
+#: flows/templates/flows/
+msgid "持香港永久居民身份證（或澳門居民身份證）向內政部移民署或駐外館處申請"
+msgstr "홍콩 영주권 신분증(또는 마카오 거민증)을 지참하여 내정부 이민서 또는 재외 공관에 신청"
+
+#: flows/templates/flows/
+msgid "臺灣地區入出境許可證"
+msgstr "대만지역 입출경 허가증"
+
+#: flows/templates/flows/
+msgid "，再以此入台就讀。"
+msgstr ", 이 허가증으로 입대하여 학업을 이어갑니다."
+
+#: flows/templates/flows/
+msgid "入台後需申請港澳居民居留許可（居留證）。"
+msgstr "입대 후 홍콩·마카오 거민 거류 허가(거류증)를 신청해야 합니다."
+
+#: flows/templates/flows/
+msgid "持外國護照入台"
+msgstr "외국 여권으로 입대"
+
+#: flows/templates/flows/
+msgid "使用外國護照 + 居留簽"
+msgstr "외국 여권 + 거류 비자 사용"
+
+#: flows/templates/flows/
+msgid "同時持有他國護照（如英國 BN(O)、葡萄牙等）的港澳生，可選擇以外國護照申請"
+msgstr "다른 나라 여권(예: 영국 BN(O), 포르투갈 등)도 보유한 홍콩·마카오 학생은 외국 여권으로"
+
+#: flows/templates/flows/
+msgid "學生居留簽（Resident Visa）"
+msgstr "학생 거류 비자(Resident Visa)"
+
+#: flows/templates/flows/
+msgid "入台。"
+msgstr "입대를 신청할 수 있습니다."
+
+#: flows/templates/flows/
+msgid "此類情況辦理流程接近一般外籍生，抵台後申請外僑居留證（ARC）。"
+msgstr "이 경우 절차는 일반 외국인 학생과 유사하며, 입대 후 외국인 거류증(ARC)을 신청합니다."
+
+#: flows/templates/flows/
+msgid "不確定自己應走哪一條路線，建議在出發前聯絡"
+msgstr "어느 경로를 택해야 할지 불확실하다면, 출발 전에 연락하는 것을 권장합니다"
+
+#: flows/templates/flows/
+msgid "或直接致電移民署（0800-024-111），說明持有的旅行證件類型，即可獲得最準確的指引。"
+msgstr ""
+"또는 이민서(0800-024-111)에 직접 전화하여 소지한 여행 증명서 종류를 설명하면 가장 정확한 안내를 받을 수 있습니다."
+
+#: flows/templates/flows/
+msgid "居留申請重點一覽"
+msgstr "거류 신청 주요 사항 개요"
+
+#: flows/templates/flows/
+msgid "辦理期限"
+msgstr "처리 기한"
+
+#: flows/templates/flows/
+msgid "15 天"
+msgstr "15일"
+
+#: flows/templates/flows/
+msgid "抵台後起算"
+msgstr "대만 도착일부터 기산"
+
+#: flows/templates/flows/
+msgid "申請規費"
+msgstr "신청 수수료"
+
+#: flows/templates/flows/
+msgid "起"
+msgstr "부터"
+
+#: flows/templates/flows/
+msgid "1年$1,000 / 2年$2,000 / 3年$3,000"
+msgstr "1년: NT$1,000 / 2년: NT$2,000 / 3년: NT$3,000"
+
+#: flows/templates/flows/
+msgid "居留證效期"
+msgstr "거류증 유효 기간"
+
+#: flows/templates/flows/
+msgid "依就學期間"
+msgstr "재학 기간에 따름"
+
+#: flows/templates/flows/
+msgid "通常每年換證"
+msgstr "통상 매년 갱신"
+
+#: flows/templates/flows/
+msgid "核發時間"
+msgstr "발급 소요 시간"
+
+#: flows/templates/flows/
+msgid "10 個工作天"
+msgstr "10 영업일"
+
+#: flows/templates/flows/
+msgid "不含退補件；預約可加快"
+msgstr "반려 서류 제외; 예약으로 빠르게 처리 가능"
+
+#: flows/templates/flows/
+msgid "申請應備文件"
+msgstr "신청 필요 서류"
+
+#: flows/templates/flows/
+msgid "以港澳身份入台者，需提供入出境許可證正本及影本。"
+msgstr "홍콩·마카오 신분으로 입대한 경우, 입출경 허가증 원본 및 사본을 제출해야 합니다."
+
+#: flows/templates/flows/
+msgid "持港澳證件者必備"
+msgstr "홍콩·마카오 서류 보유자 필수"
+
+#: flows/templates/flows/
+msgid "香港 / 澳門永久居民身份證"
+msgstr "홍콩 / 마카오 영주권 신분증"
+
+#: flows/templates/flows/
+msgid "港澳居民身份證正本及影本，作為身份認定之用。"
+msgstr "신분 확인을 위해 홍콩·마카오 거민증 원본 및 사본."
+
+#: flows/templates/flows/
+msgid "必要"
+msgstr "필수"
+
+#: flows/templates/flows/
+msgid "在學證明書"
+msgstr "재학 증명서"
+
+#: flows/templates/flows/
+msgid "由台灣就讀學校出具，載明科系、就學期間。學校 OIA 可協助申請。"
+msgstr "대만 재학 학교에서 발급하며, 학과명과 재학 기간이 기재됩니다. 학교 OIA에서 신청을 지원합니다."
+
+#: flows/templates/flows/
+msgid "照片 2 張"
+msgstr "사진 2장"
+
+#: flows/templates/flows/
+msgid "近 6 個月內 2 吋白底彩色照片（寬 3.5 cm × 高 4.5 cm）。"
+msgstr "6개월 이내 촬영한 2인치 흰 배경 컬러 사진(가로 3.5cm × 세로 4.5cm)."
+
+#: flows/templates/flows/
+msgid "居留申請書"
+msgstr "거류 신청서"
+
+#: flows/templates/flows/
+msgid "移民署官網下載或現場索取，請事先填妥。"
+msgstr "이민서 공식 사이트에서 다운로드하거나 현장에서 수령하세요. 미리 작성해 오시기 바랍니다."
+
+#: flows/templates/flows/
+msgid "健康檢查合格證明"
+msgstr "건강 검진 합격 증명서"
+
+#: flows/templates/flows/
+msgid "初次申請通常需附，須至指定醫院檢查。辦理前請向移民署或學校確認。"
+msgstr "초회 신청 시 통상 필요합니다. 지정 병원에서 검진을 받아야 합니다. 처리 전 이민서 또는 학교에 확인하세요."
+
+#: flows/templates/flows/
+msgid "初次申請通常需要"
+msgstr "초회 신청 시 통상 필요"
+
+#: flows/templates/flows/
+msgid "住宿地址證明"
+msgstr "숙소 주소 증명"
+
+#: flows/templates/flows/
+msgid "宿舍住宿證或租屋合約書，部分辦事處要求提供。"
+msgstr "기숙사 입주 증명서 또는 임대 계약서. 일부 사무소에서 요구합니다."
+
+#: flows/templates/flows/
+msgid "視情況"
+msgstr "상황에 따라"
+
+#: flows/templates/flows/
+msgid "外國護照（持外國護照者）"
+msgstr "외국 여권(외국 여권 보유자 해당)"
+
+#: flows/templates/flows/
+msgid "以外國護照入台者，需備護照正本及影本，並附上入台居留簽證。"
+msgstr "외국 여권으로 입대한 경우, 여권 원본 및 사본과 대만 거류 비자를 첨부해야 합니다."
+
+#: flows/templates/flows/
+msgid "持外國護照者適用"
+msgstr "외국 여권 보유자 해당"
+
+#: flows/templates/flows/
+msgid "居留申請流程"
+msgstr "거류 신청 절차"
+
+#: flows/templates/flows/
+msgid "抵台後前往學校國際事務處（OIA）報到"
+msgstr "도착 후 학교 국제사무처(OIA)에 등록"
+
+#: flows/templates/flows/
+msgid "OIA 通常在迎新時統一說明居留申請流程，並提供在學證明書及文件確認服務。抵台當天或次日即應前往，確認文件清單。"
+msgstr ""
+"OIA는 통상 오리엔테이션 시 거류 신청 절차를 통합 안내하고, 재학 증명서 발급 및 서류 확인 서비스를 제공합니다. 도착 당일 또는 "
+"다음 날 방문하여 서류 목록을 확인하세요."
+
+#: flows/templates/flows/
+msgid "抵台當天或次日"
+msgstr "도착 당일 또는 다음 날"
+
+#: flows/templates/flows/
+msgid "OIA 通常有團體辦理場次"
+msgstr "OIA는 통상 단체 처리 세션을 운영합니다"
+
+#: flows/templates/flows/
+msgid "取得在學證明書"
+msgstr "재학 증명서 취득"
+
+#: flows/templates/flows/
+msgid "向 OIA 申請學校出具的在學證明書。若迎新時已發放，可直接進入下一步。部分學校在報到後即可當日取件。"
+msgstr ""
+"OIA에 재학 증명서 발급을 신청하세요. 오리엔테이션 시 이미 배부된 경우 다음 단계로 진행하세요. 일부 학교는 등록 당일 발급이 "
+"가능합니다."
+
+#: flows/templates/flows/
+msgid "抵台後 1～2 天"
+msgstr "도착 후 1~2일"
+
+#: flows/templates/flows/
+msgid "健康檢查（初次申請者）"
+msgstr "건강 검진(초회 신청자)"
+
+#: flows/templates/flows/
+msgid "初次申請居留需至移民署指定合格醫院進行健康檢查，取得健康檢查合格證明書。學校 OIA 通常會提供指定醫院清單，可事先線上預約。"
+msgstr ""
+"초회 거류 신청 시 이민서 지정 의료 기관에서 건강 검진을 받고 건강 검진 합격 증명서를 취득해야 합니다. 학교 OIA가 통상 지정 의료"
+" 기관 목록을 제공하며, 온라인 사전 예약을 권장합니다."
+
+#: flows/templates/flows/
+msgid "抵台後 2～5 天"
+msgstr "도착 후 2~5일"
+
+#: flows/templates/flows/
+msgid "建議事先網路預約，節省等待時間"
+msgstr "대기 시간 절약을 위해 온라인 사전 예약 권장"
+
+#: flows/templates/flows/
+msgid "整理文件並預約移民署"
+msgstr "서류 정리 및 이민서 예약"
+
+#: flows/templates/flows/
+msgid "將所有文件整理妥當並備好正本及影本，至移民署官網線上預約辦理時段。建議選擇就近的移民署辦事處（桃園市即桃園服務站）。"
+msgstr ""
+"모든 서류를 원본 및 사본으로 정리한 후, 이민서 공식 사이트에서 처리 시간을 온라인 예약하세요. 가까운 이민서 사무소(타오위안시는 "
+"타오위안 서비스 스테이션)를 선택하는 것을 권장합니다."
+
+#: flows/templates/flows/
+msgid "抵台後 3～7 天"
+msgstr "도착 후 3~7일"
+
+#: flows/templates/flows/
+msgid "建議線上預約"
+msgstr "온라인 예약 권장"
+
+#: flows/templates/flows/
+msgid "前往移民署辦事處提交申請"
+msgstr "이민서 사무소를 방문하여 신청서 제출"
+
+#: flows/templates/flows/
+msgid "攜帶所有文件至移民署，現場核對文件、採集指紋並繳費。可由 OIA 統一帶隊辦理（若有安排），或自行前往。"
+msgstr ""
+"모든 서류를 이민서에 지참하여 현장에서 서류 확인, 지문 채취, 수수료 납부를 합니다. OIA의 단체 인솔 처리(일정이 있는 경우) 또는"
+" 개인적으로 방문할 수 있습니다."
+
+#: flows/templates/flows/
+msgid "抵台 15 天內"
+msgstr "입대 후 15일 이내"
+
+#: flows/templates/flows/
+msgid "移民署辦事處"
+msgstr "이민서 사무소"
+
+#: flows/templates/flows/
+msgid "等待審核（約 10 個工作天）"
+msgstr "심사 대기(약 10 영업일)"
+
+#: flows/templates/flows/
+msgid "申請後約"
+msgstr "신청 후 약"
+
+#: flows/templates/flows/
+msgid "製卡完成（不含退補件），移民署以簡訊通知領件。等待期間持入境許可證（或護照）及申請收據可作為合法居留暫時證明。"
+msgstr ""
+"카드 제작 완료(반려 서류 제외) 후 이민서에서 SMS로 수령 안내를 드립니다. 대기 기간 동안 입경 허가증(또는 여권)과 신청 영수증이"
+" 합법 거류 임시 증명으로 사용됩니다."
+
+#: flows/templates/flows/
+msgid "約 10 個工作天"
+msgstr "약 10 영업일"
+
+#: flows/templates/flows/
+msgid "領取居留證"
+msgstr "거류증 수령"
+
+#: flows/templates/flows/
+msgid "持入境許可證（或護照）及收據親赴辦事處領取居留證。領取後可辦理加入健保、申辦手機門號及銀行開戶。"
+msgstr ""
+"입경 허가증(또는 여권)과 영수증을 지참하여 사무소에서 직접 거류증을 수령합니다. 수령 후 건강보험 가입, 휴대폰 번호 개통, 은행 계좌"
+" 개설이 가능합니다."
+
+#: flows/templates/flows/
+msgid "完成！"
+msgstr "완료!"
+
+#: flows/templates/flows/
+msgid "港澳生的居留證跟一般外籍生的 ARC 一樣嗎？"
+msgstr "홍콩·마카오 학생의 거류증은 일반 외국인 학생의 ARC와 같나요?"
+
+#: flows/templates/flows/
+msgid "功能上相同，但法源不同。"
+msgstr "기능적으로 같지만, 법적 근거가 다릅니다."
+
+#: flows/templates/flows/
+msgid "一般外籍生辦理「"
+msgstr "일반 외국인 학생은 \""
+
+#: flows/templates/flows/
+msgid "外僑居留證（ARC）"
+msgstr "외국인 거류증(ARC)"
+
+#: flows/templates/flows/
+msgid "」，依據《入出國及移民法》。"
+msgstr "\"을 신청합니다(입출국 및 이민법에 근거)."
+
+#: flows/templates/flows/
+msgid "以港澳身份入台的港澳生辦理「"
+msgstr "홍콩·마카오 신분으로 입대한 홍콩·마카오 학생은 \""
+
+#: flows/templates/flows/
+msgid "港澳居民居留證"
+msgstr "홍콩·마카오 거민 거류증"
+
+#: flows/templates/flows/
+msgid "」，依據《香港澳門關係條例》。"
+msgstr "\"을 신청합니다(홍콩마카오관계조례에 근거)."
+
+#: flows/templates/flows/
+msgid "兩者在台均可用於身份核驗、健保加保及銀行開戶等日常事務。"
+msgstr "두 증명서 모두 대만에서 신분 확인, 건강보험 가입, 은행 계좌 개설 등 일상 업무에 사용할 수 있습니다."
+
+#: flows/templates/flows/
+msgid "在台期間可以打工嗎？"
+msgstr "대만 재학 중 아르바이트를 할 수 있나요?"
+
+#: flows/templates/flows/
+msgid ""
+"港澳生持居留證可申請工讀許可（每週不超過 20 "
+"小時）。需向學校取得工讀同意書後，至勞動部辦理工作許可。在校內工讀（如圖書館、系辦助理）通常只需學校同意，手續較簡便。未取得合法工作許可的工作行為依法屬違規，請務必事先申請。"
+msgstr ""
+"홍콩·마카오 학생은 거류증을 보유하면 근로 허가(주 20시간 이하)를 신청할 수 있습니다. 먼저 학교에서 근로 동의서를 받은 후, "
+"노동부에서 취업 허가를 신청하세요. 교내 아르바이트(도서관, 학과 사무 보조 등)는 통상 학교 동의만으로 절차가 간단합니다. 합법적인 "
+"취업 허가 없이 일하는 것은 위법이므로 반드시 사전에 신청하세요."
+
+#: flows/templates/flows/
+msgid "居留證到期後怎麼辦？"
+msgstr "거류증이 만료되면 어떻게 해야 하나요?"
+
+#: flows/templates/flows/
+msgid "居留證通常每年更新一次，到期前"
+msgstr "거류증은 통상 매년 갱신합니다. 만료"
+
+#: flows/templates/flows/
+msgid "30 天內"
+msgstr "30일 전"
+
+#: flows/templates/flows/
+msgid ""
+"即可申請延期。延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。"
+msgstr ""
+"부터 연장 신청을 할 수 있습니다. 연장에 필요한 서류는 초회 신청과 유사하며(재학 증명서, 거류증 원본, 사진 등), 건강 검진비는 "
+"재납부 불필요합니다. 연장 수수료는 NT$500입니다. 기한 초과를 방지하기 위해 일찍 처리하세요."
+
+#: flows/templates/flows/
+msgid "港澳生可以加入全民健保嗎？"
+msgstr "홍콩·마카오 학생도 국민건강보험에 가입할 수 있나요?"
+
+#: flows/templates/flows/
+msgid ""
+"可以。取得居留證後，透過學校衛生保健組辦理加保即可。保費依年度費率由學校代扣，學生費率比一般標準低。加保後就醫診所門診費用約 "
+"NT$150，享有與台灣學生相同的健保保障。"
+msgstr ""
+"가능합니다. 거류증 취득 후 학교 보건센터를 통해 가입 절차를 밟으면 됩니다. 보험료는 연간 요율에 따라 학교가 대납하며, 학생 요율은 "
+"일반 기준보다 낮습니다. 가입 후 클리닉 외래 진료비는 약 NT$150이며, 대만 학생과 동일한 건강보험 보장을 받습니다."
+
+#: flows/templates/flows/
+msgid "暑假返港澳超過 2 個月，健保怎麼處理？"
+msgstr "여름 방학에 홍콩·마카오로 2개월 이상 귀국하면 건강보험은 어떻게 처리하나요?"
+
+#: flows/templates/flows/
+msgid "離台超過 2 個月前，可至學校衛保組辦理「"
+msgstr "대만을 2개월 이상 떠나기 전에 학교 보건센터에서 \""
+
+#: flows/templates/flows/
+msgid "出國停保"
+msgstr "출국 정지(해외 정지 처리)"
+
+#: flows/templates/flows/
+msgid "」，停保期間不扣繳保費。回台後記得辦理「"
+msgstr "\"를 처리하세요. 정지 기간 동안 보험료가 공제되지 않습니다. 귀국 후 \""
+
+#: flows/templates/flows/
+msgid "復保"
+msgstr "복보(재가입)"
+
+#: flows/templates/flows/
+msgid "」以恢復保障。停保不影響居留證效期，但停保期間在台就醫無健保保障。"
+msgstr ""
+"\"를 신청하여 보장을 회복하세요. 정지는 거류증 유효 기간에 영향을 미치지 않지만, 정지 기간 동안 대만에서 진료를 받아도 건강보험이 "
+"적용되지 않습니다."
+
+#: flows/templates/flows/
+msgid "學校 OIA 會幫我辦居留證嗎？"
+msgstr "학교 OIA가 거류증 신청을 도와주나요?"
+
+#: flows/templates/flows/
+msgid ""
+"大多數學校會在開學初舉辦團體辦理場次，OIA 統一帶隊至移民署。建議迎新報到後立即前往 OIA "
+"確認是否有統一辦理安排，以便提早準備所需文件，節省自行前往的時間。"
+msgstr ""
+"대부분의 학교는 학기 초에 단체 처리 세션을 개최하며, OIA가 이민서까지 함께 안내합니다. 오리엔테이션 등록 후 즉시 OIA를 방문하여"
+" 단체 처리 일정 여부를 확인하고, 필요 서류를 미리 준비하세요."
+
+#: flows/templates/flows/
+msgid "相關資源"
+msgstr "관련 자원"
+
+#: flows/templates/flows/
+msgid "內政部移民署"
+msgstr "내정부 이민서(NIA)"
+
+#: flows/templates/flows/
+msgid "辦事處查詢、線上預約、進度查詢、申請書下載。"
+msgstr "사무소 검색, 온라인 예약, 진행 상황 조회, 신청서 다운로드."
+
+#: flows/templates/flows/
+msgid "居留說明、在學證明書申請、健康檢查指定醫院清單。"
+msgstr "거류 안내, 재학 증명서 신청, 건강 검진 지정 병원 목록."
+
+#: flows/templates/flows/
+msgid "取得居留證後可辦理加保，享有完整醫療保障。"
+msgstr "거류증 취득 후 건강보험 가입이 가능하며, 포괄적인 의료 보장을 받습니다."
+
+#: flows/templates/flows/
+msgid "外來人士在台生活諮詢"
+msgstr "외국인 대만 생활 상담 서비스"
+
+#: flows/templates/flows/
+msgid "多語言免費諮詢，涵蓋居留、生活、就業等問題。"
+msgstr "거류, 생활, 취업 등 다양한 주제에 대한 다국어 무료 상담 서비스입니다."
+
+#: flows/templates/flows/
+msgid "外籍生辦理居留證服務"
+msgstr "외국인 학생 거류증 발급 서비스"
+
+#: flows/templates/flows/
+msgid "辦理外僑居留證（ARC）"
+msgstr "외국인 거류증(ARC) 발급"
+
+#: flows/templates/flows/
+msgid "辦理重點一覽"
+msgstr "처리 주요 사항 개요"
+
+#: flows/templates/flows/
+msgid "效期時間"
+msgstr "유효 기간"
+
+#: flows/templates/flows/
+msgid "辦理流程（Step by Step）"
+msgstr "처리 절차(Step by Step)"
+
+#: flows/templates/flows/
+msgid "重要注意事項"
+msgstr "중요 유의사항"
+
+#: flows/templates/flows/
+msgid "僑生辦理居留證服務"
+msgstr "화교 학생 거류증 발급 서비스"
+
+#: flows/templates/flows/
+msgid "辦理居留證（ARC）"
+msgstr "거류증(ARC) 발급"
+
+#: flows/templates/flows/
+msgid "台灣銀行開戶"
+msgstr "대만 은행 계좌 개설"
+
+#: flows/templates/flows/
+msgid "台灣銀行開戶指南"
+msgstr "대만 은행 계좌 개설 안내"
+
+#: flows/templates/flows/
+msgid "推薦銀行選擇"
+msgstr "추천 은행 선택"
+
+#: flows/templates/flows/
+msgid "所需文件"
+msgstr "필요 서류"
+
+#: flows/templates/flows/
+msgid "開戶步驟"
+msgstr "계좌 개설 절차"
+
+#: flows/templates/flows/
+msgid "注意事項"
+msgstr "유의사항"
+
+#: flows/templates/flows/
+msgid "中央大學公車服務"
+msgstr "국립중앙대학교 버스 서비스"
+
+#: flows/templates/flows/
+msgid "快速總覽"
+msgstr "빠른 개요"
+
+#: flows/templates/flows/
+msgid "各出發地搭乘方式"
+msgstr "각 출발지 탑승 방법"
+
+#: flows/templates/flows/
+msgid "主要公車路線"
+msgstr "주요 버스 노선"
+
+#: flows/templates/flows/
+msgid "即時查詢到站時間"
+msgstr "실시간 도착 시간 조회"
+
+#: flows/templates/flows/
+msgid "中央大學住宿服務"
+msgstr "국립중앙대학교 기숙사 서비스"
+
+#: flows/templates/flows/
+msgid "中央大學校內住宿服務"
+msgstr "국립중앙대학교 교내 기숙사 서비스"
+
+#: flows/templates/flows/
+msgid "住宿重點一覽"
+msgstr "기숙사 주요 사항 개요"
+
+#: flows/templates/flows/
+msgid "申請優先順位"
+msgstr "신청 우선순위"
+
+#: flows/templates/flows/
+msgid "各宿舍棟次總覽"
+msgstr "각 기숙사 동 개요"
+
+#: flows/templates/flows/
+msgid "房間設備"
+msgstr "객실 설비"
+
+#: flows/templates/flows/
+msgid "聯絡資訊"
+msgstr "연락처 정보"
+
+#: flows/templates/flows/
+msgid "入學申請"
+msgstr "입학 지원"
+
+#: flows/templates/flows/
+msgid "各國專區"
+msgstr "국가별 전용 구역"
+
+#: flows/templates/flows/
+msgid "入學申請指南"
+msgstr "입학 지원 안내"
+
+#: flows/templates/flows/
+msgid "港澳生居留說明"
+msgstr "홍콩·마카오 학생 거류 안내"
+
+#: flows/templates/flows/
+msgid "來臺就學相關法規"
+msgstr "대만 유학 관련 법규"
+
+#: flows/templates/flows/
+msgid "生活類"
+msgstr "생활류"
+
+#: flows/templates/flows/
+msgid "全民健保申請"
+msgstr "국민건강보험 신청"
+
+#: flows/templates/flows/
+msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
+msgstr "장학금 수령 필수, 우체국·대만은행·위산은행 추천 비교"
+
+#: flows/templates/flows/
+msgid "台灣門號申辦"
+msgstr "대만 휴대폰 번호 개통"
+
+#: flows/templates/flows/
+msgid "實用工具"
+msgstr "실용 도구"
+
+#: flows/templates/flows/
+msgid "地圖導覽"
+msgstr "지도 안내"
+
+#: flows/templates/flows/
+msgid "學校・醫院・交通"
+msgstr "학교·병원·교통"
+
+#: flows/templates/flows/
+msgid "中央大學周邊重要地點，點選快速定位及導航"
+msgstr "국립중앙대학교 주변 주요 장소, 선택 시 빠른 위치 확인 및 내비게이션"
+
+#: flows/templates/flows/
+msgid "快速定位"
+msgstr "빠른 위치 확인"
+
+#: flows/templates/flows/
+msgid "中央大學"
+msgstr "국립중앙대학교"
+
+#: flows/templates/flows/
+msgid "壢新醫院"
+msgstr "리신 병원"
+
+#: flows/templates/flows/
+msgid "中壢火車站"
+msgstr "중리 기차역"
+
+#: flows/templates/flows/
+msgid "高鐵桃園站"
+msgstr "타오위안 고속철도역"
+
+#: flows/templates/flows/
+msgid "桃園國際機場"
+msgstr "타오위안 국제공항"
+
+#: flows/templates/flows/
+msgid "大江購物中心"
+msgstr "다장 쇼핑몰"
+
+#: flows/templates/flows/
+msgid "各地區申請資訊"
+msgstr "지역별 지원 정보"
+
+#: flows/templates/flows/
+msgid "依所在地選擇對應的申請說明，直接連結至海外聯招會官方網站。"
+msgstr "거주 지역에 따라 해당 지원 안내를 선택하면, 해련회 공식 사이트로 직접 연결됩니다."
+
+#: flows/templates/flows/
+msgid "以下連結將跳轉至"
+msgstr "아래 링크는"
+
+#: flows/templates/flows/
+msgid "海外聯招會官方網站"
+msgstr "해련회 공식 사이트"
+
+#: flows/templates/flows/
+msgid "，請選擇你的所在地區查看對應的申請辦法與說明。"
+msgstr "로 이동합니다. 거주 지역을 선택하여 해당 지원 방법 및 안내를 확인하세요."
+
+#: flows/templates/flows/
+msgid "選擇你的地區"
+msgstr "지역 선택"
+
+#: flows/templates/flows/
+msgid "香港"
+msgstr "홍콩"
+
+#: flows/templates/flows/
+msgid "澳門"
+msgstr "마카오"
+
+#: flows/templates/flows/
+msgid "美國／加拿大"
+msgstr "미국/캐나다"
+
+#: flows/templates/flows/
+msgid "新加坡"
+msgstr "싱가포르"
+
+#: flows/templates/flows/
+msgid "其他地區"
+msgstr "기타 지역"
+
+#: flows/templates/flows/
+msgid "在臺僑生"
+msgstr "대만 거주 화교 학생"
+
+#: flows/templates/flows/
+msgid "海外臺校"
+msgstr "해외 대만 학교"
+
+#: flows/templates/flows/
+msgid "全民健康保險申請指南"
+msgstr "국민건강보험 신청 안내"
+
+#: flows/templates/flows/
+msgid "哪些人可以申請？"
+msgstr "누가 신청할 수 있나요?"
+
+#: flows/templates/flows/
+msgid "申請步驟"
+msgstr "신청 절차"
+
+#: flows/templates/flows/
+msgid "就醫小提醒"
+msgstr "진료 소소한 안내"
+
+#: flows/templates/flows/
+msgid "參考網站"
+msgstr "참고 사이트"
+
+#: flows/templates/flows/
+msgid "台灣門號申辦指南"
+msgstr "대만 휴대폰 번호 개통 안내"
+
+#: flows/templates/flows/
+msgid "預付卡 vs 月租方案"
+msgstr "선불 카드 vs 월정액 요금제"
+
+#: flows/templates/flows/
+msgid "主要電信業者"
+msgstr "주요 통신사"
+
+#: flows/templates/flows/
+msgid "月租方案所需文件"
+msgstr "월정액 요금제 필요 서류"
+
+#: flows/templates/flows/
+msgid "月租方案辦理步驟"
+msgstr "월정액 요금제 처리 절차"
+
+#: flows/templates/flows/
+msgid "📋 需要的文件"
+msgstr "📋 필요 서류"
+
+#: flows/templates/flows/
+msgid "📍 辦理地點"
+msgstr "📍 처리 장소"
+
+#: flows/templates/flows/
+msgid "🗺️ 在地圖上查看"
+msgstr "🗺️ 지도에서 보기"
+
+#: flows/templates/flows/
+msgid "🌐 官方網站"
+msgstr "🌐 공식 사이트"
+
+#: flows/templates/flows/
+msgid "點此前往官方網站"
+msgstr "공식 사이트로 이동"
+
+#: flows/templates/flows/
+msgid "📅 辦理時程"
+msgstr "📅 처리 일정"
+
+#: flows/templates/flows/
+msgid "⚠️ 截止日期"
+msgstr "⚠️ 마감일"
+
+#: flows/templates/flows/
+msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
+msgstr ""
+"먼저 「개인 정보」에서 <strong>예상 도착일</strong>을 입력해야 시스템이 이 작업의 마감일을 자동으로 계산할 수 있습니다."
+
+#: flows/templates/flows/
+msgid "📅 截止日期"
+msgstr "📅 마감일"
+
+#: flows/templates/flows/
+msgid "任務備註"
+msgstr "작업 메모"
+
+#: flows/templates/flows/
+msgid "在這裡輸入您的備註..."
+msgstr "여기에 메모를 입력하세요..."
+
+#: flows/templates/flows/
+msgid "儲存備註"
+msgstr "메모 저장"
+
+#: flows/templates/flows/
+msgid "未命名任務"
+msgstr "이름 없는 작업"
+
+#: flows/templates/flows/
+msgid "無詳細說明"
+msgstr "상세 설명 없음"
+
+#: flows/templates/flows/
+msgid "暫無詳細資料"
+msgstr "상세 자료 없음"
+
+#: flows/templates/flows/
+msgid "完成"
+msgstr "완료"
+
+#: flows/templates/flows/
+msgid "已完成任務"
+msgstr "완료된 작업"
+
+#: flows/templates/flows/
+msgid "未完成任務"
+msgstr "미완료 작업"
+
+msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
+msgstr "ARC 신청, 주거, 교통 등 — 필요한 모든 정보를 한 곳에서."
+
+msgid "主題分類"
+msgstr "카테고리"
+
+msgid "實用指南"
+msgstr "가이드"
+
+msgid "隨時查閱"
+msgstr "24시간 열람 가능"
+
+msgid "個指南"
+msgstr "가이드"
+
+msgid "學業類"
+msgstr "학업"
+
+msgid "心理支持"
+msgstr "정신 건강"
+
+msgid "行政文件"
+msgstr "행정 서류"
+
+msgid "學籍辦理"
+msgstr "학적 관리"
+
+msgid "校內系統"
+msgstr "교내 시스템"
+
+msgid "緊急聯絡"
+msgstr "긴급 연락처"
+
+msgid "圖書館"
+msgstr "도서관"
+
+msgid "需要更多協助？"
+msgstr "더 많은 도움이 필요하신가요?"
+
+msgid "請聯繫"
+msgstr "문의하기"
+
+msgid "國際事務處（OIA）"
+msgstr "국제처 (OIA)"
+
+msgid "分機 57081，我們很樂意幫助你！"
+msgstr "내선 57081 — 기꺼이 도와드리겠습니다!"
+
+msgid "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等"
+msgstr "지역별 입학 신청 정보: 홍콩, 말레이시아, 태국 등"
+
+msgid "申請資格、時程、所需文件與注意事項整理"
+msgstr "지원 자격, 일정, 필요 서류 및 주의사항"
+
+msgid "外國護照入學者的居留證申請流程與文件清單"
+msgstr "외국 여권 소지자의 ARC 신청 절차 및 서류 목록"
+
+msgid "持外國護照入台的僑生居留證申請說明"
+msgstr "외국 여권으로 대만에 입국하는 화교 학생을 위한 ARC 신청 가이드"
+
+msgid "入出境許可證、居留申請流程與健保工讀說明"
+msgstr "입출국 허가증, 거주 신청 절차, 건강보험 및 아르바이트"
+
+msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
+msgstr "기숙사 구역, 시설, 신청 절차 및 유학생 우선 보장"
+
+msgid "入學・居留・健保・工讀・學籍等重要法規說明"
+msgstr "입학・거주・건강보험・아르바이트・학적 관련 중요 법규"
+
+msgid "申請流程、每週工時上限、違規罰則說明"
+msgstr "신청 절차, 주당 최대 근무 시간 및 위반 처벌"
+
+msgid "主要路線、常見目的地與即時查詢連結"
+msgstr "주요 노선, 주요 목적지 및 실시간 버스 조회 링크"
+
+msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
+msgstr "상담 예약, 스트레스, 대인 관계 고민, 24시간 핫라인"
+
+msgid "衛保組、校外診所、周邊醫院、急診與緊急電話"
+msgstr "교내 보건실, 외부 클리닉, 인근 병원, 응급실 및 긴급 전화"
+
+msgid "僑生獎學金、清寒補助、校內外各項申請指南"
+msgstr "화교 학생 장학금, 경제 지원 및 교내외 신청 가이드"
+
+msgid "ARC 核發後即可加保，門診費用大幅降低"
+msgstr "ARC 발급 후 가입 가능 — 외래 진료비 대폭 절감"
+
+msgid "統一證號說明、郵局・台灣銀行・玉山銀行開戶比較"
+msgstr "통일증호 설명 및 우체국・대만은행・옥산은행 비교"
+
+msgid "預付卡 vs 月租方案，各大電信業者說明"
+msgstr "선불 유심 vs 월정액 요금제 — 주요 통신사 설명"
+
+msgid "在學證明、成績單、推薦信申請說明"
+msgstr "재학증명서, 성적증명서, 추천서 신청 방법"
+
+msgid "休學、復學、轉系、雙主修規定與流程"
+msgstr "휴학, 복학, 전과, 복수전공 규정 및 절차"
+
+msgid "選課、加退選、人工加退選、停修流程與日程"
+msgstr "수강신청, 수강추가/취소, 수동 추가/취소 및 수강취소 절차"
+
+msgid "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準"
+msgstr "문자 GPA, 졸업 학점 및 영어 기준(TOEIC) 학과별"
+
+msgid "Portal 帳號啟用、ee-class 課程平台、學生信箱設定"
+msgstr "Portal 계정 활성화, ee-class 강의 플랫폼 및 학생 이메일 설정"
+
+msgid "110・119・112・校安中心・國際事務處"
+msgstr "110・119・112・캠퍼스 안전센터・국제처"
+
+msgid "借書規則、K書中心、學術資料庫、列印費用"
+msgstr "대출 규정, 열람실, 학술 데이터베이스 및 인쇄 비용"
+
+msgid "學校・醫院・車站・機場位置，一鍵導航"
+msgstr "학교, 병원, 역, 공항 위치 — 한 번의 탭으로 길 찾기"
+
+msgid "工作許可證"
+msgstr "취업허가증"
+
+msgid "在台開設銀行帳戶"
+msgstr "대만 은행 계좌 개설"
+
+msgid "醫療資訊"
+msgstr "의료 정보"
+
+msgid "課務資訊"
+msgstr "수업 정보"
+
+msgid "成績與畢業門檻"
+msgstr "성적 및 졸업 기준"
+
+msgid "學校設施"
+msgstr "학교 시설"
+
+msgid "中央大學（正門）"
+msgstr "중앙대학교 (정문)"
+
+msgid "中央圖書館"
+msgstr "중앙도서관"
+
+msgid "外籍生宿舍"
+msgstr "외국인 기숙사"
+
+msgid "校內美食"
+msgstr "교내 식당"
+
+msgid "松苑餐廳"
+msgstr "송위안 식당"
+
+msgid "松果餐廳"
+msgstr "송궈 식당"
+
+msgid "小木屋鬆餅"
+msgstr "샬레 와플"
+
+msgid "校內超商"
+msgstr "교내 편의점"
+
+msgid "校外美食"
+msgstr "교외 식당"
+
+msgid "後門商圈"
+msgstr "후문 상권"
+
+msgid "宵夜街"
+msgstr "야식 거리"
+
+msgid "中大夜市商圈"
+msgstr "중다 야시장"
+
+msgid "龍岡美食廣場"
+msgstr "롱강 푸드플라자"
+
+msgid "大江美食街"
+msgstr "다장 푸드코트"
+
+msgid "中壢市場"
+msgstr "중리 시장"
+
+msgid "醫療・交通"
+msgstr "의료 · 교통"
+
+msgid "桃園市服務站"
+msgstr "타오위안시 서비스 센터"
+
+msgid "點選上方按鈕，即可在地圖上顯示位置"
+msgstr "위 버튼을 클릭하면 지도에 위치가 표시됩니다"
+
+msgid "尚未設定 Google Maps API 金鑰"
+msgstr "Google Maps API 키가 설정되지 않았습니다"
+
+msgid "開啟導航"
+msgstr "내비게이션 열기"
+
+msgid "借書・自習室・學術資料庫・列印服務"
+msgstr "도서 대출 · 자습실 · 학술 데이터베이스 · 인쇄 서비스"
+
+msgid "三館概覽"
+msgstr "도서관 건물 개요"
+
+msgid "總圖書館"
+msgstr "총도서관"
+
+msgid "主要借閱・公用研究室 17 間・電腦檢索"
+msgstr "주요 대출 · 공용 연구실 17개 · 컴퓨터 검색"
+
+msgid "學期間 08:00–23:00"
+msgstr "학기 중 08:00–23:00"
+
+msgid "考試週：24 小時開放"
+msgstr "시험 주간: 24시간 개방"
+
+msgid "中正圖書館"
+msgstr "중정도서관"
+
+msgid "2 樓：K書中心（113 席）"
+msgstr "2층: K 자습실(KSC) (113석)"
+
+msgid "1 樓：衛保組・崑曲特藏"
+msgstr "1층: 보건센터 · 곤곡 특별 컬렉션"
+
+msgid "國鼎圖書資料館"
+msgstr "국정도서자료관"
+
+msgid "特藏・檔案資料"
+msgstr "특별 컬렉션 · 기록물"
+
+msgid "週一至週五 10:00–15:00"
+msgstr "월~금 10:00–15:00"
+
+msgid "借書規則"
+msgstr "대출 규정"
+
+msgid "最多冊數"
+msgstr "최대 권수"
+
+msgid "冊"
+msgstr "권"
+
+msgid "借閱期限"
+msgstr "대출 기간"
+
+msgid "線上續借"
+msgstr "온라인 연장"
+
+msgid "1 次"
+msgstr "1회"
+
+msgid "逾期罰款"
+msgstr "연체 벌금"
+
+msgid "憑學生證借閱，任何在學學生皆可使用，外籍生與本地生規則相同"
+msgstr "학생증으로 대출; 재학 중인 모든 학생 이용 가능; 외국인·내국인 동일 규정"
+
+msgid "線上續借：於到期前至 opac.lib.ncu.edu.tw 辦理，到期後不可續借"
+msgstr "온라인 연장: 만기 전 opac.lib.ncu.edu.tw 방문; 만기 후 연장 불가"
+
+msgid "他人預約的書籍：收到通知後 7 天內須歸還，無法續借"
+msgstr "타인이 예약한 책: 통보 후 7일 이내 반납 필수; 연장 불가"
+
+msgid "指定參考書 / 論文逾期：NT$5 每小時（注意！比一般罰款貴很多）"
+msgstr "지정 도서/논문 연체: NT$5/시간 (주의! 일반 연체료보다 훨씬 비쌈)"
+
+msgid "非服務時間還書：總圖 1 樓入口設有還書箱，24 小時可用"
+msgstr "비업무 시간 반납: 총도서관 1층 입구 반납함, 24시간 이용 가능"
+
+msgid "畢業或離校前：所有借書必須歸還並繳清罰款"
+msgstr "졸업 또는 퇴학 전: 모든 대출 도서 반납 및 벌금 완납 필수"
+
+msgid "自習空間"
+msgstr "자습 공간"
+
+msgid "書中心（KSC）"
+msgstr "K 자습실 (KSC)"
+
+msgid "中正圖書館 2F"
+msgstr "중정도서관 2층"
+
+msgid "席"
+msgstr "석"
+
+msgid "大K 82 席 + 小K 31 席"
+msgstr "대형 82석 + 소형 31석"
+
+msgid "僅限中央大學在學生，刷學生證進入"
+msgstr "NCU 재학생만 이용; 학생증 태깅 후 입장"
+
+msgid "先到先得，禁止佔位"
+msgstr "선착순; 자리 맡기 금지"
+
+msgid "違規 3 次 → 停用 6 個月"
+msgstr "3회 위반 → 6개월 이용 정지"
+
+msgid "公用研究室"
+msgstr "공용 연구실"
+
+msgid "間"
+msgstr "개"
+
+msgid "可供師生使用"
+msgstr "교수진 및 학생 이용 가능"
+
+msgid "學期初可申請學期用室"
+msgstr "학기 초에 학기 전용 열람실 신청 가능"
+
+msgid "臨時使用：至服務台申請"
+msgstr "임시 이용: 서비스 데스크에서 신청"
+
+msgid "線上預約系統 ↗"
+msgstr "온라인 예약 시스템 ↗"
+
+msgid "考試週（期中、期末）：總圖 24 小時開放。確認最新時間請查"
+msgstr "시험 주간(중간, 기말): 총도서관 24시간 개방. 최신 시간 확인:"
+
+msgid "開館時間表 ↗"
+msgstr "개관 시간표 ↗"
+
+msgid "學術資料庫"
+msgstr "학술 데이터베이스"
+
+msgid "Elsevier｜論文引用、摘要，推薦作為主要學術搜尋工具"
+msgstr "Elsevier | 논문 인용, 초록 — 주요 학술 검색 도구로 권장"
+
+msgid "訂閱中"
+msgstr "구독 중"
+
+msgid "訂閱已於 2026/01/31 終止，僅提供靜態資料（SCIE 至 2025）"
+msgstr "구독 2026/01/31 종료; 정적 데이터만 제공 (SCIE 2025년까지)"
+
+msgid "靜態存取"
+msgstr "정적 접근"
+
+msgid "Clarivate｜期刊影響因子（Impact Factor）查詢"
+msgstr "Clarivate | 저널 Impact Factor 조회"
+
+msgid "Elsevier｜理工科期刊與電子書"
+msgstr "Elsevier | 이공계 저널 및 전자책"
+
+msgid "中文電子書平台"
+msgstr "중국어 전자책 플랫폼"
+
+msgid "中央大學機構典藏 / 學位論文"
+msgstr "NCU 기관 저장소 / 학위논문"
+
+msgid "免費開放"
+msgstr "무료 접근"
+
+msgid "完整資料庫清單："
+msgstr "전체 데이터베이스 목록:"
+
+msgid "NCU 資料庫入口 ↗"
+msgstr "NCU 데이터베이스 포털 ↗"
+
+msgid "校外遠端存取"
+msgstr "교외 원격 접속"
+
+msgid "方法一：從圖書館網站點選資料庫連結，選「中央大學教職員生」，以 Portal 帳號登入"
+msgstr "방법 1: 도서관 웹사이트의 DB 링크 클릭 → '중앙대학교 교직원/학생' 선택 → Portal 계정 로그인"
+
+msgid "方法二：安裝 SSL VPN（伺服器：140.115.199.1），以計算中心帳號登入。設定說明："
+msgstr "방법 2: SSL VPN(서버: 140.115.199.1) 설치 후 전산센터 계정으로 로그인. 설정 방법:"
+
+msgid "在校園網路（140.115.x.x）時不可使用 VPN，直接進入即可"
+msgstr "교내 네트워크(140.115.x.x)에서는 VPN 사용 금지 — 직접 접속"
+
+msgid "VPN 登入問題聯絡計算機中心：分機 57555 / 57566"
+msgstr "VPN 로그인 문제: 전산센터 내선 57555 / 57566 문의"
+
+msgid "列印・影印"
+msgstr "인쇄 · 복사"
+
+msgid "頁"
+msgstr "페이지"
+
+msgid "黑白影印"
+msgstr "흑백 복사"
+
+msgid "電腦終端機列印"
+msgstr "컴퓨터 단말기 인쇄"
+
+msgid "自助影印機與電腦終端機均位於總圖 1 樓。彩色列印費用請至服務台詢問或查"
+msgstr "셀프 복사기와 컴퓨터 단말기는 총도서관 1층에 있습니다. 컬러 인쇄 비용은 서비스 데스크에 문의하거나"
+
+msgid "列印說明頁 ↗"
+msgstr "인쇄 안내 페이지 ↗"
+
+msgid "借閱・還書・罰款"
+msgstr "대출 · 반납 · 벌금"
+
+msgid "分機"
+msgstr "내선"
+
+msgid "參考諮詢・資料庫"
+msgstr "참고 서비스 · 데이터베이스"
+
+msgid "K書中心・開館時間"
+msgstr "K 자습실 · 개관 시간"
+
+msgid "台灣緊急電話、校安中心、國際事務處"
+msgstr "대만 긴급 전화, 교내 안전 센터, 국제처"
+
+msgid "台灣緊急電話"
+msgstr "대만 긴급 전화"
+
+msgid "火警・救護車"
+msgstr "화재 · 구급차"
+
+msgid "火災、緊急送醫、意外傷亡"
+msgstr "화재, 응급 의료, 사고 부상"
+
+msgid "警察"
+msgstr "경찰"
+
+msgid "犯罪、竊盜、人身安全威脅"
+msgstr "범죄, 절도, 신변 안전 위협"
+
+msgid "行動緊急電話"
+msgstr "휴대폰 긴급 전화"
+
+msgid "無 SIM 卡或無訊號時仍可撥打，自動轉接 110 / 119"
+msgstr "SIM 카드나 신호 없이도 발신 가능; 110/119로 자동 연결"
+
+msgid "安心專線"
+msgstr "정신건강 위기상담 전화"
+
+msgid "24 小時心理支持、危機處理"
+msgstr "24시간 심리 지원, 위기 개입"
+
+msgid "校內緊急聯絡"
+msgstr "교내 긴급 연락처"
+
+msgid "校安中心"
+msgstr "교내 안전 센터"
+
+msgid "24 小時，校園安全事件通報"
+msgstr "24시간, 교내 안전 사건 신고"
+
+msgid "校內分機"
+msgstr "교내 내선"
+
+msgid "留學生事務、緊急協助"
+msgstr "유학생 사무, 긴급 지원"
+
+msgid "衛保組（校醫）"
+msgstr "보건의료센터(교내 의사)"
+
+msgid "週一至週五 08:00–17:00，中正圖書館舊圖 1 樓"
+msgstr "월~금 08:00–17:00, 중정도서관 1층"
+
+msgid "如需救護車，請先撥 119，再通知校安中心 03-2805666。告知地點時可說「中央大學」加上建築物名稱。"
+msgstr ""
+"구급차가 필요하면 먼저 119에 전화하고, 교내 안전 센터 03-2805666에 알려주세요. 위치를 말할 때는 'National "
+"Central University'와 건물 이름을 말해주세요."
+
+msgid "三大系統快速入口"
+msgstr "3대 시스템 빠른 접속"
+
+msgid "統一登入入口，選課、成績、各系統 SSO"
+msgstr "수강신청, 성적, 전체 시스템 SSO 통합 로그인 포털"
+
+msgid "課程平台：講義、作業、公告、成績查詢"
+msgstr "강의 플랫폼: 강의 자료, 과제, 공지, 성적 조회"
+
+msgid "學生信箱"
+msgstr "학생 이메일"
+
+msgid "學號@cc.ncu.edu.tw，重要公告必看"
+msgstr "학번@cc.ncu.edu.tw — 중요 공지 반드시 확인"
+
+msgid "第一步：帳號啟用"
+msgstr "1단계: 계정 활성화"
+
+msgid "Portal 帳號預設未啟用，入學後請先完成啟用，才能使用所有校內系統。"
+msgstr "Portal 계정은 기본적으로 비활성화 상태입니다. 입학 후 모든 교내 시스템 사용 전에 활성화를 완료하세요."
+
+msgid "啟用步驟"
+msgstr "활성화 단계"
+
+msgid "前往啟用頁面"
+msgstr "활성화 페이지로 이동"
+
+msgid "學號、出生年月日，外籍生填護照號碼（非台灣身分證）"
+msgstr "학번과 생년월일. 외국인 학생은 여권 번호 입력 (대만 신분증 아님)"
+
+msgid "等待約 10 分鐘"
+msgstr "약 10분 대기"
+
+msgid "啟用完成後即可以學號 + 預設密碼（出生年月日，YYYYMMDD）登入 Portal。"
+msgstr "활성화 후 학번 + 기본 비밀번호(생년월일, YYYYMMDD)로 Portal에 로그인 가능."
+
+msgid "登入後立即更改密碼"
+msgstr "로그인 후 즉시 비밀번호 변경"
+
+msgid "預設密碼為生日，請馬上改成強密碼，並設定信箱或手機號碼以便之後找回密碼。"
+msgstr "기본 비밀번호는 생년월일입니다. 즉시 강력한 비밀번호로 변경하고 이메일 또는 전화번호를 등록하세요."
+
+msgid "若瀏覽器顯示「Cookie 未被接受」，請換瀏覽器（建議 Chrome / Firefox）。聯絡計算機中心：分機 57771。"
+msgstr ""
+"브라우저에 'Cookie가 허용되지 않음'이 표시되면 브라우저를 변경하세요(Chrome/Firefox 권장). 전산센터 연락: 내선 "
+"57771."
+
+msgid "登入帳號"
+msgstr "로그인 계정"
+
+msgid "學號"
+msgstr "학번"
+
+msgid "預設密碼"
+msgstr "기본 비밀번호"
+
+msgid "功能"
+msgstr "기능"
+
+msgid "選課 / 成績"
+msgstr "수강신청 / 성적"
+
+msgid "單一登入（SSO）：一組帳密進入 ee-class、信箱、圖書館等所有校內系統"
+msgstr "통합 로그인(SSO): 하나의 계정으로 ee-class, 이메일, 도서관 등 모든 교내 시스템 이용"
+
+msgid "選課系統（cis.ncu.edu.tw/Course/）：透過 Portal 帳號登入"
+msgstr "수강신청(cis.ncu.edu.tw/Course/): Portal 계정으로 로그인"
+
+msgid "成績查詢、修課記錄"
+msgstr "성적 조회, 수강 기록"
+
+msgid "QR Code 登入：在公用電腦可用手機掃碼，不需輸入密碼"
+msgstr "QR 코드 로그인: 공용 컴퓨터에서 스마트폰으로 QR 스캔, 비밀번호 불필요"
+
+msgid "忘記密碼：透過已綁定的信箱或手機號碼重設"
+msgstr "비밀번호 분실: 등록된 이메일 또는 전화번호로 재설정"
+
+msgid "課程平台"
+msgstr "강의 플랫폼"
+
+msgid "請勿在 ee-class 自行「註冊」新帳號！一般生直接用 Portal 帳號（學號）登入即可。"
+msgstr "ee-class에서 직접 새 계정 '등록'하지 마세요! 일반 학생은 Portal 계정(학번)으로 바로 로그인하면 됩니다."
+
+msgid "學號（同 Portal）"
+msgstr "학번 (Portal과 동일)"
+
+msgid "同 Portal 密碼"
+msgstr "Portal 비밀번호와 동일"
+
+msgid "查看課程講義、教材、教授公告"
+msgstr "강의 자료, 교재, 교수 공지 확인"
+
+msgid "繳交作業、查看作業批改結果"
+msgstr "과제 제출 및 채점 결과 확인"
+
+msgid "課程成績查詢（部分老師使用）"
+msgstr "강의 성적 조회 (일부 교수 사용)"
+
+msgid "NCUx 雲端課程：選修免費線上課程（不計學分）"
+msgstr "NCUx 온라인 강의: 무료 선택 온라인 강의 (학점 미산입)"
+
+msgid "特殊身份登入方式"
+msgstr "특수 사용자 유형별 로그인 방법"
+
+msgid "身份"
+msgstr "사용자 유형"
+
+msgid "帳號"
+msgstr "계정"
+
+msgid "一般生／教職員"
+msgstr "일반 학생 / 교직원"
+
+msgid "Portal 密碼"
+msgstr "Portal 비밀번호"
+
+msgid "跨校交換生"
+msgstr "타교 교환 학생"
+
+msgid "Z 開頭臨時帳號"
+msgstr "Z로 시작하는 임시 계정"
+
+msgid "原校學號"
+msgstr "원래 학교 학번"
+
+msgid "旁聽生／推廣教育"
+msgstr "청강생 / 평생교육"
+
+msgid "Y 開頭臨時帳號"
+msgstr "Y로 시작하는 임시 계정"
+
+msgid "台灣身分證號"
+msgstr "대만 주민등록번호"
+
+msgid "ee-class 問題聯絡：eeclass@ncu.edu.tw｜分機 57132 / 57169"
+msgstr "ee-class 문의: eeclass@ncu.edu.tw | 내선 57132 / 57169"
+
+msgid "信箱格式"
+msgstr "이메일 형식"
+
+msgid "學號@cc.ncu.edu.tw"
+msgstr "학번@cc.ncu.edu.tw"
+
+msgid "容量"
+msgstr "용량"
+
+msgid "有效期限"
+msgstr "유효 기간"
+
+msgid "畢業後 5 年"
+msgstr "졸업 후 5년"
+
+msgid "學校重要公告（選課結果、成績、繳費通知）均寄到此信箱，請定期查收"
+msgstr "학교 중요 공지(수강신청 결과, 성적, 납부 안내)가 모두 이 메일로 발송됩니다 — 정기적으로 확인하세요"
+
+msgid "登入帳號：學號；密碼：同 Portal 密碼"
+msgstr "로그인: 학번; 비밀번호: Portal과 동일"
+
+msgid "非 Gmail 帳號，無法直接存取 Google 服務"
+msgstr "Gmail 계정이 아니므로 Google 서비스에 직접 접근 불가"
+
+msgid "手機 / 電腦設定"
+msgstr "스마트폰 / 컴퓨터 설정"
+
+msgid "前往「設定 → 郵件 → 帳號 → 新增帳號」，選「其他」，輸入信箱與密碼，詳細步驟："
+msgstr "설정 → 메일 → 계정 → 계정 추가 → '기타' 선택 후 이메일과 비밀번호 입력. 자세한 안내:"
+
+msgid "帳號設定頁面 → 手動設定 → IMAP，詳細步驟見同上連結"
+msgstr "계정 설정 → 수동 설정 → IMAP. 자세한 단계는 위 링크 참조"
+
+msgid "忘記密碼：透過 Portal 重設，不需另行聯絡信箱管理員"
+msgstr "비밀번호 분실: Portal을 통해 재설정, 이메일 관리자에게 별도 연락 불필요"
+
+msgid "信箱問題聯絡：ncucc@cc.ncu.edu.tw｜分機 57555 / 57566"
+msgstr "이메일 문의: ncucc@cc.ncu.edu.tw | 내선 57555 / 57566"
+
+msgid "計算機中心聯絡"
+msgstr "전산센터 연락처"
+
+msgid "帳號 / Portal 問題"
+msgstr "계정 / Portal 문제"
+
+msgid "問題"
+msgstr "문제"
+
+msgid "信箱問題"
+msgstr "이메일 문제"
+
+msgid "GPA・畢業門檻・英文門檻"
+msgstr "GPA · 졸업 요건 · 영어 기준"
+
+msgid "中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。"
+msgstr "NCU의 학점 등급 제도, GPA 계산 방법, 그리고 각 단과대학 졸업에 필요한 영어 능력 기준."
+
+msgid "成績等第制（109 學年起適用）"
+msgstr "성적 등급제 (2020학년도부터 적용)"
+
+msgid ""
+"109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 60 分（C-），研究所為 70 "
+"分（B-）。"
+msgstr ""
+"2020학년도(2020년 9월)부터 NCU는 성적을 등급제로 기록하고 GPA(만점 4.3)로 환산합니다. 학부 합격 기준은 "
+"60점(C-), 대학원은 70점(B-)입니다."
+
+msgid "等第"
+msgstr "등급"
+
+msgid "分數範圍"
+msgstr "점수 범위"
+
+msgid "外籍生辦理居留證（ARC）"
+msgstr "외국인 유학생 ARC(외국인거류증) 신청"
+
+msgid "外籍生專屬"
+msgstr "외국인 유학생 전용"
+
+msgid "持外國護照以正式學籍入台就讀的外籍生，須在抵台後"
+msgstr "외국 여권을 소지하고 정식 학적으로 대만에 입학한 외국인 유학생은 대만 도착 후"
+
+msgid "向內政部移民署辦理外僑居留證（ARC），方能在台合法居留及完成就學程序。"
+msgstr "일 이내에 내정부 이민서에서 ARC(외국인거류증)를 신청하여 합법적으로 체류하고 입학 절차를 완료해야 합니다."
+
+msgid "抵台後 15 天內辦理"
+msgstr "도착 후 15일 이내 신청"
+
+msgid "規費 NT$1,000 起"
+msgstr "수수료 NT$1,000부터"
+
+msgid "核發約 10 個工作天"
+msgstr "발급까지 약 10 영업일"
+
+msgid "移民署各地服務站"
+msgstr "이민서 전국 서비스 센터"
+
+msgid "首次申請規費"
+msgstr "최초 신청 수수료"
+
+msgid "NT$1,000 起"
+msgstr "NT$1,000부터"
+
+msgid "1年$1,000／2年$2,000／3年$3,000"
+msgstr "1년 $1,000 / 2년 $2,000 / 3년 $3,000"
+
+msgid "觀光簽或免簽入台另加 NT$2,200"
+msgstr "관광비자 또는 무비자 입국 시 NT$2,200 추가"
+
+msgid "效期"
+msgstr "유효 기간"
+
+msgid "1–3 年"
+msgstr "1~3년"
+
+msgid "依申請年數核發"
+msgstr "신청 연수에 따라 발급"
+
+msgid "不含退補件及面談"
+msgstr "반려·보완·면접 제외"
+
+msgid "首次申請居留"
+msgstr "최초 거류 신청"
+
+msgid "剛入台的外籍生"
+msgstr "새로 도착한 외국인 유학생"
+
+msgid "居留延期"
+msgstr "거류 연장"
+
+msgid "ARC 到期前續辦"
+msgstr "ARC 만료 전 갱신"
+
+msgid "變更居留事由"
+msgstr "거류 사유 변경"
+
+msgid "更換居留原因"
+msgstr "거류 사유 교체"
+
+msgid "補換發"
+msgstr "재발급"
+
+msgid "遺失或毀損補發"
+msgstr "분실 또는 훼손으로 인한 재발급"
+
+msgid "應備文件"
+msgstr "필요 서류"
+
+msgid "遺失 / 毀損"
+msgstr "분실 / 훼손"
+
+msgid "外國人居（停）留案件申請書"
+msgstr "외국인 거류(체류) 신청서"
+
+msgid "可至移民署官網下載或現場索取，請事先填妥。"
+msgstr "이민서 공식 홈페이지에서 다운로드하거나 현장에서 수령 가능합니다. 미리 작성해 주세요."
+
+msgid "近期彩色照片 2 張"
+msgstr "최근 컬러 사진 2매"
+
+msgid "2 年內拍攝，2 吋白底（寬 3.5 cm × 高 4.5 cm）。"
+msgstr "2년 이내 촬영, 2인치 흰 배경(가로 3.5cm × 세로 4.5cm)."
+
+msgid "有效護照及居留簽證"
+msgstr "유효한 여권 및 거류 비자"
+
+msgid "正本（審核後當場歸還）。護照效期須超過居留期限 6 個月以上。"
+msgstr "원본(심사 후 즉시 반환). 여권 유효기간은 거류 기간보다 6개월 이상 남아 있어야 합니다."
+
+msgid "居留事由證明文件 — 在學證明書 / 清冊及通知書"
+msgstr "거류 사유 증명 서류 — 재학증명서 / 명부 및 통지서"
+
+msgid "由就讀學校國際事務處（OIA）出具，含入學日期及就讀系所，正本及影本各 1 份。"
+msgstr "재학 학교 국제처(OIA)에서 발급, 입학일 및 학과 포함. 원본 1부와 사본 1부 필요."
+
+msgid "於台灣認可醫院完成，3 個月內有效。含胸部 X 光及肺結核篩檢。"
+msgstr "대만 인가 병원에서 완료. 3개월 이내 유효. 흉부 X선 및 결핵 검사 포함."
+
+msgid "本國警察刑事紀錄證明"
+msgstr "출신국 경찰 범죄경력증명서"
+
+msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駐外館處驗證或在台公證。"
+msgstr "출신국 경찰 또는 사법기관 발급. 1년 이내 유효. 외국어 서류는 대만 재외공관 인증 또는 대만 내 공증 필요."
+
+msgid "住居所證明文件"
+msgstr "거주지 증명 서류"
+
+msgid "宿舍住宿證明或租屋合約書。"
+msgstr "기숙사 입실 증명서 또는 임대 계약서."
+
+msgid "財力證明"
+msgstr "재력 증명"
+
+msgid "銀行存款證明或獎學金核定文件，部分辦事處要求提供。"
+msgstr "은행 잔고 증명서 또는 장학금 확정 서류. 일부 사무소에서 요구."
+
+msgid "規費"
+msgstr "수수료"
+
+msgid "1年 NT$1,000 / 2年 NT$2,000 / 3年 NT$3,000"
+msgstr "1년 NT$1,000 / 2년 NT$2,000 / 3년 NT$3,000"
+
+msgid "以觀光簽或免簽入台者，另加 NT$2,200。"
+msgstr "관광비자 또는 무비자 입국자는 NT$2,200 추가."
+
+msgid "請事先填妥，移民署官網可下載。"
+msgstr "미리 작성해 주세요. 이민서 홈페이지에서 다운로드 가능."
+
+msgid "2 年內拍攝，2 吋白底。"
+msgstr "2년 이내 촬영, 2인치 흰 배경."
+
+msgid "有效護照"
+msgstr "유효한 여권"
+
+msgid "正本（審核後歸還）。"
+msgstr "원본(심사 후 반환)."
+
+msgid "居留證正本及影本"
+msgstr "거류증 원본 및 사본"
+
+msgid "現有的 ARC 卡，正本及影本各 1 份。"
+msgstr "현재 ARC 카드, 원본 1부와 사본 1부."
+
+msgid "在學證明書（最新）"
+msgstr "재학증명서(최신)"
+
+msgid "由學校 OIA 出具，證明居留事由（就學）仍持續存在。"
+msgstr "학교 OIA 발급. 거류 사유(취학)가 여전히 유효함을 증명."
+
+msgid "地址未變更者免附。"
+msgstr "주소 변경이 없으면 불필요."
+
+msgid "地址變更才需要"
+msgstr "주소 변경 시에만 필요"
+
+msgid "延期 NT$500。"
+msgstr "연장: NT$500."
+
+msgid "請於 ARC 到期前 30 天內辦理。"
+msgstr "ARC 만료 30일 전 이내에 신청하세요."
+
+msgid "請事先填妥。"
+msgstr "미리 작성해 주세요."
+
+msgid "有效護照及現有居留證"
+msgstr "유효한 여권 및 현재 거류증"
+
+msgid "護照及居留證正本及影本各 1 份。"
+msgstr "여권과 거류증 원본 및 사본 각 1부."
+
+msgid "新居留事由證明文件"
+msgstr "새로운 거류 사유 증명 서류"
+
+msgid "例如：從就學改為工作，需提供工作許可文件及聘僱合約。"
+msgstr "예: 취학에서 취업으로 변경 시 취업허가서 및 고용계약서 필요."
+
+msgid "變更事由 NT$500。"
+msgstr "사유 변경: NT$500."
+
+msgid "正本及影本各 1 份。"
+msgstr "원본 및 사본 각 1부."
+
+msgid "遺失：警察機關報案遺失報告書或具結書"
+msgstr "분실: 경찰서 분실신고서 또는 서약서"
+
+msgid "ARC 遺失時，請先至警察局報案，取得報案文件。"
+msgstr "ARC를 분실한 경우 먼저 경찰서에 신고하고 신고 서류를 받으세요."
+
+msgid "遺失時必要"
+msgstr "분실 시 필요"
+
+msgid "毀損：被損壞之居留證正本"
+msgstr "훼손: 훼손된 거류증 원본"
+
+msgid "ARC 卡片毀損時，需攜帶損壞的原卡辦理換發。"
+msgstr "ARC 카드가 훼손된 경우 훼손된 원본을 가지고 재발급 신청을 하세요."
+
+msgid "毀損時必要"
+msgstr "훼손 시 필요"
+
+msgid "補換發 NT$500。"
+msgstr "재발급: NT$500."
+
+msgid "申請須知 / 注意事項"
+msgstr "신청 안내 / 주의사항"
+
+msgid "以下為內政部移民署官方申請須知（節錄自官方網站）"
+msgstr "아래는 내정부 이민서 공식 신청 안내입니다(공식 홈페이지에서 발췌)"
+
+msgid ""
+"在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駸外館處驗證，並檢附經駐外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
+msgstr ""
+"중국 대륙, 해외, 또는 홍콩·마카오에서 작성된 문서는 해협교류기금회(SEF), 재외공관, 또는 타이베이경제문화판사처(홍콩·마카오)의 "
+"인증이 필요합니다. 외국어 제출 서류는 재외공관 인증 및 중국어 번역본을 첨부해야 합니다. 외국어 예방접종 증명서는 관할 보건소에서 "
+"번역·등록해야 합니다. 단, 외국인재전문법 제24조에 따라 취업골드카드를 신청하는 자는 면제됩니다."
+
+msgid ""
+"居留一定期間之計算方式：自定居申請日往前推算，在臺連續居留滿一年（一年內得出境三十日，出境次數不予限制）或連續居留滿二年且每年在臺居住二百七十日以上。"
+msgstr ""
+"일정 기간 거류 계산 방법: 정착 신청일로부터 소급하여, 대만에 1년 이상 계속 거류(연간 30일 출국 가능, 출국 횟수 제한 없음) "
+"또는 2년 이상 계속 거류하고 매년 270일 이상 대만에 거주."
+
+msgid ""
+"經許可居留，在臺灣地區居留一定期間，仍具備原居留條件者（親屬關係因結婚或收養發生者，應存續三年以上。但婚姻關係存續期間已生產子女者，不在此限），得申請在臺灣地區定居。"
+msgstr ""
+"거류 허가를 받고 대만에 일정 기간 거류하며 기존 거류 조건을 계속 갖춘 자(결혼 또는 입양으로 발생한 친족 관계는 3년 이상 지속되어야"
+" 함. 단, 혼인 기간 중 자녀를 출산한 경우 제외)는 대만 내 정착 신청이 가능합니다."
+
+msgid ""
+"經中央目的事業主管機關核准來臺就學者畢業後（HF168），依第十六條第一項第八款規定經許可居留連續滿五年，每年在臺灣地區居住一百八十三日以上，且最近一年於臺灣地區平均每月收入達中央勞動主管機關公告基本工資二倍以上者，得申請在臺灣地區定居。"
+msgstr ""
+"중앙 주무기관의 허가를 받아 대만에서 유학하고 졸업한 자(HF168)로, 5년 이상 연속으로 거류 허가를 받고 매년 183일 이상 대만에"
+" 거주하며, 최근 1년간 월평균 소득이 최저임금의 2배 이상인 경우 대만 정착 신청이 가능합니다."
+
+msgid ""
+"臺灣地區居留證有效期間屆滿前三十日內，原申請居留原因仍繼續存在者，得申請延期，每次不得逾二年；學生申請畢業延期居留者，自畢業當日起算六個月，延期居留期間屆滿前，得再申請延期一次，總延期居留期間最長為一年。（應備文件：1.申請書、2.臺灣地區居留證、3.其他相關證明文件）"
+msgstr ""
+"대만 거류증 유효기간 만료 30일 전 이내에 기존 거류 사유가 계속 존재하는 경우 연장 신청이 가능하며, 1회 2년을 초과할 수 "
+"없습니다. 졸업 후 거류 연장을 신청하는 학생은 졸업일부터 6개월 이내에 신청 가능하고, 1회 추가 연장 신청이 가능하며 총 연장 기간은"
+" 최장 1년입니다. (필요 서류: 1.신청서, 2.대만 거류증, 3.기타 관련 증명 서류)"
+
+msgid ""
+"依外國人才專法第二十四條規定經許可居留，原申請居留原因仍繼續存在者，得申請延期居留：1.準用同法第八條規定者：每次最長為五年。2.準用同法第五條至第七條、第九條及第十條規定者：每次最長為三年。"
+msgstr ""
+"외국인재전문법 제24조에 따라 거류 허가를 받은 자로 기존 거류 사유가 계속 존재하는 경우 거류 연장 신청이 가능합니다. 1. 동법 "
+"제8조를 준용하는 자: 1회 최장 5년. 2. 동법 제5~7조, 제9조 및 제10조를 준용하는 자: 1회 최장 3년."
+
+msgid "曾逾停留期限超過三十日未滿一年者，不予許可期間自其出境之日起算一年；逾期停留一年以上未滿二年者，起算二年；逾期停留二年以上者，起算三年。"
+msgstr ""
+"과거에 30일 초과 1년 미만 초과 체류한 경우: 출국일로부터 1년간 허가 불가. 1년 이상 2년 미만: 2년. 2년 이상: 3년."
+
+msgid "申請案件資料不符或欠缺者，應於書面通知送達之翌日起三個月內補正；未於規定期間補正或補正仍不合規定者，駁回其申請。"
+msgstr ""
+"신청 서류가 불일치하거나 부족한 경우, 서면 통지 수령 다음 날부터 3개월 이내에 보완해야 합니다. 기간 내에 보완하지 않거나 보완 "
+"후에도 요건을 충족하지 못하면 신청이 기각됩니다."
+
+msgid "香港澳門居民以依親事由及其隨同申請之未成年子女申請在臺灣地區居留，其親屬關係因收養發生者，應存續二年以上。"
+msgstr ""
+"홍콩·마카오 주민이 가족 초청을 이유로 대만 거류를 신청하고 미성년 자녀가 동반 신청하는 경우, 입양으로 발생한 친족 관계는 2년 이상 "
+"지속되어야 합니다."
+
+msgid ""
+"港澳居民逾期居留未滿三十日，原申請居留原因仍繼續存在者，經依相關規定處罰、繳清罰鍰後，得向本署重新申請居留；港澳居民未於居留期間屆滿前經許可延期居留，且逾期居留三十日以上者，應繳清罰款，並申請出境證出境。"
+msgstr ""
+"30일 미만 초과 체류한 홍콩·마카오 주민으로 기존 거류 사유가 계속 존재하는 경우, 벌금을 완납한 후 본 기관에 재신청할 수 있습니다."
+" 거류 기간 만료 전에 연장 허가를 받지 못하고 30일 이상 초과 체류한 경우 벌금을 완납하고 출국 증명서를 신청하여 출국해야 합니다."
+
+msgid "港澳居民依外國人才專法第二十四條規定準用同法第九條規定以網路申請平臺申請就業金卡者，相關規定請參考「外國特定專業人才申請就業金卡送件須知」。"
+msgstr ""
+"외국인재전문법 제24조에 따라 동법 제9조를 준용하여 온라인 플랫폼에서 취업골드카드를 신청하는 홍콩·마카오 주민은 \"외국 특정 전문인력"
+" 취업골드카드 신청 제출 안내\"를 참조하세요."
+
+msgid "申請須知 & 相關文件下載"
+msgstr "신청 안내 & 관련 서류 다운로드"
+
+msgid "0902－外國人申請居留及延期居留或變更居留原因送件須知（20260116）"
+msgstr "0902 — 외국인 거류 신청·연장·사유 변경 제출 안내(20260116)"
+
+msgid "外國人居（停）留案件申請表（20220801 版）"
+msgstr "외국인 거류(체류) 신청서(20220801 버전)"
+
+msgid "在職證明書"
+msgstr "재직증명서"
+
+msgid "內政部移民署 — 居留申請說明"
+msgstr "내정부 이민서 — 거류 신청 안내"
+
+msgid "應備文件官方說明、辦事處查詢、線上預約、申請書下載。"
+msgstr "필요 서류 공식 안내, 사무소 검색, 온라인 예약, 신청서 다운로드."
+
+msgid "在學證明申請、指定合作醫院確認、ARC 辦理協助。"
+msgstr "재학증명서 신청, 지정 협력 병원 확인, ARC 신청 지원."
+
+msgid "領取 ARC 後，持 ARC 和學校加保公文辦理加保程序。"
+msgstr "ARC 수령 후 ARC와 학교 건강보험 가입 공문을 가지고 가입 절차를 진행하세요."
+
+msgid "提供多語言諮詢服務，解答居留、就業、生活等問題。"
+msgstr "거류, 취업, 생활 등 다국어 상담 서비스 제공."
+
+msgid "僑生專屬服務"
+msgstr "재외 화교 학생 전용 서비스"
+
+msgid "持外國護照入台就讀的僑生，必須在抵台後"
+msgstr "외국 여권으로 대만에 입학하는 재외 화교 학생은 대만 도착 후"
+
+msgid "天內"
+msgstr "일 이내에"
+
+msgid "向內政部移民署線上辦理外僑居留證（ARC），方能在台合法居留及就讀。"
+msgstr "내정부 이민서 온라인 시스템을 통해 외국인 거류증(ARC)을 신청해야 합법적으로 대만에 체류하고 취학할 수 있습니다."
+
+msgid "辦理期限：入境次日起 30 天內"
+msgstr "신청 기한：입국 다음 날부터 30일 이내"
+
+msgid "規費：NT$500（僑生1年）"
+msgstr "수수료：NT$500（화교 학생 1년）"
+
+msgid "地點：移民署各地服務站"
+msgstr "장소：이민서 각 지역 서비스 센터"
+
+msgid "請注意："
+msgstr "주의 사항："
+
+msgid "持居留簽證入境次日起"
+msgstr "거류 비자로 입국한 다음 날부터"
+
+msgid "，需自行至移民署線上系統辦理外僑居留證，逾期將被處罰鍰，嚴重者需出境重新申請簽證。ARC 是後續辦理加保、開戶等必要身份證明，請儘快辦理。"
+msgstr ""
+"이민서 온라인 시스템에서 외국인 거류증을 직접 신청해야 합니다. 기한을 초과하면 과태료가 부과되며, 심각한 경우 출국 후 비자를 "
+"재신청해야 합니다. ARC는 건강보험 가입·은행 계좌 개설 등에 필요한 신분 증명서이므로 최대한 빨리 신청하세요."
+
+msgid "1 年"
+msgstr "1년"
+
+msgid "每年需延期"
+msgstr "매년 갱신 필요"
+
+msgid "以下為一般應備文件，各移民署辦事處可能有細微差異。建議事前致電當地辦事處或至移民署官網確認最新版清單。"
+msgstr ""
+"아래는 일반적인 필요 서류입니다. 이민서 사무소에 따라 차이가 있을 수 있습니다. 사전에 지역 사무소에 전화하거나 이민서 공식 사이트에서"
+" 최신 목록을 확인하시기 바랍니다."
+
+msgid "外國護照"
+msgstr "외국 여권"
+
+msgid "正本及影本各 1 份，效期須超過居留期間 6 個月以上。"
+msgstr "원본과 사본 각 1부, 여권 유효기간은 거류 기간보다 6개월 이상 남아 있어야 합니다."
+
+msgid "入台學生簽證（居留簽）"
+msgstr "대만 학생 비자（거류 비자）"
+
+msgid "持有入境台灣的學生居留簽證影本。"
+msgstr "대만 입국에 사용한 학생 거류 비자 사본."
+
+msgid "僑生應核發的身份確認函"
+msgstr "재외 화교 학생 신분 확인서"
+
+msgid "僑生還需提供僑委會或僑生應核發的身份確認文件正本及影本。"
+msgstr "재외 화교 학생은 OCAC 또는 관련 기관에서 발급한 신분 확인 서류 원본과 사본도 제출해야 합니다."
+
+msgid "在學證明書 / 清冊及通知書"
+msgstr "재학 증명서 / 명단 및 통지서"
+
+msgid "由就讀學校出具的在學證明或入學許可函，需含入學日期及就讀系所。"
+msgstr "재학 중인 학교에서 발급한 재학 증명서 또는 입학 허가서（입학일과 학과 포함）."
+
+msgid "於台灣認可醫院完成之健康檢查報告，需含胸部 X 光及肺結核篩檢結果。"
+msgstr "대만 인정 병원에서 받은 건강검진 보고서（흉부 X선 및 결핵 검사 결과 포함）."
+
+msgid "近 6 個月內拍攝之 2 吋白底彩色照片（規格：寬 3.5 cm × 高 4.5 cm）。"
+msgstr "최근 6개월 이내 촬영한 2인치 흰 배경 컬러 사진（규격：가로 3.5cm × 세로 4.5cm）."
+
+msgid "外僑居留申請書"
+msgstr "외국인 거류 신청서"
+
+msgid "可於移民署官網下載或現場索取，請事先填妥基本資料。"
+msgstr "이민서 공식 사이트에서 다운로드하거나 현장에서 받을 수 있습니다. 사전에 기본 정보를 기입해 주세요."
+
+msgid "宿舍住宿證或租屋合約書，部分辦事處或要求。"
+msgstr "기숙사 입실 증명서 또는 임대 계약서（일부 사무소에서 요구할 수 있음）."
+
+msgid "全程線上辦理："
+msgstr "전 과정 온라인 처리："
+
+msgid "居留證申請及延期皆以線上申辦為主。請至移民署「外國與外僑學生線上申辦系統」自行申請，"
+msgstr "거류증 신청 및 갱신은 온라인으로 진행합니다. 이민서의 「외국·화교 학생 온라인 신청 시스템」에서 직접 신청하세요."
+
+msgid "請勿選擇「就讀學校代辦」"
+msgstr "「학교 대행 신청」을 선택하지 마세요"
+
+msgid "（中央大學無此服務）。"
+msgstr "（중앙대학교는 이 서비스를 제공하지 않습니다）."
+
+msgid "外國與外僑學生線上申辦系統 ↗"
+msgstr "외국·화교 학생 온라인 신청 시스템 ↗"
+
+msgid "抵台後完成體檢並整理文件"
+msgstr "도착 후 건강검진 완료 및 서류 준비"
+
+msgid ""
+"確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約"
+" NT$780）。"
+msgstr ""
+"여권·입학 통지서·재학 증명서 등 서류를 확인하세요. 건강검진은 학교 인정 병원에서 받으세요（국제사무처에서 목록 제공 가능）. "
+"홍콩·마카오 출신이 아닌 학생 및 유효한 거류증을 가진 홍콩·마카오 학생은 교내 건강검진（약 NT$780）을 받을 수 있습니다."
+
+msgid "至移民署線上系統註冊並上傳文件"
+msgstr "이민서 온라인 시스템에 등록하고 서류 업로드"
+
+msgid ""
+"前往移民署「外國與外僑學生線上申辦系統」完成帳號註冊，掃描並上傳所需文件：近三個月 2 "
+"吋彩色照片、護照、入學通知函及在學證明書。系統操作請參閱官方操作手冊。"
+msgstr ""
+"이민서의 「외국·화교 학생 온라인 신청 시스템」에서 계정을 등록하고 필요 서류를 스캔하여 업로드하세요：최근 3개월 이내 2인치 컬러 "
+"사진, 여권, 입학 통지서, 재학 증명서. 시스템 사용 방법은 공식 사용자 매뉴얼을 참조하세요."
+
+msgid "抵台後 30 天內"
+msgstr "도착 후 30일 이내"
+
+msgid "全程線上"
+msgstr "전 과정 온라인"
+
+msgid "繳納申請規費"
+msgstr "신청 수수료 납부"
+
+msgid "線上申請時繳交規費 NT$500（1 年居留證）。繳費後保存收據以備查。"
+msgstr "온라인 신청 시 수수료 NT$500（1년 거류증）를 납부합니다. 영수증은 보관해 두세요."
+
+msgid "NT$500 / 年"
+msgstr "NT$500 / 년"
+
+msgid "等待審核與製證"
+msgstr "심사 및 카드 제작 대기"
+
+msgid "申請提交後通常需"
+msgstr "신청 제출 후 보통"
+
+msgid "製卡完成（不含退補件）。可至移民署線上查詢申請進度。等待期間請保留入境章及申請收據作為合法居留的暫時證明。"
+msgstr ""
+"이 소요됩니다（반려·보완 서류 제외）. 이민서 온라인에서 신청 진행 상황을 확인할 수 있습니다. 대기 중에는 입국 도장과 신청 영수증을 "
+"합법적 체류의 임시 증명으로 보관하세요."
+
+msgid "上傳居留證至 NCU Portal"
+msgstr "거류증을 NCU 포털에 업로드"
+
+msgid "取得居留證後，需於入學當年"
+msgstr "거류증 취득 후, 입학 연도"
+
+msgid "月"
+msgstr "월"
+
+msgid "日前"
+msgstr "일 이전"
+
+msgid "上傳至 NCU Portal（入口網站）。未準時上傳將影響校內工讀金撥款、獎學金核發及相關權益。"
+msgstr "NCU 포털에 업로드해야 합니다. 기한 내 업로드하지 않으면 근로 장학금 지급·장학금 수여 및 관련 권리에 영향을 미칩니다."
+
+msgid "9/30 前"
+msgstr "9월 30일 이전"
+
+msgid "完成！辦理後續程序"
+msgstr "완료！후속 절차 진행"
+
+msgid "居留證到手後即可辦理加入健保、開設銀行帳戶、申辦手機門號等後續程序。"
+msgstr "거류증을 받은 후 건강보험 가입·은행 계좌 개설·휴대폰 번호 등록 등 후속 절차를 진행할 수 있습니다."
+
+msgid "居留證到期前"
+msgstr "거류증 만료 전"
+
+msgid "個月內"
+msgstr "개월 이내에"
+
+msgid "可至移民署網站線上申請延期，規費 NT$500 / 年，核辦約 10 天。建議每學年結束前提早辦理，避免居留資格失效。"
+msgstr ""
+"이민서 웹사이트에서 온라인으로 갱신 신청을 할 수 있습니다（수수료 NT$500/년, 처리 기간 약 10일）. 거류 자격이 만료되지 않도록"
+" 매 학년 종료 전 일찍 신청하시기 바랍니다."
+
+msgid "請勿選擇「就讀學校代辦」："
+msgstr "「학교 대행 신청」을 선택하지 마세요："
+
+msgid "中央大學（NCU）不提供學校代辦服務，請學生自行登入線上申辦系統辦理，勿在系統中選擇此選項。"
+msgstr ""
+"중앙대학교（NCU）는 학교 대행 신청 서비스를 제공하지 않습니다. 학생은 온라인 신청 시스템에 직접 로그인하여 신청해야 합니다. "
+"시스템에서 이 옵션을 선택하지 마세요."
+
+msgid "居留證遺失時請立即至警局報案，持報案證明至移民署申請補發（規費 NT$500）。補發時建議隨身攜帶護照及報案證明。"
+msgstr ""
+"거류증을 분실한 경우 즉시 경찰에 신고하고 신고 증명서를 갖고 이민서에서 재발급을 신청하세요（수수료 NT$500）. 재발급 신청 시 "
+"여권과 신고 증명서를 지참하시기 바랍니다."
+
+msgid "我是台灣的僑生（台灣護照）的僑生也需要辦居留證嗎？"
+msgstr "대만 여권을 가진 재외 화교 학생도 거류증이 필요합니까？"
+
+msgid ""
+"不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。"
+msgstr ""
+"필요하지 않습니다. 중화민국（대만 여권）으로 대만에 입국하는 재외 화교 학생은 완전한 시민권을 가지고 있어 거류증이 필요하지 않습니다. "
+"이 페이지는 외국 여권으로 대만에 입학하는 재외 화교 학생（해외 영주권자 등）을 위한 서비스입니다."
+
+msgid "健康檢查可以在抵台後才做嗎？"
+msgstr "건강검진은 대만 도착 후에 받을 수 있나요？"
+
+msgid ""
+"可以。可於抵台後參加校內體檢（約 NT$780），或至學校指定醫院完成。注意檢查報告出爐需數天，請盡早安排以避免超過 30 "
+"天辦理期限。建議抵台後隔天即至國際事務處詢問體檢安排。"
+msgstr ""
+"가능합니다. 도착 후 교내 건강검진（약 NT$780）을 받거나 지정 병원에서 받을 수 있습니다. 검사 결과가 나오는 데 며칠이 걸리므로 "
+"30일 기한을 초과하지 않도록 일찍 준비하세요. 도착 다음 날 국제사무처에 건강검진 일정을 문의하시기 바랍니다."
+
+msgid "居留證辦理期間可以在台灣合法居留嗎？"
+msgstr "거류증 신청 기간 중 대만에 합법적으로 체류할 수 있나요？"
+
+msgid "可以。申請提交後至居留證核發前，持入境章及申請收據即可作為合法居留證明。建議隨身攜帶此兩份文件，以備需要時出示。"
+msgstr ""
+"가능합니다. 신청 제출부터 거류증 발급 전까지 입국 도장과 신청 영수증이 합법적 체류 증명이 됩니다. 필요할 때 제시할 수 있도록 이 두"
+" 서류를 항상 지참하시기 바랍니다."
+
+msgid "可以在不同縣市的移民署辦事處辦理嗎？"
+msgstr "다른 시·현의 이민서 사무소에서 신청할 수 있나요？"
+
+msgid "可以。全台各縣市均設有移民署服務站，選擇距離學校最近的辦事處即可。但建議選擇學校所在縣市的辦事處，方便日後延期和處理相關事務。"
+msgstr ""
+"가능합니다. 대만 전국 각 시·현에 이민서 서비스 센터가 있습니다. 학교에서 가장 가까운 사무소를 선택하세요. 다만 향후 갱신 및 관련 "
+"업무 처리의 편의를 위해 학교가 위치한 시·현의 사무소를 이용하시기 바랍니다."
+
+msgid "畢業後若要繼續留台，居留資格如何處理？"
+msgstr "졸업 후 대만에 계속 체류하려면 거류 자격을 어떻게 처리해야 하나요？"
+
+msgid ""
+"在學期間以「就讀」為居留事由。畢業後如需繼續留台（例如找工作），需在畢業後 30 "
+"天內申請變更居留事由為「工作」或「其他」，或在找到合法工作並取得工作許可後辦理變更為「工作」居留事由。建議畢業前盡早規劃，避免居留證失效。"
+msgstr ""
+"재학 중 거류 사유는 「취학」입니다. 졸업 후에도 대만에 체류하려면（예：취업 활동）, 졸업 후 30일 이내에 거류 사유를 「취업」 또는 "
+"「기타」로 변경 신청하거나, 합법적인 취업과 취업 허가 취득 후 「취업」으로 변경하세요. 거류증이 만료되지 않도록 졸업 전 미리 "
+"계획하시기 바랍니다."
+
+msgid "外國與外僑學生線上申辦系統"
+msgstr "외국·화교 학생 온라인 신청 시스템"
+
+msgid "居留證線上申請入口，需自行註冊帳號並上傳文件。"
+msgstr "거류증 온라인 신청 포털. 계정을 직접 등록하고 서류를 업로드해야 합니다."
+
+msgid "辦事處查詢、線上預約、申請進度查詢、外僑居留申請書下載。"
+msgstr "사무소 검색, 온라인 예약, 신청 진행 상황 확인, 외국인 거류 신청서 다운로드."
+
+msgid "僑務委員會（OCAC）"
+msgstr "교무위원회（OCAC）"
+
+msgid "僑生身份確認函申請、僑生相關權益說明、海外服務諮詢。"
+msgstr "신분 확인서 신청, 재외 화교 학생 권리 안내, 해외 서비스 상담."
+
+msgid "學校國際事務處"
+msgstr "학교 국제사무처"
+
+msgid "諮詢在學證明申請、指定合作醫院、移民署辦理協助等服務。"
+msgstr "재학 증명서 신청, 지정 협력 병원, 이민서 신청 지원 등 서비스 상담."
+
+msgid "提供多語言諮詢，包含居留、就業、生活等問題解答。"
+msgstr "체류·취업·생활 등에 관한 다국어 상담을 제공합니다."
+
+msgid "僑生1年居留證（線上繳費）"
+msgstr "재외 화교 학생 1년 거류증（온라인 납부）"
+
+msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
+msgstr ""
+"NCU 각 기숙사 구역 정보, 신청 절차, 객실 시설, 비용을 안내하여 외국인·화교·교환 학생이 교내 기숙사를 미리 신청할 수 있도록 "
+"돕습니다."
+
+msgid "4 大宿舍區"
+msgstr "4개 기숙사 구역"
+
+msgid "外僑優先抽籤"
+msgstr "외국인·화교 우선 추첨"
+
+msgid "宿舍分區"
+msgstr "기숙사 구역"
+
+msgid "東 / 西 / 南 / 北"
+msgstr "동 / 서 / 남 / 북"
+
+msgid "四大分區，遍佈校內"
+msgstr "캠퍼스 전체에 4개 구역"
+
+msgid "國際宿舍"
+msgstr "국제 기숙사"
+
+msgid "東區"
+msgstr "동구"
+
+msgid "外僑生專屬宿舍"
+msgstr "외국인·화교 학생 전용 기숙사"
+
+msgid "住宿學期"
+msgstr "기숙사 학기"
+
+msgid "上 9月─1月"
+msgstr "1학기: 9월–1월"
+
+msgid "下 2月─8月"
+msgstr "2학기: 2월–8월"
+
+msgid "含寒假（不需遷出）"
+msgstr "겨울 방학 포함 (이사 불필요)"
+
+msgid "行政電話"
+msgstr "행정 전화"
+
+msgid "各分區 24 小時總線"
+msgstr "모든 구역 24시간 전화"
+
+msgid "第一順位 ── 優先保證"
+msgstr "1순위 — 보장"
+
+msgid "以下身份優先獲得宿舍"
+msgstr "다음 대상자는 우선 입사 가능"
+
+msgid "外籍生（Foreign Students）"
+msgstr "외국인 유학생 (Foreign Students)"
+
+msgid "僑生（Overseas Chinese Students）"
+msgstr "재외 화교 학생"
+
+msgid "低（中）收入收學生"
+msgstr "저(중)소득 학생"
+
+msgid "身心障礙學生"
+msgstr "장애 학생"
+
+msgid "特殊弱勢家庭學生"
+msgstr "특별 취약 가정 학생"
+
+msgid "第二順位"
+msgstr "2순위"
+
+msgid "一般學生（本島）"
+msgstr "일반 학생 (국내)"
+
+msgid "大學部學生"
+msgstr "학부생"
+
+msgid "碩博士生（無保證宿舍）"
+msgstr "석·박사 과정 학생 (기숙사 보장 없음)"
+
+msgid "以抽籤決定是否取得床位"
+msgstr "침대 배정은 추첨으로 결정"
+
+msgid "依抽籤號碼依公告排序"
+msgstr "공고에 따라 추첨 번호 순으로 배정"
+
+msgid "分區："
+msgstr "구역:"
+
+msgid "西區"
+msgstr "서구"
+
+msgid "南區"
+msgstr "남구"
+
+msgid "北區"
+msgstr "북구"
+
+msgid "女生宿舍"
+msgstr "여자 기숙사"
+
+msgid "外僑生專屬"
+msgstr "외국인·화교 학생 전용"
+
+msgid "女14舍"
+msgstr "여자 기숙사 14동"
+
+msgid "男11舍"
+msgstr "남자 기숙사 11동"
+
+msgid "男生宿舍"
+msgstr "남자 기숙사"
+
+msgid "男5舍"
+msgstr "남자 기숙사 5동"
+
+msgid "女1舍"
+msgstr "여자 기숙사 1동"
+
+msgid "女2舍"
+msgstr "여자 기숙사 2동"
+
+msgid "女3舍"
+msgstr "여자 기숙사 3동"
+
+msgid "女4舍"
+msgstr "여자 기숙사 4동"
+
+msgid "男3舍"
+msgstr "남자 기숙사 3동"
+
+msgid "男6舍"
+msgstr "남자 기숙사 6동"
+
+msgid "男7舍"
+msgstr "남자 기숙사 7동"
+
+msgid "男13舍"
+msgstr "남자 기숙사 13동"
+
+msgid "男9A舍"
+msgstr "남자 기숙사 9A동"
+
+msgid "男9B舍"
+msgstr "남자 기숙사 9B동"
+
+msgid "男12舍"
+msgstr "남자 기숙사 12동"
+
+msgid "和平屋"
+msgstr "피스 하우스"
+
+msgid "性別友善宿舍"
+msgstr "성평등 기숙사"
+
+msgid "中大會館"
+msgstr "NCU 게스트 하우스"
+
+msgid "訪客 / 短住"
+msgstr "방문자 / 단기 투숙"
+
+msgid "床架"
+msgstr "침대 프레임"
+
+msgid "衣櫃"
+msgstr "옷장"
+
+msgid "書桌 + 書椅"
+msgstr "책상 + 의자"
+
+msgid "置物架"
+msgstr "수납 선반"
+
+msgid "鎖頭"
+msgstr "자물쇠"
+
+msgid "冷氣"
+msgstr "에어컨"
+
+msgid "桌燈（部分）"
+msgstr "스탠드 조명 (일부 방)"
+
+msgid "電風扇（部分）"
+msgstr "선풍기 (일부 방)"
+
+msgid "網路孔"
+msgstr "네트워크 포트"
+
+msgid "禁用電器"
+msgstr "사용 금지 전기 제품"
+
+msgid "電磁爐（全面禁用）"
+msgstr "인덕션 쿡탑 (전면 금지)"
+
+msgid "電爐 / 電磁盤"
+msgstr "전기레인지 / 인덕션 플레이트"
+
+msgid "熱水壺 / 快煮壺"
+msgstr "전기 주전자 / 전기 포트"
+
+msgid "延長線過載"
+msgstr "멀티탭 과부하"
+
+msgid "住宿服務組常見問題（官方）"
+msgstr "기숙사 서비스 자주 묻는 질문 (공식)"
+
+msgid "退宿費用、寒暑假規定、換宿申請、床墊、研究生住宿……"
+msgstr "퇴사 비용, 방학 규정, 방 이동 신청, 매트리스, 대학원생 기숙사..."
+
+msgid "完整 Q&A 由住宿服務組官方維護，內容最新最準確。"
+msgstr "전체 Q&A는 기숙사 서비스팀이 공식 관리하며 최신·정확한 내용을 제공합니다."
+
+msgid "行政諮詢電話"
+msgstr "행정 문의 전화"
+
+msgid "一般住宿申請、退宿、換宿等問題"
+msgstr "일반 기숙사 신청, 퇴사, 방 이동 등 문의"
+
+msgid "公告信箱"
+msgstr "공식 이메일"
+
+msgid "文件申請、書面問題"
+msgstr "서류 신청 및 서면 문의"
+
+msgid "住宿服務組官網"
+msgstr "기숙사 서비스팀 공식 홈페이지"
+
+msgid "最新公告、申請系統、規章下載"
+msgstr "최신 공고, 신청 시스템, 규정 다운로드"
+
+msgid "24 小時緊急總線"
+msgstr "24시간 긴급 전화"
+
+msgid "東 / 西 / 南 / 北 各分區緊急專線"
+msgstr "동 / 서 / 남 / 북 각 구역 긴급 전용 전화"
+
+msgid "緊急設施損壞、安全事件聯繫"
+msgstr "긴급 시설 손상 및 안전 사고 연락처"
+
+msgid "僑生・外籍生必讀"
+msgstr "재외 화교·외국인 유학생 필독"
+
+msgid "整理來台就學的相關法律法規，包含就學辦法、助學金、醫療保險、社團輔助等，點選名稱即可查看原文。"
+msgstr ""
+"대만 유학 관련 법령을 정리한 페이지입니다. 입학 규정, 장학금, 의료보험, 동아리 지원 등이 포함됩니다. 제목을 클릭하면 원문을 확인할"
+" 수 있습니다."
+
+msgid "就學辦法"
+msgstr "입학 규정"
+
+msgid "僑生回國就學及輔導辦法"
+msgstr "재외 화교 학생 귀국 유학 및 지도 규정"
+
+msgid "全國法規資料庫 ↗"
+msgstr "전국 법규 데이터베이스 ↗"
+
+msgid "香港澳門地區居民來臺就學辦法"
+msgstr "홍콩·마카오 거주자의 대만 유학 규정"
+
+msgid "教育部法規 ↗"
+msgstr "교육부 법규 ↗"
+
+msgid "入學大學同等學力認定標準"
+msgstr "대학 입학 동등 학력 인정 기준"
+
+msgid "助學金"
+msgstr "장학금 및 재정 지원"
+
+msgid "教育部補助高級中等以上學校僑生輔導工作實施要點"
+msgstr "교육부：고등학교 이상 재외 화교 학생 지도 보조 시행 요령"
+
+msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
+msgstr "교육부：고등학교 이상 저소득 재외 화교 학생 장학금 지급 요령"
+
+msgid "教育部補助大學校院設置研究所優秀僑生獎學金作業要點"
+msgstr "교육부：대학원 우수 재외 화교 학생 장학금 설치 보조 요령"
+
+msgid "教育部獎勵海外優秀僑生回國就讀大學校院獎學金核發要點"
+msgstr "교육부：귀국 우수 재외 화교 학생 장학금 지급 요령"
+
+msgid "僑務委員會補助僑生工讀金及學習扶助金要點"
+msgstr "OCAC：재외 화교 학생 근로장학금 및 학습지원금 보조 요령"
+
+msgid "僑委會法規 ↗"
+msgstr "OCAC 법규 ↗"
+
+msgid "僑務委員會獎勵學行優良僑生獎學金核發要點"
+msgstr "OCAC：학업 우수 재외 화교 학생 장학금 지급 요령"
+
+msgid "醫療保險"
+msgstr "의료보험"
+
+msgid "僑生傷病醫療保險作業要點"
+msgstr "재외 화교 학생 상해·질병 의료보험 운영 요령"
+
+msgid "海外回國就學僑生醫療急難及喪葬慰問金發給要點"
+msgstr "귀국 유학 재외 화교 학생 의료 긴급·장례 위로금 지급 요령"
+
+msgid "社團活動輔助"
+msgstr "동아리 활동 지원"
+
+msgid "僑務委員會補助在學僑生社團舉辦活動要點"
+msgstr "OCAC：재학 재외 화교 학생 동아리 활동 보조 요령"
+
+msgid "在學僑生社團組設及輔導要點"
+msgstr "재학 재외 화교 학생 동아리 설립 및 지도 요령"
+
+msgid "僑生輔導工作績優學校及人員甄選要點"
+msgstr "재외 화교 학생 지도 우수 학교 및 인원 선발 요령"
+
+msgid "就業服務法"
+msgstr "고용서비스법"
+
+msgid "海外聯合招生規定"
+msgstr "해외 공동 입학 규정"
+
+msgid "海外聯招 ↗"
+msgstr "해외 공동 입학 ↗"
+
+msgid "臺灣工程及科技教育學歷受新加坡政府認證"
+msgstr "대만 공학·과학기술 교육 학력이 싱가포르 정부에 의해 인증됨"
+
+msgid "教育部 ↗"
+msgstr "교육부 ↗"
+
+msgid "更多僑教法規"
+msgstr "더 많은 재외 화교 교육 법규"
+
+msgid "僑委會法規專區 ↗"
+msgstr "OCAC 법규 전용 페이지 ↗"
+
+msgid "行政院僑務委員會"
+msgstr "행정원 교무위원회 (OCAC)"
+
+msgid "教育部－主管法規查詢系統"
+msgstr "교육부 — 법규 데이터베이스"
+
+msgid "僑生・外籍生必知"
+msgstr "화교생·외국 유학생 필수 정보"
+
+msgid "工作許可證申請指南"
+msgstr "취업허가증 신청 안내"
+
+msgid "在台灣工作（不論校內或校外）前，必須先申請並取得工作許可證，否則將依法受罰並可能限令出境。"
+msgstr ""
+"대만에서 일하기 전(교내외 불문)에 반드시 취업허가증을 신청하고 취득해야 합니다. 이를 위반하면 법에 따라 처벌받을 수 있으며 출국 "
+"명령이 내려질 수 있습니다."
+
+msgid "重點一覽"
+msgstr "주요 사항 요약"
+
+msgid "項目"
+msgstr "항목"
+
+msgid "內容"
+msgstr "내용"
+
+msgid "申請方式"
+msgstr "신청 방법"
+
+msgid "線上申辦（勞動部 ezwp 系統）"
+msgstr "온라인 (노동부 ezwp 시스템)"
+
+msgid "審查費"
+msgstr "심사비"
+
+msgid "NT$100（郵局劃撥或 ATM）"
+msgstr "NT$100 (우체국 이체 또는 ATM)"
+
+msgid "許可期限"
+msgstr "허가 기간"
+
+msgid "最長 6 個月（到期需重新申請）"
+msgstr "최대 6개월 (만료 시 재신청 필요)"
+
+msgid "上課期間工時"
+msgstr "수업 기간 중 근무 시간"
+
+msgid "每週最多"
+msgstr "주당 최대:"
+
+msgid "小時"
+msgstr "시간"
+
+msgid "寒暑假工時"
+msgstr "방학 중 근무 시간"
+
+msgid "無限制，可全職工作"
+msgstr "제한 없음, 전일제 근무 가능"
+
+msgid "違規罰鍰"
+msgstr "위반 벌금"
+
+msgid "NT$3～15 萬，並可能限令出境"
+msgstr "NT$30,000~150,000 및 출국 명령 가능성"
+
+msgid "適用對象"
+msgstr "신청 가능 대상"
+
+msgid "僑生（持外國護照）"
+msgstr "화교 학생 (외국 여권 소지자)"
+
+msgid "外籍生（學位生）"
+msgstr "외국인 유학생 (학위 과정생)"
+
+msgid "港澳生（學位生）"
+msgstr "홍콩·마카오 출신 학생 (학위 과정생)"
+
+msgid "短期交換生"
+msgstr "단기 교환 학생"
+
+msgid "語言研習生"
+msgstr "어학 연수생"
+
+msgid "工作許可針對"
+msgstr "취업허가증은"
+
+msgid "個別雇主"
+msgstr "개별 고용주"
+
+msgid "核發，換工作或增加兼職需重新申請。校內工讀（如助理）與校外工作"
+msgstr "를 대상으로 발급됩니다. 직장 변경이나 아르바이트 추가 시 재신청이 필요합니다. 교내 근로(예: 조교)와 교외 근로"
+
+msgid "均需"
+msgstr "모두"
+
+msgid "持有工作許可。"
+msgstr "취업허가증이 필요합니다."
+
+msgid "所有應備文件須掃描為"
+msgstr "모든 필요 서류는"
+
+msgid "檔案"
+msgstr "파일로 스캔하여"
+
+msgid "上傳至系統。"
+msgstr "시스템에 업로드해야 합니다."
+
+msgid "文件"
+msgstr "서류"
+
+msgid "說明"
+msgstr "설명"
+
+msgid "優異"
+msgstr "우수"
+
+msgid "研究所最低及格"
+msgstr "대학원 최소 합격"
+
+msgid "大學部最低及格"
+msgstr "학부 최소 합격"
+
+msgid "不及格"
+msgstr "불합격"
+
+msgid "0（缺考）"
+msgstr "0（결시）"
+
+msgid "W（停修）"
+msgstr "W（수강 취소）"
+
+msgid "不計入學分，成績單標註 W"
+msgstr "학점 미산입, 성적표에 W 표기"
+
+msgid "GPA 計算方式"
+msgstr "GPA 계산 방법"
+
+msgid "計算公式"
+msgstr "계산 공식"
+
+msgid "課程學分數"
+msgstr "과목 학점"
+
+msgid "該課程等第積分"
+msgstr "등급 점수"
+
+msgid "總學分數"
+msgstr "총 학점"
+
+msgid "中大採 4.3 滿分制。出國交換、申請研究所時，部分機構採 4.0 換算，請依對方要求換算。"
+msgstr ""
+"NCU는 4.3 만점 제도를 사용합니다. 교환학생이나 대학원 지원 시 4.0 환산을 요구하는 곳도 있으니 해당 기관의 요구에 따라 "
+"환산하세요."
+
+msgid "體育課、軍訓、服務學習不計入畢業學分，但仍有成績記錄。這些課程的 GPA 積分計算方式請洽各系確認。"
+msgstr "체육, 군사 훈련, 봉사 학습은 졸업 학점에 포함되지 않지만 성적이 기록됩니다. GPA 적용 방식은 학과에 문의하세요."
+
+msgid "畢業條件一覽（大學部）"
+msgstr "졸업 요건 개요 (학부)"
+
+msgid "畢業學分數"
+msgstr "졸업 학점"
+
+msgid "大多數學系需修滿 128 學分（含必修、通識、選修）。實際學分依各系課程規定，請至系網查詢應修科目表。"
+msgstr "대부분의 학과는 128학점(필수, 교양, 선택 포함)을 요구합니다. 이수해야 할 교과목표는 학과 홈페이지에서 확인하세요."
+
+msgid "通識課程"
+msgstr "교양 과목"
+
+msgid "至少修習 8 學分通識課程（含核心通識及通識選修）。各學院核心通識規定略有不同，請確認是否選滿必修核心。"
+msgstr ""
+"교양 과목(핵심 및 선택 포함) 최소 8학점 이수. 단과대학마다 요건이 다를 수 있으므로 필수 핵심 과목을 모두 이수했는지 확인하세요."
+
+msgid "體育課"
+msgstr "체육"
+
+msgid "需修滿 5 學期體育課（大一必修上、下 + 興趣體育 3 學期）。不列入畢業學分，但必須修畢方可畢業。"
+msgstr "체육 5학기 이수 필요 (1학년 필수 2학기 + 선택 3학기). 졸업 학점에 포함되지 않지만 반드시 이수해야 졸업 가능."
+
+msgid "服務學習"
+msgstr "봉사 학습"
+
+msgid "需修滿 1 學年（上、下各一學期）。不列入畢業學分，但必須通過方可畢業。"
+msgstr "1학년(학기마다 한 학기씩) 이수 필요. 졸업 학점에 포함되지 않지만 통과해야 졸업 가능."
+
+msgid "英文畢業門檻"
+msgstr "영어 졸업 기준"
+
+msgid "各學院標準不同（詳見下方表格）。未達標者可修習「進修英文」（4 學分，2 學期）作為替代途徑。"
+msgstr "단과대학마다 기준이 다릅니다(아래 표 참조). 기준 미달자는 보충 영어(4학점, 2학기)를 대안으로 수강할 수 있습니다."
+
+msgid "操行成績"
+msgstr "품행 성적"
+
+msgid "各學期操行成績均須及格。"
+msgstr "매 학기 품행 성적이 합격이어야 합니다."
+
+msgid "計學分"
+msgstr "학점 산입"
+
+msgid "不計學分"
+msgstr "학점 미산입"
+
+msgid "需達標"
+msgstr "기준 달성 필요"
+
+msgid "英文畢業門檻（大學部，依學院）"
+msgstr "영어 졸업 기준 (학부, 단과대학별)"
+
+msgid "以下為各學院門檻標準，實際以語言中心公告為準。部分學院允許以「第二外語」替代英文門檻，請洽語言中心確認。"
+msgstr ""
+"아래 기준은 단과대학별이며, 공식 기준은 언어센터 공고를 따릅니다. 일부 단과대학은 제2외국어로 대체할 수 있으니 언어센터에 확인하세요."
+
+msgid "學院"
+msgstr "단과대학"
+
+msgid "（聽讀合計）"
+msgstr "(듣기+읽기 합계)"
+
+msgid "全民英檢"
+msgstr "GEPT"
+
+msgid "管理學院"
+msgstr "경영대학"
+
+msgid "中高級複試通過"
+msgstr "GEPT 중고급 (2차 합격)"
+
+msgid "文學院"
+msgstr "인문대학"
+
+msgid "客家學院"
+msgstr "객가대학"
+
+msgid "電資學院"
+msgstr "전기공학·컴퓨터과학대학"
+
+msgid "工學院"
+msgstr "공과대학"
+
+msgid "理學院"
+msgstr "이학대학"
+
+msgid "地球科學學院"
+msgstr "지구과학대학"
+
+msgid "生醫理工學院"
+msgstr "생의학 과학 및 공학대학"
+
+msgid ""
+"校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 "
+"NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。"
+msgstr ""
+"캠퍼스 TOEIC: 언어센터는 매 학기 캠퍼스 TOEIC을 개최합니다 (약 NT$1,270, NCU 학생 전용). 영어 기준을 충족하는 "
+"가장 편리한 방법입니다. 최신 일정은 언어센터 웹사이트를 확인하세요."
+
+msgid "未達門檻的替代方案：進修英文"
+msgstr "기준 미달자를 위한 대안: 보충 영어"
+
+msgid "進修英文（Supplementary English）"
+msgstr "보충 영어 (Supplementary English)"
+
+msgid "共 4 學分，分兩學期修習（每學期 2 學分）"
+msgstr "총 4학점, 두 학기에 나누어 이수 (학기당 2학점)"
+
+msgid "修習並通過後可取代英文門檻，無需另外提交語言成績"
+msgstr "이수 및 합격 시 영어 기준을 대체 — 별도 언어 점수 제출 불필요"
+
+msgid "申請資格：入學英文成績未達標準，且已參加過中央大學英文鑑定測驗者"
+msgstr "지원 자격: 입학 시 영어 성적이 기준 미달이고 NCU 영어 능력 시험을 응시한 학생"
+
+msgid "是否計入畢業學分依各系規定，請洽系辦確認"
+msgstr "졸업 학점에 포함되는지 여부는 학과마다 다름 — 학과 사무실에 확인하세요"
+
+msgid "研究所英文門檻（以工學院為例）"
+msgstr "대학원 영어 기준 (공과대학 예시)"
+
+msgid ""
+"各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 "
+"或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。"
+msgstr ""
+"각 대학원 프로그램은 자체 영어 기준을 설정하며, 학위 구술 심사 신청 전에 제출해야 합니다. 공과대학은 TOEIC 600 / TOEFL"
+" iBT 64 / IELTS 5.0 이상이 필요합니다. 자세한 사항은 각 학과에 문의하세요."
+
+msgid "學生證"
+msgstr "학생증"
+
+msgid "正面＋背面（須含當學期"
+msgstr "앞면 + 뒷면 (이번 학기"
+
+msgid "註冊章"
+msgstr "등록 도장 포함"
+
+msgid "），或另附在學證明"
+msgstr "), 또는 재학 증명서 별도 첨부"
+
+msgid "護照"
+msgstr "여권"
+
+msgid "含照片及個人資料頁"
+msgstr "사진 및 개인정보 페이지 포함"
+
+msgid "居留證（ARC）"
+msgstr "거류증 (ARC)"
+
+msgid "正面＋背面"
+msgstr "앞면 + 뒷면"
+
+msgid "審查費繳納（NT$100）"
+msgstr "심사비 납부 (NT$100)"
+
+msgid "方式"
+msgstr "방법"
+
+msgid "郵局劃撥"
+msgstr "우체국 이체"
+
+msgid "劃撥帳號："
+msgstr "계좌 번호:"
+
+msgid "戶名："
+msgstr "계좌 명의:"
+
+msgid "勞動部勞動力發展署聘僱許可收費專戶"
+msgstr "노동부 노동력발전서 고용 허가 수수료 전용 계좌"
+
+msgid "繳費後請記錄收據號碼、交易日期、交易局號，填入系統。"
+msgstr "납부 후 영수증 번호, 거래 날짜, 지점 코드를 기록하여 시스템에 입력하세요."
+
+msgid "ATM 繳費"
+msgstr "ATM 납부"
+
+msgid "先完成線上申請 → 學校審核 → 系統產生 16 碼繳費帳號 → 使用 ATM「繳費」功能繳納。"
+msgstr "온라인 신청 완료 → 학교 검토 → 시스템이 16자리 납부 계좌 생성 → ATM '요금 납부' 기능으로 납부."
+
+msgid "線上申請流程"
+msgstr "온라인 신청 절차"
+
+msgid "全程於勞動部「外國人在台工作服務網」線上辦理，選擇「"
+msgstr "전 과정은 노동부 \"대만 내 외국인 취업 서비스망\"에서 온라인으로 처리합니다. \""
+
+msgid "僑外生工讀申請"
+msgstr "화교·외국인 학생 근로 신청"
+
+msgid "」。"
+msgstr "\"을 선택하세요."
+
+msgid "準備應備文件並繳費"
+msgstr "필요 서류 준비 및 비용 납부"
+
+msgid "將學生證（正反面含註冊章）、護照、居留證（ARC 正反面）掃描為 PDF。並先至郵局劃撥繳納審查費 NT$100（或選擇 ATM 後繳）。"
+msgstr ""
+"학생증(등록 도장 포함 앞뒷면), 여권, 거류증(ARC 앞뒷면)을 PDF로 스캔하세요. 우체국 이체로 심사비 NT$100을 미리 "
+"납부하세요(또는 ATM 후납 선택 가능)."
+
+msgid "至 ezwp 系統註冊 / 登入"
+msgstr "ezwp 시스템 등록 / 로그인"
+
+msgid "前往"
+msgstr "접속:"
+
+msgid "，選擇「僑外生工讀申請」，依指示註冊帳號或登入。"
+msgstr "에 접속하여 \"화교·외국인 학생 근로 신청\"을 선택한 후 지시에 따라 계정 등록 또는 로그인하세요."
+
+msgid "填寫申請資料"
+msgstr "신청 정보 입력"
+
+msgid "步驟 2 — 校園資訊："
+msgstr "2단계 — 캠퍼스 정보:"
+
+msgid "填寫學校地址與國際學生顧問室資訊"
+msgstr "학교 주소와 국제학생처 정보 입력"
+
+msgid "步驟 3 — 申請事項："
+msgstr "3단계 — 신청 사항:"
+
+msgid "選擇「個人申請」，許可期限最長"
+msgstr "\"개인 신청\"을 선택; 최대 허가 기간은"
+
+msgid "領取方式："
+msgstr "수령 방법:"
+
+msgid "可選電子文件（需於 8 天內下載）或郵寄至學校"
+msgstr "전자 문서(8일 이내 다운로드 필요) 또는 학교로 우편 발송 선택"
+
+msgid "上傳文件並送出"
+msgstr "서류 업로드 및 제출"
+
+msgid "上傳掃描好的 PDF 文件，確認資料無誤後送出申請。"
+msgstr "스캔한 PDF 서류를 업로드하고, 모든 정보가 정확한지 확인한 후 신청서를 제출하세요."
+
+msgid "注意：系統暫存最多保留 7 天，逾期需重新填寫。"
+msgstr "주의: 시스템은 임시 저장을 최대 7일 보관합니다; 이후에는 처음부터 다시 작성해야 합니다."
+
+msgid "等待審核"
+msgstr "심사 대기"
+
+msgid "送出後由學校及勞動部審核，期間可至系統查詢進度。"
+msgstr "제출 후 학교와 노동부가 심사합니다. 이 기간 동안 시스템에서 진행 상황을 확인할 수 있습니다."
+
+msgid "取得許可前不得開始工作。"
+msgstr "허가증 발급 전에 근무를 시작해서는 안 됩니다."
+
+msgid "取得工作許可，開始工作"
+msgstr "취업허가증 취득 후 근무 시작"
+
+msgid "許可核發後即可依核准內容開始工作。若選擇電子文件，請於 8 天內至系統下載許可證。"
+msgstr ""
+"허가증 발급 후 승인된 내용에 따라 근무를 시작할 수 있습니다. 전자 문서를 선택한 경우 8일 이내에 시스템에서 허가증을 다운로드하세요."
+
+msgid "工時規定"
+msgstr "근무 시간 규정"
+
+msgid "期間"
+msgstr "기간"
+
+msgid "工時上限"
+msgstr "시간 한도"
+
+msgid "上課期間（學期中）"
+msgstr "수업 기간 (학기 중)"
+
+msgid "每週最多 20 小時"
+msgstr "주당 최대 20시간"
+
+msgid "週一至週日合計不得超過 20 小時，超時視同違規"
+msgstr "월요일~일요일 합계 20시간 초과 불가; 초과 시 위반으로 간주"
+
+msgid "寒假・暑假"
+msgstr "겨울방학·여름방학"
+
+msgid "無限制"
+msgstr "제한 없음"
+
+msgid "可全職工作，時數無上限"
+msgstr "전일제 근무 가능, 시간 제한 없음"
+
+msgid "短期交換生 / 語研生"
+msgstr "단기 교환 학생 / 어학 연수생"
+
+msgid "不得工作"
+msgstr "근무 불가"
+
+msgid "不符合申請資格，任何工作均屬違規"
+msgstr "신청 자격 없음; 모든 근무 활동은 위반"
+
+msgid "違規後果"
+msgstr "위반 결과"
+
+msgid "罰鍰 NT$30,000～150,000"
+msgstr "벌금: NT$30,000~150,000"
+
+msgid "未持工作許可違法工作者，依就業服務法可處罰鍰新臺幣三萬元至十五萬元。"
+msgstr "취업허가증 없이 불법으로 근무한 경우 취업서비스법에 따라 NT$30,000~150,000의 벌금이 부과될 수 있습니다."
+
+msgid "限令出境"
+msgstr "출국 명령"
+
+msgid "主管機關可依規定限令違規者出境，情節嚴重者可能影響日後再入境資格。"
+msgstr "주관 기관은 규정에 따라 위반자에게 출국을 명령할 수 있으며, 심각한 경우 향후 재입국 자격에 영향을 줄 수 있습니다."
+
+msgid "雇主連帶受罰"
+msgstr "고용주도 처벌"
+
+msgid "非法僱用外籍生的雇主同樣面臨罰鍰，請勿在未取得工作許可前接受工作邀約。"
+msgstr "외국인 유학생을 불법으로 고용한 고용주도 벌금을 받습니다. 취업허가증 취득 전에 구직 제안을 수락하지 마세요."
+
+msgid "換工作需重新申請："
+msgstr "직장 변경 시 재신청 필요:"
+
+msgid "工作許可針對特定雇主核發，換雇主或增加兼職均須重新申請新的工作許可，不可沿用舊許可。"
+msgstr ""
+"취업허가증은 특정 고용주를 대상으로 발급됩니다. 고용주 변경이나 아르바이트 추가 시 새로운 취업허가증을 신청해야 하며, 기존 허가증을 "
+"재사용할 수 없습니다."
+
+msgid "許可期限最長 "
+msgstr "허가 기간 최대 "
+
+msgid "6 個月"
+msgstr "6개월"
+
+msgid "到期前需提前申請展延，過期繼續工作視同無許可違規。"
+msgstr "만료 전에 연장 신청을 해야 합니다; 만료 후 계속 근무하면 허가 없는 위반으로 간주됩니다."
+
+msgid "畢業生注意："
+msgstr "졸업생 주의사항:"
+
+msgid "畢業生工作許可通常至"
+msgstr "졸업생의 취업허가증은 통상"
+
+msgid "日"
+msgstr ""
+
+msgid "截止。如有暑期課程（需附證明）或已獲錄取繼續升學者，方可延長至"
+msgstr "까지 유효합니다. 여름 프로그램(증명서 필요) 등록 또는 진학이 확정된 경우"
+
+msgid "。"
+msgstr "."
+
+msgid "系統暫存限制："
+msgstr "시스템 임시 저장 제한:"
+
+msgid "ezwp 系統暫存資料最多保留"
+msgstr "ezwp 시스템은 임시 저장 데이터를 최대"
+
+msgid "天"
+msgstr "일"
+
+msgid "，逾期需重新填寫。選擇電子文件領取者，須於核發後"
+msgstr " 보관합니다; 이후에는 처음부터 다시 작성해야 합니다. 전자 문서를 선택한 경우 발급 후"
+
+msgid "至系統下載許可證。"
+msgstr "이내에 시스템에서 다운로드하세요."
+
+msgid "工作期間健保轉換："
+msgstr "근무 기간 중 건강보험 전환:"
+
+msgid "受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工作結束後需回學校重新加保。"
+msgstr ""
+"고용 후에는 고용주 측에서 건강보험(1종)에 가입해야 합니다. 중복 가입을 방지하기 위해 먼저 학교에서 탈퇴 처리를 하세요. 근무 종료 "
+"후에는 학교에서 재가입하세요."
+
+msgid "相關連結"
+msgstr "관련 링크"
+
+msgid "語言中心英文畢業門檻"
+msgstr "언어센터 영어 졸업 기준"
+
+msgid "NCU 語言中心"
+msgstr "NCU 언어센터"
+
+msgid "應修科目表"
+msgstr "이수 과목표"
+
+msgid "教務處官網"
+msgstr "교무처 공식 홈페이지"
+
+msgid "選課・加退選・停修・抵免"
+msgstr "수강 신청 · 추가/취소 · 수강 취소 · 학점 인정"
+
+msgid "中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學期略有調整。"
+msgstr "NCU 수강 신청 시스템, 학기 일정 및 신청 절차 안내. 날짜는 공식 공지 기준이며 학기마다 다를 수 있습니다."
+
+msgid "日程請以課務組最新公告為準："
+msgstr "교무처 최신 공지 기준 일정을 확인하세요:"
+
+msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
+msgstr "아래 날짜는 114학년도 2학기 예시입니다. 학기마다 다릅니다. 방문해 주세요"
+
+msgid "課務組官網 ↗"
+msgstr "교무처 공식 웹사이트 ↗"
+
+msgid "查看最新學期日程表。"
+msgstr "최신 학기 일정표를 확인하려면"
+
+msgid "學期課務日程（114-2 為例）"
+msgstr "학기 수강 일정 (114-2 예시)"
+
+msgid "初選"
+msgstr "초기 신청"
+
+msgid "加退選"
+msgstr "수강 추가/취소"
+
+msgid "人工加退選"
+msgstr "수동 추가/취소"
+
+msgid "確認結果"
+msgstr "결과 확인"
+
+msgid "繳學分費"
+msgstr "학점 수수료 납부"
+
+msgid "停修"
+msgstr "수강 철회"
+
+msgid "選課系統入口"
+msgstr "수강 신청 시스템"
+
+msgid "選課系統："
+msgstr "수강 신청 시스템:"
+
+msgid "SPARC（計中）帳號"
+msgstr "SPARC(컴퓨터센터) 계정"
+
+msgid "此時段請勿操作選課"
+msgstr "이 시간대에는 시스템을 사용하지 마세요"
+
+msgid "路徑："
+msgstr "경로:"
+
+msgid "NCU Portal → 學生服務 → 教務相關服務 → 選課系統"
+msgstr "NCU Portal → 학생 서비스 → 교무 관련 서비스 → 수강 신청 시스템"
+
+msgid "各階段說明"
+msgstr "단계별 설명"
+
+msgid "各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。"
+msgstr "필수 과목은 보통 미리 신청되어 있습니다. 학점 인정 신청이나 조기 이수한 경우 직접 취소하세요."
+
+msgid "務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。"
+msgstr "초기 신청에 반드시 참여하세요. 참여하지 않으면 수강 인원이 제한된 과목의 우선권을 잃습니다."
+
+msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgstr "초기 신청 마감 후 일괄 배정이 한 번 이루어지며, 결과는 2026/02/03 16:00 이전에 공지됩니다."
+
+msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
+msgstr "비밀번호 카드가 필요한 과목은 담당 교수에게 받으세요; 각 코드는 일회용입니다."
+
+msgid "手續費 NT$100"
+msgstr "처리 수수료 NT$100"
+
+msgid "適用對象：加退選截止後仍有需求者、因衝堂被系統退選後欲重新加選者。"
+msgstr "추가/취소 마감 후에도 변경이 필요한 학생, 또는 시간 충돌로 취소된 후 재신청하려는 학생 대상."
+
+msgid "隔日更新至選課系統與 ee-class。"
+msgstr "다음 날 수강 신청 시스템과 ee-class에 업데이트됩니다."
+
+msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
+msgstr "교수를 만나지 못한 경우, 교수가 권한을 위임한 학과 직원이 대신 도장을 찍을 수 있습니다."
+
+msgid "確認選課結果"
+msgstr "수강 신청 결과 확인"
+
+msgid "路徑：選課系統 → 個人功能表 → 選課結果。"
+msgstr "경로: 수강 신청 시스템 → 개인 메뉴 → 신청 결과"
+
+msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgstr "시간 충돌 또는 중복 코드로 강제 취소된 경우, 수동 추가/취소(03/10–03/12)로 수정할 수 있습니다."
+
+msgid "停修（Course Withdrawal）"
+msgstr "수강 철회 (Course Withdrawal)"
+
+msgid "W 成績"
+msgstr "W 성적"
+
+msgid "重要規定"
+msgstr "중요 규정"
+
+msgid "最低修課學分："
+msgstr "최소 학점 요건:"
+
+msgid "衝堂 / 同課號："
+msgstr "시간 충돌 / 중복 과목 코드:"
+
+msgid "部份課程有群組上限："
+msgstr "일부 과목은 그룹 제한이 있습니다:"
+
+msgid "學分費："
+msgstr "학점 수수료:"
+
+msgid "學分抵免"
+msgstr "학점 인정"
+
+msgid "課務組聯絡資訊"
+msgstr "교무처 연락처"
+
+msgid "業務項目"
+msgstr "업무 항목"
+
+msgid "電話分機（03-4227151 +）"
+msgstr "전화 내선 (03-4227151 +)"
+
+msgid "選課、課務相關"
+msgstr "수강 신청 및 교무 관련"
+
+msgid "校際選課（本校至他校）"
+msgstr "학교 간 수강 (NCU → 타교)"
+
+msgid "校際選課（他校至中大）"
+msgstr "학교 간 수강 (타교 → NCU)"
+
+msgid "暑修"
+msgstr "여름 학기"
+
+msgid "數位學習平台"
+msgstr "디지털 학습 플랫폼"
+
+msgid "導師輔導選課問題"
+msgstr "지도교수 상담 관련 수강 문제"
+
+msgid "NCU 選課系統 ↗"
+msgstr "NCU 수강 신청 시스템 ↗"
+
+msgid "課務日程表 ↗"
+msgstr "수강 일정표 ↗"
+
+msgid "選課相關資訊 PDF ↗"
+msgstr "수강 신청 관련 정보 PDF ↗"
+
+msgid "選課系統操作手冊（英）↗"
+msgstr "수강 신청 시스템 사용 설명서(영문) ↗"
+
+msgid "教務處官網 ↗"
+msgstr "교무처 공식 웹사이트 ↗"
+
+msgid "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。"
+msgstr ""
+"1학년 1학기 학생은 지도교수 비밀번호 카드가 필요 없습니다; 1학년 2학기부터는 매 학기 초기 신청 전에 지도교수 안내 수강 "
+"절차(온라인)를 완료해야 합니다."
+
+msgid "春節期間（02/13–02/22）不開放選課，請注意。"
+msgstr "설 연휴(02/13–02/22) 기간에는 수강 신청이 불가능합니다. 주의하세요."
+
+msgid ""
+"自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。"
+msgstr ""
+"추가/취소 3일차부터 시스템은 매일 07:00–09:00에 배정을 실행합니다(처리 중 시스템 일시 중단). 09:00 이후 ee-"
+"class에서 당일 결과를 확인할 수 있습니다."
+
+msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
+msgstr ""
+"탈락한 과목을 여전히 수강하려면 다시 온라인으로 신청하고 다음 날 배정을 기다려야 합니다 — 대기자 명단은 자동으로 유지되지 않습니다."
+
+msgid "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
+msgstr ""
+"추가/취소 마지막 날에는 시간이 충돌할 수 있는 과목을 추가하지 마세요 — 마지막 배정에서 충돌 과목이 강제로 취소될 수 있습니다."
+
+msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
+msgstr ""
+"절차: 수강 신청 시스템에서 신청서 출력 → 담당 교수 서명 받기 → NT$100 처리 수수료 납부(재무과 현금 또는 교무처 "
+"EasyCard) → 신청서 교무처 제출"
+
+msgid "依選課辦法，未於期限內確認者以電腦系統為依據，不得異議。請務必確認！"
+msgstr "수강 신청 규정에 따라 기한 내 확인하지 않은 경우 시스템 기록이 최종 기준이며 이의 제기 불가합니다. 반드시 확인하세요!"
+
+msgid "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。"
+msgstr "학기당 1과목으로 제한; 철회 후 남은 학점은 최소값(1–3학년 16학점, 4학년 9학점) 이하가 되어서는 안 됩니다."
+
+msgid "停修不退學分費，成績單上以「停修 / W」登錄，不計入當學期所修學分數。"
+msgstr ""
+"학점 수수료는 철회 시 환불되지 않으며, 성적 증명서에 \"수강 철회 / W\"로 기록되고 해당 학기 이수 학점에 포함되지 않습니다."
+
+msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
+msgstr "절차: 수강 신청 시스템에서 철회 신청서 출력 → 담당 교수 및 학과장 서명 받기 → 교무처 제출"
+
+msgid "已辦理減修者不得再辦理停修。"
+msgstr "수강 학점 감소를 신청한 학생은 추가로 수강 철회를 신청할 수 없습니다."
+
+msgid "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"1–3학년은 학기당 최소 16학점, 4학년은 최소 9학점을 이수해야 합니다. 미달 시 학점 감소 신청(지도교수 및 학과장 승인 필요)을 "
+"해야 하며, 그렇지 않으면 제적 처분을 받습니다."
+
+msgid "加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。"
+msgstr ""
+"추가/취소 마감 후에도 남아있는 충돌이나 중복 과목 코드는 교무처에서 강제로 취소됩니다. 마감 전에 직접 해결하세요; 취소된 경우 수동 "
+"추가/취소로 복구할 수 있습니다."
+
+msgid "如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。"
+msgstr ""
+"예를 들어, 핵심 교양은 학기당 최대 2과목, 체육 1과목, 1학년 영어 1과목 등으로 제한됩니다. 신청 전 그룹 제한을 확인하세요."
+
+msgid "修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。"
+msgstr ""
+"9학점 이하: 학점 수수료와 기타 비용을 비례 납부; 10학점 이상: 전액 수업료와 기타 비용 납부(교사 양성 과정 학점은 별도 계산)."
+
+msgid "學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。"
+msgstr "학점 인정은 등록 담당 부서에서 처리합니다(교무처 아님). 신청 시기와 요건은 교무처 등록 담당 부서에 문의하세요."
+
+msgid "抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選期間選課，系統不會代選任何課程。"
+msgstr ""
+"인정 결과 공지 후 인정된 과목이 여전히 수강 신청 목록에 있으면 직접 취소하세요. 편입생은 추가/취소 기간 중 직접 수강 신청을 해야 "
+"합니다; 시스템이 자동으로 신청하지 않습니다."
+
+msgid "勞動部外國人在台工作服務網 ↗"
+msgstr "노동부 대만 내 외국인 취업 서비스망 ↗"
+
+msgid "勞動部勞動力發展署 ↗"
+msgstr "노동부 노동력발전서 ↗"
+
+msgid "NCU 國際事務處 ↗"
+msgstr "NCU 국제처 ↗"
+
+msgid "中央大學 × 公共交通"
+msgstr "국립중앙대학교 × 대중교통"
+
+msgid "整理中央大學對外主要公車路線，包含從中壢車站、高鐵桃園站、機場及台北的搭乘方式，以及即時查詢公車到站的官方連結。"
+msgstr "중리역, 타오위안 HSR역, 공항, 타이베이에서 NCU로의 주요 버스 노선 요약. 실시간 버스 도착 정보 공식 링크 포함."
+
+msgid "📍 主站點：中央大學"
+msgstr "📍 주요 정류장: 국립중앙대학교"
+
+msgid "🗺 地區：桃園市中壢區"
+msgstr "🗺 지역: 타오위안시 중리구"
+
+msgid "⚡ 即時查詢 → 見下方連結"
+msgstr "⚡ 실시간 검색 → 아래 링크 참조"
+
+msgid "🚉 中壢車站出發 → 搭"
+msgstr "🚉 중리역에서 → 탑승"
+
+msgid "🚄 高鐵桃園站出發 → 搭"
+msgstr "🚄 타오위안 HSR역에서 → 탑승"
+
+msgid "🏙 台北出發 → 搭"
+msgstr "🏙 타이베이에서 → 탑승"
+
+msgid "🚌 市區出發（後門）→ 搭"
+msgstr "🚌 시내에서(후문) → 탑승"
+
+msgid "（雙連坡站下車步行）"
+msgstr "(솽롄포에서 하차 후 도보)"
+
+msgid "約 20～30 分鐘"
+msgstr "약 20~30분"
+
+msgid "從中壢車站出發"
+msgstr "중리역에서"
+
+msgid "市區公車行駛於中壢市區及中央大學之間。票價一段票全票 18 元，可用悠遊卡。"
+msgstr "시내버스가 중리 시내와 NCU 사이를 운행. 요금 NT$18(1구간), 이지카드 사용 가능."
+
+msgid "校園站牌：前門警衛室、中大湖、依仁堂、後門、觀景台"
+msgstr "캠퍼스 정류장: 정문 경비실, NCU 호수, 이인당, 후문, 전망대"
+
+msgid "即時動態 ↗"
+msgstr "실시간 추적 ↗"
+
+msgid "桃園公車動態 ↗"
+msgstr "타오위안 버스 실시간 ↗"
+
+msgid "約 15～20 分鐘"
+msgstr "약 15~20분"
+
+msgid "從高鐵桃園站出發"
+msgstr "타오위안 HSR역에서"
+
+msgid "市區公車直達中央大學，約每半小時一班。"
+msgstr "시내버스가 NCU로 직행, 약 30분 간격."
+
+msgid "💡 高鐵桃園站設有機場捷運，可直達桃園機場 T1/T2"
+msgstr "💡 타오위안 HSR역은 공항 MRT와 연결되어 타오위안 공항 T1/T2로 직행 가능"
+
+msgid "中大校園公車時刻表 ↗"
+msgstr "NCU 캠퍼스 버스 시간표 ↗"
+
+msgid "約 35～40 分鐘"
+msgstr "약 35~40분"
+
+msgid "從桃園機場出發"
+msgstr "타오위안 공항에서"
+
+msgid "搭「桃園機場捷運」至桃園高鐵站，再轉搭 172 或 173 公車直達中央大學。"
+msgstr "공항 MRT로 타오위안 HSR역까지 이동 후 172번 또는 173번 버스로 NCU 직행."
+
+msgid "🚇 機場捷運"
+msgstr "🚇 공항 MRT"
+
+msgid "機場捷運至高鐵桃園站約 15 分鐘，轉車後再約 15～20 分鐘"
+msgstr "공항 MRT로 타오위안 HSR역까지 약 15분, 버스 환승 후 약 15~20분"
+
+msgid "約 30～40 分鐘"
+msgstr "약 30~40분"
+
+msgid "從台北出發"
+msgstr "타이베이에서"
+
+msgid "國道客運 9025A 繞經中央大學，路線為松山機場－中山高－中央大學－中壢。"
+msgstr "고속버스 9025A가 NCU를 경유. 노선: 쑹산 공항 – 중산 고속도로 – NCU – 중리."
+
+msgid "搭至「中央大學」站下車即可，不需轉乘"
+msgstr "\"국립중앙대학교\" 정류장에서 하차, 환승 불필요"
+
+msgid "公路客運查詢 ↗"
+msgstr "고속버스 검색 ↗"
+
+msgid "下車步行至後門"
+msgstr "하차 후 후문으로 도보"
+
+msgid "市區出發（後門入口）"
+msgstr "시내에서(후문 입구)"
+
+msgid "搭 5035 至「雙連坡」站下車，步行即可進入中央大學後門。"
+msgstr "5035번 버스로 \"솽롄포\" 정류장에서 하차 후 NCU 후문으로 도보."
+
+msgid "🚪 下車後步行至後門，無需轉乘"
+msgstr "🚪 하차 후 후문으로 도보, 환승 불필요"
+
+msgid "路線"
+msgstr "노선"
+
+msgid "行駛方向"
+msgstr "운행 방향"
+
+msgid "中大校園站牌"
+msgstr "NCU 캠퍼스 정류장"
+
+msgid "票價"
+msgstr "요금"
+
+msgid "備註"
+msgstr "비고"
+
+msgid "中壢市區 ⟷ 中央大學"
+msgstr "중리 시내 ⟷ NCU"
+
+msgid "前門警衛室"
+msgstr "정문 경비실"
+
+msgid "中大湖"
+msgstr "NCU 호수"
+
+msgid "依仁堂"
+msgstr "이인당"
+
+msgid "後門"
+msgstr "후문"
+
+msgid "觀景台"
+msgstr "전망대"
+
+msgid "NT$18（一段票）"
+msgstr "NT$18(1구간)"
+
+msgid "可用悠遊卡，車程約 20～30 分鐘"
+msgstr "이지카드 사용 가능, 소요시간 약 20~30분"
+
+msgid "桃園公車 ↗"
+msgstr "타오위안 버스 ↗"
+
+msgid "高鐵桃園站 ⟷ 中央大學"
+msgstr "타오위안 HSR역 ⟷ NCU"
+
+msgid "約每半小時一班，車程 15～20 分鐘"
+msgstr "약 30분 간격, 소요시간 15~20분"
+
+msgid "中大時刻表 ↗"
+msgstr "NCU 시간표 ↗"
+
+msgid "松山機場 ⟷ 中壢（繞中央大學）"
+msgstr "쑹산 공항 ⟷ 중리(NCU 경유)"
+
+msgid "國道客運，車程約 30～40 分鐘（松山機場出發）"
+msgstr "고속버스, 소요시간 약 30~40분(쑹산 공항 출발)"
+
+msgid "市區 ⟷ 雙連坡（步行至後門）"
+msgstr "시내 ⟷ 솽롄포(후문으로 도보)"
+
+msgid "雙連坡"
+msgstr "솽롄포"
+
+msgid "（步行至後門）"
+msgstr "(후문으로 도보)"
+
+msgid "🚪 雙連坡站下車後步行可進入中大後門"
+msgstr "🚪 솽롄포에서 하차 후 NCU 후문으로 도보"
+
+msgid "搭車小技巧"
+msgstr "버스 탑승 팁"
+
+msgid "建議使用悠遊卡（EasyCard）："
+msgstr "이지카드 사용 권장:"
+
+msgid "持卡搭車享折扣優惠，不需找零，一卡通用台鐵、高鐵、機場捷運等通用。可在中壢火車站或便利商店購買及加值。"
+msgstr ""
+"할인 요금 혜택, 잔돈 불필요, 대만철도·고속철도·공항 MRT 등 공통 사용 가능. 중리역 또는 편의점에서 구매 및 충전 가능."
+
+msgid "尖峰時段（08:00─09:00 / 17:00─19:00）"
+msgstr "혼잡 시간대(08:00~09:00 / 17:00~19:00)"
+
+msgid "公車較擁擠且可能誤點，建議提早 10 分鐘至站牌等候，或使用 App 及時確認車輛位置。"
+msgstr "버스가 혼잡하고 지연될 수 있습니다. 10분 일찍 정류장에 도착하거나 앱으로 실시간 위치를 확인하세요."
+
+msgid "深夜及假日班次較少："
+msgstr "심야 및 공휴일 — 운행 횟수 감소:"
+
+msgid "晚上 10 點後部分路線停駛，建議提早確認末班車時間，或改搭計程車（推薦使用 LINE TAXI / Uber）。"
+msgstr ""
+"오후 10시 이후 일부 노선 운행 종료. 막차 시간을 미리 확인하거나 택시(LINE TAXI / Uber 권장)를 이용하세요."
+
+msgid "官方"
+msgstr "공식"
+
+msgid "桃園市公車即時查詢"
+msgstr "타오위안시 버스 실시간"
+
+msgid "桃園市政府官方公車即時到站資訊，輸入站點名稱或路線號查詢。"
+msgstr "타오위안시 정부 공식 버스 실시간 도착 정보. 정류장 이름 또는 노선 번호로 검색."
+
+msgid "台灣公車網（全台）"
+msgstr "대만 버스 네트워크(전국)"
+
+msgid "交通部公路總局整合平台，支援全台縣市公車即時到站查詢。"
+msgstr "교통부 도로국 통합 플랫폼, 전국 시군구 실시간 버스 정보 지원."
+
+msgid "公路客運查詢（ebus）"
+msgstr "고속버스 검색(ebus)"
+
+msgid "政府整合公路客運班次查詢，可查中長程客運（台北──中壢等）。"
+msgstr "정부 통합 고속버스 시간표, 장거리 노선(타이베이~중리 등) 지원."
+
+msgid "地圖"
+msgstr "지도"
+
+msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示即時班次。"
+msgstr "\"국립중앙대학교\"에서 검색하여 실시간 출발 시간이 포함된 대중교통 경로를 계획하세요."
+
+msgid "休學・復學・轉系・雙主修　辦理規定與注意事項"
+msgstr "휴학·복학·전과·복수전공 — 규정 및 절차 안내"
+
+msgid "休學"
+msgstr "휴학"
+
+msgid "申請期限"
+msgstr "신청 기한"
+
+msgid "期末考試開始前"
+msgstr "기말고사 시작 전"
+
+msgid "每次最長"
+msgstr "1회 최장"
+
+msgid "2 學年"
+msgstr "2학년"
+
+msgid "累計上限"
+msgstr "누적 한도"
+
+msgid "2 學年（原則）"
+msgstr "2학년 (원칙)"
+
+msgid "特殊延長"
+msgstr "특별 연장"
+
+msgid "可再延長 2 年"
+msgstr "추가 2년 연장 가능"
+
+msgid "申請須取得家長或監護人同意，以及系主任同意，再至教務處辦理"
+msgstr "학부모 또는 보호자 동의 및 학과장 승인 후 교무처에 신청"
+
+msgid "新生及轉學生第一學期須先完成註冊繳費，才能申請休學"
+msgstr "신입생 및 편입생은 첫 학기 등록·납부를 완료한 후 휴학 신청 가능"
+
+msgid "休學當學期已選課程一律取消，不計成績（預修與抵免課程除外）"
+msgstr "휴학 학기 수강 신청 과목은 모두 취소되며 성적 미기재 (예수강·학점인정 과목 제외)"
+
+msgid "休學期間不計入修業年限"
+msgstr "휴학 기간은 수업 연한에 포함되지 않음"
+
+msgid "服兵役、懷孕、生產、照顧未滿 3 歲子女所致休學"
+msgstr "군복무, 임신, 출산, 만 3세 미만 자녀 양육으로 인한 휴학"
+
+msgid "不計入累計年限"
+msgstr "누적 연한에 미포함"
+
+msgid "外籍生 ARC 注意"
+msgstr "외국인 유학생 ARC 주의사항"
+
+msgid ""
+"辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
+msgstr ""
+"휴학 후에는 학생 신분의 거류증이 무효가 되며 규정 기간 내에 대만을 출국해야 합니다. 복귀 전 학생 비자를 재신청해야 합니다. 휴학을 "
+"확정하기 전에 국제사무처(내선 57081)에 연락하여 절차를 확인하세요."
+
+msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
+msgstr "기숙사: 휴학 전 퇴사 절차를 완료해야 합니다. 복학 후 기숙사는 재신청해야 하며 침대가 보류되지 않습니다."
+
+msgid "復學"
+msgstr "복학"
+
+msgid "自動復學"
+msgstr "자동 복학"
+
+msgid "休學期滿即自動復學"
+msgstr "휴학 기간 만료 시 자동 복학"
+
+msgid "註冊期限"
+msgstr "등록 기한"
+
+msgid "當學期註冊日（含）前"
+msgstr "해당 학기 등록일(포함) 이전"
+
+msgid "提前復學"
+msgstr "조기 복학"
+
+msgid "最遲於註冊日前申請"
+msgstr "등록일 이전에 신청"
+
+msgid "休學期滿後自動回復學籍，須於當學期校曆註冊日（含）前完成報到與繳費"
+msgstr "휴학 기간 만료 후 자동으로 학적 복귀; 학사 달력의 등록일(포함) 이전에 출석 확인 및 납부 완료 필요"
+
+msgid "提前復學：須於預定復學學期的註冊日前提出申請，不可在休學中途直接回來上課"
+msgstr "조기 복학: 복학 예정 학기 등록일 이전에 신청. 휴학 중간에 임의로 복귀하여 수업 참여 불가."
+
+msgid "復學後回到原學系，年級銜接休學前的年級繼續就讀"
+msgstr "복학 후 원래 학과로 복귀하며 휴학 전 학년부터 계속 수학"
+
+msgid "若屆時無法如期復學，需於註冊日前再次申請延續休學；逾期未辦者視情形處理"
+msgstr "예정대로 복학 불가 시 등록일 이전에 휴학 연장 재신청; 미처리 시 규정에 따라 처리"
+
+msgid "復學後的畢業條件，依入學當年度的學則與相關規章認定"
+msgstr "복학 후 졸업 요건은 입학 연도의 학칙 및 관련 규정에 따름"
+
+msgid "轉系"
+msgstr "전과"
+
+msgid "申請時間依當學年度校曆公告，每輪申請限報名一個科系，超過一個即取消資格。"
+msgstr "신청 기간은 연간 학사 일정에 공고됩니다. 매 회 1개 학과만 신청 가능 — 2개 이상 신청 시 자격 취소."
+
+msgid "申請資格（年級）"
+msgstr "신청 자격 (학년별)"
+
+msgid "大二"
+msgstr "2학년"
+
+msgid "升大二前可申請"
+msgstr "2학년 진입 전 신청 가능"
+
+msgid "大三"
+msgstr "3학년"
+
+msgid "升大三前可申請"
+msgstr "3학년 진입 전 신청 가능"
+
+msgid "大四"
+msgstr "4학년"
+
+msgid "四年級生不得申請"
+msgstr "4학년은 신청 불가"
+
+msgid "休學中"
+msgstr "휴학 중"
+
+msgid "休學期間不得申請"
+msgstr "휴학 중 신청 불가"
+
+msgid "每一申請週期只能申請一個科系，多報即全部取消資格"
+msgstr "신청 주기당 1개 학과만 신청 가능 — 복수 신청 시 전부 자격 취소"
+
+msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
+msgstr "각 학과는 자체 기준(성적 순위 등) 설정 가능, 단 순위 기준은 상위 50%(학급 상반부) 초과 불가"
+
+msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
+msgstr "전과 정원 상한: 각 학과는 학년별로 최초 승인 정원의 20%까지 전과생 수용 가능"
+
+msgid "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級"
+msgstr "4학년 진입 전 신청자는 성격이 유사한 학과 동학년 또는 성격이 다른 학과 2·3학년으로 전과 가능"
+
+msgid "核准後不可撤回，原系修過的學分可申請抵免，由新系系主任審核認定"
+msgstr "승인 후 취소 불가. 원 학과 취득 학점은 신 학과장 심사 승인을 받아 학점 인정 신청 가능"
+
+msgid "離島優惠入學生、國防大學生等特定身份不得申請轉系"
+msgstr "도서 지역 특례 입학생, 국방대학교 재학생 등 특정 신분은 전과 신청 불가"
+
+msgid "雙主修"
+msgstr "복수전공"
+
+msgid "申請時間依校曆公告。大二起至修業年限最後一年第一學期止（延修期間不得新申請）。"
+msgstr "신청 기간은 학사 일정에 공고. 2학년부터 마지막 학년 1학기까지 (연장 수학 기간 중 신규 신청 불가)."
+
+msgid "最早申請"
+msgstr "최조 신청 가능"
+
+msgid "大二開始"
+msgstr "2학년부터"
+
+msgid "最晚申請"
+msgstr "최대 신청 기한"
+
+msgid "畢業年級第一學期"
+msgstr "졸업 학년 1학기"
+
+msgid "額外延修"
+msgstr "추가 연장 수학"
+
+msgid "最多 1 學年"
+msgstr "최대 1학년"
+
+msgid "需同時完成本系全部畢業要求，以及加修學系的所有「專業必修」科目學分"
+msgstr "주 학과의 모든 졸업 요건과 추가 학과의 모든 전공필수 과목을 동시에 이수해야 함"
+
+msgid "各系可自訂申請條件（如 GPA 門檻），需向目標系查詢當年公告"
+msgstr "각 학과는 자체 신청 조건(예: GPA 기준) 설정 가능; 목표 학과의 해당 연도 공고 확인 필요"
+
+msgid "學位證書上並列兩個學系名稱；畢業成績單亦加註雙主修"
+msgstr "학위증서에 두 학과명 병기; 공식 성적표에도 복수전공 표시"
+
+msgid "若加修學分未能完成 → 可申請再延修一學年，或放棄雙主修僅以本系學分畢業"
+msgstr "추가 전공 학점 미이수 시 → 1학년 연장 수학 신청 가능, 또는 복수전공 포기 후 주 학과 학점만으로 졸업 가능"
+
+msgid "若已修完的加修學分符合輔系規定 → 可改認定為輔系資格"
+msgstr "이수 완료된 추가 전공 학점이 부전공 요건 충족 시 → 부전공으로 인정 전환 가능"
+
+msgid "備用選項"
+msgstr "대안 옵션"
+
+msgid "延修期間（因雙主修而延修）：9 學分以下按學分費計；10 學分以上收全額學雜費"
+msgstr "연장 수학 기간 (복수전공으로 인한): ≤9학점 학점별 수업료; ≥10학점 전액 등록금 및 납부금"
+
+msgid "確認加修學系的申請條件"
+msgstr "부전공 학과의 신청 조건 확인"
+
+msgid "各系 GPA 門檻與名額不同，至目標系系辦查詢當年公告"
+msgstr "GPA 기준과 정원은 학과마다 다름; 목표 학과 사무실에서 해당 연도 공고 확인"
+
+msgid "填寫申請表，經本系主任同意"
+msgstr "신청서를 작성하고 주 학과장 승인 취득"
+
+msgid "表格至教務處或各系系辦索取"
+msgstr "신청서는 교무처 또는 각 학과 사무실에서 수령"
+
+msgid "送交加修學系審核"
+msgstr "추가 전공 학과에 심사를 위해 제출"
+
+msgid "目標系系主任同意後，轉呈教務長核准"
+msgstr "목표 학과장 승인 후 교무처장에게 최종 승인을 위해 전달"
+
+msgid "核准後按加修課表修課"
+msgstr "승인 후 추가 전공 수업 시간표에 따라 수강"
+
+msgid "可選擇每學期邊修或在畢業學期一次申請資格審核（自主規劃路線）"
+msgstr "매 학기 병행 수강 또는 졸업 학기 일괄 자격 심사 신청 중 선택 가능 (자율 계획 방식)"
+
+msgid "辦理窗口"
+msgstr "담당 창구"
+
+msgid "教務處 / 註冊組"
+msgstr "교무처 / 등록 담당"
+
+msgid "學籍異動（休學、復學、轉系）"
+msgstr "학적 변동 (휴학, 복학, 전과)"
+
+msgid "外籍生休學 ARC 問題"
+msgstr "외국인 유학생 휴학 관련 ARC 문제"
+
+msgid "各系系辦"
+msgstr "각 학과 사무실"
+
+msgid "轉系、雙主修申請條件查詢"
+msgstr "전과 및 복수전공 신청 조건 문의"
+
+msgid "及課程規劃建議"
+msgstr "및 수업 계획 조언"
+
+msgid "在學證明・成績單・推薦信"
+msgstr "재학증명서·성적증명서·추천서"
+
+msgid "在學證明"
+msgstr "재학증명서"
+
+msgid "線上自印"
+msgstr "온라인 자체 출력"
+
+msgid "Portal 自行列印"
+msgstr "Portal을 통해 자체 출력"
+
+msgid "登入 Portal → 學生服務 → 在學證明列印。無公章，適用一般用途。"
+msgstr "Portal 로그인 → 학생 서비스 → 재학증명서 출력. 공인 도장 없음 — 일반 용도에 적합."
+
+msgid "臨櫃申請"
+msgstr "창구 신청"
+
+msgid "教務處 / 註冊組（含公章）"
+msgstr "교무처 / 등록 담당 (공인 도장 포함)"
+
+msgid "需蓋學校公章者至教務處（行政大樓）辦理，通常當場或隔日取件。"
+msgstr "학교 공인 도장이 필요한 경우 교무처(행정관)에서 신청. 보통 당일 또는 익일 수령."
+
+msgid "有效期限通常為 3 個月，申請前確認用途所需格式（中文或英文）。"
+msgstr "유효 기간은 보통 3개월. 신청 전 필요한 형식(중국어 또는 영어) 확인."
+
+msgid "成績單"
+msgstr "성적증명서"
+
+msgid "Portal 自行列印（非正式）"
+msgstr "Portal을 통해 자체 출력 (비공식)"
+
+msgid "Portal → 學生服務 → 成績查詢 → 列印。不含公章，供個人參考或非正式用途。"
+msgstr "Portal → 학생 서비스 → 성적 조회 → 출력. 공인 도장 없음 — 개인 참고 또는 비공식 용도."
+
+msgid "教務處 / 註冊組（含公章 / 英文版）"
+msgstr "교무처 / 등록 담당 (공인 도장 포함 / 영문판)"
+
+msgid "正式成績單（含公章）或英文成績單，至教務處申請，通常需支付工本費。"
+msgstr "공식 성적증명서(공인 도장 포함) 또는 영문 성적증명서 — 교무처에서 신청; 보통 수수료 필요."
+
+msgid "申請前確認對方是否要求「校長章」或「英文版」，不同用途規格不同。"
+msgstr "신청 전 수신처가 총장 인장 또는 영문판을 요구하는지 확인 — 용도에 따라 요건이 다름."
+
+msgid "推薦信由教授撰寫，學校不直接提供，需自行向教授申請。"
+msgstr "추천서는 교수가 작성하며 학교에서 직접 제공하지 않습니다. 직접 교수에게 요청해야 합니다."
+
+msgid "確定需求，提早 2–4 週聯絡教授"
+msgstr "필요 사항을 확인하고 2–4주 전에 교수에게 연락"
+
+msgid "說明用途（申請學校 / 獎學金）、繳交截止日、語言（中文或英文）。"
+msgstr "목적(대학 지원 / 장학금), 제출 기한, 필요 언어(중국어 또는 영어)를 설명."
+
+msgid "提供個人資料給教授"
+msgstr "교수에게 개인 자료 제공"
+
+msgid "自傳、成績單、申請用途說明、對方機構背景，方便教授撰寫具體內容。"
+msgstr "자기소개서, 성적증명서, 지원 목적 설명, 상대 기관 배경 — 교수가 구체적인 내용을 작성할 수 있도록 지원."
+
+msgid "確認格式：信封密封 / 線上填表"
+msgstr "형식 확인: 봉인 봉투 / 온라인 양식"
+
+msgid "部分申請要求教授直接寄至對方或填線上表單，提前確認避免格式錯誤。"
+msgstr "일부 지원서는 교수가 직접 수신처로 발송하거나 온라인 양식을 작성해야 합니다. 형식 오류를 피하기 위해 사전에 확인."
+
+msgid "繳交前再次確認截止日"
+msgstr "제출 전 마감일 재확인"
+
+msgid "截止日前 1 週提醒教授，以防對方忘記。"
+msgstr "마감일 1주 전에 교수에게 상기시켜 주세요 (잊지 않도록)."
+
+msgid "選擇熟悉你的教授（上過課、做過研究），推薦信內容會更有說服力。"
+msgstr "자신을 잘 아는 교수(수업 또는 연구 함께 한)를 선택하면 추천서 내용이 더 설득력 있습니다."
+
+msgid "目前尚未收錄你的學校資訊。"
+msgstr "귀 학교 정보가 아직 등록되지 않았습니다."
+
+msgid "請參考學校官網或洽詢教務處。"
+msgstr "학교 공식 웹사이트를 참고하거나 교무처에 문의하세요."
+
+msgid "抵台第一件事"
+msgstr "대만 도착 후 첫 번째 할 일"
+
+msgid "台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。"
+msgstr ""
+"대만 전화번호는 생활의 기본: LINE 인증, 은행 OTP, 지도 내비게이션 모두 현지 번호가 필요합니다. 이 페이지에서는 선불 카드와 "
+"월정액 요금제 신청 방법을 정리합니다."
+
+msgid "剛抵台、還沒拿到 ARC？"
+msgstr "대만에 막 도착했고 아직 ARC가 없나요?"
+
+msgid "可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。"
+msgstr "먼저 공항이나 편의점에서 선불 SIM 카드를 구매하고(여권만 필요), ARC를 받은 후 월정액 요금제로 전환할 수 있습니다."
+
+msgid "預付卡（易付卡）"
+msgstr "선불 SIM 카드"
+
+msgid "無 ARC 可辦"
+msgstr "ARC 불필요"
+
+msgid "只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核發的過渡期使用。"
+msgstr ""
+"여권만 필요합니다. 7-Eleven, FamilyMart 및 공항에서 구매 가능. ARC 발급 전 도착 초기 과도 기간에 적합."
+
+msgid "需要：護照"
+msgstr "필요: 여권"
+
+msgid "費用：約 NT$300 起（含一個月通話 + 數據）"
+msgstr "비용: NT$300부터 (1개월 통화 + 데이터 포함)"
+
+msgid "月租方案（後付型）"
+msgstr "월정액 요금제 (후불)"
+
+msgid "ARC 後辦理"
+msgstr "ARC 취득 후 신청"
+
+msgid "費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。多數學生取得 ARC 後即改辦月租。"
+msgstr ""
+"요금이 저렴하고 데이터가 많아 장기 유학에 적합합니다. ARC와 대만 은행 계좌 또는 신용카드가 필요합니다. 대부분의 학생은 ARC 취득"
+" 후 이 요금제로 전환합니다."
+
+msgid "需要：ARC + 護照 + 銀行帳戶（或信用卡）"
+msgstr "필요: ARC + 여권 + 은행 계좌 (또는 신용카드)"
+
+msgid "費用：約 NT$399～699/月（依方案）"
+msgstr "비용: 약 NT$399~699/월 (요금제에 따라)"
+
+msgid "中華電信"
+msgstr "청화전신"
+
+msgid "涵蓋範圍最廣，山區及偏遠地帶訊號最佳"
+msgstr "가장 넓은 커버리지; 산간 및 외진 지역에서 최고 신호"
+
+msgid "台灣大哥大"
+msgstr "대만모바일"
+
+msgid "都會區訊號佳，學生方案較多"
+msgstr "도심 지역 신호 우수; 학생 요금제 다양"
+
+msgid "遠傳電信"
+msgstr "파이스톤"
+
+msgid "北部訊號穩定，資費具競爭力"
+msgstr "북부 지역 안정적 신호; 경쟁력 있는 요금"
+
+msgid "亞太電信"
+msgstr "아시아태평양통신"
+
+msgid "資費較低，適合純數據需求"
+msgstr "낮은 요금; 데이터 전용 사용자에 적합"
+
+msgid "居留證（ARC）正本"
+msgstr "ARC 원본 (외국인거류증)"
+
+msgid "必備"
+msgstr "필수"
+
+msgid "護照正本"
+msgstr "여권 원본"
+
+msgid "台灣銀行帳戶 或 信用卡（扣繳費用）"
+msgstr "대만 은행 계좌 또는 신용카드 (요금 납부용)"
+
+msgid "必備其一"
+msgstr "둘 중 하나 필수"
+
+msgid "學生證（部分業者提供學生優惠）"
+msgstr "학생증 (일부 통신사에서 학생 할인 제공)"
+
+msgid "建議攜帶"
+msgstr "지참 권장"
+
+msgid "選擇電信業者與方案"
+msgstr "통신사 및 요금제 선택"
+
+msgid "前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。"
+msgstr ""
+"주요 통신사 웹사이트에서 요금제를 비교하세요(통화 + 데이터). 예산이 제한되고 주로 데이터를 사용한다면 데이터 무제한 요금제(약 "
+"NT$399/월)를 고려해보세요."
+
+msgid "前往電信門市"
+msgstr "통신사 매장 방문"
+
+msgid ""
+"攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
+msgstr ""
+"ARC, 여권, 은행 계좌 또는 신용카드를 가지고 통신사 매장으로 가세요(중리 시내에 모든 주요 통신사 매장 있음). 직원에게 '거류증 "
+"소지자 신규 번호 신청'이라고 말하면 보통 30분 이내에 완료됩니다."
+
+msgid "選擇門號與 SIM 卡規格"
+msgstr "번호 및 SIM 카드 규격 선택"
+
+msgid ""
+"可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G "
+"正常使用。"
+msgstr ""
+"번호를 선택할 수 있고(특수 번호는 추가 비용), SIM 카드 크기도 선택합니다(현재 대부분의 휴대폰은 nano SIM 사용). 대만에서"
+" 5G/4G가 정상 작동하도록 폰이 '전 대역 잠금 해제 버전'인지 확인하세요."
+
+msgid "插卡啟用，設定網路"
+msgstr "SIM 카드 삽입 및 네트워크 설정"
+
+msgid "插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設定 APN。"
+msgstr ""
+"SIM 카드 삽입 후 APN 설정은 보통 자동으로 완료됩니다. 인터넷에 연결되지 않으면 매장 직원에게 APN 수동 설정을 요청하세요."
+
+msgid "中央大學附近："
+msgstr "중앙대학교 근처:"
+
+msgid "中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。"
+msgstr ""
+"중리 시내(기차역 근처)에 모든 주요 통신사 매장이 있습니다. 청화전신, 대만모바일, 파이스톤은 광밍가와 중정로에도 매장이 있습니다."
+
+msgid "保留原國際漫遊號碼："
+msgstr "본국 번호 유지 (로밍):"
+
+msgid "許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。"
+msgstr ""
+"많은 학생이 가족 연락용으로 본국 번호(국제 로밍)를 유지하고 일상 사용을 위한 대만 현지 번호를 별도로 개통합니다. 듀얼 SIM 폰이 "
+"훨씬 편리합니다."
+
+msgid "月租方案需綁定扣款帳戶："
+msgstr "월정액 요금제는 자동이체 계좌 연결 필요:"
+
+msgid "銀行帳戶餘額不足時，電信業者可能暫停門號。請確保每月帳戶有足夠餘額。"
+msgstr "은행 계좌 잔액이 부족하면 통신사가 번호를 정지할 수 있습니다. 매월 계좌에 충분한 잔액을 유지하세요."
+
+msgid "領獎學金・生活必備"
+msgstr "장학금 수령 · 생활 필수품"
+
+msgid "在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。"
+msgstr ""
+"대만 유학 기간 동안 은행 계좌는 장학금 수령, 임대료 납부, 일상 지출에 필수적입니다. 이 페이지에서는 은행 선택과 계좌 개설 절차를 "
+"정리합니다."
+
+msgid "中華郵政（郵局）"
+msgstr "중화우정 (우체국)"
+
+msgid "外籍生首選"
+msgstr "외국인 유학생 최고 추천"
+
+msgid "全台門市最廣，外籍生開戶最友善，"
+msgstr "대만에서 지점 수 최다, 외국인 계좌 개설에 가장 친화적 — "
+
+msgid "當日即可拿到存摺與提款卡"
+msgstr "당일 통장과 ATM 카드 수령 가능"
+
+msgid "，不像一般銀行需等 3–5 個工作天審核。"
+msgstr ", 일반 은행처럼 3–5 영업일을 기다릴 필요가 없습니다."
+
+msgid "優點："
+msgstr "장점:"
+
+msgid "當日領卡、未有 ARC 也可辦（持統一證號）、存款有政府保障"
+msgstr "당일 카드 발급; ARC 없이도 개설 가능 (통일 ID 사용); 예금 정부 보장"
+
+msgid "缺點："
+msgstr "단점:"
+
+msgid "ATM 主要在郵局內，跨行提款每次 NT$5+，轉帳超額 NT$8–15；App 功能較基本"
+msgstr "ATM은 주로 우체국 내부; 타행 인출 NT$5+/회; 이체 수수료 NT$8–15; 앱 기능은 기본적"
+
+msgid "多人同行請提前預約，避免等候過久"
+msgstr "단체 방문 시 대기를 피하기 위해 사전 예약 권장"
+
+msgid "多數郵局營業至 17:00，部分郵局更晚（比銀行多 1.5 小時）"
+msgstr "대부분의 우체국은 17:00까지 영업, 일부는 더 늦게까지 (일반 은행보다 1.5시간 더)"
+
+msgid "台灣銀行"
+msgstr "대만은행"
+
+msgid "獎學金首選"
+msgstr "장학금 수혜자 최고 추천"
+
+msgid "政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。"
+msgstr "정부 기관 및 교육부 장학금은 보통 대만은행 계좌로 입금됩니다 — 정부 장학금을 받는 경우 필수. 중리 시내에 지점 있음."
+
+msgid "玉山銀行"
+msgstr "E.Sun 은행"
+
+msgid "線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。"
+msgstr ""
+"우수한 온라인 뱅킹 인터페이스, 더 나은 영어 고객 서비스, Apple Pay / Google Pay 지원. 외국인에게 비교적 친화적."
+
+msgid "國泰世華銀行"
+msgstr "국태세화은행"
+
+msgid "ATM 據點多，與多家電商合作，網路銀行功能完整，學生使用廣泛。"
+msgstr "ATM 위치 다수, 주요 전자상거래 플랫폼과 제휴, 종합적인 온라인 뱅킹 기능, 학생들이 널리 사용."
+
+msgid "雙證件之一"
+msgstr "필수 신분증 2개 중 하나"
+
+msgid "或 統一證號基資表（尚未領 ARC 者）"
+msgstr "또는 통일 ID 등록 서류 (ARC 미발급자)"
+
+msgid "木頭刻印章（英文姓名）"
+msgstr "나무 도장 (영문 이름)"
+
+msgid "— 原子章、橡皮章不可用"
+msgstr "— 볼펜 도장, 고무 도장은 사용 불가"
+
+msgid "現金 NT$100（不收刷卡）"
+msgstr "현금 NT$100 (카드 불가)"
+
+msgid "視需求"
+msgstr "필요시"
+
+msgid "台灣本人手機號碼（辦 Visa 卡時需要）"
+msgstr "대만 휴대폰 번호 (Visa 카드 신청 시 필요)"
+
+msgid "木頭印章哪裡買？"
+msgstr "나무 도장은 어디서 구매하나요?"
+
+msgid ""
+"學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 "
+"分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存摺分開保管。"
+msgstr ""
+"캠퍼스 근처 문구점에서 만들 수 있습니다. 주인에게 나무 도장이 필요하다고 말하고 영문 전체 이름을 알려주세요. 비용: 약 "
+"NT$50–100, 약 20분 대기. 미리 만들어 계좌 개설 당일 지참하세요. 도장은 서명과 동일한 효력을 가집니다 — 통장과 따로 "
+"보관하세요."
+
+msgid "已領有居留證（ARC）者："
+msgstr "이미 ARC가 있는 경우:"
+
+msgid "居留證號即為統一證號，無須另行申請，直接帶 ARC 正本開戶即可。"
+msgstr "ARC 번호가 곧 통일 ID입니다 — 별도 신청 불필요. ARC 원본만 지참하면 계좌 개설 가능."
+
+msgid "尚未取得居留證者（部分港澳生）："
+msgstr "아직 ARC가 없는 경우 (일부 홍콩/마카오 학생):"
+
+msgid ""
+"需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
+msgstr ""
+"현지 이민서비스센터에서 '통일 ID 등록 서류'를 신청해야 하며, 여권 원본과 사본을 지참하세요 (사진 불필요). 이 번호는 평생 "
+"고정이며, ARC를 받은 후 ARC 번호와 통일 ID가 일치합니다."
+
+msgid "建議選擇有 VISA 功能的 Debit Card（扣帳卡）："
+msgstr "VISA 기능이 있는 체크카드(Debit Card) 선택을 권장합니다:"
+
+msgid ""
+"可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 兩種組合，可按需求選擇。請注意部分台灣商家不接受 "
+"VISA Debit，付款前請確認。"
+msgstr ""
+"ATM 인출은 물론 매장 결제 및 온라인 쇼핑도 가능합니다. 우체국은 VISA + EasyCard 또는 VISA + iPASS 두 가지 "
+"조합을 제공합니다. 일부 대만 가맹점은 VISA Debit을 받지 않으니 결제 전 확인하세요."
+
+msgid "建議先辦好 SIM 卡再去開戶："
+msgstr "은행 계좌 개설 전 SIM 카드를 먼저 개통하세요:"
+
+msgid "開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。"
+msgstr ""
+"온라인 뱅킹 및 Visa 카드 개통에는 OTP 수신용 대만 휴대폰 번호가 필요합니다. 현지 번호가 있으면 한 번의 방문으로 모든 것을 "
+"완료할 수 있습니다."
+
+msgid "注意營業時間 + 預留足夠時間："
+msgstr "영업시간 확인 및 충분한 시간 확보:"
+
+msgid "一般銀行週一至週五 09:00–15:30，郵局多至 17:00。外籍生開戶流程通常需 1 小時以上，請勿太晚抵達，以免被請回。"
+msgstr ""
+"일반 은행 영업시간은 월–금 09:00–15:30, 대부분의 우체국은 17:00까지. 외국인 계좌 개설은 보통 1시간 이상 소요되므로 "
+"너무 늦게 도착하면 거절당할 수 있습니다."
+
+msgid "台灣日期格式：先寫月份、再寫日子"
+msgstr "대만 날짜 형식: 월 먼저, 그 다음 일"
+
+msgid " — 2 月 1 日 = 2025/2/1（與部分地區習慣相反），簽文件時請注意。"
+msgstr " — 2월 1일 = 2025/2/1 (일부 지역 관습과 반대). 문서 서명 시 주의하세요."
+
+msgid "建議前往學校附近郵局："
+msgstr "캠퍼스 근처 우체국을 권장합니다:"
+
+msgid "大學周邊郵局對僑外生開戶經驗豐富，審核較快，手續更熟練。"
+msgstr "대학교 근처 우체국은 외국인 학생 계좌 개설 경험이 풍부합니다 — 심사가 빠르고 절차가 더 원활합니다."
+
+msgid "ARC 到期後記得更新帳戶資料："
+msgstr "ARC 만료 후 계좌 정보 업데이트를 잊지 마세요:"
+
+msgid "ARC 換新後需至銀行更新證件資料，避免帳戶被凍結。"
+msgstr "ARC 갱신 후 계좌 동결을 방지하기 위해 은행에서 신분증 서류를 업데이트하세요."
+
+msgid "重要警示"
+msgstr "중요 경고"
+
+msgid "絕對不要將帳戶借給他人："
+msgstr "절대로 계좌를 타인에게 빌려주지 마세요:"
+
+msgid "依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。"
+msgstr ""
+"대만 법률에 따라 통장, ATM 카드, 온라인 뱅킹 비밀번호를 타인에게 빌려주는 것은 불법입니다. 최소한 사기 혐의자로 등록될 수 있으며"
+" 심하면 형사 책임을 집니다. 계좌가 도용되거나 통장을 분실하면 즉시 은행에 알리세요."
+
+msgid "不要短期內在多家銀行開戶："
+msgstr "단기간에 여러 은행에 계좌를 개설하지 마세요:"
+
+msgid "台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。"
+msgstr ""
+"대만에서 계좌를 개설할 때마다 은행은 신용 조회를 실행합니다. 단기간에 조회가 너무 많으면 은행이 전화하거나 신청을 거절할 수 있습니다 "
+"(유령 계좌 방지). 처음에는 1–2개 은행으로 시작하세요."
+
+msgid "外籍生・僑生必辦"
+msgstr "외국인 유학생·화교 유학생 필수"
+
+msgid "僑生、外籍生（僑外生）取得居留證明文件來臺就學，自合於投保資格之日起，依法應參加全民健康保險。"
+msgstr ""
+"대만에서 공부하기 위해 체류 증명 서류를 취득한 화교 학생 및 외국인 유학생은 자격 요건을 충족한 날부터 법적으로 국민건강보험에 가입해야"
+" 합니다."
+
+msgid "新生第一學期保險（未達健保資格前）"
+msgstr "신입생 첫 학기 보험 (건강보험 자격 취득 전)"
+
+msgid "重要："
+msgstr "중요:"
+
+msgid "剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保險："
+msgstr ""
+"막 도착한 화교 학생들은 NHI 가입을 위한 '대만 6개월 거주' 요건을 아직 충족하지 못하였으므로 먼저 아래 보험 중 하나에 가입해야 "
+"합니다:"
+
+msgid "僑保（海外華人保險）"
+msgstr "화교보험 (OCAC 해외화교보험)"
+
+msgid "適用對象：首次入台的大一僑生新生（只能加保一次）"
+msgstr "대상: 대만에 처음 입국하는 화교 1학년 신입생 (1회만 가입 가능)"
+
+msgid "保費：自費 NT$600（僑委會補助 NT$600，合計 NT$1,200）"
+msgstr "보험료: 자기부담 NT$600 (화교위원회 보조 NT$600, 합계 NT$1,200)"
+
+msgid "保障期間：6 個月（一學期）"
+msgstr "보장 기간: 6개월 (한 학기)"
+
+msgid "由國際事務處協助辦理"
+msgstr "국제사무처의 도움으로 처리"
+
+msgid "國泰人壽保險"
+msgstr "국태생명보험"
+
+msgid "適用對象：第二學期起或不符合僑保資格者"
+msgstr "대상: 2학기부터 또는 화교보험 자격이 없는 자"
+
+msgid "保費：NT$3,000 / 學期（最長六個月）"
+msgstr "보험료: NT$3,000 / 학기 (최장 6개월)"
+
+msgid "由國際事務處協助加保"
+msgstr "국제사무처의 지원으로 가입"
+
+msgid "理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影本、郵局存簿影本及個資同意書"
+msgstr ""
+"보험금 청구: OIA에서 청구서를 작성하고 의료 영수증, 진단서, ARC 사본, 여권 사본, 우체국 통장 사본, 개인정보 동의서를 지참"
+
+msgid "全民健保投保規定"
+msgstr "국민건강보험 가입 규정"
+
+msgid "僑外生就學期間"
+msgstr "재학 기간 (화교/외국인 유학생)"
+
+msgid "僑外生經許可工作期間"
+msgstr "허가된 취업 기간 (화교/외국인 유학생)"
+
+msgid "投保資格"
+msgstr "가입 자격"
+
+msgid "自在臺居留滿 6 個月之日投保"
+msgstr "대만 거주 6개월 완료일부터 가입"
+
+msgid "自受僱當日投保（無等待期）"
+msgstr "고용일부터 가입 (대기 기간 없음)"
+
+msgid "投保身分"
+msgstr "피보험자 신분"
+
+msgid "第 6 類第 2 目被保險人"
+msgstr "제6종 제2목 피보험자"
+
+msgid "第 1 類被保險人（受僱者）"
+msgstr "제1종 피보험자 (근로자)"
+
+msgid "投保方式"
+msgstr "가입 방법"
+
+msgid "以就讀學校為投保單位辦理"
+msgstr "재학 학교를 가입 단위로 처리"
+
+msgid "以工作單位為投保單位辦理"
+msgstr "직장을 가입 단위로 처리"
+
+msgid "※ 短期性工作未逾 3 個月者，可選擇以原投保資格繼續投保"
+msgstr "※ 단기 취업(3개월 미만)자는 기존 피보험자 자격으로 계속 가입을 선택할 수 있음"
+
+msgid "「在臺居留滿 6 個月」認定方式"
+msgstr "'대만 6개월 거주' 산정 방법"
+
+msgid ""
+"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 "
+"30 天，則從重新抵台當天起算，6 個月重新計算。"
+msgstr ""
+"대만에서 6개월 연속 거주하거나, 1회 출국이 30일을 넘지 않는 경우 실제 거주 기간에서 출국 일수를 제외한 합계가 6개월 이상이어야 "
+"합니다. 2회 이상 출국하거나 1회 출국이 30일을 초과하면 대만 재입국일부터 6개월을 다시 계산합니다."
+
+msgid "計算範例："
+msgstr "계산 예시:"
+
+msgid "入境日：113/9/1 → 未曾出境 → 投保日：114/3/1"
+msgstr "입국일: 113/9/1 → 출국 없음 → 가입일: 114/3/1"
+
+msgid "入境日：113/9/1 → 曾出境 1 次（114/1/1–1/5，共 4 天）→ 投保日：114/3/5"
+msgstr "입국일: 113/9/1 → 1회 출국 (114/1/1–1/5, 총 4일) → 가입일: 114/3/5"
+
+msgid "在臺參加健保注意事項"
+msgstr "대만 건강보험 가입 주의사항"
+
+msgid "僑外生在臺就學並符合投保資格期間，應以就讀學校為投保單位辦理投保。"
+msgstr "대만에서 재학 중이고 자격 요건을 충족하는 화교/외국인 유학생은 학교를 가입 단위로 건강보험에 가입해야 합니다."
+
+msgid "僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 日內，向健保署辦理投保。"
+msgstr ""
+"화교/외국인 유학생이 대만에서 취업 허가를 받아 고용될 경우, 가입 단위(고용주)는 피보험자가 자격 요건을 충족한 날부터 3일 이내에 "
+"건강보험 가입을 완료해야 합니다."
+
+msgid "於受僱單位投保時，應先至學校辦理轉出，避免重複投保。"
+msgstr "고용주를 통해 가입할 때는 중복 가입을 피하기 위해 먼저 학교에서 전출 처리를 해야 합니다."
+
+msgid "與工作單位終止僱傭關係後，應另以適法身分投保：若已受新單位聘僱，於新單位投保；未受聘僱期間則應回學校辦理投保。"
+msgstr ""
+"고용 관계 종료 후에는 다른 적법한 신분으로 가입: 새 고용주에게 채용되면 새 고용주 통해 가입; 미취업 기간 중에는 학교 가입으로 "
+"복귀."
+
+msgid "符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，應以眷屬身分依附其投保單位加保。"
+msgstr ""
+"자격이 있지만 미취업 기간에는 대만에서 배우자, 부모 또는 자녀가 이미 건강보험 피보험자라면 그들의 가입 단위에 피부양자로 가입해야 "
+"합니다."
+
+msgid "在學證明（學生證或在學證明書）"
+msgstr "재학 증명 (학생증 또는 재학증명서)"
+
+msgid "台灣銀行帳戶（保費扣繳用）"
+msgstr "대만 은행 계좌 (보험료 공제용)"
+
+msgid "建議"
+msgstr "권장"
+
+msgid "1 吋照片（部分單位需要）"
+msgstr "1인치 사진 (일부 부서 필요)"
+
+msgid "清寒僑生健保費補助："
+msgstr "저소득 화교 유학생 건강보험료 지원:"
+
+msgid ""
+"符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 "
+"NT$826。詳情請洽國際事務處。"
+msgstr ""
+"저소득 자격으로 건강보험에 가입한 경우 OIA에 월 NT$413 지원을 신청할 수 있습니다 (저소득 증명 필요, 심사 후 지급). 지원 "
+"없이는 월 보험료 약 NT$826. 자세한 내용은 OIA에 문의하세요."
+
+msgid "相關文件下載"
+msgstr "관련 문서 다운로드"
+
+msgid "在臺僑生、外籍生參加全民健康保險須知（PDF）↓"
+msgstr "대만 화교/외국인 유학생 건강보험 가입 안내 (PDF) ↓"
+
+msgid "小病先看診所："
+msgstr "가벼운 질환은 먼저 의원(클리닉)으로:"
+
+msgid ""
+"台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
+msgstr ""
+"대만은 단계별 의료 시스템을 채택합니다. 일반 질환은 먼저 의원(가정의학과·내과)을 방문하면 본인부담금이 약 NT$150에 불과합니다. "
+"병원 응급실이나 외래를 직접 방문하면 더 높은 본인부담금(NT$240~480)이 필요합니다."
+
+msgid "下載「健保快易通」App："
+msgstr "'건강보험 익스프레스' 앱 다운로드:"
+
+msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
+msgstr "건강보험 상태, 진료 기록을 확인하고 디지털 건강보험증을 표시할 수 있습니다 — 실물 카드를 잊어버려도 걱정 없습니다."
+
+msgid "暑假返鄉超過 2 個月時："
+msgstr "여름방학 2개월 이상 귀국 시:"
+
+msgid "建議辦理「出國停保」避免繼續扣繳保費；回台後記得立即「復保」恢復保障。"
+msgstr "계속 보험료가 공제되는 것을 막기 위해 '출국 정지' 신청을 하고, 대만 복귀 후 즉시 '보험 복원'을 기억하세요."
+
+msgid "全民健康保險署官網 ↗"
+msgstr "국민건강보험공단 공식 웹사이트 ↗"
+
+msgid "非本國籍人士加保說明 ↗"
+msgstr "외국 국적자 건강보험 가입 안내 ↗"
+
+msgid "衛保組・診所・醫院・急診"
+msgstr "건강센터·의원·병원·응급실"
+
+msgid "台灣採分級醫療制度，小病先看診所、大病再轉醫院。持健保卡就醫費用大幅降低，急救請撥 119。"
+msgstr ""
+"대만은 단계별 의료 시스템을 사용합니다 — 가벼운 질환은 먼저 의원으로, 심각한 경우 병원으로. 건강보험 카드 소지자는 훨씬 저렴하게 "
+"이용할 수 있습니다. 응급시 119 전화."
+
+msgid "台灣分級醫療制度"
+msgstr "대만 단계별 의료 제도"
+
+msgid "衛保組 / 診所"
+msgstr "건강센터 / 의원"
+
+msgid "健保約 NT$150–200"
+msgstr "건강보험 본인부담금 약 NT$150–200"
+
+msgid "一般感冒、輕傷、慢性病、定期回診"
+msgstr "일반 감기, 경상, 만성 질환, 정기 추적 진료"
+
+msgid "地區醫院（門診）"
+msgstr "지역 병원 (외래)"
+
+msgid "健保約 NT$240–360"
+msgstr "건강보험 본인부담금 약 NT$240–360"
+
+msgid "需要進一步檢查、診所無法處理者"
+msgstr "추가 검사 필요 또는 의원 처리 범위 초과"
+
+msgid "醫學中心（急診）"
+msgstr "의료 센터 (응급)"
+
+msgid "健保約 NT$450–600"
+msgstr "건강보험 본인부담금 약 NT$450–600"
+
+msgid "嚴重外傷、危及生命、需要手術"
+msgstr "중상, 생명 위협, 수술 필요"
+
+msgid "台灣分級醫療制度下，直接去大醫院門診的部分負擔比診所高 2–3 倍。輕症先到診所就診，若需轉診，醫師會開立轉診單，可享受較低的部分負擔。"
+msgstr ""
+"대만 단계별 의료 시스템에서 대형 병원 외래를 직접 방문하면 의원보다 2–3배 비쌉니다. 가벼운 질환은 먼저 의원으로 가세요. 의뢰가 "
+"필요하면 의사가 의뢰서를 발급하여 더 낮은 본인부담금이 적용됩니다."
+
+msgid "校內衛保組（NCU）"
+msgstr "교내 보건센터 (NCU)"
+
+msgid "地點"
+msgstr "위치"
+
+msgid "中正圖書館（舊圖）1 樓"
+msgstr "중정도서관(구 도서관) 1층"
+
+msgid "電話"
+msgstr "전화"
+
+msgid "分機 57271"
+msgstr "내선 57271"
+
+msgid "服務時間"
+msgstr "운영 시간"
+
+msgid "週一至週五"
+msgstr "월요일~금요일"
+
+msgid "08:00–17:00（寒暑假可能調整）"
+msgstr "08:00–17:00 (겨울·여름 방학 중 변경 가능)"
+
+msgid "服務項目"
+msgstr "서비스 항목"
+
+msgid "基本診療・諮詢・轉介"
+msgstr "기본 진료 · 상담 · 전원"
+
+msgid "量血壓、用藥諮詢、轉診協助、新生體檢"
+msgstr "혈압 측정, 약물 상담, 전원 지원, 신입생 건강 검진"
+
+msgid "衛保組適合輕症初診，如感冒、發燒、輕傷等。若需進一步診療，衛保組可協助轉介至校外診所或醫院。"
+msgstr ""
+"교내 보건센터는 감기, 발열, 경상 등 경증 초진에 적합합니다. 추가 치료가 필요한 경우 직원이 교외 의원이나 병원으로 의뢰를 "
+"도와드립니다."
+
+msgid "非上班時間請直接前往校外診所或急診。"
+msgstr "근무 시간 외에는 교외 의원 또는 응급실로 직접 방문하세요."
+
+msgid "校外診所（後門商圈 / 中壢周邊）"
+msgstr "교외 의원 (후문 상권 / 중리 주변)"
+
+msgid ""
+"中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別用 Google Maps 搜尋「中壢 內科診所」、「中壢 "
+"耳鼻喉科」等。"
+msgstr ""
+"NCU 후문 상권과 중리 시내에 의원이 많습니다. NHI 카드 사용 시 진료비 약 NT$150–200. Google Maps에서 "
+"진료과별로 '중리 내과 의원', '중리 이비인후과' 등으로 검색하세요."
+
+msgid "診所看診時間："
+msgstr "의원 진료 시간:"
+
+msgid ""
+"多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班制，非所有診所皆有晚診。建議事先電話確認或查詢"
+" Google 地圖上的即時等候人數。"
+msgstr ""
+"대부분의 의원은 오전(08:30–12:00), 오후(14:00–17:30), 야간(18:00–21:00) 3부제로 운영됩니다. 야간 "
+"진료가 없는 의원도 있습니다. 사전에 전화로 확인하거나 Google Maps의 실시간 대기 인원을 확인하는 것을 권장합니다."
+
+msgid "周邊醫院"
+msgstr "주변 병원"
+
+msgid "最近・急診24H"
+msgstr "가장 가까움 · 24H 응급"
+
+msgid "桃園市中壢區延平路150號"
+msgstr "타오위안시 중리구 옌핑로 150호"
+
+msgid "從中大搭公車約 15–20 分鐘；設有急診室（24 小時）"
+msgstr "NCU에서 버스로 약 15–20분; 24시간 응급실 있음"
+
+msgid "壢新醫院官網 ↗"
+msgstr "력신 병원 웹사이트 ↗"
+
+msgid "衛福部桃園醫院中壢院區"
+msgstr "보건복지부 타오위안 병원 중리 원구"
+
+msgid "桃園市中壢區中山東路二段16號"
+msgstr "타오위안시 중리구 중산동로 2단 16호"
+
+msgid "公立醫院，設有門診及急診"
+msgstr "외래 및 응급 부서를 갖춘 공립 병원"
+
+msgid "林口長庚醫院"
+msgstr "린커우 장경기념병원"
+
+msgid "醫學中心"
+msgstr "의료 센터"
+
+msgid "桃園市龜山區舒民路5號"
+msgstr "타오위안시 구이산구 수민로 5호"
+
+msgid "中大搭車約 40 分鐘；台灣最大醫院之一，有多語言服務"
+msgstr "NCU에서 약 40분; 대만 최대 규모 병원 중 하나, 다국어 서비스 제공"
+
+msgid "長庚醫院官網 ↗"
+msgstr "장경병원 웹사이트 ↗"
+
+msgid "急診 / 緊急情況"
+msgstr "응급 / 긴급 상황"
+
+msgid "危及生命・嚴重受傷・無法自行就醫"
+msgstr "생명 위협 · 중상 · 스스로 의료 도움을 받을 수 없음"
+
+msgid "請立即撥打緊急電話，或由旁人送至最近有急診的醫院（壢新醫院）。急診 24 小時全年無休。"
+msgstr ""
+"즉시 응급 서비스에 전화하거나 누군가에게 가장 가까운 응급실이 있는 병원(력신 병원)에 데려다 달라고 하세요. 응급실은 24시간 연중무휴"
+" 운영합니다."
+
+msgid "救護車・火災"
+msgstr "구급차 · 화재"
+
+msgid "免費撥打，全球手機可用"
+msgstr "무료 전화, 전 세계 모든 휴대폰에서 사용 가능"
+
+msgid "警察局"
+msgstr "경찰"
+
+msgid "報案・協助"
+msgstr "신고 · 도움"
+
+msgid "國際緊急號碼"
+msgstr "국제 긴급 번호"
+
+msgid "任何手機（含無 SIM 卡）皆可撥打"
+msgstr "SIM 카드 없는 폰 포함, 모든 휴대폰에서 사용 가능"
+
+msgid "外來人士生活諮詢"
+msgstr "외국인 생활 상담"
+
+msgid "多語言，含醫療協助"
+msgstr "다국어, 의료 지원 포함"
+
+msgid "急診部分負擔較高："
+msgstr "응급실 본인부담금이 더 높습니다:"
+
+msgid "非緊急狀況直接掛急診，健保部分負擔為 NT$450–600（比診所高 3 倍以上）。輕症建議前往診所就診，急診留給真正緊急的情況。"
+msgstr ""
+"비응급 상황에서 응급실을 직접 방문하면 건강보험 본인부담금이 NT$450–600(의원 대비 3배 이상). 경증은 의원으로, 응급실은 진짜"
+" 응급 상황을 위해 아껴두세요."
+
+msgid "健保就醫費用對照"
+msgstr "건강보험 진료비 비교"
+
+msgid "就醫地點"
+msgstr "진료 장소"
+
+msgid "持健保卡"
+msgstr "건강보험 카드 소지"
+
+msgid "未持健保卡"
+msgstr "건강보험 카드 미소지"
+
+msgid "衛保組（校內）"
+msgstr "교내 보건센터"
+
+msgid "免費 / 極低費"
+msgstr "무료 / 매우 저렴"
+
+msgid "視項目收費"
+msgstr "항목별 요금"
+
+msgid "診所"
+msgstr "의원"
+
+msgid "約 NT$150–200"
+msgstr "약 NT$150–200"
+
+msgid "全額自費（NT$500–1,000+）"
+msgstr "전액 자비 (NT$500–1,000+)"
+
+msgid "地區醫院門診"
+msgstr "지역 병원 외래"
+
+msgid "約 NT$240–360"
+msgstr "약 NT$240–360"
+
+msgid "全額自費（NT$1,000+）"
+msgstr "전액 자비 (NT$1,000+)"
+
+msgid "醫學中心門診"
+msgstr "의료 센터 외래"
+
+msgid "約 NT$360–480"
+msgstr "약 NT$360–480"
+
+msgid "全額自費（NT$2,000+）"
+msgstr "전액 자비 (NT$2,000+)"
+
+msgid "急診"
+msgstr "응급실"
+
+msgid "約 NT$450–600"
+msgstr "약 NT$450–600"
+
+msgid "全額自費（視治療而定）"
+msgstr "전액 자비 (치료에 따라 다름)"
+
+msgid "可顯示數位健保卡、查詢就醫紀錄與健保狀態，出門忘帶實體健保卡時可使用。"
+msgstr "디지털 건강보험 카드 표시, 진료 기록 및 보험 상태 확인 가능 — 실물 카드를 잊었을 때 유용합니다."
+
+msgid "NCU 校安緊急聯絡"
+msgstr "NCU 교내 안전 긴급 연락처"
+
+msgid "分機 57212"
+msgstr "내선 57212"
+
+msgid "24 小時校安專線："
+msgstr "24시간 교내 안전 전용 전화:"
+
+msgid "國際事務處"
+msgstr "국제사무처"
+
+msgid "分機 57081"
+msgstr "내선 57081"
+
+msgid "承辦人：徐心荷小姐"
+msgstr "담당자: 쉬신허 씨"
+
+msgid "所屬地區"
+msgstr "지역"
+
+msgid "請選擇地區"
+msgstr "지역을 선택해 주세요"
+
+msgid "東亞"
+msgstr "동아시아"
+
+msgid "東南亞"
+msgstr "동남아시아"
+
+msgid "南亞"
+msgstr "남아시아"
+
+msgid "中東"
+msgstr "중동"
+
+msgid "歐洲"
+msgstr "유럽"
+
+msgid "北美洲"
+msgstr "북미"
+
+msgid "中南美洲"
+msgstr "중남미"
+
+msgid "非洲"
+msgstr "아프리카"
+
+msgid "大洋洲"
+msgstr "오세아니아"
+
+msgid "謹慎選擇，提交後無法更改"
+msgstr "신중하게 선택하세요 — 제출 후에는 변경할 수 없습니다"
+
+msgid "必填"
+msgstr "필수"
+
+msgid "請選擇系所"
+msgstr "학과를 선택해 주세요"
+
+msgid "不確定抵達日期，建議先選擇9月1日"
+msgstr "도착일이 확실하지 않다면 일단 9월 1일을 선택하는 것을 권장합니다"
+
+msgid "下一步"
+msgstr "다음 단계"
+
+msgid "（海外華裔學生）"
+msgstr "(화교 학생)"
+
+msgid "（外國籍學生）"
+msgstr "(외국인 학생)"
+
+msgid "（香港、澳門學生）"
+msgstr "(홍콩·마카오 학생)"
+
+msgid "請先選擇地區"
+msgstr "먼저 지역을 선택해 주세요"
+
+msgid "請選擇入學狀態"
+msgstr "입학 상태를 선택해 주세요"
+
+msgid "請填寫預計抵台日期"
+msgstr "대만 도착 예정일을 입력해 주세요"
+
+msgid "您是否擁有台灣身份證？"
+msgstr "대만 신분증을 소지하고 있습니까?"
+
+msgid "此資訊將影響後續的居留證申辦流程與相關步驟"
+msgstr "이 정보는 이후 ARC 신청 절차 및 관련 단계에 영향을 미칩니다"
+
+msgid "我有台灣身份證"
+msgstr "대만 신분증을 소지하고 있습니다"
+
+msgid "我沒有台灣身份證"
+msgstr "대만 신분증을 소지하고 있지 않습니다"
+
+msgid "您是否為延遲入學？"
+msgstr "입학을 연기하셨습니까?"
+
+msgid "延遲入學生可能有不同的報到與註冊時程安排"
+msgstr "입학 연기 학생은 등록 및 신고 일정이 다를 수 있습니다"
+
+msgid "我是延遲入學"
+msgstr "입학을 연기했습니다"
+
+msgid "我不是延遲入學"
+msgstr "입학을 연기하지 않았습니다"
+
+msgid "是"
+msgstr "예"
+
+msgid "否"
+msgstr "아니요"
+
+msgid "上一題"
+msgstr "이전 문항"
+
+msgid "下一題"
+msgstr "다음 문항"
+
+msgid "入境前準備"
+msgstr "입국 전 준비"
+
+msgid "已抵臺就學"
+msgstr "대만에 도착하여 재학 중"
+
+msgid "小老師"
+msgstr "튜터"
+
+msgid "朋友"
+msgstr "친구"
+
+msgid "學長姐"
+msgstr "선배"
+
+msgid "好朋友"
+msgstr "절친"
+
+msgid "課業輔助"
+msgstr "학습 지원"
+
+msgid "生活指導"
+msgstr "생활 지도"
+
+msgid "瘋玩"
+msgstr "신나게 놀기"
+
+msgid "安靜陪伴"
+msgstr "조용한 동반자"
+
+msgid "沉穩可靠"
+msgstr "침착하고 믿음직한"
+
+msgid "火爆脾氣"
+msgstr "다혈질"
+
+msgid "語音輸入"
+msgstr "음성 입력"
+
+msgid "重新命名："
+msgstr "이름 변경:"
+
+msgid "重新命名性格："
+msgstr "성격 이름 변경:"
+
+msgid "來自世界各地、就讀國立中央大學的學長姐，分享他們最真實的留學體驗與心得"
+msgstr "세계 각지에서 NCU에 재학 중인 선배들이 대만 유학의 가장 진실한 경험과 소감을 공유합니다"
+
+msgid "國立中央大學"
+msgstr "국립중앙대학교 (NCU)"
+
+msgid "企業管理碩士"
+msgstr "경영학 석사"
+
+msgid "機械工程學系"
+msgstr "기계공학과"
+
+msgid "學習與教學研究所"
+msgstr "학습교육연구소"
+
+msgid "資訊工程學系博士班"
+msgstr "정보공학과 박사과정"
+
+msgid "國際企業學士班"
+msgstr "국제비즈니스 학사과정"
+
+msgid "光電科學與工程學系碩士"
+msgstr "광학과학 및 공학 석사"
+
+msgid ""
+"「剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。ReadyTo "
+"上的流程整理讓我在申請階段就對整個時程很有把握，少走了好多彎路！」"
+msgstr ""
+"\"처음 대만에 왔을 때 많이 긴장했지만 학교 국제처가 정말 친절했어요. 공항 픽업부터 기숙사 정착까지 전담 직원이 도와줬습니다. "
+"ReadyTo의 체계적인 과정 안내 덕분에 지원 단계부터 일정을 완전히 파악할 수 있었고 많은 시행착오를 줄일 수 있었어요!\""
+
+msgid ""
+"「中大的工程教育真的很扎實！教授們都很願意指導外籍生，實驗室設備也很完整。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」"
+msgstr ""
+"\"NCU의 공학 교육은 정말 탄탄합니다! 교수님들이 외국인 학생들을 기꺼이 지도해 주시고 실험실 시설도 매우 훌륭합니다. "
+"ReadyTo의 비자 안내 덕분에 조사 시간을 많이 절약했어요 — 단계대로 따라가면 됩니다.\""
+
+msgid "「來中大交流是我做過最棒的決定！中大的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
+msgstr ""
+"\"NCU에 온 것은 제가 내린 최고의 결정이에요! NCU의 교수 방식은 매우 활발하고 매일 실제로 적용할 수 있습니다. ReadyTo의"
+" 출발 전 준비 체크리스트 덕분에 떠나기 전에 전혀 허둥대지 않았어요.\""
+
+msgid "「中大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
+msgstr ""
+"\"NCU 정보공학과는 산학협력 기회가 많아 재학 중에 신주 과학단지에서 인턴십을 할 수 있었어요. ReadyTo의 주거 정보와 건강보험"
+" 안내는 매우 도움이 되어 연구에 집중할 수 있었습니다.\""
+
+msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。中大的校園生活多元豐富，是我做過最好的選擇！」"
+msgstr ""
+"\"화교 배경을 가진 저에게 많은 사람들이 왜 대만에 왔냐고 물어요. 사실 대만의 미디어 환경과 창의적 자유는 정말 다릅니다. NCU의 "
+"캠퍼스 생활은 다양하고 풍요로워 제가 내린 최고의 선택이에요!\""
+
+msgid ""
+"「中大的光電領域是國內數一數二的，來這裡深造是最正確的選擇。中大的研究環境和產學連結都非常完善。ReadyTo 的 ARC "
+"辦理指南讓我順利完成所有手續。」"
+msgstr ""
+"\"NCU의 광전 분야는 국내 최고 수준이라 여기서 심화 공부하는 것은 가장 옳은 선택이었습니다. NCU의 연구 환경과 산학 연계도 매우"
+" 훌륭합니다. ReadyTo의 ARC 처리 가이드 덕분에 모든 절차를 순조롭게 마쳤습니다.\""
+
+msgid "你好！"
+msgstr "안녕하세요!"
+
+msgid "歡迎使用"
+msgstr "환영합니다"
+
+msgid "，您的個人化來臺就學流程已準備好。"
+msgstr ", 맞춤형 대만 유학 프로세스가 준비되었습니다."
+
+msgid "跟著我們一步步完成留學準備，掌握所有關鍵資訊。"
+msgstr "단계별 가이드를 따라 유학 준비를 완료하고 모든 핵심 정보를 파악하세요."
+
+msgid "詢問AI小幫手"
+msgstr "AI 도우미에게 묻기"
+
+msgid "專為僑外籍生打造的來台留學流程指南平台。"
+msgstr "화교 및 외국인 유학생을 위해 특별히 제작된 대만 유학 단계별 가이드 플랫폼."
+
+msgid "了解更多"
+msgstr "더 알아보기"
+
+msgid "項任務"
+msgstr "개 작업"
+
+msgid "示範資料"
+msgstr "데모 데이터"
+
+msgid "申請中"
+msgstr "신청 중"
+
+msgid "留學流程"
+msgstr "유학 프로세스"
+
+msgid "四個階段"
+msgstr "4단계"
+
+msgid "掌握留學全流程"
+msgstr "유학 전 과정 완벽 파악"
+
+msgid "申請前準備"
+msgstr "지원 전 준비"
+
+msgid "確認資格、選擇學校與科系、準備學歷文件與財力證明"
+msgstr "자격 확인, 학교 및 학과 선택, 학력 서류 및 재정 증명 준비"
+
+msgid "申請入學"
+msgstr "입학 지원"
+
+msgid "線上申請系統填寫、繳交文件、等待入學許可"
+msgstr "온라인 지원 시스템 입력, 서류 제출, 입학 허가 대기"
+
+msgid "抵台前準備"
+msgstr "대만 도착 전 준비"
+
+msgid "辦理簽證、預訂機票、安排住宿、準備入境文件"
+msgstr "비자 신청, 항공권 예약, 숙소 준비, 입국 서류 준비"
+
+msgid "抵達後事項"
+msgstr "도착 후 해야 할 일"
+
+msgid "辦理居留證、健保、銀行開戶、手機門號、學校註冊"
+msgstr "거류증(ARC) 신청, 건강보험 가입, 은행 계좌 개설, 휴대폰 번호 등록, 학교 등록"
+
+msgid "以上為示範進度，"
+msgstr "위는 데모 진행 상황입니다, "
+
+msgid "後可查看您的個人化流程進度"
+msgstr "로그인 후 맞춤형 프로세스 진행 상황을 확인할 수 있습니다"
+
+msgid "任務清單"
+msgstr "작업 목록"
+
+msgid "跟著清單走"
+msgstr "체크리스트를 따르세요"
+
+msgid "不遺漏任何步驟"
+msgstr "어떤 단계도 놓치지 마세요"
+
+msgid "王小明"
+msgstr "왕샤오밍"
+
+msgid "目前進度"
+msgstr "현재 진행 상황"
+
+msgid "已完成 8 / 20 項任務"
+msgstr "8 / 20 작업 완료"
+
+msgid "待辦任務"
+msgstr "대기 중인 작업"
+
+msgid "即將到期"
+msgstr "곧 마감"
+
+msgid "申請學生簽證"
+msgstr "학생 비자 신청"
+
+msgid "準備財力證明文件"
+msgstr "재정 증명 서류 준비"
+
+msgid "預訂來台機票"
+msgstr "대만행 항공권 예약"
+
+msgid "以上為示範資料，"
+msgstr "위는 데모 데이터입니다, "
+
+msgid "後可查看您的個人化任務清單"
+msgstr "로그인 후 맞춤형 작업 목록을 확인할 수 있습니다"
+
+msgid "重要資訊"
+msgstr "중요 정보"
+
+msgid "一次搞定"
+msgstr "한 번에 해결"
+
+msgid "從簽證到住宿、從健保到交通，所有外籍生在台必備的重要資訊都在這裡"
+msgstr "비자부터 숙소, 건강보험부터 교통까지, 대만 유학생에게 필요한 모든 중요 정보가 여기에"
+
+msgid "簽證指南"
+msgstr "비자 가이드"
+
+msgid "學生簽證申請流程、所需文件、辦理地點與注意事項，一次搞懂不迷路。"
+msgstr "학생 비자 신청 절차, 필요 서류, 처리 장소 및 주의 사항 — 한 번에 이해하고 헤매지 마세요."
+
+msgid "住宿資訊"
+msgstr "숙소 정보"
+
+msgid "校內宿舍申請流程、校外租屋平台推薦、租房合約注意事項與常見陷阱。"
+msgstr "교내 기숙사 신청 절차, 교외 임대 플랫폼 추천, 임대 계약 주의 사항 및 흔한 함정."
+
+msgid "健保說明"
+msgstr "건강보험 안내"
+
+msgid "全民健保加入資格、保費計算方式、就醫流程與各地醫院資訊查詢。"
+msgstr "국민건강보험 가입 자격, 보험료 계산 방법, 진료 절차 및 전국 병원 정보 조회."
+
+msgid "銀行開戶"
+msgstr "은행 계좌 개설"
+
+msgid "推薦外籍生友善銀行、開戶所需文件、線上轉帳與提款卡申請教學。"
+msgstr "외국인 친화적 은행 추천, 계좌 개설에 필요한 서류, 온라인 이체 및 직불카드 신청 안내."
+
+msgid "手機門號"
+msgstr "휴대폰 번호"
+
+msgid "電信業者比較、預付卡 vs 月租方案、門號申請所需證件與流程。"
+msgstr "통신사 비교, 선불 vs 월정액 요금제, 번호 등록 필요 서류 및 절차."
+
+msgid "大眾交通"
+msgstr "대중교통"
+
+msgid "悠遊卡/一卡通使用教學、捷運公車路線查詢、YouBike 租借與火車訂票。"
+msgstr "이지카드/아이패스 사용 안내, 지하철·버스 노선 조회, YouBike 대여 및 기차 예매."
+
+msgid "學長姐分享"
+msgstr "선배들의 이야기"
+
+msgid "來聽聽"
+msgstr "들어보세요"
+
+msgid "學長姐怎麼說"
+msgstr "선배들이 하는 말"
+
+msgid "您想了解的都在這"
+msgstr "알고 싶은 모든 것이 여기에"
+
+msgid "申請台灣大學需要準備哪些文件？"
+msgstr "대만 대학 지원에 필요한 서류는 무엇인가요?"
+
+msgid ""
+"一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
+msgstr ""
+"일반적으로 필요한 것: 여권, 학력 증명서 (고등학교/대학 졸업 증명), 성적 증명서, 어학 능력 증명 (중국어 또는 영어), 재정 "
+"증명, 건강 검사 보고서, 추천서 (일부 학교에서 요구), 학업 계획서 (대학원). 학교마다 요건이 다를 수 있으니 각 학교의 모집 "
+"요강을 확인하세요."
+
+msgid "不會中文可以來台灣留學嗎？"
+msgstr "중국어를 못해도 대만에서 유학할 수 있나요?"
+
+msgid ""
+"可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 "
+"以上），或在僑先部完成一年預科中文課程。"
+msgstr ""
+"가능합니다! 대만의 많은 대학교가 영어로 진행되는 학부 및 대학원 과정을 제공합니다. 중국어 수업 과정의 경우, 일반적으로 일정 수준의 "
+"중국어 능력(예: TOCFL B1 이상)이 필요하거나 1년 예비 중국어 과정을 수료해야 합니다."
+
+msgid "留學台灣的費用大約多少？"
+msgstr "대만 유학 비용은 얼마나 드나요?"
+
+msgid ""
+"學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 "
+"NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
+msgstr ""
+"학비는 학교와 학과에 따라 다릅니다. 공립 대학 학부 과정은 학기당 약 NT$20,000–50,000, 대학원은 약 "
+"NT$25,000–60,000입니다. 생활비 (숙소, 식비, 교통)는 월 약 NT$10,000–20,000입니다. 장학금 지원을 포함하면"
+" 대만 유학 비용은 상대적으로 저렴합니다."
+
+msgid "學生簽證如何辦理？"
+msgstr "학생 비자는 어떻게 신청하나요?"
+
+msgid ""
+"收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident "
+"Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
+msgstr ""
+"대만 대학에서 입학 허가서를 받은 후, 해당 국가의 대만 대표 기관에 가져가 거류 비자를 신청하세요. 여권, 입학 허가서, 재정 증명, "
+"건강 검진 서류 등을 준비하세요."
+
+msgid "可以邊讀書邊打工嗎？"
+msgstr "공부하면서 아르바이트를 할 수 있나요?"
+
+msgid "可以，但需申請工作許可。持有效居留證（ARC）的外籍學生，入學後可向學校申請工讀許可，每週工時上限為 20 小時。寒暑假期間可申請全時工作。"
+msgstr ""
+"가능합니다만 취업 허가 신청이 필요합니다. 유효한 ARC를 가진 외국인 학생은 입학 후 학교에서 근로 허가를 신청할 수 있으며, 주당 "
+"최대 20시간 근무 가능합니다. 동계·하계 방학 기간에는 전일제 근무도 허용됩니다."
+
+msgid "全民健保什麼時候可以加入？"
+msgstr "국민건강보험에 언제 가입할 수 있나요?"
+
+msgid "持有效居留證（ARC），在台灣合法居留滿 6 個月後可強制加入全民健保。若有效工作許可可提前加保。加保後門診費用大幅降低。"
+msgstr ""
+"유효한 ARC로 대만에서 합법적으로 6개월 이상 거주한 후 국민건강보험에 의무 가입할 수 있습니다. 유효한 취업 허가가 있으면 조기 "
+"가입도 가능합니다. 가입 후 외래 진료비가 크게 감소합니다."
+
+msgid "申請流程需要多久時間？"
+msgstr "지원 절차는 얼마나 걸리나요?"
+
+msgid ""
+"從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 "
+"個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
+msgstr ""
+"지원부터 공식 입학까지 일반적으로 3–8개월이 소요됩니다. 미리 준비하는 것을 권장합니다: 지원 자격 확인 (6–12개월 전), 서류 "
+"준비 (4–6개월 전), 지원서 제출 (3–4개월 전), 합격 대기 (1–2개월), 비자 신청 (1–2개월)."
+
+msgid "首頁"
+msgstr "홈"
+
+msgid "沒有未讀通知"
+msgstr "읽지 않은 알림 없음"
+
+msgid "開始流程"
+msgstr "시작하기"
+
+msgid "專為僑外籍生打造的來台留學流程指南平台，協助學生一步步完成留學準備與抵台後事項。"
+msgstr "화교 및 외국인 유학생을 위한 대만 유학 가이드 플랫폼으로, 준비부터 도착 후까지 단계별로 지원합니다."
+
+msgid "生活指南"
+msgstr "생활 가이드"
+
+msgid "支援服務"
+msgstr "지원 서비스"
+
+msgid "使用說明"
+msgstr "사용 안내"
+
+msgid "AI 小幫手"
+msgstr "AI 도우미"
+
+msgid "聯絡我們"
+msgstr "문의하기"
+
+msgid "意見回饋"
+msgstr "피드백"
+
+msgid "歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。"
+msgstr "ReadyTo Taiwan에 오신 것을 환영합니다, 맞춤형 대만 유학 프로세스가 준비되었습니다."
+
+msgid "搜尋指南..."
+msgstr "가이드 검색..."
+
+msgid "證件・住宿"
+msgstr "서류 및 숙소"
+=======
 #~ msgid ""
 #~ "\n"
 #~ "            資料儲存後，系統將根據您的 <b>國籍</b>、<b>身份別</b> 與\n"
@@ -10353,225 +15906,3 @@ msgstr "재설정 실패. 링크가 만료되었을 수 있습니다."
 
 #~ msgid "（香港、澳門學生）"
 #~ msgstr "(홍콩·마카오 학생)"
-
-msgid "ARC 居留證"
-msgstr "ARC 거류증"
-
-msgid "ARC 線上申請一次就過的技巧"
-msgstr "ARC 온라인 신청 한 번에 통과하는 팁"
-
-msgid "ARC 辦理一次就過"
-msgstr "ARC 한 번에 통과하기"
-
-msgid "「任務小幫手」熟悉你的任務進度與截止日，用 9 種語言回答簽證、居留證等行政問題並附官方來源；「聊天好朋友」則在你想家、壓力大時陪你聊聊，還能幫你找學校附近的餐廳與商店。"
-msgstr "'과제 도우미'는 당신의 과제 진행 상황과 마감일을 파악하고 있으며, 비자·ARC 등 행정 관련 질문에 9개 언어로 공식 출처와 함께 답변합니다. '채팅 친구'는 향수병이나 스트레스가 있을 때 대화 상대가 되어주고, 학교 근처 식당과 상점도 찾아줍니다."
-
-msgid "以上為示範內容，登入後可查看您的個人化流程進度。"
-msgstr "위 내용은 예시입니다. 로그인하면 개인화된 진행 상황을 확인할 수 있습니다."
-
-msgid "以上為示範資料，登入後可查看您的個人化任務清單。"
-msgstr "위 데이터는 예시입니다. 로그인하면 개인화된 작업 목록을 확인할 수 있습니다."
-
-msgid "任務小幫手"
-msgstr "과제 도우미"
-
-msgid "你需要 3 份文件：入學許可、財力證明、護照。我已幫你加進任務清單 ✅"
-msgstr "필요한 서류는 3가지입니다: 입학허가서, 재정증명서, 여권. 이미 작업 목록에 추가해 드렸어요 ✅"
-
-msgid "來自世界各地的學長姐分享最真實的留學經驗：看看「你的學校」的前輩怎麼走過這段路，也能瀏覽所有學校的心得；完成註冊後，你也可以發佈自己的故事，成為學弟妹的引路人。"
-msgstr "전 세계 선배들이 가장 진솔한 유학 경험을 공유합니다: '내 학교' 선배들이 어떻게 이 과정을 헤쳐왔는지 살펴보고, 모든 학교의 경험담도 둘러볼 수 있어요. 가입 후에는 나만의 이야기를 올려 후배들의 길잡이가 될 수도 있습니다."
-
-msgid "個人化任務清單"
-msgstr "개인화된 작업 목록"
-
-msgid "入境 30 天內線上申請 ARC 居留證"
-msgstr "입국 후 30일 이내 온라인으로 ARC 신청"
-
-msgid "全民健保"
-msgstr "국민건강보험"
-
-msgid "兩個階段"
-msgstr "두 단계"
-
-msgid "剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。ReadyTo 上的流程整理讓我在申請階段就對整個時程很有把握！"
-msgstr "처음 대만에 왔을 때 정말 긴장했지만, 학교 국제처가 정말 세심하게 챙겨줘서 공항 마중부터 기숙사 정착까지 담당자가 도와줬어요. ReadyTo의 정리된 체크리스트 덕분에 신청 단계부터 전체 일정을 확실히 파악할 수 있었어요！"
-
-msgid "剩 12 天"
-msgstr "12일 남음"
-
-msgid "台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。ReadyTo 的 ARC 辦理指南讓我順利完成所有手續。"
-msgstr "대만의 반도체 산업은 세계 최고 수준이라 이곳에서 유학하는 것이 최고의 선택이었어요. ReadyTo의 ARC 신청 가이드 덕분에 모든 절차를 순조롭게 마칠 수 있었습니다."
-
-msgid "台灣的工程教育真的世界一流！教授們都很願意指導外籍生。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。"
-msgstr "대만의 공학 교육은 정말 세계 최고 수준이에요! 교수님들도 외국인 학생 지도에 매우 적극적입니다. ReadyTo의 비자 가이드 덕분에 조사 시간을 많이 절약했고, 단계대로만 따라가면 됐어요."
-
-msgid "回答幾個問題，系統就會依你的身分別、國籍與入學狀態生成專屬任務清單：每項任務附上所需文件、辦理地點與地圖，並依你的抵臺日期自動計算截止日，到期前以站內通知與 Email 提醒你。"
-msgstr "몇 가지 질문에 답하면 시스템이 신분 유형, 국적, 입학 상태에 따라 맞춤형 작업 목록을 생성합니다: 각 작업에는 필요 서류, 처리 장소, 지도가 첨부되며, 도착일에 따라 마감일이 자동 계산되고, 만료 전 앱 내 알림과 이메일로 알려드립니다."
-
-msgid "國際處超貼心，申請時程好掌握"
-msgstr "국제처가 세심하게 챙겨줘서 신청 일정 파악이 쉬워요"
-
-msgid "填好抵臺日期，系統自動排任務"
-msgstr "도착일을 입력하면 시스템이 자동으로 작업 일정을 잡아줍니다"
-
-msgid "學校報到註冊、辦學生證與選課"
-msgstr "학교 등록, 학생증 발급 및 수강 신청"
-
-msgid "學長姐分享區"
-msgstr "선배 공유 코너"
-
-msgid "完成進度"
-msgstr "완료 진행률"
-
-msgid "宿舍申請"
-msgstr "기숙사 신청"
-
-msgid "宿舍申請要早點排隊！"
-msgstr "기숙사 신청은 서둘러야 해요！"
-
-msgid "專為僑生、外籍生與港澳生打造的來台留學流程指南平台。"
-msgstr "화교 학생, 외국인 학생, 홍콩·마카오 학생을 위해 만든 대만 유학 프로세스 가이드 플랫폼입니다."
-
-msgid "居留滿 6 個月加入全民健保"
-msgstr "거주 6개월 후 국민건강보험 가입"
-
-msgid "居留證 ARC"
-msgstr "ARC 거류증"
-
-msgid "工作許可"
-msgstr "취업 허가증"
-
-msgid "想家很正常，要不要聊聊？也可以幫你找學校附近的家鄉味 🍜"
-msgstr "향수병은 자연스러운 거예요, 이야기 좀 할까요？ 학교 근처 고향 음식도 찾아드릴 수 있어요 🍜"
-
-msgid "我的任務清單"
-msgstr "내 작업 목록"
-
-msgid "我的學校"
-msgstr "내 학교"
-
-msgid "截止日提醒"
-msgstr "마감일 알림"
-
-msgid "所有學校"
-msgstr "모든 학교"
-
-msgid "抵臺前準備"
-msgstr "입국 전 준비"
-
-msgid "文件與地圖"
-msgstr "서류 및 지도"
-
-msgid "最近有點想家…"
-msgstr "요즘 좀 향수병이에요…"
-
-msgid "獎學金"
-msgstr "장학금"
-
-msgid "申請入學許可"
-msgstr "입학허가서 신청"
-
-msgid "申請學校宿舍或安排租屋"
-msgstr "학교 기숙사 신청 또는 임대 준비"
-
-msgid "發佈心得"
-msgstr "경험담 게시"
-
-msgid "簽證指南幫我省下超多時間"
-msgstr "비자 가이드 덕분에 시간을 많이 절약했어요"
-
-msgid "簽證要先準備什麼？"
-msgstr "비자를 위해 먼저 무엇을 준비해야 하나요?"
-
-msgid "聊天好朋友"
-msgstr "채팅 친구"
-
-msgid "自動生成"
-msgstr "자동 생성"
-
-msgid "課業小老師"
-msgstr "학업 튜터"
-
-msgid "證件與居留"
-msgstr "서류 및 체류"
-
-msgid "費用與打工"
-msgstr "비용 및 아르바이트"
-
-msgid "辦理 ARC 居留證"
-msgstr "ARC 거류증 신청"
-
-msgid "辦理學生簽證"
-msgstr "학생 비자 신청"
-
-msgid "辦理居留簽證（憑入學許可）"
-msgstr "거류비자 신청 (입학허가서 지참)"
-
-msgid "銀行開戶、辦手機門號"
-msgstr "은행 계좌 개설, 휴대폰 번호 개통"
-
-msgid "雙 AI 夥伴"
-msgstr "듀얼 AI 파트너"
-
-msgid "預訂機票、準備入境文件與體檢報告"
-msgstr "항공권 예약, 입국 서류 및 건강검진 보고서 준비"
-
-msgid "顯示第四張介紹"
-msgstr "네 번째 소개 화면 표시"
-
-msgid "Email 驗證成功！請登入您的帳號"
-msgstr "이메일 인증 성공! 계정에 로그인해 주세요"
-
-msgid "Google 登入失敗，未取得憑證"
-msgstr "Google 로그인 실패, 인증 정보를 받지 못했습니다"
-
-msgid "個人資料已更新"
-msgstr "개인정보가 업데이트되었습니다"
-
-msgid "儲存失敗，請稍後再試"
-msgstr "저장에 실패했습니다. 나중에 다시 시도해 주세요"
-
-msgid "密碼已更新，請重新登入"
-msgstr "비밀번호가 업데이트되었습니다. 다시 로그인해 주세요"
-
-msgid "帳號已停用，感謝您使用 ReadyTo Taiwan"
-msgstr "계정이 비활성화되었습니다. ReadyTo Taiwan을 이용해 주셔서 감사합니다"
-
-msgid "帳號建立成功！驗證信已寄出，請至信箱完成驗證"
-msgstr "계정이 성공적으로 생성되었습니다! 인증 메일이 발송되었으니 메일함을 확인하여 인증을 완료해 주세요"
-
-msgid "網路錯誤，請確認連線後再試"
-msgstr "네트워크 오류입니다. 연결을 확인 후 다시 시도해 주세요"
-
-msgid "請先驗證電子信箱才能繼續"
-msgstr "계속하려면 먼저 이메일을 인증해 주세요"
-
-msgid "資料已儲存！個人化流程已生成 🎉"
-msgstr "데이터가 저장되었습니다! 개인화된 프로세스가 생성되었습니다 🎉"
-
-msgid "驗證連結已過期，請重新申請"
-msgstr "인증 링크가 만료되었습니다. 다시 요청해 주세요"
-
-msgid "驗證連結無效或已使用"
-msgstr "인증 링크가 유효하지 않거나 이미 사용되었습니다"
-
-msgid "任務載入失敗，請重新整理頁面。"
-msgstr "작업을 불러오지 못했습니다. 페이지를 새로고침해 주세요."
-
-msgid "例如：簽證要先準備什麼？"
-msgstr "예: 비자를 위해 먼저 무엇을 준비해야 하나요?"
-
-msgid "快速找到解答"
-msgstr "빠르게 답 찾기"
-
-msgid "有問題直接問"
-msgstr "궁금한 점 바로 물어보기"
-
-msgid "看看其他學生的經驗"
-msgstr "다른 학생들의 경험 보기"
-
-msgid "簽證、住宿、健保等指南"
-msgstr "비자, 주거, 건강보험 등 안내"
-
-msgid "預設（無角色）"
-msgstr "기본값 (역할 없음)"
