@@ -3327,3 +3327,159 @@
 .sv-share-top b { display: block; font-size: 13.5px; color: #24312c; }
 .sv-share-top small { display: block; font-size: 11.5px; color: #8ba39b; }
 .sv-share-title { font-size: 14px; font-weight: 800; color: #2c3b35; }
+
+/* ═══════════════════════════════════════════════════════════
+   全站設計系統升級層（市面主流 SaaS 展示模式）
+   - 毛玻璃黏性導覽列（捲動時加深陰影）
+   - 區塊滾動進場動畫（卡片交錯浮入）
+   - 統一的卡片懸停語言與按鈕按壓回饋
+   - 一致的 focus 可及性環與細捲軸
+   只疊加在既有樣式之上，不改任何頁面結構。
+═══════════════════════════════════════════════════════════ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--primary-soft, #dcebe6);
+  color: var(--primary-dark, #17534d);
+}
+
+/* ── 毛玻璃導覽列 ── */
+.navbar.site-header {
+  background: rgba(255, 255, 255, .78);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid rgba(214, 228, 223, .6);
+  box-shadow: none;
+  transition: box-shadow .25s ease, background .25s ease;
+}
+
+.navbar.site-header.nav-scrolled {
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 6px 24px rgba(23, 83, 77, .10);
+}
+
+/* ── 滾動進場（JS 啟用後才生效，JS 失敗時不影響顯示） ── */
+html.js-reveal .rv {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.22, .8, .36, 1);
+  will-change: opacity, transform;
+}
+
+html.js-reveal .rv.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* 卡片交錯浮入：格內前 8 個子元素依序延遲 */
+html.js-reveal .rv-grid > * {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .55s ease, transform .55s cubic-bezier(.22, .8, .36, 1);
+}
+
+html.js-reveal .rv-grid.in > * {
+  opacity: 1;
+  transform: none;
+}
+
+html.js-reveal .rv-grid.in > *:nth-child(1) { transition-delay: .03s; }
+html.js-reveal .rv-grid.in > *:nth-child(2) { transition-delay: .09s; }
+html.js-reveal .rv-grid.in > *:nth-child(3) { transition-delay: .15s; }
+html.js-reveal .rv-grid.in > *:nth-child(4) { transition-delay: .21s; }
+html.js-reveal .rv-grid.in > *:nth-child(5) { transition-delay: .27s; }
+html.js-reveal .rv-grid.in > *:nth-child(6) { transition-delay: .33s; }
+html.js-reveal .rv-grid.in > *:nth-child(7) { transition-delay: .39s; }
+html.js-reveal .rv-grid.in > *:nth-child(8) { transition-delay: .45s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal .rv,
+  html.js-reveal .rv-grid > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── 統一卡片懸停語言（浮起 + 柔和陰影） ── */
+.db-guide-card:not(.db-guide-static),
+.gi-card,
+.dash-info-card,
+.db-stat-card,
+.db-alumni-card,
+.sidebar-card,
+.alumni-post-card,
+.flow-static-card {
+  transition: transform .22s cubic-bezier(.22, .8, .36, 1), box-shadow .22s ease;
+}
+
+.gi-card:hover,
+.db-guide-card:not(.db-guide-static):hover,
+a.dash-info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(23, 83, 77, .13);
+}
+
+.db-alumni-card:hover,
+.flow-static-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(23, 83, 77, .10);
+}
+
+/* ── 按鈕按壓回饋 ── */
+.btn-primary,
+.btn-outline-sm,
+.btn-danger-sm,
+.share-tab,
+.share-search-btn,
+.sc-tab {
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 24px rgba(87, 152, 132, .35);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active,
+.share-search-btn:active,
+.share-tab:active {
+  transform: scale(.97);
+}
+
+/* ── 一致的鍵盤 focus 環（可及性） ── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(87, 152, 132, .45);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ── 細捲軸（Webkit） ── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(111, 128, 124, .35);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(87, 152, 132, .55);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}

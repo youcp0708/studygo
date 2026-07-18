@@ -1196,10 +1196,6 @@ html[lang="my"] .bot-profile-card p {
   right: 8px;
 }
 
-/* 角色選擇器只在聊天好朋友模式顯示 */
-.chatbot-page:not(.ai-mode-friend) .role-selector {
-  display: none !important;
-}
 
 .role-selector-btn {
   display: inline-flex;

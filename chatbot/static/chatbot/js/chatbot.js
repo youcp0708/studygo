@@ -106,7 +106,7 @@
   const attachmentPreview = document.getElementById('attachmentPreview');
   const micBtn = document.getElementById('micBtn');
 
-  const MODE_ROLES = { helper: [], friend: ['小老師', '朋友'] };
+  const MODE_ROLES = { helper: ['小老師'], friend: ['朋友'] };
 
   let selectedAttachments = [];
   let selectedRole = localStorage.getItem('chatbot_role') || '';
