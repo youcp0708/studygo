@@ -3,7 +3,7 @@
 {% block title %}{% trans "AI 聊天機器人" %} — ReadyTo Taiwan{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}?v=12">
+<link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}?v=13">
 {% endblock %}
 
 {% block chatbot_fab %}{% endblock chatbot_fab %}
@@ -195,11 +195,13 @@
                 <div class="role-item role-item--direct" data-role="" data-personality="" data-color="">
                   <span class="role-item-label">↺ {% trans "預設（無角色）" %}</span>
                 </div>
-                {% if current_ai_mode == 'friend' %}
+                {% if current_ai_mode == 'helper' %}
                 <div class="role-item" data-role="小老師">
                   <span class="role-item-label">{% trans "小老師" %}</span>
                   <span class="role-item-arrow">›</span>
                 </div>
+                {% endif %}
+                {% if current_ai_mode == 'friend' %}
                 <div class="role-item" data-role="朋友">
                   <span class="role-item-label" id="friendRoleLabel">{% trans "ReadyTo 聊天好朋友" %}</span>
                   <button type="button" class="role-item-rename-btn">{% trans "重新命名" %}</button>
@@ -338,5 +340,5 @@
     }
   });
 </script>
-<script src="{% static 'chatbot/js/chatbot.js' %}?v=13"></script>
+<script src="{% static 'chatbot/js/chatbot.js' %}?v=14"></script>
 {% endblock %}

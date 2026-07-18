@@ -580,6 +580,15 @@ You MUST write your entire response in {language_en} only. No other language is 
 - 再給一點初步陪伴。
 """.strip()
         base_instructions = friend_base
+    elif ai_mode == "helper" and (role or '').strip() == '小老師':
+        base_instructions = f"""
+你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生，目前使用者選擇了「小老師」角色，專門提供課業與學習方面的協助。
+
+{language_rule}
+
+不要使用「{personal_label} / {general_label}」兩段格式，也不要輸出這兩個標題。
+直接用有教學感、像家教一樣的自然語氣回答學生的課業問題就好。
+""".strip()
     elif direct_mode:
         base_instructions = f"""
 你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生。
@@ -2340,14 +2349,14 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
         history_text = build_history_text(recent_messages)
 
     # 小老師（課業輔助）角色：載入學生系所對應學群的課業知識背景包
-    tutor_context = ''
-    if ai_mode == 'friend' and (role or '').strip() == '小老師':
-        tutor_context = build_tutor_context(user, language_code)
+    is_tutor_role = ai_mode == 'helper' and (role or '').strip() == '小老師'
+    tutor_context = build_tutor_context(user, language_code) if is_tutor_role else ''
     info_page = get_personalized_info_page(user, question)
     task_link = get_relevant_student_task(user, question, language_code) if ai_mode == "helper" else None
 
-    # 任務清單和資訊中心都沒有相關資料時，helper 模式直接回答，不分個人化/一般回答兩段
-    direct_mode = ai_mode == "helper" and not task_link and not info_page
+    # 任務清單和資訊中心都沒有相關資料時，helper 模式直接回答，不分個人化/一般回答兩段；
+    # 小老師角色一律用自然教學語氣回答，不套用個人化/一般回答兩段格式
+    direct_mode = ai_mode == "helper" and not is_tutor_role and not task_link and not info_page
 
     place_results = None
     if ai_mode == 'friend' and detect_place_query(question):
@@ -2416,8 +2425,9 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
         }
 
     # helper 模式：如果知識庫直接命中，就用穩定的本地知識庫答案，避免多花 API。
-    # 但如果學生有上傳附件，必須走 OpenAI 才能讀取附件內容，不能用這個本地捷徑。
-    if ai_mode == "helper" and not attachments and (
+    # 但如果學生有上傳附件，必須走 OpenAI 才能讀取附件內容，不能用這個本地捷徑；
+    # 小老師角色一律走 OpenAI，才能維持教學語氣與課業背景包，不要用這個直接回答的捷徑。
+    if ai_mode == "helper" and not attachments and not is_tutor_role and (
         knowledge_context
         and '目前沒有找到直接相關的知識庫資料' not in knowledge_context
         and '目前沒有可用的知識庫資料' not in knowledge_context
@@ -2479,8 +2489,6 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
 以下是學生基本資料，僅供你理解背景，不要生硬列出：
 {profile_context}
-
-{('【小老師課業背景包】以下是這位學生的系所、學群與對應的課業知識。回答課業問題時請結合這些內容：用他系所的課程舉例、推薦背景包中的免費學習資源；背景包沒有涵蓋的細節（如特定學校的課表），請誠實說明並建議他查詢系辦或課程大綱。' + chr(10) + tutor_context) if tutor_context else ''}
 
 {'【地點查詢】學生詢問附近地點，系統已根據學生所在學校搜尋到真實地點，地點列表會自動附在你的回覆後面。你只需要用 1 句話自然回應（例如「幫你找到幾個不錯的選擇！」），不要自己列出地名或地址，也不要編造或推薦任何沒在列表裡的地方。' if place_results else ''}
 
@@ -2581,6 +2589,31 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 - 請將以下求助資源原文複製到回覆中，電話連結格式必須完整保留：
 {crisis_resources}
 - 不要承諾保密，不要說 AI 可以單獨處理危機。
+""".strip()
+    elif is_tutor_role:
+        input_text = f"""
+[LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only. Do not use any other language.
+
+不要使用「{personal_label} / {general_label}」兩段格式，也不要輸出這兩個標題，直接用有教學感的自然語氣回答。
+
+以下是學生基本資料，僅供你理解背景，不要生硬列出：
+{profile_context}
+
+{('【小老師課業背景包】以下是這位學生的系所、學群與對應的課業知識。回答課業問題時請結合這些內容：用他系所的課程舉例、推薦背景包中的免費學習資源；背景包沒有涵蓋的細節（如特定學校的課表），請誠實說明並建議他查詢系辦或課程大綱。' + chr(10) + tutor_context) if tutor_context else ''}
+
+以下是系統 FAQ / 知識庫搜尋結果，如果和學生的課業問題相關可以參考，不相關就不要勉強使用：
+{knowledge_context}
+
+以下是最近對話紀錄（請根據這些內容自然銜接，不要當作第一次對話）：
+{history_text}
+
+學生最新的課業問題：
+{question}{attachment_note}
+
+【危機求助資源】若學生透露自傷、想死、危險等內容，必須將以下資源原文輸出，電話連結格式不得更改：
+{crisis_resources}
+
+[REMINDER] Write your answer in {language_en} only. Answer directly in a warm, teaching tone. Do not split it into labeled sections.
 """.strip()
     elif direct_mode:
         input_text = f"""

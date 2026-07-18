@@ -295,6 +295,54 @@
     initGuidesSearch('{{ CURRENT_LANGUAGE|default:"zh-hant" }}');
   </script>
 
+  {# ── 全站展示層：導覽列捲動陰影 + 區塊/卡片滾動進場（自動套用，各頁模板零改動） ── #}
+  <script>
+    (function () {
+      'use strict';
+
+      /* 導覽列：捲動後加深背景與陰影 */
+      var nav = document.querySelector('.navbar.site-header');
+      if (nav) {
+        var onScroll = function () {
+          nav.classList.toggle('nav-scrolled', window.scrollY > 8);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
+
+      /* 滾動進場：僅在支援 IntersectionObserver 時啟用（啟用旗標掛在 <html>） */
+      if (!('IntersectionObserver' in window)) return;
+      document.documentElement.classList.add('js-reveal');
+
+      // 區塊級進場
+      var sections = document.querySelectorAll('.db-section, .gi-cat-block, .profile-detail-shell, .dash-quicklinks, .flows-header, .login-intro, .login-panel');
+      // 卡片格：子元素交錯浮入
+      var grids = document.querySelectorAll('.db-guide-grid, .db-alumni-grid, .gi-grid, .dash-grid, .db-stats-row, .flow-static-grid');
+
+      sections.forEach(function (el) { el.classList.add('rv'); });
+      grids.forEach(function (el) { el.classList.add('rv-grid'); });
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
+
+      sections.forEach(function (el) { io.observe(el); });
+      grids.forEach(function (el) { io.observe(el); });
+
+      /* 保險：3 秒後仍未進場的元素一律顯示，確保任何環境下內容都不會隱形 */
+      setTimeout(function () {
+        document.querySelectorAll('.rv:not(.in), .rv-grid:not(.in)').forEach(function (el) {
+          el.classList.add('in');
+        });
+      }, 3000);
+    })();
+  </script>
+
   {# ── AI 浮動小工具控制 ── #}
   <script>
     (function () {

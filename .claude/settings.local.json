@@ -163,7 +163,19 @@
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/edit_flow_probe.py\")",
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/shadow_compare2.py\")",
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/verify_edit_hidden.py\")",
-      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/verify_tab_bg.py\")"
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/verify_tab_bg.py\")",
+      "Bash(./venv/Scripts/python.exe \"C:/Users/user/AppData/Local/Temp/claude/C--Users-user-Downloads-studygo/28ac13ec-7284-415c-851a-3a5a0709624e/scratchpad/gen_topics.py\")",
+      "Bash(./venv/Scripts/python.exe -c \"import ast; ast.parse\\(open\\(r'C:/Users/user/Desktop/4-E/reader/management/commands/seed_listening.py',encoding='utf-8'\\).read\\(\\)\\); print\\('syntax OK'\\)\")",
+      "Bash(./venv/Scripts/python.exe manage.py seed_listening)",
+      "Bash(./venv/Scripts/python.exe manage.py shell -c ' *)",
+      "Bash(./venv/Scripts/python.exe \"C:/Users/user/AppData/Local/Temp/claude/C--Users-user-Downloads-studygo/28ac13ec-7284-415c-851a-3a5a0709624e/scratchpad/expand_courses.py\")",
+      "Bash(./venv/Scripts/python.exe -)",
+      "Bash(python manage.py test users chatbot)",
+      "Bash(python manage.py test chatbot -v1)",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/tutor_move_probe.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python manage.py shell -c ' *)",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/role_visibility_probe.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Downloads-studygo/0c12ee06-928e-44e4-9519-3bc755ee430a/scratchpad/role_select_full.py\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\User\\Downloads\\readytoaiwan\\users\\templates\\users"
