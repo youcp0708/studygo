@@ -34,7 +34,6 @@ msgstr "Back"
 #: .\chatbot\templates\chatbot\chatbot.html:102
 #: .\chatbot\templates\chatbot\chatbot.html:137
 #: .\chatbot\templates\chatbot\chatbot.html:217
-#, fuzzy
 #| msgid "ReadyTo Taiwan AI 小幫手"
 msgid "ReadyTo 任務小幫手"
 msgstr "ReadyTo Taiwan AI Assistant"
@@ -110,7 +109,6 @@ msgid "新增附件"
 msgstr "Add Attachment"
 
 #: .\chatbot\templates\chatbot\chatbot.html:163
-#, fuzzy
 #| msgid "上傳檔案"
 msgid "上傳檔案或照片"
 msgstr "Upload File"
@@ -296,8 +294,8 @@ msgstr ""
 #: .\chatbot\views.py:33
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
 msgstr ""
-"When applying for a mobile number after arriving in Taiwan, you usually need "
-"a passport, ARC, or other identity documents."
+"When applying for a mobile number after arriving in Taiwan, you usually need"
+" a passport, ARC, or other identity documents."
 
 #: .\flows\models.py:311
 msgid "未開始"
@@ -337,25 +335,21 @@ msgid "小貼士"
 msgstr "Tips"
 
 #: .\flows\templates\flows\my_flows.html:68
-#, fuzzy
 #| msgid "📋 需要的文件"
 msgid "需要的文件"
 msgstr "📋 Required documents"
 
 #: .\flows\templates\flows\my_flows.html:69
-#, fuzzy
 #| msgid "📍 辦理地點"
 msgid "辦理地點"
 msgstr "📍 Application location"
 
 #: .\flows\templates\flows\my_flows.html:70
-#, fuzzy
 #| msgid "🗺️ 在地圖上查看"
 msgid "在地圖上查看"
 msgstr "🗺️ View on map"
 
 #: .\flows\templates\flows\my_flows.html:71
-#, fuzzy
 #| msgid "🌐 官方網站"
 msgid "官方網站"
 msgstr "🌐 Official website"
@@ -365,22 +359,18 @@ msgid "點此前往官方網站"
 msgstr "Click here to go to the official website"
 
 #: .\flows\templates\flows\my_flows.html:73
-#, fuzzy
 #| msgid "📅 辦理時程"
 msgid "辦理時程"
 msgstr "📅 Processing timetable"
 
 #: .\flows\templates\flows\my_flows.html:74
 #: .\flows\templates\flows\my_flows.html:76
-#, fuzzy
 #| msgid "📅 截止日期"
 msgid "截止日期"
 msgstr "📅 Deadline"
 
 #: .\flows\templates\flows\my_flows.html:75
-msgid ""
-"請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的"
-"截止日期。"
+msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
 msgstr ""
 "Please fill in the <strong>Estimated arrival date in Taiwan</strong> in "
 "\"Personal Information\" first, so that the system can automatically "
@@ -471,9 +461,7 @@ msgid "境外學生招生資訊"
 msgstr "Overseas student admissions information"
 
 #: .\guides\templates\guides\admissions_guide.html:21
-msgid ""
-"本頁彙整境外學生（僑生、外籍生、交換生）來臺就讀相關招生資訊，包含各學制申請"
-"資格、招生管道、獎學金及申請時程，助您順利規劃來臺求學之路。"
+msgid "本頁彙整境外學生（僑生、外籍生、交換生）來臺就讀相關招生資訊，包含各學制申請資格、招生管道、獎學金及申請時程，助您順利規劃來臺求學之路。"
 msgstr ""
 "This page compiles relevant admissions information for overseas students "
 "(overseas students, foreign students, and exchange students) to study in "
@@ -502,9 +490,7 @@ msgid "重要提醒："
 msgstr "Important reminder:"
 
 #: .\guides\templates\guides\admissions_guide.html:36
-msgid ""
-"各學制招生截止日期每年均可能調整，本頁資訊僅供參考，請務必以各校最新公告或海"
-"外聯招會官網為準。"
+msgid "各學制招生截止日期每年均可能調整，本頁資訊僅供參考，請務必以各校最新公告或海外聯招會官網為準。"
 msgstr ""
 "The admission deadline for each academic system may be adjusted every year. "
 "The information on this page is for reference only. Please be sure to refer "
@@ -606,12 +592,10 @@ msgid "港澳生"
 msgstr "Students from Hong Kong and Macao"
 
 #: .\guides\templates\guides\admissions_guide.html:84
-msgid ""
-"：針對僑生設立的一年制預備課程，修畢成績合格後可直升大學學士班，無需再參加大"
-"學入學考試。適合剛完成高中學業的僑生。"
+msgid "：針對僑生設立的一年制預備課程，修畢成績合格後可直升大學學士班，無需再參加大學入學考試。適合剛完成高中學業的僑生。"
 msgstr ""
-": A one-year preparatory course for overseas Chinese students. After passing "
-"the course, they can directly enter the bachelor's degree program without "
+": A one-year preparatory course for overseas Chinese students. After passing"
+" the course, they can directly enter the bachelor's degree program without "
 "having to take the university entrance exam. Suitable for overseas students "
 "who have just completed high school studies."
 
@@ -622,14 +606,12 @@ msgid "申請資格"
 msgstr "Eligibility"
 
 #: .\guides\templates\guides\admissions_guide.html:92
-msgid ""
-"具僑生身份、完成相當於我國高中一至三年級學業（高中畢業），成績達一定標準。年"
-"齡通常不超過 25 歲。"
+msgid "具僑生身份、完成相當於我國高中一至三年級學業（高中畢業），成績達一定標準。年齡通常不超過 25 歲。"
 msgstr ""
 "Applicants must have overseas Chinese status, have completed studies "
 "equivalent to the first to third grade of high school in my country (high "
-"school graduation), and have achieved certain academic standards. Usually no "
-"more than 25 years old."
+"school graduation), and have achieved certain academic standards. Usually no"
+" more than 25 years old."
 
 #: .\guides\templates\guides\admissions_guide.html:94
 #: .\guides\templates\guides\admissions_guide.html:149
@@ -651,9 +633,7 @@ msgid "申請管道"
 msgstr "Application pipeline"
 
 #: .\guides\templates\guides\admissions_guide.html:103
-msgid ""
-"透過海外聯合招生委員會（海聯會）統一分發。馬來西亞、緬甸、印尼、港澳及其他地"
-"區各有獨立招生窗口。"
+msgid "透過海外聯合招生委員會（海聯會）統一分發。馬來西亞、緬甸、印尼、港澳及其他地區各有獨立招生窗口。"
 msgstr ""
 "Distributed uniformly through the Overseas Joint Admissions Committee "
 "(Overseas Joint Admissions Committee). Malaysia, Myanmar, Indonesia, Hong "
@@ -675,9 +655,7 @@ msgid "申請時程"
 msgstr "Application timetable"
 
 #: .\guides\templates\guides\admissions_guide.html:113
-msgid ""
-"通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公"
-"告，8 月底至 9 月初入學報到。"
+msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
 msgstr ""
 "Online registration is usually open from January to March every year, and "
 "the deadlines vary slightly in each region. Admission results will be "
@@ -709,9 +687,7 @@ msgid "獎助學金"
 msgstr "Scholarships and Bursaries"
 
 #: .\guides\templates\guides\admissions_guide.html:124
-msgid ""
-"教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎"
-"學金或特定區域補助。"
+msgid "教育部提供僑生獎學金，另有各校及地方政府補助。成績優良僑生可申請教育部華語獎學金或特定區域補助。"
 msgstr ""
 "The Ministry of Education provides scholarships for overseas Chinese "
 "students, as well as subsidies from various schools and local governments. "
@@ -728,13 +704,11 @@ msgid "學校補助"
 msgstr "school subsidies"
 
 #: .\guides\templates\guides\admissions_guide.html:138
-msgid ""
-"：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生"
-"管道。修業成績合格者授予學士學位。"
+msgid "：四年制大學課程（部分系所五年），僑生透過海聯會申請，外籍生另有各校獨立招生管道。修業成績合格者授予學士學位。"
 msgstr ""
 ": For four-year university courses (five years in some departments), "
-"overseas students apply through the Overseas Chinese Federation, and foreign "
-"students have independent admissions channels for each school. Those who "
+"overseas students apply through the Overseas Chinese Federation, and foreign"
+" students have independent admissions channels for each school. Those who "
 "pass the academic examination will be awarded a bachelor's degree."
 
 #: .\guides\templates\guides\admissions_guide.html:145
@@ -742,9 +716,7 @@ msgid "僑生申請資格"
 msgstr "Application Qualifications for Overseas Chinese Students"
 
 #: .\guides\templates\guides\admissions_guide.html:146
-msgid ""
-"具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西"
-"亞 SPM 成績、緬甸高中畢業等均可申請。"
+msgid "具僑生身份、完成高中（高級中等學校）學業成績合格，或持有同等學力證明。馬來西亞 SPM 成績、緬甸高中畢業等均可申請。"
 msgstr ""
 "Applicants must have overseas Chinese status and have completed high school "
 "(senior secondary school) with satisfactory academic performance, or hold a "
@@ -764,14 +736,12 @@ msgid "外籍生申請資格"
 msgstr "Eligibility for foreign students to apply"
 
 #: .\guides\templates\guides\admissions_guide.html:157
-msgid ""
-"持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力"
-"證明（HSK、TOCFL、TOEFL、IELTS 等）。"
+msgid "持外國國籍、高中（或同等）學業成績達各校最低標準。部分校系要求中文或英文能力證明（HSK、TOCFL、TOEFL、IELTS 等）。"
 msgstr ""
 "Hold foreign nationality and have high school (or equivalent) academic "
 "performance that meets the minimum standards of each school. Some schools "
-"and departments require proof of Chinese or English proficiency (HSK, TOCFL, "
-"TOEFL, IELTS, etc.)."
+"and departments require proof of Chinese or English proficiency (HSK, TOCFL,"
+" TOEFL, IELTS, etc.)."
 
 #: .\guides\templates\guides\admissions_guide.html:159
 msgid "各校獨立招生"
@@ -784,12 +754,10 @@ msgid "語言能力"
 msgstr "language ability"
 
 #: .\guides\templates\guides\admissions_guide.html:167
-msgid ""
-"海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確"
-"認目標校系公告。"
+msgid "海聯會管道通常 1～3 月報名；各校獨立招生另有時程（多在 3～5 月）。建議提早確認目標校系公告。"
 msgstr ""
-"Registration for the AIS pipeline usually takes place from January to March; "
-"independent admissions for each school have other schedules (mostly from "
+"Registration for the AIS pipeline usually takes place from January to March;"
+" independent admissions for each school have other schedules (mostly from "
 "March to May). It is recommended to check the target school and department "
 "announcement in advance."
 
@@ -802,9 +770,7 @@ msgid "3～5 月（各校）"
 msgstr "March to May (each school)"
 
 #: .\guides\templates\guides\admissions_guide.html:177
-msgid ""
-"教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎"
-"助。外籍生可申請教育部臺灣獎學金。"
+msgid "教育部僑生獎學金（每月約 NT$5,000～8,000）；各校可能另有入學獎學金或成績獎助。外籍生可申請教育部臺灣獎學金。"
 msgstr ""
 "The Ministry of Education’s Overseas Chinese Scholarship (approximately "
 "NT$5,000~8,000 per month); each school may also have entrance scholarships "
@@ -822,26 +788,23 @@ msgid "學校獎助"
 msgstr "School scholarships"
 
 #: .\guides\templates\guides\admissions_guide.html:192
-msgid ""
-"：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有"
-"英文授課專班。"
+msgid "：包含碩士班（2 年）與博士班（3～5 年），透過各校研究所獨立招生，部分學校設有英文授課專班。"
 msgstr ""
 ": Including master's programs (2 years) and doctoral programs (3 to 5 "
-"years), which are independently recruited through the research institutes of "
-"each school. Some schools have special classes taught in English."
+"years), which are independently recruited through the research institutes of"
+" each school. Some schools have special classes taught in English."
 
 #: .\guides\templates\guides\admissions_guide.html:199
 msgid "碩士班申請資格"
 msgstr "Master's degree application qualifications"
 
 #: .\guides\templates\guides\admissions_guide.html:200
-msgid ""
-"大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言"
-"能力證明（中文 / 英文）。"
+msgid "大學（學士）學位畢業，成績達各校系所最低標準。部分系所要求相關領域背景或語言能力證明（中文 / 英文）。"
 msgstr ""
 "Graduation from a university (bachelor's) degree, with grades that meet the "
 "minimum standards of each school or department. Some departments require "
-"relevant field background or proof of language proficiency (Chinese/English)."
+"relevant field background or proof of language proficiency "
+"(Chinese/English)."
 
 #: .\guides\templates\guides\admissions_guide.html:202
 msgid "學士畢業"
@@ -856,12 +819,10 @@ msgid "博士班申請資格"
 msgstr "Eligibility to apply for doctoral program"
 
 #: .\guides\templates\guides\admissions_guide.html:211
-msgid ""
-"碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部"
-"分系所接受優秀碩士生直攻博士。"
+msgid "碩士學位畢業（或同等學力），具研究潛力。通常需提交研究計畫書及相關推薦信。部分系所接受優秀碩士生直攻博士。"
 msgstr ""
-"Master's degree (or equivalent) with research potential. Usually, a research "
-"proposal and relevant letters of recommendation are required. Some "
+"Master's degree (or equivalent) with research potential. Usually, a research"
+" proposal and relevant letters of recommendation are required. Some "
 "departments accept outstanding master's students to study directly for Ph.D."
 
 #: .\guides\templates\guides\admissions_guide.html:213
@@ -878,9 +839,7 @@ msgid "推薦信"
 msgstr "Letter of recommendation"
 
 #: .\guides\templates\guides\admissions_guide.html:222
-msgid ""
-"各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截"
-"止日期及備審資料需求。"
+msgid "各校研究所招生時程不一，多在 10 月～3 月期間。建議直接查閱目標系所官網確認截止日期及備審資料需求。"
 msgstr ""
 "The enrollment period for each school's graduate school varies, mostly from "
 "October to March. It is recommended to directly check the official website "
@@ -896,9 +855,7 @@ msgid "10 月～3 月"
 msgstr "October to March"
 
 #: .\guides\templates\guides\admissions_guide.html:232
-msgid ""
-"教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）"
-"薪資，及科技部研究計畫補助。"
+msgid "教育部臺灣獎學金（外籍研究生）；教育部僑生獎學金（僑生）；各校研究助理（RA）薪資，及科技部研究計畫補助。"
 msgstr ""
 "Taiwan Scholarship from the Ministry of Education (foreign graduate "
 "students); Overseas Chinese Scholarship from the Ministry of Education "
@@ -910,9 +867,7 @@ msgid "研究助理薪資"
 msgstr "Research Assistant Salary"
 
 #: .\guides\templates\guides\admissions_guide.html:246
-msgid ""
-"：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外"
-"僑居留證（ARC）。"
+msgid "：持外國國籍、非以僑生身份申請的學生。透過各大學獨立招生辦理，入學後須辦理外僑居留證（ARC）。"
 msgstr ""
 ": Students with foreign nationality who are not applying as overseas "
 "students. Through independent admissions procedures at each university, you "
@@ -920,13 +875,12 @@ msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:254
 msgid ""
-"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
-"或英文（IELTS / TOEFL）能力證明，依各校系規定。"
+"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
-"Hold a foreign nationality and have completed the prerequisite education for "
-"the target program (high school or university graduation). A Chinese (TOCFL) "
-"or English (IELTS / TOEFL) proficiency certificate is usually required, "
-"depending on each department's requirements."
+"Hold a foreign nationality and have completed the prerequisite education for"
+" the target program (high school or university graduation). A Chinese "
+"(TOCFL) or English (IELTS / TOEFL) proficiency certificate is usually "
+"required, depending on each department's requirements."
 
 #: .\guides\templates\guides\admissions_guide.html:256
 msgid "外國國籍"
@@ -941,14 +895,12 @@ msgid "所需備審文件"
 msgstr "Required documents for review"
 
 #: .\guides\templates\guides\admissions_guide.html:265
-msgid ""
-"護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書"
-"計畫）、推薦信（研究所）、體檢報告。"
+msgid "護照、最高學歷成績單及畢業證書（含中英文公證）、語言能力證明、個人陳述（讀書計畫）、推薦信（研究所）、體檢報告。"
 msgstr ""
 "Passport, highest academic transcript and graduation certificate (including "
 "notarization in Chinese and English), language proficiency certificate, "
-"personal statement (study plan), recommendation letter (research institute), "
-"and physical examination report."
+"personal statement (study plan), recommendation letter (research institute),"
+" and physical examination report."
 
 #: .\guides\templates\guides\admissions_guide.html:267
 msgid "學歷公證"
@@ -963,9 +915,7 @@ msgid "教育部臺灣獎學金"
 msgstr "Ministry of Education Taiwan Scholarship"
 
 #: .\guides\templates\guides\admissions_guide.html:275
-msgid ""
-"每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，"
-"需透過台灣駐外機構或各大學推薦申請。"
+msgid "每月生活費 NT$15,000～25,000（依學制），免學雜費，可申請 1～4 年，名額有限，需透過台灣駐外機構或各大學推薦申請。"
 msgstr ""
 "Monthly living expenses range from NT$15,000 to NT$25,000 (depending on the "
 "academic system). Tuition and miscellaneous fees are waived. Applications "
@@ -989,9 +939,7 @@ msgid "入台後必辦事項"
 msgstr "Things to do after arriving in Taiwan"
 
 #: .\guides\templates\guides\admissions_guide.html:286
-msgid ""
-"持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
-"立銀行帳戶等。"
+msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
 msgstr ""
 "After checking in with a student residence permit, you must apply for an "
 "Alien Residence Certificate (ARC) within 15 days, and then apply for health "
@@ -1006,33 +954,25 @@ msgid "健保加保"
 msgstr "Health insurance supplement"
 
 #: .\guides\templates\guides\admissions_guide.html:300
-msgid ""
-"：持香港或澳門居民身份、曾在港澳接受教育的學生，可透過海外聯合招生委員會（海"
-"聯會）港澳組申請來台就讀，享有與僑生相近的申請管道與優惠。"
+msgid "：持香港或澳門居民身份、曾在港澳接受教育的學生，可透過海外聯合招生委員會（海聯會）港澳組申請來台就讀，享有與僑生相近的申請管道與優惠。"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:308
-msgid ""
-"持香港或澳門永久居民身份證，在港澳接受正規高中教育（香港 DSE 或澳門高中文"
-"憑），且非具中華民國國籍並在台設有戶籍者。"
+msgid "持香港或澳門永久居民身份證，在港澳接受正規高中教育（香港 DSE 或澳門高中文憑），且非具中華民國國籍並在台設有戶籍者。"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:310
-#, fuzzy
 #| msgid "香港 / 澳門永久居民身份證"
 msgid "港澳居民身份"
 msgstr "Hong Kong / Macau Permanent Resident Identity Card"
 
 #: .\guides\templates\guides\admissions_guide.html:312
-#, fuzzy
 #| msgid "HKDSE / 澳門高中畢業"
 msgid "HKDSE / 澳門高中"
 msgstr "HKDSE / Macau high school graduate"
 
 #: .\guides\templates\guides\admissions_guide.html:319
-msgid ""
-"透過海外聯合招生委員會（海聯會）港澳組統一辦理，可申請學士班及研究所。部分學"
-"校亦設有港澳生獨立招生管道，請查閱各校公告。"
+msgid "透過海外聯合招生委員會（海聯會）港澳組統一辦理，可申請學士班及研究所。部分學校亦設有港澳生獨立招生管道，請查閱各校公告。"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:321
@@ -1045,13 +985,8 @@ msgid "統一報名"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:329
-#, fuzzy
-#| msgid ""
-#| "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公"
-#| "告，8 月底至 9 月初入學報到。"
-msgid ""
-"海聯會港澳組通常於每年 1～2 月開放網路報名，截止日期約為 2 月底。錄取結果約 5"
-"～6 月公告，9 月初入學報到。"
+#| msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
+msgid "海聯會港澳組通常於每年 1～2 月開放網路報名，截止日期約為 2 月底。錄取結果約 5～6 月公告，9 月初入學報到。"
 msgstr ""
 "Online registration is usually open from January to March every year, and "
 "the deadlines vary slightly in each region. Admission results will be "
@@ -1059,15 +994,12 @@ msgstr ""
 "August to the beginning of September."
 
 #: .\guides\templates\guides\admissions_guide.html:331
-#, fuzzy
 #| msgid "1～3 月報名"
 msgid "1～2 月報名"
 msgstr "Registration from January to March"
 
 #: .\guides\templates\guides\admissions_guide.html:340
-msgid ""
-"港澳生可申請教育部僑生獎學金（每月約 NT$5,000～8,000），另有各校設立的港澳生"
-"入學獎學金及學校獎助學金，請向各校國際處查詢。"
+msgid "港澳生可申請教育部僑生獎學金（每月約 NT$5,000～8,000），另有各校設立的港澳生入學獎學金及學校獎助學金，請向各校國際處查詢。"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:342
@@ -1080,9 +1012,7 @@ msgstr ""
 "Application information for overseas Chinese students in various regions"
 
 #: .\guides\templates\guides\admissions_guide.html:353
-msgid ""
-"以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申"
-"請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
+msgid "以下為海外聯合招生委員會（海聯會）各地區招生辦公室資訊。各地區因學制不同，申請資格與截止日期可能有所差異，請以海聯會最新公告為準。"
 msgstr ""
 "The following is information about the regional admissions offices of the "
 "Overseas Joint Admissions Committee (Overseas Joint Admissions Committee). "
@@ -1222,8 +1152,8 @@ msgstr "High school/university graduates from various countries"
 msgid "海聯會或各地台灣辦事處"
 msgstr "ALATS or various Taiwan offices"
 
-#: .\guides\templates\guides\admissions_guide.html:511 .\templates\base.html:70
-#: .\users\templates\users\dashboard.html:52
+#: .\guides\templates\guides\admissions_guide.html:511
+#: .\templates\base.html:70 .\users\templates\users\dashboard.html:52
 #: .\users\templates\users\home.html:351
 msgid "學長姐分享"
 msgstr "Alumni Sharing"
@@ -1252,7 +1182,6 @@ msgstr "Vietnam"
 #: .\guides\templates\guides\admissions_guide.html:524
 #: .\guides\templates\guides\admissions_guide.html:614
 #: .\users\templates\users\home.html:363
-#, fuzzy
 #| msgid "國立臺灣大學（NTU）"
 msgid "國立臺灣大學"
 msgstr "National Taiwan University (NTU)"
@@ -1265,15 +1194,13 @@ msgstr ""
 #: .\guides\templates\guides\admissions_guide.html:529
 #: .\users\templates\users\home.html:368
 msgid ""
-"「剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協"
-"助。ReadyTo 上的流程整理讓我在申請階段就對整個時程很有把握，少走了好多彎"
-"路！」"
+"「剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。ReadyTo "
+"上的流程整理讓我在申請階段就對整個時程很有把握，少走了好多彎路！」"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:539
 #: .\guides\templates\guides\admissions_guide.html:629
 #: .\users\templates\users\home.html:377
-#, fuzzy
 #| msgid "國立成功大學（NCKU）"
 msgid "國立成功大學"
 msgstr "National Cheng Kung University (NCKU)"
@@ -1286,8 +1213,7 @@ msgstr ""
 #: .\guides\templates\guides\admissions_guide.html:544
 #: .\users\templates\users\home.html:382
 msgid ""
-"「台灣的工程教育真的世界一流！教授們都很願意指導外籍生，實驗室設備也很完整。"
-"ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」"
+"「台灣的工程教育真的世界一流！教授們都很願意指導外籍生，實驗室設備也很完整。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:553
@@ -1298,7 +1224,6 @@ msgstr "Philippines"
 
 #: .\guides\templates\guides\admissions_guide.html:554
 #: .\users\templates\users\home.html:391
-#, fuzzy
 #| msgid "國立臺灣師範大學（NTNU）"
 msgid "國立臺灣師範大學"
 msgstr "National Taiwan Normal University (NTNU)"
@@ -1310,9 +1235,7 @@ msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:559
 #: .\users\templates\users\home.html:396
-msgid ""
-"「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應"
-"用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
+msgid "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:568
@@ -1324,7 +1247,6 @@ msgstr "Thailand"
 #: .\guides\templates\guides\admissions_guide.html:569
 #: .\guides\templates\guides\admissions_guide.html:644
 #: .\users\templates\users\home.html:405
-#, fuzzy
 #| msgid "國立清華大學（NTHU）"
 msgid "國立清華大學"
 msgstr "National Tsing Hua University (NTHU)"
@@ -1336,14 +1258,11 @@ msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:574
 #: .\users\templates\users\home.html:410
-msgid ""
-"「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住"
-"宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
+msgid "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:584
 #: .\users\templates\users\home.html:419
-#, fuzzy
 #| msgid "國立政治大學（NCCU）"
 msgid "國立政治大學"
 msgstr "National Chengchi University (NCCU)"
@@ -1355,9 +1274,7 @@ msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:589
 #: .\users\templates\users\home.html:424
-msgid ""
-"「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度"
-"真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」"
+msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:598
@@ -1368,7 +1285,6 @@ msgstr "Japan"
 
 #: .\guides\templates\guides\admissions_guide.html:599
 #: .\users\templates\users\home.html:433
-#, fuzzy
 #| msgid "國立陽明交通大學（NYCU）"
 msgid "國立陽明交通大學"
 msgstr "National Yang Ming Chiao Tung University (NYCU)"
@@ -1381,12 +1297,11 @@ msgstr ""
 #: .\guides\templates\guides\admissions_guide.html:604
 #: .\users\templates\users\home.html:438
 msgid ""
-"「台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。陽明交大的研究環境"
-"和業界連結都非常完善。ReadyTo 的 ARC 辦理指南讓我順利完成所有手續。」"
+"「台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。陽明交大的研究環境和業界連結都非常完善。ReadyTo 的 ARC "
+"辦理指南讓我順利完成所有手續。」"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:613 .\users\models.py:136
-#, fuzzy
 #| msgid "印尼"
 msgid "印度"
 msgstr "Indonesia"
@@ -1397,8 +1312,7 @@ msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:619
 msgid ""
-"「在印度時就聽說台灣的理工科研究環境非常好。台大電機系的資源豐富，指導教授對"
-"國際生非常友善。ReadyTo 讓我提前了解所有手續，到台灣後完全不慌亂。」"
+"「在印度時就聽說台灣的理工科研究環境非常好。台大電機系的資源豐富，指導教授對國際生非常友善。ReadyTo 讓我提前了解所有手續，到台灣後完全不慌亂。」"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:630
@@ -1407,8 +1321,7 @@ msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:634
 msgid ""
-"「從緬甸來台灣念醫學系是很大的挑戰，但成大的師長和同學都非常熱情。ReadyTo 的"
-"住宿申請和健保辦理步驟讓我少走很多彎路，強力推薦給每位境外生！」"
+"「從緬甸來台灣念醫學系是很大的挑戰，但成大的師長和同學都非常熱情。ReadyTo 的住宿申請和健保辦理步驟讓我少走很多彎路，強力推薦給每位境外生！」"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:643 .\users\models.py:154
@@ -1421,8 +1334,8 @@ msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:649
 msgid ""
-"「很多人沒想到我會從墨西哥來台灣讀博士，但清大的化工研究在全球都很有名。台灣"
-"的生活費比歐美低很多，食物又好吃，ReadyTo 幫我快速了解所有行政流程！」"
+"「很多人沒想到我會從墨西哥來台灣讀博士，但清大的化工研究在全球都很有名。台灣的生活費比歐美低很多，食物又好吃，ReadyTo "
+"幫我快速了解所有行政流程！」"
 msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:656
@@ -1479,8 +1392,7 @@ msgid "外來人士在台生活諮詢專線"
 msgstr "Consultation hotline for foreigners living in Taiwan"
 
 #: .\guides\templates\guides\admissions_guide.html:703
-msgid ""
-"提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
+msgid "提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
 msgstr ""
 "Provide multi-language (English, Japanese, Korean, Vietnamese, Thai, "
 "Indonesian, etc.) consulting services to answer questions about living and "
@@ -1547,8 +1459,8 @@ msgstr "Academic Affairs Office / Registration Section (with official seal)"
 #: .\guides\templates\guides\guide_admin_docs.html:46
 msgid "需蓋學校公章者至教務處（行政大樓）辦理，通常當場或隔日取件。"
 msgstr ""
-"If an official school seal is required, apply at the Academic Affairs Office "
-"(Administration Building). Usually available immediately or the next day."
+"If an official school seal is required, apply at the Academic Affairs Office"
+" (Administration Building). Usually available immediately or the next day."
 
 #: .\guides\templates\guides\guide_admin_docs.html:51
 msgid "有效期限通常為 3 個月，申請前確認用途所需格式（中文或英文）。"
@@ -1573,8 +1485,8 @@ msgstr ""
 #: .\guides\templates\guides\guide_admin_docs.html:68
 msgid "教務處 / 註冊組（含公章 / 英文版）"
 msgstr ""
-"Academic Affairs Office / Registration Section (with official seal / English "
-"version)"
+"Academic Affairs Office / Registration Section (with official seal / English"
+" version)"
 
 #: .\guides\templates\guides\guide_admin_docs.html:70
 msgid "正式成績單（含公章）或英文成績單，至教務處申請，通常需支付工本費。"
@@ -1622,8 +1534,8 @@ msgstr "Confirm format: sealed envelope / online form"
 #: .\guides\templates\guides\guide_admin_docs.html:104
 msgid "部分申請要求教授直接寄至對方或填線上表單，提前確認避免格式錯誤。"
 msgstr ""
-"Some applications require the professor to send directly to the recipient or "
-"fill out an online form. Confirm in advance to avoid format errors."
+"Some applications require the professor to send directly to the recipient or"
+" fill out an online form. Confirm in advance to avoid format errors."
 
 #: .\guides\templates\guides\guide_admin_docs.html:110
 msgid "繳交前再次確認截止日"
@@ -1656,8 +1568,7 @@ msgstr "HK & Macau Student Residency in Taiwan"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:20
 msgid ""
-"香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般"
-"外籍生不同。本頁整理港澳生常見的入台文件、居留證申請流程及注意事項。"
+"香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般外籍生不同。本頁整理港澳生常見的入台文件、居留證申請流程及注意事項。"
 msgstr ""
 "Hong Kong and Macau students studying in Taiwan are governed by the Act "
 "Governing Relations with Hong Kong and Macao. Their entry procedures and "
@@ -1682,9 +1593,7 @@ msgid "港澳生受到特別保障："
 msgstr "Special protections for HK/Macau students:"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:33
-msgid ""
-"香港及澳門居民依《香港澳門關係條例》在台就學，享有許多類似本國生的優惠待遇"
-"（如宿舍優先、獎學金資格等），但居留申請程序仍須透過移民署辦理。"
+msgid "香港及澳門居民依《香港澳門關係條例》在台就學，享有許多類似本國生的優惠待遇（如宿舍優先、獎學金資格等），但居留申請程序仍須透過移民署辦理。"
 msgstr ""
 "Hong Kong and Macau residents studying in Taiwan under the Act Governing "
 "Relations with Hong Kong and Macao enjoy many benefits similar to domestic "
@@ -1734,8 +1643,7 @@ msgid "使用外國護照 + 居留簽"
 msgstr "Using foreign passport + resident visa"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:53
-msgid ""
-"同時持有他國護照（如英國 BN(O)、葡萄牙等）的港澳生，可選擇以外國護照申請"
+msgid "同時持有他國護照（如英國 BN(O)、葡萄牙等）的港澳生，可選擇以外國護照申請"
 msgstr ""
 "HK/Macau students who also hold a foreign passport (e.g., British BN(O), "
 "Portuguese, etc.) may choose to apply with their foreign passport for a"
@@ -1759,9 +1667,7 @@ msgid "不確定自己應走哪一條路線，建議在出發前聯絡"
 msgstr "If you are unsure which route applies to you, contact"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:63
-msgid ""
-"或直接致電移民署（0800-024-111），說明持有的旅行證件類型，即可獲得最準確的指"
-"引。"
+msgid "或直接致電移民署（0800-024-111），說明持有的旅行證件類型，即可獲得最準確的指引。"
 msgstr ""
 "or call the NIA directly at 0800-024-111 and describe the type of travel "
 "document you hold to receive the most accurate guidance."
@@ -1897,8 +1803,8 @@ msgstr "Certificate of Enrollment"
 #: .\guides\templates\guides\guide_arc_exchange.html:119
 msgid "由台灣就讀學校出具，載明科系、就學期間。學校 OIA 可協助申請。"
 msgstr ""
-"Issued by your Taiwan school, stating your department and enrollment period. "
-"The school's OIA can assist with the application."
+"Issued by your Taiwan school, stating your department and enrollment period."
+" The school's OIA can assist with the application."
 
 #: .\guides\templates\guides\guide_arc_exchange.html:126
 #: .\guides\templates\guides\guide_arc_overseas.html:117
@@ -1908,8 +1814,8 @@ msgstr "2 passport photos"
 #: .\guides\templates\guides\guide_arc_exchange.html:127
 msgid "近 6 個月內 2 吋白底彩色照片（寬 3.5 cm × 高 4.5 cm）。"
 msgstr ""
-"Color photos taken within the past 6 months, 2 inches, white background (3.5 "
-"cm wide × 4.5 cm tall)."
+"Color photos taken within the past 6 months, 2 inches, white background (3.5"
+" cm wide × 4.5 cm tall)."
 
 #: .\guides\templates\guides\guide_arc_exchange.html:134
 msgid "居留申請書"
@@ -1943,7 +1849,8 @@ msgstr "Proof of Accommodation Address"
 #: .\guides\templates\guides\guide_arc_exchange.html:151
 msgid "宿舍住宿證或租屋合約書，部分辦事處要求提供。"
 msgstr ""
-"Dormitory residency certificate or rental contract. Required by some offices."
+"Dormitory residency certificate or rental contract. Required by some "
+"offices."
 
 #: .\guides\templates\guides\guide_arc_exchange.html:152
 #: .\guides\templates\guides\guide_arc_foreign.html:156
@@ -1976,13 +1883,11 @@ msgstr ""
 "Report to the school's Office of International Affairs (OIA) after arrival"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:173
-msgid ""
-"OIA 通常在迎新時統一說明居留申請流程，並提供在學證明書及文件確認服務。抵台當"
-"天或次日即應前往，確認文件清單。"
+msgid "OIA 通常在迎新時統一說明居留申請流程，並提供在學證明書及文件確認服務。抵台當天或次日即應前往，確認文件清單。"
 msgstr ""
 "The OIA typically explains the residence application process during "
-"orientation and provides certificate of enrollment and document verification "
-"services. Visit on the day of arrival or the next day to confirm your "
+"orientation and provides certificate of enrollment and document verification"
+" services. Visit on the day of arrival or the next day to confirm your "
 "document checklist."
 
 #: .\guides\templates\guides\guide_arc_exchange.html:175
@@ -1998,13 +1903,11 @@ msgid "取得在學證明書"
 msgstr "Obtain Certificate of Enrollment"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:184
-msgid ""
-"向 OIA 申請學校出具的在學證明書。若迎新時已發放，可直接進入下一步。部分學校在"
-"報到後即可當日取件。"
+msgid "向 OIA 申請學校出具的在學證明書。若迎新時已發放，可直接進入下一步。部分學校在報到後即可當日取件。"
 msgstr ""
 "Request the certificate of enrollment from the OIA. If it was already "
-"distributed during orientation, proceed to the next step. Some schools issue "
-"it on the same day as registration."
+"distributed during orientation, proceed to the next step. Some schools issue"
+" it on the same day as registration."
 
 #: .\guides\templates\guides\guide_arc_exchange.html:186
 #: .\guides\templates\guides\guide_arc_overseas.html:159
@@ -2016,13 +1919,11 @@ msgid "健康檢查（初次申請者）"
 msgstr "Health Examination (first-time applicants)"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:194
-msgid ""
-"初次申請居留需至移民署指定合格醫院進行健康檢查，取得健康檢查合格證明書。學校 "
-"OIA 通常會提供指定醫院清單，可事先線上預約。"
+msgid "初次申請居留需至移民署指定合格醫院進行健康檢查，取得健康檢查合格證明書。學校 OIA 通常會提供指定醫院清單，可事先線上預約。"
 msgstr ""
-"First-time applicants must undergo a health examination at an NIA-designated "
-"hospital and obtain a health certificate. The school OIA usually provides a "
-"list of designated hospitals; online appointment booking is recommended."
+"First-time applicants must undergo a health examination at an NIA-designated"
+" hospital and obtain a health certificate. The school OIA usually provides a"
+" list of designated hospitals; online appointment booking is recommended."
 
 #: .\guides\templates\guides\guide_arc_exchange.html:196
 msgid "抵台後 2～5 天"
@@ -2037,9 +1938,7 @@ msgid "整理文件並預約移民署"
 msgstr "Prepare documents and schedule an NIA appointment"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:205
-msgid ""
-"將所有文件整理妥當並備好正本及影本，至移民署官網線上預約辦理時段。建議選擇就"
-"近的移民署辦事處（桃園市即桃園服務站）。"
+msgid "將所有文件整理妥當並備好正本及影本，至移民署官網線上預約辦理時段。建議選擇就近的移民署辦事處（桃園市即桃園服務站）。"
 msgstr ""
 "Organize all documents with originals and copies ready, then book a time "
 "slot online via the NIA website. Choose the nearest NIA office (Taoyuan "
@@ -2058,9 +1957,7 @@ msgid "前往移民署辦事處提交申請"
 msgstr "Visit the NIA office to submit your application"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:216
-msgid ""
-"攜帶所有文件至移民署，現場核對文件、採集指紋並繳費。可由 OIA 統一帶隊辦理（若"
-"有安排），或自行前往。"
+msgid "攜帶所有文件至移民署，現場核對文件、採集指紋並繳費。可由 OIA 統一帶隊辦理（若有安排），或自行前往。"
 msgstr ""
 "Bring all documents to the NIA office for document verification, "
 "fingerprinting, and payment. The OIA may arrange a group visit (if "
@@ -2083,9 +1980,7 @@ msgid "申請後約"
 msgstr "Approximately"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:228
-msgid ""
-"製卡完成（不含退補件），移民署以簡訊通知領件。等待期間持入境許可證（或護照）"
-"及申請收據可作為合法居留暫時證明。"
+msgid "製卡完成（不含退補件），移民署以簡訊通知領件。等待期間持入境許可證（或護照）及申請收據可作為合法居留暫時證明。"
 msgstr ""
 "The card will be ready (excluding returned cases). The NIA will notify you "
 "by SMS when it is ready for collection. During the waiting period, your "
@@ -2103,13 +1998,11 @@ msgid "領取居留證"
 msgstr "Collect your residence permit"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:238
-msgid ""
-"持入境許可證（或護照）及收據親赴辦事處領取居留證。領取後可辦理加入健保、申辦"
-"手機門號及銀行開戶。"
+msgid "持入境許可證（或護照）及收據親赴辦事處領取居留證。領取後可辦理加入健保、申辦手機門號及銀行開戶。"
 msgstr ""
 "Bring your Entry/Exit Permit (or passport) and receipt to the NIA office to "
-"collect your residence permit. Afterwards, you may enroll in National Health "
-"Insurance, apply for a phone plan, and open a bank account."
+"collect your residence permit. Afterwards, you may enroll in National Health"
+" Insurance, apply for a phone plan, and open a bank account."
 
 #: .\guides\templates\guides\guide_arc_exchange.html:240
 #: .\guides\templates\guides\guide_arc_overseas.html:212
@@ -2171,9 +2064,8 @@ msgstr "Can I work part-time while studying in Taiwan?"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:269
 msgid ""
-"港澳生持居留證可申請工讀許可（每週不超過 20 小時）。需向學校取得工讀同意書"
-"後，至勞動部辦理工作許可。在校內工讀（如圖書館、系辦助理）通常只需學校同意，"
-"手續較簡便。未取得合法工作許可的工作行為依法屬違規，請務必事先申請。"
+"港澳生持居留證可申請工讀許可（每週不超過 20 "
+"小時）。需向學校取得工讀同意書後，至勞動部辦理工作許可。在校內工讀（如圖書館、系辦助理）通常只需學校同意，手續較簡便。未取得合法工作許可的工作行為依法屬違規，請務必事先申請。"
 msgstr ""
 "HK/Macau students with a residence permit may apply for a part-time work "
 "permit (no more than 20 hours per week). You must first obtain a part-time "
@@ -2197,8 +2089,7 @@ msgstr "30 days"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:280
 msgid ""
-"即可申請延期。延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），"
-"無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。"
+"即可申請延期。延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。"
 msgstr ""
 "before expiry, you may apply for an extension. Required documents are "
 "similar to the initial application (certificate of enrollment, original "
@@ -2211,12 +2102,11 @@ msgstr "Can HK/Macau students enroll in National Health Insurance (NHI)?"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:291
 msgid ""
-"可以。取得居留證後，透過學校衛生保健組辦理加保即可。保費依年度費率由學校代"
-"扣，學生費率比一般標準低。加保後就醫診所門診費用約 NT$150，享有與台灣學生相同"
-"的健保保障。"
+"可以。取得居留證後，透過學校衛生保健組辦理加保即可。保費依年度費率由學校代扣，學生費率比一般標準低。加保後就醫診所門診費用約 "
+"NT$150，享有與台灣學生相同的健保保障。"
 msgstr ""
-"Yes. After receiving your residence permit, enroll through the school health "
-"center. Premiums are deducted by the school at the annual rate, and the "
+"Yes. After receiving your residence permit, enroll through the school health"
+" center. Premiums are deducted by the school at the annual rate, and the "
 "student rate is lower than the standard rate. After enrollment, clinic "
 "consultation fees are approximately NT$150, providing the same NHI coverage "
 "as Taiwanese students."
@@ -2260,8 +2150,8 @@ msgstr "Will the school OIA help me apply for the residence permit?"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:313
 msgid ""
-"大多數學校會在開學初舉辦團體辦理場次，OIA 統一帶隊至移民署。建議迎新報到後立"
-"即前往 OIA 確認是否有統一辦理安排，以便提早準備所需文件，節省自行前往的時間。"
+"大多數學校會在開學初舉辦團體辦理場次，OIA 統一帶隊至移民署。建議迎新報到後立即前往 OIA "
+"確認是否有統一辦理安排，以便提早準備所需文件，節省自行前往的時間。"
 msgstr ""
 "Most schools hold a group application session at the start of the semester, "
 "with the OIA leading students to the NIA together. After orientation, visit "
@@ -2469,8 +2359,7 @@ msgstr ""
 "notification letter"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:123
-msgid ""
-"由就讀學校國際事務處（OIA）出具，含入學日期及就讀系所，正本及影本各 1 份。"
+msgid "由就讀學校國際事務處（OIA）出具，含入學日期及就讀系所，正本及影本各 1 份。"
 msgstr ""
 "Issued by the school's Office of International Affairs (OIA), including "
 "enrollment date and department; 1 original and 1 copy each."
@@ -2486,9 +2375,7 @@ msgid "本國警察刑事紀錄證明"
 msgstr "Home-country Police Criminal Record Certificate"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:139
-msgid ""
-"由母國警察或司法機關出具，1 年內有效。外文文件須經我國駐外館處驗證或在台公"
-"證。"
+msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駐外館處驗證或在台公證。"
 msgstr ""
 "Issued by your home country's police or judicial authority, valid within 1 "
 "year. Foreign-language documents must be authenticated by a Taiwan overseas "
@@ -2668,34 +2555,29 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_arc_foreign.html:374
 msgid ""
-"在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處"
-"（香港、澳門）驗證。依規定繳附之文件為外文者，應經駐外館處驗證，並檢附經駐外"
-"館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登"
-"錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
+"在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駐外館處驗證，並檢附經駐外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
 msgstr ""
 "Documents produced in mainland China, overseas, Hong Kong, or Macau must be "
 "authenticated by the SEF, an overseas mission, or TECRO (Hong Kong/Macau). "
-"Foreign-language documents must be authenticated by an overseas mission with "
-"a Chinese translation certified by the mission or a notary in Taiwan. "
-"Foreign-language vaccination records must be transcribed at the local health "
-"center. (Exception: Gold Card applicants under the Act for the Recruitment "
+"Foreign-language documents must be authenticated by an overseas mission with"
+" a Chinese translation certified by the mission or a notary in Taiwan. "
+"Foreign-language vaccination records must be transcribed at the local health"
+" center. (Exception: Gold Card applicants under the Act for the Recruitment "
 "and Employment of Foreign Professionals.)"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:378
 msgid ""
-"居留一定期間之計算方式：自定居申請日往前推算，在臺連續居留滿一年（一年內得出"
-"境三十日，出境次數不予限制）或連續居留滿二年且每年在臺居住二百七十日以上。"
+"居留一定期間之計算方式：自定居申請日往前推算，在臺連續居留滿一年（一年內得出境三十日，出境次數不予限制）或連續居留滿二年且每年在臺居住二百七十日以上。"
 msgstr ""
-"Calculating the required period of residence: counting back from the date of "
-"permanent residency application, continuous residence in Taiwan for one full "
-"year (departures of up to 30 days per year permitted, no limit on number of "
-"trips) or continuous residence for two years with at least 270 days per year."
+"Calculating the required period of residence: counting back from the date of"
+" permanent residency application, continuous residence in Taiwan for one "
+"full year (departures of up to 30 days per year permitted, no limit on "
+"number of trips) or continuous residence for two years with at least 270 "
+"days per year."
 
 #: .\guides\templates\guides\guide_arc_foreign.html:382
 msgid ""
-"經許可居留，在臺灣地區居留一定期間，仍具備原居留條件者（親屬關係因結婚或收養"
-"發生者，應存續三年以上。但婚姻關係存續期間已生產子女者，不在此限），得申請在"
-"臺灣地區定居。"
+"經許可居留，在臺灣地區居留一定期間，仍具備原居留條件者（親屬關係因結婚或收養發生者，應存續三年以上。但婚姻關係存續期間已生產子女者，不在此限），得申請在臺灣地區定居。"
 msgstr ""
 "Those permitted to reside who have lived in Taiwan for the required period "
 "and still meet the original conditions (family relationships arising from "
@@ -2704,10 +2586,7 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_arc_foreign.html:386
 msgid ""
-"經中央目的事業主管機關核准來臺就學者畢業後（HF168），依第十六條第一項第八款規"
-"定經許可居留連續滿五年，每年在臺灣地區居住一百八十三日以上，且最近一年於臺灣"
-"地區平均每月收入達中央勞動主管機關公告基本工資二倍以上者，得申請在臺灣地區定"
-"居。"
+"經中央目的事業主管機關核准來臺就學者畢業後（HF168），依第十六條第一項第八款規定經許可居留連續滿五年，每年在臺灣地區居住一百八十三日以上，且最近一年於臺灣地區平均每月收入達中央勞動主管機關公告基本工資二倍以上者，得申請在臺灣地區定居。"
 msgstr ""
 "Graduates approved to study in Taiwan by the central competent authority "
 "(HF168) who have resided continuously for 5 years under Article 16(1)(8), "
@@ -2717,52 +2596,41 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_arc_foreign.html:390
 msgid ""
-"臺灣地區居留證有效期間屆滿前三十日內，原申請居留原因仍繼續存在者，得申請延"
-"期，每次不得逾二年；學生申請畢業延期居留者，自畢業當日起算六個月，延期居留期"
-"間屆滿前，得再申請延期一次，總延期居留期間最長為一年。（應備文件：1.申請書、"
-"2.臺灣地區居留證、3.其他相關證明文件）"
+"臺灣地區居留證有效期間屆滿前三十日內，原申請居留原因仍繼續存在者，得申請延期，每次不得逾二年；學生申請畢業延期居留者，自畢業當日起算六個月，延期居留期間屆滿前，得再申請延期一次，總延期居留期間最長為一年。（應備文件：1.申請書、2.臺灣地區居留證、3.其他相關證明文件）"
 msgstr ""
-"Within 30 days before ARC expiry, if the original reason for residence still "
-"applies, an extension may be applied for; each extension cannot exceed 2 "
+"Within 30 days before ARC expiry, if the original reason for residence still"
+" applies, an extension may be applied for; each extension cannot exceed 2 "
 "years. Students applying for post-graduation residence extension have 6 "
 "months from graduation and may apply for one further extension; total "
-"extension cannot exceed 1 year. (Required: 1. Application form 2. Taiwan ARC "
-"3. Other relevant documents)"
+"extension cannot exceed 1 year. (Required: 1. Application form 2. Taiwan ARC"
+" 3. Other relevant documents)"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:394
 msgid ""
-"依外國人才專法第二十四條規定經許可居留，原申請居留原因仍繼續存在者，得申請延"
-"期居留：1.準用同法第八條規定者：每次最長為五年。2.準用同法第五條至第七條、第"
-"九條及第十條規定者：每次最長為三年。"
+"依外國人才專法第二十四條規定經許可居留，原申請居留原因仍繼續存在者，得申請延期居留：1.準用同法第八條規定者：每次最長為五年。2.準用同法第五條至第七條、第九條及第十條規定者：每次最長為三年。"
 msgstr ""
 "For those permitted to reside under Article 24 of the Act for the "
 "Recruitment and Employment of Foreign Professionals, if the original reason "
-"still applies, extension may be applied: 1. Under Article 8 of the same Act: "
-"up to 5 years per extension. 2. Under Articles 5–7, 9, and 10: up to 3 years "
-"per extension."
+"still applies, extension may be applied: 1. Under Article 8 of the same Act:"
+" up to 5 years per extension. 2. Under Articles 5–7, 9, and 10: up to 3 "
+"years per extension."
 
 #: .\guides\templates\guides\guide_arc_foreign.html:398
-msgid ""
-"曾逾停留期限超過三十日未滿一年者，不予許可期間自其出境之日起算一年；逾期停留"
-"一年以上未滿二年者，起算二年；逾期停留二年以上者，起算三年。"
+msgid "曾逾停留期限超過三十日未滿一年者，不予許可期間自其出境之日起算一年；逾期停留一年以上未滿二年者，起算二年；逾期停留二年以上者，起算三年。"
 msgstr ""
 "Those who overstayed by more than 30 days but less than 1 year are barred "
 "for 1 year from departure; overstay of 1–2 years: barred 2 years; overstay "
 "of 2 years or more: barred 3 years."
 
 #: .\guides\templates\guides\guide_arc_foreign.html:402
-msgid ""
-"申請案件資料不符或欠缺者，應於書面通知送達之翌日起三個月內補正；未於規定期間"
-"補正或補正仍不合規定者，駁回其申請。"
+msgid "申請案件資料不符或欠缺者，應於書面通知送達之翌日起三個月內補正；未於規定期間補正或補正仍不合規定者，駁回其申請。"
 msgstr ""
 "Applicants with missing or incorrect documents must correct them within 3 "
 "months of receiving written notice; failure to correct within the period or "
 "correction still not meeting requirements results in rejection."
 
 #: .\guides\templates\guides\guide_arc_foreign.html:406
-msgid ""
-"香港澳門居民以依親事由及其隨同申請之未成年子女申請在臺灣地區居留，其親屬關係"
-"因收養發生者，應存續二年以上。"
+msgid "香港澳門居民以依親事由及其隨同申請之未成年子女申請在臺灣地區居留，其親屬關係因收養發生者，應存續二年以上。"
 msgstr ""
 "HK/Macau residents applying for residency based on family reunion, along "
 "with minor children, must have had the family relationship through adoption "
@@ -2770,9 +2638,7 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_arc_foreign.html:410
 msgid ""
-"港澳居民逾期居留未滿三十日，原申請居留原因仍繼續存在者，經依相關規定處罰、繳"
-"清罰鍰後，得向本署重新申請居留；港澳居民未於居留期間屆滿前經許可延期居留，且"
-"逾期居留三十日以上者，應繳清罰款，並申請出境證出境。"
+"港澳居民逾期居留未滿三十日，原申請居留原因仍繼續存在者，經依相關規定處罰、繳清罰鍰後，得向本署重新申請居留；港澳居民未於居留期間屆滿前經許可延期居留，且逾期居留三十日以上者，應繳清罰款，並申請出境證出境。"
 msgstr ""
 "HK/Macau residents who overstay by less than 30 days and still meet the "
 "original conditions may reapply after paying fines. Those who overstay 30 "
@@ -2780,9 +2646,7 @@ msgstr ""
 "departure permit to exit."
 
 #: .\guides\templates\guides\guide_arc_foreign.html:414
-msgid ""
-"港澳居民依外國人才專法第二十四條規定準用同法第九條規定以網路申請平臺申請就業"
-"金卡者，相關規定請參考「外國特定專業人才申請就業金卡送件須知」。"
+msgid "港澳居民依外國人才專法第二十四條規定準用同法第九條規定以網路申請平臺申請就業金卡者，相關規定請參考「外國特定專業人才申請就業金卡送件須知」。"
 msgstr ""
 "HK/Macau residents applying for an Employment Gold Card via the online "
 "platform under Article 24 of the Act for Foreign Professionals should refer "
@@ -2832,8 +2696,8 @@ msgstr ""
 #: .\guides\templates\guides\guide_arc_foreign.html:478
 msgid "提供多語言諮詢服務，解答居留、就業、生活等問題。"
 msgstr ""
-"Multilingual consultation services covering residence, employment, and daily "
-"life inquiries."
+"Multilingual consultation services covering residence, employment, and daily"
+" life inquiries."
 
 #: .\guides\templates\guides\guide_arc_overseas.html:4
 msgid "僑生辦理居留證服務"
@@ -2861,8 +2725,8 @@ msgstr "days of arrival,"
 #: .\guides\templates\guides\guide_arc_overseas.html:21
 msgid "向內政部移民署線上辦理外僑居留證（ARC），方能在台合法居留及就讀。"
 msgstr ""
-"apply online for an Alien Resident Certificate (ARC) from the NIA to legally "
-"reside in Taiwan and attend school."
+"apply online for an Alien Resident Certificate (ARC) from the NIA to legally"
+" reside in Taiwan and attend school."
 
 #: .\guides\templates\guides\guide_arc_overseas.html:24
 msgid "辦理期限：入境次日起 30 天內"
@@ -2885,9 +2749,7 @@ msgid "持居留簽證入境次日起"
 msgstr "Starting from the day after entering on a resident visa,"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:34
-msgid ""
-"，需自行至移民署線上系統辦理外僑居留證，逾期將被處罰鍰，嚴重者需出境重新申請"
-"簽證。ARC 是後續辦理加保、開戶等必要身份證明，請儘快辦理。"
+msgid "，需自行至移民署線上系統辦理外僑居留證，逾期將被處罰鍰，嚴重者需出境重新申請簽證。ARC 是後續辦理加保、開戶等必要身份證明，請儘快辦理。"
 msgstr ""
 "you must apply for an ARC yourself via the NIA online system. Late "
 "applications incur fines; serious violations may require departure and visa "
@@ -2911,9 +2773,7 @@ msgid "每年需延期"
 msgstr "Must renew annually"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:70
-msgid ""
-"以下為一般應備文件，各移民署辦事處可能有細微差異。建議事前致電當地辦事處或至"
-"移民署官網確認最新版清單。"
+msgid "以下為一般應備文件，各移民署辦事處可能有細微差異。建議事前致電當地辦事處或至移民署官網確認最新版清單。"
 msgstr ""
 "The following are general required documents; individual NIA offices may "
 "have slight variations. Call your local office or check the NIA website for "
@@ -2966,8 +2826,8 @@ msgstr ""
 #: .\guides\templates\guides\guide_arc_overseas.html:118
 msgid "近 6 個月內拍攝之 2 吋白底彩色照片（規格：寬 3.5 cm × 高 4.5 cm）。"
 msgstr ""
-"2-inch white-background color photo taken within the past 6 months (3.5 cm × "
-"4.5 cm)."
+"2-inch white-background color photo taken within the past 6 months (3.5 cm ×"
+" 4.5 cm)."
 
 #: .\guides\templates\guides\guide_arc_overseas.html:125
 msgid "外僑居留申請書"
@@ -2994,9 +2854,7 @@ msgid "全程線上辦理："
 msgstr "Fully online process:"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:144
-msgid ""
-"居留證申請及延期皆以線上申辦為主。請至移民署「外國與外僑學生線上申辦系統」自"
-"行申請，"
+msgid "居留證申請及延期皆以線上申辦為主。請至移民署「外國與外僑學生線上申辦系統」自行申請，"
 msgstr ""
 "Both ARC applications and renewals are primarily handled online. Apply "
 "yourself via the NIA's \"Online Application System for Foreign and Overseas "
@@ -3020,9 +2878,8 @@ msgstr "Complete health check and gather documents after arrival"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:157
 msgid ""
-"確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院"
-"辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢"
-"（約 NT$780）。"
+"確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約"
+" NT$780）。"
 msgstr ""
 "Confirm your passport, admission letter, and enrollment certificate are "
 "ready. If a health check is needed, visit a school-approved hospital (OIA "
@@ -3035,9 +2892,8 @@ msgstr "Register and upload documents to the NIA online system"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:167
 msgid ""
-"前往移民署「外國與外僑學生線上申辦系統」完成帳號註冊，掃描並上傳所需文件：近"
-"三個月 2 吋彩色照片、護照、入學通知函及在學證明書。系統操作請參閱官方操作手"
-"冊。"
+"前往移民署「外國與外僑學生線上申辦系統」完成帳號註冊，掃描並上傳所需文件：近三個月 2 "
+"吋彩色照片、護照、入學通知函及在學證明書。系統操作請參閱官方操作手冊。"
 msgstr ""
 "Go to the NIA \"Online Application System for Foreign/Overseas Students\", "
 "register an account, scan and upload required documents: a 2-inch color "
@@ -3059,8 +2915,8 @@ msgstr "Pay the application fee"
 #: .\guides\templates\guides\guide_arc_overseas.html:178
 msgid "線上申請時繳交規費 NT$500（1 年居留證）。繳費後保存收據以備查。"
 msgstr ""
-"Pay NT$500 (1-year ARC) during the online application. Keep your receipt for "
-"reference."
+"Pay NT$500 (1-year ARC) during the online application. Keep your receipt for"
+" reference."
 
 #: .\guides\templates\guides\guide_arc_overseas.html:180
 msgid "NT$500 / 年"
@@ -3075,9 +2931,7 @@ msgid "申請提交後通常需"
 msgstr "After submission, production usually takes"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:188
-msgid ""
-"製卡完成（不含退補件）。可至移民署線上查詢申請進度。等待期間請保留入境章及申"
-"請收據作為合法居留的暫時證明。"
+msgid "製卡完成（不含退補件）。可至移民署線上查詢申請進度。等待期間請保留入境章及申請收據作為合法居留的暫時證明。"
 msgstr ""
 "business days (excluding resubmissions). Check progress via the NIA online "
 "system. Keep your entry stamp and application receipt as temporary proof of "
@@ -3109,9 +2963,7 @@ msgid "日前"
 msgstr "of your enrollment year."
 
 #: .\guides\templates\guides\guide_arc_overseas.html:199
-msgid ""
-"上傳至 NCU Portal（入口網站）。未準時上傳將影響校內工讀金撥款、獎學金核發及相"
-"關權益。"
+msgid "上傳至 NCU Portal（入口網站）。未準時上傳將影響校內工讀金撥款、獎學金核發及相關權益。"
 msgstr ""
 "Upload to NCU Portal. Failure to upload on time may affect on-campus work-"
 "study pay, scholarship disbursements, and other entitlements."
@@ -3143,9 +2995,7 @@ msgid "個月內"
 msgstr "month(s) in advance,"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:221
-msgid ""
-"可至移民署網站線上申請延期，規費 NT$500 / 年，核辦約 10 天。建議每學年結束前"
-"提早辦理，避免居留資格失效。"
+msgid "可至移民署網站線上申請延期，規費 NT$500 / 年，核辦約 10 天。建議每學年結束前提早辦理，避免居留資格失效。"
 msgstr ""
 "you can apply for renewal online via the NIA website; fee NT$500/year, "
 "processing about 10 days. Apply before the end of each academic year to "
@@ -3156,32 +3006,27 @@ msgid "請勿選擇「就讀學校代辦」："
 msgstr "Do NOT select \"Apply through your school\":"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:228
-msgid ""
-"中央大學（NCU）不提供學校代辦服務，請學生自行登入線上申辦系統辦理，勿在系統中"
-"選擇此選項。"
+msgid "中央大學（NCU）不提供學校代辦服務，請學生自行登入線上申辦系統辦理，勿在系統中選擇此選項。"
 msgstr ""
-"NCU does not offer school-assisted ARC applications. Students must log in to "
-"the online system themselves and must not select this option."
+"NCU does not offer school-assisted ARC applications. Students must log in to"
+" the online system themselves and must not select this option."
 
 #: .\guides\templates\guides\guide_arc_overseas.html:234
-msgid ""
-"居留證遺失時請立即至警局報案，持報案證明至移民署申請補發（規費 NT$500）。補發"
-"時建議隨身攜帶護照及報案證明。"
+msgid "居留證遺失時請立即至警局報案，持報案證明至移民署申請補發（規費 NT$500）。補發時建議隨身攜帶護照及報案證明。"
 msgstr ""
-"If your ARC is lost, immediately file a police report, then bring the report "
-"to the NIA to apply for reissuance (fee NT$500). Carry your passport and "
+"If your ARC is lost, immediately file a police report, then bring the report"
+" to the NIA to apply for reissuance (fee NT$500). Carry your passport and "
 "police report when applying."
 
 #: .\guides\templates\guides\guide_arc_overseas.html:242
 msgid "我是台灣的僑生（台灣護照）的僑生也需要辦居留證嗎？"
 msgstr ""
-"I am an overseas Chinese student with a Taiwan passport — do I still need an "
-"ARC?"
+"I am an overseas Chinese student with a Taiwan passport — do I still need an"
+" ARC?"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:247
 msgid ""
-"不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦"
-"理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。"
+"不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。"
 msgstr ""
 "No. Overseas Chinese students who enter Taiwan with ROC citizenship (Taiwan "
 "passport) have full citizen status and do not need an ARC. This page is for "
@@ -3194,14 +3039,13 @@ msgstr "Can I do the health check after arriving in Taiwan?"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:258
 msgid ""
-"可以。可於抵台後參加校內體檢（約 NT$780），或至學校指定醫院完成。注意檢查報告"
-"出爐需數天，請盡早安排以避免超過 30 天辦理期限。建議抵台後隔天即至國際事務處"
-"詢問體檢安排。"
+"可以。可於抵台後參加校內體檢（約 NT$780），或至學校指定醫院完成。注意檢查報告出爐需數天，請盡早安排以避免超過 30 "
+"天辦理期限。建議抵台後隔天即至國際事務處詢問體檢安排。"
 msgstr ""
 "Yes. You can take the on-campus health exam (approx. NT$780) or go to a "
-"school-designated hospital after arriving. Note that results take a few days "
-"— arrange it early to stay within the 30-day deadline. Visit the OIA the day "
-"after arrival to ask about exam arrangements."
+"school-designated hospital after arriving. Note that results take a few days"
+" — arrange it early to stay within the 30-day deadline. Visit the OIA the "
+"day after arrival to ask about exam arrangements."
 
 #: .\guides\templates\guides\guide_arc_overseas.html:264
 msgid "居留證辦理期間可以在台灣合法居留嗎？"
@@ -3209,22 +3053,18 @@ msgstr ""
 "Can I legally stay in Taiwan while my ARC application is being processed?"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:269
-msgid ""
-"可以。申請提交後至居留證核發前，持入境章及申請收據即可作為合法居留證明。建議"
-"隨身攜帶此兩份文件，以備需要時出示。"
+msgid "可以。申請提交後至居留證核發前，持入境章及申請收據即可作為合法居留證明。建議隨身攜帶此兩份文件，以備需要時出示。"
 msgstr ""
 "Yes. After submitting your application and before the ARC is issued, your "
-"entry stamp and application receipt serve as proof of legal residence. Carry "
-"both documents at all times in case you need to present them."
+"entry stamp and application receipt serve as proof of legal residence. Carry"
+" both documents at all times in case you need to present them."
 
 #: .\guides\templates\guides\guide_arc_overseas.html:275
 msgid "可以在不同縣市的移民署辦事處辦理嗎？"
 msgstr "Can I apply at an NIA office in a different city or county?"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:280
-msgid ""
-"可以。全台各縣市均設有移民署服務站，選擇距離學校最近的辦事處即可。但建議選擇"
-"學校所在縣市的辦事處，方便日後延期和處理相關事務。"
+msgid "可以。全台各縣市均設有移民署服務站，選擇距離學校最近的辦事處即可。但建議選擇學校所在縣市的辦事處，方便日後延期和處理相關事務。"
 msgstr ""
 "Yes. NIA service stations are available in all cities and counties. Choose "
 "the office closest to your school. However, it is recommended to use the "
@@ -3239,9 +3079,8 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_arc_overseas.html:291
 msgid ""
-"在學期間以「就讀」為居留事由。畢業後如需繼續留台（例如找工作），需在畢業後 "
-"30 天內申請變更居留事由為「工作」或「其他」，或在找到合法工作並取得工作許可後"
-"辦理變更為「工作」居留事由。建議畢業前盡早規劃，避免居留證失效。"
+"在學期間以「就讀」為居留事由。畢業後如需繼續留台（例如找工作），需在畢業後 30 "
+"天內申請變更居留事由為「工作」或「其他」，或在找到合法工作並取得工作許可後辦理變更為「工作」居留事由。建議畢業前盡早規劃，避免居留證失效。"
 msgstr ""
 "During study, the residency purpose is \"study\". After graduation, if you "
 "want to stay (e.g., to find work), apply to change the residency purpose to "
@@ -3301,13 +3140,11 @@ msgid "領獎學金・生活必備"
 msgstr "Collect scholarships · Daily essentials"
 
 #: .\guides\templates\guides\guide_bank.html:19
-msgid ""
-"在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開"
-"戶銀行選擇與流程說明。"
+msgid "在台留學期間，銀行帳戶是領取獎學金、支付租金與日常消費的基本工具。本頁整理開戶銀行選擇與流程說明。"
 msgstr ""
 "During your studies in Taiwan, a bank account is essential for receiving "
-"scholarships, paying rent, and daily spending. This page covers bank options "
-"and the account-opening process."
+"scholarships, paying rent, and daily spending. This page covers bank options"
+" and the account-opening process."
 
 #: .\guides\templates\guides\guide_bank.html:23
 msgid "推薦銀行選擇"
@@ -3324,8 +3161,8 @@ msgstr "Top pick for international students"
 #: .\guides\templates\guides\guide_bank.html:29
 msgid "全台門市最廣，外籍生開戶最友善，"
 msgstr ""
-"Widest branch network in Taiwan, most foreigner-friendly for account opening "
-"— "
+"Widest branch network in Taiwan, most foreigner-friendly for account opening"
+" — "
 
 #: .\guides\templates\guides\guide_bank.html:29
 msgid "當日即可拿到存摺與提款卡"
@@ -3374,9 +3211,7 @@ msgid "獎學金首選"
 msgstr "Top pick for scholarship recipients"
 
 #: .\guides\templates\guides\guide_bank.html:41
-msgid ""
-"政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢"
-"市區有分行。"
+msgid "政府機關及教育部獎學金通常匯入台灣銀行帳戶，若你有申請政府獎學金則必備。中壢市區有分行。"
 msgstr ""
 "Government agency and Ministry of Education scholarships are usually "
 "deposited into Bank of Taiwan accounts — essential if you receive a "
@@ -3387,9 +3222,7 @@ msgid "玉山銀行"
 msgstr "E.Sun Bank"
 
 #: .\guides\templates\guides\guide_bank.html:46
-msgid ""
-"線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友"
-"善。"
+msgid "線上銀行介面完善，英文客服較佳，支援 Apple Pay / Google Pay。對外籍生相對友善。"
 msgstr ""
 "Excellent online banking interface, better English customer service, "
 "supports Apple Pay / Google Pay. Relatively foreigner-friendly."
@@ -3405,7 +3238,6 @@ msgstr ""
 "comprehensive online banking features, widely used by students."
 
 #: .\guides\templates\guides\guide_bank.html:57
-#, fuzzy
 #| msgid "所需文件"
 msgid "所需文件（郵局）"
 msgstr "Required Documents"
@@ -3467,15 +3299,14 @@ msgstr "Where to buy a wooden name stamp?"
 
 #: .\guides\templates\guides\guide_bank.html:78
 msgid ""
-"學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–"
-"100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存"
-"摺分開保管。"
+"學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 "
+"分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存摺分開保管。"
 msgstr ""
 "Any stationery store near campus can make one. Tell the owner you need a "
-"wooden name stamp and provide your full English name. Cost: approx. NT$50–"
-"100, wait about 20 minutes. Have it made in advance and bring it on account-"
-"opening day. Your stamp equals your signature — keep it separate from your "
-"passbook."
+"wooden name stamp and provide your full English name. Cost: approx. "
+"NT$50–100, wait about 20 minutes. Have it made in advance and bring it on "
+"account-opening day. Your stamp equals your signature — keep it separate "
+"from your passbook."
 
 #: .\guides\templates\guides\guide_bank.html:83
 msgid "統一證號說明"
@@ -3497,13 +3328,12 @@ msgstr "If you don't have an ARC yet (some HK/Macau students):"
 
 #: .\guides\templates\guides\guide_bank.html:93
 msgid ""
-"需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照"
-"片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
+"需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
 msgstr ""
-"You must apply for a 'Unified ID Registration Form' at the local Immigration "
-"Service Station, bringing your original passport and a photocopy (no photo "
-"required). This number is permanent for life; once you receive your ARC, the "
-"ARC number will match your Unified ID."
+"You must apply for a 'Unified ID Registration Form' at the local Immigration"
+" Service Station, bringing your original passport and a photocopy (no photo "
+"required). This number is permanent for life; once you receive your ARC, the"
+" ARC number will match your Unified ID."
 
 #: .\guides\templates\guides\guide_bank.html:98
 msgid "提款卡選擇建議"
@@ -3515,8 +3345,8 @@ msgstr "We recommend choosing a Debit Card with VISA functionality:"
 
 #: .\guides\templates\guides\guide_bank.html:102
 msgid ""
-"可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 "
-"兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。"
+"可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 兩種組合，可按需求選擇。請注意部分台灣商家不接受 "
+"VISA Debit，付款前請確認。"
 msgstr ""
 "Use it at ATMs and also pay directly in-store or online. The post office "
 "offers two combinations: VISA + EasyCard or VISA + iPASS — choose based on "
@@ -3534,21 +3364,18 @@ msgid "建議先辦好 SIM 卡再去開戶："
 msgstr "Get your SIM card before opening a bank account:"
 
 #: .\guides\templates\guides\guide_bank.html:111
-msgid ""
-"開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。"
+msgid "開通網路銀行與 Visa 卡需台灣手機號接收驗證碼，先有門號才能當場一次搞定。"
 msgstr ""
-"Activating online banking and a Visa card requires a Taiwan mobile number to "
-"receive OTPs. Having a local number means you can complete everything in one "
-"visit."
+"Activating online banking and a Visa card requires a Taiwan mobile number to"
+" receive OTPs. Having a local number means you can complete everything in "
+"one visit."
 
 #: .\guides\templates\guides\guide_bank.html:117
 msgid "注意營業時間 + 預留足夠時間："
 msgstr "Check business hours and allow enough time:"
 
 #: .\guides\templates\guides\guide_bank.html:117
-msgid ""
-"一般銀行週一至週五 09:00–15:30，郵局多至 17:00。外籍生開戶流程通常需 1 小時以"
-"上，請勿太晚抵達，以免被請回。"
+msgid "一般銀行週一至週五 09:00–15:30，郵局多至 17:00。外籍生開戶流程通常需 1 小時以上，請勿太晚抵達，以免被請回。"
 msgstr ""
 "Regular banks are open Mon–Fri 09:00–15:30; most post offices until 17:00. "
 "Account opening for foreign students usually takes over 1 hour — don't "
@@ -3561,8 +3388,8 @@ msgstr "Taiwan date format: month first, then day"
 #: .\guides\templates\guides\guide_bank.html:123
 msgid " — 2 月 1 日 = 2025/2/1（與部分地區習慣相反），簽文件時請注意。"
 msgstr ""
-" — February 1 = 2025/2/1 (opposite to some regions' conventions). Be careful "
-"when signing documents."
+" — February 1 = 2025/2/1 (opposite to some regions' conventions). Be careful"
+" when signing documents."
 
 #: .\guides\templates\guides\guide_bank.html:129
 msgid "建議前往學校附近郵局："
@@ -3572,8 +3399,8 @@ msgstr "We recommend the post office near campus:"
 msgid "大學周邊郵局對僑外生開戶經驗豐富，審核較快，手續更熟練。"
 msgstr ""
 "Post offices near universities have extensive experience helping "
-"international students open accounts — reviews are faster and procedures are "
-"smoother."
+"international students open accounts — reviews are faster and procedures are"
+" smoother."
 
 #: .\guides\templates\guides\guide_bank.html:135
 msgid "ARC 到期後記得更新帳戶資料："
@@ -3594,9 +3421,7 @@ msgid "絕對不要將帳戶借給他人："
 msgstr "Never lend your account to others:"
 
 #: .\guides\templates\guides\guide_bank.html:145
-msgid ""
-"依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承"
-"擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。"
+msgid "依台灣法規，出借存摺、提款卡、網銀密碼均屬違法，輕則被列為詐騙嫌疑人，重則承擔刑事責任。若發現帳戶遭盜用或存摺遺失，請立即通知銀行。"
 msgstr ""
 "Under Taiwan law, lending your passbook, ATM card, or online banking "
 "password is illegal. At minimum you may be listed as a fraud suspect; at "
@@ -3608,9 +3433,7 @@ msgid "不要短期內在多家銀行開戶："
 msgstr "Do not open accounts at multiple banks in a short period:"
 
 #: .\guides\templates\guides\guide_bank.html:151
-msgid ""
-"台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來"
-"電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。"
+msgid "台灣每次開戶銀行均會「拉聯徵」（查信用報告）。短期內記錄過多，銀行可能主動來電詢問，甚至拒絕開戶（防人頭戶）。建議先開 1–2 家即可。"
 msgstr ""
 "Every time you open an account in Taiwan, the bank runs a credit inquiry. "
 "Too many inquiries in a short time may prompt the bank to call you or even "
@@ -3630,13 +3453,11 @@ msgid "中央大學公車指南"
 msgstr "NCU Bus Guide"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:19
-msgid ""
-"整理中央大學對外主要公車路線，包含從中壢車站、高鐵桃園站、機場及台北的搭乘方"
-"式，以及即時查詢公車到站的官方連結。"
+msgid "整理中央大學對外主要公車路線，包含從中壢車站、高鐵桃園站、機場及台北的搭乘方式，以及即時查詢公車到站的官方連結。"
 msgstr ""
 "Summary of major bus routes to and from NCU, including how to get here from "
-"Zhongli Station, Taoyuan HSR Station, the airport, and Taipei, plus official "
-"real-time arrival links."
+"Zhongli Station, Taoyuan HSR Station, the airport, and Taipei, plus official"
+" real-time arrival links."
 
 #: .\guides\templates\guides\guide_bus_ncu.html:21
 msgid "📍 主站點：中央大學"
@@ -3693,8 +3514,7 @@ msgid "從中壢車站出發"
 msgstr "From Zhongli Station"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:53
-msgid ""
-"市區公車行駛於中壢市區及中央大學之間。票價一段票全票 18 元，可用悠遊卡。"
+msgid "市區公車行駛於中壢市區及中央大學之間。票價一段票全票 18 元，可用悠遊卡。"
 msgstr ""
 "City buses run between downtown Zhongli and NCU. Fare NT$18 (one zone); "
 "EasyCard accepted."
@@ -3750,8 +3570,8 @@ msgstr "From Taoyuan Airport"
 #: .\guides\templates\guides\guide_bus_ncu.html:89
 msgid "搭「桃園機場捷運」至桃園高鐵站，再轉搭 172 或 173 公車直達中央大學。"
 msgstr ""
-"Take the Airport MRT to Taoyuan HSR Station, then transfer to Bus 172 or 173 "
-"directly to NCU."
+"Take the Airport MRT to Taoyuan HSR Station, then transfer to Bus 172 or 173"
+" directly to NCU."
 
 #: .\guides\templates\guides\guide_bus_ncu.html:91
 msgid "🚇 機場捷運"
@@ -3796,8 +3616,7 @@ msgstr "From City Area (Rear Gate Entrance)"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:121
 msgid "搭 5035 至「雙連坡」站下車，步行即可進入中央大學後門。"
-msgstr ""
-"Take Bus 5035 to the \"Shuanglianpo\" stop and walk to NCU's rear gate."
+msgstr "Take Bus 5035 to the \"Shuanglianpo\" stop and walk to NCU's rear gate."
 
 #: .\guides\templates\guides\guide_bus_ncu.html:125
 msgid "🚪 下車後步行至後門，無需轉乘"
@@ -3926,9 +3745,7 @@ msgid "建議使用悠遊卡（EasyCard）："
 msgstr "Use EasyCard:"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:243
-msgid ""
-"持卡搭車享折扣優惠，不需找零，一卡通用台鐵、高鐵、機場捷運等通用。可在中壢火"
-"車站或便利商店購買及加值。"
+msgid "持卡搭車享折扣優惠，不需找零，一卡通用台鐵、高鐵、機場捷運等通用。可在中壢火車站或便利商店購買及加值。"
 msgstr ""
 "Get discounted fares, no change needed, use one card for TRA, HSR, Airport "
 "MRT and more. Buy and top up at Zhongli Station or any convenience store."
@@ -3938,9 +3755,7 @@ msgid "尖峰時段（08:00─09:00 / 17:00─19:00）"
 msgstr "Rush Hours (08:00–09:00 / 17:00–19:00)"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:249
-msgid ""
-"公車較擁擠且可能誤點，建議提早 10 分鐘至站牌等候，或使用 App 及時確認車輛位"
-"置。"
+msgid "公車較擁擠且可能誤點，建議提早 10 分鐘至站牌等候，或使用 App 及時確認車輛位置。"
 msgstr ""
 "Buses get crowded and may run late. Arrive at the stop 10 minutes early or "
 "use an app to check bus locations in real time."
@@ -3950,9 +3765,7 @@ msgid "深夜及假日班次較少："
 msgstr "Late Night & Holidays — Fewer Services:"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:256
-msgid ""
-"晚上 10 點後部分路線停駛，建議提早確認末班車時間，或改搭計程車（推薦使用 "
-"LINE TAXI / Uber）。"
+msgid "晚上 10 點後部分路線停駛，建議提早確認末班車時間，或改搭計程車（推薦使用 LINE TAXI / Uber）。"
 msgstr ""
 "Some routes stop after 10 PM. Check last bus times in advance, or take a "
 "taxi (LINE TAXI / Uber recommended)."
@@ -3984,8 +3797,8 @@ msgstr "Taiwan Bus Network (Nationwide)"
 #: .\guides\templates\guides\guide_bus_ncu.html:275
 msgid "交通部公路總局整合平台，支援全台縣市公車即時到站查詢。"
 msgstr ""
-"MOTC Highway Bureau integrated platform supporting real-time bus queries for "
-"all counties and cities."
+"MOTC Highway Bureau integrated platform supporting real-time bus queries for"
+" all counties and cities."
 
 #: .\guides\templates\guides\guide_bus_ncu.html:282
 msgid "公路客運查詢（ebus）"
@@ -3994,8 +3807,8 @@ msgstr "Intercity Bus Search (ebus)"
 #: .\guides\templates\guides\guide_bus_ncu.html:283
 msgid "政府整合公路客運班次查詢，可查中長程客運（台北──中壢等）。"
 msgstr ""
-"Government integrated intercity bus schedule for long-distance routes (e.g., "
-"Taipei–Zhongli)."
+"Government integrated intercity bus schedule for long-distance routes (e.g.,"
+" Taipei–Zhongli)."
 
 #: .\guides\templates\guides\guide_bus_ncu.html:289
 msgid "地圖"
@@ -4004,8 +3817,8 @@ msgstr "Map"
 #: .\guides\templates\guides\guide_bus_ncu.html:291
 msgid "搜尋「中央大學」出發，直接規劃大眾運輸路線，顯示即時班次。"
 msgstr ""
-"Search from \"National Central University\" to plan transit routes with real-"
-"time departure times."
+"Search from \"National Central University\" to plan transit routes with "
+"real-time departure times."
 
 #: .\guides\templates\guides\guide_course.html:4
 #: .\guides\templates\guides\guide_course.html:18
@@ -4018,9 +3831,7 @@ msgid "選課・加退選・停修・抵免"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:19
-msgid ""
-"中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學"
-"期略有調整。"
+msgid "中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學期略有調整。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:25
@@ -4032,7 +3843,6 @@ msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同�
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:26
-#, fuzzy
 #| msgid "住宿服務組官網"
 msgid "課務組官網 ↗"
 msgstr "Housing Services Office Website"
@@ -4118,9 +3928,7 @@ msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告�
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:98
-msgid ""
-"大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上"
-"操作）。"
+msgid "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:111
@@ -4129,8 +3937,7 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:112
 msgid ""
-"自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
-"後可至 ee-class 確認當日中選結果。"
+"自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:113
@@ -4138,8 +3945,7 @@ msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發�
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:114
-msgid ""
-"加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
+msgid "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:115
@@ -4151,9 +3957,7 @@ msgid "適用對象：加退選截止後仍有需求者、因衝堂被系統退�
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:130
-msgid ""
-"流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 "
-"或 課務組悠遊卡扣款）→ 申請表送至課務組。"
+msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:131
@@ -4189,9 +3993,7 @@ msgid "W 成績"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:161
-msgid ""
-"一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 "
-"9 學分）。"
+msgid "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:162
@@ -4215,9 +4017,7 @@ msgid "最低修課學分："
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:174
-msgid ""
-"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需"
-"導師與系主任同意），否則依規定令退學。"
+msgid "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:178
@@ -4225,9 +4025,7 @@ msgid "衝堂 / 同課號："
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:178
-msgid ""
-"加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，"
-"如遭退選可於人工加退選期間補救。"
+msgid "加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:182
@@ -4235,9 +4033,7 @@ msgid "部份課程有群組上限："
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:182
-msgid ""
-"如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群"
-"組規定。"
+msgid "如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:186
@@ -4245,9 +4041,7 @@ msgid "學分費："
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:186
-msgid ""
-"修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另"
-"計）。"
+msgid "修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:191
@@ -4255,18 +4049,14 @@ msgid "學分抵免"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:195
-msgid ""
-"學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。"
+msgid "學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:201
-msgid ""
-"抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選"
-"期間選課，系統不會代選任何課程。"
+msgid "抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選期間選課，系統不會代選任何課程。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:206
-#, fuzzy
 #| msgid "聯絡資訊"
 msgid "課務組聯絡資訊"
 msgstr "Contact Information"
@@ -4327,7 +4117,6 @@ msgid "選課系統操作手冊（英）↗"
 msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:233
-#, fuzzy
 #| msgid "長庚醫院官網 ↗"
 msgid "教務處官網 ↗"
 msgstr "Chang Gung Hospital Website ↗"
@@ -4339,7 +4128,6 @@ msgid "緊急聯絡"
 msgstr "Emergency Contacts"
 
 #: .\guides\templates\guides\guide_emergency.html:18
-#, fuzzy
 #| msgid "110・119・112・校安中心・國際事務處"
 msgid "台灣緊急電話、校安中心、國際事務處"
 msgstr "110・119・112・Campus Safety Center・OIA"
@@ -4357,7 +4145,6 @@ msgid "火災、緊急送醫、意外傷亡"
 msgstr ""
 
 #: .\guides\templates\guides\guide_emergency.html:31
-#, fuzzy
 #| msgid "警察局"
 msgid "警察"
 msgstr "Police"
@@ -4377,14 +4164,13 @@ msgstr ""
 #: .\guides\templates\guides\guide_emergency.html:41
 #: .\guides\templates\guides\guide_mental_health.html:144
 msgid "安心專線"
-msgstr ""
+msgstr "Safe Call Line"
 
 #: .\guides\templates\guides\guide_emergency.html:42
 msgid "24 小時心理支持、危機處理"
 msgstr ""
 
 #: .\guides\templates\guides\guide_emergency.html:47
-#, fuzzy
 #| msgid "緊急聯絡"
 msgid "校內緊急聯絡"
 msgstr "Emergency Contacts"
@@ -4422,13 +4208,11 @@ msgstr ""
 #: .\guides\templates\guides\guide_systems.html:241
 #: .\guides\templates\guides\guide_systems.html:245
 #: .\guides\templates\guides\guide_systems.html:249
-#, fuzzy
 #| msgid "分機 57271"
 msgid "分機"
 msgstr "Ext. 57271"
 
 #: .\guides\templates\guides\guide_emergency.html:73
-#, fuzzy
 #| msgid "衛保組（校內）"
 msgid "衛保組（校醫）"
 msgstr "Campus Health Center"
@@ -4438,9 +4222,7 @@ msgid "週一至週五 08:00–17:00，中正圖書館舊圖 1 樓"
 msgstr ""
 
 #: .\guides\templates\guides\guide_emergency.html:84
-msgid ""
-"如需救護車，請先撥 119，再通知校安中心 03-2805666。告知地點時可說「中央大學」"
-"加上建築物名稱。"
+msgid "如需救護車，請先撥 119，再通知校安中心 03-2805666。告知地點時可說「中央大學」加上建築物名稱。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_enrollment.html:4
@@ -4529,8 +4311,7 @@ msgstr "International Students — ARC Notice"
 
 #: .\guides\templates\guides\guide_enrollment.html:57
 msgid ""
-"辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生"
-"簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
+"辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
 msgstr ""
 "After taking a leave of absence, your student ARC becomes invalid and you "
 "must leave Taiwan within the required period. You must re-apply for a "
@@ -4580,8 +4361,7 @@ msgstr ""
 "(inclusive)"
 
 #: .\guides\templates\guides\guide_enrollment.html:85
-msgid ""
-"提前復學：須於預定復學學期的註冊日前提出申請，不可在休學中途直接回來上課"
+msgid "提前復學：須於預定復學學期的註冊日前提出申請，不可在休學中途直接回來上課"
 msgstr ""
 "Early reinstatement: Apply before the registration date of the intended "
 "return semester. You may not simply return to class mid-leave."
@@ -4595,8 +4375,9 @@ msgstr ""
 #: .\guides\templates\guides\guide_enrollment.html:87
 msgid "若屆時無法如期復學，需於註冊日前再次申請延續休學；逾期未辦者視情形處理"
 msgstr ""
-"If you cannot return as scheduled, re-apply for a leave extension before the "
-"registration date; failure to do so will be handled according to regulations"
+"If you cannot return as scheduled, re-apply for a leave extension before the"
+" registration date; failure to do so will be handled according to "
+"regulations"
 
 #: .\guides\templates\guides\guide_enrollment.html:88
 msgid "復學後的畢業條件，依入學當年度的學則與相關規章認定"
@@ -4609,11 +4390,11 @@ msgid "轉系"
 msgstr "Department Transfer"
 
 #: .\guides\templates\guides\guide_enrollment.html:96
-msgid ""
-"申請時間依當學年度校曆公告，每輪申請限報名一個科系，超過一個即取消資格。"
+msgid "申請時間依當學年度校曆公告，每輪申請限報名一個科系，超過一個即取消資格。"
 msgstr ""
 "Application period is announced in the annual academic calendar. Each round "
-"is limited to one department — applying to more than one will disqualify you."
+"is limited to one department — applying to more than one will disqualify "
+"you."
 
 #: .\guides\templates\guides\guide_enrollment.html:100
 msgid "申請資格（年級）"
@@ -4654,28 +4435,24 @@ msgstr "Cannot apply while on leave"
 #: .\guides\templates\guides\guide_enrollment.html:121
 msgid "每一申請週期只能申請一個科系，多報即全部取消資格"
 msgstr ""
-"Only one department per application cycle — applying to multiple departments "
-"disqualifies all applications"
+"Only one department per application cycle — applying to multiple departments"
+" disqualifies all applications"
 
 #: .\guides\templates\guides\guide_enrollment.html:122
-#, fuzzy, python-format
-#| msgid ""
-#| "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半"
-#| "段為上限）"
-msgid ""
-"各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%%（即以班排名前半段"
-"為上限）"
+#, python-format
+#| msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
+msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%%（即以班排名前半段為上限）"
 msgstr ""
-"Departments may set their own criteria (e.g. grade ranking), but the ranking "
-"threshold cannot exceed the top 50% (i.e. top half of the class)"
+"Departments may set their own criteria (e.g. grade ranking), but the ranking"
+" threshold cannot exceed the top 50% (i.e. top half of the class)"
 
 #: .\guides\templates\guides\guide_enrollment.html:123
-#, fuzzy, python-format
+#, python-format
 #| msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
 msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%%"
 msgstr ""
-"Transfer quota limit: Each department may accept up to 20% of the originally "
-"approved enrollment per year level"
+"Transfer quota limit: Each department may accept up to 20% of the originally"
+" approved enrollment per year level"
 
 #: .\guides\templates\guides\guide_enrollment.html:124
 msgid "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級"
@@ -4686,8 +4463,8 @@ msgstr ""
 #: .\guides\templates\guides\guide_enrollment.html:125
 msgid "核准後不可撤回，原系修過的學分可申請抵免，由新系系主任審核認定"
 msgstr ""
-"Approval cannot be revoked. Credits earned in the original department may be "
-"applied for exemption, subject to approval by the new department chair"
+"Approval cannot be revoked. Credits earned in the original department may be"
+" applied for exemption, subject to approval by the new department chair"
 
 #: .\guides\templates\guides\guide_enrollment.html:126
 msgid "離島優惠入學生、國防大學生等特定身份不得申請轉系"
@@ -4701,13 +4478,11 @@ msgid "雙主修"
 msgstr "Double Major"
 
 #: .\guides\templates\guides\guide_enrollment.html:134
-msgid ""
-"申請時間依校曆公告。大二起至修業年限最後一年第一學期止（延修期間不得新申"
-"請）。"
+msgid "申請時間依校曆公告。大二起至修業年限最後一年第一學期止（延修期間不得新申請）。"
 msgstr ""
 "Application period is announced in the academic calendar. From 2nd year up "
-"to the first semester of the final year (new applications not allowed during "
-"extended enrollment)."
+"to the first semester of the final year (new applications not allowed during"
+" extended enrollment)."
 
 #: .\guides\templates\guides\guide_enrollment.html:140
 msgid "最早申請"
@@ -4742,8 +4517,8 @@ msgstr ""
 #: .\guides\templates\guides\guide_enrollment.html:155
 msgid "各系可自訂申請條件（如 GPA 門檻），需向目標系查詢當年公告"
 msgstr ""
-"Departments may set their own application requirements (e.g. GPA threshold); "
-"check the current year's announcement from the target department"
+"Departments may set their own application requirements (e.g. GPA threshold);"
+" check the current year's announcement from the target department"
 
 #: .\guides\templates\guides\guide_enrollment.html:156
 msgid "學位證書上並列兩個學系名稱；畢業成績單亦加註雙主修"
@@ -4769,8 +4544,7 @@ msgid "備用選項"
 msgstr "Backup option"
 
 #: .\guides\templates\guides\guide_enrollment.html:162
-msgid ""
-"延修期間（因雙主修而延修）：9 學分以下按學分費計；10 學分以上收全額學雜費"
+msgid "延修期間（因雙主修而延修）：9 學分以下按學分費計；10 學分以上收全額學雜費"
 msgstr ""
 "Extended enrollment (due to double major): ≤9 credits charged per-credit; "
 "≥10 credits charged full tuition and fees"
@@ -4786,8 +4560,8 @@ msgstr "Confirm the application requirements of the additional department"
 #: .\guides\templates\guides\guide_enrollment.html:171
 msgid "各系 GPA 門檻與名額不同，至目標系系辦查詢當年公告"
 msgstr ""
-"GPA thresholds and quotas vary by department; check this year's announcement "
-"at the target department office"
+"GPA thresholds and quotas vary by department; check this year's announcement"
+" at the target department office"
 
 #: .\guides\templates\guides\guide_enrollment.html:177
 msgid "填寫申請表，經本系主任同意"
@@ -4859,8 +4633,7 @@ msgid "GPA・畢業門檻・英文門檻"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:19
-msgid ""
-"中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。"
+msgid "中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:23
@@ -4869,8 +4642,8 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:26
 msgid ""
-"109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿"
-"分）。大學部及格標準為 60 分（C-），研究所為 70 分（B-）。"
+"109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 60 分（C-），研究所為 70 "
+"分（B-）。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:32
@@ -4885,7 +4658,6 @@ msgstr ""
 #: .\guides\templates\guides\guide_work_permit.html:82
 #: .\guides\templates\guides\guide_work_permit.html:107
 #: .\guides\templates\guides\guide_work_permit.html:192
-#, fuzzy
 #| msgid "費用說明"
 msgid "說明"
 msgstr "Fee description"
@@ -4941,15 +4713,11 @@ msgid "總學分數"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:62
-msgid ""
-"中大採 4.3 滿分制。出國交換、申請研究所時，部分機構採 4.0 換算，請依對方要求"
-"換算。"
+msgid "中大採 4.3 滿分制。出國交換、申請研究所時，部分機構採 4.0 換算，請依對方要求換算。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:67
-msgid ""
-"體育課、軍訓、服務學習不計入畢業學分，但仍有成績記錄。這些課程的 GPA 積分計算"
-"方式請洽各系確認。"
+msgid "體育課、軍訓、服務學習不計入畢業學分，但仍有成績記錄。這些課程的 GPA 積分計算方式請洽各系確認。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:71
@@ -4961,9 +4729,7 @@ msgid "畢業學分數"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:78
-msgid ""
-"大多數學系需修滿 128 學分（含必修、通識、選修）。實際學分依各系課程規定，請至"
-"系網查詢應修科目表。"
+msgid "大多數學系需修滿 128 學分（含必修、通識、選修）。實際學分依各系課程規定，請至系網查詢應修科目表。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:80
@@ -4976,9 +4742,7 @@ msgid "通識課程"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:87
-msgid ""
-"至少修習 8 學分通識課程（含核心通識及通識選修）。各學院核心通識規定略有不同，"
-"請確認是否選滿必修核心。"
+msgid "至少修習 8 學分通識課程（含核心通識及通識選修）。各學院核心通識規定略有不同，請確認是否選滿必修核心。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:95
@@ -4986,9 +4750,7 @@ msgid "體育課"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:96
-msgid ""
-"需修滿 5 學期體育課（大一必修上、下 + 興趣體育 3 學期）。不列入畢業學分，但必"
-"須修畢方可畢業。"
+msgid "需修滿 5 學期體育課（大一必修上、下 + 興趣體育 3 學期）。不列入畢業學分，但必須修畢方可畢業。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:98
@@ -5010,9 +4772,7 @@ msgid "英文畢業門檻"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:114
-msgid ""
-"各學院標準不同（詳見下方表格）。未達標者可修習「進修英文」（4 學分，2 學期）"
-"作為替代途徑。"
+msgid "各學院標準不同（詳見下方表格）。未達標者可修習「進修英文」（4 學分，2 學期）作為替代途徑。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:116
@@ -5032,9 +4792,7 @@ msgid "英文畢業門檻（大學部，依學院）"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:134
-msgid ""
-"以下為各學院門檻標準，實際以語言中心公告為準。部分學院允許以「第二外語」替代"
-"英文門檻，請洽語言中心確認。"
+msgid "以下為各學院門檻標準，實際以語言中心公告為準。部分學院允許以「第二外語」替代英文門檻，請洽語言中心確認。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:140
@@ -5108,8 +4866,8 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:195
 msgid ""
-"校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 NT$1,270，僅限本校"
-"學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。"
+"校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 "
+"NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:199
@@ -5142,9 +4900,8 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:214
 msgid ""
-"各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 "
-"TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 或同等資格，未達標者可修習一學期補救英文"
-"課程（70分以上通過）替代。詳細規定請洽各系所。"
+"各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 "
+"或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:220
@@ -5173,9 +4930,7 @@ msgid "中央大學校內住宿服務"
 msgstr "NCU On-Campus Dormitory Service"
 
 #: .\guides\templates\guides\guide_housing_ncu.html:20
-msgid ""
-"整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交"
-"換學生預先申請校內住宿。"
+msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
 msgstr ""
 "A summary of NCU dormitory zones, application process, room facilities, and "
 "fees to help international, overseas Chinese, and exchange students apply "
@@ -5567,7 +5322,8 @@ msgstr "Back to Dashboard"
 
 #: .\guides\templates\guides\guide_index.html:18
 msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
-msgstr "ARC, housing, transport and more — all the info you need in one place."
+msgstr ""
+"ARC, housing, transport and more — all the info you need in one place."
 
 #: .\guides\templates\guides\guide_index.html:29 .\templates\base.html:198
 msgid "入學申請"
@@ -5600,7 +5356,6 @@ msgid "申請資格、時程、所需文件與注意事項整理"
 msgstr "Eligibility, timeline, required documents and key notes"
 
 #: .\guides\templates\guides\guide_index.html:53
-#, fuzzy
 #| msgid "證件・住宿・交通"
 msgid "證件・住宿"
 msgstr "Documents・Housing・Transport"
@@ -5680,7 +5435,8 @@ msgstr "Mental Health"
 
 #: .\guides\templates\guides\guide_index.html:117
 msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
-msgstr "Counseling appointments, stress, interpersonal issues and 24H hotlines"
+msgstr ""
+"Counseling appointments, stress, interpersonal issues and 24H hotlines"
 
 #: .\guides\templates\guides\guide_index.html:122
 #: .\guides\templates\guides\guide_medical.html:4
@@ -5691,7 +5447,8 @@ msgstr ""
 #: .\guides\templates\guides\guide_index.html:123
 msgid "衛保組、校外診所、周邊醫院、急診與緊急電話"
 msgstr ""
-"Campus clinic, off-campus clinics, nearby hospitals, ER and emergency numbers"
+"Campus clinic, off-campus clinics, nearby hospitals, ER and emergency "
+"numbers"
 
 #: .\guides\templates\guides\guide_index.html:129
 msgid "僑生獎學金、清寒補助、校內外各項申請指南"
@@ -5711,7 +5468,8 @@ msgstr "Enroll after ARC is issued — greatly reduces outpatient costs"
 #: .\guides\templates\guides\guide_index.html:141
 msgid "統一證號說明、郵局・台灣銀行・玉山銀行開戶比較"
 msgstr ""
-"Uniform ID guide and comparison of Post Office, Bank of Taiwan and E.SUN Bank"
+"Uniform ID guide and comparison of Post Office, Bank of Taiwan and E.SUN "
+"Bank"
 
 #: .\guides\templates\guides\guide_index.html:146
 #: .\guides\templates\guides\guide_sim.html:4
@@ -5815,7 +5573,6 @@ msgid "考試週：24 小時開放"
 msgstr ""
 
 #: .\guides\templates\guides\guide_library.html:35
-#, fuzzy
 #| msgid "中正圖書館（舊圖）1 樓"
 msgid "中正圖書館"
 msgstr "Zhongzheng Library (Old Library), 1F"
@@ -5837,7 +5594,6 @@ msgid "特藏・檔案資料"
 msgstr ""
 
 #: .\guides\templates\guides\guide_library.html:46
-#, fuzzy
 #| msgid "週一至週五"
 msgid "週一至週五 10:00–15:00"
 msgstr "Monday to Friday"
@@ -5861,7 +5617,6 @@ msgstr ""
 #: .\guides\templates\guides\guide_library.html:61
 #: .\guides\templates\guides\guide_library.html:69
 #: .\guides\templates\guides\guide_work_permit.html:256
-#, fuzzy
 #| msgid "15 天"
 msgid "天"
 msgstr "15 days"
@@ -5911,7 +5666,6 @@ msgid "書中心（KSC）"
 msgstr ""
 
 #: .\guides\templates\guides\guide_library.html:88
-#, fuzzy
 #| msgid "中正圖書館（舊圖）1 樓"
 msgid "中正圖書館 2F"
 msgstr "Zhongzheng Library (Old Library), 1F"
@@ -5941,7 +5695,6 @@ msgid "公用研究室"
 msgstr ""
 
 #: .\guides\templates\guides\guide_library.html:100
-#, fuzzy
 #| msgid "期間"
 msgid "間"
 msgstr "Period"
@@ -5959,7 +5712,6 @@ msgid "臨時使用：至服務台申請"
 msgstr ""
 
 #: .\guides\templates\guides\guide_library.html:104
-#, fuzzy
 #| msgid "建議線上預約"
 msgid "線上預約系統 ↗"
 msgstr "Online appointment recommended"
@@ -6028,14 +5780,11 @@ msgid "校外遠端存取"
 msgstr ""
 
 #: .\guides\templates\guides\guide_library.html:174
-msgid ""
-"方法一：從圖書館網站點選資料庫連結，選「中央大學教職員生」，以 Portal 帳號登"
-"入"
+msgid "方法一：從圖書館網站點選資料庫連結，選「中央大學教職員生」，以 Portal 帳號登入"
 msgstr ""
 
 #: .\guides\templates\guides\guide_library.html:177
-msgid ""
-"方法二：安裝 SSL VPN（伺服器：140.115.199.1），以計算中心帳號登入。設定說明："
+msgid "方法二：安裝 SSL VPN（伺服器：140.115.199.1），以計算中心帳號登入。設定說明："
 msgstr ""
 
 #: .\guides\templates\guides\guide_library.html:180
@@ -6053,7 +5802,6 @@ msgstr ""
 #: .\guides\templates\guides\guide_library.html:191
 #: .\guides\templates\guides\guide_library.html:196
 #: .\guides\templates\guides\guide_library.html:201
-#, fuzzy
 #| msgid "項"
 msgid "頁"
 msgstr "items"
@@ -6088,13 +5836,11 @@ msgid "K書中心・開館時間"
 msgstr ""
 
 #: .\guides\templates\guides\guide_map.html:17
-#, fuzzy
 #| msgid "學校・醫院・交通"
 msgid "學校・美食・醫院・交通"
 msgstr "Campus · Hospital · Transport"
 
 #: .\guides\templates\guides\guide_map.html:19
-#, fuzzy
 #| msgid "中央大學周邊重要地點，點選快速定位及導航"
 msgid "中央大學周邊重要地點，點選按鈕即可在地圖上定位"
 msgstr "Key locations around NCU — click to navigate"
@@ -6108,7 +5854,6 @@ msgid "學校設施"
 msgstr ""
 
 #: .\guides\templates\guides\guide_map.html:29
-#, fuzzy
 #| msgid "國立中央大學（NCU）"
 msgid "中央大學（正門）"
 msgstr "National Central University (NCU)"
@@ -6215,9 +5960,7 @@ msgid "衛保組・診所・醫院・急診"
 msgstr "Health Center · Clinic · Hospital · Emergency"
 
 #: .\guides\templates\guides\guide_medical.html:19
-msgid ""
-"台灣採分級醫療制度，小病先看診所、大病再轉醫院。持健保卡就醫費用大幅降低，急"
-"救請撥 119。"
+msgid "台灣採分級醫療制度，小病先看診所、大病再轉醫院。持健保卡就醫費用大幅降低，急救請撥 119。"
 msgstr ""
 "Taiwan uses a tiered healthcare system — minor illnesses go to a clinic "
 "first, serious ones to a hospital. NHI card holders pay much less. Call 119 "
@@ -6269,9 +6012,7 @@ msgid "小病先看診所："
 msgstr "See a clinic for minor illnesses first:"
 
 #: .\guides\templates\guides\guide_medical.html:49
-msgid ""
-"台灣分級醫療制度下，直接去大醫院門診的部分負擔比診所高 2–3 倍。輕症先到診所就"
-"診，若需轉診，醫師會開立轉診單，可享受較低的部分負擔。"
+msgid "台灣分級醫療制度下，直接去大醫院門診的部分負擔比診所高 2–3 倍。輕症先到診所就診，若需轉診，醫師會開立轉診單，可享受較低的部分負擔。"
 msgstr ""
 "Under Taiwan's tiered system, going directly to a large hospital outpatient "
 "department costs 2–3× more than a clinic. See a clinic first for minor "
@@ -6329,9 +6070,7 @@ msgstr ""
 "health check"
 
 #: .\guides\templates\guides\guide_medical.html:79
-msgid ""
-"衛保組適合輕症初診，如感冒、發燒、輕傷等。若需進一步診療，衛保組可協助轉介至"
-"校外診所或醫院。"
+msgid "衛保組適合輕症初診，如感冒、發燒、輕傷等。若需進一步診療，衛保組可協助轉介至校外診所或醫院。"
 msgstr ""
 "The campus health center is suitable for first visits with minor symptoms "
 "such as colds, fever, or light injuries. If further treatment is needed, "
@@ -6348,8 +6087,8 @@ msgstr "Off-campus Clinics (Back Gate Area / Zhongli District)"
 
 #: .\guides\templates\guides\guide_medical.html:88
 msgid ""
-"中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別"
-"用 Google Maps 搜尋「中壢 內科診所」、「中壢 耳鼻喉科」等。"
+"中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別用 Google Maps 搜尋「中壢 內科診所」、「中壢 "
+"耳鼻喉科」等。"
 msgstr ""
 "There are many clinics in the NCU back-gate area and Zhongli city. With an "
 "NHI card, visits cost about NT$150–200. Search Google Maps by specialty, "
@@ -6361,13 +6100,13 @@ msgstr "Clinic hours:"
 
 #: .\guides\templates\guides\guide_medical.html:94
 msgid ""
-"多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班"
-"制，非所有診所皆有晚診。建議事先電話確認或查詢 Google 地圖上的即時等候人數。"
+"多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班制，非所有診所皆有晚診。建議事先電話確認或查詢"
+" Google 地圖上的即時等候人數。"
 msgstr ""
 "Most clinics operate in three sessions: morning (08:30–12:00), afternoon "
 "(14:00–17:30), and evening (18:00–21:00). Not all clinics offer evening "
-"sessions. It is recommended to call ahead or check real-time wait numbers on "
-"Google Maps."
+"sessions. It is recommended to call ahead or check real-time wait numbers on"
+" Google Maps."
 
 #: .\guides\templates\guides\guide_medical.html:99
 msgid "周邊醫院"
@@ -6432,12 +6171,10 @@ msgid "危及生命・嚴重受傷・無法自行就醫"
 msgstr "Life-threatening · Serious injury · Unable to seek medical help alone"
 
 #: .\guides\templates\guides\guide_medical.html:146
-msgid ""
-"請立即撥打緊急電話，或由旁人送至最近有急診的醫院（壢新醫院）。急診 24 小時全"
-"年無休。"
+msgid "請立即撥打緊急電話，或由旁人送至最近有急診的醫院（壢新醫院）。急診 24 小時全年無休。"
 msgstr ""
-"Call emergency services immediately, or have someone take you to the nearest "
-"hospital with an emergency room (Lixin Hospital). Emergency room open 24 "
+"Call emergency services immediately, or have someone take you to the nearest"
+" hospital with an emergency room (Lixin Hospital). Emergency room open 24 "
 "hours, 365 days."
 
 #: .\guides\templates\guides\guide_medical.html:150
@@ -6477,12 +6214,10 @@ msgid "急診部分負擔較高："
 msgstr "Emergency co-pay is higher:"
 
 #: .\guides\templates\guides\guide_medical.html:173
-msgid ""
-"非緊急狀況直接掛急診，健保部分負擔為 NT$450–600（比診所高 3 倍以上）。輕症建"
-"議前往診所就診，急診留給真正緊急的情況。"
+msgid "非緊急狀況直接掛急診，健保部分負擔為 NT$450–600（比診所高 3 倍以上）。輕症建議前往診所就診，急診留給真正緊急的情況。"
 msgstr ""
-"Going directly to the emergency room for non-emergencies costs NT$450–600 in "
-"NHI co-pay — more than 3× the clinic rate. Minor illness should go to a "
+"Going directly to the emergency room for non-emergencies costs NT$450–600 in"
+" NHI co-pay — more than 3× the clinic rate. Minor illness should go to a "
 "clinic; save the ER for genuine emergencies."
 
 #: .\guides\templates\guides\guide_medical.html:178
@@ -6569,8 +6304,8 @@ msgstr "Download the 'NHI Express' App:"
 #: .\guides\templates\guides\guide_medical.html:220
 msgid "可顯示數位健保卡、查詢就醫紀錄與健保狀態，出門忘帶實體健保卡時可使用。"
 msgstr ""
-"Displays your digital NHI card, lets you check medical records and insurance "
-"status — useful when you forget your physical card."
+"Displays your digital NHI card, lets you check medical records and insurance"
+" status — useful when you forget your physical card."
 
 #: .\guides\templates\guides\guide_medical.html:225
 msgid "NCU 校安緊急聯絡"
@@ -6597,80 +6332,82 @@ msgid "承辦人：徐心荷小姐"
 msgstr "Contact person: Ms. Xu Xinhe"
 
 #: .\guides\templates\guides\guide_mental_health.html:18
-#, fuzzy
 #| msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
 msgid "諮商中心預約・常見困擾・24 小時求助熱線"
-msgstr "Counseling appointments, stress, interpersonal issues and 24H hotlines"
+msgstr ""
+"Counseling appointments, stress, interpersonal issues and 24H hotlines"
 
 #: .\guides\templates\guides\guide_mental_health.html:22
-msgid ""
-"尋求幫助不代表你軟弱。無論是課業壓力、人際困擾、文化適應，還是只是想找人說說"
-"話，諮商中心都歡迎你。"
+msgid "尋求幫助不代表你軟弱。無論是課業壓力、人際困擾、文化適應，還是只是想找人說說話，諮商中心都歡迎你。"
 msgstr ""
+"Seeking help doesn't mean you're weak. Whether it's academic pressure, "
+"interpersonal issues, cultural adjustment, or just wanting someone to talk "
+"to — the counseling center welcomes you."
 
 #: .\guides\templates\guides\guide_mental_health.html:26
 msgid "諮商輔導中心"
-msgstr ""
+msgstr "Counseling & Guidance Center"
 
 #: .\guides\templates\guides\guide_mental_health.html:36
-#, fuzzy
 #| msgid "週一至週五"
 msgid "週一至週五 09:00–17:00"
 msgstr "Monday to Friday"
 
 #: .\guides\templates\guides\guide_mental_health.html:43
-#, fuzzy
 #| msgid "費用說明"
 msgid "費用"
 msgstr "Fee description"
 
 #: .\guides\templates\guides\guide_mental_health.html:44
 msgid "在學生免費"
-msgstr ""
+msgstr "Free for enrolled students"
 
 #: .\guides\templates\guides\guide_mental_health.html:49
 msgid "提供服務"
-msgstr ""
+msgstr "Services Provided"
 
 #: .\guides\templates\guides\guide_mental_health.html:52
 msgid "個別諮商（50 分鐘 / 次）"
-msgstr ""
+msgstr "Individual Counseling (50 min / session)"
 
 #: .\guides\templates\guides\guide_mental_health.html:53
 msgid "團體諮商"
-msgstr ""
+msgstr "Group Counseling"
 
 #: .\guides\templates\guides\guide_mental_health.html:54
 msgid "心理測驗"
-msgstr ""
+msgstr "Psychological Tests"
 
 #: .\guides\templates\guides\guide_mental_health.html:55
 msgid "心理衛生推廣活動"
-msgstr ""
+msgstr "Mental Health Promotion Events"
 
 #: .\guides\templates\guides\guide_mental_health.html:56
 msgid "社工師服務（分機 57265）"
-msgstr ""
+msgstr "Social Worker Services (Ext. 57265)"
 
 #: .\guides\templates\guides\guide_mental_health.html:61
 msgid "如何預約"
-msgstr ""
+msgstr "How to Make an Appointment"
 
 #: .\guides\templates\guides\guide_mental_health.html:64
-msgid ""
-"一律線上預約，預約後諮商師會主動與你聯絡，先進行初談，再安排正式諮商時間。"
+msgid "一律線上預約，預約後諮商師會主動與你聯絡，先進行初談，再安排正式諮商時間。"
 msgstr ""
+"All appointments are made online. After booking, the counselor will contact "
+"you to arrange an initial intake session before scheduling formal "
+"counseling."
 
 #: .\guides\templates\guides\guide_mental_health.html:72
 msgid "登入 NCU Portal"
-msgstr ""
+msgstr "Log in to NCU Portal"
 
 #: .\guides\templates\guides\guide_mental_health.html:73
 msgid "Portal → 學生服務 → 學生輔導服務 → 個別諮商，或直接前往："
 msgstr ""
+"Portal → Student Services → Student Counseling → Individual Counseling, or "
+"go directly to:"
 
 #: .\guides\templates\guides\guide_mental_health.html:83
-#, fuzzy
 #| msgid "建議線上預約"
 msgid "填寫線上預約表單"
 msgstr "Online appointment recommended"
@@ -6678,132 +6415,134 @@ msgstr "Online appointment recommended"
 #: .\guides\templates\guides\guide_mental_health.html:84
 msgid "簡單描述來訪原因（不需要詳細，幾句話即可）"
 msgstr ""
+"Briefly describe the reason for your visit (no need for detail, a few "
+"sentences is fine)"
 
 #: .\guides\templates\guides\guide_mental_health.html:90
 msgid "等待諮商師聯絡（初談）"
-msgstr ""
+msgstr "Wait for counselor contact (initial intake)"
 
 #: .\guides\templates\guides\guide_mental_health.html:91
 msgid "初談約 30–50 分鐘，了解你的狀況與需求"
 msgstr ""
+"Initial intake is about 30–50 minutes to understand your situation and needs"
 
 #: .\guides\templates\guides\guide_mental_health.html:97
 msgid "安排正式個別諮商"
-msgstr ""
+msgstr "Schedule formal individual counseling"
 
 #: .\guides\templates\guides\guide_mental_health.html:98
 msgid "每週固定一次，50 分鐘，由同一位諮商師陪你持續談"
-msgstr ""
+msgstr "Once a week, 50 minutes, with the same counselor each time"
 
 #: .\guides\templates\guides\guide_mental_health.html:105
 msgid "常見來訪議題"
-msgstr ""
+msgstr "Common Topics"
 
 #: .\guides\templates\guides\guide_mental_health.html:109
 msgid "課業壓力"
-msgstr ""
+msgstr "Academic Pressure"
 
 #: .\guides\templates\guides\guide_mental_health.html:110
 msgid "考試焦慮、拖延、讀不進去"
-msgstr ""
+msgstr "Exam anxiety, procrastination, difficulty studying"
 
 #: .\guides\templates\guides\guide_mental_health.html:114
 msgid "文化適應"
-msgstr ""
+msgstr "Cultural Adjustment"
 
 #: .\guides\templates\guides\guide_mental_health.html:115
 msgid "語言障礙、孤獨感、思鄉"
-msgstr ""
+msgstr "Language barriers, loneliness, homesickness"
 
 #: .\guides\templates\guides\guide_mental_health.html:119
 msgid "人際關係"
-msgstr ""
+msgstr "Interpersonal Relationships"
 
 #: .\guides\templates\guides\guide_mental_health.html:120
 msgid "室友摩擦、交友困難、衝突處理"
-msgstr ""
+msgstr "Roommate conflicts, difficulty making friends, conflict resolution"
 
 #: .\guides\templates\guides\guide_mental_health.html:124
 msgid "情感困擾"
-msgstr ""
+msgstr "Emotional Issues"
 
 #: .\guides\templates\guides\guide_mental_health.html:125
 msgid "感情問題、失戀、家庭關係"
-msgstr ""
+msgstr "Relationship problems, breakups, family relationships"
 
 #: .\guides\templates\guides\guide_mental_health.html:129
 msgid "情緒低落"
-msgstr ""
+msgstr "Low Mood"
 
 #: .\guides\templates\guides\guide_mental_health.html:130
 msgid "焦慮、憂鬱、情緒波動"
-msgstr ""
+msgstr "Anxiety, depression, mood swings"
 
 #: .\guides\templates\guides\guide_mental_health.html:134
 msgid "自我探索"
-msgstr ""
+msgstr "Self-Exploration"
 
 #: .\guides\templates\guides\guide_mental_health.html:135
 msgid "方向迷失、身份認同、生涯規劃"
-msgstr ""
+msgstr "Feeling lost, identity, career planning"
 
 #: .\guides\templates\guides\guide_mental_health.html:140
-#, fuzzy
 #| msgid "24 小時緊急總線"
 msgid "24 小時求助熱線"
 msgstr "24-hour Emergency Hotline"
 
 #: .\guides\templates\guides\guide_mental_health.html:145
 msgid "24H・心理危機・自殺防治"
-msgstr ""
+msgstr "24H · Mental Crisis · Suicide Prevention"
 
 #: .\guides\templates\guides\guide_mental_health.html:149
 msgid "生命線"
-msgstr ""
+msgstr "Lifeline"
 
 #: .\guides\templates\guides\guide_mental_health.html:150
 msgid "24H・情緒支持・危機介入"
-msgstr ""
+msgstr "24H · Emotional Support · Crisis Intervention"
 
 #: .\guides\templates\guides\guide_mental_health.html:154
 msgid "張老師專線"
-msgstr ""
+msgstr "Teacher Chang Hotline"
 
 #: .\guides\templates\guides\guide_mental_health.html:155
 msgid "情緒困擾・心理諮詢"
-msgstr ""
+msgstr "Emotional Distress · Mental Health Consultation"
 
 #: .\guides\templates\guides\guide_mental_health.html:159
 msgid "家暴 / 性暴力專線"
-msgstr ""
+msgstr "Domestic Violence / Sexual Assault Hotline"
 
 #: .\guides\templates\guides\guide_mental_health.html:160
 msgid "24H・家庭暴力・親密關係暴力"
-msgstr ""
+msgstr "24H · Domestic Violence · Intimate Partner Violence"
 
 #: .\guides\templates\guides\guide_mental_health.html:165
 msgid "桃園在地資源"
-msgstr ""
+msgstr "Local Resources in Taoyuan"
 
 #: .\guides\templates\guides\guide_mental_health.html:168
 msgid "桃園市社區心理衛生中心"
-msgstr ""
+msgstr "Taoyuan City Community Mental Health Center"
 
 #: .\guides\templates\guides\guide_mental_health.html:172
 msgid "桃園生命線"
-msgstr ""
+msgstr "Taoyuan Lifeline"
 
 #: .\guides\templates\guides\guide_mental_health.html:176
 msgid "中壢張老師"
-msgstr ""
+msgstr "Zhongli Teacher Chang Center"
 
 #: .\guides\templates\guides\guide_mental_health.html:180
 msgid "中壢蘭德醫院（提供英文服務）"
-msgstr ""
+msgstr "Zhongli Rand Hospital (English services available)"
 
 #: .\guides\templates\guides\guide_mental_health.html:186
 msgid "校安緊急聯絡（24 小時）：03-2805666｜分機 57212"
-msgstr ""
+msgstr "Campus Emergency Contact (24 hours): 03-2805666 | Ext. 57212"
 
 #: .\guides\templates\guides\guide_national_area.html:17
 msgid "各地區申請資訊"
@@ -6826,8 +6565,8 @@ msgstr "Overseas Chinese Affairs Council Official Website"
 #: .\guides\templates\guides\guide_national_area.html:23
 msgid "，請選擇你的所在地區查看對應的申請辦法與說明。"
 msgstr ""
-". Please select your region to view the corresponding application procedures "
-"and instructions."
+". Please select your region to view the corresponding application procedures"
+" and instructions."
 
 #: .\guides\templates\guides\guide_national_area.html:26
 msgid "選擇你的地區"
@@ -6874,9 +6613,7 @@ msgid "全民健康保險申請指南"
 msgstr "National Health Insurance Application Guide"
 
 #: .\guides\templates\guides\guide_nhi.html:19
-msgid ""
-"僑生、外籍生（僑外生）取得居留證明文件來臺就學，自合於投保資格之日起，依法應"
-"參加全民健康保險。"
+msgid "僑生、外籍生（僑外生）取得居留證明文件來臺就學，自合於投保資格之日起，依法應參加全民健康保險。"
 msgstr ""
 "Overseas Chinese students and international students (overseas/foreign "
 "students) who obtain residency documents to study in Taiwan are legally "
@@ -6892,13 +6629,11 @@ msgid "重要："
 msgstr "Important:"
 
 #: .\guides\templates\guides\guide_nhi.html:27
-msgid ""
-"剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保"
-"險："
+msgid "剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保險："
 msgstr ""
 "Newly arrived overseas Chinese students have not yet met the '6 months of "
-"residence in Taiwan' requirement for NHI enrollment, and must first join one "
-"of the following insurance plans:"
+"residence in Taiwan' requirement for NHI enrollment, and must first join one"
+" of the following insurance plans:"
 
 #: .\guides\templates\guides\guide_nhi.html:33
 msgid "僑保（海外華人保險）"
@@ -6929,8 +6664,8 @@ msgstr "Cathay Life Insurance"
 #: .\guides\templates\guides\guide_nhi.html:44
 msgid "適用對象：第二學期起或不符合僑保資格者"
 msgstr ""
-"Eligible: From the second semester onwards, or those not qualifying for OCAC "
-"Insurance"
+"Eligible: From the second semester onwards, or those not qualifying for OCAC"
+" Insurance"
 
 #: .\guides\templates\guides\guide_nhi.html:45
 msgid "保費：NT$3,000 / 學期（最長六個月）"
@@ -6941,9 +6676,7 @@ msgid "由國際事務處協助加保"
 msgstr "Enrollment assisted by the Office of International Affairs"
 
 #: .\guides\templates\guides\guide_nhi.html:47
-msgid ""
-"理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影"
-"本、郵局存簿影本及個資同意書"
+msgid "理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影本、郵局存簿影本及個資同意書"
 msgstr ""
 "Claims: Complete a claim form at the OIA, and bring medical receipts, "
 "diagnosis certificate, ARC copy, passport copy, post office passbook copy, "
@@ -7015,15 +6748,14 @@ msgstr "How to count '6 months of residence in Taiwan'"
 
 #: .\guides\templates\guides\guide_nhi.html:88
 msgid ""
-"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除"
-"出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 30 天，則從重新抵"
-"台當天起算，6 個月重新計算。"
+"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 "
+"30 天，則從重新抵台當天起算，6 個月重新計算。"
 msgstr ""
 "This means continuously residing in Taiwan for 6 months, or having departed "
 "once for no more than 30 days, with the actual residence period minus "
 "departure days totaling 6 months. If you depart more than once, or depart "
-"once for over 30 days, the 6-month count restarts from the day you return to "
-"Taiwan."
+"once for over 30 days, the 6-month count restarts from the day you return to"
+" Taiwan."
 
 #: .\guides\templates\guides\guide_nhi.html:91
 msgid "計算範例："
@@ -7036,8 +6768,8 @@ msgstr "Entry date: 113/9/1 → No departures → Enrollment date: 114/3/1"
 #: .\guides\templates\guides\guide_nhi.html:93
 msgid "入境日：113/9/1 → 曾出境 1 次（114/1/1–1/5，共 4 天）→ 投保日：114/3/5"
 msgstr ""
-"Entry date: 113/9/1 → Departed once (114/1/1–1/5, 4 days total) → Enrollment "
-"date: 114/3/5"
+"Entry date: 113/9/1 → Departed once (114/1/1–1/5, 4 days total) → Enrollment"
+" date: 114/3/5"
 
 #: .\guides\templates\guides\guide_nhi.html:97
 msgid "在臺參加健保注意事項"
@@ -7050,13 +6782,11 @@ msgstr ""
 "requirements must enroll in NHI through their school as the insuring unit."
 
 #: .\guides\templates\guides\guide_nhi.html:105
-msgid ""
-"僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 "
-"日內，向健保署辦理投保。"
+msgid "僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 日內，向健保署辦理投保。"
 msgstr ""
 "When overseas/foreign students are permitted to work in Taiwan and are "
-"employed, the insuring unit (employer) must complete NHI enrollment within 3 "
-"days of the insured becoming eligible."
+"employed, the insuring unit (employer) must complete NHI enrollment within 3"
+" days of the insured becoming eligible."
 
 #: .\guides\templates\guides\guide_nhi.html:109
 msgid "於受僱單位投保時，應先至學校辦理轉出，避免重複投保。"
@@ -7065,18 +6795,14 @@ msgstr ""
 "school to avoid duplicate enrollment."
 
 #: .\guides\templates\guides\guide_nhi.html:113
-msgid ""
-"與工作單位終止僱傭關係後，應另以適法身分投保：若已受新單位聘僱，於新單位投"
-"保；未受聘僱期間則應回學校辦理投保。"
+msgid "與工作單位終止僱傭關係後，應另以適法身分投保：若已受新單位聘僱，於新單位投保；未受聘僱期間則應回學校辦理投保。"
 msgstr ""
-"After ending employment, enroll under another eligible status: if hired by a "
-"new employer, enroll through the new employer; during periods without "
+"After ending employment, enroll under another eligible status: if hired by a"
+" new employer, enroll through the new employer; during periods without "
 "employment, return to school enrollment."
 
 #: .\guides\templates\guides\guide_nhi.html:117
-msgid ""
-"符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，應以眷屬身"
-"分依附其投保單位加保。"
+msgid "符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，應以眷屬身分依附其投保單位加保。"
 msgstr ""
 "During eligible but unemployed periods, if a spouse, parent, or child in "
 "Taiwan is already an NHI insured, you should enroll as a dependent under "
@@ -7104,11 +6830,11 @@ msgstr "NHI premium subsidy for low-income overseas Chinese students:"
 
 #: .\guides\templates\guides\guide_nhi.html:135
 msgid ""
-"符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，"
-"審查通過後核發）。未得補助者每月保費約 NT$826。詳情請洽國際事務處。"
+"符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 "
+"NT$826。詳情請洽國際事務處。"
 msgstr ""
-"Those who qualify as low-income and enroll in NHI may apply to the OIA for a "
-"monthly subsidy of NT$413 (requires proof of low-income status; granted "
+"Those who qualify as low-income and enroll in NHI may apply to the OIA for a"
+" monthly subsidy of NT$413 (requires proof of low-income status; granted "
 "after review). Without the subsidy, the monthly premium is approx. NT$826. "
 "Contact the OIA for details."
 
@@ -7126,13 +6852,12 @@ msgstr "Medical Tips"
 
 #: .\guides\templates\guides\guide_nhi.html:154
 msgid ""
-"台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直"
-"接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
+"台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
 msgstr ""
-"Taiwan uses a tiered healthcare system. For common illnesses, visit a clinic "
-"first (family medicine or internal medicine) — the co-pay is only about "
-"NT$150. Going directly to a hospital emergency room or outpatient department "
-"requires a higher co-pay (NT$240–480)."
+"Taiwan uses a tiered healthcare system. For common illnesses, visit a clinic"
+" first (family medicine or internal medicine) — the co-pay is only about "
+"NT$150. Going directly to a hospital emergency room or outpatient department"
+" requires a higher co-pay (NT$240–480)."
 
 #: .\guides\templates\guides\guide_nhi.html:160
 msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
@@ -7163,9 +6888,7 @@ msgid "僑生・外籍生必讀"
 msgstr "Must-read for Overseas Chinese & International Students"
 
 #: .\guides\templates\guides\guide_regulations.html:19
-msgid ""
-"整理來台就學的相關法律法規，包含就學辦法、助學金、醫療保險、社團輔助等，點選"
-"名稱即可查看原文。"
+msgid "整理來台就學的相關法律法規，包含就學辦法、助學金、醫療保險、社團輔助等，點選名稱即可查看原文。"
 msgstr ""
 "A collection of laws and regulations relevant to studying in Taiwan, "
 "including enrollment rules, scholarships, medical insurance, and student "
@@ -7224,8 +6947,8 @@ msgstr ""
 #: .\guides\templates\guides\guide_regulations.html:63
 msgid "教育部補助大學校院設置研究所優秀僑生獎學金作業要點"
 msgstr ""
-"Ministry of Education Guidelines for University Scholarships for Outstanding "
-"Overseas Chinese Graduate Students"
+"Ministry of Education Guidelines for University Scholarships for Outstanding"
+" Overseas Chinese Graduate Students"
 
 #: .\guides\templates\guides\guide_regulations.html:69
 msgid "教育部獎勵海外優秀僑生回國就讀大學校院獎學金核發要點"
@@ -7261,8 +6984,8 @@ msgstr "Medical Insurance"
 #: .\guides\templates\guides\guide_regulations.html:92
 msgid "僑生傷病醫療保險作業要點"
 msgstr ""
-"Operating Guidelines for Overseas Chinese Student Injury and Illness Medical "
-"Insurance"
+"Operating Guidelines for Overseas Chinese Student Injury and Illness Medical"
+" Insurance"
 
 #: .\guides\templates\guides\guide_regulations.html:98
 msgid "海外回國就學僑生醫療急難及喪葬慰問金發給要點"
@@ -7339,7 +7062,6 @@ msgid "教育部－主管法規查詢系統"
 msgstr "Ministry of Education — Competent Authority Regulation Search System"
 
 #: .\guides\templates\guides\guide_scholarship.html:18
-#, fuzzy
 #| msgid "僑生獎學金、清寒補助、校內外各項申請指南"
 msgid "僑生獎學金・清寒補助・校內外各項申請指南"
 msgstr ""
@@ -7347,13 +7069,11 @@ msgstr ""
 "guides"
 
 #: .\guides\templates\guides\guide_scholarship.html:22
-#, fuzzy
 #| msgid "申請管道"
 msgid "申請管道快覽"
 msgstr "Application pipeline"
 
 #: .\guides\templates\guides\guide_scholarship.html:26
-#, fuzzy
 #| msgid "國際事務處（OIA）"
 msgid "NCU 國際事務處（OIA）"
 msgstr "Office of International Affairs (OIA)"
@@ -7379,8 +7099,7 @@ msgid "清寒補助（僑生）"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:45
-msgid ""
-"申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
+msgid "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:53
@@ -7397,19 +7116,16 @@ msgid "金額"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:55
-#, fuzzy
 #| msgid "期間"
 msgid "期限"
 msgstr "Period"
 
 #: .\guides\templates\guides\guide_scholarship.html:56
-#, fuzzy
 #| msgid "備註"
 msgid "備注"
 msgstr "Remark"
 
 #: .\guides\templates\guides\guide_scholarship.html:61
-#, fuzzy
 #| msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
 msgid "教育部清寒僑生助學金"
 msgstr ""
@@ -7457,9 +7173,7 @@ msgid "不得同時領取其他政府清寒補助或學費減免（不得重複�
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:81
-msgid ""
-"所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學"
-"生證 / 護照 / ARC / 郵局存摺影本"
+msgid "所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學生證 / 護照 / ARC / 郵局存摺影本"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:86
@@ -7467,8 +7181,7 @@ msgid "僑委會新生入學獎學金"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:89
-msgid ""
-"以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。"
+msgid "以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:97
@@ -7480,7 +7193,6 @@ msgid "年額"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:99
-#, fuzzy
 #| msgid "申請資格（年級）"
 msgid "申請資格（成績）"
 msgstr "Eligibility (by year)"
@@ -7510,7 +7222,6 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:117
 #: .\guides\templates\guides\guide_scholarship.html:151
 #: .\guides\templates\guides\guide_scholarship.html:163
-#, fuzzy
 #| msgid "1 年"
 msgid "4 年"
 msgstr "1 year"
@@ -7537,19 +7248,15 @@ msgid "不得同時領取其他政府獎學金"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:129
-#, fuzzy
 #| msgid "教育部臺灣獎學金"
 msgid "教育部台灣獎學金（外籍生）"
 msgstr "Ministry of Education Taiwan Scholarship"
 
 #: .\guides\templates\guides\guide_scholarship.html:132
-msgid ""
-"台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居"
-"身分的僑生，香港澳門生亦不適用。"
+msgid "台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居身分的僑生，香港澳門生亦不適用。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:140
-#, fuzzy
 #| msgid "學制種類"
 msgid "學制"
 msgstr "Type of academic system"
@@ -7567,7 +7274,6 @@ msgid "最長年限"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:148
-#, fuzzy
 #| msgid "學士班"
 msgid "學士"
 msgstr "Bachelor's degree"
@@ -7579,13 +7285,11 @@ msgid "每學期最高 NT$40,000"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:154
-#, fuzzy
 #| msgid "碩士畢業"
 msgid "碩士"
 msgstr "Master's degree"
 
 #: .\guides\templates\guides\guide_scholarship.html:157
-#, fuzzy
 #| msgid "1 年"
 msgid "2 年"
 msgstr "1 year"
@@ -7687,7 +7391,6 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
-#, fuzzy
 #| msgid "每學期"
 msgid "學期"
 msgstr "every semester"
@@ -7753,7 +7456,6 @@ msgid "行天宮獎學金"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:291
-#, fuzzy
 #| msgid "1 年"
 msgid "年"
 msgstr "1 year"
@@ -7771,7 +7473,6 @@ msgid "孺鴻教育獎學金"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:298
-#, fuzzy
 #| msgid "約每年 3 月"
 msgid "每年 3 月"
 msgstr "Approximately March every year"
@@ -7818,13 +7519,10 @@ msgid "低 / 中低收入或身心障礙；成績 65+"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:323
-msgid ""
-"每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期"
-"查看"
+msgid "每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期查看"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:328
-#, fuzzy
 #| msgid "重要提醒："
 msgid "重要提醒"
 msgstr "Important reminder:"
@@ -7834,9 +7532,7 @@ msgid "不得重複領取"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:332
-msgid ""
-"教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再"
-"申請。"
+msgid "教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再申請。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:335
@@ -7844,8 +7540,7 @@ msgid "僑卡必備"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:336
-msgid ""
-"申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。"
+msgid "申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:339
@@ -7853,8 +7548,7 @@ msgid "清寒證明須原件"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:340
-msgid ""
-"清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
+msgid "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:343
@@ -7862,9 +7556,7 @@ msgid "留意截止日"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:344
-msgid ""
-"多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提"
-"早準備文件。"
+msgid "多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提早準備文件。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:349
@@ -7884,21 +7576,18 @@ msgid "台灣門號申辦指南"
 msgstr "Taiwan SIM Card Application Guide"
 
 #: .\guides\templates\guides\guide_sim.html:19
-msgid ""
-"台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預"
-"付卡與月租方案的辦理說明。"
+msgid "台灣門號是生活的基礎：LINE 認證、銀行 OTP、地圖導航都需要本地號碼。本頁整理預付卡與月租方案的辦理說明。"
 msgstr ""
 "A Taiwan phone number is essential for daily life: LINE verification, bank "
-"OTP, and map navigation all require a local number. This page covers prepaid "
-"cards and monthly plan options."
+"OTP, and map navigation all require a local number. This page covers prepaid"
+" cards and monthly plan options."
 
 #: .\guides\templates\guides\guide_sim.html:25
 msgid "剛抵台、還沒拿到 ARC？"
 msgstr "Just arrived in Taiwan and don't have your ARC yet?"
 
 #: .\guides\templates\guides\guide_sim.html:25
-msgid ""
-"可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。"
+msgid "可先在機場或便利商店購買「預付卡」（只需護照），等取得 ARC 後再辦月租方案。"
 msgstr ""
 "You can first buy a prepaid SIM card at the airport or convenience store "
 "(passport only), then switch to a monthly plan once you have your ARC."
@@ -7916,9 +7605,7 @@ msgid "無 ARC 可辦"
 msgstr "No ARC required"
 
 #: .\guides\templates\guides\guide_sim.html:40
-msgid ""
-"只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核"
-"發的過渡期使用。"
+msgid "只需護照即可辦理。7-Eleven、全家便利商店、機場均有售。適合剛抵台、ARC 尚未核發的過渡期使用。"
 msgstr ""
 "Only a passport is required. Available at 7-Eleven, FamilyMart, and the "
 "airport. Ideal for the transition period after arriving before your ARC is "
@@ -7941,13 +7628,11 @@ msgid "ARC 後辦理"
 msgstr "Apply after getting ARC"
 
 #: .\guides\templates\guides\guide_sim.html:53
-msgid ""
-"費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。"
-"多數學生取得 ARC 後即改辦月租。"
+msgid "費率較優惠，數據量大，適合長期留學使用。需持 ARC 及台灣銀行帳戶或信用卡辦理。多數學生取得 ARC 後即改辦月租。"
 msgstr ""
 "Better rates, large data allowance, ideal for long-term study. Requires ARC "
-"and a Taiwan bank account or credit card. Most students switch to this after "
-"getting their ARC."
+"and a Taiwan bank account or credit card. Most students switch to this after"
+" getting their ARC."
 
 #: .\guides\templates\guides\guide_sim.html:55
 msgid "需要：ARC + 護照 + 銀行帳戶（或信用卡）"
@@ -8022,9 +7707,7 @@ msgid "選擇電信業者與方案"
 msgstr "Choose a carrier and plan"
 
 #: .\guides\templates\guides\guide_sim.html:111
-msgid ""
-"前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據"
-"吃到飽方案（約 NT$399/月）。"
+msgid "前往各大電信官網比較方案（通話 + 數據）。若預算有限且主要使用數據，可選純數據吃到飽方案（約 NT$399/月）。"
 msgstr ""
 "Visit the major carriers' websites to compare plans (calls + data). If on a "
 "budget and mainly using data, consider an unlimited data-only plan (approx. "
@@ -8036,8 +7719,7 @@ msgstr "Visit a carrier store"
 
 #: .\guides\templates\guides\guide_sim.html:120
 msgid ""
-"攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告"
-"知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
+"攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
 msgstr ""
 "Bring your ARC, passport, bank account or credit card to a carrier store "
 "(all major carriers have stores in Zhongli). Tell the staff you want to "
@@ -8050,8 +7732,8 @@ msgstr "Choose your number and SIM size"
 
 #: .\guides\templates\guides\guide_sim.html:129
 msgid ""
-"可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano "
-"SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。"
+"可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G "
+"正常使用。"
 msgstr ""
 "You can choose your number (special numbers cost extra) and SIM size (most "
 "phones now use nano SIM). Confirm your phone is 'fully unlocked' to ensure "
@@ -8062,9 +7744,7 @@ msgid "插卡啟用，設定網路"
 msgstr "Insert SIM and configure network"
 
 #: .\guides\templates\guides\guide_sim.html:138
-msgid ""
-"插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設"
-"定 APN。"
+msgid "插入 SIM 卡後，系統通常自動完成 APN 設定。若無法上網，可請門市人員協助手動設定 APN。"
 msgstr ""
 "After inserting the SIM, APN settings are usually configured automatically. "
 "If you can't connect, ask store staff to help set the APN manually."
@@ -8074,22 +7754,18 @@ msgid "中央大學附近："
 msgstr "Near NCU:"
 
 #: .\guides\templates\guides\guide_sim.html:149
-msgid ""
-"中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢"
-"光明街及中正路均設有門市。"
+msgid "中壢市區（火車站附近）的各電信門市均有服務，中華電信、台灣大哥大、遠傳在中壢光明街及中正路均設有門市。"
 msgstr ""
 "All major carriers have stores in Zhongli city center (near the train "
-"station). Chunghwa Telecom, Taiwan Mobile, and FarEasTone all have stores on "
-"Guangming Street and Zhongzheng Road."
+"station). Chunghwa Telecom, Taiwan Mobile, and FarEasTone all have stores on"
+" Guangming Street and Zhongzheng Road."
 
 #: .\guides\templates\guides\guide_sim.html:155
 msgid "保留原國際漫遊號碼："
 msgstr "Keep your home country number (roaming):"
 
 #: .\guides\templates\guides\guide_sim.html:155
-msgid ""
-"許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使"
-"用，雙卡手機更方便。"
+msgid "許多同學選擇保留母國門號（國際漫遊）用於家人聯絡，再辦一支台灣本地號供日常使用，雙卡手機更方便。"
 msgstr ""
 "Many students keep their home country number (international roaming) for "
 "family contact, and get a local Taiwan number for daily use. A dual-SIM "
@@ -8153,7 +7829,6 @@ msgid "學號、出生年月日，外籍生填護照號碼（非台灣身分證�
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:77
-#, fuzzy
 #| msgid "約 15～20 分鐘"
 msgid "等待約 10 分鐘"
 msgstr "About 15–20 minutes"
@@ -8167,14 +7842,11 @@ msgid "登入後立即更改密碼"
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:85
-msgid ""
-"預設密碼為生日，請馬上改成強密碼，並設定信箱或手機號碼以便之後找回密碼。"
+msgid "預設密碼為生日，請馬上改成強密碼，並設定信箱或手機號碼以便之後找回密碼。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:91
-msgid ""
-"若瀏覽器顯示「Cookie 未被接受」，請換瀏覽器（建議 Chrome / Firefox）。聯絡計"
-"算機中心：分機 57771。"
+msgid "若瀏覽器顯示「Cookie 未被接受」，請換瀏覽器（建議 Chrome / Firefox）。聯絡計算機中心：分機 57771。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:103
@@ -8224,9 +7896,7 @@ msgid "課程平台"
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:132
-msgid ""
-"請勿在 ee-class 自行「註冊」新帳號！一般生直接用 Portal 帳號（學號）登入即"
-"可。"
+msgid "請勿在 ee-class 自行「註冊」新帳號！一般生直接用 Portal 帳號（學號）登入即可。"
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:138
@@ -8265,13 +7935,11 @@ msgid "特殊身份登入方式"
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:158
-#, fuzzy
 #| msgid "身份別"
 msgid "身份"
 msgstr "Identity Type"
 
 #: .\guides\templates\guides\guide_systems.html:159
-#, fuzzy
 #| msgid "帳號建立"
 msgid "帳號"
 msgstr "Account Created"
@@ -8325,7 +7993,6 @@ msgid "容量"
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:204
-#, fuzzy
 #| msgid "驗證連結有效期限為"
 msgid "有效期限"
 msgstr "The verification link is valid for"
@@ -8351,8 +8018,7 @@ msgid "手機 / 電腦設定"
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:219
-msgid ""
-"前往「設定 → 郵件 → 帳號 → 新增帳號」，選「其他」，輸入信箱與密碼，詳細步驟："
+msgid "前往「設定 → 郵件 → 帳號 → 新增帳號」，選「其他」，輸入信箱與密碼，詳細步驟："
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:225
@@ -8376,7 +8042,6 @@ msgid "帳號 / Portal 問題"
 msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:244
-#, fuzzy
 #| msgid "常見問題"
 msgid "問題"
 msgstr "FAQ"
@@ -8386,7 +8051,6 @@ msgid "信箱問題"
 msgstr ""
 
 #: .\guides\templates\guides\guide_work_permit.html:17
-#, fuzzy
 #| msgid "僑生・外籍生必讀"
 msgid "僑生・外籍生必知"
 msgstr "Must-read for Overseas Chinese & International Students"
@@ -8396,9 +8060,7 @@ msgid "工作許可證申請指南"
 msgstr "Work Permit Application Guide"
 
 #: .\guides\templates\guides\guide_work_permit.html:19
-msgid ""
-"在台灣工作（不論校內或校外）前，必須先申請並取得工作許可證，否則將依法受罰並"
-"可能限令出境。"
+msgid "在台灣工作（不論校內或校外）前，必須先申請並取得工作許可證，否則將依法受罰並可能限令出境。"
 msgstr ""
 "Before working in Taiwan (on or off campus), you must first apply for and "
 "obtain a work permit. Violations are subject to fines and possible "
@@ -8499,8 +8161,8 @@ msgstr "specific employer"
 #: .\guides\templates\guides\guide_work_permit.html:71
 msgid "核發，換工作或增加兼職需重新申請。校內工讀（如助理）與校外工作"
 msgstr ""
-". Changing jobs or adding part-time work requires a new application. Both on-"
-"campus work (e.g., assistants) and off-campus work"
+". Changing jobs or adding part-time work requires a new application. Both "
+"on-campus work (e.g., assistants) and off-campus work"
 
 #: .\guides\templates\guides\guide_work_permit.html:71
 msgid "均需"
@@ -8594,9 +8256,7 @@ msgid "ATM 繳費"
 msgstr "ATM Payment"
 
 #: .\guides\templates\guides\guide_work_permit.html:121
-msgid ""
-"先完成線上申請 → 學校審核 → 系統產生 16 碼繳費帳號 → 使用 ATM「繳費」功能繳"
-"納。"
+msgid "先完成線上申請 → 學校審核 → 系統產生 16 碼繳費帳號 → 使用 ATM「繳費」功能繳納。"
 msgstr ""
 "Complete the online application first → school review → system generates a "
 "16-digit payment account → pay using the ATM \"Bill Payment\" function."
@@ -8608,8 +8268,8 @@ msgstr "Online Application Process"
 #: .\guides\templates\guides\guide_work_permit.html:131
 msgid "全程於勞動部「外國人在台工作服務網」線上辦理，選擇「"
 msgstr ""
-"The entire process is done online on the Ministry of Labor \"Foreign Workers "
-"in Taiwan Service Portal\". Select \""
+"The entire process is done online on the Ministry of Labor \"Foreign Workers"
+" in Taiwan Service Portal\". Select \""
 
 #: .\guides\templates\guides\guide_work_permit.html:131
 msgid "僑外生工讀申請"
@@ -8624,13 +8284,11 @@ msgid "準備應備文件並繳費"
 msgstr "Prepare required documents and pay the fee"
 
 #: .\guides\templates\guides\guide_work_permit.html:141
-msgid ""
-"將學生證（正反面含註冊章）、護照、居留證（ARC 正反面）掃描為 PDF。並先至郵局"
-"劃撥繳納審查費 NT$100（或選擇 ATM 後繳）。"
+msgid "將學生證（正反面含註冊章）、護照、居留證（ARC 正反面）掃描為 PDF。並先至郵局劃撥繳納審查費 NT$100（或選擇 ATM 後繳）。"
 msgstr ""
-"Scan your student ID (front and back with registration stamp), passport, and "
-"ARC (front and back) as PDFs. Pay the NT$100 review fee via postal transfer "
-"in advance (or choose ATM payment later)."
+"Scan your student ID (front and back with registration stamp), passport, and"
+" ARC (front and back) as PDFs. Pay the NT$100 review fee via postal transfer"
+" in advance (or choose ATM payment later)."
 
 #: .\guides\templates\guides\guide_work_permit.html:147
 msgid "至 ezwp 系統註冊 / 登入"
@@ -8657,7 +8315,8 @@ msgstr "Step 2 — Campus Information:"
 #: .\guides\templates\guides\guide_work_permit.html:156
 msgid "填寫學校地址與國際學生顧問室資訊"
 msgstr ""
-"Enter the school address and international student advisor office information"
+"Enter the school address and international student advisor office "
+"information"
 
 #: .\guides\templates\guides\guide_work_permit.html:157
 msgid "步驟 3 — 申請事項："
@@ -8715,9 +8374,7 @@ msgid "取得工作許可，開始工作"
 msgstr "Obtain the work permit and start working"
 
 #: .\guides\templates\guides\guide_work_permit.html:180
-msgid ""
-"許可核發後即可依核准內容開始工作。若選擇電子文件，請於 8 天內至系統下載許可"
-"證。"
+msgid "許可核發後即可依核准內容開始工作。若選擇電子文件，請於 8 天內至系統下載許可證。"
 msgstr ""
 "Once the permit is issued, you may begin working as approved. If you chose "
 "electronic delivery, download the permit within 8 days."
@@ -8791,8 +8448,8 @@ msgstr "Deportation Order"
 #: .\guides\templates\guides\guide_work_permit.html:228
 msgid "主管機關可依規定限令違規者出境，情節嚴重者可能影響日後再入境資格。"
 msgstr ""
-"Authorities may order the violator to leave Taiwan; serious cases may affect "
-"future entry eligibility."
+"Authorities may order the violator to leave Taiwan; serious cases may affect"
+" future entry eligibility."
 
 #: .\guides\templates\guides\guide_work_permit.html:234
 msgid "雇主連帶受罰"
@@ -8809,9 +8466,7 @@ msgid "換工作需重新申請："
 msgstr "Changing jobs requires a new application:"
 
 #: .\guides\templates\guides\guide_work_permit.html:244
-msgid ""
-"工作許可針對特定雇主核發，換雇主或增加兼職均須重新申請新的工作許可，不可沿用"
-"舊許可。"
+msgid "工作許可針對特定雇主核發，換雇主或增加兼職均須重新申請新的工作許可，不可沿用舊許可。"
 msgstr ""
 "Work permits are issued for a specific employer. Changing employers or "
 "adding part-time work requires a new permit; old permits cannot be reused."
@@ -8855,8 +8510,8 @@ msgstr "The ezwp system saves drafts for a maximum of"
 #: .\guides\templates\guides\guide_work_permit.html:256
 msgid "，逾期需重新填寫。選擇電子文件領取者，須於核發後"
 msgstr ""
-"; after expiry, drafts must be re-entered. If you chose electronic delivery, "
-"download the permit within"
+"; after expiry, drafts must be re-entered. If you chose electronic delivery,"
+" download the permit within"
 
 #: .\guides\templates\guides\guide_work_permit.html:256
 msgid "至系統下載許可證。"
@@ -8867,13 +8522,11 @@ msgid "工作期間健保轉換："
 msgstr "Health insurance transfer while working:"
 
 #: .\guides\templates\guides\guide_work_permit.html:260
-msgid ""
-"受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工"
-"作結束後需回學校重新加保。"
+msgid "受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工作結束後需回學校重新加保。"
 msgstr ""
 "Once employed, you must enroll in NHI under your employer (Category 1). "
-"First process the transfer out from your school to avoid duplicate coverage. "
-"Re-enroll at school after work ends."
+"First process the transfer out from your school to avoid duplicate coverage."
+" Re-enroll at school after work ends."
 
 #: .\guides\templates\guides\guide_work_permit.html:266
 msgid "勞動部外國人在台工作服務網 ↗"
@@ -8934,7 +8587,6 @@ msgid "搜尋指南..."
 msgstr "Search guides..."
 
 #: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
-#, fuzzy
 #| msgid "沒有未讀通知 🎉"
 msgid "沒有未讀通知"
 msgstr "No unread notifications 🎉"
@@ -8954,8 +8606,8 @@ msgstr "Loading..."
 #: .\templates\base.html:165 .\users\templates\users\dashboard.html:138
 msgid "確定要登出嗎？登出後將返回登入頁面。"
 msgstr ""
-"Are you sure you want to log out? After logging out, you will be returned to "
-"the login page."
+"Are you sure you want to log out? After logging out, you will be returned to"
+" the login page."
 
 #: .\templates\base.html:168 .\users\templates\users\dashboard.html:143
 msgid "登出"
@@ -8966,9 +8618,7 @@ msgid "開始流程"
 msgstr "Start"
 
 #: .\templates\base.html:191
-msgid ""
-"專為僑外籍生打造的來台留學流程指南平台，協助學生一步步完成留學準備與抵台後事"
-"項。"
+msgid "專為僑外籍生打造的來台留學流程指南平台，協助學生一步步完成留學準備與抵台後事項。"
 msgstr ""
 
 #: .\templates\base.html:197 .\users\templates\users\home.html:136
@@ -9010,7 +8660,6 @@ msgid "使用說明"
 msgstr ""
 
 #: .\templates\base.html:216
-#, fuzzy
 #| msgid "詢問 AI 小幫手"
 msgid "AI 小幫手"
 msgstr "Ask the AI Assistant"
@@ -9118,7 +8767,6 @@ msgid "英國"
 msgstr ""
 
 #: .\users\models.py:145
-#, fuzzy
 #| msgid "泰國"
 msgid "法國"
 msgstr "Thailand"
@@ -9140,7 +8788,6 @@ msgid "美國"
 msgstr ""
 
 #: .\users\models.py:151
-#, fuzzy
 #| msgid "美國／加拿大"
 msgid "加拿大"
 msgstr "USA / Canada"
@@ -9154,7 +8801,6 @@ msgid "阿根廷"
 msgstr ""
 
 #: .\users\models.py:157
-#, fuzzy
 #| msgid "南亞"
 msgid "南非"
 msgstr "South Asia"
@@ -9168,7 +8814,6 @@ msgid "奈及利亞"
 msgstr ""
 
 #: .\users\models.py:161
-#, fuzzy
 #| msgid "歐洲"
 msgid "澳洲"
 msgstr "Europe"
@@ -9611,7 +9256,6 @@ msgid "來臺就學小幫手"
 msgstr "Study-in-Taiwan Assistant"
 
 #: .\users\templates\users\home.html:16 .\users\templates\users\home.html:27
-#, fuzzy
 #| msgid "你好"
 msgid "你好！"
 msgstr "Hello"
@@ -9621,7 +9265,6 @@ msgid "歡迎使用"
 msgstr ""
 
 #: .\users\templates\users\home.html:18
-#, fuzzy
 #| msgid "歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。"
 msgid "，您的個人化來臺就學流程已準備好。"
 msgstr ""
@@ -9656,13 +9299,11 @@ msgid "示範資料"
 msgstr ""
 
 #: .\users\templates\users\home.html:115
-#, fuzzy
 #| msgid "申請截止"
 msgid "申請中"
 msgstr "Application deadline"
 
 #: .\users\templates\users\home.html:116 .\users\templates\users\home.html:242
-#, fuzzy
 #| msgid "國立中央大學（NCU）"
 msgid "國立中央大學"
 msgstr "National Central University (NCU)"
@@ -9700,7 +9341,8 @@ msgid "以上為示範進度，"
 msgstr ""
 
 #: .\users\templates\users\home.html:161 .\users\templates\users\home.html:293
-#: .\users\templates\users\login.html:96 .\users\templates\users\login.html:135
+#: .\users\templates\users\login.html:96
+#: .\users\templates\users\login.html:135
 #: .\users\templates\users\login.html:153
 msgid "登入"
 msgstr "Log In"
@@ -9730,13 +9372,11 @@ msgid "已完成 8 / 20 項任務"
 msgstr ""
 
 #: .\users\templates\users\home.html:257
-#, fuzzy
 #| msgid "近期待辦任務"
 msgid "待辦任務"
 msgstr "Upcoming Tasks"
 
 #: .\users\templates\users\home.html:262
-#, fuzzy
 #| msgid "即將到期任務"
 msgid "即將到期"
 msgstr "Upcoming Due Tasks"
@@ -9746,7 +9386,6 @@ msgid "申請學生簽證"
 msgstr ""
 
 #: .\users\templates\users\home.html:280
-#, fuzzy
 #| msgid "財力證明"
 msgid "準備財力證明文件"
 msgstr "Proof of Financial Support"
@@ -9760,7 +9399,6 @@ msgid "以上為示範資料，"
 msgstr ""
 
 #: .\users\templates\users\home.html:293
-#, fuzzy
 #| msgid "我的個人化任務清單"
 msgid "後可查看您的個人化任務清單"
 msgstr "My personalized to-do list"
@@ -9790,7 +9428,6 @@ msgid "全民健保加入資格、保費計算方式、就醫流程與各地醫�
 msgstr ""
 
 #: .\users\templates\users\home.html:329
-#, fuzzy
 #| msgid "台灣銀行開戶"
 msgid "銀行開戶"
 msgstr "Open a Bank Account in Taiwan"
@@ -9825,9 +9462,7 @@ msgstr ""
 
 #: .\users\templates\users\home.html:453
 msgid ""
-"一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文"
-"或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究"
-"所）。各校要求略有不同，請以各校招生簡章為準。"
+"一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
 msgstr ""
 
 #: .\users\templates\users\home.html:456
@@ -9836,9 +9471,8 @@ msgstr ""
 
 #: .\users\templates\users\home.html:457
 msgid ""
-"可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常"
-"入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課"
-"程。"
+"可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 "
+"以上），或在僑先部完成一年預科中文課程。"
 msgstr ""
 
 #: .\users\templates\users\home.html:460
@@ -9848,8 +9482,7 @@ msgstr ""
 #: .\users\templates\users\home.html:461
 msgid ""
 "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 "
-"NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學"
-"金補助，台灣留學費用相對親民。"
+"NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
 msgstr ""
 
 #: .\users\templates\users\home.html:464
@@ -9858,20 +9491,17 @@ msgstr ""
 
 #: .\users\templates\users\home.html:465
 msgid ""
-"收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證"
-"（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
+"收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident "
+"Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
 msgstr ""
 
 #: .\users\templates\users\home.html:468
-#, fuzzy
 #| msgid "在台期間可以打工嗎？"
 msgid "可以邊讀書邊打工嗎？"
 msgstr "Can I work part-time while studying in Taiwan?"
 
 #: .\users\templates\users\home.html:469
-msgid ""
-"可以，但需申請工作許可。持有效居留證（ARC）的外籍學生，入學後可向學校申請工讀"
-"許可，每週工時上限為 20 小時。寒暑假期間可申請全時工作。"
+msgid "可以，但需申請工作許可。持有效居留證（ARC）的外籍學生，入學後可向學校申請工讀許可，每週工時上限為 20 小時。寒暑假期間可申請全時工作。"
 msgstr ""
 
 #: .\users\templates\users\home.html:472
@@ -9879,9 +9509,7 @@ msgid "全民健保什麼時候可以加入？"
 msgstr ""
 
 #: .\users\templates\users\home.html:473
-msgid ""
-"持有效居留證（ARC），在台灣合法居留滿 6 個月後可強制加入全民健保。若有效工作"
-"許可可提前加保。加保後門診費用大幅降低。"
+msgid "持有效居留證（ARC），在台灣合法居留滿 6 個月後可強制加入全民健保。若有效工作許可可提前加保。加保後門診費用大幅降低。"
 msgstr ""
 
 #: .\users\templates\users\home.html:476
@@ -9890,9 +9518,8 @@ msgstr ""
 
 #: .\users\templates\users\home.html:477
 msgid ""
-"從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個"
-"月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個"
-"月）、辦理簽證（1–2 個月）。"
+"從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 "
+"個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
 msgstr ""
 
 #: .\users\templates\users\login.html:5
@@ -9904,30 +9531,24 @@ msgid "流程提醒"
 msgstr "Process Reminders"
 
 #: .\users\templates\users\login.html:24
-msgid ""
-"系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任"
-"務，並以進度方式提醒你一步一步完成。"
+msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
 msgstr ""
-"The system automatically generates important tasks for visa application, pre-"
-"arrival, and post-arrival based on your nationality, identity type, and "
+"The system automatically generates important tasks for visa application, "
+"pre-arrival, and post-arrival based on your nationality, identity type, and "
 "current status, and reminds you step by step through progress tracking."
 
 #: .\users\templates\users\login.html:43
-msgid ""
-"把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
-"確資料，不再被零散資訊搞混。"
+msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
 msgstr ""
 "It integrates visa, ARC, health insurance, accommodation, and school "
-"registration information into a one-stop page, helping students find correct "
-"information more easily without being confused by scattered sources."
+"registration information into a one-stop page, helping students find correct"
+" information more easily without being confused by scattered sources."
 
 #: .\users\templates\users\login.html:66
-msgid ""
-"當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 "
-"AI 小幫手快速獲得協助。"
+msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
 msgstr ""
-"When you do not know what to do first, which documents to prepare, or who to "
-"ask, you can get quick help directly through the AI assistant."
+"When you do not know what to do first, which documents to prepare, or who to"
+" ask, you can get quick help directly through the AI assistant."
 
 #: .\users\templates\users\login.html:82
 msgid "顯示第一張介紹"
@@ -9941,7 +9562,8 @@ msgstr "Show the second introduction slide"
 msgid "顯示第三張介紹"
 msgstr "Show the third introduction slide"
 
-#: .\users\templates\users\login.html:98 .\users\templates\users\login.html:155
+#: .\users\templates\users\login.html:98
+#: .\users\templates\users\login.html:155
 msgid "註冊帳號"
 msgstr "Register Account"
 
@@ -10064,7 +9686,6 @@ msgid "登出成功，"
 msgstr "Logged out successfully, "
 
 #: .\users\templates\users\logout_redirect.html:26
-#, fuzzy
 #| msgid "點此返回登入頁面"
 msgid "點此返回首頁"
 msgstr "click here to return to the login page"
@@ -10075,8 +9696,7 @@ msgid "填寫個人資料"
 msgstr "Fill in Profile Information"
 
 #: .\users\templates\users\profile_setup.html:35
-msgid ""
-"這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
+msgid "這些資訊將用於生成您的個人化來臺流程，請確實填寫以獲得最準確的步驟提示。"
 msgstr ""
 "This information will be used to generate your personalized study-in-Taiwan "
 "process. Please fill it in accurately to receive the most suitable step-by-"
@@ -10112,8 +9732,8 @@ msgstr "Normal University/University of Education"
 #: .\users\templates\users\profile_setup.html:122
 msgid "目前僅開放國立中央大學（NCU）的個人化流程"
 msgstr ""
-"Currently only the National Central University (NCU) personalization process "
-"is open"
+"Currently only the National Central University (NCU) personalization process"
+" is open"
 
 #: .\users\templates\users\profile_setup.html:128
 #: .\users\templates\users\profile_setup.html:276
@@ -10121,8 +9741,7 @@ msgid "身份別"
 msgstr "Identity Type"
 
 #: .\users\templates\users\profile_setup.html:129
-msgid ""
-"指長期居住海外，具有華裔背景，並依僑生相關規定申請來臺就讀大專校院的學生。"
+msgid "指長期居住海外，具有華裔背景，並依僑生相關規定申請來臺就讀大專校院的學生。"
 msgstr ""
 
 #: .\users\templates\users\profile_setup.html:130
@@ -10305,272 +9924,6 @@ msgstr "Password reset successful. Please log in again."
 msgid "重設失敗，連結可能已過期"
 msgstr "Reset failed. The link may have expired."
 
-#~ msgid "資訊管理"
-#~ msgstr "Information Management"
-
-#~ msgid "AI 來臺就學小幫手"
-#~ msgstr "AI Study-in-Taiwan Assistant"
-
-#~ msgid "上傳圖片"
-#~ msgstr "Upload Image"
-
-#~ msgid "交換生"
-#~ msgstr "Exchange Student"
-
-#~ msgid ""
-#~ "：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可"
-#~ "依協議返校抵免，通常免繳台灣學雜費。"
-#~ msgstr ""
-#~ ": The original school concludes an exchange agreement with a Taiwanese "
-#~ "university to study for a short term (half a year or one academic year). "
-#~ "Credits can be used as credits when returning to school according to the "
-#~ "agreement, and Taiwan tuition and fees are usually exempted."
-
-#~ msgid ""
-#~ "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申"
-#~ "請，須先確認原校有締結交換協議。"
-#~ msgstr ""
-#~ "Nominated through the Exchange and Cooperation Office of the original "
-#~ "school, and then reviewed by National Taiwan University. If you cannot "
-#~ "apply directly to National Taiwan University, you must first confirm that "
-#~ "the original school has concluded an exchange agreement."
-
-#~ msgid "原校提名"
-#~ msgstr "Nominated by original school"
-
-#~ msgid "需締結協議"
-#~ msgstr "Agreement required"
-
-#~ msgid "期程與截止"
-#~ msgstr "Schedule and deadlines"
-
-#~ msgid ""
-#~ "上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 "
-#~ "月截止。依各校締約條件而有不同。"
-#~ msgstr ""
-#~ "The nomination deadline for applicants who enrolled in the previous "
-#~ "semester (September) is usually March to April; the deadline for "
-#~ "nomination for applicants who enrolled in the next semester (February) is "
-#~ "usually October to November. The contract conditions vary by school."
-
-#~ msgid "上學期：3～4 月"
-#~ msgstr "Last semester: March to April"
-
-#~ msgid "下學期：10～11 月"
-#~ msgstr "Next semester: October to November"
-
-#~ msgid "簽證與居留"
-#~ msgstr "Visa and residence"
-
-#~ msgid ""
-#~ "短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽"
-#~ "入台，並辦理外僑居留證。"
-#~ msgstr ""
-#~ "For short-term stays (within 6 months), you can enter Taiwan with a "
-#~ "tourist visa and do not need to apply for an ARC; if you stay for more "
-#~ "than 6 months, you must enter Taiwan with a student residence permit and "
-#~ "apply for an alien residence permit."
-
-#~ msgid "≤6 月：觀光簽"
-#~ msgstr "≤6 months: tourist visa"
-
-#~ msgid ">6 月：需 ARC"
-#~ msgstr ">6 months: ARC required"
-
-#~ msgid ""
-#~ "依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自"
-#~ "行負擔，每月約 NT$10,000～15,000。"
-#~ msgstr ""
-#~ "Under most exchange agreements, National Taiwan University waives tuition "
-#~ "and fees for exchange students. Living expenses (dormitory, meals, "
-#~ "transportation, etc.) need to be paid by yourself, which is about "
-#~ "NT$10,000~15,000 per month."
-
-#~ msgid "學雜費全免"
-#~ msgstr "Tuition and fees are free"
-
-#~ msgid "生活費自理"
-#~ msgstr "Pay for your own living expenses"
-
-#~ msgid "學費與生活費參考"
-#~ msgstr "Tuition fees and living expenses reference"
-
-#~ msgid ""
-#~ "以下費用資料為概略參考，實際金額依各校、各系所及入學年度公告為準。請務必向"
-#~ "目標學校確認最新收費標準。"
-#~ msgstr ""
-#~ "The following fee information is a rough reference. The actual amount is "
-#~ "subject to the announcements of each school, department and admission "
-#~ "year. Be sure to check with your target school for the latest fee "
-#~ "schedule."
-
-#~ msgid "費用項目"
-#~ msgstr "Expense items"
-
-#~ msgid "金額（新臺幣）"
-#~ msgstr "Amount (NTD)"
-
-#~ msgid "學士班學雜費（文法商）"
-#~ msgstr "Tuition and fees for bachelor's degree (Grammar and Business)"
-
-#~ msgid "約 NT$28,000 ～ 35,000"
-#~ msgstr "About NT$28,000 ~ 35,000"
-
-#~ msgid "僑生與本地生同標準"
-#~ msgstr "Overseas students and local students have the same standards"
-
-#~ msgid "學士班學雜費（理工醫）"
-#~ msgstr ""
-#~ "Tuition and Miscellaneous Fees for Bachelor's Degree (Science, "
-#~ "Engineering, Medicine)"
-
-#~ msgid "約 NT$35,000 ～ 45,000"
-#~ msgstr "About NT$35,000 ~ 45,000"
-
-#~ msgid "部分系所有額外實習費"
-#~ msgstr "Some departments have additional internship fees"
-
-#~ msgid "研究所學雜費（碩士）"
-#~ msgstr "Graduate Tuition and Fees (Master's)"
-
-#~ msgid "約 NT$30,000 ～ 48,000"
-#~ msgstr "About NT$30,000 ~ 48,000"
-
-#~ msgid "英語授課專班費用較高"
-#~ msgstr "English-taught special classes are more expensive"
-
-#~ msgid "宿舍費（學校宿舍）"
-#~ msgstr "Dormitory fee (school dormitory)"
-
-#~ msgid "約 NT$8,000 ～ 18,000"
-#~ msgstr "About NT$8,000 ~ 18,000"
-
-#~ msgid "依房型，境外生享優先保障"
-#~ msgstr ""
-#~ "Depending on the room type, overseas students enjoy priority protection"
-
-#~ msgid "生活費（餐飲 / 交通 / 日用）"
-#~ msgstr "Living expenses (meals/transportation/daily necessities)"
-
-#~ msgid "每月"
-#~ msgstr "per month"
-
-#~ msgid "約 NT$8,000 ～ 15,000"
-#~ msgstr "About NT$8,000 ~ 15,000"
-
-#~ msgid "視個人消費習慣而異"
-#~ msgstr "Varies depending on personal spending habits"
-
-#~ msgid "全民健康保險費"
-#~ msgstr "National health insurance premium"
-
-#~ msgid "每月（持 ARC 加保後）"
-#~ msgstr "Monthly (after adding insurance with ARC)"
-
-#~ msgid "約 NT$749"
-#~ msgstr "About NT$749"
-
-#~ msgid "在台超過 4 個月須加保"
-#~ msgstr ""
-#~ "If you stay in Taiwan for more than 4 months, you must purchase insurance"
-
-#~ msgid "申請時程建議（學士班僑生為例）"
-#~ msgstr ""
-#~ "Suggested application schedule (for overseas Chinese students in "
-#~ "bachelor’s degree program as an example)"
-
-#~ msgid "了解申請資訊與準備文件"
-#~ msgstr "Understand application information and prepare documents"
-
-#~ msgid ""
-#~ "前往海聯會官網確認當年度招生簡章，了解各學制申請資格、需備文件及時程。同時"
-#~ "確認學歷文件（成績單、畢業證書）是否需要公認證。"
-#~ msgstr ""
-#~ "Go to the official website of the Overseas Alliance to confirm the "
-#~ "current year's admissions brochure and learn about the application "
-#~ "qualifications, required documents and schedule for each academic system. "
-#~ "Also confirm whether academic documents (transcripts, graduation "
-#~ "certificates) require notarization."
-
-#~ msgid "每年 10 月～12 月"
-#~ msgstr "Every year from October to December"
-
-#~ msgid "準備學歷文件"
-#~ msgstr "Prepare academic documents"
-
-#~ msgid "向當地承辦窗口取得申請表"
-#~ msgstr "Obtain the application form from the local hosting window"
-
-#~ msgid ""
-#~ "聯繫所在地區的海聯會承辦窗口（如馬來西亞留台同學會、緬甸華校教師會等），取"
-#~ "得當年度申請表及相關說明，確認繳件方式（線上 / 郵寄）。"
-#~ msgstr ""
-#~ "Contact the organizer of the Overseas Alliance in your region (such as "
-#~ "the Malaysian Alumni Association in Taiwan, Myanmar Chinese School "
-#~ "Teachers Association, etc.) to obtain the current year's application form "
-#~ "and relevant instructions, and confirm the payment method (online/mail)."
-
-#~ msgid "每年 1 月"
-#~ msgstr "every January"
-
-#~ msgid "提早聯繫避免遺漏"
-#~ msgstr "Contact early to avoid missing out"
-
-#~ msgid "線上報名並繳交備審資料"
-#~ msgstr "Register online and submit application materials"
-
-#~ msgid ""
-#~ "至海聯會網路報名系統填寫志願序（可填多個志願），並上傳或郵寄所需文件（成績"
-#~ "單、護照、照片等）。確認申請費繳納方式。"
-#~ msgstr ""
-#~ "Fill in the application form (you can fill in multiple applications) in "
-#~ "the Overseas Alliance online registration system, and upload or mail the "
-#~ "required documents (transcripts, passports, photos, etc.). Confirm how to "
-#~ "pay the application fee."
-
-#~ msgid "每年 1 月～3 月"
-#~ msgstr "January to March every year"
-
-#~ msgid "備審文件繳交"
-#~ msgstr "Submission of documents for review"
-
-#~ msgid "等待審查結果與放榜"
-#~ msgstr "Waiting for review results and release of rankings"
-
-#~ msgid ""
-#~ "申請截止後由海聯會及各校審查。通常於每年 5～6 月公告錄取結果。請密切注意海"
-#~ "聯會官網及承辦窗口通知。"
-#~ msgstr ""
-#~ "Applications will be reviewed by the AIS and each school after the "
-#~ "deadline. Admission results are usually announced from May to June every "
-#~ "year. Please pay close attention to the official website of the Overseas "
-#~ "Alliance and the notification from the hosting window."
-
-#~ msgid "每年 5 月～6 月"
-#~ msgstr "May to June every year"
-
-#~ msgid "確認志願並辦理赴台簽證"
-#~ msgstr "Confirm your intention and apply for a visa to Taiwan"
-
-#~ msgid ""
-#~ "收到錄取通知後，依指定期限確認接受錄取。向台灣駐外機構（如台北經濟文化辦事"
-#~ "處）申請學生居留簽證（Resident Visa）。"
-#~ msgstr ""
-#~ "After receiving the admission notice, confirm acceptance according to the "
-#~ "specified deadline. Apply for a student residence visa (Resident Visa) "
-#~ "from Taiwan’s overseas missions (such as the Taipei Economic and Cultural "
-#~ "Office)."
-
-#~ msgid "每年 6 月～7 月"
-#~ msgstr "June to July every year"
-
-#~ msgid "辦理學生居留簽"
-#~ msgstr "Apply for student residence visa"
-
-#~ msgid "抵台入學報到"
-#~ msgstr "Arrive in Taiwan and register for admission"
-
-<<<<<<< HEAD
 msgid "辦理流程（Step by Step）"
 msgstr "Step-by-Step Process"
 
@@ -13907,204 +13260,7 @@ msgstr "Contact person: Ms. Xu Xinhe"
 
 msgid "1 年"
 msgstr "1 year"
-=======
-#~ msgid ""
-#~ "抵台後按學校通知時程辦理入學報到，並在 15 天內至移民署辦理外僑居留證"
-#~ "（ARC）。同時參加學校國際事務處的新生說明會。"
-#~ msgstr ""
-#~ "After arriving in Taiwan, you must register for admission according to "
-#~ "the schedule notified by the school, and go to the Immigration Department "
-#~ "to apply for an Alien Residence Certificate (ARC) within 15 days. At the "
-#~ "same time, attend the orientation meeting for new students held by the "
-#~ "International Affairs Office of the school."
 
-#~ msgid "每年 8 月底～9 月初"
-#~ msgstr "Every year from the end of August to the beginning of September"
-
-#~ msgid "完成入學！"
-#~ msgstr "Enrollment completed!"
-
-#~ msgid "我是外籍生（非僑生），可以透過海聯會申請嗎？"
-#~ msgstr ""
-#~ "I am a foreign student (non-overseas Chinese), can I apply through the "
-#~ "Overseas Alliance?"
-
-#~ msgid "僑生與外籍生有什麼不同？"
-#~ msgstr ""
-#~ "What is the difference between overseas Chinese students and foreign "
-#~ "students?"
-
-#~ msgid "可以同時申請多所學校嗎？"
-#~ msgstr "Can I apply to multiple schools at the same time?"
-
-#~ msgid "中文不夠好，可以申請中文授課的系所嗎？"
-#~ msgstr ""
-#~ "If my Chinese is not good enough, can I apply for a department that "
-#~ "teaches in Chinese?"
-
-#~ msgid "申請獎學金需要另外申請嗎？"
-#~ msgstr "Do I need to apply separately to apply for a scholarship?"
-
-#~ msgid "我已在台灣就讀，可以轉學嗎？"
-#~ msgstr "I am already studying in Taiwan, can I transfer?"
-
-#~ msgid "居留證辦理・住宿・交通等常用說明"
-#~ msgstr "ARC Application, Housing, Transportation and More"
-
-#~ msgid "交換生居留說明"
-#~ msgstr "Exchange Student Residency Guide"
-
-#~ msgid "短期觀光簽 vs 長期居留簽，ARC 辦理判斷指南"
-#~ msgstr ""
-#~ "Short-term Tourist Visa vs. Long-term Residency Visa — ARC Application "
-#~ "Guide"
-
-#~ msgid "⚠️ 截止日期"
-#~ msgstr "⚠️ Deadline"
-
-#~ msgid "例如：資訊工程學系"
-#~ msgstr ""
-#~ "For example: Department of Computer Science and Information Engineering"
-
-#~ msgid "非必填"
-#~ msgstr "Optional"
-
-#~ msgid "儲存資料並開始使用"
-#~ msgstr "Save Information and Start Using"
-
-#~ msgid "領獎學金必備，郵局・台灣銀行・玉山銀行推薦比較"
-#~ msgstr ""
-#~ "Essential for scholarships — Post Office, Bank of Taiwan, E.Sun compared"
-
-#~ msgid "外籍生辦理居留證服務"
-#~ msgstr "Foreign Student ARC Application Service"
-
-#~ msgid "台灣銀行開戶指南"
-#~ msgstr "Taiwan Bank Account Opening Guide"
-
-#~ msgid "開戶步驟"
-#~ msgstr "Account Opening Steps"
-
-#~ msgid "哪些人可以申請？"
-#~ msgstr "Who Can Apply?"
-
-#~ msgid "申請步驟"
-#~ msgstr "Application Steps"
-
-#~ msgid "主題分類"
-#~ msgstr "Categories"
-
-#~ msgid "實用指南"
-#~ msgstr "Guides"
-
-#~ msgid "隨時查閱"
-#~ msgstr "Available 24H"
-
-#~ msgid "需要更多協助？"
-#~ msgstr "Need more help?"
-
-#~ msgid "請聯繫"
-#~ msgstr "Contact"
-
-#~ msgid "分機 57081，我們很樂意幫助你！"
-#~ msgstr "Ext. 57081 — we're happy to help!"
-
-#~ msgid ""
-#~ "「僑生」是指具有中華民國國籍或華裔血統、長期居住海外並在當地接受教育者，依"
-#~ "教育部規定認定，可享僑生獎學金及僑先部等特別管道。「外籍生」則是持非中華民"
-#~ "國國籍護照入學者，通常透過各校獨立招生管道申請，可申請教育部臺灣獎學金。兩"
-#~ "者身份認定不同，適用的招生管道與優惠也不同。"
-#~ msgstr ""
-#~ "\"Overseas compatriot students\" (僑生) refers to those with ROC "
-#~ "citizenship or Chinese ancestry who have lived abroad long-term and "
-#~ "received education there, as recognized by the Ministry of Education. "
-#~ "They may access special channels such as overseas compatriot scholarships "
-#~ "and preparatory programs. \"International students\" (外籍生) refers to "
-#~ "those entering with a non-ROC passport, typically applying through each "
-#~ "university's independent international admissions process and eligible "
-#~ "for the Ministry of Education Taiwan Scholarship. The two statuses are "
-#~ "recognized differently, with different admissions channels and benefits."
-
-#~ msgid ""
-#~ "不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生"
-#~ "認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官"
-#~ "網。"
-#~ msgstr ""
-#~ "No. The OCAC channel is only available to applicants with overseas "
-#~ "compatriot student status. International students (those holding a "
-#~ "foreign passport but not recognized as overseas compatriot students) must "
-#~ "apply directly to each university's international admissions office. "
-#~ "Please visit the respective university websites for application timelines "
-#~ "and document requirements."
-
-#~ msgid ""
-#~ "各系所對中文能力要求不同。部分系所設有最低中文檢定門檻（如 TOCFL B1 以"
-#~ "上），部分則接受入學後修讀中文語言課程作為補強。建議查閱目標系所的最新招生"
-#~ "簡章確認，或聯繫學校國際事務處詢問。若中文尚未達標，也可先考慮申請全英語授"
-#~ "課的系所或語言先修課程。"
-#~ msgstr ""
-#~ "Chinese proficiency requirements vary by department. Some departments set "
-#~ "a minimum Chinese proficiency threshold (e.g., TOCFL B1 or above), while "
-#~ "others accept enrollment in Chinese language courses after admission as a "
-#~ "supplement. We recommend checking the latest admission guidelines for "
-#~ "your target department or contacting the school's Office of International "
-#~ "Affairs. If your Chinese is not yet up to standard, you may also consider "
-#~ "applying to English-taught programs or language preparatory courses."
-
-#~ msgid ""
-#~ "海聯會管道可填寫多個志願（學校 + 系所），系統依志願序分發，通常一個申請可"
-#~ "含多個志願。外籍生透過各校獨立申請時，只要在截止期限前分別向各校提交申請即"
-#~ "可，但需留意各校的申請費及文件要求可能不同。"
-#~ msgstr ""
-#~ "The OCAC channel allows you to fill in multiple preferences (school + "
-#~ "department), and the system assigns placements based on preference order "
-#~ "— one application typically covers multiple choices. For international "
-#~ "students applying to individual schools, simply submit separate "
-#~ "applications to each school before their respective deadlines, but note "
-#~ "that application fees and document requirements may differ between "
-#~ "schools."
-
-#~ msgid ""
-#~ "教育部臺灣獎學金需在入學申請時或入學後另行提出申請，通常透過台灣駐外機構或"
-#~ "直接向學校申請，名額有限，競爭較激烈。僑生獎學金部分由海聯會或學校自動審"
-#~ "核，部分需額外填寫申請表。學校自設的入學獎助學金通常在錄取通知中會一併說"
-#~ "明。"
-#~ msgstr ""
-#~ "The Ministry of Education Taiwan Scholarship must be applied for "
-#~ "separately, either at the time of admission or after enrollment, "
-#~ "typically through Taiwan overseas representative offices or directly "
-#~ "through the school. Slots are limited and competition is strong. Overseas "
-#~ "compatriot scholarships are partly reviewed automatically by OCAC or the "
-#~ "school, and partly require a separate application form. School-specific "
-#~ "admission scholarships are usually explained in the admission offer "
-#~ "letter."
-
-#~ msgid ""
-#~ "可以，但需注意轉學申請通常有年級限制（多限大二、大三），且需提供原校成績單"
-#~ "及放棄學籍證明。各校轉學招生時程不一，通常在每學年結束前後辦理，詳情請查閱"
-#~ "目標校系的轉學考簡章。研究所學生轉所需依各所規定辦理。"
-#~ msgstr ""
-#~ "Yes, but note that transfer applications usually have grade restrictions "
-#~ "(typically limited to 2nd or 3rd year), and require transcripts from your "
-#~ "current school and proof of withdrawal. Transfer admission timelines vary "
-#~ "by school and are typically held around the end of each academic year. "
-#~ "For details, consult the transfer examination guidelines of your target "
-#~ "school and department. Graduate students transferring between programs "
-#~ "must follow individual department regulations."
-
-#~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
-#~ msgstr ""
-#~ "Enter your question, and the system will organize suggestions based on "
-#~ "your identity and status."
-
-#~ msgid "（海外華裔學生）"
-#~ msgstr "(Overseas Chinese student)"
->>>>>>> 623704c0201826bc6938107e54ae8baadc8dc728
-
-#~ msgid "（外國籍學生）"
-#~ msgstr "(Foreign student)"
-
-<<<<<<< HEAD
 msgid "以下為一般應備文件，各移民署辦事處可能有細微差異。建議事前致電當地辦事處或至移民署官網確認最新版清單。"
 msgstr ""
 "The following are general required documents; individual NIA offices may "
@@ -15300,11 +14456,267 @@ msgstr "Course Affairs"
 msgid "成績與畢業門檻"
 msgstr "Grades and Graduation Requirements"
 
+msgid "抵台後 30 天內辦理"
+msgstr "Apply within 30 days of arrival"
+
+msgid "30 天"
+msgstr "30 days"
+
+msgid "抵台 30 天內辦居留"
+msgstr "Apply for residency within 30 days of arrival"
+
+msgid "抵台 30 天內"
+msgstr "Within 30 days of arrival"
+
+msgid "🇭🇰 香港・🇲🇴 澳門 學生專區"
+msgstr "🇭🇰 Hong Kong · 🇲🇴 Macao Student Zone"
+
+#~ msgid "資訊管理"
+#~ msgstr "Information Management"
+
+#~ msgid "AI 來臺就學小幫手"
+#~ msgstr "AI Study-in-Taiwan Assistant"
+
+#~ msgid "上傳圖片"
+#~ msgstr "Upload Image"
+
+#~ msgid "交換生"
+#~ msgstr "Exchange Student"
+
+#~ msgid "：由原就讀學校與台灣大學締結交換協議，短期（半年或一學年）交換就讀。學分可依協議返校抵免，通常免繳台灣學雜費。"
+#~ msgstr ""
+#~ ": The original school concludes an exchange agreement with a Taiwanese "
+#~ "university to study for a short term (half a year or one academic year). "
+#~ "Credits can be used as credits when returning to school according to the "
+#~ "agreement, and Taiwan tuition and fees are usually exempted."
+
+#~ msgid "透過原就讀學校的交流合作辦公室提名，再由台灣大學審核。無法直接向台灣大學申請，須先確認原校有締結交換協議。"
+#~ msgstr ""
+#~ "Nominated through the Exchange and Cooperation Office of the original "
+#~ "school, and then reviewed by National Taiwan University. If you cannot apply"
+#~ " directly to National Taiwan University, you must first confirm that the "
+#~ "original school has concluded an exchange agreement."
+
+#~ msgid "原校提名"
+#~ msgstr "Nominated by original school"
+
+#~ msgid "需締結協議"
+#~ msgstr "Agreement required"
+
+#~ msgid "期程與截止"
+#~ msgstr "Schedule and deadlines"
+
+#~ msgid "上學期（9 月）入學者通常 3～4 月截止提名；下學期（2 月）入學者通常 10～11 月截止。依各校締約條件而有不同。"
+#~ msgstr ""
+#~ "The nomination deadline for applicants who enrolled in the previous semester"
+#~ " (September) is usually March to April; the deadline for nomination for "
+#~ "applicants who enrolled in the next semester (February) is usually October "
+#~ "to November. The contract conditions vary by school."
+
+#~ msgid "上學期：3～4 月"
+#~ msgstr "Last semester: March to April"
+
+#~ msgid "下學期：10～11 月"
+#~ msgstr "Next semester: October to November"
+
+#~ msgid "簽證與居留"
+#~ msgstr "Visa and residence"
+
+#~ msgid "短期（6 個月以內）可持觀光簽入台，無需辦理 ARC；6 個月以上則須以學生居留簽入台，並辦理外僑居留證。"
+#~ msgstr ""
+#~ "For short-term stays (within 6 months), you can enter Taiwan with a tourist "
+#~ "visa and do not need to apply for an ARC; if you stay for more than 6 "
+#~ "months, you must enter Taiwan with a student residence permit and apply for "
+#~ "an alien residence permit."
+
+#~ msgid "≤6 月：觀光簽"
+#~ msgstr "≤6 months: tourist visa"
+
+#~ msgid ">6 月：需 ARC"
+#~ msgstr ">6 months: ARC required"
+
+#~ msgid "依多數交換協議，台灣大學免收交換生學雜費。生活費（宿舍、餐飲、交通等）需自行負擔，每月約 NT$10,000～15,000。"
+#~ msgstr ""
+#~ "Under most exchange agreements, National Taiwan University waives tuition "
+#~ "and fees for exchange students. Living expenses (dormitory, meals, "
+#~ "transportation, etc.) need to be paid by yourself, which is about "
+#~ "NT$10,000~15,000 per month."
+
+#~ msgid "學雜費全免"
+#~ msgstr "Tuition and fees are free"
+
+#~ msgid "生活費自理"
+#~ msgstr "Pay for your own living expenses"
+
+#~ msgid "學費與生活費參考"
+#~ msgstr "Tuition fees and living expenses reference"
+
+#~ msgid "以下費用資料為概略參考，實際金額依各校、各系所及入學年度公告為準。請務必向目標學校確認最新收費標準。"
+#~ msgstr ""
+#~ "The following fee information is a rough reference. The actual amount is "
+#~ "subject to the announcements of each school, department and admission year. "
+#~ "Be sure to check with your target school for the latest fee schedule."
+
+#~ msgid "費用項目"
+#~ msgstr "Expense items"
+
+#~ msgid "金額（新臺幣）"
+#~ msgstr "Amount (NTD)"
+
+#~ msgid "學士班學雜費（文法商）"
+#~ msgstr "Tuition and fees for bachelor's degree (Grammar and Business)"
+
+#~ msgid "約 NT$28,000 ～ 35,000"
+#~ msgstr "About NT$28,000 ~ 35,000"
+
+#~ msgid "僑生與本地生同標準"
+#~ msgstr "Overseas students and local students have the same standards"
+
+#~ msgid "學士班學雜費（理工醫）"
+#~ msgstr ""
+#~ "Tuition and Miscellaneous Fees for Bachelor's Degree (Science, Engineering, "
+#~ "Medicine)"
+
+#~ msgid "約 NT$35,000 ～ 45,000"
+#~ msgstr "About NT$35,000 ~ 45,000"
+
+#~ msgid "部分系所有額外實習費"
+#~ msgstr "Some departments have additional internship fees"
+
+#~ msgid "研究所學雜費（碩士）"
+#~ msgstr "Graduate Tuition and Fees (Master's)"
+
+#~ msgid "約 NT$30,000 ～ 48,000"
+#~ msgstr "About NT$30,000 ~ 48,000"
+
+#~ msgid "英語授課專班費用較高"
+#~ msgstr "English-taught special classes are more expensive"
+
+#~ msgid "宿舍費（學校宿舍）"
+#~ msgstr "Dormitory fee (school dormitory)"
+
+#~ msgid "約 NT$8,000 ～ 18,000"
+#~ msgstr "About NT$8,000 ~ 18,000"
+
+#~ msgid "依房型，境外生享優先保障"
+#~ msgstr ""
+#~ "Depending on the room type, overseas students enjoy priority protection"
+
+#~ msgid "生活費（餐飲 / 交通 / 日用）"
+#~ msgstr "Living expenses (meals/transportation/daily necessities)"
+
+#~ msgid "每月"
+#~ msgstr "per month"
+
+#~ msgid "約 NT$8,000 ～ 15,000"
+#~ msgstr "About NT$8,000 ~ 15,000"
+
+#~ msgid "視個人消費習慣而異"
+#~ msgstr "Varies depending on personal spending habits"
+
+#~ msgid "全民健康保險費"
+#~ msgstr "National health insurance premium"
+
+#~ msgid "每月（持 ARC 加保後）"
+#~ msgstr "Monthly (after adding insurance with ARC)"
+
+#~ msgid "約 NT$749"
+#~ msgstr "About NT$749"
+
+#~ msgid "在台超過 4 個月須加保"
+#~ msgstr ""
+#~ "If you stay in Taiwan for more than 4 months, you must purchase insurance"
+
+#~ msgid "申請時程建議（學士班僑生為例）"
+#~ msgstr ""
+#~ "Suggested application schedule (for overseas Chinese students in bachelor’s "
+#~ "degree program as an example)"
+
+#~ msgid "了解申請資訊與準備文件"
+#~ msgstr "Understand application information and prepare documents"
+
+#~ msgid "前往海聯會官網確認當年度招生簡章，了解各學制申請資格、需備文件及時程。同時確認學歷文件（成績單、畢業證書）是否需要公認證。"
+#~ msgstr ""
+#~ "Go to the official website of the Overseas Alliance to confirm the current "
+#~ "year's admissions brochure and learn about the application qualifications, "
+#~ "required documents and schedule for each academic system. Also confirm "
+#~ "whether academic documents (transcripts, graduation certificates) require "
+#~ "notarization."
+
+#~ msgid "每年 10 月～12 月"
+#~ msgstr "Every year from October to December"
+
+#~ msgid "準備學歷文件"
+#~ msgstr "Prepare academic documents"
+
+#~ msgid "向當地承辦窗口取得申請表"
+#~ msgstr "Obtain the application form from the local hosting window"
+
+#~ msgid "聯繫所在地區的海聯會承辦窗口（如馬來西亞留台同學會、緬甸華校教師會等），取得當年度申請表及相關說明，確認繳件方式（線上 / 郵寄）。"
+#~ msgstr ""
+#~ "Contact the organizer of the Overseas Alliance in your region (such as the "
+#~ "Malaysian Alumni Association in Taiwan, Myanmar Chinese School Teachers "
+#~ "Association, etc.) to obtain the current year's application form and "
+#~ "relevant instructions, and confirm the payment method (online/mail)."
+
+#~ msgid "每年 1 月"
+#~ msgstr "every January"
+
+#~ msgid "提早聯繫避免遺漏"
+#~ msgstr "Contact early to avoid missing out"
+
+#~ msgid "線上報名並繳交備審資料"
+#~ msgstr "Register online and submit application materials"
+
+#~ msgid "至海聯會網路報名系統填寫志願序（可填多個志願），並上傳或郵寄所需文件（成績單、護照、照片等）。確認申請費繳納方式。"
+#~ msgstr ""
+#~ "Fill in the application form (you can fill in multiple applications) in the "
+#~ "Overseas Alliance online registration system, and upload or mail the "
+#~ "required documents (transcripts, passports, photos, etc.). Confirm how to "
+#~ "pay the application fee."
+
+#~ msgid "每年 1 月～3 月"
+#~ msgstr "January to March every year"
+
+#~ msgid "備審文件繳交"
+#~ msgstr "Submission of documents for review"
+
+#~ msgid "等待審查結果與放榜"
+#~ msgstr "Waiting for review results and release of rankings"
+
+#~ msgid "申請截止後由海聯會及各校審查。通常於每年 5～6 月公告錄取結果。請密切注意海聯會官網及承辦窗口通知。"
+#~ msgstr ""
+#~ "Applications will be reviewed by the AIS and each school after the deadline."
+#~ " Admission results are usually announced from May to June every year. Please"
+#~ " pay close attention to the official website of the Overseas Alliance and "
+#~ "the notification from the hosting window."
+
+#~ msgid "每年 5 月～6 月"
+#~ msgstr "May to June every year"
+
+#~ msgid "確認志願並辦理赴台簽證"
+#~ msgstr "Confirm your intention and apply for a visa to Taiwan"
+
+#~ msgid "收到錄取通知後，依指定期限確認接受錄取。向台灣駐外機構（如台北經濟文化辦事處）申請學生居留簽證（Resident Visa）。"
+#~ msgstr ""
+#~ "After receiving the admission notice, confirm acceptance according to the "
+#~ "specified deadline. Apply for a student residence visa (Resident Visa) from "
+#~ "Taiwan’s overseas missions (such as the Taipei Economic and Cultural "
+#~ "Office)."
+
+#~ msgid "每年 6 月～7 月"
+#~ msgstr "June to July every year"
+
+#~ msgid "辦理學生居留簽"
+#~ msgstr "Apply for student residence visa"
+
+#~ msgid "抵台入學報到"
+#~ msgstr "Arrive in Taiwan and register for admission"
+
+#~ msgid "（外國籍學生）"
+#~ msgstr "(Foreign student)"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "Enter your question, and the system will organize suggestions based on your "
 #~ "identity and status."
-=======
-#~ msgid "（香港、澳門學生）"
-#~ msgstr "(Hong Kong/Macau student)"
->>>>>>> 623704c0201826bc6938107e54ae8baadc8dc728
