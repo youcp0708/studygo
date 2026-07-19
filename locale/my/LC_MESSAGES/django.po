@@ -7332,40 +7332,43 @@ msgstr "နိုင်ငံတကာရေးရာဌာန (OIA)"
 
 #: .\guides\templates\guides\guide_scholarship.html:27
 msgid "僑生專屬獎學金申請入口，電話：03-425-4945"
-msgstr ""
+msgstr "တိုင်းရင်းသားကျောင်းသားများအတွက် ပညာသင်ဆုပေါ်တယ် ဖုန်း: 03-425-4945"
 
 #: .\guides\templates\guides\guide_scholarship.html:31
 msgid "僑委會獎學金系統"
-msgstr ""
+msgstr "OCAC ပညာသင်ဆုစနစ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:36
 msgid "NCU Portal 獎助學金系統"
-msgstr ""
+msgstr "NCU Portal ပညာသင်ဆုစနစ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:37
 msgid "校內各項獎學金 / 校外獎學金公告"
-msgstr ""
+msgstr "ကျောင်းတွင်းပညာသင်ဆုများ / ကျောင်းပြင်ပပညာသင်ဆုကြေညာချက်"
 
 #: .\guides\templates\guides\guide_scholarship.html:42
 msgid "清寒補助（僑生）"
-msgstr ""
+msgstr "ဘဏ္ဍာရေးအခက်အခဲထောက်ပံ့ကြေး (တိုင်းရင်းသားကျောင်းသားများ)"
 
 #: .\guides\templates\guides\guide_scholarship.html:45
 msgid "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
 msgstr ""
+"လျှောက်ထားသည့်ကာလ: နှစ်ဝက်ပါသင်ကြားရေးကာလ စတင်ပြီးနောက် ကြေညာမည်။ ပထမနှစ်ဝက်"
+" ၉/၁–၉/၂၅ ဝန်းကျင်၊ ဒုတိယနှစ်ဝက် ၂/၁–၃/၂ ဝန်းကျင်။ "
+"သတ်မှတ်ရက်ကျော်လွန်သည့်လျှောက်လွှာ လက်မခံ။"
 
 #: .\guides\templates\guides\guide_scholarship.html:53
 #: .\guides\templates\guides\guide_scholarship.html:182
 #: .\guides\templates\guides\guide_scholarship.html:282
 msgid "名稱"
-msgstr ""
+msgstr "အမည်"
 
 #: .\guides\templates\guides\guide_scholarship.html:54
 #: .\guides\templates\guides\guide_scholarship.html:183
 #: .\guides\templates\guides\guide_scholarship.html:236
 #: .\guides\templates\guides\guide_scholarship.html:283
 msgid "金額"
-msgstr ""
+msgstr "ပမာဏ"
 
 #: .\guides\templates\guides\guide_scholarship.html:55
 #| msgid "期間"
@@ -7386,55 +7389,65 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:63
 msgid "1 學年（9 月至翌年 8 月）"
-msgstr ""
+msgstr "တစ်ပညာသင်နှစ် (စက်တင်ဘာမှ နောက်နှစ်ဩဂုတ်)"
 
 #: .\guides\templates\guides\guide_scholarship.html:64
 msgid "每學年重新申請，可連續領取"
-msgstr ""
+msgstr "တစ်ပညာသင်နှစ်တိုင်း ပြန်လျှောက်ရမည်၊ ဆက်တိုက်ရရှိနိုင်သည်"
 
 #: .\guides\templates\guides\guide_scholarship.html:67
 msgid "僑委會清寒僑生助學金"
-msgstr ""
+msgstr "OCAC ဘဏ္ဍာရေးအခက်အခဲရှိသော တိုင်းရင်းသားကျောင်းသား ထောက်ပံ့ကြေး"
 
 #: .\guides\templates\guides\guide_scholarship.html:68
 msgid "依僑委會公告（每學期）"
-msgstr ""
+msgstr "OCAC ကြေညာချက်အတိုင်း (တစ်နှစ်ဝက်တိုင်း)"
 
 #: .\guides\templates\guides\guide_scholarship.html:69
 msgid "1 學期"
-msgstr ""
+msgstr "တစ်နှစ်ဝက်"
 
 #: .\guides\templates\guides\guide_scholarship.html:70
 msgid "需完成 10 小時服務學習（OIA，10–11 月 / 4–5 月）"
-msgstr ""
+msgstr "ဝန်ဆောင်မှုသင်ယူမှု ၁၀ နာရီ ပြီးစီးရမည် (OIA, ၁၀–၁၁ လ / ၄–၅ လ)"
 
 #: .\guides\templates\guides\guide_scholarship.html:77
 msgid "須為依僑生回國就學辦法入學的僑生"
 msgstr ""
+"တိုင်းရင်းသားကျောင်းသားများ ပြန်လာ‌ပညာသင်ရေးဥပဒေအရ "
+"ဝင်ရောက်သောကျောင်းသားဖြစ်ရမည်"
 
 #: .\guides\templates\guides\guide_scholarship.html:78
 msgid "前學期成績及格，操行成績 80 分以上"
-msgstr ""
+msgstr "ယခင်နှစ်ဝက်သင်ကြားရေး အောင်မြင်ရမည်၊ စည်းကမ်းကျင့်ဝတ်ရမှတ် ၈၀+"
 
 #: .\guides\templates\guides\guide_scholarship.html:79
 msgid "需持有「i 僑卡」，否則無法撥款"
-msgstr ""
+msgstr "\"i-Overseas Card\" ရှိရမည်; မပါက ငွေလွှဲ၍မရ"
 
 #: .\guides\templates\guides\guide_scholarship.html:80
 msgid "不得同時領取其他政府清寒補助或學費減免（不得重複領取）"
 msgstr ""
+"အခြားအစိုးရဘဏ္ဍာရေးထောက်ပံ့ကြေး သို့မဟုတ် နှစ်ဆပေးငွေနှင့် တပြိုင်နက်ရရှိ၍မရ"
 
 #: .\guides\templates\guides\guide_scholarship.html:81
 msgid "所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學生證 / 護照 / ARC / 郵局存摺影本"
 msgstr ""
+"လိုအပ်သောစာရွက်စာတမ်းများ: လျှောက်လွှာ + ဘဏ္ဍာရေးအခက်အခဲမှတ်တမ်း၊ "
+"ဘဏ္ဍာရေးအခက်အခဲအသိအမှတ်ပြုလက်မှတ်မူရင်း (နိုင်ငံမှ ထုတ်ပေးသည်)၊ "
+"ရမှတ်မှတ်တမ်း၊ ကိုယ်တိုင်ရေးသားသောအတ္ထုပ္ပတ္တိ၊ ကျောင်းသားမှတ်ပုံတင် / "
+"နိုင်ငံကူးလက်မှတ် / ARC / စာတိုက်ဘဏ်စာအုပ်မိတ္တူ"
 
 #: .\guides\templates\guides\guide_scholarship.html:86
 msgid "僑委會新生入學獎學金"
-msgstr ""
+msgstr "OCAC သစ်လွင်သောကျောင်းသားဝင်ရောက်မှုပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:89
 msgid "以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。"
 msgstr ""
+"အောက်ပါအရည်အချင်းသည် OCAC လမ်းကြောင်းဖြင့် "
+"ဝင်ရောက်သောကျောင်းသားသစ်များအတွက်ဖြစ်သည်။ ကျောင်းဝင်ခွင့်မတိုင်မီ "
+"နိုင်ငံခြားရုံးမှ အကြံပြုလျှောက်ထားသည်။"
 
 #: .\guides\templates\guides\guide_scholarship.html:97
 #| msgid "等第"
@@ -7443,33 +7456,33 @@ msgstr "အဆင့်"
 
 #: .\guides\templates\guides\guide_scholarship.html:98
 msgid "年額"
-msgstr ""
+msgstr "နှစ်စဉ်ပမာဏ"
 
 #: .\guides\templates\guides\guide_scholarship.html:99
 #| msgid "申請資格（年級）"
 msgid "申請資格（成績）"
-msgstr "အရည်အချင်း (နှစ်အဆင့်အလိုက်)"
+msgstr "လျှောက်ထားရမည့်အရည်အချင်း (ရမှတ်)"
 
 #: .\guides\templates\guides\guide_scholarship.html:100
 msgid "續領條件"
-msgstr ""
+msgstr "သက်တမ်းတိုးရမည့်အခြေအနေ"
 
 #: .\guides\templates\guides\guide_scholarship.html:101
 msgid "年限"
-msgstr ""
+msgstr "နှစ်ကန့်သတ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:106
 msgid "頂尖"
-msgstr ""
+msgstr "ထိပ်ဆုံး"
 
 #: .\guides\templates\guides\guide_scholarship.html:108
 #, python-format
 msgid "88 分以上或班排前 5%%"
-msgstr ""
+msgstr "၈၈+ သို့မဟုတ် အတန်းထဲတွင် ထိပ်ဆုံး ၅%"
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
-msgstr ""
+msgstr "၈၅+ သို့မဟုတ် A အဆင့်"
 
 #: .\guides\templates\guides\guide_scholarship.html:110
 #: .\guides\templates\guides\guide_scholarship.html:117
@@ -7477,28 +7490,28 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:163
 #| msgid "1 年"
 msgid "4 年"
-msgstr "၁ နှစ်"
+msgstr "၄ နှစ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:113
 msgid "傑出"
-msgstr ""
+msgstr "ထူးချွန်"
 
 #: .\guides\templates\guides\guide_scholarship.html:115
 #, python-format
 msgid "85 分以上或班排前 10%%"
-msgstr ""
+msgstr "၈၅+ သို့မဟုတ် အတန်းထဲတွင် ထိပ်ဆုံး ၁၀%"
 
 #: .\guides\templates\guides\guide_scholarship.html:116
 msgid "80 分以上或 A- 等"
-msgstr ""
+msgstr "၈၀+ သို့မဟုတ် A- အဆင့်"
 
 #: .\guides\templates\guides\guide_scholarship.html:123
 msgid "操行成績 80 分以上，每學期最少 9 學分"
-msgstr ""
+msgstr "စည်းကမ်းကျင့်ဝတ်ရမှတ် ၈၀+၊ တစ်နှစ်ဝက်လျှင် အနည်းဆုံး ၉ ခရက်ဒစ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:124
 msgid "不得同時領取其他政府獎學金"
-msgstr ""
+msgstr "အခြားအစိုးရပညာသင်ဆုနှင့် တပြိုင်နက်ရရှိ၍မရ"
 
 #: .\guides\templates\guides\guide_scholarship.html:129
 #| msgid "教育部臺灣獎學金"
@@ -7508,6 +7521,10 @@ msgstr "ပညာရေးဝန်ကြီးဌာန ထိုင်ဝမ�
 #: .\guides\templates\guides\guide_scholarship.html:132
 msgid "台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居身分的僑生，香港澳門生亦不適用。"
 msgstr ""
+"ထိုင်ဝမ်ပညာသင်ဆုသည် \"နိုင်ငံခြားသား\" ကျောင်းသားများ "
+"(ဗီဇာကင်းလွတ်ခွင့်ရသူများအပါအဝင်) အတွက်သာဖြစ်သည်။ ROC နိုင်ငံသား သို့မဟုတ် "
+"တိုင်းရင်းသားအဆင့်ရှိသောကျောင်းသားများနှင့် "
+"ဟောင်ကောင်/မကာအိုကျောင်းသားများသည် မသက်ဆိုင်ပါ။"
 
 #: .\guides\templates\guides\guide_scholarship.html:140
 #| msgid "計學分"
@@ -7516,15 +7533,15 @@ msgstr "ခရက်ဒစ်တွက်သည်"
 
 #: .\guides\templates\guides\guide_scholarship.html:141
 msgid "每月生活費"
-msgstr ""
+msgstr "လစဉ်နေထိုင်ရေးစရိတ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:142
 msgid "學費補助"
-msgstr ""
+msgstr "ကျောင်းလခအထောက်အကူ"
 
 #: .\guides\templates\guides\guide_scholarship.html:143
 msgid "最長年限"
-msgstr ""
+msgstr "အများဆုံးကာလ"
 
 #: .\guides\templates\guides\guide_scholarship.html:148
 #| msgid "學士班"
@@ -7535,7 +7552,7 @@ msgstr "တက္ကသိုလ်ဘွဲ့"
 #: .\guides\templates\guides\guide_scholarship.html:156
 #: .\guides\templates\guides\guide_scholarship.html:162
 msgid "每學期最高 NT$40,000"
-msgstr ""
+msgstr "တစ်နှစ်ဝက်လျှင် အများဆုံး NT$40,000"
 
 #: .\guides\templates\guides\guide_scholarship.html:154
 #| msgid "碩士畢業"
@@ -7549,98 +7566,113 @@ msgstr "၁ နှစ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:160
 msgid "博士"
-msgstr ""
+msgstr "ဒေါက်တာဘွဲ့"
 
 #: .\guides\templates\guides\guide_scholarship.html:169
 msgid "申請期間：每年 2 月 1 日至 3 月 31 日，向所在國 TECO（台灣辦事處）申請"
 msgstr ""
+"လျှောက်ထားသည့်ကာလ: နှစ်တိုင်း ဖေဖော်ဝါရီ ၁ မှ မတ် ၃၁ ထိ၊ သင်၏နိုင်ငံရှိ TECO"
+" (ထိုင်ဝမ်ရုံး) တွင် လျှောက်ပါ"
 
 #: .\guides\templates\guides\guide_scholarship.html:170
 msgid "官方入口：taiwanscholarship.moe.gov.tw"
-msgstr ""
+msgstr "တရားဝင်ပေါ်တယ်: taiwanscholarship.moe.gov.tw"
 
 #: .\guides\templates\guides\guide_scholarship.html:175
 msgid "校內獎學金"
-msgstr ""
+msgstr "ကျောင်းတွင်းပညာသင်ဆုများ"
 
 #: .\guides\templates\guides\guide_scholarship.html:184
 msgid "主要對象 / 條件"
-msgstr ""
+msgstr "အဓိကပစ်မှတ် / အခြေအနေ"
 
 #: .\guides\templates\guides\guide_scholarship.html:189
 msgid "優秀學生獎學金"
-msgstr ""
+msgstr "ထူးချွန်သောကျောင်းသားပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:191
 msgid "競賽優異、發明專利、社務貢獻；需推薦信＋自傳，每學期申請"
 msgstr ""
+"ပြိုင်ပွဲမှ ထူးချွန်မှု၊ တီထွင်မှတ်ပုံတင်၊ ကျောင်းသားလှုပ်ရှားမှုများ; "
+"အကြံပြုစာ + ကိုယ်တိုင်ရေးသားသောအတ္ထုပ္ပတ္တိ လိုအပ်သည်၊ တစ်နှစ်ဝက်တိုင်း "
+"လျှောက်ပါ"
 
 #: .\guides\templates\guides\guide_scholarship.html:194
 msgid "勵學獎學金（清寒）"
-msgstr ""
+msgstr "ကြိုးစားသည့်ကျောင်းသားပညာသင်ဆု (ဘဏ္ဍာရေးအခက်အခဲ)"
 
 #: .\guides\templates\guides\guide_scholarship.html:195
 #: .\guides\templates\guides\guide_scholarship.html:248
 #: .\guides\templates\guides\guide_scholarship.html:291
 msgid "最高"
-msgstr ""
+msgstr "အများဆုံး"
 
 #: .\guides\templates\guides\guide_scholarship.html:196
 msgid "清寒優秀生，低收 / 單親家庭優先"
 msgstr ""
+"ဘဏ္ဍာရေးအခက်အခဲရှိသောထူးချွန်သောကျောင်းသားများ; ဝင်ငွေနည်းသောမိသားစု / "
+"မိဘတစ်ဦးတည်းရှိသောမိသားစုကို ဦးစားပေးမည်"
 
 #: .\guides\templates\guides\guide_scholarship.html:199
 msgid "學術成績優異榮譽榜"
-msgstr ""
+msgstr "ပညာရေးထူးချွန်မှု ဂုဏ်ထူးစာရင်း"
 
 #: .\guides\templates\guides\guide_scholarship.html:201
 #, python-format
 msgid "學期成績系排前 5%%，自動核發"
-msgstr ""
+msgstr "နှစ်ဝက်သင်ကြားရေးကာလတွင် ဌာနတွင်းထိပ်ဆုံး ၅%၊ အလိုအလျောက်ပေးသည်"
 
 #: .\guides\templates\guides\guide_scholarship.html:204
 msgid "傑出領導獎學金"
-msgstr ""
+msgstr "ထူးချွန်သောခေါင်းဆောင်မှုပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:206
 msgid "社團 / 自治會 / 宿委幹部或校外代表績效卓著"
 msgstr ""
+"ကလပ် / ကျောင်းသားကိုယ်ပိုင်အုပ်ချုပ်ရေး / အဆောင်ကော်မတီ အမှုဆောင် သို့မဟုတ် "
+"ကျောင်းပြင်ပကိုယ်စားလှယ်အဖြစ် ထူးချွန်သောအောင်မြင်မှု"
 
 #: .\guides\templates\guides\guide_scholarship.html:209
 msgid "羅家倫先生紀念獎學金"
-msgstr ""
+msgstr "Mr. Luo Jialun အမှတ်တရပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr ""
+"ဒုတိယနှစ်ကျောင်းသားနှင့်အထက် သို့မဟုတ် မဟာဘွဲ့ကျောင်းသား; "
+"ဘဏ္ဍာရေးအခက်အခဲရှိသောထူးချွန်မှု"
 
 #: .\guides\templates\guides\guide_scholarship.html:214
 msgid "李國鼎紀念獎學金"
-msgstr ""
+msgstr "Li Kuo-ting အမှတ်တရပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:216
 msgid "大二以上；清寒"
-msgstr ""
+msgstr "ဒုတိယနှစ်ကျောင်းသားနှင့်အထက်; ဘဏ္ဍာရေးအခက်အခဲ"
 
 #: .\guides\templates\guides\guide_scholarship.html:222
 msgid "完整校內獎學金清單及申請時間：NCU Portal → 獎助學金暨工讀管理系統，或查"
 msgstr ""
+"ကျောင်းတွင်းပညာသင်ဆုစာရင်းနှင့် အချိန်ဇယားအပြည့်: NCU Portal → ပညာသင်ဆုနှင့်"
+" ပညာသင်အလုပ်စီမံခန့်ခွဲရေးစနစ်၊ သို့မဟုတ် စစ်ဆေးပါ"
 
 #: .\guides\templates\guides\guide_scholarship.html:223
 msgid "軍訓室獎學金頁 ↗"
-msgstr ""
+msgstr "စစ်ရေးလေ့ကျင့်ရေးရုံးပညာသင်ဆုစာမျက်နှာ ↗"
 
 #: .\guides\templates\guides\guide_scholarship.html:228
 msgid "安心就學支持計劃（需申請，學務處辦理）"
 msgstr ""
+"လုံခြုံစွာပညာသင်ကြားရေးပံ့ပိုးမှုအစီအစဉ် (လျှောက်ထားရမည်၊ "
+"ကျောင်းသားရေးရာရုံး)"
 
 #: .\guides\templates\guides\guide_scholarship.html:237
 msgid "條件摘要"
-msgstr ""
+msgstr "အခြေအနေအကျဉ်းချုပ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:242
 msgid "安心學習助學金"
-msgstr ""
+msgstr "လုံခြုံစွာသင်ယူမှုထောက်ပံ့ကြေး"
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
@@ -7651,62 +7683,67 @@ msgstr "စာသင်ချိန်တိုင်း"
 #: .\guides\templates\guides\guide_scholarship.html:244
 msgid "低 / 中低收入或特殊情況；需學習計畫＋3 場活動＋2 次導師面談"
 msgstr ""
+"ဝင်ငွေနည်း / အလယ်အလတ်နည်းသော သို့မဟုတ် အထူးအခြေအနေ; သင်ကြားရေးအစီအစဉ် + "
+"လှုပ်ရှားမှု ၃ ခု + ဆရာ ၂ ကြိမ်တွေ့ဆုံမှု လိုအပ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:247
 msgid "競賽拔尖獎勵金"
-msgstr ""
+msgstr "ပြိုင်ပွဲထူးချွန်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:249
 msgid "國內外競賽獲獎"
-msgstr ""
+msgstr "ပြည်တွင်းပြည်ပပြိုင်ပွဲများတွင် ဆုရရှိမှု"
 
 #: .\guides\templates\guides\guide_scholarship.html:252
 msgid "外語檢定認證助學金"
-msgstr ""
+msgstr "နိုင်ငံခြားဘာသာစကားသက်သေခံလက်မှတ်ထောက်ပံ့ကြေး"
 
 #: .\guides\templates\guides\guide_scholarship.html:254
 msgid "英語最高 NT$10,000；日文 / 法文 / 德文最高 NT$6,000，每學年 1 次"
 msgstr ""
+"အင်္ဂလိပ်ဘာသာ အများဆုံး NT$10,000; ဂျပန်/ပြင်သစ်/ဂျာမန် အများဆုံး NT$6,000, "
+"တစ်ပညာသင်နှစ်လျှင် တစ်ကြိမ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:257
 msgid "實習獎勵金"
-msgstr ""
+msgstr "အလုပ်သင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:259
 msgid "140 小時以上實習，成績 85 分以上"
-msgstr ""
+msgstr "အလုပ်သင် ၁၄၀+ နာရီ၊ ရမှတ် ၈၅+"
 
 #: .\guides\templates\guides\guide_scholarship.html:262
 msgid "宿舍學習助學金"
-msgstr ""
+msgstr "အဆောင်သင်ကြားရေးထောက်ပံ့ကြေး"
 
 #: .\guides\templates\guides\guide_scholarship.html:263
 msgid "時，最高"
-msgstr ""
+msgstr "နာရီ၊ အများဆုံး"
 
 #: .\guides\templates\guides\guide_scholarship.html:264
 msgid "宿舍活動參與"
-msgstr ""
+msgstr "အဆောင်လှုပ်ရှားမှုများတွင် ပါဝင်မှု"
 
 #: .\guides\templates\guides\guide_scholarship.html:270
 msgid "申請入口：NCU ALC 安心就學頁面（ncu.edu.tw/ALC/）"
 msgstr ""
+"လျှောက်ထားသည့်ပေါ်တယ်: NCU ALC Secure Study စာမျက်နှာ (ncu.edu.tw/ALC/)"
 
 #: .\guides\templates\guides\guide_scholarship.html:275
 msgid "校外獎學金（精選）"
-msgstr ""
+msgstr "ကျောင်းပြင်ပပညာသင်ဆုများ (ရွေးချယ်ထားသော)"
 
 #: .\guides\templates\guides\guide_scholarship.html:284
 msgid "申請期間（約）"
-msgstr ""
+msgstr "လျှောက်ထားသည့်ကာလ (ခန့်မှန်း)"
 
 #: .\guides\templates\guides\guide_scholarship.html:285
 msgid "主要條件"
-msgstr ""
+msgstr "အဓိကအခြေအနေ"
 
 #: .\guides\templates\guides\guide_scholarship.html:290
 msgid "行天宮獎學金"
-msgstr ""
+msgstr "Xingtian ဘုရားကျောင်းပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:291
 #| msgid "1 年"
@@ -7715,15 +7752,17 @@ msgstr "၁ နှစ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:292
 msgid "上學期 9/30、下學期 3/10"
-msgstr ""
+msgstr "ပထမနှစ်ဝက် ၉/၃၀၊ ဒုတိယနှစ်ဝက် ၃/၁၀"
 
 #: .\guides\templates\guides\guide_scholarship.html:293
 msgid "大二以上；成績 80+；操行 A；清寒優先"
 msgstr ""
+"ဒုတိယနှစ်ကျောင်းသားနှင့်အထက်; ရမှတ် ၈၀+; စည်းကမ်းကျင့်ဝတ် A; "
+"ဘဏ္ဍာရေးအခက်အခဲဦးစားပေး"
 
 #: .\guides\templates\guides\guide_scholarship.html:296
 msgid "孺鴻教育獎學金"
-msgstr ""
+msgstr "Ruhong ပညာရေးပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:298
 #| msgid "約每年 3 月"
@@ -7732,48 +7771,52 @@ msgstr "ခန့်မှန်းခြေအားဖြင့် နှစ�
 
 #: .\guides\templates\guides\guide_scholarship.html:299
 msgid "成績 80+；GEPT 中級；操行 80+"
-msgstr ""
+msgstr "ရမှတ် ၈၀+; GEPT အလယ်အဆင့်; စည်းကမ်းကျင့်ဝတ် ၈၀+"
 
 #: .\guides\templates\guides\guide_scholarship.html:302
 msgid "平安菁英教育基金會"
-msgstr ""
+msgstr "Ping An ထူးချွန်ပညာရေးကူညီပံ့ပိုးမှုဖောင်ဒေးရှင်း"
 
 #: .\guides\templates\guides\guide_scholarship.html:304
 msgid "2/12 – 3/5"
-msgstr ""
+msgstr "၂/၁၂ – ၃/၅"
 
 #: .\guides\templates\guides\guide_scholarship.html:305
 #, python-format
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%%"
 msgstr ""
+"မိသားစုနှစ်စဉ်ဝင်ငွေ ≤ NT$900,000; ရမှတ် ၈၀+ သို့မဟုတ် အတန်းထဲတွင် ထိပ်ဆုံး "
+"၄၀%"
 
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
-msgstr ""
+msgstr "Taiwan Cooperative Bank သုတေသနပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
-msgstr ""
+msgstr "၁/၁၃ – ၅/၅"
 
 #: .\guides\templates\guides\guide_scholarship.html:311
 msgid "大四或研究生；成績 80+"
-msgstr ""
+msgstr "စတုတ္ထနှစ် သို့မဟုတ် မဟာဘွဲ့ကျောင်းသား; ရမှတ် ၈၀+"
 
 #: .\guides\templates\guides\guide_scholarship.html:314
 msgid "關渡宮助學金"
-msgstr ""
+msgstr "Guandu ဘုရားကျောင်းထောက်ပံ့ကြေး"
 
 #: .\guides\templates\guides\guide_scholarship.html:316
 msgid "2/10 – 3/17"
-msgstr ""
+msgstr "၂/၁၀ – ၃/၁၇"
 
 #: .\guides\templates\guides\guide_scholarship.html:317
 msgid "低 / 中低收入或身心障礙；成績 65+"
-msgstr ""
+msgstr "ဝင်ငွေနည်း / အလယ်အလတ်နည်း သို့မဟုတ် မသန်မစွမ်း; ရမှတ် ၆၅+"
 
 #: .\guides\templates\guides\guide_scholarship.html:323
 msgid "每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期查看"
 msgstr ""
+"တစ်နှစ်ဝက်တိုင်း ကျောင်းပွင့်ပြီးနောက် ကျောင်းသားရေးရာရုံးမှ NCU Portal တွင်"
+" ကျောင်းပြင်ပပညာသင်ဆုစာရင်းကြေညာမည်။ ပုံမှန်စစ်ဆေးပါ။"
 
 #: .\guides\templates\guides\guide_scholarship.html:328
 #| msgid "重要提醒："
@@ -7782,39 +7825,51 @@ msgstr "အရေးကြီးသတိပေးချက်"
 
 #: .\guides\templates\guides\guide_scholarship.html:331
 msgid "不得重複領取"
-msgstr ""
+msgstr "နှစ်ဆမရရှိရ"
 
 #: .\guides\templates\guides\guide_scholarship.html:332
 msgid "教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再申請。"
 msgstr ""
+"ပညာရေးဝန်ကြီးဌာနနှင့် OCAC ဘဏ္ဍာရေးထောက်ပံ့ကြေးကို တပြိုင်နက်ရရှိ၍မရ၊ "
+"အစိုးရကျောင်းလခကင်းလွတ်ခွင့်နှင့်လည်း အတူတကွမရ။ လျှောက်မတင်မီ သေချာစစ်ဆေးပါ။"
 
 #: .\guides\templates\guides\guide_scholarship.html:335
 msgid "僑卡必備"
-msgstr ""
+msgstr "\"i-Overseas Card\" မဖြစ်မနေလိုအပ်သည်"
 
 #: .\guides\templates\guides\guide_scholarship.html:336
 msgid "申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。"
 msgstr ""
+"အစိုးရပညာသင်ဆု သို့မဟုတ် ထောက်ပံ့ကြေးတစ်ခုကို မလျှောက်မီ \"i-Overseas Card\""
+" ကို ဦးစွာလျှောက်ရမည်; မဟုတ်ပါက ငွေလွှဲ၍မရ။ နှစ်ဝက်ပထမကာလတွင် ဆောင်ရွက်ပါ။"
 
 #: .\guides\templates\guides\guide_scholarship.html:339
 msgid "清寒證明須原件"
-msgstr ""
+msgstr "ဘဏ္ဍာရေးအခက်အခဲသက်သေခံလက်မှတ်မူရင်းဖြစ်ရမည်"
 
 #: .\guides\templates\guides\guide_scholarship.html:340
 msgid "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
 msgstr ""
+"ထောက်ပံ့ကြေးအတွက် လိုအပ်သော \"ဘဏ္ဍာရေးအခက်အခဲသက်သေခံလက်မှတ်\" ကို "
+"မူလနိုင်ငံမှ ဌာနမှ ထုတ်ပေးပြီး မူရင်းတင်ပြရမည်။ မိတ္တူ သို့မဟုတ် ဓာတ်ပုံ "
+"လက်မခံ။"
 
 #: .\guides\templates\guides\guide_scholarship.html:343
 msgid "留意截止日"
-msgstr ""
+msgstr "သတ်မှတ်ရက်ကို သတိထားပါ"
 
 #: .\guides\templates\guides\guide_scholarship.html:344
 msgid "多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提早準備文件。"
 msgstr ""
+"ပညာသင်ဆုသတ်မှတ်ရက်အများစုသည် တင်းကြပ်သည်။ OIA သတ်မှတ်ရက်မှာ တစ်နှစ်ဝက်တိုင်း"
+" ၉/၂၅ (ပထမ) / ၃/၂ (ဒုတိယ) ဝန်းကျင်ဖြစ်သည်။ သတ်မှတ်ရက်ကျော်ပြီးမှ လက်မခံ။ "
+"စာရွက်စာတမ်းများကို ကြိုတင်ပြင်ဆင်ပါ။"
 
 #: .\guides\templates\guides\guide_scholarship.html:349
 msgid "NCU 國際事務處：+886-3-425-4945｜僑生獎助學金相關業務洽 OIA 辦理"
 msgstr ""
+"NCU နိုင်ငံတကာရေးရာရုံး: +886-3-425-4945 | "
+"တိုင်းရင်းသားကျောင်းသားပညာသင်ဆုများအတွက် OIA သို့ဆက်သွယ်ပါ"
 
 #: .\guides\templates\guides\guide_search.html:22
 msgid "搜尋所有指南內容..."
@@ -12982,6 +13037,20 @@ msgstr "ရောက်ရှိပြီး ၃၀ ရက်အတွင်း"
 
 msgid "🇭🇰 香港・🇲🇴 澳門 學生專區"
 msgstr "🇭🇰 ဟောင်ကောင် · 🇲🇴 မကာအို ကျောင်းသားဇုန်"
+
+msgid "88 分以上或班排前 5%"
+msgstr "၈၈+ သို့မဟုတ် အတန်းထဲတွင် ထိပ်ဆုံး ၅%"
+
+msgid "85 分以上或班排前 10%"
+msgstr "၈၅+ သို့မဟုတ် အတန်းထဲတွင် ထိပ်ဆုံး ၁၀%"
+
+msgid "學期成績系排前 5%，自動核發"
+msgstr "နှစ်ဝက်သင်ကြားရေးကာလတွင် ဌာနတွင်းထိပ်ဆုံး ၅%၊ အလိုအလျောက်ပေးသည်"
+
+msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%"
+msgstr ""
+"မိသားစုနှစ်စဉ်ဝင်ငွေ ≤ NT$900,000; ရမှတ် ၈၀+ သို့မဟုတ် အတန်းထဲတွင် ထိပ်ဆုံး "
+"၄၀%"
 
 #~ msgid "資訊管理"
 #~ msgstr "သတင်းအချက်အလက် စီမံခန့်ခွဲမှု"

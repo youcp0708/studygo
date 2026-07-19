@@ -7636,40 +7636,40 @@ msgstr "국제처 (OIA)"
 
 #: .\guides\templates\guides\guide_scholarship.html:27
 msgid "僑生專屬獎學金申請入口，電話：03-425-4945"
-msgstr ""
+msgstr "화교 학생 전용 장학금 신청 포털, 전화: 03-425-4945"
 
 #: .\guides\templates\guides\guide_scholarship.html:31
 msgid "僑委會獎學金系統"
-msgstr ""
+msgstr "OCAC 장학금 시스템"
 
 #: .\guides\templates\guides\guide_scholarship.html:36
 msgid "NCU Portal 獎助學金系統"
-msgstr ""
+msgstr "NCU 포털 장학금 시스템"
 
 #: .\guides\templates\guides\guide_scholarship.html:37
 msgid "校內各項獎學金 / 校外獎學金公告"
-msgstr ""
+msgstr "교내 장학금 / 교외 장학금 공지"
 
 #: .\guides\templates\guides\guide_scholarship.html:42
 msgid "清寒補助（僑生）"
-msgstr ""
+msgstr "빈곤 지원금 (화교 학생)"
 
 #: .\guides\templates\guides\guide_scholarship.html:45
 msgid "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
-msgstr ""
+msgstr "신청 기간: 매 학기 개강 후 공지. 1학기 약 9/1–9/25, 2학기 약 2/1–3/2. 기한 초과 불수리."
 
 #: .\guides\templates\guides\guide_scholarship.html:53
 #: .\guides\templates\guides\guide_scholarship.html:182
 #: .\guides\templates\guides\guide_scholarship.html:282
 msgid "名稱"
-msgstr ""
+msgstr "이름"
 
 #: .\guides\templates\guides\guide_scholarship.html:54
 #: .\guides\templates\guides\guide_scholarship.html:183
 #: .\guides\templates\guides\guide_scholarship.html:236
 #: .\guides\templates\guides\guide_scholarship.html:283
 msgid "金額"
-msgstr ""
+msgstr "금액"
 
 #: .\guides\templates\guides\guide_scholarship.html:55
 #| msgid "期間"
@@ -7688,55 +7688,58 @@ msgstr "교육부：고등학교 이상 저소득 재외 화교 학생 장학금
 
 #: .\guides\templates\guides\guide_scholarship.html:63
 msgid "1 學年（9 月至翌年 8 月）"
-msgstr ""
+msgstr "1학년 (9월~다음 해 8월)"
 
 #: .\guides\templates\guides\guide_scholarship.html:64
 msgid "每學年重新申請，可連續領取"
-msgstr ""
+msgstr "매 학년 재신청, 연속 수령 가능"
 
 #: .\guides\templates\guides\guide_scholarship.html:67
 msgid "僑委會清寒僑生助學金"
-msgstr ""
+msgstr "OCAC 빈곤 화교 학생 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:68
 msgid "依僑委會公告（每學期）"
-msgstr ""
+msgstr "OCAC 공지에 따름 (매 학기)"
 
 #: .\guides\templates\guides\guide_scholarship.html:69
 msgid "1 學期"
-msgstr ""
+msgstr "1학기"
 
 #: .\guides\templates\guides\guide_scholarship.html:70
 msgid "需完成 10 小時服務學習（OIA，10–11 月 / 4–5 月）"
-msgstr ""
+msgstr "10시간 봉사학습 필수 완료 (OIA, 10–11월 / 4–5월)"
 
 #: .\guides\templates\guides\guide_scholarship.html:77
 msgid "須為依僑生回國就學辦法入學的僑生"
-msgstr ""
+msgstr "화교 학생 귀국 취학 규정에 따라 입학한 화교 학생이어야 함"
 
 #: .\guides\templates\guides\guide_scholarship.html:78
 msgid "前學期成績及格，操行成績 80 分以上"
-msgstr ""
+msgstr "전 학기 성적 합격, 품행 점수 80+"
 
 #: .\guides\templates\guides\guide_scholarship.html:79
 msgid "需持有「i 僑卡」，否則無法撥款"
-msgstr ""
+msgstr "\"i-해외동포 카드\" 소지 필수; 미소지 시 지급 불가"
 
 #: .\guides\templates\guides\guide_scholarship.html:80
 msgid "不得同時領取其他政府清寒補助或學費減免（不得重複領取）"
-msgstr ""
+msgstr "다른 정부 빈곤 지원금 또는 학비 감면과 동시 수령 불가 (중복 수령 금지)"
 
 #: .\guides\templates\guides\guide_scholarship.html:81
 msgid "所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學生證 / 護照 / ARC / 郵局存摺影本"
 msgstr ""
+"필요 서류: 신청서 + 빈곤 평가표, 빈곤 증명서 원본 (거주지 발급), 성적증명서, 자기소개서, 학생증 / 여권 / ARC / 우체국 "
+"통장 사본"
 
 #: .\guides\templates\guides\guide_scholarship.html:86
 msgid "僑委會新生入學獎學金"
-msgstr ""
+msgstr "OCAC 신입생 입학 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:89
 msgid "以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。"
 msgstr ""
+"다음 자격은 OCAC 채널로 입학한 신입생에게 적용됩니다. 입학 전 해외 공관에서 추천 신청하며, 대만 도착 후 자체 신청이 아닙니다."
 
 #: .\guides\templates\guides\guide_scholarship.html:97
 #| msgid "等第"
@@ -7745,33 +7748,33 @@ msgstr "등급"
 
 #: .\guides\templates\guides\guide_scholarship.html:98
 msgid "年額"
-msgstr ""
+msgstr "연간 금액"
 
 #: .\guides\templates\guides\guide_scholarship.html:99
 #| msgid "申請資格（年級）"
 msgid "申請資格（成績）"
-msgstr "신청 자격 (학년별)"
+msgstr "신청 자격 (성적)"
 
 #: .\guides\templates\guides\guide_scholarship.html:100
 msgid "續領條件"
-msgstr ""
+msgstr "갱신 조건"
 
 #: .\guides\templates\guides\guide_scholarship.html:101
 msgid "年限"
-msgstr ""
+msgstr "연한"
 
 #: .\guides\templates\guides\guide_scholarship.html:106
 msgid "頂尖"
-msgstr ""
+msgstr "최우수"
 
 #: .\guides\templates\guides\guide_scholarship.html:108
 #, python-format
 msgid "88 分以上或班排前 5%%"
-msgstr ""
+msgstr "88점 이상 또는 반 상위 5%"
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
-msgstr ""
+msgstr "85점 이상 또는 A 등급"
 
 #: .\guides\templates\guides\guide_scholarship.html:110
 #: .\guides\templates\guides\guide_scholarship.html:117
@@ -7779,28 +7782,28 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:163
 #| msgid "1 年"
 msgid "4 年"
-msgstr "1년"
+msgstr "4년"
 
 #: .\guides\templates\guides\guide_scholarship.html:113
 msgid "傑出"
-msgstr ""
+msgstr "우수"
 
 #: .\guides\templates\guides\guide_scholarship.html:115
 #, python-format
 msgid "85 分以上或班排前 10%%"
-msgstr ""
+msgstr "85점 이상 또는 반 상위 10%"
 
 #: .\guides\templates\guides\guide_scholarship.html:116
 msgid "80 分以上或 A- 等"
-msgstr ""
+msgstr "80점 이상 또는 A- 등급"
 
 #: .\guides\templates\guides\guide_scholarship.html:123
 msgid "操行成績 80 分以上，每學期最少 9 學分"
-msgstr ""
+msgstr "품행 점수 80+, 학기당 최소 9학점"
 
 #: .\guides\templates\guides\guide_scholarship.html:124
 msgid "不得同時領取其他政府獎學金"
-msgstr ""
+msgstr "다른 정부 장학금과 동시 수령 불가"
 
 #: .\guides\templates\guides\guide_scholarship.html:129
 #| msgid "教育部臺灣獎學金"
@@ -7810,6 +7813,8 @@ msgstr "교육부 대만 장학금"
 #: .\guides\templates\guides\guide_scholarship.html:132
 msgid "台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居身分的僑生，香港澳門生亦不適用。"
 msgstr ""
+"대만 장학금은 \"외국 국적\" 학생(무비자 외국인 포함)에게만 적용됩니다. ROC 국적 또는 화교 신분의 화교 학생이나 홍콩/마카오 "
+"학생에게는 적용되지 않습니다."
 
 #: .\guides\templates\guides\guide_scholarship.html:140
 #| msgid "計學分"
@@ -7818,15 +7823,15 @@ msgstr "학점 산입"
 
 #: .\guides\templates\guides\guide_scholarship.html:141
 msgid "每月生活費"
-msgstr ""
+msgstr "월 생활비"
 
 #: .\guides\templates\guides\guide_scholarship.html:142
 msgid "學費補助"
-msgstr ""
+msgstr "학비 보조"
 
 #: .\guides\templates\guides\guide_scholarship.html:143
 msgid "最長年限"
-msgstr ""
+msgstr "최대 기간"
 
 #: .\guides\templates\guides\guide_scholarship.html:148
 #| msgid "學士班"
@@ -7837,7 +7842,7 @@ msgstr "학사과"
 #: .\guides\templates\guides\guide_scholarship.html:156
 #: .\guides\templates\guides\guide_scholarship.html:162
 msgid "每學期最高 NT$40,000"
-msgstr ""
+msgstr "학기당 최대 NT$40,000"
 
 #: .\guides\templates\guides\guide_scholarship.html:154
 #| msgid "碩士畢業"
@@ -7851,98 +7856,98 @@ msgstr "1년"
 
 #: .\guides\templates\guides\guide_scholarship.html:160
 msgid "博士"
-msgstr ""
+msgstr "박사"
 
 #: .\guides\templates\guides\guide_scholarship.html:169
 msgid "申請期間：每年 2 月 1 日至 3 月 31 日，向所在國 TECO（台灣辦事處）申請"
-msgstr ""
+msgstr "신청 기간: 매년 2월 1일~3월 31일, 해당 국가 TECO (대만 사무소)에 신청"
 
 #: .\guides\templates\guides\guide_scholarship.html:170
 msgid "官方入口：taiwanscholarship.moe.gov.tw"
-msgstr ""
+msgstr "공식 포털: taiwanscholarship.moe.gov.tw"
 
 #: .\guides\templates\guides\guide_scholarship.html:175
 msgid "校內獎學金"
-msgstr ""
+msgstr "교내 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:184
 msgid "主要對象 / 條件"
-msgstr ""
+msgstr "주요 대상 / 조건"
 
 #: .\guides\templates\guides\guide_scholarship.html:189
 msgid "優秀學生獎學金"
-msgstr ""
+msgstr "우수 학생 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:191
 msgid "競賽優異、發明專利、社務貢獻；需推薦信＋自傳，每學期申請"
-msgstr ""
+msgstr "대회 우수, 발명 특허, 사회 기여; 추천서 + 자기소개서 필요, 매 학기 신청"
 
 #: .\guides\templates\guides\guide_scholarship.html:194
 msgid "勵學獎學金（清寒）"
-msgstr ""
+msgstr "근면 장학금 (빈곤)"
 
 #: .\guides\templates\guides\guide_scholarship.html:195
 #: .\guides\templates\guides\guide_scholarship.html:248
 #: .\guides\templates\guides\guide_scholarship.html:291
 msgid "最高"
-msgstr ""
+msgstr "최대"
 
 #: .\guides\templates\guides\guide_scholarship.html:196
 msgid "清寒優秀生，低收 / 單親家庭優先"
-msgstr ""
+msgstr "빈곤 우수 학생; 저소득 / 한부모 가정 우선"
 
 #: .\guides\templates\guides\guide_scholarship.html:199
 msgid "學術成績優異榮譽榜"
-msgstr ""
+msgstr "학업 우수 명예 명단"
 
 #: .\guides\templates\guides\guide_scholarship.html:201
 #, python-format
 msgid "學期成績系排前 5%%，自動核發"
-msgstr ""
+msgstr "학기 학과 성적 상위 5%, 자동 지급"
 
 #: .\guides\templates\guides\guide_scholarship.html:204
 msgid "傑出領導獎學金"
-msgstr ""
+msgstr "뛰어난 리더십 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:206
 msgid "社團 / 自治會 / 宿委幹部或校外代表績效卓著"
-msgstr ""
+msgstr "동아리 / 학생회 / 기숙사 위원회 간부 또는 교외 대표로서 탁월한 실적"
 
 #: .\guides\templates\guides\guide_scholarship.html:209
 msgid "羅家倫先生紀念獎學金"
-msgstr ""
+msgstr "뤄자룬 선생 기념 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
-msgstr ""
+msgstr "2학년 이상 또는 대학원생; 빈곤 우수생"
 
 #: .\guides\templates\guides\guide_scholarship.html:214
 msgid "李國鼎紀念獎學金"
-msgstr ""
+msgstr "이궈딩 기념 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:216
 msgid "大二以上；清寒"
-msgstr ""
+msgstr "2학년 이상; 빈곤"
 
 #: .\guides\templates\guides\guide_scholarship.html:222
 msgid "完整校內獎學金清單及申請時間：NCU Portal → 獎助學金暨工讀管理系統，或查"
-msgstr ""
+msgstr "교내 장학금 전체 목록 및 일정: NCU 포털 → 장학금 및 근로장학금 관리 시스템, 또는 확인"
 
 #: .\guides\templates\guides\guide_scholarship.html:223
 msgid "軍訓室獎學金頁 ↗"
-msgstr ""
+msgstr "군훈련실 장학금 페이지 ↗"
 
 #: .\guides\templates\guides\guide_scholarship.html:228
 msgid "安心就學支持計劃（需申請，學務處辦理）"
-msgstr ""
+msgstr "안심 취학 지원 프로그램 (신청 필요, 학생처 처리)"
 
 #: .\guides\templates\guides\guide_scholarship.html:237
 msgid "條件摘要"
-msgstr ""
+msgstr "조건 요약"
 
 #: .\guides\templates\guides\guide_scholarship.html:242
 msgid "安心學習助學金"
-msgstr ""
+msgstr "안심 학습 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
@@ -7952,63 +7957,63 @@ msgstr "학번"
 
 #: .\guides\templates\guides\guide_scholarship.html:244
 msgid "低 / 中低收入或特殊情況；需學習計畫＋3 場活動＋2 次導師面談"
-msgstr ""
+msgstr "저소득 / 중저소득 또는 특수 상황; 학습 계획 + 활동 3회 + 지도교수 면담 2회 필요"
 
 #: .\guides\templates\guides\guide_scholarship.html:247
 msgid "競賽拔尖獎勵金"
-msgstr ""
+msgstr "경연 우수상"
 
 #: .\guides\templates\guides\guide_scholarship.html:249
 msgid "國內外競賽獲獎"
-msgstr ""
+msgstr "국내외 대회 수상"
 
 #: .\guides\templates\guides\guide_scholarship.html:252
 msgid "外語檢定認證助學金"
-msgstr ""
+msgstr "외국어 자격증 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:254
 msgid "英語最高 NT$10,000；日文 / 法文 / 德文最高 NT$6,000，每學年 1 次"
-msgstr ""
+msgstr "영어 최대 NT$10,000; 일본어 / 프랑스어 / 독일어 최대 NT$6,000, 학년당 1회"
 
 #: .\guides\templates\guides\guide_scholarship.html:257
 msgid "實習獎勵金"
-msgstr ""
+msgstr "인턴십 장려금"
 
 #: .\guides\templates\guides\guide_scholarship.html:259
 msgid "140 小時以上實習，成績 85 分以上"
-msgstr ""
+msgstr "140시간 이상 인턴십, 성적 85+"
 
 #: .\guides\templates\guides\guide_scholarship.html:262
 msgid "宿舍學習助學金"
-msgstr ""
+msgstr "기숙사 학습 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:263
 msgid "時，最高"
-msgstr ""
+msgstr "시간, 최대"
 
 #: .\guides\templates\guides\guide_scholarship.html:264
 msgid "宿舍活動參與"
-msgstr ""
+msgstr "기숙사 활동 참여"
 
 #: .\guides\templates\guides\guide_scholarship.html:270
 msgid "申請入口：NCU ALC 安心就學頁面（ncu.edu.tw/ALC/）"
-msgstr ""
+msgstr "신청 포털: NCU ALC 안심 취학 페이지 (ncu.edu.tw/ALC/)"
 
 #: .\guides\templates\guides\guide_scholarship.html:275
 msgid "校外獎學金（精選）"
-msgstr ""
+msgstr "교외 장학금 (선별)"
 
 #: .\guides\templates\guides\guide_scholarship.html:284
 msgid "申請期間（約）"
-msgstr ""
+msgstr "신청 기간 (약)"
 
 #: .\guides\templates\guides\guide_scholarship.html:285
 msgid "主要條件"
-msgstr ""
+msgstr "주요 조건"
 
 #: .\guides\templates\guides\guide_scholarship.html:290
 msgid "行天宮獎學金"
-msgstr ""
+msgstr "싱톈궁 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:291
 #| msgid "1 年"
@@ -8017,15 +8022,15 @@ msgstr "1년"
 
 #: .\guides\templates\guides\guide_scholarship.html:292
 msgid "上學期 9/30、下學期 3/10"
-msgstr ""
+msgstr "1학기 9/30, 2학기 3/10"
 
 #: .\guides\templates\guides\guide_scholarship.html:293
 msgid "大二以上；成績 80+；操行 A；清寒優先"
-msgstr ""
+msgstr "2학년 이상; 성적 80+; 품행 A; 빈곤 우선"
 
 #: .\guides\templates\guides\guide_scholarship.html:296
 msgid "孺鴻教育獎學金"
-msgstr ""
+msgstr "루훙 교육 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:298
 #| msgid "約每年 3 月"
@@ -8034,48 +8039,48 @@ msgstr "매년 약 3월"
 
 #: .\guides\templates\guides\guide_scholarship.html:299
 msgid "成績 80+；GEPT 中級；操行 80+"
-msgstr ""
+msgstr "성적 80+; GEPT 중급; 품행 80+"
 
 #: .\guides\templates\guides\guide_scholarship.html:302
 msgid "平安菁英教育基金會"
-msgstr ""
+msgstr "핑안 엘리트 교육 재단"
 
 #: .\guides\templates\guides\guide_scholarship.html:304
 msgid "2/12 – 3/5"
-msgstr ""
+msgstr "2/12 – 3/5"
 
 #: .\guides\templates\guides\guide_scholarship.html:305
 #, python-format
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%%"
-msgstr ""
+msgstr "연간 가족 소득 ≤ NT$900,000; 성적 80+ 또는 반 상위 40%"
 
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
-msgstr ""
+msgstr "합작금고 연구 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
-msgstr ""
+msgstr "1/13 – 5/5"
 
 #: .\guides\templates\guides\guide_scholarship.html:311
 msgid "大四或研究生；成績 80+"
-msgstr ""
+msgstr "4학년 또는 대학원생; 성적 80+"
 
 #: .\guides\templates\guides\guide_scholarship.html:314
 msgid "關渡宮助學金"
-msgstr ""
+msgstr "관두궁 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:316
 msgid "2/10 – 3/17"
-msgstr ""
+msgstr "2/10 – 3/17"
 
 #: .\guides\templates\guides\guide_scholarship.html:317
 msgid "低 / 中低收入或身心障礙；成績 65+"
-msgstr ""
+msgstr "저소득 / 중저소득 또는 장애; 성적 65+"
 
 #: .\guides\templates\guides\guide_scholarship.html:323
 msgid "每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期查看"
-msgstr ""
+msgstr "매 학기 개강 후 학생처에서 NCU 포털에 해당 학기 신청 가능한 교외 장학금 목록을 공지합니다. 정기적으로 확인하세요."
 
 #: .\guides\templates\guides\guide_scholarship.html:328
 #| msgid "重要提醒："
@@ -8084,39 +8089,43 @@ msgstr "중요 안내:"
 
 #: .\guides\templates\guides\guide_scholarship.html:331
 msgid "不得重複領取"
-msgstr ""
+msgstr "중복 수령 금지"
 
 #: .\guides\templates\guides\guide_scholarship.html:332
 msgid "教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再申請。"
-msgstr ""
+msgstr "교육부와 OCAC 생활비 지원금은 동시에 받을 수 없으며, 다른 정부 학비 감면과도 병존 불가합니다. 신청 전에 확인하세요."
 
 #: .\guides\templates\guides\guide_scholarship.html:335
 msgid "僑卡必備"
-msgstr ""
+msgstr "i-해외동포 카드 필수"
 
 #: .\guides\templates\guides\guide_scholarship.html:336
 msgid "申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。"
 msgstr ""
+"정부 장학금 또는 지원금 신청 전에 반드시 \"i-해외동포 카드\"를 먼저 신청해야 합니다; 미신청 시 지급 불가. 개강 초에 "
+"처리하세요."
 
 #: .\guides\templates\guides\guide_scholarship.html:339
 msgid "清寒證明須原件"
-msgstr ""
+msgstr "빈곤 증명서는 원본이어야 함"
 
 #: .\guides\templates\guides\guide_scholarship.html:340
 msgid "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
-msgstr ""
+msgstr "지원금 신청에 필요한 \"빈곤 증명서\"는 출신 지역 기관이 발급한 원본을 제출해야 합니다. 사본이나 사진은 불수리."
 
 #: .\guides\templates\guides\guide_scholarship.html:343
 msgid "留意截止日"
-msgstr ""
+msgstr "마감일 주의"
 
 #: .\guides\templates\guides\guide_scholarship.html:344
 msgid "多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提早準備文件。"
 msgstr ""
+"대부분의 장학금 마감 기한은 엄격합니다. OIA 마감은 매 학기 약 9/25 (1학기) / 3/2 (2학기)입니다. 기한 초과 불수리. "
+"서류를 미리 준비하세요."
 
 #: .\guides\templates\guides\guide_scholarship.html:349
 msgid "NCU 國際事務處：+886-3-425-4945｜僑生獎助學金相關業務洽 OIA 辦理"
-msgstr ""
+msgstr "NCU 국제처: +886-3-425-4945 | 화교 학생 장학금 관련 업무는 OIA 문의"
 
 #: .\guides\templates\guides\guide_search.html:22
 msgid "搜尋所有指南內容..."
@@ -15979,6 +15988,18 @@ msgstr "입국 후 30일 이내"
 
 msgid "🇭🇰 香港・🇲🇴 澳門 學生專區"
 msgstr "🇭🇰 홍콩·🇲🇴 마카오 학생 구역"
+
+msgid "88 分以上或班排前 5%"
+msgstr "88점 이상 또는 반 상위 5%"
+
+msgid "85 分以上或班排前 10%"
+msgstr "85점 이상 또는 반 상위 10%"
+
+msgid "學期成績系排前 5%，自動核發"
+msgstr "학기 학과 성적 상위 5%, 자동 지급"
+
+msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%"
+msgstr "연간 가족 소득 ≤ NT$900,000; 성적 80+ 또는 반 상위 40%"
 
 #~ msgid "資訊管理"
 #~ msgstr "정보 관리"

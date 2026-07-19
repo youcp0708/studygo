@@ -7276,39 +7276,42 @@ msgstr "Pejabat Hal Ehwal Antarabangsa (OIA)"
 #: .\guides\templates\guides\guide_scholarship.html:27
 msgid "僑生專屬獎學金申請入口，電話：03-425-4945"
 msgstr ""
+"Portal biasiswa eksklusif untuk pelajar Cina perantau, Tel: 03-425-4945"
 
 #: .\guides\templates\guides\guide_scholarship.html:31
 msgid "僑委會獎學金系統"
-msgstr ""
+msgstr "Sistem Biasiswa OCAC"
 
 #: .\guides\templates\guides\guide_scholarship.html:36
 msgid "NCU Portal 獎助學金系統"
-msgstr ""
+msgstr "Sistem Biasiswa NCU Portal"
 
 #: .\guides\templates\guides\guide_scholarship.html:37
 msgid "校內各項獎學金 / 校外獎學金公告"
-msgstr ""
+msgstr "Biasiswa dalam kampus / Pengumuman biasiswa luar kampus"
 
 #: .\guides\templates\guides\guide_scholarship.html:42
 msgid "清寒補助（僑生）"
-msgstr ""
+msgstr "Bantuan Kesusahan Kewangan (Pelajar Cina Perantau)"
 
 #: .\guides\templates\guides\guide_scholarship.html:45
 msgid "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
 msgstr ""
+"Tempoh permohonan: diumumkan selepas semester bermula. Semester 1 sekitar "
+"9/1–9/25, Semester 2 sekitar 2/1–3/2. Lewat tidak diterima."
 
 #: .\guides\templates\guides\guide_scholarship.html:53
 #: .\guides\templates\guides\guide_scholarship.html:182
 #: .\guides\templates\guides\guide_scholarship.html:282
 msgid "名稱"
-msgstr ""
+msgstr "Nama"
 
 #: .\guides\templates\guides\guide_scholarship.html:54
 #: .\guides\templates\guides\guide_scholarship.html:183
 #: .\guides\templates\guides\guide_scholarship.html:236
 #: .\guides\templates\guides\guide_scholarship.html:283
 msgid "金額"
-msgstr ""
+msgstr "Jumlah"
 
 #: .\guides\templates\guides\guide_scholarship.html:55
 #| msgid "期間"
@@ -7329,55 +7332,66 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:63
 msgid "1 學年（9 月至翌年 8 月）"
-msgstr ""
+msgstr "1 tahun akademik (September hingga Ogos tahun berikutnya)"
 
 #: .\guides\templates\guides\guide_scholarship.html:64
 msgid "每學年重新申請，可連續領取"
-msgstr ""
+msgstr "Mohon semula setiap tahun akademik, boleh diterima secara berterusan"
 
 #: .\guides\templates\guides\guide_scholarship.html:67
 msgid "僑委會清寒僑生助學金"
-msgstr ""
+msgstr "Bantuan Kewangan OCAC untuk Pelajar Cina Perantau Susah"
 
 #: .\guides\templates\guides\guide_scholarship.html:68
 msgid "依僑委會公告（每學期）"
-msgstr ""
+msgstr "Mengikut pengumuman OCAC (setiap semester)"
 
 #: .\guides\templates\guides\guide_scholarship.html:69
 msgid "1 學期"
-msgstr ""
+msgstr "1 semester"
 
 #: .\guides\templates\guides\guide_scholarship.html:70
 msgid "需完成 10 小時服務學習（OIA，10–11 月 / 4–5 月）"
 msgstr ""
+"Mesti melengkapkan 10 jam pembelajaran servis (OIA, Okt–Nov / Apr–Mei)"
 
 #: .\guides\templates\guides\guide_scholarship.html:77
 msgid "須為依僑生回國就學辦法入學的僑生"
 msgstr ""
+"Mestilah pelajar Cina perantau yang mendaftar mengikut Peraturan Pelajar "
+"Cina Perantau Kembali Belajar"
 
 #: .\guides\templates\guides\guide_scholarship.html:78
 msgid "前學期成績及格，操行成績 80 分以上"
-msgstr ""
+msgstr "Gred semester sebelumnya lulus, markah kelakuan 80+"
 
 #: .\guides\templates\guides\guide_scholarship.html:79
 msgid "需持有「i 僑卡」，否則無法撥款"
-msgstr ""
+msgstr "Mesti mempunyai \"i-Overseas Card\"; jika tidak, dana tidak dapat dibayar"
 
 #: .\guides\templates\guides\guide_scholarship.html:80
 msgid "不得同時領取其他政府清寒補助或學費減免（不得重複領取）"
 msgstr ""
+"Tidak boleh menerima bantuan kewangan kerajaan lain atau pengecualian yuran "
+"secara serentak (tidak boleh berganda)"
 
 #: .\guides\templates\guides\guide_scholarship.html:81
 msgid "所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學生證 / 護照 / ARC / 郵局存摺影本"
 msgstr ""
+"Dokumen diperlukan: borang permohonan + borang pemarkahan kesusahan, sijil "
+"kesusahan asal (dikeluarkan oleh tempat asal), transkrip, autobiografi, kad "
+"pelajar / pasport / ARC / salinan buku simpanan pos"
 
 #: .\guides\templates\guides\guide_scholarship.html:86
 msgid "僑委會新生入學獎學金"
-msgstr ""
+msgstr "Biasiswa Kemasukan Pelajar Baru OCAC"
 
 #: .\guides\templates\guides\guide_scholarship.html:89
 msgid "以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。"
 msgstr ""
+"Kelayakan berikut adalah untuk pelajar baru yang diterima masuk melalui "
+"saluran OCAC. Permohonan disyorkan oleh pejabat luar negeri sebelum "
+"pendaftaran, bukan diri sendiri selepas tiba di Taiwan."
 
 #: .\guides\templates\guides\guide_scholarship.html:97
 #| msgid "等第"
@@ -7386,33 +7400,33 @@ msgstr "Gred"
 
 #: .\guides\templates\guides\guide_scholarship.html:98
 msgid "年額"
-msgstr ""
+msgstr "Jumlah Tahunan"
 
 #: .\guides\templates\guides\guide_scholarship.html:99
 #| msgid "申請資格（年級）"
 msgid "申請資格（成績）"
-msgstr "Kelayakan (mengikut tahun)"
+msgstr "Kelayakan (Gred)"
 
 #: .\guides\templates\guides\guide_scholarship.html:100
 msgid "續領條件"
-msgstr ""
+msgstr "Syarat Pembaharuan"
 
 #: .\guides\templates\guides\guide_scholarship.html:101
 msgid "年限"
-msgstr ""
+msgstr "Had Tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:106
 msgid "頂尖"
-msgstr ""
+msgstr "Terbaik"
 
 #: .\guides\templates\guides\guide_scholarship.html:108
 #, python-format
 msgid "88 分以上或班排前 5%%"
-msgstr ""
+msgstr "88+ atau 5% teratas kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
-msgstr ""
+msgstr "85+ atau Gred A"
 
 #: .\guides\templates\guides\guide_scholarship.html:110
 #: .\guides\templates\guides\guide_scholarship.html:117
@@ -7420,28 +7434,28 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:163
 #| msgid "1 年"
 msgid "4 年"
-msgstr "1 Tahun"
+msgstr "4 tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:113
 msgid "傑出"
-msgstr ""
+msgstr "Cemerlang"
 
 #: .\guides\templates\guides\guide_scholarship.html:115
 #, python-format
 msgid "85 分以上或班排前 10%%"
-msgstr ""
+msgstr "85+ atau 10% teratas kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:116
 msgid "80 分以上或 A- 等"
-msgstr ""
+msgstr "80+ atau Gred A-"
 
 #: .\guides\templates\guides\guide_scholarship.html:123
 msgid "操行成績 80 分以上，每學期最少 9 學分"
-msgstr ""
+msgstr "Markah kelakuan 80+, minimum 9 kredit setiap semester"
 
 #: .\guides\templates\guides\guide_scholarship.html:124
 msgid "不得同時領取其他政府獎學金"
-msgstr ""
+msgstr "Tidak boleh menerima biasiswa kerajaan lain secara serentak"
 
 #: .\guides\templates\guides\guide_scholarship.html:129
 #| msgid "教育部臺灣獎學金"
@@ -7451,6 +7465,9 @@ msgstr "Biasiswa Kementerian Pendidikan Taiwan"
 #: .\guides\templates\guides\guide_scholarship.html:132
 msgid "台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居身分的僑生，香港澳門生亦不適用。"
 msgstr ""
+"Biasiswa Taiwan hanya untuk pelajar \"warganegara asing\" (termasuk orang "
+"asing bebas visa). Tidak terpakai untuk pelajar Cina perantau dengan "
+"kewarganegaraan ROC atau status perantau, mahupun pelajar HK/Macao."
 
 #: .\guides\templates\guides\guide_scholarship.html:140
 #| msgid "計學分"
@@ -7459,15 +7476,15 @@ msgstr "Dikira Kredit"
 
 #: .\guides\templates\guides\guide_scholarship.html:141
 msgid "每月生活費"
-msgstr ""
+msgstr "Elaun Hidup Bulanan"
 
 #: .\guides\templates\guides\guide_scholarship.html:142
 msgid "學費補助"
-msgstr ""
+msgstr "Subsidi Yuran"
 
 #: .\guides\templates\guides\guide_scholarship.html:143
 msgid "最長年限"
-msgstr ""
+msgstr "Tempoh Maksimum"
 
 #: .\guides\templates\guides\guide_scholarship.html:148
 #| msgid "學士班"
@@ -7478,7 +7495,7 @@ msgstr "ijazah sarjana muda"
 #: .\guides\templates\guides\guide_scholarship.html:156
 #: .\guides\templates\guides\guide_scholarship.html:162
 msgid "每學期最高 NT$40,000"
-msgstr ""
+msgstr "Sehingga NT$40,000 setiap semester"
 
 #: .\guides\templates\guides\guide_scholarship.html:154
 #| msgid "碩士畢業"
@@ -7492,98 +7509,111 @@ msgstr "1 Tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:160
 msgid "博士"
-msgstr ""
+msgstr "Doktor Falsafah"
 
 #: .\guides\templates\guides\guide_scholarship.html:169
 msgid "申請期間：每年 2 月 1 日至 3 月 31 日，向所在國 TECO（台灣辦事處）申請"
 msgstr ""
+"Tempoh permohonan: 1 Februari hingga 31 Mac setiap tahun, mohon di TECO "
+"(pejabat Taiwan) di negara anda"
 
 #: .\guides\templates\guides\guide_scholarship.html:170
 msgid "官方入口：taiwanscholarship.moe.gov.tw"
-msgstr ""
+msgstr "Portal rasmi: taiwanscholarship.moe.gov.tw"
 
 #: .\guides\templates\guides\guide_scholarship.html:175
 msgid "校內獎學金"
-msgstr ""
+msgstr "Biasiswa Dalam Kampus"
 
 #: .\guides\templates\guides\guide_scholarship.html:184
 msgid "主要對象 / 條件"
-msgstr ""
+msgstr "Sasaran Utama / Syarat"
 
 #: .\guides\templates\guides\guide_scholarship.html:189
 msgid "優秀學生獎學金"
-msgstr ""
+msgstr "Biasiswa Pelajar Cemerlang"
 
 #: .\guides\templates\guides\guide_scholarship.html:191
 msgid "競賽優異、發明專利、社務貢獻；需推薦信＋自傳，每學期申請"
 msgstr ""
+"Prestasi pertandingan cemerlang, paten ciptaan, sumbangan perkhidmatan "
+"komuniti; perlu surat cadangan + autobiografi, mohon setiap semester"
 
 #: .\guides\templates\guides\guide_scholarship.html:194
 msgid "勵學獎學金（清寒）"
-msgstr ""
+msgstr "Biasiswa Rajin Belajar (Kesusahan Kewangan)"
 
 #: .\guides\templates\guides\guide_scholarship.html:195
 #: .\guides\templates\guides\guide_scholarship.html:248
 #: .\guides\templates\guides\guide_scholarship.html:291
 msgid "最高"
-msgstr ""
+msgstr "Sehingga"
 
 #: .\guides\templates\guides\guide_scholarship.html:196
 msgid "清寒優秀生，低收 / 單親家庭優先"
 msgstr ""
+"Pelajar cemerlang dengan kesusahan kewangan; keluarga berpendapatan rendah /"
+" ibu bapa tunggal diutamakan"
 
 #: .\guides\templates\guides\guide_scholarship.html:199
 msgid "學術成績優異榮譽榜"
-msgstr ""
+msgstr "Senarai Penghormatan Akademik"
 
 #: .\guides\templates\guides\guide_scholarship.html:201
 #, python-format
 msgid "學期成績系排前 5%%，自動核發"
-msgstr ""
+msgstr "5% teratas di jabatan untuk semester, diberikan secara automatik"
 
 #: .\guides\templates\guides\guide_scholarship.html:204
 msgid "傑出領導獎學金"
-msgstr ""
+msgstr "Biasiswa Kepimpinan Cemerlang"
 
 #: .\guides\templates\guides\guide_scholarship.html:206
 msgid "社團 / 自治會 / 宿委幹部或校外代表績效卓著"
 msgstr ""
+"Eksekutif kelab / kerajaan pelajar / jawatankuasa asrama atau prestasi wakil"
+" luar kampus yang cemerlang"
 
 #: .\guides\templates\guides\guide_scholarship.html:209
 msgid "羅家倫先生紀念獎學金"
-msgstr ""
+msgstr "Biasiswa Peringatan Encik Luo Jialun"
 
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr ""
+"Tahun kedua ke atas atau pelajar siswazah; cemerlang dengan kesusahan "
+"kewangan"
 
 #: .\guides\templates\guides\guide_scholarship.html:214
 msgid "李國鼎紀念獎學金"
-msgstr ""
+msgstr "Biasiswa Peringatan Li Kuo-ting"
 
 #: .\guides\templates\guides\guide_scholarship.html:216
 msgid "大二以上；清寒"
-msgstr ""
+msgstr "Tahun kedua ke atas; kesusahan kewangan"
 
 #: .\guides\templates\guides\guide_scholarship.html:222
 msgid "完整校內獎學金清單及申請時間：NCU Portal → 獎助學金暨工讀管理系統，或查"
 msgstr ""
+"Senarai penuh biasiswa dalam kampus dan jadual: NCU Portal → Sistem "
+"Pengurusan Biasiswa & Kerja Sambil Belajar, atau semak"
 
 #: .\guides\templates\guides\guide_scholarship.html:223
 msgid "軍訓室獎學金頁 ↗"
-msgstr ""
+msgstr "Halaman Biasiswa Pejabat Latihan Ketenteraan ↗"
 
 #: .\guides\templates\guides\guide_scholarship.html:228
 msgid "安心就學支持計劃（需申請，學務處辦理）"
 msgstr ""
+"Program Sokongan Belajar Selamat (perlu memohon, Pejabat Hal Ehwal Pelajar)"
 
 #: .\guides\templates\guides\guide_scholarship.html:237
 msgid "條件摘要"
-msgstr ""
+msgstr "Ringkasan Syarat"
 
 #: .\guides\templates\guides\guide_scholarship.html:242
 msgid "安心學習助學金"
-msgstr ""
+msgstr "Geran Pembelajaran Selamat"
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
@@ -7594,62 +7624,66 @@ msgstr "setiap semester"
 #: .\guides\templates\guides\guide_scholarship.html:244
 msgid "低 / 中低收入或特殊情況；需學習計畫＋3 場活動＋2 次導師面談"
 msgstr ""
+"Pendapatan rendah / sederhana rendah atau keadaan khas; perlu pelan "
+"pembelajaran + 3 aktiviti + 2 pertemuan penasihat"
 
 #: .\guides\templates\guides\guide_scholarship.html:247
 msgid "競賽拔尖獎勵金"
-msgstr ""
+msgstr "Anugerah Kecemerlangan Pertandingan"
 
 #: .\guides\templates\guides\guide_scholarship.html:249
 msgid "國內外競賽獲獎"
-msgstr ""
+msgstr "Menang pertandingan domestik atau antarabangsa"
 
 #: .\guides\templates\guides\guide_scholarship.html:252
 msgid "外語檢定認證助學金"
-msgstr ""
+msgstr "Geran Sijil Bahasa Asing"
 
 #: .\guides\templates\guides\guide_scholarship.html:254
 msgid "英語最高 NT$10,000；日文 / 法文 / 德文最高 NT$6,000，每學年 1 次"
 msgstr ""
+"Bahasa Inggeris sehingga NT$10,000; Bahasa Jepun / Perancis / Jerman "
+"sehingga NT$6,000, sekali per tahun akademik"
 
 #: .\guides\templates\guides\guide_scholarship.html:257
 msgid "實習獎勵金"
-msgstr ""
+msgstr "Anugerah Latihan Industri"
 
 #: .\guides\templates\guides\guide_scholarship.html:259
 msgid "140 小時以上實習，成績 85 分以上"
-msgstr ""
+msgstr "Latihan industri 140+ jam, gred 85+"
 
 #: .\guides\templates\guides\guide_scholarship.html:262
 msgid "宿舍學習助學金"
-msgstr ""
+msgstr "Geran Pembelajaran Asrama"
 
 #: .\guides\templates\guides\guide_scholarship.html:263
 msgid "時，最高"
-msgstr ""
+msgstr "jam, sehingga"
 
 #: .\guides\templates\guides\guide_scholarship.html:264
 msgid "宿舍活動參與"
-msgstr ""
+msgstr "Penyertaan aktiviti asrama"
 
 #: .\guides\templates\guides\guide_scholarship.html:270
 msgid "申請入口：NCU ALC 安心就學頁面（ncu.edu.tw/ALC/）"
-msgstr ""
+msgstr "Portal permohonan: Halaman NCU ALC Secure Study (ncu.edu.tw/ALC/)"
 
 #: .\guides\templates\guides\guide_scholarship.html:275
 msgid "校外獎學金（精選）"
-msgstr ""
+msgstr "Biasiswa Luar Kampus (Pilihan)"
 
 #: .\guides\templates\guides\guide_scholarship.html:284
 msgid "申請期間（約）"
-msgstr ""
+msgstr "Tempoh Permohonan (Anggaran)"
 
 #: .\guides\templates\guides\guide_scholarship.html:285
 msgid "主要條件"
-msgstr ""
+msgstr "Syarat Utama"
 
 #: .\guides\templates\guides\guide_scholarship.html:290
 msgid "行天宮獎學金"
-msgstr ""
+msgstr "Biasiswa Kuil Xingtian"
 
 #: .\guides\templates\guides\guide_scholarship.html:291
 #| msgid "1 年"
@@ -7658,15 +7692,16 @@ msgstr "1 Tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:292
 msgid "上學期 9/30、下學期 3/10"
-msgstr ""
+msgstr "Semester 1: 9/30, Semester 2: 3/10"
 
 #: .\guides\templates\guides\guide_scholarship.html:293
 msgid "大二以上；成績 80+；操行 A；清寒優先"
 msgstr ""
+"Tahun kedua ke atas; gred 80+; kelakuan A; keutamaan kesusahan kewangan"
 
 #: .\guides\templates\guides\guide_scholarship.html:296
 msgid "孺鴻教育獎學金"
-msgstr ""
+msgstr "Biasiswa Pendidikan Ruhong"
 
 #: .\guides\templates\guides\guide_scholarship.html:298
 #| msgid "約每年 3 月"
@@ -7675,48 +7710,52 @@ msgstr "Kira-kira Mac setiap tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:299
 msgid "成績 80+；GEPT 中級；操行 80+"
-msgstr ""
+msgstr "Gred 80+; GEPT pertengahan; kelakuan 80+"
 
 #: .\guides\templates\guides\guide_scholarship.html:302
 msgid "平安菁英教育基金會"
-msgstr ""
+msgstr "Yayasan Pendidikan Elit Ping An"
 
 #: .\guides\templates\guides\guide_scholarship.html:304
 msgid "2/12 – 3/5"
-msgstr ""
+msgstr "12/2 – 5/3"
 
 #: .\guides\templates\guides\guide_scholarship.html:305
 #, python-format
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%%"
 msgstr ""
+"Pendapatan keluarga tahunan ≤ NT$900,000; gred 80+ atau 40% teratas kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
-msgstr ""
+msgstr "Biasiswa Penyelidikan Bank Koperatif Taiwan"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
-msgstr ""
+msgstr "13/1 – 5/5"
 
 #: .\guides\templates\guides\guide_scholarship.html:311
 msgid "大四或研究生；成績 80+"
-msgstr ""
+msgstr "Tahun akhir atau pelajar siswazah; gred 80+"
 
 #: .\guides\templates\guides\guide_scholarship.html:314
 msgid "關渡宮助學金"
-msgstr ""
+msgstr "Geran Kuil Guandu"
 
 #: .\guides\templates\guides\guide_scholarship.html:316
 msgid "2/10 – 3/17"
-msgstr ""
+msgstr "10/2 – 17/3"
 
 #: .\guides\templates\guides\guide_scholarship.html:317
 msgid "低 / 中低收入或身心障礙；成績 65+"
-msgstr ""
+msgstr "Pendapatan rendah / sederhana rendah atau kurang upaya; gred 65+"
 
 #: .\guides\templates\guides\guide_scholarship.html:323
 msgid "每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期查看"
 msgstr ""
+"Selepas semester bermula, Pejabat Hal Ehwal Pelajar akan mengumumkan "
+"biasiswa luar kampus yang boleh dipohon di NCU Portal. Sila semak secara "
+"berkala."
 
 #: .\guides\templates\guides\guide_scholarship.html:328
 #| msgid "重要提醒："
@@ -7725,39 +7764,53 @@ msgstr "Peringatan penting:"
 
 #: .\guides\templates\guides\guide_scholarship.html:331
 msgid "不得重複領取"
-msgstr ""
+msgstr "Tidak Boleh Berganda"
 
 #: .\guides\templates\guides\guide_scholarship.html:332
 msgid "教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再申請。"
 msgstr ""
+"Bantuan kewangan Kementerian Pendidikan dan OCAC tidak boleh diterima "
+"serentak, juga tidak boleh wujud bersama dengan pengecualian yuran kerajaan "
+"lain. Sila sahkan sebelum memohon."
 
 #: .\guides\templates\guides\guide_scholarship.html:335
 msgid "僑卡必備"
-msgstr ""
+msgstr "Kad i-Overseas Diperlukan"
 
 #: .\guides\templates\guides\guide_scholarship.html:336
 msgid "申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。"
 msgstr ""
+"Sebelum memohon apa-apa biasiswa atau geran kerajaan, anda mesti memohon "
+"\"i-Overseas Card\" terlebih dahulu; jika tidak, dana tidak dapat dibayar. "
+"Sila uruskan ini pada awal semester."
 
 #: .\guides\templates\guides\guide_scholarship.html:339
 msgid "清寒證明須原件"
-msgstr ""
+msgstr "Sijil Kesusahan Mesti Asal"
 
 #: .\guides\templates\guides\guide_scholarship.html:340
 msgid "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
 msgstr ""
+"Sijil \"kesusahan kewangan\" yang diperlukan untuk bantuan mesti dikeluarkan"
+" oleh pihak berkuasa di negara asal dan diserahkan sebagai asal. Salinan "
+"atau foto tidak diterima."
 
 #: .\guides\templates\guides\guide_scholarship.html:343
 msgid "留意截止日"
-msgstr ""
+msgstr "Perhatikan Tarikh Akhir"
 
 #: .\guides\templates\guides\guide_scholarship.html:344
 msgid "多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提早準備文件。"
 msgstr ""
+"Kebanyakan tarikh akhir biasiswa adalah ketat. Tarikh akhir OIA kira-kira "
+"9/25 (semester 1) / 3/2 (semester 2) setiap semester. Lewat tidak diterima. "
+"Sila sediakan dokumen lebih awal."
 
 #: .\guides\templates\guides\guide_scholarship.html:349
 msgid "NCU 國際事務處：+886-3-425-4945｜僑生獎助學金相關業務洽 OIA 辦理"
 msgstr ""
+"Pejabat Hal Ehwal Antarabangsa NCU: +886-3-425-4945 | Untuk biasiswa pelajar"
+" Cina perantau, hubungi OIA"
 
 #: .\guides\templates\guides\guide_search.html:22
 msgid "搜尋所有指南內容..."
@@ -12883,6 +12936,19 @@ msgstr "Dalam 30 hari selepas tiba"
 
 msgid "🇭🇰 香港・🇲🇴 澳門 學生專區"
 msgstr "🇭🇰 Zon Pelajar Hong Kong · 🇲🇴 Macao"
+
+msgid "88 分以上或班排前 5%"
+msgstr "88+ atau 5% teratas kelas"
+
+msgid "85 分以上或班排前 10%"
+msgstr "85+ atau 10% teratas kelas"
+
+msgid "學期成績系排前 5%，自動核發"
+msgstr "5% teratas di jabatan untuk semester, diberikan secara automatik"
+
+msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%"
+msgstr ""
+"Pendapatan keluarga tahunan ≤ NT$900,000; gred 80+ atau 40% teratas kelas"
 
 #~ msgid "資訊管理"
 #~ msgstr "Pengurusan Maklumat"
