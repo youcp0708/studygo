@@ -13,3 +13,7 @@ openai==2.33.0
 django-modeltranslation==0.20.3
 deep-translator==1.11.4
 django-multiselectfield==1.0.1
+gunicorn==23.0.0         # production WSGI server（Render 啟動用）
+whitenoise==6.11.0       # 無 Nginx 時由 Django 自行安全地服務靜態檔
+django-storages==1.14.6  # 頭像/附件存 Supabase Storage（S3-compatible）用
+boto3==1.40.19           # django-storages 的 S3 後端依賴

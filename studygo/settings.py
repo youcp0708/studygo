@@ -34,6 +34,12 @@ SITE_BASE_URL = os.getenv('SITE_BASE_URL', 'http://localhost:8000').rstrip('/')
 # 上線後填入正式網域，例如 CSRF_TRUSTED_ORIGINS=https://readytotaiwan.tw,https://www.readytotaiwan.tw
 CSRF_TRUSTED_ORIGINS = [o.strip() for o in os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',') if o.strip()]
 
+# Render 會自動注入這個變數（如 your-app.onrender.com），自動放行避免忘記手動加入 ALLOWED_HOSTS
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+    CSRF_TRUSTED_ORIGINS.append(f'https://{RENDER_EXTERNAL_HOSTNAME}')
+
 # ── 應用程式 ──
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -53,6 +59,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -135,14 +142,37 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
 
-# ── 靜態檔案 ──
+# ── 靜態檔案（無 Nginx，由 whitenoise 服務）──
 STATIC_URL  = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # collectstatic 輸出
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}
 
-# ── 媒體檔案（如上傳頭像）──
+# ── 媒體檔案（如上傳頭像、chatbot 附件）──
+# 本機開發預設用本機檔案系統；設定 SUPABASE_S3_ENDPOINT_URL 等環境變數後，
+# 自動改用 Supabase Storage（S3-compatible），Render 上重新部署不會遺失檔案。
 MEDIA_URL  = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+SUPABASE_S3_ENDPOINT_URL = os.environ.get('SUPABASE_S3_ENDPOINT_URL')
+if SUPABASE_S3_ENDPOINT_URL:
+    STORAGES['default'] = {
+        'BACKEND': 'storages.backends.s3.S3Storage',
+        'OPTIONS': {
+            'endpoint_url': SUPABASE_S3_ENDPOINT_URL,
+            'access_key': env('SUPABASE_S3_ACCESS_KEY_ID', required=True),
+            'secret_key': env('SUPABASE_S3_SECRET_ACCESS_KEY', required=True),
+            'bucket_name': env('SUPABASE_S3_BUCKET_NAME', required=True),
+            'region_name': os.environ.get('SUPABASE_S3_REGION', 'ap-southeast-1'),
+            'querystring_auth': False,
+            'file_overwrite': False,
+            'default_acl': None,
+        },
+    }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
