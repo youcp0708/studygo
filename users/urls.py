@@ -70,15 +70,8 @@ def register_page(request):
 
 def logout_page(request):
     """
-    登出：清除 Django session + Auth Token，並重定向到登入頁面。
+    登出：清除 Django session，並重定向到登入頁面。
     """
-    # 刪除 Auth Token（若存在）
-    if request.user.is_authenticated:
-        try:
-            request.user.auth_token.delete()
-        except Exception:
-            pass
-    # 登出 Django session
     auth_logout(request)
     return render(request, 'users/logout_redirect.html')
 

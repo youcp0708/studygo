@@ -6,18 +6,33 @@ Django 專案主設定檔
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
+
+def env(key, default=None, required=False):
+    v = os.environ.get(key, default)
+    if required and not v:
+        raise ImproperlyConfigured(f"缺少必要環境變數：{key}")
+    return v
+
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY", "")
 
-SECRET_KEY = 'django-insecure-請替換成隨機字串-production-key-here'
+SECRET_KEY = env('SECRET_KEY', required=True)
 
-DEBUG = os.getenv('DEBUG', 'True') == 'True'  # 上線時在 .env 設 DEBUG=False
+DEBUG = os.getenv('DEBUG', 'False') == 'True'  # production 不設此變數即為 False
 
-ALLOWED_HOSTS = [h.strip() for h in os.getenv('ALLOWED_HOSTS', '*').split(',') if h.strip()]
+ALLOWED_HOSTS = [h.strip() for h in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') if h.strip()]
+
+# 正式網域（信件連結等場合使用，不信任 request.get_host()，避免 Host Header 攻擊）
+SITE_BASE_URL = os.getenv('SITE_BASE_URL', 'http://localhost:8000').rstrip('/')
+
+# 上線後填入正式網域，例如 CSRF_TRUSTED_ORIGINS=https://readytotaiwan.tw,https://www.readytotaiwan.tw
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',') if o.strip()]
 
 # ── 應用程式 ──
 INSTALLED_APPS = [
@@ -71,12 +86,14 @@ WSGI_APPLICATION = 'studygo.wsgi.application'
 # ── 資料庫 ──
 DATABASES = {
     'default': {
-        'ENGINE':   os.getenv('DB_ENGINE', 'django.db.backends.postgresql'),
-        'NAME':     os.getenv('DB_NAME', 'postgres'),
-        'USER':     os.getenv('DB_USER', 'postgres.hpszxboxqzmvisydcnhz'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'uq6pUJAfP8wGIlCZ'),
-        'HOST':     os.getenv('DB_HOST', 'aws-1-ap-southeast-1.pooler.supabase.com'),  # 你的 Supabase host
-        'PORT':     os.getenv('DB_PORT', '5432'),
+        'ENGINE':   env('DB_ENGINE', 'django.db.backends.postgresql'),
+        'NAME':     env('DB_NAME', required=True),
+        'USER':     env('DB_USER', required=True),
+        'PASSWORD': env('DB_PASSWORD', required=True),
+        'HOST':     env('DB_HOST', required=True),
+        'PORT':     env('DB_PORT', '5432'),
+        'CONN_MAX_AGE': 60,
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
@@ -135,7 +152,6 @@ AUTH_USER_MODEL = 'users.CustomUser'
 # ── Django REST Framework ──
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
@@ -156,11 +172,15 @@ REST_FRAMEWORK = {
 }
 
 # ── CORS（前後端分離時使用）──
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'http://127.0.0.1:8000',
-]
+# 上線後改用實際前端網域，例如 CORS_ALLOWED_ORIGINS=https://readytotaiwan.tw
+CORS_ALLOWED_ORIGINS = [o.strip() for o in os.getenv(
+    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000,http://127.0.0.1:8000'
+).split(',') if o.strip()]
 CORS_ALLOW_CREDENTIALS = True
+
+# ── 上傳大小上限 ──
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024  # 10MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024
 
 # ── Email 設定 ──
 # 使用環境變數設定 SMTP（Gmail 範例）：
@@ -196,7 +216,6 @@ GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID', '')
 
 # ── Session 設定 ──
 SESSION_COOKIE_AGE     = 60 * 60 * 24 * 7  # 7 天
-SESSION_COOKIE_SECURE  = False  # 上線改 True（HTTPS）
 SESSION_COOKIE_HTTPONLY= True
 
 # ── CSRF ──
@@ -206,6 +225,20 @@ CSRF_COOKIE_SAMESITE = 'Lax'
 # 只有確認部署在可信任的 Reverse Proxy（如 Nginx）後面時才設為 True
 # 設為 False 時一律使用 REMOTE_ADDR，避免 X-Forwarded-For 被偽造
 TRUST_X_FORWARDED_FOR = os.environ.get('TRUST_X_FORWARDED_FOR', 'False') == 'True'
+
+# ── HTTPS 強制 + 安全 Cookie（僅 production，即 DEBUG=False 時啟用） ──
+# 本機開發用 http，維持 DEBUG=True 即可略過這些設定
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE    = not DEBUG
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT   = True
+    SECURE_HSTS_SECONDS   = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD   = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    if TRUST_X_FORWARDED_FOR:
+        SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # ── Google Sign-In 彈窗修復 ──
 # Django 5.x 預設 COOP: same-origin 會阻擋 GSI popup 回傳 credential

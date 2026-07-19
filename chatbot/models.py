@@ -4,10 +4,13 @@ AI 聊天機器人模組：儲存每位學生自己的對話紀錄。
 """
 
 from django.conf import settings
+from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.utils import timezone
 
 from users.models import DISCIPLINE_CHOICES
+
+ALLOWED_ATTACHMENT_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'pdf', 'txt', 'csv', 'md', 'json']
 
 
 class ChatSession(models.Model):
@@ -105,6 +108,7 @@ class ChatAttachment(models.Model):
 
     file = models.FileField(
         upload_to='chatbot_uploads/%Y/%m/%d/',
+        validators=[FileExtensionValidator(allowed_extensions=ALLOWED_ATTACHMENT_EXTENSIONS)],
         verbose_name='附件檔案',
     )
 

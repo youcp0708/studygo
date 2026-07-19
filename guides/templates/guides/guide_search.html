@@ -35,7 +35,7 @@
 {% endblock %}
 
 {% block extra_js %}
-<script id="bodyData" type="application/json">{{ body_data_json|safe }}</script>
+{{ body_data|json_script:"bodyData" }}
 <script>
   (function () {
     var LANG = '{{ CURRENT_LANGUAGE|default:"zh-hant" }}';

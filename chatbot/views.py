@@ -7,7 +7,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from .models import ChatSession, ChatMessage, ChatAttachment, ChatFeedback
+from .models import ChatSession, ChatMessage, ChatAttachment, ChatFeedback, ALLOWED_ATTACHMENT_EXTENSIONS
 from .services import generate_ai_reply, contains_crisis_keywords, build_crisis_resources
 from django.utils import timezone
 from django.utils.translation import gettext as _
@@ -15,6 +15,8 @@ from django.utils.translation import gettext as _
 import logging
 
 logger = logging.getLogger(__name__)
+
+MAX_ATTACHMENT_SIZE = 8 * 1024 * 1024  # 8MB，低於 settings.DATA_UPLOAD_MAX_MEMORY_SIZE
 
 
 def normalize_ai_mode(value):
@@ -129,6 +131,19 @@ def chat_message_api(request):
 
     attachments = request.FILES.getlist('attachments')
     attachment_types = request.data.getlist('attachment_types')
+
+    for uploaded_file in attachments:
+        ext = uploaded_file.name.rsplit('.', 1)[-1].lower() if '.' in uploaded_file.name else ''
+        if ext not in ALLOWED_ATTACHMENT_EXTENSIONS:
+            return Response({
+                'success': False,
+                'message': f'不支援的檔案格式：{ext or uploaded_file.name}',
+            }, status=status.HTTP_400_BAD_REQUEST)
+        if uploaded_file.size > MAX_ATTACHMENT_SIZE:
+            return Response({
+                'success': False,
+                'message': f'檔案 {uploaded_file.name} 超過大小上限（{MAX_ATTACHMENT_SIZE // (1024 * 1024)}MB）',
+            }, status=status.HTTP_400_BAD_REQUEST)
 
     if not message and not attachments:
         return Response({

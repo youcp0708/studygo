@@ -1,6 +1,10 @@
+import logging
+
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.utils import translation
+
+logger = logging.getLogger(__name__)
 
 
 @login_required(login_url='/login/')
@@ -83,7 +87,7 @@ def guide_admin_docs(request):
         school_code = SCHOOL_MAP.get(university.strip(), 'ncu')
         school_name = university
     except Exception:
-        pass
+        logger.debug('guide_admin_docs: user %s 尚無 student_profile', request.user.id, exc_info=True)
     return render(request, 'guides/guide_admin_docs.html', {
         'school_code': school_code,
         'school_name': school_name,
@@ -130,7 +134,6 @@ def guide_map(request):
 
 @login_required(login_url='/login/')
 def guide_search(request):
-    import json
     from .search_data import SEARCH_BODY
     q = request.GET.get('q', '').strip()
     lang = (translation.get_language() or 'zh-hant').lower()
@@ -139,5 +142,5 @@ def guide_search(request):
         body[url] = langs.get(lang) or langs.get('en') or langs.get('zh-hant') or []
     return render(request, 'guides/guide_search.html', {
         'q': q,
-        'body_data_json': json.dumps(body, ensure_ascii=False),
+        'body_data': body,
     })

@@ -21,7 +21,6 @@ from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes, throttle_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
-from rest_framework.authtoken.models import Token
 from .throttles import LoginThrottle, RegisterThrottle, PasswordResetThrottle, ResendVerificationThrottle
 
 from .models import CustomUser, StudentProfile, EmailVerificationToken, LoginLog
@@ -71,7 +70,7 @@ def register_view(request):
         "password": "Password1!", "password2": "Password1!" }
 
     Response (201):
-      { "success": true, "token": "xxx",
+      { "success": true,
         "user": { "id":1, "name":"Ahmad", "email":"a@b.com", ... },
         "has_profile": false }
     """
@@ -81,17 +80,13 @@ def register_view(request):
 
     user = serializer.save()
 
-    # 產生 Auth Token
-    token, _ = Token.objects.get_or_create(user=user)
-
     # 寄送 Email 驗證信（可改為 Celery 非同步）
-    _send_verification_email(user, request)
+    _send_verification_email(user)
 
     user_data = UserDetailSerializer(user).data
     return Response({
         'success': True,
         'message': '帳號建立成功，驗證信已寄出',
-        'token': token.key,
         'user': user_data,
         'has_profile': False,
     }, status=201)
@@ -112,7 +107,7 @@ def login_view(request):
       { "email": "a@b.com", "password": "Password1!" }
 
     Response (200):
-      { "success": true, "token": "xxx",
+      { "success": true,
         "user": {...}, "has_profile": true/false }
     """
     serializer = LoginSerializer(data=request.data)
@@ -128,7 +123,6 @@ def login_view(request):
         return error_response('登入失敗', serializer.errors, 401)
 
     user  = serializer.validated_data['user']
-    token, _ = Token.objects.get_or_create(user=user)
 
     # 建立 Django session，讓模板的 user.is_authenticated 與 @login_required 正常運作
     login(request, user, backend='django.contrib.auth.backends.ModelBackend')
@@ -145,7 +139,6 @@ def login_view(request):
     user_data   = UserDetailSerializer(user).data
 
     return success_response({
-        'token': token.key,
         'user':  user_data,
         'has_profile': has_profile,
     }, '登入成功')
@@ -158,11 +151,8 @@ def login_view(request):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def logout_view(request):
-    """刪除 Token，前端清除 localStorage"""
-    try:
-        request.user.auth_token.delete()
-    except Exception:
-        pass
+    """清除 Django session"""
+    logout(request)
     return success_response(message='登出成功')
 
 
@@ -299,11 +289,7 @@ def change_password_view(request):
     request.user.set_password(serializer.validated_data['new_password1'])
     request.user.save()
 
-    # 舊 Token 失效，產生新 Token
-    request.user.auth_token.delete()
-    token, _ = Token.objects.get_or_create(user=request.user)
-
-    return success_response({'token': token.key}, '密碼更新成功，請重新登入')
+    return success_response(message='密碼更新成功，請重新登入')
 
 
 # ══════════════════════════════════════════
@@ -325,7 +311,7 @@ def password_reset_request_view(request):
     email = serializer.validated_data['email']
     try:
         user = CustomUser.objects.get(email=email)
-        _send_password_reset_email(user, request)
+        _send_password_reset_email(user)
     except CustomUser.DoesNotExist:
         pass  # 不揭露帳號是否存在
 
@@ -400,7 +386,7 @@ def verify_email_view(request, token):
 def google_login_view(request):
     """
     Request Body: { "credential": "<Google ID Token>" }
-    驗證 Google ID Token，自動建立或取得對應帳號，回傳 Auth Token。
+    驗證 Google ID Token，自動建立或取得對應帳號，並建立登入 session。
     """
     credential = request.data.get('credential')
     if not credential:
@@ -442,12 +428,10 @@ def google_login_view(request):
         user.set_unusable_password()
         user.save()
 
-    token, _ = Token.objects.get_or_create(user=user)
     login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
     has_profile = hasattr(user, 'student_profile') and user.student_profile is not None
     return success_response({
-        'token':       token.key,
         'user':        UserDetailSerializer(user).data,
         'has_profile': has_profile,
         'is_new_user': created,
@@ -468,10 +452,6 @@ def delete_account_view(request):
     user = request.user
     user.is_active = False
     user.save(update_fields=['is_active'])
-    try:
-        user.auth_token.delete()
-    except Exception:
-        pass
     logout(request)  # 同步清除 Django session
     return success_response(message='帳號已停用')
 
@@ -487,7 +467,7 @@ def resend_verification_view(request):
     user = request.user
     if user.email_verified:
         return error_response('此信箱已完成驗證')
-    _send_verification_email(user, request)
+    _send_verification_email(user)
     return success_response(message='驗證信已重新寄出')
 
 
@@ -513,12 +493,12 @@ def login_logs_view(request):
 # ══════════════════════════════════════════
 # PRIVATE HELPERS
 # ══════════════════════════════════════════
-def _send_verification_email(user, request):
+def _send_verification_email(user):
     """產生並寄送 Email 驗證信"""
     raw_token = secrets.token_urlsafe(48)
     token_hash = hashlib.sha256(raw_token.encode()).hexdigest()
     EmailVerificationToken.objects.create(user=user, token=token_hash)
-    link = f"{request.scheme}://{request.get_host()}/api/users/verify-email/{raw_token}/"
+    link = f"{settings.SITE_BASE_URL}/api/users/verify-email/{raw_token}/"
     send_mail(
         subject='【ReadyTo Taiwan】請驗證您的電子信箱',
         message=f'您好 {user.name}，\n\n請點擊以下連結完成驗證：\n{link}\n\n連結有效期限為 24 小時。',
@@ -528,11 +508,11 @@ def _send_verification_email(user, request):
     )
 
 
-def _send_password_reset_email(user, request):
+def _send_password_reset_email(user):
     """產生並寄送密碼重設信"""
     uid   = urlsafe_base64_encode(force_bytes(user.pk))
     token = default_token_generator.make_token(user)
-    link  = f"{request.scheme}://{request.get_host()}/reset-password?uid={uid}&token={token}"
+    link  = f"{settings.SITE_BASE_URL}/reset-password?uid={uid}&token={token}"
     send_mail(
         subject='【ReadyTo Taiwan】密碼重設申請',
         message=f'您好 {user.name}，\n\n請點擊以下連結重設密碼：\n{link}\n\n若非本人操作，請忽略此信。',

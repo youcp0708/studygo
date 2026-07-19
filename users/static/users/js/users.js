@@ -143,9 +143,6 @@ async function apiFetch(url, method = 'GET', body = null) {
     },
     credentials: 'same-origin',
   };
-  // Token Auth（前後端分離模式）
-  const token = localStorage.getItem('authToken');
-  if (token) opts.headers['Authorization'] = `Token ${token}`;
   if (body) opts.body = JSON.stringify(body);
   const res = await fetch(url, opts);
   const data = await res.json();
@@ -310,7 +307,6 @@ async function handleLogin(e) {
     return;
   }
 
-  localStorage.setItem('authToken', data.data.token);
   // 快取 user 資料，讓下一頁 initApp() 跳過重複的 /api/users/me/ 請求
   sessionStorage.setItem('_userCache', JSON.stringify({ d: data.data, ts: Date.now() }));
 
@@ -358,7 +354,6 @@ async function handleRegister(e) {
     return;
   }
 
-  localStorage.setItem('authToken', data.token);
   localStorage.setItem('pendingVerifyEmail', email);
   showToast(tCommon('accountCreated', '帳號建立成功！驗證信已寄出，請至信箱完成驗證'), 'success');
   showVerifyEmailPanel(email);
@@ -376,7 +371,6 @@ function showVerifyEmailPanel(email) {
 /** 返回登入（從驗證等待面板） */
 function backToLogin() {
   localStorage.removeItem('pendingVerifyEmail');
-  localStorage.removeItem('authToken');
   document.getElementById('verifyEmailPanel')?.classList.add('hidden');
   switchAuth('signin');
 }
@@ -785,8 +779,6 @@ async function handleChangePw(e) {
     return;
   }
 
-  // 更新 Token
-  if (data.data?.token) localStorage.setItem('authToken', data.data.token);
   showToast(tCommon('passwordUpdated', '密碼已更新，請重新登入'), 'success');
   document.getElementById('changePwForm')?.reset();
   setTimeout(handleLogout, 2000);
@@ -820,7 +812,6 @@ async function handleForgot(e) {
    POST /api/users/logout/
 ════════════════════════════════════════ */
 async function handleLogout() {
-  localStorage.removeItem('authToken');
   window.location.href = '/logout/';
 }
 
@@ -831,7 +822,6 @@ async function handleLogout() {
 async function deleteAccount() {
   const { ok, data } = await apiFetch('/api/users/delete/', 'DELETE');
   if (ok) {
-    localStorage.removeItem('authToken');
     showToast(tCommon('accountDeactivated', '帳號已停用，感謝您使用 ReadyTo Taiwan'), 'info', 2000);
     setTimeout(() => { window.location.href = '/login/?deleted=1'; }, 2000);
   } else {
@@ -1075,7 +1065,6 @@ async function initApp() {
     // 處理驗證結果通知
     if (verified === '1') {
       localStorage.removeItem('pendingVerifyEmail');
-      localStorage.removeItem('authToken');
       showToast(tCommon('emailVerified', 'Email 驗證成功！請登入您的帳號'), 'success');
     } else if (verified === 'fail') {
       showToast(tCommon('verifyInvalid', '驗證連結無效或已使用'), 'error');
@@ -1091,8 +1080,6 @@ async function initApp() {
       return;
     }
 
-    // 一般登入頁：清除舊 token
-    localStorage.removeItem('authToken');
     return;
   }
 
@@ -1118,7 +1105,6 @@ async function initApp() {
   if (!userData) {
     const { ok, data } = await apiFetch('/api/users/me/');
     if (!ok) {
-      localStorage.removeItem('authToken');
       window.location.href = '/login/';
       return;
     }
@@ -1173,7 +1159,7 @@ function initGoogleSignIn() {
   }
 }
 
-/** 收到 Google ID Token 後送往後端換取系統 Token */
+/** 收到 Google ID Token 後送往後端驗證並建立登入 session */
 async function handleGoogleLogin(response) {
   const credential = response.credential;
   if (!credential) {
@@ -1188,7 +1174,6 @@ async function handleGoogleLogin(response) {
     return;
   }
 
-  localStorage.setItem('authToken', data.data.token);
   sessionStorage.setItem('_userCache', JSON.stringify({ d: data.data, ts: Date.now() }));
   const isNew = data.data.is_new_user;
   showToast(isNew ? `帳號已建立，歡迎 ${data.data.user.name}！` : `歡迎回來，${data.data.user.name}！`, 'success');

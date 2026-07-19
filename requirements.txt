@@ -1,15 +1,15 @@
 # requirements.txt
 # pip install -r requirements.txt
 
-Django>=5.1
-djangorestframework>=3.14
-django-cors-headers>=4.0
-Pillow>=10.0           # 頭像上傳用
-google-auth>=2.0       # 驗證 Google OAuth ID Token
-requests>=2.31         # google-auth transport 依賴
-python-dotenv>=1.0     # 從 .env 自動載入環境變數
-psycopg2-binary>=2.9   # PostgreSQL 驅動（Supabase）
-openai>=2.0
-django-modeltranslation
-deep-translator
+Django==6.0.4
+djangorestframework==3.17.1
+django-cors-headers==4.9.0
+Pillow==12.2.0           # 頭像上傳用
+google-auth==2.49.2      # 驗證 Google OAuth ID Token
+requests==2.33.1         # google-auth transport 依賴
+python-dotenv==1.2.2     # 從 .env 自動載入環境變數
+psycopg2-binary==2.9.12  # PostgreSQL 驅動（Supabase）
+openai==2.33.0
+django-modeltranslation==0.20.3
+deep-translator==1.11.4
 django-multiselectfield==1.0.1

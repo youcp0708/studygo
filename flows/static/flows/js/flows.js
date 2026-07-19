@@ -154,8 +154,8 @@ async function renderDashboardProgress() {
           <div style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;">
             <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
             <div style="flex:1;">
-              <div style="font-weight:700;font-size:14px;">${task.localized ? task.localized.title : (task.task_detail ? task.task_detail.title : '未命名任務')}</div>
-              <div style="font-size:12px;color:var(--muted);">${task.stage_name || '流程階段'}</div>
+              <div style="font-weight:700;font-size:14px;">${escapeFlowsHtml(task.localized ? task.localized.title : (task.task_detail ? task.task_detail.title : '未命名任務'))}</div>
+              <div style="font-size:12px;color:var(--muted);">${escapeFlowsHtml(task.stage_name || '流程階段')}</div>
             </div>
           </div>
         `;
@@ -408,7 +408,7 @@ async function renderMyTasks() {
 
   stages.forEach((stage, index) => {
     const isActive = index === currentActiveTabIndex ? 'active' : '';
-    tabsHtml += `<button class="flow-tab-btn ${isActive}" onclick="switchFlowTab(${index})">${stage.stage_name}</button>`;
+    tabsHtml += `<button class="flow-tab-btn ${isActive}" onclick="switchFlowTab(${index})">${escapeFlowsHtml(stage.stage_name)}</button>`;
 
     const tasks = stage.tasks || [];
     const total = tasks.length;
@@ -429,13 +429,13 @@ async function renderMyTasks() {
       const loc = task.localized || task.task_detail || {};
       const deadlineInfo = task.deadline_info || {};
 
-      const reqDocs = loc.required_documents || null;
-      const applyLoc = loc.apply_location ? loc.apply_location.trim() : null;
-      const applyAddr = loc.apply_address ? loc.apply_address.trim() : null;
+      const reqDocs = loc.required_documents ? escapeFlowsHtml(loc.required_documents) : null;
+      const applyLoc = loc.apply_location ? escapeFlowsHtml(loc.apply_location.trim()) : null;
+      const applyAddr = loc.apply_address ? escapeFlowsHtml(loc.apply_address.trim()) : null;
       const officialUrl = loc.official_url
-        ? `<a href="${loc.official_url}" target="_blank" style="color:var(--primary);text-decoration:underline;">${window.UI_STRINGS.visitOfficialWebsite}</a>`
+        ? `<a href="${escapeFlowsHtml(loc.official_url)}" target="_blank" style="color:var(--primary);text-decoration:underline;">${window.UI_STRINGS.visitOfficialWebsite}</a>`
         : null;
-      const noteVal = task.note || '';
+      const noteVal = escapeFlowsHtml(task.note || '');
       const reqLabel = window.UI_STRINGS?.requiredLabel || '必做';
       const optLabel = window.UI_STRINGS?.optionalLabel || '建議';
       const requiredBadge = task.task_detail?.is_required
@@ -476,7 +476,7 @@ async function renderMyTasks() {
       }
 
       // ── 只顯示有資料的欄位 ──
-      const applyMapUrl = loc.apply_map_url || null;
+      const applyMapUrl = loc.apply_map_url ? escapeFlowsHtml(loc.apply_map_url) : null;
 
       const detailRows = [
         reqDocs ? `
@@ -508,11 +508,11 @@ async function renderMyTasks() {
             <input type="checkbox" id="chk-${task.id}" onclick="toggleTaskCompletion(${task.id}, event)" ${isDone ? 'checked' : ''}>
             <div class="task-content">
               <div class="task-title">
-                ${loc.title || window.UI_STRINGS.unnamedTask}
+                ${loc.title ? escapeFlowsHtml(loc.title) : window.UI_STRINGS.unnamedTask}
                 ${requiredBadge}
                 ${loc.has_fallback ? `<span class="task-badge" style="background:#fef3c7;color:#d97706;border:1px solid #fcd34d;">Untranslated</span>` : ''}
               </div>
-              <div class="task-desc" style="white-space: pre-wrap;">${loc.description || ''}</div>
+              <div class="task-desc" style="white-space: pre-wrap;">${loc.description ? escapeFlowsHtml(loc.description) : ''}</div>
             </div>
             ${isDone ? `<span class="task-completed-badge">${window.UI_STRINGS.completedBadge}</span>` : ''}
           </div>
@@ -593,10 +593,10 @@ async function renderTips() {
       html += `
         <div class="tip-item">
           <div class="tip-item-title">
-            ${tip.title}
+            ${escapeFlowsHtml(tip.title)}
             ${tip.has_fallback ? `<span class="task-badge" style="background:#fef3c7;color:#d97706;border:1px solid #fcd34d;">Untranslated</span>` : ''}
           </div>
-          ${tip.content ? `<div class="tip-item-content">${tip.content}</div>` : ''}
+          ${tip.content ? `<div class="tip-item-content">${escapeFlowsHtml(tip.content)}</div>` : ''}
       `;
 
       if (Array.isArray(tip.links) && tip.links.length > 0) {
@@ -619,7 +619,7 @@ async function renderTips() {
           const firstIcon = links[0].category_icon;
 
           const iconHtml = firstIcon
-            ? `<span class="material-symbols-outlined tip-category-icon">${firstIcon}</span>`
+            ? `<span class="material-symbols-outlined tip-category-icon">${escapeFlowsHtml(firstIcon)}</span>`
             : '';
 
           html += `
@@ -627,7 +627,7 @@ async function renderTips() {
               <button type="button" class="tip-category-btn" onclick="toggleTipCategory('${panelId}')">
                 <span class="tip-category-left">
                   ${iconHtml}
-                  <span>${cat}</span>
+                  <span>${escapeFlowsHtml(cat)}</span>
                 </span>
                 <span id="tip-arrow-${panelId}" class="material-symbols-outlined tip-category-arrow">expand_more</span>
               </button>
@@ -637,8 +637,8 @@ async function renderTips() {
           `;
 
           links.forEach(l => {
-            const label = l.label || l.url;
-            html += `<a href="${l.url}" target="_blank" class="tip-app-link">${label}</a>`;
+            const label = escapeFlowsHtml(l.label || l.url);
+            html += `<a href="${escapeFlowsHtml(l.url)}" target="_blank" class="tip-app-link">${label}</a>`;
           });
 
           html += `
@@ -652,9 +652,9 @@ async function renderTips() {
           html += `<div class="tip-link-list tip-uncategorized-links">`;
 
           uncategorized.forEach(l => {
-            const label = l.label || l.url;
+            const label = escapeFlowsHtml(l.label || l.url);
             html += `
-              <a href="${l.url}" target="_blank" class="tip-app-link">${label}</a>`;
+              <a href="${escapeFlowsHtml(l.url)}" target="_blank" class="tip-app-link">${label}</a>`;
           });
 
           html += `</div>`;

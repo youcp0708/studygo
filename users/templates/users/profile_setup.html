@@ -450,7 +450,7 @@
     document.getElementById('langForm' + suffix).submit();
   }
 
-  {# 國籍標籤走 i18n（與 StudentProfile.NATIONALITY_CHOICES 的 msgid 一致），非中文使用者不再看到中文國名 #}
+  // 國籍標籤走 i18n（與 StudentProfile.NATIONALITY_CHOICES 的 msgid 一致），非中文使用者不再看到中文國名
   const SETUP_REGION_COUNTRY_MAP = {
     "East Asia": [
       { value: "Japan", label: "🇯🇵 {% trans '日本' %}" },
