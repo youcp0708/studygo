@@ -10,6 +10,12 @@
    0. 工具函式
 ════════════════════════════════════════ */
 
+/** 依網站目前語言（<html lang>）取得對應的 BCP-47 locale，供 toLocaleString 等使用 */
+function getSiteLocale() {
+  const lang = (document.documentElement.lang || 'zh-hant').toLowerCase();
+  return lang === 'zh-hant' ? 'zh-TW' : lang;
+}
+
 /** 取得 Django CSRF Token（由 Cookie 讀取） */
 function getCookie(name) {
   for (const cookie of document.cookie.split(';')) {
@@ -887,7 +893,7 @@ function populateDashboard(user, profile) {
   }
 
   const lastLoginEl = document.getElementById('lastLogin');
-  if (lastLoginEl) lastLoginEl.textContent = new Date().toLocaleString('zh-TW');
+  if (lastLoginEl) lastLoginEl.textContent = new Date().toLocaleString(getSiteLocale());
 
 }
 

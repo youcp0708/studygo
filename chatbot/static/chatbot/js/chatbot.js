@@ -712,7 +712,7 @@
       { key: '生活指導', label: i18n.pLife     || '生活指導', color: '#0891b2', renamable: false },
     ],
     '朋友': [
-      { key: '好朋友',   label: i18n.pBestFriend || '好朋友',   color: '#22c55e', renamable: true  },
+      { key: '好朋友',   label: i18n.pBestFriend || '好朋友',   color: '#22c55e', renamable: false },
       { key: '瘋玩',     label: i18n.pFun        || '瘋玩',     color: '#f97316', renamable: false },
       { key: '安靜陪伴', label: i18n.pQuiet      || '安靜陪伴', color: '#8b5cf6', renamable: false },
       { key: '沉穩可靠', label: i18n.pCalm       || '沉穩可靠', color: '#0d9488', renamable: false },

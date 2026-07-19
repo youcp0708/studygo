@@ -10,6 +10,12 @@ function flowsT(key, fallback) {
   return (window.UI_STRINGS && window.UI_STRINGS[key]) || fallback;
 }
 
+/** 依網站目前語言（<html lang>）取得對應的 BCP-47 locale，供 toLocaleDateString 等使用 */
+function getSiteLocale() {
+  const lang = (document.documentElement.lang || 'zh-hant').toLowerCase();
+  return lang === 'zh-hant' ? 'zh-TW' : lang;
+}
+
 /** HTML 跳脫：插入 innerHTML 的動態內容（使用者備註、通知訊息）一律先跳脫 */
 function escapeFlowsHtml(text) {
   return String(text ?? '')
@@ -734,7 +740,7 @@ async function renderReminders() {
       <div id="reminder-${r.id}" style="padding:12px 16px; border-bottom:1px solid var(--border, #eee); display:flex; flex-direction:column; gap:4px; font-size:14px;">
         <div style="color:var(--text); line-height:1.4;">${escapeFlowsHtml(r.message)}</div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
-          <span style="font-size:12px; color:var(--muted);">${new Date(r.created_at).toLocaleDateString()}</span>
+          <span style="font-size:12px; color:var(--muted);">${new Date(r.created_at).toLocaleDateString(getSiteLocale())}</span>
           <button onclick="markReminderRead(${r.id})" style="background:none; border:none; color:var(--primary, #007bff); cursor:pointer; font-size:12px; padding:0;">${markReadText}</button>
         </div>
       </div>
