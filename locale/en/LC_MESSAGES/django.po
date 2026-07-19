@@ -3828,19 +3828,26 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_course.html:17
 msgid "選課・加退選・停修・抵免"
-msgstr ""
+msgstr "Course Selection · Add/Drop · Withdrawal · Credit Exemption"
 
 #: .\guides\templates\guides\guide_course.html:19
 msgid "中央大學選課系統、學期課務日程與各項申辦流程整理。日程以課務組公告為準，每學期略有調整。"
 msgstr ""
+"NCU course registration system, semester schedule, and application "
+"procedures. Dates are subject to official announcements by the Academic "
+"Affairs Division and may vary each semester."
 
 #: .\guides\templates\guides\guide_course.html:25
 msgid "日程請以課務組最新公告為準："
 msgstr ""
+"Please refer to the latest announcement from the Academic Affairs Division "
+"for schedules:"
 
 #: .\guides\templates\guides\guide_course.html:25
 msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
 msgstr ""
+"The dates below are based on Academic Year 114, Semester 2 as an example. "
+"Schedules differ each semester. Please visit"
 
 #: .\guides\templates\guides\guide_course.html:26
 #| msgid "住宿服務組官網"
@@ -3849,212 +3856,278 @@ msgstr "Housing Services Office Website"
 
 #: .\guides\templates\guides\guide_course.html:27
 msgid "查看最新學期日程表。"
-msgstr ""
+msgstr "to view the latest semester schedule."
 
 #: .\guides\templates\guides\guide_course.html:32
 msgid "學期課務日程（114-2 為例）"
-msgstr ""
+msgstr "Semester Course Schedule (AY114-2 Example)"
 
 #: .\guides\templates\guides\guide_course.html:36
 #: .\guides\templates\guides\guide_course.html:90
 msgid "初選"
-msgstr ""
+msgstr "Initial Registration"
 
 #: .\guides\templates\guides\guide_course.html:41
 #: .\guides\templates\guides\guide_course.html:106
 msgid "加退選"
-msgstr ""
+msgstr "Add/Drop"
 
 #: .\guides\templates\guides\guide_course.html:46
 #: .\guides\templates\guides\guide_course.html:123
 msgid "人工加退選"
-msgstr ""
+msgstr "Manual Add/Drop"
 
 #: .\guides\templates\guides\guide_course.html:47
 #: .\guides\templates\guides\guide_course.html:125
 msgid "手續費 NT$100"
-msgstr ""
+msgstr "Processing fee NT$100"
 
 #: .\guides\templates\guides\guide_course.html:51
 msgid "確認結果"
-msgstr ""
+msgstr "Confirm Results"
 
 #: .\guides\templates\guides\guide_course.html:56
 msgid "繳學分費"
-msgstr ""
+msgstr "Pay Credit Fees"
 
 #: .\guides\templates\guides\guide_course.html:61
 msgid "停修"
-msgstr ""
+msgstr "Course Withdrawal"
 
 #: .\guides\templates\guides\guide_course.html:67
 msgid "選課系統入口"
-msgstr ""
+msgstr "Course Registration System"
 
 #: .\guides\templates\guides\guide_course.html:71
 msgid "選課系統："
-msgstr ""
+msgstr "Course Registration System:"
 
 #: .\guides\templates\guides\guide_course.html:71
 msgid "SPARC（計中）帳號"
-msgstr ""
+msgstr "SPARC (Computer Center) account"
 
 #: .\guides\templates\guides\guide_course.html:72
 msgid "此時段請勿操作選課"
-msgstr ""
+msgstr "Please do not use the system during this time"
 
 #: .\guides\templates\guides\guide_course.html:80
 msgid "路徑："
-msgstr ""
+msgstr "Path:"
 
 #: .\guides\templates\guides\guide_course.html:80
 msgid "NCU Portal → 學生服務 → 教務相關服務 → 選課系統"
 msgstr ""
+"NCU Portal → Student Services → Academic Services → Course Registration"
 
 #: .\guides\templates\guides\guide_course.html:85
 msgid "各階段說明"
-msgstr ""
+msgstr "Stage Descriptions"
 
 #: .\guides\templates\guides\guide_course.html:95
 msgid "各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。"
 msgstr ""
+"Required courses for each department are usually pre-selected. If you have "
+"applied for credit exemption or completed them early, please drop them "
+"yourself."
 
 #: .\guides\templates\guides\guide_course.html:96
 msgid "務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。"
 msgstr ""
+"You must participate in initial registration; otherwise you will lose "
+"priority for courses with enrollment limits."
 
 #: .\guides\templates\guides\guide_course.html:97
 msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
 msgstr ""
+"After initial registration closes, results are distributed in one batch and "
+"announced before 16:00 on 115/02/03."
 
 #: .\guides\templates\guides\guide_course.html:98
 msgid "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。"
 msgstr ""
+"First-semester freshmen do not need an advisor password card. Starting from "
+"the second semester, students must complete the advisor-guided course "
+"selection procedure (online) before initial registration each semester."
 
 #: .\guides\templates\guides\guide_course.html:111
 msgid "春節期間（02/13–02/22）不開放選課，請注意。"
 msgstr ""
+"Course registration is not available during the Lunar New Year holiday "
+"(02/13–02/22). Please take note."
 
 #: .\guides\templates\guides\guide_course.html:112
 msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。"
 msgstr ""
+"From the 3rd day of add/drop, the system distributes results once daily at "
+"07:00–09:00 (system paused during processing). After 09:00 you can check the"
+" day's results on ee-class."
 
 #: .\guides\templates\guides\guide_course.html:113
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
 msgstr ""
+"If you still wish to take a course you were not selected for, you must "
+"register online again and wait for the next day's distribution. Waitlist "
+"spots are not held automatically."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
 msgstr ""
+"On the last day of add/drop, do not add courses that may conflict with your "
+"schedule, to avoid being forcibly dropped by the system in the final "
+"distribution."
 
 #: .\guides\templates\guides\guide_course.html:115
 msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
 msgstr ""
+"For courses requiring a password card, obtain it from the instructor. Each "
+"password can only be used once."
 
 #: .\guides\templates\guides\guide_course.html:129
 msgid "適用對象：加退選截止後仍有需求者、因衝堂被系統退選後欲重新加選者。"
 msgstr ""
+"Applicable for: those who still need to add/drop after the deadline, and "
+"those who were forcibly dropped due to schedule conflicts and wish to re-"
+"enroll."
 
 #: .\guides\templates\guides\guide_course.html:130
 msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
 msgstr ""
+"Process: Print application form from the course system → Get instructor "
+"signature → Pay NT$100 processing fee (cash at cashier or EasyCard deduction"
+" at Academic Affairs) → Submit form to Academic Affairs Division."
 
 #: .\guides\templates\guides\guide_course.html:131
 msgid "隔日更新至選課系統與 ee-class。"
 msgstr ""
+"Updates are reflected in the course system and ee-class the following day."
 
 #: .\guides\templates\guides\guide_course.html:132
 msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
 msgstr ""
+"If the instructor is unavailable, a department staff member authorized by "
+"the instructor may stamp on their behalf."
 
 #: .\guides\templates\guides\guide_course.html:140
 msgid "確認選課結果"
-msgstr ""
+msgstr "Confirm Course Registration Results"
 
 #: .\guides\templates\guides\guide_course.html:145
 msgid "路徑：選課系統 → 個人功能表 → 選課結果。"
-msgstr ""
+msgstr "Path: Course System → Personal Menu → Registration Results."
 
 #: .\guides\templates\guides\guide_course.html:146
 msgid "依選課辦法，未於期限內確認者以電腦系統為依據，不得異議。請務必確認！"
 msgstr ""
+"Per course registration regulations, those who do not confirm within the "
+"deadline are bound by the computer system records and may not dispute. "
+"Please confirm without fail!"
 
 #: .\guides\templates\guides\guide_course.html:147
 msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
 msgstr ""
+"If you are forcibly dropped due to schedule conflict or duplicate course "
+"code, you may use the manual add/drop period (03/10–03/12) to remedy."
 
 #: .\guides\templates\guides\guide_course.html:155
 msgid "停修（Course Withdrawal）"
-msgstr ""
+msgstr "Course Withdrawal"
 
 #: .\guides\templates\guides\guide_course.html:157
 msgid "W 成績"
-msgstr ""
+msgstr "W Grade"
 
 #: .\guides\templates\guides\guide_course.html:161
 msgid "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。"
 msgstr ""
+"Limited to one course per semester. After withdrawal, remaining credits must"
+" not fall below the minimum required (16 for years 1–3, 9 for year 4)."
 
 #: .\guides\templates\guides\guide_course.html:162
 msgid "停修不退學分費，成績單上以「停修 / W」登錄，不計入當學期所修學分數。"
 msgstr ""
+"No credit fee refund for withdrawal. The transcript records \"Withdrawal / "
+"W\" and it does not count toward the semester's credit total."
 
 #: .\guides\templates\guides\guide_course.html:163
 msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
 msgstr ""
+"Process: Print withdrawal application from the course system → Get "
+"signatures from instructor and department head → Submit to Academic Affairs "
+"Division."
 
 #: .\guides\templates\guides\guide_course.html:164
 msgid "已辦理減修者不得再辦理停修。"
 msgstr ""
+"Students who have already applied for reduced credit load may not also apply"
+" for course withdrawal."
 
 #: .\guides\templates\guides\guide_course.html:170
 msgid "重要規定"
-msgstr ""
+msgstr "Important Regulations"
 
 #: .\guides\templates\guides\guide_course.html:174
 msgid "最低修課學分："
-msgstr ""
+msgstr "Minimum Credits:"
 
 #: .\guides\templates\guides\guide_course.html:174
 msgid "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。"
 msgstr ""
+"Years 1–3 must take at least 16 credits per semester; Year 4 at least 9. "
+"Those falling short must apply for credit reduction (with advisor and "
+"department head approval), otherwise may be subject to dismissal."
 
 #: .\guides\templates\guides\guide_course.html:178
 msgid "衝堂 / 同課號："
-msgstr ""
+msgstr "Schedule Conflict / Duplicate Course Code:"
 
 #: .\guides\templates\guides\guide_course.html:178
 msgid "加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。"
 msgstr ""
+"After the add/drop deadline, if there are still schedule conflicts or "
+"duplicate course codes, the Academic Affairs Division will forcibly drop all"
+" of them. Handle these yourself before the deadline; you can remedy via "
+"manual add/drop if dropped."
 
 #: .\guides\templates\guides\guide_course.html:182
 msgid "部份課程有群組上限："
-msgstr ""
+msgstr "Some courses have group limits:"
 
 #: .\guides\templates\guides\guide_course.html:182
 msgid "如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。"
 msgstr ""
+"For example, Core General Education is limited to 2 per semester, PE 1 per "
+"semester, Freshman English 1 per semester, etc. Please check group "
+"restrictions before registering."
 
 #: .\guides\templates\guides\guide_course.html:186
 msgid "學分費："
-msgstr ""
+msgstr "Credit Fees:"
 
 #: .\guides\templates\guides\guide_course.html:186
 msgid "修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。"
 msgstr ""
+"≤ 9 credits: pay proportional credit fees and misc. fees; ≥ 10 credits: pay "
+"full tuition and misc. fees (teacher education credits counted separately)."
 
 #: .\guides\templates\guides\guide_course.html:191
 msgid "學分抵免"
-msgstr ""
+msgstr "Credit Exemption"
 
 #: .\guides\templates\guides\guide_course.html:195
 msgid "學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。"
 msgstr ""
+"Credit exemption is handled by the Registration Section (not the Academic "
+"Affairs Division). Please contact the Registration Section of the Academic "
+"Office for application timing and regulations."
 
 #: .\guides\templates\guides\guide_course.html:201
 msgid "抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選期間選課，系統不會代選任何課程。"
 msgstr ""
+"After exemption results are announced, if exempted courses are still on your"
+" registration list, please drop them yourself. Transfer students must "
+"register for courses themselves during the add/drop period; the system will "
+"not auto-select any courses."
 
 #: .\guides\templates\guides\guide_course.html:206
 #| msgid "聯絡資訊"
@@ -4063,58 +4136,58 @@ msgstr "Contact Information"
 
 #: .\guides\templates\guides\guide_course.html:211
 msgid "業務項目"
-msgstr ""
+msgstr "Service Area"
 
 #: .\guides\templates\guides\guide_course.html:212
 msgid "電話分機（03-4227151 +）"
-msgstr ""
+msgstr "Phone Extension (03-4227151 +)"
 
 #: .\guides\templates\guides\guide_course.html:216
 msgid "選課、課務相關"
-msgstr ""
+msgstr "Course Registration & Academic Affairs"
 
 #: .\guides\templates\guides\guide_course.html:217
 msgid "校際選課（本校至他校）"
-msgstr ""
+msgstr "Inter-School Registration (NCU to Other Schools)"
 
 #: .\guides\templates\guides\guide_course.html:218
 msgid "校際選課（他校至中大）"
-msgstr ""
+msgstr "Inter-School Registration (Other Schools to NCU)"
 
 #: .\guides\templates\guides\guide_course.html:219
 msgid "暑修"
-msgstr ""
+msgstr "Summer Session"
 
 #: .\guides\templates\guides\guide_course.html:220
 msgid "數位學習平台"
-msgstr ""
+msgstr "Digital Learning Platform"
 
 #: .\guides\templates\guides\guide_course.html:221
 msgid "導師輔導選課問題"
-msgstr ""
+msgstr "Advisor-Guided Course Selection Issues"
 
 #: .\guides\templates\guides\guide_course.html:227
 #: .\guides\templates\guides\guide_graduation.html:218
 #: .\guides\templates\guides\guide_nhi.html:171
 #: .\guides\templates\guides\guide_work_permit.html:264
 msgid "相關連結"
-msgstr ""
+msgstr "Related Links"
 
 #: .\guides\templates\guides\guide_course.html:229
 msgid "NCU 選課系統 ↗"
-msgstr ""
+msgstr "NCU Course Registration System ↗"
 
 #: .\guides\templates\guides\guide_course.html:230
 msgid "課務日程表 ↗"
-msgstr ""
+msgstr "Course Schedule Calendar ↗"
 
 #: .\guides\templates\guides\guide_course.html:231
 msgid "選課相關資訊 PDF ↗"
-msgstr ""
+msgstr "Course Registration Info PDF ↗"
 
 #: .\guides\templates\guides\guide_course.html:232
 msgid "選課系統操作手冊（英）↗"
-msgstr ""
+msgstr "Course System User Manual (English) ↗"
 
 #: .\guides\templates\guides\guide_course.html:233
 #| msgid "長庚醫院官網 ↗"
@@ -4630,29 +4703,34 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_graduation.html:17
 msgid "GPA・畢業門檻・英文門檻"
-msgstr ""
+msgstr "GPA · Graduation Threshold · English Proficiency"
 
 #: .\guides\templates\guides\guide_graduation.html:19
 msgid "中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。"
 msgstr ""
+"NCU grade letter system, GPA calculation method, and the English proficiency"
+" requirements for graduation from each college."
 
 #: .\guides\templates\guides\guide_graduation.html:23
 msgid "成績等第制（109 學年起適用）"
-msgstr ""
+msgstr "Grade Letter System (Effective from AY 109)"
 
 #: .\guides\templates\guides\guide_graduation.html:26
 msgid ""
 "109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 60 分（C-），研究所為 70 "
 "分（B-）。"
 msgstr ""
+"For students enrolled from AY 109 (September 2020) onwards, NCU records "
+"grades using letter grades converted to GPA (max 4.3). The passing standard "
+"for undergraduates is 60 (C-); for graduate students it is 70 (B-)."
 
 #: .\guides\templates\guides\guide_graduation.html:32
 msgid "等第"
-msgstr ""
+msgstr "Grade"
 
 #: .\guides\templates\guides\guide_graduation.html:33
 msgid "分數範圍"
-msgstr ""
+msgstr "Score Range"
 
 #: .\guides\templates\guides\guide_graduation.html:35
 #: .\guides\templates\guides\guide_work_permit.html:82
@@ -4664,154 +4742,177 @@ msgstr "Fee description"
 
 #: .\guides\templates\guides\guide_graduation.html:39
 msgid "優異"
-msgstr ""
+msgstr "Excellent"
 
 #: .\guides\templates\guides\guide_graduation.html:44
 msgid "研究所最低及格"
-msgstr ""
+msgstr "Graduate minimum pass"
 
 #: .\guides\templates\guides\guide_graduation.html:47
 msgid "大學部最低及格"
-msgstr ""
+msgstr "Undergraduate minimum pass"
 
 #: .\guides\templates\guides\guide_graduation.html:48
 #: .\guides\templates\guides\guide_graduation.html:49
 #: .\guides\templates\guides\guide_graduation.html:50
 msgid "不及格"
-msgstr ""
+msgstr "Fail"
 
 #: .\guides\templates\guides\guide_graduation.html:50
 msgid "0（缺考）"
-msgstr ""
+msgstr "0 (Absent)"
 
 #: .\guides\templates\guides\guide_graduation.html:51
 msgid "W（停修）"
-msgstr ""
+msgstr "W (Withdrawal)"
 
 #: .\guides\templates\guides\guide_graduation.html:51
 msgid "不計入學分，成績單標註 W"
-msgstr ""
+msgstr "Not counted in credits; transcript marked W"
 
 #: .\guides\templates\guides\guide_graduation.html:57
 msgid "GPA 計算方式"
-msgstr ""
+msgstr "GPA Calculation Method"
 
 #: .\guides\templates\guides\guide_graduation.html:59
 msgid "計算公式"
-msgstr ""
+msgstr "Formula"
 
 #: .\guides\templates\guides\guide_graduation.html:60
 msgid "課程學分數"
-msgstr ""
+msgstr "Course Credits"
 
 #: .\guides\templates\guides\guide_graduation.html:60
 msgid "該課程等第積分"
-msgstr ""
+msgstr "Grade Points for the Course"
 
 #: .\guides\templates\guides\guide_graduation.html:60
 msgid "總學分數"
-msgstr ""
+msgstr "Total Credits"
 
 #: .\guides\templates\guides\guide_graduation.html:62
 msgid "中大採 4.3 滿分制。出國交換、申請研究所時，部分機構採 4.0 換算，請依對方要求換算。"
 msgstr ""
+"NCU uses a 4.3-point scale. When applying for exchange programs or graduate "
+"schools, some institutions use a 4.0 scale — convert as required by the "
+"receiving institution."
 
 #: .\guides\templates\guides\guide_graduation.html:67
 msgid "體育課、軍訓、服務學習不計入畢業學分，但仍有成績記錄。這些課程的 GPA 積分計算方式請洽各系確認。"
 msgstr ""
+"PE, military training, and service learning are not counted toward "
+"graduation credits, but grades are still recorded. Please check with your "
+"department on how these affect your GPA calculation."
 
 #: .\guides\templates\guides\guide_graduation.html:71
 msgid "畢業條件一覽（大學部）"
-msgstr ""
+msgstr "Graduation Requirements Overview (Undergraduate)"
 
 #: .\guides\templates\guides\guide_graduation.html:77
 msgid "畢業學分數"
-msgstr ""
+msgstr "Graduation Credits"
 
 #: .\guides\templates\guides\guide_graduation.html:78
 msgid "大多數學系需修滿 128 學分（含必修、通識、選修）。實際學分依各系課程規定，請至系網查詢應修科目表。"
 msgstr ""
+"Most departments require 128 credits (including required, general education,"
+" and elective courses). Actual requirements vary by department — check your "
+"department's required course list."
 
 #: .\guides\templates\guides\guide_graduation.html:80
 #: .\guides\templates\guides\guide_graduation.html:89
 msgid "計學分"
-msgstr ""
+msgstr "Counts toward credits"
 
 #: .\guides\templates\guides\guide_graduation.html:86
 msgid "通識課程"
-msgstr ""
+msgstr "General Education"
 
 #: .\guides\templates\guides\guide_graduation.html:87
 msgid "至少修習 8 學分通識課程（含核心通識及通識選修）。各學院核心通識規定略有不同，請確認是否選滿必修核心。"
 msgstr ""
+"At least 8 credits of general education courses (including core and elective"
+" general education) are required. Core requirements vary by college — "
+"confirm you have completed all mandatory core courses."
 
 #: .\guides\templates\guides\guide_graduation.html:95
 msgid "體育課"
-msgstr ""
+msgstr "Physical Education"
 
 #: .\guides\templates\guides\guide_graduation.html:96
 msgid "需修滿 5 學期體育課（大一必修上、下 + 興趣體育 3 學期）。不列入畢業學分，但必須修畢方可畢業。"
 msgstr ""
+"5 semesters of PE are required (2 mandatory in Year 1 + 3 elective PE "
+"semesters). Not counted toward graduation credits, but must be completed to "
+"graduate."
 
 #: .\guides\templates\guides\guide_graduation.html:98
 #: .\guides\templates\guides\guide_graduation.html:107
 #: .\guides\templates\guides\guide_graduation.html:125
 msgid "不計學分"
-msgstr ""
+msgstr "Not counted in credits"
 
 #: .\guides\templates\guides\guide_graduation.html:104
 msgid "服務學習"
-msgstr ""
+msgstr "Service Learning"
 
 #: .\guides\templates\guides\guide_graduation.html:105
 msgid "需修滿 1 學年（上、下各一學期）。不列入畢業學分，但必須通過方可畢業。"
 msgstr ""
+"1 full academic year (one semester each term) is required. Not counted "
+"toward graduation credits, but must be passed to graduate."
 
 #: .\guides\templates\guides\guide_graduation.html:113
 msgid "英文畢業門檻"
-msgstr ""
+msgstr "English Graduation Threshold"
 
 #: .\guides\templates\guides\guide_graduation.html:114
 msgid "各學院標準不同（詳見下方表格）。未達標者可修習「進修英文」（4 學分，2 學期）作為替代途徑。"
 msgstr ""
+"Standards differ by college (see table below). Students who do not meet the "
+"threshold may take \"Supplementary English\" (4 credits, 2 semesters) as an "
+"alternative."
 
 #: .\guides\templates\guides\guide_graduation.html:116
 msgid "需達標"
-msgstr ""
+msgstr "Must meet standard"
 
 #: .\guides\templates\guides\guide_graduation.html:122
 msgid "操行成績"
-msgstr ""
+msgstr "Conduct Grade"
 
 #: .\guides\templates\guides\guide_graduation.html:123
 msgid "各學期操行成績均須及格。"
-msgstr ""
+msgstr "Conduct grades must be passing every semester."
 
 #: .\guides\templates\guides\guide_graduation.html:131
 msgid "英文畢業門檻（大學部，依學院）"
-msgstr ""
+msgstr "English Graduation Threshold (Undergraduate, by College)"
 
 #: .\guides\templates\guides\guide_graduation.html:134
 msgid "以下為各學院門檻標準，實際以語言中心公告為準。部分學院允許以「第二外語」替代英文門檻，請洽語言中心確認。"
 msgstr ""
+"The thresholds below are the college standards. Actual requirements follow "
+"the Language Center's official announcements. Some colleges allow a second "
+"foreign language as a substitute — confirm with the Language Center."
 
 #: .\guides\templates\guides\guide_graduation.html:140
 msgid "學院"
-msgstr ""
+msgstr "College"
 
 #: .\guides\templates\guides\guide_graduation.html:141
 msgid "（聽讀合計）"
-msgstr ""
+msgstr "(Listening + Reading)"
 
 #: .\guides\templates\guides\guide_graduation.html:145
 msgid "全民英檢"
-msgstr ""
+msgstr "GEPT"
 
 #: .\guides\templates\guides\guide_graduation.html:150
 #: .\users\templates\users\edit_profile.html:126
 #: .\users\templates\users\profile_setup.html:199
 msgid "管理學院"
-msgstr ""
+msgstr "College of Management"
 
 #: .\guides\templates\guides\guide_graduation.html:152
 #: .\guides\templates\guides\guide_graduation.html:157
@@ -4822,103 +4923,119 @@ msgstr ""
 #: .\guides\templates\guides\guide_graduation.html:182
 #: .\guides\templates\guides\guide_graduation.html:187
 msgid "中高級複試通過"
-msgstr ""
+msgstr "GEPT High-Intermediate (Stage 2)"
 
 #: .\guides\templates\guides\guide_graduation.html:155
 #: .\users\templates\users\edit_profile.html:107
 #: .\users\templates\users\profile_setup.html:180
 msgid "文學院"
-msgstr ""
+msgstr "College of Humanities"
 
 #: .\guides\templates\guides\guide_graduation.html:160
 #: .\users\templates\users\edit_profile.html:144
 #: .\users\templates\users\profile_setup.html:217
 msgid "客家學院"
-msgstr ""
+msgstr "College of Hakka Studies"
 
 #: .\guides\templates\guides\guide_graduation.html:165
 msgid "電資學院"
-msgstr ""
+msgstr "College of Electrical Engineering & Computer Science"
 
 #: .\guides\templates\guides\guide_graduation.html:170
 #: .\users\templates\users\edit_profile.html:120
 #: .\users\templates\users\profile_setup.html:193
 msgid "工學院"
-msgstr ""
+msgstr "College of Engineering"
 
 #: .\guides\templates\guides\guide_graduation.html:175
 #: .\users\templates\users\edit_profile.html:113
 #: .\users\templates\users\profile_setup.html:186
 msgid "理學院"
-msgstr ""
+msgstr "College of Science"
 
 #: .\guides\templates\guides\guide_graduation.html:180
 #: .\users\templates\users\edit_profile.html:138
 #: .\users\templates\users\profile_setup.html:211
 msgid "地球科學學院"
-msgstr ""
+msgstr "College of Earth Sciences"
 
 #: .\guides\templates\guides\guide_graduation.html:185
 #: .\users\templates\users\edit_profile.html:147
 #: .\users\templates\users\profile_setup.html:220
 msgid "生醫理工學院"
-msgstr ""
+msgstr "College of Biomedical Sciences & Engineering"
 
 #: .\guides\templates\guides\guide_graduation.html:195
 msgid ""
 "校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 "
 "NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。"
 msgstr ""
+"Campus TOEIC: The Language Center holds a campus TOEIC exam every semester. "
+"The fee is approximately NT$1,270, open only to NCU students. It is the most"
+" convenient way to meet the English graduation requirement. Check the "
+"Language Center website for the latest session registration."
 
 #: .\guides\templates\guides\guide_graduation.html:199
 msgid "未達門檻的替代方案：進修英文"
-msgstr ""
+msgstr "Alternative for Not Meeting the Threshold: Supplementary English"
 
 #: .\guides\templates\guides\guide_graduation.html:201
 msgid "進修英文（Supplementary English）"
-msgstr ""
+msgstr "Supplementary English"
 
 #: .\guides\templates\guides\guide_graduation.html:203
 msgid "共 4 學分，分兩學期修習（每學期 2 學分）"
-msgstr ""
+msgstr "4 credits total, taken over two semesters (2 credits per semester)"
 
 #: .\guides\templates\guides\guide_graduation.html:204
 msgid "修習並通過後可取代英文門檻，無需另外提交語言成績"
 msgstr ""
+"Upon completion and passing, it substitutes for the English proficiency "
+"requirement — no separate language score needed"
 
 #: .\guides\templates\guides\guide_graduation.html:205
 msgid "申請資格：入學英文成績未達標準，且已參加過中央大學英文鑑定測驗者"
 msgstr ""
+"Eligibility: Students whose English score at enrollment did not meet the "
+"standard and who have taken the NCU English Placement Test"
 
 #: .\guides\templates\guides\guide_graduation.html:206
 msgid "是否計入畢業學分依各系規定，請洽系辦確認"
 msgstr ""
+"Whether it counts toward graduation credits depends on your department — "
+"confirm with the department office"
 
 #: .\guides\templates\guides\guide_graduation.html:211
 msgid "研究所英文門檻（以工學院為例）"
-msgstr ""
+msgstr "Graduate English Threshold (College of Engineering as Example)"
 
 #: .\guides\templates\guides\guide_graduation.html:214
 msgid ""
 "各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 "
 "或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。"
 msgstr ""
+"Each graduate program sets its own English requirement, which must be "
+"submitted before the degree oral exam. For the College of Engineering, the "
+"requirement is TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 or equivalent. Students "
+"who do not meet this can take a one-semester remedial English course (pass "
+"with 70+) instead. Please check with your department for specific "
+"regulations."
 
 #: .\guides\templates\guides\guide_graduation.html:220
 msgid "語言中心英文畢業門檻"
-msgstr ""
+msgstr "Language Center — English Graduation Threshold"
 
 #: .\guides\templates\guides\guide_graduation.html:221
 msgid "NCU 語言中心"
-msgstr ""
+msgstr "NCU Language Center"
 
 #: .\guides\templates\guides\guide_graduation.html:222
 msgid "應修科目表"
-msgstr ""
+msgstr "Required Course List"
 
 #: .\guides\templates\guides\guide_graduation.html:223
 msgid "教務處官網"
-msgstr ""
+msgstr "Academic Affairs Office Website"
 
 #: .\guides\templates\guides\guide_housing_ncu.html:4
 #: .\guides\templates\guides\guide_housing_ncu.html:17
@@ -7832,41 +7949,46 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_systems.html:22
 msgid "三大系統快速入口"
-msgstr ""
+msgstr "Quick Access to 3 Main Systems"
 
 #: .\guides\templates\guides\guide_systems.html:28
 msgid "統一登入入口，選課、成績、各系統 SSO"
 msgstr ""
+"Unified login portal for course registration, grades, and SSO across all "
+"campus systems"
 
 #: .\guides\templates\guides\guide_systems.html:34
 msgid "課程平台：講義、作業、公告、成績查詢"
 msgstr ""
+"Course platform: lecture notes, assignments, announcements, and grade lookup"
 
 #: .\guides\templates\guides\guide_systems.html:38
 #: .\guides\templates\guides\guide_systems.html:189
 #: .\guides\templates\guides\guide_systems.html:192
 msgid "學生信箱"
-msgstr ""
+msgstr "Student Email"
 
 #: .\guides\templates\guides\guide_systems.html:40
 msgid "學號@cc.ncu.edu.tw，重要公告必看"
-msgstr ""
+msgstr "StudentID@cc.ncu.edu.tw — check regularly for important notices"
 
 #: .\guides\templates\guides\guide_systems.html:45
 msgid "第一步：帳號啟用"
-msgstr ""
+msgstr "Step 1: Account Activation"
 
 #: .\guides\templates\guides\guide_systems.html:48
 msgid "Portal 帳號預設未啟用，入學後請先完成啟用，才能使用所有校內系統。"
 msgstr ""
+"Your Portal account is not activated by default. Complete activation after "
+"enrollment before using any campus system."
 
 #: .\guides\templates\guides\guide_systems.html:52
 msgid "啟用步驟"
-msgstr ""
+msgstr "Activation Steps"
 
 #: .\guides\templates\guides\guide_systems.html:57
 msgid "前往啟用頁面"
-msgstr ""
+msgstr "Go to the Activation Page"
 
 #: .\guides\templates\guides\guide_systems.html:68
 #: .\users\templates\users\profile_setup.html:21
@@ -7876,6 +7998,8 @@ msgstr "Fill in Information"
 #: .\guides\templates\guides\guide_systems.html:70
 msgid "學號、出生年月日，外籍生填護照號碼（非台灣身分證）"
 msgstr ""
+"Student ID and date of birth. International students use passport number "
+"(not Taiwan ID)."
 
 #: .\guides\templates\guides\guide_systems.html:77
 #| msgid "約 15～20 分鐘"
@@ -7885,72 +8009,86 @@ msgstr "About 15–20 minutes"
 #: .\guides\templates\guides\guide_systems.html:78
 msgid "啟用完成後即可以學號 + 預設密碼（出生年月日，YYYYMMDD）登入 Portal。"
 msgstr ""
+"Once activated, log in to Portal with your student ID and default password "
+"(date of birth in YYYYMMDD format)."
 
 #: .\guides\templates\guides\guide_systems.html:84
 msgid "登入後立即更改密碼"
-msgstr ""
+msgstr "Change Your Password Immediately After Logging In"
 
 #: .\guides\templates\guides\guide_systems.html:85
 msgid "預設密碼為生日，請馬上改成強密碼，並設定信箱或手機號碼以便之後找回密碼。"
 msgstr ""
+"The default password is your birthday. Change it to a strong password "
+"immediately and link an email or phone number for future password recovery."
 
 #: .\guides\templates\guides\guide_systems.html:91
 msgid "若瀏覽器顯示「Cookie 未被接受」，請換瀏覽器（建議 Chrome / Firefox）。聯絡計算機中心：分機 57771。"
 msgstr ""
+"If the browser shows \"Cookies not accepted\", switch browsers (Chrome or "
+"Firefox recommended). Contact the Computer Center: ext. 57771."
 
 #: .\guides\templates\guides\guide_systems.html:103
 #: .\guides\templates\guides\guide_systems.html:137
 msgid "登入帳號"
-msgstr ""
+msgstr "Login Account"
 
 #: .\guides\templates\guides\guide_systems.html:104
 #: .\guides\templates\guides\guide_systems.html:166
 msgid "學號"
-msgstr ""
+msgstr "Student ID"
 
 #: .\guides\templates\guides\guide_systems.html:107
 msgid "預設密碼"
-msgstr ""
+msgstr "Default Password"
 
 #: .\guides\templates\guides\guide_systems.html:111
 msgid "功能"
-msgstr ""
+msgstr "Features"
 
 #: .\guides\templates\guides\guide_systems.html:112
 msgid "選課 / 成績"
-msgstr ""
+msgstr "Course Reg. / Grades"
 
 #: .\guides\templates\guides\guide_systems.html:117
 msgid "單一登入（SSO）：一組帳密進入 ee-class、信箱、圖書館等所有校內系統"
 msgstr ""
+"Single Sign-On (SSO): one account and password to access ee-class, email, "
+"library, and all other campus systems"
 
 #: .\guides\templates\guides\guide_systems.html:118
 msgid "選課系統（cis.ncu.edu.tw/Course/）：透過 Portal 帳號登入"
 msgstr ""
+"Course Registration System (cis.ncu.edu.tw/Course/): log in with your Portal"
+" account"
 
 #: .\guides\templates\guides\guide_systems.html:119
 msgid "成績查詢、修課記錄"
-msgstr ""
+msgstr "Grade inquiry and course history"
 
 #: .\guides\templates\guides\guide_systems.html:120
 msgid "QR Code 登入：在公用電腦可用手機掃碼，不需輸入密碼"
 msgstr ""
+"QR Code login: scan with your phone on a shared computer — no need to type "
+"your password"
 
 #: .\guides\templates\guides\guide_systems.html:121
 msgid "忘記密碼：透過已綁定的信箱或手機號碼重設"
-msgstr ""
+msgstr "Forgot password: reset via your linked email or phone number"
 
 #: .\guides\templates\guides\guide_systems.html:126
 msgid "課程平台"
-msgstr ""
+msgstr "Course Platform"
 
 #: .\guides\templates\guides\guide_systems.html:132
 msgid "請勿在 ee-class 自行「註冊」新帳號！一般生直接用 Portal 帳號（學號）登入即可。"
 msgstr ""
+"Do NOT register a new account on ee-class yourself! Regular students simply "
+"log in with their Portal account (student ID)."
 
 #: .\guides\templates\guides\guide_systems.html:138
 msgid "學號（同 Portal）"
-msgstr ""
+msgstr "Student ID (same as Portal)"
 
 #: .\guides\templates\guides\guide_systems.html:141
 #: .\guides\templates\guides\guide_systems.html:160
@@ -7961,27 +8099,27 @@ msgstr "Password"
 
 #: .\guides\templates\guides\guide_systems.html:142
 msgid "同 Portal 密碼"
-msgstr ""
+msgstr "Same as Portal password"
 
 #: .\guides\templates\guides\guide_systems.html:147
 msgid "查看課程講義、教材、教授公告"
-msgstr ""
+msgstr "View course lecture notes, materials, and professor announcements"
 
 #: .\guides\templates\guides\guide_systems.html:148
 msgid "繳交作業、查看作業批改結果"
-msgstr ""
+msgstr "Submit assignments and check graded results"
 
 #: .\guides\templates\guides\guide_systems.html:149
 msgid "課程成績查詢（部分老師使用）"
-msgstr ""
+msgstr "Check course grades (used by some instructors)"
 
 #: .\guides\templates\guides\guide_systems.html:150
 msgid "NCUx 雲端課程：選修免費線上課程（不計學分）"
-msgstr ""
+msgstr "NCUx online courses: enroll in free online courses (no credits)"
 
 #: .\guides\templates\guides\guide_systems.html:153
 msgid "特殊身份登入方式"
-msgstr ""
+msgstr "Login Methods for Special Student Types"
 
 #: .\guides\templates\guides\guide_systems.html:158
 #| msgid "身份別"
@@ -7995,51 +8133,51 @@ msgstr "Account Created"
 
 #: .\guides\templates\guides\guide_systems.html:165
 msgid "一般生／教職員"
-msgstr ""
+msgstr "Regular Student / Faculty"
 
 #: .\guides\templates\guides\guide_systems.html:167
 msgid "Portal 密碼"
-msgstr ""
+msgstr "Portal Password"
 
 #: .\guides\templates\guides\guide_systems.html:170
 msgid "跨校交換生"
-msgstr ""
+msgstr "Inter-School Exchange Student"
 
 #: .\guides\templates\guides\guide_systems.html:171
 msgid "Z 開頭臨時帳號"
-msgstr ""
+msgstr "Temporary account starting with Z"
 
 #: .\guides\templates\guides\guide_systems.html:172
 msgid "原校學號"
-msgstr ""
+msgstr "Home School Student ID"
 
 #: .\guides\templates\guides\guide_systems.html:175
 msgid "旁聽生／推廣教育"
-msgstr ""
+msgstr "Auditing Student / Continuing Education"
 
 #: .\guides\templates\guides\guide_systems.html:176
 msgid "Y 開頭臨時帳號"
-msgstr ""
+msgstr "Temporary account starting with Y"
 
 #: .\guides\templates\guides\guide_systems.html:177
 msgid "台灣身分證號"
-msgstr ""
+msgstr "Taiwan National ID Number"
 
 #: .\guides\templates\guides\guide_systems.html:184
 msgid "ee-class 問題聯絡：eeclass@ncu.edu.tw｜分機 57132 / 57169"
-msgstr ""
+msgstr "ee-class support: eeclass@ncu.edu.tw | ext. 57132 / 57169"
 
 #: .\guides\templates\guides\guide_systems.html:196
 msgid "信箱格式"
-msgstr ""
+msgstr "Email Format"
 
 #: .\guides\templates\guides\guide_systems.html:197
 msgid "學號@cc.ncu.edu.tw"
-msgstr ""
+msgstr "StudentID@cc.ncu.edu.tw"
 
 #: .\guides\templates\guides\guide_systems.html:200
 msgid "容量"
-msgstr ""
+msgstr "Storage"
 
 #: .\guides\templates\guides\guide_systems.html:204
 #| msgid "驗證連結有效期限為"
@@ -8048,47 +8186,55 @@ msgstr "The verification link is valid for"
 
 #: .\guides\templates\guides\guide_systems.html:205
 msgid "畢業後 5 年"
-msgstr ""
+msgstr "5 years after graduation"
 
 #: .\guides\templates\guides\guide_systems.html:210
 msgid "學校重要公告（選課結果、成績、繳費通知）均寄到此信箱，請定期查收"
 msgstr ""
+"All important school notices (course registration results, grades, payment "
+"notifications) are sent here — check regularly"
 
 #: .\guides\templates\guides\guide_systems.html:211
 msgid "登入帳號：學號；密碼：同 Portal 密碼"
-msgstr ""
+msgstr "Login: student ID; Password: same as Portal password"
 
 #: .\guides\templates\guides\guide_systems.html:212
 msgid "非 Gmail 帳號，無法直接存取 Google 服務"
-msgstr ""
+msgstr "Not a Gmail account — cannot directly access Google services"
 
 #: .\guides\templates\guides\guide_systems.html:215
 msgid "手機 / 電腦設定"
-msgstr ""
+msgstr "Mobile / Desktop Setup"
 
 #: .\guides\templates\guides\guide_systems.html:219
 msgid "前往「設定 → 郵件 → 帳號 → 新增帳號」，選「其他」，輸入信箱與密碼，詳細步驟："
 msgstr ""
+"Go to Settings → Mail → Accounts → Add Account, choose \"Other\", enter your"
+" email and password. Full guide:"
 
 #: .\guides\templates\guides\guide_systems.html:225
 msgid "帳號設定頁面 → 手動設定 → IMAP，詳細步驟見同上連結"
 msgstr ""
+"Account settings → Manual setup → IMAP. See the same link above for full "
+"steps."
 
 #: .\guides\templates\guides\guide_systems.html:228
 msgid "忘記密碼：透過 Portal 重設，不需另行聯絡信箱管理員"
 msgstr ""
+"Forgot password: reset via Portal — no need to contact the email admin "
+"separately"
 
 #: .\guides\templates\guides\guide_systems.html:232
 msgid "信箱問題聯絡：ncucc@cc.ncu.edu.tw｜分機 57555 / 57566"
-msgstr ""
+msgstr "Email support: ncucc@cc.ncu.edu.tw | ext. 57555 / 57566"
 
 #: .\guides\templates\guides\guide_systems.html:237
 msgid "計算機中心聯絡"
-msgstr ""
+msgstr "Computer Center Contact"
 
 #: .\guides\templates\guides\guide_systems.html:240
 msgid "帳號 / Portal 問題"
-msgstr ""
+msgstr "Account / Portal Issues"
 
 #: .\guides\templates\guides\guide_systems.html:244
 #| msgid "常見問題"
@@ -8097,7 +8243,7 @@ msgstr "FAQ"
 
 #: .\guides\templates\guides\guide_systems.html:248
 msgid "信箱問題"
-msgstr ""
+msgstr "Email Issues"
 
 #: .\guides\templates\guides\guide_work_permit.html:17
 #| msgid "僑生・外籍生必讀"
@@ -14531,6 +14677,15 @@ msgstr "Top 5% in department for the semester, automatically awarded"
 
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%"
 msgstr "Annual family income ≤ NT$900,000; grade 80+ or top 40% of class"
+
+msgid "截止"
+msgstr "Deadline"
+
+msgid "SPARC（計中）帳號登入"
+msgstr "Log in with your SPARC (Computer Center) account"
+
+msgid "每日 07:00–09:00 系統進行資料備份，"
+msgstr "The system performs data backup daily from 07:00–09:00. "
 
 #~ msgid "資訊管理"
 #~ msgstr "Information Management"

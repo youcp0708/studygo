@@ -12950,6 +12950,15 @@ msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%"
 msgstr ""
 "Pendapatan keluarga tahunan ≤ NT$900,000; gred 80+ atau 40% teratas kelas"
 
+msgid "截止"
+msgstr "Tamat Tempoh"
+
+msgid "SPARC（計中）帳號登入"
+msgstr "Log masuk dengan akaun SPARC (Pusat Komputer)"
+
+msgid "每日 07:00–09:00 系統進行資料備份，"
+msgstr "Sistem membuat sandaran data setiap hari dari 07:00–09:00. "
+
 #~ msgid "資訊管理"
 #~ msgstr "Pengurusan Maklumat"
 

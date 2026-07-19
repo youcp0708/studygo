@@ -15167,6 +15167,15 @@ msgstr "Top 5% trong khoa học kỳ, tự động cấp"
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%"
 msgstr "Thu nhập gia đình hàng năm ≤ NT$900,000; điểm 80+ hoặc top 40% lớp"
 
+msgid "截止"
+msgstr "Hết hạn"
+
+msgid "SPARC（計中）帳號登入"
+msgstr "Đăng nhập bằng tài khoản SPARC (Trung tâm Máy tính)"
+
+msgid "每日 07:00–09:00 系統進行資料備份，"
+msgstr "Hệ thống sao lưu dữ liệu hàng ngày từ 07:00–09:00. "
+
 #~ msgid "資訊管理"
 #~ msgstr "Quản lý thông tin"
 
