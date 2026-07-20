@@ -245,7 +245,7 @@
             if (href.startsWith('tel:')) {
               return `<a href="${href}" class="chat-link chat-link--tel">📞 ${label}</a>`;
             }
-            return `<a href="${href}" class="chat-link">${label}</a>`;
+            return `<a href="${href}" class="chat-link" target="_top">${label}</a>`;
           }
         );
         if (!ANSWER_LABEL_LINE.test(line.trim())) return safeLine;
