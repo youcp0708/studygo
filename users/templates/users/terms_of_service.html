@@ -1,0 +1,69 @@
+{# users/templates/users/terms_of_service.html — 服務條款（獨立頁面） #}
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "服務條款" %} — ReadyTo Taiwan{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'users/css/dashboard.css' %}?v=4">
+{% endblock %}
+
+{% block content %}
+<section class="db-section" style="padding-top:32px;padding-bottom:64px;">
+  <div class="db-wrap" style="max-width:820px;">
+    <h1 style="margin-bottom:4px;">{% trans "服務條款" %}</h1>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:32px;">{% trans "最後更新日期" %}：2026 年 7 月 21 日</p>
+
+    <div class="legal-doc" style="line-height:1.8;color:var(--text);">
+
+      <h2>{% trans "一、接受條款" %}</h2>
+      <p>{% blocktrans trimmed %}註冊或使用 ReadyTo Taiwan（以下稱「本服務」）即表示你同意本服務條款與《隱私權政策》。若你不同意，請不要使用本服務。{% endblocktrans %}</p>
+
+      <h2>{% trans "二、服務說明" %}</h2>
+      <p>{% blocktrans trimmed %}本服務協助國際學生準備來台就學所需的各項流程，提供任務清單、資訊指南、AI 聊天助手與學長姐分享社群等功能。本服務所提供之資訊僅供參考，實際申請流程與規定請以各校及台灣政府主管機關公告為準。{% endblocktrans %}</p>
+
+      <h2>{% trans "三、帳號註冊與安全" %}</h2>
+      <ul>
+        <li>{% blocktrans trimmed %}註冊時請提供正確、完整的個人資訊，並保持資料更新。{% endblocktrans %}</li>
+        <li>{% blocktrans trimmed %}你有責任妥善保管帳號密碼，帳號下的所有活動視為由你本人進行。{% endblocktrans %}</li>
+        <li>{% blocktrans trimmed %}若發現帳號遭未授權使用，請立即通知我們並修改密碼。{% endblocktrans %}</li>
+      </ul>
+
+      <h2>{% trans "四、使用者行為規範" %}</h2>
+      <p>{% blocktrans trimmed %}使用本服務時，你同意不會：{% endblocktrans %}</p>
+      <ul>
+        <li>{% blocktrans trimmed %}上傳違法、侵權、騷擾性或不實的內容。{% endblocktrans %}</li>
+        <li>{% blocktrans trimmed %}濫用 AI 聊天機器人（例如大量發送無關訊息、嘗試取得系統內部資訊）。{% endblocktrans %}</li>
+        <li>{% blocktrans trimmed %}嘗試未經授權存取他人帳號或本服務的系統。{% endblocktrans %}</li>
+        <li>{% blocktrans trimmed %}在學長姐分享區發佈與留學無關的廣告、詐騙或垃圾訊息。{% endblocktrans %}</li>
+      </ul>
+      <p>{% blocktrans trimmed %}違反上述規範時，我們保留移除相關內容或暫停／終止帳號的權利。{% endblocktrans %}</p>
+
+      <h2>{% trans "五、使用者內容" %}</h2>
+      <p>{% blocktrans trimmed %}你在學長姐分享區發佈的文字內容，或提供給 AI 聊天機器人的訊息與附件，其著作權仍歸你所有；但你同意授權本服務為提供該功能所必要的方式（例如儲存、顯示、傳送給第三方 API 處理）使用該內容。{% endblocktrans %}</p>
+
+      <h2>{% trans "六、第三方服務" %}</h2>
+      <p>{% blocktrans trimmed %}本服務整合 Google 登入、Google 地圖、OpenAI 聊天機器人等第三方服務，這些服務另受其自身條款與隱私權政策規範，本服務不對第三方服務的內容或行為負責。{% endblocktrans %}</p>
+
+      <h2>{% trans "七、免責聲明" %}</h2>
+      <p>{% blocktrans trimmed %}本服務提供的資訊（包含 AI 聊天機器人的回覆）僅供參考，不構成正式的法律、簽證、移民或財務建議。實際申請結果依各校、內政部移民署、勞動部等主管機關規定為準，請務必自行向官方管道確認最新規定。{% endblocktrans %}</p>
+
+      <h2>{% trans "八、服務變更與中止" %}</h2>
+      <p>{% blocktrans trimmed %}我們可能因維護、升級或其他營運考量，隨時修改或暫停部分或全部服務功能，將盡可能事先公告。{% endblocktrans %}</p>
+
+      <h2>{% trans "九、責任限制" %}</h2>
+      <p>{% blocktrans trimmed %}在法律允許的最大範圍內，本服務不對因使用或無法使用本服務所產生的間接、附帶或衍生性損害負責。{% endblocktrans %}</p>
+
+      <h2>{% trans "十、準據法" %}</h2>
+      <p>{% blocktrans trimmed %}本條款之解釋與適用，以及與本條款有關的爭議，均應依照中華民國（台灣）法律予以規範。{% endblocktrans %}</p>
+
+      <h2>{% trans "十一、條款的變更" %}</h2>
+      <p>{% blocktrans trimmed %}我們可能不時更新本條款，重大變更會於本頁面公告，並更新上方「最後更新日期」。繼續使用本服務即視為你接受更新後的條款。{% endblocktrans %}</p>
+
+      <h2>{% trans "十二、聯絡我們" %}</h2>
+      <p>{% blocktrans trimmed %}若你對本條款有任何疑問，歡迎透過{% endblocktrans %} <a href="mailto:readytotaiwan@gmail.com">readytotaiwan@gmail.com</a> {% blocktrans trimmed %}與我們聯絡。{% endblocktrans %}</p>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

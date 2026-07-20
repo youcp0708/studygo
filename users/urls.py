@@ -252,6 +252,14 @@ def alumni_edit(request):
     return redirect('/alumni/?tab=mine')
 
 
+def privacy_policy_page(request):
+    return render(request, 'users/privacy_policy.html')
+
+
+def terms_of_service_page(request):
+    return render(request, 'users/terms_of_service.html')
+
+
 def forgot_password_page(request):
     return render(request, 'users/forgot_password.html')
 
@@ -277,4 +285,6 @@ urlpatterns = [
     path('alumni/edit/',    alumni_edit,          name='alumni_edit'),
     path('forgot-password/', forgot_password_page, name='forgot_password'),
     path('reset-password/', reset_password_page,  name='reset_password'),
+    path('privacy-policy/', privacy_policy_page,  name='privacy_policy'),
+    path('terms-of-service/', terms_of_service_page, name='terms_of_service'),
 ]
