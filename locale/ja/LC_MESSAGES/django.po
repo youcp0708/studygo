@@ -202,15 +202,9 @@ msgstr "削除に失敗しました"
 msgid "回覆中…"
 msgstr "返信中…"
 
-<<<<<<< HEAD
-#: .\chatbot\templates\chatbot\chatbot.html:261
-msgid "朋友"
-msgstr "友達"
-=======
 #: .\chatbot\views.py:16
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
 msgstr "台湾のコンビニでは、料金の支払い、荷物の受け取り、コピー、日用品の購入などができます。"
->>>>>>> new/16
 
 #: .\chatbot\templates\chatbot\chatbot.html:262
 msgid "好朋友"
@@ -306,8 +300,6 @@ msgstr "進行中"
 msgid "已完成"
 msgstr "完了"
 
-<<<<<<< HEAD
-=======
 #: .\flows\templates\flows\admissions_guide.html:4
 #: .\flows\templates\flows\admissions_guide.html:218
 msgid "招生簡章"
@@ -1292,7 +1284,6 @@ msgstr "台湾留学関連法規"
 msgid "入學・居留・健保・工讀・學籍等重要法規說明"
 msgstr "入学・居留・健保・工讀・学籍等の重要法規説明"
 
->>>>>>> new/16
 #: .\flows\templates\flows\my_flows.html:3
 msgid "我的任務"
 msgstr "私の仕事"
@@ -4026,8 +4017,6 @@ msgstr ""
 msgid "注意事項"
 msgstr "注意事項"
 
-<<<<<<< HEAD
-=======
 msgid "建議先辦好 SIM 卡再去開戶："
 msgstr "銀行口座開設前にSIMカードを入手しておきましょう："
 
@@ -4098,7 +4087,6 @@ msgstr "🗺 地区：桃園市中壢区"
 msgid "⚡ 即時查詢 → 見下方連結"
 msgstr "⚡ リアルタイム検索 → 下記リンクを参照"
 
->>>>>>> new/16
 #: .\guides\templates\guides\guide_bank.html:111
 msgid "建議先辦好 SIM 卡再去開戶："
 msgstr "銀行口座開設前にSIMカードを入手しておきましょう："
@@ -5255,30 +5243,9 @@ msgstr "および科目計画のアドバイス"
 msgid "成績與畢業門檻"
 msgstr "成績と卒業基準"
 
-<<<<<<< HEAD
-#: .\guides\templates\guides\guide_graduation.html:17
-msgid "GPA・畢業門檻・英文門檻"
-msgstr "GPA・卒業要件・英語基準"
-
-#: .\guides\templates\guides\guide_graduation.html:19
-msgid "中央大學成績等第制度、GPA 計算方式，以及各學院畢業所需達到的英文門檻標準。"
-msgstr "NCUの成績等第制度、GPA計算方法、および各学部の卒業に必要な英語の基準。"
-
-#: .\guides\templates\guides\guide_graduation.html:23
-msgid "成績等第制（109 學年起適用）"
-msgstr "成績等第制（2020年度より適用）"
-
-#: .\guides\templates\guides\guide_graduation.html:26
-msgid ""
-"109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 60 分（C-），研究所為 70 "
-"分（B-）。"
-msgstr ""
-"2020年度（2020年9月）入学より、NCUは成績を等第制で記録し、GPA（満点4.3）に換算。学部の合格基準は60点（C-）、大学院は70点（B-）。"
-=======
 #: flows/templates/flows/guide_arc_exchange.html
 msgid "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。"
 msgstr "1学期に1科目まで。取消後の残単位数は最低履修単位（1〜3年次16単位、4年次9単位）を下回ってはいけません。"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_graduation.html:32
 msgid "等第"
@@ -5493,15 +5460,8 @@ msgstr "生医理工学院"
 
 #: .\guides\templates\guides\guide_graduation.html:195
 msgid ""
-<<<<<<< HEAD
-"校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 "
-"NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。"
-msgstr ""
-"キャンパスTOEIC：語学センターが毎学期キャンパスTOEICを実施（約NT$1,270、本学学生限定）。英語基準を達成する最も便利な方法。最新の試験日程は語学センターのウェブサイトで確認してください。"
-=======
 "不可以。海聯會管道僅適用於具僑生身份的申請者。外籍生（持外國國籍但不符僑生認定）須直接向各大學的國際招生辦公室申請，各校招生時程與文件要求請見各校官網。"
 msgstr "取消後は単位費用の返還なし。成績証明書に「停修 / W」と記録され、当学期の修得単位数に含まれません。"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_graduation.html:199
 msgid "未達門檻的替代方案：進修英文"
@@ -5536,625 +5496,6 @@ msgid ""
 "各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 "
 "或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。"
 msgstr ""
-<<<<<<< HEAD
-"各研究所の英語基準は各学院が定め、学位口試申請前に提出が必要です。工学院はTOEIC 600 / TOEFL iBT 64 / IELTS "
-"5.0以上が必要。詳細は各学科にお問い合わせください。"
-
-#: .\guides\templates\guides\guide_graduation.html:220
-msgid "語言中心英文畢業門檻"
-msgstr "語学センター英語卒業基準"
-
-#: .\guides\templates\guides\guide_graduation.html:221
-msgid "NCU 語言中心"
-msgstr "NCU語学センター"
-
-#: .\guides\templates\guides\guide_graduation.html:222
-msgid "應修科目表"
-msgstr "必修科目表"
-
-#: .\guides\templates\guides\guide_graduation.html:223
-msgid "教務處官網"
-msgstr "教務処公式サイト"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:4
-#: .\guides\templates\guides\guide_housing_ncu.html:17
-msgid "中央大學住宿服務"
-msgstr "中央大学寮サービス"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:18
-msgid "中央大學校內住宿服務"
-msgstr "中央大学学内寮サービス"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:20
-msgid "整理中央大學各宿舍區資訊、申請流程、房間設備和費用說明，幫助外籍生、僑生及交換學生預先申請校內住宿。"
-msgstr "NCU各寮ゾーンの情報、申請手続き、部屋の設備、費用を案内し、外国人・華僑・交換留学生が校内住宿を事前に申請できるようサポートします。"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:23
-msgid "4 大宿舍區"
-msgstr "4つの寮ゾーン"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:24
-msgid "外僑優先抽籤"
-msgstr "外国人・華僑優先抽選"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:29
-msgid "住宿重點一覽"
-msgstr "寮の概要"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:33
-msgid "宿舍分區"
-msgstr "寮ゾーン"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:34
-msgid "東 / 西 / 南 / 北"
-msgstr "東 / 西 / 南 / 北"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:35
-msgid "四大分區，遍佈校內"
-msgstr "キャンパス全体に4ゾーン"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:39
-#: .\guides\templates\guides\guide_housing_ncu.html:116
-msgid "國際宿舍"
-msgstr "国際寮"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:40
-#: .\guides\templates\guides\guide_housing_ncu.html:88
-#: .\guides\templates\guides\guide_housing_ncu.html:115
-#: .\guides\templates\guides\guide_housing_ncu.html:121
-#: .\guides\templates\guides\guide_housing_ncu.html:126
-#: .\guides\templates\guides\guide_housing_ncu.html:131
-msgid "東區"
-msgstr "東ゾーン"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:41
-msgid "外僑生專屬宿舍"
-msgstr "外国人・華僑学生専用寮"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:45
-msgid "住宿學期"
-msgstr "入居学期"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:46
-msgid "上 9月─1月"
-msgstr "前期：9月〜1月"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:46
-msgid "下 2月─8月"
-msgstr "後期：2月〜8月"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:47
-msgid "含寒假（不需遷出）"
-msgstr "冬休みを含む（退去不要）"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:51
-msgid "行政電話"
-msgstr "管理電話"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:53
-msgid "各分區 24 小時總線"
-msgstr "全ゾーン24時間対応"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:57
-msgid "申請優先順位"
-msgstr "申請優先順位"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:60
-msgid "第一順位 ── 優先保證"
-msgstr "第1優先 — 保証"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:61
-msgid "以下身份優先獲得宿舍"
-msgstr "以下の対象者は優先的に入寮できます"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:63
-msgid "外籍生（Foreign Students）"
-msgstr "外国人留学生（Foreign Students）"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:64
-msgid "僑生（Overseas Chinese Students）"
-msgstr "海外華僑学生"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:65
-msgid "低（中）收入收學生"
-msgstr "低（中）所得の学生"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:66
-msgid "身心障礙學生"
-msgstr "障がいのある学生"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:67
-msgid "特殊弱勢家庭學生"
-msgstr "特別支援家庭の学生"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:71
-msgid "第二順位"
-msgstr "第2優先"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:72
-msgid "一般學生（本島）"
-msgstr "一般学生（国内）"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:74
-msgid "大學部學生"
-msgstr "学部生"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:75
-msgid "碩博士生（無保證宿舍）"
-msgstr "修士・博士課程学生（入寮保証なし）"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:76
-msgid "以抽籤決定是否取得床位"
-msgstr "ベッドの配分は抽選で決定"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:77
-msgid "依抽籤號碼依公告排序"
-msgstr "抽選番号に基づき公告順に並べる"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:82
-msgid "各宿舍棟次總覽"
-msgstr "寮棟の概要"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:86
-msgid "分區："
-msgstr "ゾーン："
-
-#: .\guides\templates\guides\guide_housing_ncu.html:91
-#: .\guides\templates\guides\guide_housing_ncu.html:136
-#: .\guides\templates\guides\guide_housing_ncu.html:141
-#: .\guides\templates\guides\guide_housing_ncu.html:146
-#: .\guides\templates\guides\guide_housing_ncu.html:151
-#: .\guides\templates\guides\guide_housing_ncu.html:156
-msgid "西區"
-msgstr "西ゾーン"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:94
-#: .\guides\templates\guides\guide_housing_ncu.html:161
-#: .\guides\templates\guides\guide_housing_ncu.html:166
-#: .\guides\templates\guides\guide_housing_ncu.html:171
-msgid "南區"
-msgstr "南ゾーン"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:97
-#: .\guides\templates\guides\guide_housing_ncu.html:176
-#: .\guides\templates\guides\guide_housing_ncu.html:181
-#: .\guides\templates\guides\guide_housing_ncu.html:186
-#: .\guides\templates\guides\guide_housing_ncu.html:191
-#: .\guides\templates\guides\guide_housing_ncu.html:196
-msgid "北區"
-msgstr "北ゾーン"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:117
-#: .\guides\templates\guides\guide_housing_ncu.html:123
-#: .\guides\templates\guides\guide_housing_ncu.html:138
-#: .\guides\templates\guides\guide_housing_ncu.html:143
-#: .\guides\templates\guides\guide_housing_ncu.html:148
-#: .\guides\templates\guides\guide_housing_ncu.html:153
-msgid "女生宿舍"
-msgstr "女子寮"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:118
-msgid "外僑生專屬"
-msgstr "外国人・華僑学生専用"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:122
-msgid "女14舍"
-msgstr "女子寮14棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:127
-msgid "男11舍"
-msgstr "男子寮11棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:128
-#: .\guides\templates\guides\guide_housing_ncu.html:133
-#: .\guides\templates\guides\guide_housing_ncu.html:158
-#: .\guides\templates\guides\guide_housing_ncu.html:163
-#: .\guides\templates\guides\guide_housing_ncu.html:168
-#: .\guides\templates\guides\guide_housing_ncu.html:173
-#: .\guides\templates\guides\guide_housing_ncu.html:178
-#: .\guides\templates\guides\guide_housing_ncu.html:183
-#: .\guides\templates\guides\guide_housing_ncu.html:188
-msgid "男生宿舍"
-msgstr "男子寮"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:132
-msgid "男5舍"
-msgstr "男子寮5棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:137
-msgid "女1舍"
-msgstr "女子寮1棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:142
-msgid "女2舍"
-msgstr "女子寮2棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:147
-msgid "女3舍"
-msgstr "女子寮3棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:152
-msgid "女4舍"
-msgstr "女子寮4棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:157
-msgid "男3舍"
-msgstr "男子寮3棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:162
-msgid "男6舍"
-msgstr "男子寮6棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:167
-msgid "男7舍"
-msgstr "男子寮7棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:172
-msgid "男13舍"
-msgstr "男子寮13棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:177
-msgid "男9A舍"
-msgstr "男子寮9A棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:182
-msgid "男9B舍"
-msgstr "男子寮9B棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:187
-msgid "男12舍"
-msgstr "男子寮12棟"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:192
-msgid "和平屋"
-msgstr "ピースハウス"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:193
-#: .\guides\templates\guides\guide_housing_ncu.html:198
-msgid "性別友善宿舍"
-msgstr "ジェンダーフレンドリー寮"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:197
-msgid "中大會館"
-msgstr "NCUゲストハウス"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:199
-msgid "訪客 / 短住"
-msgstr "訪問者 / 短期滞在"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:203
-msgid "房間設備"
-msgstr "部屋の設備"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:205
-msgid "床架"
-msgstr "ベッドフレーム"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:206
-msgid "衣櫃"
-msgstr "ワードローブ"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:207
-msgid "書桌 + 書椅"
-msgstr "デスク + チェア"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:208
-msgid "置物架"
-msgstr "収納棚"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:209
-msgid "鎖頭"
-msgstr "錠前"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:210
-msgid "冷氣"
-msgstr "エアコン"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:211
-msgid "桌燈（部分）"
-msgstr "デスクランプ（一部の部屋）"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:212
-msgid "電風扇（部分）"
-msgstr "扇風機（一部の部屋）"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:213
-msgid "網路孔"
-msgstr "ネットワークポート"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:215
-msgid "禁用電器"
-msgstr "持ち込み禁止電気器具"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:217
-msgid "電磁爐（全面禁用）"
-msgstr "IHクッキングヒーター（全面禁止）"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:218
-msgid "電爐 / 電磁盤"
-msgstr "電気コンロ / 電磁調理板"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:219
-msgid "熱水壺 / 快煮壺"
-msgstr "電気ケトル / 湯沸かし器"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:220
-msgid "延長線過載"
-msgstr "延長コードの過負荷"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:228
-msgid "住宿服務組常見問題（官方）"
-msgstr "住宿サービス課よくある質問（公式）"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:230
-msgid "退宿費用、寒暑假規定、換宿申請、床墊、研究生住宿……"
-msgstr "退寮費用、冬夏休み規定、部屋交換申請、マットレス、大学院生入寮..."
-
-#: .\guides\templates\guides\guide_housing_ncu.html:231
-msgid "完整 Q&A 由住宿服務組官方維護，內容最新最準確。"
-msgstr "完全なQ&Aは住宿サービス課が公式に管理しており、最新かつ正確な内容です。"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:238
-#: .\guides\templates\guides\guide_library.html:212
-msgid "聯絡資訊"
-msgstr "連絡先情報"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:243
-msgid "行政諮詢電話"
-msgstr "管理問い合わせ電話"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:244
-msgid "一般住宿申請、退宿、換宿等問題"
-msgstr "入寮申請・退寮・部屋交換などの問い合わせ"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:250
-msgid "公告信箱"
-msgstr "公式メール"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:251
-msgid "文件申請、書面問題"
-msgstr "書類申請・書面に関する問い合わせ"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:257
-msgid "住宿服務組官網"
-msgstr "住宿サービス課公式ウェブサイト"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:258
-msgid "最新公告、申請系統、規章下載"
-msgstr "最新公告・申請システム・規定ダウンロード"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:264
-msgid "24 小時緊急總線"
-msgstr "24時間緊急回線"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:265
-msgid "東 / 西 / 南 / 北 各分區緊急專線"
-msgstr "東 / 西 / 南 / 北 各ゾーン緊急専用回線"
-
-#: .\guides\templates\guides\guide_housing_ncu.html:265
-msgid "緊急設施損壞、安全事件聯繫"
-msgstr "緊急設備故障・安全事案の連絡先"
-
-#: .\guides\templates\guides\guide_index.html:4 .\templates\base.html:73
-#: .\templates\base.html:225 .\users\templates\users\dashboard.html:127
-#: .\users\templates\users\home.html:182 .\users\templates\users\login.html:43
-msgid "資訊中心"
-msgstr "情報センター"
-
-#: .\guides\templates\guides\guide_index.html:18
-#: .\guides\templates\guides\guide_index.html:37
-#: .\users\templates\users\faq.html:18
-msgid "入學申請"
-msgstr "入学申請"
-
-#: .\guides\templates\guides\guide_index.html:19
-#: .\guides\templates\guides\guide_index.html:62
-msgid "證件・住宿"
-msgstr "書類・住居"
-
-#: .\guides\templates\guides\guide_index.html:20
-#: .\guides\templates\guides\guide_index.html:111
-msgid "生活類"
-msgstr "生活情報"
-
-#: .\guides\templates\guides\guide_index.html:21
-#: .\guides\templates\guides\guide_index.html:166
-msgid "學業類"
-msgstr "学業"
-
-#: .\guides\templates\guides\guide_index.html:22
-#: .\guides\templates\guides\guide_index.html:209
-msgid "實用工具"
-msgstr "便利ツール"
-
-#: .\guides\templates\guides\guide_index.html:30
-msgid "搜尋資訊，例如：簽證、居留證、健保…"
-msgstr "情報を検索、例：ビザ、居留証、健康保険…"
-
-#: .\guides\templates\guides\guide_index.html:38
-#: .\guides\templates\guides\guide_index.html:63
-#: .\guides\templates\guides\guide_index.html:112
-#: .\guides\templates\guides\guide_index.html:167
-#: .\guides\templates\guides\guide_index.html:210
-msgid "個指南"
-msgstr "ガイド"
-
-#: .\guides\templates\guides\guide_index.html:46
-#: .\guides\templates\guides\guide_national_area.html:4
-#: .\guides\templates\guides\guide_national_area.html:16
-msgid "各國專區"
-msgstr "国別専用ページ"
-
-#: .\guides\templates\guides\guide_index.html:47
-msgid "依地區查看海外聯招會申請說明，香港、馬來西亞、泰國等"
-msgstr "地域別申請説明（香港・マレーシア・タイなど）を確認できます"
-
-#: .\guides\templates\guides\guide_index.html:52
-msgid "入學申請指南"
-msgstr "入学申請ガイド"
-
-#: .\guides\templates\guides\guide_index.html:53
-msgid "申請資格、時程、所需文件與注意事項整理"
-msgstr "申請資格・スケジュール・必要書類・注意事項のまとめ"
-
-#: .\guides\templates\guides\guide_index.html:71
-msgid "外籍生 ARC 辦理"
-msgstr "外国人留学生の居留証申請"
-
-#: .\guides\templates\guides\guide_index.html:72
-msgid "外國護照入學者的居留證申請流程與文件清單"
-msgstr "外国パスポートで入学した学生の居留証申請手続きと書類リスト"
-
-#: .\guides\templates\guides\guide_index.html:77
-msgid "僑生 ARC 辦理"
-msgstr "僑生の居留証申請"
-
-#: .\guides\templates\guides\guide_index.html:78
-msgid "持外國護照入台的僑生居留證申請說明"
-msgstr "外国パスポートで台湾入国した僑生の居留証申請説明"
-
-#: .\guides\templates\guides\guide_index.html:83
-msgid "港澳生居留說明"
-msgstr "香港・マカオ学生の在留ガイド"
-
-#: .\guides\templates\guides\guide_index.html:84
-msgid "入出境許可證、居留申請流程與健保工讀說明"
-msgstr "入出境許可証・在留申請手順・健保とアルバイト説明"
-
-#: .\guides\templates\guides\guide_index.html:89
-msgid "中央大學住宿申請"
-msgstr "中央大学の寮申請"
-
-#: .\guides\templates\guides\guide_index.html:90
-msgid "宿舍分區、設備、申請流程與外僑優先保證說明"
-msgstr "寮のゾーン・設備・申請手続きと外国人留学生優先保証の説明"
-
-#: .\guides\templates\guides\guide_index.html:95
-#: .\guides\templates\guides\guide_regulations.html:4
-#: .\guides\templates\guides\guide_regulations.html:18
-msgid "來臺就學相關法規"
-msgstr "台湾留学関連法規"
-
-#: .\guides\templates\guides\guide_index.html:96
-msgid "入學・居留・健保・工讀・學籍等重要法規說明"
-msgstr "入学・居留・健保・工讀・学籍等の重要法規説明"
-
-#: .\guides\templates\guides\guide_index.html:101
-#: .\guides\templates\guides\guide_work_permit.html:4
-msgid "工作許可證"
-msgstr "就労許可証"
-
-#: .\guides\templates\guides\guide_index.html:102
-msgid "申請流程、每週工時上限、違規罰則說明"
-msgstr "申請手順・週当たり労働時間上限と違反罰則"
-
-#: .\guides\templates\guides\guide_index.html:121
-msgid "主要路線、常見目的地與即時查詢連結"
-msgstr "主要路線・よく行く目的地とリアルタイム検索リンク"
-
-#: .\guides\templates\guides\guide_index.html:126
-#: .\guides\templates\guides\guide_mental_health.html:4
-#: .\guides\templates\guides\guide_mental_health.html:17
-msgid "心理支持"
-msgstr "メンタルヘルス"
-
-#: .\guides\templates\guides\guide_index.html:127
-msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
-msgstr "カウンセリング予約・ストレス・対人問題・24時間ホットライン"
-
-#: .\guides\templates\guides\guide_index.html:132
-#: .\guides\templates\guides\guide_medical.html:4
-#: .\guides\templates\guides\guide_medical.html:18
-msgid "醫療資訊"
-msgstr "医療情報"
-
-#: .\guides\templates\guides\guide_index.html:133
-msgid "衛保組、校外診所、周邊醫院、急診與緊急電話"
-msgstr "キャンパス診療所・近隣クリニック・病院・救急と緊急電話"
-
-#: .\guides\templates\guides\guide_index.html:139
-msgid "僑生獎學金、清寒補助、校內外各項申請指南"
-msgstr "海外華人学生奨学金・経済支援と学内外申請ガイド"
-
-#: .\guides\templates\guides\guide_index.html:144
-#: .\guides\templates\guides\guide_nhi.html:4
-msgid "全民健保申請"
-msgstr "全民健保加入手続き"
-
-#: .\guides\templates\guides\guide_index.html:145
-msgid "ARC 核發後即可加保，門診費用大幅降低"
-msgstr "ARC取得後すぐ加入でき、外来費用が大幅に低下"
-
-#: .\guides\templates\guides\guide_index.html:151
-msgid "統一證號說明、郵局・台灣銀行・玉山銀行開戶比較"
-msgstr "統一証号の説明と郵便局・台湾銀行・玉山銀行の比較"
-
-#: .\guides\templates\guides\guide_index.html:156
-#: .\guides\templates\guides\guide_sim.html:4
-msgid "台灣門號申辦"
-msgstr "台湾SIMカード申込み"
-
-#: .\guides\templates\guides\guide_index.html:157
-msgid "預付卡 vs 月租方案，各大電信業者說明"
-msgstr "プリペイドvs月額プラン — 主要キャリアを解説"
-
-#: .\guides\templates\guides\guide_index.html:176
-msgid "在學證明、成績單、推薦信申請說明"
-msgstr "在学証明・成績証明書・推薦状の申請方法"
-
-#: .\guides\templates\guides\guide_index.html:182
-msgid "休學、復學、轉系、雙主修規定與流程"
-msgstr "休学・復学・専攻変更・ダブルメジャーの規則と手続き"
-
-#: .\guides\templates\guides\guide_index.html:188
-msgid "選課、加退選、人工加退選、停修流程與日程"
-msgstr "授業登録・履修追加/削除・手動追加/削除と取消手順"
-
-#: .\guides\templates\guides\guide_index.html:194
-msgid "等第制 GPA、畢業學分、英文門檻（TOEIC）依學院標準"
-msgstr "文字制GPA・卒業単位数・英語基準（TOEIC）学部別"
-
-#: .\guides\templates\guides\guide_index.html:199
-#: .\guides\templates\guides\guide_systems.html:4
-#: .\guides\templates\guides\guide_systems.html:17
-msgid "校內系統"
-msgstr "学内システム"
-
-#: .\guides\templates\guides\guide_index.html:200
-#: .\guides\templates\guides\guide_systems.html:18
-msgid "Portal 帳號啟用、ee-class 課程平台、學生信箱設定"
-msgstr "Portalアカウント有効化・ee-class授業プラットフォーム・学生メール設定"
-
-#: .\guides\templates\guides\guide_index.html:219
-msgid "110・119・112・校安中心・國際事務處"
-msgstr "110・119・112・キャンパス安全センター・国際事務局"
-
-#: .\guides\templates\guides\guide_index.html:224
-#: .\guides\templates\guides\guide_library.html:4
-#: .\guides\templates\guides\guide_library.html:17
-msgid "圖書館"
-msgstr "図書館"
-
-#: .\guides\templates\guides\guide_index.html:225
-msgid "借書規則、K書中心、學術資料庫、列印費用"
-msgstr "貸出規則・自習室・学術データベースと印刷費用"
-
-#: .\guides\templates\guides\guide_index.html:230
-#: .\guides\templates\guides\guide_map.html:4
-#: .\guides\templates\guides\guide_map.html:18
-msgid "地圖導覽"
-msgstr "マップ＆ナビ"
-
-#: .\guides\templates\guides\guide_index.html:231
-msgid "學校・醫院・車站・機場位置，一鍵導航"
-msgstr "大学・病院・駅・空港の位置 — ワンタップでナビ"
-
-#: .\guides\templates\guides\guide_index.html:237
-msgid "找不到符合的指南，試著換個關鍵字。"
-msgstr "該当するガイドが見つかりません。別のキーワードをお試しください。"
-
-#: .\guides\templates\guides\guide_library.html:18
-=======
 "「僑生」とは、中華民国籍または華人血統を持ち、長期海外居住かつ現地で教育を受けた者を指し、教育部の規定により認定されます。僑生奨学金や僑先部などの特別ルートが利用できます。「外籍生」とは非中華民国籍のパスポートで入学する者を指し、通常は各大学の独自入試ルートで申請し、教育部台湾奨学金に応募できます。両者は身分認定・適用ルート・特典が異なります。"
 
 #: flows/templates/flows/guide_arc_exchange.html
@@ -6676,7 +6017,6 @@ msgstr "上のボタンをクリックして地図上の位置を表示"
 msgid "尚未設定 Google Maps API 金鑰"
 msgstr "Google Maps APIキーが設定されていません"
 
->>>>>>> new/16
 msgid "借書・自習室・學術資料庫・列印服務"
 msgstr "貸出・自習室・学術データベース・印刷サービス"
 
@@ -7850,10 +7190,6 @@ msgstr "台湾での健保加入注意事項"
 msgid "僑外生在臺就學並符合投保資格期間，應以就讀學校為投保單位辦理投保。"
 msgstr "在台就学中で投保資格を満たす僑外生は、就学校を投保単位として健保に加入しなければなりません。"
 
-<<<<<<< HEAD
-#: .\guides\templates\guides\guide_nhi.html:105
-msgid "僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 日內，向健保署辦理投保。"
-=======
 msgid "向內政部移民署辦理外僑居留證（ARC），方能在台合法居留及完成就學程序。"
 msgstr "日以内に内政部移民署でARC（外国人居留証）を申請し、台湾に合法的に滞在して入学手続きを完了させる必要があります。"
 
@@ -8062,38 +7398,19 @@ msgid "以下為內政部移民署官方申請須知（節錄自官方網站）"
 msgstr "以下は内政部移民署の公式申請案内です（公式ウェブサイトより抜粋）"
 
 msgid "剛抵台的僑生新生，尚未滿足「在台居留 6 個月」的健保加保資格，需先加入以下保險："
->>>>>>> new/16
 msgstr ""
 "僑外生が許可を受けて台湾で就労・雇用される場合、投保単位（雇用主）は被保険者が資格を満たした日から3日以内に健保署に加入手続きを行う必要があります。"
 
-<<<<<<< HEAD
 #: .\guides\templates\guides\guide_nhi.html:109
 msgid "於受僱單位投保時，應先至學校辦理轉出，避免重複投保。"
 msgstr "雇用先の投保単位で加入する際は、まず学校での転出手続きを行い、重複加入を避けること。"
 
 #: .\guides\templates\guides\guide_nhi.html:113
-=======
-msgid "理賠申請：至國際處填寫申請書，並攜帶醫療收據、診斷證明、居留證影本、護照影本、郵局存簿影本及個資同意書"
-msgstr ""
-"一定期間の居留計算方法：定住申請日から遡り、台湾に継続して1年間居留（年内最大30日の出国可、回数制限なし）または継続して2年間居留かつ毎年270日以上台湾に居住。"
-
-msgid ""
-"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 "
-"30 天，則從重新抵台當天起算，6 個月重新計算。"
-msgstr ""
-"居留許可を受け台湾に一定期間居留し、元の居留条件を引き続き満たす者（婚姻または養子縁組による親族関係は3年以上継続が必要。婚姻期間中に子が生まれた場合を除く）は台湾での定住申請が可能です。"
-
-msgid "僑外生經許可在臺工作並受僱，投保單位（雇主）應於被保險人合於投保資格之日起 3 日內，向健保署辦理投保。"
-msgstr ""
-"中央主管機関の許可を受けて台湾で留学し卒業した者（HF168）で、継続して5年間の居留許可を受け毎年183日以上台湾に居住し、かつ直近1年の月平均収入が最低賃金の2倍以上である者は台湾への定住申請が可能です。"
-
->>>>>>> new/16
 msgid "與工作單位終止僱傭關係後，應另以適法身分投保：若已受新單位聘僱，於新單位投保；未受聘僱期間則應回學校辦理投保。"
 msgstr "就労終了後は適法な身分で加入：新たな雇用先があれば新雇用先で加入、無職期間中は学校で加入手続きを行う。"
 
 #: .\guides\templates\guides\guide_nhi.html:117
 msgid "符合投保資格且無工作期間，若配偶、父母或子女在臺已為健保被保險人，應以眷屬身分依附其投保單位加保。"
-<<<<<<< HEAD
 msgstr "資格はあるが無職期間に、配偶者・父母・子女が台湾ですでに健保加入者であれば、眷属として依附して加入すること。"
 
 #: .\guides\templates\guides\guide_nhi.html:122
@@ -8120,8 +7437,6 @@ msgstr "清寒僑生の健保料補助："
 msgid ""
 "符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 "
 "NT$826。詳情請洽國際事務處。"
-=======
->>>>>>> new/16
 msgstr ""
 "清寒資格で健保加入者はOIAに月額NT$413補助を申請できます（清寒証明が必要、審査後支給）。補助なしの場合の月額保険料は約NT$826。詳細はOIAへお問い合わせください。"
 
@@ -8159,11 +7474,6 @@ msgstr "保険料の継続控除を避けるため「出国停保」を申請し
 msgid "全民健康保險署官網 ↗"
 msgstr "全民健康保険署公式ウェブサイト ↗"
 
-<<<<<<< HEAD
-#: .\guides\templates\guides\guide_nhi.html:174
-msgid "非本國籍人士加保說明 ↗"
-msgstr "外国籍者の健保加入案内 ↗"
-=======
 msgid "在職證明書"
 msgstr "在職証明書"
 
@@ -8667,7 +7977,6 @@ msgstr "東 / 西 / 南 / 北 各ゾーン緊急専用回線"
 
 msgid "緊急設施損壞、安全事件聯繫"
 msgstr "緊急設備故障・安全事案の連絡先"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_regulations.html:17
 msgid "僑生・外籍生必讀"
@@ -9934,9 +9243,6 @@ msgstr "としてシステムにアップロードしてください。"
 msgid "文件"
 msgstr "書類"
 
-<<<<<<< HEAD
-#: .\guides\templates\guides\guide_work_permit.html:87
-=======
 msgid "說明"
 msgstr "説明"
 
@@ -10107,7 +9413,6 @@ msgstr ""
 "各研究所の英語基準は各学院が定め、学位口試申請前に提出が必要です。工学院はTOEIC 600 / TOEFL iBT 64 / IELTS "
 "5.0以上が必要。詳細は各学科にお問い合わせください。"
 
->>>>>>> new/16
 msgid "學生證"
 msgstr "学生証"
 
@@ -10408,9 +9713,6 @@ msgstr "以内にシステムからダウンロードしてください。"
 msgid "工作期間健保轉換："
 msgstr "就労中の健康保険切替："
 
-<<<<<<< HEAD
-#: .\guides\templates\guides\guide_work_permit.html:260
-=======
 msgid "受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工作結束後需回學校重新加保。"
 msgstr ""
 "雇用後は雇用主のもとで健康保険（第1種）に加入する必要があります。二重加入を避けるため、まず学校で脱退手続きを行ってください。就労終了後は学校で再加入してください。"
@@ -13947,16 +13249,10 @@ msgstr "以内にシステムからダウンロードしてください。"
 msgid "工作期間健保轉換："
 msgstr "就労中の健康保険切替："
 
->>>>>>> new/16
 msgid "受僱工作後需在雇主處投保健保（第 1 類），請先至學校辦理轉出，避免重複投保。工作結束後需回學校重新加保。"
 msgstr ""
 "雇用後は雇用主のもとで健康保険（第1種）に加入する必要があります。二重加入を避けるため、まず学校で脱退手続きを行ってください。就労終了後は学校で再加入してください。"
 
-<<<<<<< HEAD
-#: .\guides\templates\guides\guide_work_permit.html:266
-msgid "勞動部外國人在台工作服務網 ↗"
-msgstr "労働部 外国人在台就労サービスネット ↗"
-=======
 msgid "相關連結"
 msgstr "関連リンク"
 
@@ -15730,7 +15026,6 @@ msgstr "以上はデモの進捗です。"
 
 msgid "後可查看您的個人化流程進度"
 msgstr "ログイン後、あなたのパーソナライズされた手続き進捗を確認できます"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_work_permit.html:267
 #, fuzzy
@@ -16653,11 +15948,6 @@ msgstr "メールアドレスを入力してください。パスワード再設
 msgid "電子郵件"
 msgstr "メールアドレス"
 
-<<<<<<< HEAD
-#: .\users\templates\users\forgot_password.html:27
-msgid "寄送重設連結"
-msgstr "再設定リンクを送信"
-=======
 msgid "抵台後 30 天內辦理"
 msgstr "到着後30日以内に申請"
 
@@ -17349,7 +16639,6 @@ msgstr "システムは毎日07:00〜09:00にデータバックアップを行�
 
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr "質問を入力してください。システムがあなたの身分と状態に基づいて提案を整理します。"
->>>>>>> new/16
 
 #: .\users\templates\users\forgot_password.html:34
 msgid "郵件已寄出！"
@@ -17556,7 +16845,6 @@ msgstr "知りたいことはすべてここに"
 msgid "登入 / 註冊"
 msgstr "ログイン / 登録"
 
-<<<<<<< HEAD
 #: .\users\templates\users\login.html:23
 msgid "個人化任務清單"
 msgstr "パーソナライズされたタスクリスト"
@@ -18065,7 +17353,3 @@ msgstr "パスワードの再設定が完了しました。再度ログインし
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "再設定に失敗しました。リンクの有効期限が切れている可能性があります。"
-=======
-#~ msgid "我的帳戶"
-#~ msgstr "マイアカウント"
->>>>>>> new/16

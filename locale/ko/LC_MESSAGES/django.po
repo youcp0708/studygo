@@ -108,12 +108,8 @@ msgstr "맨 아래로"
 msgid "新增附件"
 msgstr "첨부파일 추가"
 
-<<<<<<< HEAD
-#: .\chatbot\templates\chatbot\chatbot.html:176
-=======
 #: .\chatbot\templates\chatbot\chatbot.html:163
 #| msgid "上傳檔案"
->>>>>>> new/16
 msgid "上傳檔案或照片"
 msgstr "파일 업로드"
 
@@ -126,16 +122,8 @@ msgstr "사진 촬영"
 msgid "例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？"
 msgstr "예: 요즘 스트레스가 심하고 조금 향수병이 있어요, 저와 이야기해 줄 수 있나요?"
 
-<<<<<<< HEAD
-#: .\chatbot\templates\chatbot\chatbot.html:182
-#: .\chatbot\templates\chatbot\chatbot.html:273
-#, fuzzy
-#| msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
-msgid "例如：簽證要先準備什麼？"
-=======
 #: .\chatbot\templates\chatbot\chatbot.html:169
 msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
->>>>>>> new/16
 msgstr "예: 저는 미얀마에서 대만으로 학사 과정을 공부하러 왔습니다. 비자를 위해 먼저 무엇을 준비해야 하나요?"
 
 #: .\chatbot\templates\chatbot\chatbot.html:186
@@ -250,31 +238,6 @@ msgstr "이름 변경:"
 msgid "重新命名性格："
 msgstr "성격 이름 변경:"
 
-<<<<<<< HEAD
-#: .\chatbot\templates\chatbot\chatbot.html:272
-msgid "已收到回饋，謝謝！"
-msgstr "피드백이 접수되었습니다. 감사합니다!"
-
-#: .\chatbot\views.py:29
-msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
-msgstr "대만의 편의점에서는 요금 납부, 택배 수령, 복사, 그리고 다양한 생활용품을 구매할 수 있습니다."
-
-#: .\chatbot\views.py:30
-msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
-msgstr "대만에서 지하철과 버스를 이용할 때는 주로 이지카드(悠遊卡) 또는 아이패스(一卡通)를 사용합니다."
-
-#: .\chatbot\views.py:31
-msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
-msgstr "대만의 많은 학교에는 국제처가 있어 외국 학생의 입학 및 생활 문제를 지원합니다."
-
-#: .\chatbot\views.py:32
-msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
-msgstr "대만에서 집을 빌리기 전에 임대료, 보증금, 공과금, 임대 기간을 확인하는 것이 좋습니다."
-
-#: .\chatbot\views.py:33
-msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
-msgstr "대만에서 병원을 갈 때 건강보험에 가입되어 있으면 의료비가 자비보다 저렴합니다."
-=======
 #: .\chatbot\views.py:24
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
 msgstr "대만의 편의점에서는 요금 납부, 택배 수령, 복사, 그리고 다양한 생활용품을 구매할 수 있습니다."
@@ -314,7 +277,6 @@ msgstr "대만 학교에서는 이메일이나 학교 시스템으로 중요한 
 #: .\chatbot\views.py:33
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
 msgstr "대만에 도착 후 휴대폰 번호를 신청할 때는 보통 여권, 외국인등록증 또는 기타 신분 서류가 필요합니다."
->>>>>>> new/16
 
 #: .\chatbot\views.py:34
 msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
@@ -364,21 +326,6 @@ msgstr "작업 완료율"
 msgid "小貼士"
 msgstr "팁"
 
-<<<<<<< HEAD
-#: .\flows\templates\flows\my_flows.html:56
-msgid "需要的文件"
-msgstr "📋 필요 서류"
-
-#: .\flows\templates\flows\my_flows.html:57
-msgid "辦理地點"
-msgstr "📍 처리 장소"
-
-#: .\flows\templates\flows\my_flows.html:58
-msgid "在地圖上查看"
-msgstr "🗺️ 지도에서 보기"
-
-#: .\flows\templates\flows\my_flows.html:59
-=======
 #: .\flows\templates\flows\my_flows.html:68
 #| msgid "📋 需要的文件"
 msgid "需要的文件"
@@ -396,7 +343,6 @@ msgstr "🗺️ 지도에서 보기"
 
 #: .\flows\templates\flows\my_flows.html:71
 #| msgid "🌐 官方網站"
->>>>>>> new/16
 msgid "官方網站"
 msgstr "🌐 공식 사이트"
 
@@ -404,18 +350,6 @@ msgstr "🌐 공식 사이트"
 msgid "點此前往官方網站"
 msgstr "공식 사이트로 이동"
 
-<<<<<<< HEAD
-#: .\flows\templates\flows\my_flows.html:61
-msgid "辦理時程"
-msgstr "📅 처리 일정"
-
-#: .\flows\templates\flows\my_flows.html:62
-#: .\flows\templates\flows\my_flows.html:64
-msgid "截止日期"
-msgstr "📅 마감일"
-
-#: .\flows\templates\flows\my_flows.html:63
-=======
 #: .\flows\templates\flows\my_flows.html:73
 #| msgid "📅 辦理時程"
 msgid "辦理時程"
@@ -428,7 +362,6 @@ msgid "截止日期"
 msgstr "📅 마감일"
 
 #: .\flows\templates\flows\my_flows.html:75
->>>>>>> new/16
 msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
 msgstr ""
 "먼저 「개인 정보」에서 <strong>예상 도착일</strong>을 입력해야 시스템이 이 작업의 마감일을 자동으로 계산할 수 있습니다."
@@ -957,13 +890,7 @@ msgid "入台後必辦事項"
 msgstr "입대 후 필수 사항"
 
 #: .\guides\templates\guides\admissions_guide.html:286
-<<<<<<< HEAD
-#, fuzzy
-#| msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
-msgid "持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
-=======
 msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
->>>>>>> new/16
 msgstr ""
 "학생 거류 비자로 입대 후 15일 이내에 외국인 거류증(ARC)을 발급받아야 하며, 이후 건강보험 가입, 은행 계좌 개설 등을 "
 "처리합니다."
@@ -991,18 +918,12 @@ msgstr ""
 "중화민국 국적이 없고 대만에 호적이 없는 자."
 
 #: .\guides\templates\guides\admissions_guide.html:310
-<<<<<<< HEAD
-=======
 #| msgid "香港 / 澳門永久居民身份證"
->>>>>>> new/16
 msgid "港澳居民身份"
 msgstr "홍콩/마카오 거주민 신분"
 
 #: .\guides\templates\guides\admissions_guide.html:312
-<<<<<<< HEAD
-=======
 #| msgid "HKDSE / 澳門高中畢業"
->>>>>>> new/16
 msgid "HKDSE / 澳門高中"
 msgstr "HKDSE / 마카오 고등학교 졸업"
 
@@ -1022,20 +943,14 @@ msgid "統一報名"
 msgstr "통합 접수"
 
 #: .\guides\templates\guides\admissions_guide.html:329
-<<<<<<< HEAD
-=======
 #| msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
->>>>>>> new/16
 msgid "海聯會港澳組通常於每年 1～2 月開放網路報名，截止日期約為 2 月底。錄取結果約 5～6 月公告，9 月初入學報到。"
 msgstr ""
 "통상 매년 1~3월에 인터넷 원서 접수를 받으며, 지역마다 마감일이 다소 다릅니다. 합격 결과는 약 5~6월에 발표되며, 8월 말~9월 "
 "초에 입학 등록합니다."
 
 #: .\guides\templates\guides\admissions_guide.html:331
-<<<<<<< HEAD
-=======
 #| msgid "1～3 月報名"
->>>>>>> new/16
 msgid "1～2 月報名"
 msgstr "1~2월 원서 접수"
 
@@ -1195,14 +1110,8 @@ msgid "海聯會或各地台灣辦事處"
 msgstr "해련회 또는 각지 대만 사무소"
 
 #: .\guides\templates\guides\admissions_guide.html:511
-<<<<<<< HEAD
-#: .\templates\base.html:76 .\templates\base.html:78
-#: .\users\templates\users\dashboard.html:132
-#: .\users\templates\users\home.html:227
-=======
 #: .\templates\base.html:70 .\users\templates\users\dashboard.html:52
 #: .\users\templates\users\home.html:351
->>>>>>> new/16
 msgid "學長姐分享"
 msgstr "선배 공유"
 
@@ -1229,12 +1138,8 @@ msgstr "베트남"
 
 #: .\guides\templates\guides\admissions_guide.html:524
 #: .\guides\templates\guides\admissions_guide.html:614
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:239 .\users\templates\users\login.html:90
-=======
 #: .\users\templates\users\home.html:363
 #| msgid "例如：國立臺灣大學"
->>>>>>> new/16
 msgid "國立臺灣大學"
 msgstr "국립대만대학교"
 
@@ -1278,12 +1183,8 @@ msgid "菲律賓"
 msgstr "필리핀"
 
 #: .\guides\templates\guides\admissions_guide.html:554
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:269
-=======
 #: .\users\templates\users\home.html:391
 #| msgid "例如：國立臺灣大學"
->>>>>>> new/16
 msgid "國立臺灣師範大學"
 msgstr "국립대만사범대학교"
 
@@ -1293,11 +1194,7 @@ msgid "華語文教學碩士"
 msgstr "중국어교육 석사"
 
 #: .\guides\templates\guides\admissions_guide.html:559
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:274
-=======
 #: .\users\templates\users\home.html:396
->>>>>>> new/16
 msgid "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
 msgstr ""
 "\"중국어를 배우러 온 건 제가 내린 최고의 결정이었어요! 사범대 화어중심의 교육 방식은 활기차고, 매일 실제로 활용할 수 있어요. "
@@ -1322,11 +1219,7 @@ msgid "資訊工程博士班"
 msgstr "정보공학 박사과정"
 
 #: .\guides\templates\guides\admissions_guide.html:574
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:288
-=======
 #: .\users\templates\users\home.html:410
->>>>>>> new/16
 msgid "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
 msgstr ""
 "\"칭화대 컴퓨터공학과는 산학협력 기회가 많아서, 재학 중에 신주과학단지에서 인턴십을 할 기회가 있었어요. ReadyTo의 숙소 정보와 "
@@ -1343,11 +1236,7 @@ msgid "國際傳播學士班"
 msgstr "국제커뮤니케이션 학사과정"
 
 #: .\guides\templates\guides\admissions_guide.html:589
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:302
-=======
 #: .\users\templates\users\home.html:424
->>>>>>> new/16
 msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」"
 msgstr ""
 "\"화교 배경 때문에 왜 굳이 대만에 왔냐고 많이들 물어봐요. 하지만 대만의 미디어 환경과 창작의 자유는 정말 다릅니다. 정치대학교의 "
@@ -1379,11 +1268,7 @@ msgstr ""
 "연계는 매우 완벽해요. ReadyTo의 ARC 처리 가이드 덕분에 모든 절차를 순조롭게 마쳤습니다.\""
 
 #: .\guides\templates\guides\admissions_guide.html:613 .\users\models.py:136
-<<<<<<< HEAD
-#: .\users\templates\users\profile_setup.html:472
-=======
 #| msgid "印尼"
->>>>>>> new/16
 msgid "印度"
 msgstr "인도"
 
@@ -2515,11 +2400,8 @@ msgid "以下為內政部移民署官方申請須知（節錄自官方網站）"
 msgstr "아래는 내정부 이민서 공식 신청 안내입니다(공식 홈페이지에서 발췌)"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:374
-<<<<<<< HEAD
-=======
 #| msgid ""
 #| "在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駸外館處驗證，並檢附經駐外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
->>>>>>> new/16
 msgid ""
 "在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駐外館處驗證，並檢附經駐外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
 msgstr ""
@@ -3094,10 +2976,7 @@ msgid "ATM 據點多，與多家電商合作，網路銀行功能完整，學生
 msgstr "ATM 위치 다수, 주요 전자상거래 플랫폼과 제휴, 종합적인 온라인 뱅킹 기능, 학생들이 널리 사용."
 
 #: .\guides\templates\guides\guide_bank.html:57
-<<<<<<< HEAD
-=======
 #| msgid "所需文件"
->>>>>>> new/16
 msgid "所需文件（郵局）"
 msgstr "필요 서류"
 
@@ -4230,27 +4109,16 @@ msgid "每一申請週期只能申請一個科系，多報即全部取消資格"
 msgstr "신청 주기당 1개 학과만 신청 가능 — 복수 신청 시 전부 자격 취소"
 
 #: .\guides\templates\guides\guide_enrollment.html:122
-<<<<<<< HEAD
-#, fuzzy, python-format
-#| msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
-msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%%（即以班排名前半段為上限）"
-msgstr "각 학과는 자체 기준(성적 순위 등) 설정 가능, 단 순위 기준은 상위 50%%(학급 상반부) 초과 불가"
-=======
 #, python-format
 #| msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
 msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%%（即以班排名前半段為上限）"
 msgstr "각 학과는 자체 기준(성적 순위 등) 설정 가능, 단 순위 기준은 상위 50%(학급 상반부) 초과 불가"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_enrollment.html:123
 #, python-format
 #| msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
 msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%%"
-<<<<<<< HEAD
-msgstr "전과 정원 상한: 각 학과는 학년별로 최초 승인 정원의 20%%까지 전과생 수용 가능"
-=======
 msgstr "전과 정원 상한: 각 학과는 학년별로 최초 승인 정원의 20%까지 전과생 수용 가능"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_enrollment.html:124
 msgid "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級"
@@ -5069,11 +4937,6 @@ msgstr "동 / 서 / 남 / 북 각 구역 긴급 전용 전화"
 msgid "緊急設施損壞、安全事件聯繫"
 msgstr "긴급 시설 손상 및 안전 사고 연락처"
 
-<<<<<<< HEAD
-#: .\guides\templates\guides\guide_index.html:4 .\templates\base.html:73
-#: .\templates\base.html:225 .\users\templates\users\dashboard.html:127
-#: .\users\templates\users\home.html:182 .\users\templates\users\login.html:43
-=======
 msgid "資訊中心"
 msgstr "정보센터"
 
@@ -6178,7 +6041,6 @@ msgstr "외국 국적자 건강보험 가입 안내 ↗"
 #: .\users\templates\users\dashboard.html:159
 #: .\users\templates\users\home.html:23 .\users\templates\users\home.html:306
 #: .\users\templates\users\login.html:42
->>>>>>> new/16
 msgid "資訊中心"
 msgstr "정보 센터"
 
@@ -6238,16 +6100,12 @@ msgstr "입학 지원 안내"
 msgid "申請資格、時程、所需文件與注意事項整理"
 msgstr "지원 자격, 일정, 필요 서류 및 주의사항"
 
-<<<<<<< HEAD
-#: .\guides\templates\guides\guide_index.html:71
-=======
 #: .\guides\templates\guides\guide_index.html:53
 #| msgid "證件・住宿・交通"
 msgid "證件・住宿"
 msgstr "증서・숙소・교통"
 
 #: .\guides\templates\guides\guide_index.html:62
->>>>>>> new/16
 msgid "外籍生 ARC 辦理"
 msgstr "외국 유학생 외국인등록증 신청"
 
@@ -6685,18 +6543,12 @@ msgid "K書中心・開館時間"
 msgstr "K 자습실 · 개관 시간"
 
 #: .\guides\templates\guides\guide_map.html:17
-<<<<<<< HEAD
-=======
 #| msgid "學校・醫院・交通"
->>>>>>> new/16
 msgid "學校・美食・醫院・交通"
 msgstr "학교·병원·교통"
 
 #: .\guides\templates\guides\guide_map.html:19
-<<<<<<< HEAD
-=======
 #| msgid "中央大學周邊重要地點，點選快速定位及導航"
->>>>>>> new/16
 msgid "中央大學周邊重要地點，點選按鈕即可在地圖上定位"
 msgstr "국립중앙대학교 주변 주요 장소 — 버튼을 클릭하면 지도에서 위치를 확인할 수 있습니다"
 
@@ -7170,26 +7022,13 @@ msgid "承辦人：徐心荷小姐"
 msgstr "담당자: 쉬신허 씨"
 
 #: .\guides\templates\guides\guide_mental_health.html:18
-<<<<<<< HEAD
-=======
 #| msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
->>>>>>> new/16
 msgid "諮商中心預約・常見困擾・24 小時求助熱線"
 msgstr "상담센터 예약, 자주 겪는 고민, 24시간 도움 요청 핫라인"
 
 #: .\guides\templates\guides\guide_mental_health.html:22
 msgid "尋求幫助不代表你軟弱。無論是課業壓力、人際困擾、文化適應，還是只是想找人說說話，諮商中心都歡迎你。"
 msgstr ""
-<<<<<<< HEAD
-"도움을 요청하는 것은 약함을 의미하지 않습니다. 학업 스트레스든, 대인관계 고민이든, 문화 적응이든, 그저 누군가와 이야기하고 싶은 "
-"것이든 상담센터는 언제나 당신을 환영합니다."
-
-#: .\guides\templates\guides\guide_mental_health.html:26
-msgid "諮商輔導中心"
-msgstr "상담센터"
-
-#: .\guides\templates\guides\guide_mental_health.html:36
-=======
 "도움을 구하는 것이 약함을 의미하지 않습니다. 학업 스트레스, 대인관계 문제, 문화 적응, 혹은 그냥 이야기 나눌 사람이 필요할 때도 —"
 " 상담센터는 언제나 여러분을 환영합니다."
 
@@ -7199,15 +7038,11 @@ msgstr "상담 지도 센터"
 
 #: .\guides\templates\guides\guide_mental_health.html:36
 #| msgid "週一至週五 10:00–15:00"
->>>>>>> new/16
 msgid "週一至週五 09:00–17:00"
 msgstr "월~금 10:00–15:00"
 
 #: .\guides\templates\guides\guide_mental_health.html:43
-<<<<<<< HEAD
-=======
 #| msgid "費用說明"
->>>>>>> new/16
 msgid "費用"
 msgstr "비용 안내"
 
@@ -7221,11 +7056,7 @@ msgstr "제공 서비스"
 
 #: .\guides\templates\guides\guide_mental_health.html:52
 msgid "個別諮商（50 分鐘 / 次）"
-<<<<<<< HEAD
-msgstr "개별 상담 (회당 50분)"
-=======
 msgstr "개인 상담 (50분 / 회)"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_mental_health.html:53
 msgid "團體諮商"
@@ -7233,19 +7064,11 @@ msgstr "집단 상담"
 
 #: .\guides\templates\guides\guide_mental_health.html:54
 msgid "心理測驗"
-<<<<<<< HEAD
-msgstr "심리검사"
-
-#: .\guides\templates\guides\guide_mental_health.html:55
-msgid "心理衛生推廣活動"
-msgstr "정신건강 증진 활동"
-=======
 msgstr "심리 검사"
 
 #: .\guides\templates\guides\guide_mental_health.html:55
 msgid "心理衛生推廣活動"
 msgstr "정신 건강 홍보 행사"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_mental_health.html:56
 msgid "社工師服務（分機 57265）"
@@ -7257,19 +7080,6 @@ msgstr "예약 방법"
 
 #: .\guides\templates\guides\guide_mental_health.html:64
 msgid "一律線上預約，預約後諮商師會主動與你聯絡，先進行初談，再安排正式諮商時間。"
-<<<<<<< HEAD
-msgstr "모든 예약은 온라인으로 진행되며, 예약 후 상담사가 먼저 연락하여 초기 상담을 진행한 뒤 정식 상담 일정을 잡습니다."
-
-#: .\guides\templates\guides\guide_mental_health.html:72
-msgid "登入 NCU Portal"
-msgstr "NCU Portal 로그인"
-
-#: .\guides\templates\guides\guide_mental_health.html:73
-msgid "Portal → 學生服務 → 學生輔導服務 → 個別諮商，或直接前往："
-msgstr "Portal → 학생 서비스 → 학생 상담 서비스 → 개별 상담, 또는 바로가기:"
-
-#: .\guides\templates\guides\guide_mental_health.html:83
-=======
 msgstr "모든 예약은 온라인으로 이루어집니다. 예약 후 상담사가 먼저 연락하여 초기 면담을 진행한 다음 정식 상담 일정을 잡습니다."
 
 #: .\guides\templates\guides\guide_mental_health.html:72
@@ -7282,35 +7092,11 @@ msgstr "Portal → 학생 서비스 → 학생 상담 서비스 → 개인 상�
 
 #: .\guides\templates\guides\guide_mental_health.html:83
 #| msgid "建議線上預約"
->>>>>>> new/16
 msgid "填寫線上預約表單"
 msgstr "온라인 예약 양식 작성"
 
 #: .\guides\templates\guides\guide_mental_health.html:84
 msgid "簡單描述來訪原因（不需要詳細，幾句話即可）"
-<<<<<<< HEAD
-msgstr "방문 사유를 간단히 적어주세요 (자세할 필요 없이 몇 문장이면 됩니다)"
-
-#: .\guides\templates\guides\guide_mental_health.html:90
-msgid "等待諮商師聯絡（初談）"
-msgstr "상담사 연락 대기 (초기 상담)"
-
-#: .\guides\templates\guides\guide_mental_health.html:91
-msgid "初談約 30–50 分鐘，了解你的狀況與需求"
-msgstr "초기 상담은 약 30~50분, 귀하의 상황과 필요를 파악합니다"
-
-#: .\guides\templates\guides\guide_mental_health.html:97
-msgid "安排正式個別諮商"
-msgstr "정식 개별 상담 예약"
-
-#: .\guides\templates\guides\guide_mental_health.html:98
-msgid "每週固定一次，50 分鐘，由同一位諮商師陪你持續談"
-msgstr "매주 1회, 50분, 동일한 상담사와 지속 진행"
-
-#: .\guides\templates\guides\guide_mental_health.html:105
-msgid "常見來訪議題"
-msgstr "자주 있는 상담 주제"
-=======
 msgstr "방문 이유를 간략하게 설명하세요 (자세하지 않아도 됩니다, 몇 문장이면 충분합니다)"
 
 #: .\guides\templates\guides\guide_mental_health.html:90
@@ -7332,7 +7118,6 @@ msgstr "매주 1회, 50분, 같은 상담사와 지속적으로 진행"
 #: .\guides\templates\guides\guide_mental_health.html:105
 msgid "常見來訪議題"
 msgstr "자주 찾는 상담 주제"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_mental_health.html:109
 msgid "課業壓力"
@@ -7340,11 +7125,7 @@ msgstr "학업 스트레스"
 
 #: .\guides\templates\guides\guide_mental_health.html:110
 msgid "考試焦慮、拖延、讀不進去"
-<<<<<<< HEAD
-msgstr "시험 불안, 미루기, 공부에 집중이 안 됨"
-=======
 msgstr "시험 불안, 미루기, 공부가 안 됨"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_mental_health.html:114
 msgid "文化適應"
@@ -7356,11 +7137,7 @@ msgstr "언어 장벽, 외로움, 향수병"
 
 #: .\guides\templates\guides\guide_mental_health.html:119
 msgid "人際關係"
-<<<<<<< HEAD
-msgstr "대인관계"
-=======
 msgstr "대인 관계"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_mental_health.html:120
 msgid "室友摩擦、交友困難、衝突處理"
@@ -7368,19 +7145,11 @@ msgstr "룸메이트 갈등, 친구 사귀기 어려움, 갈등 해결"
 
 #: .\guides\templates\guides\guide_mental_health.html:124
 msgid "情感困擾"
-<<<<<<< HEAD
-msgstr "감정 문제"
-
-#: .\guides\templates\guides\guide_mental_health.html:125
-msgid "感情問題、失戀、家庭關係"
-msgstr "연애 문제, 이별, 가족 관계"
-=======
 msgstr "감정적 어려움"
 
 #: .\guides\templates\guides\guide_mental_health.html:125
 msgid "感情問題、失戀、家庭關係"
 msgstr "연애 문제, 실연, 가족 관계"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_mental_health.html:129
 msgid "情緒低落"
@@ -7388,61 +7157,23 @@ msgstr "우울한 기분"
 
 #: .\guides\templates\guides\guide_mental_health.html:130
 msgid "焦慮、憂鬱、情緒波動"
-<<<<<<< HEAD
-msgstr "불안, 우울, 감정 기복"
-
-#: .\guides\templates\guides\guide_mental_health.html:134
-msgid "自我探索"
-msgstr "자아 탐색"
-=======
 msgstr "불안, 우울, 기분 변동"
 
 #: .\guides\templates\guides\guide_mental_health.html:134
 msgid "自我探索"
 msgstr "자기 탐색"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_mental_health.html:135
 msgid "方向迷失、身份認同、生涯規劃"
 msgstr "방향 상실, 정체성, 진로 계획"
 
 #: .\guides\templates\guides\guide_mental_health.html:140
-<<<<<<< HEAD
-=======
 #| msgid "24 小時緊急總線"
->>>>>>> new/16
 msgid "24 小時求助熱線"
 msgstr "24시간 도움 요청 핫라인"
 
 #: .\guides\templates\guides\guide_mental_health.html:145
 msgid "24H・心理危機・自殺防治"
-<<<<<<< HEAD
-msgstr "24시간・심리 위기・자살 예방"
-
-#: .\guides\templates\guides\guide_mental_health.html:149
-msgid "生命線"
-msgstr "생명의전화"
-
-#: .\guides\templates\guides\guide_mental_health.html:150
-msgid "24H・情緒支持・危機介入"
-msgstr "24시간・정서 지원・위기 개입"
-
-#: .\guides\templates\guides\guide_mental_health.html:154
-msgid "張老師專線"
-msgstr "장라오스 상담전화"
-
-#: .\guides\templates\guides\guide_mental_health.html:155
-msgid "情緒困擾・心理諮詢"
-msgstr "정서적 어려움 및 심리 상담"
-
-#: .\guides\templates\guides\guide_mental_health.html:159
-msgid "家暴 / 性暴力專線"
-msgstr "가정폭력 / 성폭력 상담전화"
-
-#: .\guides\templates\guides\guide_mental_health.html:160
-msgid "24H・家庭暴力・親密關係暴力"
-msgstr "24시간・가정폭력・친밀한 관계 폭력"
-=======
 msgstr "24H · 정신적 위기 · 자살 예방"
 
 #: .\guides\templates\guides\guide_mental_health.html:149
@@ -7468,7 +7199,6 @@ msgstr "가정 폭력 / 성폭력 전화"
 #: .\guides\templates\guides\guide_mental_health.html:160
 msgid "24H・家庭暴力・親密關係暴力"
 msgstr "24H · 가정 폭력 · 친밀한 파트너 폭력"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_mental_health.html:165
 msgid "桃園在地資源"
@@ -7476,25 +7206,6 @@ msgstr "타오위안 지역 자원"
 
 #: .\guides\templates\guides\guide_mental_health.html:168
 msgid "桃園市社區心理衛生中心"
-<<<<<<< HEAD
-msgstr "타오위안시 지역사회 정신건강센터"
-
-#: .\guides\templates\guides\guide_mental_health.html:172
-msgid "桃園生命線"
-msgstr "타오위안 생명의전화"
-
-#: .\guides\templates\guides\guide_mental_health.html:176
-msgid "中壢張老師"
-msgstr "중리 장라오스"
-
-#: .\guides\templates\guides\guide_mental_health.html:180
-msgid "中壢蘭德醫院（提供英文服務）"
-msgstr "중리 랜드시드 병원 (영어 서비스 제공)"
-
-#: .\guides\templates\guides\guide_mental_health.html:186
-msgid "校安緊急聯絡（24 小時）：03-2805666｜分機 57212"
-msgstr "교내안전 긴급연락처 (24시간): 03-2805666｜내선 57212"
-=======
 msgstr "타오위안시 지역 정신보건센터"
 
 #: .\guides\templates\guides\guide_mental_health.html:172
@@ -7512,7 +7223,6 @@ msgstr "중리 란드 병원 (영어 서비스 제공)"
 #: .\guides\templates\guides\guide_mental_health.html:186
 msgid "校安緊急聯絡（24 小時）：03-2805666｜分機 57212"
 msgstr "캠퍼스 긴급 연락처 (24시간): 03-2805666 | 내선 57212"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_national_area.html:17
 msgid "各地區申請資訊"
@@ -7975,54 +7685,22 @@ msgid "教育部－主管法規查詢系統"
 msgstr "교육부 — 법규 데이터베이스"
 
 #: .\guides\templates\guides\guide_scholarship.html:18
-<<<<<<< HEAD
-=======
 #| msgid "僑生獎學金、清寒補助、校內外各項申請指南"
->>>>>>> new/16
 msgid "僑生獎學金・清寒補助・校內外各項申請指南"
 msgstr "화교 학생 장학금, 경제 지원 및 교내외 신청 가이드"
 
 #: .\guides\templates\guides\guide_scholarship.html:22
-<<<<<<< HEAD
-=======
 #| msgid "申請管道"
->>>>>>> new/16
 msgid "申請管道快覽"
 msgstr "지원 채널"
 
 #: .\guides\templates\guides\guide_scholarship.html:26
-<<<<<<< HEAD
-=======
 #| msgid "國際事務處（OIA）"
->>>>>>> new/16
 msgid "NCU 國際事務處（OIA）"
 msgstr "국제처 (OIA)"
 
 #: .\guides\templates\guides\guide_scholarship.html:27
 msgid "僑生專屬獎學金申請入口，電話：03-425-4945"
-<<<<<<< HEAD
-msgstr "화교학생 전용 장학금 신청 창구, 전화: 03-425-4945"
-
-#: .\guides\templates\guides\guide_scholarship.html:31
-msgid "僑委會獎學金系統"
-msgstr "교무위원회 장학금 시스템"
-
-#: .\guides\templates\guides\guide_scholarship.html:36
-msgid "NCU Portal 獎助學金系統"
-msgstr "NCU Portal 장학금 시스템"
-
-#: .\guides\templates\guides\guide_scholarship.html:37
-msgid "校內各項獎學金 / 校外獎學金公告"
-msgstr "교내 장학금 / 교외 장학금 공고"
-
-#: .\guides\templates\guides\guide_scholarship.html:42
-msgid "清寒補助（僑生）"
-msgstr "저소득 보조금 (화교 학생)"
-
-#: .\guides\templates\guides\guide_scholarship.html:45
-msgid "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
-msgstr "신청 기간: 매 학기 개강 후 공고. 1학기 약 9/1~9/25, 2학기 약 2/1~3/2. 기한 초과 시 접수 불가."
-=======
 msgstr "화교 학생 전용 장학금 신청 포털, 전화: 03-425-4945"
 
 #: .\guides\templates\guides\guide_scholarship.html:31
@@ -8044,17 +7722,12 @@ msgstr "빈곤 지원금 (화교 학생)"
 #: .\guides\templates\guides\guide_scholarship.html:45
 msgid "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
 msgstr "신청 기간: 매 학기 개강 후 공지. 1학기 약 9/1–9/25, 2학기 약 2/1–3/2. 기한 초과 불수리."
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:53
 #: .\guides\templates\guides\guide_scholarship.html:182
 #: .\guides\templates\guides\guide_scholarship.html:282
 msgid "名稱"
-<<<<<<< HEAD
-msgstr "명칭"
-=======
 msgstr "이름"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:54
 #: .\guides\templates\guides\guide_scholarship.html:183
@@ -8064,46 +7737,22 @@ msgid "金額"
 msgstr "금액"
 
 #: .\guides\templates\guides\guide_scholarship.html:55
-<<<<<<< HEAD
-=======
 #| msgid "期間"
->>>>>>> new/16
 msgid "期限"
 msgstr "기한"
 
 #: .\guides\templates\guides\guide_scholarship.html:56
-<<<<<<< HEAD
-=======
 #| msgid "備註"
->>>>>>> new/16
 msgid "備注"
 msgstr "비고"
 
 #: .\guides\templates\guides\guide_scholarship.html:61
-<<<<<<< HEAD
-=======
 #| msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
->>>>>>> new/16
 msgid "教育部清寒僑生助學金"
 msgstr "교육부 저소득 화교 학생 지원금"
 
 #: .\guides\templates\guides\guide_scholarship.html:63
 msgid "1 學年（9 月至翌年 8 月）"
-<<<<<<< HEAD
-msgstr "1학년도 (9월~다음해 8월)"
-
-#: .\guides\templates\guides\guide_scholarship.html:64
-msgid "每學年重新申請，可連續領取"
-msgstr "매 학년도 재신청, 연속 수령 가능"
-
-#: .\guides\templates\guides\guide_scholarship.html:67
-msgid "僑委會清寒僑生助學金"
-msgstr "교무위원회 저소득 화교학생 장학금"
-
-#: .\guides\templates\guides\guide_scholarship.html:68
-msgid "依僑委會公告（每學期）"
-msgstr "교무위원회 공고에 따름 (매 학기)"
-=======
 msgstr "1학년 (9월~다음 해 8월)"
 
 #: .\guides\templates\guides\guide_scholarship.html:64
@@ -8117,7 +7766,6 @@ msgstr "OCAC 빈곤 화교 학생 장학금"
 #: .\guides\templates\guides\guide_scholarship.html:68
 msgid "依僑委會公告（每學期）"
 msgstr "OCAC 공지에 따름 (매 학기)"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:69
 msgid "1 學期"
@@ -8125,25 +7773,6 @@ msgstr "1학기"
 
 #: .\guides\templates\guides\guide_scholarship.html:70
 msgid "需完成 10 小時服務學習（OIA，10–11 月 / 4–5 月）"
-<<<<<<< HEAD
-msgstr "10시간의 서비스러닝 완료 필요 (OIA, 10~11월 / 4~5월)"
-
-#: .\guides\templates\guides\guide_scholarship.html:77
-msgid "須為依僑生回國就學辦法入學的僑生"
-msgstr "화교학생 귀국취학판법에 따라 입학한 화교학생이어야 함"
-
-#: .\guides\templates\guides\guide_scholarship.html:78
-msgid "前學期成績及格，操行成績 80 分以上"
-msgstr "직전 학기 성적 통과, 품행 점수 80점 이상"
-
-#: .\guides\templates\guides\guide_scholarship.html:79
-msgid "需持有「i 僑卡」，否則無法撥款"
-msgstr "'i카드' 소지 필수, 없으면 지급 불가"
-
-#: .\guides\templates\guides\guide_scholarship.html:80
-msgid "不得同時領取其他政府清寒補助或學費減免（不得重複領取）"
-msgstr "다른 정부 저소득 보조금 또는 학비 감면과 중복 수령 불가"
-=======
 msgstr "10시간 봉사학습 필수 완료 (OIA, 10–11월 / 4–5월)"
 
 #: .\guides\templates\guides\guide_scholarship.html:77
@@ -8161,39 +7790,24 @@ msgstr "\"i-해외동포 카드\" 소지 필수; 미소지 시 지급 불가"
 #: .\guides\templates\guides\guide_scholarship.html:80
 msgid "不得同時領取其他政府清寒補助或學費減免（不得重複領取）"
 msgstr "다른 정부 빈곤 지원금 또는 학비 감면과 동시 수령 불가 (중복 수령 금지)"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:81
 msgid "所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學生證 / 護照 / ARC / 郵局存摺影本"
 msgstr ""
-<<<<<<< HEAD
-"필요 서류: 신청서+저소득 평가표, 저소득 증명서 원본(출신 지역 발급), 성적증명서, 자기소개서, 학생증/여권/ARC/우체국 통장 사본"
-
-#: .\guides\templates\guides\guide_scholarship.html:86
-msgid "僑委會新生入學獎學金"
-msgstr "교무위원회 신입생 입학장학금"
-=======
 "필요 서류: 신청서 + 빈곤 평가표, 빈곤 증명서 원본 (거주지 발급), 성적증명서, 자기소개서, 학생증 / 여권 / ARC / 우체국 "
 "통장 사본"
 
 #: .\guides\templates\guides\guide_scholarship.html:86
 msgid "僑委會新生入學獎學金"
 msgstr "OCAC 신입생 입학 장학금"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:89
 msgid "以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。"
 msgstr ""
-<<<<<<< HEAD
-"다음은 해외연합회 경로 입학 자격입니다 — 입학 전 재외공관에서 추천 신청하며, 대만 도착 후 본인이 직접 신청하는 것이 아닙니다."
-
-#: .\guides\templates\guides\guide_scholarship.html:97
-=======
 "다음 자격은 OCAC 채널로 입학한 신입생에게 적용됩니다. 입학 전 해외 공관에서 추천 신청하며, 대만 도착 후 자체 신청이 아닙니다."
 
 #: .\guides\templates\guides\guide_scholarship.html:97
 #| msgid "等第"
->>>>>>> new/16
 msgid "等級"
 msgstr "등급"
 
@@ -8202,22 +7816,6 @@ msgid "年額"
 msgstr "연간 금액"
 
 #: .\guides\templates\guides\guide_scholarship.html:99
-<<<<<<< HEAD
-msgid "申請資格（成績）"
-msgstr "신청 자격 (성적별)"
-
-#: .\guides\templates\guides\guide_scholarship.html:100
-msgid "續領條件"
-msgstr "재신청 조건"
-
-#: .\guides\templates\guides\guide_scholarship.html:101
-msgid "年限"
-msgstr "기간"
-
-#: .\guides\templates\guides\guide_scholarship.html:106
-msgid "頂尖"
-msgstr "최상위"
-=======
 #| msgid "申請資格（年級）"
 msgid "申請資格（成績）"
 msgstr "신청 자격 (성적)"
@@ -8233,52 +7831,32 @@ msgstr "연한"
 #: .\guides\templates\guides\guide_scholarship.html:106
 msgid "頂尖"
 msgstr "최우수"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:108
 #, python-format
 msgid "88 分以上或班排前 5%%"
-<<<<<<< HEAD
-msgstr "88점 이상 또는 반 상위 5%%"
-
-#: .\guides\templates\guides\guide_scholarship.html:109
-msgid "85 分以上或 A 等"
-msgstr "85점 이상 또는 A등급"
-=======
 msgstr "88점 이상 또는 반 상위 5%"
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
 msgstr "85점 이상 또는 A 등급"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:110
 #: .\guides\templates\guides\guide_scholarship.html:117
 #: .\guides\templates\guides\guide_scholarship.html:151
 #: .\guides\templates\guides\guide_scholarship.html:163
-<<<<<<< HEAD
-=======
 #| msgid "1 年"
->>>>>>> new/16
 msgid "4 年"
 msgstr "4년"
 
 #: .\guides\templates\guides\guide_scholarship.html:113
 msgid "傑出"
-<<<<<<< HEAD
-msgstr "탁월"
-=======
 msgstr "우수"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:115
 #, python-format
 msgid "85 分以上或班排前 10%%"
-<<<<<<< HEAD
-msgstr "85점 이상 또는 반 상위 10%%"
-=======
 msgstr "85점 이상 또는 반 상위 10%"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:116
 msgid "80 分以上或 A- 等"
@@ -8286,15 +7864,6 @@ msgstr "80점 이상 또는 A- 등급"
 
 #: .\guides\templates\guides\guide_scholarship.html:123
 msgid "操行成績 80 分以上，每學期最少 9 學分"
-<<<<<<< HEAD
-msgstr "품행 점수 80점 이상, 매 학기 최소 9학점"
-
-#: .\guides\templates\guides\guide_scholarship.html:124
-msgid "不得同時領取其他政府獎學金"
-msgstr "다른 정부 장학금과 중복 수령 불가"
-
-#: .\guides\templates\guides\guide_scholarship.html:129
-=======
 msgstr "품행 점수 80+, 학기당 최소 9학점"
 
 #: .\guides\templates\guides\guide_scholarship.html:124
@@ -8303,25 +7872,17 @@ msgstr "다른 정부 장학금과 동시 수령 불가"
 
 #: .\guides\templates\guides\guide_scholarship.html:129
 #| msgid "教育部臺灣獎學金"
->>>>>>> new/16
 msgid "教育部台灣獎學金（外籍生）"
 msgstr "교육부 대만 장학금 (외국인 학생)"
 
 #: .\guides\templates\guides\guide_scholarship.html:132
 msgid "台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居身分的僑生，香港澳門生亦不適用。"
 msgstr ""
-<<<<<<< HEAD
-"대만 장학금은 '외국 국적' 학생(무비자 외국인 포함)에게만 적용되며, 중화민국 국적 또는 화교 거주 신분을 가진 화교학생에게는 적용되지"
-" 않고, 홍콩·마카오 학생에게도 적용되지 않습니다."
-
-#: .\guides\templates\guides\guide_scholarship.html:140
-=======
 "대만 장학금은 \"외국 국적\" 학생(무비자 외국인 포함)에게만 적용됩니다. ROC 국적 또는 화교 신분의 화교 학생이나 홍콩/마카오 "
 "학생에게는 적용되지 않습니다."
 
 #: .\guides\templates\guides\guide_scholarship.html:140
 #| msgid "計學分"
->>>>>>> new/16
 msgid "學制"
 msgstr "학제"
 
@@ -8335,16 +7896,10 @@ msgstr "학비 보조"
 
 #: .\guides\templates\guides\guide_scholarship.html:143
 msgid "最長年限"
-<<<<<<< HEAD
-msgstr "최장 기간"
-
-#: .\guides\templates\guides\guide_scholarship.html:148
-=======
 msgstr "최대 기간"
 
 #: .\guides\templates\guides\guide_scholarship.html:148
 #| msgid "學士班"
->>>>>>> new/16
 msgid "學士"
 msgstr "학사과"
 
@@ -8355,18 +7910,12 @@ msgid "每學期最高 NT$40,000"
 msgstr "학기당 최대 NT$40,000"
 
 #: .\guides\templates\guides\guide_scholarship.html:154
-<<<<<<< HEAD
-=======
 #| msgid "碩士畢業"
->>>>>>> new/16
 msgid "碩士"
 msgstr "석사 졸업"
 
 #: .\guides\templates\guides\guide_scholarship.html:157
-<<<<<<< HEAD
-=======
 #| msgid "1 年"
->>>>>>> new/16
 msgid "2 年"
 msgstr "2년"
 
@@ -8376,19 +7925,11 @@ msgstr "박사"
 
 #: .\guides\templates\guides\guide_scholarship.html:169
 msgid "申請期間：每年 2 月 1 日至 3 月 31 日，向所在國 TECO（台灣辦事處）申請"
-<<<<<<< HEAD
-msgstr "신청 기간: 매년 2월 1일~3월 31일, 소재국 TECO(대만대표처)에 신청"
-
-#: .\guides\templates\guides\guide_scholarship.html:170
-msgid "官方入口：taiwanscholarship.moe.gov.tw"
-msgstr "공식 창구: taiwanscholarship.moe.gov.tw"
-=======
 msgstr "신청 기간: 매년 2월 1일~3월 31일, 해당 국가 TECO (대만 사무소)에 신청"
 
 #: .\guides\templates\guides\guide_scholarship.html:170
 msgid "官方入口：taiwanscholarship.moe.gov.tw"
 msgstr "공식 포털: taiwanscholarship.moe.gov.tw"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:175
 msgid "校內獎學金"
@@ -8396,21 +7937,6 @@ msgstr "교내 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:184
 msgid "主要對象 / 條件"
-<<<<<<< HEAD
-msgstr "대상 / 조건"
-
-#: .\guides\templates\guides\guide_scholarship.html:189
-msgid "優秀學生獎學金"
-msgstr "우수학생 장학금"
-
-#: .\guides\templates\guides\guide_scholarship.html:191
-msgid "競賽優異、發明專利、社務貢獻；需推薦信＋自傳，每學期申請"
-msgstr "대회 우수, 발명 특허, 사회공헌; 추천서+자기소개서 필요, 매 학기 신청"
-
-#: .\guides\templates\guides\guide_scholarship.html:194
-msgid "勵學獎學金（清寒）"
-msgstr "여학장학금 (저소득)"
-=======
 msgstr "주요 대상 / 조건"
 
 #: .\guides\templates\guides\guide_scholarship.html:189
@@ -8424,23 +7950,11 @@ msgstr "대회 우수, 발명 특허, 사회 기여; 추천서 + 자기소개서
 #: .\guides\templates\guides\guide_scholarship.html:194
 msgid "勵學獎學金（清寒）"
 msgstr "근면 장학금 (빈곤)"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:195
 #: .\guides\templates\guides\guide_scholarship.html:248
 #: .\guides\templates\guides\guide_scholarship.html:291
 msgid "最高"
-<<<<<<< HEAD
-msgstr "최고"
-
-#: .\guides\templates\guides\guide_scholarship.html:196
-msgid "清寒優秀生，低收 / 單親家庭優先"
-msgstr "저소득 우수학생, 저소득/한부모 가정 우선"
-
-#: .\guides\templates\guides\guide_scholarship.html:199
-msgid "學術成績優異榮譽榜"
-msgstr "학업 우수 명예의 전당"
-=======
 msgstr "최대"
 
 #: .\guides\templates\guides\guide_scholarship.html:196
@@ -8450,50 +7964,10 @@ msgstr "빈곤 우수 학생; 저소득 / 한부모 가정 우선"
 #: .\guides\templates\guides\guide_scholarship.html:199
 msgid "學術成績優異榮譽榜"
 msgstr "학업 우수 명예 명단"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:201
 #, python-format
 msgid "學期成績系排前 5%%，自動核發"
-<<<<<<< HEAD
-msgstr "학기 성적 학과 상위 5%%, 자동 지급"
-
-#: .\guides\templates\guides\guide_scholarship.html:204
-msgid "傑出領導獎學金"
-msgstr "우수 리더십 장학금"
-
-#: .\guides\templates\guides\guide_scholarship.html:206
-msgid "社團 / 自治會 / 宿委幹部或校外代表績效卓著"
-msgstr "동아리/자치회/기숙사위원회 간부 또는 교외 대표로서 탁월한 성과"
-
-#: .\guides\templates\guides\guide_scholarship.html:209
-msgid "羅家倫先生紀念獎學金"
-msgstr "뤄자룬 선생 기념장학금"
-
-#: .\guides\templates\guides\guide_scholarship.html:211
-msgid "大二以上或研究生；清寒優秀"
-msgstr "2학년 이상 또는 대학원생; 저소득 우수학생"
-
-#: .\guides\templates\guides\guide_scholarship.html:214
-msgid "李國鼎紀念獎學金"
-msgstr "리궈딩 기념 장학금"
-
-#: .\guides\templates\guides\guide_scholarship.html:216
-msgid "大二以上；清寒"
-msgstr "2학년 이상; 저소득층"
-
-#: .\guides\templates\guides\guide_scholarship.html:222
-msgid "完整校內獎學金清單及申請時間：NCU Portal → 獎助學金暨工讀管理系統，或查"
-msgstr "교내 장학금 전체 목록 및 신청 기간: NCU Portal → 장학금 및 근로장학 관리시스템, 또는 확인:"
-
-#: .\guides\templates\guides\guide_scholarship.html:223
-msgid "軍訓室獎學金頁 ↗"
-msgstr "군훈실 장학금 페이지 ↗"
-
-#: .\guides\templates\guides\guide_scholarship.html:228
-msgid "安心就學支持計劃（需申請，學務處辦理）"
-msgstr "안심학업지원 프로그램 (신청 필요, 학생처 담당)"
-=======
 msgstr "학기 학과 성적 상위 5%, 자동 지급"
 
 #: .\guides\templates\guides\guide_scholarship.html:204
@@ -8531,7 +8005,6 @@ msgstr "군훈련실 장학금 페이지 ↗"
 #: .\guides\templates\guides\guide_scholarship.html:228
 msgid "安心就學支持計劃（需申請，學務處辦理）"
 msgstr "안심 취학 지원 프로그램 (신청 필요, 학생처 처리)"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:237
 msgid "條件摘要"
@@ -8539,36 +8012,21 @@ msgstr "조건 요약"
 
 #: .\guides\templates\guides\guide_scholarship.html:242
 msgid "安心學習助學金"
-<<<<<<< HEAD
-msgstr "안심학습 지원금"
-
-#: .\guides\templates\guides\guide_scholarship.html:243
-#: .\guides\templates\guides\guide_scholarship.html:303
-=======
 msgstr "안심 학습 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
 #| msgid "學號"
->>>>>>> new/16
 msgid "學期"
 msgstr "학기"
 
 #: .\guides\templates\guides\guide_scholarship.html:244
 msgid "低 / 中低收入或特殊情況；需學習計畫＋3 場活動＋2 次導師面談"
-<<<<<<< HEAD
-msgstr "저소득/중저소득 또는 특수 상황; 학습계획+활동 3회+지도교수 면담 2회 필요"
-
-#: .\guides\templates\guides\guide_scholarship.html:247
-msgid "競賽拔尖獎勵金"
-msgstr "대회 우수상 장려금"
-=======
 msgstr "저소득 / 중저소득 또는 특수 상황; 학습 계획 + 활동 3회 + 지도교수 면담 2회 필요"
 
 #: .\guides\templates\guides\guide_scholarship.html:247
 msgid "競賽拔尖獎勵金"
 msgstr "경연 우수상"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:249
 msgid "國內外競賽獲獎"
@@ -8576,29 +8034,6 @@ msgstr "국내외 대회 수상"
 
 #: .\guides\templates\guides\guide_scholarship.html:252
 msgid "外語檢定認證助學金"
-<<<<<<< HEAD
-msgstr "외국어인증 지원금"
-
-#: .\guides\templates\guides\guide_scholarship.html:254
-msgid "英語最高 NT$10,000；日文 / 法文 / 德文最高 NT$6,000，每學年 1 次"
-msgstr "영어 최대 NT$10,000; 일본어/프랑스어/독일어 최대 NT$6,000, 매 학년도 1회"
-
-#: .\guides\templates\guides\guide_scholarship.html:257
-msgid "實習獎勵金"
-msgstr "실습 장려금"
-
-#: .\guides\templates\guides\guide_scholarship.html:259
-msgid "140 小時以上實習，成績 85 分以上"
-msgstr "140시간 이상 실습, 성적 85점 이상"
-
-#: .\guides\templates\guides\guide_scholarship.html:262
-msgid "宿舍學習助學金"
-msgstr "기숙사 학습 지원금"
-
-#: .\guides\templates\guides\guide_scholarship.html:263
-msgid "時，最高"
-msgstr "일 때 최대"
-=======
 msgstr "외국어 자격증 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:254
@@ -8620,7 +8055,6 @@ msgstr "기숙사 학습 장학금"
 #: .\guides\templates\guides\guide_scholarship.html:263
 msgid "時，最高"
 msgstr "시간, 최대"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:264
 msgid "宿舍活動參與"
@@ -8628,19 +8062,11 @@ msgstr "기숙사 활동 참여"
 
 #: .\guides\templates\guides\guide_scholarship.html:270
 msgid "申請入口：NCU ALC 安心就學頁面（ncu.edu.tw/ALC/）"
-<<<<<<< HEAD
-msgstr "신청 창구: NCU ALC 안심학업 페이지 (ncu.edu.tw/ALC/)"
-
-#: .\guides\templates\guides\guide_scholarship.html:275
-msgid "校外獎學金（精選）"
-msgstr "교외 장학금 (엄선)"
-=======
 msgstr "신청 포털: NCU ALC 안심 취학 페이지 (ncu.edu.tw/ALC/)"
 
 #: .\guides\templates\guides\guide_scholarship.html:275
 msgid "校外獎學金（精選）"
 msgstr "교외 장학금 (선별)"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:284
 msgid "申請期間（約）"
@@ -8655,10 +8081,7 @@ msgid "行天宮獎學金"
 msgstr "싱톈궁 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:291
-<<<<<<< HEAD
-=======
 #| msgid "1 年"
->>>>>>> new/16
 msgid "年"
 msgstr "1년"
 
@@ -8668,15 +8091,6 @@ msgstr "1학기 9/30, 2학기 3/10"
 
 #: .\guides\templates\guides\guide_scholarship.html:293
 msgid "大二以上；成績 80+；操行 A；清寒優先"
-<<<<<<< HEAD
-msgstr "2학년 이상; 성적 80+; 품행 A; 저소득 우선"
-
-#: .\guides\templates\guides\guide_scholarship.html:296
-msgid "孺鴻教育獎學金"
-msgstr "루훙교육 장학금"
-
-#: .\guides\templates\guides\guide_scholarship.html:298
-=======
 msgstr "2학년 이상; 성적 80+; 품행 A; 빈곤 우선"
 
 #: .\guides\templates\guides\guide_scholarship.html:296
@@ -8685,7 +8099,6 @@ msgstr "루훙 교육 장학금"
 
 #: .\guides\templates\guides\guide_scholarship.html:298
 #| msgid "約每年 3 月"
->>>>>>> new/16
 msgid "每年 3 月"
 msgstr "매년 약 3월"
 
@@ -8695,11 +8108,7 @@ msgstr "성적 80+; GEPT 중급; 품행 80+"
 
 #: .\guides\templates\guides\guide_scholarship.html:302
 msgid "平安菁英教育基金會"
-<<<<<<< HEAD
-msgstr "핑안 엘리트 교육재단"
-=======
 msgstr "핑안 엘리트 교육 재단"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:304
 msgid "2/12 – 3/5"
@@ -8708,19 +8117,11 @@ msgstr "2/12 – 3/5"
 #: .\guides\templates\guides\guide_scholarship.html:305
 #, python-format
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%%"
-<<<<<<< HEAD
-msgstr "가구 연소득 ≤ NT$900,000; 성적 80+ 또는 반 상위 40%%"
-
-#: .\guides\templates\guides\guide_scholarship.html:308
-msgid "合作金庫研究獎學金"
-msgstr "협동조합은행 연구장학금"
-=======
 msgstr "연간 가족 소득 ≤ NT$900,000; 성적 80+ 또는 반 상위 40%"
 
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
 msgstr "합작금고 연구 장학금"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
@@ -8728,11 +8129,7 @@ msgstr "1/13 – 5/5"
 
 #: .\guides\templates\guides\guide_scholarship.html:311
 msgid "大四或研究生；成績 80+"
-<<<<<<< HEAD
-msgstr "4학년 또는 대학원생; 성적 80점 이상"
-=======
 msgstr "4학년 또는 대학원생; 성적 80+"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:314
 msgid "關渡宮助學金"
@@ -8744,16 +8141,6 @@ msgstr "2/10 – 3/17"
 
 #: .\guides\templates\guides\guide_scholarship.html:317
 msgid "低 / 中低收入或身心障礙；成績 65+"
-<<<<<<< HEAD
-msgstr "저소득/중저소득 또는 장애; 성적 65점 이상"
-
-#: .\guides\templates\guides\guide_scholarship.html:323
-msgid "每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期查看"
-msgstr ""
-"매 학기 개강 후, 학생처가 NCU Portal에 해당 학기 신청 가능한 교외 장학금 목록을 공고합니다. 정기적으로 확인해 주세요"
-
-#: .\guides\templates\guides\guide_scholarship.html:328
-=======
 msgstr "저소득 / 중저소득 또는 장애; 성적 65+"
 
 #: .\guides\templates\guides\guide_scholarship.html:323
@@ -8762,24 +8149,11 @@ msgstr "매 학기 개강 후 학생처에서 NCU 포털에 해당 학기 신청
 
 #: .\guides\templates\guides\guide_scholarship.html:328
 #| msgid "重要提醒："
->>>>>>> new/16
 msgid "重要提醒"
 msgstr "중요 안내:"
 
 #: .\guides\templates\guides\guide_scholarship.html:331
 msgid "不得重複領取"
-<<<<<<< HEAD
-msgstr "중복 수령 불가"
-
-#: .\guides\templates\guides\guide_scholarship.html:332
-msgid "教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再申請。"
-msgstr ""
-"교육부와 교무위원회의 저소득 장학금은 동시에 받을 수 없으며, 다른 정부 학비 감면과도 병행할 수 없습니다. 신청 전 확인해 주세요."
-
-#: .\guides\templates\guides\guide_scholarship.html:335
-msgid "僑卡必備"
-msgstr "i카드 필수"
-=======
 msgstr "중복 수령 금지"
 
 #: .\guides\templates\guides\guide_scholarship.html:332
@@ -8789,23 +8163,10 @@ msgstr "교육부와 OCAC 생활비 지원금은 동시에 받을 수 없으며,
 #: .\guides\templates\guides\guide_scholarship.html:335
 msgid "僑卡必備"
 msgstr "i-해외동포 카드 필수"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:336
 msgid "申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。"
 msgstr ""
-<<<<<<< HEAD
-"정부 지원금을 신청하기 전에 반드시 'i카드'를 발급받아야 하며, 그렇지 않으면 지급되지 않습니다. 학기 초에 처리해 주세요."
-
-#: .\guides\templates\guides\guide_scholarship.html:339
-msgid "清寒證明須原件"
-msgstr "저소득 증명서는 원본 필수"
-
-#: .\guides\templates\guides\guide_scholarship.html:340
-msgid "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
-msgstr ""
-"저소득 보조금에 필요한 '저소득 증명서'는 출신 지역 기관이 발급한 원본을 제출해야 하며, 사본이나 사진은 인정되지 않습니다."
-=======
 "정부 장학금 또는 지원금 신청 전에 반드시 \"i-해외동포 카드\"를 먼저 신청해야 합니다; 미신청 시 지급 불가. 개강 초에 "
 "처리하세요."
 
@@ -8816,7 +8177,6 @@ msgstr "빈곤 증명서는 원본이어야 함"
 #: .\guides\templates\guides\guide_scholarship.html:340
 msgid "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
 msgstr "지원금 신청에 필요한 \"빈곤 증명서\"는 출신 지역 기관이 발급한 원본을 제출해야 합니다. 사본이나 사진은 불수리."
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_scholarship.html:343
 msgid "留意截止日"
@@ -8825,26 +8185,12 @@ msgstr "마감일 주의"
 #: .\guides\templates\guides\guide_scholarship.html:344
 msgid "多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提早準備文件。"
 msgstr ""
-<<<<<<< HEAD
-"대부분의 장학금 마감일은 엄격합니다 — OIA는 매 학기 약 9/25(1학기)/3/2(2학기)입니다. 기한 초과 시 접수되지 않으니 "
-=======
 "대부분의 장학금 마감 기한은 엄격합니다. OIA 마감은 매 학기 약 9/25 (1학기) / 3/2 (2학기)입니다. 기한 초과 불수리. "
->>>>>>> new/16
 "서류를 미리 준비하세요."
 
 #: .\guides\templates\guides\guide_scholarship.html:349
 msgid "NCU 國際事務處：+886-3-425-4945｜僑生獎助學金相關業務洽 OIA 辦理"
-<<<<<<< HEAD
-msgstr "NCU 국제처: +886-3-425-4945｜화교학생 장학금 관련 업무는 OIA로 문의"
-
-#: .\guides\templates\guides\guide_search.html:14
-#: .\users\templates\users\profile_setup.html:194
-#: .\users\templates\users\profile_setup.html:253
-msgid "返回"
-msgstr "돌아가기"
-=======
 msgstr "NCU 국제처: +886-3-425-4945 | 화교 학생 장학금 관련 업무는 OIA 문의"
->>>>>>> new/16
 
 #: .\guides\templates\guides\guide_search.html:22
 msgid "搜尋所有指南內容..."
@@ -9706,10 +9052,7 @@ msgstr ""
 "재사용할 수 없습니다."
 
 #: .\guides\templates\guides\guide_work_permit.html:248
-<<<<<<< HEAD
-=======
 #| msgid "許可期限最長 "
->>>>>>> new/16
 msgid "許可期限最長 6 個月："
 msgstr "허가 기간 최대 "
 
@@ -9805,12 +9148,8 @@ msgstr "작업 목록"
 msgid "搜尋指南..."
 msgstr "가이드 검색..."
 
-<<<<<<< HEAD
-#: .\templates\base.html:157
-=======
 #: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
 #| msgid "沒有未讀通知 🎉"
->>>>>>> new/16
 msgid "沒有未讀通知"
 msgstr "읽지 않은 알림이 없습니다 🎉"
 
@@ -9838,59 +9177,12 @@ msgstr "로그아웃"
 msgid "開始流程"
 msgstr "시작하기"
 
-<<<<<<< HEAD
 #: .\templates\base.html:192 .\templates\base.html:194
 msgid "詢問AI小幫手"
 msgstr "AI 도우미"
 
 #: .\templates\base.html:197 .\templates\base.html:237
 #: .\users\templates\users\dashboard.html:142
-=======
-#: .\templates\base.html:191
-msgid "專為僑外籍生打造的來台留學流程指南平台，協助學生一步步完成留學準備與抵台後事項。"
-msgstr ""
-
-#: .\templates\base.html:197 .\users\templates\users\home.html:136
-#: .\users\templates\users\home.html:281
-msgid "申請前準備"
-msgstr ""
-
-#: .\templates\base.html:199 .\users\templates\users\home.html:148
-#: .\users\templates\users\home.html:274 .\users\templates\users\home.html:288
-msgid "抵台前準備"
-msgstr ""
-
-#: .\templates\base.html:200 .\users\templates\users\home.html:154
-msgid "抵達後事項"
-msgstr ""
-
-#: .\templates\base.html:205 .\users\templates\users\home.html:314
-msgid "簽證指南"
-msgstr ""
-
-#: .\templates\base.html:206 .\users\templates\users\home.html:319
-msgid "住宿資訊"
-msgstr ""
-
-#: .\templates\base.html:207 .\users\templates\users\home.html:324
-msgid "健保說明"
-msgstr ""
-
-#: .\templates\base.html:208
-msgid "生活指南"
-msgstr ""
-
-#: .\templates\base.html:212
-msgid "支援服務"
-msgstr ""
-
-#: .\templates\base.html:213
-msgid "使用說明"
-msgstr ""
-
-#: .\templates\base.html:216
-#| msgid "詢問 AI 小幫手"
->>>>>>> new/16
 msgid "AI 小幫手"
 msgstr "AI 도우미에게 묻기"
 
@@ -10095,12 +9387,8 @@ msgstr "튀르키예"
 msgid "英國"
 msgstr "영국"
 
-<<<<<<< HEAD
-#: .\users\models.py:145 .\users\templates\users\profile_setup.html:483
-=======
 #: .\users\models.py:145
 #| msgid "泰國"
->>>>>>> new/16
 msgid "法國"
 msgstr "프랑스"
 
@@ -10120,12 +9408,8 @@ msgstr "스페인"
 msgid "美國"
 msgstr "미국"
 
-<<<<<<< HEAD
-#: .\users\models.py:151 .\users\templates\users\profile_setup.html:490
-=======
 #: .\users\models.py:151
 #| msgid "美國／加拿大"
->>>>>>> new/16
 msgid "加拿大"
 msgstr "미국/캐나다"
 
@@ -10137,12 +9421,8 @@ msgstr "브라질"
 msgid "阿根廷"
 msgstr "아르헨티나"
 
-<<<<<<< HEAD
-#: .\users\models.py:157 .\users\templates\users\profile_setup.html:498
-=======
 #: .\users\models.py:157
 #| msgid "南亞"
->>>>>>> new/16
 msgid "南非"
 msgstr "남아프리카공화국"
 
@@ -10154,12 +9434,8 @@ msgstr "이집트"
 msgid "奈及利亞"
 msgstr "나이지리아"
 
-<<<<<<< HEAD
-#: .\users\models.py:161 .\users\templates\users\profile_setup.html:503
-=======
 #: .\users\models.py:161
 #| msgid "歐洲"
->>>>>>> new/16
 msgid "澳洲"
 msgstr "호주"
 
@@ -10168,10 +9444,7 @@ msgid "紐西蘭"
 msgstr "뉴질랜드"
 
 #: .\users\models.py:169
-<<<<<<< HEAD
-=======
 #| msgid "例如：國立臺灣大學"
->>>>>>> new/16
 msgid "國立臺灣大學（NTU）"
 msgstr "국립대만대학교 (NTU)"
 
@@ -10196,10 +9469,7 @@ msgid "國立中興大學（NCHU）"
 msgstr "국립중흥대학교 (NCHU)"
 
 #: .\users\models.py:175
-<<<<<<< HEAD
-=======
 #| msgid "中央大學（正門）"
->>>>>>> new/16
 msgid "國立中央大學（NCU）"
 msgstr "국립중앙대학교 (NCU)"
 
@@ -10319,13 +9589,6 @@ msgstr "국립방송통신대학교 (NOU)"
 msgid "其他（Other）"
 msgstr "기타 (Other)"
 
-<<<<<<< HEAD
-#: .\users\templates\users\_alumni_card.html:13
-#, fuzzy
-#| msgid "編輯資料"
-msgid "編輯"
-msgstr "정보 편집"
-=======
 #: .\users\templates\users\dashboard.html:152
 msgid "你好"
 msgstr "안녕하세요"
@@ -10338,7 +9601,6 @@ msgstr "해외 유학생"
 #| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
 msgid "歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。"
 msgstr "StudyGo Taiwan에 오신 것을 환영합니다. 개인화된 대만 유학 프로세스가 준비되었습니다."
->>>>>>> new/16
 
 #: .\users\templates\users\_alumni_card.html:15
 msgid "確定要刪除這則分享嗎？此動作無法復原。"
@@ -10811,12 +10073,8 @@ msgstr "로그인 페이지로 돌아가기"
 msgid "來臺就學小幫手"
 msgstr "대만 유학 도우미"
 
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:15
-=======
 #: .\users\templates\users\home.html:16 .\users\templates\users\home.html:27
 #| msgid "你好"
->>>>>>> new/16
 msgid "你好！"
 msgstr "안녕하세요"
 
@@ -10831,14 +10089,11 @@ msgid "專為僑生、外籍生與港澳生打造的來台留學流程指南平�
 msgstr "화교 및 외국인 유학생을 위해 특별히 제작된 대만 유학 단계별 가이드 플랫폼."
 
 #: .\users\templates\users\home.html:18
-<<<<<<< HEAD
-=======
 #| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
 msgid "，您的個人化來臺就學流程已準備好。"
 msgstr "StudyGo Taiwan에 오신 것을 환영합니다. 개인화된 대만 유학 프로세스가 준비되었습니다."
 
 #: .\users\templates\users\home.html:19 .\users\templates\users\home.html:30
->>>>>>> new/16
 msgid "跟著我們一步步完成留學準備，掌握所有關鍵資訊。"
 msgstr "저희와 함께 한 단계씩 유학 준비를 완료하고 모든 핵심 정보를 파악하세요."
 
@@ -10851,15 +10106,6 @@ msgstr "개 작업"
 msgid "示範資料"
 msgstr "예시 데이터"
 
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:60
-#, fuzzy
-#| msgid "入臺前準備"
-msgid "抵臺前準備"
-msgstr "입국 전 준비"
-
-#: .\users\templates\users\home.html:61 .\users\templates\users\home.html:118
-=======
 #: .\users\templates\users\home.html:115
 #| msgid "申請截止"
 msgid "申請中"
@@ -10867,7 +10113,6 @@ msgstr "지원 마감"
 
 #: .\users\templates\users\home.html:116 .\users\templates\users\home.html:242
 #| msgid "中央大學"
->>>>>>> new/16
 msgid "國立中央大學"
 msgstr "국립중앙대학교"
 
@@ -10879,75 +10124,6 @@ msgstr "두 단계"
 msgid "掌握留學全流程"
 msgstr "유학 전 과정 완벽 파악"
 
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:83
-#, fuzzy
-#| msgid "辦理居留證（ARC）"
-msgid "辦理居留簽證（憑入學許可）"
-msgstr "거류증(ARC) 발급"
-
-#: .\users\templates\users\home.html:84
-msgid "申請學校宿舍或安排租屋"
-msgstr "기숙사 신청 또는 외부 임대 준비"
-
-#: .\users\templates\users\home.html:85
-msgid "預訂機票、準備入境文件與體檢報告"
-msgstr "항공권 예약, 입국 서류 및 건강검진 보고서 준비"
-
-#: .\users\templates\users\home.html:86
-msgid "填好抵臺日期，系統自動排任務"
-msgstr "도착일을 입력하면 시스템이 자동으로 작업을 배정합니다"
-
-#: .\users\templates\users\home.html:93
-msgid "入境 30 天內線上申請 ARC 居留證"
-msgstr "입국 30일 이내 온라인으로 ARC 신청"
-
-#: .\users\templates\users\home.html:94
-msgid "學校報到註冊、辦學生證與選課"
-msgstr "학교 등록, 학생증 발급, 수강신청"
-
-#: .\users\templates\users\home.html:95
-msgid "銀行開戶、辦手機門號"
-msgstr "은행 계좌 개설 및 휴대폰 개통"
-
-#: .\users\templates\users\home.html:96
-#, fuzzy
-#| msgid "自在臺居留滿 6 個月之日投保"
-msgid "居留滿 6 個月加入全民健保"
-msgstr "대만 거주 6개월 완료일부터 가입"
-
-#: .\users\templates\users\home.html:100
-#, fuzzy
-#| msgid "後可查看您的個人化流程進度"
-msgid "以上為示範內容，登入後可查看您的個人化流程進度。"
-msgstr "로그인 후 맞춤형 프로세스 진행 상황을 확인할 수 있습니다"
-
-#: .\users\templates\users\home.html:108
-msgid "跟著清單走"
-msgstr "체크리스트를 따라가세요"
-
-#: .\users\templates\users\home.html:108
-msgid "不遺漏任何步驟"
-msgstr "어떤 단계도 놓치지 않기"
-
-#: .\users\templates\users\home.html:113
-msgid "王小明"
-msgstr "왕샤오밍"
-
-#: .\users\templates\users\home.html:122
-msgid "目前進度"
-msgstr "현재 진행 상황"
-
-#: .\users\templates\users\home.html:128
-msgid "已完成 8 / 20 項任務"
-msgstr "8 / 20 작업 완료"
-
-#: .\users\templates\users\home.html:133
-msgid "待辦任務"
-msgstr "최근 할 일"
-
-#: .\users\templates\users\home.html:138
-=======
 #: .\users\templates\users\home.html:137
 msgid "確認資格、選擇學校與科系、準備學歷文件與財力證明"
 msgstr ""
@@ -11010,7 +10186,6 @@ msgstr "최근 할 일"
 
 #: .\users\templates\users\home.html:262
 #| msgid "即將到期任務"
->>>>>>> new/16
 msgid "即將到期"
 msgstr "곧 만료되는 작업"
 
@@ -11018,12 +10193,8 @@ msgstr "곧 만료되는 작업"
 msgid "申請學生簽證"
 msgstr "학생 비자 신청"
 
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:158
-=======
 #: .\users\templates\users\home.html:280
 #| msgid "財力證明"
->>>>>>> new/16
 msgid "準備財力證明文件"
 msgstr "재력 증명"
 
@@ -11035,13 +10206,6 @@ msgstr "신청 전 준비"
 msgid "預訂來台機票"
 msgstr "대만행 항공권 예약"
 
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:171
-#, fuzzy
-#| msgid "後可查看您的個人化任務清單"
-msgid "以上為示範資料，登入後可查看您的個人化任務清單。"
-msgstr "이후 개인화된 작업 목록을 확인할 수 있습니다"
-=======
 #: .\users\templates\users\home.html:293
 msgid "以上為示範資料，"
 msgstr ""
@@ -11050,7 +10214,6 @@ msgstr ""
 #| msgid "我的個人化任務清單"
 msgid "後可查看您的個人化任務清單"
 msgstr "나의 개인화된 할 일 목록"
->>>>>>> new/16
 
 #: .\users\templates\users\home.html:183
 msgid "重要資訊"
@@ -11076,12 +10239,8 @@ msgstr "교내 기숙사 신청 절차, 교외 임대 플랫폼 추천, 임대 �
 msgid "全民健保加入資格、保費計算方式、就醫流程與各地醫院資訊查詢。"
 msgstr "국민건강보험 가입 자격, 보험료 계산 방식, 진료 절차 및 지역별 병원 정보 조회."
 
-<<<<<<< HEAD
-#: .\users\templates\users\home.html:205 .\users\templates\users\login.html:53
-=======
 #: .\users\templates\users\home.html:329
 #| msgid "台灣銀行開戶"
->>>>>>> new/16
 msgid "銀行開戶"
 msgstr "대만 은행 계좌 개설"
 
@@ -11111,9 +10270,6 @@ msgstr "세계 각지에서 NCU에 재학 중인 선배들이 대만 유학의 �
 
 #: .\users\templates\users\home.html:328
 msgid "您想了解的都在這"
-<<<<<<< HEAD
-msgstr "알고 싶은 모든 것이 여기에"
-=======
 msgstr ""
 
 #: .\users\templates\users\home.html:452
@@ -11181,7 +10337,6 @@ msgid ""
 "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 "
 "個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
 msgstr ""
->>>>>>> new/16
 
 #: .\users\templates\users\login.html:5
 msgid "登入 / 註冊"
@@ -11194,7 +10349,6 @@ msgid "個人化任務清單"
 msgstr "나의 개인화된 할 일 목록"
 
 #: .\users\templates\users\login.html:24
-<<<<<<< HEAD
 msgid ""
 "回答幾個問題，系統就會依你的身分別、國籍與入學狀態生成專屬任務清單：每項任務附上所需文件、辦理地點與地圖，並依你的抵臺日期自動計算截止日，到期前以站內通知與"
 " Email 提醒你。"
@@ -11249,19 +10403,10 @@ msgid "剩 12 天"
 msgstr "12일 남음"
 
 #: .\users\templates\users\login.html:44
-=======
-msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
-msgstr ""
-"시스템이 국적, 신분 유형 및 현재 상태에 따라 비자 신청, 입국 전, 입국 후의 중요한 작업을 자동으로 생성하고 진행 상황으로 단계별로"
-" 완료를 알려드립니다."
-
-#: .\users\templates\users\login.html:43
->>>>>>> new/16
 msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
 msgstr ""
 "비자, 외국인등록증, 건강보험, 숙소, 입학 등록 정보를 원스톱 페이지로 통합하여 학생들이 올바른 정보를 더 쉽게 찾을 수 있고 흩어진 "
 "정보에 혼란스러워하지 않도록 합니다."
-<<<<<<< HEAD
 
 #: .\users\templates\users\login.html:48
 msgid "居留證 ARC"
@@ -11304,14 +10449,6 @@ msgid ""
 msgstr ""
 "'작업 도우미'는 여러분의 작업 진행 상황과 마감일을 파악하고, 비자·거류증 등 행정 문제를 9개 언어로 공식 출처와 함께 답변해 "
 "드립니다. '채팅 친구'는 향수병이나 스트레스가 있을 때 함께 이야기해 주고, 학교 근처 식당과 상점을 찾는 것도 도와줍니다."
-=======
-
-#: .\users\templates\users\login.html:66
-msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
-msgstr ""
-"첫 번째 단계가 무엇인지, 어떤 서류를 준비해야 하는지, 또는 누구에게 물어야 할지 모를 때 AI 도우미를 통해 빠른 도움을 받을 수 "
-"있습니다."
->>>>>>> new/16
 
 #: .\users\templates\users\login.html:67
 #, fuzzy
@@ -11376,7 +10513,6 @@ msgstr "두 번째 소개 슬라이드 표시"
 msgid "顯示第三張介紹"
 msgstr "세 번째 소개 슬라이드 표시"
 
-<<<<<<< HEAD
 #: .\users\templates\users\login.html:107
 msgid "顯示第四張介紹"
 msgstr "네 번째 소개 화면 표시"
@@ -11389,10 +10525,6 @@ msgstr "로그인"
 
 #: .\users\templates\users\login.html:121
 #: .\users\templates\users\login.html:178
-=======
-#: .\users\templates\users\login.html:98
-#: .\users\templates\users\login.html:155
->>>>>>> new/16
 msgid "註冊帳號"
 msgstr "회원가입"
 
@@ -11400,12 +10532,8 @@ msgstr "회원가입"
 msgid "歡迎回來"
 msgstr "다시 오신 것을 환영합니다"
 
-<<<<<<< HEAD
-#: .\users\templates\users\login.html:126
-=======
 #: .\users\templates\users\login.html:103
 #| msgid "請登入您的 StudyGo 帳戶"
->>>>>>> new/16
 msgid "請登入您的 ReadyTo Taiwan 帳戶"
 msgstr "ReadyTo Taiwan 계정에 로그인해 주세요"
 
@@ -11435,12 +10563,8 @@ msgstr "지금 무료로 회원가입"
 msgid "建立帳號"
 msgstr "계정 만들기"
 
-<<<<<<< HEAD
-#: .\users\templates\users\login.html:183
-=======
 #: .\users\templates\users\login.html:160
 #| msgid "填寫基本資料，開始使用 StudyGo Taiwan"
->>>>>>> new/16
 msgid "填寫基本資料，開始使用 ReadyTo Taiwan"
 msgstr "기본 정보를 입력하고 StudyGo Taiwan 사용을 시작하세요"
 
@@ -11497,21 +10621,6 @@ msgstr "인증 메일이 발송된 주소:"
 msgid "請至信箱點擊驗證連結，完成驗證後系統將自動引導您填寫個人資料。"
 msgstr "메일함에서 인증 링크를 클릭해 주세요. 인증이 완료되면 시스템이 자동으로 개인정보 입력 화면으로 안내합니다."
 
-<<<<<<< HEAD
-#: .\users\templates\users\login.html:262
-msgid "驗證連結有效期限為"
-msgstr "유효 기간"
-
-#: .\users\templates\users\login.html:262
-msgid "24 小時"
-msgstr "24시간 긴급 전화"
-
-#: .\users\templates\users\login.html:266
-msgid "重新發送驗證信"
-msgstr "인증 이메일 다시 보내기"
-
-#: .\users\templates\users\login.html:270
-=======
 #: .\users\templates\users\login.html:239
 #| msgid "有效期限"
 msgid "驗證連結有效期限為"
@@ -11529,7 +10638,6 @@ msgstr "인증 이메일 다시 보내기"
 
 #: .\users\templates\users\login.html:247
 #| msgid "返回登入"
->>>>>>> new/16
 msgid "已驗證？返回登入"
 msgstr "로그인으로 돌아가기"
 
@@ -11542,10 +10650,7 @@ msgid "登出成功，"
 msgstr "로그아웃 성공, "
 
 #: .\users\templates\users\logout_redirect.html:26
-<<<<<<< HEAD
-=======
 #| msgid "點此返回登入頁面"
->>>>>>> new/16
 msgid "點此返回首頁"
 msgstr "여기를 클릭하여 홈으로 돌아가세요"
 
@@ -11574,12 +10679,8 @@ msgid "請先選擇地區"
 msgstr "먼저 지역을 선택해 주세요"
 
 #: .\users\templates\users\profile_setup.html:71
-<<<<<<< HEAD
-#: .\users\templates\users\profile_setup.html:410
-=======
 #: .\users\templates\users\profile_setup.html:447
 #| msgid "請勿選擇「就讀學校代辦」"
->>>>>>> new/16
 msgid "請選擇就讀學校"
 msgstr "「학교 대행 신청」을 선택하지 마세요"
 
@@ -11606,11 +10707,7 @@ msgstr "신분 유형"
 
 #: .\users\templates\users\profile_setup.html:129
 msgid "指長期居住海外，具有華裔背景，並依僑生相關規定申請來臺就讀大專校院的學生。"
-<<<<<<< HEAD
 msgstr "해외에 장기 거주하며 화교 배경을 가지고, 화교학생 관련 규정에 따라 대만 대학(원)에 입학을 신청하는 학생을 말함."
-=======
-msgstr ""
->>>>>>> new/16
 
 #: .\users\templates\users\profile_setup.html:130
 msgid "指不具中華民國國籍，依外國學生身分申請並來臺就讀各級學校的學生。"
@@ -11638,10 +10735,7 @@ msgid "辦理簽證等手續"
 msgstr "비자 및 관련 절차 처리"
 
 #: .\users\templates\users\profile_setup.html:158
-<<<<<<< HEAD
-=======
 #| msgid "抵臺後"
->>>>>>> new/16
 msgid "入臺後"
 msgstr "대만 입국 후"
 
@@ -11791,8 +10885,6 @@ msgstr "비밀번호 재설정 성공. 다시 로그인해 주세요."
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "재설정 실패. 링크가 만료되었을 수 있습니다."
-<<<<<<< HEAD
-=======
 
 #: flows/templates/flows/admissions_guide.html
 msgid "申請時程"
@@ -17569,4 +16661,3 @@ msgstr "시스템이 매일 07:00–09:00에 데이터 백업을 수행합니다
 
 #~ msgid "儲存資料並開始使用"
 #~ msgstr "정보를 저장하고 사용 시작"
->>>>>>> new/16
