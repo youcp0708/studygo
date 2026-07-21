@@ -81,7 +81,8 @@ class Command(BaseCommand):
                     f'{st.student.user.name} 您好，\n\n'
                     f'{message}\n\n'
                     f'請登入系統完成您的任務！\n\n'
-                    f'ReadyTo Taiwan 團隊'
+                    f'ReadyTo Taiwan 團隊\n\n'
+                    f'*本信件為系統自動發送，請勿回覆。'
                 )
             else:
                 if due_date < today:
@@ -97,7 +98,8 @@ class Command(BaseCommand):
                     f'Hello {st.student.user.name},\n\n'
                     f'{message}\n\n'
                     f'Please log in to the system to complete your task!\n\n'
-                    f'ReadyTo Taiwan Team'
+                    f'ReadyTo Taiwan Team\n\n'
+                    f'*This email was sent automatically by the system; please do not reply.'
                 )
 
             # 檢查是否已經有針對此截止日期的提醒（不論已讀或未讀，避免對同一個截止日重複產生與發送）
