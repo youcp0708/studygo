@@ -114,12 +114,12 @@ msgstr "kembali ke bawah"
 msgid "新增附件"
 msgstr "Tambah Lampiran"
 
-<<<<<<< HEAD
+
 #: .\chatbot\templates\chatbot\chatbot.html:176
-=======
+
 #: .\chatbot\templates\chatbot\chatbot.html:163
 #| msgid "上傳檔案"
->>>>>>> new/16
+
 msgid "上傳檔案或照片"
 msgstr "Muat Naik Fail"
 
@@ -343,7 +343,7 @@ msgstr "Kadar Penyelesaian Tugasan"
 msgid "小貼士"
 msgstr "Tips"
 
-<<<<<<< HEAD
+
 #: .\flows\templates\flows\my_flows.html:56
 msgid "需要的文件"
 msgstr "📋 Dokumen yang diperlukan"
@@ -357,7 +357,7 @@ msgid "在地圖上查看"
 msgstr "🗺️ Lihat pada peta"
 
 #: .\flows\templates\flows\my_flows.html:59
-=======
+
 #: .\flows\templates\flows\my_flows.html:68
 #| msgid "📋 需要的文件"
 msgid "需要的文件"
@@ -375,7 +375,7 @@ msgstr "🗺️ Lihat pada peta"
 
 #: .\flows\templates\flows\my_flows.html:71
 #| msgid "🌐 官方網站"
->>>>>>> new/16
+
 msgid "官方網站"
 msgstr "🌐 Laman web rasmi"
 
@@ -383,7 +383,7 @@ msgstr "🌐 Laman web rasmi"
 msgid "點此前往官方網站"
 msgstr "Klik di sini untuk pergi ke laman web rasmi"
 
-<<<<<<< HEAD
+
 #: .\flows\templates\flows\my_flows.html:61
 msgid "辦理時程"
 msgstr "📅 Jadual waktu pemprosesan"
@@ -394,7 +394,7 @@ msgid "截止日期"
 msgstr "📅 Tarikh akhir"
 
 #: .\flows\templates\flows\my_flows.html:63
-=======
+
 #: .\flows\templates\flows\my_flows.html:73
 #| msgid "📅 辦理時程"
 msgid "辦理時程"
@@ -407,7 +407,7 @@ msgid "截止日期"
 msgstr "📅 Tarikh akhir"
 
 #: .\flows\templates\flows\my_flows.html:75
->>>>>>> new/16
+
 msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
 msgstr ""
 "Sila isikan <strong>Anggaran tarikh ketibaan di Taiwan</strong> dalam "
@@ -981,13 +981,13 @@ msgid "入台後必辦事項"
 msgstr "Perkara yang perlu dilakukan selepas tiba di Taiwan"
 
 #: .\guides\templates\guides\admissions_guide.html:286
-<<<<<<< HEAD
+
 #, fuzzy
 #| msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
 msgid "持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
-=======
+
 msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
->>>>>>> new/16
+
 msgstr ""
 "Selepas mendaftar masuk dengan permit kediaman pelajar, anda mesti memohon "
 "Sijil Kediaman Asing (ARC) dalam masa 15 hari, dan kemudian memohon "
@@ -1021,18 +1021,18 @@ msgstr ""
 "atau Pendaftaran Isi Rumah di Taiwan."
 
 #: .\guides\templates\guides\admissions_guide.html:310
-<<<<<<< HEAD
-=======
+
+
 #| msgid "港澳居民居留證"
->>>>>>> new/16
+
 msgid "港澳居民身份"
 msgstr "Identiti Penduduk HK/Macau"
 
 #: .\guides\templates\guides\admissions_guide.html:312
-<<<<<<< HEAD
-=======
+
+
 #| msgid "HKDSE / 澳門高中畢業"
->>>>>>> new/16
+
 msgid "HKDSE / 澳門高中"
 msgstr "Lulusan sekolah menengah HKDSE / Macau"
 
@@ -1054,10 +1054,10 @@ msgid "統一報名"
 msgstr "Pendaftaran Bersepadu"
 
 #: .\guides\templates\guides\admissions_guide.html:329
-<<<<<<< HEAD
-=======
+
+
 #| msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
->>>>>>> new/16
+
 msgid "海聯會港澳組通常於每年 1～2 月開放網路報名，截止日期約為 2 月底。錄取結果約 5～6 月公告，9 月初入學報到。"
 msgstr ""
 "Pendaftaran dalam talian biasanya dibuka dari Januari hingga Mac setiap "
@@ -1066,10 +1066,10 @@ msgstr ""
 "bermula dari akhir Ogos hingga awal September."
 
 #: .\guides\templates\guides\admissions_guide.html:331
-<<<<<<< HEAD
-=======
+
+
 #| msgid "1～3 月報名"
->>>>>>> new/16
+
 msgid "1～2 月報名"
 msgstr "Pendaftaran Januari–Februari"
 
@@ -1235,14 +1235,14 @@ msgid "海聯會或各地台灣辦事處"
 msgstr "ALATS atau pelbagai pejabat Taiwan"
 
 #: .\guides\templates\guides\admissions_guide.html:511
-<<<<<<< HEAD
+
 #: .\templates\base.html:76 .\templates\base.html:78
 #: .\users\templates\users\dashboard.html:132
 #: .\users\templates\users\home.html:227
-=======
+
 #: .\templates\base.html:70 .\users\templates\users\dashboard.html:52
 #: .\users\templates\users\home.html:351
->>>>>>> new/16
+
 msgid "學長姐分享"
 msgstr "Perkongsian Alumni"
 
@@ -1271,12 +1271,12 @@ msgstr "Vietnam"
 
 #: .\guides\templates\guides\admissions_guide.html:524
 #: .\guides\templates\guides\admissions_guide.html:614
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:239 .\users\templates\users\login.html:90
-=======
+
 #: .\users\templates\users\home.html:363
 #| msgid "國立臺灣大學（NTU）"
->>>>>>> new/16
+
 msgid "國立臺灣大學"
 msgstr "Universiti Kebangsaan Taiwan (NTU)"
 
@@ -1298,12 +1298,12 @@ msgstr ""
 
 #: .\guides\templates\guides\admissions_guide.html:539
 #: .\guides\templates\guides\admissions_guide.html:629
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:254
-=======
+
 #: .\users\templates\users\home.html:377
 #| msgid "國立成功大學（NCKU）"
->>>>>>> new/16
+
 msgid "國立成功大學"
 msgstr "Universiti Kebangsaan Cheng Kung (NCKU)"
 
@@ -1330,12 +1330,12 @@ msgid "菲律賓"
 msgstr "Filipina"
 
 #: .\guides\templates\guides\admissions_guide.html:554
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:269
-=======
+
 #: .\users\templates\users\home.html:391
 #| msgid "國立臺灣師範大學（NTNU）"
->>>>>>> new/16
+
 msgid "國立臺灣師範大學"
 msgstr "Universiti Normal Taiwan Kebangsaan (NTNU)"
 
@@ -1345,11 +1345,11 @@ msgid "華語文教學碩士"
 msgstr "Sarjana Pengajaran Bahasa Cina"
 
 #: .\guides\templates\guides\admissions_guide.html:559
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:274
-=======
+
 #: .\users\templates\users\home.html:396
->>>>>>> new/16
+
 msgid "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
 msgstr ""
 "\"Datang untuk belajar bahasa Mandarin adalah keputusan terbaik yang pernah "
@@ -1366,12 +1366,12 @@ msgstr "Thailand"
 
 #: .\guides\templates\guides\admissions_guide.html:569
 #: .\guides\templates\guides\admissions_guide.html:644
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:283
-=======
+
 #: .\users\templates\users\home.html:405
 #| msgid "國立清華大學（NTHU）"
->>>>>>> new/16
+
 msgid "國立清華大學"
 msgstr "Universiti Kebangsaan Tsing Hua (NTHU)"
 
@@ -1381,11 +1381,11 @@ msgid "資訊工程博士班"
 msgstr "Program Kedoktoran Kejuruteraan Komputer"
 
 #: .\guides\templates\guides\admissions_guide.html:574
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:288
-=======
+
 #: .\users\templates\users\home.html:410
->>>>>>> new/16
+
 msgid "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
 msgstr ""
 "\"Jabatan Sains Komputer NTHU mempunyai banyak kerjasama industri — saya "
@@ -1394,12 +1394,12 @@ msgstr ""
 "sangat membantu, membolehkan saya fokus pada penyelidikan.\""
 
 #: .\guides\templates\guides\admissions_guide.html:584
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:297
-=======
+
 #: .\users\templates\users\home.html:419
 #| msgid "國立政治大學（NCCU）"
->>>>>>> new/16
+
 msgid "國立政治大學"
 msgstr "Universiti Kebangsaan Chengchi (NCCU)"
 
@@ -1409,11 +1409,11 @@ msgid "國際傳播學士班"
 msgstr "Program Sarjana Komunikasi Antarabangsa"
 
 #: .\guides\templates\guides\admissions_guide.html:589
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:302
-=======
+
 #: .\users\templates\users\home.html:424
->>>>>>> new/16
+
 msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」"
 msgstr ""
 "\"Kerana latar belakang Cina saya, ramai orang bertanya mengapa saya masih "
@@ -1429,12 +1429,12 @@ msgid "日本"
 msgstr "Jepun"
 
 #: .\guides\templates\guides\admissions_guide.html:599
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:311 .\users\templates\users\login.html:94
-=======
+
 #: .\users\templates\users\home.html:433
 #| msgid "國立陽明交通大學（NYCU）"
->>>>>>> new/16
+
 msgid "國立陽明交通大學"
 msgstr "Universiti Kebangsaan Yang Ming Chiao Tung (NYCU)"
 
@@ -1454,11 +1454,11 @@ msgstr ""
 "membantu saya menyelesaikan semua dokumen dengan lancar.\""
 
 #: .\guides\templates\guides\admissions_guide.html:613 .\users\models.py:136
-<<<<<<< HEAD
+
 #: .\users\templates\users\profile_setup.html:472
-=======
+
 #| msgid "印尼"
->>>>>>> new/16
+
 msgid "印度"
 msgstr "India"
 
@@ -2578,10 +2578,10 @@ msgid "本國警察刑事紀錄證明"
 msgstr "Sijil Rekod Jenayah Polis Negara Asal"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:139
-<<<<<<< HEAD
-=======
+
+
 #| msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駸外館處驗證或在台公證。"
->>>>>>> new/16
+
 msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駐外館處驗證或在台公證。"
 msgstr ""
 "Dikeluarkan oleh polis atau badan kehakiman negara asal. Sah dalam 1 tahun. "
@@ -2761,11 +2761,11 @@ msgstr ""
 "dari laman web rasmi)"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:374
-<<<<<<< HEAD
-=======
+
+
 #| msgid ""
 #| "在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駐外館處驗證，並檢附經駸外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
->>>>>>> new/16
+
 msgid ""
 "在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駐外館處驗證，並檢附經駐外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
 msgstr ""
@@ -3480,10 +3480,10 @@ msgstr ""
 "pelajar."
 
 #: .\guides\templates\guides\guide_bank.html:57
-<<<<<<< HEAD
-=======
+
+
 #| msgid "所需文件"
->>>>>>> new/16
+
 msgid "所需文件（郵局）"
 msgstr "Dokumen yang Diperlukan"
 
@@ -4759,11 +4759,11 @@ msgstr ""
 "akan membatalkan semua permohonan"
 
 #: .\guides\templates\guides\guide_enrollment.html:122
-<<<<<<< HEAD
+
 #, fuzzy, python-format
-=======
+
 #, python-format
->>>>>>> new/16
+
 #| msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
 msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%%（即以班排名前半段為上限）"
 msgstr ""
@@ -5669,17 +5669,17 @@ msgid "資訊中心"
 msgstr "Pusat Maklumat"
 
 #: .\guides\templates\guides\guide_index.html:18
-<<<<<<< HEAD
+
 #: .\guides\templates\guides\guide_index.html:37
 #: .\users\templates\users\faq.html:18
-=======
+
 msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
 msgstr ""
 "Permohonan ARC, penginapan, pengangkutan — semua maklumat yang anda "
 "perlukan."
 
 #: .\guides\templates\guides\guide_index.html:29 .\templates\base.html:198
->>>>>>> new/16
+
 msgid "入學申請"
 msgstr "Kemasukan"
 
@@ -5735,16 +5735,16 @@ msgstr "Panduan Kemasukan"
 msgid "申請資格、時程、所需文件與注意事項整理"
 msgstr "Kelayakan, jadual, dokumen yang diperlukan, dan nota penting"
 
-<<<<<<< HEAD
+
 #: .\guides\templates\guides\guide_index.html:71
-=======
+
 #: .\guides\templates\guides\guide_index.html:53
 #| msgid "證件・住宿・交通"
 msgid "證件・住宿"
 msgstr "Dokumen・Penginapan・Pengangkutan"
 
 #: .\guides\templates\guides\guide_index.html:62
->>>>>>> new/16
+
 msgid "外籍生 ARC 辦理"
 msgstr "Permohonan ARC Pelajar Asing"
 
@@ -6223,18 +6223,18 @@ msgid "K書中心・開館時間"
 msgstr "Pusat Belajar · Waktu Buka"
 
 #: .\guides\templates\guides\guide_map.html:17
-<<<<<<< HEAD
-=======
+
+
 #| msgid "學校・醫院・交通"
->>>>>>> new/16
+
 msgid "學校・美食・醫院・交通"
 msgstr "Kampus · Hospital · Pengangkutan"
 
 #: .\guides\templates\guides\guide_map.html:19
-<<<<<<< HEAD
-=======
+
+
 #| msgid "中央大學周邊重要地點，點選快速定位及導航"
->>>>>>> new/16
+
 msgid "中央大學周邊重要地點，點選按鈕即可在地圖上定位"
 msgstr "Lokasi penting sekitar NCU — klik butang untuk mencari lokasi di peta"
 
@@ -6732,17 +6732,17 @@ msgid "承辦人：徐心荷小姐"
 msgstr "Orang untuk dihubungi: Cik Xu Xinhe"
 
 #: .\guides\templates\guides\guide_mental_health.html:18
-<<<<<<< HEAD
-=======
+
+
 #| msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
->>>>>>> new/16
+
 msgid "諮商中心預約・常見困擾・24 小時求助熱線"
 msgstr "Temujanji Pusat Kaunseling, Masalah Biasa & Talian Bantuan 24 Jam"
 
 #: .\guides\templates\guides\guide_mental_health.html:22
 msgid "尋求幫助不代表你軟弱。無論是課業壓力、人際困擾、文化適應，還是只是想找人說說話，諮商中心都歡迎你。"
 msgstr ""
-<<<<<<< HEAD
+
 "Meminta bantuan tidak bermakna anda lemah. Sama ada tekanan akademik, "
 "kesukaran hubungan, penyesuaian budaya, atau hanya mahu bercakap dengan "
 "seseorang, Pusat Kaunseling mengalu-alukan anda."
@@ -6752,7 +6752,7 @@ msgid "諮商輔導中心"
 msgstr "Pusat Kaunseling"
 
 #: .\guides\templates\guides\guide_mental_health.html:36
-=======
+
 "Mencari bantuan bukan bermakna kamu lemah. Sama ada tekanan akademik, "
 "masalah interpersonal, penyesuaian budaya, atau sekadar mahu berbual dengan "
 "seseorang — pusat kaunseling sentiasa mengalu-alukanmu."
@@ -6763,21 +6763,21 @@ msgstr "Pusat Kaunseling & Bimbingan"
 
 #: .\guides\templates\guides\guide_mental_health.html:36
 #| msgid "週一至週五 10:00–15:00"
->>>>>>> new/16
+
 msgid "週一至週五 09:00–17:00"
 msgstr "Isnin–Jumaat 10:00–15:00"
 
 #: .\guides\templates\guides\guide_mental_health.html:43
-<<<<<<< HEAD
-=======
+
+
 #| msgid "費用說明"
->>>>>>> new/16
+
 msgid "費用"
 msgstr "Penerangan yuran"
 
 #: .\guides\templates\guides\guide_mental_health.html:44
 msgid "在學生免費"
-<<<<<<< HEAD
+
 msgstr "Percuma untuk Pelajar Aktif"
 
 #: .\guides\templates\guides\guide_mental_health.html:49
@@ -6787,7 +6787,7 @@ msgstr "Perkhidmatan Disediakan"
 #: .\guides\templates\guides\guide_mental_health.html:52
 msgid "個別諮商（50 分鐘 / 次）"
 msgstr "Kaunseling Individu (50 minit/sesi)"
-=======
+
 msgstr "Percuma untuk pelajar berdaftar"
 
 #: .\guides\templates\guides\guide_mental_health.html:49
@@ -6797,7 +6797,7 @@ msgstr "Perkhidmatan yang Disediakan"
 #: .\guides\templates\guides\guide_mental_health.html:52
 msgid "個別諮商（50 分鐘 / 次）"
 msgstr "Kaunseling Individu (50 minit / sesi)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_mental_health.html:53
 msgid "團體諮商"
@@ -6817,23 +6817,23 @@ msgstr "Perkhidmatan Pekerja Sosial (Sambungan 57265)"
 
 #: .\guides\templates\guides\guide_mental_health.html:61
 msgid "如何預約"
-<<<<<<< HEAD
+
 msgstr "Cara Menempah"
-=======
+
 msgstr "Cara Membuat Temujanji"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_mental_health.html:64
 msgid "一律線上預約，預約後諮商師會主動與你聯絡，先進行初談，再安排正式諮商時間。"
 msgstr ""
-<<<<<<< HEAD
+
 "Semua tempahan dibuat secara dalam talian; selepas tempahan, kaunselor akan "
 "menghubungi anda untuk konsultasi awal sebelum menjadualkan sesi rasmi."
 
 #: .\guides\templates\guides\guide_mental_health.html:72
 msgid "登入 NCU Portal"
 msgstr "Log Masuk ke NCU Portal"
-=======
+
 "Semua temujanji dibuat secara dalam talian. Selepas tempahan, kaunselor akan"
 " menghubungimu untuk mengatur sesi pengambilan awal sebelum menjadualkan "
 "kaunseling formal."
@@ -6841,49 +6841,49 @@ msgstr "Log Masuk ke NCU Portal"
 #: .\guides\templates\guides\guide_mental_health.html:72
 msgid "登入 NCU Portal"
 msgstr "Log masuk ke NCU Portal"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_mental_health.html:73
 msgid "Portal → 學生服務 → 學生輔導服務 → 個別諮商，或直接前往："
 msgstr ""
-<<<<<<< HEAD
+
 "Portal → Perkhidmatan Pelajar → Perkhidmatan Kaunseling Pelajar → Kaunseling"
 " Individu, atau terus ke:"
 
 #: .\guides\templates\guides\guide_mental_health.html:83
-=======
+
 "Portal → Perkhidmatan Pelajar → Kaunseling Pelajar → Kaunseling Individu, "
 "atau terus ke:"
 
 #: .\guides\templates\guides\guide_mental_health.html:83
 #| msgid "建議線上預約"
->>>>>>> new/16
+
 msgid "填寫線上預約表單"
 msgstr "Isi Borang Temujanji Dalam Talian"
 
 #: .\guides\templates\guides\guide_mental_health.html:84
 msgid "簡單描述來訪原因（不需要詳細，幾句話即可）"
 msgstr ""
-<<<<<<< HEAD
+
 "Terangkan Secara Ringkas Sebab Lawatan Anda (Tidak Perlu Terperinci, "
 "Beberapa Ayat Sudah Memadai)"
 
 #: .\guides\templates\guides\guide_mental_health.html:90
 msgid "等待諮商師聯絡（初談）"
 msgstr "Menunggu Hubungan Kaunselor (Konsultasi Awal)"
-=======
+
 "Terangkan secara ringkas sebab kunjunganmu (tidak perlu terperinci, beberapa"
 " ayat sudah mencukupi)"
 
 #: .\guides\templates\guides\guide_mental_health.html:90
 msgid "等待諮商師聯絡（初談）"
 msgstr "Tunggu kaunselor menghubungi (pengambilan awal)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_mental_health.html:91
 msgid "初談約 30–50 分鐘，了解你的狀況與需求"
 msgstr ""
-<<<<<<< HEAD
+
 "Konsultasi Awal Mengambil Masa Kira-kira 30–50 Minit untuk Memahami Situasi "
 "dan Keperluan Anda"
 
@@ -6898,7 +6898,7 @@ msgstr "Sekali Seminggu, 50 Minit, dengan Kaunselor yang Sama Sepanjang Masa"
 #: .\guides\templates\guides\guide_mental_health.html:105
 msgid "常見來訪議題"
 msgstr "Topik Lazim"
-=======
+
 "Pengambilan awal sekitar 30–50 minit untuk memahami situasi dan keperluanmu"
 
 #: .\guides\templates\guides\guide_mental_health.html:97
@@ -6912,7 +6912,7 @@ msgstr "Sekali seminggu, 50 minit, dengan kaunselor yang sama setiap kali"
 #: .\guides\templates\guides\guide_mental_health.html:105
 msgid "常見來訪議題"
 msgstr "Topik Biasa"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_mental_health.html:109
 msgid "課業壓力"
@@ -6920,11 +6920,11 @@ msgstr "Tekanan Akademik"
 
 #: .\guides\templates\guides\guide_mental_health.html:110
 msgid "考試焦慮、拖延、讀不進去"
-<<<<<<< HEAD
+
 msgstr "Kebimbangan Peperiksaan, Penangguhan, Sukar Fokus"
-=======
+
 msgstr "Kebimbangan peperiksaan, penangguhan, sukar belajar"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_mental_health.html:114
 msgid "文化適應"
@@ -6932,11 +6932,11 @@ msgstr "Penyesuaian Budaya"
 
 #: .\guides\templates\guides\guide_mental_health.html:115
 msgid "語言障礙、孤獨感、思鄉"
-<<<<<<< HEAD
+
 msgstr "Halangan Bahasa, Kesunyian, Rindu Rumah"
-=======
+
 msgstr "Halangan bahasa, kesepian, rindu kampung halaman"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_mental_health.html:119
 msgid "人際關係"
@@ -6944,7 +6944,7 @@ msgstr "Hubungan Interpersonal"
 
 #: .\guides\templates\guides\guide_mental_health.html:120
 msgid "室友摩擦、交友困難、衝突處理"
-<<<<<<< HEAD
+
 msgstr ""
 "Pergeseran dengan Rakan Sebilik, Kesukaran Berkawan, Penyelesaian Konflik"
 
@@ -6963,7 +6963,7 @@ msgstr "Perasaan Murung"
 #: .\guides\templates\guides\guide_mental_health.html:130
 msgid "焦慮、憂鬱、情緒波動"
 msgstr "Kebimbangan, Kemurungan, Perubahan Mood"
-=======
+
 msgstr "Konflik dengan rakan sebilik, sukar berkawan, penyelesaian konflik"
 
 #: .\guides\templates\guides\guide_mental_health.html:124
@@ -6981,7 +6981,7 @@ msgstr "Mood Rendah"
 #: .\guides\templates\guides\guide_mental_health.html:130
 msgid "焦慮、憂鬱、情緒波動"
 msgstr "Kebimbangan, kemurungan, perubahan mood"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_mental_health.html:134
 msgid "自我探索"
@@ -6989,22 +6989,22 @@ msgstr "Penerokaan Diri"
 
 #: .\guides\templates\guides\guide_mental_health.html:135
 msgid "方向迷失、身份認同、生涯規劃"
-<<<<<<< HEAD
+
 msgstr "Hilang Arah, Identiti Diri, Perancangan Kerjaya"
 
 #: .\guides\templates\guides\guide_mental_health.html:140
-=======
+
 msgstr "Hilang arah, identiti, perancangan kerjaya"
 
 #: .\guides\templates\guides\guide_mental_health.html:140
 #| msgid "24 小時緊急總線"
->>>>>>> new/16
+
 msgid "24 小時求助熱線"
 msgstr "Talian Bantuan 24 Jam"
 
 #: .\guides\templates\guides\guide_mental_health.html:145
 msgid "24H・心理危機・自殺防治"
-<<<<<<< HEAD
+
 msgstr "Krisis Kesihatan Mental 24 Jam & Pencegahan Bunuh Diri"
 
 #: .\guides\templates\guides\guide_mental_health.html:149
@@ -7034,7 +7034,7 @@ msgstr "Keganasan Rumah Tangga & Keganasan Pasangan Intim 24 Jam"
 #: .\guides\templates\guides\guide_mental_health.html:165
 msgid "桃園在地資源"
 msgstr "Sumber Tempatan Taoyuan"
-=======
+
 msgstr "24H · Krisis Mental · Pencegahan Bunuh Diri"
 
 #: .\guides\templates\guides\guide_mental_health.html:149
@@ -7064,7 +7064,7 @@ msgstr "24H · Keganasan Rumah Tangga · Keganasan Pasangan Intim"
 #: .\guides\templates\guides\guide_mental_health.html:165
 msgid "桃園在地資源"
 msgstr "Sumber Tempatan di Taoyuan"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_mental_health.html:168
 msgid "桃園市社區心理衛生中心"
@@ -7072,7 +7072,7 @@ msgstr "Pusat Kesihatan Mental Komuniti Bandar Taoyuan"
 
 #: .\guides\templates\guides\guide_mental_health.html:172
 msgid "桃園生命線"
-<<<<<<< HEAD
+
 msgstr "Lifeline Taoyuan"
 
 #: .\guides\templates\guides\guide_mental_health.html:176
@@ -7087,7 +7087,7 @@ msgstr "Hospital Landseed Zhongli (Perkhidmatan Bahasa Inggeris Tersedia)"
 msgid "校安緊急聯絡（24 小時）：03-2805666｜分機 57212"
 msgstr ""
 "Kenalan Kecemasan Keselamatan Kampus (24 Jam): 03-2805666 | Sambungan 57212"
-=======
+
 msgstr "Talian Nyawa Taoyuan"
 
 #: .\guides\templates\guides\guide_mental_health.html:176
@@ -7101,7 +7101,7 @@ msgstr "Hospital Rand Zhongli (perkhidmatan Bahasa Inggeris tersedia)"
 #: .\guides\templates\guides\guide_mental_health.html:186
 msgid "校安緊急聯絡（24 小時）：03-2805666｜分機 57212"
 msgstr "Hubungan Kecemasan Kampus (24 jam): 03-2805666 | Sambungan 57212"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_national_area.html:17
 msgid "各地區申請資訊"
@@ -7626,39 +7626,39 @@ msgid "教育部－主管法規查詢系統"
 msgstr "Kementerian Pendidikan — Sistem Pangkalan Data Peraturan"
 
 #: .\guides\templates\guides\guide_scholarship.html:18
-<<<<<<< HEAD
-=======
+
+
 #| msgid "僑生獎學金、清寒補助、校內外各項申請指南"
->>>>>>> new/16
+
 msgid "僑生獎學金・清寒補助・校內外各項申請指南"
 msgstr ""
 "Biasiswa pelajar Cina perantauan, bantuan kewangan dan panduan permohonan"
 
 #: .\guides\templates\guides\guide_scholarship.html:22
-<<<<<<< HEAD
-=======
+
+
 #| msgid "申請管道"
->>>>>>> new/16
+
 msgid "申請管道快覽"
 msgstr "Saluran paip aplikasi"
 
 #: .\guides\templates\guides\guide_scholarship.html:26
-<<<<<<< HEAD
-=======
+
+
 #| msgid "國際事務處（OIA）"
->>>>>>> new/16
+
 msgid "NCU 國際事務處（OIA）"
 msgstr "Pejabat Hal Ehwal Antarabangsa (OIA)"
 
 #: .\guides\templates\guides\guide_scholarship.html:27
 msgid "僑生專屬獎學金申請入口，電話：03-425-4945"
 msgstr ""
-<<<<<<< HEAD
+
 "Portal Permohonan Biasiswa Khusus Pelajar Cina Seberang Laut, Tel: "
 "03-425-4945"
-=======
+
 "Portal biasiswa eksklusif untuk pelajar Cina perantau, Tel: 03-425-4945"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:31
 msgid "僑委會獎學金系統"
@@ -7670,31 +7670,31 @@ msgstr "Sistem Biasiswa NCU Portal"
 
 #: .\guides\templates\guides\guide_scholarship.html:37
 msgid "校內各項獎學金 / 校外獎學金公告"
-<<<<<<< HEAD
+
 msgstr "Biasiswa Dalaman / Pengumuman Biasiswa Luar"
 
 #: .\guides\templates\guides\guide_scholarship.html:42
 msgid "清寒補助（僑生）"
 msgstr "Subsidi Berpendapatan Rendah (Pelajar Cina Seberang Laut)"
-=======
+
 msgstr "Biasiswa dalam kampus / Pengumuman biasiswa luar kampus"
 
 #: .\guides\templates\guides\guide_scholarship.html:42
 msgid "清寒補助（僑生）"
 msgstr "Bantuan Kesusahan Kewangan (Pelajar Cina Perantau)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:45
 msgid "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
 msgstr ""
-<<<<<<< HEAD
+
 "Tempoh Permohonan: Diumumkan Selepas Setiap Semester Bermula. Semester 1 "
 "Sekitar 9/1–9/25, Semester 2 Sekitar 2/1–3/2. Permohonan Lewat Tidak "
 "Diterima."
-=======
+
 "Tempoh permohonan: diumumkan selepas semester bermula. Semester 1 sekitar "
 "9/1–9/25, Semester 2 sekitar 2/1–3/2. Lewat tidak diterima."
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:53
 #: .\guides\templates\guides\guide_scholarship.html:182
@@ -7710,33 +7710,33 @@ msgid "金額"
 msgstr "Jumlah"
 
 #: .\guides\templates\guides\guide_scholarship.html:55
-<<<<<<< HEAD
-=======
+
+
 #| msgid "期間"
->>>>>>> new/16
+
 msgid "期限"
 msgstr "Tarikh Akhir"
 
 #: .\guides\templates\guides\guide_scholarship.html:56
-<<<<<<< HEAD
-=======
+
+
 #| msgid "備註"
->>>>>>> new/16
+
 msgid "備注"
 msgstr "Nota"
 
 #: .\guides\templates\guides\guide_scholarship.html:61
-<<<<<<< HEAD
-=======
+
+
 #| msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
->>>>>>> new/16
+
 msgid "教育部清寒僑生助學金"
 msgstr ""
 "Bantuan Kewangan KPM untuk Pelajar Cina Perantauan Kurang Berkemampuan"
 
 #: .\guides\templates\guides\guide_scholarship.html:63
 msgid "1 學年（9 月至翌年 8 月）"
-<<<<<<< HEAD
+
 msgstr "1 Tahun Akademik (September hingga Ogos Tahun Berikutnya)"
 
 #: .\guides\templates\guides\guide_scholarship.html:64
@@ -7750,7 +7750,7 @@ msgstr "Geran Pelajar Cina Seberang Laut Berpendapatan Rendah OCAC"
 #: .\guides\templates\guides\guide_scholarship.html:68
 msgid "依僑委會公告（每學期）"
 msgstr "Mengikut Pengumuman OCAC (Setiap Semester)"
-=======
+
 msgstr "1 tahun akademik (September hingga Ogos tahun berikutnya)"
 
 #: .\guides\templates\guides\guide_scholarship.html:64
@@ -7764,7 +7764,7 @@ msgstr "Bantuan Kewangan OCAC untuk Pelajar Cina Perantau Susah"
 #: .\guides\templates\guides\guide_scholarship.html:68
 msgid "依僑委會公告（每學期）"
 msgstr "Mengikut pengumuman OCAC (setiap semester)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:69
 msgid "1 學期"
@@ -7773,16 +7773,16 @@ msgstr "1 semester"
 #: .\guides\templates\guides\guide_scholarship.html:70
 msgid "需完成 10 小時服務學習（OIA，10–11 月 / 4–5 月）"
 msgstr ""
-<<<<<<< HEAD
+
 "Perlu Melengkapkan 10 Jam Pembelajaran Perkhidmatan (OIA, Okt–Nov / Apr–Mei)"
-=======
+
 "Mesti melengkapkan 10 jam pembelajaran servis (OIA, Okt–Nov / Apr–Mei)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:77
 msgid "須為依僑生回國就學辦法入學的僑生"
 msgstr ""
-<<<<<<< HEAD
+
 "Mesti Pelajar Cina Seberang Laut yang Dimasukkan Mengikut Peraturan Pelajar "
 "Cina Seberang Laut Pulang Belajar"
 
@@ -7793,7 +7793,7 @@ msgstr "Lulus Gred Semester Lepas; Gred Kelakuan 80+"
 #: .\guides\templates\guides\guide_scholarship.html:79
 msgid "需持有「i 僑卡」，否則無法撥款"
 msgstr "Perlu Memiliki \"i-Card\", Jika Tidak Dana Tidak Boleh Dikeluarkan"
-=======
+
 "Mestilah pelajar Cina perantau yang mendaftar mengikut Peraturan Pelajar "
 "Cina Perantau Kembali Belajar"
 
@@ -7804,23 +7804,23 @@ msgstr "Gred semester sebelumnya lulus, markah kelakuan 80+"
 #: .\guides\templates\guides\guide_scholarship.html:79
 msgid "需持有「i 僑卡」，否則無法撥款"
 msgstr "Mesti mempunyai \"i-Overseas Card\"; jika tidak, dana tidak dapat dibayar"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:80
 msgid "不得同時領取其他政府清寒補助或學費減免（不得重複領取）"
 msgstr ""
-<<<<<<< HEAD
+
 "Tidak Boleh Digabung dengan Subsidi Kerajaan Berpendapatan Rendah Lain atau "
 "Pengecualian Yuran (Tiada Tuntutan Berganda)"
-=======
+
 "Tidak boleh menerima bantuan kewangan kerajaan lain atau pengecualian yuran "
 "secara serentak (tidak boleh berganda)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:81
 msgid "所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學生證 / 護照 / ARC / 郵局存摺影本"
 msgstr ""
-<<<<<<< HEAD
+
 "Dokumen Diperlukan: Borang Permohonan + Helaian Penilaian Berpendapatan "
 "Rendah, Sijil Berpendapatan Rendah Asal (Dikeluarkan oleh Kawasan Asal), "
 "Transkrip, Autobiografi, Salinan Kad Pelajar / Pasport / ARC / Buku Simpanan"
@@ -7829,7 +7829,7 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:86
 msgid "僑委會新生入學獎學金"
 msgstr "Biasiswa Kemasukan Pelajar Baharu OCAC"
-=======
+
 "Dokumen diperlukan: borang permohonan + borang pemarkahan kesusahan, sijil "
 "kesusahan asal (dikeluarkan oleh tempat asal), transkrip, autobiografi, kad "
 "pelajar / pasport / ARC / salinan buku simpanan pos"
@@ -7837,25 +7837,25 @@ msgstr "Biasiswa Kemasukan Pelajar Baharu OCAC"
 #: .\guides\templates\guides\guide_scholarship.html:86
 msgid "僑委會新生入學獎學金"
 msgstr "Biasiswa Kemasukan Pelajar Baru OCAC"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:89
 msgid "以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。"
 msgstr ""
-<<<<<<< HEAD
+
 "Berikut adalah kelayakan kemasukan melalui saluran Gabungan OCAC — disyorkan"
 " dan dimohon oleh pejabat luar negara sebelum ketibaan, bukan dimohon "
 "sendiri selepas tiba di Taiwan."
 
 #: .\guides\templates\guides\guide_scholarship.html:97
-=======
+
 "Kelayakan berikut adalah untuk pelajar baru yang diterima masuk melalui "
 "saluran OCAC. Permohonan disyorkan oleh pejabat luar negeri sebelum "
 "pendaftaran, bukan diri sendiri selepas tiba di Taiwan."
 
 #: .\guides\templates\guides\guide_scholarship.html:97
 #| msgid "等第"
->>>>>>> new/16
+
 msgid "等級"
 msgstr "Gred"
 
@@ -7864,14 +7864,14 @@ msgid "年額"
 msgstr "Jumlah Tahunan"
 
 #: .\guides\templates\guides\guide_scholarship.html:99
-<<<<<<< HEAD
+
 msgid "申請資格（成績）"
 msgstr "Kelayakan (mengikut gred)"
-=======
+
 #| msgid "申請資格（年級）"
 msgid "申請資格（成績）"
 msgstr "Kelayakan (Gred)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:100
 msgid "續領條件"
@@ -7879,49 +7879,49 @@ msgstr "Syarat Pembaharuan"
 
 #: .\guides\templates\guides\guide_scholarship.html:101
 msgid "年限"
-<<<<<<< HEAD
+
 msgstr "Tempoh"
 
 #: .\guides\templates\guides\guide_scholarship.html:106
 msgid "頂尖"
 msgstr "Terkemuka"
-=======
+
 msgstr "Had Tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:106
 msgid "頂尖"
 msgstr "Terbaik"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:108
 #, python-format
 msgid "88 分以上或班排前 5%%"
-<<<<<<< HEAD
+
 msgstr "88 ke atas, atau 5%% teratas dalam kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
 msgstr "85 ke atas, atau Gred A"
-=======
+
 msgstr "88+ atau 5% teratas kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
 msgstr "85+ atau Gred A"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:110
 #: .\guides\templates\guides\guide_scholarship.html:117
 #: .\guides\templates\guides\guide_scholarship.html:151
 #: .\guides\templates\guides\guide_scholarship.html:163
-<<<<<<< HEAD
+
 msgid "4 年"
 msgstr "4 Tahun"
-=======
+
 #| msgid "1 年"
 msgid "4 年"
 msgstr "4 tahun"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:113
 msgid "傑出"
@@ -7930,7 +7930,7 @@ msgstr "Cemerlang"
 #: .\guides\templates\guides\guide_scholarship.html:115
 #, python-format
 msgid "85 分以上或班排前 10%%"
-<<<<<<< HEAD
+
 msgstr "85 ke atas, atau 10%% teratas dalam kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:116
@@ -7946,7 +7946,7 @@ msgid "不得同時領取其他政府獎學金"
 msgstr "Tidak Boleh Digabung dengan Biasiswa Kerajaan Lain"
 
 #: .\guides\templates\guides\guide_scholarship.html:129
-=======
+
 msgstr "85+ atau 10% teratas kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:116
@@ -7963,56 +7963,56 @@ msgstr "Tidak boleh menerima biasiswa kerajaan lain secara serentak"
 
 #: .\guides\templates\guides\guide_scholarship.html:129
 #| msgid "教育部臺灣獎學金"
->>>>>>> new/16
+
 msgid "教育部台灣獎學金（外籍生）"
 msgstr "Biasiswa KPM Taiwan (Pelajar Antarabangsa)"
 
 #: .\guides\templates\guides\guide_scholarship.html:132
 msgid "台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居身分的僑生，香港澳門生亦不適用。"
 msgstr ""
-<<<<<<< HEAD
+
 "Biasiswa Taiwan Hanya Terpakai untuk Pelajar \"Warganegara Asing\" (Termasuk"
 " Warga Asing Bebas Visa) — Tidak Terpakai untuk Pelajar Cina Seberang Laut "
 "dengan Kewarganegaraan ROC atau Status Kediaman Cina Seberang Laut, dan "
 "Tidak Terpakai untuk Pelajar Hong Kong/Macau."
 
 #: .\guides\templates\guides\guide_scholarship.html:140
-=======
+
 "Biasiswa Taiwan hanya untuk pelajar \"warganegara asing\" (termasuk orang "
 "asing bebas visa). Tidak terpakai untuk pelajar Cina perantau dengan "
 "kewarganegaraan ROC atau status perantau, mahupun pelajar HK/Macao."
 
 #: .\guides\templates\guides\guide_scholarship.html:140
 #| msgid "計學分"
->>>>>>> new/16
+
 msgid "學制"
 msgstr "Jenis Program"
 
 #: .\guides\templates\guides\guide_scholarship.html:141
 msgid "每月生活費"
-<<<<<<< HEAD
+
 msgstr "Elaun Sara Hidup Bulanan"
 
 #: .\guides\templates\guides\guide_scholarship.html:142
 msgid "學費補助"
 msgstr "Subsidi Yuran Pengajian"
-=======
+
 msgstr "Elaun Hidup Bulanan"
 
 #: .\guides\templates\guides\guide_scholarship.html:142
 msgid "學費補助"
 msgstr "Subsidi Yuran"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:143
 msgid "最長年限"
 msgstr "Tempoh Maksimum"
 
 #: .\guides\templates\guides\guide_scholarship.html:148
-<<<<<<< HEAD
-=======
+
+
 #| msgid "學士班"
->>>>>>> new/16
+
 msgid "學士"
 msgstr "ijazah sarjana muda"
 
@@ -8020,39 +8020,39 @@ msgstr "ijazah sarjana muda"
 #: .\guides\templates\guides\guide_scholarship.html:156
 #: .\guides\templates\guides\guide_scholarship.html:162
 msgid "每學期最高 NT$40,000"
-<<<<<<< HEAD
+
 msgstr "Maksimum NT$40,000 setiap semester"
 
 #: .\guides\templates\guides\guide_scholarship.html:154
-=======
+
 msgstr "Sehingga NT$40,000 setiap semester"
 
 #: .\guides\templates\guides\guide_scholarship.html:154
 #| msgid "碩士畢業"
->>>>>>> new/16
+
 msgid "碩士"
 msgstr "ijazah sarjana"
 
 #: .\guides\templates\guides\guide_scholarship.html:157
-<<<<<<< HEAD
-=======
+
+
 #| msgid "1 年"
->>>>>>> new/16
+
 msgid "2 年"
 msgstr "2 Tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:160
 msgid "博士"
-<<<<<<< HEAD
+
 msgstr "PhD"
-=======
+
 msgstr "Doktor Falsafah"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:169
 msgid "申請期間：每年 2 月 1 日至 3 月 31 日，向所在國 TECO（台灣辦事處）申請"
 msgstr ""
-<<<<<<< HEAD
+
 "Tempoh Permohonan: 1 Februari hingga 31 Mac Setiap Tahun, Mohon di TECO "
 "(Pejabat Perwakilan Taiwan) Tempatan"
 
@@ -8067,7 +8067,7 @@ msgstr "Biasiswa Dalaman"
 #: .\guides\templates\guides\guide_scholarship.html:184
 msgid "主要對象 / 條件"
 msgstr "Sasaran / Syarat"
-=======
+
 "Tempoh permohonan: 1 Februari hingga 31 Mac setiap tahun, mohon di TECO "
 "(pejabat Taiwan) di negara anda"
 
@@ -8082,7 +8082,7 @@ msgstr "Biasiswa Dalam Kampus"
 #: .\guides\templates\guides\guide_scholarship.html:184
 msgid "主要對象 / 條件"
 msgstr "Sasaran Utama / Syarat"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:189
 msgid "優秀學生獎學金"
@@ -8091,60 +8091,60 @@ msgstr "Biasiswa Pelajar Cemerlang"
 #: .\guides\templates\guides\guide_scholarship.html:191
 msgid "競賽優異、發明專利、社務貢獻；需推薦信＋自傳，每學期申請"
 msgstr ""
-<<<<<<< HEAD
+
 "Kecemerlangan Pertandingan, Paten, Sumbangan Perkhidmatan Komuniti; "
 "Memerlukan Surat Perakuan + Autobiografi, Memohon Setiap Semester"
 
 #: .\guides\templates\guides\guide_scholarship.html:194
 msgid "勵學獎學金（清寒）"
 msgstr "Biasiswa Galakan (Berpendapatan Rendah)"
-=======
+
 "Prestasi pertandingan cemerlang, paten ciptaan, sumbangan perkhidmatan "
 "komuniti; perlu surat cadangan + autobiografi, mohon setiap semester"
 
 #: .\guides\templates\guides\guide_scholarship.html:194
 msgid "勵學獎學金（清寒）"
 msgstr "Biasiswa Rajin Belajar (Kesusahan Kewangan)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:195
 #: .\guides\templates\guides\guide_scholarship.html:248
 #: .\guides\templates\guides\guide_scholarship.html:291
 msgid "最高"
-<<<<<<< HEAD
+
 msgstr "Maksimum"
-=======
+
 msgstr "Sehingga"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:196
 msgid "清寒優秀生，低收 / 單親家庭優先"
 msgstr ""
-<<<<<<< HEAD
+
 "Pelajar Cemerlang Berpendapatan Rendah; Keutamaan untuk Keluarga "
 "Berpendapatan Rendah/Ibu Bapa Tunggal"
 
 #: .\guides\templates\guides\guide_scholarship.html:199
 msgid "學術成績優異榮譽榜"
 msgstr "Senarai Kehormat Kecemerlangan Akademik"
-=======
+
 "Pelajar cemerlang dengan kesusahan kewangan; keluarga berpendapatan rendah /"
 " ibu bapa tunggal diutamakan"
 
 #: .\guides\templates\guides\guide_scholarship.html:199
 msgid "學術成績優異榮譽榜"
 msgstr "Senarai Penghormatan Akademik"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:201
 #, python-format
 msgid "學期成績系排前 5%%，自動核發"
-<<<<<<< HEAD
+
 msgstr ""
 "5%% Teratas Jabatan Mengikut Gred Semester, Diberikan Secara Automatik"
-=======
+
 msgstr "5% teratas di jabatan untuk semester, diberikan secara automatik"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:204
 msgid "傑出領導獎學金"
@@ -8153,26 +8153,26 @@ msgstr "Biasiswa Kepimpinan Cemerlang"
 #: .\guides\templates\guides\guide_scholarship.html:206
 msgid "社團 / 自治會 / 宿委幹部或校外代表績效卓著"
 msgstr ""
-<<<<<<< HEAD
+
 "Prestasi Cemerlang sebagai Pegawai Kelab/Majlis Pelajar/Jawatankuasa Asrama "
 "atau Wakil Luar"
 
 #: .\guides\templates\guides\guide_scholarship.html:209
 msgid "羅家倫先生紀念獎學金"
 msgstr "Biasiswa Peringatan Luo Jialun"
-=======
+
 "Eksekutif kelab / kerajaan pelajar / jawatankuasa asrama atau prestasi wakil"
 " luar kampus yang cemerlang"
 
 #: .\guides\templates\guides\guide_scholarship.html:209
 msgid "羅家倫先生紀念獎學金"
 msgstr "Biasiswa Peringatan Encik Luo Jialun"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr ""
-<<<<<<< HEAD
+
 "Tahun 2 ke atas atau pelajar pascasiswazah; berpendapatan rendah dan "
 "cemerlang"
 
@@ -8183,7 +8183,7 @@ msgstr "Biasiswa Peringatan K.T. Li"
 #: .\guides\templates\guides\guide_scholarship.html:216
 msgid "大二以上；清寒"
 msgstr "Tahun 2 ke atas; berpendapatan rendah"
-=======
+
 "Tahun kedua ke atas atau pelajar siswazah; cemerlang dengan kesusahan "
 "kewangan"
 
@@ -8194,36 +8194,36 @@ msgstr "Biasiswa Peringatan Li Kuo-ting"
 #: .\guides\templates\guides\guide_scholarship.html:216
 msgid "大二以上；清寒"
 msgstr "Tahun kedua ke atas; kesusahan kewangan"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:222
 msgid "完整校內獎學金清單及申請時間：NCU Portal → 獎助學金暨工讀管理系統，或查"
 msgstr ""
-<<<<<<< HEAD
+
 "Senarai Lengkap Biasiswa Dalaman dan Tarikh Permohonan: NCU Portal → Sistem "
 "Pengurusan Biasiswa & Kerja Sambilan, atau semak"
 
 #: .\guides\templates\guides\guide_scholarship.html:223
 msgid "軍訓室獎學金頁 ↗"
 msgstr "Halaman Biasiswa Pejabat Latihan Tentera ↗"
-=======
+
 "Senarai penuh biasiswa dalam kampus dan jadual: NCU Portal → Sistem "
 "Pengurusan Biasiswa & Kerja Sambil Belajar, atau semak"
 
 #: .\guides\templates\guides\guide_scholarship.html:223
 msgid "軍訓室獎學金頁 ↗"
 msgstr "Halaman Biasiswa Pejabat Latihan Ketenteraan ↗"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:228
 msgid "安心就學支持計劃（需申請，學務處辦理）"
 msgstr ""
-<<<<<<< HEAD
+
 "Program Sokongan Pembelajaran Tenang (Perlu Permohonan, Dikendalikan oleh "
 "Hal Ehwal Pelajar)"
-=======
+
 "Program Sokongan Belajar Selamat (perlu memohon, Pejabat Hal Ehwal Pelajar)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:237
 msgid "條件摘要"
@@ -8231,31 +8231,31 @@ msgstr "Ringkasan Syarat"
 
 #: .\guides\templates\guides\guide_scholarship.html:242
 msgid "安心學習助學金"
-<<<<<<< HEAD
+
 msgstr "Geran Pembelajaran Tenang"
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
-=======
+
 msgstr "Geran Pembelajaran Selamat"
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
 #| msgid "每學期"
->>>>>>> new/16
+
 msgid "學期"
 msgstr "setiap semester"
 
 #: .\guides\templates\guides\guide_scholarship.html:244
 msgid "低 / 中低收入或特殊情況；需學習計畫＋3 場活動＋2 次導師面談"
 msgstr ""
-<<<<<<< HEAD
+
 "Berpendapatan Rendah/Sederhana Rendah atau Keadaan Khas; Memerlukan "
 "Rancangan Pembelajaran + 3 Aktiviti + 2 Temu Janji Penasihat"
-=======
+
 "Pendapatan rendah / sederhana rendah atau keadaan khas; perlu pelan "
 "pembelajaran + 3 aktiviti + 2 pertemuan penasihat"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:247
 msgid "競賽拔尖獎勵金"
@@ -8263,24 +8263,24 @@ msgstr "Anugerah Kecemerlangan Pertandingan"
 
 #: .\guides\templates\guides\guide_scholarship.html:249
 msgid "國內外競賽獲獎"
-<<<<<<< HEAD
+
 msgstr "Anugerah Pertandingan Dalam/Luar Negara"
 
 #: .\guides\templates\guides\guide_scholarship.html:252
 msgid "外語檢定認證助學金"
 msgstr "Geran Pensijilan Bahasa Asing"
-=======
+
 msgstr "Menang pertandingan domestik atau antarabangsa"
 
 #: .\guides\templates\guides\guide_scholarship.html:252
 msgid "外語檢定認證助學金"
 msgstr "Geran Sijil Bahasa Asing"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:254
 msgid "英語最高 NT$10,000；日文 / 法文 / 德文最高 NT$6,000，每學年 1 次"
 msgstr ""
-<<<<<<< HEAD
+
 "Bahasa Inggeris: Maksimum NT$10,000; Jepun/Perancis/Jerman: Maksimum "
 "NT$6,000, 1 Kali setiap Tahun Akademik"
 
@@ -8291,7 +8291,7 @@ msgstr "Insentif Latihan Industri"
 #: .\guides\templates\guides\guide_scholarship.html:259
 msgid "140 小時以上實習，成績 85 分以上"
 msgstr "140+ Jam Latihan Industri; Gred 85+"
-=======
+
 "Bahasa Inggeris sehingga NT$10,000; Bahasa Jepun / Perancis / Jerman "
 "sehingga NT$6,000, sekali per tahun akademik"
 
@@ -8302,7 +8302,7 @@ msgstr "Anugerah Latihan Industri"
 #: .\guides\templates\guides\guide_scholarship.html:259
 msgid "140 小時以上實習，成績 85 分以上"
 msgstr "Latihan industri 140+ jam, gred 85+"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:262
 msgid "宿舍學習助學金"
@@ -8310,7 +8310,7 @@ msgstr "Geran Pembelajaran Asrama"
 
 #: .\guides\templates\guides\guide_scholarship.html:263
 msgid "時，最高"
-<<<<<<< HEAD
+
 msgstr ", maksimum"
 
 #: .\guides\templates\guides\guide_scholarship.html:264
@@ -8321,7 +8321,7 @@ msgstr "Penyertaan Aktiviti Asrama"
 msgid "申請入口：NCU ALC 安心就學頁面（ncu.edu.tw/ALC/）"
 msgstr ""
 "Portal Permohonan: Halaman Pembelajaran Tenang NCU ALC (ncu.edu.tw/ALC/)"
-=======
+
 msgstr "jam, sehingga"
 
 #: .\guides\templates\guides\guide_scholarship.html:264
@@ -8331,7 +8331,7 @@ msgstr "Penyertaan aktiviti asrama"
 #: .\guides\templates\guides\guide_scholarship.html:270
 msgid "申請入口：NCU ALC 安心就學頁面（ncu.edu.tw/ALC/）"
 msgstr "Portal permohonan: Halaman NCU ALC Secure Study (ncu.edu.tw/ALC/)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:275
 msgid "校外獎學金（精選）"
@@ -8339,11 +8339,11 @@ msgstr "Biasiswa Luar Kampus (Pilihan)"
 
 #: .\guides\templates\guides\guide_scholarship.html:284
 msgid "申請期間（約）"
-<<<<<<< HEAD
+
 msgstr "Tempoh Permohonan (anggaran)"
-=======
+
 msgstr "Tempoh Permohonan (Anggaran)"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:285
 msgid "主要條件"
@@ -8354,10 +8354,10 @@ msgid "行天宮獎學金"
 msgstr "Biasiswa Kuil Xingtian"
 
 #: .\guides\templates\guides\guide_scholarship.html:291
-<<<<<<< HEAD
-=======
+
+
 #| msgid "1 年"
->>>>>>> new/16
+
 msgid "年"
 msgstr "1 Tahun"
 
@@ -8367,7 +8367,7 @@ msgstr "Semester 1: 9/30, Semester 2: 3/10"
 
 #: .\guides\templates\guides\guide_scholarship.html:293
 msgid "大二以上；成績 80+；操行 A；清寒優先"
-<<<<<<< HEAD
+
 msgstr "Tahun 2 ke atas; Gred 80+; Kelakuan A; Keutamaan Berpendapatan Rendah"
 
 #: .\guides\templates\guides\guide_scholarship.html:296
@@ -8375,7 +8375,7 @@ msgid "孺鴻教育獎學金"
 msgstr "Biasiswa Pendidikan Ru Hong"
 
 #: .\guides\templates\guides\guide_scholarship.html:298
-=======
+
 msgstr ""
 "Tahun kedua ke atas; gred 80+; kelakuan A; keutamaan kesusahan kewangan"
 
@@ -8385,17 +8385,17 @@ msgstr "Biasiswa Pendidikan Ruhong"
 
 #: .\guides\templates\guides\guide_scholarship.html:298
 #| msgid "約每年 3 月"
->>>>>>> new/16
+
 msgid "每年 3 月"
 msgstr "Kira-kira Mac setiap tahun"
 
 #: .\guides\templates\guides\guide_scholarship.html:299
 msgid "成績 80+；GEPT 中級；操行 80+"
-<<<<<<< HEAD
+
 msgstr "Gred 80+; GEPT Pertengahan; Kelakuan 80+"
-=======
+
 msgstr "Gred 80+; GEPT pertengahan; kelakuan 80+"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:302
 msgid "平安菁英教育基金會"
@@ -8403,17 +8403,17 @@ msgstr "Yayasan Pendidikan Elit Ping An"
 
 #: .\guides\templates\guides\guide_scholarship.html:304
 msgid "2/12 – 3/5"
-<<<<<<< HEAD
+
 msgstr "2/12 – 3/5"
-=======
+
 msgstr "12/2 – 5/3"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:305
 #, python-format
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%%"
 msgstr ""
-<<<<<<< HEAD
+
 "Pendapatan Tahunan Keluarga ≤ NT$900,000; Gred 80+ atau 40%% Teratas dalam "
 "Kelas"
 
@@ -8440,7 +8440,7 @@ msgstr "2/10 – 3/17"
 #: .\guides\templates\guides\guide_scholarship.html:317
 msgid "低 / 中低收入或身心障礙；成績 65+"
 msgstr "Berpendapatan Rendah/Sederhana Rendah atau Kurang Upaya; Gred 65+"
-=======
+
 "Pendapatan keluarga tahunan ≤ NT$900,000; gred 80+ atau 40% teratas kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:308
@@ -8466,40 +8466,40 @@ msgstr "10/2 – 17/3"
 #: .\guides\templates\guides\guide_scholarship.html:317
 msgid "低 / 中低收入或身心障礙；成績 65+"
 msgstr "Pendapatan rendah / sederhana rendah atau kurang upaya; gred 65+"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:323
 msgid "每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期查看"
 msgstr ""
-<<<<<<< HEAD
+
 "Selepas Setiap Semester Bermula, Hal Ehwal Pelajar Akan Menyiarkan Senarai "
 "Biasiswa Luar Kampus yang Boleh Dipohon di NCU Portal — Sila Semak Secara "
 "Berkala"
 
 #: .\guides\templates\guides\guide_scholarship.html:328
-=======
+
 "Selepas semester bermula, Pejabat Hal Ehwal Pelajar akan mengumumkan "
 "biasiswa luar kampus yang boleh dipohon di NCU Portal. Sila semak secara "
 "berkala."
 
 #: .\guides\templates\guides\guide_scholarship.html:328
 #| msgid "重要提醒："
->>>>>>> new/16
+
 msgid "重要提醒"
 msgstr "Peringatan penting:"
 
 #: .\guides\templates\guides\guide_scholarship.html:331
 msgid "不得重複領取"
-<<<<<<< HEAD
+
 msgstr "Tidak Boleh Dituntut Dua Kali"
-=======
+
 msgstr "Tidak Boleh Berganda"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:332
 msgid "教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再申請。"
 msgstr ""
-<<<<<<< HEAD
+
 "Geran Berpendapatan Rendah MOE dan OCAC Tidak Boleh Dituntut Bersama, dan "
 "Tidak Boleh Digabung dengan Pengecualian Yuran Kerajaan Lain — Sila Sahkan "
 "Sebelum Memohon."
@@ -8507,7 +8507,7 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:335
 msgid "僑卡必備"
 msgstr "i-Card Diperlukan"
-=======
+
 "Bantuan kewangan Kementerian Pendidikan dan OCAC tidak boleh diterima "
 "serentak, juga tidak boleh wujud bersama dengan pengecualian yuran kerajaan "
 "lain. Sila sahkan sebelum memohon."
@@ -8515,19 +8515,19 @@ msgstr "i-Card Diperlukan"
 #: .\guides\templates\guides\guide_scholarship.html:335
 msgid "僑卡必備"
 msgstr "Kad i-Overseas Diperlukan"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:336
 msgid "申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。"
 msgstr ""
-<<<<<<< HEAD
+
 "Anda Mesti Memohon \"i-Card\" Sebelum Menuntut Sebarang Geran Kerajaan, Jika"
 " Tidak Dana Tidak Boleh Dikeluarkan — Sila Uruskan pada Awal Semester."
 
 #: .\guides\templates\guides\guide_scholarship.html:339
 msgid "清寒證明須原件"
 msgstr "Sijil Berpendapatan Rendah Mesti Asal"
-=======
+
 "Sebelum memohon apa-apa biasiswa atau geran kerajaan, anda mesti memohon "
 "\"i-Overseas Card\" terlebih dahulu; jika tidak, dana tidak dapat dibayar. "
 "Sila uruskan ini pada awal semester."
@@ -8535,20 +8535,20 @@ msgstr "Sijil Berpendapatan Rendah Mesti Asal"
 #: .\guides\templates\guides\guide_scholarship.html:339
 msgid "清寒證明須原件"
 msgstr "Sijil Kesusahan Mesti Asal"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:340
 msgid "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
 msgstr ""
-<<<<<<< HEAD
+
 "\"Sijil Berpendapatan Rendah\" yang Diperlukan untuk Subsidi Mesti "
 "Dikeluarkan oleh Pihak Berkuasa di Kawasan Asal Anda dan Diserahkan sebagai "
 "Asal — Salinan atau Foto Tidak Diterima."
-=======
+
 "Sijil \"kesusahan kewangan\" yang diperlukan untuk bantuan mesti dikeluarkan"
 " oleh pihak berkuasa di negara asal dan diserahkan sebagai asal. Salinan "
 "atau foto tidak diterima."
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:343
 msgid "留意截止日"
@@ -8557,20 +8557,20 @@ msgstr "Perhatikan Tarikh Akhir"
 #: .\guides\templates\guides\guide_scholarship.html:344
 msgid "多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提早準備文件。"
 msgstr ""
-<<<<<<< HEAD
+
 "Kebanyakan Tarikh Akhir Biasiswa Adalah Ketat — OIA Sekitar 9/25 (Semester "
 "1) / 3/2 (Semester 2) Setiap Semester. Penyerahan Lewat Tidak Diterima, Jadi"
 " Sediakan Dokumen Awal."
-=======
+
 "Kebanyakan tarikh akhir biasiswa adalah ketat. Tarikh akhir OIA kira-kira "
 "9/25 (semester 1) / 3/2 (semester 2) setiap semester. Lewat tidak diterima. "
 "Sila sediakan dokumen lebih awal."
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_scholarship.html:349
 msgid "NCU 國際事務處：+886-3-425-4945｜僑生獎助學金相關業務洽 OIA 辦理"
 msgstr ""
-<<<<<<< HEAD
+
 "Pejabat Hal Ehwal Antarabangsa NCU: +886-3-425-4945 | Untuk Urusan Biasiswa "
 "Pelajar Cina Seberang Laut, Hubungi OIA"
 
@@ -8579,10 +8579,10 @@ msgstr ""
 #: .\users\templates\users\profile_setup.html:253
 msgid "返回"
 msgstr "Kembali"
-=======
+
 "Pejabat Hal Ehwal Antarabangsa NCU: +886-3-425-4945 | Untuk biasiswa pelajar"
 " Cina perantau, hubungi OIA"
->>>>>>> new/16
+
 
 #: .\guides\templates\guides\guide_search.html:22
 msgid "搜尋所有指南內容..."
@@ -9526,10 +9526,10 @@ msgstr ""
 "digunakan semula."
 
 #: .\guides\templates\guides\guide_work_permit.html:248
-<<<<<<< HEAD
-=======
+
+
 #| msgid "許可期限最長 "
->>>>>>> new/16
+
 msgid "許可期限最長 6 個月："
 msgstr "Tempoh Permit Maksimum "
 
@@ -9632,12 +9632,12 @@ msgstr "Senarai Tugas"
 msgid "搜尋指南..."
 msgstr "Cari panduan..."
 
-<<<<<<< HEAD
+
 #: .\templates\base.html:157
-=======
+
 #: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
 #| msgid "沒有未讀通知 🎉"
->>>>>>> new/16
+
 msgid "沒有未讀通知"
 msgstr "Tiada pemberitahuan yang belum dibaca 🎉"
 
@@ -9667,14 +9667,14 @@ msgstr "Log Keluar"
 msgid "開始流程"
 msgstr "Mula"
 
-<<<<<<< HEAD
+
 #: .\templates\base.html:192 .\templates\base.html:194
 msgid "詢問AI小幫手"
 msgstr "Tanya AI"
 
 #: .\templates\base.html:197 .\templates\base.html:237
 #: .\users\templates\users\dashboard.html:142
-=======
+
 #: .\templates\base.html:191
 msgid "專為僑外籍生打造的來台留學流程指南平台，協助學生一步步完成留學準備與抵台後事項。"
 msgstr ""
@@ -9719,7 +9719,7 @@ msgstr ""
 
 #: .\templates\base.html:216
 #| msgid "詢問 AI 小幫手"
->>>>>>> new/16
+
 msgid "AI 小幫手"
 msgstr "Tanya Pembantu AI"
 
@@ -9919,12 +9919,12 @@ msgstr "Turki"
 msgid "英國"
 msgstr "United Kingdom"
 
-<<<<<<< HEAD
+
 #: .\users\models.py:145 .\users\templates\users\profile_setup.html:483
-=======
+
 #: .\users\models.py:145
 #| msgid "泰國"
->>>>>>> new/16
+
 msgid "法國"
 msgstr "Perancis"
 
@@ -9944,12 +9944,12 @@ msgstr "Sepanyol"
 msgid "美國"
 msgstr "Amerika Syarikat"
 
-<<<<<<< HEAD
+
 #: .\users\models.py:151 .\users\templates\users\profile_setup.html:490
-=======
+
 #: .\users\models.py:151
 #| msgid "美國／加拿大"
->>>>>>> new/16
+
 msgid "加拿大"
 msgstr "Amerika / Kanada"
 
@@ -9961,12 +9961,12 @@ msgstr "Brazil"
 msgid "阿根廷"
 msgstr "Argentina"
 
-<<<<<<< HEAD
+
 #: .\users\models.py:157 .\users\templates\users\profile_setup.html:498
-=======
+
 #: .\users\models.py:157
 #| msgid "南亞"
->>>>>>> new/16
+
 msgid "南非"
 msgstr "Afrika Selatan"
 
@@ -9978,12 +9978,12 @@ msgstr "Mesir"
 msgid "奈及利亞"
 msgstr "Nigeria"
 
-<<<<<<< HEAD
+
 #: .\users\models.py:161 .\users\templates\users\profile_setup.html:503
-=======
+
 #: .\users\models.py:161
 #| msgid "歐洲"
->>>>>>> new/16
+
 msgid "澳洲"
 msgstr "Australia"
 
@@ -10135,7 +10135,7 @@ msgstr "Universiti Udara Kebangsaan (NOU)"
 msgid "其他（Other）"
 msgstr "Lain-lain"
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\_alumni_card.html:13
 #, fuzzy
 #| msgid "編輯資料"
@@ -10144,7 +10144,7 @@ msgstr "Edit Maklumat"
 
 #: .\users\templates\users\_alumni_card.html:15
 msgid "確定要刪除這則分享嗎？此動作無法復原。"
-=======
+
 #: .\users\templates\users\dashboard.html:152
 msgid "你好"
 msgstr "Hello"
@@ -10156,7 +10156,7 @@ msgstr "Pelajar Antarabangsa"
 #: .\users\templates\users\dashboard.html:155
 #| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
 msgid "歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。"
->>>>>>> new/16
+
 msgstr ""
 "Adakah anda pasti mahu memadam perkongsian ini? Tindakan ini tidak boleh "
 "dibatalkan."
@@ -10654,12 +10654,12 @@ msgstr "Kembali ke halaman log masuk"
 msgid "來臺就學小幫手"
 msgstr "Pembantu Belajar di Taiwan"
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:15
-=======
+
 #: .\users\templates\users\home.html:16 .\users\templates\users\home.html:27
 #| msgid "你好，"
->>>>>>> new/16
+
 msgid "你好！"
 msgstr "Helo, "
 
@@ -10674,8 +10674,8 @@ msgstr ""
 "Cina perantauan, pelajar antarabangsa serta pelajar Hong Kong/Macau."
 
 #: .\users\templates\users\home.html:18
-<<<<<<< HEAD
-=======
+
+
 #| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
 msgid "，您的個人化來臺就學流程已準備好。"
 msgstr ""
@@ -10683,7 +10683,7 @@ msgstr ""
 "Taiwan sudah sedia."
 
 #: .\users\templates\users\home.html:19 .\users\templates\users\home.html:30
->>>>>>> new/16
+
 msgid "跟著我們一步步完成留學準備，掌握所有關鍵資訊。"
 msgstr ""
 "Ikuti kami langkah demi langkah untuk menyelesaikan persediaan pengajian "
@@ -10698,13 +10698,13 @@ msgstr "tugas"
 msgid "示範資料"
 msgstr "Data Contoh"
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:60
 msgid "抵臺前準備"
 msgstr "Persediaan Sebelum Ketibaan"
 
 #: .\users\templates\users\home.html:61 .\users\templates\users\home.html:118
-=======
+
 #: .\users\templates\users\home.html:115
 #| msgid "申請截止"
 msgid "申請中"
@@ -10712,7 +10712,7 @@ msgstr "Tarikh akhir permohonan"
 
 #: .\users\templates\users\home.html:116 .\users\templates\users\home.html:242
 #| msgid "國立中央大學（NCU）"
->>>>>>> new/16
+
 msgid "國立中央大學"
 msgstr "Universiti Pusat Kebangsaan (NCU)"
 
@@ -10764,9 +10764,9 @@ msgstr ""
 "Kandungan di atas adalah contoh. Log masuk untuk melihat kemajuan peribadi "
 "anda."
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:108
-=======
+
 #: .\users\templates\users\home.html:142
 msgid "申請入學"
 msgstr ""
@@ -10799,7 +10799,7 @@ msgid "後可查看您的個人化流程進度"
 msgstr ""
 
 #: .\users\templates\users\home.html:171
->>>>>>> new/16
+
 msgid "跟著清單走"
 msgstr "Ikuti Senarai Semak"
 
@@ -10819,13 +10819,13 @@ msgstr "Kemajuan Semasa"
 msgid "已完成 8 / 20 項任務"
 msgstr "8 / 20 Tugas Selesai"
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:133
 msgid "待辦任務"
 msgstr "Tugasan Akan Datang"
 
 #: .\users\templates\users\home.html:138
-=======
+
 #: .\users\templates\users\home.html:257
 #| msgid "近期待辦任務"
 msgid "待辦任務"
@@ -10833,7 +10833,7 @@ msgstr "Tugasan Akan Datang"
 
 #: .\users\templates\users\home.html:262
 #| msgid "即將到期任務"
->>>>>>> new/16
+
 msgid "即將到期"
 msgstr "Tugasan yang Hampir Tamat Tempoh"
 
@@ -10841,12 +10841,12 @@ msgstr "Tugasan yang Hampir Tamat Tempoh"
 msgid "申請學生簽證"
 msgstr "Memohon Visa Pelajar"
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:158
-=======
+
 #: .\users\templates\users\home.html:280
 #| msgid "財力證明"
->>>>>>> new/16
+
 msgid "準備財力證明文件"
 msgstr "Bukti Kewangan"
 
@@ -10864,9 +10864,9 @@ msgstr ""
 "Data di atas adalah contoh. Log masuk untuk melihat senarai tugas peribadi "
 "anda."
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:183
-=======
+
 #: .\users\templates\users\home.html:293
 msgid "以上為示範資料，"
 msgstr ""
@@ -10877,7 +10877,7 @@ msgid "後可查看您的個人化任務清單"
 msgstr "Senarai tugasan peribadi saya"
 
 #: .\users\templates\users\home.html:307
->>>>>>> new/16
+
 msgid "重要資訊"
 msgstr "Maklumat Penting"
 
@@ -10910,12 +10910,12 @@ msgstr ""
 "Kelayakan Insurans Kesihatan Kebangsaan, pengiraan premium, proses rawatan "
 "perubatan dan maklumat hospital mengikut kawasan."
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\home.html:205 .\users\templates\users\login.html:53
-=======
+
 #: .\users\templates\users\home.html:329
 #| msgid "台灣銀行開戶"
->>>>>>> new/16
+
 msgid "銀行開戶"
 msgstr "Buka Akaun Bank di Taiwan"
 
@@ -10953,9 +10953,9 @@ msgstr ""
 
 #: .\users\templates\users\home.html:328
 msgid "您想了解的都在這"
-<<<<<<< HEAD
+
 msgstr "Semua yang Anda Ingin Tahu Ada di Sini"
-=======
+
 msgstr ""
 
 #: .\users\templates\users\home.html:452
@@ -11023,7 +11023,7 @@ msgid ""
 "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 "
 "個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
 msgstr ""
->>>>>>> new/16
+
 
 #: .\users\templates\users\login.html:5
 msgid "登入 / 註冊"
@@ -11034,13 +11034,13 @@ msgid "個人化任務清單"
 msgstr "Senarai Tugas Peribadi"
 
 #: .\users\templates\users\login.html:24
-<<<<<<< HEAD
+
 msgid ""
 "回答幾個問題，系統就會依你的身分別、國籍與入學狀態生成專屬任務清單：每項任務附上所需文件、辦理地點與地圖，並依你的抵臺日期自動計算截止日，到期前以站內通知與"
 " Email 提醒你。"
-=======
+
 msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
->>>>>>> new/16
+
 msgstr ""
 "Jawab beberapa soalan, sistem akan menjana senarai tugas khusus berdasarkan "
 "jenis identiti, kewarganegaraan dan status pendaftaran anda: setiap tugas "
@@ -11048,7 +11048,7 @@ msgstr ""
 "secara automatik daripada tarikh ketibaan anda, serta peringatan melalui "
 "notifikasi dalam aplikasi dan e-mel sebelum tamat tempoh."
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\login.html:25
 msgid "自動生成"
 msgstr "Dijana Secara Automatik"
@@ -11086,9 +11086,9 @@ msgid "剩 12 天"
 msgstr "Baki 12 Hari"
 
 #: .\users\templates\users\login.html:44
-=======
+
 #: .\users\templates\users\login.html:43
->>>>>>> new/16
+
 msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
 msgstr ""
 "Menggabungkan maklumat visa, ARC, insurans kesihatan, penginapan dan "
@@ -11125,7 +11125,7 @@ msgid "雙 AI 夥伴"
 msgstr "Dua Rakan AI"
 
 #: .\users\templates\users\login.html:66
-<<<<<<< HEAD
+
 msgid ""
 "「任務小幫手」熟悉你的任務進度與截止日，用 9 "
 "種語言回答簽證、居留證等行政問題並附官方來源；「聊天好朋友」則在你想家、壓力大時陪你聊聊，還能幫你找學校附近的餐廳與商店。"
@@ -11135,13 +11135,13 @@ msgstr ""
 "rasmi; \"Chat Companion\" menemani anda berbual apabila rindu rumah atau "
 "tertekan, malah boleh membantu mencari restoran dan kedai berhampiran "
 "kampus."
-=======
+
 msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
 msgstr ""
 "Apabila anda tidak tahu langkah pertama yang perlu dilakukan, dokumen apa "
 "yang perlu disediakan, atau siapa yang perlu ditanya, anda boleh mendapatkan"
 " bantuan pantas secara langsung melalui pembantu AI."
->>>>>>> new/16
+
 
 #: .\users\templates\users\login.html:67
 msgid "任務小幫手"
@@ -11208,7 +11208,7 @@ msgstr "Paparkan slaid pengenalan kedua"
 msgid "顯示第三張介紹"
 msgstr "Paparkan slaid pengenalan ketiga"
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\login.html:107
 msgid "顯示第四張介紹"
 msgstr "Papar Slaid Pengenalan Keempat"
@@ -11221,10 +11221,10 @@ msgstr "Log Masuk"
 
 #: .\users\templates\users\login.html:121
 #: .\users\templates\users\login.html:178
-=======
+
 #: .\users\templates\users\login.html:98
 #: .\users\templates\users\login.html:155
->>>>>>> new/16
+
 msgid "註冊帳號"
 msgstr "Daftar Akaun"
 
@@ -11232,12 +11232,12 @@ msgstr "Daftar Akaun"
 msgid "歡迎回來"
 msgstr "Selamat Kembali"
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\login.html:126
-=======
+
 #: .\users\templates\users\login.html:103
 #| msgid "請登入您的 StudyGo 帳戶"
->>>>>>> new/16
+
 msgid "請登入您的 ReadyTo Taiwan 帳戶"
 msgstr "Sila log masuk ke akaun ReadyTo Taiwan anda"
 
@@ -11267,12 +11267,12 @@ msgstr "Daftar percuma sekarang"
 msgid "建立帳號"
 msgstr "Cipta Akaun"
 
-<<<<<<< HEAD
+
 #: .\users\templates\users\login.html:183
-=======
+
 #: .\users\templates\users\login.html:160
 #| msgid "填寫基本資料，開始使用 StudyGo Taiwan"
->>>>>>> new/16
+
 msgid "填寫基本資料，開始使用 ReadyTo Taiwan"
 msgstr "Isi maklumat asas untuk mula menggunakan StudyGo Taiwan"
 
@@ -11357,10 +11357,10 @@ msgid "登出成功，"
 msgstr "Berjaya log keluar, "
 
 #: .\users\templates\users\logout_redirect.html:26
-<<<<<<< HEAD
-=======
+
+
 #| msgid "點此返回登入頁面"
->>>>>>> new/16
+
 msgid "點此返回首頁"
 msgstr "klik di sini untuk kembali ke laman utama"
 
@@ -11609,8 +11609,8 @@ msgstr "Kata laluan berjaya ditetapkan semula. Sila log masuk semula."
 #: .\users\templates\users\reset_password.html:75
 msgid "重設失敗，連結可能已過期"
 msgstr "Tetapan semula gagal. Pautan mungkin telah tamat tempoh."
-<<<<<<< HEAD
-=======
+
+
 
 msgid "10 個工作天"
 msgstr "10 hari bekerja"
@@ -14953,4 +14953,37 @@ msgstr "Sistem membuat sandaran data setiap hari dari 07:00–09:00. "
 
 #~ msgid "我的帳戶"
 #~ msgstr "Akaun Saya"
->>>>>>> new/16
+
+\n
+msgid "未命名任務"
+msgstr "Tugasan tanpa nama"
+
+msgid "流程階段"
+msgstr "Peringkat aliran"
+
+msgid "未翻譯"
+msgstr "Belum diterjemahkan"
+
+msgid "載入失敗，請確認已登入並填寫學生資料。"
+msgstr "Gagal memuat turun. Sila pastikan anda telah log masuk dan mengisi maklumat pelajar."
+
+msgid "尚未產生任務"
+msgstr "Belum ada tugas dijana"
+
+msgid "請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。"
+msgstr "Sila pastikan anda telah menetapkan status pelajar di 'Akaun Saya' dan muat semula halaman."
+
+msgid "任務已完成"
+msgstr "Tugas selesai"
+
+msgid "已取消完成"
+msgstr "Selesai dibatalkan"
+
+msgid "狀態更新失敗"
+msgstr "Gagal mengemas kini status"
+
+msgid "狀態更新成功"
+msgstr "Status berjaya dikemas kini"
+
+msgid "備註已儲存"
+msgstr "Nota disimpan"

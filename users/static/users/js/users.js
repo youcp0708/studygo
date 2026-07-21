@@ -969,26 +969,6 @@ function switchEditTab(tab, btn) {
   if (btn) btn.classList.add('active');
 }
 
-/* ════════════════════════════════════════
-   18. Task Toggle（儀表板任務）
-   PATCH /api/tasks/<id>/status/（模塊二接口）
-════════════════════════════════════════ */
-function toggleTask(btn) {
-  const task = btn.closest('.check-task');
-  const isDone = !task.classList.contains('done');
-  task.classList.toggle('done', isDone);
-  btn.textContent = isDone ? '✓' : '';
-  const status = task.querySelector('.task-status');
-  if (status) status.textContent = isDone ? '已完成' : '待完成';
-
-  /*
-  const taskId = task.dataset.taskId;
-  if (taskId) {
-    apiFetch(`/api/tasks/${taskId}/status/`, 'PATCH',
-      { status: isDone ? 'completed' : 'pending' });
-  }
-  */
-}
 
 /* ════════════════════════════════════════
    19. Login Slide 輪播（滑動效果）

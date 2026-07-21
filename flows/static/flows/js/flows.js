@@ -352,16 +352,6 @@ window.toggleTaskCompletion = async function (taskId, event) {
   }
 };
 
-window.changeTaskStatus = async function (taskId, status, event) {
-  event.stopPropagation();
-  const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { status });
-  if (ok) {
-    showToast(flowsT('statusUpdateSuccessToast', '狀態更新成功'), 'success');
-    renderMyTasks();
-    renderDashboardProgress();
-    renderReminders();
-  }
-};
 
 window.toggleTaskDetails = function (taskId) {
   const details = document.getElementById(`details-${taskId}`);
