@@ -114,7 +114,12 @@ msgstr "အောက်ခြေသို့ ပြန်သွားရန်"
 msgid "新增附件"
 msgstr "ဖိုင်တွဲထည့်ရန်"
 
+<<<<<<< HEAD
 #: .\chatbot\templates\chatbot\chatbot.html:176
+=======
+#: .\chatbot\templates\chatbot\chatbot.html:163
+#| msgid "上傳檔案"
+>>>>>>> new/18
 msgid "上傳檔案或照片"
 msgstr "ဖိုင်တင်ရန်"
 
@@ -249,15 +254,41 @@ msgstr "ပင်ကိုယ်သဘာဝနာမည်ပြောင်း
 msgid "已收到回饋，謝謝！"
 msgstr "အကြံပြုချက်ရရှိပါပြီ၊ ကျေးဇူးတင်ပါသည်!"
 
+<<<<<<< HEAD
+=======
+#: .\chatbot\views.py:29
+msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
+msgstr ""
+"ထိုင်ဝမ်ရှိ convenience store များတွင် ငွေပေးချေခြင်း၊ ပစ္စည်းယူခြင်း၊ "
+"မိတ္တူကူးခြင်းများ ပြုလုပ်နိုင်ပြီး နေ့စဉ်သုံးပစ္စည်းများလည်း ဝယ်ယူနိုင်သည်။"
+
+#: .\chatbot\views.py:30
+msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
+msgstr ""
+"ထိုင်ဝမ်၏ နွေရာသီသည် ပူပြီး စိုထိုင်းသောကြောင့် အပြင်သွားရာတွင် ရေဘူး၊ "
+"နေရောင်ကာကွယ်ပစ္စည်းနှင့် မိုးကာပစ္စည်းများ ပြင်ဆင်ထားနိုင်သည်။"
+
+>>>>>>> new/18
 #: .\chatbot\views.py:31
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
 msgstr ""
+<<<<<<< HEAD
 "ထိုင်ဝမ်ရှိ convenience store များတွင် ငွေပေးချေခြင်း၊ ပစ္စည်းယူခြင်း၊ မိတ္တူကူးခြင်းများ "
 "ပြုလုပ်နိုင်ပြီး နေ့စဉ်သုံးပစ္စည်းများလည်း ဝယ်ယူနိုင်သည်။"
 
 #: .\chatbot\views.py:32
 msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
 msgstr "ထိုင်ဝမ်တွင် MRT သို့မဟုတ် ဘတ်စ်ကားစီးရာတွင် EasyCard သို့မဟုတ် iPASS ကို မကြာခဏ အသုံးပြုကြသည်။"
+=======
+"ထိုင်ဝမ်တွင် လိပ်စာပြောင်းပါက အချို့စာရွက်စာတမ်းများ သို့မဟုတ် "
+"ကျောင်းမှတ်တမ်းများကိုပါ အတူတကွ အပ်ဒိတ်လုပ်ရန် လိုနိုင်သည်။"
+
+#: .\chatbot\views.py:32
+msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
+msgstr ""
+"ထိုင်ဝမ်ကျောင်းများတွင် အရေးကြီးသတင်းများကို Email သို့မဟုတ် "
+"ကျောင်းစနစ်မှတစ်ဆင့် ကြေညာလေ့ရှိသောကြောင့် ပုံမှန်စစ်ဆေးသင့်သည်။"
+>>>>>>> new/18
 
 #: .\chatbot\views.py:33
 msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
@@ -322,9 +353,24 @@ msgstr "ပြီးသွားပြီ"
 msgid "我的任務"
 msgstr "ကျွန်ုပ်၏တာဝန်များ"
 
+<<<<<<< HEAD
 #: .\flows\templates\flows\my_flows.html:30
 #: .\users\templates\users\dashboard.html:20
 #: .\users\templates\users\home.html:28
+=======
+#: .\flows\templates\flows\my_flows.html:18
+msgid "我的個人化任務清單"
+msgstr "ကျွန်ုပ်၏ ကိုယ်ပိုင်တာဝန်စာရင်း"
+
+#: .\flows\templates\flows\my_flows.html:21
+msgid "完成這些任務，為你在台灣的學習生活做好準備！"
+msgstr ""
+"ဤတာဝန်များကို ပြီးမြောက်စေပြီး ထိုင်ဝမ်ရှိ ပညာသင်ဘဝအတွက် ကြိုတင်ပြင်ဆင်ပါ။"
+
+#: .\flows\templates\flows\my_flows.html:42
+#: .\users\templates\users\dashboard.html:170
+#: .\users\templates\users\home.html:46 .\users\templates\users\home.html:86
+>>>>>>> new/18
 msgid "任務完成率"
 msgstr "တာဝန်ပြီးစီးမှုနှုန်း"
 
@@ -332,6 +378,7 @@ msgstr "တာဝန်ပြီးစီးမှုနှုန်း"
 msgid "小貼士"
 msgstr "အကြံပြုချက်များ"
 
+<<<<<<< HEAD
 #: .\flows\templates\flows\my_flows.html:56
 msgid "需要的文件"
 msgstr "📋 လိုအပ်သော စာရွက်စာတမ်းများ"
@@ -345,6 +392,25 @@ msgid "在地圖上查看"
 msgstr "🗺️ မြေပုံပေါ်တွင် ကြည့်ရန်"
 
 #: .\flows\templates\flows\my_flows.html:59
+=======
+#: .\flows\templates\flows\my_flows.html:68
+#| msgid "📋 需要的文件"
+msgid "需要的文件"
+msgstr "📋 လိုအပ်သော စာရွက်စာတမ်းများ"
+
+#: .\flows\templates\flows\my_flows.html:69
+#| msgid "📍 辦理地點"
+msgid "辦理地點"
+msgstr "📍 လျှောက်ထားရမည့်နေရာ"
+
+#: .\flows\templates\flows\my_flows.html:70
+#| msgid "🗺️ 在地圖上查看"
+msgid "在地圖上查看"
+msgstr "🗺️ မြေပုံပေါ်တွင် ကြည့်ရန်"
+
+#: .\flows\templates\flows\my_flows.html:71
+#| msgid "🌐 官方網站"
+>>>>>>> new/18
 msgid "官方網站"
 msgstr "🌐 တရားဝင် ဝဘ်ဆိုဒ်"
 
@@ -352,6 +418,7 @@ msgstr "🌐 တရားဝင် ဝဘ်ဆိုဒ်"
 msgid "點此前往官方網站"
 msgstr "တရားဝင်ဝဘ်ဆိုဒ်သို့ သွားရန် ဤနေရာကို နှိပ်ပါ"
 
+<<<<<<< HEAD
 #: .\flows\templates\flows\my_flows.html:61
 msgid "辦理時程"
 msgstr "📅 လျှောက်ထားရမည့်အချိန်ဇယား"
@@ -365,6 +432,21 @@ msgstr "📅 သတ်မှတ်ရက်"
 msgid ""
 "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的"
 "截止日期。"
+=======
+#: .\flows\templates\flows\my_flows.html:73
+#| msgid "📅 辦理時程"
+msgid "辦理時程"
+msgstr "📅 လျှောက်ထားရမည့်အချိန်ဇယား"
+
+#: .\flows\templates\flows\my_flows.html:74
+#: .\flows\templates\flows\my_flows.html:76
+#| msgid "📅 截止日期"
+msgid "截止日期"
+msgstr "📅 သတ်မှတ်ရက်"
+
+#: .\flows\templates\flows\my_flows.html:75
+msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
+>>>>>>> new/18
 msgstr ""
 "စနစ်မှ ဤတာဝန်၏ သတ်မှတ်ရက်ကို အလိုအလျောက် တွက်ချက်နိုင်ရန်အတွက် ကျေးဇူးပြု၍ \"ကိုယ်ရေးအချက်အလက်\" တွင် "
 "<strong>ထိုင်ဝမ်သို့ ရောက်ရှိမည့် ခန့်မှန်းရက်စွဲ</strong> ကို အရင်ဖြည့်စွက်ပါ။"
@@ -999,9 +1081,13 @@ msgid "入台後必辦事項"
 msgstr "ထိုင်ဝမ်သို့ရောက်ပြီးနောက် လုပ်ဆောင်ရမည့်အရာများ"
 
 #: .\guides\templates\guides\admissions_guide.html:286
+<<<<<<< HEAD
 msgid ""
 "持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
 "立銀行帳戶等。"
+=======
+msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
+>>>>>>> new/18
 msgstr ""
 "ကျောင်းသားနေထိုင်ခွင့်လက်မှတ်ဖြင့် ဝင်ရောက်ပြီးနောက်၊ သင်သည် 15 ရက်အတွင်း Alien Residence "
 "Certificate (ARC) ကို လျှောက်ထားရမည်ဖြစ်ပြီး၊ ထို့နောက် ကျန်းမာရေးအာမခံအတွက် အကျုံးဝင်စေရန် "
@@ -1034,10 +1120,18 @@ msgstr ""
 "ထိုင်ဝမ်တွင်အိမ်ထောင်စုမှတ်ပုံတင်မရှိသူ။"
 
 #: .\guides\templates\guides\admissions_guide.html:310
+<<<<<<< HEAD
+=======
+#| msgid "港澳居民居留證"
+>>>>>>> new/18
 msgid "港澳居民身份"
 msgstr "ဟောင်ကောင်/မကာအို နေထိုင်သူ အသိအမှတ်ပြုမှု"
 
 #: .\guides\templates\guides\admissions_guide.html:312
+<<<<<<< HEAD
+=======
+#| msgid "HKDSE / 澳門高中畢業"
+>>>>>>> new/18
 msgid "HKDSE / 澳門高中"
 msgstr "HKDSE/ Macau အထက်တန်းကျောင်းမှ ဘွဲ့ရ"
 
@@ -1061,15 +1155,24 @@ msgid "統一報名"
 msgstr "ပေါင်းစည်းစာရင်းသွင်းခြင်း"
 
 #: .\guides\templates\guides\admissions_guide.html:329
+<<<<<<< HEAD
 msgid ""
 "海聯會港澳組通常於每年 1～2 月開放網路報名，截止日期約為 2 月底。錄取結果約 5"
 "～6 月公告，9 月初入學報到。"
+=======
+#| msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
+msgid "海聯會港澳組通常於每年 1～2 月開放網路報名，截止日期約為 2 月底。錄取結果約 5～6 月公告，9 月初入學報到。"
+>>>>>>> new/18
 msgstr ""
 "အွန်လိုင်းမှတ်ပုံတင်ခြင်းကို နှစ်စဉ် ဇန်နဝါရီလမှ မတ်လအထိ ဖွင့်လှစ်လေ့ရှိပြီး သတ်မှတ်ရက်မှာ ဒေသတစ်ခုစီတွင် "
 "အနည်းငယ်ကွဲပြားသည်။ ဝင်ခွင့်ရလဒ်များကို မေလမှ ဇွန်လအတွင်း ထုတ်ပြန်ကြေညာမည်ဖြစ်ပြီး ဩဂုတ်လကုန်မှ "
 "စက်တင်ဘာလအစအထိ စာရင်းပေးသွင်းရမည်ဖြစ်သည်။"
 
 #: .\guides\templates\guides\admissions_guide.html:331
+<<<<<<< HEAD
+=======
+#| msgid "1～3 月報名"
+>>>>>>> new/18
 msgid "1～2 月報名"
 msgstr "ဇန်နဝါရီမှ ဖေဖော်ဝါရီအထိ မှတ်ပုံတင်ခြင်း"
 
@@ -1233,7 +1336,247 @@ msgstr "နိုင်ငံအသီးသီးမှ အထက်တန်�
 msgid "海聯會或各地台灣辦事處"
 msgstr "ALATS သို့မဟုတ် အမျိုးမျိုးသော ထိုင်ဝမ်ရုံးများ"
 
+<<<<<<< HEAD
 #: .\guides\templates\guides\admissions_guide.html:508
+=======
+#: .\guides\templates\guides\admissions_guide.html:511
+#: .\templates\base.html:70 .\users\templates\users\dashboard.html:52
+#: .\users\templates\users\home.html:351
+msgid "學長姐分享"
+msgstr "ကျောင်းသားဟောင်းဝေမျှခြင်း"
+
+#: .\guides\templates\guides\admissions_guide.html:512
+#: .\users\templates\users\home.html:228
+msgid "來聽聽"
+msgstr "နားထောင်ကြည့်ပါ"
+
+#: .\guides\templates\guides\admissions_guide.html:512
+#: .\users\templates\users\home.html:228
+msgid "學長姐怎麼說"
+msgstr "အကို/အမများ ဘယ်လိုပြောကြသလဲ"
+
+#: .\guides\templates\guides\admissions_guide.html:514
+msgid "來自世界各地的學長姐，分享他們在台灣最真實的留學體驗與心得"
+msgstr ""
+"ကမ္ဘာအနှံ့မှ အကို/အမများ ၎င်းတို့၏ ထိုင်ဝမ်တွင် ပညာသင်ကြားမှု "
+"အမှန်တကယ်ခံစားချက်များကို မျှဝေထားပါသည်"
+
+#: .\guides\templates\guides\admissions_guide.html:523
+#: .\guides\templates\guides\guide_national_area.html:76 .\users\models.py:129
+#: .\users\templates\users\home.html:238
+#: .\users\templates\users\profile_setup.html:464
+msgid "越南"
+msgstr "ဗီယက်နမ်"
+
+#: .\guides\templates\guides\admissions_guide.html:524
+#: .\guides\templates\guides\admissions_guide.html:614
+#: .\users\templates\users\home.html:363
+#| msgid "國立臺灣大學（NTU）"
+msgid "國立臺灣大學"
+msgstr "အမျိုးသား ထိုင်ဝမ်တက္ကသိုလ် (NTU)"
+
+#: .\guides\templates\guides\admissions_guide.html:525
+#: .\users\templates\users\home.html:240
+msgid "國際企業管理碩士"
+msgstr "နိုင်ငံတကာစီးပွားရေးစီမံခန့်ခွဲမှု မဟာဘွဲ့"
+
+#: .\guides\templates\guides\admissions_guide.html:529
+msgid ""
+"「剛來台灣的時候很緊張，但學校的國際處真的超貼心，從接機到安頓宿舍都有專人協助。ReadyTo "
+"上的流程整理讓我在申請階段就對整個時程很有把握，少走了好多彎路！」"
+msgstr ""
+"\"ထိုင်ဝမ်သို့ ပထမဆုံးရောက်သောအခါ အလွန်နာဆင်ခဲ့သည်၊ သို့သော် ကျောင်း၏ "
+"နိုင်ငံတကာရုံးသည် အလွန်ဂရုစိုက်ခဲ့သည် — လေဆိပ်ကြိုဆိုမှုမှ အိပ်ဆောင်တွင် "
+"နေထိုင်ဖြေရှင်းမှုအထိ လူတစ်ဦးက အမြဲကူညီပေးသည်။ ReadyTo ၏ "
+"ကျဉ်းကျပ်သောလုပ်ငန်းစဉ်လမ်းညွှန်ကြောင့် လျှောက်ထားသောအဆင့်မှ ချိန်ဇယားကို "
+"အပြည့်အဝ ယုံကြည်နိုင်ခဲ့ပြီး လမ်းကြောင်းများစွာကို ရှောင်နိုင်ခဲ့သည်!\""
+
+#: .\guides\templates\guides\admissions_guide.html:539
+#: .\guides\templates\guides\admissions_guide.html:629
+#: .\users\templates\users\home.html:377
+#| msgid "國立成功大學（NCKU）"
+msgid "國立成功大學"
+msgstr "အမျိုးသား Cheng Kung တက္ကသိုလ် (NCKU)"
+
+#: .\guides\templates\guides\admissions_guide.html:540
+#: .\users\templates\users\home.html:255
+msgid "機械工程學士班"
+msgstr "စက်မှုအင်ဂျင်နီယာ ဘွဲ့ကြိုအတန်း"
+
+#: .\guides\templates\guides\admissions_guide.html:544
+#: .\users\templates\users\home.html:259
+msgid ""
+"「台灣的工程教育真的世界一流！教授們都很願意指導外籍生，實驗室設備也很完整。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」"
+msgstr ""
+"\"ထိုင်ဝမ်ရဲ့အင်ဂျင်နီယာပညာရေးက တကယ်ကမ္ဘာ့အဆင့်မီပါတယ်! ပါမောက္ခတွေက "
+"နိုင်ငံခြားကျောင်းသားတွေကို လမ်းညွှန်ဖို့ အလွန်စိတ်အားထက်သန်ကြပြီး၊ "
+"ဓာတ်ခွဲခန်းကိရိယာတွေလည်း ပြည့်စုံပါတယ်။ ReadyTo ရဲ့ဗီဇာလမ်းညွှန်က "
+"ကျွန်တော့်ကို လေ့လာစုံစမ်းချိန် အများကြီးချွေတာပေးခဲ့ပြီး၊ "
+"အဆင့်လိုက်လုပ်ရုံနဲ့ ရောက်သွားပါတယ်။\""
+
+#: .\guides\templates\guides\admissions_guide.html:553
+#: .\guides\templates\guides\guide_national_area.html:56 .\users\models.py:131
+#: .\users\templates\users\home.html:268
+#: .\users\templates\users\profile_setup.html:466
+msgid "菲律賓"
+msgstr "ဖိလစ်ပိုင်"
+
+#: .\guides\templates\guides\admissions_guide.html:554
+#: .\users\templates\users\home.html:391
+#| msgid "國立臺灣師範大學（NTNU）"
+msgid "國立臺灣師範大學"
+msgstr "အမျိုးသား ထိုင်ဝမ်ပုံမှန်တက္ကသိုလ် (NTNU)"
+
+#: .\guides\templates\guides\admissions_guide.html:555
+#: .\users\templates\users\home.html:270
+msgid "華語文教學碩士"
+msgstr "တရုတ်ဘာသာသင်ကြားရေးမဟာဘွဲ့"
+
+#: .\guides\templates\guides\admissions_guide.html:559
+#: .\users\templates\users\home.html:396
+msgid "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
+msgstr ""
+"\"တရုတ်စာလေ့လာဖို့လာခဲ့တာက ကျွန်မလုပ်ခဲ့တဲ့အကောင်းဆုံးဆုံးဖြတ်ချက်ပါ! NTNU "
+"ရဲ့တရုတ်ဘာသာစကားသင်တန်းစင်တာရဲ့သင်ကြားနည်းက အသက်ဝင်ပြီး၊ "
+"နေ့စဉ်လက်တွေ့အသုံးချနိုင်ပါတယ်။ ReadyTo ရဲ့ ခရီးမထွက်ခင်ပြင်ဆင်စရာစာရင်းက "
+"ကျွန်မကို ထွက်ခွာခင်လုံးဝမတုန်လှုပ်စေခဲ့ပါဘူး။\""
+
+#: .\guides\templates\guides\admissions_guide.html:568
+#: .\guides\templates\guides\guide_national_area.html:71 .\users\models.py:130
+#: .\users\templates\users\home.html:282
+#: .\users\templates\users\profile_setup.html:465
+msgid "泰國"
+msgstr "ထိုင်း"
+
+#: .\guides\templates\guides\admissions_guide.html:569
+#: .\guides\templates\guides\admissions_guide.html:644
+#: .\users\templates\users\home.html:405
+#| msgid "國立清華大學（NTHU）"
+msgid "國立清華大學"
+msgstr "National Tsing Hua University (NTHU)"
+
+#: .\guides\templates\guides\admissions_guide.html:570
+#: .\users\templates\users\home.html:284
+msgid "資訊工程博士班"
+msgstr "ကွန်ပျူတာအင်ဂျင်နီယာပါရဂူသင်တန်း"
+
+#: .\guides\templates\guides\admissions_guide.html:574
+#: .\users\templates\users\home.html:410
+msgid "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
+msgstr ""
+"\"NTHU ရဲ့ကွန်ပျူတာအင်ဂျင်နီယာဌာနမှာ "
+"စက်မှုပူးပေါင်းဆောင်ရွက်မှုအခွင့်အလမ်းတွေအများကြီးရှိပြီး၊ "
+"ကျောင်းတက်နေစဉ်ကတည်းက Hsinchu သိပ္ပံပန်းခြံမှာ အလုပ်သင်လုပ်ခွင့်ရခဲ့ပါတယ်။ "
+"ReadyTo ရဲ့နေရာထိုင်ခင်းအချက်အလက်နဲ့ "
+"ကျန်းမာရေးအာမခံလုပ်ငန်းစဉ်ရှင်းလင်းချက်တွေက အများကြီးအထောက်အကူပြုပြီး၊ "
+"သုတေသနအလုပ်ကို အာရုံစိုက်နိုင်ခဲ့ပါတယ်။\""
+
+#: .\guides\templates\guides\admissions_guide.html:584
+#: .\users\templates\users\home.html:419
+#| msgid "國立政治大學（NCCU）"
+msgid "國立政治大學"
+msgstr "National Chengchi University (NCCU)"
+
+#: .\guides\templates\guides\admissions_guide.html:585
+#: .\users\templates\users\home.html:298
+msgid "國際傳播學士班"
+msgstr "နိုင်ငံတကာဆက်သွယ်ရေးဘွဲ့ကြိုသင်တန်း"
+
+#: .\guides\templates\guides\admissions_guide.html:589
+#: .\users\templates\users\home.html:424
+msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」"
+msgstr ""
+"\"တရုတ်လူမျိုးအမွေအနှစ်ရှိသောကြောင့် ဘာလို့ထိုင်ဝမ်ကိုရွေးချယ်လာသေးလဲလို့ "
+"လူအများကမေးကြပါတယ်။ တကယ်တော့ ထိုင်ဝမ်ရဲ့မီဒီယာပတ်ဝန်းကျင်နဲ့ "
+"ဖန်တီးမှုလွတ်လပ်မှုက တကယ်ကွာခြားပါတယ်။ NCCU ရဲ့ကျောင်းဝင်းဘဝက "
+"စုံလင်ကြွယ်ဝပြီး ကျွန်မလုပ်ခဲ့တဲ့အကောင်းဆုံးရွေးချယ်မှုပါ!\""
+
+#: .\guides\templates\guides\admissions_guide.html:598
+#: .\guides\templates\guides\guide_national_area.html:81 .\users\models.py:121
+#: .\users\templates\users\home.html:310
+#: .\users\templates\users\profile_setup.html:456
+msgid "日本"
+msgstr "ဂျပန်"
+
+#: .\guides\templates\guides\admissions_guide.html:599
+#: .\users\templates\users\home.html:433
+#| msgid "國立陽明交通大學（NYCU）"
+msgid "國立陽明交通大學"
+msgstr "အမျိုးသား Yang Ming Chiao Tung တက္ကသိုလ် (NYCU)၊"
+
+#: .\guides\templates\guides\admissions_guide.html:600
+#: .\users\templates\users\home.html:312
+msgid "半導體研究碩士"
+msgstr "ဆီမီးကွန်ဒတ်တာ သုတေသန မဟာဘွဲ့"
+
+#: .\guides\templates\guides\admissions_guide.html:604
+msgid ""
+"「台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。陽明交大的研究環境和業界連結都非常完善。ReadyTo 的 ARC "
+"辦理指南讓我順利完成所有手續。」"
+msgstr ""
+"ထိုင်ဝမ်ရဲ့ ဆီမီးကွန်ဒတ်တာလုပ်ငန်းက ကမ္ဘာ့ထိပ်တန်းဖြစ်ပြီး၊ ဒီနေရာမှာ "
+"ဆက်လက်ပညာသင်ကြားဖို့လာတာက အမှန်ကန်ဆုံးရွေးချယ်မှုပါ။ NYCU ရဲ့ "
+"သုတေသနပတ်ဝန်းကျင်နဲ့ စက်မှုလုပ်ငန်းဆက်သွယ်မှုတွေက အလွန်ပြည့်စုံပါတယ်။ "
+"ReadyTo ရဲ့ ARC လုပ်ငန်းစဉ်လမ်းညွှန်က ကျွန်တော့်ကို လုပ်ငန်းစဉ်အားလုံးကို "
+"ချောမွေ့စွာပြီးမြောက်စေခဲ့ပါတယ်။"
+
+#: .\guides\templates\guides\admissions_guide.html:613 .\users\models.py:136
+#| msgid "印尼"
+msgid "印度"
+msgstr "အိန္ဒိယ"
+
+#: .\guides\templates\guides\admissions_guide.html:615
+msgid "電機工程碩士"
+msgstr "လျှပ်စစ်အင်ဂျင်နီယာမဟာဘွဲ့"
+
+#: .\guides\templates\guides\admissions_guide.html:619
+msgid ""
+"「在印度時就聽說台灣的理工科研究環境非常好。台大電機系的資源豐富，指導教授對國際生非常友善。ReadyTo 讓我提前了解所有手續，到台灣後完全不慌亂。」"
+msgstr ""
+"အိန္ဒိယမှာနေတုန်းကတည်းက ထိုင်ဝမ်ရဲ့သိပ္ပံနဲ့နည်းပညာသုတေသနပတ်ဝန်းကျင်က "
+"အရမ်းကောင်းတယ်ဆိုတာ ကြားဖူးပါတယ်။ NTU ရဲ့လျှပ်စစ်အင်ဂျင်နီယာဌာနမှာ "
+"အရင်းအမြစ်တွေ ကြွယ်ဝပြီး၊ ကျွန်တော့်လမ်းညွှန်ဆရာကလည်း "
+"နိုင်ငံတကာကျောင်းသားတွေကို အလွန်ကြင်နာပါတယ်။ ReadyTo ကနေ "
+"လုပ်ငန်းစဉ်အားလုံးကို ကြိုတင်နားလည်စေခဲ့ပြီး၊ ထိုင်ဝမ်ရောက်ပြီးနောက် "
+"လုံးဝမတုန်လှုပ်ခဲ့ပါဘူး။"
+
+#: .\guides\templates\guides\admissions_guide.html:630
+msgid "醫學系學士班"
+msgstr "ဆေးပညာဘွဲ့ကြိုသင်တန်း"
+
+#: .\guides\templates\guides\admissions_guide.html:634
+msgid ""
+"「從緬甸來台灣念醫學系是很大的挑戰，但成大的師長和同學都非常熱情。ReadyTo 的住宿申請和健保辦理步驟讓我少走很多彎路，強力推薦給每位境外生！」"
+msgstr ""
+"\"မြန်မာနိုင်ငံကနေ ထိုင်ဝမ်ကို ဆေးပညာသင်ဖို့လာတာက စိန်ခေါ်မှုကြီးတစ်ခုပါ၊ "
+"ဒါပေမယ့် NCKU ရဲ့ဆရာတွေနဲ့ အတန်းဖော်တွေက အလွန်နွေးထွေးကြပါတယ်။ ReadyTo ရဲ့ "
+"အဆောင်လျှောက်ထားခြင်းနဲ့ ကျန်းမာရေးအာမခံလုပ်ငန်းစဉ်က ကျွန်တော့်ကို "
+"အချိန်ကုန်စေတဲ့လမ်းကြောင်းတွေကို ရှောင်ရှားပေးခဲ့ပါတယ်။ "
+"နိုင်ငံခြားကျောင်းသားတိုင်းကို အလွန်အကြံပြုချင်ပါတယ်!\""
+
+#: .\guides\templates\guides\admissions_guide.html:643 .\users\models.py:154
+#: .\users\templates\users\profile_setup.html:494
+msgid "墨西哥"
+msgstr "မက်ဆီကို"
+
+#: .\guides\templates\guides\admissions_guide.html:645
+msgid "化學工程博士班"
+msgstr "ဓာတုအင်ဂျင်နီယာပါရဂူသင်တန်း"
+
+#: .\guides\templates\guides\admissions_guide.html:649
+msgid ""
+"「很多人沒想到我會從墨西哥來台灣讀博士，但清大的化工研究在全球都很有名。台灣的生活費比歐美低很多，食物又好吃，ReadyTo "
+"幫我快速了解所有行政流程！」"
+msgstr ""
+"ကျွန်တော် မက်ဆီကိုကနေ ထိုင်ဝမ်ကို ပါရဂူဘွဲ့လာလုပ်မယ်ဆိုတာ လူတော်တော်များများ"
+" မမျှော်လင့်ခဲ့ကြပါဘူး၊ ဒါပေမယ့် Tsing Hua တက္ကသိုလ်ရဲ့ "
+"ဓာတုအင်ဂျင်နီယာသုတေသနက ကမ္ဘာတစ်ဝှမ်း နာမည်ကြီးပါတယ်။ ထိုင်ဝမ်ရဲ့ "
+"နေထိုင်စားသောက်စရိတ်က ဥရောပနဲ့ အမေရိကထက် အများကြီးနည်းပြီး၊ အစားအစာလည်း "
+"အရသာရှိပါတယ်။ ReadyTo က အုပ်ချုပ်ရေးဆိုင်ရာလုပ်ငန်းစဉ်အားလုံးကို "
+"လျင်မြန်စွာနားလည်စေခဲ့ပါတယ်!"
+
+#: .\guides\templates\guides\admissions_guide.html:656
+>>>>>>> new/18
 msgid "重要聯絡與資源"
 msgstr "အရေးကြီးသောအဆက်အသွယ်များနှင့် အရင်းအမြစ်များ"
 
@@ -2240,9 +2583,14 @@ msgid "本國警察刑事紀錄證明"
 msgstr "မိခင်နိုင်ငံ ရဲရင်ကျမ်းဘောင် ရာဇဝတ်မှတ်တမ်း သက်သေခံချက်"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:139
+<<<<<<< HEAD
 msgid ""
 "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駐外館處驗證或在台公"
 "證。"
+=======
+#| msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駸外館處驗證或在台公證。"
+msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駐外館處驗證或在台公證。"
+>>>>>>> new/18
 msgstr ""
 "မိခင်နိုင်ငံ ရဲ သို့မဟုတ် တရားရေးဌာနမှ ထုတ်ပေးပြီး ၁ နှစ် သက်တမ်းရှိသည်။ နိုင်ငံခြားဘာသာဖြင့် "
 "ရေးသားထားသော စာရွက်များသည် တိုင်ဝမ် ကိုယ်စားလှယ်ရုံး အတည်ပြုချက် သို့မဟုတ် တိုင်ဝမ်တွင် ထောက်ခံချက် လိုအပ်သည်။"
@@ -2414,6 +2762,11 @@ msgstr ""
 "ဖြစ်သည် (တရားဝင်ဝဘ်ဆိုက်မှ ကောက်နုတ်)"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:374
+<<<<<<< HEAD
+=======
+#| msgid ""
+#| "在大陸、海外地區或港澳製作之文書，應經海基會、駸外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駸外館處驗證，並檢附經駸外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
+>>>>>>> new/18
 msgid ""
 "在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處"
 "（香港、澳門）驗證。依規定繳附之文件為外文者，應經駐外館處驗證，並檢附經駐外"
@@ -3063,6 +3416,10 @@ msgstr ""
 "အွန်လိုင်းဘဏ် လုပ်ဆောင်ချက်များ၊ ကျောင်းသားများ ကြားတွင် ကျယ်ပြန့်စွာ သုံးသည်။"
 
 #: .\guides\templates\guides\guide_bank.html:57
+<<<<<<< HEAD
+=======
+#| msgid "所需文件"
+>>>>>>> new/18
 msgid "所需文件（郵局）"
 msgstr "လိုအပ်သောစာရွက်စာတမ်းများ"
 
@@ -4310,15 +4667,30 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_enrollment.html:122
 #, python-format
+<<<<<<< HEAD
 msgid ""
 "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%%（即以班排名前半段"
 "為上限）"
 msgstr "ဌာနများသည် မိမိတို့၏ စစ်ဆေးရေး သတ်မှတ်ချက်များ (ဥပမာ - အဂ်ကအဆင့်) ကို "
+=======
+#| msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
+msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%%（即以班排名前半段為上限）"
+msgstr ""
+"ဌာနများသည် မိမိတို့၏ စစ်ဆေးရေး သတ်မှတ်ချက်များ (ဥပမာ - အဂ်ကအဆင့်) ကို "
+"သတ်မှတ်နိုင်သော်လည်း အဆင့်တံခါးဝ ၅၀% ထိပ် ကျော်မဖြစ်ရ "
+"(ကျောင်းတန်းတစ်ဝက်ထိပ်)"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_enrollment.html:123
 #, python-format
 msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%%"
+<<<<<<< HEAD
 msgstr "လွှဲပြောင်းဝင်ရောက်မည့် ကန့်သတ်ချက်: ဌာနတစ်ခုစီသည် နှစ်တိုင်းတွင် မူလ "
+=======
+msgstr ""
+"လွှဲပြောင်းဝင်ရောက်မည့် ကန့်သတ်ချက်: ဌာနတစ်ခုစီသည် နှစ်တိုင်းတွင် မူလ "
+"ခွင့်ပြုပညာသင်ကာလ၏ ၂၀% ထက် မပိုဘဲ လက်ခံနိုင်"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_enrollment.html:124
 msgid "升大四前申請者，可轉入性質相近系的同年級，或轉入性質不同系的二三年級"
@@ -5199,8 +5571,17 @@ msgid "資訊中心"
 msgstr "သတင်းအချက်အလက်ဗဟိုဌာန"
 
 #: .\guides\templates\guides\guide_index.html:18
+<<<<<<< HEAD
 #: .\guides\templates\guides\guide_index.html:37
 #: .\users\templates\users\faq.html:18
+=======
+msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
+msgstr ""
+"ARC လုပ်ဆောင်ခြင်း၊ နေထိုင်ရေး၊ သွားလာရေး — လိုအပ်သည့် အချက်အလက်များ "
+"တစ်နေရာတည်းတွင်"
+
+#: .\guides\templates\guides\guide_index.html:29 .\templates\base.html:198
+>>>>>>> new/18
 msgid "入學申請"
 msgstr "ဝင်ခွင့်လျှောက်ထားမှု"
 
@@ -5250,9 +5631,22 @@ msgstr "ဒေသအလိုက် လျှောက်ထားမှုလ�
 msgid "入學申請指南"
 msgstr "ဝင်ခွင့်လမ်းညွှန်"
 
+<<<<<<< HEAD
 #: .\guides\templates\guides\guide_index.html:53
 msgid "申請資格、時程、所需文件與注意事項整理"
 msgstr "အရည်အချင်းများ၊ အချိန်ဇယား၊ လိုအပ်သောစာရွက်စာတမ်းများနှင့် အရေးကြီးသောမှတ်ချက်များ"
+=======
+#: .\guides\templates\guides\guide_index.html:45
+msgid "申請資格、時程、所需文件與注意事項整理"
+msgstr ""
+"အရည်အချင်းများ၊ အချိန်ဇယား၊ လိုအပ်သောစာရွက်စာတမ်းများနှင့် "
+"အရေးကြီးသောမှတ်ချက်များ"
+
+#: .\guides\templates\guides\guide_index.html:53
+#| msgid "證件・住宿・交通"
+msgid "證件・住宿"
+msgstr "စာရွက်စာတမ်း・နေထိုင်ရာ・သယ်ယူပို့ဆောင်ရေး"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_index.html:71
 msgid "外籍生 ARC 辦理"
@@ -5711,10 +6105,18 @@ msgid "K書中心・開館時間"
 msgstr "K မိမိ့ဘာသာလေ့လာစင်တာ · ဖွင့်ချိန်"
 
 #: .\guides\templates\guides\guide_map.html:17
+<<<<<<< HEAD
+=======
+#| msgid "學校・醫院・交通"
+>>>>>>> new/18
 msgid "學校・美食・醫院・交通"
 msgstr "ကျောင်း · ဆေးရုံ · သယ်ယူပို့ဆောင်ရေး"
 
 #: .\guides\templates\guides\guide_map.html:19
+<<<<<<< HEAD
+=======
+#| msgid "中央大學周邊重要地點，點選快速定位及導航"
+>>>>>>> new/18
 msgid "中央大學周邊重要地點，點選按鈕即可在地圖上定位"
 msgstr "NCU အနီးရှိ အရေးကြီးသောနေရာများ - ခလုတ်ကို နှိပ်ပါက မြေပုံပေါ်တွင် တည်နေရာပြပါမည်"
 
@@ -6203,31 +6605,58 @@ msgid "承辦人：徐心荷小姐"
 msgstr "ဆက်သွယ်ရမည့်သူ: Xu Xinhe အမ်"
 
 #: .\guides\templates\guides\guide_mental_health.html:18
+<<<<<<< HEAD
 msgid "諮商中心預約・常見困擾・24 小時求助熱線"
 msgstr ""
 "တိုင်ပင်ဆွေးနွေးရေးစင်တာ ချိန်းဆိုမှု၊ အများအားဖြင့် ကြုံတွေ့ရသော ပြဿနာများနှင့် ၂၄ နာရီ "
 "အကူအညီတောင်းခံရေး ဖုန်းလိုင်း"
+=======
+#| msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
+msgid "諮商中心預約・常見困擾・24 小時求助熱線"
+msgstr ""
+"တိုင်ပင်ဆွေးနွေးရေးချိန်းဆိုမှု၊ စိတ်ဖိစီးမှု၊ ဆက်ဆံရေးပြဿနာနှင့် ၂၄ နာရီ "
+"ဖုန်းဆက်ကြောင်း"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_mental_health.html:22
 msgid ""
 "尋求幫助不代表你軟弱。無論是課業壓力、人際困擾、文化適應，還是只是想找人說說"
 "話，諮商中心都歡迎你。"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_mental_health.html:26
 msgid "諮商輔導中心"
 msgstr "အကြံဉာဏ်ပေးရေးစင်တာ"
 
 #: .\guides\templates\guides\guide_mental_health.html:36
+=======
+"အကူအညီတောင်းခြင်းသည် အားနည်းခြင်းကို မဆိုလိုပါ။ စာသင်ကျောင်းဖိအား၊ "
+"လူမှုဆက်ဆံရေးပြဿနာ၊ ယဉ်ကျေးမှုပြောင်းလဲခြင်း သို့မဟုတ် တစ်ယောက်ယောက်နှင့် "
+"စကားပြောချင်ရုံမျှဖြစ်စေ — တိုင်ပင်ဆွေးနွေးရေးဌာနမှ သင့်ကို "
+"အမြဲကြိုဆိုပါသည်။"
+
+#: .\guides\templates\guides\guide_mental_health.html:26
+msgid "諮商輔導中心"
+msgstr "တိုင်ပင်ဆွေးနွေးရေးနှင့် လမ်းညွှန်ရေးဌာန"
+
+#: .\guides\templates\guides\guide_mental_health.html:36
+#| msgid "週一至週五 10:00–15:00"
+>>>>>>> new/18
 msgid "週一至週五 09:00–17:00"
 msgstr "တနင်္လာ–သောကြာ ၁၀:၀၀–၁၅:၀၀"
 
 #: .\guides\templates\guides\guide_mental_health.html:43
+<<<<<<< HEAD
+=======
+#| msgid "費用說明"
+>>>>>>> new/18
 msgid "費用"
 msgstr "အခကြေးငွေဖော်ပြချက်"
 
 #: .\guides\templates\guides\guide_mental_health.html:44
 msgid "在學生免費"
+<<<<<<< HEAD
 msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:49
@@ -6257,43 +6686,111 @@ msgstr "လူမှုဝန်ထမ်းဝန်ဆောင်မှု (�
 #: .\guides\templates\guides\guide_mental_health.html:61
 msgid "如何預約"
 msgstr "ဘယ်လိုကြိုတင်စာရင်းပေးရမလဲ"
+=======
+msgstr "မှတ်ပုံတင်ထားသော ကျောင်းသားများအတွက် အခမဲ့"
+
+#: .\guides\templates\guides\guide_mental_health.html:49
+msgid "提供服務"
+msgstr "ပေးဆောင်သောဝန်ဆောင်မှုများ"
+
+#: .\guides\templates\guides\guide_mental_health.html:52
+msgid "個別諮商（50 分鐘 / 次）"
+msgstr "တစ်ဦးချင်းဆွေးနွေးတိုင်ပင်ခြင်း (၅၀ မိနစ် / ကြိမ်)"
+
+#: .\guides\templates\guides\guide_mental_health.html:53
+msgid "團體諮商"
+msgstr "အုပ်စုဆွေးနွေးတိုင်ပင်ခြင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:54
+msgid "心理測驗"
+msgstr "စိတ်ပညာဆိုင်ရာ စမ်းသပ်မှုများ"
+
+#: .\guides\templates\guides\guide_mental_health.html:55
+msgid "心理衛生推廣活動"
+msgstr "စိတ်ကျန်းမာရေးမြှင့်တင်ရေးလှုပ်ရှားမှုများ"
+
+#: .\guides\templates\guides\guide_mental_health.html:56
+msgid "社工師服務（分機 57265）"
+msgstr "လူမှုဝန်ထမ်းဝန်ဆောင်မှု (တိုး 57265)"
+
+#: .\guides\templates\guides\guide_mental_health.html:61
+msgid "如何預約"
+msgstr "ချိန်းဆိုရောက်ရှိနည်း"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_mental_health.html:64
 msgid ""
 "一律線上預約，預約後諮商師會主動與你聯絡，先進行初談，再安排正式諮商時間。"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_mental_health.html:72
 msgid "登入 NCU Portal"
 msgstr "NCU Portal သို့ဝင်ရောက်ပါ"
+=======
+"ချိန်းဆိုမှုများအားလုံးကို အွန်လိုင်းမှ ပြုလုပ်သည်။ ချိန်းဆိုပြီးနောက် "
+"အတိုင်ပင်ဆရာမှ ဆက်သွယ်မည်ဖြစ်ပြီး တရားဝင်ဆွေးနွေးချိန် သတ်မှတ်မီ "
+"ကနဦးစစ်ဆင်းမှုကို စီစဉ်မည်ဖြစ်သည်။"
+
+#: .\guides\templates\guides\guide_mental_health.html:72
+msgid "登入 NCU Portal"
+msgstr "NCU Portal သို့ ဝင်ရောက်ပါ"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_mental_health.html:73
 msgid "Portal → 學生服務 → 學生輔導服務 → 個別諮商，或直接前往："
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_mental_health.html:83
+=======
+"Portal → ကျောင်းသားဝန်ဆောင်မှု → ကျောင်းသားဆွေးနွေးတိုင်ပင်ရေးဝန်ဆောင်မှု → "
+"တစ်ဦးချင်းဆွေးနွေးခြင်း သို့မဟုတ် တိုက်ရိုက်သွားပါ:"
+
+#: .\guides\templates\guides\guide_mental_health.html:83
+#| msgid "建議線上預約"
+>>>>>>> new/18
 msgid "填寫線上預約表單"
 msgstr "အွန်လိုင်း ချိန်းဆိုမှုပုံစံကို ဖြည့်စွက်ရန်"
 
 #: .\guides\templates\guides\guide_mental_health.html:84
 msgid "簡單描述來訪原因（不需要詳細，幾句話即可）"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_mental_health.html:90
 msgid "等待諮商師聯絡（初談）"
 msgstr "အကြံဉာဏ်ပေးသူဆက်သွယ်မှုစောင့်ဆိုင်းနေသည် (ကနဦးဆွေးနွေးမှု)"
+=======
+"လာရောက်ရသောအကြောင်းရင်းကို အကျဉ်းချုပ် ဖော်ပြပါ (အသေးစိတ်မလိုအပ်ပါ၊ "
+"ဝါကျအနည်းငယ်သာ)"
+
+#: .\guides\templates\guides\guide_mental_health.html:90
+msgid "等待諮商師聯絡（初談）"
+msgstr "အတိုင်ပင်ဆရာ ဆက်သွယ်မည်ကို စောင့်ပါ (ကနဦးစစ်ဆင်းမှု)"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_mental_health.html:91
 msgid "初談約 30–50 分鐘，了解你的狀況與需求"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_mental_health.html:97
 msgid "安排正式個別諮商"
 msgstr "တရားဝင်တစ်ဦးချင်းအကြံဉာဏ်ပေးမှုစီစဉ်ရန်"
+=======
+"ကနဦးစစ်ဆင်းမှုမှာ မိနစ် ၃၀–၅၀ ကြာမည်ဖြစ်ပြီး သင်၏အခြေအနေနှင့် "
+"လိုအပ်ချက်များကို နားလည်ရန်ဖြစ်သည်"
+
+#: .\guides\templates\guides\guide_mental_health.html:97
+msgid "安排正式個別諮商"
+msgstr "တရားဝင်တစ်ဦးချင်းဆွေးနွေးချိန် သတ်မှတ်ခြင်း"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_mental_health.html:98
 msgid "每週固定一次，50 分鐘，由同一位諮商師陪你持續談"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_mental_health.html:105
 msgid "常見來訪議題"
@@ -6348,11 +6845,72 @@ msgid "方向迷失、身份認同、生涯規劃"
 msgstr "ဦးတည်ချက်ပျောက်ဆုံးခြင်း၊ ကိုယ်ပိုင်လက္ခဏာ၊ အနာဂတ်အသက်မွေးဝမ်းကြောင်းစီစဉ်ခြင်း"
 
 #: .\guides\templates\guides\guide_mental_health.html:140
+=======
+"တစ်ပတ်လျှင်တစ်ကြိမ်၊ မိနစ် ၅၀၊ တူညီသောအတိုင်ပင်ဆရာနှင့် ဆက်လက်ဆွေးနွေးခြင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:105
+msgid "常見來訪議題"
+msgstr "ဖြစ်တတ်သောဆွေးနွေးတိုင်ပင်မှုအကြောင်းများ"
+
+#: .\guides\templates\guides\guide_mental_health.html:109
+msgid "課業壓力"
+msgstr "ပညာရေးဖိအား"
+
+#: .\guides\templates\guides\guide_mental_health.html:110
+msgid "考試焦慮、拖延、讀不進去"
+msgstr "စာမေးပွဲစိုးရိမ်မှု၊ ရွှဲ့ဆိုင်းနေခြင်း၊ ဖတ်ရှုရာတွင်အခက်ကြုံခြင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:114
+msgid "文化適應"
+msgstr "ယဉ်ကျေးမှုပြောင်းလဲခြင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:115
+msgid "語言障礙、孤獨感、思鄉"
+msgstr "ဘာသာစကားအတားအဆီး၊ တစ်ယောက်တည်းဆန်မှု၊ အိမ်ဆွတ်ခြင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:119
+msgid "人際關係"
+msgstr "လူချင်းဆက်ဆံရေး"
+
+#: .\guides\templates\guides\guide_mental_health.html:120
+msgid "室友摩擦、交友困難、衝突處理"
+msgstr ""
+"အခန်းဖော်နှင့်ပဋိပက္ခ၊ သူငယ်ချင်းရှာရာတွင်အခက်ကြုံခြင်း၊ "
+"ပဋိပက္ခဖြေရှင်းခြင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:124
+msgid "情感困擾"
+msgstr "ခံစားချက်ဆိုင်ရာပြဿနာများ"
+
+#: .\guides\templates\guides\guide_mental_health.html:125
+msgid "感情問題、失戀、家庭關係"
+msgstr "ချစ်ခင်ရေးပြဿနာ၊ ချစ်သူနှင့်ကွဲကွာခြင်း၊ မိသားစုဆက်ဆံရေး"
+
+#: .\guides\templates\guides\guide_mental_health.html:129
+msgid "情緒低落"
+msgstr "စိတ်ဓာတ်ကျနေခြင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:130
+msgid "焦慮、憂鬱、情緒波動"
+msgstr "စိုးရိမ်ပူပန်မှု၊ စိတ်ကျရောဂါ၊ ခံစားချက်ပြောင်းလဲမှု"
+
+#: .\guides\templates\guides\guide_mental_health.html:134
+msgid "自我探索"
+msgstr "မိမိကိုယ်ကို ရှာဖွေလေ့လာခြင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:135
+msgid "方向迷失、身份認同、生涯規劃"
+msgstr "လမ်းဆုံးနေခြင်း၊ ကိုယ်ရည်ကိုယ်သွေး၊ အသက်မွေးဝမ်းကျောင်းစီမံကိန်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:140
+#| msgid "24 小時緊急總線"
+>>>>>>> new/18
 msgid "24 小時求助熱線"
 msgstr "၂၄ နာရီ အကူအညီတောင်းခံရေး ဖုန်းလိုင်း"
 
 #: .\guides\templates\guides\guide_mental_health.html:145
 msgid "24H・心理危機・自殺防治"
+<<<<<<< HEAD
 msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:149
@@ -6402,6 +6960,57 @@ msgstr "Zhongli Landseed Hospital (အင်္ဂလိပ်ဝန်ဆော
 #: .\guides\templates\guides\guide_mental_health.html:186
 msgid "校安緊急聯絡（24 小時）：03-2805666｜分機 57212"
 msgstr "ကျောင်းလုံခြုံရေးအရေးပေါ်ဆက်သွယ်ရန် (၂၄ နာရီ)- 03-2805666｜ဖုန်းခွဲ 57212"
+=======
+msgstr "₂₄H · စိတ်ပညာဆိုင်ရာ အကျပ်အတည်း · မိမိကိုယ်ကို သတ်သေခြင်း ကာကွယ်ရေး"
+
+#: .\guides\templates\guides\guide_mental_health.html:149
+msgid "生命線"
+msgstr "အသက်ကယ်ဖုန်းလိုင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:150
+msgid "24H・情緒支持・危機介入"
+msgstr "₂₄H · ခံစားချက်ဆိုင်ရာ ပံ့ပိုးမှု · အကျပ်အတည်းဝင်ရောက်ကူညီမှု"
+
+#: .\guides\templates\guides\guide_mental_health.html:154
+msgid "張老師專線"
+msgstr "ဆရာ Chang ဖုန်းလိုင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:155
+msgid "情緒困擾・心理諮詢"
+msgstr "ခံစားချက်ဒုက္ခ · စိတ်ကျန်းမာရေး တိုင်ပင်ဆွေးနွေးမှု"
+
+#: .\guides\templates\guides\guide_mental_health.html:159
+msgid "家暴 / 性暴力專線"
+msgstr "မိသားစုအကြမ်းဖက်မှု / လိင်ပိုင်းဆိုင်ရာ အကြမ်းဖက်မှုဖုန်းလိုင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:160
+msgid "24H・家庭暴力・親密關係暴力"
+msgstr "₂₄H · မိသားစုအကြမ်းဖက်မှု · ချစ်သူနှင့်ဆက်ဆံရေးတွင်အကြမ်းဖက်မှု"
+
+#: .\guides\templates\guides\guide_mental_health.html:165
+msgid "桃園在地資源"
+msgstr "Taoyuan ဒေသဆိုင်ရာ အရင်းအမြစ်များ"
+
+#: .\guides\templates\guides\guide_mental_health.html:168
+msgid "桃園市社區心理衛生中心"
+msgstr "Taoyuan မြို့ ကျောင်းသားစိတ်ကျန်းမာရေးဌာန"
+
+#: .\guides\templates\guides\guide_mental_health.html:172
+msgid "桃園生命線"
+msgstr "Taoyuan အသက်ကယ်ဖုန်းလိုင်း"
+
+#: .\guides\templates\guides\guide_mental_health.html:176
+msgid "中壢張老師"
+msgstr "Zhongli ဆရာ Chang ဌာနချုပ်"
+
+#: .\guides\templates\guides\guide_mental_health.html:180
+msgid "中壢蘭德醫院（提供英文服務）"
+msgstr "Zhongli Rand ဆေးရုံ (အင်္ဂလိပ်ဘာသာဖြင့် ဝန်ဆောင်မှုပေးသည်)"
+
+#: .\guides\templates\guides\guide_mental_health.html:186
+msgid "校安緊急聯絡（24 小時）：03-2805666｜分機 57212"
+msgstr "ကျောင်းဝင်းအရေးပေါ်ဆက်သွယ်ရန် (₂₄ နာရီ): 03-2805666 | တိုး 57212"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_national_area.html:17
 msgid "各地區申請資訊"
@@ -6922,20 +7531,36 @@ msgid "教育部－主管法規查詢系統"
 msgstr "ပညာရေးဝန်ကြီးဌာန — မူဝါဒ ဒေတာဘေ့စ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:18
+<<<<<<< HEAD
+=======
+#| msgid "僑生獎學金、清寒補助、校內外各項申請指南"
+>>>>>>> new/18
 msgid "僑生獎學金・清寒補助・校內外各項申請指南"
 msgstr "တရုတ်မျိုးနွယ်ကျောင်းသားများ ပညာသင်ဆုများ၊ ငွေကြေးထောက်ပံ့မှုနှင့် လျှောက်ထားမှုလမ်းညွှန်"
 
 #: .\guides\templates\guides\guide_scholarship.html:22
+<<<<<<< HEAD
+=======
+#| msgid "申請管道"
+>>>>>>> new/18
 msgid "申請管道快覽"
 msgstr "လျှောက်လွှာပိုက်လိုင်း"
 
 #: .\guides\templates\guides\guide_scholarship.html:26
+<<<<<<< HEAD
+=======
+#| msgid "國際事務處（OIA）"
+>>>>>>> new/18
 msgid "NCU 國際事務處（OIA）"
 msgstr "နိုင်ငံတကာရေးရာဌာန (OIA)"
 
 #: .\guides\templates\guides\guide_scholarship.html:27
 msgid "僑生專屬獎學金申請入口，電話：03-425-4945"
+<<<<<<< HEAD
 msgstr ""
+=======
+msgstr "တိုင်းရင်းသားကျောင်းသားများအတွက် ပညာသင်ဆုပေါ်တယ် ဖုန်း: 03-425-4945"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:31
 msgid "僑委會獎學金系統"
@@ -6951,12 +7576,22 @@ msgstr "ကျောင်းတွင်းပညာသင်ဆုများ
 
 #: .\guides\templates\guides\guide_scholarship.html:42
 msgid "清寒補助（僑生）"
+<<<<<<< HEAD
 msgstr ""
+=======
+msgstr "ဘဏ္ဍာရေးအခက်အခဲထောက်ပံ့ကြေး (တိုင်းရင်းသားကျောင်းသားများ)"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:45
 msgid ""
 "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
 msgstr ""
+<<<<<<< HEAD
+=======
+"လျှောက်ထားသည့်ကာလ: နှစ်ဝက်ပါသင်ကြားရေးကာလ စတင်ပြီးနောက် ကြေညာမည်။ ပထမနှစ်ဝက်"
+" ၉/၁–၉/၂၅ ဝန်းကျင်၊ ဒုတိယနှစ်ဝက် ၂/၁–၃/၂ ဝန်းကျင်။ "
+"သတ်မှတ်ရက်ကျော်လွန်သည့်လျှောက်လွှာ လက်မခံ။"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:53
 #: .\guides\templates\guides\guide_scholarship.html:182
@@ -6972,14 +7607,23 @@ msgid "金額"
 msgstr "ပမာဏ"
 
 #: .\guides\templates\guides\guide_scholarship.html:55
+<<<<<<< HEAD
+=======
+#| msgid "期間"
+>>>>>>> new/18
 msgid "期限"
 msgstr "သတ်မှတ်ရက်"
 
 #: .\guides\templates\guides\guide_scholarship.html:56
+<<<<<<< HEAD
+=======
+#| msgid "備註"
+>>>>>>> new/18
 msgid "備注"
 msgstr "မှတ်ချက်"
 
 #: .\guides\templates\guides\guide_scholarship.html:61
+<<<<<<< HEAD
 msgid "教育部清寒僑生助學金"
 msgstr "ပညာရေးဝန်ကြီးဌာန ချို့တဲ့သော ပြည်ပတရုတ်ကျောင်းသားများအတွက် ထောက်ပံ့ကြေး"
 
@@ -7006,10 +7650,42 @@ msgstr "၁ ပညာသင်နှစ်ဝက်"
 #: .\guides\templates\guides\guide_scholarship.html:70
 msgid "需完成 10 小時服務學習（OIA，10–11 月 / 4–5 月）"
 msgstr "ဝန်ဆောင်မှုသင်ယူခြင်း ၁၀ နာရီပြီးစီးရမည် (OIA၊ အောက်တိုဘာ-နိုဝင်ဘာ / ဧပြီ-မေ)"
+=======
+#| msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
+msgid "教育部清寒僑生助學金"
+msgstr ""
+"ပညာရေးဝန်ကြီးဌာန - အဆင်းရဲကြပ်တည်းသော တိုင်းရင်းသားကျောင်းသားများအတွက် "
+"ပညာသင်ဆု ပေးရေး ညွှန်ကြားချက်"
+
+#: .\guides\templates\guides\guide_scholarship.html:63
+msgid "1 學年（9 月至翌年 8 月）"
+msgstr "တစ်ပညာသင်နှစ် (စက်တင်ဘာမှ နောက်နှစ်ဩဂုတ်)"
+
+#: .\guides\templates\guides\guide_scholarship.html:64
+msgid "每學年重新申請，可連續領取"
+msgstr "တစ်ပညာသင်နှစ်တိုင်း ပြန်လျှောက်ရမည်၊ ဆက်တိုက်ရရှိနိုင်သည်"
+
+#: .\guides\templates\guides\guide_scholarship.html:67
+msgid "僑委會清寒僑生助學金"
+msgstr "OCAC ဘဏ္ဍာရေးအခက်အခဲရှိသော တိုင်းရင်းသားကျောင်းသား ထောက်ပံ့ကြေး"
+
+#: .\guides\templates\guides\guide_scholarship.html:68
+msgid "依僑委會公告（每學期）"
+msgstr "OCAC ကြေညာချက်အတိုင်း (တစ်နှစ်ဝက်တိုင်း)"
+
+#: .\guides\templates\guides\guide_scholarship.html:69
+msgid "1 學期"
+msgstr "တစ်နှစ်ဝက်"
+
+#: .\guides\templates\guides\guide_scholarship.html:70
+msgid "需完成 10 小時服務學習（OIA，10–11 月 / 4–5 月）"
+msgstr "ဝန်ဆောင်မှုသင်ယူမှု ၁၀ နာရီ ပြီးစီးရမည် (OIA, ၁၀–၁၁ လ / ၄–၅ လ)"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:77
 msgid "須為依僑生回國就學辦法入學的僑生"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:78
 msgid "前學期成績及格，操行成績 80 分以上"
@@ -7018,27 +7694,63 @@ msgstr "ယခင်နှစ်ဝက်အောင်မြင်၊ အက�
 #: .\guides\templates\guides\guide_scholarship.html:79
 msgid "需持有「i 僑卡」，否則無法撥款"
 msgstr "\"i-Card\" ကိုင်ဆောင်ရမည်၊ မဟုတ်ပါက ငွေထုတ်ပေးနိုင်မည်မဟုတ်ပါ"
+=======
+"တိုင်းရင်းသားကျောင်းသားများ ပြန်လာ‌ပညာသင်ရေးဥပဒေအရ "
+"ဝင်ရောက်သောကျောင်းသားဖြစ်ရမည်"
+
+#: .\guides\templates\guides\guide_scholarship.html:78
+msgid "前學期成績及格，操行成績 80 分以上"
+msgstr "ယခင်နှစ်ဝက်သင်ကြားရေး အောင်မြင်ရမည်၊ စည်းကမ်းကျင့်ဝတ်ရမှတ် ၈၀+"
+
+#: .\guides\templates\guides\guide_scholarship.html:79
+msgid "需持有「i 僑卡」，否則無法撥款"
+msgstr "\"i-Overseas Card\" ရှိရမည်; မပါက ငွေလွှဲ၍မရ"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:80
 msgid "不得同時領取其他政府清寒補助或學費減免（不得重複領取）"
 msgstr ""
+<<<<<<< HEAD
+=======
+"အခြားအစိုးရဘဏ္ဍာရေးထောက်ပံ့ကြေး သို့မဟုတ် နှစ်ဆပေးငွေနှင့် တပြိုင်နက်ရရှိ၍မရ"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:81
 msgid ""
 "所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學"
 "生證 / 護照 / ARC / 郵局存摺影本"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:86
 msgid "僑委會新生入學獎學金"
 msgstr "OCAC ကျောင်းသားအသစ်ဝင်ခွင့်ပညာသင်ဆု"
+=======
+"လိုအပ်သောစာရွက်စာတမ်းများ: လျှောက်လွှာ + ဘဏ္ဍာရေးအခက်အခဲမှတ်တမ်း၊ "
+"ဘဏ္ဍာရေးအခက်အခဲအသိအမှတ်ပြုလက်မှတ်မူရင်း (နိုင်ငံမှ ထုတ်ပေးသည်)၊ "
+"ရမှတ်မှတ်တမ်း၊ ကိုယ်တိုင်ရေးသားသောအတ္ထုပ္ပတ္တိ၊ ကျောင်းသားမှတ်ပုံတင် / "
+"နိုင်ငံကူးလက်မှတ် / ARC / စာတိုက်ဘဏ်စာအုပ်မိတ္တူ"
+
+#: .\guides\templates\guides\guide_scholarship.html:86
+msgid "僑委會新生入學獎學金"
+msgstr "OCAC သစ်လွင်သောကျောင်းသားဝင်ရောက်မှုပညာသင်ဆု"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:89
 msgid ""
 "以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:97
+=======
+"အောက်ပါအရည်အချင်းသည် OCAC လမ်းကြောင်းဖြင့် "
+"ဝင်ရောက်သောကျောင်းသားသစ်များအတွက်ဖြစ်သည်။ ကျောင်းဝင်ခွင့်မတိုင်မီ "
+"နိုင်ငံခြားရုံးမှ အကြံပြုလျှောက်ထားသည်။"
+
+#: .\guides\templates\guides\guide_scholarship.html:97
+#| msgid "等第"
+>>>>>>> new/18
 msgid "等級"
 msgstr "အဆင့်"
 
@@ -7047,6 +7759,7 @@ msgid "年額"
 msgstr "နှစ်စဉ်ပမာဏ"
 
 #: .\guides\templates\guides\guide_scholarship.html:99
+<<<<<<< HEAD
 msgid "申請資格（成績）"
 msgstr "အရည်အချင်း (အမှတ်များအလိုက်)"
 
@@ -7061,30 +7774,64 @@ msgstr "ကာလ"
 #: .\guides\templates\guides\guide_scholarship.html:106
 msgid "頂尖"
 msgstr "အထွဋ်အထိပ်"
+=======
+#| msgid "申請資格（年級）"
+msgid "申請資格（成績）"
+msgstr "လျှောက်ထားရမည့်အရည်အချင်း (ရမှတ်)"
+
+#: .\guides\templates\guides\guide_scholarship.html:100
+msgid "續領條件"
+msgstr "သက်တမ်းတိုးရမည့်အခြေအနေ"
+
+#: .\guides\templates\guides\guide_scholarship.html:101
+msgid "年限"
+msgstr "နှစ်ကန့်သတ်"
+
+#: .\guides\templates\guides\guide_scholarship.html:106
+msgid "頂尖"
+msgstr "ထိပ်ဆုံး"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:108
 #, python-format
 msgid "88 分以上或班排前 5%%"
+<<<<<<< HEAD
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
 msgstr "၈၅ မှတ်နှင့်အထက် သို့မဟုတ် A အဆင့်"
+=======
+msgstr "၈၈+ သို့မဟုတ် အတန်းထဲတွင် ထိပ်ဆုံး ၅%"
+
+#: .\guides\templates\guides\guide_scholarship.html:109
+msgid "85 分以上或 A 等"
+msgstr "၈၅+ သို့မဟုတ် A အဆင့်"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:110
 #: .\guides\templates\guides\guide_scholarship.html:117
 #: .\guides\templates\guides\guide_scholarship.html:151
 #: .\guides\templates\guides\guide_scholarship.html:163
+<<<<<<< HEAD
+=======
+#| msgid "1 年"
+>>>>>>> new/18
 msgid "4 年"
 msgstr "၄ နှစ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:113
 msgid "傑出"
+<<<<<<< HEAD
 msgstr ""
+=======
+msgstr "ထူးချွန်"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:115
 #, python-format
 msgid "85 分以上或班排前 10%%"
+<<<<<<< HEAD
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:116
@@ -7100,6 +7847,24 @@ msgid "不得同時領取其他政府獎學金"
 msgstr "အခြားအစိုးရပညာသင်ဆုများနှင့်တစ်ပြိုင်နက်မရယူနိုင်ပါ"
 
 #: .\guides\templates\guides\guide_scholarship.html:129
+=======
+msgstr "၈၅+ သို့မဟုတ် အတန်းထဲတွင် ထိပ်ဆုံး ၁၀%"
+
+#: .\guides\templates\guides\guide_scholarship.html:116
+msgid "80 分以上或 A- 等"
+msgstr "၈၀+ သို့မဟုတ် A- အဆင့်"
+
+#: .\guides\templates\guides\guide_scholarship.html:123
+msgid "操行成績 80 分以上，每學期最少 9 學分"
+msgstr "စည်းကမ်းကျင့်ဝတ်ရမှတ် ၈၀+၊ တစ်နှစ်ဝက်လျှင် အနည်းဆုံး ၉ ခရက်ဒစ်"
+
+#: .\guides\templates\guides\guide_scholarship.html:124
+msgid "不得同時領取其他政府獎學金"
+msgstr "အခြားအစိုးရပညာသင်ဆုနှင့် တပြိုင်နက်ရရှိ၍မရ"
+
+#: .\guides\templates\guides\guide_scholarship.html:129
+#| msgid "教育部臺灣獎學金"
+>>>>>>> new/18
 msgid "教育部台灣獎學金（外籍生）"
 msgstr "ပညာရေးဝန်ကြီးဌာန ထိုင်ဝမ်ပညာသင်ဆု (နိုင်ငံခြားကျောင်းသားများ)"
 
@@ -7108,24 +7873,46 @@ msgid ""
 "台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居"
 "身分的僑生，香港澳門生亦不適用。"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:140
+=======
+"ထိုင်ဝမ်ပညာသင်ဆုသည် \"နိုင်ငံခြားသား\" ကျောင်းသားများ "
+"(ဗီဇာကင်းလွတ်ခွင့်ရသူများအပါအဝင်) အတွက်သာဖြစ်သည်။ ROC နိုင်ငံသား သို့မဟုတ် "
+"တိုင်းရင်းသားအဆင့်ရှိသောကျောင်းသားများနှင့် "
+"ဟောင်ကောင်/မကာအိုကျောင်းသားများသည် မသက်ဆိုင်ပါ။"
+
+#: .\guides\templates\guides\guide_scholarship.html:140
+#| msgid "計學分"
+>>>>>>> new/18
 msgid "學制"
 msgstr "ပညာရေးစနစ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:141
 msgid "每月生活費"
+<<<<<<< HEAD
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:142
 msgid "學費補助"
 msgstr "စာသင်ကြေးထောက်ပံ့ငွေ"
+=======
+msgstr "လစဉ်နေထိုင်ရေးစရိတ်"
+
+#: .\guides\templates\guides\guide_scholarship.html:142
+msgid "學費補助"
+msgstr "ကျောင်းလခအထောက်အကူ"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:143
 msgid "最長年限"
 msgstr "အများဆုံးကာလ"
 
 #: .\guides\templates\guides\guide_scholarship.html:148
+<<<<<<< HEAD
+=======
+#| msgid "學士班"
+>>>>>>> new/18
 msgid "學士"
 msgstr "တက္ကသိုလ်ဘွဲ့"
 
@@ -7136,20 +7923,33 @@ msgid "每學期最高 NT$40,000"
 msgstr "တစ်နှစ်ဝက်လျှင် အများဆုံး NT$40,000"
 
 #: .\guides\templates\guides\guide_scholarship.html:154
+<<<<<<< HEAD
+=======
+#| msgid "碩士畢業"
+>>>>>>> new/18
 msgid "碩士"
 msgstr "မဟာဘွဲ့"
 
 #: .\guides\templates\guides\guide_scholarship.html:157
+<<<<<<< HEAD
+=======
+#| msgid "1 年"
+>>>>>>> new/18
 msgid "2 年"
 msgstr "၂ နှစ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:160
 msgid "博士"
+<<<<<<< HEAD
 msgstr ""
+=======
+msgstr "ဒေါက်တာဘွဲ့"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:169
 msgid "申請期間：每年 2 月 1 日至 3 月 31 日，向所在國 TECO（台灣辦事處）申請"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:170
 msgid "官方入口：taiwanscholarship.moe.gov.tw"
@@ -7166,14 +7966,44 @@ msgstr "ရည်ရွယ်သူ / အခြေအနေ"
 #: .\guides\templates\guides\guide_scholarship.html:189
 msgid "優秀學生獎學金"
 msgstr "ထူးချွန်ကျောင်းသားပညာသင်ဆု"
+=======
+"လျှောက်ထားသည့်ကာလ: နှစ်တိုင်း ဖေဖော်ဝါရီ ၁ မှ မတ် ၃၁ ထိ၊ သင်၏နိုင်ငံရှိ TECO"
+" (ထိုင်ဝမ်ရုံး) တွင် လျှောက်ပါ"
+
+#: .\guides\templates\guides\guide_scholarship.html:170
+msgid "官方入口：taiwanscholarship.moe.gov.tw"
+msgstr "တရားဝင်ပေါ်တယ်: taiwanscholarship.moe.gov.tw"
+
+#: .\guides\templates\guides\guide_scholarship.html:175
+msgid "校內獎學金"
+msgstr "ကျောင်းတွင်းပညာသင်ဆုများ"
+
+#: .\guides\templates\guides\guide_scholarship.html:184
+msgid "主要對象 / 條件"
+msgstr "အဓိကပစ်မှတ် / အခြေအနေ"
+
+#: .\guides\templates\guides\guide_scholarship.html:189
+msgid "優秀學生獎學金"
+msgstr "ထူးချွန်သောကျောင်းသားပညာသင်ဆု"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:191
 msgid "競賽優異、發明專利、社務貢獻；需推薦信＋自傳，每學期申請"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:194
 msgid "勵學獎學金（清寒）"
 msgstr "လေ့လာမှုအားပေးပညာသင်ဆု (ချို့တဲ့)"
+=======
+"ပြိုင်ပွဲမှ ထူးချွန်မှု၊ တီထွင်မှတ်ပုံတင်၊ ကျောင်းသားလှုပ်ရှားမှုများ; "
+"အကြံပြုစာ + ကိုယ်တိုင်ရေးသားသောအတ္ထုပ္ပတ္တိ လိုအပ်သည်၊ တစ်နှစ်ဝက်တိုင်း "
+"လျှောက်ပါ"
+
+#: .\guides\templates\guides\guide_scholarship.html:194
+msgid "勵學獎學金（清寒）"
+msgstr "ကြိုးစားသည့်ကျောင်းသားပညာသင်ဆု (ဘဏ္ဍာရေးအခက်အခဲ)"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:195
 #: .\guides\templates\guides\guide_scholarship.html:248
@@ -7184,31 +8014,58 @@ msgstr "အများဆုံး"
 #: .\guides\templates\guides\guide_scholarship.html:196
 msgid "清寒優秀生，低收 / 單親家庭優先"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:199
 msgid "學術成績優異榮譽榜"
 msgstr "ပညာရေးထူးချွန်ဂုဏ်ပြုစာရင်း"
+=======
+"ဘဏ္ဍာရေးအခက်အခဲရှိသောထူးချွန်သောကျောင်းသားများ; ဝင်ငွေနည်းသောမိသားစု / "
+"မိဘတစ်ဦးတည်းရှိသောမိသားစုကို ဦးစားပေးမည်"
+
+#: .\guides\templates\guides\guide_scholarship.html:199
+msgid "學術成績優異榮譽榜"
+msgstr "ပညာရေးထူးချွန်မှု ဂုဏ်ထူးစာရင်း"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:201
 #, python-format
 msgid "學期成績系排前 5%%，自動核發"
+<<<<<<< HEAD
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:204
 msgid "傑出領導獎學金"
 msgstr "ထူးချွန်ခေါင်းဆောင်မှုပညာသင်ဆု"
+=======
+msgstr "နှစ်ဝက်သင်ကြားရေးကာလတွင် ဌာနတွင်းထိပ်ဆုံး ၅%၊ အလိုအလျောက်ပေးသည်"
+
+#: .\guides\templates\guides\guide_scholarship.html:204
+msgid "傑出領導獎學金"
+msgstr "ထူးချွန်သောခေါင်းဆောင်မှုပညာသင်ဆု"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:206
 msgid "社團 / 自治會 / 宿委幹部或校外代表績效卓著"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:209
 msgid "羅家倫先生紀念獎學金"
 msgstr "Luo Jialun အောက်မေ့ဖွယ်ပညာသင်ဆု"
+=======
+"ကလပ် / ကျောင်းသားကိုယ်ပိုင်အုပ်ချုပ်ရေး / အဆောင်ကော်မတီ အမှုဆောင် သို့မဟုတ် "
+"ကျောင်းပြင်ပကိုယ်စားလှယ်အဖြစ် ထူးချွန်သောအောင်မြင်မှု"
+
+#: .\guides\templates\guides\guide_scholarship.html:209
+msgid "羅家倫先生紀念獎學金"
+msgstr "Mr. Luo Jialun အမှတ်တရပညာသင်ဆု"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:214
 msgid "李國鼎紀念獎學金"
@@ -7217,18 +8074,44 @@ msgstr "K.T. Li အောက်မေ့ဖွယ်ပညာသင်ဆု"
 #: .\guides\templates\guides\guide_scholarship.html:216
 msgid "大二以上；清寒"
 msgstr "ဒုတိယနှစ်နှင့်အထက်၊ ချို့တဲ့သူ"
+=======
+"ဒုတိယနှစ်ကျောင်းသားနှင့်အထက် သို့မဟုတ် မဟာဘွဲ့ကျောင်းသား; "
+"ဘဏ္ဍာရေးအခက်အခဲရှိသောထူးချွန်မှု"
+
+#: .\guides\templates\guides\guide_scholarship.html:214
+msgid "李國鼎紀念獎學金"
+msgstr "Li Kuo-ting အမှတ်တရပညာသင်ဆု"
+
+#: .\guides\templates\guides\guide_scholarship.html:216
+msgid "大二以上；清寒"
+msgstr "ဒုတိယနှစ်ကျောင်းသားနှင့်အထက်; ဘဏ္ဍာရေးအခက်အခဲ"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:222
 msgid "完整校內獎學金清單及申請時間：NCU Portal → 獎助學金暨工讀管理系統，或查"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:223
 msgid "軍訓室獎學金頁 ↗"
 msgstr "စစ်သင်တန်းရုံးပညာသင်ဆုစာမျက်နှာ ↗"
+=======
+"ကျောင်းတွင်းပညာသင်ဆုစာရင်းနှင့် အချိန်ဇယားအပြည့်: NCU Portal → ပညာသင်ဆုနှင့်"
+" ပညာသင်အလုပ်စီမံခန့်ခွဲရေးစနစ်၊ သို့မဟုတ် စစ်ဆေးပါ"
+
+#: .\guides\templates\guides\guide_scholarship.html:223
+msgid "軍訓室獎學金頁 ↗"
+msgstr "စစ်ရေးလေ့ကျင့်ရေးရုံးပညာသင်ဆုစာမျက်နှာ ↗"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:228
 msgid "安心就學支持計劃（需申請，學務處辦理）"
 msgstr ""
+<<<<<<< HEAD
+=======
+"လုံခြုံစွာပညာသင်ကြားရေးပံ့ပိုးမှုအစီအစဉ် (လျှောက်ထားရမည်၊ "
+"ကျောင်းသားရေးရာရုံး)"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:237
 msgid "條件摘要"
@@ -7236,16 +8119,25 @@ msgstr "အခြေအနေအကျဉ်းချုပ်"
 
 #: .\guides\templates\guides\guide_scholarship.html:242
 msgid "安心學習助學金"
+<<<<<<< HEAD
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
+=======
+msgstr "လုံခြုံစွာသင်ယူမှုထောက်ပံ့ကြေး"
+
+#: .\guides\templates\guides\guide_scholarship.html:243
+#: .\guides\templates\guides\guide_scholarship.html:303
+#| msgid "每學期"
+>>>>>>> new/18
 msgid "學期"
 msgstr "စာသင်ချိန်တိုင်း"
 
 #: .\guides\templates\guides\guide_scholarship.html:244
 msgid "低 / 中低收入或特殊情況；需學習計畫＋3 場活動＋2 次導師面談"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:247
 msgid "競賽拔尖獎勵金"
@@ -7258,10 +8150,27 @@ msgstr "ပြည်တွင်း/ပြည်ပပြိုင်ပွဲ�
 #: .\guides\templates\guides\guide_scholarship.html:252
 msgid "外語檢定認證助學金"
 msgstr "နိုင်ငံခြားဘာသာစကားအသိအမှတ်ပြုလက်မှတ်ထောက်ပံ့ကြေး"
+=======
+"ဝင်ငွေနည်း / အလယ်အလတ်နည်းသော သို့မဟုတ် အထူးအခြေအနေ; သင်ကြားရေးအစီအစဉ် + "
+"လှုပ်ရှားမှု ၃ ခု + ဆရာ ၂ ကြိမ်တွေ့ဆုံမှု လိုအပ်"
+
+#: .\guides\templates\guides\guide_scholarship.html:247
+msgid "競賽拔尖獎勵金"
+msgstr "ပြိုင်ပွဲထူးချွန်ဆု"
+
+#: .\guides\templates\guides\guide_scholarship.html:249
+msgid "國內外競賽獲獎"
+msgstr "ပြည်တွင်းပြည်ပပြိုင်ပွဲများတွင် ဆုရရှိမှု"
+
+#: .\guides\templates\guides\guide_scholarship.html:252
+msgid "外語檢定認證助學金"
+msgstr "နိုင်ငံခြားဘာသာစကားသက်သေခံလက်မှတ်ထောက်ပံ့ကြေး"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:254
 msgid "英語最高 NT$10,000；日文 / 法文 / 德文最高 NT$6,000，每學年 1 次"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:257
 msgid "實習獎勵金"
@@ -7282,10 +8191,35 @@ msgstr "အခါ၊ အများဆုံး"
 #: .\guides\templates\guides\guide_scholarship.html:264
 msgid "宿舍活動參與"
 msgstr "အဆောင်လှုပ်ရှားမှုပါဝင်ခြင်း"
+=======
+"အင်္ဂလိပ်ဘာသာ အများဆုံး NT$10,000; ဂျပန်/ပြင်သစ်/ဂျာမန် အများဆုံး NT$6,000, "
+"တစ်ပညာသင်နှစ်လျှင် တစ်ကြိမ်"
+
+#: .\guides\templates\guides\guide_scholarship.html:257
+msgid "實習獎勵金"
+msgstr "အလုပ်သင်ဆု"
+
+#: .\guides\templates\guides\guide_scholarship.html:259
+msgid "140 小時以上實習，成績 85 分以上"
+msgstr "အလုပ်သင် ၁၄၀+ နာရီ၊ ရမှတ် ၈၅+"
+
+#: .\guides\templates\guides\guide_scholarship.html:262
+msgid "宿舍學習助學金"
+msgstr "အဆောင်သင်ကြားရေးထောက်ပံ့ကြေး"
+
+#: .\guides\templates\guides\guide_scholarship.html:263
+msgid "時，最高"
+msgstr "နာရီ၊ အများဆုံး"
+
+#: .\guides\templates\guides\guide_scholarship.html:264
+msgid "宿舍活動參與"
+msgstr "အဆောင်လှုပ်ရှားမှုများတွင် ပါဝင်မှု"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:270
 msgid "申請入口：NCU ALC 安心就學頁面（ncu.edu.tw/ALC/）"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:275
 msgid "校外獎學金（精選）"
@@ -7304,6 +8238,28 @@ msgid "行天宮獎學金"
 msgstr "Xingtian Temple ပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:291
+=======
+"လျှောက်ထားသည့်ပေါ်တယ်: NCU ALC Secure Study စာမျက်နှာ (ncu.edu.tw/ALC/)"
+
+#: .\guides\templates\guides\guide_scholarship.html:275
+msgid "校外獎學金（精選）"
+msgstr "ကျောင်းပြင်ပပညာသင်ဆုများ (ရွေးချယ်ထားသော)"
+
+#: .\guides\templates\guides\guide_scholarship.html:284
+msgid "申請期間（約）"
+msgstr "လျှောက်ထားသည့်ကာလ (ခန့်မှန်း)"
+
+#: .\guides\templates\guides\guide_scholarship.html:285
+msgid "主要條件"
+msgstr "အဓိကအခြေအနေ"
+
+#: .\guides\templates\guides\guide_scholarship.html:290
+msgid "行天宮獎學金"
+msgstr "Xingtian ဘုရားကျောင်းပညာသင်ဆု"
+
+#: .\guides\templates\guides\guide_scholarship.html:291
+#| msgid "1 年"
+>>>>>>> new/18
 msgid "年"
 msgstr "၁ နှစ်"
 
@@ -7314,17 +8270,30 @@ msgstr "ပထမနှစ်ဝက် ၉/၃၀၊ ဒုတိယနှစ်
 #: .\guides\templates\guides\guide_scholarship.html:293
 msgid "大二以上；成績 80+；操行 A；清寒優先"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:296
 msgid "孺鴻教育獎學金"
 msgstr "Ru Hong ပညာရေးပညာသင်ဆု"
 
 #: .\guides\templates\guides\guide_scholarship.html:298
+=======
+"ဒုတိယနှစ်ကျောင်းသားနှင့်အထက်; ရမှတ် ၈၀+; စည်းကမ်းကျင့်ဝတ် A; "
+"ဘဏ္ဍာရေးအခက်အခဲဦးစားပေး"
+
+#: .\guides\templates\guides\guide_scholarship.html:296
+msgid "孺鴻教育獎學金"
+msgstr "Ruhong ပညာရေးပညာသင်ဆု"
+
+#: .\guides\templates\guides\guide_scholarship.html:298
+#| msgid "約每年 3 月"
+>>>>>>> new/18
 msgid "每年 3 月"
 msgstr "ခန့်မှန်းခြေအားဖြင့် နှစ်စဉ် မတ်လ"
 
 #: .\guides\templates\guides\guide_scholarship.html:299
 msgid "成績 80+；GEPT 中級；操行 80+"
+<<<<<<< HEAD
 msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:302
@@ -7334,11 +8303,23 @@ msgstr "Ping An ထူးချွန်ပညာရေးဖောင်ဒေ�
 #: .\guides\templates\guides\guide_scholarship.html:304
 msgid "2/12 – 3/5"
 msgstr "2/12 – 3/5"
+=======
+msgstr "ရမှတ် ၈၀+; GEPT အလယ်အဆင့်; စည်းကမ်းကျင့်ဝတ် ၈၀+"
+
+#: .\guides\templates\guides\guide_scholarship.html:302
+msgid "平安菁英教育基金會"
+msgstr "Ping An ထူးချွန်ပညာရေးကူညီပံ့ပိုးမှုဖောင်ဒေးရှင်း"
+
+#: .\guides\templates\guides\guide_scholarship.html:304
+msgid "2/12 – 3/5"
+msgstr "၂/၁၂ – ၃/၅"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:305
 #, python-format
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%%"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
@@ -7363,58 +8344,138 @@ msgstr "2/10 – 3/17"
 #: .\guides\templates\guides\guide_scholarship.html:317
 msgid "低 / 中低收入或身心障礙；成績 65+"
 msgstr "ဝင်ငွေနည်း/အလယ်အလတ်ဝင်ငွေနည်း သို့မဟုတ် ကိုယ်စိတ်နှစ်ပါးမသန်စွမ်း၊ အမှတ် ၆၅+"
+=======
+"မိသားစုနှစ်စဉ်ဝင်ငွေ ≤ NT$900,000; ရမှတ် ၈၀+ သို့မဟုတ် အတန်းထဲတွင် ထိပ်ဆုံး "
+"၄၀%"
+
+#: .\guides\templates\guides\guide_scholarship.html:308
+msgid "合作金庫研究獎學金"
+msgstr "Taiwan Cooperative Bank သုတေသနပညာသင်ဆု"
+
+#: .\guides\templates\guides\guide_scholarship.html:310
+msgid "1/13 – 5/5"
+msgstr "၁/၁၃ – ၅/၅"
+
+#: .\guides\templates\guides\guide_scholarship.html:311
+msgid "大四或研究生；成績 80+"
+msgstr "စတုတ္ထနှစ် သို့မဟုတ် မဟာဘွဲ့ကျောင်းသား; ရမှတ် ၈၀+"
+
+#: .\guides\templates\guides\guide_scholarship.html:314
+msgid "關渡宮助學金"
+msgstr "Guandu ဘုရားကျောင်းထောက်ပံ့ကြေး"
+
+#: .\guides\templates\guides\guide_scholarship.html:316
+msgid "2/10 – 3/17"
+msgstr "၂/၁၀ – ၃/၁၇"
+
+#: .\guides\templates\guides\guide_scholarship.html:317
+msgid "低 / 中低收入或身心障礙；成績 65+"
+msgstr "ဝင်ငွေနည်း / အလယ်အလတ်နည်း သို့မဟုတ် မသန်မစွမ်း; ရမှတ် ၆၅+"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:323
 msgid ""
 "每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期"
 "查看"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:328
+=======
+"တစ်နှစ်ဝက်တိုင်း ကျောင်းပွင့်ပြီးနောက် ကျောင်းသားရေးရာရုံးမှ NCU Portal တွင်"
+" ကျောင်းပြင်ပပညာသင်ဆုစာရင်းကြေညာမည်။ ပုံမှန်စစ်ဆေးပါ။"
+
+#: .\guides\templates\guides\guide_scholarship.html:328
+#| msgid "重要提醒："
+>>>>>>> new/18
 msgid "重要提醒"
 msgstr "အရေးကြီးသတိပေးချက်"
 
 #: .\guides\templates\guides\guide_scholarship.html:331
 msgid "不得重複領取"
+<<<<<<< HEAD
 msgstr ""
+=======
+msgstr "နှစ်ဆမရရှိရ"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:332
 msgid ""
 "教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再"
 "申請。"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:335
 msgid "僑卡必備"
 msgstr "i-Card လိုအပ်သည်"
+=======
+"ပညာရေးဝန်ကြီးဌာနနှင့် OCAC ဘဏ္ဍာရေးထောက်ပံ့ကြေးကို တပြိုင်နက်ရရှိ၍မရ၊ "
+"အစိုးရကျောင်းလခကင်းလွတ်ခွင့်နှင့်လည်း အတူတကွမရ။ လျှောက်မတင်မီ သေချာစစ်ဆေးပါ။"
+
+#: .\guides\templates\guides\guide_scholarship.html:335
+msgid "僑卡必備"
+msgstr "\"i-Overseas Card\" မဖြစ်မနေလိုအပ်သည်"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:336
 msgid ""
 "申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:339
 msgid "清寒證明須原件"
 msgstr "ချို့တဲ့ကြောင်းသက်သေခံလွှာမူရင်းလိုအပ်သည်"
+=======
+"အစိုးရပညာသင်ဆု သို့မဟုတ် ထောက်ပံ့ကြေးတစ်ခုကို မလျှောက်မီ \"i-Overseas Card\""
+" ကို ဦးစွာလျှောက်ရမည်; မဟုတ်ပါက ငွေလွှဲ၍မရ။ နှစ်ဝက်ပထမကာလတွင် ဆောင်ရွက်ပါ။"
+
+#: .\guides\templates\guides\guide_scholarship.html:339
+msgid "清寒證明須原件"
+msgstr "ဘဏ္ဍာရေးအခက်အခဲသက်သေခံလက်မှတ်မူရင်းဖြစ်ရမည်"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:340
 msgid ""
 "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
 msgstr ""
+<<<<<<< HEAD
 
 #: .\guides\templates\guides\guide_scholarship.html:343
 msgid "留意截止日"
 msgstr "နောက်ဆုံးရက်ကိုသတိပြုပါ"
+=======
+"ထောက်ပံ့ကြေးအတွက် လိုအပ်သော \"ဘဏ္ဍာရေးအခက်အခဲသက်သေခံလက်မှတ်\" ကို "
+"မူလနိုင်ငံမှ ဌာနမှ ထုတ်ပေးပြီး မူရင်းတင်ပြရမည်။ မိတ္တူ သို့မဟုတ် ဓာတ်ပုံ "
+"လက်မခံ။"
+
+#: .\guides\templates\guides\guide_scholarship.html:343
+msgid "留意截止日"
+msgstr "သတ်မှတ်ရက်ကို သတိထားပါ"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:344
 msgid ""
 "多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提"
 "早準備文件。"
 msgstr ""
+<<<<<<< HEAD
+=======
+"ပညာသင်ဆုသတ်မှတ်ရက်အများစုသည် တင်းကြပ်သည်။ OIA သတ်မှတ်ရက်မှာ တစ်နှစ်ဝက်တိုင်း"
+" ၉/၂၅ (ပထမ) / ၃/၂ (ဒုတိယ) ဝန်းကျင်ဖြစ်သည်။ သတ်မှတ်ရက်ကျော်ပြီးမှ လက်မခံ။ "
+"စာရွက်စာတမ်းများကို ကြိုတင်ပြင်ဆင်ပါ။"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_scholarship.html:349
 msgid "NCU 國際事務處：+886-3-425-4945｜僑生獎助學金相關業務洽 OIA 辦理"
 msgstr ""
+<<<<<<< HEAD
+=======
+"NCU နိုင်ငံတကာရေးရာရုံး- "
+"+886-3-425-4945｜ကျားနှင့်ကျားကျောင်းသားပညာသင်ဆုကိစ္စများအတွက် OIA "
+"သို့ဆက်သွယ်ပါ"
+>>>>>>> new/18
 
 #: .\guides\templates\guides\guide_search.html:14
 #: .\users\templates\users\profile_setup.html:194
@@ -8359,6 +9420,10 @@ msgstr ""
 "အချိန်ပိုင်းအလုပ်ထပ်ဆောင်ရန် ခွင့်ပြုလက်မှတ်အသစ် ပြန်လည်လျှောက်ထားရမည်၊ ဟောင်းသောခွင့်ပြုလက်မှတ်ကို ပြန်သုံးမရ။"
 
 #: .\guides\templates\guides\guide_work_permit.html:248
+<<<<<<< HEAD
+=======
+#| msgid "許可期限最長 "
+>>>>>>> new/18
 msgid "許可期限最長 6 個月："
 msgstr "ခွင့်ပြုကာလ အများဆုံး "
 
@@ -8468,7 +9533,12 @@ msgstr "ကျောင်းသားဟောင်းဝေမျှခြင
 msgid "搜尋指南..."
 msgstr "လမ်းညွှန်ရှာမည်..."
 
+<<<<<<< HEAD
 #: .\templates\base.html:157
+=======
+#: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
+#| msgid "沒有未讀通知 🎉"
+>>>>>>> new/18
 msgid "沒有未讀通知"
 msgstr "ဖတ်ရန်ကျန်သော အသိပေးချက်မရှိပါ 🎉"
 
@@ -8708,7 +9778,12 @@ msgstr "တူရကီ"
 msgid "英國"
 msgstr "ယူနိုက်တက်ကင်းဒမ်း"
 
+<<<<<<< HEAD
 #: .\users\models.py:145 .\users\templates\users\profile_setup.html:483
+=======
+#: .\users\models.py:145
+#| msgid "泰國"
+>>>>>>> new/18
 msgid "法國"
 msgstr "ပြင်သစ်"
 
@@ -8728,7 +9803,12 @@ msgstr "စပိန်"
 msgid "美國"
 msgstr "အမေရိကန်"
 
+<<<<<<< HEAD
 #: .\users\models.py:151 .\users\templates\users\profile_setup.html:490
+=======
+#: .\users\models.py:151
+#| msgid "美國／加拿大"
+>>>>>>> new/18
 msgid "加拿大"
 msgstr "အမေရိကန် / ကနေဒါ"
 
@@ -8744,7 +9824,12 @@ msgstr "မက်ဆီကို"
 msgid "阿根廷"
 msgstr "အာဂျင်တီးနား"
 
+<<<<<<< HEAD
 #: .\users\models.py:157 .\users\templates\users\profile_setup.html:498
+=======
+#: .\users\models.py:157
+#| msgid "南亞"
+>>>>>>> new/18
 msgid "南非"
 msgstr "တောင်အာဖရိက"
 
@@ -8756,7 +9841,12 @@ msgstr "အီဂျစ်"
 msgid "奈及利亞"
 msgstr "နိုင်ဂျီးရီးယား"
 
+<<<<<<< HEAD
 #: .\users\models.py:161 .\users\templates\users\profile_setup.html:503
+=======
+#: .\users\models.py:161
+#| msgid "歐洲"
+>>>>>>> new/18
 msgid "澳洲"
 msgstr "သြစတြေးလျ"
 
@@ -8908,6 +9998,7 @@ msgstr "အမျိုးသားလေကြောင်းတက္ကသိ
 msgid "其他（Other）"
 msgstr "တခြား"
 
+<<<<<<< HEAD
 #: .\users\templates\users\_alumni_card.html:13
 msgid "編輯"
 msgstr "အချက်အလက် ပြင်ရန်"
@@ -9001,6 +10092,22 @@ msgstr "ဌာနအားလုံး"
 #: .\users\templates\users\alumni.html:89
 msgid "搜尋分享內容，例如：宿舍、選課、打工…"
 msgstr "မျှဝေထားသောအကြောင်းအရာရှာဖွေရန်၊ ဥပမာ- အဆောင်၊ သင်တန်းရွေးချယ်ခြင်း၊ အချိန်ပိုင်းအလုပ်…"
+=======
+#: .\users\templates\users\dashboard.html:152
+msgid "你好"
+msgstr "မင်္ဂလာပါ၊ "
+
+#: .\users\templates\users\dashboard.html:154
+msgid "境外生"
+msgstr "နိုင်ငံတကာကျောင်းသား/ကျောင်းသူ"
+
+#: .\users\templates\users\dashboard.html:155
+#| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+msgid "歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。"
+msgstr ""
+"StudyGo Taiwan မှ ကြိုဆိုပါသည်။ သင့်အတွက် ကိုယ်ပိုင်ပြင်ဆင်ထားသော "
+"ထိုင်ဝမ်ပညာသင် လုပ်ငန်းစဉ် အသင့်ဖြစ်ပါပြီ။"
+>>>>>>> new/18
 
 #: .\users\templates\users\alumni.html:116
 msgid "找不到符合條件的分享，試著放寬篩選或換個關鍵字。"
@@ -9381,7 +10488,12 @@ msgstr "ဝင်ရောက်ရန် စာမျက်နှာသို�
 msgid "來臺就學小幫手"
 msgstr "ထိုင်ဝမ်ပညာသင်ရေး အကူအညီ"
 
+<<<<<<< HEAD
 #: .\users\templates\users\home.html:15
+=======
+#: .\users\templates\users\home.html:16 .\users\templates\users\home.html:27
+#| msgid "你好"
+>>>>>>> new/18
 msgid "你好！"
 msgstr "မင်္ဂလာပါ၊ "
 
@@ -9396,6 +10508,16 @@ msgstr ""
 "မကာအိုကျောင်းသားများအတွက် အထူးဖန်တီးထားသော ထိုင်ဝမ်ပညာသင်ကြားရေး လုပ်ငန်းစဉ်လမ်းညွှန်ပလက်ဖောင်း။"
 
 #: .\users\templates\users\home.html:18
+<<<<<<< HEAD
+=======
+#| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
+msgid "，您的個人化來臺就學流程已準備好。"
+msgstr ""
+"StudyGo Taiwan မှ ကြိုဆိုပါသည်။ သင့်အတွက် ကိုယ်ပိုင်ပြင်ဆင်ထားသော "
+"ထိုင်ဝမ်ပညာသင် လုပ်ငန်းစဉ် အသင့်ဖြစ်ပါပြီ။"
+
+#: .\users\templates\users\home.html:19 .\users\templates\users\home.html:30
+>>>>>>> new/18
 msgid "跟著我們一步步完成留學準備，掌握所有關鍵資訊。"
 msgstr ""
 "ကျွန်ုပ်တို့နှင့်အတူ တစ်ဆင့်ချင်း ပညာသင်ကြားရေး ပြင်ဆင်မှုကို ပြီးမြောက်စေပြီး အဓိကအချက်အလက်အားလုံးကို "
@@ -9410,7 +10532,17 @@ msgstr "အလုပ်များ"
 msgid "示範資料"
 msgstr "နမူနာအချက်အလက်"
 
+<<<<<<< HEAD
 #: .\users\templates\users\home.html:60 .\users\templates\users\home.html:117
+=======
+#: .\users\templates\users\home.html:115
+#| msgid "申請截止"
+msgid "申請中"
+msgstr "လျှောက်လွှာနောက်ဆုံးရက်"
+
+#: .\users\templates\users\home.html:116 .\users\templates\users\home.html:242
+#| msgid "國立中央大學（NCU）"
+>>>>>>> new/18
 msgid "國立中央大學"
 msgstr "အမျိုးသားဗဟိုတက္ကသိုလ် (NCU)၊"
 
@@ -9459,7 +10591,34 @@ msgstr "၆ လ နေထိုင်ပြီးနောက် အမျို
 msgid "以上為示範內容，登入後可查看您的個人化流程進度。"
 msgstr "အထက်ပါအချက်များသည် နမူနာဖြစ်သည်။ သင်၏ကိုယ်ပိုင်လုပ်ငန်းစဉ်တိုးတက်မှုကိုကြည့်ရှုရန် အကောင့်ဝင်ပါ။"
 
+<<<<<<< HEAD
 #: .\users\templates\users\home.html:107
+=======
+#: .\users\templates\users\home.html:149
+msgid "辦理簽證、預訂機票、安排住宿、準備入境文件"
+msgstr ""
+
+#: .\users\templates\users\home.html:155
+msgid "辦理居留證、健保、銀行開戶、手機門號、學校註冊"
+msgstr ""
+
+#: .\users\templates\users\home.html:161
+msgid "以上為示範進度，"
+msgstr ""
+
+#: .\users\templates\users\home.html:161 .\users\templates\users\home.html:293
+#: .\users\templates\users\login.html:96
+#: .\users\templates\users\login.html:135
+#: .\users\templates\users\login.html:153
+msgid "登入"
+msgstr "ဝင်ရောက်ရန်"
+
+#: .\users\templates\users\home.html:161
+msgid "後可查看您的個人化流程進度"
+msgstr ""
+
+#: .\users\templates\users\home.html:171
+>>>>>>> new/18
 msgid "跟著清單走"
 msgstr "စာရင်းအတိုင်း လိုက်နာပါ"
 
@@ -9479,11 +10638,21 @@ msgstr "လက်ရှိတိုးတက်မှု"
 msgid "已完成 8 / 20 項任務"
 msgstr "၈ / ၂၀ အလုပ် ပြီးမြောက်ပြီး"
 
+<<<<<<< HEAD
 #: .\users\templates\users\home.html:132
 msgid "待辦任務"
 msgstr "မကြာမီ လုပ်ဆောင်ရမည့် တာဝန်များ"
 
 #: .\users\templates\users\home.html:137
+=======
+#: .\users\templates\users\home.html:257
+#| msgid "近期待辦任務"
+msgid "待辦任務"
+msgstr "မကြာမီ လုပ်ဆောင်ရမည့် တာဝန်များ"
+
+#: .\users\templates\users\home.html:262
+#| msgid "即將到期任務"
+>>>>>>> new/18
 msgid "即將到期"
 msgstr "မကြာမီ အလုပ်များ ပြီးမည်။"
 
@@ -9491,7 +10660,12 @@ msgstr "မကြာမီ အလုပ်များ ပြီးမည်။"
 msgid "申請學生簽證"
 msgstr "ကျောင်းသားဗီဇာ လျှောက်ထားရန်"
 
+<<<<<<< HEAD
 #: .\users\templates\users\home.html:157
+=======
+#: .\users\templates\users\home.html:280
+#| msgid "財力證明"
+>>>>>>> new/18
 msgid "準備財力證明文件"
 msgstr "ဘဏ္ဍာရေး အထောက်အထား"
 
@@ -9508,7 +10682,20 @@ msgid "以上為示範資料，登入後可查看您的個人化任務清單。"
 msgstr ""
 "အထက်ပါအချက်များသည် နမူနာဒေတာဖြစ်သည်။ သင်၏ကိုယ်ပိုင်လုပ်ငန်းဆောင်တာစာရင်းကို ကြည့်ရှုရန် အကောင့်ဝင်ပါ။"
 
+<<<<<<< HEAD
 #: .\users\templates\users\home.html:182
+=======
+#: .\users\templates\users\home.html:293
+msgid "以上為示範資料，"
+msgstr ""
+
+#: .\users\templates\users\home.html:293
+#| msgid "我的個人化任務清單"
+msgid "後可查看您的個人化任務清單"
+msgstr "ကျွန်ုပ်၏ ကိုယ်ပိုင်တာဝန်စာရင်း"
+
+#: .\users\templates\users\home.html:307
+>>>>>>> new/18
 msgid "重要資訊"
 msgstr "အရေးကြီးသောအချက်အလက်"
 
@@ -9540,7 +10727,12 @@ msgstr ""
 "အမျိုးသားကျန်းမာရေးအာမခံ ဝင်ရောက်ခွင့်အရည်အချင်း၊ ပရီမီယံတွက်ချက်နည်း၊ ဆေးကုသမှုလုပ်ငန်းစဉ်နှင့် ဒေသအလိုက် "
 "ဆေးရုံအချက်အလက်များ။"
 
+<<<<<<< HEAD
 #: .\users\templates\users\home.html:204 .\users\templates\users\login.html:53
+=======
+#: .\users\templates\users\home.html:329
+#| msgid "台灣銀行開戶"
+>>>>>>> new/18
 msgid "銀行開戶"
 msgstr "တိုင်ဝမ်ဘဏ်အကောင့် ဖွင့်ခြင်း"
 
@@ -9668,7 +10860,77 @@ msgstr "ဆီမီးကွန်ဒတ်တာ သုတေသန မဟာ�
 
 #: .\users\templates\users\home.html:327
 msgid "您想了解的都在這"
+<<<<<<< HEAD
 msgstr "မင်းသိချင်သမျှက ဒီမှာ"
+=======
+msgstr ""
+
+#: .\users\templates\users\home.html:452
+msgid "申請台灣大學需要準備哪些文件？"
+msgstr ""
+
+#: .\users\templates\users\home.html:453
+msgid ""
+"一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
+msgstr ""
+
+#: .\users\templates\users\home.html:456
+msgid "不會中文可以來台灣留學嗎？"
+msgstr ""
+
+#: .\users\templates\users\home.html:457
+msgid ""
+"可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 "
+"以上），或在僑先部完成一年預科中文課程。"
+msgstr ""
+
+#: .\users\templates\users\home.html:460
+msgid "留學台灣的費用大約多少？"
+msgstr ""
+
+#: .\users\templates\users\home.html:461
+msgid ""
+"學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 "
+"NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
+msgstr ""
+
+#: .\users\templates\users\home.html:464
+msgid "學生簽證如何辦理？"
+msgstr ""
+
+#: .\users\templates\users\home.html:465
+msgid ""
+"收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident "
+"Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
+msgstr ""
+
+#: .\users\templates\users\home.html:468
+#| msgid "在台期間可以打工嗎？"
+msgid "可以邊讀書邊打工嗎？"
+msgstr "တိုင်ဝမ်ရောက်နေစဉ် အလုပ်လုပ်ကိုင်နိုင်သလား?"
+
+#: .\users\templates\users\home.html:469
+msgid "可以，但需申請工作許可。持有效居留證（ARC）的外籍學生，入學後可向學校申請工讀許可，每週工時上限為 20 小時。寒暑假期間可申請全時工作。"
+msgstr ""
+
+#: .\users\templates\users\home.html:472
+msgid "全民健保什麼時候可以加入？"
+msgstr ""
+
+#: .\users\templates\users\home.html:473
+msgid "持有效居留證（ARC），在台灣合法居留滿 6 個月後可強制加入全民健保。若有效工作許可可提前加保。加保後門診費用大幅降低。"
+msgstr ""
+
+#: .\users\templates\users\home.html:476
+msgid "申請流程需要多久時間？"
+msgstr ""
+
+#: .\users\templates\users\home.html:477
+msgid ""
+"從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 "
+"個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
+msgstr ""
+>>>>>>> new/18
 
 #: .\users\templates\users\login.html:5
 msgid "登入 / 註冊"
@@ -9722,12 +10984,20 @@ msgid "剩 12 天"
 msgstr "၁၂ ရက် ကျန်သည်"
 
 #: .\users\templates\users\login.html:44
+<<<<<<< HEAD
 msgid ""
 "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正"
 "確資料，不再被零散資訊搞混。"
 msgstr ""
 "ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံ၊ နေထိုင်ရာနှင့် ကျောင်းမှတ်ပုံတင်ခြင်းဆိုင်ရာ အချက်အလက်များကို "
 "တစ်နေရာတည်းတွင် စုစည်းပေး၍ ကျောင်းသား/ကျောင်းသူများသည် မှန်ကန်သောအချက်အလက်များကို ပိုမိုလွယ်ကူစွာ "
+=======
+msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
+msgstr ""
+"ဗီဇာ၊ နေထိုင်ခွင့်ကတ်၊ ကျန်းမာရေးအာမခံ၊ နေထိုင်ရာနှင့် "
+"ကျောင်းမှတ်ပုံတင်ခြင်းဆိုင်ရာ အချက်အလက်များကို တစ်နေရာတည်းတွင် စုစည်းပေး၍ "
+"ကျောင်းသား/ကျောင်းသူများသည် မှန်ကန်သောအချက်အလက်များကို ပိုမိုလွယ်ကူစွာ "
+>>>>>>> new/18
 "ရှာနိုင်ပြီး ပြန့်ကျဲနေသောအချက်အလက်များကြောင့် မရှုပ်ထွေးတော့ပါ။"
 
 #: .\users\templates\users\login.html:48
@@ -9759,11 +11029,18 @@ msgid "雙 AI 夥伴"
 msgstr "AI လုပ်ဖော်ကိုင်ဖက် နှစ်ခု"
 
 #: .\users\templates\users\login.html:66
+<<<<<<< HEAD
 msgid ""
 "「任務小幫手」熟悉你的任務進度與截止日，用 9 種語言回答簽證、居留證等行政問題"
 "並附官方來源；「聊天好朋友」則在你想家、壓力大時陪你聊聊，還能幫你找學校附近"
 "的餐廳與商店。"
 msgstr ""
+=======
+msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
+msgstr ""
+"ပထမဆုံး ဘာလုပ်ရမည်၊ မည်သည့်စာရွက်စာတမ်းများ ပြင်ဆင်ရမည် သို့မဟုတ် မည်သူ့ကို "
+"မေးရမည် မသိသည့်အခါ AI အကူအညီမှတစ်ဆင့် မြန်မြန်ဆန်ဆန် အကူအညီရနိုင်ပါသည်။"
+>>>>>>> new/18
 
 #: .\users\templates\users\login.html:67
 msgid "任務小幫手"
@@ -9846,7 +11123,12 @@ msgstr "အကောင့် မှတ်ပုံတင်ရန်"
 msgid "歡迎回來"
 msgstr "ပြန်လည်ကြိုဆိုပါသည်"
 
+<<<<<<< HEAD
 #: .\users\templates\users\login.html:126
+=======
+#: .\users\templates\users\login.html:103
+#| msgid "請登入您的 StudyGo 帳戶"
+>>>>>>> new/18
 msgid "請登入您的 ReadyTo Taiwan 帳戶"
 msgstr "သင့် ReadyTo Taiwan အကောင့်သို့ ဝင်ရောက်ပါ"
 
@@ -9876,7 +11158,12 @@ msgstr "ယခု အခမဲ့ မှတ်ပုံတင်ရန်"
 msgid "建立帳號"
 msgstr "အကောင့် ဖန်တီးရန်"
 
+<<<<<<< HEAD
 #: .\users\templates\users\login.html:183
+=======
+#: .\users\templates\users\login.html:160
+#| msgid "填寫基本資料，開始使用 StudyGo Taiwan"
+>>>>>>> new/18
 msgid "填寫基本資料，開始使用 ReadyTo Taiwan"
 msgstr "အခြေခံအချက်အလက်များ ဖြည့်စွက်ပြီး StudyGo Taiwan ကို စတင်အသုံးပြုပါ"
 
@@ -9961,7 +11248,12 @@ msgstr "ထွက်နေသည်…"
 msgid "登出成功，"
 msgstr "အောင်မြင်စွာ ထွက်ပြီးပါပြီ၊ "
 
+<<<<<<< HEAD
 #: .\users\templates\users\logout_redirect.html:23
+=======
+#: .\users\templates\users\logout_redirect.html:26
+#| msgid "點此返回登入頁面"
+>>>>>>> new/18
 msgid "點此返回首頁"
 msgstr "ပင်မစာမျက်နှာသို့ ပြန်သွားရန် ဤနေရာကို နှိပ်ပါ"
 
