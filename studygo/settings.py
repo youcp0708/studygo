@@ -139,7 +139,6 @@ LANGUAGES = [
 ]
 
 LOCALE_PATHS = [
-    BASE_DIR / 'locale_home',
     BASE_DIR / 'locale',
 ]
 

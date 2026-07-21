@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-18 23:22+0800\n"
+"POT-Creation-Date: 2026-07-21 15:02+0800\n"
 "PO-Revision-Date: 2026-05-16 00:00+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Vietnamese <vi@li.org>\n"
@@ -112,12 +112,7 @@ msgstr "Quay về cuối trang"
 msgid "新增附件"
 msgstr "Thêm tệp đính kèm"
 
-
 #: .\chatbot\templates\chatbot\chatbot.html:176
-
-#: .\chatbot\templates\chatbot\chatbot.html:163
-#| msgid "上傳檔案"
-
 msgid "上傳檔案或照片"
 msgstr "Tải lên tệp"
 
@@ -253,61 +248,61 @@ msgstr "Đổi tên tính cách:"
 msgid "已收到回饋，謝謝！"
 msgstr "Đã nhận được phản hồi, cảm ơn bạn!"
 
-#: .\chatbot\views.py:29
+#: .\chatbot\views.py:31
 msgid "台灣的便利商店可以繳費、取貨、影印，也能買到很多生活用品。"
 msgstr ""
 "Cửa hàng tiện lợi ở Đài Loan có thể thanh toán hóa đơn, nhận hàng, photocopy"
 " và mua nhiều đồ dùng sinh hoạt."
 
-#: .\chatbot\views.py:30
+#: .\chatbot\views.py:32
 msgid "在台灣搭捷運、公車，常會使用悠遊卡或一卡通。"
 msgstr ""
 "Khi đi tàu điện ngầm và xe buýt ở Đài Loan, bạn thường dùng thẻ EasyCard "
 "(悠遊卡) hoặc iPASS (一卡通)."
 
-#: .\chatbot\views.py:31
+#: .\chatbot\views.py:33
 msgid "台灣很多學校都有國際事務處，可以協助境外生處理入學與生活問題。"
 msgstr ""
 "Nhiều trường ở Đài Loan có Phòng Hợp tác Quốc tế, có thể hỗ trợ du học sinh "
 "giải quyết vấn đề nhập học và sinh hoạt."
 
-#: .\chatbot\views.py:32
+#: .\chatbot\views.py:34
 msgid "在台灣租屋前，建議先確認租金、押金、水電費和租約期限。"
 msgstr ""
 "Trước khi thuê nhà ở Đài Loan, nên xác nhận tiền thuê, tiền đặt cọc, phí "
 "điện nước và thời hạn hợp đồng."
 
-#: .\chatbot\views.py:33
+#: .\chatbot\views.py:35
 msgid "台灣看醫生時，如果已加入健保，通常醫療費用會比自費便宜。"
 msgstr ""
 "Khi khám bệnh ở Đài Loan, nếu đã tham gia bảo hiểm y tế (健保), chi phí thường"
 " rẻ hơn so với tự chi trả."
 
-#: .\chatbot\views.py:34
+#: .\chatbot\views.py:36
 msgid "台灣垃圾車通常會播放音樂提醒居民倒垃圾，不同地區時間不同。"
 msgstr ""
 "Xe rác ở Đài Loan thường phát nhạc để nhắc cư dân đổ rác, thời gian khác "
 "nhau tùy khu vực."
 
-#: .\chatbot\views.py:35
+#: .\chatbot\views.py:37
 msgid "台灣夏天較熱且潮濕，外出可以準備水壺、防曬和雨具。"
 msgstr ""
 "Mùa hè ở Đài Loan khá nóng và ẩm, nên chuẩn bị bình nước, kem chống nắng và "
 "đồ che mưa khi ra ngoài."
 
-#: .\chatbot\views.py:36
+#: .\chatbot\views.py:38
 msgid "如果在台灣變更住址，部分證件或學校資料可能需要一起更新。"
 msgstr ""
 "Nếu thay đổi địa chỉ ở Đài Loan, một số giấy tờ hoặc thông tin trường học có"
 " thể cần cập nhật cùng lúc."
 
-#: .\chatbot\views.py:37
+#: .\chatbot\views.py:39
 msgid "台灣校園常用 Email 或學校系統公告重要資訊，建議定期查看。"
 msgstr ""
 "Các trường ở Đài Loan thường dùng Email hoặc hệ thống trường để thông báo "
 "thông tin quan trọng, nên kiểm tra thường xuyên."
 
-#: .\chatbot\views.py:38
+#: .\chatbot\views.py:40
 msgid "來台後辦理手機門號時，通常需要護照、居留證或其他身分文件。"
 msgstr ""
 "Khi đăng ký sim điện thoại sau khi đến Đài Loan, thường cần hộ chiếu, thẻ cư"
@@ -323,7 +318,8 @@ msgstr "Đang tiến hành"
 
 #: .\flows\models.py:323 .\flows\templates\flows\my_flows.html:68
 #: .\users\templates\users\dashboard.html:21
-#: .\users\templates\users\login.html:32 .\users\templates\users\login.html:33
+#: .\users\templates\users\home.html:29 .\users\templates\users\login.html:32
+#: .\users\templates\users\login.html:33
 msgid "已完成"
 msgstr "Đã hoàn thành"
 
@@ -331,32 +327,15 @@ msgstr "Đã hoàn thành"
 msgid "我的任務"
 msgstr "Nhiệm vụ của tôi"
 
-
 #: .\flows\templates\flows\my_flows.html:30
 #: .\users\templates\users\dashboard.html:20
 #: .\users\templates\users\home.html:28
-
-#: .\flows\templates\flows\my_flows.html:18
-msgid "我的個人化任務清單"
-msgstr "Danh sách nhiệm vụ cá nhân hóa của tôi"
-
-#: .\flows\templates\flows\my_flows.html:21
-msgid "完成這些任務，為你在台灣的學習生活做好準備！"
-msgstr ""
-"Hoàn thành những nhiệm vụ này để chuẩn bị cho cuộc sống học tập tại Đài "
-"Loan!"
-
-#: .\flows\templates\flows\my_flows.html:42
-#: .\users\templates\users\dashboard.html:170
-#: .\users\templates\users\home.html:46 .\users\templates\users\home.html:86
-
 msgid "任務完成率"
 msgstr "Tỷ lệ hoàn thành nhiệm vụ"
 
 #: .\flows\templates\flows\my_flows.html:39
 msgid "小貼士"
 msgstr "Mẹo nhỏ"
-
 
 #: .\flows\templates\flows\my_flows.html:56
 msgid "需要的文件"
@@ -371,23 +350,12 @@ msgid "在地圖上查看"
 msgstr "🗺️ Xem trên bản đồ"
 
 #: .\flows\templates\flows\my_flows.html:59
-
-#: .\flows\templates\flows\my_flows.html:68
-#| msgid "📋 需要的文件"
-#: .\flows\templates\flows\my_flows.html:69
-#| msgid "📍 辦理地點"
-#: .\flows\templates\flows\my_flows.html:70
-#| msgid "🗺️ 在地圖上查看"
-#: .\flows\templates\flows\my_flows.html:71
-#| msgid "🌐 官方網站"
-
 msgid "官方網站"
 msgstr "🌐 Trang web chính thức"
 
 #: .\flows\templates\flows\my_flows.html:60
 msgid "點此前往官方網站"
 msgstr "Nhấp vào đây để đến trang web chính thức"
-
 
 #: .\flows\templates\flows\my_flows.html:61
 msgid "辦理時程"
@@ -399,14 +367,6 @@ msgid "截止日期"
 msgstr "📅 Ngày hết hạn"
 
 #: .\flows\templates\flows\my_flows.html:63
-
-#: .\flows\templates\flows\my_flows.html:73
-#| msgid "📅 辦理時程"
-#: .\flows\templates\flows\my_flows.html:74
-#: .\flows\templates\flows\my_flows.html:76
-#| msgid "📅 截止日期"
-#: .\flows\templates\flows\my_flows.html:75
-
 msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
 msgstr ""
 "Vui lòng trước tiên vào \"Hồ sơ cá nhân\" điền <strong>ngày dự kiến đến Đài "
@@ -426,6 +386,8 @@ msgid "儲存備註"
 msgstr "Lưu ghi chú"
 
 #: .\flows\templates\flows\my_flows.html:69
+#: .\flows\templates\flows\my_flows.html:78
+#: .\users\templates\users\dashboard.html:154
 msgid "未命名任務"
 msgstr "Nhiệm vụ chưa đặt tên"
 
@@ -461,6 +423,50 @@ msgstr "Bắt buộc"
 #: .\guides\templates\guides\guide_nhi.html:127
 msgid "建議"
 msgstr "Đề xuất"
+
+#: .\flows\templates\flows\my_flows.html:79
+#: .\users\templates\users\dashboard.html:155
+msgid "流程階段"
+msgstr "Giai đoạn quy trình"
+
+#: .\flows\templates\flows\my_flows.html:80
+msgid "未翻譯"
+msgstr "Chưa được dịch"
+
+#: .\flows\templates\flows\my_flows.html:81
+msgid "載入失敗，請確認已登入並填寫學生資料。"
+msgstr ""
+"Tải thất bại. Vui lòng đảm bảo bạn đã đăng nhập và điền thông tin sinh viên."
+
+#: .\flows\templates\flows\my_flows.html:82
+msgid "尚未產生任務"
+msgstr "Chưa có nhiệm vụ nào được tạo"
+
+#: .\flows\templates\flows\my_flows.html:83
+msgid "請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。"
+msgstr ""
+"Vui lòng đảm bảo bạn đã thiết lập trạng thái sinh viên trong 'Tài khoản của "
+"tôi' và làm mới trang."
+
+#: .\flows\templates\flows\my_flows.html:84
+msgid "任務已完成"
+msgstr "Nhiệm vụ đã hoàn thành"
+
+#: .\flows\templates\flows\my_flows.html:85
+msgid "已取消完成"
+msgstr "Đã hủy hoàn thành"
+
+#: .\flows\templates\flows\my_flows.html:86
+msgid "狀態更新失敗"
+msgstr "Cập nhật trạng thái thất bại"
+
+#: .\flows\templates\flows\my_flows.html:87
+msgid "狀態更新成功"
+msgstr "Cập nhật trạng thái thành công"
+
+#: .\flows\templates\flows\my_flows.html:88
+msgid "備註已儲存"
+msgstr "Đã lưu ghi chú"
 
 #: .\guides\templates\guides\admissions_guide.html:4
 #: .\guides\templates\guides\admissions_guide.html:19
@@ -897,6 +903,10 @@ msgstr ""
 "Cư trú Nước ngoài (ARC)."
 
 #: .\guides\templates\guides\admissions_guide.html:254
+msgid ""
+"持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）或英文（IELTS / TOEFL）能力證明，依各校系規定。"
+msgstr ""
+
 #: .\guides\templates\guides\admissions_guide.html:256
 msgid "外國國籍"
 msgstr "Quốc tịch nước ngoài"
@@ -952,20 +962,14 @@ msgid "入台後必辦事項"
 msgstr "Việc bắt buộc phải làm sau khi đến Đài Loan"
 
 #: .\guides\templates\guides\admissions_guide.html:286
-
-#, fuzzy
 #| msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
 msgid "持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
-
-msgid "持學生居留簽入台後，須在 15 天內辦理外僑居留證（ARC），之後再辦理健保加保、開立銀行帳戶等。"
-
 msgstr ""
 "Sau khi đến Đài Loan với visa cư trú sinh viên, phải làm Thẻ Cư trú Nước "
 "ngoài (ARC) trong vòng 15 ngày, sau đó đăng ký bảo hiểm y tế, mở tài khoản "
 "ngân hàng, v.v."
 
 #: .\guides\templates\guides\admissions_guide.html:288
-#, fuzzy
 #| msgid "15 天內辦 ARC"
 msgid "30 天內辦 ARC"
 msgstr "Làm ARC trong vòng 15 ngày"
@@ -991,18 +995,10 @@ msgstr ""
 "tại Đài Loan."
 
 #: .\guides\templates\guides\admissions_guide.html:310
-
-
-#| msgid "港澳居民居留證"
-
 msgid "港澳居民身份"
 msgstr "Danh tính Cư dân HK/Macau"
 
 #: .\guides\templates\guides\admissions_guide.html:312
-
-
-#| msgid "HKDSE / 澳門高中畢業"
-
 msgid "HKDSE / 澳門高中"
 msgstr "HKDSE / Tốt nghiệp THPT Macau"
 
@@ -1024,10 +1020,6 @@ msgid "統一報名"
 msgstr "Đăng ký thống nhất"
 
 #: .\guides\templates\guides\admissions_guide.html:329
-
-
-#| msgid "通常每年 1～3 月開放網路報名，各地區截止日期略有不同。錄取結果約 5～6 月公告，8 月底至 9 月初入學報到。"
-
 msgid "海聯會港澳組通常於每年 1～2 月開放網路報名，截止日期約為 2 月底。錄取結果約 5～6 月公告，9 月初入學報到。"
 msgstr ""
 "Thường mở đăng ký trực tuyến từ tháng 1-3 hàng năm, ngày hạn của từng khu "
@@ -1035,10 +1027,6 @@ msgstr ""
 "nhập học báo danh cuối tháng 8 đến đầu tháng 9."
 
 #: .\guides\templates\guides\admissions_guide.html:331
-
-
-#| msgid "1～3 月報名"
-
 msgid "1～2 月報名"
 msgstr "Đăng ký tháng 1–2"
 
@@ -1066,9 +1054,8 @@ msgstr ""
 " khác biệt, vui lòng theo thông báo mới nhất của Hải Liên Hội."
 
 #: .\guides\templates\guides\admissions_guide.html:359
-#: .\guides\templates\guides\admissions_guide.html:583
 #: .\guides\templates\guides\guide_national_area.html:46 .\users\models.py:128
-#: .\users\templates\users\home.html:296
+#: .\users\templates\users\home.html:295
 #: .\users\templates\users\profile_setup.html:463
 msgid "馬來西亞"
 msgstr "Malaysia"
@@ -1118,7 +1105,6 @@ msgid "馬來西亞留台同學會"
 msgstr "Hội Sinh viên Malaysia Du học Đài Loan"
 
 #: .\guides\templates\guides\admissions_guide.html:384
-#: .\guides\templates\guides\admissions_guide.html:628
 #: .\guides\templates\guides\guide_national_area.html:36 .\users\models.py:133
 #: .\users\templates\users\profile_setup.html:468
 msgid "緬甸"
@@ -1144,9 +1130,8 @@ msgid "緬甸華校教師會"
 msgstr "Hội Giáo viên Trường Hoa Myanmar"
 
 #: .\guides\templates\guides\admissions_guide.html:409
-#: .\guides\templates\guides\admissions_guide.html:538
 #: .\guides\templates\guides\guide_national_area.html:51 .\users\models.py:127
-#: .\users\templates\users\home.html:116 .\users\templates\users\home.html:253
+#: .\users\templates\users\home.html:115 .\users\templates\users\home.html:252
 #: .\users\templates\users\profile_setup.html:462
 msgid "印尼"
 msgstr "Indonesia"
@@ -1200,278 +1185,77 @@ msgstr "Tốt nghiệp THPT / Đại học các nước"
 msgid "海聯會或各地台灣辦事處"
 msgstr "Hải Liên Hội hoặc Văn phòng Đài Loan tại các địa phương"
 
-#: .\guides\templates\guides\admissions_guide.html:511
-
-#: .\templates\base.html:76 .\templates\base.html:78
-#: .\users\templates\users\dashboard.html:132
-#: .\users\templates\users\home.html:227
-
-#: .\templates\base.html:70 .\users\templates\users\dashboard.html:52
-#: .\users\templates\users\home.html:351
-
-msgid "學長姐分享"
-msgstr "Chia sẻ cựu sinh viên"
-
-#: .\guides\templates\guides\admissions_guide.html:512
-#: .\users\templates\users\home.html:228
-msgid "來聽聽"
-msgstr "Lắng Nghe Từ"
-
-#: .\guides\templates\guides\admissions_guide.html:512
-#: .\users\templates\users\home.html:228
-msgid "學長姐怎麼說"
-msgstr "Lời Chia Sẻ Từ Các Anh Chị Khóa Trước"
-
-#: .\guides\templates\guides\admissions_guide.html:514
-msgid "來自世界各地的學長姐，分享他們在台灣最真實的留學體驗與心得"
-msgstr ""
-"Các anh chị khóa trước từ khắp nơi trên thế giới chia sẻ trải nghiệm du học "
-"Đài Loan chân thực nhất"
-
-#: .\guides\templates\guides\admissions_guide.html:523
-#: .\guides\templates\guides\guide_national_area.html:76 .\users\models.py:129
-#: .\users\templates\users\home.html:238
-#: .\users\templates\users\profile_setup.html:464
-msgid "越南"
-msgstr "Việt Nam"
-
-#: .\guides\templates\guides\admissions_guide.html:524
-#: .\guides\templates\guides\admissions_guide.html:614
-
-#: .\users\templates\users\home.html:239 .\users\templates\users\login.html:90
-
-#: .\users\templates\users\home.html:363
-#| msgid "例如：國立臺灣大學"
-
-msgid "國立臺灣大學"
-msgstr "Đại học Quốc gia Đài Loan"
-
-#: .\guides\templates\guides\admissions_guide.html:525
-#: .\users\templates\users\home.html:240
-msgid "國際企業管理碩士"
-msgstr "Thạc sĩ Quản trị Kinh doanh Quốc tế"
-
-#: .\guides\templates\guides\admissions_guide.html:529
-#: .\guides\templates\guides\admissions_guide.html:539
-#: .\guides\templates\guides\admissions_guide.html:629
-#: .\users\templates\users\home.html:254
-msgid "國立成功大學"
-msgstr "Đại học Quốc gia Thành Công"
-
-#: .\guides\templates\guides\admissions_guide.html:540
-#: .\users\templates\users\home.html:255
-msgid "機械工程學士班"
-msgstr "Cử nhân Kỹ thuật Cơ khí"
-
-#: .\guides\templates\guides\admissions_guide.html:544
-#: .\users\templates\users\home.html:259
-#: .\guides\templates\guides\admissions_guide.html:553
-#: .\guides\templates\guides\guide_national_area.html:56 .\users\models.py:131
-#: .\users\templates\users\home.html:268
-#: .\users\templates\users\profile_setup.html:466
-msgid "菲律賓"
-msgstr "Philippines"
-
-#: .\guides\templates\guides\admissions_guide.html:554
-
-#: .\users\templates\users\home.html:269
-
-#: .\users\templates\users\home.html:391
-#| msgid "例如：國立臺灣大學"
-
-msgid "國立臺灣師範大學"
-msgstr "Đại học Sư phạm Quốc gia Đài Loan"
-
-#: .\guides\templates\guides\admissions_guide.html:555
-#: .\users\templates\users\home.html:270
-msgid "華語文教學碩士"
-msgstr "Thạc sĩ Giảng dạy tiếng Hoa"
-
-#: .\guides\templates\guides\admissions_guide.html:559
-
-#: .\users\templates\users\home.html:274
-
-#: .\users\templates\users\home.html:396
-
-msgid "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
-msgstr ""
-"\"Đến học tiếng Hoa là quyết định tuyệt vời nhất tôi từng đưa ra! Phương "
-"pháp giảng dạy của Trung tâm Hoa ngữ NTNU rất sinh động, và tôi được áp dụng"
-" thực tế mỗi ngày. Danh sách chuẩn bị trước khi khởi hành của ReadyTo giúp "
-"tôi hoàn toàn không bối rối trước khi lên đường.\""
-
-#: .\guides\templates\guides\admissions_guide.html:568
-#: .\guides\templates\guides\guide_national_area.html:71 .\users\models.py:130
-#: .\users\templates\users\home.html:282
-#: .\users\templates\users\profile_setup.html:465
-msgid "泰國"
-msgstr "Thái Lan"
-
-#: .\guides\templates\guides\admissions_guide.html:569
-#: .\guides\templates\guides\admissions_guide.html:644
-#: .\users\templates\users\home.html:283
-msgid "國立清華大學"
-msgstr "Đại học Quốc lập Thanh Hoa"
-
-#: .\guides\templates\guides\admissions_guide.html:570
-#: .\users\templates\users\home.html:284
-msgid "資訊工程博士班"
-msgstr "Chương trình Tiến sĩ Kỹ thuật Thông tin"
-
-#: .\guides\templates\guides\admissions_guide.html:574
-
-#: .\users\templates\users\home.html:288
-
-#: .\users\templates\users\home.html:410
-
-msgid "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
-msgstr ""
-"\"Khoa Khoa học Máy tính của NTHU có rất nhiều cơ hội hợp tác với doanh "
-"nghiệp — tôi đã có cơ hội thực tập tại Công viên Khoa học Hsinchu ngay khi "
-"còn đi học. Thông tin nhà ở và hướng dẫn bảo hiểm y tế trên ReadyTo giúp ích"
-" rất nhiều, cho tôi tập trung vào nghiên cứu.\""
-
-#: .\guides\templates\guides\admissions_guide.html:584
-#: .\users\templates\users\home.html:297
-msgid "國立政治大學"
-msgstr "Đại học Quốc lập Chính Trị"
-
-#: .\guides\templates\guides\admissions_guide.html:585
-#: .\users\templates\users\home.html:298
-msgid "國際傳播學士班"
-msgstr "Chương trình Cử nhân Truyền thông Quốc tế"
-
-#: .\guides\templates\guides\admissions_guide.html:589
-
-#: .\users\templates\users\home.html:302
-
-#: .\users\templates\users\home.html:424
-
-msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」"
-msgstr ""
-"\"Vì có gốc gác Hoa kiều, nhiều người hỏi tại sao tôi vẫn chọn đến Đài Loan."
-" Nhưng môi trường truyền thông và tự do sáng tạo ở Đài Loan thực sự rất khác"
-" biệt. Cuộc sống ở NCCU đa dạng và phong phú — đó là lựa chọn tốt nhất tôi "
-"từng đưa ra!\""
-
-#: .\guides\templates\guides\admissions_guide.html:598
-#: .\guides\templates\guides\guide_national_area.html:81 .\users\models.py:121
-#: .\users\templates\users\home.html:310
-#: .\users\templates\users\profile_setup.html:456
-msgid "日本"
-msgstr "Nhật Bản"
-
-#: .\guides\templates\guides\admissions_guide.html:599
-#: .\users\templates\users\home.html:311 .\users\templates\users\login.html:94
-msgid "國立陽明交通大學"
-msgstr "Đại học Quốc gia Dương Minh Giao Thông"
-
-#: .\guides\templates\guides\admissions_guide.html:600
-#: .\users\templates\users\home.html:312
-msgid "半導體研究碩士"
-msgstr "Thạc sĩ Nghiên cứu Bán dẫn"
-
-#: .\guides\templates\guides\admissions_guide.html:604
-#: .\guides\templates\guides\admissions_guide.html:613 .\users\models.py:136
-
-#: .\users\templates\users\profile_setup.html:472
-
-#| msgid "印尼"
-
-msgid "印度"
-msgstr "Ấn Độ"
-
-#: .\guides\templates\guides\admissions_guide.html:615
-msgid "電機工程碩士"
-msgstr "Thạc sĩ Kỹ thuật Điện"
-
-#: .\guides\templates\guides\admissions_guide.html:619
-#: .\guides\templates\guides\admissions_guide.html:630
-msgid "醫學系學士班"
-msgstr "Chương trình Cử nhân Y khoa"
-
-#: .\guides\templates\guides\admissions_guide.html:634
-#: .\guides\templates\guides\admissions_guide.html:643 .\users\models.py:154
-#: .\users\templates\users\profile_setup.html:494
-msgid "墨西哥"
-msgstr "Mexico"
-
-#: .\guides\templates\guides\admissions_guide.html:645
-msgid "化學工程博士班"
-msgstr "Chương trình Tiến sĩ Kỹ thuật Hóa học"
-
-#: .\guides\templates\guides\admissions_guide.html:649
-#: .\guides\templates\guides\admissions_guide.html:656
+#: .\guides\templates\guides\admissions_guide.html:508
 msgid "重要聯絡與資源"
 msgstr "Liên hệ và tài nguyên quan trọng"
 
-#: .\guides\templates\guides\admissions_guide.html:661
+#: .\guides\templates\guides\admissions_guide.html:513
 msgid "海外聯合招生委員會（海聯會）"
 msgstr "Ủy ban Tuyển sinh Hải ngoại (Hải Liên Hội)"
 
-#: .\guides\templates\guides\admissions_guide.html:663
+#: .\guides\templates\guides\admissions_guide.html:515
 msgid "僑生申請主要管道，提供報名、志願填寫、成績查詢。"
 msgstr ""
 "Kênh đăng ký chính dành cho Hoa kiều, cung cấp đăng ký, điền nguyện vọng, "
 "tra cứu kết quả."
 
-#: .\guides\templates\guides\admissions_guide.html:671
+#: .\guides\templates\guides\admissions_guide.html:523
 msgid "教育部學生事務及特教司"
 msgstr "Vụ Công tác Sinh viên và Giáo dục Đặc biệt, Bộ Giáo dục"
 
-#: .\guides\templates\guides\admissions_guide.html:673
+#: .\guides\templates\guides\admissions_guide.html:525
 msgid "僑生獎學金、臺灣獎學金主管機關，提供獎助學金申請辦法。"
 msgstr ""
 "Cơ quan chủ quản học bổng Hoa kiều, Học bổng Đài Loan, cung cấp phương thức "
 "xin học bổng."
 
-#: .\guides\templates\guides\admissions_guide.html:681
+#: .\guides\templates\guides\admissions_guide.html:533
 #: .\guides\templates\guides\guide_arc_exchange.html:63
 #: .\guides\templates\guides\guide_arc_exchange.html:333
 #: .\guides\templates\guides\guide_arc_foreign.html:462
 msgid "學校國際事務處（OIA）"
 msgstr "Phòng Hợp tác Quốc tế của Trường (OIA)"
 
-#: .\guides\templates\guides\admissions_guide.html:683
+#: .\guides\templates\guides\admissions_guide.html:535
 msgid "入學後主要聯繫窗口，提供簽證協助、ARC 辦理、生活輔導、獎學金申請。"
 msgstr ""
 "Đầu mối liên hệ chính sau khi nhập học, hỗ trợ visa, làm ARC, tư vấn sinh "
 "hoạt, xin học bổng."
 
-#: .\guides\templates\guides\admissions_guide.html:691
+#: .\guides\templates\guides\admissions_guide.html:543
 msgid "台灣駐外機構（辦理學生簽證）"
 msgstr "Cơ quan đại diện Đài Loan ở nước ngoài (làm visa sinh viên)"
 
-#: .\guides\templates\guides\admissions_guide.html:693
+#: .\guides\templates\guides\admissions_guide.html:545
 msgid "確認錄取後，向所在地台灣駐外辦事處申請學生居留簽證（Resident Visa）。"
 msgstr ""
 "Sau khi xác nhận trúng tuyển, đến văn phòng đại diện Đài Loan tại địa phương"
 " đăng ký visa cư trú sinh viên (Resident Visa)."
 
-#: .\guides\templates\guides\admissions_guide.html:701
+#: .\guides\templates\guides\admissions_guide.html:553
 msgid "外來人士在台生活諮詢專線"
 msgstr "Đường dây tư vấn sinh hoạt tại Đài Loan dành cho người nước ngoài"
 
-#: .\guides\templates\guides\admissions_guide.html:703
+#: .\guides\templates\guides\admissions_guide.html:555
 msgid "提供多語言（英、日、韓、越、泰、印尼等）諮詢服務，解答在台生活及就學問題。"
 msgstr ""
 "Cung cấp dịch vụ tư vấn đa ngôn ngữ (tiếng Anh, Nhật, Hàn, Việt, Thái, "
 "Indonesia, v.v.), giải đáp các vấn đề sinh hoạt và học tập tại Đài Loan."
 
-#: .\guides\templates\guides\admissions_guide.html:704
+#: .\guides\templates\guides\admissions_guide.html:556
 #: .\guides\templates\guides\guide_arc_exchange.html:350
 #: .\guides\templates\guides\guide_arc_foreign.html:479
 #: .\guides\templates\guides\guide_arc_overseas.html:335
 msgid "免費電話：1925"
 msgstr "Điện thoại miễn phí: 1925"
 
-#: .\guides\templates\guides\admissions_guide.html:711
+#: .\guides\templates\guides\admissions_guide.html:563
 #: .\guides\templates\guides\guide_arc_exchange.html:340
 #: .\guides\templates\guides\guide_arc_foreign.html:469
 msgid "全民健康保險署"
 msgstr "Cơ quan Bảo hiểm Y tế Toàn dân"
 
-#: .\guides\templates\guides\admissions_guide.html:713
+#: .\guides\templates\guides\admissions_guide.html:565
 msgid "持 ARC 在台居留超過 4 個月者須加入全民健保，由學校協助辦理加保手續。"
 msgstr ""
 "Người cư trú tại Đài Loan với ARC trên 4 tháng phải tham gia bảo hiểm y tế "
@@ -1622,13 +1406,20 @@ msgstr ""
 msgid "港澳生在台居留說明"
 msgstr "Hướng dẫn cư trú tại Đài Loan cho sinh viên Hồng Kông và Macau"
 
+#: .\guides\templates\guides\guide_arc_exchange.html:17
+msgid "🇭🇰 香港・🇲🇴 澳門 學生專區"
+msgstr "🇭🇰 Khu vực sinh viên Hồng Kông · 🇲🇴 Ma Cao"
+
 #: .\guides\templates\guides\guide_arc_exchange.html:20
+msgid ""
+"香港、澳門學生依據《香港澳門關係條例》來台就學，入台方式及居留申請程序與一般外籍生不同。本頁整理港澳生常見的入台文件、居留證申請流程及注意事項。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_exchange.html:23
 msgid "依港澳關係條例辦理"
 msgstr "Xử lý theo Luật Quan hệ HK-Macau"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:24
-#, fuzzy
 #| msgid "抵台 15 天內辦居留"
 msgid "抵台 30 天內辦居留"
 msgstr "Đăng ký cư trú trong vòng 15 ngày sau khi đến Đài Loan"
@@ -1734,7 +1525,6 @@ msgstr "Thời hạn thực hiện"
 #: .\guides\templates\guides\guide_arc_exchange.html:73
 #: .\guides\templates\guides\guide_arc_foreign.html:38
 #: .\guides\templates\guides\guide_arc_overseas.html:43
-#, fuzzy
 #| msgid "30 天內"
 msgid "30 天"
 msgstr "Trong vòng 30 ngày"
@@ -2016,7 +1806,6 @@ msgstr ""
 "đến."
 
 #: .\guides\templates\guides\guide_arc_exchange.html:218
-#, fuzzy
 #| msgid "抵台後 30 天內"
 msgid "抵台 30 天內"
 msgstr "Trong vòng 30 ngày sau khi đến"
@@ -2067,7 +1856,7 @@ msgstr "Hoàn thành!"
 #: .\guides\templates\guides\guide_housing_ncu.html:223
 #: .\templates\base.html:81 .\templates\base.html:235
 #: .\users\templates\users\dashboard.html:137
-#: .\users\templates\users\faq.html:5 .\users\templates\users\home.html:327
+#: .\users\templates\users\faq.html:5 .\users\templates\users\home.html:326
 msgid "常見問題"
 msgstr "Câu hỏi thường gặp"
 
@@ -2117,6 +1906,11 @@ msgid "在台期間可以打工嗎？"
 msgstr "Có thể làm thêm trong thời gian ở Đài Loan không?"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:269
+msgid ""
+"港澳生持居留證可申請工讀許可（每週不超過 20 "
+"小時）。需向學校取得工讀同意書後，至勞動部辦理工作許可。在校內工讀（如圖書館、系辦助理）通常只需學校同意，手續較簡便。未取得合法工作許可的工作行為依法屬違規，請務必事先申請。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_exchange.html:275
 msgid "居留證到期後怎麼辦？"
 msgstr "Phải làm gì sau khi thẻ cư trú hết hạn?"
@@ -2130,12 +1924,21 @@ msgid "30 天內"
 msgstr "Trong vòng 30 ngày"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:280
+msgid ""
+"即可申請延期。延期所需文件與初次申請類似（在學證明書、居留證正本、照片等），無需再繳健康檢查費。延期規費 NT$500。建議提早辦理以避免逾期。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_exchange.html:286
 msgid "港澳生可以加入全民健保嗎？"
 msgstr ""
 "Sinh viên HK/Macau có thể tham gia NHI (Bảo hiểm Y tế Quốc gia) không?"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:291
+msgid ""
+"可以。取得居留證後，透過學校衛生保健組辦理加保即可。保費依年度費率由學校代扣，學生費率比一般標準低。加保後就醫診所門診費用約 "
+"NT$150，享有與台灣學生相同的健保保障。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_exchange.html:297
 msgid "暑假返港澳超過 2 個月，健保怎麼處理？"
 msgstr "Nếu về HK/Macau hơn 2 tháng trong kỳ nghỉ hè, xử lý NHI như thế nào?"
@@ -2172,6 +1975,11 @@ msgid "學校 OIA 會幫我辦居留證嗎？"
 msgstr "OIA của trường có giúp tôi làm thẻ cư trú không?"
 
 #: .\guides\templates\guides\guide_arc_exchange.html:313
+msgid ""
+"大多數學校會在開學初舉辦團體辦理場次，OIA 統一帶隊至移民署。建議迎新報到後立即前往 OIA "
+"確認是否有統一辦理安排，以便提早準備所需文件，節省自行前往的時間。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_exchange.html:320
 #: .\guides\templates\guides\guide_arc_foreign.html:449
 #: .\guides\templates\guides\guide_arc_overseas.html:297
@@ -2236,7 +2044,6 @@ msgstr ""
 "pháp tại Đài Loan và hoàn tất thủ tục nhập học."
 
 #: .\guides\templates\guides\guide_arc_foreign.html:25
-#, fuzzy
 #| msgid "抵台後 15 天內辦理"
 msgid "抵台後 30 天內辦理"
 msgstr "Nộp đơn trong vòng 15 ngày sau khi đến"
@@ -2388,10 +2195,6 @@ msgid "本國警察刑事紀錄證明"
 msgstr "Giấy Xác Nhận Lý Lịch Tư Pháp từ Nước Sở Tại"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:139
-
-
-#| msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駸外館處驗證或在台公證。"
-
 msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駐外館處驗證或在台公證。"
 msgstr ""
 "Do cơ quan cảnh sát hoặc tư pháp nước sở tại cấp. Có hiệu lực trong 1 năm. "
@@ -2570,16 +2373,35 @@ msgstr ""
 "(trích từ trang web chính thức)"
 
 #: .\guides\templates\guides\guide_arc_foreign.html:374
-
-
-#| msgid ""
-#| "在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駸外館處驗證，並檢附經駸外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
+msgid ""
+"在大陸、海外地區或港澳製作之文書，應經海基會、駐外館處或臺北經濟文化辦事處（香港、澳門）驗證。依規定繳附之文件為外文者，應經駐外館處驗證，並檢附經駐外館驗證或國內公證人認證之中譯本；預防接種證明為外文者，應至該管衛生所轉譯登錄。但依外國人才專法第二十四條準用同法第九條規定申請就業金卡者，免附。"
+msgstr ""
 
 #: .\guides\templates\guides\guide_arc_foreign.html:378
+msgid ""
+"居留一定期間之計算方式：自定居申請日往前推算，在臺連續居留滿一年（一年內得出境三十日，出境次數不予限制）或連續居留滿二年且每年在臺居住二百七十日以上。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_foreign.html:382
+msgid ""
+"經許可居留，在臺灣地區居留一定期間，仍具備原居留條件者（親屬關係因結婚或收養發生者，應存續三年以上。但婚姻關係存續期間已生產子女者，不在此限），得申請在臺灣地區定居。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_foreign.html:386
+msgid ""
+"經中央目的事業主管機關核准來臺就學者畢業後（HF168），依第十六條第一項第八款規定經許可居留連續滿五年，每年在臺灣地區居住一百八十三日以上，且最近一年於臺灣地區平均每月收入達中央勞動主管機關公告基本工資二倍以上者，得申請在臺灣地區定居。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_foreign.html:390
+msgid ""
+"臺灣地區居留證有效期間屆滿前三十日內，原申請居留原因仍繼續存在者，得申請延期，每次不得逾二年；學生申請畢業延期居留者，自畢業當日起算六個月，延期居留期間屆滿前，得再申請延期一次，總延期居留期間最長為一年。（應備文件：1.申請書、2.臺灣地區居留證、3.其他相關證明文件）"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_foreign.html:394
+msgid ""
+"依外國人才專法第二十四條規定經許可居留，原申請居留原因仍繼續存在者，得申請延期居留：1.準用同法第八條規定者：每次最長為五年。2.準用同法第五條至第七條、第九條及第十條規定者：每次最長為三年。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_foreign.html:398
 msgid "曾逾停留期限超過三十日未滿一年者，不予許可期間自其出境之日起算一年；逾期停留一年以上未滿二年者，起算二年；逾期停留二年以上者，起算三年。"
 msgstr ""
@@ -2602,6 +2424,10 @@ msgstr ""
 "qua nhận nuôi, quan hệ đó phải tồn tại ít nhất hai năm."
 
 #: .\guides\templates\guides\guide_arc_foreign.html:410
+msgid ""
+"港澳居民逾期居留未滿三十日，原申請居留原因仍繼續存在者，經依相關規定處罰、繳清罰鍰後，得向本署重新申請居留；港澳居民未於居留期間屆滿前經許可延期居留，且逾期居留三十日以上者，應繳清罰款，並申請出境證出境。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_foreign.html:414
 msgid "港澳居民依外國人才專法第二十四條規定準用同法第九條規定以網路申請平臺申請就業金卡者，相關規定請參考「外國特定專業人才申請就業金卡送件須知」。"
 msgstr ""
@@ -2833,11 +2659,21 @@ msgid "抵台後完成體檢並整理文件"
 msgstr "Hoàn thành kiểm tra sức khỏe và chuẩn bị tài liệu sau khi đến"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:157
+msgid ""
+"確認護照、入學通知函、在學證明等文件齊全。若需完成健康檢查，請至學校認可醫院辦理（國際事務處可提供名單）。非港澳生及持有效居留證的港澳生可參加校內體檢（約"
+" NT$780）。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_overseas.html:165
 msgid "至移民署線上系統註冊並上傳文件"
 msgstr "Đăng ký trên hệ thống trực tuyến NIA và tải lên tài liệu"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:167
+msgid ""
+"前往移民署「外國與外僑學生線上申辦系統」完成帳號註冊，掃描並上傳所需文件：近三個月 2 "
+"吋彩色照片、護照、入學通知函及在學證明書。系統操作請參閱官方操作手冊。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_overseas.html:169
 msgid "抵台後 30 天內"
 msgstr "Trong vòng 30 ngày sau khi đến"
@@ -2966,11 +2802,20 @@ msgstr ""
 "ARC không?"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:247
+msgid ""
+"不需要。持中華民國籍由僑居地（台灣護照）入台的僑生，具有完整公民身份，無需辦理居留證。本頁服務適用於持外國護照入台就讀的僑生（海外永久居民等）。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_overseas.html:253
 msgid "健康檢查可以在抵台後才做嗎？"
 msgstr "Có thể kiểm tra sức khỏe sau khi đến Đài Loan không?"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:258
+msgid ""
+"可以。可於抵台後參加校內體檢（約 NT$780），或至學校指定醫院完成。注意檢查報告出爐需數天，請盡早安排以避免超過 30 "
+"天辦理期限。建議抵台後隔天即至國際事務處詢問體檢安排。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_overseas.html:264
 msgid "居留證辦理期間可以在台灣合法居留嗎？"
 msgstr ""
@@ -3003,6 +2848,11 @@ msgstr ""
 "nghiệp?"
 
 #: .\guides\templates\guides\guide_arc_overseas.html:291
+msgid ""
+"在學期間以「就讀」為居留事由。畢業後如需繼續留台（例如找工作），需在畢業後 30 "
+"天內申請變更居留事由為「工作」或「其他」，或在找到合法工作並取得工作許可後辦理變更為「工作」居留事由。建議畢業前盡早規劃，避免居留證失效。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_arc_overseas.html:302
 msgid "外國與外僑學生線上申辦系統"
 msgstr "Hệ thống nộp đơn trực tuyến cho sinh viên nước ngoài và Hoa kiều"
@@ -3156,10 +3006,6 @@ msgstr ""
 "năng ngân hàng trực tuyến toàn diện, được sinh viên sử dụng rộng rãi."
 
 #: .\guides\templates\guides\guide_bank.html:57
-
-
-#| msgid "所需文件"
-
 msgid "所需文件（郵局）"
 msgstr "Tài liệu cần thiết"
 
@@ -3219,6 +3065,11 @@ msgid "木頭印章哪裡買？"
 msgstr "Mua con dấu tên bằng gỗ ở đâu?"
 
 #: .\guides\templates\guides\guide_bank.html:78
+msgid ""
+"學校附近文具店均可刻製，告知老闆「要刻木頭章」並提供英文全名，費用約 NT$50–100，等候約 20 "
+"分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存摺分開保管。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_bank.html:83
 msgid "統一證號說明"
 msgstr "Giải thích mã số thống nhất"
@@ -3238,6 +3089,10 @@ msgid "尚未取得居留證者（部分港澳生）："
 msgstr "Nếu bạn chưa có ARC (một số sinh viên HK/Macau):"
 
 #: .\guides\templates\guides\guide_bank.html:93
+msgid ""
+"需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_bank.html:98
 msgid "提款卡選擇建議"
 msgstr "Gợi ý chọn thẻ ATM"
@@ -3247,6 +3102,11 @@ msgid "建議選擇有 VISA 功能的 Debit Card（扣帳卡）："
 msgstr "Chúng tôi khuyên nên chọn Debit Card có tính năng VISA:"
 
 #: .\guides\templates\guides\guide_bank.html:102
+msgid ""
+"可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 兩種組合，可按需求選擇。請注意部分台灣商家不接受 "
+"VISA Debit，付款前請確認。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_bank.html:107
 #: .\guides\templates\guides\guide_sim.html:145
 #: .\guides\templates\guides\guide_work_permit.html:241
@@ -3739,325 +3599,330 @@ msgstr ""
 "Ngày dưới đây là ví dụ cho Học kỳ 2, NĂM HỌC 114. Ngày thay đổi mỗi học kỳ. "
 "Vui lòng truy cập"
 
-#: .\guides\templates\guides\guide_course.html:26
+#: .\guides\templates\guides\guide_course.html:27
 msgid "課務組官網 ↗"
 msgstr "Website Phòng Học vụ ↗"
 
-#: .\guides\templates\guides\guide_course.html:27
+#: .\guides\templates\guides\guide_course.html:28
 msgid "查看最新學期日程表。"
 msgstr "để xem lịch học kỳ mới nhất."
 
-#: .\guides\templates\guides\guide_course.html:32
+#: .\guides\templates\guides\guide_course.html:33
 msgid "學期課務日程（114-2 為例）"
 msgstr "Lịch Học Kỳ (Ví dụ HK114-2)"
 
-#: .\guides\templates\guides\guide_course.html:36
-#: .\guides\templates\guides\guide_course.html:90
+#: .\guides\templates\guides\guide_course.html:37
+#: .\guides\templates\guides\guide_course.html:91
 msgid "初選"
 msgstr "Đăng ký ban đầu"
 
-#: .\guides\templates\guides\guide_course.html:41
-#: .\guides\templates\guides\guide_course.html:106
+#: .\guides\templates\guides\guide_course.html:42
+#: .\guides\templates\guides\guide_course.html:107
 msgid "加退選"
 msgstr "Thêm/Rút môn"
 
-#: .\guides\templates\guides\guide_course.html:46
-#: .\guides\templates\guides\guide_course.html:123
+#: .\guides\templates\guides\guide_course.html:47
+#: .\guides\templates\guides\guide_course.html:124
 msgid "人工加退選"
 msgstr "Thêm/Rút thủ công"
 
-#: .\guides\templates\guides\guide_course.html:47
-#: .\guides\templates\guides\guide_course.html:125
+#: .\guides\templates\guides\guide_course.html:48
+#: .\guides\templates\guides\guide_course.html:126
 msgid "手續費 NT$100"
 msgstr "Phí xử lý NT$100"
 
-#: .\guides\templates\guides\guide_course.html:51
+#: .\guides\templates\guides\guide_course.html:52
 msgid "確認結果"
 msgstr "Xác nhận kết quả"
 
-#: .\guides\templates\guides\guide_course.html:56
+#: .\guides\templates\guides\guide_course.html:57
 msgid "繳學分費"
 msgstr "Nộp phí tín chỉ"
 
-#: .\guides\templates\guides\guide_course.html:61
+#: .\guides\templates\guides\guide_course.html:62
 msgid "停修"
 msgstr "Rút môn học"
 
-#: .\guides\templates\guides\guide_course.html:67
+#: .\guides\templates\guides\guide_course.html:63
+msgid "截止"
+msgstr "Hết hạn"
+
+#: .\guides\templates\guides\guide_course.html:68
 msgid "選課系統入口"
 msgstr "Hệ thống đăng ký môn học"
 
-#: .\guides\templates\guides\guide_course.html:71
+#: .\guides\templates\guides\guide_course.html:72
 msgid "選課系統："
 msgstr "Hệ thống đăng ký:"
 
-#: .\guides\templates\guides\guide_course.html:71
-msgid "SPARC（計中）帳號"
-msgstr "tài khoản SPARC (Trung tâm Máy tính)"
-
 #: .\guides\templates\guides\guide_course.html:72
+msgid "SPARC（計中）帳號登入"
+msgstr "Đăng nhập bằng tài khoản SPARC (Trung tâm Máy tính)"
+
+#: .\guides\templates\guides\guide_course.html:73
+msgid "每日 07:00–09:00 系統進行資料備份，"
+msgstr "Hệ thống sao lưu dữ liệu hàng ngày từ 07:00–09:00. "
+
+#: .\guides\templates\guides\guide_course.html:73
 msgid "此時段請勿操作選課"
 msgstr "vui lòng không truy cập hệ thống trong khoảng thời gian này"
 
-#: .\guides\templates\guides\guide_course.html:80
+#: .\guides\templates\guides\guide_course.html:81
 msgid "路徑："
 msgstr "Đường dẫn:"
 
-#: .\guides\templates\guides\guide_course.html:80
+#: .\guides\templates\guides\guide_course.html:81
 msgid "NCU Portal → 學生服務 → 教務相關服務 → 選課系統"
 msgstr "NCU Portal → Dịch vụ sinh viên → Dịch vụ học vụ → Đăng ký môn học"
 
-#: .\guides\templates\guides\guide_course.html:85
+#: .\guides\templates\guides\guide_course.html:86
 msgid "各階段說明"
 msgstr "Giải thích từng giai đoạn"
 
-#: .\guides\templates\guides\guide_course.html:95
+#: .\guides\templates\guides\guide_course.html:96
 msgid "各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。"
 msgstr ""
 "Các môn bắt buộc thường được đăng ký sẵn. Nếu bạn đã xin miễn tín chỉ hoặc "
 "hoàn thành sớm, hãy tự rút môn."
 
-#: .\guides\templates\guides\guide_course.html:96
+#: .\guides\templates\guides\guide_course.html:97
 msgid "務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。"
 msgstr ""
 "Bạn phải tham gia đăng ký ban đầu, nếu không sẽ mất quyền ưu tiên đối với "
 "các môn có giới hạn chỗ."
 
-#: .\guides\templates\guides\guide_course.html:97
+#: .\guides\templates\guides\guide_course.html:98
 msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
 msgstr ""
 "Một lần phân bổ hàng loạt xảy ra sau khi đăng ký ban đầu kết thúc; kết quả "
 "thông báo trước 16:00 ngày 2026/02/03."
 
-#: .\guides\templates\guides\guide_course.html:98
+#: .\guides\templates\guides\guide_course.html:99
 msgid "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。"
 msgstr ""
 "Sinh viên năm nhất học kỳ 1 không cần thẻ mật khẩu cố vấn; từ học kỳ 2 trở "
 "đi, hoàn thành thủ tục chọn môn có hướng dẫn cố vấn (trực tuyến) trước mỗi "
 "đợt đăng ký ban đầu."
 
-#: .\guides\templates\guides\guide_course.html:111
+#: .\guides\templates\guides\guide_course.html:112
 msgid "春節期間（02/13–02/22）不開放選課，請注意。"
 msgstr ""
 "Đăng ký môn học đóng cửa trong dịp Tết Nguyên Đán (02/13–02/22). Vui lòng "
 "lưu ý."
 
-#: .\guides\templates\guides\guide_course.html:112
 #: .\guides\templates\guides\guide_course.html:113
+msgid ""
+"自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。"
+msgstr ""
+
+#: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
 msgstr ""
 "Nếu vẫn muốn học môn bị loại, bạn phải đăng ký lại trực tuyến và chờ phân bổ"
 " ngày hôm sau — danh sách chờ không được giữ tự động."
 
-#: .\guides\templates\guides\guide_course.html:114
+#: .\guides\templates\guides\guide_course.html:115
 msgid "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
 msgstr ""
 "Vào ngày cuối của kỳ thêm/rút, đừng thêm các môn có thể xung đột — đợt phân "
 "bổ cuối có thể bắt buộc rút các môn xung đột."
 
-#: .\guides\templates\guides\guide_course.html:115
+#: .\guides\templates\guides\guide_course.html:116
 msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
 msgstr ""
 "Đối với các môn yêu cầu thẻ mật khẩu, hãy lấy từ giảng viên; mỗi mã mật khẩu"
 " chỉ dùng một lần."
 
-#: .\guides\templates\guides\guide_course.html:129
+#: .\guides\templates\guides\guide_course.html:130
 msgid "適用對象：加退選截止後仍有需求者、因衝堂被系統退選後欲重新加選者。"
 msgstr ""
 "Dành cho: những người vẫn cần thay đổi sau khi thêm/rút kết thúc, hoặc những"
 " người bị rút môn do xung đột và muốn đăng ký lại."
 
-#: .\guides\templates\guides\guide_course.html:130
+#: .\guides\templates\guides\guide_course.html:131
 msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
 msgstr ""
 "Quy trình: In mẫu từ hệ thống → Lấy chữ ký giảng viên → Nộp phí NT$100 (tiền"
 " mặt tại phòng tài chính hoặc EasyCard tại phòng học vụ) → Nộp mẫu tại phòng"
 " học vụ."
 
-#: .\guides\templates\guides\guide_course.html:131
+#: .\guides\templates\guides\guide_course.html:132
 msgid "隔日更新至選課系統與 ee-class。"
 msgstr "Cập nhật xuất hiện trong hệ thống và ee-class vào ngày hôm sau."
 
-#: .\guides\templates\guides\guide_course.html:132
+#: .\guides\templates\guides\guide_course.html:133
 msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
 msgstr ""
 "Nếu giảng viên không có mặt, nhân viên phòng ban được giảng viên ủy quyền có"
 " thể đóng dấu thay."
 
-#: .\guides\templates\guides\guide_course.html:140
+#: .\guides\templates\guides\guide_course.html:141
 msgid "確認選課結果"
 msgstr "Xác nhận kết quả đăng ký"
 
-#: .\guides\templates\guides\guide_course.html:145
+#: .\guides\templates\guides\guide_course.html:146
 msgid "路徑：選課系統 → 個人功能表 → 選課結果。"
 msgstr "Đường dẫn: Hệ thống → Menu cá nhân → Kết quả đăng ký."
 
-#: .\guides\templates\guides\guide_course.html:146
+#: .\guides\templates\guides\guide_course.html:147
 msgid "依選課辦法，未於期限內確認者以電腦系統為依據，不得異議。請務必確認！"
 msgstr ""
 "Theo quy định đăng ký môn học, những người không xác nhận trong thời hạn sẽ "
 "bị ràng buộc bởi hồ sơ hệ thống mà không có quyền khiếu nại. Hãy nhớ xác "
 "nhận!"
 
-#: .\guides\templates\guides\guide_course.html:147
+#: .\guides\templates\guides\guide_course.html:148
 msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
 msgstr ""
 "Nếu bất kỳ môn nào bị bắt buộc rút do xung đột hoặc mã trùng lặp, có thể "
 "dùng thêm/rút thủ công (03/10–03/12) để sửa."
 
-#: .\guides\templates\guides\guide_course.html:155
+#: .\guides\templates\guides\guide_course.html:156
 msgid "停修（Course Withdrawal）"
 msgstr "Rút môn học (Course Withdrawal)"
 
-#: .\guides\templates\guides\guide_course.html:157
+#: .\guides\templates\guides\guide_course.html:158
 msgid "W 成績"
 msgstr "Điểm W"
 
-#: .\guides\templates\guides\guide_course.html:161
+#: .\guides\templates\guides\guide_course.html:162
 msgid "一學期以一科為限，停修後學分數不得低於最低應修學分（大一至大三 16 學分、大四 9 學分）。"
 msgstr ""
 "Giới hạn một môn mỗi học kỳ; sau khi rút, số tín chỉ còn lại không được thấp"
 " hơn mức tối thiểu (16 tín chỉ cho năm 1–3, 9 cho năm 4)."
 
-#: .\guides\templates\guides\guide_course.html:162
+#: .\guides\templates\guides\guide_course.html:163
 msgid "停修不退學分費，成績單上以「停修 / W」登錄，不計入當學期所修學分數。"
 msgstr ""
 "Phí tín chỉ không được hoàn lại khi rút môn; bảng điểm ghi \"Rút môn / W\" "
 "và tín chỉ không được tính cho học kỳ đó."
 
-#: .\guides\templates\guides\guide_course.html:163
+#: .\guides\templates\guides\guide_course.html:164
 msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
 msgstr ""
 "Quy trình: In mẫu rút môn từ hệ thống → Lấy chữ ký của giảng viên và trưởng "
 "khoa → Nộp tại phòng học vụ."
 
-#: .\guides\templates\guides\guide_course.html:164
+#: .\guides\templates\guides\guide_course.html:165
 msgid "已辦理減修者不得再辦理停修。"
 msgstr "Sinh viên đã đăng ký giảm tải không được phép rút thêm môn."
 
-#: .\guides\templates\guides\guide_course.html:170
+#: .\guides\templates\guides\guide_course.html:171
 msgid "重要規定"
 msgstr "Quy định quan trọng"
 
-#: .\guides\templates\guides\guide_course.html:174
+#: .\guides\templates\guides\guide_course.html:175
 msgid "最低修課學分："
 msgstr "Yêu cầu tín chỉ tối thiểu:"
 
-#: .\guides\templates\guides\guide_course.html:174
-msgid "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。"
-msgstr ""
-"Năm 1–3 phải học ít nhất 16 tín chỉ mỗi học kỳ; năm 4 ít nhất 9. Những người"
-" dưới mức tối thiểu phải đăng ký giảm tải (cần sự chấp thuận của cố vấn và "
-"trưởng khoa), nếu không sẽ bị đuổi học."
-
-#: .\guides\templates\guides\guide_course.html:178
+#: .\guides\templates\guides\guide_course.html:180
 msgid "衝堂 / 同課號："
 msgstr "Xung đột lịch / Mã môn trùng lặp:"
 
-#: .\guides\templates\guides\guide_course.html:178
+#: .\guides\templates\guides\guide_course.html:180
 msgid "加退選截止後若仍有衝堂或重複課號，課務組將全部強制退選。請在截止前自行處理，如遭退選可於人工加退選期間補救。"
 msgstr ""
 "Sau khi thêm/rút kết thúc, mọi xung đột hoặc mã trùng lặp còn lại sẽ bị "
 "phòng học vụ bắt buộc rút. Giải quyết trước thời hạn; nếu bị rút, sử dụng "
 "thêm/rút thủ công để khắc phục."
 
-#: .\guides\templates\guides\guide_course.html:182
+#: .\guides\templates\guides\guide_course.html:185
 msgid "部份課程有群組上限："
 msgstr "Một số môn có giới hạn nhóm:"
 
-#: .\guides\templates\guides\guide_course.html:182
+#: .\guides\templates\guides\guide_course.html:185
 msgid "如核心通識每學期最多選 2 門、體育課 1 門、大一英文 1 門等。選課前請確認課程群組規定。"
 msgstr ""
 "Ví dụ, giáo dục đại cương cốt lõi giới hạn 2 môn mỗi học kỳ, thể dục 1 môn, "
 "tiếng Anh năm nhất 1 môn, v.v. Kiểm tra giới hạn nhóm trước khi đăng ký."
 
-#: .\guides\templates\guides\guide_course.html:186
+#: .\guides\templates\guides\guide_course.html:189
 msgid "學分費："
 msgstr "Học phí tín chỉ:"
 
-#: .\guides\templates\guides\guide_course.html:186
+#: .\guides\templates\guides\guide_course.html:189
 msgid "修 ≤ 9 學分按比例繳學分費與雜費；≥ 10 學分繳全額學費與雜費（師培課程學分另計）。"
 msgstr ""
 "Học ≤9 tín chỉ: nộp phí tín chỉ và phí linh tinh theo tỷ lệ; ≥10 tín chỉ: "
 "nộp toàn bộ học phí và phí linh tinh (tín chỉ đào tạo giáo viên tính riêng)."
 
-#: .\guides\templates\guides\guide_course.html:191
+#: .\guides\templates\guides\guide_course.html:194
 msgid "學分抵免"
 msgstr "Miễn tín chỉ"
 
-#: .\guides\templates\guides\guide_course.html:195
+#: .\guides\templates\guides\guide_course.html:198
 msgid "學分抵免由註冊組負責辦理（非課務組），請至教務處註冊組查詢申請時間與規定。"
 msgstr ""
 "Miễn tín chỉ do Phòng Đăng ký phụ trách (không phải Phòng Học vụ). Liên hệ "
 "Phòng Đăng ký tại Phòng Giáo vụ để biết thời gian và yêu cầu nộp đơn."
 
-#: .\guides\templates\guides\guide_course.html:201
+#: .\guides\templates\guides\guide_course.html:204
 msgid "抵免結果公告後，若被抵免課程仍在選課清單中，請自行退選。轉學生需自行於加退選期間選課，系統不會代選任何課程。"
 msgstr ""
 "Sau khi kết quả miễn tín chỉ được công bố, nếu các môn được miễn vẫn còn "
 "trong danh sách đăng ký, hãy tự rút. Sinh viên chuyển tiếp phải tự đăng ký "
 "trong kỳ thêm/rút; hệ thống sẽ không tự động đăng ký."
 
-#: .\guides\templates\guides\guide_course.html:206
+#: .\guides\templates\guides\guide_course.html:209
 msgid "課務組聯絡資訊"
 msgstr "Liên hệ Phòng Học vụ"
 
-#: .\guides\templates\guides\guide_course.html:211
+#: .\guides\templates\guides\guide_course.html:214
 msgid "業務項目"
 msgstr "Hạng mục dịch vụ"
 
-#: .\guides\templates\guides\guide_course.html:212
+#: .\guides\templates\guides\guide_course.html:215
 msgid "電話分機（03-4227151 +）"
 msgstr "Số máy lẻ (03-4227151 +)"
 
-#: .\guides\templates\guides\guide_course.html:216
+#: .\guides\templates\guides\guide_course.html:220
 msgid "選課、課務相關"
 msgstr "Đăng ký môn học & Học vụ"
 
-#: .\guides\templates\guides\guide_course.html:217
+#: .\guides\templates\guides\guide_course.html:224
 msgid "校際選課（本校至他校）"
 msgstr "Đăng ký liên trường (NCU đến trường khác)"
 
-#: .\guides\templates\guides\guide_course.html:218
+#: .\guides\templates\guides\guide_course.html:228
 msgid "校際選課（他校至中大）"
 msgstr "Đăng ký liên trường (Trường khác đến NCU)"
 
-#: .\guides\templates\guides\guide_course.html:219
+#: .\guides\templates\guides\guide_course.html:232
 msgid "暑修"
 msgstr "Học hè"
 
-#: .\guides\templates\guides\guide_course.html:220
+#: .\guides\templates\guides\guide_course.html:236
 msgid "數位學習平台"
 msgstr "Nền tảng học tập số"
 
-#: .\guides\templates\guides\guide_course.html:221
+#: .\guides\templates\guides\guide_course.html:240
 msgid "導師輔導選課問題"
 msgstr "Vấn đề chọn môn có hướng dẫn cố vấn"
 
-#: .\guides\templates\guides\guide_course.html:227
+#: .\guides\templates\guides\guide_course.html:248
 #: .\guides\templates\guides\guide_graduation.html:218
 #: .\guides\templates\guides\guide_nhi.html:171
 #: .\guides\templates\guides\guide_work_permit.html:264
 msgid "相關連結"
 msgstr "Liên kết liên quan"
 
-#: .\guides\templates\guides\guide_course.html:229
+#: .\guides\templates\guides\guide_course.html:250
 msgid "NCU 選課系統 ↗"
 msgstr "Hệ thống đăng ký NCU ↗"
 
-#: .\guides\templates\guides\guide_course.html:230
+#: .\guides\templates\guides\guide_course.html:251
 msgid "課務日程表 ↗"
 msgstr "Lịch học kỳ ↗"
 
-#: .\guides\templates\guides\guide_course.html:231
+#: .\guides\templates\guides\guide_course.html:252
 msgid "選課相關資訊 PDF ↗"
 msgstr "PDF thông tin đăng ký ↗"
 
-#: .\guides\templates\guides\guide_course.html:232
+#: .\guides\templates\guides\guide_course.html:253
 msgid "選課系統操作手冊（英）↗"
 msgstr "Hướng dẫn sử dụng hệ thống (Tiếng Anh) ↗"
 
-#: .\guides\templates\guides\guide_course.html:233
+#: .\guides\templates\guides\guide_course.html:254
 msgid "教務處官網 ↗"
 msgstr "Website Phòng Giáo vụ ↗"
 
@@ -4245,6 +4110,10 @@ msgid "外籍生 ARC 注意"
 msgstr "Lưu ý cho sinh viên nước ngoài về ARC"
 
 #: .\guides\templates\guides\guide_enrollment.html:57
+msgid ""
+"辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_enrollment.html:61
 msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
 msgstr ""
@@ -4360,11 +4229,7 @@ msgstr ""
 "toàn bộ"
 
 #: .\guides\templates\guides\guide_enrollment.html:122
-
-#, fuzzy, python-format
-
 #, python-format
-
 #| msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
 msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%%（即以班排名前半段為上限）"
 msgstr ""
@@ -4373,7 +4238,6 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_enrollment.html:123
 #, python-format
-#| msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
 msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%%"
 msgstr ""
 "Hạn ngạch chuyển vào: Mỗi khoa có thể nhận tối đa 20%% chỉ tiêu được phê "
@@ -4562,6 +4426,11 @@ msgid "成績等第制（109 學年起適用）"
 msgstr "Hệ thống bảng chữ cái (áp dụng từ năm học 2020)"
 
 #: .\guides\templates\guides\guide_graduation.html:26
+msgid ""
+"109 學年（2020年9月）入學起，中央大學採等第制記錄成績，並換算為 GPA（4.3 滿分）。大學部及格標準為 60 分（C-），研究所為 70 "
+"分（B-）。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_graduation.html:32
 msgid "等第"
 msgstr "Hạng"
@@ -4791,6 +4660,11 @@ msgid "生醫理工學院"
 msgstr "Trường Kỹ thuật Khoa học Y sinh"
 
 #: .\guides\templates\guides\guide_graduation.html:195
+msgid ""
+"校園多益（TOEIC）考試：語言中心每學期舉辦校園多益，費用約 "
+"NT$1,270，僅限本校學生報考，是達到英文門檻最便利的方式。報名請至語言中心網站查詢最新場次。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_graduation.html:199
 msgid "未達門檻的替代方案：進修英文"
 msgstr "Phương án thay thế cho dưới ngưỡng: Tiếng Anh Bổ túc"
@@ -4826,6 +4700,11 @@ msgid "研究所英文門檻（以工學院為例）"
 msgstr "Ngưỡng tiếng Anh cao học (ví dụ Trường Kỹ thuật)"
 
 #: .\guides\templates\guides\guide_graduation.html:214
+msgid ""
+"各研究所英文門檻由各學院自訂，需於申請學位口試前繳交。以工學院為例，需達 TOEIC 600 / TOEFL iBT 64 / IELTS 5.0 "
+"或同等資格，未達標者可修習一學期補救英文課程（70分以上通過）替代。詳細規定請洽各系所。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_graduation.html:220
 msgid "語言中心英文畢業門檻"
 msgstr "Ngưỡng tiếng Anh Trung tâm Ngôn ngữ"
@@ -5230,7 +5109,7 @@ msgstr "Liên hệ cho sự cố hư hỏng cơ sở vật chất khẩn cấp h
 
 #: .\guides\templates\guides\guide_index.html:4 .\templates\base.html:73
 #: .\templates\base.html:225 .\users\templates\users\dashboard.html:127
-#: .\users\templates\users\home.html:182 .\users\templates\users\login.html:43
+#: .\users\templates\users\home.html:181 .\users\templates\users\login.html:43
 msgid "資訊中心"
 msgstr "Trung tâm thông tin"
 
@@ -5292,13 +5171,7 @@ msgstr "Hướng dẫn đăng ký nhập học"
 msgid "申請資格、時程、所需文件與注意事項整理"
 msgstr "Tổng hợp điều kiện, lịch trình, tài liệu cần thiết và lưu ý"
 
-
 #: .\guides\templates\guides\guide_index.html:71
-
-#: .\guides\templates\guides\guide_index.html:53
-#| msgid "證件・住宿・交通"
-#: .\guides\templates\guides\guide_index.html:62
-
 msgid "外籍生 ARC 辦理"
 msgstr "Làm ARC cho sinh viên nước ngoài"
 
@@ -5783,18 +5656,10 @@ msgid "K書中心・開館時間"
 msgstr "Trung tâm học · Giờ mở cửa"
 
 #: .\guides\templates\guides\guide_map.html:17
-
-
-#| msgid "學校・醫院・交通"
-
 msgid "學校・美食・醫院・交通"
 msgstr "Trường・Bệnh viện・Giao thông"
 
 #: .\guides\templates\guides\guide_map.html:19
-
-
-#| msgid "中央大學周邊重要地點，點選快速定位及導航"
-
 msgid "中央大學周邊重要地點，點選按鈕即可在地圖上定位"
 msgstr "Địa điểm quan trọng quanh NCU — nhấp nút để định vị trên bản đồ"
 
@@ -6040,11 +5905,21 @@ msgid "校外診所（後門商圈 / 中壢周邊）"
 msgstr "Phòng khám ngoài khuôn viên (Khu vực cổng sau / Quận Zhongli)"
 
 #: .\guides\templates\guides\guide_medical.html:88
+msgid ""
+"中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別用 Google Maps 搜尋「中壢 內科診所」、「中壢 "
+"耳鼻喉科」等。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_medical.html:94
 msgid "診所看診時間："
 msgstr "Giờ khám bệnh của phòng khám:"
 
 #: .\guides\templates\guides\guide_medical.html:94
+msgid ""
+"多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班制，非所有診所皆有晚診。建議事先電話確認或查詢"
+" Google 地圖上的即時等候人數。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_medical.html:99
 msgid "周邊醫院"
 msgstr "Bệnh viện lân cận"
@@ -6269,10 +6144,6 @@ msgid "承辦人：徐心荷小姐"
 msgstr "Người liên hệ: Cô Xu Xinhe"
 
 #: .\guides\templates\guides\guide_mental_health.html:18
-
-
-#| msgid "諮商中心預約、壓力、人際困擾、24H 熱線"
-
 msgid "諮商中心預約・常見困擾・24 小時求助熱線"
 msgstr ""
 "Đặt lịch Trung tâm Tư vấn, Vấn đề Thường gặp & Đường dây Hỗ trợ 24 giờ"
@@ -6282,30 +6153,15 @@ msgid "尋求幫助不代表你軟弱。無論是課業壓力、人際困擾、�
 msgstr ""
 "Tìm kiếm sự giúp đỡ không có nghĩa là bạn yếu đuối. Dù là áp lực học tập, "
 
-"khó khăn trong quan hệ, thích nghi văn hóa, hay chỉ đơn giản là muốn tìm "
-"người trò chuyện, Trung tâm Tư vấn luôn chào đón bạn."
-
 #: .\guides\templates\guides\guide_mental_health.html:26
 msgid "諮商輔導中心"
 msgstr "Trung tâm tư vấn"
 
 #: .\guides\templates\guides\guide_mental_health.html:36
-
-"khó khăn trong quan hệ, thích nghi văn hóa, hay chỉ muốn có người trò chuyện"
-" — trung tâm tư vấn luôn chào đón bạn."
-
-#: .\guides\templates\guides\guide_mental_health.html:26
-#: .\guides\templates\guides\guide_mental_health.html:36
-#| msgid "週一至週五 10:00–15:00"
-
 msgid "週一至週五 09:00–17:00"
 msgstr "Thứ 2–Thứ 6: 10:00–15:00"
 
 #: .\guides\templates\guides\guide_mental_health.html:43
-
-
-#| msgid "費用說明"
-
 msgid "費用"
 msgstr "Giải thích chi phí"
 
@@ -6319,11 +6175,7 @@ msgstr "Dịch vụ cung cấp"
 
 #: .\guides\templates\guides\guide_mental_health.html:52
 msgid "個別諮商（50 分鐘 / 次）"
-
-msgstr "Tư vấn cá nhân (50 phút/buổi)"
-
-msgstr "Tư vấn cá nhân (50 phút / buổi)"
-
+msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:53
 msgid "團體諮商"
@@ -6335,8 +6187,7 @@ msgstr "Trắc nghiệm tâm lý"
 
 #: .\guides\templates\guides\guide_mental_health.html:55
 msgid "心理衛生推廣活動"
-
-msgstr "Hoạt động nâng cao sức khỏe tâm thần"
+msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:56
 msgid "社工師服務（分機 57265）"
@@ -6346,67 +6197,33 @@ msgstr "Dịch vụ nhân viên xã hội (Số nội bộ 57265)"
 msgid "如何預約"
 msgstr "Cách đặt lịch"
 
-msgstr "Hoạt động Thúc đẩy Sức khỏe Tâm thần"
-
-#: .\guides\templates\guides\guide_mental_health.html:56
-#: .\guides\templates\guides\guide_mental_health.html:61
-
 #: .\guides\templates\guides\guide_mental_health.html:64
 msgid "一律線上預約，預約後諮商師會主動與你聯絡，先進行初談，再安排正式諮商時間。"
 msgstr ""
-
-"Tất cả đặt lịch qua mạng; sau khi đặt, chuyên viên tư vấn sẽ chủ động liên "
-"hệ để trò chuyện ban đầu trước khi sắp xếp buổi tư vấn chính thức."
 
 #: .\guides\templates\guides\guide_mental_health.html:72
 msgid "登入 NCU Portal"
 msgstr "Đăng nhập NCU Portal"
 
-"Tất cả các cuộc hẹn được đặt trực tuyến. Sau khi đặt, cố vấn sẽ liên hệ với "
-"bạn để sắp xếp buổi tiếp nhận ban đầu trước khi lên lịch tư vấn chính thức."
-
-#: .\guides\templates\guides\guide_mental_health.html:72
-
 #: .\guides\templates\guides\guide_mental_health.html:73
 msgid "Portal → 學生服務 → 學生輔導服務 → 個別諮商，或直接前往："
 msgstr ""
 
-"Portal → Dịch vụ Sinh viên → Dịch vụ Tư vấn Sinh viên → Tư vấn cá nhân, hoặc"
-" truy cập trực tiếp:"
-
 #: .\guides\templates\guides\guide_mental_health.html:83
-
-"Portal → Dịch vụ sinh viên → Dịch vụ tư vấn sinh viên → Tư vấn cá nhân, hoặc"
-" truy cập trực tiếp:"
-
-#: .\guides\templates\guides\guide_mental_health.html:83
-#| msgid "建議線上預約"
-
 msgid "填寫線上預約表單"
 msgstr "Điền Biểu mẫu Đặt lịch Trực tuyến"
 
 #: .\guides\templates\guides\guide_mental_health.html:84
 msgid "簡單描述來訪原因（不需要詳細，幾句話即可）"
-
-msgstr "Mô tả ngắn gọn lý do đến khám (không cần chi tiết, vài câu là đủ)"
+msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:90
 msgid "等待諮商師聯絡（初談）"
 msgstr "Chờ chuyên viên tư vấn liên hệ (buổi trò chuyện ban đầu)"
 
-msgstr "Mô tả ngắn gọn lý do đến (không cần chi tiết, vài câu là được)"
-
-#: .\guides\templates\guides\guide_mental_health.html:90
-
 #: .\guides\templates\guides\guide_mental_health.html:91
 msgid "初談約 30–50 分鐘，了解你的狀況與需求"
 msgstr ""
-
-"Buổi trò chuyện ban đầu khoảng 30–50 phút để hiểu tình trạng và nhu cầu của "
-
-"Buổi tiếp nhận ban đầu khoảng 30–50 phút để hiểu tình trạng và nhu cầu của "
-
-"bạn"
 
 #: .\guides\templates\guides\guide_mental_health.html:97
 msgid "安排正式個別諮商"
@@ -6414,16 +6231,11 @@ msgstr "Sắp xếp tư vấn cá nhân chính thức"
 
 #: .\guides\templates\guides\guide_mental_health.html:98
 msgid "每週固定一次，50 分鐘，由同一位諮商師陪你持續談"
-
-msgstr "Mỗi tuần một lần, 50 phút, cùng một chuyên viên tư vấn xuyên suốt"
+msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:105
 msgid "常見來訪議題"
 msgstr "Chủ đề thường gặp"
-
-msgstr "Mỗi tuần một lần, 50 phút, với cùng một cố vấn mỗi lần"
-
-#: .\guides\templates\guides\guide_mental_health.html:105
 
 #: .\guides\templates\guides\guide_mental_health.html:109
 msgid "課業壓力"
@@ -6431,11 +6243,7 @@ msgstr "Áp lực học tập"
 
 #: .\guides\templates\guides\guide_mental_health.html:110
 msgid "考試焦慮、拖延、讀不進去"
-
-msgstr "Lo lắng thi cử, Trì hoãn, Khó tập trung học"
-
-msgstr "Lo lắng về thi cử, trì hoãn, khó học vào"
-
+msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:114
 msgid "文化適應"
@@ -6443,8 +6251,7 @@ msgstr "Thích nghi văn hóa"
 
 #: .\guides\templates\guides\guide_mental_health.html:115
 msgid "語言障礙、孤獨感、思鄉"
-
-msgstr "Rào cản ngôn ngữ, Cô đơn, Nhớ nhà"
+msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:119
 msgid "人際關係"
@@ -6454,19 +6261,13 @@ msgstr "Quan hệ giữa các cá nhân"
 msgid "室友摩擦、交友困難、衝突處理"
 msgstr "Mâu thuẫn với bạn cùng phòng, Khó kết bạn, Giải quyết xung đột"
 
-msgstr "Rào cản ngôn ngữ, cô đơn, nhớ nhà"
-
-#: .\guides\templates\guides\guide_mental_health.html:119
-#: .\guides\templates\guides\guide_mental_health.html:120
-
 #: .\guides\templates\guides\guide_mental_health.html:124
 msgid "情感困擾"
 msgstr "Vấn đề tình cảm"
 
 #: .\guides\templates\guides\guide_mental_health.html:125
 msgid "感情問題、失戀、家庭關係"
-
-msgstr "Vấn đề tình cảm, Chia tay, Quan hệ gia đình"
+msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:129
 msgid "情緒低落"
@@ -6476,34 +6277,21 @@ msgstr "Tâm trạng chán nản"
 msgid "焦慮、憂鬱、情緒波動"
 msgstr "Lo âu, Trầm cảm, Rối loạn cảm xúc"
 
-msgstr "Vấn đề tình cảm, thất tình, quan hệ gia đình"
-
-#: .\guides\templates\guides\guide_mental_health.html:129
-#: .\guides\templates\guides\guide_mental_health.html:130
-
 #: .\guides\templates\guides\guide_mental_health.html:134
 msgid "自我探索"
 msgstr "Khám phá bản thân"
 
 #: .\guides\templates\guides\guide_mental_health.html:135
 msgid "方向迷失、身份認同、生涯規劃"
-
-msgstr "Mất phương hướng, Bản sắc cá nhân, Định hướng nghề nghiệp"
-
-#: .\guides\templates\guides\guide_mental_health.html:140
-
-msgstr "Mất phương hướng, bản sắc, lập kế hoạch sự nghiệp"
+msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:140
-#| msgid "24 小時緊急總線"
-
 msgid "24 小時求助熱線"
 msgstr "Đường dây Hỗ trợ 24 giờ"
 
 #: .\guides\templates\guides\guide_mental_health.html:145
 msgid "24H・心理危機・自殺防治"
-
-msgstr "24H・Khủng hoảng tâm lý・Phòng chống tự tử"
+msgstr ""
 
 #: .\guides\templates\guides\guide_mental_health.html:149
 msgid "生命線"
@@ -6553,21 +6341,6 @@ msgstr "Bệnh viện Landseed Trung Lịch (Có dịch vụ tiếng Anh)"
 msgid "校安緊急聯絡（24 小時）：03-2805666｜分機 57212"
 msgstr "Liên hệ khẩn cấp an ninh trường (24 giờ): 03-2805666｜Số nội bộ 57212"
 
-msgstr "24H · Khủng hoảng tâm lý · Phòng chống tự tử"
-
-#: .\guides\templates\guides\guide_mental_health.html:149
-#: .\guides\templates\guides\guide_mental_health.html:150
-#: .\guides\templates\guides\guide_mental_health.html:154
-#: .\guides\templates\guides\guide_mental_health.html:155
-#: .\guides\templates\guides\guide_mental_health.html:159
-#: .\guides\templates\guides\guide_mental_health.html:160
-#: .\guides\templates\guides\guide_mental_health.html:165
-#: .\guides\templates\guides\guide_mental_health.html:168
-#: .\guides\templates\guides\guide_mental_health.html:172
-#: .\guides\templates\guides\guide_mental_health.html:176
-#: .\guides\templates\guides\guide_mental_health.html:180
-#: .\guides\templates\guides\guide_mental_health.html:186
-
 #: .\guides\templates\guides\guide_national_area.html:17
 msgid "各地區申請資訊"
 msgstr "Thông tin đăng ký theo khu vực"
@@ -6606,6 +6379,12 @@ msgstr "Hồng Kông"
 msgid "澳門"
 msgstr "Macau"
 
+#: .\guides\templates\guides\guide_national_area.html:56 .\users\models.py:131
+#: .\users\templates\users\home.html:267
+#: .\users\templates\users\profile_setup.html:466
+msgid "菲律賓"
+msgstr "Philippines"
+
 #: .\guides\templates\guides\guide_national_area.html:61 .\users\models.py:122
 #: .\users\templates\users\profile_setup.html:457
 msgid "韓國"
@@ -6614,6 +6393,24 @@ msgstr "Hàn Quốc"
 #: .\guides\templates\guides\guide_national_area.html:66
 msgid "美國／加拿大"
 msgstr "Mỹ / Canada"
+
+#: .\guides\templates\guides\guide_national_area.html:71 .\users\models.py:130
+#: .\users\templates\users\home.html:281
+#: .\users\templates\users\profile_setup.html:465
+msgid "泰國"
+msgstr "Thái Lan"
+
+#: .\guides\templates\guides\guide_national_area.html:76 .\users\models.py:129
+#: .\users\templates\users\home.html:237
+#: .\users\templates\users\profile_setup.html:464
+msgid "越南"
+msgstr "Việt Nam"
+
+#: .\guides\templates\guides\guide_national_area.html:81 .\users\models.py:121
+#: .\users\templates\users\home.html:309
+#: .\users\templates\users\profile_setup.html:456
+msgid "日本"
+msgstr "Nhật Bản"
 
 #: .\guides\templates\guides\guide_national_area.html:86 .\users\models.py:134
 #: .\users\templates\users\profile_setup.html:469
@@ -6774,6 +6571,11 @@ msgid "「在臺居留滿 6 個月」認定方式"
 msgstr "Cách tính '6 tháng cư trú tại Đài Loan'"
 
 #: .\guides\templates\guides\guide_nhi.html:88
+msgid ""
+"指進入臺灣地區連續居住達 6 個月，或曾出境 1 次且未逾 30 日，實際居住期間扣除出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 "
+"30 天，則從重新抵台當天起算，6 個月重新計算。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_nhi.html:91
 msgid "計算範例："
 msgstr "Ví dụ tính toán:"
@@ -6846,6 +6648,11 @@ msgid "清寒僑生健保費補助："
 msgstr "Trợ cấp phí NHI cho sinh viên Hoa kiều có thu nhập thấp:"
 
 #: .\guides\templates\guides\guide_nhi.html:135
+msgid ""
+"符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，審查通過後核發）。未得補助者每月保費約 "
+"NT$826。詳情請洽國際事務處。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_nhi.html:140
 msgid "相關文件下載"
 msgstr "Tải xuống tài liệu liên quan"
@@ -6860,6 +6667,10 @@ msgid "就醫小提醒"
 msgstr "Lưu ý khi khám bệnh"
 
 #: .\guides\templates\guides\guide_nhi.html:154
+msgid ""
+"台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_nhi.html:160
 msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
 msgstr ""
@@ -7057,39 +6868,22 @@ msgid "教育部－主管法規查詢系統"
 msgstr "Bộ Giáo dục — Hệ thống Cơ sở Dữ liệu Quy định"
 
 #: .\guides\templates\guides\guide_scholarship.html:18
-
-
-#| msgid "僑生獎學金、清寒補助、校內外各項申請指南"
-
 msgid "僑生獎學金・清寒補助・校內外各項申請指南"
 msgstr ""
 "Học bổng sinh viên Hoa kiều, hỗ trợ tài chính và hướng dẫn đăng ký "
 "trong/ngoài trường"
 
 #: .\guides\templates\guides\guide_scholarship.html:22
-
-
-#| msgid "申請管道"
-
 msgid "申請管道快覽"
 msgstr "Kênh đăng ký"
 
 #: .\guides\templates\guides\guide_scholarship.html:26
-
-
-#| msgid "國際事務處（OIA）"
-
 msgid "NCU 國際事務處（OIA）"
 msgstr "Phòng Quan hệ Quốc tế (OIA)"
 
 #: .\guides\templates\guides\guide_scholarship.html:27
 msgid "僑生專屬獎學金申請入口，電話：03-425-4945"
-
 msgstr ""
-"Cổng đăng ký học bổng dành riêng cho sinh viên Hoa kiều, ĐT: 03-425-4945"
-
-msgstr "Cổng học bổng dành riêng cho sinh viên Hoa kiều, Tel: 03-425-4945"
-
 
 #: .\guides\templates\guides\guide_scholarship.html:31
 msgid "僑委會獎學金系統"
@@ -7105,22 +6899,11 @@ msgstr "Học bổng trong trường / Thông báo học bổng ngoài trường
 
 #: .\guides\templates\guides\guide_scholarship.html:42
 msgid "清寒補助（僑生）"
-
-msgstr "Trợ cấp hoàn cảnh khó khăn (Sinh viên Hoa kiều)"
-
-msgstr "Hỗ trợ tài chính (Sinh viên Hoa kiều)"
-
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:45
 msgid "申請期間：每學期開學後公告。上學期約 9/1–9/25，下學期約 2/1–3/2，逾期不受理。"
 msgstr ""
-
-"Thời gian nộp đơn: thông báo sau khi mỗi học kỳ bắt đầu. Học kỳ 1 khoảng "
-"1/9–25/9, học kỳ 2 khoảng 1/2–2/3. Không nhận đơn trễ hạn."
-
-"Thời gian đăng ký: thông báo sau khi bắt đầu mỗi học kỳ. Học kỳ 1 khoảng "
-"9/1–9/25, Học kỳ 2 khoảng 2/1–3/2. Hết hạn không được chấp nhận."
-
 
 #: .\guides\templates\guides\guide_scholarship.html:53
 #: .\guides\templates\guides\guide_scholarship.html:182
@@ -7136,26 +6919,14 @@ msgid "金額"
 msgstr "Số tiền"
 
 #: .\guides\templates\guides\guide_scholarship.html:55
-
-
-#| msgid "期間"
-
 msgid "期限"
 msgstr "Hạn chót"
 
 #: .\guides\templates\guides\guide_scholarship.html:56
-
-
-#| msgid "備註"
-
 msgid "備注"
 msgstr "Ghi chú"
 
 #: .\guides\templates\guides\guide_scholarship.html:61
-
-
-#| msgid "教育部核發高級中等以上學校清寒僑生助學金要點"
-
 msgid "教育部清寒僑生助學金"
 msgstr "Trợ cấp Bộ Giáo dục cho Sinh viên Hoa kiều Khó khăn"
 
@@ -7165,16 +6936,11 @@ msgstr "1 năm học (tháng 9 đến tháng 8 năm sau)"
 
 #: .\guides\templates\guides\guide_scholarship.html:64
 msgid "每學年重新申請，可連續領取"
-
-msgstr "Nộp đơn lại mỗi năm học; có thể nhận liên tục"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:67
 msgid "僑委會清寒僑生助學金"
 msgstr "Trợ cấp sinh viên Hoa kiều hoàn cảnh khó khăn OCAC"
-
-msgstr "Đăng ký lại mỗi năm học, có thể nhận liên tiếp"
-
-#: .\guides\templates\guides\guide_scholarship.html:67
 
 #: .\guides\templates\guides\guide_scholarship.html:68
 msgid "依僑委會公告（每學期）"
@@ -7186,20 +6952,11 @@ msgstr "1 học kỳ"
 
 #: .\guides\templates\guides\guide_scholarship.html:70
 msgid "需完成 10 小時服務學習（OIA，10–11 月 / 4–5 月）"
-
 msgstr ""
-"Cần hoàn thành 10 giờ học tập phục vụ cộng đồng (OIA, tháng 10–11 / tháng "
-"4–5)"
-
-msgstr "Phải hoàn thành 10 giờ học phục vụ (OIA, tháng 10–11 / 4–5)"
-
 
 #: .\guides\templates\guides\guide_scholarship.html:77
 msgid "須為依僑生回國就學辦法入學的僑生"
 msgstr ""
-
-"Phải là sinh viên Hoa kiều nhập học theo quy định sinh viên Hoa kiều về nước"
-" học tập"
 
 #: .\guides\templates\guides\guide_scholarship.html:78
 msgid "前學期成績及格，操行成績 80 分以上"
@@ -7209,35 +6966,13 @@ msgstr "Đạt điểm học kỳ trước; Điểm hạnh kiểm 80+"
 msgid "需持有「i 僑卡」，否則無法撥款"
 msgstr "Phải có \"i-Card\", nếu không sẽ không thể giải ngân"
 
-"Phải là sinh viên Hoa kiều nhập học theo Quy định học tập về nước của sinh "
-"viên Hoa kiều"
-
-#: .\guides\templates\guides\guide_scholarship.html:78
-#: .\guides\templates\guides\guide_scholarship.html:79
-
 #: .\guides\templates\guides\guide_scholarship.html:80
 msgid "不得同時領取其他政府清寒補助或學費減免（不得重複領取）"
 msgstr ""
 
-"Không được nhận đồng thời với trợ cấp hoàn cảnh khó khăn hoặc miễn giảm học "
-"phí khác của chính phủ (không được nhận trùng lặp)"
-
-"Không được đồng thời nhận hỗ trợ tài chính hoặc miễn học phí của chính phủ "
-"khác (không được nhận trùng)"
-
-
 #: .\guides\templates\guides\guide_scholarship.html:81
 msgid "所需文件：申請表＋清寒評分表、清寒證明正本（由原居地開具）、成績單、自傳、學生證 / 護照 / ARC / 郵局存摺影本"
 msgstr ""
-
-"Hồ sơ cần thiết: Đơn đăng ký + Bảng chấm điểm hoàn cảnh khó khăn, Giấy chứng"
-" nhận hoàn cảnh khó khăn bản gốc (do quê nhà cấp), Bảng điểm, Tự truyện, Bản"
-" sao thẻ sinh viên / hộ chiếu / ARC / sổ tiết kiệm bưu điện"
-
-"Tài liệu cần thiết: đơn đăng ký + bảng chấm điểm khó khăn, chứng nhận khó "
-"khăn gốc (do nơi cư trú cấp), bảng điểm, tự truyện, thẻ sinh viên / hộ chiếu"
-" / ARC / bản sao sổ tiết kiệm bưu điện"
-
 
 #: .\guides\templates\guides\guide_scholarship.html:86
 msgid "僑委會新生入學獎學金"
@@ -7247,19 +6982,7 @@ msgstr "Học bổng nhập học sinh viên mới OCAC"
 msgid "以下為海聯會管道入學的新生資格，入學前由駐外館處推薦申請，非到台後自行申請。"
 msgstr ""
 
-"Dưới đây là tiêu chuẩn nhập học qua kênh Liên hiệp OCAC — được văn phòng đại"
-" diện ở nước ngoài giới thiệu và nộp đơn trước khi đến, không phải tự nộp "
-"đơn sau khi đến Đài Loan."
-
 #: .\guides\templates\guides\guide_scholarship.html:97
-
-"Điều kiện sau áp dụng cho tân sinh viên nhập học qua kênh OCAC. Hồ sơ được "
-"giới thiệu bởi văn phòng nước ngoài trước khi nhập học, không tự nộp sau khi"
-" đến Đài Loan."
-
-#: .\guides\templates\guides\guide_scholarship.html:97
-#| msgid "等第"
-
 msgid "等級"
 msgstr "Hạng"
 
@@ -7268,11 +6991,8 @@ msgid "年額"
 msgstr "Số tiền hàng năm"
 
 #: .\guides\templates\guides\guide_scholarship.html:99
-
 msgid "申請資格（成績）"
 msgstr "Điều kiện (theo điểm số)"
-
-#| msgid "申請資格（年級）"
 
 #: .\guides\templates\guides\guide_scholarship.html:100
 msgid "續領條件"
@@ -7280,11 +7000,7 @@ msgstr "Điều kiện gia hạn"
 
 #: .\guides\templates\guides\guide_scholarship.html:101
 msgid "年限"
-
-msgstr "Thời hạn"
-
-msgstr "Giới hạn năm"
-
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:106
 msgid "頂尖"
@@ -7293,26 +7009,18 @@ msgstr "Hàng đầu"
 #: .\guides\templates\guides\guide_scholarship.html:108
 #, python-format
 msgid "88 分以上或班排前 5%%"
-
-msgstr "88 điểm trở lên hoặc top 5%% lớp"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
 msgstr "85 điểm trở lên hoặc hạng A"
 
-msgstr "88+ hoặc top 5% lớp"
-
-#: .\guides\templates\guides\guide_scholarship.html:109
-
 #: .\guides\templates\guides\guide_scholarship.html:110
 #: .\guides\templates\guides\guide_scholarship.html:117
 #: .\guides\templates\guides\guide_scholarship.html:151
 #: .\guides\templates\guides\guide_scholarship.html:163
-
 msgid "4 年"
 msgstr "4 Năm"
-
-#| msgid "1 年"
 
 #: .\guides\templates\guides\guide_scholarship.html:113
 msgid "傑出"
@@ -7321,8 +7029,7 @@ msgstr "Xuất sắc"
 #: .\guides\templates\guides\guide_scholarship.html:115
 #, python-format
 msgid "85 分以上或班排前 10%%"
-
-msgstr "85 điểm trở lên hoặc top 10%% lớp"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:116
 msgid "80 分以上或 A- 等"
@@ -7337,15 +7044,6 @@ msgid "不得同時領取其他政府獎學金"
 msgstr "Không được nhận đồng thời với học bổng chính phủ khác"
 
 #: .\guides\templates\guides\guide_scholarship.html:129
-
-msgstr "85+ hoặc top 10% lớp"
-
-#: .\guides\templates\guides\guide_scholarship.html:116
-#: .\guides\templates\guides\guide_scholarship.html:123
-#: .\guides\templates\guides\guide_scholarship.html:124
-#: .\guides\templates\guides\guide_scholarship.html:129
-#| msgid "教育部臺灣獎學金"
-
 msgid "教育部台灣獎學金（外籍生）"
 msgstr "Học bổng Đài Loan của Bộ Giáo dục (Sinh viên Quốc tế)"
 
@@ -7353,31 +7051,13 @@ msgstr "Học bổng Đài Loan của Bộ Giáo dục (Sinh viên Quốc tế)"
 msgid "台灣獎學金僅適用「外國籍」學生（含免簽外國人），不適用持有中華民國國籍或僑居身分的僑生，香港澳門生亦不適用。"
 msgstr ""
 
-"Học bổng Đài Loan chỉ áp dụng cho sinh viên \"quốc tịch nước ngoài\" (bao "
-"gồm người nước ngoài được miễn visa) — không áp dụng cho sinh viên Hoa kiều "
-"mang quốc tịch Trung Hoa Dân Quốc hoặc tư cách cư trú Hoa kiều, cũng không "
-"áp dụng cho sinh viên Hồng Kông/Ma Cao."
-
 #: .\guides\templates\guides\guide_scholarship.html:140
-
-"Học bổng Đài Loan chỉ dành cho sinh viên \"quốc tịch nước ngoài\" (bao gồm "
-"người nước ngoài được miễn thị thực). Không áp dụng cho sinh viên Hoa kiều "
-"có quốc tịch ROC hoặc tư cách Hoa kiều, cũng không áp dụng cho sinh viên "
-"Hồng Kông/Ma Cao."
-
-#: .\guides\templates\guides\guide_scholarship.html:140
-#| msgid "計學分"
-
 msgid "學制"
 msgstr "Hệ đào tạo"
 
 #: .\guides\templates\guides\guide_scholarship.html:141
 msgid "每月生活費"
-
-msgstr "Sinh hoạt phí hàng tháng"
-
-msgstr "Trợ cấp sinh hoạt hàng tháng"
-
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:142
 msgid "學費補助"
@@ -7388,10 +7068,6 @@ msgid "最長年限"
 msgstr "Thời hạn tối đa"
 
 #: .\guides\templates\guides\guide_scholarship.html:148
-
-
-#| msgid "學士班"
-
 msgid "學士"
 msgstr "Đại học"
 
@@ -7399,24 +7075,13 @@ msgstr "Đại học"
 #: .\guides\templates\guides\guide_scholarship.html:156
 #: .\guides\templates\guides\guide_scholarship.html:162
 msgid "每學期最高 NT$40,000"
-
-msgstr "Tối đa NT$40.000 mỗi học kỳ"
-
-#: .\guides\templates\guides\guide_scholarship.html:154
-
-msgstr "Tối đa NT$40,000 mỗi học kỳ"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:154
-#| msgid "碩士畢業"
-
 msgid "碩士"
 msgstr "Tốt nghiệp thạc sĩ"
 
 #: .\guides\templates\guides\guide_scholarship.html:157
-
-
-#| msgid "1 年"
-
 msgid "2 年"
 msgstr "2 Năm"
 
@@ -7428,13 +7093,6 @@ msgstr "Tiến sĩ"
 msgid "申請期間：每年 2 月 1 日至 3 月 31 日，向所在國 TECO（台灣辦事處）申請"
 msgstr ""
 
-"Thời gian nộp đơn: từ 1/2 đến 31/3 hàng năm, nộp tại TECO (Văn phòng Đại "
-"diện Đài Loan) tại nước sở tại"
-
-"Thời gian đăng ký: 1/2 đến 31/3 hàng năm, nộp hồ sơ tại TECO (văn phòng Đài "
-"Loan) ở nước bạn"
-
-
 #: .\guides\templates\guides\guide_scholarship.html:170
 msgid "官方入口：taiwanscholarship.moe.gov.tw"
 msgstr "Cổng chính thức: taiwanscholarship.moe.gov.tw"
@@ -7445,32 +7103,19 @@ msgstr "Học bổng trong trường"
 
 #: .\guides\templates\guides\guide_scholarship.html:184
 msgid "主要對象 / 條件"
-
-msgstr "Đối tượng / Điều kiện"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:189
 msgid "優秀學生獎學金"
 msgstr "Học bổng Sinh viên Xuất sắc"
 
-msgstr "Đối tượng / Điều kiện chính"
-
-#: .\guides\templates\guides\guide_scholarship.html:189
-
 #: .\guides\templates\guides\guide_scholarship.html:191
 msgid "競賽優異、發明專利、社務貢獻；需推薦信＋自傳，每學期申請"
 msgstr ""
 
-"Thành tích thi đấu xuất sắc, bằng sáng chế, đóng góp công tác xã hội; cần "
-"thư giới thiệu + tự truyện, nộp đơn mỗi học kỳ"
-
 #: .\guides\templates\guides\guide_scholarship.html:194
 msgid "勵學獎學金（清寒）"
 msgstr "Học bổng Khuyến học (Hoàn cảnh khó khăn)"
-
-"Kết quả thi đấu xuất sắc, bằng sáng chế, đóng góp dịch vụ cộng đồng; cần thư"
-" giới thiệu + tự truyện, đăng ký mỗi học kỳ"
-
-#: .\guides\templates\guides\guide_scholarship.html:194
 
 #: .\guides\templates\guides\guide_scholarship.html:195
 #: .\guides\templates\guides\guide_scholarship.html:248
@@ -7482,54 +7127,30 @@ msgstr "Tối đa"
 msgid "清寒優秀生，低收 / 單親家庭優先"
 msgstr ""
 
-"Sinh viên xuất sắc hoàn cảnh khó khăn; Ưu tiên gia đình thu nhập thấp/đơn "
-"thân"
-
 #: .\guides\templates\guides\guide_scholarship.html:199
 msgid "學術成績優異榮譽榜"
 msgstr "Bảng danh dự thành tích học tập xuất sắc"
 
-"Sinh viên xuất sắc có khó khăn tài chính; ưu tiên gia đình thu nhập thấp / "
-"đơn thân"
-
-#: .\guides\templates\guides\guide_scholarship.html:199
-
 #: .\guides\templates\guides\guide_scholarship.html:201
 #, python-format
 msgid "學期成績系排前 5%%，自動核發"
-
-msgstr "Top 5%% khoa theo điểm học kỳ, tự động cấp"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:204
 msgid "傑出領導獎學金"
 msgstr "Học bổng Lãnh đạo Xuất sắc"
 
-msgstr "Top 5% trong khoa học kỳ, tự động cấp"
-
-#: .\guides\templates\guides\guide_scholarship.html:204
-
 #: .\guides\templates\guides\guide_scholarship.html:206
 msgid "社團 / 自治會 / 宿委幹部或校外代表績效卓著"
 msgstr ""
-
-"Thành tích xuất sắc với vai trò cán bộ câu lạc bộ/hội sinh viên/ban ký túc "
-"xá hoặc đại diện ngoài trường"
 
 #: .\guides\templates\guides\guide_scholarship.html:209
 msgid "羅家倫先生紀念獎學金"
 msgstr "Học bổng Tưởng niệm La Gia Luân"
 
-"Cán bộ câu lạc bộ / hội sinh viên / ủy ban ký túc xá hoặc thành tích đại "
-"diện ngoài trường xuất sắc"
-
-#: .\guides\templates\guides\guide_scholarship.html:209
-
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr ""
-
-"Năm 2 trở lên hoặc học viên sau đại học; hoàn cảnh khó khăn và học lực xuất "
-"sắc"
 
 #: .\guides\templates\guides\guide_scholarship.html:214
 msgid "李國鼎紀念獎學金"
@@ -7539,21 +7160,9 @@ msgstr "Học bổng Tưởng niệm Lý Quốc Đỉnh"
 msgid "大二以上；清寒"
 msgstr "Năm 2 trở lên; hoàn cảnh khó khăn"
 
-"Năm hai trở lên hoặc sinh viên sau đại học; xuất sắc có khó khăn tài chính"
-
-#: .\guides\templates\guides\guide_scholarship.html:214
-#: .\guides\templates\guides\guide_scholarship.html:216
-
 #: .\guides\templates\guides\guide_scholarship.html:222
 msgid "完整校內獎學金清單及申請時間：NCU Portal → 獎助學金暨工讀管理系統，或查"
 msgstr ""
-
-"Danh sách đầy đủ học bổng trong trường và thời gian nộp đơn: NCU Portal → Hệ"
-" thống quản lý học bổng & việc làm bán thời gian, hoặc xem tại"
-
-"Danh sách đầy đủ học bổng trong trường và lịch: NCU Portal → Hệ thống Quản "
-"lý Học bổng & Việc làm, hoặc xem"
-
 
 #: .\guides\templates\guides\guide_scholarship.html:223
 msgid "軍訓室獎學金頁 ↗"
@@ -7563,39 +7172,22 @@ msgstr "Trang học bổng Phòng Huấn luyện Quân sự ↗"
 msgid "安心就學支持計劃（需申請，學務處辦理）"
 msgstr ""
 
-"Chương trình hỗ trợ học tập an tâm (cần đăng ký, do Phòng Công tác Sinh viên"
-" phụ trách)"
-
-"Chương trình Hỗ trợ Học tập An toàn (cần đăng ký, Văn phòng Sinh viên)"
-
-
 #: .\guides\templates\guides\guide_scholarship.html:237
 msgid "條件摘要"
 msgstr "Tóm tắt điều kiện"
 
 #: .\guides\templates\guides\guide_scholarship.html:242
 msgid "安心學習助學金"
-
-msgstr "Trợ cấp học tập an tâm"
-
-#: .\guides\templates\guides\guide_scholarship.html:243
-#: .\guides\templates\guides\guide_scholarship.html:303
-
-msgstr "Trợ cấp Học tập An toàn"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:243
 #: .\guides\templates\guides\guide_scholarship.html:303
-#| msgid "每學期"
-
 msgid "學期"
 msgstr "Mỗi học kỳ"
 
 #: .\guides\templates\guides\guide_scholarship.html:244
 msgid "低 / 中低收入或特殊情況；需學習計畫＋3 場活動＋2 次導師面談"
 msgstr ""
-
-"Thu nhập thấp/trung bình thấp hoặc trường hợp đặc biệt; cần kế hoạch học tập"
-" + 3 hoạt động + 2 lần gặp cố vấn"
 
 #: .\guides\templates\guides\guide_scholarship.html:247
 msgid "競賽拔尖獎勵金"
@@ -7609,18 +7201,9 @@ msgstr "Giải thưởng thi đấu trong/ngoài nước"
 msgid "外語檢定認證助學金"
 msgstr "Trợ cấp chứng chỉ ngoại ngữ"
 
-"Thu nhập thấp / trung thấp hoặc hoàn cảnh đặc biệt; cần kế hoạch học tập + 3"
-" hoạt động + 2 buổi gặp cố vấn"
-
-#: .\guides\templates\guides\guide_scholarship.html:247
-#: .\guides\templates\guides\guide_scholarship.html:249
-#: .\guides\templates\guides\guide_scholarship.html:252
-
 #: .\guides\templates\guides\guide_scholarship.html:254
 msgid "英語最高 NT$10,000；日文 / 法文 / 德文最高 NT$6,000，每學年 1 次"
 msgstr ""
-
-"Tiếng Anh tối đa NT$10.000; Nhật/Pháp/Đức tối đa NT$6.000, 1 lần mỗi năm học"
 
 #: .\guides\templates\guides\guide_scholarship.html:257
 msgid "實習獎勵金"
@@ -7638,22 +7221,13 @@ msgstr "Trợ cấp học tập ký túc xá"
 msgid "時，最高"
 msgstr ", tối đa"
 
-"Tiếng Anh tối đa NT$10,000; Tiếng Nhật / Pháp / Đức tối đa NT$6,000, 1 lần "
-"mỗi năm học"
-
-#: .\guides\templates\guides\guide_scholarship.html:257
-#: .\guides\templates\guides\guide_scholarship.html:259
-#: .\guides\templates\guides\guide_scholarship.html:262
-#: .\guides\templates\guides\guide_scholarship.html:263
-
 #: .\guides\templates\guides\guide_scholarship.html:264
 msgid "宿舍活動參與"
 msgstr "Tham gia hoạt động ký túc xá"
 
 #: .\guides\templates\guides\guide_scholarship.html:270
 msgid "申請入口：NCU ALC 安心就學頁面（ncu.edu.tw/ALC/）"
-
-msgstr "Cổng đăng ký: Trang học tập an tâm NCU ALC (ncu.edu.tw/ALC/)"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:275
 msgid "校外獎學金（精選）"
@@ -7663,34 +7237,21 @@ msgstr "Học bổng ngoài trường (chọn lọc)"
 msgid "申請期間（約）"
 msgstr "Thời gian nộp đơn (khoảng)"
 
-msgstr "Cổng đăng ký: Trang NCU ALC Secure Study (ncu.edu.tw/ALC/)"
-
-#: .\guides\templates\guides\guide_scholarship.html:275
-#: .\guides\templates\guides\guide_scholarship.html:284
-
 #: .\guides\templates\guides\guide_scholarship.html:285
 msgid "主要條件"
 msgstr "Điều kiện chính"
 
 #: .\guides\templates\guides\guide_scholarship.html:290
 msgid "行天宮獎學金"
-
-msgstr "Học bổng Đền Hành Thiên"
-
-#: .\guides\templates\guides\guide_scholarship.html:291
-
-msgstr "Học bổng Đền Xingtian"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:291
-#| msgid "1 年"
-
 msgid "年"
 msgstr "1 Năm"
 
 #: .\guides\templates\guides\guide_scholarship.html:292
 msgid "上學期 9/30、下學期 3/10"
-
-msgstr "Học kỳ 1: 30/9, Học kỳ 2: 10/3"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:293
 msgid "大二以上；成績 80+；操行 A；清寒優先"
@@ -7701,21 +7262,12 @@ msgid "孺鴻教育獎學金"
 msgstr "Học bổng Giáo dục Nhụ Hồng"
 
 #: .\guides\templates\guides\guide_scholarship.html:298
-
-msgstr "Học kỳ 1: 9/30, Học kỳ 2: 3/10"
-
-#: .\guides\templates\guides\guide_scholarship.html:293
-#: .\guides\templates\guides\guide_scholarship.html:296
-#: .\guides\templates\guides\guide_scholarship.html:298
-#| msgid "約每年 3 月"
-
 msgid "每年 3 月"
 msgstr "Khoảng tháng 3 hàng năm"
 
 #: .\guides\templates\guides\guide_scholarship.html:299
 msgid "成績 80+；GEPT 中級；操行 80+"
-
-msgstr "Điểm 80+; GEPT Trung cấp; Hạnh kiểm 80+"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:302
 msgid "平安菁英教育基金會"
@@ -7725,16 +7277,10 @@ msgstr "Quỹ Giáo dục Tinh anh Bình An"
 msgid "2/12 – 3/5"
 msgstr "2/12 – 3/5"
 
-msgstr "Điểm 80+; GEPT trung cấp; hạnh kiểm 80+"
-
-#: .\guides\templates\guides\guide_scholarship.html:302
-#: .\guides\templates\guides\guide_scholarship.html:304
-
 #: .\guides\templates\guides\guide_scholarship.html:305
 #, python-format
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%%"
-
-msgstr "Thu nhập gia đình hàng năm ≤ NT$900.000; Điểm 80+ hoặc top 40%% lớp"
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
@@ -7760,121 +7306,55 @@ msgstr "2/10 – 3/17"
 msgid "低 / 中低收入或身心障礙；成績 65+"
 msgstr "Thu nhập thấp/trung bình thấp hoặc khuyết tật; Điểm 65+"
 
-msgstr "Thu nhập gia đình hàng năm ≤ NT$900,000; điểm 80+ hoặc top 40% lớp"
-
-#: .\guides\templates\guides\guide_scholarship.html:308
-#: .\guides\templates\guides\guide_scholarship.html:310
-#: .\guides\templates\guides\guide_scholarship.html:311
-#: .\guides\templates\guides\guide_scholarship.html:314
-#: .\guides\templates\guides\guide_scholarship.html:316
-#: .\guides\templates\guides\guide_scholarship.html:317
-
 #: .\guides\templates\guides\guide_scholarship.html:323
 msgid "每學期開學後，學務處會在 NCU Portal 公告當學期可申請的校外獎學金清單，請定期查看"
 msgstr ""
 
-"Sau khi mỗi học kỳ bắt đầu, Phòng Công tác Sinh viên sẽ đăng danh sách học "
-"bổng ngoài trường có thể nộp đơn trong học kỳ đó trên NCU Portal — vui lòng "
-"kiểm tra thường xuyên"
-
 #: .\guides\templates\guides\guide_scholarship.html:328
-
-"Sau khi bắt đầu mỗi học kỳ, Văn phòng Sinh viên sẽ thông báo học bổng ngoài "
-"trường có thể đăng ký trên NCU Portal. Vui lòng kiểm tra thường xuyên."
-
-#: .\guides\templates\guides\guide_scholarship.html:328
-#| msgid "重要提醒："
-
 msgid "重要提醒"
 msgstr "Lưu ý quan trọng:"
 
 #: .\guides\templates\guides\guide_scholarship.html:331
 msgid "不得重複領取"
-
-msgstr "Không được nhận trùng lặp"
-
-msgstr "Không được nhận trùng"
-
+msgstr ""
 
 #: .\guides\templates\guides\guide_scholarship.html:332
 msgid "教育部與僑委會清寒助學金不可同時領取，也不能與其他政府學費減免並存，請確認再申請。"
 msgstr ""
 
-"Trợ cấp hoàn cảnh khó khăn của Bộ Giáo dục và OCAC không thể nhận đồng thời,"
-" cũng không thể kết hợp với miễn giảm học phí khác của chính phủ — vui lòng "
-"xác nhận trước khi nộp đơn."
-
 #: .\guides\templates\guides\guide_scholarship.html:335
 msgid "僑卡必備"
 msgstr "Bắt buộc có i-Card"
-
-"Học bổng hỗ trợ Bộ Giáo dục và OCAC không thể nhận đồng thời, cũng không thể"
-" tồn tại cùng với miễn học phí chính phủ khác. Vui lòng xác nhận trước khi "
-"đăng ký."
-
-#: .\guides\templates\guides\guide_scholarship.html:335
 
 #: .\guides\templates\guides\guide_scholarship.html:336
 msgid "申領任何政府獎助款項前必須先申辦「i 僑卡」，否則無法撥款，請在開學初即辦理。"
 msgstr ""
 
-"Bạn phải đăng ký \"i-Card\" trước khi nhận bất kỳ khoản trợ cấp nào của "
-"chính phủ, nếu không sẽ không thể giải ngân — vui lòng làm ngay đầu học kỳ."
-
 #: .\guides\templates\guides\guide_scholarship.html:339
 msgid "清寒證明須原件"
 msgstr "Giấy chứng nhận hoàn cảnh khó khăn phải là bản gốc"
-
-"Trước khi đăng ký bất kỳ học bổng hoặc trợ cấp chính phủ nào, bạn phải đăng "
-"ký \"i-Overseas Card\" trước; nếu không tiền sẽ không được giải ngân. Vui "
-"lòng xử lý vào đầu học kỳ."
-
-#: .\guides\templates\guides\guide_scholarship.html:339
 
 #: .\guides\templates\guides\guide_scholarship.html:340
 msgid "清寒補助所需的「清寒證明」必須由原居地機關開具並提交正本，影本或照片不受理。"
 msgstr ""
 
-"\"Giấy chứng nhận hoàn cảnh khó khăn\" cần thiết cho trợ cấp phải do cơ quan"
-" tại quê nhà cấp và nộp bản gốc — không chấp nhận bản sao hoặc ảnh chụp."
-
 #: .\guides\templates\guides\guide_scholarship.html:343
 msgid "留意截止日"
 msgstr "Lưu ý hạn chót"
-
-"Chứng nhận \"khó khăn tài chính\" cần cho hỗ trợ phải được cơ quan nơi cư "
-"trú cấp và nộp bản gốc. Bản sao hoặc ảnh không được chấp nhận."
-
-#: .\guides\templates\guides\guide_scholarship.html:343
 
 #: .\guides\templates\guides\guide_scholarship.html:344
 msgid "多數獎學金截止期限嚴格，OIA 每學期約 9/25（上）/ 3/2（下），逾期不受理，請提早準備文件。"
 msgstr ""
 
-"Hầu hết hạn chót học bổng đều nghiêm ngặt — OIA khoảng 25/9 (kỳ 1) / 2/3 (kỳ"
-" 2) mỗi học kỳ. Không nhận nộp trễ, vì vậy hãy chuẩn bị hồ sơ sớm."
-
-"Hầu hết thời hạn học bổng đều nghiêm ngặt. Thời hạn OIA khoảng 9/25 (học kỳ "
-"1) / 3/2 (học kỳ 2) mỗi học kỳ. Hết hạn không được chấp nhận. Hãy chuẩn bị "
-"tài liệu sớm."
-
-
 #: .\guides\templates\guides\guide_scholarship.html:349
 msgid "NCU 國際事務處：+886-3-425-4945｜僑生獎助學金相關業務洽 OIA 辦理"
 msgstr ""
-
-"Phòng Quan hệ Quốc tế NCU: +886-3-425-4945｜Vấn đề học bổng sinh viên Hoa "
-"kiều liên hệ OIA"
 
 #: .\guides\templates\guides\guide_search.html:14
 #: .\users\templates\users\profile_setup.html:194
 #: .\users\templates\users\profile_setup.html:253
 msgid "返回"
 msgstr "Quay lại"
-
-"Văn phòng Quan hệ Quốc tế NCU: +886-3-425-4945 | Học bổng sinh viên Hoa kiều"
-" liên hệ OIA"
-
 
 #: .\guides\templates\guides\guide_search.html:22
 msgid "搜尋所有指南內容..."
@@ -8032,11 +7512,20 @@ msgid "前往電信門市"
 msgstr "Đến cửa hàng nhà mạng"
 
 #: .\guides\templates\guides\guide_sim.html:120
+msgid ""
+"攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_sim.html:127
 msgid "選擇門號與 SIM 卡規格"
 msgstr "Chọn số và kích thước SIM"
 
 #: .\guides\templates\guides\guide_sim.html:129
+msgid ""
+"可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G "
+"正常使用。"
+msgstr ""
+
 #: .\guides\templates\guides\guide_sim.html:136
 msgid "插卡啟用，設定網路"
 msgstr "Lắp SIM và cấu hình mạng"
@@ -8793,10 +8282,6 @@ msgstr ""
 "lại."
 
 #: .\guides\templates\guides\guide_work_permit.html:248
-
-
-#| msgid "許可期限最長 "
-
 msgid "許可期限最長 6 個月："
 msgstr "Thời hạn giấy phép tối đa "
 
@@ -8891,20 +8376,21 @@ msgid "儀表板"
 msgstr "Bảng điều khiển"
 
 #: .\templates\base.html:71 .\templates\base.html:236
-#: .\users\templates\users\home.html:107
+#: .\users\templates\users\home.html:106
 msgid "任務清單"
 msgstr "Danh sách nhiệm vụ"
+
+#: .\templates\base.html:76 .\templates\base.html:78
+#: .\users\templates\users\dashboard.html:132
+#: .\users\templates\users\home.html:226
+msgid "學長姐分享"
+msgstr "Chia sẻ cựu sinh viên"
 
 #: .\templates\base.html:97
 msgid "搜尋指南..."
 msgstr "Tìm kiếm hướng dẫn..."
 
-
 #: .\templates\base.html:157
-
-#: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
-#| msgid "沒有未讀通知 🎉"
-
 msgid "沒有未讀通知"
 msgstr "Không có thông báo chưa đọc 🎉"
 
@@ -8934,79 +8420,63 @@ msgstr "Đăng xuất"
 msgid "開始流程"
 msgstr "Bắt đầu"
 
-
 #: .\templates\base.html:192 .\templates\base.html:194
 msgid "詢問AI小幫手"
 msgstr "Hỏi AI"
 
 #: .\templates\base.html:197 .\templates\base.html:237
 #: .\users\templates\users\dashboard.html:142
-
-#: .\templates\base.html:191
-msgid "專為僑外籍生打造的來台留學流程指南平台，協助學生一步步完成留學準備與抵台後事項。"
-msgstr ""
-
-#: .\templates\base.html:197 .\users\templates\users\home.html:136
-#: .\users\templates\users\home.html:281
-msgid "申請前準備"
-msgstr ""
-
-#: .\templates\base.html:199 .\users\templates\users\home.html:148
-#: .\users\templates\users\home.html:274 .\users\templates\users\home.html:288
-msgid "抵台前準備"
-msgstr ""
-
-#: .\templates\base.html:200 .\users\templates\users\home.html:154
-msgid "抵達後事項"
-msgstr ""
-
-#: .\templates\base.html:205 .\users\templates\users\home.html:314
-msgid "簽證指南"
-msgstr ""
-
-#: .\templates\base.html:206 .\users\templates\users\home.html:319
-msgid "住宿資訊"
-msgstr ""
-
-#: .\templates\base.html:207 .\users\templates\users\home.html:324
-msgid "健保說明"
-msgstr ""
-
-#: .\templates\base.html:208
-msgid "生活指南"
-msgstr ""
-
-#: .\templates\base.html:212
-msgid "支援服務"
-msgstr ""
-
-#: .\templates\base.html:213
-msgid "使用說明"
-msgstr ""
-
-#: .\templates\base.html:216
-#| msgid "詢問 AI 小幫手"
-
 msgid "AI 小幫手"
 msgstr "Hỏi Trợ lý AI"
 
 #: .\templates\base.html:214
-#: .\templates\base.html:219 .\users\templates\users\home.html:75
+msgid "專為僑外籍生打造的來台留學流程指南平台，協助學生一步步完成留學準備與抵台後事項。"
+msgstr ""
+"Nền tảng hướng dẫn quy trình du học Đài Loan được thiết kế đặc biệt dành cho"
+" sinh viên Hoa kiều và quốc tế, hỗ trợ sinh viên từng bước hoàn thành chuẩn "
+"bị du học và các thủ tục sau khi đến nơi."
+
+#: .\templates\base.html:219 .\users\templates\users\home.html:74
 msgid "留學流程"
 msgstr "Quy trình du học"
 
-#: .\templates\base.html:220 .\users\templates\users\home.html:81
-#: .\users\templates\users\home.html:151 .\users\templates\users\home.html:167
-#: .\templates\base.html:221 .\users\templates\users\home.html:91
-#: .\templates\base.html:226 .\users\templates\users\home.html:190
-#: .\templates\base.html:227 .\users\templates\users\home.html:195
-#: .\templates\base.html:228 .\users\templates\users\home.html:200
+#: .\templates\base.html:220 .\users\templates\users\home.html:59
+#: .\users\templates\users\home.html:80 .\users\templates\users\home.html:150
+#: .\users\templates\users\home.html:166
+msgid "抵台前準備"
+msgstr "Chuẩn bị trước khi đến Đài Loan"
+
+#: .\templates\base.html:221 .\users\templates\users\home.html:90
+msgid "抵達後事項"
+msgstr "Những việc cần làm sau khi đến"
+
+#: .\templates\base.html:226 .\users\templates\users\home.html:189
+msgid "簽證指南"
+msgstr "Hướng dẫn xin thị thực"
+
+#: .\templates\base.html:227 .\users\templates\users\home.html:194
+msgid "住宿資訊"
+msgstr "Thông tin chỗ ở"
+
+#: .\templates\base.html:228 .\users\templates\users\home.html:199
+msgid "健保說明"
+msgstr "Hướng dẫn bảo hiểm y tế"
+
 #: .\templates\base.html:229
+msgid "生活指南"
+msgstr "Hướng dẫn cuộc sống"
+
 #: .\templates\base.html:233
+msgid "支援服務"
+msgstr "Dịch vụ hỗ trợ"
+
 #: .\templates\base.html:234
+msgid "使用說明"
+msgstr "Hướng dẫn sử dụng"
+
 #: .\templates\base.html:243
 msgid "聯絡我們"
-msgstr "Liên hệ Chúng tôi"
+msgstr "Liên hệ chúng tôi"
 
 #: .\templates\base.html:251
 msgid "意見回饋"
@@ -9063,7 +8533,7 @@ msgid "Google 登入失敗，未取得憑證"
 msgstr "Đăng nhập Google thất bại, không nhận được thông tin xác thực"
 
 #: .\users\models.py:95 .\users\templates\users\edit_profile.html:76
-#: .\users\templates\users\home.html:117
+#: .\users\templates\users\home.html:116
 #: .\users\templates\users\profile_setup.html:129
 #: .\users\templates\users\profile_setup.html:136
 #: .\users\templates\users\profile_setup.html:415
@@ -9132,6 +8602,10 @@ msgstr "Mông Cổ"
 msgid "柬埔寨"
 msgstr "Campuchia"
 
+#: .\users\models.py:136 .\users\templates\users\profile_setup.html:472
+msgid "印度"
+msgstr "Ấn Độ"
+
 #: .\users\models.py:137 .\users\templates\users\profile_setup.html:473
 msgid "巴基斯坦"
 msgstr "Pakistan"
@@ -9156,12 +8630,7 @@ msgstr "Thổ Nhĩ Kỳ"
 msgid "英國"
 msgstr "Vương quốc Anh"
 
-
 #: .\users\models.py:145 .\users\templates\users\profile_setup.html:483
-
-#: .\users\models.py:145
-#| msgid "泰國"
-
 msgid "法國"
 msgstr "Pháp"
 
@@ -9181,12 +8650,7 @@ msgstr "Tây Ban Nha"
 msgid "美國"
 msgstr "Hoa Kỳ"
 
-
 #: .\users\models.py:151 .\users\templates\users\profile_setup.html:490
-
-#: .\users\models.py:151
-#| msgid "美國／加拿大"
-
 msgid "加拿大"
 msgstr "Mỹ / Canada"
 
@@ -9194,16 +8658,15 @@ msgstr "Mỹ / Canada"
 msgid "巴西"
 msgstr "Brazil"
 
+#: .\users\models.py:154 .\users\templates\users\profile_setup.html:494
+msgid "墨西哥"
+msgstr "Mexico"
+
 #: .\users\models.py:155 .\users\templates\users\profile_setup.html:495
 msgid "阿根廷"
 msgstr "Argentina"
 
-
 #: .\users\models.py:157 .\users\templates\users\profile_setup.html:498
-
-#: .\users\models.py:157
-#| msgid "南亞"
-
 msgid "南非"
 msgstr "Nam Phi"
 
@@ -9215,12 +8678,7 @@ msgstr "Ai Cập"
 msgid "奈及利亞"
 msgstr "Nigeria"
 
-
 #: .\users\models.py:161 .\users\templates\users\profile_setup.html:503
-
-#: .\users\models.py:161
-#| msgid "歐洲"
-
 msgid "澳洲"
 msgstr "Úc"
 
@@ -9229,10 +8687,6 @@ msgid "紐西蘭"
 msgstr "New Zealand"
 
 #: .\users\models.py:169
-
-
-#| msgid "例如：國立臺灣大學"
-
 msgid "國立臺灣大學（NTU）"
 msgstr "Đại học Quốc gia Đài Loan (NTU)"
 
@@ -9257,10 +8711,6 @@ msgid "國立中興大學（NCHU）"
 msgstr "Đại học Quốc lập Trung Hưng (NCHU)"
 
 #: .\users\models.py:175
-
-
-#| msgid "中央大學（正門）"
-
 msgid "國立中央大學（NCU）"
 msgstr "Đại học Quốc gia Trung ương (NCU)"
 
@@ -9380,30 +8830,14 @@ msgstr "Đại học Mở Quốc lập (NOU)"
 msgid "其他（Other）"
 msgstr "Khác (Other)"
 
-
 #: .\users\templates\users\_alumni_card.html:13
-#, fuzzy
 #| msgid "編輯資料"
 msgid "編輯"
 msgstr "Chỉnh sửa thông tin"
 
 #: .\users\templates\users\_alumni_card.html:15
 msgid "確定要刪除這則分享嗎？此動作無法復原。"
-
-#: .\users\templates\users\dashboard.html:152
-msgid "你好"
-msgstr "Xin chào"
-
-#: .\users\templates\users\dashboard.html:154
-msgid "境外生"
-msgstr "Du học sinh"
-
-#: .\users\templates\users\dashboard.html:155
-#| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
-msgid "歡迎使用 ReadyTo Taiwan，您的個人化來臺就學流程已準備好。"
-
 msgstr ""
-"Bạn có chắc muốn xóa chia sẻ này không? Hành động này không thể hoàn tác."
 
 #: .\users\templates\users\_alumni_card.html:28
 msgid "展開"
@@ -9419,7 +8853,6 @@ msgid "問題主旨"
 msgstr "Chủ đề"
 
 #: .\users\templates\users\_alumni_card.html:40
-#, fuzzy
 #| msgid "儲存備註"
 msgid "儲存"
 msgstr "Lưu ghi chú"
@@ -9511,22 +8944,22 @@ msgid "目前完成進度"
 msgstr "Tiến độ hoàn thành hiện tại"
 
 #: .\users\templates\users\dashboard.html:28
-#: .\users\templates\users\home.html:40
+#: .\users\templates\users\home.html:39
 msgid "即將到期 / 提醒"
 msgstr "Sắp hết hạn / Nhắc nhở"
 
 #: .\users\templates\users\dashboard.html:32
-#: .\users\templates\users\home.html:44
+#: .\users\templates\users\home.html:43
 msgid "即將到期任務"
 msgstr "Nhiệm vụ sắp hết hạn"
 
 #: .\users\templates\users\dashboard.html:37
-#: .\users\templates\users\home.html:49
+#: .\users\templates\users\home.html:48
 msgid "未讀通知"
 msgstr "Thông báo chưa đọc"
 
 #: .\users\templates\users\dashboard.html:43
-#: .\users\templates\users\home.html:58
+#: .\users\templates\users\home.html:57
 msgid "目前入學狀態"
 msgstr "Trạng thái nhập học hiện tại"
 
@@ -9555,7 +8988,7 @@ msgid "編輯資料"
 msgstr "Chỉnh sửa thông tin"
 
 #: .\users\templates\users\dashboard.html:105
-#: .\users\templates\users\home.html:144
+#: .\users\templates\users\home.html:143
 msgid "近期待辦任務"
 msgstr "Nhiệm vụ cần làm gần đây"
 
@@ -9749,47 +9182,71 @@ msgstr "Giấy tờ & Cư trú"
 msgid "費用與打工"
 msgstr "Chi phí & Làm thêm"
 
-#: .\users\templates\users\faq.html:29 .\users\templates\users\home.html:331
+#: .\users\templates\users\faq.html:29 .\users\templates\users\home.html:330
 msgid "申請台灣大學需要準備哪些文件？"
 msgstr "Xin nhập học đại học Đài Loan cần chuẩn bị những giấy tờ gì?"
 
 #: .\users\templates\users\faq.html:30
-#: .\users\templates\users\faq.html:33 .\users\templates\users\home.html:336
+msgid ""
+"一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
+msgstr ""
+
+#: .\users\templates\users\faq.html:33 .\users\templates\users\home.html:335
 msgid "不會中文可以來台灣留學嗎？"
 msgstr "Không biết tiếng Trung có thể du học Đài Loan không?"
 
 #: .\users\templates\users\faq.html:34
-#: .\users\templates\users\faq.html:37 .\users\templates\users\home.html:359
+msgid ""
+"可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 "
+"以上），或在僑先部完成一年預科中文課程。"
+msgstr ""
+
+#: .\users\templates\users\faq.html:37 .\users\templates\users\home.html:358
 msgid "申請流程需要多久時間？"
 msgstr "Quy trình nộp hồ sơ mất bao lâu?"
 
 #: .\users\templates\users\faq.html:38
-#: .\users\templates\users\faq.html:46 .\users\templates\users\home.html:346
+msgid ""
+"從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 "
+"個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
+msgstr ""
+
+#: .\users\templates\users\faq.html:46 .\users\templates\users\home.html:345
 msgid "學生簽證如何辦理？"
 msgstr "Làm thế nào để xin visa du học?"
 
 #: .\users\templates\users\faq.html:47
-#: .\users\templates\users\faq.html:50 .\users\templates\users\home.html:355
+msgid ""
+"收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident "
+"Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
+msgstr ""
+
+#: .\users\templates\users\faq.html:50 .\users\templates\users\home.html:354
 msgid "全民健保什麼時候可以加入？"
 msgstr "Khi nào có thể tham gia Bảo hiểm Y tế Toàn dân?"
 
-#: .\users\templates\users\faq.html:51 .\users\templates\users\home.html:356
+#: .\users\templates\users\faq.html:51 .\users\templates\users\home.html:355
 msgid "持有效居留證（ARC），在台灣合法居留滿 6 個月後可強制加入全民健保。若有效工作許可可提前加保。加保後門診費用大幅降低。"
 msgstr ""
 "Có ARC hợp lệ, sau khi cư trú hợp pháp tại Đài Loan đủ 6 tháng phải tham gia"
 " Bảo hiểm Y tế Toàn dân bắt buộc. Nếu có giấy phép lao động hợp lệ có thể "
 "tham gia sớm hơn. Chi phí khám ngoại trú giảm đáng kể sau khi tham gia."
 
-#: .\users\templates\users\faq.html:59 .\users\templates\users\home.html:341
+#: .\users\templates\users\faq.html:59 .\users\templates\users\home.html:340
 msgid "留學台灣的費用大約多少？"
 msgstr "Chi phí du học Đài Loan khoảng bao nhiêu?"
 
 #: .\users\templates\users\faq.html:60
-#: .\users\templates\users\faq.html:63 .\users\templates\users\home.html:351
+msgid ""
+"學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 "
+"NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
+msgstr ""
+
+#: .\users\templates\users\faq.html:63 .\users\templates\users\home.html:350
 msgid "可以邊讀書邊打工嗎？"
 msgstr "Có thể vừa học vừa làm thêm không?"
 
-#: .\users\templates\users\faq.html:64 .\users\templates\users\home.html:352
+#: .\users\templates\users\faq.html:64 .\users\templates\users\home.html:351
 msgid "可以，但需申請工作許可。持有效居留證（ARC）的外籍學生，入學後可向學校申請工讀許可，每週工時上限為 20 小時。寒暑假期間可申請全時工作。"
 msgstr ""
 "Được, nhưng cần xin giấy phép lao động. Sinh viên quốc tế có ARC hợp lệ có "
@@ -9839,12 +9296,7 @@ msgstr "Quay lại trang đăng nhập"
 msgid "來臺就學小幫手"
 msgstr "Trợ lý du học Đài Loan"
 
-
 #: .\users\templates\users\home.html:15
-
-#: .\users\templates\users\home.html:16 .\users\templates\users\home.html:27
-#| msgid "你好"
-
 msgid "你好！"
 msgstr "Xin chào"
 
@@ -9855,272 +9307,280 @@ msgstr "Chào Mừng Đến Với"
 #: .\users\templates\users\home.html:17
 msgid "專為僑生、外籍生與港澳生打造的來台留學流程指南平台。"
 msgstr ""
-"Nền tảng hướng dẫn quy trình du học Đài Loan được xây dựng riêng cho sinh "
-"viên Hoa kiều, sinh viên quốc tế và sinh viên Hồng Kông/Macau."
+"Nền tảng hướng dẫn quy trình du học Đài Loan được thiết kế đặc biệt dành cho"
+" sinh viên Hoa kiều, quốc tế và Hồng Kông/Ma Cao."
 
 #: .\users\templates\users\home.html:18
-
-
-#| msgid "歡迎使用 StudyGo Taiwan，您的個人化來臺就學流程已準備好。"
-msgid "，您的個人化來臺就學流程已準備好。"
-msgstr ""
-"Chào mừng đến với StudyGo Taiwan, quy trình du học Đài Loan cá nhân hóa của "
-"bạn đã sẵn sàng."
-
-#: .\users\templates\users\home.html:19 .\users\templates\users\home.html:30
-
 msgid "跟著我們一步步完成留學準備，掌握所有關鍵資訊。"
 msgstr ""
 "Cùng chúng tôi hoàn thành từng bước chuẩn bị du học và nắm vững mọi thông "
 "tin quan trọng."
 
-#: .\users\templates\users\home.html:30
+#: .\users\templates\users\home.html:29
 msgid "項任務"
 msgstr "nhiệm vụ"
 
-#: .\users\templates\users\home.html:34 .\users\templates\users\home.html:52
-#: .\users\templates\users\home.html:66
+#: .\users\templates\users\home.html:33 .\users\templates\users\home.html:51
+#: .\users\templates\users\home.html:65
 msgid "示範資料"
 msgstr "Dữ liệu Mẫu"
 
-
-#: .\users\templates\users\home.html:60
-msgid "抵臺前準備"
-msgstr "Chuẩn bị Trước khi Đến"
-
-#: .\users\templates\users\home.html:61 .\users\templates\users\home.html:118
-
-#: .\users\templates\users\home.html:115
-#| msgid "申請截止"
-msgid "申請中"
-msgstr "Hạn đăng ký"
-
-#: .\users\templates\users\home.html:116 .\users\templates\users\home.html:242
-#| msgid "中央大學"
-
+#: .\users\templates\users\home.html:60 .\users\templates\users\home.html:117
 msgid "國立中央大學"
 msgstr "Đại học Trung Ương Quốc lập (NCU)"
 
-#: .\users\templates\users\home.html:76
+#: .\users\templates\users\home.html:75
 msgid "兩個階段"
 msgstr "Hai Giai Đoạn"
 
-#: .\users\templates\users\home.html:76
+#: .\users\templates\users\home.html:75
 msgid "掌握留學全流程"
 msgstr "Nắm Vững Toàn Bộ Quy Trình Du Học"
 
-#: .\users\templates\users\home.html:83
+#: .\users\templates\users\home.html:82
 msgid "辦理居留簽證（憑入學許可）"
-msgstr "Xin Visa Cư trú (kèm Giấy báo Nhập học)"
+msgstr "Xin Visa Cư trú (với giấy báo nhập học)"
 
-#: .\users\templates\users\home.html:84
+#: .\users\templates\users\home.html:83
 msgid "申請學校宿舍或安排租屋"
 msgstr "Đăng ký Ký túc xá Trường hoặc Sắp xếp Thuê nhà"
 
-#: .\users\templates\users\home.html:85
+#: .\users\templates\users\home.html:84
 msgid "預訂機票、準備入境文件與體檢報告"
 msgstr "Đặt vé Máy bay, Chuẩn bị Hồ sơ Nhập cảnh và Giấy Khám Sức khỏe"
 
-#: .\users\templates\users\home.html:86
+#: .\users\templates\users\home.html:85
 msgid "填好抵臺日期，系統自動排任務"
 msgstr "Điền ngày đến, hệ thống tự động sắp xếp nhiệm vụ"
 
-#: .\users\templates\users\home.html:93
+#: .\users\templates\users\home.html:92
 msgid "入境 30 天內線上申請 ARC 居留證"
 msgstr "Đăng ký ARC Trực tuyến Trong Vòng 30 Ngày Sau Khi Nhập Cảnh"
 
-#: .\users\templates\users\home.html:94
+#: .\users\templates\users\home.html:93
 msgid "學校報到註冊、辦學生證與選課"
 msgstr "Nhập học đăng ký, làm thẻ sinh viên và chọn môn học"
 
-
-#: .\users\templates\users\home.html:95
+#: .\users\templates\users\home.html:94
 msgid "銀行開戶、辦手機門號"
 msgstr "Mở Tài khoản Ngân hàng, Đăng ký Số Điện thoại"
 
-#: .\users\templates\users\home.html:161 .\users\templates\users\home.html:293
-#: .\users\templates\users\login.html:96
-#: .\users\templates\users\login.html:135
-#: .\users\templates\users\login.html:153
-msgid "登入"
-msgstr "Đăng nhập"
-
-
-#: .\users\templates\users\home.html:96
+#: .\users\templates\users\home.html:95
 msgid "居留滿 6 個月加入全民健保"
-msgstr "Tham gia Bảo hiểm Y tế Toàn dân sau 6 tháng cư trú"
+msgstr "Tham gia BHYT Toàn dân sau 6 tháng cư trú"
 
-#: .\users\templates\users\home.html:100
+#: .\users\templates\users\home.html:99
 msgid "以上為示範內容，登入後可查看您的個人化流程進度。"
-msgstr "Nội dung trên chỉ là ví dụ. Đăng nhập để xem tiến độ cá nhân của bạn."
+msgstr ""
+"Trên đây là nội dung mẫu. Đăng nhập để xem tiến độ quy trình cá nhân hóa của"
+" bạn."
 
-#: .\users\templates\users\home.html:108
+#: .\users\templates\users\home.html:107
 msgid "跟著清單走"
 msgstr "Làm Theo Danh sách"
 
-#: .\users\templates\users\home.html:108
+#: .\users\templates\users\home.html:107
 msgid "不遺漏任何步驟"
 msgstr "Không Bỏ Sót Bước Nào"
 
-#: .\users\templates\users\home.html:113
+#: .\users\templates\users\home.html:112
 msgid "王小明"
 msgstr "Vương Tiểu Minh"
 
-#: .\users\templates\users\home.html:122
+#: .\users\templates\users\home.html:121
 msgid "目前進度"
 msgstr "Tiến độ Hiện tại"
 
-#: .\users\templates\users\home.html:128
+#: .\users\templates\users\home.html:127
 msgid "已完成 8 / 20 項任務"
 msgstr "Đã Hoàn Thành 8 / 20 Nhiệm Vụ"
 
-
-#: .\users\templates\users\home.html:133
+#: .\users\templates\users\home.html:132
 msgid "待辦任務"
 msgstr "Nhiệm vụ cần làm gần đây"
 
-#: .\users\templates\users\home.html:138
-
-#: .\users\templates\users\home.html:257
-#| msgid "近期待辦任務"
-#: .\users\templates\users\home.html:262
-#| msgid "即將到期任務"
-
+#: .\users\templates\users\home.html:137
 msgid "即將到期"
 msgstr "Nhiệm vụ sắp hết hạn"
 
-#: .\users\templates\users\home.html:150
+#: .\users\templates\users\home.html:149
 msgid "申請學生簽證"
 msgstr "Đăng ký Visa Du học"
 
-
-#: .\users\templates\users\home.html:158
-
-#: .\users\templates\users\home.html:280
-#| msgid "財力證明"
-
+#: .\users\templates\users\home.html:157
 msgid "準備財力證明文件"
 msgstr "Bằng Chứng Tài Chính"
 
-#: .\users\templates\users\home.html:159
-#: .\users\templates\users\home.html:166
+#: .\users\templates\users\home.html:158
+msgid "申請前準備"
+msgstr "Chuẩn bị trước khi nộp đơn"
+
+#: .\users\templates\users\home.html:165
 msgid "預訂來台機票"
 msgstr "Đặt vé Máy bay đến Đài Loan"
 
-#: .\users\templates\users\home.html:171
+#: .\users\templates\users\home.html:170
 msgid "以上為示範資料，登入後可查看您的個人化任務清單。"
 msgstr ""
-"Dữ liệu trên chỉ là ví dụ. Đăng nhập để xem danh sách nhiệm vụ cá nhân của "
-"bạn."
+"Trên đây là dữ liệu mẫu. Đăng nhập để xem danh sách nhiệm vụ cá nhân hóa của"
+" bạn."
 
-
-#: .\users\templates\users\home.html:183
-
-#: .\users\templates\users\home.html:293
-msgid "以上為示範資料，"
-msgstr ""
-
-#: .\users\templates\users\home.html:293
-#| msgid "我的個人化任務清單"
-msgid "後可查看您的個人化任務清單"
-msgstr "Danh sách nhiệm vụ cá nhân hóa của tôi"
-
-#: .\users\templates\users\home.html:307
-
+#: .\users\templates\users\home.html:182
 msgid "重要資訊"
 msgstr "Thông tin Quan trọng"
 
-#: .\users\templates\users\home.html:183
+#: .\users\templates\users\home.html:182
 msgid "一次搞定"
 msgstr "Hoàn Tất Trong Một Lần"
 
-#: .\users\templates\users\home.html:185
+#: .\users\templates\users\home.html:184
 msgid "從簽證到住宿、從健保到交通，所有外籍生在台必備的重要資訊都在這裡"
 msgstr ""
 "Từ visa đến nhà ở, từ bảo hiểm y tế đến giao thông — mọi thông tin quan "
 "trọng sinh viên quốc tế cần tại Đài Loan đều có ở đây"
 
-#: .\users\templates\users\home.html:191
+#: .\users\templates\users\home.html:190
 msgid "學生簽證申請流程、所需文件、辦理地點與注意事項，一次搞懂不迷路。"
 msgstr ""
 "Quy trình xin visa du học, hồ sơ cần thiết, địa điểm nộp và lưu ý — hiểu rõ "
 "tất cả chỉ trong một lần."
 
-#: .\users\templates\users\home.html:196
+#: .\users\templates\users\home.html:195
 msgid "校內宿舍申請流程、校外租屋平台推薦、租房合約注意事項與常見陷阱。"
 msgstr ""
 "Quy trình đăng ký ký túc xá trong trường, giới thiệu nền tảng thuê nhà ngoài"
 " trường, lưu ý hợp đồng thuê nhà và các cạm bẫy thường gặp."
 
-#: .\users\templates\users\home.html:201
+#: .\users\templates\users\home.html:200
 msgid "全民健保加入資格、保費計算方式、就醫流程與各地醫院資訊查詢。"
 msgstr ""
 "Điều kiện tham gia Bảo hiểm Y tế Toàn dân, cách tính phí bảo hiểm, quy trình"
 " khám chữa bệnh và tra cứu thông tin bệnh viện theo khu vực."
 
-
-#: .\users\templates\users\home.html:205 .\users\templates\users\login.html:53
-
-#: .\users\templates\users\home.html:329
-#| msgid "台灣銀行開戶"
-
+#: .\users\templates\users\home.html:204 .\users\templates\users\login.html:53
 msgid "銀行開戶"
 msgstr "Mở tài khoản ngân hàng Đài Loan"
 
-#: .\users\templates\users\home.html:206
+#: .\users\templates\users\home.html:205
 msgid "推薦外籍生友善銀行、開戶所需文件、線上轉帳與提款卡申請教學。"
 msgstr ""
 "Giới thiệu ngân hàng thân thiện với sinh viên quốc tế, hồ sơ mở tài khoản, "
 "chuyển khoản trực tuyến và hướng dẫn làm thẻ ghi nợ."
 
-#: .\users\templates\users\home.html:210
+#: .\users\templates\users\home.html:209
 msgid "手機門號"
 msgstr "Số Điện thoại Di động"
 
-#: .\users\templates\users\home.html:211
+#: .\users\templates\users\home.html:210
 msgid "電信業者比較、預付卡 vs 月租方案、門號申請所需證件與流程。"
 msgstr ""
 "So sánh nhà mạng, gói trả trước vs gói tháng, hồ sơ và quy trình đăng ký số "
 "điện thoại."
 
-#: .\users\templates\users\home.html:215
+#: .\users\templates\users\home.html:214
 msgid "大眾交通"
 msgstr "Giao thông Công cộng"
 
-#: .\users\templates\users\home.html:216
+#: .\users\templates\users\home.html:215
 msgid "悠遊卡/一卡通使用教學、捷運公車路線查詢、YouBike 租借與火車訂票。"
 msgstr ""
 "Hướng dẫn sử dụng EasyCard/iPASS, tra cứu tuyến MRT và xe buýt, thuê YouBike"
 " và đặt vé tàu."
 
-#: .\users\templates\users\home.html:230
+#: .\users\templates\users\home.html:227
+msgid "來聽聽"
+msgstr "Lắng Nghe Từ"
+
+#: .\users\templates\users\home.html:227
+msgid "學長姐怎麼說"
+msgstr "Lời Chia Sẻ Từ Các Anh Chị Khóa Trước"
+
+#: .\users\templates\users\home.html:229
 msgid "來自世界各地、就讀國立中央大學的學長姐，分享他們最真實的留學體驗與心得"
 msgstr ""
 "Các sinh viên quốc tế đến từ khắp nơi trên thế giới tại NCU chia sẻ những "
 "trải nghiệm du học tại Đài Loan chân thực nhất"
 
-#: .\users\templates\users\home.html:328
-msgid "您想了解的都在這"
+#: .\users\templates\users\home.html:238 .\users\templates\users\login.html:90
+msgid "國立臺灣大學"
+msgstr "Đại học Quốc gia Đài Loan"
 
-msgstr "Mọi thứ bạn muốn biết đều ở đây"
+#: .\users\templates\users\home.html:239
+msgid "國際企業管理碩士"
+msgstr "Thạc sĩ Quản trị Kinh doanh Quốc tế"
 
+#: .\users\templates\users\home.html:253
+msgid "國立成功大學"
+msgstr "Đại học Quốc gia Thành Công"
+
+#: .\users\templates\users\home.html:254
+msgid "機械工程學士班"
+msgstr "Cử nhân Kỹ thuật Cơ khí"
+
+#: .\users\templates\users\home.html:258
+msgid ""
+"「台灣的工程教育真的世界一流！教授們都很願意指導外籍生，實驗室設備也很完整。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」"
 msgstr ""
 
-#: .\users\templates\users\home.html:452
-#: .\users\templates\users\home.html:453
-#: .\users\templates\users\home.html:456
-#: .\users\templates\users\home.html:457
-#: .\users\templates\users\home.html:460
-#: .\users\templates\users\home.html:461
-#: .\users\templates\users\home.html:464
-#: .\users\templates\users\home.html:465
-#: .\users\templates\users\home.html:468
-#| msgid "在台期間可以打工嗎？"
-#: .\users\templates\users\home.html:469
-#: .\users\templates\users\home.html:472
-#: .\users\templates\users\home.html:473
-#: .\users\templates\users\home.html:476
-#: .\users\templates\users\home.html:477
+#: .\users\templates\users\home.html:268
+msgid "國立臺灣師範大學"
+msgstr "Đại học Sư phạm Quốc gia Đài Loan"
+
+#: .\users\templates\users\home.html:269
+msgid "華語文教學碩士"
+msgstr "Thạc sĩ Giảng dạy tiếng Hoa"
+
+#: .\users\templates\users\home.html:273
+msgid "「來學習華語是我做過最棒的決定！師大華語中心的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
+msgstr ""
+"\"Đến học tiếng Hoa là quyết định tuyệt vời nhất tôi từng đưa ra! Phương "
+"pháp giảng dạy của Trung tâm Hoa ngữ NTNU rất sinh động, và tôi được áp dụng"
+" thực tế mỗi ngày. Danh sách chuẩn bị trước khi khởi hành của ReadyTo giúp "
+"tôi hoàn toàn không bối rối trước khi lên đường.\""
+
+#: .\users\templates\users\home.html:282
+msgid "國立清華大學"
+msgstr "Đại học Quốc lập Thanh Hoa"
+
+#: .\users\templates\users\home.html:283
+msgid "資訊工程博士班"
+msgstr "Chương trình Tiến sĩ Kỹ thuật Thông tin"
+
+#: .\users\templates\users\home.html:287
+msgid "「清大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
+msgstr ""
+"\"Khoa Khoa học Máy tính của NTHU có rất nhiều cơ hội hợp tác với doanh "
+"nghiệp — tôi đã có cơ hội thực tập tại Công viên Khoa học Hsinchu ngay khi "
+"còn đi học. Thông tin nhà ở và hướng dẫn bảo hiểm y tế trên ReadyTo giúp ích"
+" rất nhiều, cho tôi tập trung vào nghiên cứu.\""
+
+#: .\users\templates\users\home.html:296
+msgid "國立政治大學"
+msgstr "Đại học Quốc lập Chính Trị"
+
+#: .\users\templates\users\home.html:297
+msgid "國際傳播學士班"
+msgstr "Chương trình Cử nhân Truyền thông Quốc tế"
+
+#: .\users\templates\users\home.html:301
+msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。政大的校園生活多元豐富，是我做過最好的選擇！」"
+msgstr ""
+"\"Vì có gốc gác Hoa kiều, nhiều người hỏi tại sao tôi vẫn chọn đến Đài Loan."
+" Nhưng môi trường truyền thông và tự do sáng tạo ở Đài Loan thực sự rất khác"
+" biệt. Cuộc sống ở NCCU đa dạng và phong phú — đó là lựa chọn tốt nhất tôi "
+"từng đưa ra!\""
+
+#: .\users\templates\users\home.html:310 .\users\templates\users\login.html:94
+msgid "國立陽明交通大學"
+msgstr "Đại học Quốc gia Dương Minh Giao Thông"
+
+#: .\users\templates\users\home.html:311
+msgid "半導體研究碩士"
+msgstr "Thạc sĩ Nghiên cứu Bán dẫn"
+
+#: .\users\templates\users\home.html:327
+msgid "您想了解的都在這"
+msgstr "Mọi thứ bạn muốn biết đều ở đây"
 
 #: .\users\templates\users\login.html:5
 msgid "登入 / 註冊"
@@ -10131,15 +9591,10 @@ msgid "個人化任務清單"
 msgstr "Danh sách Nhiệm vụ Cá nhân hóa"
 
 #: .\users\templates\users\login.html:24
-
-msgid "系統會依你的國籍、身分別與目前狀態，自動生成簽證申請、入臺前與入臺後的重要任務，並以進度方式提醒你一步一步完成。"
-
+msgid ""
+"回答幾個問題，系統就會依你的身分別、國籍與入學狀態生成專屬任務清單：每項任務附上所需文件、辦理地點與地圖，並依你的抵臺日期自動計算截止日，到期前以站內通知與"
+" Email 提醒你。"
 msgstr ""
-"Trả lời một vài câu hỏi, hệ thống sẽ tạo danh sách nhiệm vụ riêng theo loại "
-"đối tượng, quốc tịch và tình trạng nhập học của bạn: mỗi nhiệm vụ kèm hồ sơ "
-"cần thiết, địa điểm và bản đồ, hạn chót được tự động tính theo ngày đến của "
-"bạn, và sẽ nhắc bạn qua thông báo trong ứng dụng và email trước khi hết hạn."
-
 
 #: .\users\templates\users\login.html:25
 msgid "自動生成"
@@ -10178,9 +9633,6 @@ msgid "剩 12 天"
 msgstr "Còn 12 Ngày"
 
 #: .\users\templates\users\login.html:44
-
-#: .\users\templates\users\login.html:43
-
 msgid "把簽證、居留證、健保、住宿與入學報到資訊整合成一站式頁面，讓學生更容易找到正確資料，不再被零散資訊搞混。"
 msgstr ""
 "Tổng hợp thông tin visa, thẻ cư trú, bảo hiểm y tế, nhà ở và đăng ký nhập "
@@ -10216,13 +9668,10 @@ msgid "雙 AI 夥伴"
 msgstr "Cặp đôi AI Đồng hành"
 
 #: .\users\templates\users\login.html:66
-
-msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
+msgid ""
+"「任務小幫手」熟悉你的任務進度與截止日，用 9 "
+"種語言回答簽證、居留證等行政問題並附官方來源；「聊天好朋友」則在你想家、壓力大時陪你聊聊，還能幫你找學校附近的餐廳與商店。"
 msgstr ""
-"Khi bạn không biết bước đầu tiên phải làm gì, cần chuẩn bị những giấy tờ gì,"
-" hoặc không biết hỏi ai, bạn có thể nhận được trợ giúp nhanh chóng qua Trợ "
-"lý AI."
-
 
 #: .\users\templates\users\login.html:67
 msgid "任務小幫手"
@@ -10257,6 +9706,10 @@ msgstr ""
 "bạn tìm hương vị quê nhà gần trường 🍜"
 
 #: .\users\templates\users\login.html:84
+msgid ""
+"來自世界各地的學長姐分享最真實的留學經驗：看看「你的學校」的前輩怎麼走過這段路，也能瀏覽所有學校的心得；完成註冊後，你也可以發佈自己的故事，成為學弟妹的引路人。"
+msgstr ""
+
 #: .\users\templates\users\login.html:85
 msgid "發佈心得"
 msgstr "Đăng Kinh nghiệm"
@@ -10281,7 +9734,6 @@ msgstr "Hiển thị giới thiệu thứ hai"
 msgid "顯示第三張介紹"
 msgstr "Hiển thị giới thiệu thứ ba"
 
-
 #: .\users\templates\users\login.html:107
 msgid "顯示第四張介紹"
 msgstr "Hiển thị Slide Giới thiệu Thứ 4"
@@ -10289,12 +9741,11 @@ msgstr "Hiển thị Slide Giới thiệu Thứ 4"
 #: .\users\templates\users\login.html:119
 #: .\users\templates\users\login.html:158
 #: .\users\templates\users\login.html:176
+msgid "登入"
+msgstr "Đăng nhập"
+
 #: .\users\templates\users\login.html:121
 #: .\users\templates\users\login.html:178
-
-#: .\users\templates\users\login.html:98
-#: .\users\templates\users\login.html:155
-
 msgid "註冊帳號"
 msgstr "Đăng ký tài khoản"
 
@@ -10302,12 +9753,7 @@ msgstr "Đăng ký tài khoản"
 msgid "歡迎回來"
 msgstr "Chào mừng trở lại"
 
-
 #: .\users\templates\users\login.html:126
-
-#: .\users\templates\users\login.html:103
-#| msgid "請登入您的 StudyGo 帳戶"
-
 msgid "請登入您的 ReadyTo Taiwan 帳戶"
 msgstr "Vui lòng đăng nhập vào tài khoản ReadyTo Taiwan của bạn"
 
@@ -10337,12 +9783,7 @@ msgstr "Đăng ký miễn phí ngay"
 msgid "建立帳號"
 msgstr "Tạo tài khoản"
 
-
 #: .\users\templates\users\login.html:183
-
-#: .\users\templates\users\login.html:160
-#| msgid "填寫基本資料，開始使用 StudyGo Taiwan"
-
 msgid "填寫基本資料，開始使用 ReadyTo Taiwan"
 msgstr "Điền thông tin cơ bản, bắt đầu sử dụng StudyGo Taiwan"
 
@@ -10421,15 +9862,11 @@ msgstr "Đã xác minh? Quay lại đăng nhập"
 msgid "登出中…"
 msgstr "Đang đăng xuất…"
 
-#: .\users\templates\users\logout_redirect.html:25
+#: .\users\templates\users\logout_redirect.html:22
 msgid "登出成功，"
 msgstr "Đăng xuất thành công, "
 
-#: .\users\templates\users\logout_redirect.html:26
-
-
-#| msgid "點此返回登入頁面"
-
+#: .\users\templates\users\logout_redirect.html:23
 msgid "點此返回首頁"
 msgstr "Nhấp vào đây để quay lại trang chủ"
 
@@ -10674,178 +10111,218 @@ msgstr "Đặt lại mật khẩu thành công, vui lòng đăng nhập lại"
 msgid "重設失敗，連結可能已過期"
 msgstr "Đặt lại thất bại, liên kết có thể đã hết hạn"
 
+#~ msgid "我的個人化任務清單"
+#~ msgstr "Danh sách nhiệm vụ cá nhân hóa của tôi"
 
+#~ msgid "完成這些任務，為你在台灣的學習生活做好準備！"
+#~ msgstr ""
+#~ "Hoàn thành những nhiệm vụ này để chuẩn bị cho cuộc sống học tập tại Đài "
+#~ "Loan!"
 
-msgid "準備來臺流程"
-msgstr "Quy trình chuẩn bị đến Đài Loan"
+#~ msgid "來自世界各地的學長姐，分享他們在台灣最真實的留學體驗與心得"
+#~ msgstr ""
+#~ "Các anh chị khóa trước từ khắp nơi trên thế giới chia sẻ trải nghiệm du học "
+#~ "Đài Loan chân thực nhất"
 
-msgid "15 天"
-msgstr "15 ngày"
+#~ msgid "電機工程碩士"
+#~ msgstr "Thạc sĩ Kỹ thuật Điện"
 
-msgid "抵台 15 天內"
-msgstr "Trong vòng 15 ngày sau khi đến Đài Loan"
+#~ msgid "醫學系學士班"
+#~ msgstr "Chương trình Cử nhân Y khoa"
 
-msgid "抵台 15 天內辦居留"
-msgstr "Đăng ký cư trú trong vòng 15 ngày sau khi đến Đài Loan"
+#~ msgid "化學工程博士班"
+#~ msgstr "Chương trình Tiến sĩ Kỹ thuật Hóa học"
 
-msgid "抵台後 15 天內辦理"
-msgstr "Nộp đơn trong vòng 15 ngày sau khi đến"
+#~ msgid "SPARC（計中）帳號"
+#~ msgstr "tài khoản SPARC (Trung tâm Máy tính)"
 
-msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駸外館處驗證或在台公證。"
-msgstr ""
-"Do cơ quan cảnh sát hoặc tư pháp nước sở tại cấp. Có hiệu lực trong 1 năm. "
-"Tài liệu tiếng nước ngoài phải được cơ quan đại diện Đài Loan xác nhận hoặc "
-"công chứng tại Đài Loan."
+#~ msgid "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需導師與系主任同意），否則依規定令退學。"
+#~ msgstr ""
+#~ "Năm 1–3 phải học ít nhất 16 tín chỉ mỗi học kỳ; năm 4 ít nhất 9. Những người"
+#~ " dưới mức tối thiểu phải đăng ký giảm tải (cần sự chấp thuận của cố vấn và "
+#~ "trưởng khoa), nếu không sẽ bị đuổi học."
 
-msgid "主題分類"
-msgstr "Chủ đề"
+#~ msgid "你好"
+#~ msgstr "Xin chào"
 
-msgid "實用指南"
-msgstr "Hướng dẫn"
+#~ msgid "境外生"
+#~ msgstr "Du học sinh"
 
-msgid "隨時查閱"
-msgstr "Tra cứu 24H"
+#~ msgid "，您的個人化來臺就學流程已準備好。"
+#~ msgstr ""
+#~ "Chào mừng đến với StudyGo Taiwan, quy trình du học Đài Loan cá nhân hóa của "
+#~ "bạn đã sẵn sàng."
 
-msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
-msgstr ""
-"Thủ tục ARC, nhà ở, đi lại và hơn thế nữa — tất cả thông tin bạn cần ở một "
-"nơi."
+#~ msgid "抵臺前準備"
+#~ msgstr "Chuẩn bị Trước khi Đến"
 
-msgid "需要更多協助？"
-msgstr "Cần thêm hỗ trợ?"
+#~ msgid "申請中"
+#~ msgstr "Hạn đăng ký"
 
-msgid "請聯繫"
-msgstr "Liên hệ"
+#~ msgid "後可查看您的個人化任務清單"
+#~ msgstr "Danh sách nhiệm vụ cá nhân hóa của tôi"
 
-msgid "分機 57081，我們很樂意幫助你！"
-msgstr "Số nội bộ 57081 — Chúng tôi sẵn lòng giúp đỡ!"
+#~ msgid "當你不知道第一步該做什麼、文件要準備哪些，或是不知道該問誰時，都可以直接透過 AI 小幫手快速獲得協助。"
+#~ msgstr ""
+#~ "Khi bạn không biết bước đầu tiên phải làm gì, cần chuẩn bị những giấy tờ gì,"
+#~ " hoặc không biết hỏi ai, bạn có thể nhận được trợ giúp nhanh chóng qua Trợ "
+#~ "lý AI."
 
-msgid "許可期限最長 "
-msgstr "Thời hạn giấy phép tối đa "
+#~ msgid "準備來臺流程"
+#~ msgstr "Quy trình chuẩn bị đến Đài Loan"
 
-msgid "日"
-msgstr ""
+#~ msgid "15 天"
+#~ msgstr "15 ngày"
 
-msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
-msgstr ""
-"Các khoa có thể tự đặt tiêu chí (ví dụ: xếp hạng điểm), nhưng ngưỡng xếp "
-"hạng không được vượt quá 50% đầu (tức là nửa trên của lớp)"
+#~ msgid "抵台 15 天內"
+#~ msgstr "Trong vòng 15 ngày sau khi đến Đài Loan"
 
-msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
-msgstr ""
-"Hạn ngạch chuyển vào: Mỗi khoa có thể nhận tối đa 20% chỉ tiêu được phê "
-"duyệt ban đầu mỗi năm học"
+#~ msgid "抵台 15 天內辦居留"
+#~ msgstr "Đăng ký cư trú trong vòng 15 ngày sau khi đến Đài Loan"
 
-msgid "（海外華裔學生）"
-msgstr "(Sinh viên Hoa kiều)"
+#~ msgid "抵台後 15 天內辦理"
+#~ msgstr "Nộp đơn trong vòng 15 ngày sau khi đến"
 
-msgid "（外國籍學生）"
-msgstr "(Sinh viên nước ngoài)"
+#~ msgid "由母國警察或司法機關出具，1 年內有效。外文文件須經我國駸外館處驗證或在台公證。"
+#~ msgstr ""
+#~ "Do cơ quan cảnh sát hoặc tư pháp nước sở tại cấp. Có hiệu lực trong 1 năm. "
+#~ "Tài liệu tiếng nước ngoài phải được cơ quan đại diện Đài Loan xác nhận hoặc "
+#~ "công chứng tại Đài Loan."
 
-msgid "（香港、澳門學生）"
-msgstr "(Sinh viên Hồng Kông/Ma Cao)"
+#~ msgid "主題分類"
+#~ msgstr "Chủ đề"
 
-msgid "學長姐"
-msgstr "Đàn anh chị"
+#~ msgid "實用指南"
+#~ msgstr "Hướng dẫn"
 
-msgid "企業管理碩士"
-msgstr "Thạc sĩ Quản trị Kinh doanh"
+#~ msgid "隨時查閱"
+#~ msgstr "Tra cứu 24H"
 
-msgid "機械工程學系"
-msgstr "Khoa Kỹ thuật Cơ khí"
+#~ msgid "居留證辦理・住宿・交通等常用說明，一站式查詢所有你需要的資訊。"
+#~ msgstr ""
+#~ "Thủ tục ARC, nhà ở, đi lại và hơn thế nữa — tất cả thông tin bạn cần ở một "
+#~ "nơi."
 
-msgid "學習與教學研究所"
-msgstr "Viện Nghiên cứu Học tập và Giảng dạy"
+#~ msgid "需要更多協助？"
+#~ msgstr "Cần thêm hỗ trợ?"
 
-msgid "資訊工程學系博士班"
-msgstr "Chương trình Tiến sĩ Kỹ thuật Thông tin"
+#~ msgid "請聯繫"
+#~ msgstr "Liên hệ"
 
-msgid "國際企業學士班"
-msgstr "Chương trình Cử nhân Kinh doanh Quốc tế"
+#~ msgid "分機 57081，我們很樂意幫助你！"
+#~ msgstr "Số nội bộ 57081 — Chúng tôi sẵn lòng giúp đỡ!"
 
-msgid "光電科學與工程學系碩士"
-msgstr "Thạc sĩ Khoa học Quang học và Kỹ thuật"
+#~ msgid "許可期限最長 "
+#~ msgstr "Thời hạn giấy phép tối đa "
 
-msgid "「來中大交流是我做過最棒的決定！中大的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
-msgstr ""
-"\"Đến NCU là quyết định tốt nhất tôi từng đưa ra! Phương pháp giảng dạy của "
-"NCU rất sinh động và thực tiễn mỗi ngày. Danh sách chuẩn bị trước khi đi của"
-" ReadyTo giúp tôi hoàn toàn không bị rối loạn trước khi khởi hành.\""
+#~ msgid "各系可自訂審查標準（如成績排名），但排名門檻不得高於前 50%（即以班排名前半段為上限）"
+#~ msgstr ""
+#~ "Các khoa có thể tự đặt tiêu chí (ví dụ: xếp hạng điểm), nhưng ngưỡng xếp "
+#~ "hạng không được vượt quá 50% đầu (tức là nửa trên của lớp)"
 
-msgid "「中大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
-msgstr ""
-"\"Khoa CNTT của NCU có nhiều cơ hội hợp tác với ngành công nghiệp — tôi có "
-"cơ hội thực tập tại Khu công nghệ Tân Trúc khi còn học. Thông tin nhà ở và "
-"hướng dẫn NHI trên ReadyTo rất hữu ích, giúp tôi tập trung vào nghiên cứu.\""
+#~ msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%"
+#~ msgstr ""
+#~ "Hạn ngạch chuyển vào: Mỗi khoa có thể nhận tối đa 20% chỉ tiêu được phê "
+#~ "duyệt ban đầu mỗi năm học"
 
-msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。中大的校園生活多元豐富，是我做過最好的選擇！」"
-msgstr ""
-"\"Với nền tảng người Hoa, nhiều người hỏi tôi tại sao vẫn đến Đài Loan? Thực"
-" ra môi trường truyền thông và sự tự do sáng tạo ở đây thực sự rất khác "
-"biệt. Cuộc sống trong khuôn viên NCU đa dạng và phong phú — đó là lựa chọn "
-"tốt nhất tôi từng đưa ra!\""
+#~ msgid "（海外華裔學生）"
+#~ msgstr "(Sinh viên Hoa kiều)"
 
-msgid "專為僑外籍生打造的來台留學流程指南平台。"
-msgstr ""
-"Nền tảng hướng dẫn du học Đài Loan từng bước được xây dựng dành riêng cho "
-"sinh viên kiều bào và nước ngoài."
+#~ msgid "（外國籍學生）"
+#~ msgstr "(Sinh viên nước ngoài)"
 
-msgid "了解更多"
-msgstr "Tìm hiểu thêm"
+#~ msgid "（香港、澳門學生）"
+#~ msgstr "(Sinh viên Hồng Kông/Ma Cao)"
 
-msgid "四個階段"
-msgstr "Bốn giai đoạn"
+#~ msgid "學長姐"
+#~ msgstr "Đàn anh chị"
 
-msgid "確認資格、選擇學校與科系、準備學歷文件與財力證明"
-msgstr ""
-"Xác nhận đủ điều kiện, chọn trường và ngành, chuẩn bị hồ sơ học vấn và chứng"
-" minh tài chính"
+#~ msgid "企業管理碩士"
+#~ msgstr "Thạc sĩ Quản trị Kinh doanh"
 
-msgid "申請入學"
-msgstr "Nộp đơn nhập học"
+#~ msgid "機械工程學系"
+#~ msgstr "Khoa Kỹ thuật Cơ khí"
 
-msgid "線上申請系統填寫、繳交文件、等待入學許可"
-msgstr ""
-"Điền vào hệ thống đăng ký trực tuyến, nộp tài liệu và chờ quyết định nhập "
-"học"
+#~ msgid "學習與教學研究所"
+#~ msgstr "Viện Nghiên cứu Học tập và Giảng dạy"
 
-msgid "辦理簽證、預訂機票、安排住宿、準備入境文件"
-msgstr "Làm visa, đặt vé máy bay, sắp xếp chỗ ở, chuẩn bị tài liệu nhập cảnh"
+#~ msgid "資訊工程學系博士班"
+#~ msgstr "Chương trình Tiến sĩ Kỹ thuật Thông tin"
 
-msgid "辦理居留證、健保、銀行開戶、手機門號、學校註冊"
-msgstr ""
-"Làm thẻ cư trú, bảo hiểm y tế, mở tài khoản ngân hàng, đăng ký số điện "
-"thoại, đăng ký trường"
+#~ msgid "國際企業學士班"
+#~ msgstr "Chương trình Cử nhân Kinh doanh Quốc tế"
 
-msgid "以上為示範進度，"
-msgstr "Trên đây là tiến độ minh họa, "
+#~ msgid "光電科學與工程學系碩士"
+#~ msgstr "Thạc sĩ Khoa học Quang học và Kỹ thuật"
 
-msgid "後可查看您的個人化流程進度"
-msgstr "đăng nhập để xem tiến độ quy trình cá nhân hóa của bạn"
+#~ msgid "「來中大交流是我做過最棒的決定！中大的教學方式很活潑，每天都能實際應用。ReadyTo 的行前準備清單讓我出發前完全不會手忙腳亂。」"
+#~ msgstr ""
+#~ "\"Đến NCU là quyết định tốt nhất tôi từng đưa ra! Phương pháp giảng dạy của "
+#~ "NCU rất sinh động và thực tiễn mỗi ngày. Danh sách chuẩn bị trước khi đi của"
+#~ " ReadyTo giúp tôi hoàn toàn không bị rối loạn trước khi khởi hành.\""
 
-msgid "🇭🇰 香港・🇲🇴 澳門 學生專區"
-msgstr "🇭🇰 Khu vực sinh viên Hồng Kông · 🇲🇴 Ma Cao"
+#~ msgid "「中大資工系的產學合作機會很多，我在學期間就有機會到竹科實習。ReadyTo 上的住宿資訊和健保辦理說明幫助很大，讓我可以專心在研究上。」"
+#~ msgstr ""
+#~ "\"Khoa CNTT của NCU có nhiều cơ hội hợp tác với ngành công nghiệp — tôi có "
+#~ "cơ hội thực tập tại Khu công nghệ Tân Trúc khi còn học. Thông tin nhà ở và "
+#~ "hướng dẫn NHI trên ReadyTo rất hữu ích, giúp tôi tập trung vào nghiên cứu.\""
 
-msgid "88 分以上或班排前 5%"
-msgstr "88+ hoặc top 5% lớp"
+#~ msgid "「因為有華人背景，很多人問我為什麼還要來台灣？其實台灣的媒體環境和創意自由度真的很不一樣。中大的校園生活多元豐富，是我做過最好的選擇！」"
+#~ msgstr ""
+#~ "\"Với nền tảng người Hoa, nhiều người hỏi tôi tại sao vẫn đến Đài Loan? Thực"
+#~ " ra môi trường truyền thông và sự tự do sáng tạo ở đây thực sự rất khác "
+#~ "biệt. Cuộc sống trong khuôn viên NCU đa dạng và phong phú — đó là lựa chọn "
+#~ "tốt nhất tôi từng đưa ra!\""
 
-msgid "85 分以上或班排前 10%"
-msgstr "85+ hoặc top 10% lớp"
+#~ msgid "專為僑外籍生打造的來台留學流程指南平台。"
+#~ msgstr ""
+#~ "Nền tảng hướng dẫn du học Đài Loan từng bước được xây dựng dành riêng cho "
+#~ "sinh viên kiều bào và nước ngoài."
 
-msgid "學期成績系排前 5%，自動核發"
-msgstr "Top 5% trong khoa học kỳ, tự động cấp"
+#~ msgid "了解更多"
+#~ msgstr "Tìm hiểu thêm"
 
-msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%"
-msgstr "Thu nhập gia đình hàng năm ≤ NT$900,000; điểm 80+ hoặc top 40% lớp"
+#~ msgid "四個階段"
+#~ msgstr "Bốn giai đoạn"
 
-msgid "截止"
-msgstr "Hết hạn"
+#~ msgid "確認資格、選擇學校與科系、準備學歷文件與財力證明"
+#~ msgstr ""
+#~ "Xác nhận đủ điều kiện, chọn trường và ngành, chuẩn bị hồ sơ học vấn và chứng"
+#~ " minh tài chính"
 
-msgid "SPARC（計中）帳號登入"
-msgstr "Đăng nhập bằng tài khoản SPARC (Trung tâm Máy tính)"
+#~ msgid "申請入學"
+#~ msgstr "Nộp đơn nhập học"
 
-msgid "每日 07:00–09:00 系統進行資料備份，"
-msgstr "Hệ thống sao lưu dữ liệu hàng ngày từ 07:00–09:00. "
+#~ msgid "線上申請系統填寫、繳交文件、等待入學許可"
+#~ msgstr ""
+#~ "Điền vào hệ thống đăng ký trực tuyến, nộp tài liệu và chờ quyết định nhập "
+#~ "học"
+
+#~ msgid "辦理簽證、預訂機票、安排住宿、準備入境文件"
+#~ msgstr "Làm visa, đặt vé máy bay, sắp xếp chỗ ở, chuẩn bị tài liệu nhập cảnh"
+
+#~ msgid "辦理居留證、健保、銀行開戶、手機門號、學校註冊"
+#~ msgstr ""
+#~ "Làm thẻ cư trú, bảo hiểm y tế, mở tài khoản ngân hàng, đăng ký số điện "
+#~ "thoại, đăng ký trường"
+
+#~ msgid "以上為示範進度，"
+#~ msgstr "Trên đây là tiến độ minh họa, "
+
+#~ msgid "後可查看您的個人化流程進度"
+#~ msgstr "đăng nhập để xem tiến độ quy trình cá nhân hóa của bạn"
+
+#~ msgid "88 分以上或班排前 5%"
+#~ msgstr "88+ hoặc top 5% lớp"
+
+#~ msgid "85 分以上或班排前 10%"
+#~ msgstr "85+ hoặc top 10% lớp"
+
+#~ msgid "學期成績系排前 5%，自動核發"
+#~ msgstr "Top 5% trong khoa học kỳ, tự động cấp"
+
+#~ msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%"
+#~ msgstr "Thu nhập gia đình hàng năm ≤ NT$900,000; điểm 80+ hoặc top 40% lớp"
 
 #~ msgid "資訊管理"
 #~ msgstr "Quản lý thông tin"
@@ -11226,34 +10703,3 @@ msgstr "Hệ thống sao lưu dữ liệu hàng ngày từ 07:00–09:00. "
 #~ "Malaysia Du học Đài Loan, Hội Giáo viên Trường Hoa Myanmar, v.v.), lấy đơn "
 #~ "đăng ký năm đó và hướng dẫn liên quan, xác nhận phương thức nộp hồ sơ (trực "
 #~ "tuyến/bưu điện)."
-
-\n
-msgid "流程階段"
-msgstr "Giai đoạn quy trình"
-
-msgid "未翻譯"
-msgstr "Chưa được dịch"
-
-msgid "載入失敗，請確認已登入並填寫學生資料。"
-msgstr "Tải thất bại. Vui lòng đảm bảo bạn đã đăng nhập và điền thông tin sinh viên."
-
-msgid "尚未產生任務"
-msgstr "Chưa có nhiệm vụ nào được tạo"
-
-msgid "請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。"
-msgstr "Vui lòng đảm bảo bạn đã thiết lập trạng thái sinh viên trong 'Tài khoản của tôi' và làm mới trang."
-
-msgid "任務已完成"
-msgstr "Nhiệm vụ đã hoàn thành"
-
-msgid "已取消完成"
-msgstr "Đã hủy hoàn thành"
-
-msgid "狀態更新失敗"
-msgstr "Cập nhật trạng thái thất bại"
-
-msgid "狀態更新成功"
-msgstr "Cập nhật trạng thái thành công"
-
-msgid "備註已儲存"
-msgstr "Đã lưu ghi chú"
