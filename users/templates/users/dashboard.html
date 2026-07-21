@@ -150,6 +150,9 @@
 
 {% block extra_js %}
 <script>
+  window.UI_STRINGS = window.UI_STRINGS || {};
+  window.UI_STRINGS.unnamedTask = '{% trans "未命名任務" %}';
+  window.UI_STRINGS.flowStage = '{% trans "流程階段" %}';
 (function () {
   var rateEl = document.getElementById('dashCompletionRate');
   var barEl = document.getElementById('dashCompletionBar');
