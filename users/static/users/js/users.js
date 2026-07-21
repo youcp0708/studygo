@@ -240,6 +240,12 @@ function switchAuth(type) {
   ['tabRegister', 'tabReg2'].forEach(id => {
     document.getElementById(id)?.classList.toggle('active', !isSignin);
   });
+
+  // 同步網址列，避免頁面重新整理（例如新分頁開連結後回來）時掉回預設的登入畫面
+  const targetPath = isSignin ? '/login/' : '/register/';
+  if (window.location.pathname !== targetPath) {
+    history.replaceState(null, '', targetPath + window.location.search);
+  }
 }
 
 /* ════════════════════════════════════════
@@ -1069,8 +1075,8 @@ async function initApp() {
     return;
   }
 
-  // ── 公開頁面（忘記密碼、重設密碼）：不需要登入，直接結束 ──
-  const publicPaths = ['/forgot-password/', '/reset-password/'];
+  // ── 公開頁面（忘記密碼、重設密碼、隱私權政策、服務條款）：不需要登入，直接結束 ──
+  const publicPaths = ['/forgot-password/', '/reset-password/', '/privacy-policy/', '/terms-of-service/'];
   if (publicPaths.some(p => window.location.pathname.startsWith(p))) {
     return;
   }
