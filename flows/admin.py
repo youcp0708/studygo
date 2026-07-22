@@ -169,6 +169,7 @@ class TaskAdmin(admin.ModelAdmin):
                 'description_en',
                 'required_documents_en',
                 'apply_location_en',
+                'apply_address_en',
                 'deadline_text_en',
             )
         }),
@@ -178,6 +179,7 @@ class TaskAdmin(admin.ModelAdmin):
                 'description_my',
                 'required_documents_my',
                 'apply_location_my',
+                'apply_address_my',
                 'deadline_text_my',
             )
         }),
@@ -187,6 +189,7 @@ class TaskAdmin(admin.ModelAdmin):
                 'description_id',
                 'required_documents_id',
                 'apply_location_id',
+                'apply_address_id',
                 'deadline_text_id',
             )
         }),
@@ -196,6 +199,7 @@ class TaskAdmin(admin.ModelAdmin):
                 'description_ms',
                 'required_documents_ms',
                 'apply_location_ms',
+                'apply_address_ms',
                 'deadline_text_ms',
             )
         }),
@@ -205,6 +209,7 @@ class TaskAdmin(admin.ModelAdmin):
                 'description_th',
                 'required_documents_th',
                 'apply_location_th',
+                'apply_address_th',
                 'deadline_text_th',
             )
         }),
@@ -214,6 +219,7 @@ class TaskAdmin(admin.ModelAdmin):
                 'description_ja',
                 'required_documents_ja',
                 'apply_location_ja',
+                'apply_address_ja',
                 'deadline_text_ja',
             )
         }),
@@ -223,6 +229,7 @@ class TaskAdmin(admin.ModelAdmin):
                 'description_ko',
                 'required_documents_ko',
                 'apply_location_ko',
+                'apply_address_ko',
                 'deadline_text_ko',
             )
         }),
@@ -232,6 +239,7 @@ class TaskAdmin(admin.ModelAdmin):
                 'description_vi',
                 'required_documents_vi',
                 'apply_location_vi',
+                'apply_address_vi',
                 'deadline_text_vi',
             )
         }),

@@ -35,8 +35,45 @@ def my_flows_page(request):
     unread_count = profile.reminders.filter(
         is_read=False
     ).count()
+    from django.utils.translation import gettext as _
+    ui_strings = {
+        'requiredDocs': _("需要的文件"),
+        'applyLocation': _("辦理地點"),
+        'viewOnMap': _("在地圖上查看"),
+        'officialWebsite': _("官方網站"),
+        'visitOfficialWebsite': _("點此前往官方網站"),
+        'taskSchedule': _("辦理時程"),
+        'deadlineWarning': _("截止日期"),
+        'fillArrivalDatePrompt': _("請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"),
+        'deadline': _("截止日期"),
+        'taskNotes': _("任務備註"),
+        'enterNotesPlaceholder': _("在這裡輸入您的備註..."),
+        'saveNotesBtn': _("儲存備註"),
+        'completedBadge': _("已完成"),
+        'unnamedTask': _("未命名任務"),
+        'noDescription': _("無詳細說明"),
+        'noDetails': _("暫無詳細資料"),
+        'completedProgress': _("完成"),
+        'completedTasks': _("已完成任務"),
+        'inProgressTasks': _("未完成任務"),
+        'visitLink': _("前往查看"),
+        'requiredLabel': _("必做"),
+        'optionalLabel': _("建議"),
+        'flowStage': _("流程階段"),
+        'untranslatedBadge': _("未翻譯"),
+        'loadFailedText': _("載入失敗，請確認已登入並填寫學生資料。"),
+        'noTasksTitle': _("尚未產生任務"),
+        'noTasksHint': _("請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。"),
+        'taskCompletedToast': _("任務已完成"),
+        'taskUncompletedToast': _("已取消完成"),
+        'statusUpdateFailedToast': _("狀態更新失敗"),
+        'statusUpdateSuccessToast': _("狀態更新成功"),
+        'noteSavedToast': _("備註已儲存"),
+    }
+
     return render(request, 'flows/my_flows.html', {
         'unread_count': unread_count,
+        'ui_strings': ui_strings,
     })
 
 

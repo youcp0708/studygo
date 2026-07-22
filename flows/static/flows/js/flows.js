@@ -160,8 +160,8 @@ async function renderDashboardProgress() {
           <div style="padding:12px 16px;background:white;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;">
             <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);"></div>
             <div style="flex:1;">
-              <div style="font-weight:700;font-size:14px;">${escapeFlowsHtml(task.localized ? task.localized.title : (task.task_detail ? task.task_detail.title : '未命名任務'))}</div>
-              <div style="font-size:12px;color:var(--muted);">${escapeFlowsHtml(task.stage_name || '流程階段')}</div>
+              <div style="font-weight:700;font-size:14px;">${escapeFlowsHtml(task.localized ? task.localized.title : (task.task_detail ? task.task_detail.title : flowsT('unnamedTask', '未命名任務')))}</div>
+              <div style="font-size:12px;color:var(--muted);">${escapeFlowsHtml(task.stage_name || flowsT('flowStage', '流程階段'))}</div>
             </div>
           </div>
         `;
@@ -352,16 +352,6 @@ window.toggleTaskCompletion = async function (taskId, event) {
   }
 };
 
-window.changeTaskStatus = async function (taskId, status, event) {
-  event.stopPropagation();
-  const { ok } = await apiFetch(`/api/flows/my-tasks/${taskId}/update/`, 'PATCH', { status });
-  if (ok) {
-    showToast(flowsT('statusUpdateSuccessToast', '狀態更新成功'), 'success');
-    renderMyTasks();
-    renderDashboardProgress();
-    renderReminders();
-  }
-};
 
 window.toggleTaskDetails = function (taskId) {
   const details = document.getElementById(`details-${taskId}`);
@@ -516,7 +506,7 @@ async function renderMyTasks() {
               <div class="task-title">
                 ${loc.title ? escapeFlowsHtml(loc.title) : window.UI_STRINGS.unnamedTask}
                 ${requiredBadge}
-                ${loc.has_fallback ? `<span class="task-badge" style="background:#fef3c7;color:#d97706;border:1px solid #fcd34d;">Untranslated</span>` : ''}
+                ${loc.has_fallback ? `<span class="task-badge" style="background:#fef3c7;color:#d97706;border:1px solid #fcd34d;">${flowsT('untranslatedBadge', '未翻譯')}</span>` : ''}
               </div>
               <div class="task-desc" style="white-space: pre-wrap;">${loc.description ? escapeFlowsHtml(loc.description) : ''}</div>
             </div>
@@ -600,7 +590,7 @@ async function renderTips() {
         <div class="tip-item">
           <div class="tip-item-title">
             ${escapeFlowsHtml(tip.title)}
-            ${tip.has_fallback ? `<span class="task-badge" style="background:#fef3c7;color:#d97706;border:1px solid #fcd34d;">Untranslated</span>` : ''}
+            ${tip.has_fallback ? `<span class="task-badge" style="background:#fef3c7;color:#d97706;border:1px solid #fcd34d;">${flowsT('untranslatedBadge', '未翻譯')}</span>` : ''}
           </div>
           ${tip.content ? `<div class="tip-item-content">${escapeFlowsHtml(tip.content)}</div>` : ''}
       `;
