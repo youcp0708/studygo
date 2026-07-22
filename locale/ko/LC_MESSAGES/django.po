@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-21 15:45+0800\n"
+"POT-Creation-Date: 2026-07-22 11:12+0800\n"
 "PO-Revision-Date: 2026-05-07 00:00+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -286,7 +286,7 @@ msgstr "시작되지 않음"
 msgid "進行中"
 msgstr "진행 중"
 
-#: .\flows\models.py:323 .\flows\templates\flows\my_flows.html:68
+#: .\flows\models.py:323 .\flows\views.py:52
 #: .\users\templates\users\dashboard.html:21
 #: .\users\templates\users\home.html:29 .\users\templates\users\login.html:32
 #: .\users\templates\users\login.html:33
@@ -307,135 +307,126 @@ msgstr "작업 완료율"
 msgid "小貼士"
 msgstr "팁"
 
-#: .\flows\templates\flows\my_flows.html:68
-#| msgid "📋 需要的文件"
+#: .\flows\views.py:40
 msgid "需要的文件"
 msgstr "📋 필요 서류"
 
-#: .\flows\templates\flows\my_flows.html:69
-#| msgid "📍 辦理地點"
+#: .\flows\views.py:41
 msgid "辦理地點"
 msgstr "📍 처리 장소"
 
-#: .\flows\templates\flows\my_flows.html:70
-#| msgid "🗺️ 在地圖上查看"
+#: .\flows\views.py:42
 msgid "在地圖上查看"
 msgstr "🗺️ 지도에서 보기"
 
-#: .\flows\templates\flows\my_flows.html:71
-#| msgid "🌐 官方網站"
+#: .\flows\views.py:43
 msgid "官方網站"
 msgstr "🌐 공식 사이트"
 
-#: .\flows\templates\flows\my_flows.html:60
+#: .\flows\views.py:44
 msgid "點此前往官方網站"
 msgstr "공식 사이트로 이동"
 
-#: .\flows\templates\flows\my_flows.html:73
-#| msgid "📅 辦理時程"
+#: .\flows\views.py:45
 msgid "辦理時程"
 msgstr "📅 처리 일정"
 
-#: .\flows\templates\flows\my_flows.html:74
-#: .\flows\templates\flows\my_flows.html:76
-#| msgid "📅 截止日期"
+#: .\flows\views.py:46 .\flows\views.py:48
 msgid "截止日期"
 msgstr "📅 마감일"
 
-#: .\flows\templates\flows\my_flows.html:75
-msgid "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。"
+#: .\flows\views.py:47
+msgid ""
+"請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的"
+"截止日期。"
 msgstr ""
 "먼저 「개인 정보」에서 <strong>예상 도착일</strong>을 입력해야 시스템이 이 작업의 마감일을 자동으로 계산할 수 있습니다."
 
-#: .\flows\templates\flows\my_flows.html:65
+#: .\flows\views.py:49
 msgid "任務備註"
 msgstr "작업 메모"
 
-#: .\flows\templates\flows\my_flows.html:66
+#: .\flows\views.py:50
 msgid "在這裡輸入您的備註..."
 msgstr "여기에 메모를 입력하세요..."
 
-#: .\flows\templates\flows\my_flows.html:67
+#: .\flows\views.py:51
 msgid "儲存備註"
 msgstr "메모 저장"
 
-#: .\flows\templates\flows\my_flows.html:69
-#: .\flows\templates\flows\my_flows.html:78
-#: .\users\templates\users\dashboard.html:154
+#: .\flows\views.py:53 .\users\templates\users\dashboard.html:154
 msgid "未命名任務"
 msgstr "이름 없는 작업"
 
-#: .\flows\templates\flows\my_flows.html:70
+#: .\flows\views.py:54
 msgid "無詳細說明"
 msgstr "상세 설명 없음"
 
-#: .\flows\templates\flows\my_flows.html:71
+#: .\flows\views.py:55
 msgid "暫無詳細資料"
 msgstr "상세 자료 없음"
 
-#: .\flows\templates\flows\my_flows.html:72
+#: .\flows\views.py:56
 msgid "完成"
 msgstr "완료"
 
-#: .\flows\templates\flows\my_flows.html:73
+#: .\flows\views.py:57
 msgid "已完成任務"
 msgstr "완료된 작업"
 
-#: .\flows\templates\flows\my_flows.html:74
+#: .\flows\views.py:58
 msgid "未完成任務"
 msgstr "미완료 작업"
 
-#: .\flows\templates\flows\my_flows.html:75
+#: .\flows\views.py:59
 msgid "前往查看"
 msgstr "바로가기"
 
-#: .\flows\templates\flows\my_flows.html:76
+#: .\flows\views.py:60
 msgid "必做"
 msgstr "필수"
 
-#: .\flows\templates\flows\my_flows.html:77
-#: .\guides\templates\guides\guide_nhi.html:127
+#: .\flows\views.py:61 .\guides\templates\guides\guide_nhi.html:127
 msgid "建議"
 msgstr "권장"
 
-#: .\flows\templates\flows\my_flows.html:79
-#: .\users\templates\users\dashboard.html:155
+#: .\flows\views.py:62 .\users\templates\users\dashboard.html:155
 msgid "流程階段"
 msgstr "흐름 단계"
 
-#: .\flows\templates\flows\my_flows.html:80
+#: .\flows\views.py:63
 msgid "未翻譯"
 msgstr "번역되지 않음"
 
-#: .\flows\templates\flows\my_flows.html:81
+#: .\flows\views.py:64
 msgid "載入失敗，請確認已登入並填寫學生資料。"
 msgstr "로드에 실패했습니다. 로그인하고 학생 정보를 기입했는지 확인해 주세요."
 
-#: .\flows\templates\flows\my_flows.html:82
+#: .\flows\views.py:65
 msgid "尚未產生任務"
 msgstr "아직 생성된 작업이 없습니다"
 
-#: .\flows\templates\flows\my_flows.html:83
+#: .\flows\views.py:66
 msgid "請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。"
 msgstr "'내 계정'에서 학생 상태를 설정했는지 확인하고 페이지를 새로 고침해 주세요."
 
-#: .\flows\templates\flows\my_flows.html:84
+#: .\flows\views.py:67
 msgid "任務已完成"
 msgstr "작업 완료됨"
 
-#: .\flows\templates\flows\my_flows.html:85
+#: .\flows\views.py:68
 msgid "已取消完成"
 msgstr "완료가 취소되었습니다"
 
-#: .\flows\templates\flows\my_flows.html:86
+#: .\flows\views.py:69
 msgid "狀態更新失敗"
 msgstr "상태 업데이트 실패"
 
-#: .\flows\templates\flows\my_flows.html:87
+#: .\flows\views.py:70
 msgid "狀態更新成功"
 msgstr "상태가 성공적으로 업데이트되었습니다"
 
-#: .\flows\templates\flows\my_flows.html:88
+#: .\flows\views.py:71
 msgid "備註已儲存"
 msgstr "메모가 저장되었습니다"
 
@@ -10854,7 +10845,6 @@ msgid "我們可能不時更新本政策，重大變更會於本頁面公告，�
 msgstr ""
 
 #: .\users\templates\users\privacy_policy.html:65
-#| msgid "聯絡我們"
 msgid "九、聯絡我們"
 msgstr "문의하기"
 
@@ -11224,7 +11214,6 @@ msgid "我們可能不時更新本條款，重大變更會於本頁面公告，�
 msgstr ""
 
 #: .\users\templates\users\terms_of_service.html:63
-#| msgid "聯絡我們"
 msgid "十二、聯絡我們"
 msgstr "문의하기"
 

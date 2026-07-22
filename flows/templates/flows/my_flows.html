@@ -51,42 +51,18 @@
 
 {% block extra_js %}
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{{ ui_strings|json_script:"ui-strings-data" }}
 <script>
-  window.UI_STRINGS = {
-    requiredDocs: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">description</span>{% trans "需要的文件" %}',
-    applyLocation: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">place</span>{% trans "辦理地點" %}',
-    viewOnMap: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">map</span>{% trans "在地圖上查看" %}',
-    officialWebsite: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">language</span>{% trans "官方網站" %}',
-    visitOfficialWebsite: '{% trans "點此前往官方網站" %}',
-    taskSchedule: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">event_note</span>{% trans "辦理時程" %}',
-    deadlineWarning: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px; color:#ff9800;">warning</span>{% trans "截止日期" %}',
-    fillArrivalDatePrompt: '{% trans "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的截止日期。" %}',
-    deadline: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">event</span>{% trans "截止日期" %}',
-    taskNotes: '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">edit_note</span>{% trans "任務備註" %}',
-    enterNotesPlaceholder: '{% trans "在這裡輸入您的備註..." %}',
-    saveNotesBtn: '{% trans "儲存備註" %}',
-    completedBadge: '{% trans "已完成" %}',
-    unnamedTask: '{% trans "未命名任務" %}',
-    noDescription: '{% trans "無詳細說明" %}',
-    noDetails: '{% trans "暫無詳細資料" %}',
-    completedProgress: '{% trans "完成" %}', // e.g. 1 / 5 完成
-    completedTasks: '{% trans "已完成任務" %}',
-    inProgressTasks: '{% trans "未完成任務" %}',
-    visitLink: '{% trans "前往查看" %}',
-    requiredLabel: '{% trans "必做" %}',
-    optionalLabel: '{% trans "建議" %}',
-    unnamedTask: '{% trans "未命名任務" %}',
-    flowStage: '{% trans "流程階段" %}',
-    untranslatedBadge: '{% trans "未翻譯" %}',
-    loadFailedText: '{% trans "載入失敗，請確認已登入並填寫學生資料。" %}',
-    noTasksTitle: '{% trans "尚未產生任務" %}',
-    noTasksHint: '{% trans "請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。" %}',
-    taskCompletedToast: '{% trans "任務已完成" %}',
-    taskUncompletedToast: '{% trans "已取消完成" %}',
-    statusUpdateFailedToast: '{% trans "狀態更新失敗" %}',
-    statusUpdateSuccessToast: '{% trans "狀態更新成功" %}',
-    noteSavedToast: '{% trans "備註已儲存" %}',
-  };
+  window.UI_STRINGS = JSON.parse(document.getElementById('ui-strings-data').textContent);
+  // Re-add the HTML tags that were inside the strings in the template:
+  window.UI_STRINGS.requiredDocs = '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">description</span>' + window.UI_STRINGS.requiredDocs;
+  window.UI_STRINGS.applyLocation = '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">place</span>' + window.UI_STRINGS.applyLocation;
+  window.UI_STRINGS.viewOnMap = '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">map</span>' + window.UI_STRINGS.viewOnMap;
+  window.UI_STRINGS.officialWebsite = '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">language</span>' + window.UI_STRINGS.officialWebsite;
+  window.UI_STRINGS.taskSchedule = '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">event_note</span>' + window.UI_STRINGS.taskSchedule;
+  window.UI_STRINGS.deadlineWarning = '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px; color:#ff9800;">warning</span>' + window.UI_STRINGS.deadlineWarning;
+  window.UI_STRINGS.deadline = '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">event</span>' + window.UI_STRINGS.deadline;
+  window.UI_STRINGS.taskNotes = '<span class="material-symbols-outlined" style="font-size:18px; vertical-align:middle; margin-right:4px;">edit_note</span>' + window.UI_STRINGS.taskNotes;
 </script>
 
 {% endblock %}
