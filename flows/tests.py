@@ -186,6 +186,78 @@ class CheckRemindersCommandTest(TestCase):
         self.assertEqual(Reminder.objects.filter(student_task=self.st).count(), 0)
 
 
+class ReminderApiLazySyncTest(TestCase):
+    """鈴鐺 API 應該在使用者打開通知時即時補上過期提醒，不必等 check_reminders 排程先跑過"""
+
+    def setUp(self):
+        self.student = make_student(email="lazy_sync@example.com")
+        self.stage = FlowStage.objects.create(name="Stage 1", order=1)
+        self.task = Task.objects.create(
+            stage=self.stage,
+            title="Overdue Task",
+            deadline_type="absolute",
+            deadline_date=date(2026, 6, 28),  # already in the past
+            order=1
+        )
+        self.st = StudentTask.objects.create(
+            student=self.student,
+            task=self.task,
+            status="not_started"
+        )
+        self.client = APIClient()
+        self.client.force_authenticate(user=self.student.user)
+
+    def test_overdue_reminder_appears_without_running_command_first(self):
+        # No check_reminders call here on purpose — the API itself should generate it.
+        response = self.client.get('/api/flows/reminders/')
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(Reminder.objects.filter(student_task=self.st).count(), 1)
+        reminder = Reminder.objects.get(student_task=self.st)
+        self.assertIn('已過期', reminder.message)
+
+        data = response.json()['data']
+        self.assertEqual(data['unread_count'], 1)
+        self.assertTrue(any('已過期' in r['message'] for r in data['reminders']))
+
+    def test_lazy_sync_does_not_send_email(self):
+        from django.core import mail
+        self.client.get('/api/flows/reminders/')
+        self.assertEqual(len(mail.outbox), 0)
+
+    def test_command_creates_overdue_reminder_even_if_upcoming_reminder_exists(self):
+        from django.core.management import call_command
+        from django.utils import timezone
+        from datetime import timedelta
+        today = timezone.now().date()
+
+        # 1. Create upcoming reminder when deadline is today + 2 days
+        self.task.deadline_date = today + timedelta(days=2)
+        self.task.save()
+        call_command('check_reminders')
+        self.assertEqual(Reminder.objects.filter(student_task=self.st).count(), 1)
+        upcoming_reminder = Reminder.objects.get(student_task=self.st)
+        self.assertIn("天後到期", upcoming_reminder.message)
+
+        # Mark as read (to simulate user reading it)
+        upcoming_reminder.is_read = True
+        upcoming_reminder.save()
+
+        # 2. Suppose time passes, and the deadline is now in the past (deadline is today - 1 day)
+        self.task.deadline_date = today - timedelta(days=1)
+        self.task.save()
+
+        # Run command again. An overdue reminder should be created
+        call_command('check_reminders')
+        
+        # Now there should be 2 reminders (1 upcoming, 1 overdue)
+        self.assertEqual(Reminder.objects.filter(student_task=self.st).count(), 2)
+        overdue_reminder = Reminder.objects.filter(student_task=self.st, is_read=False).first()
+        self.assertIsNotNone(overdue_reminder)
+        self.assertIn("已過期", overdue_reminder.message)
+
+
+
 
 class InitStudentTasksSyncTest(TestCase):
     """任務同步（init API）：去重 key、進度保留、is_pre_arrival 自動完成"""

@@ -44,6 +44,7 @@ def my_flows_page(request):
 # REST API 視圖 (DRF)
 # ==========================================
 from .models import FlowStage, Task, StudentTask, Reminder, Tip
+from .reminders import sync_task_reminders
 from .serializers import (
     FlowStageSerializer,
     TaskSerializer,
@@ -545,9 +546,12 @@ def get_reminders_view(request):
         profile = user.student_profile
     except StudentProfile.DoesNotExist:
         return error_response('請先建立學生資料', status_code=400)
-        
+
+    # 即時掃描該學生的任務截止日，確保已過期/今天到期的提醒不需要等排程跑過才會出現
+    sync_task_reminders(StudentTask.objects.filter(student=profile), send_email=False)
+
     reminders = profile.reminders.all()
-    
+
     # 可支援只抓未讀
     if request.query_params.get('unread_only') == 'true':
         reminders = reminders.filter(is_read=False)
