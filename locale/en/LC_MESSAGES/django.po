@@ -355,7 +355,7 @@ msgstr "View on map"
 
 #: .\flows\views.py:43
 msgid "官方網站"
-msgstr " Official website"
+msgstr "Official website"
 
 #: .\flows\views.py:44
 msgid "點此前往官方網站"
@@ -3730,11 +3730,11 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_bus_ncu.html:21
 msgid "📍 主站點：中央大學"
-msgstr "📍 Main Stop: National Central University"
+msgstr "Main Stop: National Central University"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:22
 msgid "🗺 地區：桃園市中壢區"
-msgstr "🗺 Area: Zhongli District, Taoyuan City"
+msgstr "Area: Zhongli District, Taoyuan City"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:23
 msgid "⚡ 即時查詢 → 見下方連結"

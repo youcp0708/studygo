@@ -345,19 +345,19 @@ msgstr "အကြံပြုချက်များ"
 
 #: .\flows\views.py:40
 msgid "需要的文件"
-msgstr "📋 လိုအပ်သော စာရွက်စာတမ်းများ"
+msgstr "လိုအပ်သော စာရွက်စာတမ်းများ"
 
 #: .\flows\views.py:41
 msgid "辦理地點"
-msgstr "📍 လျှောက်ထားရမည့်နေရာ"
+msgstr "လျှောက်ထားရမည့်နေရာ"
 
 #: .\flows\views.py:42
 msgid "在地圖上查看"
-msgstr "🗺️ မြေပုံပေါ်တွင် ကြည့်ရန်"
+msgstr "မြေပုံပေါ်တွင် ကြည့်ရန်"
 
 #: .\flows\views.py:43
 msgid "官方網站"
-msgstr "🌐 တရားဝင် ဝဘ်ဆိုဒ်"
+msgstr "တရားဝင် ဝဘ်ဆိုဒ်"
 
 #: .\flows\views.py:44
 msgid "點此前往官方網站"
@@ -365,11 +365,11 @@ msgstr "တရားဝင်ဝဘ်ဆိုဒ်သို့ သွား�
 
 #: .\flows\views.py:45
 msgid "辦理時程"
-msgstr "📅 လျှောက်ထားရမည့်အချိန်ဇယား"
+msgstr "လျှောက်ထားရမည့်အချိန်ဇယား"
 
 #: .\flows\views.py:46 .\flows\views.py:48
 msgid "截止日期"
-msgstr "📅 သတ်မှတ်ရက်"
+msgstr "သတ်မှတ်ရက်"
 
 #: .\flows\views.py:47
 msgid ""
@@ -3606,11 +3606,11 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_bus_ncu.html:21
 msgid "📍 主站點：中央大學"
-msgstr "📍 အဓိကမှတ်တိုင်: အမျိုးသားဗဟိုတက္ကသိုလ်"
+msgstr "အဓိကမှတ်တိုင်: အမျိုးသားဗဟိုတက္ကသိုလ်"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:22
 msgid "🗺 地區：桃園市中壢區"
-msgstr "🗺 ဒေသ: Taoyuan မြို့ Zhongli ခရိုင်"
+msgstr "ဒေသ: Taoyuan မြို့ Zhongli ခရိုင်"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:23
 msgid "⚡ 即時查詢 → 見下方連結"

@@ -326,19 +326,19 @@ msgstr "팁"
 
 #: .\flows\views.py:40
 msgid "需要的文件"
-msgstr "📋 필요 서류"
+msgstr "필요 서류"
 
 #: .\flows\views.py:41
 msgid "辦理地點"
-msgstr "📍 처리 장소"
+msgstr "처리 장소"
 
 #: .\flows\views.py:42
 msgid "在地圖上查看"
-msgstr "🗺️ 지도에서 보기"
+msgstr "지도에서 보기"
 
 #: .\flows\views.py:43
 msgid "官方網站"
-msgstr "🌐 공식 사이트"
+msgstr "공식 사이트"
 
 #: .\flows\views.py:44
 msgid "點此前往官方網站"
@@ -346,11 +346,11 @@ msgstr "공식 사이트로 이동"
 
 #: .\flows\views.py:45
 msgid "辦理時程"
-msgstr "📅 처리 일정"
+msgstr "처리 일정"
 
 #: .\flows\views.py:46 .\flows\views.py:48
 msgid "截止日期"
-msgstr "📅 마감일"
+msgstr "마감일"
 
 #: .\flows\views.py:47
 msgid ""
@@ -3536,11 +3536,11 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_bus_ncu.html:21
 msgid "📍 主站點：中央大學"
-msgstr "📍 주요 정류장: 국립중앙대학교"
+msgstr "주요 정류장: 국립중앙대학교"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:22
 msgid "🗺 地區：桃園市中壢區"
-msgstr "🗺 지역: 타오위안시 중리구"
+msgstr "지역: 타오위안시 중리구"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:23
 msgid "⚡ 即時查詢 → 見下方連結"

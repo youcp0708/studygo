@@ -349,19 +349,19 @@ msgstr "Mẹo nhỏ"
 
 #: .\flows\views.py:40
 msgid "需要的文件"
-msgstr "📋 Tài liệu cần thiết"
+msgstr "Tài liệu cần thiết"
 
 #: .\flows\views.py:41
 msgid "辦理地點"
-msgstr "📍 Địa điểm thực hiện"
+msgstr "Địa điểm thực hiện"
 
 #: .\flows\views.py:42
 msgid "在地圖上查看"
-msgstr "🗺️ Xem trên bản đồ"
+msgstr "Xem trên bản đồ"
 
 #: .\flows\views.py:43
 msgid "官方網站"
-msgstr "🌐 Trang web chính thức"
+msgstr "Trang web chính thức"
 
 #: .\flows\views.py:44
 msgid "點此前往官方網站"
@@ -369,11 +369,11 @@ msgstr "Nhấp vào đây để đến trang web chính thức"
 
 #: .\flows\views.py:45
 msgid "辦理時程"
-msgstr "📅 Lịch trình thực hiện"
+msgstr "Lịch trình thực hiện"
 
 #: .\flows\views.py:46 .\flows\views.py:48
 msgid "截止日期"
-msgstr "📅 Ngày hết hạn"
+msgstr "Ngày hết hạn"
 
 #: .\flows\views.py:47
 msgid ""
@@ -3694,11 +3694,11 @@ msgstr ""
 
 #: .\guides\templates\guides\guide_bus_ncu.html:21
 msgid "📍 主站點：中央大學"
-msgstr "📍 Điểm dừng chính: Đại học Trung ương Quốc gia"
+msgstr "Điểm dừng chính: Đại học Trung ương Quốc gia"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:22
 msgid "🗺 地區：桃園市中壢區"
-msgstr "🗺 Khu vực: Quận Zhongli, Thành phố Taoyuan"
+msgstr "Khu vực: Quận Zhongli, Thành phố Taoyuan"
 
 #: .\guides\templates\guides\guide_bus_ncu.html:23
 msgid "⚡ 即時查詢 → 見下方連結"
