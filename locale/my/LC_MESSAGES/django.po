@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-21 15:45+0800\n"
+"POT-Creation-Date: 2026-07-22 11:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -311,7 +311,7 @@ msgstr "မစတင်ခဲ့ပါ။"
 msgid "進行中"
 msgstr "ဆောင်ရွက်ဆဲဖြစ်သည်"
 
-#: .\flows\models.py:323 .\flows\templates\flows\my_flows.html:68
+#: .\flows\models.py:323 .\flows\views.py:52
 #: .\users\templates\users\dashboard.html:21
 #: .\users\templates\users\home.html:29 .\users\templates\users\login.html:32
 #: .\users\templates\users\login.html:33
@@ -332,36 +332,35 @@ msgstr "တာဝန်ပြီးစီးမှုနှုန်း"
 msgid "小貼士"
 msgstr "အကြံပြုချက်များ"
 
-#: .\flows\templates\flows\my_flows.html:56
+#: .\flows\views.py:40
 msgid "需要的文件"
 msgstr "📋 လိုအပ်သော စာရွက်စာတမ်းများ"
 
-#: .\flows\templates\flows\my_flows.html:57
+#: .\flows\views.py:41
 msgid "辦理地點"
 msgstr "📍 လျှောက်ထားရမည့်နေရာ"
 
-#: .\flows\templates\flows\my_flows.html:58
+#: .\flows\views.py:42
 msgid "在地圖上查看"
 msgstr "🗺️ မြေပုံပေါ်တွင် ကြည့်ရန်"
 
-#: .\flows\templates\flows\my_flows.html:59
+#: .\flows\views.py:43
 msgid "官方網站"
 msgstr "🌐 တရားဝင် ဝဘ်ဆိုဒ်"
 
-#: .\flows\templates\flows\my_flows.html:60
+#: .\flows\views.py:44
 msgid "點此前往官方網站"
 msgstr "တရားဝင်ဝဘ်ဆိုဒ်သို့ သွားရန် ဤနေရာကို နှိပ်ပါ"
 
-#: .\flows\templates\flows\my_flows.html:61
+#: .\flows\views.py:45
 msgid "辦理時程"
 msgstr "📅 လျှောက်ထားရမည့်အချိန်ဇယား"
 
-#: .\flows\templates\flows\my_flows.html:62
-#: .\flows\templates\flows\my_flows.html:64
+#: .\flows\views.py:46 .\flows\views.py:48
 msgid "截止日期"
 msgstr "📅 သတ်မှတ်ရက်"
 
-#: .\flows\templates\flows\my_flows.html:63
+#: .\flows\views.py:47
 msgid ""
 "請先至「個人資料」填寫<strong>預計抵台日期</strong>，系統才能自動計算此任務的"
 "截止日期。"
@@ -369,96 +368,92 @@ msgstr ""
 "စနစ်မှ ဤတာဝန်၏ သတ်မှတ်ရက်ကို အလိုအလျောက် တွက်ချက်နိုင်ရန်အတွက် ကျေးဇူးပြု၍ \"ကိုယ်ရေးအချက်အလက်\" တွင် "
 "<strong>ထိုင်ဝမ်သို့ ရောက်ရှိမည့် ခန့်မှန်းရက်စွဲ</strong> ကို အရင်ဖြည့်စွက်ပါ။"
 
-#: .\flows\templates\flows\my_flows.html:65
+#: .\flows\views.py:49
 msgid "任務備註"
 msgstr "တာဝန် မှတ်စုများ"
 
-#: .\flows\templates\flows\my_flows.html:66
+#: .\flows\views.py:50
 msgid "在這裡輸入您的備註..."
 msgstr "ဤနေရာတွင် သင့်မှတ်စုကို ထည့်ပါ..."
 
-#: .\flows\templates\flows\my_flows.html:67
+#: .\flows\views.py:51
 msgid "儲存備註"
 msgstr "မှတ်စုကို သိမ်းဆည်းရန်"
 
-#: .\flows\templates\flows\my_flows.html:69
-#: .\flows\templates\flows\my_flows.html:78
-#: .\users\templates\users\dashboard.html:154
+#: .\flows\views.py:53 .\users\templates\users\dashboard.html:154
 msgid "未命名任務"
 msgstr "အမည်မရှိသော တာဝန်"
 
-#: .\flows\templates\flows\my_flows.html:70
+#: .\flows\views.py:54
 msgid "無詳細說明"
 msgstr "အသေးစိတ် ဖော်ပြချက် မရှိပါ"
 
-#: .\flows\templates\flows\my_flows.html:71
+#: .\flows\views.py:55
 msgid "暫無詳細資料"
 msgstr "အသေးစိတ် အချက်အလက်များ မရှိသေးပါ"
 
-#: .\flows\templates\flows\my_flows.html:72
+#: .\flows\views.py:56
 msgid "完成"
 msgstr "ပြီးစီး"
 
-#: .\flows\templates\flows\my_flows.html:73
+#: .\flows\views.py:57
 msgid "已完成任務"
 msgstr "ပြီးစီးပြီးသော တာဝန်များ"
 
-#: .\flows\templates\flows\my_flows.html:74
+#: .\flows\views.py:58
 msgid "未完成任務"
 msgstr "မပြီးစီးသေးသော တာဝန်များ"
 
-#: .\flows\templates\flows\my_flows.html:75
+#: .\flows\views.py:59
 msgid "前往查看"
 msgstr "ကြည့်ရန်သွားမည်"
 
-#: .\flows\templates\flows\my_flows.html:76
+#: .\flows\views.py:60
 msgid "必做"
 msgstr "မဖြစ်မနေလုပ်ရမည်"
 
-#: .\flows\templates\flows\my_flows.html:77
-#: .\guides\templates\guides\guide_nhi.html:127
+#: .\flows\views.py:61 .\guides\templates\guides\guide_nhi.html:127
 msgid "建議"
 msgstr "အကြံပြုထားသည်"
 
-#: .\flows\templates\flows\my_flows.html:79
-#: .\users\templates\users\dashboard.html:155
+#: .\flows\views.py:62 .\users\templates\users\dashboard.html:155
 msgid "流程階段"
 msgstr "လုပ်ငန်းစဉ် အဆင့်"
 
-#: .\flows\templates\flows\my_flows.html:80
+#: .\flows\views.py:63
 msgid "未翻譯"
 msgstr "ဘာသာမပြန်ရသေးပါ"
 
-#: .\flows\templates\flows\my_flows.html:81
+#: .\flows\views.py:64
 msgid "載入失敗，請確認已登入並填寫學生資料。"
 msgstr ""
 "ချိတ်ဆက်မှု မအောင်မြင်ပါ။ အကောင့်ဝင်ထားပြီး ကျောင်းသားအချက်အလက် ဖြည့်စွက်ထားကြောင်း သေချာစေပါ။"
 
-#: .\flows\templates\flows\my_flows.html:82
+#: .\flows\views.py:65
 msgid "尚未產生任務"
 msgstr "တာဝန်များကို မဖန်တီးရသေးပါ"
 
-#: .\flows\templates\flows\my_flows.html:83
+#: .\flows\views.py:66
 msgid "請確保您已在「我的帳戶」中設定完學籍身分，並重新整理頁面。"
 msgstr "'ကျွန်ုပ်၏ အကောင့်' တွင် ကျောင်းသားအခြေအနေကို သတ်မှတ်ထားပြီး စာမျက်နှာကို ပြန်လည်စတင်ပါ။"
 
-#: .\flows\templates\flows\my_flows.html:84
+#: .\flows\views.py:67
 msgid "任務已完成"
 msgstr "တာဝန်ပြီးဆုံးပါပြီ"
 
-#: .\flows\templates\flows\my_flows.html:85
+#: .\flows\views.py:68
 msgid "已取消完成"
 msgstr "ပြီးဆုံးမှုကို ပယ်ဖျက်လိုက်ပါပြီ"
 
-#: .\flows\templates\flows\my_flows.html:86
+#: .\flows\views.py:69
 msgid "狀態更新失敗"
 msgstr "အခြေအနေ ပြောင်းလဲခြင်း မအောင်မြင်ပါ"
 
-#: .\flows\templates\flows\my_flows.html:87
+#: .\flows\views.py:70
 msgid "狀態更新成功"
 msgstr "အခြေအနေ ပြောင်းလဲခြင်း အောင်မြင်ပါသည်"
 
-#: .\flows\templates\flows\my_flows.html:88
+#: .\flows\views.py:71
 msgid "備註已儲存"
 msgstr "မှတ်ချက် သိမ်းဆည်းပြီးပါပြီ"
 
@@ -10130,7 +10125,6 @@ msgid ""
 msgstr ""
 
 #: .\users\templates\users\privacy_policy.html:65
-#| msgid "聯絡我們"
 msgid "九、聯絡我們"
 msgstr "ဆက်သွယ်ပါ"
 
@@ -10520,7 +10514,6 @@ msgid ""
 msgstr ""
 
 #: .\users\templates\users\terms_of_service.html:63
-#| msgid "聯絡我們"
 msgid "十二、聯絡我們"
 msgstr "ဆက်သွယ်ပါ"
 
