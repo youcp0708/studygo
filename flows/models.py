@@ -193,6 +193,14 @@ class Task(models.Model):
     apply_location_vi = models.CharField(max_length=200, blank=True, verbose_name="辦理地點 Vietnamese")
 
     apply_address = models.CharField(max_length=200, blank=True, verbose_name="辦理地址")
+    apply_address_en = models.CharField(max_length=200, blank=True, verbose_name="辦理地址 English")
+    apply_address_my = models.CharField(max_length=200, blank=True, verbose_name="辦理地址 Burmese")
+    apply_address_id = models.CharField(max_length=200, blank=True, verbose_name="辦理地址 Indonesian")
+    apply_address_ms = models.CharField(max_length=200, blank=True, verbose_name="辦理地址 Malay")
+    apply_address_th = models.CharField(max_length=200, blank=True, verbose_name="辦理地址 Thai")
+    apply_address_ja = models.CharField(max_length=200, blank=True, verbose_name="辦理地址 Japanese")
+    apply_address_ko = models.CharField(max_length=200, blank=True, verbose_name="辦理地址 Korean")
+    apply_address_vi = models.CharField(max_length=200, blank=True, verbose_name="辦理地址 Vietnamese")
     apply_map_url = models.URLField(
         blank=True,
         verbose_name="辦理地點地圖連結",
