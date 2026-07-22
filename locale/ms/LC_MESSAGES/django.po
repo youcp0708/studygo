@@ -3632,6 +3632,12 @@ msgid ""
 "100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存"
 "摺分開保管。"
 msgstr ""
+"Kedai alat tulis berhampiran kampus boleh mengukirnya. Beritahu pemilik "
+"kedai bahawa anda mahu \"cop nama kayu\" dan berikan nama penuh Bahasa "
+"Inggeris anda — kosnya sekitar NT$50–100 dan mengambil masa kira-kira 20 "
+"minit. Kami mengesyorkan mengukirnya lebih awal dan membawanya terus pada "
+"hari pembukaan akaun. Cop anda setara dengan tandatangan anda, jadi "
+"simpan berasingan daripada buku akaun."
 
 #: .\guides\templates\guides\guide_bank.html:83
 msgid "統一證號說明"
@@ -3656,6 +3662,11 @@ msgid ""
 "需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照"
 "片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
 msgstr ""
+"Anda perlu memohon secara berasingan untuk \"Borang Pendaftaran ID "
+"Bersatu\" di stesen perkhidmatan Agensi Imigresen Kebangsaan di kawasan "
+"tempat tinggal anda, dengan membawa pasport asal dan salinan fotokopi "
+"(tanpa keperluan gambar). Nombor ini tetap sepanjang hayat — apabila "
+"anda menerima ARC kelak, nombor ARC akan sepadan dengan ID Bersatu anda."
 
 #: .\guides\templates\guides\guide_bank.html:98
 msgid "提款卡選擇建議"
@@ -3670,6 +3681,11 @@ msgid ""
 "可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 "
 "兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。"
 msgstr ""
+"Anda boleh mengeluarkan wang tunai di ATM dan juga membayar terus dengan "
+"kad di kedai atau dalam talian. Pejabat pos menawarkan dua kombinasi: "
+"VISA + EasyCard atau VISA + iPASS — pilih mengikut keperluan anda. "
+"Perhatikan bahawa sesetengah peniaga di Taiwan tidak menerima VISA "
+"Debit, jadi sahkan sebelum membayar."
 
 #: .\guides\templates\guides\guide_bank.html:107
 #: .\guides\templates\guides\guide_sim.html:145
@@ -6582,6 +6598,10 @@ msgid ""
 "中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別"
 "用 Google Maps 搜尋「中壢 內科診所」、「中壢 耳鼻喉科」等。"
 msgstr ""
+"Terdapat banyak klinik berhampiran pintu belakang NCU dan di pusat bandar "
+"Zhongli — dengan kad NHI anda, kos lawatan adalah sekitar NT$150–200. "
+"Anda boleh mencari di Google Maps mengikut bidang pakar, seperti "
+"\"klinik perubatan dalaman Zhongli\" atau \"klinik ENT Zhongli\"."
 
 #: .\guides\templates\guides\guide_medical.html:94
 msgid "診所看診時間："
@@ -6592,6 +6612,11 @@ msgid ""
 "多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班"
 "制，非所有診所皆有晚診。建議事先電話確認或查詢 Google 地圖上的即時等候人數。"
 msgstr ""
+"Kebanyakan klinik beroperasi dalam tiga syif: pagi (08:30–12:00), tengah "
+"hari (14:00–17:30), dan malam (18:00–21:00) — tidak semua klinik "
+"menawarkan waktu malam. Kami mengesyorkan menghubungi terlebih dahulu "
+"untuk pengesahan, atau menyemak bilangan menunggu masa nyata di Google "
+"Maps."
 
 #: .\guides\templates\guides\guide_medical.html:99
 msgid "周邊醫院"
@@ -7257,6 +7282,12 @@ msgid ""
 "出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 30 天，則從重新抵"
 "台當天起算，6 個月重新計算。"
 msgstr ""
+"Ini bermaksud tinggal berterusan di Taiwan selama 6 bulan, atau pernah "
+"meninggalkan Taiwan sekali tidak lebih daripada 30 hari, dengan hari-hari "
+"di luar negara ditolak dan baki tempoh tinggal mencapai jumlah 6 bulan. "
+"Jika anda meninggalkan Taiwan lebih daripada sekali, atau meninggalkan "
+"sekali lebih daripada 30 hari, kiraan 6 bulan akan bermula semula dari "
+"hari anda kembali masuk ke Taiwan."
 
 #: .\guides\templates\guides\guide_nhi.html:91
 msgid "計算範例："
@@ -7341,6 +7372,11 @@ msgid ""
 "符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，"
 "審查通過後核發）。未得補助者每月保費約 NT$826。詳情請洽國際事務處。"
 msgstr ""
+"Pelajar yang layak sebagai berpendapatan rendah dan mendaftar dalam NHI "
+"boleh memohon subsidi bulanan sebanyak NT$413 daripada Pejabat Hal Ehwal "
+"Antarabangsa (sijil berpendapatan rendah diperlukan; subsidi dikeluarkan "
+"selepas semakan). Tanpa subsidi, premium bulanan adalah kira-kira "
+"NT$826. Hubungi Pejabat Hal Ehwal Antarabangsa untuk maklumat lanjut."
 
 #: .\guides\templates\guides\guide_nhi.html:140
 msgid "相關文件下載"
@@ -7359,6 +7395,11 @@ msgid ""
 "台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直"
 "接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
 msgstr ""
+"Taiwan menggunakan sistem penjagaan kesihatan berperingkat. Untuk "
+"penyakit biasa, kunjungi klinik dahulu (perubatan keluarga atau "
+"perubatan dalaman) — kosnya hanya sekitar NT$150. Pergi terus ke jabatan "
+"kecemasan atau pesakit luar hospital bermakna bayaran bersama yang lebih "
+"tinggi (NT$240–480)."
 
 #: .\guides\templates\guides\guide_nhi.html:160
 msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
@@ -7888,6 +7929,11 @@ msgstr ""
 msgid "羅家倫先生紀念獎學金"
 msgstr "Biasiswa Peringatan Encik Luo Jialun"
 
+#: .\guides\templates\guides\guide_scholarship.html:210
+#: .\guides\templates\guides\guide_scholarship.html:215
+msgid "名"
+msgstr "penerima"
+
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr ""
@@ -8039,6 +8085,14 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
 msgstr "Biasiswa Penyelidikan Bank Koperatif Taiwan"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "碩"
+msgstr "Sarjana"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "博"
+msgstr "Doktor"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
@@ -8305,6 +8359,10 @@ msgid ""
 "攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告"
 "知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
 msgstr ""
+"Bawa ARC, pasport, akaun bank atau kad kredit, kemudian pergi ke kedai "
+"pengendali (semua pengendali mempunyai kedai di pusat bandar Zhongli). "
+"Beritahu kakitangan bahawa anda mahu \"mendaftar nombor baharu, memiliki "
+"ARC\" — biasanya siap dalam masa kurang 30 minit."
 
 #: .\guides\templates\guides\guide_sim.html:127
 msgid "選擇門號與 SIM 卡規格"
@@ -8315,6 +8373,10 @@ msgid ""
 "可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano "
 "SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。"
 msgstr ""
+"Anda boleh memilih nombor sendiri (nombor istimewa dikenakan bayaran "
+"tambahan) dan memilih saiz kad SIM (kebanyakan telefon kini menggunakan "
+"nano SIM). Pastikan telefon anda adalah versi \"unlock semua jalur\" untuk "
+"memastikan ia berfungsi dengan baik pada rangkaian 5G/4G Taiwan."
 
 #: .\guides\templates\guides\guide_sim.html:136
 msgid "插卡啟用，設定網路"

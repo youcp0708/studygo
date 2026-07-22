@@ -3586,6 +3586,12 @@ msgid ""
 "100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存"
 "摺分開保管。"
 msgstr ""
+"Toko alat tulis di dekat kampus dapat membuatkannya. Beri tahu pemiliknya "
+"bahwa Anda ingin \"cap nama kayu\" dan berikan nama lengkap bahasa Inggris "
+"Anda — biayanya sekitar NT$50–100 dan memakan waktu sekitar 20 menit. "
+"Sebaiknya buat cap ini terlebih dahulu dan bawa langsung pada hari "
+"pembukaan rekening. Cap Anda setara dengan tanda tangan Anda, jadi simpan "
+"terpisah dari buku tabungan."
 
 #: .\guides\templates\guides\guide_bank.html:83
 msgid "統一證號說明"
@@ -3610,6 +3616,11 @@ msgid ""
 "需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照"
 "片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
 msgstr ""
+"Anda perlu mengajukan permohonan terpisah untuk \"Formulir Pendaftaran ID "
+"Unified\" di kantor layanan Badan Imigrasi Nasional di wilayah tempat "
+"tinggal Anda, dengan membawa paspor asli dan fotokopinya (tanpa perlu "
+"foto). Nomor ini bersifat tetap seumur hidup — setelah Anda menerima ARC "
+"nanti, nomor ARC akan sama dengan ID Unified Anda."
 
 #: .\guides\templates\guides\guide_bank.html:98
 msgid "提款卡選擇建議"
@@ -3624,6 +3635,11 @@ msgid ""
 "可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 "
 "兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。"
 msgstr ""
+"Anda dapat menarik tunai di ATM dan juga membayar langsung dengan kartu di "
+"toko atau online. Kantor pos menawarkan dua kombinasi: VISA + EasyCard "
+"atau VISA + iPASS — pilih sesuai kebutuhan Anda. Perhatikan bahwa "
+"beberapa merchant di Taiwan tidak menerima VISA Debit, jadi konfirmasi "
+"sebelum membayar."
 
 #: .\guides\templates\guides\guide_bank.html:107
 #: .\guides\templates\guides\guide_sim.html:145
@@ -6522,6 +6538,10 @@ msgid ""
 "中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別"
 "用 Google Maps 搜尋「中壢 內科診所」、「中壢 耳鼻喉科」等。"
 msgstr ""
+"Ada banyak klinik di dekat gerbang belakang NCU dan di pusat kota Zhongli "
+"— dengan kartu NHI, biaya kunjungan sekitar NT$150–200. Anda dapat "
+"mencari di Google Maps berdasarkan spesialisasi, seperti \"klinik "
+"penyakit dalam Zhongli\" atau \"klinik THT Zhongli\"."
 
 #: .\guides\templates\guides\guide_medical.html:94
 msgid "診所看診時間："
@@ -6532,6 +6552,10 @@ msgid ""
 "多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班"
 "制，非所有診所皆有晚診。建議事先電話確認或查詢 Google 地圖上的即時等候人數。"
 msgstr ""
+"Sebagian besar klinik beroperasi dalam tiga shift: pagi (08:30–12:00), "
+"siang (14:00–17:30), dan malam (18:00–21:00) — tidak semua klinik "
+"menyediakan jam malam. Sebaiknya hubungi terlebih dahulu untuk "
+"konfirmasi, atau periksa jumlah antrean real-time di Google Maps."
 
 #: .\guides\templates\guides\guide_medical.html:99
 msgid "周邊醫院"
@@ -7194,6 +7218,12 @@ msgid ""
 "出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 30 天，則從重新抵"
 "台當天起算，6 個月重新計算。"
 msgstr ""
+"Ini berarti tinggal terus-menerus di Taiwan selama 6 bulan, atau pernah "
+"meninggalkan Taiwan satu kali tidak lebih dari 30 hari, dengan hari-hari "
+"di luar negeri dikurangkan dan sisa masa tinggal mencapai total 6 bulan. "
+"Jika Anda meninggalkan Taiwan lebih dari sekali, atau meninggalkan sekali "
+"lebih dari 30 hari, hitungan 6 bulan akan dimulai kembali dari hari Anda "
+"kembali masuk ke Taiwan."
 
 #: .\guides\templates\guides\guide_nhi.html:91
 msgid "計算範例："
@@ -7280,6 +7310,11 @@ msgid ""
 "符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，"
 "審查通過後核發）。未得補助者每月保費約 NT$826。詳情請洽國際事務處。"
 msgstr ""
+"Mahasiswa yang memenuhi syarat berpenghasilan rendah dan terdaftar di NHI "
+"dapat mengajukan permohonan subsidi bulanan sebesar NT$413 ke Kantor "
+"Urusan Internasional (diperlukan surat keterangan berpenghasilan rendah; "
+"subsidi diberikan setelah lolos peninjauan). Tanpa subsidi, premi bulanan "
+"sekitar NT$826. Hubungi Kantor Urusan Internasional untuk detailnya."
 
 #: .\guides\templates\guides\guide_nhi.html:140
 msgid "相關文件下載"
@@ -7299,6 +7334,10 @@ msgid ""
 "台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直"
 "接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
 msgstr ""
+"Taiwan menggunakan sistem perawatan kesehatan berjenjang. Untuk penyakit "
+"umum, kunjungi klinik terlebih dahulu (kedokteran keluarga atau penyakit "
+"dalam) — biayanya hanya sekitar NT$150. Langsung pergi ke UGD atau rawat "
+"jalan rumah sakit berarti tanggungan biaya yang lebih tinggi (NT$240–480)."
 
 #: .\guides\templates\guides\guide_nhi.html:160
 msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
@@ -7830,6 +7869,11 @@ msgstr ""
 msgid "羅家倫先生紀念獎學金"
 msgstr "Beasiswa Memorial Bapak Luo Jialun"
 
+#: .\guides\templates\guides\guide_scholarship.html:210
+#: .\guides\templates\guides\guide_scholarship.html:215
+msgid "名"
+msgstr "penerima"
+
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr ""
@@ -7980,6 +8024,14 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
 msgstr "Beasiswa Riset Bank Koperasi Taiwan"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "碩"
+msgstr "Master"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "博"
+msgstr "Doktor"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
@@ -8243,6 +8295,10 @@ msgid ""
 "攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告"
 "知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
 msgstr ""
+"Bawa ARC, paspor, rekening bank atau kartu kredit, lalu kunjungi toko "
+"operator (semua operator memiliki toko di pusat kota Zhongli). Beri tahu "
+"staf bahwa Anda ingin \"mendaftar nomor baru, memiliki ARC\" — biasanya "
+"selesai dalam waktu kurang dari 30 menit."
 
 #: .\guides\templates\guides\guide_sim.html:127
 msgid "選擇門號與 SIM 卡規格"
@@ -8253,6 +8309,10 @@ msgid ""
 "可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano "
 "SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。"
 msgstr ""
+"Anda dapat memilih nomor sendiri (nomor khusus dikenakan biaya tambahan) "
+"dan memilih ukuran kartu SIM (sebagian besar ponsel saat ini menggunakan "
+"nano SIM). Pastikan ponsel Anda adalah versi \"unlocked semua band\" agar "
+"dapat digunakan dengan baik di jaringan 5G/4G Taiwan."
 
 #: .\guides\templates\guides\guide_sim.html:136
 msgid "插卡啟用，設定網路"

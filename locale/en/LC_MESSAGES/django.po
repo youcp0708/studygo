@@ -3574,6 +3574,12 @@ msgid ""
 "100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存"
 "摺分開保管。"
 msgstr ""
+"Any stationery shop near campus can carve one for you. Tell the owner you "
+"want a \"wooden name stamp\" and give them your full English name — it "
+"costs about NT$50–100 and takes around 20 minutes. We recommend getting "
+"it made beforehand and bringing it with you on account-opening day. Your "
+"stamp is equivalent to your signature, so keep it separate from your "
+"passbook."
 
 #: .\guides\templates\guides\guide_bank.html:83
 msgid "統一證號說明"
@@ -3598,6 +3604,11 @@ msgid ""
 "需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照"
 "片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
 msgstr ""
+"You'll need to apply separately for a \"Unified ID Registration Form\" at "
+"the National Immigration Agency service station in your area of stay, "
+"bringing your original passport and a photocopy (no photo needed). This "
+"number is fixed for life — once you receive your ARC later, the ARC "
+"number will match your Unified ID."
 
 #: .\guides\templates\guides\guide_bank.html:98
 msgid "提款卡選擇建議"
@@ -3612,6 +3623,10 @@ msgid ""
 "可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 "
 "兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。"
 msgstr ""
+"You can withdraw cash at ATMs and also pay directly by card in stores or "
+"online. The post office (Chunghwa Post) offers two combinations: VISA + "
+"EasyCard or VISA + iPASS — choose based on your needs. Note that some "
+"merchants in Taiwan don't accept VISA Debit, so confirm before paying."
 
 #: .\guides\templates\guides\guide_bank.html:107
 #: .\guides\templates\guides\guide_sim.html:145
@@ -6549,6 +6564,10 @@ msgid ""
 "中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別"
 "用 Google Maps 搜尋「中壢 內科診所」、「中壢 耳鼻喉科」等。"
 msgstr ""
+"There are many clinics near the back gate of NCU and in Zhongli city "
+"center — with your NHI card, a visit costs about NT$150–200. You can "
+"search Google Maps by specialty, such as \"Zhongli internal medicine "
+"clinic\" or \"Zhongli ENT clinic\"."
 
 #: .\guides\templates\guides\guide_medical.html:94
 msgid "診所看診時間："
@@ -6559,6 +6578,10 @@ msgid ""
 "多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班"
 "制，非所有診所皆有晚診。建議事先電話確認或查詢 Google 地圖上的即時等候人數。"
 msgstr ""
+"Most clinics operate in three shifts: morning (08:30–12:00), afternoon "
+"(14:00–17:30), and evening (18:00–21:00) — not all clinics offer evening "
+"hours. We recommend calling ahead to confirm, or checking the real-time "
+"waiting count on Google Maps."
 
 #: .\guides\templates\guides\guide_medical.html:99
 msgid "周邊醫院"
@@ -7218,6 +7241,11 @@ msgid ""
 "出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 30 天，則從重新抵"
 "台當天起算，6 個月重新計算。"
 msgstr ""
+"This means continuous residence in Taiwan for 6 months, or having left "
+"Taiwan once for no more than 30 days, with the actual days abroad "
+"subtracted and the remaining residence period totaling 6 months. If you "
+"leave more than once, or leave once for over 30 days, the 6-month count "
+"restarts from the day you re-enter Taiwan."
 
 #: .\guides\templates\guides\guide_nhi.html:91
 msgid "計算範例："
@@ -7301,6 +7329,11 @@ msgid ""
 "符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，"
 "審查通過後核發）。未得補助者每月保費約 NT$826。詳情請洽國際事務處。"
 msgstr ""
+"Students who qualify as low-income and are enrolled in NHI can apply to "
+"the Office of International Affairs for a monthly subsidy of NT$413 (a "
+"certificate of low income is required; the subsidy is issued after "
+"review). Without the subsidy, the monthly premium is about NT$826. "
+"Contact the Office of International Affairs for details."
 
 #: .\guides\templates\guides\guide_nhi.html:140
 msgid "相關文件下載"
@@ -7319,6 +7352,10 @@ msgid ""
 "台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直"
 "接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
 msgstr ""
+"Taiwan uses a tiered healthcare system. For common illnesses, visit a "
+"clinic first (family medicine or internal medicine) — the cost is only "
+"about NT$150. Going directly to a hospital's ER or outpatient department "
+"means a higher copayment (NT$240–480)."
 
 #: .\guides\templates\guides\guide_nhi.html:160
 msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
@@ -7849,6 +7886,11 @@ msgstr ""
 msgid "羅家倫先生紀念獎學金"
 msgstr "Mr. Luo Jialun Memorial Scholarship"
 
+#: .\guides\templates\guides\guide_scholarship.html:210
+#: .\guides\templates\guides\guide_scholarship.html:215
+msgid "名"
+msgstr "recipients"
+
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr ""
@@ -7997,6 +8039,14 @@ msgstr "Annual family income ≤ NT$900,000; grade 80+ or top 40% of class"
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
 msgstr "Taiwan Cooperative Bank Research Scholarship"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "碩"
+msgstr "Master's"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "博"
+msgstr "PhD"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
@@ -8261,6 +8311,10 @@ msgid ""
 "攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告"
 "知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
 msgstr ""
+"Bring your ARC, passport, and a bank account or credit card, then go to a "
+"carrier store (all carriers have stores in Zhongli city center). Tell the "
+"staff you want to \"apply for a new number and have an ARC\" — it usually "
+"takes under 30 minutes."
 
 #: .\guides\templates\guides\guide_sim.html:127
 msgid "選擇門號與 SIM 卡規格"
@@ -8271,6 +8325,10 @@ msgid ""
 "可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano "
 "SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。"
 msgstr ""
+"You can choose your own phone number (special numbers cost extra) and "
+"select your SIM card size (most phones use nano SIM today). Check whether "
+"your phone is a \"fully unlocked, all-band\" model to make sure it works "
+"properly on Taiwan's 5G/4G networks."
 
 #: .\guides\templates\guides\guide_sim.html:136
 msgid "插卡啟用，設定網路"

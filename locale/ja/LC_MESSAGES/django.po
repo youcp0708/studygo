@@ -7211,6 +7211,11 @@ msgstr "サークル／自治会／寮委員幹部または学外代表として
 msgid "羅家倫先生紀念獎學金"
 msgstr "羅家倫先生記念奨学金"
 
+#: .\guides\templates\guides\guide_scholarship.html:210
+#: .\guides\templates\guides\guide_scholarship.html:215
+msgid "名"
+msgstr "名"
+
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr "2年生以上または大学院生；困窮かつ優秀"
@@ -7351,6 +7356,14 @@ msgstr "家庭年収 NT$900,000以下；成績80点以上またはクラス上�
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
 msgstr "合作金庫研究奨学金"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "碩"
+msgstr "修士"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "博"
+msgstr "博士"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"

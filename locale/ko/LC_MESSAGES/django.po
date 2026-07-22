@@ -3386,6 +3386,10 @@ msgid ""
 "100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存"
 "摺分開保管。"
 msgstr ""
+"학교 근처 문구점에서 제작할 수 있습니다. 사장님께 \"나무 도장\"을 새기고 "
+"싶다고 말하고 영문 전체 이름을 알려주세요 — 비용은 약 NT$50~100이며 약 "
+"20분 정도 소요됩니다. 개설 전에 미리 새겨서 계좌 개설 당일 바로 가져가는 "
+"것을 권장합니다. 도장은 서명과 동일하므로 통장과 별도로 보관하세요."
 
 #: .\guides\templates\guides\guide_bank.html:83
 msgid "統一證號說明"
@@ -3410,6 +3414,9 @@ msgid ""
 "需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照"
 "片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
 msgstr ""
+"체류지 관할 이민서 서비스 센터에서 \"통일 ID 등록 서류\"를 별도로 신청해야 "
+"하며, 여권 원본과 사본(사진 불필요)을 지참하세요. 이 번호는 평생 고정되며, "
+"이후 ARC를 발급받으면 ARC 번호가 통일 ID와 동일해집니다."
 
 #: .\guides\templates\guides\guide_bank.html:98
 msgid "提款卡選擇建議"
@@ -3424,6 +3431,10 @@ msgid ""
 "可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 "
 "兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。"
 msgstr ""
+"ATM에서 현금을 인출할 수 있고, 매장이나 온라인에서 카드로 직접 결제할 수도 "
+"있습니다. 우체국은 VISA + 이지카드 또는 VISA + iPASS 두 가지 조합을 "
+"제공하므로 필요에 따라 선택하세요. 일부 대만 가맹점은 VISA 체크카드를 받지 "
+"않으니 결제 전에 확인하세요."
 
 #: .\guides\templates\guides\guide_bank.html:107
 #: .\guides\templates\guides\guide_sim.html:145
@@ -7108,6 +7119,11 @@ msgstr "동아리 / 학생회 / 기숙사 위원회 간부 또는 교외 대표�
 msgid "羅家倫先生紀念獎學金"
 msgstr "뤄자룬 선생 기념 장학금"
 
+#: .\guides\templates\guides\guide_scholarship.html:210
+#: .\guides\templates\guides\guide_scholarship.html:215
+msgid "名"
+msgstr "명"
+
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
 msgstr "2학년 이상 또는 대학원생; 빈곤 우수생"
@@ -7253,6 +7269,14 @@ msgstr "연간 가족 소득 ≤ NT$900,000; 성적 80+ 또는 반 상위 40%"
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
 msgstr "합작금고 연구 장학금"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "碩"
+msgstr "석사"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "博"
+msgstr "박사"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
@@ -7502,6 +7526,9 @@ msgid ""
 "攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告"
 "知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
 msgstr ""
+"ARC, 여권, 은행 계좌 또는 신용카드를 지참하고 통신사 매장을 방문하세요(중리 "
+"시내 각 통신사 매장 있음). 직원에게 \"신규 번호 개통, ARC 소지\"라고 말하면 "
+"보통 30분 이내에 완료됩니다."
 
 #: .\guides\templates\guides\guide_sim.html:127
 msgid "選擇門號與 SIM 卡規格"
@@ -7512,6 +7539,9 @@ msgid ""
 "可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano "
 "SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。"
 msgstr ""
+"번호를 직접 선택할 수 있으며(특수 번호는 추가 요금 발생), SIM 카드 크기도 "
+"선택하세요(대부분의 휴대폰은 나노 SIM 사용). 대만의 5G/4G를 정상적으로 사용"
+"하려면 휴대폰이 \"전대역 언락 버전\"인지 확인하세요."
 
 #: .\guides\templates\guides\guide_sim.html:136
 msgid "插卡啟用，設定網路"
