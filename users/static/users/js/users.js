@@ -1141,10 +1141,14 @@ function initGoogleSignIn() {
   });
   const container = document.getElementById('googleBtnContainer');
   if (container) {
+    // 依容器實際可用寬度算按鈕寬度（Google 元件僅接受 200–400），避免手機窄螢幕
+    // 下寫死的寬度把卡片撐爆、或被 .auth-card 的 overflow:hidden 裁掉一部分
+    const available = Math.floor(container.getBoundingClientRect().width) || 300;
+    const buttonWidth = Math.min(400, Math.max(200, available));
     google.accounts.id.renderButton(container, {
       theme: 'outline',
       size: 'large',
-      width: 300,
+      width: buttonWidth,
       text: 'signin_with',
       logo_alignment: 'center',
     });

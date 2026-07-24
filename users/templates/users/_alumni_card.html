@@ -3,7 +3,7 @@
 <div class="db-alumni-card" data-share-id="{{ share.id }}">
   <div class="db-alumni-top">
     <div class="db-alumni-av">{{ share.user.name|first|upper }}</div>
-    <div>
+    <div class="db-alumni-info">
       <div class="db-alumni-name">{{ share.user.name }}</div>
       {% if share.nationality %}<div class="db-alumni-loc">📍 {{ share.get_nationality_display }}</div>{% endif %}
       <div class="db-alumni-uni">{{ share.get_university_display|default:share.university }}{% if share.program %} <span class="db-alumni-prog">{{ share.program }}</span>{% endif %}</div>

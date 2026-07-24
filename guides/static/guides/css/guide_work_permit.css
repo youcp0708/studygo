@@ -42,9 +42,10 @@
   .alert-danger strong  { color: #dc2626; }
 
   /* ── Simple info table ── */
+  .info-table-wrap { overflow-x: auto; margin-bottom: 24px; }
   .info-table {
-    width: 100%; border-collapse: collapse;
-    font-size: 14px; margin-bottom: 24px;
+    width: 100%; min-width: 480px; border-collapse: collapse;
+    font-size: 14px;
   }
   .info-table th {
     background: var(--primary); color: #fff;
