@@ -1630,12 +1630,12 @@ msgid ""
 "持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
 "立銀行帳戶等。"
 msgstr ""
-"学生滞在許可証でチェックイン後、15 日以内に外国人居住証明書 (ARC) を申請し、"
+"学生滞在許可証でチェックイン後、30 日以内に外国人居住証明書 (ARC) を申請し、"
 "その後、健康保険の申請、銀行口座の開設などを行う必要があります。"
 
 #: .\guides\templates\guides\admissions_guide.html:288
 msgid "30 天內辦 ARC"
-msgstr "15日以内にARCを申請してください"
+msgstr "30日以内にARCを申請してください"
 
 #: .\guides\templates\guides\admissions_guide.html:300
 msgid ""
@@ -4266,6 +4266,15 @@ msgstr "重要規定"
 #: .\guides\templates\guides\guide_course.html:175
 msgid "最低修課學分："
 msgstr "最低履修単位数："
+
+#: .\guides\templates\guides\guide_course.html:163
+msgid ""
+"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修"
+"（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"1〜3年生は毎学期16単位以上、4年生は毎学期9単位以上を履修する必要がありま"
+"す。基準に満たない場合は減修の手続き（指導教員と学科主任の同意が必要）を行"
+"う必要があり、行わない場合は規定により退学となります。"
 
 #: .\guides\templates\guides\guide_course.html:180
 msgid "衝堂 / 同課號："

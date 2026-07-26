@@ -914,6 +914,9 @@ msgid ""
 "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
 "或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"외국 국적을 보유하고 해당 학제의 선수 학력(고등학교 또는 대학교 졸업)을 마쳐"
+"야 합니다. 각 학교 규정에 따라 중국어(TOCFL) 또는 영어(IELTS / TOEFL) 능력 "
+"증명이 필요한 경우가 많습니다."
 
 #: .\guides\templates\guides\admissions_guide.html:256
 msgid "外國國籍"
@@ -980,9 +983,17 @@ msgstr ""
 "학생 거류 비자로 입대 후 15일 이내에 외국인 거류증(ARC)을 발급받아야 하며, 이"
 "후 건강보험 가입, 은행 계좌 개설 등을 처리합니다."
 
+#: .\guides\templates\guides\admissions_guide.html:286
+msgid ""
+"持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
+"立銀行帳戶等。"
+msgstr ""
+"학생 거류 비자로 입대 후 30일 이내에 외국인 거류증(ARC)을 발급받아야 하며, 이"
+"후 건강보험 가입, 은행 계좌 개설 등을 처리합니다."
+
 #: .\guides\templates\guides\admissions_guide.html:288
 msgid "30 天內辦 ARC"
-msgstr "15일 이내 ARC 발급"
+msgstr "30일 이내 ARC 발급"
 
 #: .\guides\templates\guides\admissions_guide.html:289
 msgid "健保加保"
@@ -4044,6 +4055,9 @@ msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
+"추가/취소 3일째부터 시스템이 매일 07:00–09:00에 한 번씩 배정을 진행합니다"
+"(처리 중에는 시스템이 중단됩니다). 09:00 이후 ee-class에서 당일 결과를 확인"
+"할 수 있습니다."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
@@ -4146,6 +4160,15 @@ msgstr "중요 규정"
 #: .\guides\templates\guides\guide_course.html:175
 msgid "最低修課學分："
 msgstr "최소 학점 요건:"
+
+#: .\guides\templates\guides\guide_course.html:163
+msgid ""
+"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修"
+"（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"1–3학년은 학기당 최소 16학점, 4학년은 최소 9학점을 이수해야 합니다. 미달 "
+"시 학점 감소 신청(지도교수 및 학과장 승인 필요)을 해야 하며, 그렇지 않으"
+"면 제적 처분을 받습니다."
 
 #: .\guides\templates\guides\guide_course.html:180
 msgid "衝堂 / 同課號："
@@ -4451,6 +4474,9 @@ msgid ""
 "辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生"
 "簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
 msgstr ""
+"휴학 처리 후에는 학생 신분의 거류증이 즉시 효력을 잃으며, 규정된 기한 내에 "
+"대만을 떠나야 합니다. 복학 전에는 학생 비자를 다시 신청해야 합니다. 휴학을 "
+"확정하기 전에 국제처(내선 57081)에 먼저 연락하여 절차를 확인하시기 바랍니다."
 
 #: .\guides\templates\guides\guide_enrollment.html:61
 msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
