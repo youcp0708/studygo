@@ -62,10 +62,8 @@
     {% block site_nav %}
     <div class="site-nav">
       {% if user.is_authenticated %}
-      <a href="{% url 'index' %}" class="site-nav-link{% if request.path == '/' %} active{% endif %}">{% trans "首頁" %}</a>
-      <span class="site-nav-dot">◈</span>
       {% if user.student_profile %}
-      <a href="{% url 'dashboard' %}" class="site-nav-link{% if request.path == '/dashboard/' %} active{% endif %}">{% trans "儀表板" %}</a>
+      <a href="{% url 'dashboard' %}" class="site-nav-link{% if request.path == '/dashboard/' %} active{% endif %}">{% trans "首頁" %}</a>
       <span class="site-nav-dot">◈</span>
       {% endif %}
       <a href="{% url 'my_flows' %}" class="site-nav-link{% if '/flows/' in request.path %} active{% endif %}">{% trans "任務清單" %}</a>

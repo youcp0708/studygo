@@ -40,12 +40,7 @@ def index_view(request):
 
     user = request.user
     if user.is_authenticated:
-        if _email_verification_required() and not user.email_verified:
-            return render(request, 'users/login.html', _login_context())
-        profile = user.student_profile if hasattr(user, 'student_profile') else None
-        return render(request, 'users/home.html', {
-            'user': user, 'profile': profile, 'recent_shares': recent_shares,
-        })
+        return _authenticated_redirect(request)
     return render(request, 'users/home.html', {'recent_shares': recent_shares})
 
 
