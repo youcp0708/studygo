@@ -950,6 +950,10 @@ msgid ""
 "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
 "或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"Có quốc tịch nước ngoài, đã hoàn thành trình độ học vấn tiền đề của bậc học "
+"tương ứng (tốt nghiệp trung học phổ thông hoặc đại học). Thường cần cung cấp "
+"chứng chỉ năng lực tiếng Trung (TOCFL) hoặc tiếng Anh (IELTS / TOEFL) tùy "
+"theo quy định của từng trường."
 
 #: .\guides\templates\guides\admissions_guide.html:256
 msgid "外國國籍"
@@ -1018,9 +1022,18 @@ msgstr ""
 "ngoài (ARC) trong vòng 15 ngày, sau đó đăng ký bảo hiểm y tế, mở tài khoản "
 "ngân hàng, v.v."
 
+#: .\guides\templates\guides\admissions_guide.html:286
+msgid ""
+"持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
+"立銀行帳戶等。"
+msgstr ""
+"Sau khi đến Đài Loan với visa cư trú sinh viên, phải làm Thẻ Cư trú Nước "
+"ngoài (ARC) trong vòng 30 ngày, sau đó đăng ký bảo hiểm y tế, mở tài khoản "
+"ngân hàng, v.v."
+
 #: .\guides\templates\guides\admissions_guide.html:288
 msgid "30 天內辦 ARC"
-msgstr "Làm ARC trong vòng 15 ngày"
+msgstr "Làm ARC trong vòng 30 ngày"
 
 #: .\guides\templates\guides\admissions_guide.html:289
 msgid "健保加保"
@@ -4206,6 +4219,9 @@ msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
+"Từ ngày thứ 3 của kỳ thêm/rút, hệ thống phân bổ một lần mỗi ngày vào lúc "
+"07:00–09:00 (hệ thống tạm dừng trong khi xử lý). Sau 09:00 bạn có thể kiểm "
+"tra kết quả trong ngày trên ee-class."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
@@ -4311,6 +4327,15 @@ msgstr "Quy định quan trọng"
 #: .\guides\templates\guides\guide_course.html:175
 msgid "最低修課學分："
 msgstr "Yêu cầu tín chỉ tối thiểu:"
+
+#: .\guides\templates\guides\guide_course.html:163
+msgid ""
+"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修"
+"（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"Năm 1–3 phải học ít nhất 16 tín chỉ mỗi học kỳ; năm 4 ít nhất 9. Những "
+"người dưới mức tối thiểu phải đăng ký giảm tải (cần sự chấp thuận của cố "
+"vấn và trưởng khoa), nếu không sẽ bị đuổi học."
 
 #: .\guides\templates\guides\guide_course.html:180
 msgid "衝堂 / 同課號："
@@ -4622,6 +4647,11 @@ msgid ""
 "辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生"
 "簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
 msgstr ""
+"Sau khi thủ tục nghỉ học có hiệu lực, thẻ cư trú với tư cách sinh viên sẽ "
+"lập tức mất hiệu lực và bạn phải rời Đài Loan trong thời hạn quy định. "
+"Trước khi phục học phải xin lại visa sinh viên. Vui lòng liên hệ Phòng Sự "
+"vụ Quốc tế (số nội bộ 57081) để xác nhận thủ tục trước khi quyết định nghỉ "
+"học."
 
 #: .\guides\templates\guides\guide_enrollment.html:61
 msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"

@@ -958,6 +958,10 @@ msgid ""
 "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
 "或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"Hold foreign nationality and have completed the prerequisite academic "
+"qualifications for the intended program (high school or bachelor's degree "
+"graduation). Proof of Chinese (TOCFL) or English (IELTS / TOEFL) proficiency "
+"is usually required, depending on each school's regulations."
 
 #: .\guides\templates\guides\admissions_guide.html:256
 msgid "外國國籍"
@@ -1028,9 +1032,18 @@ msgstr ""
 "Alien Residence Certificate (ARC) within 30 days, and then apply for health "
 "insurance coverage, open a bank account, etc."
 
+#: .\guides\templates\guides\admissions_guide.html:286
+msgid ""
+"持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
+"立銀行帳戶等。"
+msgstr ""
+"After checking in with a student residence permit, you must apply for an "
+"Alien Residence Certificate (ARC) within 30 days, and then apply for health "
+"insurance coverage, open a bank account, etc."
+
 #: .\guides\templates\guides\admissions_guide.html:288
 msgid "30 天內辦 ARC"
-msgstr "Apply for ARC within 15 days"
+msgstr "Apply for ARC within 30 days"
 
 #: .\guides\templates\guides\admissions_guide.html:289
 msgid "健保加保"
@@ -4173,6 +4186,10 @@ msgstr "Pay Credit Fees"
 msgid "停修"
 msgstr "Course Withdrawal"
 
+#: .\guides\templates\guides\guide_course.html:63
+msgid "截止"
+msgstr "Deadline"
+
 #: .\guides\templates\guides\guide_course.html:67
 msgid "選課系統入口"
 msgstr "Course Registration System"
@@ -4186,8 +4203,16 @@ msgid "SPARC（計中）帳號"
 msgstr "SPARC (Computer Center) account"
 
 #: .\guides\templates\guides\guide_course.html:72
+msgid "SPARC（計中）帳號登入"
+msgstr "Log in with SPARC (Computer Center) account"
+
+#: .\guides\templates\guides\guide_course.html:72
 msgid "此時段請勿操作選課"
 msgstr "Please do not use the system during this time"
+
+#: .\guides\templates\guides\guide_course.html:73
+msgid "每日 07:00–09:00 系統進行資料備份，"
+msgstr "The system performs data backup daily from 07:00–09:00, "
 
 #: .\guides\templates\guides\guide_course.html:80
 msgid "路徑："
@@ -4218,45 +4243,47 @@ msgstr ""
 #: .\guides\templates\guides\guide_course.html:98
 msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
 msgstr ""
-"First-semester freshmen do not need an advisor password card. Starting from "
-"the second semester, students must complete the advisor-guided course "
-"selection procedure (online) before initial registration each semester."
+"One batch distribution takes place after the initial registration deadline; "
+"results will be announced by 115/02/03 16:00."
 
 #: .\guides\templates\guides\guide_course.html:99
 msgid ""
 "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上"
 "操作）。"
 msgstr ""
-"Course registration is not available during the Lunar New Year holiday "
-"(02/13–02/22). Please take note."
+"First-semester freshmen do not need an advisor password card. Starting from "
+"the second semester, students must complete the advisor-guided course "
+"selection procedure (online) before initial registration each semester."
 
 #: .\guides\templates\guides\guide_course.html:112
 msgid "春節期間（02/13–02/22）不開放選課，請注意。"
 msgstr ""
-"From the 3rd day of add/drop, the system distributes results once daily at "
-"07:00–09:00 (system paused during processing). After 09:00 you can check the "
-"day's results on ee-class."
+"Course registration is not available during the Lunar New Year holiday "
+"(02/13–02/22). Please take note."
 
 #: .\guides\templates\guides\guide_course.html:113
 msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
-"If you still wish to take a course you were not selected for, you must "
-"register online again and wait for the next day's distribution. Waitlist "
-"spots are not held automatically."
+"From the 3rd day of add/drop, the system distributes results once daily at "
+"07:00–09:00 (system paused during processing). After 09:00 you can check the "
+"day's results on ee-class."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
 msgstr ""
-"On the last day of add/drop, do not add courses that may conflict with your "
-"schedule, to avoid being forcibly dropped by the system in the final "
-"distribution."
+"If you still wish to take a course you were not selected for, you must "
+"register online again and wait for the next day's distribution. Waitlist "
+"spots are not held automatically."
 
 #: .\guides\templates\guides\guide_course.html:115
 msgid ""
 "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
 msgstr ""
+"On the last day of add/drop, do not add courses that may conflict with your "
+"schedule, to avoid being forcibly dropped by the system in the final "
+"distribution."
 
 #: .\guides\templates\guides\guide_course.html:116
 msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
@@ -4274,6 +4301,14 @@ msgstr ""
 #: .\guides\templates\guides\guide_course.html:131
 msgid "隔日更新至選課系統與 ee-class。"
 msgstr "Updated to the course selection system and ee-class the next day."
+
+#: .\guides\templates\guides\guide_course.html:131
+msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
+msgstr ""
+"Process: Print the application form from the course registration system → "
+"Obtain the instructor's signature → Pay the NT$100 fee (cash at the "
+"Cashier's Office or EasyCard deduction at the Curriculum Office) → Submit "
+"the form to the Curriculum Office."
 
 #: .\guides\templates\guides\guide_course.html:133
 msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
@@ -4328,6 +4363,9 @@ msgstr ""
 #: .\guides\templates\guides\guide_course.html:164
 msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
 msgstr ""
+"Process: Print the course withdrawal application form from the course "
+"registration system → Obtain signatures from the instructor and department "
+"chair → Submit to the Curriculum Office."
 
 #: .\guides\templates\guides\guide_course.html:165
 msgid "已辦理減修者不得再辦理停修。"
@@ -4680,6 +4718,11 @@ msgid ""
 "辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生"
 "簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
 msgstr ""
+"Once a leave of absence takes effect, your student residence permit "
+"immediately becomes invalid and you must leave Taiwan within the specified "
+"deadline. You must reapply for a student visa before resuming studies. "
+"Please contact the Office of International Affairs (ext. 57081) to confirm "
+"the procedure before finalizing your leave of absence."
 
 #: .\guides\templates\guides\guide_enrollment.html:61
 msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"

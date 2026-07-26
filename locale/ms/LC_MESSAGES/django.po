@@ -961,6 +961,10 @@ msgid ""
 "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
 "或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"Memegang kewarganegaraan asing dan telah menamatkan kelayakan akademik "
+"prasyarat bagi peringkat yang dipohon (tamat sekolah menengah atau ijazah "
+"sarjana muda). Bukti penguasaan bahasa Cina (TOCFL) atau Inggeris (IELTS / "
+"TOEFL) biasanya diperlukan, bergantung kepada peraturan setiap sekolah."
 
 #: .\guides\templates\guides\admissions_guide.html:256
 msgid "外國國籍"
@@ -1032,9 +1036,18 @@ msgstr ""
 "Sijil Kediaman Asing (ARC) dalam masa 15 hari, dan kemudian memohon "
 "perlindungan insurans kesihatan, membuka akaun bank, dsb."
 
+#: .\guides\templates\guides\admissions_guide.html:286
+msgid ""
+"持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
+"立銀行帳戶等。"
+msgstr ""
+"Selepas mendaftar masuk dengan permit kediaman pelajar, anda mesti memohon "
+"Sijil Kediaman Asing (ARC) dalam masa 30 hari, dan kemudian memohon "
+"perlindungan insurans kesihatan, membuka akaun bank, dsb."
+
 #: .\guides\templates\guides\admissions_guide.html:288
 msgid "30 天內辦 ARC"
-msgstr "Mohon ARC dalam masa 15 hari"
+msgstr "Mohon ARC dalam masa 30 hari"
 
 #: .\guides\templates\guides\admissions_guide.html:289
 msgid "健保加保"
@@ -4307,6 +4320,9 @@ msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
+"Bermula hari ke-3 tambah/gugur, sistem memperuntukkan sekali setiap hari "
+"pada 07:00–09:00 (sistem dijeda semasa pemprosesan). Selepas 09:00 anda "
+"boleh menyemak keputusan hari itu di ee-class."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
@@ -4420,6 +4436,16 @@ msgstr "Peraturan Penting"
 #: .\guides\templates\guides\guide_course.html:175
 msgid "最低修課學分："
 msgstr "Keperluan Kredit Minimum:"
+
+#: .\guides\templates\guides\guide_course.html:163
+msgid ""
+"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修"
+"（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"Tahun 1–3 mesti mengambil sekurang-kurangnya 16 kredit setiap semester; "
+"tahun 4 sekurang-kurangnya 9. Mereka yang di bawah minimum mesti memohon "
+"pengurangan beban (perlu kelulusan penasihat dan ketua jabatan), atau "
+"menghadapi pemberhentian."
 
 #: .\guides\templates\guides\guide_course.html:180
 msgid "衝堂 / 同課號："
@@ -4739,6 +4765,11 @@ msgid ""
 "辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生"
 "簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
 msgstr ""
+"Selepas cuti akademik berkuat kuasa, permit kediaman pelajar anda serta "
+"merta tidak sah dan anda mesti meninggalkan Taiwan dalam tempoh yang "
+"ditetapkan. Anda mesti memohon semula visa pelajar sebelum menyambung "
+"pengajian. Sila hubungi Pejabat Hal Ehwal Antarabangsa (sambungan 57081) "
+"untuk mengesahkan prosedur sebelum memuktamadkan cuti akademik anda."
 
 #: .\guides\templates\guides\guide_enrollment.html:61
 msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"

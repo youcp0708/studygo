@@ -958,6 +958,10 @@ msgid ""
 "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
 "或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"Memiliki kewarganegaraan asing dan telah menyelesaikan kualifikasi akademik "
+"prasyarat untuk jenjang yang dituju (lulus sekolah menengah atas atau "
+"sarjana). Biasanya diperlukan bukti kemahiran bahasa Mandarin (TOCFL) atau "
+"Inggris (IELTS / TOEFL), tergantung ketentuan masing-masing sekolah."
 
 #: .\guides\templates\guides\admissions_guide.html:256
 msgid "外國國籍"
@@ -1028,9 +1032,18 @@ msgstr ""
 "Residence Certificate (ARC) dalam waktu 15 hari, lalu mengajukan permohonan "
 "perlindungan asuransi kesehatan, membuka rekening bank, dll."
 
+#: .\guides\templates\guides\admissions_guide.html:286
+msgid ""
+"持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
+"立銀行帳戶等。"
+msgstr ""
+"Setelah check-in dengan izin tinggal pelajar, Anda harus mengajukan Alien "
+"Residence Certificate (ARC) dalam waktu 30 hari, lalu mengajukan permohonan "
+"perlindungan asuransi kesehatan, membuka rekening bank, dll."
+
 #: .\guides\templates\guides\admissions_guide.html:288
 msgid "30 天內辦 ARC"
-msgstr "Ajukan permohonan ARC dalam waktu 15 hari"
+msgstr "Ajukan permohonan ARC dalam waktu 30 hari"
 
 #: .\guides\templates\guides\admissions_guide.html:289
 msgid "健保加保"
@@ -4257,6 +4270,9 @@ msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
+"Mulai hari ke-3 masa tambah/hapus, sistem mengalokasikan sekali setiap hari "
+"pukul 07:00–09:00 (sistem dijeda selama pemrosesan). Setelah pukul 09:00 "
+"Anda dapat memeriksa hasil hari itu di ee-class."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
@@ -4366,6 +4382,15 @@ msgstr "Peraturan Penting"
 #: .\guides\templates\guides\guide_course.html:175
 msgid "最低修課學分："
 msgstr "Persyaratan SKS Minimum:"
+
+#: .\guides\templates\guides\guide_course.html:163
+msgid ""
+"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修"
+"（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"Tahun 1–3 harus mengambil minimal 16 SKS per semester; tahun 4 minimal 9. "
+"Mereka yang di bawah minimum harus mengajukan pengurangan beban (perlu "
+"persetujuan advisor dan kepala jurusan), atau menghadapi pemecatan."
 
 #: .\guides\templates\guides\guide_course.html:180
 msgid "衝堂 / 同課號："
@@ -4683,6 +4708,11 @@ msgid ""
 "辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生"
 "簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
 msgstr ""
+"Setelah cuti akademik berlaku, izin tinggal pelajar Anda langsung tidak "
+"berlaku dan Anda harus meninggalkan Taiwan dalam batas waktu yang "
+"ditentukan. Anda harus mengajukan kembali visa pelajar sebelum melanjutkan "
+"studi. Silakan hubungi Kantor Urusan Internasional (ekstensi 57081) untuk "
+"memastikan prosedurnya sebelum memastikan cuti akademik Anda."
 
 #: .\guides\templates\guides\guide_enrollment.html:61
 msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
