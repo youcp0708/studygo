@@ -9954,7 +9954,7 @@ msgid ""
 "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文"
 "或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究"
 "所）。各校要求略有不同，請以各校招生簡章為準。"
-msgstr ""
+msgstr "Secara umum Anda memerlukan: paspor, bukti pendidikan (ijazah SMA/universitas), transkrip nilai, sertifikat kemampuan bahasa (Mandarin atau Inggris), bukti keuangan, laporan pemeriksaan kesehatan, surat rekomendasi (diperlukan oleh beberapa sekolah), dan rencana studi (untuk program pascasarjana). Persyaratan dapat berbeda di setiap sekolah, silakan periksa buku panduan penerimaan masing-masing sekolah."
 
 #: .\users\templates\users\faq.html:33 .\users\templates\users\home.html:335
 msgid "不會中文可以來台灣留學嗎？"
@@ -9965,7 +9965,7 @@ msgid ""
 "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常"
 "入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課"
 "程。"
-msgstr ""
+msgstr "Bisa! Banyak universitas di Taiwan menawarkan program sarjana dan pascasarjana yang diajarkan dalam bahasa Inggris. Jika mengikuti program berbahasa Mandarin, Anda biasanya perlu memiliki tingkat kemampuan bahasa Mandarin tertentu sebelum masuk (seperti TOCFL B1 ke atas), atau dapat menyelesaikan program persiapan bahasa Mandarin selama satu tahun."
 
 #: .\users\templates\users\faq.html:37 .\users\templates\users\home.html:358
 msgid "申請流程需要多久時間？"
@@ -9976,7 +9976,7 @@ msgid ""
 "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個"
 "月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個"
 "月）、辦理簽證（1–2 個月）。"
-msgstr ""
+msgstr "Dari mulai mengajukan aplikasi hingga resmi terdaftar biasanya memakan waktu 3–8 bulan. Sebaiknya persiapkan lebih awal: konfirmasi kelayakan (6–12 bulan sebelumnya), siapkan dokumen (4–6 bulan sebelumnya), ajukan aplikasi (3–4 bulan sebelumnya), tunggu hasil penerimaan (1–2 bulan), dan ajukan visa (1–2 bulan)."
 
 #: .\users\templates\users\faq.html:46 .\users\templates\users\home.html:345
 msgid "學生簽證如何辦理？"
@@ -9986,7 +9986,7 @@ msgstr "Bagaimana cara mengajukan visa pelajar?"
 msgid ""
 "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證"
 "（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
-msgstr ""
+msgstr "Setelah menerima surat penerimaan dari sekolah di Taiwan, bawa surat tersebut ke kantor perwakilan Taiwan setempat untuk mengajukan Visa Tinggal (Resident Visa). Siapkan paspor, surat penerimaan, bukti keuangan, dan dokumen pemeriksaan kesehatan untuk mengajukan permohonan."
 
 #: .\users\templates\users\faq.html:50 .\users\templates\users\home.html:354
 msgid "全民健保什麼時候可以加入？"
@@ -10011,7 +10011,7 @@ msgid ""
 "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 "
 "NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學"
 "金補助，台灣留學費用相對親民。"
-msgstr ""
+msgstr "Biaya kuliah bervariasi tergantung sekolah dan program studi. Program sarjana di universitas negeri sekitar NT$20.000–50.000 per semester, dan program pascasarjana sekitar NT$25.000–60.000. Biaya hidup (tempat tinggal, makan, transportasi) sekitar NT$10.000–20.000 per bulan. Dengan bantuan beasiswa, biaya studi di Taiwan relatif terjangkau."
 
 #: .\users\templates\users\faq.html:63 .\users\templates\users\home.html:350
 msgid "可以邊讀書邊打工嗎？"
