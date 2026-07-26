@@ -1797,7 +1797,7 @@
 ════════════════════════════════════ */
   @media (max-width: 1100px) {
     .login-shell {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
 
     .login-slide h2 {
@@ -1957,6 +1957,23 @@
 
     .language-select {
       height: 38px;
+    }
+
+    .lang-menu {
+      right: auto;
+      left: 0;
+    }
+
+    /* #reminderDropdown 的定位/寬度是行內樣式（base.html），行動版改為固定於視窗
+       左右安全邊界，避免依附小小的鈴鐺按鈕位置導致超出螢幕；需要 !important 才能
+       蓋過行內樣式（JS 只切換 display，不受影響）。 */
+    #reminderDropdown {
+      position: fixed !important;
+      top: 96px !important;
+      left: 12px !important;
+      right: 12px !important;
+      width: auto !important;
+      margin-top: 0 !important;
     }
   }
 
@@ -2387,7 +2404,6 @@
   }
 
   /* 如果在台指南外面有包一層 */
-  .nav-right,
   .header-actions,
   .nav-actions {
     display: flex;
@@ -2931,7 +2947,7 @@
 }
 /* ════════════════════════════════════════
    手機版導覽列（漢堡選單）
-   桌面隱藏按鈕；≤900px 收合 .site-nav，點擊漢堡展開
+   桌面隱藏按鈕；≤1024px 收合 .site-nav，點擊漢堡展開（需與上方 .site-nav{display:none} 的 1024px 斷點一致，否則 901–1024px 會出現選單無法開啟的死區）
 ════════════════════════════════════════ */
 .nav-hamburger {
   display: none;
@@ -2957,7 +2973,7 @@
 .nav-hamburger.active span:nth-child(2) { opacity: 0; }
 .nav-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .nav-hamburger {
     display: flex;
   }
@@ -3053,9 +3069,11 @@
   background: #fff; border: 1.5px solid var(--border, #e5e8e6); border-radius: 20px;
   padding: 22px 20px; position: relative; overflow: hidden;
   transition: box-shadow .2s, transform .2s;
+  display: flex; flex-direction: column; height: 100%; box-sizing: border-box;
 }
 .db-alumni-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.07); transform: translateY(-2px); }
 .db-alumni-top { display: flex; gap: 14px; margin-bottom: 12px; align-items: flex-start; }
+.db-alumni-info { min-width: 0; }
 /* 編輯／刪除自己的分享（僅「我的分享」分頁顯示） */
 .db-alumni-actions { margin-left: auto; display: flex; align-items: center; gap: 2px; }
 .db-alumni-edit-btn,
@@ -3126,6 +3144,8 @@
   font-size: 12px;
   color: var(--muted, #9aa3a0);
 }
+.db-alumni-view { flex: 1; display: flex; flex-direction: column; }
+.db-alumni-view .db-alumni-date { margin-top: auto; padding-top: 10px; }
 
 /* ════════════════════════════════════════
    學長姐分享區：左側分頁導覽版型
@@ -3248,6 +3268,35 @@
     padding: 11px 8px;
     font-size: 14px;
   }
+
+  /* 學長姐分享卡片：手機一行兩個，內容縮小並統一高度，避免擠成一團 */
+  .db-alumni-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .db-alumni-card { padding: 14px 12px; min-height: 240px; border-radius: 16px; }
+  .db-alumni-top { gap: 8px; margin-bottom: 8px; }
+  .db-alumni-av { width: 36px; height: 36px; font-size: 14px; }
+  .db-alumni-info { min-height: 54px; }
+  .db-alumni-name {
+    font-size: 12.5px; margin-bottom: 1px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .db-alumni-loc {
+    font-size: 10.5px; margin-bottom: 1px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .db-alumni-uni {
+    font-size: 10.5px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .db-alumni-prog {
+    display: block; margin-top: 1px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .db-alumni-title {
+    font-size: 13px; margin: 0 0 4px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .db-alumni-q { font-size: 11.5px; line-height: 1.6; }
+  .db-alumni-date { font-size: 10.5px; }
 }
 
 

@@ -95,9 +95,9 @@
     font-size:13px; font-weight:800;
     display:flex; align-items:center; justify-content:center; margin-top:1px;
   }
-  .gs-step-body { flex:1; }
+  .gs-step-body { flex:1; min-width:0; }
   .gs-step-title { font-size:14px; font-weight:700; color:var(--primary-dark); margin-bottom:4px; }
-  .gs-step-desc  { font-size:13px; color:#555; line-height:1.7; }
+  .gs-step-desc  { font-size:13px; color:#555; line-height:1.7; overflow-wrap:anywhere; }
   .gs-step-desc code {
     background:#f1f5f9; border-radius:4px; padding:1px 6px;
     font-size:12px; color:#1e40af; font-weight:700;

@@ -73,6 +73,7 @@
     font-size:14px; color:#444; line-height:1.6;
     display:flex; gap:8px; align-items:flex-start;
   }
+  .gl-rule-list li > *:last-child { min-width:0; overflow-wrap:anywhere; }
   .gl-rule-list li:last-child { border-bottom:none; }
   .gl-rule-list li::before { content:'•'; color:var(--primary); font-weight:900; flex-shrink:0; }
 

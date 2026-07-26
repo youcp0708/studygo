@@ -961,6 +961,10 @@ msgid ""
 "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
 "或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"Memegang kewarganegaraan asing dan telah menamatkan kelayakan akademik "
+"prasyarat bagi peringkat yang dipohon (tamat sekolah menengah atau ijazah "
+"sarjana muda). Bukti penguasaan bahasa Cina (TOCFL) atau Inggeris (IELTS / "
+"TOEFL) biasanya diperlukan, bergantung kepada peraturan setiap sekolah."
 
 #: .\guides\templates\guides\admissions_guide.html:256
 msgid "外國國籍"
@@ -1032,9 +1036,18 @@ msgstr ""
 "Sijil Kediaman Asing (ARC) dalam masa 15 hari, dan kemudian memohon "
 "perlindungan insurans kesihatan, membuka akaun bank, dsb."
 
+#: .\guides\templates\guides\admissions_guide.html:286
+msgid ""
+"持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
+"立銀行帳戶等。"
+msgstr ""
+"Selepas mendaftar masuk dengan permit kediaman pelajar, anda mesti memohon "
+"Sijil Kediaman Asing (ARC) dalam masa 30 hari, dan kemudian memohon "
+"perlindungan insurans kesihatan, membuka akaun bank, dsb."
+
 #: .\guides\templates\guides\admissions_guide.html:288
 msgid "30 天內辦 ARC"
-msgstr "Mohon ARC dalam masa 15 hari"
+msgstr "Mohon ARC dalam masa 30 hari"
 
 #: .\guides\templates\guides\admissions_guide.html:289
 msgid "健保加保"
@@ -3632,6 +3645,12 @@ msgid ""
 "100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存"
 "摺分開保管。"
 msgstr ""
+"Kedai alat tulis berhampiran kampus boleh mengukirnya. Beritahu pemilik "
+"kedai bahawa anda mahu \"cop nama kayu\" dan berikan nama penuh Bahasa "
+"Inggeris anda — kosnya sekitar NT$50–100 dan mengambil masa kira-kira 20 "
+"minit. Kami mengesyorkan mengukirnya lebih awal dan membawanya terus pada "
+"hari pembukaan akaun. Cop anda setara dengan tandatangan anda, jadi "
+"simpan berasingan daripada buku akaun."
 
 #: .\guides\templates\guides\guide_bank.html:83
 msgid "統一證號說明"
@@ -3656,6 +3675,11 @@ msgid ""
 "需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照"
 "片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
 msgstr ""
+"Anda perlu memohon secara berasingan untuk \"Borang Pendaftaran ID "
+"Bersatu\" di stesen perkhidmatan Agensi Imigresen Kebangsaan di kawasan "
+"tempat tinggal anda, dengan membawa pasport asal dan salinan fotokopi "
+"(tanpa keperluan gambar). Nombor ini tetap sepanjang hayat — apabila "
+"anda menerima ARC kelak, nombor ARC akan sepadan dengan ID Bersatu anda."
 
 #: .\guides\templates\guides\guide_bank.html:98
 msgid "提款卡選擇建議"
@@ -3670,6 +3694,11 @@ msgid ""
 "可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 "
 "兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。"
 msgstr ""
+"Anda boleh mengeluarkan wang tunai di ATM dan juga membayar terus dengan "
+"kad di kedai atau dalam talian. Pejabat pos menawarkan dua kombinasi: "
+"VISA + EasyCard atau VISA + iPASS — pilih mengikut keperluan anda. "
+"Perhatikan bahawa sesetengah peniaga di Taiwan tidak menerima VISA "
+"Debit, jadi sahkan sebelum membayar."
 
 #: .\guides\templates\guides\guide_bank.html:107
 #: .\guides\templates\guides\guide_sim.html:145
@@ -4307,6 +4336,9 @@ msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
+"Bermula hari ke-3 tambah/gugur, sistem memperuntukkan sekali setiap hari "
+"pada 07:00–09:00 (sistem dijeda semasa pemprosesan). Selepas 09:00 anda "
+"boleh menyemak keputusan hari itu di ee-class."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
@@ -4420,6 +4452,16 @@ msgstr "Peraturan Penting"
 #: .\guides\templates\guides\guide_course.html:175
 msgid "最低修課學分："
 msgstr "Keperluan Kredit Minimum:"
+
+#: .\guides\templates\guides\guide_course.html:163
+msgid ""
+"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修"
+"（需導師與系主任同意），否則依規定令退學。"
+msgstr ""
+"Tahun 1–3 mesti mengambil sekurang-kurangnya 16 kredit setiap semester; "
+"tahun 4 sekurang-kurangnya 9. Mereka yang di bawah minimum mesti memohon "
+"pengurangan beban (perlu kelulusan penasihat dan ketua jabatan), atau "
+"menghadapi pemberhentian."
 
 #: .\guides\templates\guides\guide_course.html:180
 msgid "衝堂 / 同課號："
@@ -4739,6 +4781,11 @@ msgid ""
 "辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生"
 "簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
 msgstr ""
+"Selepas cuti akademik berkuat kuasa, permit kediaman pelajar anda serta "
+"merta tidak sah dan anda mesti meninggalkan Taiwan dalam tempoh yang "
+"ditetapkan. Anda mesti memohon semula visa pelajar sebelum menyambung "
+"pengajian. Sila hubungi Pejabat Hal Ehwal Antarabangsa (sambungan 57081) "
+"untuk mengesahkan prosedur sebelum memuktamadkan cuti akademik anda."
 
 #: .\guides\templates\guides\guide_enrollment.html:61
 msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
@@ -6582,6 +6629,10 @@ msgid ""
 "中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別"
 "用 Google Maps 搜尋「中壢 內科診所」、「中壢 耳鼻喉科」等。"
 msgstr ""
+"Terdapat banyak klinik berhampiran pintu belakang NCU dan di pusat bandar "
+"Zhongli — dengan kad NHI anda, kos lawatan adalah sekitar NT$150–200. "
+"Anda boleh mencari di Google Maps mengikut bidang pakar, seperti "
+"\"klinik perubatan dalaman Zhongli\" atau \"klinik ENT Zhongli\"."
 
 #: .\guides\templates\guides\guide_medical.html:94
 msgid "診所看診時間："
@@ -6592,6 +6643,11 @@ msgid ""
 "多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班"
 "制，非所有診所皆有晚診。建議事先電話確認或查詢 Google 地圖上的即時等候人數。"
 msgstr ""
+"Kebanyakan klinik beroperasi dalam tiga syif: pagi (08:30–12:00), tengah "
+"hari (14:00–17:30), dan malam (18:00–21:00) — tidak semua klinik "
+"menawarkan waktu malam. Kami mengesyorkan menghubungi terlebih dahulu "
+"untuk pengesahan, atau menyemak bilangan menunggu masa nyata di Google "
+"Maps."
 
 #: .\guides\templates\guides\guide_medical.html:99
 msgid "周邊醫院"
@@ -7257,6 +7313,12 @@ msgid ""
 "出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 30 天，則從重新抵"
 "台當天起算，6 個月重新計算。"
 msgstr ""
+"Ini bermaksud tinggal berterusan di Taiwan selama 6 bulan, atau pernah "
+"meninggalkan Taiwan sekali tidak lebih daripada 30 hari, dengan hari-hari "
+"di luar negara ditolak dan baki tempoh tinggal mencapai jumlah 6 bulan. "
+"Jika anda meninggalkan Taiwan lebih daripada sekali, atau meninggalkan "
+"sekali lebih daripada 30 hari, kiraan 6 bulan akan bermula semula dari "
+"hari anda kembali masuk ke Taiwan."
 
 #: .\guides\templates\guides\guide_nhi.html:91
 msgid "計算範例："
@@ -7341,6 +7403,11 @@ msgid ""
 "符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，"
 "審查通過後核發）。未得補助者每月保費約 NT$826。詳情請洽國際事務處。"
 msgstr ""
+"Pelajar yang layak sebagai berpendapatan rendah dan mendaftar dalam NHI "
+"boleh memohon subsidi bulanan sebanyak NT$413 daripada Pejabat Hal Ehwal "
+"Antarabangsa (sijil berpendapatan rendah diperlukan; subsidi dikeluarkan "
+"selepas semakan). Tanpa subsidi, premium bulanan adalah kira-kira "
+"NT$826. Hubungi Pejabat Hal Ehwal Antarabangsa untuk maklumat lanjut."
 
 #: .\guides\templates\guides\guide_nhi.html:140
 msgid "相關文件下載"
@@ -7359,6 +7426,11 @@ msgid ""
 "台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直"
 "接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
 msgstr ""
+"Taiwan menggunakan sistem penjagaan kesihatan berperingkat. Untuk "
+"penyakit biasa, kunjungi klinik dahulu (perubatan keluarga atau "
+"perubatan dalaman) — kosnya hanya sekitar NT$150. Pergi terus ke jabatan "
+"kecemasan atau pesakit luar hospital bermakna bayaran bersama yang lebih "
+"tinggi (NT$240–480)."
 
 #: .\guides\templates\guides\guide_nhi.html:160
 msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
@@ -7730,7 +7802,7 @@ msgstr "Terbaik"
 #: .\guides\templates\guides\guide_scholarship.html:108
 #, python-format
 msgid "88 分以上或班排前 5%%"
-msgstr "88+ atau 5% teratas kelas"
+msgstr "88+ atau 5%% teratas kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
@@ -7751,7 +7823,7 @@ msgstr "Cemerlang"
 #: .\guides\templates\guides\guide_scholarship.html:115
 #, python-format
 msgid "85 分以上或班排前 10%%"
-msgstr "85+ atau 10% teratas kelas"
+msgstr "85+ atau 10%% teratas kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:116
 msgid "80 分以上或 A- 等"
@@ -7872,7 +7944,7 @@ msgstr "Senarai Penghormatan Akademik"
 #: .\guides\templates\guides\guide_scholarship.html:201
 #, python-format
 msgid "學期成績系排前 5%%，自動核發"
-msgstr "5% teratas di jabatan untuk semester, diberikan secara automatik"
+msgstr "5%% teratas di jabatan untuk semester, diberikan secara automatik"
 
 #: .\guides\templates\guides\guide_scholarship.html:204
 msgid "傑出領導獎學金"
@@ -7887,6 +7959,11 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:209
 msgid "羅家倫先生紀念獎學金"
 msgstr "Biasiswa Peringatan Encik Luo Jialun"
+
+#: .\guides\templates\guides\guide_scholarship.html:210
+#: .\guides\templates\guides\guide_scholarship.html:215
+msgid "名"
+msgstr "penerima"
 
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
@@ -8034,11 +8111,19 @@ msgstr "12/2 – 5/3"
 #, python-format
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%%"
 msgstr ""
-"Pendapatan keluarga tahunan ≤ NT$900,000; gred 80+ atau 40% teratas kelas"
+"Pendapatan keluarga tahunan ≤ NT$900,000; gred 80+ atau 40%% teratas kelas"
 
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
 msgstr "Biasiswa Penyelidikan Bank Koperatif Taiwan"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "碩"
+msgstr "Sarjana"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "博"
+msgstr "Doktor"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
@@ -8305,6 +8390,10 @@ msgid ""
 "攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告"
 "知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
 msgstr ""
+"Bawa ARC, pasport, akaun bank atau kad kredit, kemudian pergi ke kedai "
+"pengendali (semua pengendali mempunyai kedai di pusat bandar Zhongli). "
+"Beritahu kakitangan bahawa anda mahu \"mendaftar nombor baharu, memiliki "
+"ARC\" — biasanya siap dalam masa kurang 30 minit."
 
 #: .\guides\templates\guides\guide_sim.html:127
 msgid "選擇門號與 SIM 卡規格"
@@ -8315,6 +8404,10 @@ msgid ""
 "可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano "
 "SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。"
 msgstr ""
+"Anda boleh memilih nombor sendiri (nombor istimewa dikenakan bayaran "
+"tambahan) dan memilih saiz kad SIM (kebanyakan telefon kini menggunakan "
+"nano SIM). Pastikan telefon anda adalah versi \"unlock semua jalur\" untuk "
+"memastikan ia berfungsi dengan baik pada rangkaian 5G/4G Taiwan."
 
 #: .\guides\templates\guides\guide_sim.html:136
 msgid "插卡啟用，設定網路"
@@ -11262,15 +11355,6 @@ msgstr ""
 
 #~ msgid "SPARC（計中）帳號"
 #~ msgstr "akaun SPARC (Pusat Komputer)"
-
-#~ msgid ""
-#~ "大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修"
-#~ "（需導師與系主任同意），否則依規定令退學。"
-#~ msgstr ""
-#~ "Tahun 1–3 mesti mengambil sekurang-kurangnya 16 kredit setiap semester; "
-#~ "tahun 4 sekurang-kurangnya 9. Mereka yang di bawah minimum mesti memohon "
-#~ "pengurangan beban (perlu kelulusan penasihat dan ketua jabatan), atau "
-#~ "menghadapi pemberhentian."
 
 #~ msgid "抵臺前準備"
 #~ msgstr "Persediaan Sebelum Ketibaan"

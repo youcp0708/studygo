@@ -958,6 +958,10 @@ msgid ""
 "持外國國籍，完成相應學制的前置學歷（高中或大學畢業）。通常需提供中文（TOCFL）"
 "或英文（IELTS / TOEFL）能力證明，依各校系規定。"
 msgstr ""
+"Hold foreign nationality and have completed the prerequisite academic "
+"qualifications for the intended program (high school or bachelor's degree "
+"graduation). Proof of Chinese (TOCFL) or English (IELTS / TOEFL) proficiency "
+"is usually required, depending on each school's regulations."
 
 #: .\guides\templates\guides\admissions_guide.html:256
 msgid "外國國籍"
@@ -1028,9 +1032,18 @@ msgstr ""
 "Alien Residence Certificate (ARC) within 30 days, and then apply for health "
 "insurance coverage, open a bank account, etc."
 
+#: .\guides\templates\guides\admissions_guide.html:286
+msgid ""
+"持學生居留簽入台後，須在 30 天內辦理外僑居留證（ARC），之後再辦理健保加保、開"
+"立銀行帳戶等。"
+msgstr ""
+"After checking in with a student residence permit, you must apply for an "
+"Alien Residence Certificate (ARC) within 30 days, and then apply for health "
+"insurance coverage, open a bank account, etc."
+
 #: .\guides\templates\guides\admissions_guide.html:288
 msgid "30 天內辦 ARC"
-msgstr "Apply for ARC within 15 days"
+msgstr "Apply for ARC within 30 days"
 
 #: .\guides\templates\guides\admissions_guide.html:289
 msgid "健保加保"
@@ -3574,6 +3587,12 @@ msgid ""
 "100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存"
 "摺分開保管。"
 msgstr ""
+"Any stationery shop near campus can carve one for you. Tell the owner you "
+"want a \"wooden name stamp\" and give them your full English name — it "
+"costs about NT$50–100 and takes around 20 minutes. We recommend getting "
+"it made beforehand and bringing it with you on account-opening day. Your "
+"stamp is equivalent to your signature, so keep it separate from your "
+"passbook."
 
 #: .\guides\templates\guides\guide_bank.html:83
 msgid "統一證號說明"
@@ -3598,6 +3617,11 @@ msgid ""
 "需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照"
 "片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
 msgstr ""
+"You'll need to apply separately for a \"Unified ID Registration Form\" at "
+"the National Immigration Agency service station in your area of stay, "
+"bringing your original passport and a photocopy (no photo needed). This "
+"number is fixed for life — once you receive your ARC later, the ARC "
+"number will match your Unified ID."
 
 #: .\guides\templates\guides\guide_bank.html:98
 msgid "提款卡選擇建議"
@@ -3612,6 +3636,10 @@ msgid ""
 "可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 "
 "兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。"
 msgstr ""
+"You can withdraw cash at ATMs and also pay directly by card in stores or "
+"online. The post office (Chunghwa Post) offers two combinations: VISA + "
+"EasyCard or VISA + iPASS — choose based on your needs. Note that some "
+"merchants in Taiwan don't accept VISA Debit, so confirm before paying."
 
 #: .\guides\templates\guides\guide_bank.html:107
 #: .\guides\templates\guides\guide_sim.html:145
@@ -4173,6 +4201,10 @@ msgstr "Pay Credit Fees"
 msgid "停修"
 msgstr "Course Withdrawal"
 
+#: .\guides\templates\guides\guide_course.html:63
+msgid "截止"
+msgstr "Deadline"
+
 #: .\guides\templates\guides\guide_course.html:67
 msgid "選課系統入口"
 msgstr "Course Registration System"
@@ -4186,8 +4218,16 @@ msgid "SPARC（計中）帳號"
 msgstr "SPARC (Computer Center) account"
 
 #: .\guides\templates\guides\guide_course.html:72
+msgid "SPARC（計中）帳號登入"
+msgstr "Log in with SPARC (Computer Center) account"
+
+#: .\guides\templates\guides\guide_course.html:72
 msgid "此時段請勿操作選課"
 msgstr "Please do not use the system during this time"
+
+#: .\guides\templates\guides\guide_course.html:73
+msgid "每日 07:00–09:00 系統進行資料備份，"
+msgstr "The system performs data backup daily from 07:00–09:00, "
 
 #: .\guides\templates\guides\guide_course.html:80
 msgid "路徑："
@@ -4218,45 +4258,47 @@ msgstr ""
 #: .\guides\templates\guides\guide_course.html:98
 msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
 msgstr ""
-"First-semester freshmen do not need an advisor password card. Starting from "
-"the second semester, students must complete the advisor-guided course "
-"selection procedure (online) before initial registration each semester."
+"One batch distribution takes place after the initial registration deadline; "
+"results will be announced by 115/02/03 16:00."
 
 #: .\guides\templates\guides\guide_course.html:99
 msgid ""
 "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上"
 "操作）。"
 msgstr ""
-"Course registration is not available during the Lunar New Year holiday "
-"(02/13–02/22). Please take note."
+"First-semester freshmen do not need an advisor password card. Starting from "
+"the second semester, students must complete the advisor-guided course "
+"selection procedure (online) before initial registration each semester."
 
 #: .\guides\templates\guides\guide_course.html:112
 msgid "春節期間（02/13–02/22）不開放選課，請注意。"
 msgstr ""
-"From the 3rd day of add/drop, the system distributes results once daily at "
-"07:00–09:00 (system paused during processing). After 09:00 you can check the "
-"day's results on ee-class."
+"Course registration is not available during the Lunar New Year holiday "
+"(02/13–02/22). Please take note."
 
 #: .\guides\templates\guides\guide_course.html:113
 msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
-"If you still wish to take a course you were not selected for, you must "
-"register online again and wait for the next day's distribution. Waitlist "
-"spots are not held automatically."
+"From the 3rd day of add/drop, the system distributes results once daily at "
+"07:00–09:00 (system paused during processing). After 09:00 you can check the "
+"day's results on ee-class."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
 msgstr ""
-"On the last day of add/drop, do not add courses that may conflict with your "
-"schedule, to avoid being forcibly dropped by the system in the final "
-"distribution."
+"If you still wish to take a course you were not selected for, you must "
+"register online again and wait for the next day's distribution. Waitlist "
+"spots are not held automatically."
 
 #: .\guides\templates\guides\guide_course.html:115
 msgid ""
 "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
 msgstr ""
+"On the last day of add/drop, do not add courses that may conflict with your "
+"schedule, to avoid being forcibly dropped by the system in the final "
+"distribution."
 
 #: .\guides\templates\guides\guide_course.html:116
 msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
@@ -4274,6 +4316,14 @@ msgstr ""
 #: .\guides\templates\guides\guide_course.html:131
 msgid "隔日更新至選課系統與 ee-class。"
 msgstr "Updated to the course selection system and ee-class the next day."
+
+#: .\guides\templates\guides\guide_course.html:131
+msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
+msgstr ""
+"Process: Print the application form from the course registration system → "
+"Obtain the instructor's signature → Pay the NT$100 fee (cash at the "
+"Cashier's Office or EasyCard deduction at the Curriculum Office) → Submit "
+"the form to the Curriculum Office."
 
 #: .\guides\templates\guides\guide_course.html:133
 msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
@@ -4328,6 +4378,9 @@ msgstr ""
 #: .\guides\templates\guides\guide_course.html:164
 msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
 msgstr ""
+"Process: Print the course withdrawal application form from the course "
+"registration system → Obtain signatures from the instructor and department "
+"chair → Submit to the Curriculum Office."
 
 #: .\guides\templates\guides\guide_course.html:165
 msgid "已辦理減修者不得再辦理停修。"
@@ -4680,6 +4733,11 @@ msgid ""
 "辦理休學後，學生身份的居留證即失效，需在規定期限內離台。恢復前須重新申請學生"
 "簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
 msgstr ""
+"Once a leave of absence takes effect, your student residence permit "
+"immediately becomes invalid and you must leave Taiwan within the specified "
+"deadline. You must reapply for a student visa before resuming studies. "
+"Please contact the Office of International Affairs (ext. 57081) to confirm "
+"the procedure before finalizing your leave of absence."
 
 #: .\guides\templates\guides\guide_enrollment.html:61
 msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
@@ -4811,13 +4869,13 @@ msgid ""
 "為上限）"
 msgstr ""
 "Departments may set their own criteria (e.g. grade ranking), but the ranking "
-"threshold cannot exceed the top 50% (i.e. top half of the class)"
+"threshold cannot exceed the top 50%% (i.e. top half of the class)"
 
 #: .\guides\templates\guides\guide_enrollment.html:123
 #, python-format
 msgid "轉入名額上限：各系每年級最多招收原核定名額的 20%%"
 msgstr ""
-"Transfer quota limit: Each department may accept up to 20% of the originally "
+"Transfer quota limit: Each department may accept up to 20%% of the originally "
 "approved enrollment per year level"
 
 #: .\guides\templates\guides\guide_enrollment.html:124
@@ -6549,6 +6607,10 @@ msgid ""
 "中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別"
 "用 Google Maps 搜尋「中壢 內科診所」、「中壢 耳鼻喉科」等。"
 msgstr ""
+"There are many clinics near the back gate of NCU and in Zhongli city "
+"center — with your NHI card, a visit costs about NT$150–200. You can "
+"search Google Maps by specialty, such as \"Zhongli internal medicine "
+"clinic\" or \"Zhongli ENT clinic\"."
 
 #: .\guides\templates\guides\guide_medical.html:94
 msgid "診所看診時間："
@@ -6559,6 +6621,10 @@ msgid ""
 "多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班"
 "制，非所有診所皆有晚診。建議事先電話確認或查詢 Google 地圖上的即時等候人數。"
 msgstr ""
+"Most clinics operate in three shifts: morning (08:30–12:00), afternoon "
+"(14:00–17:30), and evening (18:00–21:00) — not all clinics offer evening "
+"hours. We recommend calling ahead to confirm, or checking the real-time "
+"waiting count on Google Maps."
 
 #: .\guides\templates\guides\guide_medical.html:99
 msgid "周邊醫院"
@@ -7218,6 +7284,11 @@ msgid ""
 "出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 30 天，則從重新抵"
 "台當天起算，6 個月重新計算。"
 msgstr ""
+"This means continuous residence in Taiwan for 6 months, or having left "
+"Taiwan once for no more than 30 days, with the actual days abroad "
+"subtracted and the remaining residence period totaling 6 months. If you "
+"leave more than once, or leave once for over 30 days, the 6-month count "
+"restarts from the day you re-enter Taiwan."
 
 #: .\guides\templates\guides\guide_nhi.html:91
 msgid "計算範例："
@@ -7301,6 +7372,11 @@ msgid ""
 "符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，"
 "審查通過後核發）。未得補助者每月保費約 NT$826。詳情請洽國際事務處。"
 msgstr ""
+"Students who qualify as low-income and are enrolled in NHI can apply to "
+"the Office of International Affairs for a monthly subsidy of NT$413 (a "
+"certificate of low income is required; the subsidy is issued after "
+"review). Without the subsidy, the monthly premium is about NT$826. "
+"Contact the Office of International Affairs for details."
 
 #: .\guides\templates\guides\guide_nhi.html:140
 msgid "相關文件下載"
@@ -7319,6 +7395,10 @@ msgid ""
 "台灣採分級醫療，一般疾病先至診所（家醫科、內科）就診，費用僅 NT$150 左右。直"
 "接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
 msgstr ""
+"Taiwan uses a tiered healthcare system. For common illnesses, visit a "
+"clinic first (family medicine or internal medicine) — the cost is only "
+"about NT$150. Going directly to a hospital's ER or outpatient department "
+"means a higher copayment (NT$240–480)."
 
 #: .\guides\templates\guides\guide_nhi.html:160
 msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
@@ -7690,7 +7770,7 @@ msgstr "Top"
 #: .\guides\templates\guides\guide_scholarship.html:108
 #, python-format
 msgid "88 分以上或班排前 5%%"
-msgstr "88+ or top 5% of class"
+msgstr "88+ or top 5%% of class"
 
 #: .\guides\templates\guides\guide_scholarship.html:109
 msgid "85 分以上或 A 等"
@@ -7711,7 +7791,7 @@ msgstr "Outstanding"
 #: .\guides\templates\guides\guide_scholarship.html:115
 #, python-format
 msgid "85 分以上或班排前 10%%"
-msgstr "85+ or top 10% of class"
+msgstr "85+ or top 10%% of class"
 
 #: .\guides\templates\guides\guide_scholarship.html:116
 msgid "80 分以上或 A- 等"
@@ -7833,7 +7913,7 @@ msgstr "Academic Excellence Honor Roll"
 #: .\guides\templates\guides\guide_scholarship.html:201
 #, python-format
 msgid "學期成績系排前 5%%，自動核發"
-msgstr "Top 5% in department for the semester, automatically awarded"
+msgstr "Top 5%% in department for the semester, automatically awarded"
 
 #: .\guides\templates\guides\guide_scholarship.html:204
 msgid "傑出領導獎學金"
@@ -7848,6 +7928,11 @@ msgstr ""
 #: .\guides\templates\guides\guide_scholarship.html:209
 msgid "羅家倫先生紀念獎學金"
 msgstr "Mr. Luo Jialun Memorial Scholarship"
+
+#: .\guides\templates\guides\guide_scholarship.html:210
+#: .\guides\templates\guides\guide_scholarship.html:215
+msgid "名"
+msgstr "recipients"
 
 #: .\guides\templates\guides\guide_scholarship.html:211
 msgid "大二以上或研究生；清寒優秀"
@@ -7992,11 +8077,19 @@ msgstr "2/12 – 3/5"
 #: .\guides\templates\guides\guide_scholarship.html:305
 #, python-format
 msgid "家庭年收入 ≤ NT$900,000；成績 80+ 或班排前 40%%"
-msgstr "Annual family income ≤ NT$900,000; grade 80+ or top 40% of class"
+msgstr "Annual family income ≤ NT$900,000; grade 80+ or top 40%% of class"
 
 #: .\guides\templates\guides\guide_scholarship.html:308
 msgid "合作金庫研究獎學金"
 msgstr "Taiwan Cooperative Bank Research Scholarship"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "碩"
+msgstr "Master's"
+
+#: .\guides\templates\guides\guide_scholarship.html:309
+msgid "博"
+msgstr "PhD"
 
 #: .\guides\templates\guides\guide_scholarship.html:310
 msgid "1/13 – 5/5"
@@ -8261,6 +8354,10 @@ msgid ""
 "攜帶 ARC、護照、銀行帳戶或信用卡，前往電信門市（中壢市區各電信均有門市）。告"
 "知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
 msgstr ""
+"Bring your ARC, passport, and a bank account or credit card, then go to a "
+"carrier store (all carriers have stores in Zhongli city center). Tell the "
+"staff you want to \"apply for a new number and have an ARC\" — it usually "
+"takes under 30 minutes."
 
 #: .\guides\templates\guides\guide_sim.html:127
 msgid "選擇門號與 SIM 卡規格"
@@ -8271,6 +8368,10 @@ msgid ""
 "可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano "
 "SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。"
 msgstr ""
+"You can choose your own phone number (special numbers cost extra) and "
+"select your SIM card size (most phones use nano SIM today). Check whether "
+"your phone is a \"fully unlocked, all-band\" model to make sure it works "
+"properly on Taiwan's 5G/4G networks."
 
 #: .\guides\templates\guides\guide_sim.html:136
 msgid "插卡啟用，設定網路"

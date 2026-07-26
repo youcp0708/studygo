@@ -4,7 +4,7 @@
 {% block title %}{% trans "工作許可證" %} — ReadyTo Taiwan{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'guides/css/guide_work_permit.css' %}?v=1">
+<link rel="stylesheet" href="{% static 'guides/css/guide_work_permit.css' %}?v=2">
 {% endblock %}
 
 {% block content %}
@@ -21,6 +21,7 @@
 
   <!-- ── 重點一覽 ── -->
   <div class="section-title">📌 {% trans "重點一覽" %}</div>
+  <div class="info-table-wrap">
   <table class="info-table">
     <thead>
       <tr>
@@ -55,6 +56,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 
   <!-- ── 適用對象 ── -->
   <div class="section-title">👤 {% trans "適用對象" %}</div>
@@ -75,7 +77,8 @@
 
   <!-- ── 應備文件 ── -->
   <div class="section-title">📋 {% trans "應備文件" %}</div>
-  <table class="info-table" style="margin-bottom:24px;">
+  <div class="info-table-wrap">
+  <table class="info-table">
     <thead>
       <tr>
         <th>{% trans "文件" %}</th>
@@ -97,10 +100,12 @@
       </tr>
     </tbody>
   </table>
+  </div>
 
   <!-- ── 審查費繳納 ── -->
   <div class="section-title">💰 {% trans "審查費繳納（NT$100）" %}</div>
-  <table class="info-table" style="margin-bottom:24px;">
+  <div class="info-table-wrap">
+  <table class="info-table">
     <thead>
       <tr>
         <th>{% trans "方式" %}</th>
@@ -122,6 +127,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 
   <!-- ── 申請流程 ── -->
   <div class="section-title">🪜 {% trans "線上申請流程" %}</div>
@@ -184,6 +190,7 @@
 
   <!-- ── 工時規定 ── -->
   <div class="section-title">⏱ {% trans "工時規定" %}</div>
+  <div class="info-table-wrap">
   <table class="info-table">
     <thead>
       <tr>
@@ -210,6 +217,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 
   <!-- ── 違規後果 ── -->
   <div class="section-title">🚨 {% trans "違規後果" %}</div>
