@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from multiselectfield import MultiSelectField
 from users.models import StudentProfile
+from .reminder_messages import normalize_lang, render_due_message, render_skipped_message
 
 
 # 流程階段：申請來台、抵台、辦理入學報到
@@ -370,6 +371,13 @@ class StudentTask(models.Model):
 
 
 class Reminder(models.Model):
+    KIND_CHOICES = [
+        ('due_soon', '即將到期'),
+        ('due_today', '今天到期'),
+        ('overdue', '已過期'),
+        ('skipped', '跳過前置任務'),
+    ]
+
     student = models.ForeignKey(
         StudentProfile,
         on_delete=models.CASCADE,
@@ -385,6 +393,19 @@ class Reminder(models.Model):
         verbose_name="關聯學生任務"
     )
     message = models.TextField(verbose_name="提醒內容")
+    kind = models.CharField(
+        max_length=20, choices=KIND_CHOICES, blank=True, default='',
+        verbose_name="提醒類型",
+        help_text="用來讓小鈴鐺依目前瀏覽語言即時翻譯提醒內容；舊資料留空，會直接顯示 message 欄位。"
+    )
+    due_date = models.DateField(
+        null=True, blank=True, verbose_name="相關截止日期",
+        help_text="kind 為 due_soon/due_today/overdue 時使用"
+    )
+    skipped_task_ids = models.JSONField(
+        default=list, blank=True, verbose_name="被跳過的前置任務ID",
+        help_text="kind 為 skipped 時使用"
+    )
     is_read = models.BooleanField(default=False, verbose_name="是否已讀")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="建立時間")
 
@@ -394,6 +415,29 @@ class Reminder(models.Model):
 
     def __str__(self):
         return f"Reminder for {self.student.user.name} - {'Read' if self.is_read else 'Unread'}"
+
+    def get_message(self, lang_code=None):
+        """
+        依語言即時翻譯提醒內容給小鈴鐺顯示；沒有 kind 的舊資料直接回退到建立時寫死的 message。
+        """
+        if lang_code is None:
+            from django.utils.translation import get_language
+            lang_code = get_language()
+        lang = normalize_lang(lang_code)
+
+        if self.kind in ('overdue', 'due_today', 'due_soon') and self.student_task_id and self.due_date:
+            task_title = self.student_task.task.get_title_by_lang(lang)
+            days_left = (self.due_date - self.created_at.date()).days if self.kind == 'due_soon' else None
+            return render_due_message(self.kind, lang, task_title, self.due_date, days_left)
+
+        if self.kind == 'skipped' and self.student_task_id:
+            task_title = self.student_task.task.get_title_by_lang(lang)
+            tasks = Task.objects.in_bulk(self.skipped_task_ids)
+            skipped_titles = [tasks[tid].get_title_by_lang(lang) for tid in self.skipped_task_ids if tid in tasks]
+            if skipped_titles:
+                return render_skipped_message(lang, task_title, skipped_titles)
+
+        return self.message
 
 
 # ==========================================
@@ -425,59 +469,14 @@ def auto_create_reminder_on_task_update(sender, instance, **kwargs):
         ).select_related('task', 'task__stage')
 
         if skipped_tasks.exists():
-            # 使用學生的慣用語言（而非觸發請求當下的介面語言），
-            # 避免提醒訊息語言固化後與學生慣用語言不一致
-            pref_lang = (instance.student.preferred_language or 'zh-hant').lower()
-            lang = (pref_lang.split('-')[0] if '-' in pref_lang else pref_lang)
+            # 使用學生的慣用語言（而非觸發請求當下的介面語言）產生 message 欄位；
+            # 小鈴鐺實際顯示時會依 kind + skipped_task_ids 依目前瀏覽語言即時翻譯（見 Reminder.get_message）
+            lang = normalize_lang(instance.student.preferred_language)
 
             task_title = t.get_title_by_lang(lang)
-            skipped_titles = [st.task.get_title_by_lang(lang) for st in skipped_tasks]
-
-            if lang == 'en':
-                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
-                if len(skipped_titles) > 3:
-                    skipped_str += f" and {len(skipped_titles) - 3} other tasks"
-                message = f'You have completed "{task_title}", but the prior task(s) {skipped_str} is/are not yet completed. It is recommended to complete them in order!'
-            elif lang == 'vi':
-                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
-                if len(skipped_titles) > 3:
-                    skipped_str += f" và {len(skipped_titles) - 3} nhiệm vụ khác"
-                message = f'Bạn đã hoàn thành "{task_title}", nhưng (các) nhiệm vụ trước đó {skipped_str} chưa được hoàn thành. Khuyên bạn nên hoàn thành chúng theo thứ tự!'
-            elif lang == 'id':
-                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
-                if len(skipped_titles) > 3:
-                    skipped_str += f" dan {len(skipped_titles) - 3} tugas lainnya"
-                message = f'Anda telah menyelesaikan "{task_title}", tetapi tugas sebelumnya {skipped_str} belum diselesaikan. Disarankan untuk menyelesaikannya secara berurutan!'
-            elif lang == 'ms':
-                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
-                if len(skipped_titles) > 3:
-                    skipped_str += f" dan {len(skipped_titles) - 3} tugasan lain"
-                message = f'Anda telah menyelesaikan "{task_title}", tetapi tugasan sebelumnya {skipped_str} belum selesai. Disyorkan untuk menyelesaikannya mengikut urutan!'
-            elif lang == 'th':
-                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
-                if len(skipped_titles) > 3:
-                    skipped_str += f" และอีก {len(skipped_titles) - 3} งาน"
-                message = f'คุณได้ทำ "{task_title}" เสร็จสิ้นแล้ว แต่งานก่อนหน้า {skipped_str} ยังไม่เสร็จสมบูรณ์ ขอแนะนำให้ทำตามลำดับ!'
-            elif lang == 'ja':
-                skipped_str = "、".join([f'「{title}」' for title in skipped_titles[:3]])
-                if len(skipped_titles) > 3:
-                    skipped_str += f" など計 {len(skipped_titles)} 件のタスク"
-                message = f'「{task_title}」を完了しましたが、前置タスク{skipped_str}が未完了です。順序通りに完了することをお勧めします！'
-            elif lang == 'ko':
-                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
-                if len(skipped_titles) > 3:
-                    skipped_str += f" 등 총 {len(skipped_titles)}개 작업"
-                message = f'"{task_title}"을(를) 완료했으나, 이전 작업인 {skipped_str}이(가) 아직 완료되지 않았습니다. 순서대로 완료하는 것을 권장합니다!'
-            elif lang == 'my':
-                skipped_str = ", ".join([f'"{title}"' for title in skipped_titles[:3]])
-                if len(skipped_titles) > 3:
-                    skipped_str += f" နှင့် အခြား {len(skipped_titles) - 3} ခု"
-                message = f'သင်သည် "{task_title}" ကို ပြီးမြောက်ပြီးဖြစ်သော်လည်း ယခင်လုပ်ဆောင်ရမည့် {skipped_str} မပြီးသေးပါ။ အစီအစဉ်အတိုင်း လုပ်ဆောင်ရန် အကြံပြုပါသည်!'
-            else:  # Default zh-hant
-                skipped_str = "、".join([f"「{title}」" for title in skipped_titles[:3]])
-                if len(skipped_titles) > 3:
-                    skipped_str += f" 等共 {len(skipped_titles)} 個任務"
-                message = f"您已完成「{task_title}」，但前置任務 {skipped_str} 尚未完成，建議您依序完成！"
+            skipped_task_list = [st.task for st in skipped_tasks]
+            skipped_titles = [task.get_title_by_lang(lang) for task in skipped_task_list]
+            message = render_skipped_message(lang, task_title, skipped_titles)
 
             # 檢查是否已經有未讀的相同提醒，避免重複發送
             exists = Reminder.objects.filter(
@@ -490,7 +489,9 @@ def auto_create_reminder_on_task_update(sender, instance, **kwargs):
                 Reminder.objects.create(
                     student=instance.student,
                     student_task=instance,
-                    message=message
+                    message=message,
+                    kind='skipped',
+                    skipped_task_ids=[task.id for task in skipped_task_list],
                 )
 
 

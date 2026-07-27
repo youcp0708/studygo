@@ -328,11 +328,14 @@ class ReminderAdmin(admin.ModelAdmin):
         'id',
         'student',
         'student_task',
+        'kind',
+        'due_date',
         'is_read',
         'created_at',
     )
 
     list_filter = (
+        'kind',
         'is_read',
         'created_at',
     )
