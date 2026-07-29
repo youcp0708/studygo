@@ -217,9 +217,9 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024
 #   $env:EMAIL_HOST_USER="your@gmail.com"
 #   $env:EMAIL_HOST_PASSWORD="your_app_password"   ← Gmail 應用程式密碼（非帳號密碼）
 # 若未設定 EMAIL_HOST_USER，自動退回 console 模式（印到終端機）
-#
+
 # 強制使用 console 模式，不發送真實信件給使用者（若要正式發信請改為 False）
-FORCE_CONSOLE_EMAIL = True
+FORCE_CONSOLE_EMAIL = False
 
 _email_user = os.environ.get('EMAIL_HOST_USER', '')
 if _email_user and not FORCE_CONSOLE_EMAIL:
