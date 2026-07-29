@@ -4123,9 +4123,9 @@ msgstr ""
 "for schedules:"
 
 #: .\guides\templates\guides\guide_course.html:25
-msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
+msgid "以下日期以 115 學年度第 1 學期為例，每學期日程不同。請至"
 msgstr ""
-"The dates below are based on Academic Year 114, Semester 2 as an example. "
+"The dates below are based on Academic Year 115, Semester 1 as an example. "
 "Schedules differ each semester. Please visit"
 
 #: .\guides\templates\guides\guide_course.html:26
@@ -4138,8 +4138,8 @@ msgid "查看最新學期日程表。"
 msgstr "to view the latest semester schedule."
 
 #: .\guides\templates\guides\guide_course.html:32
-msgid "學期課務日程（114-2 為例）"
-msgstr "Semester Course Schedule (AY114-2 Example)"
+msgid "學期課務日程（115-1 為例）"
+msgstr "Semester Course Schedule (AY115-1 Example)"
 
 #: .\guides\templates\guides\guide_course.html:36
 #: .\guides\templates\guides\guide_course.html:90
@@ -4216,47 +4216,49 @@ msgstr ""
 "priority for courses with enrollment limits."
 
 #: .\guides\templates\guides\guide_course.html:98
-msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgid "初選截止後批次分發一次，結果於 115/07/15 16:00 前公告。"
 msgstr ""
-"First-semester freshmen do not need an advisor password card. Starting from "
-"the second semester, students must complete the advisor-guided course "
-"selection procedure (online) before initial registration each semester."
+"Distribution happens once in a batch after initial registration closes; "
+"results will be announced before 16:00 on 2026/07/15."
 
 #: .\guides\templates\guides\guide_course.html:99
 msgid ""
 "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上"
 "操作）。"
 msgstr ""
-"Course registration is not available during the Lunar New Year holiday "
-"(02/13–02/22). Please take note."
+"First-semester freshmen do not need an advisor password card. Starting from "
+"the second semester, students must complete the advisor-guided course "
+"selection procedure (online) before initial registration each semester."
 
 #: .\guides\templates\guides\guide_course.html:112
 msgid "春節期間（02/13–02/22）不開放選課，請注意。"
 msgstr ""
-"From the 3rd day of add/drop, the system distributes results once daily at "
-"07:00–09:00 (system paused during processing). After 09:00 you can check the "
-"day's results on ee-class."
+"Course registration is not available during the Lunar New Year holiday "
+"(02/13–02/22). Please take note."
 
 #: .\guides\templates\guides\guide_course.html:113
 msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
-"If you still wish to take a course you were not selected for, you must "
-"register online again and wait for the next day's distribution. Waitlist "
-"spots are not held automatically."
+"From the 3rd day of add/drop, the system distributes results once daily at "
+"07:00–09:00 (system paused during processing). After 09:00 you can check the "
+"day's results on ee-class."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
 msgstr ""
-"On the last day of add/drop, do not add courses that may conflict with your "
-"schedule, to avoid being forcibly dropped by the system in the final "
-"distribution."
+"If you still wish to take a course you were not selected for, you must "
+"register online again and wait for the next day's distribution. Waitlist "
+"spots are not held automatically."
 
 #: .\guides\templates\guides\guide_course.html:115
 msgid ""
 "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。"
 msgstr ""
+"On the last day of add/drop, do not add courses that may conflict with your "
+"schedule, to avoid being forcibly dropped by the system in the final "
+"distribution."
 
 #: .\guides\templates\guides\guide_course.html:116
 msgid "課程有設定密碼卡者，須向任課教師索取，每組密碼使用一次即失效。"
@@ -4297,10 +4299,10 @@ msgstr ""
 "Please confirm without fail!"
 
 #: .\guides\templates\guides\guide_course.html:148
-msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgid "如有衝堂/同課號被強制退選，可於 09/18–09/22 辦理人工加退選補救。"
 msgstr ""
 "If you are forcibly dropped due to schedule conflict or duplicate course "
-"code, you may use the manual add/drop period (03/10–03/12) to remedy."
+"code, you may use the manual add/drop period (09/18–09/22) to remedy."
 
 #: .\guides\templates\guides\guide_course.html:156
 msgid "停修（Course Withdrawal）"

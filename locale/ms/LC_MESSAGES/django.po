@@ -4182,9 +4182,9 @@ msgid "日程請以課務組最新公告為準："
 msgstr "Sila semak jadual rasmi terkini daripada Bahagian Hal Ehwal Akademik:"
 
 #: .\guides\templates\guides\guide_course.html:25
-msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
+msgid "以下日期以 115 學年度第 1 學期為例，每學期日程不同。請至"
 msgstr ""
-"Tarikh di bawah adalah contoh Semester 2, Tahun Akademik 114. Tarikh berbeza "
+"Tarikh di bawah adalah contoh Semester 1, Tahun Akademik 115. Tarikh berbeza "
 "setiap semester. Sila lawati"
 
 #: .\guides\templates\guides\guide_course.html:27
@@ -4196,8 +4196,8 @@ msgid "查看最新學期日程表。"
 msgstr "untuk melihat jadual semester terkini."
 
 #: .\guides\templates\guides\guide_course.html:33
-msgid "學期課務日程（114-2 為例）"
-msgstr "Jadual Semester (Contoh TA114-2)"
+msgid "學期課務日程（115-1 為例）"
+msgstr "Jadual Semester (Contoh TA115-1)"
 
 #: .\guides\templates\guides\guide_course.html:37
 #: .\guides\templates\guides\guide_course.html:91
@@ -4282,10 +4282,10 @@ msgstr ""
 "untuk kursus yang terhad."
 
 #: .\guides\templates\guides\guide_course.html:98
-msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgid "初選截止後批次分發一次，結果於 115/07/15 16:00 前公告。"
 msgstr ""
 "Satu peruntukan kelompok berlaku selepas pendaftaran awal ditutup; keputusan "
-"diumumkan sebelum 16:00 pada 2026/02/03."
+"diumumkan sebelum 16:00 pada 2026/07/15."
 
 #: .\guides\templates\guides\guide_course.html:99
 msgid ""
@@ -4372,10 +4372,10 @@ msgstr ""
 "Pastikan untuk mengesahkan!"
 
 #: .\guides\templates\guides\guide_course.html:148
-msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgid "如有衝堂/同課號被強制退選，可於 09/18–09/22 辦理人工加退選補救。"
 msgstr ""
 "Jika mana-mana kursus digugurkan secara paksa kerana konflik atau kod "
-"pendua, tambah/gugur manual (03/10–03/12) boleh digunakan untuk "
+"pendua, tambah/gugur manual (09/18–09/22) boleh digunakan untuk "
 "membetulkannya."
 
 #: .\guides\templates\guides\guide_course.html:156

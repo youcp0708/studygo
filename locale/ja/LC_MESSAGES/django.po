@@ -4045,8 +4045,8 @@ msgid "日程請以課務組最新公告為準："
 msgstr "最新の日程は課務組の公式発表をご確認ください："
 
 #: .\guides\templates\guides\guide_course.html:25
-msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
-msgstr "以下の日程は114学年度第2学期の例です。学期ごとに異なります。"
+msgid "以下日期以 115 學年度第 1 學期為例，每學期日程不同。請至"
+msgstr "以下の日程は115学年度第1学期の例です。学期ごとに異なります。"
 
 #: .\guides\templates\guides\guide_course.html:27
 msgid "課務組官網 ↗"
@@ -4057,8 +4057,8 @@ msgid "查看最新學期日程表。"
 msgstr "最新の学期日程表を確認する。"
 
 #: .\guides\templates\guides\guide_course.html:33
-msgid "學期課務日程（114-2 為例）"
-msgstr "学期課務日程（114-2学期の例）"
+msgid "學期課務日程（115-1 為例）"
+msgstr "学期課務日程（115-1学期の例）"
 
 #: .\guides\templates\guides\guide_course.html:37
 #: .\guides\templates\guides\guide_course.html:91
@@ -4141,9 +4141,9 @@ msgstr ""
 "を失います。"
 
 #: .\guides\templates\guides\guide_course.html:98
-msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgid "初選截止後批次分發一次，結果於 115/07/15 16:00 前公告。"
 msgstr ""
-"初回登録締切後にバッチ配分が1回行われ、結果は2026/02/03 16:00までに公告されま"
+"初回登録締切後にバッチ配分が1回行われ、結果は2026/07/15 16:00までに公告されま"
 "す。"
 
 #: .\guides\templates\guides\guide_course.html:99
@@ -4222,9 +4222,9 @@ msgstr ""
 "申し立て不可。必ず確認してください！"
 
 #: .\guides\templates\guides\guide_course.html:148
-msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgid "如有衝堂/同課號被強制退選，可於 09/18–09/22 辦理人工加退選補救。"
 msgstr ""
-"時間割重複や同課号によって強制取消された科目は、手動追加/取消（03/10–03/12）"
+"時間割重複や同課号によって強制取消された科目は、手動追加/取消（09/18–09/22）"
 "で補救できます。"
 
 #: .\guides\templates\guides\guide_course.html:156

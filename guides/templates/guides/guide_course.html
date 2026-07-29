@@ -22,7 +22,7 @@
   <div class="alert alert-warning">
     <div class="alert-icon">📅</div>
     <div>
-      <strong>{% trans "日程請以課務組最新公告為準：" %}</strong>{% trans "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至" %}
+      <strong>{% trans "日程請以課務組最新公告為準：" %}</strong>{% trans "以下日期以 115 學年度第 1 學期為例，每學期日程不同。請至" %}
       <a href="https://pdc.adm.ncu.edu.tw/p/406-1019-9937,r498.php?Lang=zh-tw" target="_blank" rel="noopener"
         style="color:var(--warning);font-weight:700;">{% trans "課務組官網 ↗" %}</a>
       {% trans "查看最新學期日程表。" %}
@@ -30,37 +30,37 @@
   </div>
 
   <!-- ── 學期日程流程 ── -->
-  <div class="section-title">📅 {% trans "學期課務日程（114-2 為例）" %}</div>
+  <div class="section-title">📅 {% trans "學期課務日程（115-1 為例）" %}</div>
   <div class="schedule-flow">
     <div class="sf-step">
       <div class="sf-icon">🖱</div>
       <div class="sf-title">{% trans "初選" %}</div>
-      <div class="sf-date">12/05 – 12/12<br>09:00–23:59</div>
+      <div class="sf-date">05/29 – 06/05<br>09:00–23:59</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">📋</div>
       <div class="sf-title">{% trans "加退選" %}</div>
-      <div class="sf-date">02/09 – 02/12<br>02/23 – 03/06</div>
+      <div class="sf-date">09/02 – 09/16<br>09:00–23:59</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">✍️</div>
       <div class="sf-title">{% trans "人工加退選" %}</div>
-      <div class="sf-date">03/10 – 03/12<br>{% trans "手續費 NT$100" %}</div>
+      <div class="sf-date">09/18 – 09/22<br>{% trans "手續費 NT$100" %}</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">✅</div>
       <div class="sf-title">{% trans "確認結果" %}</div>
-      <div class="sf-date">03/10 – 03/13</div>
+      <div class="sf-date">09/18 – 09/23</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">💳</div>
       <div class="sf-title">{% trans "繳學分費" %}</div>
-      <div class="sf-date">03/19 – 03/31</div>
+      <div class="sf-date">10/01 – 10/12</div>
     </div>
     <div class="sf-step">
       <div class="sf-icon">🚪</div>
       <div class="sf-title">{% trans "停修" %}</div>
-      <div class="sf-date">04/07 – 05/15<br>17:00 {% trans "截止" %}</div>
+      <div class="sf-date">10/19 – 11/27</div>
     </div>
   </div>
 
@@ -89,13 +89,13 @@
     <div class="stage-header">
       <div class="stage-num">1</div>
       {% trans "初選" %}
-      <span class="stage-tag tag-date">114/12/05 – 12/12</span>
+      <span class="stage-tag tag-date">115/05/29 – 06/05</span>
     </div>
     <div class="stage-body">
       <ul>
         <li>{% trans "各系所必修課程通常已預設預選，若已申請抵免或提前修畢，請自行退選。" %}</li>
         <li>{% trans "務必參加初選，否則遇有人數限制之課程，將喪失優先選擇權。" %}</li>
-        <li>{% trans "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。" %}</li>
+        <li>{% trans "初選截止後批次分發一次，結果於 115/07/15 16:00 前公告。" %}</li>
         <li>{% trans "大一上學生不需要導師密碼卡；大一下起每學期初選前須完成導師輔導選課程序（線上操作）。" %}</li>
       </ul>
     </div>
@@ -105,11 +105,10 @@
     <div class="stage-header">
       <div class="stage-num">2</div>
       {% trans "加退選" %}
-      <span class="stage-tag tag-date">02/09–02/12 & 02/23–03/06</span>
+      <span class="stage-tag tag-date">09/02 – 09/16</span>
     </div>
     <div class="stage-body">
       <ul>
-        <li>{% trans "春節期間（02/13–02/22）不開放選課，請注意。" %}</li>
         <li>{% trans "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 後可至 ee-class 確認當日中選結果。" %}</li>
         <li>{% trans "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。" %}</li>
         <li>{% trans "加退選最後一日請勿加選可能衝堂的課，以免最後一次分發造成衝堂被系統強制退選。" %}</li>
@@ -122,7 +121,7 @@
     <div class="stage-header">
       <div class="stage-num">3</div>
       {% trans "人工加退選" %}
-      <span class="stage-tag tag-date">03/10 – 03/12</span>
+      <span class="stage-tag tag-date">09/18 – 09/22</span>
       <span class="stage-tag tag-fee">{% trans "手續費 NT$100" %}</span>
     </div>
     <div class="stage-body">
@@ -139,13 +138,13 @@
     <div class="stage-header">
       <div class="stage-num">4</div>
       {% trans "確認選課結果" %}
-      <span class="stage-tag tag-date">03/10 – 03/13</span>
+      <span class="stage-tag tag-date">09/18 – 09/23</span>
     </div>
     <div class="stage-body">
       <ul>
         <li>{% trans "路徑：選課系統 → 個人功能表 → 選課結果。" %}</li>
         <li>{% trans "依選課辦法，未於期限內確認者以電腦系統為依據，不得異議。請務必確認！" %}</li>
-        <li>{% trans "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。" %}</li>
+        <li>{% trans "如有衝堂/同課號被強制退選，可於 09/18–09/22 辦理人工加退選補救。" %}</li>
       </ul>
     </div>
   </div>
@@ -154,7 +153,7 @@
     <div class="stage-header">
       <div class="stage-num">5</div>
       {% trans "停修（Course Withdrawal）" %}
-      <span class="stage-tag tag-date">04/07 – 05/15 17:00</span>
+      <span class="stage-tag tag-date">10/19 – 11/27</span>
       <span class="stage-tag tag-warn">{% trans "W 成績" %}</span>
     </div>
     <div class="stage-body">

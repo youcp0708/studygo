@@ -4083,9 +4083,9 @@ msgid "日程請以課務組最新公告為準："
 msgstr "Vui lòng kiểm tra lịch chính thức mới nhất từ Phòng Học vụ:"
 
 #: .\guides\templates\guides\guide_course.html:25
-msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
+msgid "以下日期以 115 學年度第 1 學期為例，每學期日程不同。請至"
 msgstr ""
-"Ngày dưới đây là ví dụ cho Học kỳ 2, NĂM HỌC 114. Ngày thay đổi mỗi học kỳ. "
+"Ngày dưới đây là ví dụ cho Học kỳ 1, NĂM HỌC 115. Ngày thay đổi mỗi học kỳ. "
 "Vui lòng truy cập"
 
 #: .\guides\templates\guides\guide_course.html:27
@@ -4097,8 +4097,8 @@ msgid "查看最新學期日程表。"
 msgstr "để xem lịch học kỳ mới nhất."
 
 #: .\guides\templates\guides\guide_course.html:33
-msgid "學期課務日程（114-2 為例）"
-msgstr "Lịch Học Kỳ (Ví dụ HK114-2)"
+msgid "學期課務日程（115-1 為例）"
+msgstr "Lịch Học Kỳ (Ví dụ HK115-1)"
 
 #: .\guides\templates\guides\guide_course.html:37
 #: .\guides\templates\guides\guide_course.html:91
@@ -4181,10 +4181,10 @@ msgstr ""
 "các môn có giới hạn chỗ."
 
 #: .\guides\templates\guides\guide_course.html:98
-msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgid "初選截止後批次分發一次，結果於 115/07/15 16:00 前公告。"
 msgstr ""
 "Một lần phân bổ hàng loạt xảy ra sau khi đăng ký ban đầu kết thúc; kết quả "
-"thông báo trước 16:00 ngày 2026/02/03."
+"thông báo trước 16:00 ngày 2026/07/15."
 
 #: .\guides\templates\guides\guide_course.html:99
 msgid ""
@@ -4267,10 +4267,10 @@ msgstr ""
 "nhận!"
 
 #: .\guides\templates\guides\guide_course.html:148
-msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgid "如有衝堂/同課號被強制退選，可於 09/18–09/22 辦理人工加退選補救。"
 msgstr ""
 "Nếu bất kỳ môn nào bị bắt buộc rút do xung đột hoặc mã trùng lặp, có thể "
-"dùng thêm/rút thủ công (03/10–03/12) để sửa."
+"dùng thêm/rút thủ công (09/18–09/22) để sửa."
 
 #: .\guides\templates\guides\guide_course.html:156
 msgid "停修（Course Withdrawal）"
