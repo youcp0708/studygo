@@ -4233,9 +4233,15 @@ msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
+<<<<<<< HEAD
 "Từ ngày thứ 3 của kỳ thêm/rút, hệ thống phân bổ một lần mỗi ngày vào lúc "
 "07:00–09:00 (hệ thống tạm dừng trong khi xử lý). Sau 09:00 bạn có thể kiểm "
 "tra kết quả trong ngày trên ee-class."
+=======
+"Kể từ ngày thứ 3 của kỳ thêm/rút, hệ thống phân bổ kết quả một lần mỗi ngày "
+"vào lúc 07:00–09:00 (hệ thống tạm dừng trong quá trình xử lý). Sau 09:00, "
+"bạn có thể kiểm tra kết quả trong ngày trên ee-class."
+>>>>>>> nora/xinde
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
