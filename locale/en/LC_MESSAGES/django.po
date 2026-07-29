@@ -4151,9 +4151,9 @@ msgstr ""
 "for schedules:"
 
 #: .\guides\templates\guides\guide_course.html:25
-msgid "以下日期以 114 學年度第 2 學期為例，每學期日程不同。請至"
+msgid "以下日期以 115 學年度第 1 學期為例，每學期日程不同。請至"
 msgstr ""
-"The dates below are based on Academic Year 114, Semester 2 as an example. "
+"The dates below are based on Academic Year 115, Semester 1 as an example. "
 "Schedules differ each semester. Please visit"
 
 #: .\guides\templates\guides\guide_course.html:26
@@ -4166,8 +4166,8 @@ msgid "查看最新學期日程表。"
 msgstr "to view the latest semester schedule."
 
 #: .\guides\templates\guides\guide_course.html:32
-msgid "學期課務日程（114-2 為例）"
-msgstr "Semester Course Schedule (AY114-2 Example)"
+msgid "學期課務日程（115-1 為例）"
+msgstr "Semester Course Schedule (AY115-1 Example)"
 
 #: .\guides\templates\guides\guide_course.html:36
 #: .\guides\templates\guides\guide_course.html:90
@@ -4256,10 +4256,11 @@ msgstr ""
 "priority for courses with enrollment limits."
 
 #: .\guides\templates\guides\guide_course.html:98
-msgid "初選截止後批次分發一次，結果於 115/02/03 16:00 前公告。"
+msgid "初選截止後批次分發一次，結果於 115/07/15 16:00 前公告。"
 msgstr ""
-"One batch distribution takes place after the initial registration deadline; "
-"results will be announced by 115/02/03 16:00."
+"First-semester freshmen do not need an advisor password card. Starting from "
+"the second semester, students must complete the advisor-guided course "
+"selection procedure (online) before initial registration each semester."
 
 #: .\guides\templates\guides\guide_course.html:99
 msgid ""
@@ -4347,10 +4348,10 @@ msgstr ""
 "Please confirm without fail!"
 
 #: .\guides\templates\guides\guide_course.html:148
-msgid "如有衝堂/同課號被強制退選，可於 03/10–03/12 辦理人工加退選補救。"
+msgid "如有衝堂/同課號被強制退選，可於 09/18–09/22 辦理人工加退選補救。"
 msgstr ""
 "If you are forcibly dropped due to schedule conflict or duplicate course "
-"code, you may use the manual add/drop period (03/10–03/12) to remedy."
+"code, you may use the manual add/drop period (09/18–09/22) to remedy."
 
 #: .\guides\templates\guides\guide_course.html:156
 msgid "停修（Course Withdrawal）"
