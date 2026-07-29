@@ -6,7 +6,10 @@ Django Admin 設定 — 系統管理員（Admin 角色）使用
 
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import CustomUser, StudentProfile, LoginLog, EmailVerificationToken, Department, AlumniShare
+from .models import (
+    CustomUser, StudentProfile, LoginLog, EmailVerificationToken, Department,
+    AlumniShare, School, SchoolUnit,
+)
 
 
 # ══════════════════════════════════════════
@@ -83,6 +86,32 @@ class DepartmentAdmin(admin.ModelAdmin):
     list_editable = ('discipline', 'order', 'is_active')
     search_fields = ('name', 'name_en', 'faculty')
     ordering      = ('university', 'order')
+
+
+# ══════════════════════════════════════════
+# School Admin（chatbot 校務問答的資料來源）
+# last_verified_at 留空或過舊者代表尚未查核，需人工對照官網確認。
+# ══════════════════════════════════════════
+class SchoolUnitInline(admin.TabularInline):
+    model  = SchoolUnit
+    extra  = 0
+    fields = ('name', 'aliases', 'location', 'tel', 'ext', 'office_hours', 'order', 'is_active')
+
+
+@admin.register(School)
+class SchoolAdmin(admin.ModelAdmin):
+    list_display  = ('code', 'name', 'main_tel', 'intl_office_ext', 'last_verified_at', 'is_active')
+    list_filter   = ('is_active', 'last_verified_at')
+    search_fields = ('code', 'name', 'name_en', 'aliases')
+    inlines       = [SchoolUnitInline]
+    readonly_fields = ('updated_at',)
+
+
+@admin.register(SchoolUnit)
+class SchoolUnitAdmin(admin.ModelAdmin):
+    list_display  = ('school', 'name', 'location', 'tel', 'ext', 'is_active')
+    list_filter   = ('school', 'is_active')
+    search_fields = ('name', 'name_en', 'aliases', 'location')
 
 
 # ══════════════════════════════════════════

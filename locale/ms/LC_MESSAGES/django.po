@@ -130,6 +130,9 @@ msgstr ""
 "Contoh: Kebelakangan ini saya sangat tertekan dan agak rindu rumah, bolehkah "
 "anda berbual dengan saya?"
 
+msgid "可以陪我聊聊嗎？"
+msgstr "Bolehkah anda berbual dengan saya?"
+
 #: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:273
 msgid "例如：簽證要先準備什麼？"

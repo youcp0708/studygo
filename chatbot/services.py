@@ -13,9 +13,11 @@ import base64
 import logging
 import mimetypes
 import re
+import ssl
 from datetime import timedelta
 
 import requests as http_requests
+from requests.adapters import HTTPAdapter
 
 from django.conf import settings
 from django.db.models import Q
@@ -177,6 +179,24 @@ SOURCE_LABELS = {
     'ms': '📌 Sumber rasmi: ',
     'ko': '📌 공식 출처: ',
 }
+
+# 地點卡片（Google Places / 校內單位）用的欄位標籤，需支援全部 9 種語言，
+# 避免非中文介面下混入「地址：」「評分：」這種寫死的中文字
+PLACE_LABELS = {
+    'zh-hant': {'address': '地址', 'rating': '評分', 'location': '位置', 'phone': '電話', 'ext': '轉', 'hours': '服務時間', 'sep': '，', 'colon': '：'},
+    'en': {'address': 'Address', 'rating': 'Rating', 'location': 'Location', 'phone': 'Phone', 'ext': 'ext.', 'hours': 'Hours', 'sep': ', ', 'colon': ': '},
+    'vi': {'address': 'Địa chỉ', 'rating': 'Đánh giá', 'location': 'Vị trí', 'phone': 'Điện thoại', 'ext': 'số nội bộ', 'hours': 'Giờ phục vụ', 'sep': ', ', 'colon': ': '},
+    'ja': {'address': '住所', 'rating': '評価', 'location': '場所', 'phone': '電話', 'ext': '内線', 'hours': '対応時間', 'sep': '、', 'colon': '：'},
+    'my': {'address': 'လိပ်စာ', 'rating': 'အဆင့်သတ်မှတ်ချက်', 'location': 'တည်နေရာ', 'phone': 'ဖုန်း', 'ext': 'လိုင်းခွဲ', 'hours': 'ဝန်ဆောင်မှုအချိန်', 'sep': '、 ', 'colon': '：'},
+    'id': {'address': 'Alamat', 'rating': 'Penilaian', 'location': 'Lokasi', 'phone': 'Telepon', 'ext': 'ekst.', 'hours': 'Jam layanan', 'sep': ', ', 'colon': ': '},
+    'th': {'address': 'ที่อยู่', 'rating': 'คะแนน', 'location': 'ที่ตั้ง', 'phone': 'โทรศัพท์', 'ext': 'ต่อ', 'hours': 'เวลาให้บริการ', 'sep': ', ', 'colon': ': '},
+    'ms': {'address': 'Alamat', 'rating': 'Penilaian', 'location': 'Lokasi', 'phone': 'Telefon', 'ext': 'samb.', 'hours': 'Waktu perkhidmatan', 'sep': ', ', 'colon': ': '},
+    'ko': {'address': '주소', 'rating': '평점', 'location': '위치', 'phone': '전화', 'ext': '내선', 'hours': '서비스 시간', 'sep': ', ', 'colon': ': '},
+}
+
+
+def _place_labels(language_code):
+    return PLACE_LABELS.get(language_code, PLACE_LABELS['zh-hant'])
 
 TASK_LINK_LABELS = {
     'zh-hant': '查看相關任務：',
@@ -897,12 +917,141 @@ def build_user_profile_context(user):
             f"國籍：{profile.get_nationality_display()}",
             f"身份別：{profile.get_identity_type_display()}",
             f"入學狀態：{profile.get_admission_status_display()}",
-            f"學校：{safe_display(profile.university)}",
+            # 用學校全名而非代碼（NCU → 國立中央大學），AI 才認得出是哪一所
+            f"學校：{safe_display(profile.get_university_display())}",
             f"系所：{safe_display(profile.department)}",
             f"預計抵台日期：{safe_display(profile.expected_arrival)}",
         ])
     else:
         lines.append('學生尚未填寫完整個人資料。')
+
+    return '\n'.join(lines)
+
+
+def get_student_school(user):
+    """取得學生就讀學校的 School 物件；查不到時回傳 None。"""
+    profile = get_student_profile(user)
+    code = (getattr(profile, 'university', '') or '') if profile else ''
+    if not code:
+        return None
+    try:
+        from users.models import School
+        return School.objects.filter(code=code, is_active=True).first()
+    except Exception:
+        return None
+
+
+def search_school_units(school, question):
+    """
+    在學生學校的 SchoolUnit 裡找跟問題直接對應的單位（例如問句包含「校長室」或英文問法）。
+    用於 friend 模式地點查詢：校內單位不是 Google 地圖上找得到的地標，
+    要先比對這裡的正確資料，而不是把單位名稱丟給 Google 搜尋亂猜。
+
+    中文名稱/別名用完整子字串比對；英文名稱/別名額外做「不分大小寫、不分詞序」的逐字比對，
+    因為學生的英文問法（例如 "office of the president"）詞序常常跟別名（"President Office"）不同。
+    """
+    if not school:
+        return []
+    q = (question or '').strip()
+    q_lower = q.lower()
+    if not q:
+        return []
+    try:
+        units = list(school.units.filter(is_active=True))
+    except Exception:
+        return []
+
+    matched = []
+    for unit in units:
+        names = [unit.name, unit.name_en] + unit.alias_list()
+        for name in names:
+            name = (name or '').strip()
+            if not name:
+                continue
+            if name in q or name.lower() in q_lower:
+                matched.append(unit)
+                break
+            words = re.findall(r'[a-z]+', name.lower())
+            if len(words) >= 2 and all(w in q_lower for w in words):
+                matched.append(unit)
+                break
+    return matched
+
+
+def _format_school_unit(unit, school, language_code='zh-hant'):
+    """把 SchoolUnit 格式化成跟 _format_place 一致風格的 Markdown 行。"""
+    labels = _place_labels(language_code)
+    sep, colon = labels['sep'], labels['colon']
+    line = f'- {unit.name}'
+    if unit.location:
+        line += f'{sep}{labels["location"]}{colon}{unit.location}'
+    phone = unit.tel or (school.main_tel if school else '')
+    if phone:
+        line += f'{sep}{labels["phone"]}{colon}{phone}' + (f' {labels["ext"]} {unit.ext}' if unit.ext else '')
+    if unit.office_hours:
+        line += f'{sep}{labels["hours"]}{colon}{unit.office_hours}'
+    if unit.url:
+        line += f'（{unit.url}）'
+    return line
+
+
+def build_school_context(user, language_code='zh-hant'):
+    """
+    學生就讀學校的校務資料包：地址、總機、國際處、校內單位位置與分機。
+    讓「校長室在哪裡」「國際處分機幾號」這類問題可以直接依個人資料回答，
+    而不是叫學生自己去查官網。查不到學校資料時回傳空字串。
+    """
+    school = get_student_school(user)
+    if not school:
+        return ''
+
+    lines = [f'學生就讀學校：{school.get_localized_name(language_code)}（{school.code}）']
+    if school.aliases:
+        lines.append(f'該校常見簡稱：{school.aliases}')
+    if school.address:
+        lines.append(f'校本部地址：{school.address}')
+    if school.main_tel:
+        lines.append(f'學校總機：{school.main_tel}')
+    if school.website:
+        lines.append(f'官方網站：{school.website}')
+    if school.intl_office_name:
+        intl = f'{school.intl_office_name}：{school.intl_office_tel or school.main_tel or ""}'
+        if school.intl_office_ext:
+            intl += f' 轉 {school.intl_office_ext}'
+        if school.intl_office_url:
+            intl += f'（{school.intl_office_url}）'
+        lines.append(intl.strip())
+    if school.calendar_url:
+        lines.append(f'學校行事曆：{school.calendar_url}')
+    if school.admission_url:
+        lines.append(f'境外生招生資訊：{school.admission_url}')
+
+    try:
+        units = list(school.units.filter(is_active=True))
+    except Exception:
+        units = []
+
+    if units:
+        lines.append('該校校內單位（位置與聯絡方式）：')
+        for unit in units:
+            parts = [unit.name]
+            if unit.aliases:
+                parts.append(f'（別名：{unit.aliases}）')
+            if unit.location:
+                parts.append(f'位置：{unit.location}')
+            if unit.tel or unit.ext:
+                phone = unit.tel or school.main_tel or ''
+                parts.append(f'電話：{phone}' + (f' 轉 {unit.ext}' if unit.ext else ''))
+            if unit.office_hours:
+                parts.append(f'服務時間：{unit.office_hours}')
+            if unit.url:
+                parts.append(unit.url)
+            lines.append('- ' + '，'.join(parts))
+
+    if school.last_verified_at:
+        lines.append(f'（以上校務資料最後查核日期：{school.last_verified_at}）')
+    else:
+        lines.append('（以上校務資料尚未經人工查核，回答時請提醒學生向學校再次確認）')
 
     return '\n'.join(lines)
 
@@ -1086,6 +1235,74 @@ def build_tutor_context(user, language_code='zh-hant'):
     return '\n'.join(lines)
 
 
+# 小老師「生活指導」會用到的知識庫分類：
+# 住、醫、錢、行、安全與校園生活，對應 ChatKnowledge.CATEGORY_CHOICES
+LIFE_GUIDANCE_CATEGORIES = [
+    'dorm', 'renting', 'nhi', 'insurance', 'medical', 'health_check',
+    'bank', 'phone', 'transportation', 'food', 'living_cost',
+    'work_permit', 'scholarship', 'campus_activity', 'library',
+    'student_id', 'arc', 'mental_support', 'emergency',
+]
+
+
+def build_life_guidance_context(user, language_code='zh-hant', limit=8):
+    """
+    小老師（生活指導）的生活背景包：
+    依學生個人資料（學校 / 國籍 / 身分別）載入對應的生活知識，
+    校內單位與聯絡方式另由 build_school_context 提供。
+    """
+    profile = get_student_profile(user)
+    if not profile:
+        return ''
+
+    student_university = profile.university or ''
+    student_country = profile.nationality or ''
+    student_identity = profile.identity_type or ''
+
+    lines = [
+        f'學生身分別：{profile.get_identity_type_display()}',
+        f'學生國籍：{profile.get_nationality_display()}',
+        f'學生入學狀態：{profile.get_admission_status_display()}',
+    ]
+
+    try:
+        from .models import ChatKnowledge
+        entries_qs = ChatKnowledge.objects.filter(
+            is_active=True,
+            category__in=LIFE_GUIDANCE_CATEGORIES,
+        ).filter(Q(bot_type='helper') | Q(bot_type='both'))
+
+        if student_university:
+            entries_qs = entries_qs.filter(Q(university='') | Q(university=student_university))
+        if student_country:
+            entries_qs = entries_qs.filter(Q(country='') | Q(country=student_country))
+        if student_identity:
+            entries_qs = entries_qs.filter(Q(identity_type='') | Q(identity_type=student_identity))
+
+        # 指定給這位學生的內容排在通用內容前面
+        entries = sorted(
+            entries_qs[:30],
+            key=lambda e: (
+                e.university != student_university,
+                e.country != student_country,
+                e.identity_type != student_identity,
+            ),
+        )[:limit]
+
+        for entry in entries:
+            content = entry.get_content_by_lang(language_code)
+            if content:
+                title = entry.get_title_by_lang(language_code)
+                lines.append(f'- 【{entry.get_category_display()}】{title}：{content}')
+    except Exception:
+        pass
+
+    if len(lines) == 3:
+        return ''
+
+    return '\n'.join(lines)
+
+
 def extract_search_terms(question):
     """把問題切成簡單搜尋詞，用於 FAQ / 知識庫搜尋。"""
     question = (question or '').strip()
@@ -1110,6 +1327,7 @@ def extract_search_terms(question):
     '到校交通', '新生報到', '註冊繳費', '學生證',
     '居留證', 'ARC', '居留證 ARC', '健檢', '體檢',
     '保險', '銀行開戶', '手機門號', '校內系統',
+    '電話卡', 'SIM卡', '預付卡', '門號',
 
     '課務選課', '選課', '學籍', '成績', '畢業',
     '宿舍', '租屋', '健保', '工作證', '獎助學金',
@@ -1120,6 +1338,7 @@ def extract_search_terms(question):
     '緊急聯絡', '生活費', '其他',
 
     '護照', '學校', '國際處', '報到', '文件',
+    '地址', '總機', '分機', '信箱', '校長室', '校內單位',
 
     ]
     for term in common_terms:
@@ -1673,11 +1892,15 @@ def insert_info_links_after_personalized_answer(reply, info_page, personal_label
     return reply + links_text
 
 
-def search_knowledge_items(question, ai_mode="helper", limit=3):
+def search_knowledge_items(question, ai_mode="helper", limit=3, user=None):
     """
     簡易 RAG 檢索：回傳依「關聯度」排序的 ChatKnowledge 物件清單。
     關聯度計分：標題/關鍵字命中 +3、內容命中 +1（跨 9 語欄位），
     取代原本單純以更新時間排序，避免「最近改過但不相關」的資料排在前面。
+
+    傳入 user 時，會依個人資料的學校 / 國籍 / 身分別過濾：
+    知識庫欄位留空＝通用；有值時只有相符的學生會取得，
+    避免中央的學生撿到台大的入學方式、越南學生撿到日本的簽證流程。
     """
     try:
         from .models import ChatKnowledge
@@ -1708,17 +1931,38 @@ def search_knowledge_items(question, ai_mode="helper", limit=3):
             query |= Q(**{f'title{s}__icontains': term})
             query |= Q(**{f'content{s}__icontains': term})
 
+    profile = get_student_profile(user) if user else None
+    student_university = (getattr(profile, 'university', '') or '') if profile else ''
+    student_country = (getattr(profile, 'nationality', '') or '') if profile else ''
+    student_identity = (getattr(profile, 'identity_type', '') or '') if profile else ''
+
     try:
         knowledge_qs = ChatKnowledge.objects.filter(is_active=True).filter(
             Q(bot_type=ai_mode) | Q(bot_type="both")
         )
+        # 依個人資料排除「指定給別校 / 別國 / 別身分別」的條目；
+        # 沒有個人資料時不過濾，維持原本行為
+        if student_university:
+            knowledge_qs = knowledge_qs.filter(Q(university='') | Q(university=student_university))
+        if student_country:
+            knowledge_qs = knowledge_qs.filter(Q(country='') | Q(country=student_country))
+        if student_identity:
+            knowledge_qs = knowledge_qs.filter(Q(identity_type='') | Q(identity_type=student_identity))
+
         # 先取一批候選，再在 Python 端做關聯度計分排序
         candidates = list(knowledge_qs.filter(query)[:20])
     except Exception:
         return []
 
-    def relevance_score(item):
+    def score_item(item):
         score = 0
+        # 專屬條目優於通用條目：學生自己學校 / 國籍 / 身分別的內容要排前面
+        if student_university and getattr(item, 'university', '') == student_university:
+            score += 5
+        if student_country and getattr(item, 'country', '') == student_country:
+            score += 5
+        if student_identity and getattr(item, 'identity_type', '') == student_identity:
+            score += 3
         title_text = ' '.join(
             (getattr(item, f'title{s}', '') or '') for s in LANG_SUFFIXES
         ).lower()
@@ -1726,16 +1970,25 @@ def search_knowledge_items(question, ai_mode="helper", limit=3):
         content_text = ' '.join(
             (getattr(item, f'content{s}', '') or '') for s in LANG_SUFFIXES
         ).lower()
+        is_strong = False
         for term in terms:
             t = term.lower()
             if t in title_text or t in keyword_text:
                 score += 3
+                is_strong = True
             elif t in content_text:
                 score += 1
-        return score
+        return score, is_strong
 
-    candidates.sort(key=relevance_score, reverse=True)
-    return [c for c in candidates if relevance_score(c) > 0][:limit]
+    scored = [(item, *score_item(item)) for item in candidates]
+    scored = [entry for entry in scored if entry[1] > 0]
+    # 只在內容裡順帶提到某個詞（例如「銀行開戶」文章提到「居留證」是辦理前提）
+    # 不代表這篇文章跟問題相關；有標題/關鍵字命中的候選存在時，
+    # 排除只靠內容命中的候選，避免不相關的文章被硬湊進「一般回答」
+    if any(entry[2] for entry in scored):
+        scored = [entry for entry in scored if entry[2]]
+    scored.sort(key=lambda entry: entry[1], reverse=True)
+    return [item for item, _, _ in scored][:limit]
 
 
 def format_knowledge_context(items, language_code='zh-hant'):
@@ -1758,12 +2011,12 @@ def format_knowledge_context(items, language_code='zh-hant'):
     return '\n\n'.join(lines).strip() or '目前沒有找到直接相關的知識庫資料。'
 
 
-def search_knowledge_base(question, language_code='zh-hant', limit=3, ai_mode="helper"):
+def search_knowledge_base(question, language_code='zh-hant', limit=3, ai_mode="helper", user=None):
     """
     簡易 RAG：搜尋 chatbot 的 FAQ / 知識庫資料（相容舊介面）。
     知識庫可以只填中文，但 keywords 建議放中文 + 英文，提高搜尋命中率。
     """
-    items = search_knowledge_items(question, ai_mode=ai_mode, limit=limit)
+    items = search_knowledge_items(question, ai_mode=ai_mode, limit=limit, user=user)
     return format_knowledge_context(items, language_code)
 
 
@@ -2024,8 +2277,10 @@ def _geocode_location(place_name, api_key):
     return None, None
 
 
-def _format_place(place):
+def _format_place(place, language_code='zh-hant'):
     """把 Places API 單筆結果格式化成 Markdown 行。"""
+    labels = _place_labels(language_code)
+    sep, colon = labels['sep'], labels['colon']
     name = place.get('name', '')
     address = place.get('formatted_address', '') or place.get('vicinity', '')
     rating = place.get('rating', '')
@@ -2034,11 +2289,11 @@ def _format_place(place):
 
     line = f'- {name}'
     if address and maps_url:
-        line += f'，地址：[{address}]({maps_url})'
+        line += f'{sep}{labels["address"]}{colon}[{address}]({maps_url})'
     elif address:
-        line += f'，地址：{address}'
+        line += f'{sep}{labels["address"]}{colon}{address}'
     if rating:
-        line += f'，評分：{rating}/5'
+        line += f'{sep}{labels["rating"]}{colon}{rating}/5'
     return line
 
 
@@ -2102,7 +2357,233 @@ def search_google_places(query, language_code='zh-hant', location_hint='台灣')
     if not results:
         return None
 
-    return '\n'.join(_format_place(p) for p in results)
+    return '\n'.join(_format_place(p, language_code) for p in results)
+
+
+# 學校代碼 → 中央氣象署 36 小時天氣預報用的縣市名稱。
+# 依 users/school_data.py 已查核的地址推導，NKUST 官網未列地址但確定位於高雄市。
+UNIVERSITY_TO_CWA_COUNTY = {
+    'NTU': '臺北市', 'NCCU': '臺北市', 'NTNU': '臺北市', 'NTUST': '臺北市',
+    'NTUT': '臺北市', 'NTUE': '臺北市', 'NTUB': '臺北市',
+    'NTPU': '新北市', 'NOU': '新北市',
+    'NCU': '桃園市',
+    'NTHU': '新竹市', 'NYCU': '新竹市',
+    'NCHU': '臺中市', 'NTCUST': '臺中市', 'NTCU': '臺中市', 'NTUS': '臺中市',
+    'NCUE': '彰化縣',
+    'NCNU': '南投縣',
+    'YunTech': '雲林縣', 'NFU': '雲林縣',
+    'NCYU': '嘉義市',
+    'NCKU': '臺南市', 'NUTN': '臺南市',
+    'NSYSU': '高雄市', 'NKUST': '高雄市', 'NKUHT': '高雄市', 'NKNU': '高雄市',
+    'NPTU': '屏東縣', 'NPUST': '屏東縣',
+    'NIU': '宜蘭縣',
+    'NDHU': '花蓮縣',
+    'NTTU': '臺東縣',
+    'NUU': '苗栗縣',
+    'NQU': '金門縣',
+    'NPU': '澎湖縣',
+}
+
+
+def get_student_county(user):
+    """依學生就讀學校推斷所在縣市，供天氣查詢使用；查不到時回傳 None。"""
+    profile = get_student_profile(user)
+    code = (getattr(profile, 'university', '') or '') if profile else ''
+    return UNIVERSITY_TO_CWA_COUNTY.get(code)
+
+
+def detect_weather_query(question):
+    """偵測問題是否在詢問天氣、溫度、日照或颱風。"""
+    q = (question or '').strip()
+    lower_q = q.lower()
+
+    zh_keywords = [
+        '天氣', '氣象', '溫度', '氣溫', '幾度',
+        '下雨', '會不會雨', '降雨', '雷陣雨', '會不會下雨',
+        '太陽', '陽光', '會不會曬', '出太陽', '紫外線',
+        '颱風', '暴風', '豪雨', '強風',
+        '要不要帶傘', '要不要穿外套', '會不會冷', '會不會熱',
+    ]
+    en_keywords = [
+        'weather', 'temperature', 'forecast', 'rain', 'rainy', 'raining',
+        'sunny', 'sunshine', 'typhoon', 'storm', 'humid', 'cold', 'hot',
+    ]
+
+    return (
+        any(k in q for k in zh_keywords)
+        or any(k in lower_q for k in en_keywords)
+    )
+
+
+# ══════════════════════════════════════════
+# 兩個 AI 模式的管轄範圍互相提醒
+# 任務小幫手（helper）管：簽證、居留證、財力／語言證明、學校行政、入學申請等正式手續；
+# 聊天好朋友（friend）管：情緒陪伴、心情、人際關係、想家、焦慮等生活與心理支持。
+# 學生問到「另一個 AI 的管轄範圍」時，提醒他切換過去，而不是勉強用不擅長的模式硬答。
+# ══════════════════════════════════════════
+FRIEND_DOMAIN_KEYWORDS_ZH = [
+    '心情不好', '心情不太好', '好難過', '想哭', '很難過', '很委屈',
+    '好孤單', '很孤單', '沒有朋友', '沒朋友', '交不到朋友',
+    '好想家', '很想家', '想念家人', '想家想到',
+    '好焦慮', '很焦慮', '好緊張', '睡不著', '腦袋停不下來',
+    '好無聊', '很無聊', '不知道要幹嘛', '不知道能幹嘛',
+    '壓力好大', '壓力很大', '好累好廢', '好累', '撐不下去',
+    '室友吵架', '跟室友', '跟朋友吵架', '跟男友', '跟女友', '分手了', '吵架了',
+    '聽不懂老師', '中文不好很挫折', '格格不入', '不適應這裡的生活',
+    '陪我聊', '陪我說說話', '想找人聊',
+]
+FRIEND_DOMAIN_KEYWORDS_EN = [
+    'feeling down', 'feeling sad', 'i miss home', 'homesick',
+    'so lonely', 'no friends', 'feeling anxious', 'stressed out',
+    'i feel like crying', 'can we just talk', 'i need to vent',
+]
+
+
+def detect_friend_domain_query(question):
+    """
+    偵測問題是否屬於聊天好朋友的專長範圍（情緒陪伴、心情、人際關係）。
+    只在 helper 模式「查無任何任務／資訊頁／知識庫資料」時才會被拿來判斷，
+    避免把帶有情緒字眼、但其實是正式手續問題（例如財力證明的經濟壓力）誤判過去。
+    """
+    q = (question or '').strip()
+    lower_q = q.lower()
+    if not q:
+        return False
+    return (
+        any(k in q for k in FRIEND_DOMAIN_KEYWORDS_ZH)
+        or any(k in lower_q for k in FRIEND_DOMAIN_KEYWORDS_EN)
+    )
+
+
+def detect_helper_domain_hit(question, user=None):
+    """
+    偵測問題是否命中「只有任務小幫手在管」的知識庫內容
+    （bot_type 嚴格等於 helper，不含 both 共用內容）。
+    用來提醒聊天好朋友：這類正式手續問題，任務小幫手有查證過的完整資料，
+    自己邊聊邊answer 容易漏掉細節或講錯。
+    """
+    items = search_knowledge_items(question, ai_mode='helper', user=user, limit=3)
+    return any(getattr(item, 'bot_type', '') == 'helper' for item in items)
+
+
+def _format_cwa_forecast(data, county):
+    """把中央氣象署 36 小時天氣預報 API 回應整理成人類可讀文字。"""
+    try:
+        locations = data['records']['location']
+        location = next((l for l in locations if l.get('locationName') == county), None)
+        if not location:
+            return None
+
+        elements = {el['elementName']: el['time'] for el in location['weatherElement']}
+        wx_times = elements.get('Wx', [])
+        pop_times = elements.get('PoP', [])
+        min_t_times = elements.get('MinT', [])
+        max_t_times = elements.get('MaxT', [])
+
+        if not wx_times:
+            return None
+
+        lines = [f'{county}天氣預報（中央氣象署）：']
+        for i in range(min(len(wx_times), 3)):
+            start = wx_times[i]['startTime']
+            wx = wx_times[i]['parameter']['parameterName']
+            pop = pop_times[i]['parameter']['parameterName'] if i < len(pop_times) else ''
+            min_t = min_t_times[i]['parameter']['parameterName'] if i < len(min_t_times) else ''
+            max_t = max_t_times[i]['parameter']['parameterName'] if i < len(max_t_times) else ''
+
+            time_label = start[5:16].replace('-', '/').replace('T', ' ')
+            line = f'- {time_label} 起：{wx}'
+            if min_t and max_t:
+                line += f'，氣溫 {min_t}~{max_t}°C'
+            if pop:
+                line += f'，降雨機率 {pop}%'
+            lines.append(line)
+
+        return '\n'.join(lines)
+    except Exception:
+        return None
+
+
+class _GovCertCompatAdapter(HTTPAdapter):
+    """
+    部分政府機關網站（例如中央氣象署開放資料平臺）的憑證缺少
+    Subject Key Identifier 擴充欄位，Python 3.13 預設會用嚴格模式
+    （VERIFY_X509_STRICT）擋下連線，但瀏覽器與 curl 都能正常連線，
+    代表憑證鏈本身仍是可信的，只是不符合這一項嚴格規範。
+
+    這裡只關閉 VERIFY_X509_STRICT 這一項檢查，其餘憑證鏈驗證、
+    主機名稱比對都維持正常，跟直接關閉憑證驗證（verify=False）不同，
+    不應被當成一般的「忽略憑證錯誤」處理方式來重用。
+    """
+
+    def init_poolmanager(self, *args, **kwargs):
+        ctx = ssl.create_default_context()
+        if hasattr(ssl, 'VERIFY_X509_STRICT'):
+            ctx.verify_flags &= ~ssl.VERIFY_X509_STRICT
+        kwargs['ssl_context'] = ctx
+        return super().init_poolmanager(*args, **kwargs)
+
+
+def _cwa_get(url, params, timeout=5):
+    """對中央氣象署開放資料平臺發送請求，處理其憑證的相容性問題。"""
+    session = http_requests.Session()
+    session.mount('https://', _GovCertCompatAdapter())
+    return session.get(url, params=params, timeout=timeout)
+
+
+def fetch_weather_forecast(county):
+    """
+    查詢中央氣象署 36 小時天氣預報。
+    沒有設定 API key、查無資料、或連線失敗時一律回傳 None，
+    由呼叫端決定如何告知學生，不在這裡編造天氣資料。
+    """
+    api_key = getattr(settings, 'CWA_API_KEY', '')
+    if not api_key or not county:
+        return None
+
+    try:
+        resp = _cwa_get(
+            'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001',
+            params={'Authorization': api_key, 'locationName': county},
+        )
+        data = resp.json()
+        if str(data.get('success')).lower() != 'true':
+            logger.warning('CWA forecast API returned failure for %s', county)
+            return None
+        return _format_cwa_forecast(data, county)
+    except Exception as e:
+        logger.warning('CWA forecast error: %s', e)
+        return None
+
+
+def fetch_typhoon_bulletin():
+    """
+    查詢中央氣象署現有颱風警報。沒有作用中的颱風、沒有設定 API key、
+    或連線失敗時回傳 None（None 不代表「沒有颱風」，呼叫端仍應以此為「查無資料」處理，
+    不可用來斷定安全無虞）。
+    """
+    api_key = getattr(settings, 'CWA_API_KEY', '')
+    if not api_key:
+        return None
+
+    try:
+        resp = _cwa_get(
+            'https://opendata.cwa.gov.tw/api/v1/rest/datastore/W-C0034-005',
+            params={'Authorization': api_key},
+        )
+        data = resp.json()
+        typhoons = data.get('records', {}).get('tropicalCyclones', {}).get('tropicalCyclone', [])
+        if not typhoons:
+            return None
+
+        lines = ['目前中央氣象署發布的颱風警報：']
+        for typhoon in typhoons[:2]:
+            name = typhoon.get('typhoonName', '') or typhoon.get('cwaTyphoonName', '')
+            lines.append(f'- 颱風「{name}」，詳細警戒範圍與強度請查中央氣象署官網確認最新消息。')
+        return '\n'.join(lines)
+    except Exception as e:
+        logger.warning('CWA typhoon error: %s', e)
+        return None
 
 
 def build_history_text(messages, max_messages=3, max_chars_per_message=300, max_user_messages=None):
@@ -2331,10 +2812,33 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
     profile_context = build_user_profile_context(user)
     crisis_resources = build_crisis_resources(user)
+    # helper 模式沒有像 friend 模式在 views.py 那樣的關鍵字保底安全網，
+    # 危機指令完全交給 LLM 自行判斷語氣很容易誤觸發（例如學生只是語氣不耐煩、反駁），
+    # 所以先用關鍵字判斷：沒有命中明確危機字眼時，直接不把危機指令放進 prompt，
+    # 避免模型被鄰近的強指令帶著聯想成危機
+    is_crisis_message = contains_crisis_keywords(question)
+    if is_crisis_message:
+        crisis_block = f"""
+【危機求助資源】這則訊息含有明確的自傷、想死、傷害他人等危機字眼，請優先處理安全：
+- 提醒學生不要獨處，立刻聯絡可信任的人、學校輔導中心或家人朋友。
+- 如果已經受傷或有立即危險，先提醒撥打 119 緊急醫療救護專線。
+- 將以下求助資源原文複製到回覆中，電話連結格式必須完整保留：
+{crisis_resources}
+- 不要承諾保密，不要說 AI 可以單獨處理危機。
+""".strip()
+    else:
+        crisis_block = (
+            '【危機求助資源】這則訊息沒有偵測到明確的自傷、想死、傷害他人等危機字眼，'
+            '請正常回答學生實際問的問題就好，不要主動提起自殺防治專線等求助資源；'
+            '單純的情緒化、不耐煩、反駁、開玩笑不算危機，不要誤判。'
+        )
     flow_context = build_student_flow_context(user, language_code)
+    # 學生就讀學校的校務資料（地址、總機、國際處、校內單位位置與分機），
+    # 讓「校長室在哪裡」這類問題可以直接依個人資料定位回答
+    school_context = build_school_context(user, language_code)
 
     # RAG 檢索（依關聯度排序），items 同時供「你可能還想問」追問建議使用
-    knowledge_items = search_knowledge_items(question, ai_mode=ai_mode)
+    knowledge_items = search_knowledge_items(question, ai_mode=ai_mode, user=user)
     knowledge_context = format_knowledge_context(knowledge_items, language_code)
     suggestions = get_followup_suggestions(
         language_code, ai_mode=ai_mode, matched_items=knowledge_items
@@ -2348,30 +2852,145 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
     else:
         history_text = build_history_text(recent_messages)
 
-    # 小老師（課業輔助）角色：載入學生系所對應學群的課業知識背景包
+    # 小老師角色：課業輔助載入學群課業背景包；生活指導載入生活知識背景包
     is_tutor_role = ai_mode == 'helper' and (role or '').strip() == '小老師'
-    tutor_context = build_tutor_context(user, language_code) if is_tutor_role else ''
+    is_life_guidance = is_tutor_role and (personality or '').strip() == '生活指導'
+    if is_life_guidance:
+        tutor_context = build_life_guidance_context(user, language_code)
+    elif is_tutor_role:
+        tutor_context = build_tutor_context(user, language_code)
+    else:
+        tutor_context = ''
+
+    if not tutor_context:
+        tutor_block = ''
+    elif is_life_guidance:
+        tutor_block = (
+            '【小老師生活背景包】以下是依這位學生的學校、國籍與身分別載入的生活知識。'
+            '回答生活問題時請結合這些內容，並針對他的身分別與國籍給具體做法；'
+            '背景包沒有涵蓋的細節，請誠實說明並建議他詢問學校國際處或宿舍管理員，不要自行編造規定與費用。\n'
+            + tutor_context
+        )
+    else:
+        tutor_block = (
+            '【小老師課業背景包】以下是這位學生的系所、學群與對應的課業知識。'
+            '回答課業問題時請結合這些內容：用他系所的課程舉例、推薦背景包中的免費學習資源；'
+            '背景包沒有涵蓋的細節（如特定學校的課表），請誠實說明並建議他查詢系辦或課程大綱。\n'
+            + tutor_context
+        )
+
     info_page = get_personalized_info_page(user, question)
     task_link = get_relevant_student_task(user, question, language_code) if ai_mode == "helper" else None
+
+    # 依個人資料定位的規則：學生問「校長室在哪」「國際處分機幾號」時，
+    # 先用他自己學校的資料回答，不要反問「你是哪間學校」，也不要編造沒有的分機
+    if school_context:
+        school_block = f"""
+【學生就讀學校的校務資料】以下是這位學生個人資料所填學校的實際資料：
+{school_context}
+
+依個人資料定位的規則：
+1. 學生問校內地點、單位、分機、行事曆、校務流程時，預設就是在問「他自己的學校」，直接用上面的資料回答，不要反問他是哪一間學校。
+2. 上面資料沒有涵蓋的單位或分機，直接說明你沒有這項資料，並請他打學校總機或查官網，絕對不可以自行編造地點、分機或電話號碼。
+3. 學生明確問其他學校時，才改用一般說明，並提醒他這不是他就讀的學校。
+""".strip()
+    else:
+        school_block = (
+            '【學生就讀學校的校務資料】系統目前沒有這位學生學校的校務資料。'
+            '遇到校內地點、單位、分機問題時，請說明你沒有該校資料，'
+            '建議他查學校官網或撥打總機，不要編造地點與號碼。'
+        )
 
     # 任務清單和資訊中心都沒有相關資料時，helper 模式直接回答，不分個人化/一般回答兩段；
     # 小老師角色一律用自然教學語氣回答，不套用個人化/一般回答兩段格式
     direct_mode = ai_mode == "helper" and not is_tutor_role and not task_link and not info_page
 
-    place_results = None
-    if ai_mode == 'friend' and detect_place_query(question):
-        if detect_explicit_location(question):
-            # 使用者已明確說明地區，直接用原問題搜尋
-            place_results = search_google_places(question, language_code, location_hint='')
-        else:
-            # 沒有說明地區，從個人資料取學校名稱作為搜尋範圍
-            profile = get_student_profile(user)
-            location_hint = '台灣'
-            if profile and getattr(profile, 'university', ''):
-                location_hint = profile.university
-            place_results = search_google_places(question, language_code, location_hint)
+    # 管轄範圍互相提醒（helper → friend）：
+    # 任務、資訊頁、知識庫都查無資料時，才判斷這是不是其實是聊天好朋友的專長
+    # （情緒陪伴、心情、人際關係），避免把帶情緒字眼的正式手續問題誤判過去；
+    # 危機訊息已由上面的 crisis_block 處理，優先權更高，這裡不重複判斷。
+    friend_domain_hint = ''
+    if direct_mode and not is_crisis_message and detect_friend_domain_query(question):
+        friend_domain_hint = (
+            '【任務歸屬提醒】這個問題聽起來比較像是情緒或生活陪伴需求'
+            '（例如心情不好、想家、人際關係、壓力大），這其實是「ReadyTo 聊天好朋友」的專長，'
+            '不是任務小幫手負責的簽證、居留證等正式手續。'
+            '請先用 1、2 句話簡短、溫暖地回應學生的感受，不要勉強套用個人化/一般回答的格式，'
+            '再自然地建議他切換到「ReadyTo 聊天好朋友」，那邊比較適合陪他聊這件事。'
+        )
 
-    logger.debug('ai_mode=%s, place_results=%s', ai_mode, bool(place_results))
+    place_results = None
+    place_source = None
+    if ai_mode == 'friend' and detect_place_query(question):
+        # 校內單位（校長室、國際處…）不是 Google 地圖上找得到的地標，
+        # 先比對學生學校自己的 SchoolUnit 資料，比 Google 關鍵字亂猜準確
+        school = get_student_school(user)
+        matched_units = search_school_units(school, question)
+        if matched_units:
+            place_results = '\n'.join(_format_school_unit(unit, school, language_code) for unit in matched_units[:3])
+            place_source = 'school_unit'
+        else:
+            if detect_explicit_location(question):
+                # 使用者已明確說明地區，直接用原問題搜尋
+                place_results = search_google_places(question, language_code, location_hint='')
+            else:
+                # 沒有說明地區，從個人資料取學校名稱作為搜尋範圍
+                profile = get_student_profile(user)
+                location_hint = '台灣'
+                if profile and getattr(profile, 'university', ''):
+                    location_hint = profile.university
+                place_results = search_google_places(question, language_code, location_hint)
+
+            if place_results:
+                place_source = 'google'
+            elif knowledge_items:
+                # Google 地圖也查無此地點，退回知識庫找相關資料
+                place_results = knowledge_context
+                place_source = 'knowledge'
+
+    place_hint = ''
+    if place_source in ('google', 'school_unit'):
+        place_hint = '【地點查詢】學生詢問附近地點，系統已根據學生所在學校搜尋到真實地點，地點列表會自動附在你的回覆後面。你只需要用 1 句話自然回應（例如「幫你找到幾個不錯的選擇！」），不要自己列出地名或地址，也不要編造或推薦任何沒在列表裡的地方。'
+    elif place_source == 'knowledge':
+        place_hint = '【地點查詢】學生詢問的地點在地圖上查不到，但知識庫剛好有相關資料，資料會自動附在你的回覆後面。你只需要用 1 句話自然帶到（例如「幫你查到相關資訊囉！」），不要自己編造地點或地址，也不要重複列出知識庫的內容。'
+
+    logger.debug('ai_mode=%s, place_results=%s, place_source=%s', ai_mode, bool(place_results), place_source)
+
+    # 天氣查詢：與地點查詢同一套設計，AI 只負責一句話帶到，實際數字一律來自中央氣象署，不可自行編造
+    weather_results = None
+    weather_hint = ''
+    if ai_mode == 'friend' and detect_weather_query(question):
+        county = get_student_county(user)
+        weather_results = fetch_weather_forecast(county) if county else None
+
+        if '颱風' in question or 'typhoon' in question.lower():
+            typhoon_bulletin = fetch_typhoon_bulletin()
+            if typhoon_bulletin:
+                weather_results = (
+                    f'{weather_results}\n\n{typhoon_bulletin}' if weather_results else typhoon_bulletin
+                )
+
+        if weather_results:
+            weather_hint = '【天氣查詢】學生詢問天氣相關問題，系統已查詢中央氣象署的真實資料，資料會自動附在你的回覆後面。你只需要用 1 句話自然回應（例如「幫你查到天氣資訊囉！」），不要自己說出溫度、降雨機率等具體數字，也不要編造任何天氣狀況。'
+        elif county:
+            weather_hint = '【天氣查詢】學生詢問天氣，但目前查詢不到氣象資料（可能是氣象署服務暫時無法連線）。請誠實告知你現在查不到即時天氣，建議他查中央氣象署官網或天氣 App，絕對不可以自己編造溫度、降雨機率或颱風狀況。'
+        else:
+            weather_hint = '【天氣查詢】學生詢問天氣，但系統不知道他就讀哪所學校、無法判斷地區。請直接問他想查哪個城市的天氣，不要編造天氣資料。'
+
+    logger.debug('ai_mode=%s, weather_results=%s', ai_mode, bool(weather_results))
+
+    # 管轄範圍互相提醒（friend → helper）：
+    # 學生在聊天好朋友問到簽證、居留證、學校行政等正式手續，
+    # 提醒他去問任務小幫手，那邊有查證過的完整資料，不要讓 friend 憑印象隨口回答。
+    cross_domain_hint = ''
+    if ai_mode == 'friend' and detect_helper_domain_hit(question, user):
+        cross_domain_hint = (
+            '【任務歸屬提醒】這個問題其實屬於「ReadyTo 任務小幫手」的專業範圍'
+            '（例如簽證、居留證、財力／語言證明、學校行政等正式手續），'
+            '任務小幫手那邊有經過查證的完整資料。'
+            '你可以先用 1、2 句話簡短回應，但不要給出詳細步驟或保證細節正確，'
+            '並自然地建議學生切換到「ReadyTo 任務小幫手」問這類問題。'
+        )
 
     if not api_key:
         if ai_mode == "friend":
@@ -2490,7 +3109,11 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 以下是學生基本資料，僅供你理解背景，不要生硬列出：
 {profile_context}
 
-{'【地點查詢】學生詢問附近地點，系統已根據學生所在學校搜尋到真實地點，地點列表會自動附在你的回覆後面。你只需要用 1 句話自然回應（例如「幫你找到幾個不錯的選擇！」），不要自己列出地名或地址，也不要編造或推薦任何沒在列表裡的地方。' if place_results else ''}
+{place_hint}
+
+{weather_hint}
+
+{cross_domain_hint}
 
 以下是最近對話紀錄（請根據這些內容自然銜接，不要當作第一次對話）：
 {history_text}
@@ -2599,7 +3222,9 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 以下是學生基本資料，僅供你理解背景，不要生硬列出：
 {profile_context}
 
-{('【小老師課業背景包】以下是這位學生的系所、學群與對應的課業知識。回答課業問題時請結合這些內容：用他系所的課程舉例、推薦背景包中的免費學習資源；背景包沒有涵蓋的細節（如特定學校的課表），請誠實說明並建議他查詢系辦或課程大綱。' + chr(10) + tutor_context) if tutor_context else ''}
+{school_block}
+
+{tutor_block}
 
 以下是系統 FAQ / 知識庫搜尋結果，如果和學生的課業問題相關可以參考，不相關就不要勉強使用：
 {knowledge_context}
@@ -2610,8 +3235,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 學生最新的課業問題：
 {question}{attachment_note}
 
-【危機求助資源】若學生透露自傷、想死、危險等內容，必須將以下資源原文輸出，電話連結格式不得更改：
-{crisis_resources}
+{crisis_block}
 
 [REMINDER] Write your answer in {language_en} only. Answer directly in a warm, teaching tone. Do not split it into labeled sections.
 """.strip()
@@ -2621,11 +3245,18 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
 這個問題在網站的任務清單和資訊中心都沒有找到相關資料，不要使用「{personal_label} / {general_label}」兩段格式，也不要輸出這兩個標題。
 
+以下是學生基本資料：
+{profile_context}
+
+{school_block}
+
+{friend_domain_hint}
+
 以下是系統 FAQ / 知識庫搜尋結果，必須優先參考：
 {knowledge_context}
 
 如果知識庫有直接相關內容，必須根據知識庫回答，不要忽略。
-如果知識庫沒有找到相關資料，必須根據你自己對來臺就學流程的知識直接回答學生的問題，絕對不可以把「目前沒有找到直接相關的知識庫資料」或任何系統提示語直接輸出為答案。
+如果知識庫沒有找到相關資料，且上面沒有提醒學生改問聊天好朋友，必須根據你自己對來臺就學流程的知識直接回答學生的問題，絕對不可以把「目前沒有找到直接相關的知識庫資料」或任何系統提示語直接輸出為答案。
 
 以下是最近對話紀錄，僅供上下文參考：
 {history_text}
@@ -2633,8 +3264,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 學生最新問題：
 {question}{attachment_note}
 
-【危機求助資源】若學生透露自傷、想死、危險等內容，必須將以下資源原文輸出，電話連結格式不得更改：
-{crisis_resources}
+{crisis_block}
 
 [REMINDER] Write your answer in {language_en} only. Answer the question directly in one concise passage. Do not split it into labeled sections.
 """.strip()
@@ -2644,6 +3274,9 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
 以下是學生自己的基本資料，僅供「{personal_label}」參考：
 {profile_context}
+
+{school_block}
+（校務資料屬於個人化資訊，請用在「{personal_label}」，不要寫進「{general_label}」。）
 
 以下是學生目前的流程任務與提醒資料，僅供「{personal_label}」使用：
 {flow_context}
@@ -2663,8 +3296,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 學生最新問題：
 {question}{attachment_note}
 
-【危機求助資源】若學生透露自傷、想死、危險等內容，必須將以下資源原文輸出，電話連結格式不得更改：
-{crisis_resources}
+{crisis_block}
 
 [REMINDER] Write your answer in {language_en} only. Use this exact format:
 {personal_label}：
@@ -2727,6 +3359,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
         return {
             'reply': reply,
             'place_results_text': place_results,
+            'weather_results_text': weather_results,
             'source': 'openai',
             'model': model,
             'suggestions': suggestions,

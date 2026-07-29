@@ -1,6 +1,7 @@
+from django.core.management import call_command
 from django.test import TestCase
 
-from users.models import CustomUser, StudentProfile, AlumniShare
+from users.models import CustomUser, StudentProfile, AlumniShare, School
 from users.serializers import StudentProfileSerializer, validate_identity_consistency
 
 
@@ -204,3 +205,86 @@ class AlumniSharePageTest(TestCase):
         self.client.force_login(self.ncu_user)
         resp = self.client.get('/alumni/?tab=school&dept=')
         self.assertNotContains(resp, 'alumni/delete/')
+
+
+class SeedSchoolsCommandTest(TestCase):
+    """seed_schools：建立學校全名與簡稱，且不覆蓋已查核過的資料"""
+
+    def test_creates_all_schools_with_aliases(self):
+        call_command('seed_schools', verbosity=0)
+
+        # UNIVERSITY_CHOICES 共 36 項，扣掉不是真實學校的 'Other'
+        self.assertEqual(School.objects.count(), 35)
+
+        ncu = School.objects.get(code='NCU')
+        self.assertEqual(ncu.name, '國立中央大學')          # 代碼括號已去除
+        self.assertIn('中大', ncu.alias_list())
+
+    def test_rerun_does_not_overwrite_verified_data(self):
+        call_command('seed_schools', verbosity=0)
+        School.objects.filter(code='NCU').update(
+            address='桃園市中壢區中大路 300 號', aliases='中央大學',
+        )
+
+        call_command('seed_schools', verbosity=0)
+
+        ncu = School.objects.get(code='NCU')
+        self.assertEqual(ncu.aliases, '中央大學')           # 管理員填的內容不被覆蓋
+        self.assertEqual(School.objects.count(), 35)        # 不重複建立
+
+    def test_verified_schools_get_detailed_data(self):
+        """已查核的學校要寫入地址、分機與校內單位，並標上查核日期"""
+        call_command('seed_schools', verbosity=0)
+
+        ncu = School.objects.get(code='NCU')
+        self.assertEqual(ncu.address, '320317 桃園市中壢區中大路300號')
+        self.assertEqual(ncu.main_tel, '03-4227151')
+        self.assertEqual(ncu.intl_office_ext, '57085')
+        self.assertIsNotNone(ncu.last_verified_at)
+        self.assertEqual(ncu.units.get(name='國際事務處').ext, '57085')
+
+        # 多校區學校的每個校區都要有自己的單位資料
+        nycu = School.objects.get(code='NYCU')
+        self.assertEqual(nycu.units.count(), 2)
+
+    def test_fields_not_found_on_official_sites_stay_blank(self):
+        """
+        查不到的「欄位」必須留白，不能出現猜測值。
+        35 所都已查核，但不是每一所都公開了所有欄位，
+        留白才是誠實的表示法。
+        """
+        call_command('seed_schools', verbosity=0)
+
+        # 清大：官網有總機，但國際處分機未公開
+        nthu = School.objects.get(code='NTHU')
+        self.assertEqual(nthu.main_tel, '03-5715131')
+        self.assertEqual(nthu.intl_office_ext, '')
+
+        # 高科大：五校區，國際處頁未列地址與總機，只取得信箱
+        nkust = School.objects.get(code='NKUST')
+        self.assertEqual(nkust.address, '')
+        self.assertEqual(nkust.main_tel, '')
+        self.assertEqual(nkust.units.get(name='國際事務處').email, 'nkustoia@nkust.edu.tw')
+
+        # 台科大：官網只列各承辦人直撥號，判斷不出對外總線 → 不填電話
+        ntust = School.objects.get(code='NTUST')
+        self.assertEqual(ntust.intl_office_tel, '')
+        self.assertEqual(ntust.address, '10607 臺北市大安區基隆路四段43號')
+
+    def test_every_verified_school_cites_a_source(self):
+        """
+        守則：school_data.py 裡每一筆都必須有官方來源與查核日期。
+        沒有來源就代表那個數字沒人能複查，學生會照著撥號，不允許出現。
+        """
+        from users.school_data import VERIFIED_SCHOOLS
+
+        for code, data in VERIFIED_SCHOOLS.items():
+            self.assertTrue(data.get('source', '').startswith('http'), f'{code} 缺少官方來源')
+            self.assertIsNotNone(data.get('verified'), f'{code} 缺少查核日期')
+
+            # 有分機就一定要有主號，否則學生撥不出去
+            if data.get('intl_office_ext'):
+                self.assertTrue(
+                    data.get('intl_office_tel') or data.get('main_tel'),
+                    f'{code} 有分機卻沒有可撥打的主號',
+                )

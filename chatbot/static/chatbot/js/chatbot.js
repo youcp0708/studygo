@@ -86,7 +86,7 @@
   // placeholder 由模板的 {% trans %} 注入，跟著介面語言走
   const AI_MODE_PLACEHOLDERS = {
     helper: i18n.placeholderHelper || '例如：簽證要先準備什麼？',
-    friend: i18n.placeholderFriend || '例如：我最近壓力很大，有點想家。',
+    friend: i18n.placeholderFriend || '可以陪我聊聊嗎？',
   };
 
   const messagesEl = document.getElementById('chatMessages');
@@ -255,6 +255,18 @@
         return `<span class="answer-label answer-label--${variant}">${safeLine}</span>`;
       })
       .join('<br>');
+  }
+
+  // embed 模式下（浮在頁面上的小卡片），小卡片本來就沒蓋住整個畫面，
+  // 訊息裡的任務/資訊頁連結改成請父視窗先收起小卡片再跳轉，
+  // 避免使用者還沒反應過來頁面就已經跳走、看起來像「亂跳轉」
+  if (messagesEl) {
+    messagesEl.addEventListener('click', function (event) {
+      const link = event.target.closest('a.chat-link:not(.chat-link--tel)');
+      if (!link || !isEmbed) return;
+      event.preventDefault();
+      postToParent('chat:navigate', { url: link.getAttribute('href') });
+    });
   }
 
   function renderExistingMessageLinks() {

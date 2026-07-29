@@ -126,6 +126,9 @@ msgstr ""
 "例：最近すごくストレスが溜まっていて、少しホームシックです。話し相手になって"
 "もらえますか？"
 
+msgid "可以陪我聊聊嗎？"
+msgstr "話し相手になってもらえますか？"
+
 #: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:273
 msgid "例如：簽證要先準備什麼？"

@@ -128,6 +128,9 @@ msgstr ""
 "Ví dụ: Dạo này mình căng thẳng quá, hơi nhớ nhà, bạn có thể trò chuyện cùng "
 "mình không?"
 
+msgid "可以陪我聊聊嗎？"
+msgstr "Bạn có thể trò chuyện cùng mình không?"
+
 #: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:273
 msgid "例如：簽證要先準備什麼？"

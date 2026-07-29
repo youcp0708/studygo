@@ -236,6 +236,11 @@ def chat_message_api(request):
         if place_text:
             reply_parts.append(place_text)
 
+        # 天氣資料同理：真實數字直接附加為獨立訊息，不讓 AI 自己複述數字
+        weather_text = ai_result.get('weather_results_text')
+        if weather_text:
+            reply_parts.append(weather_text)
+
         # 危機保底安全網：只要學生訊息命中危機關鍵字（9 語），
         # 且 AI 回覆沒有帶出可撥打的求助電話，就由伺服器端強制附上，
         # 不把學生的安全交給模型的自由發揮

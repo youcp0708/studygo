@@ -8,7 +8,7 @@ from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.utils import timezone
 
-from users.models import DISCIPLINE_CHOICES
+from users.models import DISCIPLINE_CHOICES, StudentProfile
 
 ALLOWED_ATTACHMENT_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'pdf', 'txt', 'csv', 'md', 'json']
 
@@ -178,6 +178,10 @@ class ChatKnowledge(models.Model):
     """聊天機器人知識庫 / FAQ：給 AI 一般回答參考，可支援多語言。"""
 
     CATEGORY_CHOICES = [
+    # 學校綜合資訊：校區位置、聯絡方式、國際處、行事曆、校內單位、學校特色等
+    # 凡是「跟某一所學校有關」的內容都放這裡，並在 university 欄位指定學校
+    ('school_info', '學校資訊'),
+
     ('admission', '入學申請'),
     ('documents', '文件準備'),
     ('document_verification', '文件驗證'),
@@ -240,6 +244,36 @@ class ChatKnowledge(models.Model):
         default='',
         verbose_name='適用學群',
         help_text='對應學生系所的 18 學群分類，留空表示不分學群',
+    )
+
+    # 以下三個「適用對象」欄位一律留空＝通用內容，所有學生都會檢索到；
+    # 有值時，只有個人資料相符的學生才會檢索到這筆。
+    # 例：入學申請各校不同 → 填 university；簽證各國不同 → 填 country。
+    university = models.CharField(
+        max_length=200,
+        choices=StudentProfile.UNIVERSITY_CHOICES,
+        blank=True,
+        default='',
+        verbose_name='適用學校',
+        help_text='留空表示所有學校通用；各校做法不同的內容（入學申請、註冊繳費等）請指定學校',
+    )
+
+    country = models.CharField(
+        max_length=50,
+        choices=StudentProfile.NATIONALITY_CHOICES,
+        blank=True,
+        default='',
+        verbose_name='適用國籍',
+        help_text='留空表示所有國籍通用；各國做法不同的內容（簽證辦理）請指定國籍',
+    )
+
+    identity_type = models.CharField(
+        max_length=30,
+        choices=StudentProfile.IDENTITY_CHOICES,
+        blank=True,
+        default='',
+        verbose_name='適用身分別',
+        help_text='留空表示僑生／外籍生／港澳生皆適用；管道不同的內容請指定身分別',
     )
 
     title = models.CharField(max_length=200, verbose_name='繁體中文標題')
