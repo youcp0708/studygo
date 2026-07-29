@@ -179,7 +179,7 @@
 
           <div class="textarea-wrapper">
             <textarea id="chatInput" rows="2" maxlength="1200"
-              placeholder="{% if current_ai_mode == 'friend' %}{% trans '例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？' %}{% else %}{% trans '例如：簽證要先準備什麼？' %}{% endif %}"></textarea>
+              placeholder="{% if current_ai_mode == 'friend' %}{% trans '可以陪我聊聊嗎？' %}{% else %}{% trans '例如：簽證要先準備什麼？' %}{% endif %}"></textarea>
 
           <div id="roleSelector" class="role-selector">
             <button id="roleSelectorBtn" type="button" class="role-selector-btn" aria-haspopup="true" aria-expanded="false">
@@ -271,7 +271,7 @@
 {% trans "重新命名性格：" as txt_rename_personality %}
 {% trans "已收到回饋，謝謝！" as txt_feedback_thanks %}
 {% trans "例如：簽證要先準備什麼？" as txt_ph_helper %}
-{% trans "例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？" as txt_ph_friend %}
+{% trans "可以陪我聊聊嗎？" as txt_ph_friend %}
 
 <script>
   window.CHATBOT_I18N = {

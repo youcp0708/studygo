@@ -21,6 +21,8 @@ def env(key, default=None, required=False):
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY", "")
+# 中央氣象署開放資料平臺 Authorization key，免費申請：https://opendata.cwa.gov.tw/
+CWA_API_KEY = os.getenv("CWA_API_KEY", "")
 
 SECRET_KEY = env('SECRET_KEY', required=True)
 

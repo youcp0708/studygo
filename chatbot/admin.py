@@ -74,8 +74,8 @@ class ChatFeedbackAdmin(admin.ModelAdmin):
 
 @admin.register(ChatKnowledge)
 class ChatKnowledgeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'category', 'discipline', 'source_url', 'last_verified_at', 'is_active', 'updated_at')
-    list_filter = ('category', 'discipline', 'is_active', 'updated_at', 'last_verified_at')
+    list_display = ('id', 'title', 'category', 'university', 'country', 'identity_type', 'discipline', 'source_url', 'last_verified_at', 'is_active', 'updated_at')
+    list_filter = ('category', 'university', 'country', 'identity_type', 'discipline', 'is_active', 'updated_at', 'last_verified_at')
     search_fields = (
         'title', 'title_en', 'title_my', 'title_id', 'title_ms', 'title_th', 'title_ja','title_ko','title_vi',
         'keywords',

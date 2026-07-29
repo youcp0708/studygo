@@ -123,6 +123,9 @@ msgid "例如：我最近壓力很大，有點想家，可以陪我聊聊嗎？"
 msgstr ""
 "예: 요즘 스트레스가 심하고 조금 향수병이 있어요, 저와 이야기해 줄 수 있나요?"
 
+msgid "可以陪我聊聊嗎？"
+msgstr "저와 이야기해 줄 수 있나요?"
+
 #: .\chatbot\templates\chatbot\chatbot.html:169
 msgid "例如：我從緬甸來臺讀學士班，簽證要先準備什麼？"
 msgstr ""

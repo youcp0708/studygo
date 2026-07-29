@@ -340,6 +340,112 @@ class Department(models.Model):
 
 
 # ══════════════════════════════════════════
+# SCHOOL（學校基本資料）
+# UNIVERSITY_CHOICES 只有代碼與顯示名稱，chatbot 需要地址、總機、
+# 國際處分機、行事曆等實際校務資訊才能回答「我的學校」相關問題。
+# ══════════════════════════════════════════
+class School(models.Model):
+    code = models.CharField(
+        max_length=200,
+        choices=StudentProfile.UNIVERSITY_CHOICES,
+        unique=True,
+        verbose_name='學校代碼',
+    )
+    name    = models.CharField(max_length=200, verbose_name='學校全名')
+    name_en = models.CharField(max_length=200, blank=True, verbose_name='學校英文全名')
+    aliases = models.CharField(
+        max_length=500, blank=True,
+        verbose_name='簡稱 / 別名',
+        help_text='以逗號分隔，學生可能使用的所有稱呼，例如：中央,中大,NCU,中央大學,National Central University',
+    )
+
+    address  = models.CharField(max_length=300, blank=True, verbose_name='校本部地址')
+    main_tel = models.CharField(max_length=50, blank=True, verbose_name='學校總機')
+    website  = models.URLField(blank=True, verbose_name='官方網站')
+
+    intl_office_name = models.CharField(
+        max_length=100, blank=True, verbose_name='國際事務處名稱',
+        help_text='各校名稱不同，例如：國際事務處 / 國際處 / 國際學生事務組',
+    )
+    intl_office_tel = models.CharField(max_length=50, blank=True, verbose_name='國際處電話')
+    intl_office_ext = models.CharField(max_length=20, blank=True, verbose_name='國際處分機')
+    intl_office_url = models.URLField(blank=True, verbose_name='國際處網站')
+
+    calendar_url   = models.URLField(blank=True, verbose_name='行事曆網址')
+    admission_url  = models.URLField(blank=True, verbose_name='境外生招生 / 入學申請網址')
+
+    last_verified_at = models.DateField(
+        null=True, blank=True,
+        verbose_name='最後查核日期',
+        help_text='最後一次對照官網確認此資料仍正確的日期，留空代表尚未查核',
+    )
+    is_active  = models.BooleanField(default=True, verbose_name='是否啟用')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='更新時間')
+
+    class Meta:
+        db_table = 'users_school'
+        ordering = ['code']
+        verbose_name = '學校資料'
+        verbose_name_plural = '學校資料'
+
+    def __str__(self):
+        return f'{self.code} - {self.name}'
+
+    def alias_list(self):
+        """回傳去空白後的別名清單，供 chatbot 比對學生口語中的學校稱呼。"""
+        return [a.strip() for a in self.aliases.split(',') if a.strip()]
+
+    def get_localized_name(self, lang_code):
+        if lang_code and not lang_code.startswith('zh') and self.name_en.strip():
+            return self.name_en
+        return self.name
+
+
+class SchoolUnit(models.Model):
+    """
+    校內單位（校長室、國際處、註冊組、宿舍組…）的位置與聯絡方式。
+    學生問「校長室在哪裡」時，chatbot 依個人資料的學校找出該校對應單位回答。
+    """
+
+    school = models.ForeignKey(
+        School,
+        on_delete=models.CASCADE,
+        related_name='units',
+        verbose_name='所屬學校',
+    )
+    name    = models.CharField(max_length=100, verbose_name='單位名稱')
+    name_en = models.CharField(max_length=100, blank=True, verbose_name='單位英文名稱')
+    aliases = models.CharField(
+        max_length=300, blank=True,
+        verbose_name='別名',
+        help_text='以逗號分隔，例如：校長室,校長辦公室,President Office',
+    )
+
+    location     = models.CharField(max_length=200, blank=True, verbose_name='位置',
+                                    help_text='例如：行政大樓 2 樓 201 室')
+    tel          = models.CharField(max_length=50, blank=True, verbose_name='電話')
+    ext          = models.CharField(max_length=20, blank=True, verbose_name='分機')
+    email        = models.EmailField(blank=True, verbose_name='電子郵件')
+    url          = models.URLField(blank=True, verbose_name='單位網頁')
+    office_hours = models.CharField(max_length=200, blank=True, verbose_name='服務時間')
+
+    order     = models.PositiveIntegerField(default=0, verbose_name='排序')
+    is_active = models.BooleanField(default=True, verbose_name='是否啟用')
+
+    class Meta:
+        db_table = 'users_school_unit'
+        ordering = ['school', 'order', 'id']
+        verbose_name = '校內單位'
+        verbose_name_plural = '校內單位'
+
+    def __str__(self):
+        return f'{self.school.code} - {self.name}'
+
+    def alias_list(self):
+        return [a.strip() for a in self.aliases.split(',') if a.strip()]
+
+
+# ══════════════════════════════════════════
 # ALUMNI SHARE（學長姐分享）
 # 學生發佈留學經驗分享；分享頁分「我的學校」與「所有學校」兩區，
 # 同一篇分享會同時出現在自己學校區與所有學校區。

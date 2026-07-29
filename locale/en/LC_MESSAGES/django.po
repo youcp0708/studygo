@@ -131,6 +131,11 @@ msgstr ""
 "company?"
 
 #: .\chatbot\templates\chatbot\chatbot.html:182
+#: .\chatbot\templates\chatbot\chatbot.html:274
+msgid "可以陪我聊聊嗎？"
+msgstr "Could you keep me company?"
+
+#: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:273
 msgid "例如：簽證要先準備什麼？"
 msgstr ""
