@@ -4,7 +4,7 @@
 {% block title %}ReadyTo Taiwan — {% trans "來臺就學小幫手" %}{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'users/css/dashboard.css' %}?v=7">
+<link rel="stylesheet" href="{% static 'users/css/dashboard.css' %}?v=9">
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,12 @@
 {# ── Hero（純展示，無按鈕）── #}
 <section class="db-hero" id="homePage">
   <div class="db-hero-inner">
-    <h1>{% trans "你好！" %}<br>{% trans "歡迎使用" %} <span class="db-brand">ReadyTo Taiwan</span></h1>
+{% comment %}
+  品牌名稱逐字彈跳：拆成單字元 span 以便各自 animate；--i 為接力順序。
+  aria-label + aria-hidden 讓螢幕閱讀器唸出完整品牌名，而非逐字母拼讀。
+  注意：各 span 之間不可換行，否則 inline-block 會多出空白間隙。
+{% endcomment %}
+    <h1>{% trans "你好！" %}<br>{% trans "歡迎使用" %} <span class="db-brand brand-bounce" aria-label="ReadyTo Taiwan"><span class="bb-char" aria-hidden="true" style="--i:0">R</span><span class="bb-char" aria-hidden="true" style="--i:1">e</span><span class="bb-char" aria-hidden="true" style="--i:2">a</span><span class="bb-char" aria-hidden="true" style="--i:3">d</span><span class="bb-char" aria-hidden="true" style="--i:4">y</span><span class="bb-char" aria-hidden="true" style="--i:5">T</span><span class="bb-char" aria-hidden="true" style="--i:6">o</span><span class="bb-space" aria-hidden="true"></span><span class="bb-char" aria-hidden="true" style="--i:8">T</span><span class="bb-char" aria-hidden="true" style="--i:9">a</span><span class="bb-char" aria-hidden="true" style="--i:10">i</span><span class="bb-char" aria-hidden="true" style="--i:11">w</span><span class="bb-char" aria-hidden="true" style="--i:12">a</span><span class="bb-char" aria-hidden="true" style="--i:13">n</span></span></h1>
     <p>
       {% trans "專為僑生、外籍生與港澳生打造的來台留學流程指南平台。" %}<br>
       {% trans "跟著我們一步步完成留學準備，掌握所有關鍵資訊。" %}
