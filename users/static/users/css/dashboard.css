@@ -21,6 +21,42 @@
   color: #1a1a1a; margin: 0 0 16px;
 }
 .db-brand { color: var(--primary); }
+
+/* ── 品牌名稱逐字波浪彈跳 ──
+   每個字母以 --i 依序延遲 .06s 接力跳起，形成波浪感；
+   位移量用 em 而非 px，字級在手機縮到 28px 時跳動幅度會等比縮小。 */
+.brand-bounce {
+  display: inline-block;
+  white-space: nowrap;   /* 避免品牌名稱在窄螢幕被拆行 */
+}
+
+.brand-bounce .bb-char {
+  display: inline-block;          /* transform 對 inline 元素無效，必須改 inline-block */
+  transform-origin: center bottom;
+  animation: brandBounce 2s cubic-bezier(.32, 0, .68, 1) infinite;
+  animation-delay: calc(var(--i) * .06s);
+  will-change: transform;
+}
+
+/* 兩個單字之間的空白：inline-block 排版下原生空白會塌陷，改用固定寬度撐開 */
+.brand-bounce .bb-space {
+  display: inline-block;
+  width: .3em;
+}
+
+/* 跳起時微微拉長、落地時擠壓（squash & stretch），與首頁機器人 FAB 的跳動語彙一致。
+   55%~100% 為靜止段，讓每輪之間有短暫停頓，不會一直忙碌跳動。 */
+@keyframes brandBounce {
+  0%, 55%, 100% { transform: translateY(0)       scale(1, 1); }
+  14%           { transform: translateY(-.24em)  scale(.94, 1.06); }
+  28%           { transform: translateY(0)       scale(1.08, .92); }
+  40%           { transform: translateY(-.07em)  scale(.99, 1.01); }
+}
+
+/* 註：此處刻意「不」加上 @media (prefers-reduced-motion: reduce) 的停用規則。
+   若加上，凡是作業系統關閉動畫效果的使用者（Windows 設定 → 兼具性 → 動畫效果，
+   對應登錄檔 MinAnimate=0）都不會看到此動畫，屬專案明確的設計決定：品牌動畫一律播放。
+   本專案其他 reveal 動畫仍保留 reduced-motion 保護，見 users.css 檔末。 */
 .db-hero p { font-size: 16px; color: var(--muted); line-height: 1.7; margin: 0 0 28px; }
 .db-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .db-btn-dark {
