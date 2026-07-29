@@ -4257,6 +4257,9 @@ msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
+"Mulai hari ke-3 periode tambah/hapus, sistem melakukan alokasi sekali "
+"setiap hari pukul 07:00–09:00 (sistem berhenti sementara selama proses "
+"ini). Setelah pukul 09:00, Anda dapat memeriksa hasil hari itu di ee-class."
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
