@@ -47,6 +47,8 @@ def _build_school_entry(code, data):
             parts = [unit['name']]
             if unit.get('location'):
                 parts.append(f'位置：{unit["location"]}')
+            else:
+                parts.append('位置：目前查無具體大樓位置，請洽總機或該處室分機確認')
             if unit.get('tel'):
                 phone = unit['tel']
                 if unit.get('ext'):

@@ -245,7 +245,8 @@ class SeedSchoolsCommandTest(TestCase):
 
         # 多校區學校的每個校區都要有自己的單位資料
         nycu = School.objects.get(code='NYCU')
-        self.assertEqual(nycu.units.count(), 2)
+        self.assertGreaterEqual(nycu.units.count(), 2)
+        self.assertTrue(nycu.units.filter(name__startswith='國際事務處（').exists())
 
     def test_fields_not_found_on_official_sites_stay_blank(self):
         """
@@ -288,3 +289,33 @@ class SeedSchoolsCommandTest(TestCase):
                     data.get('intl_office_tel') or data.get('main_tel'),
                     f'{code} 有分機卻沒有可撥打的主號',
                 )
+
+    def test_admin_office_data_seeded_for_top_schools(self):
+        """
+        各校行政處室（教務/學務/總務/保健/圖書館/諮商）大量查證的第一批結果：
+        NTU、NCU、NCKU、NCCU、NTHU 應包含這些單位，查到的要有正確位置，
+        查不到的至少要有名稱（不能整個處室不存在）。
+        """
+        call_command('seed_schools', verbosity=0)
+
+        ncu = School.objects.get(code='NCU')
+        self.assertIn('教研大樓', ncu.units.get(name='教務處').location)
+        self.assertIn('中正圖書館', ncu.units.get(name='衛生保健組').location)
+        self.assertEqual(ncu.units.get(name='校長室').ext, '57000')
+
+        ntu = School.objects.get(code='NTU')
+        self.assertIn('望樂樓', ntu.units.get(name='學生心理輔導中心').location)
+        self.assertIn('第一行政大樓', ntu.units.get(name='學務處（學務長室）').location)
+
+        ncku = School.objects.get(code='NCKU')
+        self.assertIn('雲平大樓', ncku.units.get(name='教務處').location)
+
+        nccu = School.objects.get(code='NCCU')
+        self.assertIn('行政大樓', nccu.units.get(name='總務處').location)
+        self.assertIn('身心健康中心', nccu.units.get(name='心理諮商').location)
+
+        nthu = School.objects.get(code='NTHU')
+        self.assertIn('第一綜合大樓', nthu.units.get(name='總務處').location)
+        # 查不到大樓的處室仍要存在（至少有名稱），不能整個消失
+        self.assertTrue(nthu.units.filter(name='校長室').exists())
+        self.assertEqual(nthu.units.get(name='校長室').location, '')

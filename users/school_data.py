@@ -38,6 +38,42 @@ VERIFIED_SCHOOLS = {
                 'office_hours': '週一至週五 09:00-17:00；國際學生櫃檯 12:00-16:30',
                 'url': 'https://oia.ntu.edu.tw/',
             },
+            {
+                'name': '校長室',
+                'aliases': '校長辦公室,President Office',
+                # 查無具體大樓，seed_schools 會落到 school.main_tel
+            },
+            {
+                'name': '教務處',
+                'aliases': '註冊組,課務組,Office of Academic Affairs',
+                'url': 'https://www.aca.ntu.edu.tw/',
+                # 官網未列具體大樓樓層
+            },
+            {
+                'name': '學務處（學務長室）',
+                'aliases': '學生事務處,生活輔導組,Office of Student Affairs',
+                'location': '第一行政大樓 1 樓 114 室',
+                'url': 'https://osa.ntu.edu.tw/',
+            },
+            {
+                'name': '總務處',
+                'aliases': '事務組,General Affairs',
+                'location': '第二行政大樓',
+                'url': 'https://ga.ntu.edu.tw/',
+            },
+            {
+                'name': '學生保健中心',
+                'aliases': '健康暨心理輔導中心,Student Health Center',
+                'url': 'https://shmc.ntu.edu.tw/',
+                # 官網僅列校總區地址，未指出獨立大樓名稱
+            },
+            {
+                'name': '學生心理輔導中心',
+                'aliases': '諮商中心,心輔中心,Student Counseling Center',
+                'location': '研一宿舍旁 望樂樓',
+                'tel': '02-3366-2181',
+                'url': 'https://scc_osa.ntu.edu.tw/',
+            },
         ],
     },
 
@@ -57,6 +93,50 @@ VERIFIED_SCHOOLS = {
                 'tel': '03-4227151',
                 'ext': '57085',
                 'email': 'lntlAdms@ncu.edu.tw',
+            },
+            {
+                'name': '校長室',
+                'tel': '03-4227151',
+                'ext': '57000',
+                # 亦可撥 03-4254822 專線；官網未列具體大樓
+            },
+            {
+                'name': '教務處',
+                'aliases': '註冊組,課務組,招生組',
+                'location': '教研大樓（招生組、教務長室、教學發展中心 4 樓；註冊組、課務組 3 樓）',
+                'url': 'https://pdc.adm.ncu.edu.tw/',
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處,生活輔導組',
+                'url': 'https://osa.ncu.edu.tw/',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '總務處',
+                'aliases': '事務組',
+                'url': 'https://www.oga.ncu.edu.tw/',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '衛生保健組',
+                'aliases': '保健中心,健康中心',
+                'location': '中正圖書館 1 樓',
+                'url': 'https://health.ncu.edu.tw/',
+            },
+            {
+                'name': '總圖書館',
+                'aliases': '圖書館',
+                'location': '行政大樓與中正圖書館之間（校門口附近，白色 8 層樓建築）',
+                'url': 'https://www.lib.ncu.edu.tw/',
+            },
+            {
+                'name': '諮商中心',
+                'aliases': '諮商輔導中心,心輔中心',
+                'location': '中正圖書館（舊圖）1 樓',
+                'tel': '03-4227151',
+                'ext': '57263',
+                'url': 'https://love.adm.ncu.edu.tw/',
             },
         ],
     },
@@ -78,6 +158,42 @@ VERIFIED_SCHOOLS = {
                 'tel': '06-2757575',
                 'ext': '50950',
                 'url': 'https://oia.ncku.edu.tw/',
+            },
+            {
+                'name': '校長室',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '教務處',
+                'aliases': '課務組,推廣教育中心,教學發展中心',
+                'location': '雲平大樓西棟 2 樓（處本部、課務組、推廣教育中心）；'
+                            '雲平大樓東棟 3 樓（教學發展中心）',
+                'url': 'https://acad.ncku.edu.tw/',
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處,生活輔導組',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '總務處',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '保健中心',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '圖書館',
+                'tel': '06-2757575',
+                'ext': '65760',
+                'url': 'https://www.lib.ncku.edu.tw/',
+                # 官網僅列大學路一號，與校本部地址相同，未再區分獨立大樓名稱
+            },
+            {
+                'name': '諮商中心',
+                'aliases': '諮商輔導組',
+                # 官網未列具體大樓
             },
         ],
     },
@@ -101,6 +217,51 @@ VERIFIED_SCHOOLS = {
                 'ext': '62052',
                 'email': 'oic@nccu.edu.tw',
                 'url': 'https://oic.nccu.edu.tw/',
+            },
+            {
+                'name': '校長室',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '教務處',
+                'aliases': '註冊組,課務組',
+                'url': 'https://aca.nccu.edu.tw/',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處',
+                'url': 'https://osa.nccu.edu.tw/',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '總務處',
+                'aliases': '事務組',
+                'location': '行政大樓 5 樓',
+                'url': 'https://nccuga.nccu.edu.tw/',
+            },
+            {
+                'name': '身心健康中心',
+                'aliases': '保健中心,健康中心',
+                'location': '身心健康中心大樓（指南路二段117號）2 樓',
+                'url': 'https://osa.nccu.edu.tw/tw/身心健康中心',
+            },
+            {
+                'name': '心理諮商',
+                'aliases': '諮商中心',
+                'location': '身心健康中心大樓（指南路二段117號）3 樓',
+                'tel': '02-8237-7419',
+            },
+            {
+                'name': '中正圖書館',
+                'aliases': '圖書館,總館',
+                'url': 'https://www.lib.nccu.edu.tw/',
+            },
+            {
+                'name': '達賢圖書館',
+                'aliases': '社資中心',
+                'location': '萬壽路（山下校區外）',
+                'url': 'https://dhl.lib.nccu.edu.tw/',
             },
         ],
     },
@@ -134,6 +295,43 @@ VERIFIED_SCHOOLS = {
                 'email': 'oia@nycu.edu.tw',
                 'url': 'https://oia.nycu.edu.tw/',
             },
+            {
+                'name': '校長室',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '教務處',
+                'url': 'https://aa.nycu.edu.tw/',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '總務處',
+                'aliases': '事務組,出納組,文書組,保管組,營繕組,校園規劃組',
+                'location': '總務長室於浩然圖書資訊中心 8 樓；副總務長室、校園規劃組於工程五館 542 室；'
+                            '文書二組、事務二組、出納二組、保管組於大禮堂 2 樓；營繕二組於服務大樓 3 樓',
+                'url': 'https://www.ga.nctu.edu.tw/',
+            },
+            {
+                'name': '浩然圖書資訊中心',
+                'aliases': '圖書館,交通館',
+                'location': '新竹市大學路1001號（交大校區）8 樓為總務長室所在，圖書館主體樓層另見官網',
+                'url': 'https://www.lib.nycu.edu.tw/',
+            },
+            {
+                'name': '諮商中心',
+                'aliases': '學生輔導中心',
+                'location': '學生活動中心',
+            },
+            {
+                'name': '保健中心',
+                'aliases': '健康心理中心',
+                # 官網未列具體大樓
+            },
         ],
     },
 
@@ -144,6 +342,43 @@ VERIFIED_SCHOOLS = {
         'source': 'https://www.nthu.edu.tw/',
         'verified': _V,
         # 國際處分機未在官網查到，刻意留空，不填猜測值
+        'units': [
+            {
+                'name': '校長室',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '教務處',
+                'url': 'https://academic.site.nthu.edu.tw/',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處',
+                'url': 'https://student.site.nthu.edu.tw/',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '總務處',
+                'aliases': '事務組,出納組,文書組,保管組,採購組,校園規劃組,營繕組',
+                'location': '校本部行政大樓／第一綜合大樓（1 樓文書組、出納組；2 樓副總務長室、保管組、'
+                            '事務組、採購組；3 樓總務長室、校園規劃組；4 樓營繕組）',
+                'url': 'https://general.site.nthu.edu.tw/',
+            },
+            {
+                'name': '保健中心',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '圖書館',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '諮商中心',
+                'aliases': '學生輔導中心',
+                # 官網未列具體大樓
+            },
+        ],
     },
 
     'NCHU': {
@@ -163,6 +398,39 @@ VERIFIED_SCHOOLS = {
                 'tel': '04-2284-0206',
                 'email': 'oia@nchu.edu.tw',
                 'url': 'https://oia.nchu.edu.tw/',
+            },
+            {
+                'name': '校長室',
+                'url': 'https://www.nchu.edu.tw/administrative/mid/982',
+                # 官網未列具體大樓，僅有分機數字，不確定是否等同房號，不採信
+            },
+            {
+                'name': '教務處',
+                'location': '行政大樓 3 樓',
+                'url': 'https://oaa.nchu.edu.tw/',
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處',
+                'location': '行政大樓 3 樓（主要業務單位；部分組別另設於惠蓀堂、雲平樓、興大二村南棟）',
+                'url': 'https://www.nchu.edu.tw/administrative/mid/278',
+            },
+            {
+                'name': '總務處',
+                'aliases': '事務組,採購組,出納組,營繕組',
+                'location': '行政大樓 3 樓（總務長室主要業務單位；事務組、採購組 1 樓；出納組、營繕組 2 樓）',
+                'url': 'https://oga.nchu.edu.tw/',
+            },
+            {
+                'name': '健康及諮商中心',
+                'aliases': '保健中心,諮商中心',
+                'location': '惠蓀堂 1 樓、4 樓',
+                'url': 'https://www.osa.nchu.edu.tw/osa/hac/',
+            },
+            {
+                'name': '圖書館',
+                'url': 'https://www.lib.nchu.edu.tw/',
+                # 官網未列具體大樓（圖書館本身即為獨立館舍，但未查到明確描述）
             },
         ],
     },
@@ -186,6 +454,39 @@ VERIFIED_SCHOOLS = {
                 'ext': '2244',
                 'url': 'https://oia.nsysu.edu.tw/',
             },
+            {
+                'name': '校長室',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '教務處',
+                'url': 'https://oaa.nsysu.edu.tw/',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處',
+                'tel': '07-5252000',
+                'ext': '2201',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '總務處',
+                'aliases': '文書組,事務組,出納組,保管組,營繕組,駐警隊',
+                'location': '行政大樓（總務處主要業務單位 4 樓；出納組、行政支援 3 樓；駐警隊、值班室 1 樓）',
+                'url': 'https://rpa48.nsysu.edu.tw/',
+            },
+            {
+                'name': '保健中心',
+                'aliases': '諮商中心',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '圖書館',
+                'aliases': '圖書與資訊處',
+                'url': 'https://lis.nsysu.edu.tw/',
+                # 官網未列具體大樓
+            },
         ],
     },
 
@@ -205,6 +506,40 @@ VERIFIED_SCHOOLS = {
                 'tel': '02-7749-1272',
                 'url': 'https://oia.ntnu.edu.tw/',
             },
+            {
+                'name': '校長室',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '教務處',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '總務處',
+                'url': 'https://www.ga.ntnu.edu.tw/',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '健康中心',
+                'aliases': '保健中心',
+                # 官網未列具體大樓
+            },
+            {
+                'name': '圖書館',
+                'aliases': '圖書館校區',
+                'location': '和平校區Ⅱ（圖書館校區），臺北市大安區和平東路一段129號',
+                'url': 'https://www.lib.ntnu.edu.tw/',
+            },
+            {
+                'name': '學生輔導中心',
+                'aliases': '諮商中心',
+                # 官網未列具體大樓
+            },
         ],
     },
 
@@ -217,6 +552,15 @@ VERIFIED_SCHOOLS = {
         'source': 'http://oia.ntpu.edu.tw/',
         'verified': _V,
         # 國際處分機未查到，留空
+        'units': [
+            {'name': '國際事務處', 'aliases': '國際處,OIA', 'url': 'http://oia.ntpu.edu.tw/'},
+            {'name': '校長室'},
+            {'name': '教務處'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     'NDHU': {
@@ -235,6 +579,12 @@ VERIFIED_SCHOOLS = {
                 'tel': '03-8905107',
                 'url': 'https://oia.ndhu.edu.tw/',
             },
+            {'name': '校長室'},
+            {'name': '教務處', 'url': 'https://aa.ndhu.edu.tw/'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處', 'url': 'https://ga.ndhu.edu.tw/'},
+            {'name': '圖書資訊處', 'aliases': '圖書館'},
+            {'name': '心理諮商輔導中心', 'aliases': '諮商中心,保健中心'},
         ],
     },
 
@@ -245,6 +595,14 @@ VERIFIED_SCHOOLS = {
         'source': 'https://www.doc.ncnu.edu.tw/ncnu/index.php/',
         'verified': _V,
         # 校內分機查詢系統：https://ccweb.ncnu.edu.tw/telquery/
+        'units': [
+            {'name': '校長室'},
+            {'name': '教務處', 'url': 'https://aca.ncnu.edu.tw/'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處', 'url': 'https://general.ncnu.edu.tw/'},
+            {'name': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     'NIU': {
@@ -253,6 +611,19 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.niu.edu.tw/',
         'source': 'https://www.niu.edu.tw/p/412-1000-1052.php',
         'verified': _V,
+        'units': [
+            {'name': '校長室'},
+            {'name': '教務處', 'url': 'https://academic.niu.edu.tw/'},
+            {
+                'name': '學務處',
+                'aliases': '學生事務處',
+                'location': '體育館 2、3 樓',
+                'url': 'https://niuosa.niu.edu.tw/',
+            },
+            {'name': '總務處'},
+            {'name': '圖書資訊館', 'aliases': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     'NUU': {
@@ -272,6 +643,17 @@ VERIFIED_SCHOOLS = {
                 'url': 'https://oia.nuu.edu.tw/',
                 'office_hours': '另有 037-381407、037-381408 兩線',
             },
+            {'name': '校長室'},
+            {
+                'name': '教務處',
+                'aliases': '課務組,註冊組,綜合業務組,教學發展中心',
+                'location': '八甲校區 通識教育中心大樓後棟 2 樓',
+                'url': 'https://aca.nuu.edu.tw/',
+            },
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
         ],
     },
 
@@ -279,9 +661,42 @@ VERIFIED_SCHOOLS = {
         'address': '600355 嘉義市東區學府路300號（蘭潭校區，校本部）',
         'main_tel': '05-2717000',
         'website': 'https://www.ncyu.edu.tw/',
-        'source': 'https://www.ncyu.edu.tw/',
+        'source': 'https://www.ncyu.edu.tw/affair/ServerFile/Get/cba1d4d6-6943-4fb0-9615-aa6afd1e6bb1?nodeId=39496&sId=128494',
         'verified': _V,
         # 蘭潭、民雄、林森、新民四校區，地址以校本部蘭潭校區為準
+        'units': [
+            {
+                'name': '校長室',
+                'tel': '05-2717100',
+                'location': '蘭潭校區 中正樓行政中心',
+            },
+            {
+                'name': '教務處',
+                'tel': '05-2717020',
+                'location': '蘭潭校區 中正樓行政中心',
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處',
+                'tel': '05-2717054',
+                'location': '蘭潭校區 中正樓行政中心',
+            },
+            {
+                'name': '總務處',
+                'tel': '05-2717177',
+                'location': '蘭潭校區 中正樓行政中心',
+            },
+            {
+                'name': '圖書資訊館',
+                'aliases': '圖書館',
+                'location': '蘭潭校區 圖書資訊館',
+            },
+            {
+                'name': '保健中心',
+                'aliases': '諮商中心',
+                # 官網未列具體大樓
+            },
+        ],
     },
 
     'NQU': {
@@ -290,6 +705,14 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nqu.edu.tw/',
         'source': 'https://www.nqu.edu.tw/',
         'verified': _V,
+        'units': [
+            {'name': '副校長室'},
+            {'name': '教務處', 'url': 'https://teach.nqu.edu.tw/'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     # 以下學校已確認地址，但總機號碼只在「帶著猜測號碼去搜尋」時被回音確認，
@@ -297,8 +720,21 @@ VERIFIED_SCHOOLS = {
     'NUTN': {
         'address': '700301 臺南市中西區樹林街二段33號（府城校區）',
         'website': 'https://www.nutn.edu.tw/',
-        'source': 'https://www.nutn.edu.tw/about.html',
+        'source': 'https://academic.nutn.edu.tw/',
         'verified': _V,
+        'units': [
+            {
+                'name': '教務處',
+                'aliases': '教學組,學籍組,規劃組,推廣組,數位學習中心,教學發展中心',
+                'url': 'https://academic.nutn.edu.tw/',
+                # 官網列出各組分機號碼，但未標明具體樓層，不確定格式是否等同對外可撥分機，不採信
+            },
+            {'name': '校長室'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館', 'aliases': '圖書館與資訊服務組'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     'NTTU': {
@@ -306,6 +742,14 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nttu.edu.tw/',
         'source': 'https://www.nttu.edu.tw/',
         'verified': _V,
+        'units': [
+            {'name': '校長室'},
+            {'name': '教務處'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書資訊館', 'aliases': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     'NTUT': {
@@ -329,6 +773,13 @@ VERIFIED_SCHOOLS = {
                 'email': 'intstudy@ntut.edu.tw',
                 'url': 'https://oia.ntut.edu.tw/',
             },
+            {'name': '校長室'},
+            {'name': '教務處', 'url': 'https://aa.ntut.edu.tw/'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館'},
+            # 官網校園地圖僅描述「校園左側區塊，鄰近行政大樓」，不夠精確到可定位，不採信
+            {'name': '保健中心', 'aliases': '諮商中心'},
         ],
     },
 
@@ -337,17 +788,45 @@ VERIFIED_SCHOOLS = {
         'intl_office_name': '國際事務處',
         'intl_office_url': 'https://www.oia.ntust.edu.tw/',
         'website': 'https://www.ntust.edu.tw/',
-        'source': 'https://www.oia.ntust.edu.tw/p/404-1060-60572.php?Lang=zh-tw',
+        'source': 'https://www.ntust.edu.tw/p/404-1000-88778.php?Lang=zh-tw',
         'verified': _V,
         # 官網列出的是各承辦人的直撥號碼，無法判斷哪一支是對外總線，故不填電話
         'units': [
             {
                 'name': '國際事務處',
                 'aliases': '國際處,OIA',
-                'location': '國際大樓 4 樓 402 室',
+                'location': '第 4 棟 IB 國際大樓',
                 'email': 'oia@mail.ntust.edu.tw',
                 'url': 'https://www.oia.ntust.edu.tw/',
             },
+            {
+                'name': '校長室',
+                'aliases': '副校長室',
+                'location': '第 1 棟行政大樓',
+                # 校內配置圖僅列「副校長室」，校長室本身樓層未單獨標示
+            },
+            {
+                'name': '教務處',
+                'location': '第 1 棟行政大樓（教務處綜合業務組另設於第 4 棟 IB 國際大樓）',
+                'url': 'https://www.ntust.edu.tw/p/412-1000-106.php?Lang=zh-tw',
+            },
+            {
+                'name': '學務處',
+                'aliases': '學生事務處',
+                'location': '第 2 棟學生活動中心',
+            },
+            {
+                'name': '總務處',
+                'aliases': '保管組,檔案室',
+                'location': '第 1 棟行政大樓（保管組、檔案室另設於第 5 棟 T3 第三教學大樓）',
+            },
+            {
+                'name': '衛生保健組',
+                'aliases': '健康中心,保健中心',
+                'location': '第 3 棟體育館',
+            },
+            {'name': '圖書館'},
+            {'name': '諮商中心', 'aliases': '學生輔導中心'},
         ],
     },
 
@@ -388,6 +867,17 @@ VERIFIED_SCHOOLS = {
                 'tel': '04-2219-5764',
                 'url': 'https://oia.nutc.edu.tw/',
             },
+            {'name': '校長室', 'url': 'https://www.nutc.edu.tw/p/412-1000-99.php'},
+            {'name': '教務處', 'url': 'https://academic.nutc.edu.tw/'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {
+                'name': '圖書館',
+                'aliases': '三民總館,民生分館',
+                'location': '三民校區 中商大樓 1 樓（另有民生校區 綜合大樓 3 樓 民生分館）',
+                'url': 'https://elib.nutc.edu.tw/',
+            },
+            {'name': '職涯及諮商輔導中心', 'aliases': '保健中心,諮商中心'},
         ],
     },
 
@@ -406,6 +896,13 @@ VERIFIED_SCHOOLS = {
                 'email': 'nkustoia@nkust.edu.tw',
                 'url': 'https://oia.nkust.edu.tw/',
             },
+            {'name': '校長室'},
+            {'name': '教務處', 'url': 'https://acad.nkust.edu.tw/'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+            # 多校區，分機第一碼代表校區（1＝建工/燕巢），詳細位置請洽總機轉接
         ],
     },
 
@@ -415,6 +912,18 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.yuntech.edu.tw/',
         'source': 'https://www.yuntech.edu.tw/',
         'verified': _V,
+        'units': [
+            {'name': '校長室'},
+            {'name': '教務處', 'url': 'https://aax.yuntech.edu.tw/'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {
+                'name': '總務處',
+                'location': '圖書館 1-2 樓（部分業務）、圖書館 4 樓（部分業務）',
+                'url': 'https://ags.yuntech.edu.tw/',
+            },
+            {'name': '圖書資訊處', 'aliases': '圖書館', 'url': 'https://www.yuntech.edu.tw/index.php/2019-07-25-11-32-12/2019-04-10-08-05-51/2019-04-23-06-06-12'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     'NPUST': {
@@ -436,6 +945,12 @@ VERIFIED_SCHOOLS = {
                 'office_hours': '08:30-12:30、13:30-17:30',
                 'url': 'https://oia2.npust.edu.tw/',
             },
+            {'name': '校長室'},
+            {'name': '教務處', 'url': 'https://aa.npust.edu.tw/'},
+            {'name': '學生事務處', 'aliases': '學務處,學生諮商中心,諮商中心'},
+            {'name': '總務處'},
+            {'name': '圖書與會展館', 'aliases': '圖書館'},
+            {'name': '保健中心'},
         ],
     },
 
@@ -445,14 +960,33 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nkuht.edu.tw/',
         'source': 'https://www.nkuht.edu.tw/',
         'verified': _V,
+        'units': [
+            {'name': '校長室'},
+            {'name': '教務處'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書資訊大樓', 'aliases': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     'NFU': {
         'address': '632301 雲林縣虎尾鎮文化路64號',
         'main_tel': '05-631-5000',
         'website': 'https://www.nfu.edu.tw/',
-        'source': 'https://www.nfu.edu.tw/',
+        'source': 'https://www.nfu.edu.tw/zh/administration',
         'verified': _V,
+        'units': [
+            {'name': '校長室', 'tel': '05-631-5011'},
+            {'name': '教務處', 'tel': '05-631-5101'},
+            {
+                'name': '學生事務處',
+                'aliases': '學務處,衛生保健,諮商輔導,軍訓室,課外活動,生活輔導',
+                'tel': '05-631-5137',
+            },
+            {'name': '總務處', 'tel': '05-631-5202'},
+            {'name': '圖書館'},
+        ],
     },
 
     'NPU': {
@@ -461,19 +995,47 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.npu.edu.tw/',
         'source': 'https://www.npu.edu.tw/',
         'verified': _V,
+        'units': [
+            {'name': '校長室'},
+            {'name': '教務處'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     'NKNU': {
         'address': '802561 高雄市苓雅區和平一路116號（和平校區）',
         'main_tel': '07-717-2930',
         'website': 'https://w3.nknu.edu.tw/',
-        'source': 'https://w3.nknu.edu.tw/zh/',
+        'source': 'https://w3.nknu.edu.tw/zh/contact',
         'verified': _V,
         'units': [
             {
                 'name': '燕巢校區',
                 'aliases': '燕巢,第二校區',
                 'location': '824004 高雄市燕巢區深中路62號',
+            },
+            {'name': '教務長室', 'tel': '07-717-2930', 'ext': '1101'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {
+                'name': '總務處',
+                'aliases': '文書組,事務組,保管組,出納組,營繕組',
+                'tel': '07-717-2930',
+                'ext': '1311',
+            },
+            {
+                'name': '衛生保健組',
+                'aliases': '保健中心,諮商中心',
+                'tel': '07-717-2930',
+                'ext': '1291',
+            },
+            {
+                'name': '和平圖書館',
+                'aliases': '愛閱館,圖書館',
+                'tel': '07-717-2930',
+                'ext': '1414',
             },
         ],
     },
@@ -490,6 +1052,12 @@ VERIFIED_SCHOOLS = {
                 'aliases': '寶山校區,第二校區',
                 'location': '500208 彰化市師大路2號',
             },
+            {'name': '校長室', 'tel': '04-723-2105', 'ext': '1040'},
+            {'name': '教務處', 'tel': '04-723-2105', 'ext': '5603'},
+            {'name': '學生事務處', 'aliases': '學務處', 'tel': '04-723-2105', 'ext': '5703'},
+            {'name': '總務處', 'tel': '04-723-2105', 'ext': '5803'},
+            {'name': '圖書館', 'aliases': '圖書館電算中心'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
         ],
     },
 
@@ -497,8 +1065,25 @@ VERIFIED_SCHOOLS = {
         'address': '10671 臺北市大安區和平東路二段134號',
         'main_tel': '02-2732-1104',
         'website': 'https://www.ntue.edu.tw/',
-        'source': 'https://www.ntue.edu.tw/p/412-1000-85.php?Lang=zh-tw',
+        'source': 'https://www.ntue.edu.tw/p/404-1000-12835.php?Lang=zh-tw',
         'verified': _V,
+        'units': [
+            {
+                'name': '校長室',
+                'aliases': '副校長室,秘書室,人事室,主計室,研發處',
+                'location': '行政大樓（代號 A）',
+            },
+            {'name': '教務處', 'location': '行政大樓（代號 A）'},
+            {'name': '學務處', 'aliases': '學生事務處', 'location': '行政大樓（代號 A）'},
+            {'name': '總務處', 'location': '行政大樓（代號 A）'},
+            {'name': '圖書館', 'location': '與行政大樓（代號 A）相連'},
+            {
+                'name': '諮商組',
+                'aliases': '諮商中心,學生輔導中心',
+                'location': '至善樓（代號 G）',
+            },
+            {'name': '保健中心'},
+        ],
     },
 
     'NTCU': {
@@ -514,6 +1099,12 @@ VERIFIED_SCHOOLS = {
                 'location': '403012 臺中市西區民生路227號',
                 'tel': '04-2218-8050',
             },
+            {'name': '校長室'},
+            {'name': '教務處'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處', 'url': 'https://oga.ntcu.edu.tw/'},
+            {'name': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
         ],
     },
 
@@ -523,6 +1114,14 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ntus.edu.tw/',
         'source': 'https://www.ntus.edu.tw/',
         'verified': _V,
+        'units': [
+            {'name': '校長室'},
+            {'name': '教務處'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
+        ],
     },
 
     'NTUB': {
@@ -538,6 +1137,12 @@ VERIFIED_SCHOOLS = {
                 'location': '324022 桃園市平鎮區福龍路一段100號',
                 'tel': '03-4506333',
             },
+            {'name': '校長室'},
+            {'name': '教務處'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館'},
+            {'name': '保健中心', 'aliases': '諮商中心'},
         ],
     },
 
@@ -548,5 +1153,12 @@ VERIFIED_SCHOOLS = {
         'source': 'https://www.nou.edu.tw/',
         'verified': _V,
         # 空中大學為遠距教學，另有各地學習指導中心
+        'units': [
+            {'name': '校長室'},
+            {'name': '教務處'},
+            {'name': '學務處', 'aliases': '學生事務處'},
+            {'name': '總務處'},
+            {'name': '圖書館'},
+        ],
     },
 }

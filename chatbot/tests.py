@@ -448,6 +448,19 @@ class SchoolContextTest(TestCase):
         School.objects.all().delete()
         self.assertEqual(build_school_context(self.user, 'zh-hant'), '')
 
+    def test_unit_without_location_states_it_explicitly(self):
+        """
+        大量查詢處室位置時，很多處室官網只有電話沒有大樓名稱。
+        欄位空白時必須明確告知「查無具體位置」，不能因為省略位置行
+        而讓 AI／學生誤以為系統忘記收錄這個單位。
+        """
+        school = School.objects.get(code='NCU')
+        SchoolUnit.objects.create(school=school, name='教務處', tel='03-4227151')
+
+        context = build_school_context(self.user, 'zh-hant')
+        self.assertIn('教務處', context)
+        self.assertIn('目前查無具體大樓位置', context)
+
 
 class SeedKnowledgeCommandTest(TestCase):
     """seed_knowledge：從 knowledge_data 載入知識庫，且可重複執行"""

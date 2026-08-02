@@ -183,15 +183,15 @@ SOURCE_LABELS = {
 # 地點卡片（Google Places / 校內單位）用的欄位標籤，需支援全部 9 種語言，
 # 避免非中文介面下混入「地址：」「評分：」這種寫死的中文字
 PLACE_LABELS = {
-    'zh-hant': {'address': '地址', 'rating': '評分', 'location': '位置', 'phone': '電話', 'ext': '轉', 'hours': '服務時間', 'sep': '，', 'colon': '：'},
-    'en': {'address': 'Address', 'rating': 'Rating', 'location': 'Location', 'phone': 'Phone', 'ext': 'ext.', 'hours': 'Hours', 'sep': ', ', 'colon': ': '},
-    'vi': {'address': 'Địa chỉ', 'rating': 'Đánh giá', 'location': 'Vị trí', 'phone': 'Điện thoại', 'ext': 'số nội bộ', 'hours': 'Giờ phục vụ', 'sep': ', ', 'colon': ': '},
-    'ja': {'address': '住所', 'rating': '評価', 'location': '場所', 'phone': '電話', 'ext': '内線', 'hours': '対応時間', 'sep': '、', 'colon': '：'},
-    'my': {'address': 'လိပ်စာ', 'rating': 'အဆင့်သတ်မှတ်ချက်', 'location': 'တည်နေရာ', 'phone': 'ဖုန်း', 'ext': 'လိုင်းခွဲ', 'hours': 'ဝန်ဆောင်မှုအချိန်', 'sep': '、 ', 'colon': '：'},
-    'id': {'address': 'Alamat', 'rating': 'Penilaian', 'location': 'Lokasi', 'phone': 'Telepon', 'ext': 'ekst.', 'hours': 'Jam layanan', 'sep': ', ', 'colon': ': '},
-    'th': {'address': 'ที่อยู่', 'rating': 'คะแนน', 'location': 'ที่ตั้ง', 'phone': 'โทรศัพท์', 'ext': 'ต่อ', 'hours': 'เวลาให้บริการ', 'sep': ', ', 'colon': ': '},
-    'ms': {'address': 'Alamat', 'rating': 'Penilaian', 'location': 'Lokasi', 'phone': 'Telefon', 'ext': 'samb.', 'hours': 'Waktu perkhidmatan', 'sep': ', ', 'colon': ': '},
-    'ko': {'address': '주소', 'rating': '평점', 'location': '위치', 'phone': '전화', 'ext': '내선', 'hours': '서비스 시간', 'sep': ', ', 'colon': ': '},
+    'zh-hant': {'address': '地址', 'rating': '評分', 'location': '位置', 'phone': '電話', 'ext': '轉', 'hours': '服務時間', 'sep': '，', 'colon': '：', 'location_unknown': '目前查無具體大樓位置，請洽總機或該處室分機確認'},
+    'en': {'address': 'Address', 'rating': 'Rating', 'location': 'Location', 'phone': 'Phone', 'ext': 'ext.', 'hours': 'Hours', 'sep': ', ', 'colon': ': ', 'location_unknown': 'Building not confirmed yet, please contact the switchboard or the office extension'},
+    'vi': {'address': 'Địa chỉ', 'rating': 'Đánh giá', 'location': 'Vị trí', 'phone': 'Điện thoại', 'ext': 'số nội bộ', 'hours': 'Giờ phục vụ', 'sep': ', ', 'colon': ': ', 'location_unknown': 'Chưa xác định được tòa nhà cụ thể, vui lòng liên hệ tổng đài hoặc số nội bộ của đơn vị'},
+    'ja': {'address': '住所', 'rating': '評価', 'location': '場所', 'phone': '電話', 'ext': '内線', 'hours': '対応時間', 'sep': '、', 'colon': '：', 'location_unknown': '現時点で建物の詳細は確認できていません。総機または内線にご確認ください'},
+    'my': {'address': 'လိပ်စာ', 'rating': 'အဆင့်သတ်မှတ်ချက်', 'location': 'တည်နေရာ', 'phone': 'ဖုန်း', 'ext': 'လိုင်းခွဲ', 'hours': 'ဝန်ဆောင်မှုအချိန်', 'sep': '、 ', 'colon': '：', 'location_unknown': 'အဆောက်အဦတည်နေရာ အတည်ပြုရရှိခြင်း မရှိသေးပါ၊ ဖုန်းစင်တာ သို့မဟုတ် ဌာနလိုင်းခွဲသို့ ဆက်သွယ်ပါ'},
+    'id': {'address': 'Alamat', 'rating': 'Penilaian', 'location': 'Lokasi', 'phone': 'Telepon', 'ext': 'ekst.', 'hours': 'Jam layanan', 'sep': ', ', 'colon': ': ', 'location_unknown': 'Gedung belum dikonfirmasi, silakan hubungi operator atau ekstensi unit terkait'},
+    'th': {'address': 'ที่อยู่', 'rating': 'คะแนน', 'location': 'ที่ตั้ง', 'phone': 'โทรศัพท์', 'ext': 'ต่อ', 'hours': 'เวลาให้บริการ', 'sep': ', ', 'colon': ': ', 'location_unknown': 'ยังไม่ทราบอาคารที่แน่ชัด กรุณาติดต่อสลับสายหรือเบอร์ต่อของหน่วยงาน'},
+    'ms': {'address': 'Alamat', 'rating': 'Penilaian', 'location': 'Lokasi', 'phone': 'Telefon', 'ext': 'samb.', 'hours': 'Waktu perkhidmatan', 'sep': ', ', 'colon': ': ', 'location_unknown': 'Bangunan belum disahkan, sila hubungi operator atau sambungan unit berkenaan'},
+    'ko': {'address': '주소', 'rating': '평점', 'location': '위치', 'phone': '전화', 'ext': '내선', 'hours': '서비스 시간', 'sep': ', ', 'colon': ': ', 'location_unknown': '아직 건물 위치가 확인되지 않았습니다. 총 교환대 또는 부서 내선으로 문의해 주세요'},
 }
 
 
@@ -985,6 +985,9 @@ def _format_school_unit(unit, school, language_code='zh-hant'):
     line = f'- {unit.name}'
     if unit.location:
         line += f'{sep}{labels["location"]}{colon}{unit.location}'
+    else:
+        # 明確說「查無具體位置」，不要因為欄位空白就讓學生以為系統沒收錄這個單位
+        line += f'{sep}{labels["location"]}{colon}{labels["location_unknown"]}'
     phone = unit.tel or (school.main_tel if school else '')
     if phone:
         line += f'{sep}{labels["phone"]}{colon}{phone}' + (f' {labels["ext"]} {unit.ext}' if unit.ext else '')
@@ -1039,6 +1042,8 @@ def build_school_context(user, language_code='zh-hant'):
                 parts.append(f'（別名：{unit.aliases}）')
             if unit.location:
                 parts.append(f'位置：{unit.location}')
+            else:
+                parts.append('位置：目前查無具體大樓位置，請洽總機或該處室分機確認')
             if unit.tel or unit.ext:
                 phone = unit.tel or school.main_tel or ''
                 parts.append(f'電話：{phone}' + (f' 轉 {unit.ext}' if unit.ext else ''))
