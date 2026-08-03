@@ -4,10 +4,11 @@ users/urls.py
 掛載於 readyto/urls.py → path('', include('users.urls'))
 """
 
-from django.urls import path
+from django.urls import path, reverse
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout as auth_logout
 from django.conf import settings
+from django.utils.translation import gettext as _
 
 
 def _login_context(extra=None):
@@ -110,7 +111,38 @@ def dashboard_page(request):
         return redirect('login_page')
     if not hasattr(request.user, 'student_profile') or request.user.student_profile is None:
         return redirect('profile_setup')
-    context = {'user': request.user, 'profile': request.user.student_profile}
+    profile = request.user.student_profile
+
+    # 首次導覽（Dashboard Product Tour）設定：在後端組好 dict，
+    # 前端透過 json_script 讀取，避免把未加引號的 Django 變數直接塞進 <script> 裡的 JS
+    tour_config = {
+        'hasSeenTour': profile.has_seen_dashboard_tour,
+        'markSeenUrl': reverse('api_dashboard_tour_seen'),
+        'nextText': _('下一個'),
+        'skipText': _('跳過'),
+        'finishText': _('開始使用'),
+        'steps': [
+            {'targets': ['tourNavHome', 'tourNavTasks', 'tourNavGuide', 'tourNavAlumni', 'tourNavFaq'],
+             'title': _('導覽列'),
+             'desc': _('首頁、任務清單、資訊中心、學長姐分享、常見問題，都可以從這裡快速前往。')},
+            {'targets': ['searchWrap', 'langWrap', 'tourNavReminder', 'tourNavUser'], 'title': _('語言與帳號'),
+             'desc': _('這裡可以搜索内容、切換網站語言、查看通知，或前往編輯個人資料。')},
+            {'targets': ['dashCardCompletion'], 'title': _('任務完成率'),
+             'desc': _('這裡顯示你目前完成了多少準備事項，隨時回來查看整體進度。')},
+            {'targets': ['dashCardReminder'], 'title': _('即將到期 / 提醒'),
+             'desc': _('重要期限與通知都會顯示在這裡，別錯過任何截止日。')},
+            {'targets': ['dashCardAdmission'], 'title': _('目前入學狀態'),
+             'desc': _('這裡顯示你目前的入學狀態與就讀學校。')},
+            {'targets': ['dashProfileCard'], 'title': _('個人資料卡'),
+             'desc': _('你的基本資料都在這裡，可以隨時點擊編輯。')},
+            {'targets': ['dashTasksPanel'], 'title': _('近期待辦任務'),
+             'desc': _('這裡列出你接下來需要完成的任務，點擊可以查看詳細內容。')},
+            {'targets': ['chatFab'], 'title': _('AI 小幫手'),
+             'desc': _('有任何問題都可以點這裡問 AI 小幫手，24 小時隨時待命。')},
+        ],
+    }
+
+    context = {'user': request.user, 'profile': profile, 'tour_config': tour_config}
     return render(request, 'users/dashboard.html', context)
 
 

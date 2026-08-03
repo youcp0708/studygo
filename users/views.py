@@ -272,6 +272,24 @@ def profile_update_view(request):
 
 
 # ══════════════════════════════════════════
+# 6b. 標記 Dashboard 首次導覽已完成
+# PATCH /api/users/profile/dashboard-tour-seen/
+# ══════════════════════════════════════════
+@api_view(['PATCH'])
+@permission_classes([IsAuthenticated])
+def dashboard_tour_seen_view(request):
+    if not hasattr(request.user, 'student_profile'):
+        return error_response('尚未建立學生資料', status_code=404)
+
+    profile = request.user.student_profile
+    if not profile.has_seen_dashboard_tour:
+        profile.has_seen_dashboard_tour = True
+        profile.save(update_fields=['has_seen_dashboard_tour'])
+
+    return success_response(message='已標記導覽完成')
+
+
+# ══════════════════════════════════════════
 # 7. 修改密碼
 # POST /api/users/change-password/
 # ══════════════════════════════════════════

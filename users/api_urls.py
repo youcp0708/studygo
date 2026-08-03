@@ -30,6 +30,10 @@ urlpatterns = [
     # PATCH /api/users/profile/update/     → 更新基本資料（編輯頁面用）
     path('users/profile/update/',    views.profile_update_view,     name='api_profile_update'),
 
+    # PATCH /api/users/profile/dashboard-tour-seen/  → 標記 Dashboard 首次導覽已完成
+    path('users/profile/dashboard-tour-seen/', views.dashboard_tour_seen_view,
+         name='api_dashboard_tour_seen'),
+
     # ── 密碼管理 ───────────────────────────────────────
     # POST  /api/users/change-password/    → 修改密碼（已登入）
     path('users/change-password/',   views.change_password_view,    name='api_change_password'),

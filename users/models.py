@@ -236,7 +236,8 @@ class StudentProfile(models.Model):
     is_deferred   = models.BooleanField(null=True, blank=True, verbose_name='是否延遲入學')
     # has_indo_prep = models.BooleanField(null=True, blank=True, verbose_name='是否上印輔班')
 
-    
+    # ── 首次導覽（Dashboard Product Tour）──
+    has_seen_dashboard_tour = models.BooleanField(default=False, verbose_name='是否已看過 Dashboard 導覽')
 
     # ── 時間戳 ──
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')

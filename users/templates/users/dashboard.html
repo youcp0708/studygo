@@ -15,7 +15,7 @@
 
     {# 狀態摘要 #}
     <div class="dash-grid">
-      <div class="dash-info-card">
+      <div id="dashCardCompletion" class="dash-info-card">
         <div class="dic-icon dic-green">✅</div>
         <h4>{% trans "任務完成率" %}</h4>
         <div class="val" id="dashCompletionRate" data-completed-text="{% trans '已完成' %}"
@@ -23,7 +23,7 @@
         <div class="db-stat-bar" style="margin-top:8px;"><div class="db-stat-bar-fill" id="dashCompletionBar" style="width:0%"></div></div>
         <div class="sub">{% trans "目前完成進度" %}</div>
       </div>
-      <div class="dash-info-card">
+      <div id="dashCardReminder" class="dash-info-card">
         <div class="dic-icon dic-yellow">⏰</div>
         <h4>{% trans "即將到期 / 提醒" %}</h4>
         <div style="display:flex; gap:16px; align-items:center; margin: 6px 0;">
@@ -38,7 +38,7 @@
           </div>
         </div>
       </div>
-      <div class="dash-info-card">
+      <div id="dashCardAdmission" class="dash-info-card">
         <div class="dic-icon dic-blue">🪪</div>
         <h4>{% trans "目前入學狀態" %}</h4>
         <div class="val" style="font-size:20px;">
@@ -52,7 +52,7 @@
     <div class="profile-detail-shell">
 
       {# 左：個人卡片 #}
-      <div class="profile-card">
+      <div id="dashProfileCard" class="profile-card">
         <div class="profile-card-avatar">{{ user.name|first|upper }}</div>
         <h3>{{ user.name }}</h3>
         <div class="email">{{ user.email }}</div>
@@ -101,7 +101,7 @@
       </div>
 
       {# 右：待辦任務（由模塊二提供資料）#}
-      <div class="edit-panel">
+      <div id="dashTasksPanel" class="edit-panel">
         <h3>📌 {% trans "近期待辦任務" %}</h3>
 
         <div id="dashRecentTasks" data-no-tasks=" {% trans '太棒了！您目前沒有待辦任務。' %}"
@@ -149,6 +149,12 @@
 {% endblock %}
 
 {% block extra_js %}
+<script src="{% static 'users/js/dashboard_tour.js' %}?v=2"></script>
+{{ tour_config|json_script:"dashboardTourConfig" }}
+<script>
+  window.initDashboardTour(JSON.parse(document.getElementById('dashboardTourConfig').textContent));
+</script>
+
 <script>
   window.UI_STRINGS = window.UI_STRINGS || {};
   window.UI_STRINGS.unnamedTask = '{% trans "未命名任務" %}';

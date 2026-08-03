@@ -4140,3 +4140,92 @@
     border: 2px solid transparent;
     background-clip: content-box;
   }
+
+  /* ════════════════════════════════════════
+     Dashboard 首次導覽（Spotlight Product Tour）
+  ════════════════════════════════════════ */
+  .tour-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: transparent; /* 暗化效果完全靠 .tour-spotlight 的 box-shadow，這層只負責擋點擊 */
+    cursor: default;
+  }
+
+  .tour-spotlight {
+    position: fixed;
+    z-index: 9001;
+    border-radius: 14px;
+    box-shadow: 0 0 0 9999px rgba(17, 24, 22, .68);
+    pointer-events: none;
+    transition: left .25s ease, top .25s ease, width .25s ease, height .25s ease;
+  }
+
+  .tour-popover {
+    position: fixed;
+    z-index: 9002;
+    width: min(320px, calc(100vw - 32px));
+    background: #fff;
+    border-radius: var(--radius, 16px);
+    /* 綠色外框加在說明話框上（不是被指示的區塊） */
+    box-shadow: var(--shadow, 0 14px 34px rgba(25, 83, 77, .12)), 0 0 0 2px var(--primary);
+    padding: 18px 20px;
+    pointer-events: auto;
+    transition: left .25s ease, top .25s ease;
+  }
+
+  .tour-popover-progress {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .tour-popover-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+  }
+
+  .tour-popover-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .tour-popover-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tour-btn-skip {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 4px;
+    cursor: pointer;
+  }
+
+  .tour-btn-next {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 18px;
+    border-radius: 99px;
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tour-spotlight,
+    .tour-popover {
+      transition: none;
+    }
+  }
