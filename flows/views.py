@@ -587,16 +587,24 @@ def get_reminders_view(request):
     # 即時掃描該學生的任務截止日，確保已過期/今天到期的提醒不需要等排程跑過才會出現
     sync_task_reminders(StudentTask.objects.filter(student=profile), send_email=False)
 
+    # 把尚未推播過的到期提醒包裝成主動 AI 訊息，存進學生的 helper 對話
+    from chatbot.services import create_proactive_chat_messages_for_student
+    proactive_session_id = create_proactive_chat_messages_for_student(profile)
+
     reminders = profile.reminders.all()
 
     # 可支援只抓未讀
     if request.query_params.get('unread_only') == 'true':
         reminders = reminders.filter(is_read=False)
-        
+
     serializer = ReminderSerializer(reminders, many=True)
     return success_response({
         'reminders': serializer.data,
-        'unread_count': profile.reminders.filter(is_read=False).count()
+        'unread_count': profile.reminders.filter(is_read=False).count(),
+        'proactive_chat': {
+            'has_new': bool(proactive_session_id),
+            'session_id': proactive_session_id,
+        },
     })
 
 # ══════════════════════════════════════════

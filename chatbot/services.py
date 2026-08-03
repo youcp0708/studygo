@@ -410,7 +410,7 @@ def choose_reply_language(question):
     return site_language_code, 'site_language'
 
 
-def build_system_instructions(language_code, language_source, ai_mode="helper", role="", personality="", direct_mode=False):
+def build_system_instructions(language_code, language_source, ai_mode="helper", role="", personality="", direct_mode=False, proactive_mode=False):
     personal_label, general_label = ANSWER_LABELS.get(language_code, ANSWER_LABELS['zh-hant'])
     language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
 
@@ -600,6 +600,19 @@ You MUST write your entire response in {language_en} only. No other language is 
 - 再給一點初步陪伴。
 """.strip()
         base_instructions = friend_base
+    elif ai_mode == "helper" and proactive_mode:
+        base_instructions = f"""
+你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生。這次是你「主動」傳訊息給學生，不是在回答他的提問。
+
+{language_rule}
+
+規則：
+1. 不要使用「{personal_label} / {general_label}」兩段格式，也不要輸出這兩個標題。
+2. 只能使用 prompt 提供的事實（任務名稱、截止日、相關資訊），不可以自行編造或補充日期、規定、文件細節。
+3. 語氣要溫暖、簡短，像貼心提醒學生一件事，不要寫成催繳公告或制式通知。
+4. 全部訊息控制在 2 到 3 句話以內。
+5. 結尾可以自然帶一句類似「有問題都可以直接在這裡問我」，銜接學生後續追問。
+""".strip()
     elif ai_mode == "helper" and (role or '').strip() == '小老師':
         base_instructions = f"""
 你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生，目前使用者選擇了「小老師」角色，專門提供課業與學習方面的協助。
@@ -3390,3 +3403,162 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
             'source': 'openai_error',
             'model': model,
         }
+
+
+# ══════════════════════════════════════════
+# 主動式引導訊息（helper 模式限定）
+# 把 flows.Reminder（到期/逾期）包裝成一則主動 AI 訊息，存成正常的 ChatMessage，
+# 讓學生打開聊天視窗時就能看到，後續追問時上下文也自然銜接。
+# ══════════════════════════════════════════
+
+# MVP 範圍：只做「事實已確定發生」的到期提醒，正當性最高，之後再視情況加入 due_soon / skipped
+PROACTIVE_DUE_KINDS = ('overdue', 'due_today')
+
+
+def build_proactive_fact_block(reminder, language_code):
+    """
+    把 Reminder（+ 對應 StudentTask）整理成給 AI 的『事實清單』。
+    AI 只能改寫語氣，不能新增或竄改日期、任務名稱等事實。
+
+    Reminder.get_message() 內部會自己呼叫 flows.reminder_messages.normalize_lang()，
+    對不支援的代碼一律回退中文，所以這裡可以直接把 chatbot 慣例的 language_code
+    （如 'zh-hant'）原樣傳進去，不需要另外轉換。
+    """
+    lines = [f'到期提醒內容：{reminder.get_message(language_code)}']
+
+    student_task = getattr(reminder, 'student_task', None)
+    task = getattr(student_task, 'task', None) if student_task else None
+
+    if task:
+        # Task.get_localized 的 suffix_map 同樣沒有 'zh-hant' 這個 key，
+        # 傳入時會自然回退中文，跟 get_message 是同一套慣例
+        localized = task.get_localized(language_code)
+        if localized.get('deadline_text'):
+            lines.append(f'辦理時程：{localized["deadline_text"]}')
+        if localized.get('required_documents'):
+            lines.append(f'需要的文件：{localized["required_documents"]}')
+        if localized.get('apply_location'):
+            lines.append(f'辦理地點：{localized["apply_location"]}')
+
+    return '\n'.join(lines)
+
+
+def generate_proactive_message(*, user, reminder):
+    """
+    產生一則主動 AI 訊息（helper 模式限定）。
+    回傳格式與 generate_ai_reply 一致：{'reply', 'source', 'model'}。
+    """
+    api_key = getattr(settings, 'OPENAI_API_KEY', '')
+    model = getattr(settings, 'OPENAI_MODEL', 'gpt-4o-mini')
+
+    profile = get_student_profile(user)
+    # 用學生自己設定的慣用語言（跟 Email 提醒同一套邏輯），而不是觸發當下的網站介面語言
+    language_code = normalize_language_code(getattr(profile, 'preferred_language', '') if profile else '')
+    language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
+
+    fallback_reply = reminder.get_message(language_code)
+
+    if not api_key:
+        return {'reply': fallback_reply, 'source': 'local_fallback', 'model': 'local-fallback'}
+
+    try:
+        from openai import OpenAI
+    except Exception:
+        return {'reply': fallback_reply, 'source': 'local_error', 'model': 'openai-sdk-missing'}
+
+    profile_context = build_user_profile_context(user)
+    fact_block = build_proactive_fact_block(reminder, language_code)
+
+    input_text = f"""
+[LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only.
+
+以下是學生基本資料，僅供你理解背景，不要生硬列出：
+{profile_context}
+
+以下是這次要主動提醒學生的事實，只能使用這些內容，不可以新增或竄改：
+{fact_block}
+
+請寫一則簡短、溫暖的主動提醒訊息給這位學生。
+""".strip()
+
+    try:
+        client = OpenAI(api_key=api_key)
+        response = client.responses.create(
+            model=model,
+            instructions=build_system_instructions(
+                language_code, 'student_preferred_language', ai_mode='helper', proactive_mode=True
+            ),
+            input=input_text,
+        )
+        reply = (response.output_text or '').strip()
+        reply = remove_trailing_language_name(reply)
+
+        if not reply:
+            reply = fallback_reply
+
+        return {'reply': reply, 'source': 'openai', 'model': model}
+    except Exception:
+        # OpenAI 呼叫失敗時一律退回規則產生的到期文字，確保主動訊息一定能送出
+        return {'reply': fallback_reply, 'source': 'openai_error', 'model': model}
+
+
+def get_or_create_helper_session(user):
+    """
+    取這位學生「最近一個」helper 模式 ChatSession（沿用 ChatSession.Meta.ordering，
+    跟 chatbot_page / delete_session_api 選 session 的既有邏輯一致）；沒有的話自動建立一個。
+    """
+    from .models import ChatSession
+
+    session = ChatSession.objects.filter(user=user, ai_mode='helper').first()
+    if session:
+        return session
+    return ChatSession.objects.create(user=user, title='新的聊天', ai_mode='helper')
+
+
+def create_proactive_chat_message(reminder):
+    """
+    把一則到期提醒包裝成 helper 模式主動 AI 訊息，存成 ChatMessage(role='assistant')。
+    冪等：reminder.proactive_notified_at 非空、或 kind 不在 PROACTIVE_DUE_KINDS 時直接跳過。
+    回傳新建立的 ChatMessage，略過時回傳 None。
+    """
+    from django.utils import timezone
+
+    from .models import ChatMessage
+
+    if reminder.proactive_notified_at or reminder.kind not in PROACTIVE_DUE_KINDS:
+        return None
+
+    user = reminder.student.user
+    ai_result = generate_proactive_message(user=user, reminder=reminder)
+
+    session = get_or_create_helper_session(user)
+    message = ChatMessage.objects.create(session=session, role='assistant', content=ai_result['reply'])
+    session.save(update_fields=['updated_at'])
+
+    reminder.proactive_notified_at = timezone.now()
+    reminder.save(update_fields=['proactive_notified_at'])
+    return message
+
+
+def create_proactive_chat_messages_for_student(profile):
+    """
+    給 flows.views.get_reminders_view 呼叫。
+    找出這位學生所有 kind 屬於 PROACTIVE_DUE_KINDS、且尚未轉成主動 AI 訊息的 Reminder
+    （不論是否已讀——已讀不代表已處理，仍然要推播），依到期日排序，全部處理。
+    回傳最後一則新建立訊息的 session_id（有新訊息時），否則回傳 None。
+    """
+    from flows.models import Reminder
+
+    pending = (
+        Reminder.objects
+        .filter(student=profile, kind__in=PROACTIVE_DUE_KINDS, proactive_notified_at__isnull=True)
+        .select_related('student_task__task', 'student__user')
+        .order_by('due_date')
+    )
+
+    session_id = None
+    for reminder in pending:
+        message = create_proactive_chat_message(reminder)
+        if message:
+            session_id = message.session_id
+    return session_id

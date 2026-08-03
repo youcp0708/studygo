@@ -187,8 +187,12 @@
   {% block chatbot_fab %}
   {% if user.is_authenticated and user.student_profile %}
   <div id="chatWidget" class="chat-widget" data-embed-url="{% url 'chatbot:page' %}">
+    <div id="chatFabBubble" class="chat-fab-bubble" hidden>{% trans "嗶嗶嗶，你有新消息！" %}</div>
     <button type="button" class="chatbot-fab" id="chatFab" aria-label="{% trans '詢問AI小幫手' %}">
-      <span class="chatbot-fab-icon">{% include "_bot_icon.html" %}</span>
+      <span class="chatbot-fab-icon">
+        {% include "_bot_icon.html" %}
+        <span id="chatFabDot" class="chat-fab-dot" hidden></span>
+      </span>
       <span class="chatbot-fab-label">{% trans "詢問AI小幫手" %}</span>
     </button>
     <div class="chat-widget-panel" id="chatWidgetPanel" hidden>
@@ -353,7 +357,22 @@
       var frame = document.getElementById('chatWidgetFrame');
       var embedUrl = widget.dataset.embedUrl || '/chatbot/';
       var SESSION_KEY = 'chatWidgetSession';   // 最後對話 id（保留對話用）
+      var PENDING_KEY = 'chatWidgetPendingSession';  // 有新的主動 AI 訊息時，flows.js 會寫入這裡
       var loaded = false;
+
+      // 開啟視窗前，如果有待顯示的主動 AI 訊息，就導到那個對話並清除紅點
+      function syncPendingSession() {
+        var pending = sessionStorage.getItem(PENDING_KEY);
+        if (pending) {
+          sessionStorage.setItem(SESSION_KEY, pending);
+          sessionStorage.removeItem(PENDING_KEY);
+          loaded = false;  // 強制依新 session 重新載入 iframe
+        }
+        var dot = document.getElementById('chatFabDot');
+        if (dot) dot.hidden = true;
+        var bubble = document.getElementById('chatFabBubble');
+        if (bubble) bubble.hidden = true;
+      }
 
       function buildSrc() {
         var sid = sessionStorage.getItem(SESSION_KEY);
@@ -402,9 +421,11 @@
         sessionStorage.removeItem(SESSION_KEY);
       }
 
-      // 點懸浮機器人：關閉中 → 預設開全螢幕；開啟中 → 最小化收合（保留對話）
+      // 點懸浮機器人：關閉中 → 預設開全螢幕（若有待顯示的主動訊息，順便導去該對話）；開啟中 → 最小化收合（保留對話）
       fab.addEventListener('click', function () {
-        go(sessionStorage.getItem(STATE_KEY) ? '' : 'full');
+        var opening = !sessionStorage.getItem(STATE_KEY);
+        if (opening) syncPendingSession();
+        go(opening ? 'full' : '');
       });
 
       // 接收 iframe（聊天頁 embed 模式）傳來的訊息
@@ -439,6 +460,14 @@
 
       // 跨頁保留：每次載入頁面時，還原上次的視窗狀態（緊湊 / 全螢幕）
       applyState(sessionStorage.getItem(STATE_KEY) || '');
+
+      // 跨頁保留：如果上一頁已經偵測到新的主動訊息但使用者還沒點開，紅點與對話框要繼續顯示
+      if (sessionStorage.getItem(PENDING_KEY)) {
+        var dot = document.getElementById('chatFabDot');
+        if (dot) dot.hidden = false;
+        var bubble = document.getElementById('chatFabBubble');
+        if (bubble) bubble.hidden = false;
+      }
     })();
   </script>
 

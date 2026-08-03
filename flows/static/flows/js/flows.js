@@ -425,6 +425,26 @@ async function renderMyTasks() {
       const loc = task.localized || task.task_detail || {};
       const deadlineInfo = task.deadline_info || {};
 
+      // ── 依截止日判斷卡片邊框顏色：已過期紅框，3 天內（含今天）到期橘框 ──
+      // 跟 renderDashboardProgress() 判斷「即將到期」用的邏輯與門檻（3 天）一致
+      let dueStatusClass = '';
+      if (!isDone && deadlineInfo.calculated_due_date) {
+        const due = new Date(deadlineInfo.calculated_due_date);
+        due.setHours(0, 0, 0, 0);
+        if (!isNaN(due)) {
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+          const threeDaysLater = new Date(today);
+          threeDaysLater.setDate(today.getDate() + 3);
+
+          if (due < today) {
+            dueStatusClass = 'overdue';
+          } else if (due <= threeDaysLater) {
+            dueStatusClass = 'due-soon';
+          }
+        }
+      }
+
       const reqDocs = loc.required_documents ? escapeFlowsHtml(loc.required_documents) : null;
       const applyLoc = loc.apply_location ? escapeFlowsHtml(loc.apply_location.trim()) : null;
       const applyAddr = loc.apply_address ? escapeFlowsHtml(loc.apply_address.trim()) : null;
@@ -499,7 +519,7 @@ async function renderMyTasks() {
       ].join('');
 
       contentHtml += `
-        <div id="task-${task.id}" class="task-item ${isDone ? 'completed' : ''}">
+        <div id="task-${task.id}" class="task-item ${isDone ? 'completed' : ''} ${dueStatusClass}">
           <div class="task-item-row" onclick="toggleTaskDetails(${task.id})">
             <input type="checkbox" id="chk-${task.id}" onclick="toggleTaskCompletion(${task.id}, event)" ${isDone ? 'checked' : ''}>
             <div class="task-content">
@@ -695,6 +715,18 @@ async function renderReminders() {
   const list = document.getElementById('reminderList');
   const dropdown = document.getElementById('reminderDropdown');
 
+  // 主動 AI 引導訊息：後端已包裝成一則 helper 對話裡的 assistant 訊息，
+  // 這裡只負責記住「哪個 session 有新訊息」並點亮 FAB 紅點，
+  // 實際訊息內容交給聊天小工具開啟時自己載入該 session 顯示。
+  const proactiveChat = data.data.proactive_chat;
+  const fabDot = document.getElementById('chatFabDot');
+  const fabBubble = document.getElementById('chatFabBubble');
+  if (proactiveChat && proactiveChat.has_new) {
+    sessionStorage.setItem('chatWidgetPendingSession', String(proactiveChat.session_id));
+    if (fabDot) fabDot.hidden = false;
+    if (fabBubble) fabBubble.hidden = false;
+  }
+
   const noRemindersText = dropdown ? dropdown.getAttribute('data-no-reminders') : '沒有未讀通知 🎉';
   const markReadText = dropdown ? dropdown.getAttribute('data-mark-read') : '標記為已讀';
 
@@ -781,5 +813,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   if (document.getElementById('reminderBtn') || hasDashboardWidgets) {
     await renderReminders();
+    // 輕量輪詢：讓學生開著頁面時，也能在一分鐘內看到新的到期提醒與主動 AI 訊息紅點。
+    // proactive_notified_at 是後端的冪等旗標，多個分頁同時輪詢也不會重複產生訊息。
+    setInterval(renderReminders, 60000);
   }
 });

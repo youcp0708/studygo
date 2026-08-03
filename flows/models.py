@@ -407,6 +407,11 @@ class Reminder(models.Model):
         help_text="kind 為 skipped 時使用"
     )
     is_read = models.BooleanField(default=False, verbose_name="是否已讀")
+    proactive_notified_at = models.DateTimeField(
+        null=True, blank=True,
+        verbose_name="主動 AI 訊息已發送時間",
+        help_text="非空代表這則提醒已經包裝成一則 helper 模式的主動 AI 訊息，避免重複生成"
+    )
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="建立時間")
 
     class Meta:
