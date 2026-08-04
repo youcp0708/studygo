@@ -4240,9 +4240,12 @@
     box-shadow: 0 0 0 3px rgba(59, 130, 246, .28) !important;
   }
 
+  /* z-index 需低於浮動聊天視窗（.chat-widget = 950）：
+     使用者開啟 AI 小幫手時，聊天視窗要蓋住手指與提示條，
+     否則手指會浮在聊天畫面上指著被遮住的任務卡片 */
   .guide-hand {
     position: fixed;
-    z-index: 8500;
+    z-index: 940;
     width: 56px;
     height: auto;
     pointer-events: none;
@@ -4260,7 +4263,7 @@
     left: 50%;
     bottom: 24px;
     transform: translateX(-50%);
-    z-index: 8500;
+    z-index: 940;
     display: flex;
     align-items: center;
     gap: 14px;
