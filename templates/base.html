@@ -11,7 +11,7 @@
   <title>{% block title %}ReadyTo Taiwan{% endblock %}</title>
   <link rel="icon" type="image/png" href="{% static '/image/image-removebg-preview.png' %}">
 
-  <link rel="stylesheet" href="{% static 'users/css/users.css' %}?v=30" />
+  <link rel="stylesheet" href="{% static 'users/css/users.css' %}?v=31" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   {% block extra_css %}{% endblock %}
 </head>
@@ -288,9 +288,15 @@
       googleFailed: "{{ t_google_failed|escapejs }}"
     };
   </script>
-  <script src="{% static 'users/js/users.js' %}?v=2"></script>
+  {# 「帶領」逐步引導功能：手指圖示與結束按鈕文字，供 users.js 的 pointGuideHand() 使用 #}
+  {% trans "結束帶領" as t_guide_end %}
+  <script>
+    window.GUIDE_HAND_ICON_URL = "{% static 'image/finger-removebg-preview.png' %}";
+    window.GUIDE_END_TEXT = "{{ t_guide_end|escapejs }}";
+  </script>
+  <script src="{% static 'users/js/users.js' %}?v=4"></script>
   {% if user.is_authenticated %}
-  <script src="{% static 'flows/js/flows.js' %}?v=1"></script>
+  <script src="{% static 'flows/js/flows.js' %}?v=3"></script>
   {% endif %}
 
   <script>
@@ -453,6 +459,19 @@
             go('');
             if (typeof data.url === 'string' && data.url) {
               window.location.href = data.url;
+            }
+            break;
+          case 'chat:start-guide':
+            // 「帶領」連結：收起聊天視窗，記住要引導的任務 id，
+            // 已經在 dashboard 就原地指「查看全部任務清單」，否則直接跳去任務清單頁
+            go('');
+            if (data.studentTaskId) {
+              sessionStorage.setItem('taskGuideTarget', String(data.studentTaskId));
+              if (window.location.pathname !== "{% url 'dashboard' %}") {
+                window.location.href = "{% url 'my_flows' %}";
+              } else if (typeof window.startDashboardGuideStep === 'function') {
+                window.startDashboardGuideStep();
+              }
             }
             break;
         }

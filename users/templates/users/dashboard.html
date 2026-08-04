@@ -113,7 +113,7 @@
           </div>
         </div>
 
-        <a href="{% url 'my_flows' %}" class="btn-outline-sm"
+        <a id="dashViewAllTasksLink" href="{% url 'my_flows' %}" class="btn-outline-sm"
           style="margin-top:16px;width:100%;padding:12px;text-align:center;display:block;text-decoration:none;">
           {% trans "查看全部任務清單" %} →
         </a>
@@ -153,6 +153,19 @@
 {{ tour_config|json_script:"dashboardTourConfig" }}
 <script>
   window.initDashboardTour(JSON.parse(document.getElementById('dashboardTourConfig').textContent));
+</script>
+
+{% trans "先點這裡，我們去完成這項任務吧！" as t_guide_dashboard_text %}
+<script>
+  window.startDashboardGuideStep = function () {
+    window.pointGuideHand('dashViewAllTasksLink', "{{ t_guide_dashboard_text|escapejs }}");
+    // 不用額外掛「點擊後怎樣」的邏輯——使用者點下去，<a> 本身就會正常導覽到任務清單頁，
+    // 帶著 sessionStorage 裡的 taskGuideTarget 接續下一步
+  };
+
+  if (sessionStorage.getItem('taskGuideTarget')) {
+    window.startDashboardGuideStep();
+  }
 </script>
 
 <script>

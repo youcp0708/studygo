@@ -1629,3 +1629,76 @@ function selectLang(code) {
   document.getElementById('langInput').value = code;
   document.getElementById('langForm').submit();
 }
+
+/* ════════════════════════════════════════
+   「帶領」逐步引導：手指指標 + 底部提示條
+   全站共用（dashboard 的「查看全部任務清單」步驟、
+   任務清單頁的具體任務步驟都呼叫這裡的 pointGuideHand/endGuideHand）
+════════════════════════════════════════ */
+var _guideReflowHandler = null;
+
+function _positionGuideHand(target) {
+  var hand = document.getElementById('guideHand');
+  if (!hand) return;
+  var rect = target.getBoundingClientRect();
+  // 放在被指區塊的右下角，稍微疊在角落上
+  hand.style.top = (rect.bottom - hand.offsetHeight * 0.35) + 'px';
+  hand.style.left = (rect.right - hand.offsetWidth * 0.35) + 'px';
+}
+
+window.pointGuideHand = function (targetId, text) {
+  removeGuideHandUi();
+
+  var target = document.getElementById(targetId);
+  if (!target) return false;
+
+  target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  target.classList.add('guide-target-active');
+
+  var hand = document.createElement('img');
+  hand.id = 'guideHand';
+  hand.className = 'guide-hand';
+  hand.src = window.GUIDE_HAND_ICON_URL || '';
+  hand.alt = '';
+  document.body.appendChild(hand);
+
+  var banner = document.createElement('div');
+  banner.id = 'guideBanner';
+  banner.className = 'guide-banner';
+  banner.innerHTML = '<span class="guide-banner-text"></span>' +
+    '<button type="button" class="guide-banner-end">' + (window.GUIDE_END_TEXT || 'End guide') + '</button>';
+  banner.querySelector('.guide-banner-text').textContent = text || '';
+  banner.querySelector('.guide-banner-end').addEventListener('click', endGuideHand);
+  document.body.appendChild(banner);
+
+  var reposition = function () { _positionGuideHand(target); };
+  // 捲動動畫尚未結束時量到的位置不準，延後一輪再定位一次
+  requestAnimationFrame(function () {
+    requestAnimationFrame(reposition);
+  });
+
+  _guideReflowHandler = reposition;
+  window.addEventListener('resize', _guideReflowHandler);
+  window.addEventListener('scroll', _guideReflowHandler, { passive: true });
+
+  return true;
+};
+
+window.endGuideHand = function () {
+  removeGuideHandUi();
+};
+
+function removeGuideHandUi() {
+  document.querySelectorAll('.guide-target-active').forEach(function (el) {
+    el.classList.remove('guide-target-active');
+  });
+  var hand = document.getElementById('guideHand');
+  if (hand) hand.remove();
+  var banner = document.getElementById('guideBanner');
+  if (banner) banner.remove();
+  if (_guideReflowHandler) {
+    window.removeEventListener('resize', _guideReflowHandler);
+    window.removeEventListener('scroll', _guideReflowHandler);
+    _guideReflowHandler = null;
+  }
+}

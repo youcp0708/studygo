@@ -190,6 +190,10 @@ async function renderDashboardProgress() {
    GET /api/flows/my-tasks/
 ════════════════════════════════════════ */
 let currentActiveTabIndex = 0;
+// 最近一次 renderMyTasks() 抓到的 stages 資料，供「帶領」逐步引導查詢任務歸屬與完成狀態，不用重打 API
+let lastStagesData = null;
+// 目前正在被「帶領」引導的 StudentTask id；null 代表沒有引導中
+let taskGuideId = null;
 
 window.switchFlowTab = function (activeIndex) {
   currentActiveTabIndex = activeIndex;
@@ -346,11 +350,56 @@ window.toggleTaskCompletion = async function (taskId, event) {
     renderMyTasks();
     renderDashboardProgress();
     renderReminders();
+
+    // 「帶領」逐步引導：剛好完成的是目前正在被引導的那個任務時，結束引導並附上相關指南連結
+    if (taskGuideId && taskId === taskGuideId && newStatus === 'completed') {
+      const finishedId = taskGuideId;
+      taskGuideId = null;
+      window.endGuideHand();
+      apiFetch(`/chatbot/api/task-guide/${finishedId}/`).then(({ ok: guideOk, data: guideData }) => {
+        const guide = guideOk && guideData.data;
+        const msg = guide
+          ? flowsT('guideDoneWithLink', '任務已完成！想更了解細節可以看看：')
+            + ` <a href="${guide.url}" target="_top">${guide.title}</a>`
+          : flowsT('guideDone', '任務已完成！');
+        showToast(msg, 'success', 8000);
+      });
+    }
   } else {
     showToast(flowsT('statusUpdateFailedToast', '狀態更新失敗'), 'error');
     checkbox.checked = !checkbox.checked; // revert
   }
 };
+
+/** 在 lastStagesData 裡找到指定 id 的任務與所屬 stage index，回傳 { task, stageIndex } 或 null */
+function findTaskAndStageIndex(taskId) {
+  if (!lastStagesData) return null;
+  for (let sIdx = 0; sIdx < lastStagesData.length; sIdx++) {
+    const task = (lastStagesData[sIdx].tasks || []).find(t => t.id === taskId);
+    if (task) return { task, stageIndex: sIdx };
+  }
+  return null;
+}
+
+/** 由 AI 主動訊息的「帶領」連結觸發：切到正確分頁、指向該任務卡片 */
+function startTaskGuideFor(taskId) {
+  const found = findTaskAndStageIndex(taskId);
+  if (!found || found.task.status === 'completed') {
+    if (found) showToast(flowsT('guideTaskDone', '這項任務已經完成囉！'), 'success');
+    return;
+  }
+
+  const sections = document.querySelectorAll('.stage-section:not(.skeleton)');
+  if (sections[found.stageIndex] && !sections[found.stageIndex].classList.contains('active')) {
+    switchFlowTab(found.stageIndex);
+  }
+
+  taskGuideId = taskId;
+  const loc = found.task.localized || found.task.task_detail || {};
+  const title = loc.title || '';
+  const text = flowsT('guideTaskText', '完成「{title}」吧！').replace('{title}', title);
+  window.pointGuideHand('task-' + taskId, text);
+}
 
 
 window.toggleTaskDetails = function (taskId) {
@@ -382,6 +431,7 @@ async function renderMyTasks() {
   }
 
   const stages = data.data.stages || [];
+  lastStagesData = stages;
   container.innerHTML = '';
 
   if (!stages || stages.length === 0) {
@@ -703,6 +753,18 @@ window.toggleReminderDropdown = function () {
   }
 };
 
+/**
+ * 顯示 FAB 紅點 + 「嗶嗶嗶，你有新消息！」話框，記住要開啟哪個聊天 session。
+ * 到期提醒、AI 首次歡迎訊息都共用這套通知機制（回應格式都是 { has_new, session_id }）。
+ */
+function showProactiveChatDot(sessionId) {
+  sessionStorage.setItem('chatWidgetPendingSession', String(sessionId));
+  const fabDot = document.getElementById('chatFabDot');
+  const fabBubble = document.getElementById('chatFabBubble');
+  if (fabDot) fabDot.hidden = false;
+  if (fabBubble) fabBubble.hidden = false;
+}
+
 async function renderReminders() {
   const { ok, data } = await apiFetch('/api/flows/reminders/?unread_only=true');
   if (!ok) return;
@@ -719,12 +781,8 @@ async function renderReminders() {
   // 這裡只負責記住「哪個 session 有新訊息」並點亮 FAB 紅點，
   // 實際訊息內容交給聊天小工具開啟時自己載入該 session 顯示。
   const proactiveChat = data.data.proactive_chat;
-  const fabDot = document.getElementById('chatFabDot');
-  const fabBubble = document.getElementById('chatFabBubble');
   if (proactiveChat && proactiveChat.has_new) {
-    sessionStorage.setItem('chatWidgetPendingSession', String(proactiveChat.session_id));
-    if (fabDot) fabDot.hidden = false;
-    if (fabBubble) fabBubble.hidden = false;
+    showProactiveChatDot(proactiveChat.session_id);
   }
 
   const noRemindersText = dropdown ? dropdown.getAttribute('data-no-reminders') : '沒有未讀通知 🎉';
@@ -804,11 +862,25 @@ document.addEventListener('DOMContentLoaded', async () => {
   // 只要頁面有完成率 / 提醒 / 近期待辦，就更新 Dashboard 資料
   if (hasDashboardWidgets) {
     await renderDashboardProgress();
+
+    // 首次進 dashboard：AI 主動打招呼 + 帶到第一個任務（後端用 has_received_welcome_chat 冪等保護，
+    // 每次進 dashboard 呼叫都安全，只有第一次會真的產生新訊息）
+    const { ok: welcomeOk, data: welcomeData } = await apiFetch('/chatbot/api/welcome-message/', 'POST');
+    if (welcomeOk && welcomeData.data && welcomeData.data.has_new) {
+      showProactiveChatDot(welcomeData.data.session_id);
+    }
   }
 
   if (hasFlowsPage) {
     await renderMyTasks();
     await renderTips();
+
+    // 由 AI 主動訊息的「帶領」連結接續：跨頁帶著要引導的任務 id 過來
+    const guideTaskId = sessionStorage.getItem('taskGuideTarget');
+    if (guideTaskId) {
+      sessionStorage.removeItem('taskGuideTarget');
+      startTaskGuideFor(Number(guideTaskId));
+    }
   }
 
   if (document.getElementById('reminderBtn') || hasDashboardWidgets) {

@@ -240,10 +240,13 @@
       .split('\n')
       .map((line) => {
         const safeLine = escapeHtml(line).replace(
-          /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)/g,
+          /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+|guide:start:\d+)\)/g,
           (_match, label, href) => {
             if (href.startsWith('tel:')) {
               return `<a href="${href}" class="chat-link chat-link--tel">📞 ${label}</a>`;
+            }
+            if (href.startsWith('guide:start:')) {
+              return `<a href="${href}" class="chat-link chat-link--guide">👉 ${label}</a>`;
             }
             return `<a href="${href}" class="chat-link" target="_top">${label}</a>`;
           }
@@ -265,7 +268,14 @@
       const link = event.target.closest('a.chat-link:not(.chat-link--tel)');
       if (!link || !isEmbed) return;
       event.preventDefault();
-      postToParent('chat:navigate', { url: link.getAttribute('href') });
+
+      const href = link.getAttribute('href') || '';
+      const guideMatch = href.match(/^guide:start:(\d+)$/);
+      if (guideMatch) {
+        postToParent('chat:start-guide', { studentTaskId: Number(guideMatch[1]) });
+        return;
+      }
+      postToParent('chat:navigate', { url: href });
     });
   }
 

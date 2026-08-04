@@ -210,6 +210,19 @@ TASK_LINK_LABELS = {
     'ko':      '관련 과제 보기: ',
 }
 
+# 主動 AI 訊息結尾的「帶領」連結文字（點擊後跨頁逐步引導完成該任務）
+GUIDE_LINK_LABELS = {
+    'zh-hant': '帶領',
+    'en':      'Guide me',
+    'vi':      'Hướng dẫn tôi',
+    'ja':      '案内して',
+    'my':      'လမ်းညွှန်ပါ',
+    'id':      'Pandu saya',
+    'th':      'นำทางฉัน',
+    'ms':      'Pandu saya',
+    'ko':      '안내해줘',
+}
+
 # 各校校安中心 / 諮商輔導中心電話
 # safety_tel / counseling_tel：去除分隔符的完整號碼（供 tel: 連結使用）
 # safety_ext / counseling_ext：分機號碼（選填）
@@ -1511,6 +1524,65 @@ INFO_PAGE_MAP = {
     },
 }
 
+# 任務關鍵字 → topic，用於「問題 → 相關任務」（find_relevant_student_task）
+# 與「任務 → 相關指南」（get_task_topic）雙向比對，兩邊共用同一份定義
+TOPIC_TASK_KEYWORDS = {
+    'arc':          ['arc', 'residence permit', '居留', '居留證'],
+    'nhi':          ['nhi', 'health insurance', '健保', '健康保險'],
+    'bank':         ['bank account', 'open bank', '銀行', '開戶'],
+    'sim':          ['sim card', 'phone number', '手機', '門號', '電話卡'],
+    'housing':      ['housing', 'dormitory', '住宿', '宿舍'],
+    'work_permit':  ['work permit', 'part-time', '工作許可', '打工', '兼職'],
+    'medical':      ['medical', 'hospital', 'doctor', '醫療', '看病', '就醫', '醫院'],
+    'course':       ['course', 'class', '課程', '選課', '修課'],
+    'graduation':   ['graduation', 'thesis', '畢業', '論文'],
+    'enrollment':   ['enrollment', 'registration', '報到', '入學報到', '新生報到'],
+    'scholarship':  ['scholarship', '獎學金', '助學金'],
+    'admin_docs':   ['certificate', 'transcript', '在學證明', '成績單', '行政文件'],
+    'mental_health':['counseling', 'mental health', '心理', '輔導', '諮商'],
+    'library':      ['library', '圖書館', '借書'],
+    'systems':      ['school system', 'student portal', '系統', '選課系統', '校務系統'],
+    'admissions':   ['admission', '入學申請', '招生', '海聯招'],
+    'bus':          ['shuttle bus', '公車', '巴士', '交通'],
+    'emergency':    ['emergency', '緊急', '急救', '119', '110'],
+}
+
+
+def keyword_matches(keyword, text):
+    """英文關鍵字用詞邊界比對，中文直接子字串比對。"""
+    k = keyword.lower()
+    if k.isascii():
+        return bool(re.search(r'\b' + re.escape(k) + r'\b', text))
+    return k in text
+
+
+def get_task_topic(task):
+    """依 task_code / 標題比對 TOPIC_TASK_KEYWORDS，找出這個任務屬於哪個 topic。"""
+    task_code = (task.task_code or '').lower()
+    task_text = f'{task_code} {(task.title or "").lower()} {(task.title_en or "").lower()}'
+    for topic, keywords in TOPIC_TASK_KEYWORDS.items():
+        if any(keyword_matches(k, task_text) for k in keywords):
+            return topic
+    return None
+
+
+def get_guide_page_for_task(task, user):
+    """
+    依任務對應的 topic + 學生身分別，找出對應的資訊中心頁面（複用 INFO_PAGE_MAP）。
+    回傳 {'title', 'url'} 或 None。
+    """
+    topic = get_task_topic(task)
+    if not topic:
+        return None
+    topic_pages = INFO_PAGE_MAP.get(topic)
+    if not topic_pages:
+        return None
+    identity_key = get_student_identity_key_from_profile(user)
+    if identity_key and identity_key in topic_pages:
+        return topic_pages[identity_key]
+    return topic_pages.get('all')
+
+
 def get_student_identity_key_from_profile(user):
     """
     根據學生個人資料判斷身份：
@@ -1743,35 +1815,8 @@ def find_relevant_student_task(user, question):
 
     question_combined = (question or '').lower()
 
-    TOPIC_TASK_KEYWORDS = {
-        'arc':          ['arc', 'residence permit', '居留', '居留證'],
-        'nhi':          ['nhi', 'health insurance', '健保', '健康保險'],
-        'bank':         ['bank account', 'open bank', '銀行', '開戶'],
-        'sim':          ['sim card', 'phone number', '手機', '門號', '電話卡'],
-        'housing':      ['housing', 'dormitory', '住宿', '宿舍'],
-        'work_permit':  ['work permit', 'part-time', '工作許可', '打工', '兼職'],
-        'medical':      ['medical', 'hospital', 'doctor', '醫療', '看病', '就醫', '醫院'],
-        'course':       ['course', 'class', '課程', '選課', '修課'],
-        'graduation':   ['graduation', 'thesis', '畢業', '論文'],
-        'enrollment':   ['enrollment', 'registration', '報到', '入學報到', '新生報到'],
-        'scholarship':  ['scholarship', '獎學金', '助學金'],
-        'admin_docs':   ['certificate', 'transcript', '在學證明', '成績單', '行政文件'],
-        'mental_health':['counseling', 'mental health', '心理', '輔導', '諮商'],
-        'library':      ['library', '圖書館', '借書'],
-        'systems':      ['school system', 'student portal', '系統', '選課系統', '校務系統'],
-        'admissions':   ['admission', '入學申請', '招生', '海聯招'],
-        'bus':          ['shuttle bus', '公車', '巴士', '交通'],
-        'emergency':    ['emergency', '緊急', '急救', '119', '110'],
-    }
-
-    def keyword_matches(keyword, text):
-        """英文關鍵字用詞邊界比對，中文直接子字串比對。"""
-        k = keyword.lower()
-        if k.isascii():
-            return bool(re.search(r'\b' + re.escape(k) + r'\b', text))
-        return k in text
-
     # 先確定問題屬於哪些主題，再去找符合這些主題的任務
+    # （TOPIC_TASK_KEYWORDS / keyword_matches 為模組層級共用定義，見上方 get_task_topic 附近）
     matched_topics = {
         topic: keywords
         for topic, keywords in TOPIC_TASK_KEYWORDS.items()
@@ -3531,8 +3576,16 @@ def create_proactive_chat_message(reminder):
     user = reminder.student.user
     ai_result = generate_proactive_message(user=user, reminder=reminder)
 
+    reply = ai_result['reply']
+    if reminder.student_task_id:
+        # 附加「帶領」連結：點擊後跨頁逐步引導完成這項對應的任務，見 chatbot.js/base.html 的 guide:start 攔截邏輯
+        profile = get_student_profile(user)
+        language_code = normalize_language_code(getattr(profile, 'preferred_language', '') if profile else '')
+        guide_label = GUIDE_LINK_LABELS.get(language_code, GUIDE_LINK_LABELS['zh-hant'])
+        reply = reply.rstrip() + f'\n\n[{guide_label}](guide:start:{reminder.student_task_id})'
+
     session = get_or_create_helper_session(user)
-    message = ChatMessage.objects.create(session=session, role='assistant', content=ai_result['reply'])
+    message = ChatMessage.objects.create(session=session, role='assistant', content=reply)
     session.save(update_fields=['updated_at'])
 
     reminder.proactive_notified_at = timezone.now()
@@ -3562,3 +3615,206 @@ def create_proactive_chat_messages_for_student(profile):
         if message:
             session_id = message.session_id
     return session_id
+
+
+# ══════════════════════════════════════════
+# 首次進 Dashboard：AI 歡迎訊息 + 帶到第一個任務
+# 跟上面的到期提醒主動訊息是同一套「AI 主動開口」語氣（proactive_mode），
+# 差別只在觸發時機（首次進 dashboard，而不是任務到期）與不依賴 Reminder。
+# ══════════════════════════════════════════
+
+WELCOME_FALLBACK_MESSAGES = {
+    'zh-hant': '嗨 {name}！歡迎加入 ReadyTo Taiwan，我是你的任務小幫手，之後有任何問題都可以直接在這裡問我 😊',
+    'en': "Hi {name}! Welcome to ReadyTo Taiwan — I'm your task helper, feel free to ask me anything here.",
+    'vi': 'Chào {name}! Chào mừng bạn đến với ReadyTo Taiwan, mình là trợ lý nhiệm vụ của bạn, có gì cứ hỏi mình nhé 😊',
+    'ja': '{name}さん、こんにちは！ReadyTo Taiwan へようこそ。あなたのタスク小幫手です、何かあればいつでも聞いてくださいね 😊',
+    'my': 'မင်္ဂလာပါ {name}! ReadyTo Taiwan မှ ကြိုဆိုပါတယ်၊ ကျွန်တော်က သင့်တာဝန်လမ်းညွှန်ဖြစ်ပါတယ်၊ မေးစရာရှိရင် ဒီမှာ မေးလို့ရပါတယ် 😊',
+    'id': 'Hai {name}! Selamat datang di ReadyTo Taiwan, saya asisten tugasmu, jangan ragu untuk bertanya apa saja di sini 😊',
+    'th': 'สวัสดี {name}! ยินดีต้อนรับสู่ ReadyTo Taiwan ฉันคือผู้ช่วยภารกิจของคุณ มีอะไรถามได้เลยนะ 😊',
+    'ms': 'Hai {name}! Selamat datang ke ReadyTo Taiwan, saya pembantu tugas anda, jangan segan bertanya apa-apa di sini 😊',
+    'ko': '안녕하세요 {name}님! ReadyTo Taiwan에 오신 것을 환영해요, 저는 당신의 과제 도우미예요. 궁금한 게 있으면 언제든 여기서 물어보세요 😊',
+}
+
+FIRST_TASK_FALLBACK_MESSAGES = {
+    'zh-hant': '我們先從「{title}」開始吧！',
+    'en': 'Let\'s start with "{title}"!',
+    'vi': 'Chúng ta hãy bắt đầu với "{title}" nhé!',
+    'ja': 'まずは「{title}」から始めましょう！',
+    'my': '"{title}" ကနေ စလိုက်ကြရအောင်!',
+    'id': 'Mari kita mulai dengan "{title}"!',
+    'th': 'เริ่มจาก "{title}" กันก่อนเลย!',
+    'ms': 'Mari kita mulakan dengan "{title}"!',
+    'ko': '"{title}"부터 시작해볼까요!',
+}
+
+
+def generate_welcome_message(user):
+    """
+    產生一則首次進 dashboard 的歡迎訊息（helper 模式限定）。
+    回傳格式與 generate_proactive_message 一致：{'reply', 'source', 'model'}。
+    """
+    api_key = getattr(settings, 'OPENAI_API_KEY', '')
+    model = getattr(settings, 'OPENAI_MODEL', 'gpt-4o-mini')
+
+    profile = get_student_profile(user)
+    language_code = normalize_language_code(getattr(profile, 'preferred_language', '') if profile else '')
+    language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
+
+    name = getattr(user, 'name', '') or '同學'
+    fallback_reply = WELCOME_FALLBACK_MESSAGES.get(
+        language_code, WELCOME_FALLBACK_MESSAGES['zh-hant']
+    ).format(name=name)
+
+    if not api_key:
+        return {'reply': fallback_reply, 'source': 'local_fallback', 'model': 'local-fallback'}
+
+    try:
+        from openai import OpenAI
+    except Exception:
+        return {'reply': fallback_reply, 'source': 'local_error', 'model': 'openai-sdk-missing'}
+
+    profile_context = build_user_profile_context(user)
+
+    input_text = f"""
+[LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only.
+
+以下是學生基本資料，僅供你理解背景，不要生硬列出：
+{profile_context}
+
+這位學生剛完成註冊、第一次進入網站首頁。請寫一則簡短、溫暖的歡迎訊息，
+介紹自己是他的任務小幫手，之後有任何問題都可以直接在這裡問你。
+""".strip()
+
+    try:
+        client = OpenAI(api_key=api_key)
+        response = client.responses.create(
+            model=model,
+            instructions=build_system_instructions(
+                language_code, 'student_preferred_language', ai_mode='helper', proactive_mode=True
+            ),
+            input=input_text,
+        )
+        reply = (response.output_text or '').strip()
+        reply = remove_trailing_language_name(reply)
+
+        if not reply:
+            reply = fallback_reply
+
+        return {'reply': reply, 'source': 'openai', 'model': model}
+    except Exception:
+        return {'reply': fallback_reply, 'source': 'openai_error', 'model': model}
+
+
+def build_task_intro_fact_block(student_task, language_code):
+    """
+    把「第一個任務」整理成給 AI 的事實清單，跟 build_proactive_fact_block 同構，
+    差別是沒有 Reminder，事實只來自 Task 本身。
+    """
+    task = student_task.task
+    localized = task.get_localized(language_code)
+    lines = [f'任務名稱：{localized.get("title") or task.title}']
+    if localized.get('deadline_text'):
+        lines.append(f'辦理時程：{localized["deadline_text"]}')
+    if localized.get('required_documents'):
+        lines.append(f'需要的文件：{localized["required_documents"]}')
+    if localized.get('apply_location'):
+        lines.append(f'辦理地點：{localized["apply_location"]}')
+    return '\n'.join(lines)
+
+
+def generate_first_task_intro_message(user, student_task):
+    """
+    產生一則「帶你去做第一個任務」的訊息（helper 模式限定），結尾附「帶領」連結。
+    回傳格式與 generate_proactive_message 一致：{'reply', 'source', 'model'}。
+    """
+    api_key = getattr(settings, 'OPENAI_API_KEY', '')
+    model = getattr(settings, 'OPENAI_MODEL', 'gpt-4o-mini')
+
+    profile = get_student_profile(user)
+    language_code = normalize_language_code(getattr(profile, 'preferred_language', '') if profile else '')
+    language_en = LANGUAGE_LABELS_EN.get(language_code, 'Traditional Chinese')
+
+    task = student_task.task
+    localized_title = task.get_localized(language_code).get('title') or task.title
+    fallback_reply = FIRST_TASK_FALLBACK_MESSAGES.get(
+        language_code, FIRST_TASK_FALLBACK_MESSAGES['zh-hant']
+    ).format(title=localized_title)
+
+    reply = fallback_reply
+
+    if api_key:
+        try:
+            from openai import OpenAI
+
+            profile_context = build_user_profile_context(user)
+            fact_block = build_task_intro_fact_block(student_task, language_code)
+
+            input_text = f"""
+[LANGUAGE REQUIREMENT] Your entire reply MUST be in {language_en} only.
+
+以下是學生基本資料，僅供你理解背景，不要生硬列出：
+{profile_context}
+
+以下是這位學生流程清單中排序最前面的第一個任務，只能使用這些內容，不可以新增或竄改：
+{fact_block}
+
+請寫一則簡短、溫暖的訊息，鼓勵學生從這個任務開始著手。
+""".strip()
+
+            client = OpenAI(api_key=api_key)
+            response = client.responses.create(
+                model=model,
+                instructions=build_system_instructions(
+                    language_code, 'student_preferred_language', ai_mode='helper', proactive_mode=True
+                ),
+                input=input_text,
+            )
+            ai_reply = (response.output_text or '').strip()
+            ai_reply = remove_trailing_language_name(ai_reply)
+            if ai_reply:
+                reply = ai_reply
+        except Exception:
+            reply = fallback_reply
+
+    guide_label = GUIDE_LINK_LABELS.get(language_code, GUIDE_LINK_LABELS['zh-hant'])
+    reply = reply.rstrip() + f'\n\n[{guide_label}](guide:start:{student_task.id})'
+
+    return {'reply': reply, 'source': 'openai' if api_key else 'local_fallback', 'model': model}
+
+
+def create_welcome_chat_messages(user):
+    """
+    給 chatbot.views.welcome_message_api 呼叫。
+    冪等：profile.has_received_welcome_chat 為 True 時直接跳過，回傳 None。
+    成功時建立「歡迎」+「第一個任務引導」（若有未完成任務）兩則 ChatMessage，回傳 session_id。
+    """
+    from .models import ChatMessage
+
+    profile = get_student_profile(user)
+    if not profile or profile.has_received_welcome_chat:
+        return None
+
+    from flows.models import StudentTask
+
+    session = get_or_create_helper_session(user)
+
+    welcome_result = generate_welcome_message(user)
+    ChatMessage.objects.create(session=session, role='assistant', content=welcome_result['reply'])
+
+    first_task = (
+        StudentTask.objects
+        .filter(student=profile)
+        .exclude(status='completed')
+        .select_related('task__stage')
+        .order_by('task__stage__order', 'task__order')
+        .first()
+    )
+    if first_task:
+        task_result = generate_first_task_intro_message(user, first_task)
+        ChatMessage.objects.create(session=session, role='assistant', content=task_result['reply'])
+
+    session.save(update_fields=['updated_at'])
+
+    profile.has_received_welcome_chat = True
+    profile.save(update_fields=['has_received_welcome_chat'])
+    return session.id

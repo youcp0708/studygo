@@ -8,7 +8,10 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from .models import ChatSession, ChatMessage, ChatAttachment, ChatFeedback, ALLOWED_ATTACHMENT_EXTENSIONS
-from .services import generate_ai_reply, contains_crisis_keywords, build_crisis_resources
+from .services import (
+    generate_ai_reply, contains_crisis_keywords, build_crisis_resources,
+    get_guide_page_for_task, create_welcome_chat_messages,
+)
 from django.utils import timezone
 from django.utils.translation import gettext as _
 
@@ -460,4 +463,52 @@ def delete_session_api(request):
         'data': {
             'next_session_id': next_session.id if next_session else None
         }
+    })
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def task_guide_view(request, student_task_id):
+    """
+    GET /chatbot/api/task-guide/<student_task_id>/
+    給「帶領」逐步引導功能用：學生在任務清單頁把被引導的任務打勾完成後，
+    前端呼叫這支 API 查詢有沒有對應的資訊中心指南可以附加成連結。
+    """
+    from flows.models import StudentTask
+
+    student_task = StudentTask.objects.filter(
+        id=student_task_id, student__user=request.user
+    ).select_related('task').first()
+
+    if not student_task:
+        return Response({
+            'success': False,
+            'message': '找不到此任務',
+            'data': None,
+        }, status=status.HTTP_404_NOT_FOUND)
+
+    guide = get_guide_page_for_task(student_task.task, request.user)
+
+    return Response({
+        'success': True,
+        'data': guide,
+    })
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def welcome_message_api(request):
+    """
+    POST /chatbot/api/welcome-message/
+    給首次進 dashboard 的學生觸發歡迎訊息 + 帶到第一個任務。
+    冪等（由 create_welcome_chat_messages 內的 has_received_welcome_chat 判斷），
+    回應格式比照 GET /api/flows/reminders/ 的 proactive_chat，前端可直接複用同一套顯示邏輯。
+    """
+    session_id = create_welcome_chat_messages(request.user)
+    return Response({
+        'success': True,
+        'data': {
+            'has_new': bool(session_id),
+            'session_id': session_id,
+        },
     })

@@ -239,6 +239,9 @@ class StudentProfile(models.Model):
     # ── 首次導覽（Dashboard Product Tour）──
     has_seen_dashboard_tour = models.BooleanField(default=False, verbose_name='是否已看過 Dashboard 導覽')
 
+    # ── AI 首次歡迎訊息 ──
+    has_received_welcome_chat = models.BooleanField(default=False, verbose_name='是否已收到 AI 歡迎訊息')
+
     # ── 時間戳 ──
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='建立時間')
     updated_at = models.DateTimeField(auto_now=True,     verbose_name='更新時間')
