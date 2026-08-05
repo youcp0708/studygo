@@ -10982,3 +10982,7 @@ msgstr ""
 
 #~ msgid "抵臺前準備"
 #~ msgstr "渡航前の準備"
+
+#: .\templates\base.html:190
+msgid "嗶嗶嗶，你有新消息！"
+msgstr "ピピピッ！新しいメッセージが届きました！"

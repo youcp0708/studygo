@@ -4339,16 +4339,10 @@ msgid ""
 "自加退選第 3 日起，系統每日 07:00–09:00 分發一次（處理期間系統暫停），09:00 "
 "後可至 ee-class 確認當日中選結果。"
 msgstr ""
-<<<<<<< HEAD
-"Bermula hari ke-3 tambah/gugur, sistem memperuntukkan sekali setiap hari "
-"pada 07:00–09:00 (sistem dijeda semasa pemprosesan). Selepas 09:00 anda "
-"boleh menyemak keputusan hari itu di ee-class."
-=======
 "Bermula hari ke-3 tempoh tambah/gugur, sistem melakukan peruntukan sekali "
 "setiap hari pada pukul 07:00–09:00 (sistem berhenti seketika semasa "
 "pemprosesan). Selepas pukul 09:00, anda boleh menyemak keputusan hari itu "
 "di ee-class."
->>>>>>> nora/xinde
 
 #: .\guides\templates\guides\guide_course.html:114
 msgid "落選課程若仍想修習，需再次上網登錄，等候隔日分發，不會自動保留候補。"
@@ -12111,3 +12105,7 @@ msgstr ""
 
 #~ msgid "我的帳戶"
 #~ msgstr "Akaun Saya"
+
+#: .\templates\base.html:190
+msgid "嗶嗶嗶，你有新消息！"
+msgstr "Bip bip bip! Anda ada mesej baharu!"

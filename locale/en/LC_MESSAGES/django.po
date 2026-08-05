@@ -4224,15 +4224,11 @@ msgstr "SPARC (Computer Center) account"
 
 #: .\guides\templates\guides\guide_course.html:72
 msgid "SPARC（計中）帳號登入"
-<<<<<<< HEAD
-msgstr "Log in with SPARC (Computer Center) account"
-=======
 msgstr "Log in with your SPARC (Computer Center) account"
 
 #: .\guides\templates\guides\guide_course.html:73
 msgid "每日 07:00–09:00 系統進行資料備份，"
 msgstr "The system performs data backup daily from 07:00–09:00. "
->>>>>>> nora/xinde
 
 #: .\guides\templates\guides\guide_course.html:72
 msgid "此時段請勿操作選課"
@@ -11705,3 +11701,7 @@ msgstr ""
 #~ msgstr ""
 #~ "Enter your question, and the system will organize suggestions based on "
 #~ "your identity and status."
+
+#: .\templates\base.html:190
+msgid "嗶嗶嗶，你有新消息！"
+msgstr "Beep beep beep! You have a new message!"
