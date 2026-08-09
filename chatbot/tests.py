@@ -1,4 +1,5 @@
-from datetime import timedelta
+import json
+from datetime import date, timedelta
 from unittest.mock import patch, MagicMock
 
 from django.core.management import call_command
@@ -14,14 +15,20 @@ from chatbot.services import (
     contains_crisis_keywords,
     detect_friend_domain_query,
     detect_helper_domain_hit,
+    detect_current_info_query,
     detect_question_language,
     detect_weather_query,
+    extract_web_citations,
     fetch_typhoon_bulletin,
     fetch_weather_forecast,
+    format_citations,
     generate_ai_reply,
+    log_knowledge_conflict,
+    get_current_academic_context,
     get_role_instructions,
     get_student_county,
     get_student_discipline,
+    build_web_search_tool,
     search_knowledge_items,
 )
 from users.models import CustomUser, School, SchoolUnit, StudentProfile
@@ -885,3 +892,209 @@ class CrossDomainWiringTest(TestCase):
         self.assertIn('自傷', prompt)
         # 危機優先權更高：不應該只丟一句「切換到聊天好朋友」就打發掉
         self.assertNotIn('任務歸屬提醒', prompt)
+
+
+class CurrentInfoRoutingTest(TestCase):
+    """Web Search 路由：只有會隨時間變動的問題才觸發，控制每 1,000 次呼叫的成本"""
+
+    def test_volatile_questions_trigger_search(self):
+        for q in ['這學期什麼時候開學', '宿舍申請截止日是什麼時候',
+                  '今年獎學金什麼時候截止', '現在 ARC 費用是多少',
+                  '大專資訊應用競賽是什麼時候', 'When is the tuition deadline?']:
+            self.assertTrue(detect_current_info_query(q), f'應觸發搜尋: {q}')
+
+    def test_definition_questions_do_not_trigger_search(self):
+        """「ARC 是什麼」屬穩定知識，知識庫就夠了，不該花錢搜尋"""
+        for q in ['ARC 是什麼', 'degree student 是什麼', '什麼是僑生',
+                  'What is ARC?', '怎麼修改 ReadyTo Taiwan 任務狀態']:
+            self.assertFalse(detect_current_info_query(q), f'不該觸發搜尋: {q}')
+
+    def test_empty_question_does_not_trigger(self):
+        self.assertFalse(detect_current_info_query(''))
+
+
+class AcademicContextTest(TestCase):
+    """學年度判斷：模型必須知道現在是哪一學年度，才不會拿舊行事曆回答"""
+
+    def test_august_is_first_semester_of_new_academic_year(self):
+        with patch('django.utils.timezone.localdate', return_value=date(2026, 8, 9)):
+            ctx = get_current_academic_context()
+        self.assertIn('2026', ctx)
+        self.assertIn('115 學年度第 1 學期', ctx)
+
+    def test_march_is_second_semester_of_previous_academic_year(self):
+        with patch('django.utils.timezone.localdate', return_value=date(2027, 3, 1)):
+            ctx = get_current_academic_context()
+        self.assertIn('115 學年度第 2 學期', ctx)
+
+    def test_january_still_belongs_to_previous_academic_year(self):
+        with patch('django.utils.timezone.localdate', return_value=date(2027, 1, 15)):
+            ctx = get_current_academic_context()
+        self.assertIn('115 學年度第 1 學期', ctx)
+
+
+class WebSearchToolConfigTest(TestCase):
+    """網域過濾：校務／政府問題鎖官方網域，校外活動只擋內容農場"""
+
+    def setUp(self):
+        self.user = CustomUser.objects.create_user(
+            email='tool@test.com', password='pw', name='T'
+        )
+        make_profile(self.user)
+        School.objects.create(
+            code='NCU', name='國立中央大學', aliases='中央,中大',
+            website='https://www.ncu.edu.tw/',
+        )
+
+    def test_campus_question_restricts_to_official_domains(self):
+        tool = build_web_search_tool(self.user, '這學期什麼時候開學')
+        allowed = tool['filters']['allowed_domains']
+        self.assertEqual(tool['type'], 'web_search')
+        self.assertIn('ncu.edu.tw', allowed)          # 學生自己的學校
+        self.assertIn('immigration.gov.tw', allowed)  # 政府機關
+
+    def test_external_competition_is_not_domain_locked(self):
+        """
+        校外競賽的主辦單位可能是任何網站，鎖定官方網域反而會查不到，
+        所以只擋討論區與內容農場。
+        """
+        tool = build_web_search_tool(self.user, '大專資訊應用競賽是什麼時候')
+        self.assertNotIn('allowed_domains', tool['filters'])
+        self.assertIn('dcard.tw', tool['filters']['blocked_domains'])
+        self.assertIn('ptt.cc', tool['filters']['blocked_domains'])
+
+
+class CitationFormattingTest(TestCase):
+    """來源必須輸出成可點擊的 Markdown 連結，不是裸網址"""
+
+    def test_citations_render_as_markdown_links(self):
+        text = format_citations([
+            {'title': 'NCU Academic Calendar', 'url': 'https://pdc.adm.ncu.edu.tw/cal'},
+        ], 'zh-hant')
+        self.assertIn('[NCU Academic Calendar](https://pdc.adm.ncu.edu.tw/cal)', text)
+        self.assertIn('資料來源', text)
+
+    def test_long_title_truncated(self):
+        text = format_citations([{'title': 'X' * 100, 'url': 'https://a.tw/'}], 'zh-hant')
+        self.assertIn('...', text)
+        self.assertIn('https://a.tw/', text)
+
+    def test_no_citations_returns_empty(self):
+        self.assertEqual(format_citations([], 'zh-hant'), '')
+
+    def test_extract_citations_from_response(self):
+        ann = MagicMock()
+        ann.type = 'url_citation'
+        ann.url = 'https://www.ncu.edu.tw/cal'
+        ann.title = 'NCU 行事曆'
+        content = MagicMock(annotations=[ann])
+        item = MagicMock(content=[content])
+        response = MagicMock(output=[item])
+
+        cites = extract_web_citations(response)
+        self.assertEqual(cites, [{'title': 'NCU 行事曆', 'url': 'https://www.ncu.edu.tw/cal'}])
+
+    def test_extract_citations_tolerates_missing_structure(self):
+        """模型沒有搜尋時 output 結構不同，不能因此整個回答失敗"""
+        self.assertEqual(extract_web_citations(MagicMock(output=[])), [])
+
+
+class KnowledgeConflictLogTest(TestCase):
+    """
+    知識庫過期偵測：同一問題既命中本地知識庫、又查到官方網頁時留下線索。
+    只記錄不自動修改 —— 學生看到的內容不該被自動改寫而沒人審核過。
+    """
+
+    def setUp(self):
+        self.entry = ChatKnowledge.objects.create(
+            category='dorm', title='宿舍申請說明',
+            keywords='宿舍', content='宿舍申請每年開放一次。', bot_type='helper',
+        )
+
+    def test_logs_when_both_sources_present(self):
+        with patch('chatbot.services.knowledge_conflict_logger') as mock_logger:
+            log_knowledge_conflict(
+                '宿舍申請截止日是什麼時候',
+                [self.entry],
+                [{'title': '住宿服務組公告', 'url': 'https://shsd.ncu.edu.tw/News/Detail/8107'}],
+            )
+        mock_logger.info.assert_called_once()
+        record = json.loads(mock_logger.info.call_args[0][0])
+        self.assertEqual(record['question'], '宿舍申請截止日是什麼時候')
+        self.assertEqual(record['knowledge_entries'][0]['title'], '宿舍申請說明')
+        self.assertIn('https://shsd.ncu.edu.tw/News/Detail/8107', record['official_sources'])
+
+    def test_no_log_without_web_citations(self):
+        """沒有查網頁時不算有嫌疑，不要製造雜訊"""
+        with patch('chatbot.services.knowledge_conflict_logger') as mock_logger:
+            log_knowledge_conflict('宿舍申請說明', [self.entry], [])
+        mock_logger.info.assert_not_called()
+
+    def test_no_log_without_knowledge_hit(self):
+        """知識庫沒東西就沒有「過期」可言"""
+        with patch('chatbot.services.knowledge_conflict_logger') as mock_logger:
+            log_knowledge_conflict('隨便問', [], [{'title': 'x', 'url': 'https://a.tw/'}])
+        mock_logger.info.assert_not_called()
+
+    def test_logging_failure_does_not_break_reply(self):
+        """log 寫入失敗絕不能讓學生拿不到回答"""
+        with patch('chatbot.services.knowledge_conflict_logger') as mock_logger:
+            mock_logger.info.side_effect = OSError('disk full')
+            log_knowledge_conflict('q', [self.entry], [{'title': 't', 'url': 'https://a.tw/'}])
+
+
+class FriendModeWebSearchTest(TestCase):
+    """friend 模式也能查最新資訊，但一般聊天不該觸發搜尋"""
+
+    def test_emotional_questions_do_not_trigger_search(self):
+        for q in ['我今天心情不好', '好想家', '室友吵架怎麼辦']:
+            self.assertFalse(detect_current_info_query(q), f'不該觸發搜尋: {q}')
+
+    def test_friend_mode_still_routes_explicit_current_info(self):
+        self.assertTrue(detect_current_info_query('獎學金什麼時候截止'))
+
+
+@override_settings(OPENAI_API_KEY='test-key', OPENAI_WEB_SEARCH_ENABLED=True)
+class VolatileQuestionBypassesKnowledgeShortcutTest(TestCase):
+    """
+    知識庫捷徑會直接 return，繞過 web search。
+    問到日期／費用這類會變動的資訊時必須停用捷徑，否則等於用可能過期的本地資料回答，
+    違反「本地資料可能過期時要用官方網站驗證」的優先順序。
+    """
+
+    def setUp(self):
+        self.user = CustomUser.objects.create_user(
+            email='bypass@test.com', password='pw', name='B'
+        )
+        make_profile(self.user)
+        ChatKnowledge.objects.create(
+            category='arc', title='ARC 規費說明',
+            keywords='ARC, 規費, 費用',
+            content='ARC 規費依居留期間計費。', bot_type='helper',
+        )
+
+    def _mock_openai(self):
+        resp = MagicMock()
+        resp.output_text = '查詢結果'
+        resp.output = []
+        client = MagicMock()
+        client.responses.create.return_value = resp
+        return patch('openai.OpenAI', return_value=client)
+
+    def test_stable_question_still_uses_shortcut(self):
+        """穩定知識維持走捷徑，才不會每題都花錢"""
+        result = generate_ai_reply(
+            user=self.user, question='ARC 是什麼？',
+            recent_messages=[], ai_mode='helper',
+        )
+        self.assertEqual(result['source'], 'knowledge_base_direct')
+
+    def test_volatile_question_goes_to_openai_with_web_search(self):
+        with self._mock_openai() as mock_openai:
+            result = generate_ai_reply(
+                user=self.user, question='現在 ARC 的規費是多少？',
+                recent_messages=[], ai_mode='helper',
+            )
+        self.assertEqual(result['source'], 'openai')
+        kwargs = mock_openai.return_value.responses.create.call_args.kwargs
+        self.assertEqual(kwargs['tools'][0]['type'], 'web_search')

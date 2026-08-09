@@ -10,6 +10,7 @@ chatbot/services.py
 """
 
 import base64
+import json
 import logging
 import mimetypes
 import re
@@ -2502,6 +2503,280 @@ def detect_weather_query(question):
 
 
 # ══════════════════════════════════════════
+# Web Search 路由與時效性判斷
+#
+# web_search 是按「每 1,000 次呼叫」計費的，所以不能每題都開。
+# 這裡用關鍵字做確定性判斷（而不是交給模型自由決定），
+# 好處是成本可預期、可測試、可調整，跟本檔其他偵測器（地點、天氣）一致。
+# ══════════════════════════════════════════
+
+# 會隨時間變動、模型記憶一定不可靠的主題
+VOLATILE_MARKERS_ZH = [
+    '什麼時候', '甚麼時候', '幾號', '幾月', '哪一天', '日期', '時間',
+    '截止', '期限', '最後一天', '報名', '開始', '結束',
+    '學費', '費用', '多少錢', '價格', '收費', '規費',
+    '獎學金', '補助',
+    '最新', '今年', '明年', '這學期', '本學期', '下學期', '目前', '現在', '近期',
+    '公告', '新規定', '新制', '修法', '異動',
+    '開學', '註冊', '加退選', '選課時間', '考試週', '寒假', '暑假',
+    '競賽', '比賽', '活動', '講座', '說明會', '營隊',
+]
+VOLATILE_MARKERS_EN = [
+    'when is', 'when does', 'what date', 'deadline', 'due date',
+    'tuition', 'fee', 'how much', 'cost', 'price',
+    'scholarship', 'latest', 'this semester', 'next semester',
+    'current', 'announcement', 'competition', 'registration date',
+]
+
+# 純定義型問題：問「是什麼」通常是穩定知識，知識庫就能回答，不需要花錢搜尋
+DEFINITION_MARKERS = [
+    '是什麼', '是甚麼', '什麼是', '甚麼是', '是啥', '意思',
+    'what is', 'what are', 'meaning of', 'definition',
+]
+
+# 明確在問時間或金額，一定要查最新資料。
+# 必須優先於 DEFINITION_MARKERS 判斷，因為「截止日是什麼時候」這種問句
+# 字面上包含「是什麼」，但問的是日期而不是定義，不能被當成定義型問題擋掉。
+STRONG_VOLATILE_MARKERS = [
+    '什麼時候', '甚麼時候', '幾號', '幾月', '哪一天',
+    '截止', '期限', '最後一天',
+    '多少錢', '幾點',
+    'when is', 'when does', 'deadline', 'due date', 'how much',
+]
+
+# 台灣政府與教育主管機關，行政法規類問題優先採信
+GOVERNMENT_DOMAINS = [
+    'immigration.gov.tw',   # 移民署：居留證 ARC
+    'boca.gov.tw',          # 外交部領事事務局：簽證
+    'moe.gov.tw',           # 教育部
+    'edu.tw',               # 各級學校與教育單位
+    'nhi.gov.tw',           # 健保署
+    'wda.gov.tw',           # 勞動部勞動力發展署：工作許可
+    'ocac.gov.tw',          # 僑委會
+]
+
+# 內容農場與非官方討論區：這些地方的資訊常常過時或錯誤，不適合當行政資訊來源
+LOW_QUALITY_DOMAINS = [
+    'dcard.tw', 'ptt.cc', 'pixnet.net', 'blogspot.com',
+    'wikipedia.org', 'zhihu.com', 'xuite.net',
+]
+
+
+def detect_current_info_query(question):
+    """
+    判斷這個問題是否需要查最新官方資料。
+
+    True  → 會隨時間變動（日期、費用、截止日、最新公告、競賽時程）
+    False → 穩定知識（ARC 是什麼、身分別定義），知識庫就夠了
+
+    刻意保守：問「XX 是什麼」即使句中有「費用」兩字也不觸發搜尋，
+    避免把定義型問題也送去搜尋而白花錢。
+    """
+    q = (question or '').strip()
+    if not q:
+        return False
+    lower_q = q.lower()
+
+    # 明確問時間或金額 → 直接確定要查，不再走定義型判斷
+    if (any(k in q for k in STRONG_VOLATILE_MARKERS)
+            or any(k in lower_q for k in STRONG_VOLATILE_MARKERS)):
+        return True
+
+    is_volatile = (
+        any(k in q for k in VOLATILE_MARKERS_ZH)
+        or any(k in lower_q for k in VOLATILE_MARKERS_EN)
+    )
+    if not is_volatile:
+        return False
+
+    # 定義型問句優先，「ARC 是什麼」不該因為別的字眼被誤判成時效性問題
+    is_definition = (
+        any(k in q for k in DEFINITION_MARKERS)
+        or any(k in lower_q for k in DEFINITION_MARKERS)
+    )
+    return not is_definition
+
+
+def _school_domain(user):
+    """從學生就讀學校的官網取出可用於網域過濾的網域，例如 ncu.edu.tw。"""
+    school = get_student_school(user)
+    website = (getattr(school, 'website', '') or '') if school else ''
+    if not website:
+        return ''
+    host = website.split('//')[-1].split('/')[0].lower()
+    host = host.split(':')[0]
+    parts = [p for p in host.split('.') if p]
+    # www.ncu.edu.tw → ncu.edu.tw（保留 edu.tw 這種兩段式頂級網域）
+    if len(parts) >= 4 and parts[-2:] == ['edu', 'tw']:
+        return '.'.join(parts[-3:])
+    return '.'.join(parts[-2:]) if len(parts) >= 2 else host
+
+
+def build_web_search_tool(user, question):
+    """
+    組出 web_search 工具設定。
+
+    分兩種情況，因為一律鎖定官方網域反而會答不出來：
+    1. 校務 / 政府法規類（開學、註冊、ARC、簽證、學費）
+       → 限定學生自己學校網域 + 政府網域，確保來源可信。
+    2. 其他時效性問題（校外競賽、外部活動）
+       → 不限定網域（主辦單位可能是任何網站），但擋掉討論區與內容農場。
+    """
+    q = (question or '')
+    school_domain = _school_domain(user)
+
+    campus_or_gov_markers = [
+        '開學', '註冊', '加退選', '選課', '考試週', '寒假', '暑假', '學費', '宿舍',
+        '住宿', '行事曆', '學期', '校內', '學校',
+        'ARC', '居留證', '簽證', '健保', '工作許可', '工作證', '入學', '招生',
+    ]
+    is_campus_or_gov = any(k in q for k in campus_or_gov_markers) or 'arc' in q.lower()
+
+    if is_campus_or_gov:
+        allowed = list(GOVERNMENT_DOMAINS)
+        if school_domain:
+            allowed.insert(0, school_domain)
+        return {
+            'type': 'web_search',
+            'filters': {'allowed_domains': allowed[:100]},
+        }
+
+    return {
+        'type': 'web_search',
+        'filters': {'blocked_domains': LOW_QUALITY_DOMAINS[:100]},
+    }
+
+
+def get_current_academic_context():
+    """
+    產生「現在是什麼時候」的說明，注入 prompt。
+
+    模型不知道今天日期，就無法判斷該找哪個學年度的行事曆，
+    很容易拿 2024 或 2025 的舊公告當答案。
+
+    臺灣學年度：8 月起算新學年度，民國年 = 西元年 - 1911。
+    第 1 學期約 8 月至隔年 1 月，第 2 學期約 2 月至 7 月。
+    """
+    from django.utils import timezone
+
+    today = timezone.localdate()
+    if today.month >= 8:
+        academic_year = today.year - 1911
+        semester = 1
+    elif today.month <= 1:
+        academic_year = today.year - 1911 - 1
+        semester = 1
+    else:
+        academic_year = today.year - 1911 - 1
+        semester = 2
+
+    return (
+        f'【現在時間】今天是西元 {today.year} 年 {today.month} 月 {today.day} 日。\n'
+        f'目前處於臺灣 {academic_year} 學年度第 {semester} 學期'
+        f'（{academic_year} 學年度＝西元 {academic_year + 1911}-{academic_year + 1912} 學年）。\n'
+        f'查詢學校行事曆或任何時程時，必須找「{academic_year} 學年度」或更新的版本，'
+        f'不可以拿更舊學年度的公告當答案。看到公告要先確認它是哪一學年度的。'
+    )
+
+
+knowledge_conflict_logger = logging.getLogger('chatbot.knowledge_conflict')
+
+
+def log_knowledge_conflict(question, knowledge_items, citations, user=None):
+    """
+    記錄「本地知識庫可能已過期」的線索。
+
+    偵測邏輯刻意保守，只記錄「有嫌疑」而不宣稱一定衝突：
+    同一個問題既命中了本地 ChatKnowledge、又實際查了官方網頁並取得來源時，
+    代表這個主題我們自己有一份答案、但它屬於會變動的資訊。
+    要真正判斷兩者是否矛盾需要語意比對，成本高且不可靠，
+    因此這裡只留下線索，由人工定期檢查該筆知識是否需要更新。
+
+    不做自動修改知識庫：學生看到的內容不應該被自動改寫而沒人審核過。
+    """
+    if not knowledge_items or not citations:
+        return
+    try:
+        entries = [
+            {'id': item.id, 'category': item.category, 'title': item.title,
+             'last_verified_at': str(getattr(item, 'last_verified_at', '') or '')}
+            for item in knowledge_items
+        ]
+        record = {
+            'question': (question or '')[:200],
+            'user': getattr(user, 'email', '') if user else '',
+            'knowledge_entries': entries,
+            'official_sources': [c['url'] for c in citations],
+        }
+        knowledge_conflict_logger.info(
+            json.dumps(record, ensure_ascii=False)
+        )
+    except Exception:
+        # log 失敗絕不能影響學生拿到回答
+        logger.warning('寫入 knowledge_conflict log 失敗', exc_info=True)
+
+
+CITATION_LABELS = {
+    'zh-hant': '🔎 資料來源：',
+    'en': '🔎 Sources: ',
+    'vi': '🔎 Nguồn: ',
+    'ja': '🔎 出典：',
+    'my': '🔎 အချက်အလက်ရင်းမြစ်：',
+    'id': '🔎 Sumber: ',
+    'th': '🔎 แหล่งข้อมูล: ',
+    'ms': '🔎 Sumber: ',
+    'ko': '🔎 출처: ',
+}
+
+
+def format_citations(citations, language_code='zh-hant'):
+    """
+    把來源整理成可點擊的 Markdown 連結。
+    用 [標題](網址) 而不是直接貼網址，前端才會渲染成可點擊的藍色連結，
+    學生也不會看到一長串醜網址。
+    """
+    if not citations:
+        return ''
+    label = CITATION_LABELS.get(language_code, CITATION_LABELS['zh-hant'])
+    lines = [label]
+    for c in citations:
+        title = (c.get('title') or c.get('url') or '').strip()
+        # 標題太長會在聊天氣泡裡擠成一團，截斷但保留可辨識度
+        if len(title) > 60:
+            title = title[:57] + '...'
+        lines.append(f'- [{title}]({c["url"]})')
+    return '\n'.join(lines)
+
+
+def extract_web_citations(response, limit=3):
+    """
+    從 Responses API 回應取出 url_citation 標註。
+
+    回傳 [{'title': ..., 'url': ...}]，最多 limit 筆。
+    模型沒有實際搜尋、或 SDK 結構不同時回傳空 list，呼叫端要能接受沒有來源。
+    """
+    citations = []
+    try:
+        for item in getattr(response, 'output', []) or []:
+            for content in getattr(item, 'content', []) or []:
+                for ann in getattr(content, 'annotations', []) or []:
+                    if getattr(ann, 'type', '') != 'url_citation':
+                        continue
+                    url = getattr(ann, 'url', '')
+                    if not url:
+                        continue
+                    title = getattr(ann, 'title', '') or url
+                    if any(c['url'] == url for c in citations):
+                        continue
+                    citations.append({'title': title, 'url': url})
+                    if len(citations) >= limit:
+                        return citations
+    except Exception:
+        logger.warning('extract_web_citations 解析失敗', exc_info=True)
+    return citations
+
+
+# ══════════════════════════════════════════
 # 兩個 AI 模式的管轄範圍互相提醒
 # 任務小幫手（helper）管：簽證、居留證、財力／語言證明、學校行政、入學申請等正式手續；
 # 聊天好朋友（friend）管：情緒陪伴、心情、人際關係、想家、焦慮等生活與心理支持。
@@ -3150,6 +3425,37 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
             '並自然地建議學生切換到「ReadyTo 任務小幫手」問這類問題。'
         )
 
+    # ── Web Search 路由 ──
+    # 只有 helper 模式、且問題屬於「會隨時間變動」時才開，friend 模式是情緒陪伴不需要查官網。
+    # 這一層是成本控制的關鍵：不開工具就完全不會產生 web_search 的費用。
+    web_search_enabled = getattr(settings, 'OPENAI_WEB_SEARCH_ENABLED', True)
+    # friend 模式也允許搜尋，但同樣要通過 detect_current_info_query 這一關。
+    # 聊天好朋友絕大多數是情緒陪伴類問題，不會命中時效性關鍵字，
+    # 所以實際觸發率很低，不會明顯增加成本；只有他真的問到「今年幾號截止」
+    # 這種明確涉及最新資訊的問題時才會查，避免好朋友憑印象亂講日期。
+    use_web_search = (
+        web_search_enabled
+        and not is_tutor_role
+        and detect_current_info_query(question)
+    )
+
+    if use_web_search:
+        current_time_block = get_current_academic_context()
+        search_hint = (
+            '【這題需要查最新官方資料】\n'
+            '這個問題的答案會隨時間變動，你手上的知識庫與記憶都可能過期，請使用 web_search 查詢最新資料。\n'
+            '規則：\n'
+            '1. 優先採用學校官方網站與政府機關網站的公告，不要採信論壇、部落格、代辦或懶人包文章。\n'
+            '2. 一定要確認公告的學年度或年份，拿到舊年度的資料不可以直接當答案。\n'
+            '3. 找到答案後，直接講重點，不要整篇複製網頁內容。\n'
+            '4. 如果搜尋後仍找不到可靠的官方來源，就誠實說「目前找不到可以確認的最新官方資訊，'
+            '建議向相關承辦單位確認」，絕對不可以自己猜日期、費用或規定。\n'
+            '5. 提供網址時一律用 Markdown 格式 [說明文字](網址)，不要直接貼一長串裸網址。'
+        )
+    else:
+        current_time_block = get_current_academic_context()
+        search_hint = ''
+
     if not api_key:
         if ai_mode == "friend":
             return {
@@ -3215,9 +3521,13 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
     # 小老師角色一律走 OpenAI，才能維持教學語氣與課業背景包，不要用這個直接回答的捷徑。
     # friend_domain_hint 有值代表這題其實該轉給聊天好朋友（天氣、地點推薦、情緒陪伴），
     # 就算知識庫剛好也搜到東西，也要走 OpenAI 講出轉介提醒，不要用本地捷徑蓋掉這個提醒。
+    #
+    # use_web_search 為真時也絕對不能走捷徑：那代表學生問的是日期、費用、截止日這類
+    # 會隨時間變動的資訊。知識庫裡就算有一段看似相關的內容，也可能已經過期，
+    # 直接原文貼出去等於用舊資料回答；這種情況一定要讓模型去查官方網站驗證。
     DIRECTORY_STYLE_CATEGORIES = {'school_info'}
     knowledge_categories = {item.category for item in knowledge_items}
-    if ai_mode == "helper" and not attachments and not is_tutor_role and not friend_domain_hint and len(knowledge_categories) == 1 and not (knowledge_categories & DIRECTORY_STYLE_CATEGORIES) and (
+    if ai_mode == "helper" and not attachments and not is_tutor_role and not friend_domain_hint and not use_web_search and len(knowledge_categories) == 1 and not (knowledge_categories & DIRECTORY_STYLE_CATEGORIES) and (
         knowledge_context
         and '目前沒有找到直接相關的知識庫資料' not in knowledge_context
         and '目前沒有可用的知識庫資料' not in knowledge_context
@@ -3395,6 +3705,10 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
 {school_block}
 
+{current_time_block}
+
+{search_hint}
+
 {tutor_block}
 
 以下是系統 FAQ / 知識庫搜尋結果，如果和學生的課業問題相關可以參考，不相關就不要勉強使用：
@@ -3420,6 +3734,10 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 {profile_context}
 
 {school_block}
+
+{current_time_block}
+
+{search_hint}
 
 {friend_domain_hint}
 
@@ -3449,6 +3767,10 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 {profile_context}
 
 {school_block}
+
+{current_time_block}
+
+{search_hint}
 （校務資料屬於個人化資訊，請用在「{personal_label}」，不要寫進「{general_label}」。）
 
 以下是學生目前的流程任務與提醒資料，僅供「{personal_label}」使用：
@@ -3491,15 +3813,31 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
         else:
             api_input = input_text
 
-        response = client.responses.create(
-            model=model,
-            instructions=build_system_instructions(language_code, language_source, ai_mode, role=role, personality=personality, direct_mode=direct_mode),
-            input=api_input,
-        )
+        # web_search 按每 1,000 次呼叫計費，只在「會隨時間變動」的問題才掛上工具。
+        # 掛上後仍用 tool_choice='auto'，讓模型在知識庫已足夠時可以不搜尋，再省一層。
+        create_kwargs = {
+            'model': model,
+            'instructions': build_system_instructions(
+                language_code, language_source, ai_mode,
+                role=role, personality=personality, direct_mode=direct_mode,
+            ),
+            'input': api_input,
+        }
+        if use_web_search:
+            create_kwargs['tools'] = [build_web_search_tool(user, question)]
+            create_kwargs['tool_choice'] = 'auto'
+
+        response = client.responses.create(**create_kwargs)
 
         reply = (response.output_text or '').strip()
         reply = remove_trailing_language_name(reply)
         reply = remove_existing_info_page_links(reply)
+
+        citations = extract_web_citations(response) if use_web_search else []
+
+        # 本地知識庫與官方網頁同時都有內容 → 記下線索，供人工檢查該筆知識是否過期
+        if citations and knowledge_items:
+            log_knowledge_conflict(question, knowledge_items, citations, user=user)
 
         # 只有 helper 模式需要把資訊頁連結插入兩段格式中；friend 模式不要破壞自然聊天感。
         if ai_mode == "helper":
@@ -3533,6 +3871,10 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
             'reply': reply,
             'place_results_text': place_results,
             'weather_results_text': weather_results,
+            # 有實際搜尋網頁時，把官方來源附在回覆後面供學生查證
+            'citations_text': format_citations(citations, language_code),
+            'citations': citations,
+            'used_web_search': bool(citations),
             'source': 'openai',
             'model': model,
             'suggestions': suggestions,

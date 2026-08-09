@@ -232,6 +232,15 @@
 
   const ANSWER_LABEL_LINE = /^[^\n:：]{1,40}[:：]$/;
 
+  // 一次掃描同時處理兩種寫法，避免分兩次 replace 時
+  // 把前一次產生的 <a href="..."> 裡的網址又當成裸網址再處理一次：
+  //   1. markdown 連結 [文字](網址)
+  //   2. 直接貼在文字裡的裸網址 https://...
+  // 模型偶爾會忘記用 markdown 格式，裸網址若不處理就只是純文字、學生點不動。
+  // 結尾的中英文標點（。，、）】等）不算網址的一部分，否則會連標點一起變成連結。
+  const MESSAGE_LINK_PATTERN =
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)|(https?:\/\/[^\s<>"'，。、；：）)】\]]+)/g;
+
   function renderMessageContent(content) {
     const normalized = normalizeMessageContent(content);
     let labelCount = 0;
@@ -240,8 +249,12 @@
       .split('\n')
       .map((line) => {
         const safeLine = escapeHtml(line).replace(
-          /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)/g,
-          (_match, label, href) => {
+          MESSAGE_LINK_PATTERN,
+          (match, label, href, bareUrl) => {
+            if (bareUrl) {
+              return `<a href="${bareUrl}" class="chat-link" target="_top">${bareUrl}</a>`;
+            }
+            if (!href) return match;
             if (href.startsWith('tel:')) {
               return `<a href="${href}" class="chat-link chat-link--tel">📞 ${label}</a>`;
             }
