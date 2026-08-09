@@ -2578,12 +2578,14 @@ VOLATILE_MARKERS_ZH = [
     '公告', '新規定', '新制', '修法', '異動',
     '開學', '註冊', '加退選', '選課時間', '考試週', '寒假', '暑假',
     '競賽', '比賽', '活動', '講座', '說明會', '營隊',
+    '煙火', '場次', '展覽', '演出', '表演', '燈會', '花季', '音樂節', '市集', '還有嗎', '還有沒有',
 ]
 VOLATILE_MARKERS_EN = [
     'when is', 'when does', 'what date', 'deadline', 'due date',
     'tuition', 'fee', 'how much', 'cost', 'price',
     'scholarship', 'latest', 'this semester', 'next semester',
     'current', 'announcement', 'competition', 'registration date',
+    'fireworks', 'show times', 'exhibition', 'performance', 'festival',
 ]
 
 # 純定義型問題：問「是什麼」通常是穩定知識，知識庫就能回答，不需要花錢搜尋
