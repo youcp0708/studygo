@@ -140,26 +140,26 @@
   }
 
   function updateAIModeUI() {
-  page.classList.remove('ai-mode-helper', 'ai-mode-friend');
-  page.classList.add(`ai-mode-${currentAIMode}`);
+    page.classList.remove('ai-mode-helper', 'ai-mode-friend');
+    page.classList.add(`ai-mode-${currentAIMode}`);
 
-  document.querySelectorAll('.ai-mode-card').forEach((card) => {
-    card.classList.toggle('active', card.dataset.mode === currentAIMode);
-  });
+    document.querySelectorAll('.ai-mode-card').forEach((card) => {
+      card.classList.toggle('active', card.dataset.mode === currentAIMode);
+    });
 
-  document.querySelectorAll('.js-ai-name').forEach((el) => {
-    el.textContent = getCurrentAIName();
-  });
+    document.querySelectorAll('.js-ai-name').forEach((el) => {
+      el.textContent = getCurrentAIName();
+    });
 
-  document.querySelectorAll('.js-ai-avatar').forEach((el) => {
-    el.classList.remove('helper', 'friend');
-    el.classList.add(currentAIMode);
-  });
+    document.querySelectorAll('.js-ai-avatar').forEach((el) => {
+      el.classList.remove('helper', 'friend');
+      el.classList.add(currentAIMode);
+    });
 
-  if (input) {
-    input.placeholder = AI_MODE_PLACEHOLDERS[currentAIMode] || AI_MODE_PLACEHOLDERS.helper;
+    if (input) {
+      input.placeholder = AI_MODE_PLACEHOLDERS[currentAIMode] || AI_MODE_PLACEHOLDERS.helper;
+    }
   }
-}
 
   async function requestJSON(url, method, body) {
     const options = {
@@ -232,6 +232,15 @@
 
   const ANSWER_LABEL_LINE = /^[^\n:：]{1,40}[:：]$/;
 
+  // 一次掃描同時處理兩種寫法，避免分兩次 replace 時
+  // 把前一次產生的 <a href="..."> 裡的網址又當成裸網址再處理一次：
+  //   1. markdown 連結 [文字](網址)
+  //   2. 直接貼在文字裡的裸網址 https://...
+  // 模型偶爾會忘記用 markdown 格式，裸網址若不處理就只是純文字、學生點不動。
+  // 結尾的中英文標點（。，、）】等）不算網址的一部分，否則會連標點一起變成連結。
+  const MESSAGE_LINK_PATTERN =
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)|(https?:\/\/[^\s<>"'，。、；：）)】\]]+)/g;
+
   function renderMessageContent(content) {
     const normalized = normalizeMessageContent(content);
     let labelCount = 0;
@@ -240,7 +249,7 @@
       .split('\n')
       .map((line) => {
         const safeLine = escapeHtml(line).replace(
-          /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+|guide:start:\d+)\)/g,
+          /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)/g,
           (_match, label, href) => {
             if (href.startsWith('tel:')) {
               return `<a href="${href}" class="chat-link chat-link--tel">📞 ${label}</a>`;
@@ -731,14 +740,14 @@
   const ROLE_PERSONALITIES = {
     '小老師': [
       { key: '課業輔助', label: i18n.pAcademic || '課業輔助', color: '#2563eb', renamable: false },
-      { key: '生活指導', label: i18n.pLife     || '生活指導', color: '#0891b2', renamable: false },
+      { key: '生活指導', label: i18n.pLife || '生活指導', color: '#0891b2', renamable: false },
     ],
     '朋友': [
-      { key: '好朋友',   label: i18n.pBestFriend || '好朋友',   color: '#22c55e', renamable: false },
-      { key: '瘋玩',     label: i18n.pFun        || '瘋玩',     color: '#f97316', renamable: false },
-      { key: '安靜陪伴', label: i18n.pQuiet      || '安靜陪伴', color: '#8b5cf6', renamable: false },
-      { key: '沉穩可靠', label: i18n.pCalm       || '沉穩可靠', color: '#0d9488', renamable: false },
-      { key: '火爆脾氣', label: i18n.pHot        || '火爆脾氣', color: '#dc2626', renamable: false },
+      { key: '好朋友', label: i18n.pBestFriend || '好朋友', color: '#22c55e', renamable: false },
+      { key: '瘋玩', label: i18n.pFun || '瘋玩', color: '#f97316', renamable: false },
+      { key: '安靜陪伴', label: i18n.pQuiet || '安靜陪伴', color: '#8b5cf6', renamable: false },
+      { key: '沉穩可靠', label: i18n.pCalm || '沉穩可靠', color: '#0d9488', renamable: false },
+      { key: '火爆脾氣', label: i18n.pHot || '火爆脾氣', color: '#dc2626', renamable: false },
     ],
   };
 
@@ -767,8 +776,8 @@
 
   function getCurrentRoleDisplayName() {
     if (!selectedRole) return '';
-    if (selectedRole === '朋友')   return getFriendRoleName();
-    if (selectedRole === '小老師') return i18n.roleTutor  || selectedRole;
+    if (selectedRole === '朋友') return getFriendRoleName();
+    if (selectedRole === '小老師') return i18n.roleTutor || selectedRole;
     return selectedRole;
   }
 

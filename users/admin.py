@@ -8,7 +8,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .models import (
     CustomUser, StudentProfile, LoginLog, EmailVerificationToken, Department,
-    AlumniShare, School, SchoolUnit,
+    AlumniShare, School, SchoolUnit, SchoolLink,
 )
 
 
@@ -98,12 +98,19 @@ class SchoolUnitInline(admin.TabularInline):
     fields = ('name', 'aliases', 'location', 'tel', 'ext', 'office_hours', 'order', 'is_active')
 
 
+class SchoolLinkInline(admin.TabularInline):
+    model  = SchoolLink
+    extra  = 0
+    fields = ('category', 'name', 'aliases', 'url', 'note', 'is_reachable', 'last_checked_at', 'is_active')
+    readonly_fields = ('is_reachable', 'last_checked_at')
+
+
 @admin.register(School)
 class SchoolAdmin(admin.ModelAdmin):
-    list_display  = ('code', 'name', 'main_tel', 'intl_office_ext', 'last_verified_at', 'is_active')
+    list_display  = ('code', 'name', 'main_tel', 'intl_office_ext', 'calendar_url', 'last_verified_at', 'is_active')
     list_filter   = ('is_active', 'last_verified_at')
     search_fields = ('code', 'name', 'name_en', 'aliases')
-    inlines       = [SchoolUnitInline]
+    inlines       = [SchoolUnitInline, SchoolLinkInline]
     readonly_fields = ('updated_at',)
 
 
@@ -112,6 +119,15 @@ class SchoolUnitAdmin(admin.ModelAdmin):
     list_display  = ('school', 'name', 'location', 'tel', 'ext', 'is_active')
     list_filter   = ('school', 'is_active')
     search_fields = ('name', 'name_en', 'aliases', 'location')
+
+
+@admin.register(SchoolLink)
+class SchoolLinkAdmin(admin.ModelAdmin):
+    """連結失效是這份資料的主要衰減方式，所以把 is_reachable 放在最顯眼的位置。"""
+    list_display  = ('school', 'category', 'name', 'url', 'is_reachable', 'last_checked_at', 'is_active')
+    list_filter   = ('category', 'is_reachable', 'school', 'is_active')
+    search_fields = ('name', 'aliases', 'url')
+    readonly_fields = ('is_reachable', 'last_checked_at')
 
 
 # ══════════════════════════════════════════

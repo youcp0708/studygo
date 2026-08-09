@@ -20,3 +20,6 @@ db.sqlite3
 db.sqlite3
 __pycache__/
 *.pyc
+
+# 執行時產生的知識庫過期偵測 log（含使用者 email 與提問內容，不進版控）
+knowledge_conflict.log

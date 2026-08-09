@@ -244,6 +244,11 @@ def chat_message_api(request):
         if weather_text:
             reply_parts.append(weather_text)
 
+        # friend 模式偶爾也會查最新資訊（例如問到截止日），一樣要附上來源
+        friend_citations = ai_result.get('citations_text')
+        if friend_citations:
+            reply_parts.append(friend_citations)
+
         # 危機保底安全網：只要學生訊息命中危機關鍵字（9 語），
         # 且 AI 回覆沒有帶出可撥打的求助電話，就由伺服器端強制附上，
         # 不把學生的安全交給模型的自由發揮
@@ -253,6 +258,12 @@ def chat_message_api(request):
                 reply_parts.append(build_crisis_resources(request.user))
     else:
         reply_parts = [ai_result['reply']]
+
+        # 有實際查詢網頁時，把官方來源附成獨立訊息，讓學生可以自己點進去查證。
+        # 由後端組裝而不是靠 AI 自己寫，可以確保來源網址不會被模型改寫或漏掉。
+        citations_text = ai_result.get('citations_text')
+        if citations_text:
+            reply_parts.append(citations_text)
 
     assistant_messages = []
 

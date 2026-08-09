@@ -20,6 +20,11 @@ def env(key, default=None, required=False):
 
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# 之前 services.py 用 getattr(settings, 'OPENAI_MODEL', ...) 取這個值，
+# 但 settings 從來沒有定義它，導致 .env 設了也不會生效、永遠用寫死的預設值。
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.6-terra")
+# 每 1,000 次呼叫計費，因此只在「會隨時間變動的問題」才啟用（見 detect_current_info_query）
+OPENAI_WEB_SEARCH_ENABLED = os.getenv("OPENAI_WEB_SEARCH_ENABLED", "True") == "True"
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY", "")
 # 中央氣象署開放資料平臺 Authorization key，免費申請：https://opendata.cwa.gov.tw/
 CWA_API_KEY = os.getenv("CWA_API_KEY", "")
@@ -275,3 +280,37 @@ if not DEBUG:
 # ── Google Sign-In 彈窗修復 ──
 # Django 5.x 預設 COOP: same-origin 會阻擋 GSI popup 回傳 credential
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
+
+# ── 知識庫過期偵測 log ──
+# chatbot 走 web_search 查到最新官方資料時，若本地 ChatKnowledge 同時也命中，
+# 代表那筆知識庫內容有可能已經過期，寫進獨立檔案供人工定期檢查。
+# 注意：Render 這類容器平台的檔案系統是暫時性的，重新部署後 log 會消失；
+# 若要長期保存，之後可改成寫入資料表或外部 log 服務。
+KNOWLEDGE_CONFLICT_LOG_PATH = os.getenv(
+    'KNOWLEDGE_CONFLICT_LOG_PATH', str(BASE_DIR / 'knowledge_conflict.log')
+)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'knowledge_conflict': {
+            'format': '%(asctime)s %(message)s',
+        },
+    },
+    'handlers': {
+        'knowledge_conflict_file': {
+            'class': 'logging.FileHandler',
+            'filename': KNOWLEDGE_CONFLICT_LOG_PATH,
+            'encoding': 'utf-8',
+            'formatter': 'knowledge_conflict',
+        },
+    },
+    'loggers': {
+        'chatbot.knowledge_conflict': {
+            'handlers': ['knowledge_conflict_file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
