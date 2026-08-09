@@ -1,7 +1,10 @@
+from datetime import date
+from unittest.mock import patch, MagicMock
+
 from django.core.management import call_command
 from django.test import TestCase
 
-from users.models import CustomUser, StudentProfile, AlumniShare, School
+from users.models import CustomUser, StudentProfile, AlumniShare, School, SchoolLink
 from users.serializers import StudentProfileSerializer, validate_identity_consistency
 
 
@@ -319,3 +322,99 @@ class SeedSchoolsCommandTest(TestCase):
         # 查不到大樓的處室仍要存在（至少有名稱），不能整個消失
         self.assertTrue(nthu.units.filter(name='校長室').exists())
         self.assertEqual(nthu.units.get(name='校長室').location, '')
+
+
+class SchoolLinkSeedTest(TestCase):
+    """各校線上系統連結：網址存得進去，且 seed 不會洗掉連線檢查結果"""
+
+    def test_links_seeded_with_category_and_aliases(self):
+        call_command('seed_schools', verbosity=0)
+
+        ncu_lms = SchoolLink.objects.get(school__code='NCU', category='lms')
+        self.assertEqual(ncu_lms.url, 'https://ncueeclass.ncu.edu.tw/')
+        self.assertIn('eeclass', ncu_lms.alias_list())
+        # 舊站已停用，備註必須寫清楚，否則學生會連到停用系統
+        self.assertIn('109-1', ncu_lms.note)
+
+        ntu_portal = SchoolLink.objects.get(school__code='NTU', category='portal')
+        self.assertEqual(ntu_portal.url, 'https://my.ntu.edu.tw/')
+
+    def test_calendar_url_stored_on_school(self):
+        """行事曆存的是「頁面網址」而不是某一年的日期，這樣每年更新都不會過期"""
+        call_command('seed_schools', verbosity=0)
+
+        for code in ('NTU', 'NCU', 'NCKU', 'NCCU', 'NTHU', 'NYCU', 'NCHU', 'NSYSU'):
+            school = School.objects.get(code=code)
+            self.assertTrue(
+                school.calendar_url.startswith('http'),
+                f'{code} 缺少行事曆連結',
+            )
+
+    def test_reseed_preserves_link_check_result(self):
+        """
+        重跑 seed 不可以把 check_school_links 的檢查結果洗掉，
+        否則每次部署後所有連結都會變回「未檢查」狀態。
+        """
+        call_command('seed_schools', verbosity=0)
+        link = SchoolLink.objects.filter(school__code='NTU').first()
+        SchoolLink.objects.filter(pk=link.pk).update(
+            is_reachable=False, last_checked_at=date(2026, 7, 30),
+        )
+
+        call_command('seed_schools', verbosity=0)
+
+        link.refresh_from_db()
+        self.assertFalse(link.is_reachable)
+        self.assertEqual(link.last_checked_at, date(2026, 7, 30))
+
+
+class CheckSchoolLinksCommandTest(TestCase):
+    """
+    連結檢查：誤判成失效會讓 chatbot 對學生說正常的連結壞了，比不檢查更糟，
+    所以「本機網路有問題」時必須整批放棄，而不是把所有連結標記成失效。
+    """
+
+    def setUp(self):
+        call_command('seed_schools', verbosity=0)
+        self.links = SchoolLink.objects.all()
+        self.assertGreater(self.links.count(), 4, '需要有連結資料才能測試')
+
+    def test_aborts_without_writing_when_most_links_fail(self):
+        """超過半數連不通 → 判定是本機網路問題，不寫入任何結果"""
+        with patch('studygo.http_compat.requests.Session.get', side_effect=OSError('network down')):
+            call_command('check_school_links', verbosity=0)
+
+        # 全部維持出廠狀態，沒有任何一筆被誤標成失效
+        self.assertEqual(SchoolLink.objects.filter(is_reachable=False).count(), 0)
+        self.assertEqual(SchoolLink.objects.filter(last_checked_at__isnull=False).count(), 0)
+
+    def test_writes_results_when_network_is_healthy(self):
+        """多數連得通時才寫入，並記錄檢查日期"""
+        ok = MagicMock()
+        ok.status_code = 200
+        with patch('studygo.http_compat.requests.Session.get', return_value=ok):
+            call_command('check_school_links', verbosity=0)
+
+        self.assertEqual(SchoolLink.objects.filter(is_reachable=False).count(), 0)
+        self.assertEqual(
+            SchoolLink.objects.filter(last_checked_at__isnull=True).count(), 0,
+            '網路正常時每一筆都應該記錄檢查日期',
+        )
+
+    def test_http_error_status_marks_link_unreachable(self):
+        """學校網站明確回 404 時（改版換路徑），要標記失效讓管理員修正"""
+        notfound = MagicMock()
+        notfound.status_code = 404
+        ok = MagicMock()
+        ok.status_code = 200
+        target = SchoolLink.objects.first()
+
+        def fake_get(self_session, url, **kwargs):
+            return notfound if url == target.url else ok
+
+        with patch('studygo.http_compat.requests.Session.get', autospec=True, side_effect=fake_get):
+            call_command('check_school_links', verbosity=0)
+
+        target.refresh_from_db()
+        self.assertFalse(target.is_reachable)
+        self.assertIsNotNone(target.last_checked_at)

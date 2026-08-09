@@ -28,6 +28,13 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ntu.edu.tw/',
         'source': 'https://oia.ntu.edu.tw/contactOIA',
         'verified': _V,
+        'calendar_url': 'https://www.aca.ntu.edu.tw/w/aca/calendar',
+        'links': [
+            {'category': 'portal', 'name': 'myNTU 臺大人入口網',
+             'aliases': 'myNTU,入口網,校務系統,portal', 'url': 'https://my.ntu.edu.tw/'},
+            {'category': 'lms', 'name': 'NTU COOL 數位教學平台',
+             'aliases': 'NTU COOL,cool,數位學習,線上課程', 'url': 'https://cool.ntu.edu.tw/'},
+        ],
         'units': [
             {
                 'name': '國際事務處',
@@ -86,6 +93,13 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ncu.edu.tw/',
         'source': 'https://www.ncu.edu.tw/tw/contact/index.php',
         'verified': _V,
+        'calendar_url': 'https://pdc.adm.ncu.edu.tw/p/412-1019-1725.php?Lang=zh-tw',
+        'links': [
+            {'category': 'lms', 'name': '新 ee-class 易課平台',
+             'aliases': 'eeclass,ee-class,易課平台,數位學習,線上課程',
+             'url': 'https://ncueeclass.ncu.edu.tw/',
+             'note': '舊站 eeclass.ncu.edu.tw 自 109-1 學期起已停用，請勿使用舊網址'},
+        ],
         'units': [
             {
                 'name': '國際事務處',
@@ -151,6 +165,14 @@ VERIFIED_SCHOOLS = {
         'website': 'https://web.ncku.edu.tw/',
         'source': 'https://oia.ncku.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://web.ncku.edu.tw/p/412-1000-6149.php?Lang=zh-tw',
+        'links': [
+            {'category': 'portal', 'name': '成功入口',
+             'aliases': '成功入口,入口網,校務系統,portal', 'url': 'https://i.ncku.edu.tw/'},
+            {'category': 'lms', 'name': 'NCKU Moodle 數位學習平台',
+             'aliases': 'moodle,數位學習,線上課程', 'url': 'https://moodle.ncku.edu.tw/',
+             'note': '帳號密碼與「成功入口」相同，不需另外註冊'},
+        ],
         'units': [
             {
                 'name': '國際事務處',
@@ -208,6 +230,13 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nccu.edu.tw/',
         'source': 'https://oic.nccu.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://aca.nccu.edu.tw/zh/%E5%B8%B8%E7%94%A8%E9%80%A3%E7%B5%90/%E5%AD%B8%E5%B9%B4%E8%A1%8C%E4%BA%8B%E6%9B%86',
+        'links': [
+            {'category': 'portal', 'name': 'iNCCU 愛政大',
+             'aliases': 'iNCCU,愛政大,入口網,校務資訊系統,portal', 'url': 'https://i.nccu.edu.tw/'},
+            {'category': 'lms', 'name': 'NCCU Moodle 數位學習平台',
+             'aliases': 'moodle,數位學習,線上課程', 'url': 'https://moodle45.nccu.edu.tw/'},
+        ],
         'units': [
             {
                 'name': '國際合作事務處',
@@ -277,6 +306,13 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nycu.edu.tw/',
         'source': 'https://oia.nycu.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://www.nycu.edu.tw/calendar/',
+        'links': [
+            {'category': 'portal', 'name': '校園單一入口 NYCU Portal',
+             'aliases': 'portal,單一入口,校務系統', 'url': 'https://portal.nycu.edu.tw/'},
+            {'category': 'lms', 'name': 'E3 數位教學平臺',
+             'aliases': 'e3,數位教學,數位學習,線上課程', 'url': 'https://e3.nycu.edu.tw/'},
+        ],
         'units': [
             {
                 'name': '國際事務處（交大校區）',
@@ -341,6 +377,12 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nthu.edu.tw/',
         'source': 'https://www.nthu.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://dgaa.site.nthu.edu.tw/p/407-1209-629-1.php?Lang=zh-tw',
+        'links': [
+            {'category': 'lms', 'name': 'eeclass 數位學習平台',
+             'aliases': 'eeclass,ee-class,數位學習,線上課程', 'url': 'https://eeclass.nthu.edu.tw/',
+             'note': '以校務資訊系統帳號登入'},
+        ],
         # 國際處分機未在官網查到，刻意留空，不填猜測值
         'units': [
             {
@@ -390,6 +432,13 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nchu.edu.tw/',
         'source': 'https://oia.nchu.edu.tw/index.php/zh/1-1-about-tw/1-1-6-contact-tw',
         'verified': _V,
+        'calendar_url': 'https://www.nchu.edu.tw/about/mid/487',
+        'links': [
+            {'category': 'portal', 'name': 'NCHU Portal 校務系統',
+             'aliases': 'portal,入口網,校務系統', 'url': 'https://portal.nchu.edu.tw/'},
+            {'category': 'lms', 'name': 'iLearning 3.0 教學平台',
+             'aliases': 'ilearning,數位學習,線上課程', 'url': 'https://lms2020.nchu.edu.tw/'},
+        ],
         'units': [
             {
                 'name': '國際事務處',
@@ -445,6 +494,13 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nsysu.edu.tw/',
         'source': 'https://oia.nsysu.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://oaa.nsysu.edu.tw/p/412-1003-98.php?Lang=zh-tw',
+        'links': [
+            {'category': 'lms', 'name': '中山網路大學',
+             'aliases': '網路大學,cu,數位學習,線上課程', 'url': 'https://cu.nsysu.edu.tw/'},
+            {'category': 'course', 'name': '選課系統',
+             'aliases': '選課,加退選,selcrs', 'url': 'https://selcrs.nsysu.edu.tw/'},
+        ],
         'units': [
             {
                 'name': '國際事務處',
@@ -499,6 +555,14 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ntnu.edu.tw/',
         'source': 'https://www.ntnu.edu.tw/static.php?id=contactus',
         'verified': _V,
+        'links': [
+            {'category': 'lms', 'name': 'NTNU Moodle 數位學習平台',
+             'aliases': 'moodle,數位學習,線上課程', 'url': 'https://moodle3.ntnu.edu.tw/',
+             'note': '舊站 moodle2.ntnu.edu.tw 已無法連線，請用此網址'},
+            {'category': 'portal', 'name': '校務行政帳號啟用',
+             'aliases': '帳號啟用,新生帳號,開通', 'url': 'https://ap.itc.ntnu.edu.tw/nipinit/',
+             'note': '新生必須先在此啟用帳號，才能使用其他校內系統'},
+        ],
         'units': [
             {
                 'name': '國際事務處',
@@ -572,6 +636,7 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ndhu.edu.tw/',
         'source': 'https://www.ndhu.edu.tw/p/412-1000-8813.php?Lang=zh-tw',
         'verified': _V,
+        'calendar_url': 'https://sys.ndhu.edu.tw/AA/calendar/',
         'units': [
             {
                 'name': '國際事務處',
@@ -594,6 +659,10 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ncnu.edu.tw/',
         'source': 'https://www.doc.ncnu.edu.tw/ncnu/index.php/',
         'verified': _V,
+        'links': [
+            {'category': 'lms', 'name': '課程資訊網 Moodle',
+             'aliases': 'moodle,數位學習,課程資訊網,線上課程', 'url': 'https://moodle.ncnu.edu.tw/'},
+        ],
         # 校內分機查詢系統：https://ccweb.ncnu.edu.tw/telquery/
         'units': [
             {'name': '校長室'},
@@ -611,6 +680,13 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.niu.edu.tw/',
         'source': 'https://www.niu.edu.tw/p/412-1000-1052.php',
         'verified': _V,
+        'calendar_url': 'https://academic.niu.edu.tw/p/412-1003-5555.php',
+        'links': [
+            {'category': 'portal', 'name': '校務資訊服務入口網',
+             'aliases': '單一登入,SSO,校務系統,portal', 'url': 'https://ccsys.niu.edu.tw/SSO/'},
+            {'category': 'course', 'name': '教務行政資訊系統',
+             'aliases': '教務系統,選課,成績', 'url': 'https://acade.niu.edu.tw/'},
+        ],
         'units': [
             {'name': '校長室'},
             {'name': '教務處', 'url': 'https://academic.niu.edu.tw/'},
@@ -635,6 +711,13 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nuu.edu.tw/',
         'source': 'https://www.nuu.edu.tw/p/412-1000-3769.php?Lang=zh-tw',
         'verified': _V,
+        'calendar_url': 'https://curr.nuu.edu.tw/p/404-1076-6482.php',
+        'links': [
+            {'category': 'lms', 'name': '聯合數位學園',
+             'aliases': 'elearning,數位學習,線上課程', 'url': 'https://elearning.nuu.edu.tw/'},
+            {'category': 'portal', 'name': '校務資訊系統',
+             'aliases': '校務系統,portal,選課,成績', 'url': 'https://eap10.nuu.edu.tw/'},
+        ],
         'units': [
             {
                 'name': '國際及兩岸事務組',
@@ -663,6 +746,7 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ncyu.edu.tw/',
         'source': 'https://www.ncyu.edu.tw/affair/ServerFile/Get/cba1d4d6-6943-4fb0-9615-aa6afd1e6bb1?nodeId=39496&sId=128494',
         'verified': _V,
+        'calendar_url': 'https://website.ncyu.edu.tw/academic/Subject?nodeId=10496',
         # 蘭潭、民雄、林森、新民四校區，地址以校本部蘭潭校區為準
         'units': [
             {
@@ -763,6 +847,7 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ntut.edu.tw/',
         'source': 'https://oia.ntut.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://oaa.ntut.edu.tw/p/412-1008-12781.php?Lang=zh-tw',
         'units': [
             {
                 'name': '國際事務處',
@@ -790,6 +875,12 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ntust.edu.tw/',
         'source': 'https://www.ntust.edu.tw/p/404-1000-88778.php?Lang=zh-tw',
         'verified': _V,
+        'calendar_url': 'https://www.academic.ntust.edu.tw/p/404-1048-78935.php?Lang=zh-tw',
+        'links': [
+            {'category': 'lms', 'name': 'Moodle 教學平台',
+             'aliases': 'moodle,數位學習,線上課程', 'url': 'https://moodle2.ntust.edu.tw/',
+             'note': '舊站 moodle.ntust.edu.tw 已無法連線，請用此網址；帳號與校務資訊系統整合'},
+        ],
         # 官網列出的是各承辦人的直撥號碼，無法判斷哪一支是對外總線，故不填電話
         'units': [
             {
@@ -839,6 +930,11 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nptu.edu.tw/',
         'source': 'https://oia.nptu.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://cud.nptu.edu.tw/p/412-1065-4687.php?Lang=zh-tw',
+        'links': [
+            {'category': 'lms', 'name': '數位學習平台',
+             'aliases': 'elearning,數位學習,線上課程', 'url': 'https://elearning.nptu.edu.tw/'},
+        ],
         'units': [
             {
                 'name': '國際事務處',
@@ -859,6 +955,7 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nutc.edu.tw/',
         'source': 'https://oia.nutc.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://aca.nutc.edu.tw/p/412-1015-4596.php',
         'units': [
             {
                 'name': '國際事務處',
@@ -887,6 +984,11 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nkust.edu.tw/',
         'source': 'https://oia.nkust.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://www.nkust.edu.tw/p/404-1000-4622.php',
+        'links': [
+            {'category': 'portal', 'name': '校務系統',
+             'aliases': 'webap,校務行政,portal,選課', 'url': 'https://webap.nkust.edu.tw/nkust/'},
+        ],
         # 多校區（建工、燕巢、第一、楠梓、旗津），官網國際處頁未列地址與電話，
         # 僅取得信箱；地址與總機待補
         'units': [
@@ -912,6 +1014,11 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.yuntech.edu.tw/',
         'source': 'https://www.yuntech.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://aax.yuntech.edu.tw/index.php/ql-ct/calendar',
+        'links': [
+            {'category': 'course', 'name': '選課系統',
+             'aliases': '選課,加退選', 'url': 'https://webapp.yuntech.edu.tw/aaxccs/'},
+        ],
         'units': [
             {'name': '校長室'},
             {'name': '教務處', 'url': 'https://aax.yuntech.edu.tw/'},
@@ -935,6 +1042,13 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.npust.edu.tw/',
         'source': 'https://oia2.npust.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://aa.npust.edu.tw/calendar/calendar.html',
+        'links': [
+            {'category': 'lms', 'name': '數位學習入口',
+             'aliases': 'moodle,elearning,數位學習,線上課程', 'url': 'https://elearning.npust.edu.tw/'},
+            {'category': 'portal', 'name': '校務行政系統',
+             'aliases': '校務系統,選課,course', 'url': 'https://course.npust.edu.tw/'},
+        ],
         'units': [
             {
                 'name': '國際事務處',
@@ -976,6 +1090,7 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.nfu.edu.tw/',
         'source': 'https://www.nfu.edu.tw/zh/administration',
         'verified': _V,
+        'calendar_url': 'https://www.nfu.edu.tw/zh/nfu-calendar',
         'units': [
             {'name': '校長室', 'tel': '05-631-5011'},
             {'name': '教務處', 'tel': '05-631-5101'},
@@ -1092,6 +1207,7 @@ VERIFIED_SCHOOLS = {
         'website': 'https://www.ntcu.edu.tw/',
         'source': 'https://www.ntcu.edu.tw/',
         'verified': _V,
+        'calendar_url': 'https://oaa.ntcu.edu.tw/redirect.php?ID=Calendar',
         'units': [
             {
                 'name': '英才校區',

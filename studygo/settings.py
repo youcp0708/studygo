@@ -20,6 +20,11 @@ def env(key, default=None, required=False):
 
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# 之前 services.py 用 getattr(settings, 'OPENAI_MODEL', ...) 取這個值，
+# 但 settings 從來沒有定義它，導致 .env 設了也不會生效、永遠用寫死的預設值。
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.6-terra")
+# 每 1,000 次呼叫計費，因此只在「會隨時間變動的問題」才啟用（見 detect_current_info_query）
+OPENAI_WEB_SEARCH_ENABLED = os.getenv("OPENAI_WEB_SEARCH_ENABLED", "True") == "True"
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY", "")
 # 中央氣象署開放資料平臺 Authorization key，免費申請：https://opendata.cwa.gov.tw/
 CWA_API_KEY = os.getenv("CWA_API_KEY", "")

@@ -462,6 +462,57 @@ class SchoolContextTest(TestCase):
         self.assertIn('目前查無具體大樓位置', context)
 
 
+@override_settings(OPENAI_API_KEY='test-key')
+class CalendarScopeRuleTest(TestCase):
+    """
+    「學校行事曆」只能用來回答校內學期行程。
+
+    背景：規則寫成「日期問題一律給行事曆連結」時，模型會把校外競賽
+    （例如大專資訊應用競賽）也導向學校行事曆，但行事曆上根本沒有這種資訊，
+    等於答非所問。這個測試把可用 / 不可用的界線固定在 prompt 裡。
+    """
+
+    def setUp(self):
+        self.user = CustomUser.objects.create_user(
+            email='calscope@test.com', password='pw', name='C'
+        )
+        make_profile(self.user)
+        School.objects.create(
+            code='NCU', name='國立中央大學', aliases='中央,中大',
+            main_tel='03-4227151',
+            calendar_url='https://pdc.adm.ncu.edu.tw/p/412-1019-1725.php?Lang=zh-tw',
+        )
+
+    def _prompt_for(self, question):
+        fake_response = MagicMock()
+        fake_response.output_text = '好的'
+        fake_client = MagicMock()
+        fake_client.responses.create.return_value = fake_response
+        with patch('openai.OpenAI', return_value=fake_client):
+            generate_ai_reply(
+                user=self.user, question=question,
+                recent_messages=[], ai_mode='helper',
+            )
+        call = fake_client.responses.create.call_args
+        return call.kwargs.get('instructions', '') + str(call.kwargs.get('input', ''))
+
+    def test_prompt_lists_calendar_applicable_topics(self):
+        prompt = self._prompt_for('這學期什麼時候開學？')
+        self.assertIn('開學日', prompt)
+        self.assertIn('加退選', prompt)
+
+    def test_prompt_forbids_calendar_for_external_competitions(self):
+        """校外競賽必須被明確排除，且要指名主辦單位"""
+        prompt = self._prompt_for('大專資訊應用競賽是什麼時候？')
+        self.assertIn('大專資訊應用競賽', prompt)
+        self.assertIn('不要用學校行事曆搪塞', prompt)
+        self.assertIn('主辦單位', prompt)
+
+    def test_prompt_still_forbids_stating_dates_from_memory(self):
+        prompt = self._prompt_for('這學期什麼時候開學？')
+        self.assertIn('不可以自己講日期', prompt)
+
+
 class SeedKnowledgeCommandTest(TestCase):
     """seed_knowledge：從 knowledge_data 載入知識庫，且可重複執行"""
 

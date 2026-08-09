@@ -617,6 +617,8 @@ You MUST write your entire response in {language_en} only. No other language is 
 
 這個問題在網站的任務清單和資訊中心都沒有相關資料，不要使用「{personal_label} / {general_label}」兩段格式，也不要輸出這兩個標題。
 直接針對學生的問題給出完整、精簡的回答就好。
+只回答學生實際問的問題；提供給你參考的知識庫資料如果包含跟這個問題無關的其他主題或其他項目（就算是同一篇文章裡的列表），直接忽略、不要一併講出來。
+如果知識庫資料沒有直接回答到學生的問題，就憑你自己對來臺就學流程的理解回答，不要硬套不相關的知識庫內容。
 """.strip()
     else:
         base_instructions = f"""
@@ -1030,6 +1032,24 @@ def build_school_context(user, language_code='zh-hant'):
         lines.append(f'境外生招生資訊：{school.admission_url}')
 
     try:
+        links = list(school.links.filter(is_active=True))
+    except Exception:
+        links = []
+
+    if links:
+        lines.append('該校線上系統（學生常用連結）：')
+        for link in links:
+            parts = [f'{link.get_category_display()}：{link.name}']
+            if link.aliases:
+                parts.append(f'（別名：{link.aliases}）')
+            parts.append(link.url)
+            if link.note:
+                parts.append(link.note)
+            if not link.is_reachable:
+                parts.append('（此連結最後一次檢查時無法連通，可能已失效，請提醒學生改由學校首頁進入）')
+            lines.append('- ' + '，'.join(parts))
+
+    try:
         units = list(school.units.filter(is_active=True))
     except Exception:
         units = []
@@ -1308,6 +1328,39 @@ def build_life_guidance_context(user, language_code='zh-hant', limit=8):
     return '\n'.join(lines)
 
 
+_LATIN_TERM_RE = re.compile(r'^[A-Za-z0-9][A-Za-z0-9\-]*$')
+
+
+def _term_matches(term, text):
+    """
+    判斷 term 是否算是「命中」text。
+    純英數字的短詞（例如 ARC、NHI）容易變成其他英文字的子字串
+    （例如 "arc" 誤中 "architecture"），改用字界比對；
+    中文詞沒有這個問題（中文沒有詞界符號），維持原本的子字串比對。
+    """
+    if not term or not text:
+        return False
+    text_lower = text.lower()
+    if _LATIN_TERM_RE.match(term):
+        pattern = r'(?<![a-z0-9])' + re.escape(term.lower()) + r'(?![a-z0-9])'
+        return re.search(pattern, text_lower) is not None
+    return term in text or term.lower() in text_lower
+
+
+# 太籠統的英文詞：幾乎任何一篇文章的標題/內容都可能剛好出現，
+# 當成搜尋詞只會製造誤命中（例如問句本身是 "What is ARC?"，
+# 「what」「is」會命中一堆同樣用「What is ...?」當標題的不相關文章），
+# 不排除的話，越多語言 title_en 用問句當標題，命中就越亂
+ENGLISH_STOPWORDS = {
+    'a', 'an', 'the', 'is', 'are', 'was', 'were', 'be', 'been', 'am',
+    'do', 'does', 'did', 'can', 'could', 'should', 'would', 'will',
+    'what', 'when', 'where', 'why', 'who', 'which', 'how',
+    'i', 'my', 'me', 'you', 'your', 'it', 'its', 'this', 'that', 'these', 'those',
+    'to', 'of', 'for', 'in', 'on', 'at', 'by', 'and', 'or', 'so', 'if',
+    'about', 'with', 'as', 'from', 'not', 'no', 'yes', 'have', 'has', 'had',
+}
+
+
 def extract_search_terms(question):
     """把問題切成簡單搜尋詞，用於 FAQ / 知識庫搜尋。"""
     question = (question or '').strip()
@@ -1318,7 +1371,7 @@ def extract_search_terms(question):
 
     for token in re.findall(r'[A-Za-z0-9][A-Za-z0-9\-]{1,}', question):
         token = token.strip().lower()
-        if len(token) >= 2:
+        if len(token) >= 2 and token not in ENGLISH_STOPWORDS:
             terms.append(token)
 
     common_terms = [
@@ -1361,7 +1414,7 @@ def extract_search_terms(question):
     }
     lower_question = question.lower()
     for key, values in bridge_terms.items():
-        if key in lower_question:
+        if _term_matches(key, lower_question):
             terms.extend(values)
 
     unique_terms = []
@@ -1977,11 +2030,10 @@ def search_knowledge_items(question, ai_mode="helper", limit=3, user=None):
         ).lower()
         is_strong = False
         for term in terms:
-            t = term.lower()
-            if t in title_text or t in keyword_text:
+            if _term_matches(term, title_text) or _term_matches(term, keyword_text):
                 score += 3
                 is_strong = True
-            elif t in content_text:
+            elif _term_matches(term, content_text):
                 score += 1
         return score, is_strong
 
@@ -2210,30 +2262,59 @@ def detect_friend_emotion_hint(question):
     return '情緒不明，需要先問清楚'
 
 
+# 問題裡常見的縣市/地區關鍵字 → 對應的中央氣象署縣市名稱，
+# 也用來判斷問題是否已明確講地區（有的話天氣/地點查詢都不該再套用學校所在地）
+LOCATION_KEYWORD_TO_CWA_COUNTY = {
+    '台北': '臺北市', '臺北': '臺北市', '信義區': '臺北市', '大安區': '臺北市',
+    '中山區': '臺北市', '松山區': '臺北市', '內湖區': '臺北市',
+    '新北': '新北市', '板橋': '新北市', '新莊': '新北市', '三重': '新北市',
+    '桃園': '桃園市', '桃園市': '桃園市', '中壢': '桃園市', '內壢': '桃園市', '中原': '桃園市',
+    '新竹': '新竹市',
+    '苗栗': '苗栗縣',
+    '台中': '臺中市', '臺中': '臺中市',
+    '彰化': '彰化縣',
+    '南投': '南投縣',
+    '雲林': '雲林縣',
+    '嘉義': '嘉義市',
+    '台南': '臺南市', '臺南': '臺南市',
+    '高雄': '高雄市',
+    '屏東': '屏東縣',
+    '宜蘭': '宜蘭縣',
+    '花蓮': '花蓮縣',
+    '台東': '臺東縣', '臺東': '臺東縣',
+    '澎湖': '澎湖縣',
+    '金門': '金門縣',
+    '馬祖': '連江縣',
+}
+LOCATION_KEYWORD_TO_CWA_COUNTY_EN = {
+    'taipei': '臺北市', 'new taipei': '新北市', 'taoyuan': '桃園市',
+    'hsinchu': '新竹市', 'taichung': '臺中市', 'tainan': '臺南市',
+    'kaohsiung': '高雄市', 'zhongli': '桃園市', 'chungli': '桃園市',
+}
+
+
+def detect_explicit_county(question):
+    """
+    偵測問題裡是否已明確提到縣市/地區名稱，回傳中央氣象署慣用的縣市名稱（例如「臺北市」）。
+    沒有提到就回傳 None，這時天氣/地點查詢才需要用學生學校所在地當預設值。
+    """
+    q = (question or '').strip()
+    lower_q = q.lower()
+    for keyword, county in LOCATION_KEYWORD_TO_CWA_COUNTY.items():
+        if keyword in q:
+            return county
+    for keyword, county in LOCATION_KEYWORD_TO_CWA_COUNTY_EN.items():
+        if keyword in lower_q:
+            return county
+    return None
+
+
 def detect_explicit_location(question):
     """
     偵測問題裡是否已明確提到地區/城市/地點名稱。
     有的話搜尋時不需再附加學校位置。
     """
-    q = (question or '').strip()
-    lower_q = q.lower()
-
-    location_keywords_zh = [
-        '台北', '臺北', '新北', '桃園', '新竹', '苗栗', '台中', '臺中',
-        '彰化', '南投', '雲林', '嘉義', '台南', '臺南', '高雄', '屏東',
-        '宜蘭', '花蓮', '台東', '臺東', '澎湖', '金門', '馬祖',
-        '中壢', '桃園市', '內壢', '中原', '板橋', '新莊', '三重',
-        '信義區', '大安區', '中山區', '松山區', '內湖區',
-    ]
-    location_keywords_en = [
-        'taipei', 'new taipei', 'taoyuan', 'hsinchu', 'taichung',
-        'tainan', 'kaohsiung', 'zhongli', 'chungli',
-    ]
-
-    return (
-        any(k in q for k in location_keywords_zh)
-        or any(k in lower_q for k in location_keywords_en)
-    )
+    return detect_explicit_county(question) is not None
 
 
 def detect_place_query(question):
@@ -2457,6 +2538,37 @@ def detect_friend_domain_query(question):
     return (
         any(k in q for k in FRIEND_DOMAIN_KEYWORDS_ZH)
         or any(k in lower_q for k in FRIEND_DOMAIN_KEYWORDS_EN)
+    )
+
+
+# 生活機能地點推薦（餐廳、超商、健身房…），這種問題需要 Google Places 搜尋真實地點，
+# 目前只有聊天好朋友有串接。刻意不放「在哪」「地址」「辦公室」這類太通用的字，
+# 避免誤判成校內單位、簽證窗口這類任務小幫手自己就能正確回答的正式手續問題。
+AMENITY_KEYWORDS_ZH = [
+    '餐廳', '餐館', '食堂', '小吃', '咖啡廳', '咖啡館', '咖啡',
+    '便利商店', '超商', '超市', '商店', '商場', '百貨', '夜市', '市場',
+    '醫院', '診所', '藥局', '銀行', '郵局',
+    '公園', '體育館', '游泳池', '球場', '化妝品店', '藥妝店', '屈臣氏', '康是美', '寶雅', '日藥本鋪',
+    '看病', '看醫生', '掛號', '急診', '買藥', '拿藥',
+    '吃飯', '吃東西', '喝飲料', '喝咖啡', '買東西', '逛街',
+    '剪髮', '剪頭髮', '美髮', '健身房', '洗衣', '自助洗衣',
+]
+AMENITY_KEYWORDS_EN = [
+    'restaurant', 'cafe', 'coffee shop', 'shop', 'store', 'mall',
+    'supermarket', 'convenience store', 'hospital', 'clinic', 'pharmacy',
+    'bank', 'post office', 'night market',
+]
+
+
+def detect_amenity_recommendation_query(question):
+    """偵測問題是不是在找生活機能地點推薦（附近餐廳、超商…），不是校內單位或正式手續地點。"""
+    q = (question or '').strip()
+    lower_q = q.lower()
+    if not q:
+        return False
+    return (
+        any(k in q for k in AMENITY_KEYWORDS_ZH)
+        or any(k in lower_q for k in AMENITY_KEYWORDS_EN)
     )
 
 
@@ -2898,6 +3010,29 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 1. 學生問校內地點、單位、分機、行事曆、校務流程時，預設就是在問「他自己的學校」，直接用上面的資料回答，不要反問他是哪一間學校。
 2. 上面資料沒有涵蓋的單位或分機，直接說明你沒有這項資料，並請他打學校總機或查官網，絕對不可以自行編造地點、分機或電話號碼。
 3. 學生明確問其他學校時，才改用一般說明，並提醒他這不是他就讀的學校。
+
+【不可以自己講日期】
+你手上沒有任何一年的正確日期資料，所以任何具體日期都不可以憑印象說出來
+（例如「9 月 9 日開學」「3 月 15 日截止」），即使你覺得自己知道，也不可以。
+講錯開學日或報到期限，學生可能訂錯機票、錯過註冊，後果比回答不出來嚴重得多。
+
+【什麼時候可以給「學校行事曆」連結】
+只有在學生問的是「他自己學校的學期行程」時才給，也就是這幾類：
+開學日、放假與寒暑假起訖、註冊繳費期限、選課與加退選時間、期中期末考週、畢業相關流程時程。
+這些才是學校行事曆上真的會寫的東西。
+
+【什麼時候「不可以」給學校行事曆連結】
+以下這些的日期不會出現在學校行事曆上，把行事曆丟給學生是答非所問，不要這樣做：
+- 校外或全國性的競賽、比賽、檢定考試（例如大專資訊應用競賽、TOCFL、多益）
+- 其他單位主辦的活動、營隊、講座、說明會
+- 獎學金、計畫、實習的報名或截止日
+- 政府機關的辦理時程（簽證、居留證、健保）
+- 系所或社團自己辦的活動
+遇到這幾類，請誠實說明你沒有可靠的最新資訊，並建議他直接查「主辦單位」的官方網站或公告，
+必要時可以請他洽詢系辦、學務處課外活動組或該競賽的官方網站。不要用學校行事曆搪塞。
+
+【線上系統】
+選課、成績、請假這類要登入操作的問題，把上面「線上系統」對應的連結給他。
 """.strip()
     else:
         school_block = (
@@ -2912,17 +3047,33 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
     # 管轄範圍互相提醒（helper → friend）：
     # 任務、資訊頁、知識庫都查無資料時，才判斷這是不是其實是聊天好朋友的專長
-    # （情緒陪伴、心情、人際關係），避免把帶情緒字眼的正式手續問題誤判過去；
+    # （情緒陪伴、天氣查詢、生活機能地點推薦——天氣和地點都只有 friend 模式串接了真實 API，
+    # helper 自己回答只會編造或含糊帶過），避免把帶情緒字眼的正式手續問題誤判過去；
     # 危機訊息已由上面的 crisis_block 處理，優先權更高，這裡不重複判斷。
     friend_domain_hint = ''
-    if direct_mode and not is_crisis_message and detect_friend_domain_query(question):
-        friend_domain_hint = (
-            '【任務歸屬提醒】這個問題聽起來比較像是情緒或生活陪伴需求'
-            '（例如心情不好、想家、人際關係、壓力大），這其實是「ReadyTo 聊天好朋友」的專長，'
-            '不是任務小幫手負責的簽證、居留證等正式手續。'
-            '請先用 1、2 句話簡短、溫暖地回應學生的感受，不要勉強套用個人化/一般回答的格式，'
-            '再自然地建議他切換到「ReadyTo 聊天好朋友」，那邊比較適合陪他聊這件事。'
-        )
+    if direct_mode and not is_crisis_message:
+        if detect_friend_domain_query(question):
+            friend_domain_hint = (
+                '【任務歸屬提醒】這個問題聽起來比較像是情緒或生活陪伴需求'
+                '（例如心情不好、想家、人際關係、壓力大），這其實是「ReadyTo 聊天好朋友」的專長，'
+                '不是任務小幫手負責的簽證、居留證等正式手續。'
+                '請先用 1、2 句話簡短、溫暖地回應學生的感受，不要勉強套用個人化/一般回答的格式，'
+                '再自然地建議他切換到「ReadyTo 聊天好朋友」，那邊比較適合陪他聊這件事。'
+            )
+        elif detect_weather_query(question):
+            friend_domain_hint = (
+                '【任務歸屬提醒】這是天氣查詢，任務小幫手沒有串接氣象資料，這其實是「ReadyTo 聊天好朋友」的專長'
+                '（那邊串接了中央氣象署的即時資料）。'
+                '請用 1、2 句話簡短回應，絕對不要自己編造溫度、降雨機率、颱風等任何天氣數字，'
+                '直接建議他切換到「ReadyTo 聊天好朋友」查詢天氣。'
+            )
+        elif detect_amenity_recommendation_query(question):
+            friend_domain_hint = (
+                '【任務歸屬提醒】這是生活機能地點推薦（例如附近餐廳、超商、健身房），'
+                '任務小幫手沒有串接地圖服務，這其實是「ReadyTo 聊天好朋友」的專長（那邊串接了 Google 地圖搜尋真實地點）。'
+                '請用 1、2 句話簡短回應，絕對不要自己編造或推薦任何地點名稱與地址，'
+                '直接建議他切換到「ReadyTo 聊天好朋友」查詢附近地點。'
+            )
 
     place_results = None
     place_source = None
@@ -2965,7 +3116,9 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
     weather_results = None
     weather_hint = ''
     if ai_mode == 'friend' and detect_weather_query(question):
-        county = get_student_county(user)
+        # 問題裡有明確講縣市（例如「臺北天氣怎麼樣」）就查那個縣市，
+        # 沒有明確講地區（例如「今天天氣如何」）才退回學生學校所在地
+        county = detect_explicit_county(question) or get_student_county(user)
         weather_results = fetch_weather_forecast(county) if county else None
 
         if '颱風' in question or 'typhoon' in question.lower():
@@ -3048,10 +3201,23 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
             'model': 'openai-sdk-missing',
         }
 
-    # helper 模式：如果知識庫直接命中，就用穩定的本地知識庫答案，避免多花 API。
+    # helper 模式：如果知識庫命中的文章「全部屬於同一分類」，就用穩定的本地知識庫答案，避免多花 API
+    # （例如簽證命中「通則」+「該國別」兩篇都算 visa 分類，原文拼接仍然是同一個主題，沒問題）。
+    # 命中好幾篇「不同分類」時，代表題目籠統或搜尋詞誤中好幾個不同主題，
+    # 直接原文拼接會把不相關的內容也一起丟給學生（問護照卻連簽證、僑生海聯招都貼出來），
+    # 這種情況要走 OpenAI，讓它自己判斷只回答學生實際問的部分。
+    #
+    # school_info 這個分類本身是「整校校內單位總覽」的長文，就算只命中這一篇也不能直接整篇貼出去——
+    # 學生問「地址」「校長室在哪」只是想知道其中一行，原文照貼會把全部單位都列出來，
+    # 一樣要走 OpenAI 讓它從文章裡挑出真正被問到的那一項。
+    #
     # 但如果學生有上傳附件，必須走 OpenAI 才能讀取附件內容，不能用這個本地捷徑；
     # 小老師角色一律走 OpenAI，才能維持教學語氣與課業背景包，不要用這個直接回答的捷徑。
-    if ai_mode == "helper" and not attachments and not is_tutor_role and (
+    # friend_domain_hint 有值代表這題其實該轉給聊天好朋友（天氣、地點推薦、情緒陪伴），
+    # 就算知識庫剛好也搜到東西，也要走 OpenAI 講出轉介提醒，不要用本地捷徑蓋掉這個提醒。
+    DIRECTORY_STYLE_CATEGORIES = {'school_info'}
+    knowledge_categories = {item.category for item in knowledge_items}
+    if ai_mode == "helper" and not attachments and not is_tutor_role and not friend_domain_hint and len(knowledge_categories) == 1 and not (knowledge_categories & DIRECTORY_STYLE_CATEGORIES) and (
         knowledge_context
         and '目前沒有找到直接相關的知識庫資料' not in knowledge_context
         and '目前沒有可用的知識庫資料' not in knowledge_context
@@ -3257,11 +3423,13 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
 {friend_domain_hint}
 
-以下是系統 FAQ / 知識庫搜尋結果，必須優先參考：
+以下是系統 FAQ / 知識庫搜尋結果，僅供參考，裡面可能包含好幾個不同主題（因為搜尋是關鍵字比對，不代表每篇都跟學生的問題相關）：
 {knowledge_context}
 
-如果知識庫有直接相關內容，必須根據知識庫回答，不要忽略。
-如果知識庫沒有找到相關資料，且上面沒有提醒學生改問聊天好朋友，必須根據你自己對來臺就學流程的知識直接回答學生的問題，絕對不可以把「目前沒有找到直接相關的知識庫資料」或任何系統提示語直接輸出為答案。
+只回答學生這次實際問的問題。上面的知識庫資料如果有哪一段直接對應這個問題，就根據那一段回答；
+其他不相關的段落（不同主題、不同證件、不同流程、或同一篇列表裡跟問題無關的其他項目）一律忽略，
+絕對不要因為它剛好在同一篇知識庫資料裡就整篇貼出來——例如學生只問地址，就只回地址，不要把其他單位、電話、分機全部列出來。
+如果整份知識庫資料都沒有直接回答到問題，且上面沒有提醒學生改問聊天好朋友，就憑你自己對來臺就學流程的知識直接回答，絕對不可以把「目前沒有找到直接相關的知識庫資料」或任何系統提示語直接輸出為答案。
 
 以下是最近對話紀錄，僅供上下文參考：
 {history_text}

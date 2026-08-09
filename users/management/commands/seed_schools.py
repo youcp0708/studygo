@@ -103,7 +103,7 @@ class Command(BaseCommand):
                 school.save(update_fields=updates)
                 filled_count += 1
 
-        verified_count, unit_count = self._apply_verified_data()
+        verified_count, unit_count, link_count = self._apply_verified_data()
 
         if options['verbosity']:
             total = School.objects.count()
@@ -112,7 +112,8 @@ class Command(BaseCommand):
                 f'完成：新增 {created_count} 所、補齊 {filled_count} 所，目前共 {total} 筆學校資料。'
             ))
             self.stdout.write(
-                f'已查核並寫入詳細校務資料：{verified_count} 所（含 {unit_count} 個校內單位）。'
+                f'已查核並寫入詳細校務資料：{verified_count} 所'
+                f'（含 {unit_count} 個校內單位、{link_count} 個線上系統連結）。'
             )
             self.stdout.write(self.style.WARNING(
                 f'尚有 {pending} 所只有校名與簡稱，地址、總機、分機皆為空白且未查核。'
@@ -124,10 +125,10 @@ class Command(BaseCommand):
         把 users/school_data.py 中已查核的校務資料寫入 School / SchoolUnit。
         只覆蓋資料檔有提供的欄位，資料檔沒寫的欄位保持原狀（可能是管理員手動填的）。
         """
-        from users.models import School, SchoolUnit
+        from users.models import School, SchoolUnit, SchoolLink
         from users.school_data import VERIFIED_SCHOOLS
 
-        verified_count = unit_count = 0
+        verified_count = unit_count = link_count = 0
 
         for code, data in VERIFIED_SCHOOLS.items():
             school = School.objects.filter(code=code).first()
@@ -135,9 +136,10 @@ class Command(BaseCommand):
                 continue
 
             units = data.get('units', [])
+            links = data.get('links', [])
             fields = {
                 k: v for k, v in data.items()
-                if k not in ('units', 'source', 'verified')
+                if k not in ('units', 'links', 'source', 'verified')
             }
             fields['last_verified_at'] = data['verified']
 
@@ -154,4 +156,14 @@ class Command(BaseCommand):
                 )
                 unit_count += 1
 
-        return verified_count, unit_count
+            for order, link in enumerate(links):
+                # is_reachable / last_checked_at 由 check_school_links 維護，
+                # 這裡不覆蓋，避免每次 seed 都把檢查結果洗掉
+                SchoolLink.objects.update_or_create(
+                    school=school, name=link['name'],
+                    defaults={**{k: v for k, v in link.items() if k != 'name'},
+                              'order': order, 'is_active': True},
+                )
+                link_count += 1
+
+        return verified_count, unit_count, link_count

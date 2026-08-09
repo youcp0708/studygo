@@ -445,6 +445,80 @@ class SchoolUnit(models.Model):
         return [a.strip() for a in self.aliases.split(',') if a.strip()]
 
 
+class SchoolLink(models.Model):
+    """
+    各校的線上系統連結（校務系統 Portal、eeclass 數位學習平台、選課系統等）。
+
+    與其他兩者的分工，不要混用：
+      School.website / calendar_url / admission_url → 學校層級的網頁
+      SchoolUnit.url                                → 處室 / 系所的網頁
+      SchoolLink（本表）                             → 學生要登入使用的線上系統
+
+    重要原則：這裡存的是「網址」，不是網址裡的內容。
+    網址通常長年不變，內容（例如每年的行事曆日期）則會更新，
+    所以 chatbot 回答時一律導向連結，不把會過期的內容寫死在知識庫裡。
+    """
+
+    CATEGORY_CHOICES = [
+        ('portal',   '校務行政系統 Portal'),
+        ('lms',      '數位學習平台'),
+        ('course',   '選課系統'),
+        ('mail',     '學生信箱'),
+        ('dorm',     '住宿服務系統'),
+        ('library',  '圖書館系統'),
+        ('other',    '其他系統'),
+    ]
+
+    school = models.ForeignKey(
+        School,
+        on_delete=models.CASCADE,
+        related_name='links',
+        verbose_name='所屬學校',
+    )
+    category = models.CharField(
+        max_length=20, choices=CATEGORY_CHOICES, default='other',
+        verbose_name='系統類型',
+    )
+    name    = models.CharField(max_length=100, verbose_name='系統名稱')
+    aliases = models.CharField(
+        max_length=300, blank=True,
+        verbose_name='別名',
+        help_text='學生實際會講的說法，以逗號分隔，例如：eeclass,數位學習平台,線上課程',
+    )
+    url  = models.URLField(verbose_name='網址')
+    note = models.CharField(
+        max_length=200, blank=True,
+        verbose_name='備註',
+        help_text='例如登入帳號規則、僅限校內網路使用等',
+    )
+
+    last_checked_at = models.DateField(
+        null=True, blank=True,
+        verbose_name='最後連線檢查日期',
+        help_text='由 check_school_links 指令自動更新；連結失效時會在後台標示',
+    )
+    is_reachable = models.BooleanField(
+        default=True,
+        verbose_name='連結是否可連通',
+        help_text='最後一次檢查時是否正常回應；False 代表連結可能已失效需人工確認',
+    )
+
+    order     = models.PositiveIntegerField(default=0, verbose_name='排序')
+    is_active = models.BooleanField(default=True, verbose_name='是否啟用')
+
+    class Meta:
+        db_table = 'users_school_link'
+        ordering = ['school', 'order', 'id']
+        verbose_name = '學校線上系統連結'
+        verbose_name_plural = '學校線上系統連結'
+
+    def __str__(self):
+        return f'{self.school.code} - {self.name}'
+
+    def alias_list(self):
+        return [a.strip() for a in self.aliases.split(',') if a.strip()]
+
+
 # ══════════════════════════════════════════
 # ALUMNI SHARE（學長姐分享）
 # 學生發佈留學經驗分享；分享頁分「我的學校」與「所有學校」兩區，
