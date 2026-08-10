@@ -9307,8 +9307,8 @@ msgstr "Cari panduan..."
 
 #: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
 #| msgid "沒有未讀通知 🎉"
-msgid "沒有未讀通知"
-msgstr "Tiada pemberitahuan yang belum dibaca 🎉"
+msgid "沒有通知"
+msgstr "Tiada pemberitahuan 🎉"
 
 #: .\templates\base.html:157
 msgid "標記為已讀"

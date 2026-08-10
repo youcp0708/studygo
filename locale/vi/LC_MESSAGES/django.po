@@ -9139,8 +9139,8 @@ msgstr "Tìm kiếm hướng dẫn..."
 
 #: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
 #| msgid "沒有未讀通知 🎉"
-msgid "沒有未讀通知"
-msgstr "Không có thông báo chưa đọc 🎉"
+msgid "沒有通知"
+msgstr "Không có thông báo 🎉"
 
 #: .\templates\base.html:157
 msgid "標記為已讀"

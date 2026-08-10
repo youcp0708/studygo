@@ -9084,8 +9084,8 @@ msgid "學長姐分享"
 msgstr "先輩の体験談"
 
 #: .\templates\base.html:157
-msgid "沒有未讀通知"
-msgstr "未読の通知はありません"
+msgid "沒有通知"
+msgstr "通知はありません"
 
 #: .\templates\base.html:157
 msgid "標記為已讀"

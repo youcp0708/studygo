@@ -602,6 +602,15 @@ async function renderMyTasks() {
   tabsHtml += `</div><div class="stage-progress" id="topProgressText" style="white-space: nowrap; font-weight: 700;">${activeProgressText}</div></div>`;
   container.innerHTML = tabsHtml + contentHtml;
 
+  applyTaskHashDeepLink();
+}
+
+/**
+ * 讀取網址的 #task-<id>，切到對應分頁、捲過去並高亮。
+ * 由 renderMyTasks() 頁面載入時呼叫；小鈴鐺提醒在同一頁點擊跳轉時也直接呼叫這個函式
+ * （同頁改網址 hash 不會自動觸發這段邏輯，需要手動呼叫一次）。
+ */
+function applyTaskHashDeepLink() {
   const hash = window.location.hash;
   if (hash && hash.startsWith('#task-')) {
     const target = document.querySelector(hash);
@@ -748,10 +757,27 @@ window.toggleReminderDropdown = function () {
 
   if (dropdown.style.display === 'none') {
     dropdown.style.display = 'block';
+    // 延遲一拍再掛監聽，避免這次開啟下拉選單的點擊事件被自己立刻關掉
+    setTimeout(() => {
+      document.addEventListener('click', _closeReminderDropdownOutside);
+    }, 0);
   } else {
-    dropdown.style.display = 'none';
+    closeReminderDropdown();
   }
 };
+
+function closeReminderDropdown() {
+  const dropdown = document.getElementById('reminderDropdown');
+  if (dropdown) dropdown.style.display = 'none';
+  document.removeEventListener('click', _closeReminderDropdownOutside);
+}
+
+function _closeReminderDropdownOutside(e) {
+  const wrap = document.getElementById('tourNavReminder');
+  if (wrap && !wrap.contains(e.target)) {
+    closeReminderDropdown();
+  }
+}
 
 /**
  * 顯示 FAB 紅點 + 「嗶嗶嗶，你有新消息！」話框，記住要開啟哪個聊天 session。
@@ -766,7 +792,7 @@ function showProactiveChatDot(sessionId) {
 }
 
 async function renderReminders() {
-  const { ok, data } = await apiFetch('/api/flows/reminders/?unread_only=true');
+  const { ok, data } = await apiFetch('/api/flows/reminders/');
   if (!ok) return;
 
   const count = data.data.unread_count || 0;
@@ -785,8 +811,7 @@ async function renderReminders() {
     showProactiveChatDot(proactiveChat.session_id);
   }
 
-  const noRemindersText = dropdown ? dropdown.getAttribute('data-no-reminders') : '沒有未讀通知 🎉';
-  const markReadText = dropdown ? dropdown.getAttribute('data-mark-read') : '標記為已讀';
+  const noRemindersText = dropdown ? dropdown.getAttribute('data-no-reminders') : '沒有通知 🎉';
 
   if (dashCount) {
     dashCount.textContent = count;
@@ -815,31 +840,69 @@ async function renderReminders() {
 
   list.innerHTML = '';
 
+  // 已讀/未讀用不同顏色：未讀是淡底色+一般文字色，已讀是透明底+灰色文字，但兩者都留在畫面上
   reminders.forEach(r => {
+    const hasLink = r.link_task_id !== null && r.link_task_id !== undefined;
+    const clickable = hasLink || !r.is_read;
+    const clickAttr = clickable
+      ? `onclick="onReminderClick(${r.id}, ${r.is_read}, ${hasLink ? r.link_task_id : 'null'})"`
+      : '';
+    const bg = r.is_read ? 'transparent' : 'var(--primary-soft, #eef6f3)';
+    const textColor = r.is_read ? 'var(--muted)' : 'var(--text)';
     list.innerHTML += `
-      <div id="reminder-${r.id}" style="padding:12px 16px; border-bottom:1px solid var(--border, #eee); display:flex; flex-direction:column; gap:4px; font-size:14px;">
-        <div style="color:var(--text); line-height:1.4;">${escapeFlowsHtml(r.message)}</div>
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
-          <span style="font-size:12px; color:var(--muted);">${new Date(r.created_at).toLocaleDateString(getSiteLocale())}</span>
-          <button onclick="markReminderRead(${r.id})" style="background:none; border:none; color:var(--primary, #007bff); cursor:pointer; font-size:12px; padding:0;">${markReadText}</button>
-        </div>
+      <div id="reminder-${r.id}" ${clickAttr} style="padding:12px 16px; border-bottom:1px solid var(--border, #eee); display:flex; flex-direction:column; gap:4px; font-size:14px; background:${bg}; ${clickable ? 'cursor:pointer;' : ''}">
+        <div class="reminder-message" style="color:${textColor}; line-height:1.4;">${escapeFlowsHtml(r.message)}</div>
+        <span style="font-size:12px; color:var(--muted);">${new Date(r.created_at).toLocaleDateString(getSiteLocale())}</span>
       </div>
     `;
   });
 }
 
-window.markReminderRead = async function (id) {
-  const { ok } = await apiFetch(`/api/flows/reminders/${id}/read/`, 'PATCH');
-
-  if (ok) {
-    const item = document.getElementById(`reminder-${id}`);
-    if (item) {
-      item.style.opacity = '0.5';
+/** 點小鈴鐺的提醒卡片：標記已讀（保留在畫面上，只是變灰）＋ 如果有對應任務就跳轉過去 */
+window.onReminderClick = async function (id, wasRead, studentTaskId) {
+  if (!wasRead) {
+    const { ok } = await apiFetch(`/api/flows/reminders/${id}/read/`, 'PATCH');
+    if (ok) {
+      const item = document.getElementById(`reminder-${id}`);
+      if (item) {
+        item.style.background = 'transparent';
+        const msg = item.querySelector('.reminder-message');
+        if (msg) msg.style.color = 'var(--muted)';
+      }
+      updateUnreadCount(-1);
     }
+  }
 
-    setTimeout(() => {
-      renderReminders();
-    }, 500);
+  if (studentTaskId !== null && studentTaskId !== undefined) {
+    goToReminderTask(studentTaskId);
+  }
+};
+
+function updateUnreadCount(delta) {
+  const badge = document.getElementById('reminderBadge');
+  const dashCount = document.getElementById('dashUnreadCount');
+  if (badge) {
+    const next = Math.max(0, parseInt(badge.textContent || '0', 10) + delta);
+    if (next > 0) {
+      badge.textContent = next;
+    } else {
+      badge.style.display = 'none';
+    }
+  }
+  if (dashCount) {
+    dashCount.textContent = Math.max(0, parseInt(dashCount.textContent || '0', 10) + delta);
+  }
+}
+
+/** 點小鈴鐺的提醒卡片：跳到「我的任務」頁面並定位到對應任務 */
+window.goToReminderTask = function (studentTaskId) {
+  const hash = `#task-${studentTaskId}`;
+  if (window.location.pathname === '/flows/my-tasks/') {
+    window.location.hash = hash;
+    applyTaskHashDeepLink();
+    closeReminderDropdown();
+  } else {
+    window.location.href = `/flows/my-tasks/${hash}`;
   }
 };
 

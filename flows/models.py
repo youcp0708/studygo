@@ -444,6 +444,22 @@ class Reminder(models.Model):
 
         return self.message
 
+    def get_link_task_id(self):
+        """
+        回傳點擊小鈴鐺這則提醒時應該導去的 StudentTask id。
+        到期提醒直接連到本身；跳過前置任務的提醒則連到「被跳過、尚未完成」任務中最前面的一個
+        （skipped_task_ids 依流程順序存放，見 auto_create_reminder_on_task_update 的 order_by）。
+        """
+        if self.kind == 'skipped':
+            for task_id in self.skipped_task_ids:
+                st_id = StudentTask.objects.filter(
+                    student_id=self.student_id, task_id=task_id
+                ).values_list('id', flat=True).first()
+                if st_id:
+                    return st_id
+            return self.student_task_id
+        return self.student_task_id
+
 
 # ==========================================
 # Signals: 當任務被更新時自動檢查並產生提醒
@@ -471,7 +487,7 @@ def auto_create_reminder_on_task_update(sender, instance, **kwargs):
         ).filter(
             Q(task__stage__order__lt=curr_stage_order) |
             Q(task__stage__order=curr_stage_order, task__order__lt=curr_task_order)
-        ).select_related('task', 'task__stage')
+        ).select_related('task', 'task__stage').order_by('task__stage__order', 'task__order')
 
         if skipped_tasks.exists():
             # 使用學生的慣用語言（而非觸發請求當下的介面語言）產生 message 欄位；

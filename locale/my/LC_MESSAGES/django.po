@@ -8934,8 +8934,8 @@ msgstr "လမ်းညွှန်ရှာမည်..."
 
 #: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
 #| msgid "沒有未讀通知 🎉"
-msgid "沒有未讀通知"
-msgstr "ဖတ်ရန်ကျန်သော အသိပေးချက်မရှိပါ 🎉"
+msgid "沒有通知"
+msgstr "အသိပေးချက်မရှိပါ 🎉"
 
 #: .\templates\base.html:157
 msgid "標記為已讀"

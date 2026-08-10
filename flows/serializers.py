@@ -59,13 +59,18 @@ class StudentTaskSerializer(serializers.ModelSerializer):
 class ReminderSerializer(serializers.ModelSerializer):
     # 依目前瀏覽頁面的語言即時翻譯提醒內容（見 Reminder.get_message）
     message = serializers.SerializerMethodField()
+    # 點擊這則提醒要導去的 StudentTask id（見 Reminder.get_link_task_id）
+    link_task_id = serializers.SerializerMethodField()
 
     class Meta:
         model = Reminder
-        fields = ('id', 'student_task', 'message', 'is_read', 'created_at')
+        fields = ('id', 'student_task', 'link_task_id', 'message', 'is_read', 'created_at')
 
     def get_message(self, obj):
         return obj.get_message()
+
+    def get_link_task_id(self, obj):
+        return obj.get_link_task_id()
 
 
 class TipLinkSerializer(serializers.ModelSerializer):

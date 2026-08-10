@@ -8435,8 +8435,8 @@ msgstr "가이드 검색..."
 
 #: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
 #| msgid "沒有未讀通知 🎉"
-msgid "沒有未讀通知"
-msgstr "읽지 않은 알림이 없습니다 🎉"
+msgid "沒有通知"
+msgstr "알림이 없습니다 🎉"
 
 #: .\templates\base.html:157
 msgid "標記為已讀"

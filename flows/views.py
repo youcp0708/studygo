@@ -597,6 +597,9 @@ def get_reminders_view(request):
     if request.query_params.get('unread_only') == 'true':
         reminders = reminders.filter(is_read=False)
 
+    # 小鈴鐺下拉選單改成已讀也留著顯示（只是變灰），避免無上限累積，只取最近 30 筆
+    reminders = reminders[:30]
+
     serializer = ReminderSerializer(reminders, many=True)
     return success_response({
         'reminders': serializer.data,

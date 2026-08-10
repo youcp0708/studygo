@@ -4398,15 +4398,9 @@ msgstr ""
 #: .\guides\templates\guides\guide_course.html:164
 msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
 msgstr ""
-<<<<<<< HEAD
-"Process: Print the course withdrawal application form from the course "
-"registration system → Obtain signatures from the instructor and department "
-"chair → Submit to the Curriculum Office."
-=======
 "Process: Print the withdrawal application form from the course system → "
 "Get signatures from the instructor and department head → Submit to the "
 "Academic Affairs Division."
->>>>>>> nora/xinde
 
 #: .\guides\templates\guides\guide_course.html:165
 msgid "已辦理減修者不得再辦理停修。"
@@ -9286,8 +9280,8 @@ msgstr "Search guides..."
 
 #: .\templates\base.html:149 .\users\templates\users\dashboard.html:122
 #| msgid "沒有未讀通知 🎉"
-msgid "沒有未讀通知"
-msgstr "No unread notifications 🎉"
+msgid "沒有通知"
+msgstr "No notifications 🎉"
 
 #: .\templates\base.html:157
 msgid "標記為已讀"
