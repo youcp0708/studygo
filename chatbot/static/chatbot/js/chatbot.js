@@ -249,7 +249,7 @@
       .split('\n')
       .map((line) => {
         const safeLine = escapeHtml(line).replace(
-          /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)/g,
+          /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+|guide:start:\d+)\)/g,
           (_match, label, href) => {
             if (href.startsWith('tel:')) {
               return `<a href="${href}" class="chat-link chat-link--tel">📞 ${label}</a>`;
