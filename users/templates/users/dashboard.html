@@ -67,8 +67,9 @@
           <div class="preview-row">
             <span>{% trans "系所" %}</span>
             <span>
-              {% if profile %}
-              {{ profile.department|default:"—" }}
+              {# department 存的是中文原值，需在顯示時翻譯；查無翻譯會原樣回傳 #}
+              {% if profile.department %}
+              {% trans profile.department %}
               {% else %}
               —
               {% endif %}

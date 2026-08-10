@@ -11034,3 +11034,127 @@ msgstr "台湾の学校から入学許可を受け取った後、入学許可書
 #: .\users\templates\users\home.html:358
 msgid "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
 msgstr "出願開始から正式な入学までは通常 3–8 か月かかります。早めの準備をおすすめします：出願資格の確認（6–12 か月前）、書類の準備（4–6 か月前）、出願（3–4 か月前）、合否待ち（1–2 か月）、ビザ申請（1–2 か月）。"
+
+#: .\templates\base.html:292
+msgid "結束帶領"
+msgstr "ガイドを終了"
+
+#: .\users\templates\users\dashboard.html:158
+msgid "先點這裡，我們去完成這項任務吧！"
+msgstr "まずはここをクリック！このタスクを一緒に片づけましょう。"
+
+#: .\flows\views.py:71
+msgid "完成「{title}」吧！"
+msgstr "「{title}」を片づけましょう！"
+
+#: .\flows\views.py:72
+msgid "這項任務已經完成囉！"
+msgstr "このタスクはすでに完了しています！"
+
+#: .\flows\views.py:73
+msgid "任務已完成！"
+msgstr "タスクが完了しました！"
+
+#: .\flows\views.py:74
+msgid "任務已完成！想更了解細節可以看看："
+msgstr "タスクが完了しました！詳しく知りたい方はこちらをご覧ください："
+
+#: .\users\templates\users\edit_profile.html
+msgid "文學院學士班"
+msgstr "文学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "中國文學系"
+msgstr "中国文学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "英美語文學系"
+msgstr "英米語文学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "法國語文學系"
+msgstr "フランス語文学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "理學院學士班"
+msgstr "理学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "物理學系"
+msgstr "物理学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "數學系"
+msgstr "数学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "化學學系"
+msgstr "化学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "光電科學與工程學系"
+msgstr "光電科学工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "工學院學士班"
+msgstr "工学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "化學工程與材料工程學系"
+msgstr "化学工学・材料工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "土木工程學系"
+msgstr "土木工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "企業管理學系"
+msgstr "企業管理学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "資訊管理學系"
+msgstr "情報管理学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "財務金融學系"
+msgstr "財務金融学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "經濟學系"
+msgstr "経済学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "資訊電機學院學士班"
+msgstr "資訊電機学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "通訊工程學系"
+msgstr "通信工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "地球科學學院學士班"
+msgstr "地球科学学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "地球科學學系"
+msgstr "地球科学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "大氣科學學系"
+msgstr "大気科学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "太空科學與工程學系"
+msgstr "宇宙科学工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "客家語文暨社會科學學系"
+msgstr "客家語文・社会科学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "生命科學系"
+msgstr "生命科学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "生醫科學與工程學系"
+msgstr "生医科学工学科"

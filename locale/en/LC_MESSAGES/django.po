@@ -11803,3 +11803,131 @@ msgstr "After receiving your admission letter from a Taiwanese school, take it t
 #: .\users\templates\users\home.html:358
 msgid "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
 msgstr "From starting your application to actual enrollment usually takes 3–8 months. We recommend preparing early: confirm your eligibility (6–12 months ahead), prepare documents (4–6 months ahead), submit your application (3–4 months ahead), wait for admission results (1–2 months), and apply for your visa (1–2 months)."
+
+#: .\templates\base.html:292
+msgid "結束帶領"
+msgstr "End guide"
+
+#: .\users\templates\users\dashboard.html:158
+msgid "先點這裡，我們去完成這項任務吧！"
+msgstr "Click here first — let's go finish this task!"
+
+#: .\flows\views.py:71
+msgid "完成「{title}」吧！"
+msgstr "Let's finish \"{title}\"!"
+
+#: .\flows\views.py:72
+msgid "這項任務已經完成囉！"
+msgstr "This task is already completed!"
+
+#: .\flows\views.py:73
+msgid "任務已完成！"
+msgstr "Task completed!"
+
+#: .\flows\views.py:74
+msgid "任務已完成！想更了解細節可以看看："
+msgstr "Task completed! For more details, take a look at: "
+
+#: .\users\templates\users\edit_profile.html
+msgid "文學院學士班"
+msgstr "Bachelor Program, College of Humanities"
+
+#: .\users\templates\users\edit_profile.html
+msgid "中國文學系"
+msgstr "Department of Chinese Literature"
+
+#: .\users\templates\users\edit_profile.html
+msgid "英美語文學系"
+msgstr "Department of English"
+
+#: .\users\templates\users\edit_profile.html
+msgid "法國語文學系"
+msgstr "Department of French"
+
+#: .\users\templates\users\edit_profile.html
+msgid "理學院學士班"
+msgstr "Bachelor Program, College of Science"
+
+#: .\users\templates\users\edit_profile.html
+msgid "物理學系"
+msgstr "Department of Physics"
+
+#: .\users\templates\users\edit_profile.html
+msgid "數學系"
+msgstr "Department of Mathematics"
+
+#: .\users\templates\users\edit_profile.html
+msgid "化學學系"
+msgstr "Department of Chemistry"
+
+#: .\users\templates\users\edit_profile.html
+msgid "光電科學與工程學系"
+msgstr "Department of Optics and Photonics"
+
+#: .\users\templates\users\edit_profile.html
+msgid "工學院學士班"
+msgstr "Bachelor Program, College of Engineering"
+
+#: .\users\templates\users\edit_profile.html
+msgid "化學工程與材料工程學系"
+msgstr "Department of Chemical and Materials Engineering"
+
+#: .\users\templates\users\edit_profile.html
+msgid "土木工程學系"
+msgstr "Department of Civil Engineering"
+
+#: .\users\templates\users\edit_profile.html
+msgid "機械工程學系"
+msgstr "Department of Mechanical Engineering"
+
+#: .\users\templates\users\edit_profile.html
+msgid "企業管理學系"
+msgstr "Department of Business Administration"
+
+#: .\users\templates\users\edit_profile.html
+msgid "資訊管理學系"
+msgstr "Department of Information Management"
+
+#: .\users\templates\users\edit_profile.html
+msgid "財務金融學系"
+msgstr "Department of Finance"
+
+#: .\users\templates\users\edit_profile.html
+msgid "經濟學系"
+msgstr "Department of Economics"
+
+#: .\users\templates\users\edit_profile.html
+msgid "資訊電機學院學士班"
+msgstr "Bachelor Program, College of Electrical Engineering and Computer Science"
+
+#: .\users\templates\users\edit_profile.html
+msgid "通訊工程學系"
+msgstr "Department of Communication Engineering"
+
+#: .\users\templates\users\edit_profile.html
+msgid "地球科學學院學士班"
+msgstr "Bachelor Program, College of Earth Sciences"
+
+#: .\users\templates\users\edit_profile.html
+msgid "地球科學學系"
+msgstr "Department of Earth Sciences"
+
+#: .\users\templates\users\edit_profile.html
+msgid "大氣科學學系"
+msgstr "Department of Atmospheric Sciences"
+
+#: .\users\templates\users\edit_profile.html
+msgid "太空科學與工程學系"
+msgstr "Department of Space Science and Engineering"
+
+#: .\users\templates\users\edit_profile.html
+msgid "客家語文暨社會科學學系"
+msgstr "Department of Hakka Language and Social Sciences"
+
+#: .\users\templates\users\edit_profile.html
+msgid "生命科學系"
+msgstr "Department of Life Sciences"
+
+#: .\users\templates\users\edit_profile.html
+msgid "生醫科學與工程學系"
+msgstr "Department of Biomedical Sciences and Engineering"

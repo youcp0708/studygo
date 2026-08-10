@@ -69,6 +69,11 @@ def my_flows_page(request):
         'statusUpdateFailedToast': _("狀態更新失敗"),
         'statusUpdateSuccessToast': _("狀態更新成功"),
         'noteSavedToast': _("備註已儲存"),
+        # 「帶領」逐步引導：手指提示條與完成後的 toast
+        'guideTaskText': _("完成「{title}」吧！"),
+        'guideTaskDone': _("這項任務已經完成囉！"),
+        'guideDone': _("任務已完成！"),
+        'guideDoneWithLink': _("任務已完成！想更了解細節可以看看："),
     }
 
     return render(request, 'flows/my_flows.html', {
