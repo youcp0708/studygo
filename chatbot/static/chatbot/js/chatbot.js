@@ -239,7 +239,7 @@
   // 模型偶爾會忘記用 markdown 格式，裸網址若不處理就只是純文字、學生點不動。
   // 結尾的中英文標點（。，、）】等）不算網址的一部分，否則會連標點一起變成連結。
   const MESSAGE_LINK_PATTERN =
-    /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)|(https?:\/\/[^\s<>"'，。、；：）)】\]]+)/g;
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+|guide:start:\d+)\)|(https?:\/\/[^\s<>"'，。、；：）)】\]]+)/g;
 
   function renderMessageContent(content) {
     const normalized = normalizeMessageContent(content);
