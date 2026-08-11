@@ -16,6 +16,7 @@ from django.utils import timezone
 from django.utils.translation import gettext as _
 
 import logging
+import uuid
 
 logger = logging.getLogger(__name__)
 
@@ -212,11 +213,17 @@ def chat_message_api(request):
         if index < len(attachment_types):
             attachment_type = attachment_types[index]
 
+        original_name = uploaded_file.name
+        ext = original_name.rsplit('.', 1)[-1].lower() if '.' in original_name else ''
+        # 檔名可能含中文等非 ASCII 字元，Supabase S3 相容儲存的 HeadObject
+        # 對這類 key 會回 400，所以實際存檔用安全的隨機檔名，原始檔名另外存 original_name 顯示用。
+        uploaded_file.name = f'{uuid.uuid4().hex}.{ext}' if ext else uuid.uuid4().hex
+
         attachment = ChatAttachment.objects.create(
             message=user_msg,
             file=uploaded_file,
             attachment_type=attachment_type,
-            original_name=uploaded_file.name,
+            original_name=original_name,
         )
         created_attachments.append(attachment)
 
