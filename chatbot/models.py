@@ -10,7 +10,7 @@ from django.utils import timezone
 
 from users.models import DISCIPLINE_CHOICES, StudentProfile
 
-ALLOWED_ATTACHMENT_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'pdf', 'txt', 'csv', 'md', 'json']
+ALLOWED_ATTACHMENT_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'pdf', 'txt', 'csv', 'md', 'json', 'docx', 'xlsx']
 
 
 class ChatSession(models.Model):

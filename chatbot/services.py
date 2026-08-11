@@ -10,12 +10,16 @@ chatbot/services.py
 """
 
 import base64
+import io
 import json
 import logging
 import mimetypes
 import re
 import ssl
 from datetime import timedelta
+
+import openpyxl
+from docx import Document as DocxDocument
 
 import requests as http_requests
 from requests.adapters import HTTPAdapter
@@ -3207,6 +3211,37 @@ def local_fallback_reply(question, user, language_code='zh-hant'):
 
 
 
+def extract_docx_text(data):
+    """讀取 .docx 附件的段落與表格文字，讀取失敗回傳 None。"""
+    try:
+        doc = DocxDocument(io.BytesIO(data))
+        parts = [p.text for p in doc.paragraphs if p.text.strip()]
+        for table in doc.tables:
+            for row in table.rows:
+                cells = [cell.text.strip() for cell in row.cells]
+                if any(cells):
+                    parts.append(' | '.join(cells))
+        return '\n'.join(parts)
+    except Exception:
+        return None
+
+
+def extract_xlsx_text(data):
+    """讀取 .xlsx 附件每個工作表的儲存格內容，讀取失敗回傳 None。"""
+    try:
+        workbook = openpyxl.load_workbook(io.BytesIO(data), data_only=True, read_only=True)
+        parts = []
+        for sheet in workbook.worksheets:
+            parts.append(f'[工作表：{sheet.title}]')
+            for row in sheet.iter_rows(values_only=True):
+                cells = ['' if cell is None else str(cell) for cell in row]
+                if any(cells):
+                    parts.append(' | '.join(cells))
+        return '\n'.join(parts)
+    except Exception:
+        return None
+
+
 def build_attachment_input_content(attachments):
     """
     將使用者上傳的附件轉成 OpenAI Responses API 可用的 content blocks。
@@ -3214,6 +3249,7 @@ def build_attachment_input_content(attachments):
     - 圖片／拍照：以 base64 data URL 提供給模型的視覺輸入。
     - PDF：以 base64 file_data 提供給模型的檔案輸入。
     - 可解碼成文字的檔案（txt/csv/md/json 等）：直接把文字內容放進 prompt。
+    - Word／Excel（docx/xlsx）：解析出文字或儲存格內容後放進 prompt。
     - 其他無法讀取內容的檔案：只在摘要中列出檔名，提示模型無法讀取內容。
     """
     content_blocks = []
@@ -3247,10 +3283,15 @@ def build_attachment_input_content(attachments):
             })
             summary_lines.append(f'【PDF 附件】{name}')
         else:
-            try:
-                text = data.decode('utf-8')
-            except UnicodeDecodeError:
-                text = None
+            if mime_type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+                text = extract_docx_text(data)
+            elif mime_type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
+                text = extract_xlsx_text(data)
+            else:
+                try:
+                    text = data.decode('utf-8')
+                except UnicodeDecodeError:
+                    text = None
 
             if text is not None:
                 if len(text) > 8000:
