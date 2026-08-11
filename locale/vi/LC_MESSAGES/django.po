@@ -128,13 +128,13 @@ msgstr ""
 "Ví dụ: Dạo này mình căng thẳng quá, hơi nhớ nhà, bạn có thể trò chuyện cùng "
 "mình không?"
 
-msgid "可以陪我聊聊嗎？"
-msgstr "Bạn có thể trò chuyện cùng mình không?"
+msgid "讓我們一起聊一聊"
+msgstr "Hãy cùng trò chuyện nhé"
 
 #: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:273
-msgid "例如：簽證要先準備什麼？"
-msgstr "Ví dụ: Cần chuẩn bị gì trước cho visa?"
+msgid "可以詢問與留學任務相關的問題..."
+msgstr "Bạn có thể hỏi các câu hỏi liên quan đến nhiệm vụ du học của mình..."
 
 #: .\chatbot\templates\chatbot\chatbot.html:186
 #: .\chatbot\templates\chatbot\chatbot.html:259
@@ -11745,27 +11745,3 @@ msgstr "Khoa Báo chí"
 #: .\users\templates\users\home.html:315
 msgid "半導體工程學系"
 msgstr "Khoa Kỹ thuật Bán dẫn"
-
-#: .\users\templates\users\home.html:330
-msgid "您想了解的都在這"
-msgstr "Mọi điều bạn muốn biết đều ở đây"
-
-#: .\users\templates\users\home.html:334
-msgid "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
-msgstr "Thông thường bạn cần chuẩn bị: hộ chiếu, bằng cấp (bằng tốt nghiệp trung học/đại học), bảng điểm, chứng chỉ năng lực ngôn ngữ (tiếng Trung hoặc tiếng Anh), chứng minh tài chính, báo cáo khám sức khỏe, thư giới thiệu (một số trường yêu cầu), kế hoạch học tập (bậc sau đại học). Yêu cầu của mỗi trường có khác biệt, vui lòng theo thông báo tuyển sinh của từng trường."
-
-#: .\users\templates\users\home.html:338
-msgid "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課程。"
-msgstr "Được! Nhiều trường đại học Đài Loan có chương trình cử nhân và sau đại học giảng dạy bằng tiếng Anh. Nếu học chương trình giảng dạy bằng tiếng Trung, thông thường bạn cần đạt trình độ tiếng Trung nhất định trước khi nhập học (như TOCFL B1 trở lên), hoặc hoàn thành khóa tiếng Trung dự bị một năm tại Ban Dự bị Hoa kiều."
-
-#: .\users\templates\users\home.html:342
-msgid "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
-msgstr "Học phí khác nhau tùy trường và ngành. Tại trường đại học công lập, bậc cử nhân khoảng NT$20,000–50,000 mỗi học kỳ, bậc sau đại học khoảng NT$25,000–60,000. Chi phí sinh hoạt (ở, ăn uống, đi lại) khoảng NT$10,000–20,000 mỗi tháng. Cộng thêm học bổng hỗ trợ, chi phí du học Đài Loan tương đối phải chăng."
-
-#: .\users\templates\users\home.html:346
-msgid "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
-msgstr "Sau khi nhận được giấy báo nhập học từ trường Đài Loan, mang thư nhập học đến cơ quan đại diện Đài Loan tại nước sở tại để xin thị thực cư trú du học (Resident Visa). Chuẩn bị hộ chiếu, giấy báo nhập học, chứng minh tài chính và giấy khám sức khỏe là có thể nộp hồ sơ."
-
-#: .\users\templates\users\home.html:358
-msgid "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
-msgstr "Từ khi bắt đầu nộp hồ sơ đến khi chính thức nhập học thường mất 3–8 tháng. Nên chuẩn bị sớm: xác nhận điều kiện dự tuyển (trước 6–12 tháng), chuẩn bị hồ sơ (trước 4–6 tháng), nộp hồ sơ (trước 3–4 tháng), chờ kết quả trúng tuyển (1–2 tháng), làm thị thực (1–2 tháng)."

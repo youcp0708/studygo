@@ -85,8 +85,8 @@
 
   // placeholder 由模板的 {% trans %} 注入，跟著介面語言走
   const AI_MODE_PLACEHOLDERS = {
-    helper: i18n.placeholderHelper || '例如：簽證要先準備什麼？',
-    friend: i18n.placeholderFriend || '可以陪我聊聊嗎？',
+    helper: i18n.placeholderHelper || '可以詢問與留學任務相關的問題...',
+    friend: i18n.placeholderFriend || '讓我們一起聊一聊',
   };
 
   const messagesEl = document.getElementById('chatMessages');
@@ -249,8 +249,11 @@
       .split('\n')
       .map((line) => {
         const safeLine = escapeHtml(line).replace(
-          /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+|tel:[^\s)]+)\)/g,
-          (_match, label, href) => {
+          MESSAGE_LINK_PATTERN,
+          (_match, label, href, bareUrl) => {
+            if (bareUrl) {
+              return `<a href="${bareUrl}" class="chat-link" target="_top">${bareUrl}</a>`;
+            }
             if (href.startsWith('tel:')) {
               return `<a href="${href}" class="chat-link chat-link--tel">📞 ${label}</a>`;
             }

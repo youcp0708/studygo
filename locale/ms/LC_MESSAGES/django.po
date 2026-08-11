@@ -130,13 +130,13 @@ msgstr ""
 "Contoh: Kebelakangan ini saya sangat tertekan dan agak rindu rumah, bolehkah "
 "anda berbual dengan saya?"
 
-msgid "可以陪我聊聊嗎？"
-msgstr "Bolehkah anda berbual dengan saya?"
+msgid "讓我們一起聊一聊"
+msgstr "Jom kita berbual"
 
 #: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:273
-msgid "例如：簽證要先準備什麼？"
-msgstr "Contoh: Apakah yang perlu saya sediakan dahulu untuk visa?"
+msgid "可以詢問與留學任務相關的問題..."
+msgstr "Anda boleh bertanya soalan berkaitan tugas pengajian luar negara anda..."
 
 #: .\chatbot\templates\chatbot\chatbot.html:186
 #: .\chatbot\templates\chatbot\chatbot.html:259
@@ -12129,27 +12129,3 @@ msgstr "Jabatan Kewartawanan"
 #: .\users\templates\users\home.html:315
 msgid "半導體工程學系"
 msgstr "Jabatan Kejuruteraan Semikonduktor"
-
-#: .\users\templates\users\home.html:330
-msgid "您想了解的都在這"
-msgstr "Semua yang anda ingin tahu ada di sini"
-
-#: .\users\templates\users\home.html:334
-msgid "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
-msgstr "Umumnya anda perlu menyediakan: pasport, bukti akademik (sijil tamat sekolah menengah/universiti), transkrip, sijil kemahiran bahasa (Mandarin atau Inggeris), bukti kewangan, laporan pemeriksaan kesihatan, surat cadangan (diperlukan oleh sesetengah universiti), dan rancangan pengajian (untuk pascasiswazah). Syarat setiap universiti berbeza sedikit, sila rujuk panduan kemasukan universiti masing-masing."
-
-#: .\users\templates\users\home.html:338
-msgid "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課程。"
-msgstr "Boleh! Banyak universiti di Taiwan menawarkan program sarjana muda dan pascasiswazah dalam bahasa Inggeris. Jika mengikuti program dalam bahasa Mandarin, biasanya anda perlu mempunyai tahap Mandarin tertentu sebelum kemasukan (seperti TOCFL B1 ke atas), atau menamatkan kursus Mandarin persediaan selama setahun di Bahagian Persediaan Pelajar Cina Perantauan."
-
-#: .\users\templates\users\home.html:342
-msgid "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
-msgstr "Yuran pengajian berbeza mengikut universiti dan jurusan. Di universiti awam, program sarjana muda kira-kira NT$20,000–50,000 setiap semester dan pascasiswazah kira-kira NT$25,000–60,000. Kos sara hidup (penginapan, makanan, pengangkutan) kira-kira NT$10,000–20,000 sebulan. Dengan bantuan biasiswa, kos belajar di Taiwan agak berpatutan."
-
-#: .\users\templates\users\home.html:346
-msgid "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
-msgstr "Selepas menerima surat tawaran kemasukan daripada universiti di Taiwan, bawa surat tersebut ke pejabat perwakilan Taiwan di negara anda untuk memohon Visa Kediaman pelajar (Resident Visa). Sediakan pasport, surat tawaran, bukti kewangan dan laporan pemeriksaan kesihatan untuk memohon."
-
-#: .\users\templates\users\home.html:358
-msgid "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
-msgstr "Dari mula memohon sehingga kemasukan rasmi biasanya mengambil masa 3–8 bulan. Disyorkan bersedia lebih awal: sahkan kelayakan permohonan (6–12 bulan sebelum), sediakan dokumen (4–6 bulan sebelum), hantar permohonan (3–4 bulan sebelum), tunggu keputusan kemasukan (1–2 bulan), dan uruskan visa (1–2 bulan)."

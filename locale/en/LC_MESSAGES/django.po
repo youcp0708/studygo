@@ -132,15 +132,13 @@ msgstr ""
 
 #: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:274
-msgid "可以陪我聊聊嗎？"
-msgstr "Could you keep me company?"
+msgid "讓我們一起聊一聊"
+msgstr "Let's chat together"
 
 #: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:273
-msgid "例如：簽證要先準備什麼？"
-msgstr ""
-"For example: I am coming from Myanmar to study for a bachelor's degree in "
-"Taiwan. What should I prepare first for the visa?"
+msgid "可以詢問與留學任務相關的問題..."
+msgstr "You can ask questions related to your study abroad tasks..."
 
 #: .\chatbot\templates\chatbot\chatbot.html:186
 #: .\chatbot\templates\chatbot\chatbot.html:259
@@ -4233,11 +4231,6 @@ msgstr "The system performs data backup daily from 07:00–09:00. "
 #: .\guides\templates\guides\guide_course.html:72
 msgid "此時段請勿操作選課"
 msgstr "Please do not use the system during this time"
-
-#: .\guides\templates\guides\guide_course.html:73
-msgid "每日 07:00–09:00 系統進行資料備份，"
-msgstr "The system performs data backup daily from 07:00–09:00, "
-
 #: .\guides\templates\guides\guide_course.html:80
 msgid "路徑："
 msgstr "Path:"
@@ -4336,15 +4329,6 @@ msgstr ""
 #: .\guides\templates\guides\guide_course.html:131
 msgid "隔日更新至選課系統與 ee-class。"
 msgstr "Updated to the course selection system and ee-class the next day."
-
-#: .\guides\templates\guides\guide_course.html:131
-msgid "流程：選課系統列印申請表 → 取得任課教師簽章 → 繳 NT$100 手續費（出納組現金 或 課務組悠遊卡扣款）→ 申請表送至課務組。"
-msgstr ""
-"Process: Print the application form from the course registration system → "
-"Obtain the instructor's signature → Pay the NT$100 fee (cash at the "
-"Cashier's Office or EasyCard deduction at the Curriculum Office) → Submit "
-"the form to the Curriculum Office."
-
 #: .\guides\templates\guides\guide_course.html:133
 msgid "找不到教師本人，可由教師授權系辦人員代理蓋章。"
 msgstr ""
@@ -4398,15 +4382,9 @@ msgstr ""
 #: .\guides\templates\guides\guide_course.html:164
 msgid "流程：選課系統列印停修申請表 → 任課教師及系所主管簽章 → 送至課務組。"
 msgstr ""
-<<<<<<< HEAD
 "Process: Print the course withdrawal application form from the course "
 "registration system → Obtain signatures from the instructor and department "
 "chair → Submit to the Curriculum Office."
-=======
-"Process: Print the withdrawal application form from the course system → "
-"Get signatures from the instructor and department head → Submit to the "
-"Academic Affairs Division."
->>>>>>> nora/xinde
 
 #: .\guides\templates\guides\guide_course.html:165
 msgid "已辦理減修者不得再辦理停修。"
@@ -11705,27 +11683,6 @@ msgstr ""
 #: .\templates\base.html:190
 msgid "嗶嗶嗶，你有新消息！"
 msgstr "Beep beep beep! You have a new message!"
-
-#: .\users\templates\users\home.html:112
-msgid "跟著清單走"
-msgstr "Follow the Checklist"
-
-#: .\users\templates\users\home.html:112
-msgid "不遺漏任何步驟"
-msgstr "Never Miss a Step"
-
-#: .\users\templates\users\home.html:117
-msgid "王小明"
-msgstr "Wang Xiao-Ming"
-
-#: .\users\templates\users\home.html:126
-msgid "目前進度"
-msgstr "Current Progress"
-
-#: .\users\templates\users\home.html:132
-msgid "已完成 8 / 20 項任務"
-msgstr "8 / 20 Tasks Completed"
-
 #: .\users\templates\users\home.html:175
 msgid "以上為示範資料，登入後可查看您的個人化任務清單。"
 msgstr "The above is sample data. Log in to view your personalized task list."
@@ -11785,27 +11742,3 @@ msgstr "Department of Journalism"
 #: .\users\templates\users\home.html:315
 msgid "半導體工程學系"
 msgstr "Department of Semiconductor Engineering"
-
-#: .\users\templates\users\home.html:330
-msgid "您想了解的都在這"
-msgstr "Everything you want to know is here"
-
-#: .\users\templates\users\home.html:334
-msgid "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
-msgstr "You will generally need: passport, academic credentials (high school/university diploma), transcripts, language proficiency certificate (Chinese or English), proof of financial support, health check report, recommendation letters (required by some schools), and a study plan (for graduate programs). Requirements vary slightly by school, so please refer to each school's admission guidelines."
-
-#: .\users\templates\users\home.html:338
-msgid "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課程。"
-msgstr "Yes! Many universities in Taiwan offer English-taught undergraduate and graduate programs. For Chinese-taught programs, you usually need a certain level of Chinese before admission (such as TOCFL B1 or above), or you can complete a one-year preparatory Chinese course at the Overseas Chinese Student Preparatory Program."
-
-#: .\users\templates\users\home.html:342
-msgid "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
-msgstr "Tuition varies by school and department. At public universities, undergraduate programs cost about NT$20,000–50,000 per semester and graduate programs about NT$25,000–60,000. Living expenses (housing, food, transport) run about NT$10,000–20,000 per month. With scholarships available, studying in Taiwan is relatively affordable."
-
-#: .\users\templates\users\home.html:346
-msgid "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
-msgstr "After receiving your admission letter from a Taiwanese school, take it to your local Taiwanese overseas mission to apply for a student Resident Visa. Prepare your passport, admission letter, proof of financial support, and health check documents to apply."
-
-#: .\users\templates\users\home.html:358
-msgid "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
-msgstr "From starting your application to actual enrollment usually takes 3–8 months. We recommend preparing early: confirm your eligibility (6–12 months ahead), prepare documents (4–6 months ahead), submit your application (3–4 months ahead), wait for admission results (1–2 months), and apply for your visa (1–2 months)."
