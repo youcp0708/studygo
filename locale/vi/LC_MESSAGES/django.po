@@ -128,13 +128,13 @@ msgstr ""
 "Ví dụ: Dạo này mình căng thẳng quá, hơi nhớ nhà, bạn có thể trò chuyện cùng "
 "mình không?"
 
-msgid "可以陪我聊聊嗎？"
-msgstr "Bạn có thể trò chuyện cùng mình không?"
+msgid "讓我們一起聊一聊"
+msgstr "Hãy cùng trò chuyện nhé"
 
 #: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:273
-msgid "例如：簽證要先準備什麼？"
-msgstr "Ví dụ: Cần chuẩn bị gì trước cho visa?"
+msgid "可以詢問與留學任務相關的問題..."
+msgstr "Bạn có thể hỏi các câu hỏi liên quan đến nhiệm vụ du học của mình..."
 
 #: .\chatbot\templates\chatbot\chatbot.html:186
 #: .\chatbot\templates\chatbot\chatbot.html:259
@@ -3555,11 +3555,11 @@ msgid ""
 "100，等候約 20 分鐘。建議事前刻好，開戶當天直接帶去。印章等同你的簽名，請與存"
 "摺分開保管。"
 msgstr ""
-"Các cửa hàng văn phòng phẩm gần trường đều có thể khắc con dấu. Nói với "
-"chủ tiệm rằng bạn muốn khắc \"con dấu tên bằng gỗ\" và cung cấp họ tên "
-"đầy đủ bằng tiếng Anh — chi phí khoảng NT$50–100, chờ khoảng 20 phút. "
-"Nên khắc trước và mang theo ngay trong ngày mở tài khoản. Con dấu tương "
-"đương chữ ký của bạn, vui lòng bảo quản riêng với sổ tiết kiệm."
+"Các cửa hàng văn phòng phẩm gần trường đều có thể khắc con dấu. Nói với chủ "
+"tiệm rằng bạn muốn khắc \"con dấu tên bằng gỗ\" và cung cấp họ tên đầy đủ "
+"bằng tiếng Anh — chi phí khoảng NT$50–100, chờ khoảng 20 phút. Nên khắc "
+"trước và mang theo ngay trong ngày mở tài khoản. Con dấu tương đương chữ ký "
+"của bạn, vui lòng bảo quản riêng với sổ tiết kiệm."
 
 #: .\guides\templates\guides\guide_bank.html:83
 msgid "統一證號說明"
@@ -3584,10 +3584,10 @@ msgid ""
 "需另向停留地移民署服務站申請「統一證號基資表」，攜帶護照正本及影本（免貼照"
 "片）。此號碼終身固定，日後領到居留證後，ARC 號碼會與統一證號一致。"
 msgstr ""
-"Bạn cần nộp đơn riêng xin \"Mẫu đăng ký Mã số thống nhất\" tại trạm dịch "
-"vụ của Sở Di trú Quốc gia tại nơi cư trú, mang theo hộ chiếu gốc và bản "
-"photocopy (không cần dán ảnh). Số này cố định trọn đời — sau khi nhận "
-"ARC, số ARC sẽ trùng với Mã số thống nhất của bạn."
+"Bạn cần nộp đơn riêng xin \"Mẫu đăng ký Mã số thống nhất\" tại trạm dịch vụ "
+"của Sở Di trú Quốc gia tại nơi cư trú, mang theo hộ chiếu gốc và bản "
+"photocopy (không cần dán ảnh). Số này cố định trọn đời — sau khi nhận ARC, "
+"số ARC sẽ trùng với Mã số thống nhất của bạn."
 
 #: .\guides\templates\guides\guide_bank.html:98
 msgid "提款卡選擇建議"
@@ -3602,11 +3602,11 @@ msgid ""
 "可 ATM 提款，也能直接刷卡消費、網購。郵局提供 VISA + 悠遊卡 或 VISA + 一卡通 "
 "兩種組合，可按需求選擇。請注意部分台灣商家不接受 VISA Debit，付款前請確認。"
 msgstr ""
-"Bạn có thể rút tiền mặt tại ATM và cũng có thể thanh toán trực tiếp bằng "
-"thẻ tại cửa hàng hoặc mua sắm trực tuyến. Bưu điện cung cấp hai lựa chọn "
-"kết hợp: VISA + EasyCard hoặc VISA + iPASS — chọn theo nhu cầu của bạn. "
-"Lưu ý một số cửa hàng ở Đài Loan không chấp nhận VISA Debit, vui lòng "
-"xác nhận trước khi thanh toán."
+"Bạn có thể rút tiền mặt tại ATM và cũng có thể thanh toán trực tiếp bằng thẻ "
+"tại cửa hàng hoặc mua sắm trực tuyến. Bưu điện cung cấp hai lựa chọn kết "
+"hợp: VISA + EasyCard hoặc VISA + iPASS — chọn theo nhu cầu của bạn. Lưu ý "
+"một số cửa hàng ở Đài Loan không chấp nhận VISA Debit, vui lòng xác nhận "
+"trước khi thanh toán."
 
 #: .\guides\templates\guides\guide_bank.html:107
 #: .\guides\templates\guides\guide_sim.html:145
@@ -4347,12 +4347,12 @@ msgstr "Yêu cầu tín chỉ tối thiểu:"
 
 #: .\guides\templates\guides\guide_course.html:163
 msgid ""
-"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修"
-"（需導師與系主任同意），否則依規定令退學。"
+"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需"
+"導師與系主任同意），否則依規定令退學。"
 msgstr ""
-"Năm 1–3 phải học ít nhất 16 tín chỉ mỗi học kỳ; năm 4 ít nhất 9. Những "
-"người dưới mức tối thiểu phải đăng ký giảm tải (cần sự chấp thuận của cố "
-"vấn và trưởng khoa), nếu không sẽ bị đuổi học."
+"Năm 1–3 phải học ít nhất 16 tín chỉ mỗi học kỳ; năm 4 ít nhất 9. Những người "
+"dưới mức tối thiểu phải đăng ký giảm tải (cần sự chấp thuận của cố vấn và "
+"trưởng khoa), nếu không sẽ bị đuổi học."
 
 #: .\guides\templates\guides\guide_course.html:180
 msgid "衝堂 / 同課號："
@@ -4665,10 +4665,9 @@ msgid ""
 "簽證。請在確定休學前先聯絡國際事務處（分機 57081）確認程序。"
 msgstr ""
 "Sau khi thủ tục nghỉ học có hiệu lực, thẻ cư trú với tư cách sinh viên sẽ "
-"lập tức mất hiệu lực và bạn phải rời Đài Loan trong thời hạn quy định. "
-"Trước khi phục học phải xin lại visa sinh viên. Vui lòng liên hệ Phòng Sự "
-"vụ Quốc tế (số nội bộ 57081) để xác nhận thủ tục trước khi quyết định nghỉ "
-"học."
+"lập tức mất hiệu lực và bạn phải rời Đài Loan trong thời hạn quy định. Trước "
+"khi phục học phải xin lại visa sinh viên. Vui lòng liên hệ Phòng Sự vụ Quốc "
+"tế (số nội bộ 57081) để xác nhận thủ tục trước khi quyết định nghỉ học."
 
 #: .\guides\templates\guides\guide_enrollment.html:61
 msgid "宿舍：休學前須完成退宿手續。復學後需重新申請宿舍，不保留床位。"
@@ -6501,10 +6500,10 @@ msgid ""
 "中央大學後門商圈及中壢市區有多間診所，持健保卡就診費用約 NT$150–200。可依科別"
 "用 Google Maps 搜尋「中壢 內科診所」、「中壢 耳鼻喉科」等。"
 msgstr ""
-"Có nhiều phòng khám gần cổng sau NCU và trong trung tâm thành phố Trung "
-"Lịch — dùng thẻ NHI, chi phí khám khoảng NT$150–200. Bạn có thể tìm trên "
-"Google Maps theo chuyên khoa, ví dụ \"phòng khám nội khoa Trung Lịch\" "
-"hoặc \"phòng khám tai mũi họng Trung Lịch\"."
+"Có nhiều phòng khám gần cổng sau NCU và trong trung tâm thành phố Trung Lịch "
+"— dùng thẻ NHI, chi phí khám khoảng NT$150–200. Bạn có thể tìm trên Google "
+"Maps theo chuyên khoa, ví dụ \"phòng khám nội khoa Trung Lịch\" hoặc \"phòng "
+"khám tai mũi họng Trung Lịch\"."
 
 #: .\guides\templates\guides\guide_medical.html:94
 msgid "診所看診時間："
@@ -6515,10 +6514,10 @@ msgid ""
 "多數診所採早診（08:30–12:00）、午診（14:00–17:30）、晚診（18:00–21:00）三班"
 "制，非所有診所皆有晚診。建議事先電話確認或查詢 Google 地圖上的即時等候人數。"
 msgstr ""
-"Hầu hết các phòng khám hoạt động theo 3 ca: sáng (08:30–12:00), chiều "
-"(14:00–17:30) và tối (18:00–21:00) — không phải phòng khám nào cũng có "
-"ca tối. Nên gọi điện xác nhận trước, hoặc kiểm tra số lượng người đang "
-"chờ theo thời gian thực trên Google Maps."
+"Hầu hết các phòng khám hoạt động theo 3 ca: sáng (08:30–12:00), chiều (14:00–"
+"17:30) và tối (18:00–21:00) — không phải phòng khám nào cũng có ca tối. Nên "
+"gọi điện xác nhận trước, hoặc kiểm tra số lượng người đang chờ theo thời "
+"gian thực trên Google Maps."
 
 #: .\guides\templates\guides\guide_medical.html:99
 msgid "周邊醫院"
@@ -7177,11 +7176,11 @@ msgid ""
 "出境日數後，併計達 6 個月。若出境超過 1 次，或出境一次超過 30 天，則從重新抵"
 "台當天起算，6 個月重新計算。"
 msgstr ""
-"Điều này có nghĩa là cư trú liên tục tại Đài Loan đủ 6 tháng, hoặc đã "
-"xuất cảnh 1 lần không quá 30 ngày, với số ngày ở nước ngoài được trừ đi "
-"và thời gian cư trú thực tế cộng dồn đủ 6 tháng. Nếu xuất cảnh nhiều hơn "
-"1 lần, hoặc xuất cảnh một lần quá 30 ngày, thì thời gian 6 tháng sẽ được "
-"tính lại từ ngày quay trở lại Đài Loan."
+"Điều này có nghĩa là cư trú liên tục tại Đài Loan đủ 6 tháng, hoặc đã xuất "
+"cảnh 1 lần không quá 30 ngày, với số ngày ở nước ngoài được trừ đi và thời "
+"gian cư trú thực tế cộng dồn đủ 6 tháng. Nếu xuất cảnh nhiều hơn 1 lần, hoặc "
+"xuất cảnh một lần quá 30 ngày, thì thời gian 6 tháng sẽ được tính lại từ "
+"ngày quay trở lại Đài Loan."
 
 #: .\guides\templates\guides\guide_nhi.html:91
 msgid "計算範例："
@@ -7265,11 +7264,11 @@ msgid ""
 "符合清寒資格加入健保者，可向國際事務處申請每月 NT$413 補助（需檢附清寒證明，"
 "審查通過後核發）。未得補助者每月保費約 NT$826。詳情請洽國際事務處。"
 msgstr ""
-"Sinh viên đủ điều kiện thu nhập thấp và tham gia NHI có thể nộp đơn xin "
-"trợ cấp hàng tháng NT$413 tại Văn phòng Hợp tác Quốc tế (cần đính kèm "
-"giấy chứng nhận thu nhập thấp; trợ cấp được cấp sau khi xét duyệt). Nếu "
-"không được trợ cấp, phí bảo hiểm hàng tháng khoảng NT$826. Liên hệ Văn "
-"phòng Hợp tác Quốc tế để biết thêm chi tiết."
+"Sinh viên đủ điều kiện thu nhập thấp và tham gia NHI có thể nộp đơn xin trợ "
+"cấp hàng tháng NT$413 tại Văn phòng Hợp tác Quốc tế (cần đính kèm giấy chứng "
+"nhận thu nhập thấp; trợ cấp được cấp sau khi xét duyệt). Nếu không được trợ "
+"cấp, phí bảo hiểm hàng tháng khoảng NT$826. Liên hệ Văn phòng Hợp tác Quốc "
+"tế để biết thêm chi tiết."
 
 #: .\guides\templates\guides\guide_nhi.html:140
 msgid "相關文件下載"
@@ -7290,9 +7289,9 @@ msgid ""
 "接前往醫院急診或門診需負擔較高部分負擔（NT$240～480）。"
 msgstr ""
 "Đài Loan áp dụng hệ thống chăm sóc y tế phân cấp. Đối với các bệnh thông "
-"thường, hãy đến phòng khám trước (khoa y học gia đình hoặc nội khoa) — "
-"chi phí chỉ khoảng NT$150. Đến thẳng phòng cấp cứu hoặc khám ngoại trú "
-"tại bệnh viện đồng nghĩa với mức đồng chi trả cao hơn (NT$240–480)."
+"thường, hãy đến phòng khám trước (khoa y học gia đình hoặc nội khoa) — chi "
+"phí chỉ khoảng NT$150. Đến thẳng phòng cấp cứu hoặc khám ngoại trú tại bệnh "
+"viện đồng nghĩa với mức đồng chi trả cao hơn (NT$240–480)."
 
 #: .\guides\templates\guides\guide_nhi.html:160
 msgid "可查詢健保狀態、就醫紀錄，並顯示數位健保卡，出門不怕忘帶實體卡。"
@@ -8239,9 +8238,9 @@ msgid ""
 "知工作人員「辦新門號，持有居留證」，通常 30 分鐘內可完成。"
 msgstr ""
 "Mang theo ARC, hộ chiếu, tài khoản ngân hàng hoặc thẻ tín dụng, sau đó đến "
-"cửa hàng nhà mạng (các nhà mạng đều có cửa hàng ở trung tâm thành phố "
-"Trung Lịch). Nói với nhân viên rằng bạn muốn \"đăng ký số mới, có ARC\" — "
-"thường hoàn tất trong vòng 30 phút."
+"cửa hàng nhà mạng (các nhà mạng đều có cửa hàng ở trung tâm thành phố Trung "
+"Lịch). Nói với nhân viên rằng bạn muốn \"đăng ký số mới, có ARC\" — thường "
+"hoàn tất trong vòng 30 phút."
 
 #: .\guides\templates\guides\guide_sim.html:127
 msgid "選擇門號與 SIM 卡規格"
@@ -8252,10 +8251,10 @@ msgid ""
 "可自選門號（特殊號碼需加費），並選擇 SIM 卡尺寸（目前多數手機使用 nano "
 "SIM）。確認手機是否為「全頻段解鎖版」以確保在台灣 5G/4G 正常使用。"
 msgstr ""
-"Bạn có thể tự chọn số điện thoại (số đặc biệt sẽ tính thêm phí) và chọn "
-"kích thước SIM (hầu hết điện thoại hiện nay dùng nano SIM). Kiểm tra xem "
-"điện thoại của bạn có phải là phiên bản \"mở khóa toàn băng tần\" hay "
-"không để đảm bảo hoạt động tốt trên mạng 5G/4G tại Đài Loan."
+"Bạn có thể tự chọn số điện thoại (số đặc biệt sẽ tính thêm phí) và chọn kích "
+"thước SIM (hầu hết điện thoại hiện nay dùng nano SIM). Kiểm tra xem điện "
+"thoại của bạn có phải là phiên bản \"mở khóa toàn băng tần\" hay không để "
+"đảm bảo hoạt động tốt trên mạng 5G/4G tại Đài Loan."
 
 #: .\guides\templates\guides\guide_sim.html:136
 msgid "插卡啟用，設定網路"
@@ -9942,7 +9941,13 @@ msgid ""
 "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文"
 "或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究"
 "所）。各校要求略有不同，請以各校招生簡章為準。"
-msgstr "Bạn thường cần chuẩn bị: hộ chiếu, bằng chứng học vấn (bằng tốt nghiệp trung học/đại học), bảng điểm, chứng chỉ năng lực ngôn ngữ (tiếng Trung hoặc tiếng Anh), giấy chứng minh tài chính, giấy khám sức khỏe, thư giới thiệu (một số trường yêu cầu), và kế hoạch học tập (đối với chương trình sau đại học). Yêu cầu có thể khác nhau tùy trường, vui lòng tham khảo thông báo tuyển sinh của từng trường."
+msgstr ""
+"Bạn thường cần chuẩn bị: hộ chiếu, bằng chứng học vấn (bằng tốt nghiệp trung "
+"học/đại học), bảng điểm, chứng chỉ năng lực ngôn ngữ (tiếng Trung hoặc tiếng "
+"Anh), giấy chứng minh tài chính, giấy khám sức khỏe, thư giới thiệu (một số "
+"trường yêu cầu), và kế hoạch học tập (đối với chương trình sau đại học). Yêu "
+"cầu có thể khác nhau tùy trường, vui lòng tham khảo thông báo tuyển sinh của "
+"từng trường."
 
 #: .\users\templates\users\faq.html:33 .\users\templates\users\home.html:335
 msgid "不會中文可以來台灣留學嗎？"
@@ -9953,7 +9958,12 @@ msgid ""
 "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常"
 "入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課"
 "程。"
-msgstr "Có chứ! Nhiều trường đại học tại Đài Loan cung cấp chương trình cử nhân và sau đại học giảng dạy bằng tiếng Anh. Nếu theo học chương trình giảng dạy bằng tiếng Trung, bạn thường cần đạt trình độ tiếng Trung nhất định trước khi nhập học (như TOCFL B1 trở lên), hoặc có thể hoàn thành khóa dự bị tiếng Trung một năm."
+msgstr ""
+"Có chứ! Nhiều trường đại học tại Đài Loan cung cấp chương trình cử nhân và "
+"sau đại học giảng dạy bằng tiếng Anh. Nếu theo học chương trình giảng dạy "
+"bằng tiếng Trung, bạn thường cần đạt trình độ tiếng Trung nhất định trước "
+"khi nhập học (như TOCFL B1 trở lên), hoặc có thể hoàn thành khóa dự bị tiếng "
+"Trung một năm."
 
 #: .\users\templates\users\faq.html:37 .\users\templates\users\home.html:358
 msgid "申請流程需要多久時間？"
@@ -9964,7 +9974,11 @@ msgid ""
 "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個"
 "月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個"
 "月）、辦理簽證（1–2 個月）。"
-msgstr "Từ khi bắt đầu nộp đơn đến khi chính thức nhập học thường mất 3–8 tháng. Nên chuẩn bị sớm: xác nhận điều kiện đủ tiêu chuẩn (trước 6–12 tháng), chuẩn bị hồ sơ (trước 4–6 tháng), nộp đơn (trước 3–4 tháng), chờ kết quả trúng tuyển (1–2 tháng), và xin visa (1–2 tháng)."
+msgstr ""
+"Từ khi bắt đầu nộp đơn đến khi chính thức nhập học thường mất 3–8 tháng. Nên "
+"chuẩn bị sớm: xác nhận điều kiện đủ tiêu chuẩn (trước 6–12 tháng), chuẩn bị "
+"hồ sơ (trước 4–6 tháng), nộp đơn (trước 3–4 tháng), chờ kết quả trúng tuyển "
+"(1–2 tháng), và xin visa (1–2 tháng)."
 
 #: .\users\templates\users\faq.html:46 .\users\templates\users\home.html:345
 msgid "學生簽證如何辦理？"
@@ -9974,7 +9988,11 @@ msgstr "Làm thế nào để xin visa du học?"
 msgid ""
 "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證"
 "（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
-msgstr "Sau khi nhận được giấy báo nhập học từ trường tại Đài Loan, hãy mang giấy báo đến văn phòng đại diện Đài Loan tại địa phương để xin visa cư trú (Resident Visa). Chuẩn bị hộ chiếu, giấy báo nhập học, giấy chứng minh tài chính và giấy khám sức khỏe để nộp đơn."
+msgstr ""
+"Sau khi nhận được giấy báo nhập học từ trường tại Đài Loan, hãy mang giấy "
+"báo đến văn phòng đại diện Đài Loan tại địa phương để xin visa cư trú "
+"(Resident Visa). Chuẩn bị hộ chiếu, giấy báo nhập học, giấy chứng minh tài "
+"chính và giấy khám sức khỏe để nộp đơn."
 
 #: .\users\templates\users\faq.html:50 .\users\templates\users\home.html:354
 msgid "全民健保什麼時候可以加入？"
@@ -9998,7 +10016,12 @@ msgid ""
 "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 "
 "NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學"
 "金補助，台灣留學費用相對親民。"
-msgstr "Học phí tùy thuộc vào trường và ngành học. Chương trình cử nhân tại trường công lập khoảng NT$20.000–50.000 mỗi học kỳ, chương trình sau đại học khoảng NT$25.000–60.000. Chi phí sinh hoạt (nhà ở, ăn uống, đi lại) khoảng NT$10.000–20.000 mỗi tháng. Cộng thêm học bổng hỗ trợ, chi phí du học Đài Loan tương đối phải chăng."
+msgstr ""
+"Học phí tùy thuộc vào trường và ngành học. Chương trình cử nhân tại trường "
+"công lập khoảng NT$20.000–50.000 mỗi học kỳ, chương trình sau đại học khoảng "
+"NT$25.000–60.000. Chi phí sinh hoạt (nhà ở, ăn uống, đi lại) khoảng "
+"NT$10.000–20.000 mỗi tháng. Cộng thêm học bổng hỗ trợ, chi phí du học Đài "
+"Loan tương đối phải chăng."
 
 #: .\users\templates\users\faq.html:63 .\users\templates\users\home.html:350
 msgid "可以邊讀書邊打工嗎？"
@@ -10282,9 +10305,9 @@ msgstr ""
 "Các sinh viên quốc tế đến từ khắp nơi trên thế giới tại NCU chia sẻ những "
 "trải nghiệm du học tại Đài Loan chân thực nhất"
 
-#: .\users\templates\users\home.html:327
+#: .\users\templates\users\home.html:330
 msgid "您想了解的都在這"
-msgstr ""
+msgstr "Mọi điều bạn muốn biết đều ở đây"
 
 #: .\users\templates\users\login.html:5
 msgid "登入 / 註冊"
@@ -11145,6 +11168,158 @@ msgstr "Liên hệ chúng tôi"
 msgid "若你對本條款有任何疑問，歡迎透過"
 msgstr ""
 
+#: .\templates\base.html:190
+msgid "嗶嗶嗶，你有新消息！"
+msgstr "Bíp bíp bíp! Bạn có tin nhắn mới!"
+
+#: .\users\templates\users\home.html:99
+msgid "銀行開戶、辦手機門號"
+msgstr "Mở tài khoản ngân hàng và đăng ký số điện thoại di động"
+
+#: .\users\templates\users\home.html:244
+msgid "電機工程學系"
+msgstr "Khoa Kỹ thuật Điện"
+
+#: .\users\templates\users\home.html:258
+msgid "資訊工程學系"
+msgstr "Khoa Khoa học Máy tính và Kỹ thuật Thông tin"
+
+#: .\users\templates\users\home.html:273
+msgid "教育學系"
+msgstr "Khoa Giáo dục"
+
+#: .\users\templates\users\home.html:301
+msgid "新聞學系"
+msgstr "Khoa Báo chí"
+
+#: .\users\templates\users\home.html:315
+msgid "半導體工程學系"
+msgstr "Khoa Kỹ thuật Bán dẫn"
+
+#: .\templates\base.html:292
+msgid "結束帶領"
+msgstr "Kết thúc hướng dẫn"
+
+#: .\users\templates\users\dashboard.html:158
+msgid "先點這裡，我們去完成這項任務吧！"
+msgstr "Nhấn vào đây trước, chúng ta cùng hoàn thành nhiệm vụ này nhé!"
+
+#: .\flows\views.py:71
+msgid "完成「{title}」吧！"
+msgstr "Cùng hoàn thành \"{title}\" nào!"
+
+#: .\flows\views.py:72
+msgid "這項任務已經完成囉！"
+msgstr "Nhiệm vụ này đã hoàn thành rồi!"
+
+#: .\flows\views.py:73
+msgid "任務已完成！"
+msgstr "Đã hoàn thành nhiệm vụ!"
+
+#: .\flows\views.py:74
+msgid "任務已完成！想更了解細節可以看看："
+msgstr "Đã hoàn thành nhiệm vụ! Muốn tìm hiểu thêm chi tiết, hãy xem: "
+
+#: .\users\templates\users\edit_profile.html
+msgid "文學院學士班"
+msgstr "Chương trình Cử nhân, Khoa Nhân văn"
+
+#: .\users\templates\users\edit_profile.html
+msgid "中國文學系"
+msgstr "Khoa Văn học Trung Quốc"
+
+#: .\users\templates\users\edit_profile.html
+msgid "英美語文學系"
+msgstr "Khoa Ngôn ngữ và Văn học Anh Mỹ"
+
+#: .\users\templates\users\edit_profile.html
+msgid "法國語文學系"
+msgstr "Khoa Ngôn ngữ và Văn học Pháp"
+
+#: .\users\templates\users\edit_profile.html
+msgid "理學院學士班"
+msgstr "Chương trình Cử nhân, Khoa Khoa học"
+
+#: .\users\templates\users\edit_profile.html
+msgid "物理學系"
+msgstr "Khoa Vật lý"
+
+#: .\users\templates\users\edit_profile.html
+msgid "數學系"
+msgstr "Khoa Toán học"
+
+#: .\users\templates\users\edit_profile.html
+msgid "化學學系"
+msgstr "Khoa Hóa học"
+
+#: .\users\templates\users\edit_profile.html
+msgid "光電科學與工程學系"
+msgstr "Khoa Khoa học và Kỹ thuật Quang điện"
+
+#: .\users\templates\users\edit_profile.html
+msgid "工學院學士班"
+msgstr "Chương trình Cử nhân, Khoa Kỹ thuật"
+
+#: .\users\templates\users\edit_profile.html
+msgid "化學工程與材料工程學系"
+msgstr "Khoa Kỹ thuật Hóa học và Vật liệu"
+
+#: .\users\templates\users\edit_profile.html
+msgid "土木工程學系"
+msgstr "Khoa Kỹ thuật Xây dựng"
+
+#: .\users\templates\users\edit_profile.html
+msgid "企業管理學系"
+msgstr "Khoa Quản trị Kinh doanh"
+
+#: .\users\templates\users\edit_profile.html
+msgid "資訊管理學系"
+msgstr "Khoa Quản trị Thông tin"
+
+#: .\users\templates\users\edit_profile.html
+msgid "財務金融學系"
+msgstr "Khoa Tài chính"
+
+#: .\users\templates\users\edit_profile.html
+msgid "經濟學系"
+msgstr "Khoa Kinh tế"
+
+#: .\users\templates\users\edit_profile.html
+msgid "資訊電機學院學士班"
+msgstr "Chương trình Cử nhân, Khoa Điện và Khoa học Máy tính"
+
+#: .\users\templates\users\edit_profile.html
+msgid "通訊工程學系"
+msgstr "Khoa Kỹ thuật Truyền thông"
+
+#: .\users\templates\users\edit_profile.html
+msgid "地球科學學院學士班"
+msgstr "Chương trình Cử nhân, Khoa Khoa học Trái đất"
+
+#: .\users\templates\users\edit_profile.html
+msgid "地球科學學系"
+msgstr "Khoa Khoa học Trái đất"
+
+#: .\users\templates\users\edit_profile.html
+msgid "大氣科學學系"
+msgstr "Khoa Khoa học Khí quyển"
+
+#: .\users\templates\users\edit_profile.html
+msgid "太空科學與工程學系"
+msgstr "Khoa Khoa học và Kỹ thuật Vũ trụ"
+
+#: .\users\templates\users\edit_profile.html
+msgid "客家語文暨社會科學學系"
+msgstr "Khoa Ngôn ngữ Khách Gia và Khoa học Xã hội"
+
+#: .\users\templates\users\edit_profile.html
+msgid "生命科學系"
+msgstr "Khoa Khoa học Sự sống"
+
+#: .\users\templates\users\edit_profile.html
+msgid "生醫科學與工程學系"
+msgstr "Khoa Khoa học và Kỹ thuật Y sinh"
+
 #~ msgid "SPARC（計中）帳號"
 #~ msgstr "tài khoản SPARC (Trung tâm Máy tính)"
 
@@ -11717,183 +11892,3 @@ msgstr ""
 #~ "Malaysia Du học Đài Loan, Hội Giáo viên Trường Hoa Myanmar, v.v.), lấy "
 #~ "đơn đăng ký năm đó và hướng dẫn liên quan, xác nhận phương thức nộp hồ sơ "
 #~ "(trực tuyến/bưu điện)."
-
-#: .\templates\base.html:190
-msgid "嗶嗶嗶，你有新消息！"
-msgstr "Bíp bíp bíp! Bạn có tin nhắn mới!"
-
-#: .\users\templates\users\home.html:99
-msgid "銀行開戶、辦手機門號"
-msgstr "Mở tài khoản ngân hàng và đăng ký số điện thoại di động"
-
-#: .\users\templates\users\home.html:244
-msgid "電機工程學系"
-msgstr "Khoa Kỹ thuật Điện"
-
-#: .\users\templates\users\home.html:258
-msgid "資訊工程學系"
-msgstr "Khoa Khoa học Máy tính và Kỹ thuật Thông tin"
-
-#: .\users\templates\users\home.html:273
-msgid "教育學系"
-msgstr "Khoa Giáo dục"
-
-#: .\users\templates\users\home.html:301
-msgid "新聞學系"
-msgstr "Khoa Báo chí"
-
-#: .\users\templates\users\home.html:315
-msgid "半導體工程學系"
-msgstr "Khoa Kỹ thuật Bán dẫn"
-
-#: .\users\templates\users\home.html:330
-msgid "您想了解的都在這"
-msgstr "Mọi điều bạn muốn biết đều ở đây"
-
-#: .\users\templates\users\home.html:334
-msgid "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
-msgstr "Thông thường bạn cần chuẩn bị: hộ chiếu, bằng cấp (bằng tốt nghiệp trung học/đại học), bảng điểm, chứng chỉ năng lực ngôn ngữ (tiếng Trung hoặc tiếng Anh), chứng minh tài chính, báo cáo khám sức khỏe, thư giới thiệu (một số trường yêu cầu), kế hoạch học tập (bậc sau đại học). Yêu cầu của mỗi trường có khác biệt, vui lòng theo thông báo tuyển sinh của từng trường."
-
-#: .\users\templates\users\home.html:338
-msgid "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課程。"
-msgstr "Được! Nhiều trường đại học Đài Loan có chương trình cử nhân và sau đại học giảng dạy bằng tiếng Anh. Nếu học chương trình giảng dạy bằng tiếng Trung, thông thường bạn cần đạt trình độ tiếng Trung nhất định trước khi nhập học (như TOCFL B1 trở lên), hoặc hoàn thành khóa tiếng Trung dự bị một năm tại Ban Dự bị Hoa kiều."
-
-#: .\users\templates\users\home.html:342
-msgid "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
-msgstr "Học phí khác nhau tùy trường và ngành. Tại trường đại học công lập, bậc cử nhân khoảng NT$20,000–50,000 mỗi học kỳ, bậc sau đại học khoảng NT$25,000–60,000. Chi phí sinh hoạt (ở, ăn uống, đi lại) khoảng NT$10,000–20,000 mỗi tháng. Cộng thêm học bổng hỗ trợ, chi phí du học Đài Loan tương đối phải chăng."
-
-#: .\users\templates\users\home.html:346
-msgid "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
-msgstr "Sau khi nhận được giấy báo nhập học từ trường Đài Loan, mang thư nhập học đến cơ quan đại diện Đài Loan tại nước sở tại để xin thị thực cư trú du học (Resident Visa). Chuẩn bị hộ chiếu, giấy báo nhập học, chứng minh tài chính và giấy khám sức khỏe là có thể nộp hồ sơ."
-
-#: .\users\templates\users\home.html:358
-msgid "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
-msgstr "Từ khi bắt đầu nộp hồ sơ đến khi chính thức nhập học thường mất 3–8 tháng. Nên chuẩn bị sớm: xác nhận điều kiện dự tuyển (trước 6–12 tháng), chuẩn bị hồ sơ (trước 4–6 tháng), nộp hồ sơ (trước 3–4 tháng), chờ kết quả trúng tuyển (1–2 tháng), làm thị thực (1–2 tháng)."
-
-#: .\templates\base.html:292
-msgid "結束帶領"
-msgstr "Kết thúc hướng dẫn"
-
-#: .\users\templates\users\dashboard.html:158
-msgid "先點這裡，我們去完成這項任務吧！"
-msgstr "Nhấn vào đây trước, chúng ta cùng hoàn thành nhiệm vụ này nhé!"
-
-#: .\flows\views.py:71
-msgid "完成「{title}」吧！"
-msgstr "Cùng hoàn thành \"{title}\" nào!"
-
-#: .\flows\views.py:72
-msgid "這項任務已經完成囉！"
-msgstr "Nhiệm vụ này đã hoàn thành rồi!"
-
-#: .\flows\views.py:73
-msgid "任務已完成！"
-msgstr "Đã hoàn thành nhiệm vụ!"
-
-#: .\flows\views.py:74
-msgid "任務已完成！想更了解細節可以看看："
-msgstr "Đã hoàn thành nhiệm vụ! Muốn tìm hiểu thêm chi tiết, hãy xem: "
-
-#: .\users\templates\users\edit_profile.html
-msgid "文學院學士班"
-msgstr "Chương trình Cử nhân, Khoa Nhân văn"
-
-#: .\users\templates\users\edit_profile.html
-msgid "中國文學系"
-msgstr "Khoa Văn học Trung Quốc"
-
-#: .\users\templates\users\edit_profile.html
-msgid "英美語文學系"
-msgstr "Khoa Ngôn ngữ và Văn học Anh Mỹ"
-
-#: .\users\templates\users\edit_profile.html
-msgid "法國語文學系"
-msgstr "Khoa Ngôn ngữ và Văn học Pháp"
-
-#: .\users\templates\users\edit_profile.html
-msgid "理學院學士班"
-msgstr "Chương trình Cử nhân, Khoa Khoa học"
-
-#: .\users\templates\users\edit_profile.html
-msgid "物理學系"
-msgstr "Khoa Vật lý"
-
-#: .\users\templates\users\edit_profile.html
-msgid "數學系"
-msgstr "Khoa Toán học"
-
-#: .\users\templates\users\edit_profile.html
-msgid "化學學系"
-msgstr "Khoa Hóa học"
-
-#: .\users\templates\users\edit_profile.html
-msgid "光電科學與工程學系"
-msgstr "Khoa Khoa học và Kỹ thuật Quang điện"
-
-#: .\users\templates\users\edit_profile.html
-msgid "工學院學士班"
-msgstr "Chương trình Cử nhân, Khoa Kỹ thuật"
-
-#: .\users\templates\users\edit_profile.html
-msgid "化學工程與材料工程學系"
-msgstr "Khoa Kỹ thuật Hóa học và Vật liệu"
-
-#: .\users\templates\users\edit_profile.html
-msgid "土木工程學系"
-msgstr "Khoa Kỹ thuật Xây dựng"
-
-#: .\users\templates\users\edit_profile.html
-msgid "機械工程學系"
-msgstr "Khoa Kỹ thuật Cơ khí"
-
-#: .\users\templates\users\edit_profile.html
-msgid "企業管理學系"
-msgstr "Khoa Quản trị Kinh doanh"
-
-#: .\users\templates\users\edit_profile.html
-msgid "資訊管理學系"
-msgstr "Khoa Quản trị Thông tin"
-
-#: .\users\templates\users\edit_profile.html
-msgid "財務金融學系"
-msgstr "Khoa Tài chính"
-
-#: .\users\templates\users\edit_profile.html
-msgid "經濟學系"
-msgstr "Khoa Kinh tế"
-
-#: .\users\templates\users\edit_profile.html
-msgid "資訊電機學院學士班"
-msgstr "Chương trình Cử nhân, Khoa Điện và Khoa học Máy tính"
-
-#: .\users\templates\users\edit_profile.html
-msgid "通訊工程學系"
-msgstr "Khoa Kỹ thuật Truyền thông"
-
-#: .\users\templates\users\edit_profile.html
-msgid "地球科學學院學士班"
-msgstr "Chương trình Cử nhân, Khoa Khoa học Trái đất"
-
-#: .\users\templates\users\edit_profile.html
-msgid "地球科學學系"
-msgstr "Khoa Khoa học Trái đất"
-
-#: .\users\templates\users\edit_profile.html
-msgid "大氣科學學系"
-msgstr "Khoa Khoa học Khí quyển"
-
-#: .\users\templates\users\edit_profile.html
-msgid "太空科學與工程學系"
-msgstr "Khoa Khoa học và Kỹ thuật Vũ trụ"
-
-#: .\users\templates\users\edit_profile.html
-msgid "客家語文暨社會科學學系"
-msgstr "Khoa Ngôn ngữ Khách Gia và Khoa học Xã hội"
-
-#: .\users\templates\users\edit_profile.html
-msgid "生命科學系"
-msgstr "Khoa Khoa học Sự sống"
-
-#: .\users\templates\users\edit_profile.html
-msgid "生醫科學與工程學系"
-msgstr "Khoa Khoa học và Kỹ thuật Y sinh"

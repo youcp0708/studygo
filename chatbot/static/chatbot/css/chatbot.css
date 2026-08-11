@@ -1193,6 +1193,7 @@ html[lang="my"] .bot-profile-card p {
 }
 
 .role-selector {
+  display: none;
   position: absolute;
   bottom: 8px;
   right: 8px;

@@ -126,13 +126,13 @@ msgstr ""
 "例：最近すごくストレスが溜まっていて、少しホームシックです。話し相手になって"
 "もらえますか？"
 
-msgid "可以陪我聊聊嗎？"
-msgstr "話し相手になってもらえますか？"
+msgid "讓我們一起聊一聊"
+msgstr "一緒におしゃべりしましょう"
 
 #: .\chatbot\templates\chatbot\chatbot.html:182
 #: .\chatbot\templates\chatbot\chatbot.html:273
-msgid "例如：簽證要先準備什麼？"
-msgstr "例：ビザのために何を先に準備すればいいですか？"
+msgid "可以詢問與留學任務相關的問題..."
+msgstr "留学タスクに関する質問ができます…"
 
 #: .\chatbot\templates\chatbot\chatbot.html:186
 #: .\chatbot\templates\chatbot\chatbot.html:259
@@ -4272,12 +4272,12 @@ msgstr "最低履修単位数："
 
 #: .\guides\templates\guides\guide_course.html:163
 msgid ""
-"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修"
-"（需導師與系主任同意），否則依規定令退學。"
+"大一至大三每學期至少修 16 學分；大四每學期至少 9 學分。未達標者需辦理減修（需"
+"導師與系主任同意），否則依規定令退學。"
 msgstr ""
-"1〜3年生は毎学期16単位以上、4年生は毎学期9単位以上を履修する必要がありま"
-"す。基準に満たない場合は減修の手続き（指導教員と学科主任の同意が必要）を行"
-"う必要があり、行わない場合は規定により退学となります。"
+"1〜3年生は毎学期16単位以上、4年生は毎学期9単位以上を履修する必要があります。"
+"基準に満たない場合は減修の手続き（指導教員と学科主任の同意が必要）を行う必要"
+"があり、行わない場合は規定により退学となります。"
 
 #: .\guides\templates\guides\guide_course.html:180
 msgid "衝堂 / 同課號："
@@ -9664,7 +9664,11 @@ msgid ""
 "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文"
 "或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究"
 "所）。各校要求略有不同，請以各校招生簡章為準。"
-msgstr "一般的に、パスポート、学歴証明書（高校/大学の卒業証書）、成績証明書、語学能力証明書（中国語または英語）、経済証明書、健康診断書、推薦状（一部の学校で必要）、研究計画書（大学院）が必要です。学校によって要件が異なるため、各校の募集要項をご確認ください。"
+msgstr ""
+"一般的に、パスポート、学歴証明書（高校/大学の卒業証書）、成績証明書、語学能力"
+"証明書（中国語または英語）、経済証明書、健康診断書、推薦状（一部の学校で必"
+"要）、研究計画書（大学院）が必要です。学校によって要件が異なるため、各校の募"
+"集要項をご確認ください。"
 
 #: .\users\templates\users\faq.html:33 .\users\templates\users\home.html:335
 msgid "不會中文可以來台灣留學嗎？"
@@ -9675,7 +9679,10 @@ msgid ""
 "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常"
 "入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課"
 "程。"
-msgstr "はい！台湾の多くの大学が英語で学べる学士課程・大学院課程を提供しています。中国語で行われる課程に進む場合は、通常入学前に一定の中国語能力（TOCFL B1以上など）が必要ですが、1年間の中国語予備課程を修了することでも対応できます。"
+msgstr ""
+"はい！台湾の多くの大学が英語で学べる学士課程・大学院課程を提供しています。中"
+"国語で行われる課程に進む場合は、通常入学前に一定の中国語能力（TOCFL B1以上な"
+"ど）が必要ですが、1年間の中国語予備課程を修了することでも対応できます。"
 
 #: .\users\templates\users\faq.html:37 .\users\templates\users\home.html:358
 msgid "申請流程需要多久時間？"
@@ -9686,7 +9693,10 @@ msgid ""
 "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個"
 "月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個"
 "月）、辦理簽證（1–2 個月）。"
-msgstr "申請開始から正式入学まで通常3〜8ヶ月かかります。早めの準備をおすすめします：出願資格の確認（6〜12ヶ月前）、書類の準備（4〜6ヶ月前）、出願（3〜4ヶ月前）、合格発表待ち（1〜2ヶ月）、ビザ申請（1〜2ヶ月）。"
+msgstr ""
+"申請開始から正式入学まで通常3〜8ヶ月かかります。早めの準備をおすすめします："
+"出願資格の確認（6〜12ヶ月前）、書類の準備（4〜6ヶ月前）、出願（3〜4ヶ月前）、"
+"合格発表待ち（1〜2ヶ月）、ビザ申請（1〜2ヶ月）。"
 
 #: .\users\templates\users\faq.html:46 .\users\templates\users\home.html:345
 msgid "學生簽證如何辦理？"
@@ -9696,7 +9706,10 @@ msgstr "学生ビザはどのように申請しますか？"
 msgid ""
 "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證"
 "（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
-msgstr "台湾の学校から入学許可を受け取ったら、入学許可書を持って現地の台湾代表機関で居留ビザ（Resident Visa）を申請してください。パスポート、入学許可書、経済証明書、健康診断書を準備すれば申請できます。"
+msgstr ""
+"台湾の学校から入学許可を受け取ったら、入学許可書を持って現地の台湾代表機関で"
+"居留ビザ（Resident Visa）を申請してください。パスポート、入学許可書、経済証明"
+"書、健康診断書を準備すれば申請できます。"
 
 #: .\users\templates\users\faq.html:50 .\users\templates\users\home.html:354
 msgid "全民健保什麼時候可以加入？"
@@ -9720,7 +9733,11 @@ msgid ""
 "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 "
 "NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學"
 "金補助，台灣留學費用相對親民。"
-msgstr "学費は学校や学科によって異なります。公立大学の学士課程は1学期あたり約NT$20,000〜50,000、大学院は約NT$25,000〜60,000です。生活費（住居、食費、交通費）は月あたり約NT$10,000〜20,000です。奨学金を活用すれば、台湾留学は比較的お手頃です。"
+msgstr ""
+"学費は学校や学科によって異なります。公立大学の学士課程は1学期あたり約"
+"NT$20,000〜50,000、大学院は約NT$25,000〜60,000です。生活費（住居、食費、交通"
+"費）は月あたり約NT$10,000〜20,000です。奨学金を活用すれば、台湾留学は比較的お"
+"手頃です。"
 
 #: .\users\templates\users\faq.html:63 .\users\templates\users\home.html:350
 msgid "可以邊讀書邊打工嗎？"
@@ -10792,6 +10809,164 @@ msgstr "お問い合わせ"
 msgid "若你對本條款有任何疑問，歡迎透過"
 msgstr ""
 
+#: .\templates\base.html:190
+msgid "嗶嗶嗶，你有新消息！"
+msgstr "ピピピッ！新しいメッセージが届きました！"
+
+#: .\users\templates\users\home.html:244
+msgid "電機工程學系"
+msgstr "電機工学科"
+
+#: .\users\templates\users\home.html:258
+msgid "資訊工程學系"
+msgstr "情報工学科"
+
+#: .\users\templates\users\home.html:273
+msgid "教育學系"
+msgstr "教育学科"
+
+#: .\users\templates\users\home.html:301
+msgid "新聞學系"
+msgstr "新聞学科"
+
+#: .\users\templates\users\home.html:315
+msgid "半導體工程學系"
+msgstr "半導体工学科"
+
+#: .\users\templates\users\home.html:319
+msgid ""
+"「台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。陽明交大的研究環境"
+"和業界連結都非常完善。ReadyTo 的 ARC 辦理指南讓我順利完成所有手續。」"
+msgstr ""
+"「台湾の半導体産業は世界トップクラスで、ここで深く学ぶことは最も正しい選択で"
+"した。陽明交通大学の研究環境も産業界とのつながりも非常に充実しています。"
+"ReadyTo の ARC 手続きガイドのおかげで、すべての手続きをスムーズに終えられまし"
+"た。」"
+
+#: .\templates\base.html:292
+msgid "結束帶領"
+msgstr "ガイドを終了"
+
+#: .\users\templates\users\dashboard.html:158
+msgid "先點這裡，我們去完成這項任務吧！"
+msgstr "まずはここをクリック！このタスクを一緒に片づけましょう。"
+
+#: .\flows\views.py:71
+msgid "完成「{title}」吧！"
+msgstr "「{title}」を片づけましょう！"
+
+#: .\flows\views.py:72
+msgid "這項任務已經完成囉！"
+msgstr "このタスクはすでに完了しています！"
+
+#: .\flows\views.py:73
+msgid "任務已完成！"
+msgstr "タスクが完了しました！"
+
+#: .\flows\views.py:74
+msgid "任務已完成！想更了解細節可以看看："
+msgstr "タスクが完了しました！詳しく知りたい方はこちらをご覧ください："
+
+#: .\users\templates\users\edit_profile.html
+msgid "文學院學士班"
+msgstr "文学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "中國文學系"
+msgstr "中国文学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "英美語文學系"
+msgstr "英米語文学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "法國語文學系"
+msgstr "フランス語文学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "理學院學士班"
+msgstr "理学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "物理學系"
+msgstr "物理学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "數學系"
+msgstr "数学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "化學學系"
+msgstr "化学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "光電科學與工程學系"
+msgstr "光電科学工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "工學院學士班"
+msgstr "工学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "化學工程與材料工程學系"
+msgstr "化学工学・材料工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "土木工程學系"
+msgstr "土木工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "企業管理學系"
+msgstr "企業管理学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "資訊管理學系"
+msgstr "情報管理学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "財務金融學系"
+msgstr "財務金融学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "經濟學系"
+msgstr "経済学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "資訊電機學院學士班"
+msgstr "資訊電機学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "通訊工程學系"
+msgstr "通信工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "地球科學學院學士班"
+msgstr "地球科学学院学士課程"
+
+#: .\users\templates\users\edit_profile.html
+msgid "地球科學學系"
+msgstr "地球科学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "大氣科學學系"
+msgstr "大気科学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "太空科學與工程學系"
+msgstr "宇宙科学工学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "客家語文暨社會科學學系"
+msgstr "客家語文・社会科学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "生命科學系"
+msgstr "生命科学科"
+
+#: .\users\templates\users\edit_profile.html
+msgid "生醫科學與工程學系"
+msgstr "生医科学工学科"
+
 #~ msgid "輸入你的問題，系統會根據你的身份與狀態整理建議。"
 #~ msgstr ""
 #~ "質問を入力してください。システムがあなたの身分と状態に基づいて提案を整理し"
@@ -10982,179 +11157,3 @@ msgstr ""
 
 #~ msgid "抵臺前準備"
 #~ msgstr "渡航前の準備"
-
-#: .\templates\base.html:190
-msgid "嗶嗶嗶，你有新消息！"
-msgstr "ピピピッ！新しいメッセージが届きました！"
-
-#: .\users\templates\users\home.html:244
-msgid "電機工程學系"
-msgstr "電機工学科"
-
-#: .\users\templates\users\home.html:258
-msgid "資訊工程學系"
-msgstr "情報工学科"
-
-#: .\users\templates\users\home.html:262
-msgid "「台灣的工程教育真的世界一流！教授們都很願意指導外籍生，實驗室設備也很完整。ReadyTo 的簽證指南幫我省下超多做功課的時間，照著步驟走就到了。」"
-msgstr "「台湾の工学教育は本当に世界一流です！教授たちは留学生の指導にとても熱心で、実験室の設備も充実しています。ReadyTo のビザガイドのおかげで下調べの時間を大幅に節約でき、手順どおりに進めるだけで完了しました。」"
-
-#: .\users\templates\users\home.html:273
-msgid "教育學系"
-msgstr "教育学科"
-
-#: .\users\templates\users\home.html:301
-msgid "新聞學系"
-msgstr "新聞学科"
-
-#: .\users\templates\users\home.html:315
-msgid "半導體工程學系"
-msgstr "半導体工学科"
-
-#: .\users\templates\users\home.html:319
-msgid "「台灣的半導體產業是世界頂尖的，來這裡深造是最正確的選擇。陽明交大的研究環境和業界連結都非常完善。ReadyTo 的 ARC 辦理指南讓我順利完成所有手續。」"
-msgstr "「台湾の半導体産業は世界トップクラスで、ここで深く学ぶことは最も正しい選択でした。陽明交通大学の研究環境も産業界とのつながりも非常に充実しています。ReadyTo の ARC 手続きガイドのおかげで、すべての手続きをスムーズに終えられました。」"
-
-#: .\users\templates\users\home.html:334
-msgid "一般需要準備：護照、學歷證明（高中/大學畢業證書）、成績單、語言能力證明（中文或英文）、財力證明、健康檢查報告、推薦信（部分學校要求）、學習計畫書（研究所）。各校要求略有不同，請以各校招生簡章為準。"
-msgstr "一般的に必要な書類：パスポート、学歴証明（高校／大学の卒業証書）、成績証明書、語学力証明（中国語または英語）、財力証明、健康診断書、推薦状（一部の学校で必要）、研究計画書（大学院）。学校ごとに要件が多少異なるため、各校の募集要項をご確認ください。"
-
-#: .\users\templates\users\home.html:338
-msgid "可以！台灣許多大學提供英文授課的學士班與研究所課程。若就讀中文授課課程，通常入學前需具備一定中文程度（如 TOCFL B1 以上），或在僑先部完成一年預科中文課程。"
-msgstr "可能です！台湾の多くの大学では英語で行われる学士課程・大学院課程を提供しています。中国語で行われる課程に進学する場合は、通常入学前に一定の中国語力（TOCFL B1 以上など）が必要か、僑生先修部で 1 年間の予科中国語課程を修了する必要があります。"
-
-#: .\users\templates\users\home.html:342
-msgid "學費依學校與科系不同，公立大學學士班約每學期 NT$20,000–50,000，研究所約 NT$25,000–60,000。生活費（住宿、餐飲、交通）約每月 NT$10,000–20,000。加上獎學金補助，台灣留學費用相對親民。"
-msgstr "学費は学校や学科によって異なり、国公立大学の学士課程は 1 学期あたり約 NT$20,000–50,000、大学院は約 NT$25,000–60,000 です。生活費（住居・食事・交通）は月あたり約 NT$10,000–20,000。奨学金の補助もあり、台湾留学の費用は比較的手頃です。"
-
-#: .\users\templates\users\home.html:346
-msgid "收到台灣學校入學許可後，持入學許可函至所在地台灣駐外機構申請學生居留簽證（Resident Visa）。備妥護照、入學許可、財力證明、健康檢查等文件即可申請。"
-msgstr "台湾の学校から入学許可を受け取った後、入学許可書を持って居住国の台湾駐外機関で学生居留ビザ（Resident Visa）を申請します。パスポート、入学許可書、財力証明、健康診断書などの書類を用意すれば申請できます。"
-
-#: .\users\templates\users\home.html:358
-msgid "從開始申請到正式入學，通常需要 3–8 個月。建議提早準備：確認申請資格（6–12 個月前）、準備文件（4–6 個月前）、提交申請（3–4 個月前）、等待錄取（1–2 個月）、辦理簽證（1–2 個月）。"
-msgstr "出願開始から正式な入学までは通常 3–8 か月かかります。早めの準備をおすすめします：出願資格の確認（6–12 か月前）、書類の準備（4–6 か月前）、出願（3–4 か月前）、合否待ち（1–2 か月）、ビザ申請（1–2 か月）。"
-
-#: .\templates\base.html:292
-msgid "結束帶領"
-msgstr "ガイドを終了"
-
-#: .\users\templates\users\dashboard.html:158
-msgid "先點這裡，我們去完成這項任務吧！"
-msgstr "まずはここをクリック！このタスクを一緒に片づけましょう。"
-
-#: .\flows\views.py:71
-msgid "完成「{title}」吧！"
-msgstr "「{title}」を片づけましょう！"
-
-#: .\flows\views.py:72
-msgid "這項任務已經完成囉！"
-msgstr "このタスクはすでに完了しています！"
-
-#: .\flows\views.py:73
-msgid "任務已完成！"
-msgstr "タスクが完了しました！"
-
-#: .\flows\views.py:74
-msgid "任務已完成！想更了解細節可以看看："
-msgstr "タスクが完了しました！詳しく知りたい方はこちらをご覧ください："
-
-#: .\users\templates\users\edit_profile.html
-msgid "文學院學士班"
-msgstr "文学院学士課程"
-
-#: .\users\templates\users\edit_profile.html
-msgid "中國文學系"
-msgstr "中国文学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "英美語文學系"
-msgstr "英米語文学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "法國語文學系"
-msgstr "フランス語文学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "理學院學士班"
-msgstr "理学院学士課程"
-
-#: .\users\templates\users\edit_profile.html
-msgid "物理學系"
-msgstr "物理学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "數學系"
-msgstr "数学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "化學學系"
-msgstr "化学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "光電科學與工程學系"
-msgstr "光電科学工学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "工學院學士班"
-msgstr "工学院学士課程"
-
-#: .\users\templates\users\edit_profile.html
-msgid "化學工程與材料工程學系"
-msgstr "化学工学・材料工学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "土木工程學系"
-msgstr "土木工学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "企業管理學系"
-msgstr "企業管理学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "資訊管理學系"
-msgstr "情報管理学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "財務金融學系"
-msgstr "財務金融学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "經濟學系"
-msgstr "経済学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "資訊電機學院學士班"
-msgstr "資訊電機学院学士課程"
-
-#: .\users\templates\users\edit_profile.html
-msgid "通訊工程學系"
-msgstr "通信工学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "地球科學學院學士班"
-msgstr "地球科学学院学士課程"
-
-#: .\users\templates\users\edit_profile.html
-msgid "地球科學學系"
-msgstr "地球科学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "大氣科學學系"
-msgstr "大気科学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "太空科學與工程學系"
-msgstr "宇宙科学工学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "客家語文暨社會科學學系"
-msgstr "客家語文・社会科学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "生命科學系"
-msgstr "生命科学科"
-
-#: .\users\templates\users\edit_profile.html
-msgid "生醫科學與工程學系"
-msgstr "生医科学工学科"

@@ -2594,6 +2594,30 @@ DEFINITION_MARKERS = [
     'what is', 'what are', 'meaning of', 'definition',
 ]
 
+# 需要「解讀學生具體情境」才能回答的問句：問的不是穩定知識本身，
+# 而是「我現在這個狀況該怎麼辦」，直接把知識庫整篇貼出來答非所問。
+# 命中這些字眼時，即使知識庫只命中單一分類，也不能走本地捷徑，必須讓 AI 讀懂問題再回答。
+NEEDS_INTERPRETATION_MARKERS_ZH = [
+    '怎麼辦', '該怎麼', '該如何', '如何處理', '為什麼', '為何',
+    '過期', '逾期', '已經過', '已過', '來不及', '沒趕上', '超過期限',
+]
+NEEDS_INTERPRETATION_MARKERS_EN = [
+    'what should i do', 'what do i do', 'why', 'how do i',
+    'overdue', 'expired', 'missed the deadline', 'too late',
+]
+
+
+def detect_needs_interpretation(question):
+    """判斷問句是否問的是「特定情境下該怎麼辦」，而不是穩定知識本身。"""
+    q = (question or '').strip()
+    if not q:
+        return False
+    lower_q = q.lower()
+    return (
+        any(k in q for k in NEEDS_INTERPRETATION_MARKERS_ZH)
+        or any(k in lower_q for k in NEEDS_INTERPRETATION_MARKERS_EN)
+    )
+
 # 明確在問時間或金額，一定要查最新資料。
 # 必須優先於 DEFINITION_MARKERS 判斷，因為「截止日是什麼時候」這種問句
 # 字面上包含「是什麼」，但問的是日期而不是定義，不能被當成定義型問題擋掉。
@@ -3585,9 +3609,13 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
     # use_web_search 為真時也絕對不能走捷徑：那代表學生問的是日期、費用、截止日這類
     # 會隨時間變動的資訊。知識庫裡就算有一段看似相關的內容，也可能已經過期，
     # 直接原文貼出去等於用舊資料回答；這種情況一定要讓模型去查官方網站驗證。
+    # 問句需要解讀學生具體情境（例如「已經過期該怎麼辦」）時，就算知識庫只命中單一分類，
+    # 也不能走本地捷徑直接拼接原文，必須讓 AI 讀懂問題後再回答。
+    needs_interpretation = detect_needs_interpretation(question)
+
     DIRECTORY_STYLE_CATEGORIES = {'school_info'}
     knowledge_categories = {item.category for item in knowledge_items}
-    if ai_mode == "helper" and not attachments and not is_tutor_role and not friend_domain_hint and not use_web_search and len(knowledge_categories) == 1 and not (knowledge_categories & DIRECTORY_STYLE_CATEGORIES) and (
+    if ai_mode == "helper" and not attachments and not is_tutor_role and not friend_domain_hint and not use_web_search and not needs_interpretation and len(knowledge_categories) == 1 and not (knowledge_categories & DIRECTORY_STYLE_CATEGORIES) and (
         knowledge_context
         and '目前沒有找到直接相關的知識庫資料' not in knowledge_context
         and '目前沒有可用的知識庫資料' not in knowledge_context
@@ -3859,7 +3887,8 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 不要逐步教學或列出操作指南，只需描述他目前的狀況與脈絡。
 
 {general_label}：
-...
+只根據上面知識庫資料中「直接回答學生這次實際問的問題」的部分作答，其他不相關的主題、證件或流程一律忽略，不要把整篇知識庫原文貼出來。
+如果學生問的是特定情境（例如任務已經過期、已經超過某個時限），要針對這個情境具體說明現在該怎麼辦，不要重複一遍完整申辦流程或文件清單。
 """.strip()
 
     try:
