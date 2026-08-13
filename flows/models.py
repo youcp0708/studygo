@@ -407,6 +407,10 @@ class Reminder(models.Model):
         help_text="kind 為 skipped 時使用"
     )
     is_read = models.BooleanField(default=False, verbose_name="是否已讀")
+    email_sent = models.BooleanField(
+        default=False, verbose_name="是否已成功寄送 Email",
+        help_text="用來讓排程補寄：即使這筆提醒已經存在（例如使用者自己開網站時即時建立、未寄信），只要這裡是 False，下次 check_reminders 執行時還是會補寄一次。"
+    )
     proactive_notified_at = models.DateTimeField(
         null=True, blank=True,
         verbose_name="主動 AI 訊息已發送時間",
