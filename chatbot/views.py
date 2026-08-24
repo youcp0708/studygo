@@ -264,6 +264,12 @@ def chat_message_api(request):
         # 由後端組裝而不是靠 AI 自己寫，可以確保來源網址不會被模型改寫或漏掉。
         reply_text = ai_result['reply']
 
+        # 校內處室/系所/大樓的地圖連結同理：由後端直接附上真實查到的連結，
+        # 不讓 AI 自己複述或編造地址與網址
+        campus_place_text = ai_result.get('campus_place_results_text')
+        if campus_place_text:
+            reply_text = f"{reply_text}\n\n{campus_place_text}"
+
         citations_text = ai_result.get('citations_text')
         if citations_text:
             reply_text = f"{reply_text}\n\n{citations_text}"
