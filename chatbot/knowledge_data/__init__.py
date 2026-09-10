@@ -27,6 +27,7 @@ MODULE_ORDER = [
     'schools',
     'admission',
     'life',
+    'ncu',
 ]
 
 

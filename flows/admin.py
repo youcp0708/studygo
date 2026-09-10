@@ -331,12 +331,14 @@ class ReminderAdmin(admin.ModelAdmin):
         'kind',
         'due_date',
         'is_read',
+        'email_sent',
         'created_at',
     )
 
     list_filter = (
         'kind',
         'is_read',
+        'email_sent',
         'created_at',
     )
 

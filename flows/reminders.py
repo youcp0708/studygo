@@ -21,7 +21,12 @@ DUE_KINDS = ('due_soon', 'due_today', 'overdue')
 
 def sync_task_reminders(student_tasks, days_ahead=3, send_email=True, stdout=None):
     """
-    為傳入的 StudentTask queryset 建立/清理到期提醒。
+    為傳入的 StudentTask queryset 建立/清理到期提醒，並視需要補寄 Email。
+
+    重點：提醒「是否已建立」跟「是否已寄過 Email」是分開追蹤的（見 Reminder.email_sent）。
+    使用者自己開網站觸發的即時掃描（send_email=False）只會建立提醒、不寄信；
+    之後排程以 send_email=True 執行時，即使提醒已經存在，只要 email_sent 還是 False，
+    一樣會補寄，不會因為「提醒已存在」就永遠跳過寄信。
 
     :param student_tasks: StudentTask queryset（呼叫端負責篩選要掃描哪些學生/任務）
     :param days_ahead: 提早幾天產生「即將到期」提醒
@@ -75,15 +80,10 @@ def sync_task_reminders(student_tasks, days_ahead=3, send_email=True, stdout=Non
         message = render_due_message(kind, pref_lang, task_title, due_date, days_left)
         email_subject, email_body = render_due_email(pref_lang, st.student.user.name, message)
 
-        # 檢查是否已經有針對此截止日期的相同類型提醒，避免重複產生與發送
-        has_current_reminder = Reminder.objects.filter(
-            student_task=st,
-            kind=kind,
-            due_date=due_date,
-        ).exists()
+        reminder = Reminder.objects.filter(student_task=st, kind=kind, due_date=due_date).first()
 
-        if not has_current_reminder:
-            Reminder.objects.create(
+        if reminder is None:
+            reminder = Reminder.objects.create(
                 student=st.student,
                 student_task=st,
                 message=message,
@@ -92,21 +92,23 @@ def sync_task_reminders(student_tasks, days_ahead=3, send_email=True, stdout=Non
             )
             created_count += 1
 
-            if send_email:
-                email = st.student.user.email
-                if email:
-                    try:
-                        send_mail(
-                            subject=email_subject,
-                            message=email_body,
-                            from_email=settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'noreply@studygo.tw',
-                            recipient_list=[email],
-                            fail_silently=False,
-                        )
-                        if stdout:
-                            stdout.write(f'成功寄送 Email 提醒給 {email}。')
-                    except Exception as e:
-                        if stdout:
-                            stdout.write(f'寄送 Email 提醒給 {email} 失敗: {e}')
+        if send_email and not reminder.email_sent:
+            email = st.student.user.email
+            if email:
+                try:
+                    send_mail(
+                        subject=email_subject,
+                        message=email_body,
+                        from_email=settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'noreply@studygo.tw',
+                        recipient_list=[email],
+                        fail_silently=False,
+                    )
+                    reminder.email_sent = True
+                    reminder.save(update_fields=['email_sent'])
+                    if stdout:
+                        stdout.write(f'成功寄送 Email 提醒給 {email}。')
+                except Exception as e:
+                    if stdout:
+                        stdout.write(f'寄送 Email 提醒給 {email} 失敗: {e}')
 
     return created_count

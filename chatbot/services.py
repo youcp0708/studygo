@@ -1011,13 +1011,23 @@ def search_school_units(school, question):
     return matched
 
 
-def _format_school_unit(unit, school, language_code='zh-hant'):
-    """把 SchoolUnit 格式化成跟 _format_place 一致風格的 Markdown 行。"""
+def _format_school_unit(unit, school, language_code='zh-hant', with_map_link=False):
+    """
+    把 SchoolUnit 格式化成跟 _format_place 一致風格的 Markdown 行。
+    with_map_link=True 時，會呼叫 Google Maps API 把單位位置轉成可點擊的地圖連結
+    （任務小幫手回答校內處室、系所、大樓位置時使用；只有明確問「在哪」才會觸發，
+    避免每次回答校內單位都呼叫 API）。
+    """
     labels = _place_labels(language_code)
     sep, colon = labels['sep'], labels['colon']
     line = f'- {unit.name}'
     if unit.location:
-        line += f'{sep}{labels["location"]}{colon}{unit.location}'
+        location_text = unit.location
+        if with_map_link:
+            maps_url = _campus_unit_map_link(school, unit)
+            if maps_url:
+                location_text = f'[{unit.location}]({maps_url})'
+        line += f'{sep}{labels["location"]}{colon}{location_text}'
     else:
         # 明確說「查無具體位置」，不要因為欄位空白就讓學生以為系統沒收錄這個單位
         line += f'{sep}{labels["location"]}{colon}{labels["location_unknown"]}'
@@ -2935,6 +2945,61 @@ def detect_amenity_recommendation_query(question):
     )
 
 
+# 校內處室、系所、大樓的地點查詢（任務小幫手專屬）：這類問題任務小幫手本來就能從
+# SchoolUnit 資料回答文字地址，但沒有地圖連結。只有「同時」命中校內單位詞彙
+# 與「問位置」詞彙時，才會另外呼叫 Google Maps API 附上可點擊的地圖連結——
+# 範圍嚴格限縮在校內處室 / 系所 / 大樓，不跟 AMENITY（生活機能推薦，friend 專屬）搜尋混用，
+# 也不會因為學生只是問電話、分機、辦理規定就白白呼叫地圖 API。
+CAMPUS_LOCATION_KEYWORDS_ZH = [
+    '系辦', '系所', '系館', '學系', '學院', '教學大樓', '行政大樓', '大樓', '教研大樓',
+    '辦公室', '辦公大樓', '處室', '中心', '教務處', '學務處', '總務處',
+    '國際處', '國際事務處', '註冊組', '課務組', '圖書館', '諮商中心',
+    '諮商輔導中心', '衛保組', '保健中心', '健康中心', '校長室', '系主任室',
+    '系辦公室', '招生組', '住宿服務組', '軍訓室', '系上',
+]
+CAMPUS_LOCATION_KEYWORDS_EN = [
+    'department of', 'college of', 'faculty of', 'building',
+    'office of', 'admissions office', 'international affairs',
+    'registrar', 'student affairs', 'library', 'counseling center',
+]
+CAMPUS_LOCATION_ASK_KEYWORDS_ZH = ['在哪', '在哪裡', '怎麼去', '怎麼走', '地址', '位置', '哪一棟', '哪棟', '幾樓', '路線']
+CAMPUS_LOCATION_ASK_KEYWORDS_EN = ['where is', 'how to get to', 'location of', 'address of', 'which building', 'directions to']
+
+
+def detect_campus_location_query(question):
+    """
+    偵測問題是否在問「校內處室、系所、大樓」的位置。
+    必須同時命中「校內單位/系所」詞彙和「問位置」詞彙，避免只問電話、分機、
+    辦理規定的問題也被誤判成要查地圖（那些不需要地圖連結，白白呼叫 API）。
+    """
+    q = (question or '').strip()
+    lower_q = q.lower()
+    if not q:
+        return False
+    has_campus_noun = (
+        any(k in q for k in CAMPUS_LOCATION_KEYWORDS_ZH)
+        or any(k in lower_q for k in CAMPUS_LOCATION_KEYWORDS_EN)
+    )
+    has_location_ask = (
+        any(k in q for k in CAMPUS_LOCATION_ASK_KEYWORDS_ZH)
+        or any(k in lower_q for k in CAMPUS_LOCATION_ASK_KEYWORDS_EN)
+    )
+    return has_campus_noun and has_location_ask
+
+
+def _campus_unit_map_link(school, unit):
+    """把校內單位（系所、處室、大樓）的位置轉成 Google Maps 連結；查不到或沒設定 API key 時回傳空字串。"""
+    api_key = getattr(settings, 'GOOGLE_MAPS_API_KEY', '')
+    if not api_key or not unit.location:
+        return ''
+    school_name = school.name if school else ''
+    query = ' '.join(filter(None, [school_name, unit.name, unit.location]))
+    lat, lng = _geocode_location(query, api_key)
+    if lat and lng:
+        return f'https://www.google.com/maps/search/?api=1&query={lat},{lng}'
+    return ''
+
+
 def detect_helper_domain_hit(question, user=None):
     """
     偵測問題是否命中「只有任務小幫手在管」的知識庫內容
@@ -3512,6 +3577,40 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
     logger.debug('ai_mode=%s, place_results=%s, place_source=%s', ai_mode, bool(place_results), place_source)
 
+    # 任務小幫手專屬：學生問校內處室、系所、大樓的位置時，附上 Google Maps 連結。
+    # 先比對學生學校的 SchoolUnit 資料（比較準確，且已知確切地址片段），
+    # 比對不到才用 Google Places 以學校名稱為中心搜尋——系所、學院大樓不一定收錄在
+    # SchoolUnit 資料庫裡。只有 detect_campus_location_query 判定為「問校內地點」時才觸發，
+    # 一般問校內單位電話、規定的問題不會多打這支 API。
+    campus_place_results = None
+    campus_place_source = None
+    if ai_mode == 'helper' and detect_campus_location_query(question):
+        campus_school = get_student_school(user)
+        campus_matched_units = search_school_units(campus_school, question)
+        if campus_matched_units:
+            campus_place_results = '\n'.join(
+                _format_school_unit(unit, campus_school, language_code, with_map_link=True)
+                for unit in campus_matched_units[:3]
+            )
+            campus_place_source = 'school_unit'
+        elif campus_school:
+            campus_place_results = search_google_places(question, language_code, location_hint=campus_school.name)
+            if campus_place_results:
+                campus_place_source = 'google'
+
+    campus_place_hint = ''
+    if campus_place_source:
+        campus_place_hint = (
+            '【校內地點查詢】學生詢問校內處室、系所或大樓的位置，系統已查到地圖連結，'
+            '會自動附在你的回覆後面。你只需要正常回答問題本身（例如位置說明、電話、服務時間），'
+            '不用自己重複貼出地圖網址，也不要編造或推薦沒有出現在結果裡的地點。'
+        )
+
+    logger.debug(
+        'ai_mode=%s, campus_place_results=%s, campus_place_source=%s',
+        ai_mode, bool(campus_place_results), campus_place_source
+    )
+
     # 天氣查詢：與地點查詢同一套設計，AI 只負責一句話帶到，實際數字一律來自中央氣象署，不可自行編造
     weather_results = None
     weather_hint = ''
@@ -3834,6 +3933,8 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 
 {school_block}
 
+{campus_place_hint}
+
 {current_time_block}
 
 {search_hint}
@@ -3863,6 +3964,8 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 {profile_context}
 
 {school_block}
+
+{campus_place_hint}
 
 {current_time_block}
 
@@ -3896,6 +3999,8 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 {profile_context}
 
 {school_block}
+
+{campus_place_hint}
 
 {current_time_block}
 
@@ -4000,6 +4105,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
         return {
             'reply': reply,
             'place_results_text': place_results,
+            'campus_place_results_text': campus_place_results,
             'weather_results_text': weather_results,
             # 有實際搜尋網頁時，把官方來源附在回覆後面供學生查證
             'citations_text': format_citations(citations, language_code),
