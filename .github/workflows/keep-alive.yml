@@ -1,17 +1,7 @@
 name: Keep Alive (Supabase DB)
 
-# 用途：每天對 Supabase 資料庫下一次輕量查詢，避免免費專案因閒置（約 7 天）被自動暫停。
-#
-# 設定：到 GitHub repo → Settings → Secrets and variables → Actions → Secrets 分頁
-#       新增一個 Repository secret：
-#         名稱 = SUPABASE_DB_URL
-#         值   = postgresql://使用者:密碼@主機:5432/postgres?sslmode=require
-#       （用 Secret 而非 Variable，因為連線字串含密碼；請填「輪替後」的新密碼）
-
 on:
   schedule:
-    # 每天 UTC 03:00（＝台灣時間 11:00）執行一次。Supabase 約 7 天無活動才暫停，每天跑綽綽有餘。
-    # 注意：GitHub 的排程在尖峰時可能延遲數分鐘，屬正常現象。
     - cron: "0 3 * * *"
   workflow_dispatch: {}   # 允許在 Actions 頁面手動觸發（測試用）
 
