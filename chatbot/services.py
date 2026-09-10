@@ -438,7 +438,7 @@ You MUST write your entire response in {language_en} only. No other language is 
 
     if ai_mode == "friend":
         friend_base = f"""
-你是 ReadyTo 聊天好朋友，服務對象是來臺灣就學的境外學生。
+你是 friend，服務對象是來臺灣就學的境外學生。
 
 {language_rule}
 
@@ -620,7 +620,7 @@ You MUST write your entire response in {language_en} only. No other language is 
         base_instructions = friend_base
     elif ai_mode == "helper" and proactive_mode:
         base_instructions = f"""
-你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生。這次是你「主動」傳訊息給學生，不是在回答他的提問。
+你是 Assistant，服務對象是來臺灣就學的境外學生。這次是你「主動」傳訊息給學生，不是在回答他的提問。
 
 {language_rule}
 
@@ -633,7 +633,7 @@ You MUST write your entire response in {language_en} only. No other language is 
 """.strip()
     elif ai_mode == "helper" and (role or '').strip() == '小老師':
         base_instructions = f"""
-你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生，目前使用者選擇了「小老師」角色，專門提供課業與學習方面的協助。
+你是 Assistant，服務對象是來臺灣就學的境外學生，目前使用者選擇了「小老師」角色，專門提供課業與學習方面的協助。
 
 {language_rule}
 
@@ -642,7 +642,7 @@ You MUST write your entire response in {language_en} only. No other language is 
 """.strip()
     elif direct_mode:
         base_instructions = f"""
-你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生。
+你是 Assistant，服務對象是來臺灣就學的境外學生。
 
 {language_rule}
 
@@ -653,7 +653,7 @@ You MUST write your entire response in {language_en} only. No other language is 
 """.strip()
     else:
         base_instructions = f"""
-你是 ReadyTo 任務小幫手，服務對象是來臺灣就學的境外學生。
+你是 Assistant，服務對象是來臺灣就學的境外學生。
 
 {language_rule}
 
@@ -3520,24 +3520,24 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
         if detect_friend_domain_query(question):
             friend_domain_hint = (
                 '【任務歸屬提醒】這個問題聽起來比較像是情緒或生活陪伴需求'
-                '（例如心情不好、想家、人際關係、壓力大），這其實是「ReadyTo 聊天好朋友」的專長，'
-                '不是任務小幫手負責的簽證、居留證等正式手續。'
+                '（例如心情不好、想家、人際關係、壓力大），這其實是「friend」的專長，'
+                '不是 Assistant 負責的簽證、居留證等正式手續。'
                 '請先用 1、2 句話簡短、溫暖地回應學生的感受，不要勉強套用個人化/一般回答的格式，'
-                '再自然地建議他切換到「ReadyTo 聊天好朋友」，那邊比較適合陪他聊這件事。'
+                '再自然地建議他切換到「friend」，那邊比較適合陪他聊這件事。'
             )
         elif detect_weather_query(question):
             friend_domain_hint = (
-                '【任務歸屬提醒】這是天氣查詢，任務小幫手沒有串接氣象資料，這其實是「ReadyTo 聊天好朋友」的專長'
+                '【任務歸屬提醒】這是天氣查詢，Assistant 沒有串接氣象資料，這其實是「friend」的專長'
                 '（那邊串接了中央氣象署的即時資料）。'
                 '請用 1、2 句話簡短回應，絕對不要自己編造溫度、降雨機率、颱風等任何天氣數字，'
-                '直接建議他切換到「ReadyTo 聊天好朋友」查詢天氣。'
+                '直接建議他切換到「friend」查詢天氣。'
             )
         elif detect_amenity_recommendation_query(question):
             friend_domain_hint = (
                 '【任務歸屬提醒】這是生活機能地點推薦（例如附近餐廳、超商、健身房），'
-                '任務小幫手沒有串接地圖服務，這其實是「ReadyTo 聊天好朋友」的專長（那邊串接了 Google 地圖搜尋真實地點）。'
+                'Assistant 沒有串接地圖服務，這其實是「friend」的專長（那邊串接了 Google 地圖搜尋真實地點）。'
                 '請用 1、2 句話簡短回應，絕對不要自己編造或推薦任何地點名稱與地址，'
-                '直接建議他切換到「ReadyTo 聊天好朋友」查詢附近地點。'
+                '直接建議他切換到「friend」查詢附近地點。'
             )
 
     place_results = None
@@ -3642,11 +3642,11 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
     cross_domain_hint = ''
     if ai_mode == 'friend' and detect_helper_domain_hit(question, user):
         cross_domain_hint = (
-            '【任務歸屬提醒】這個問題其實屬於「ReadyTo 任務小幫手」的專業範圍'
+            '【任務歸屬提醒】這個問題其實屬於「Assistant」的專業範圍'
             '（例如簽證、居留證、財力／語言證明、學校行政等正式手續），'
-            '任務小幫手那邊有經過查證的完整資料。'
+            'Assistant 那邊有經過查證的完整資料。'
             '你可以先用 1、2 句話簡短回應，但不要給出詳細步驟或保證細節正確，'
-            '並自然地建議學生切換到「ReadyTo 任務小幫手」問這類問題。'
+            '並自然地建議學生切換到「Assistant」問這類問題。'
         )
 
     # ── Web Search 路由 ──
@@ -3830,7 +3830,7 @@ def generate_ai_reply(*, user, question, recent_messages, ai_mode="helper", atta
 學生最新想聊的內容：
 {question}{attachment_note}
 
-請用 ReadyTo 聊天好朋友的身份回答。
+請用 friend 的身份回答。
 
 你的核心角色：
 你不是行政流程機器人，而是像一位真誠、會聽人說話、有情緒反應的朋友。

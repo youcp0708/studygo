@@ -79,8 +79,8 @@
   sessionStorage.setItem('chatbot_active_mode', currentAIMode);
 
   const AI_MODE_NAMES = {
-    helper: i18n.assistantName || 'ReadyTo 任務小幫手',
-    friend: i18n.friendName || 'ReadyTo 聊天好朋友',
+    helper: i18n.assistantName || 'Assistant',
+    friend: i18n.friendName || 'friend',
   };
 
   // placeholder 由模板的 {% trans %} 注入，跟著介面語言走

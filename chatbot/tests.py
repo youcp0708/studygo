@@ -860,7 +860,7 @@ class CrossDomainWiringTest(TestCase):
                 recent_messages=[], ai_mode='friend',
             )
         self.assertIn('任務歸屬提醒', self._prompt_text(mock_openai))
-        self.assertIn('ReadyTo 任務小幫手', self._prompt_text(mock_openai))
+        self.assertIn('Assistant', self._prompt_text(mock_openai))
 
     def test_friend_mode_no_hint_for_casual_chat(self):
         with self._mock_openai() as mock_openai:
@@ -878,7 +878,7 @@ class CrossDomainWiringTest(TestCase):
             )
         prompt = self._prompt_text(mock_openai)
         self.assertIn('任務歸屬提醒', prompt)
-        self.assertIn('ReadyTo 聊天好朋友', prompt)
+        self.assertIn('friend', prompt)
 
     def test_helper_mode_crisis_message_takes_priority_over_domain_hint(self):
         """危機訊息即使也帶有情緒字眼，也要走危機求助流程，不是單純建議切換模式"""

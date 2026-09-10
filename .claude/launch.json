@@ -9,6 +9,13 @@
       "autoPort": false
     },
     {
+      "name": "studygo-desktop",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["C:\\Users\\user\\Desktop\\studygo\\manage.py", "runserver", "8016"],
+      "port": 8016,
+      "autoPort": false
+    },
+    {
       "name": "reader",
       "runtimeExecutable": "C:\\Users\\user\\Desktop\\4-E\\venv\\Scripts\\python.exe",
       "runtimeArgs": ["C:\\Users\\user\\Desktop\\4-E\\manage.py", "runserver", "8010"],

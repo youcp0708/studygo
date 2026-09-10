@@ -18,7 +18,7 @@
   <div class="chat-embed-header">
     <span class="ceh-title">
       <span class="ceh-ava js-ai-avatar {{ current_ai_mode|default:'helper' }}">{% include "_bot_icon.html" %}</span>
-      <span class="js-ai-name">{% if current_ai_mode == "friend" %}{% trans "ReadyTo 聊天好朋友" %}{% else %}{% trans "ReadyTo 任務小幫手" %}{% endif %}</span>
+      <span class="js-ai-name">{% if current_ai_mode == "friend" %}{% trans "friend" %}{% else %}{% trans "Assistant" %}{% endif %}</span>
     </span>
     <div class="chat-window-controls">
       <button type="button" id="chatWinMaximize" class="win-ctrl-btn" title="{% trans '展開 / 還原' %}" aria-label="{% trans '展開 / 還原' %}">⛶</button>
@@ -36,14 +36,14 @@
           <button class="ai-mode-card {% if current_ai_mode != 'friend' %}active{% endif %}" data-mode="helper"
             type="button">
             <div class="bot-avatar bot-avatar-dark">{% include "_bot_icon.html" %}</div>
-            <h2>{% trans "ReadyTo 任務小幫手" %}</h2>
+            <h2>{% trans "Assistant" %}</h2>
             <!--<p>{% trans "我是協助管理來臺任務、查詢疑問、提供建議的小幫手。" %}</p>-->
           </button>
 
           <button class="ai-mode-card {% if current_ai_mode == 'friend' %}active{% endif %}" data-mode="friend"
             type="button">
             <div class="bot-avatar bot-avatar-light">{% include "_bot_icon.html" %}</div>
-            <h2>{% trans "ReadyTo 聊天好朋友" %}</h2>
+            <h2>{% trans "friend" %}</h2>
             <!--<p>{% trans "我是陪你聊天協助、處理生活適應與心理壓力的好朋友。" %}</p>-->
           </button>
 
@@ -110,9 +110,9 @@
             {% if message.role != 'user' %}
             <div class="message-name js-ai-name">
               {% if current_ai_mode == "friend" %}
-              {% trans "ReadyTo 聊天好朋友" %}
+              {% trans "friend" %}
               {% else %}
-              {% trans "ReadyTo 任務小幫手" %}
+              {% trans "Assistant" %}
               {% endif %}
             </div>
             {% endif %}
@@ -145,9 +145,9 @@
           <div class="message-bubble">
             <div class="message-name js-ai-name">
               {% if current_ai_mode == "friend" %}
-              {% trans "ReadyTo 聊天好朋友" %}
+              {% trans "friend" %}
               {% else %}
-              {% trans "ReadyTo 任務小幫手" %}
+              {% trans "Assistant" %}
               {% endif %}
             </div>
             <div class="message-content">
@@ -203,7 +203,7 @@
                 {% endif %}
                 {% if current_ai_mode == 'friend' %}
                 <div class="role-item" data-role="朋友">
-                  <span class="role-item-label" id="friendRoleLabel">{% trans "ReadyTo 聊天好朋友" %}</span>
+                  <span class="role-item-label" id="friendRoleLabel">{% trans "friend" %}</span>
                   <button type="button" class="role-item-rename-btn">{% trans "重新命名" %}</button>
                   <span class="role-item-arrow">›</span>
                 </div>
@@ -238,8 +238,8 @@
 
 {% block extra_js %}
 {% trans "我" as txt_me %}
-{% trans "ReadyTo 任務小幫手" as txt_assistant_name %}
-{% trans "ReadyTo 聊天好朋友" as txt_friend_name %}
+{% trans "Assistant" as txt_assistant_name %}
+{% trans "friend" as txt_friend_name %}
 {% trans "已上傳附件" as txt_uploaded_attachment %}
 {% trans "找不到 message API" as txt_missing_message_api %}
 {% trans "送出失敗，請稍後再試。" as txt_send_failed %}

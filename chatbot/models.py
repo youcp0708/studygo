@@ -17,8 +17,8 @@ class ChatSession(models.Model):
     """一位使用者可有多個聊天對話。"""
 
     AI_MODE_CHOICES = [
-        ("helper", "ReadyTo 任務小幫手"),
-        ("friend", "ReadyTo 聊天好朋友"),
+        ("helper", "Assistant"),
+        ("friend", "friend"),
     ]
 
     user = models.ForeignKey(
@@ -287,8 +287,8 @@ class ChatKnowledge(models.Model):
     title_ko = models.CharField(max_length=200, blank=True, verbose_name='韓文標題')
 
     BOT_TYPE_CHOICES = [
-    ("helper", "ReadyTo 任務小幫手"),
-    ("friend", "ReadyTo 聊天好朋友"),
+    ("helper", "Assistant"),
+    ("friend", "friend"),
     ("both", "兩者都可使用"),
 ]
 
