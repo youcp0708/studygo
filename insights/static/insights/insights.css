@@ -1,0 +1,107 @@
+/* insights/static/insights/insights.css — 校方端 Student Insights，沿用 users.css 的色彩變數 */
+
+.ins-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  color: var(--text);
+}
+
+.ins-header { margin-bottom: 16px; }
+.ins-eyebrow { margin: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); font-weight: 700; }
+.ins-title { margin: 4px 0; font-size: 26px; color: var(--text-dark); }
+.ins-sub { margin: 0; color: var(--muted); font-size: 14px; }
+
+.ins-demo-banner {
+  background: var(--yellow-soft);
+  border: 1px solid var(--yellow);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.ins-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+.ins-filters label { display: flex; flex-direction: column; font-size: 12px; color: var(--muted); gap: 4px; }
+.ins-filters select { min-width: 140px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 8px; background: #fff; color: var(--text); }
+.ins-btn { background: var(--primary); color: #fff; border: 0; border-radius: 8px; padding: 8px 16px; cursor: pointer; font-weight: 600; }
+.ins-btn:hover { background: var(--primary-dark); }
+.ins-link { color: var(--primary-dark); font-size: 14px; text-decoration: none; }
+.ins-link:hover { text-decoration: underline; }
+
+.ins-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 20px; }
+.ins-kpi { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+.ins-kpi-label { font-size: 13px; color: var(--muted); }
+.ins-kpi-value { font-size: 26px; color: var(--text-dark); }
+.ins-kpi-note { font-size: 12px; color: var(--muted); }
+
+.ins-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; margin-bottom: 20px; }
+.ins-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px; margin-bottom: 20px; min-width: 0; }
+.ins-grid .ins-card { margin-bottom: 0; }
+.ins-card h3 { margin: 0 0 12px; font-size: 16px; color: var(--text-dark); }
+.ins-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.ins-card canvas { max-height: 320px; margin-bottom: 12px; }
+
+.ins-table-wrap { overflow-x: auto; }
+.ins-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ins-table th { text-align: left; font-weight: 600; color: var(--muted); border-bottom: 1px solid var(--border); padding: 8px; font-size: 13px; }
+.ins-table th small { font-weight: 400; }
+.ins-table td { border-bottom: 1px solid var(--line); padding: 8px; }
+.ins-table td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ins-table.compact td { padding: 4px 8px; }
+.ins-row-flag td { background: var(--danger-soft); }
+
+.ins-n { color: var(--muted); font-size: 12px; }
+.ins-muted { color: var(--muted); }
+
+.ins-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.ins-tab { padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--text); text-decoration: none; font-size: 14px; }
+.ins-tab.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+.ins-alert { border: 1px solid var(--danger); background: var(--danger-soft); border-radius: 14px; padding: 14px 16px; margin-bottom: 14px; }
+.ins-alert-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ins-alert-head h4 { margin: 0; font-size: 16px; color: var(--text-dark); }
+.ins-alert-icon { color: var(--danger); font-size: 18px; }
+.ins-alert-delta { margin-left: auto; font-weight: 700; color: var(--danger); }
+.ins-alert-body { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.ins-alert-section { margin: 12px 0 4px; font-size: 13px; font-weight: 700; color: var(--text-dark); }
+.ins-alert-groups { margin: 0; padding-left: 20px; font-size: 14px; }
+.ins-alert-reco { margin: 0; background: var(--card); border-radius: 10px; padding: 10px 12px; font-size: 14px; line-height: 1.6; }
+
+.ins-footnote { margin-top: 24px; font-size: 12px; color: var(--muted); }
+
+.ins-export { display: inline-block; margin-bottom: 16px; padding: 6px 14px; border: 1px solid var(--primary); border-radius: 8px; color: var(--primary-dark); text-decoration: none; font-size: 14px; background: var(--card); }
+.ins-export:hover { background: var(--primary-soft); }
+
+/* AI 資料助理 */
+.ins-presets { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.ins-preset { display: block; padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); color: var(--text); text-decoration: none; font-size: 14px; line-height: 1.5; }
+.ins-preset:hover { border-color: var(--primary); background: var(--primary-soft); }
+.ins-ask-form textarea { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; font: inherit; color: var(--text); resize: vertical; }
+.ins-ask-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 8px 0; flex-wrap: wrap; }
+.ins-btn:disabled { background: var(--muted); cursor: not-allowed; }
+.ins-error { color: var(--danger); margin: 8px 0 0; }
+.ins-warning { background: var(--yellow-soft); border: 1px solid var(--yellow); border-radius: 10px; padding: 8px 12px; margin-bottom: 10px; font-size: 14px; }
+.ins-ask-question { font-weight: 700; color: var(--text-dark); margin: 0 0 10px; }
+.ins-ask-answer { background: var(--bg); border-radius: 10px; padding: 12px 14px; line-height: 1.7; }
+.ins-evidence { margin-top: 12px; }
+.ins-evidence summary { cursor: pointer; font-weight: 600; color: var(--text-dark); }
+.ins-evidence-item p { margin: 10px 0 4px; font-size: 13px; }
+.ins-evidence-item code { color: var(--muted); }
+.ins-evidence-item pre { margin: 0; max-height: 260px; overflow: auto; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
+
+@media (max-width: 600px) {
+  .ins-grid { grid-template-columns: 1fr; }
+  .ins-filters select { min-width: 0; width: 100%; }
+  .ins-filters label { flex: 1 1 45%; }
+}

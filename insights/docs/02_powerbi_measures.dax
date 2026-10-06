@@ -1,0 +1,86 @@
+// ════════════════════════════════════════════════════════════════
+// Student Insights：Power BI DAX 量值
+// 定義與 insights/metrics.py 完全一致（規格 §7）。
+// 截止日、是否到期、是否逾期都已由 Django ETL 算好，這裡只做加總，不要重新判斷日期。
+//
+// 用法：在語意模型的 insights_fact_student_task 表上「新增量值」，逐一貼上。
+// 量值本身不篩 is_demo：正式報表請在「報表層級篩選」設定 is_demo = FALSE，Demo 報表則設為 TRUE。
+// ════════════════════════════════════════════════════════════════
+
+// ── 任務（只算必做任務）──
+
+已到期任務數 =
+CALCULATE (
+    COUNTROWS ( insights_fact_student_task ),
+    insights_fact_student_task[is_required] = TRUE (),
+    insights_fact_student_task[is_due] = TRUE ()
+)
+
+已到期且完成數 =
+CALCULATE (
+    [已到期任務數],
+    insights_fact_student_task[is_completed] = TRUE ()
+)
+
+逾期任務數 =
+CALCULATE (
+    [已到期任務數],
+    insights_fact_student_task[is_overdue] = TRUE ()
+)
+
+// 分母 < 10 時回傳 BLANK()，與 Django 的「樣本不足」一致
+完成率 =
+IF ( [已到期任務數] < 10, BLANK (), DIVIDE ( [已到期且完成數], [已到期任務數] ) )
+
+逾期率 =
+IF ( [已到期任務數] < 10, BLANK (), DIVIDE ( [逾期任務數], [已到期任務數] ) )
+
+逾期學生數 =
+CALCULATE (
+    DISTINCTCOUNT ( insights_fact_student_task[student_key] ),
+    insights_fact_student_task[is_required] = TRUE (),
+    insights_fact_student_task[is_overdue] = TRUE ()
+)
+
+逾期未完成數 =
+CALCULATE (
+    [已到期任務數],
+    insights_fact_student_task[is_overdue_open] = TRUE ()
+)
+
+可能未回報比例 =
+VAR n = [逾期未完成數]
+RETURN
+    IF (
+        n < 10,
+        BLANK (),
+        DIVIDE (
+            CALCULATE ( [逾期未完成數], insights_fact_student_task[is_possibly_unreported] = TRUE () ),
+            n
+        )
+    )
+
+// 用於卡片／表格標題：「13.6%（n=214）」
+逾期率顯示 =
+IF (
+    ISBLANK ( [逾期率] ),
+    "樣本不足（n=" & [已到期任務數] & "）",
+    FORMAT ( [逾期率], "0.0%" ) & "（n=" & [已到期任務數] & "）"
+)
+
+
+// ── 學生（建在 insights_dim_student 表上）──
+
+學生數 = COUNTROWS ( insights_dim_student )
+
+
+// ── 提問（建在 insights_fact_question 表上）──
+
+提問數 = COUNTROWS ( insights_fact_question )
+
+// 每 100 名學生提問數：需要 insights_fact_question 與 insights_dim_student
+// 透過共同維度篩選（建議建立 nationality / identity_type / university 維度表並建立關聯）
+每百人提問數 =
+VAR students = [學生數]
+RETURN
+    IF ( students < 10, BLANK (), DIVIDE ( [提問數] * 100, students ) )

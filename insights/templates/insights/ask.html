@@ -1,0 +1,61 @@
+{% extends "insights/_base.html" %}
+{% load insights_tags %}
+
+{% block page_title %}AI 資料助理{% endblock %}
+
+{% block insights_content %}
+<section class="ins-card">
+  <h3>預設問題</h3>
+  <p class="ins-muted">直接由系統計算並產生回答，不經過 AI，不會答錯，也不計入提問次數。</p>
+  <div class="ins-presets">
+    {% for p in presets %}
+    <a class="ins-preset" href="?{% query_with query_string 'preset' p.id %}">{{ p.question }}</a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="ins-card">
+  <h3>自由提問</h3>
+  {% if ai_available %}
+  <form method="post" action="{% if query_string %}?{{ query_string }}{% endif %}" class="ins-ask-form">
+    {% csrf_token %}
+    <textarea name="question" rows="3" maxlength="500" required
+      placeholder="例如：外籍生哪一個行政流程逾期最嚴重？">{% if result and result.source != 'preset' %}{{ result.question }}{% endif %}</textarea>
+    <div class="ins-ask-actions">
+      <span class="ins-muted">今天還可以問 {{ remaining_quota }} / {{ daily_limit }} 題。查詢範圍依上方篩選條件。</span>
+      <button type="submit" class="ins-btn"{% if remaining_quota <= 0 %} disabled{% endif %}>送出</button>
+    </div>
+  </form>
+  <p class="ins-muted">AI 只能使用系統的分析工具取得數字，無法查詢個別學生資料。回答下方會列出資料依據，請以依據中的數字為準。</p>
+  {% else %}
+  <p class="ins-muted">尚未設定 OpenAI API 金鑰，自由提問暫時無法使用，請改用上方的預設問題。</p>
+  {% endif %}
+  {% if error %}<p class="ins-error">{{ error }}</p>{% endif %}
+</section>
+
+{% if result %}
+<section class="ins-card">
+  <p class="ins-ask-question">Q：{{ result.question }}</p>
+  {% if not result.verified %}
+  <div class="ins-warning">⚠ 此回答含無法對應到資料的數字（{{ result.unverified|join:"、" }}），請以下方資料依據為準。</div>
+  {% endif %}
+  <div class="ins-ask-answer">{{ result.answer|linebreaksbr }}</div>
+  <p class="ins-muted">
+    {% if result.source == 'preset' %}來源：預設問題（系統計算）{% elif result.source == 'llm' %}來源：AI 資料助理{% endif %}
+    · 資料日期：{{ snapshot_date|date:"Y-m-d"|default:"尚未產生" }}
+  </p>
+
+  {% if result.calls %}
+  <details class="ins-evidence" open>
+    <summary>資料依據（{{ result.calls|length }} 次查詢）</summary>
+    {% for call in result.calls %}
+    <div class="ins-evidence-item">
+      <p><strong>{{ call.name }}</strong> <code>{{ call.arguments }}</code></p>
+      <pre>{{ call.result|pretty_json }}</pre>
+    </div>
+    {% endfor %}
+  </details>
+  {% endif %}
+</section>
+{% endif %}
+{% endblock %}

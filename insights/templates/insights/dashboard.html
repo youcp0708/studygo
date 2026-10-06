@@ -1,0 +1,82 @@
+{% extends "insights/_base.html" %}
+{% load insights_tags %}
+
+{% block page_title %}總覽{% endblock %}
+
+{% block insights_content %}
+<section class="ins-kpis">
+  <div class="ins-kpi">
+    <span class="ins-kpi-label">境外學生總數</span>
+    <strong class="ins-kpi-value">{{ overview.total }}</strong>
+    {% if overview.missing_arrival %}<span class="ins-kpi-note">其中 {{ overview.missing_arrival }} 人未填抵台日</span>{% endif %}
+  </div>
+  <div class="ins-kpi">
+    <span class="ins-kpi-label">{{ overview.academic_year }} 學年度新生</span>
+    <strong class="ins-kpi-value">{{ overview.new_students }}</strong>
+    <span class="ins-kpi-note">依預計抵台日推算</span>
+  </div>
+  <div class="ins-kpi">
+    <span class="ins-kpi-label">整體完成率（已到期任務）</span>
+    <strong class="ins-kpi-value">{{ task_summary.completion|rate }}</strong>
+  </div>
+  <div class="ins-kpi">
+    <span class="ins-kpi-label">整體逾期率</span>
+    <strong class="ins-kpi-value">{{ task_summary.overdue|rate }}</strong>
+    <span class="ins-kpi-note">逾期學生 {{ task_summary.overdue_students }} 人</span>
+  </div>
+</section>
+
+<section class="ins-grid">
+  <div class="ins-card">
+    <h3>身份別分布</h3>
+    <canvas data-chart="doughnut" data-source="identityData" data-label="label" data-value="count"></canvas>
+    {{ overview.by_identity|json_script:"identityData" }}
+  </div>
+  <div class="ins-card">
+    <h3>國籍分布</h3>
+    <canvas data-chart="bar" data-horizontal="1" data-source="nationalityData" data-label="label" data-value="pct" data-unit="%"></canvas>
+    {{ overview.by_nationality|json_script:"nationalityData" }}
+  </div>
+  {% if is_all_schools and not filters.school %}
+  <div class="ins-card">
+    <h3>學校分布</h3>
+    <canvas data-chart="bar" data-horizontal="1" data-source="universityData" data-label="label" data-value="count"></canvas>
+    {{ overview.by_university|json_script:"universityData" }}
+  </div>
+  {% endif %}
+  <div class="ins-card">
+    <h3>入學狀態</h3>
+    <table class="ins-table">
+      {% for row in overview.by_admission_status %}
+      <tr><td>{{ row.label }}</td><td class="num">{{ row.count }}</td><td class="num">{{ row.pct }}%</td></tr>
+      {% empty %}
+      <tr><td class="ins-muted">尚無資料</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</section>
+
+<section class="ins-card">
+  <div class="ins-card-head">
+    <h3>各任務完成率與逾期率</h3>
+    <a class="ins-link" href="{% url 'insights:tasks' %}{% if query_string %}?{{ query_string }}{% endif %}">詳細分析 →</a>
+  </div>
+  <canvas data-chart="bar" data-source="taskData" data-label="label"
+    data-value="completion.rate" data-value-name="完成率"
+    data-value2="overdue.rate" data-value2-name="逾期率" data-unit="%"></canvas>
+  {{ task_rows|json_script:"taskData" }}
+  {% include "insights/_task_table.html" with rows=task_rows first_col="任務分類" %}
+</section>
+
+<section class="ins-card">
+  <div class="ins-card-head">
+    <h3>風險預警（共 {{ alert_total }} 則）</h3>
+    <a class="ins-link" href="{% url 'insights:alerts' %}{% if query_string %}?{{ query_string }}{% endif %}">全部預警 →</a>
+  </div>
+  {% for alert in alerts %}
+    {% include "insights/_alert.html" %}
+  {% empty %}
+    <p class="ins-muted">目前沒有符合預警條件的項目。</p>
+  {% endfor %}
+</section>
+{% endblock %}

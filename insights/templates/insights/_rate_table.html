@@ -1,0 +1,16 @@
+<div class="ins-table-wrap">
+<table class="ins-table">
+  <thead><tr><th>{{ first_col }}</th><th>學生數</th><th>每 100 人提問數</th></tr></thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      <td>{{ row.label }}</td>
+      <td class="num">{{ row.students }}</td>
+      <td class="num">{% if row.suppressed %}<span class="ins-muted">樣本不足</span>{% else %}{{ row.per_100 }}{% endif %}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="3" class="ins-muted">尚無資料</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>

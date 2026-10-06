@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'flows',                    # 流程模塊(模塊二)
     'guides',                   # 資訊中心指南
     'chatbot',                  # AI 聊天機器人
+    'insights',                 # Student Insights 校方數據分析
 ]
 
 MIDDLEWARE = [

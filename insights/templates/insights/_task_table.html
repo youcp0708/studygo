@@ -1,0 +1,27 @@
+{% load insights_tags %}
+<div class="ins-table-wrap">
+<table class="ins-table">
+  <thead>
+    <tr>
+      <th>{{ first_col }}</th>
+      <th>完成率<br><small>已完成 ÷ 已到期</small></th>
+      <th>逾期率<br><small>逾期 ÷ 已到期</small></th>
+      <th>可能未回報<br><small>逾期未完成中 30 天未登入</small></th>
+      <th>無期限任務完成率</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      <td>{{ row.label }}</td>
+      <td class="num">{{ row.completion|rate }}</td>
+      <td class="num">{{ row.overdue|rate }}</td>
+      <td class="num">{{ row.unreported|rate }}</td>
+      <td class="num">{{ row.nodeadline_completion|rate }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="5" class="ins-muted">尚無資料</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,58 @@
+{% extends "insights/_base.html" %}
+{% load insights_tags %}
+
+{% block page_title %}任務完成率與逾期分析{% endblock %}
+
+{% block insights_content %}
+<a class="ins-export" href="{% url 'insights:export' 'tasks' %}{% if query_string %}?{{ query_string }}{% endif %}">⬇ 匯出 任務統計 CSV</a>
+<section class="ins-kpis">
+  <div class="ins-kpi">
+    <span class="ins-kpi-label">整體完成率（已到期任務）</span>
+    <strong class="ins-kpi-value">{{ task_summary.completion|rate }}</strong>
+  </div>
+  <div class="ins-kpi">
+    <span class="ins-kpi-label">整體逾期率</span>
+    <strong class="ins-kpi-value">{{ task_summary.overdue|rate }}</strong>
+  </div>
+  <div class="ins-kpi">
+    <span class="ins-kpi-label">逾期任務數／逾期學生數</span>
+    <strong class="ins-kpi-value">{{ task_summary.overdue_count }} / {{ task_summary.overdue_students }}</strong>
+  </div>
+  <div class="ins-kpi">
+    <span class="ins-kpi-label">可能未回報（逾期未完成中）</span>
+    <strong class="ins-kpi-value">{{ task_summary.unreported|rate }}</strong>
+    <span class="ins-kpi-note">可能已辦好但沒回來勾選</span>
+  </div>
+</section>
+
+<section class="ins-card">
+  <h3>各任務分類</h3>
+  {% include "insights/_task_table.html" with rows=task_rows first_col="任務分類" %}
+</section>
+
+<nav class="ins-tabs">
+  {% for code, label in category_choices %}
+  <a href="?{% query_with query_string 'category' code %}" class="ins-tab{% if code == category %} active{% endif %}">{{ label }}</a>
+  {% endfor %}
+</nav>
+
+<section class="ins-card">
+  <h3>{{ category_label }}：依抵台梯次的逾期率趨勢</h3>
+  <canvas data-chart="line" data-source="trendData" data-label="label"
+    data-value="overdue.rate" data-value-name="逾期率"
+    data-value2="completion.rate" data-value2-name="完成率" data-unit="%"></canvas>
+  {{ trend|json_script:"trendData" }}
+  {% include "insights/_task_table.html" with rows=trend first_col="抵台梯次" %}
+</section>
+
+<section class="ins-grid">
+  <div class="ins-card">
+    <h3>{{ category_label }}：依身份別</h3>
+    {% include "insights/_task_table.html" with rows=by_identity first_col="身份別" %}
+  </div>
+  <div class="ins-card">
+    <h3>{{ category_label }}：依國籍</h3>
+    {% include "insights/_task_table.html" with rows=by_nationality first_col="國籍" %}
+  </div>
+</section>
+{% endblock %}

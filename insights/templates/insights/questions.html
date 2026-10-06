@@ -1,0 +1,52 @@
+{% extends "insights/_base.html" %}
+{% load insights_tags %}
+
+{% block page_title %}學生需求（AI 提問分析）{% endblock %}
+
+{% block insights_content %}
+<a class="ins-export" href="{% url 'insights:export' 'questions' %}{% if query_string %}?{{ query_string }}{% endif %}">⬇ 匯出 提問統計 CSV</a>
+<section class="ins-grid">
+  <div class="ins-card">
+    <h3>提問分類占比（共 {{ share.total }} 則）</h3>
+    <canvas data-chart="bar" data-horizontal="1" data-source="shareData" data-label="label" data-value="pct" data-unit="%"></canvas>
+    {{ share.rows|json_script:"shareData" }}
+  </div>
+  <div class="ins-card">
+    <h3>需要優先改善說明的流程</h3>
+    <p class="ins-muted">提問率與逾期率都高於平均的任務分類。</p>
+    <div class="ins-table-wrap">
+    <table class="ins-table">
+      <thead><tr><th>任務分類</th><th>每 100 名學生提問數</th><th>逾期率</th><th></th></tr></thead>
+      <tbody>
+        {% for row in needs.rows %}
+        <tr{% if row.needs_attention %} class="ins-row-flag"{% endif %}>
+          <td>{{ row.label }}</td>
+          <td class="num">{% if row.questions_per_100 is not None %}{{ row.questions_per_100 }}{% else %}<span class="ins-muted">樣本不足</span>{% endif %}</td>
+          <td class="num">{{ row.overdue|rate }}</td>
+          <td>{% if row.needs_attention %}⚠ 優先改善{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<nav class="ins-tabs">
+  {% for code, label in category_choices %}
+  <a href="?{% query_with query_string 'category' code %}" class="ins-tab{% if code == category %} active{% endif %}">{{ label }}</a>
+  {% endfor %}
+</nav>
+
+<section class="ins-grid">
+  <div class="ins-card">
+    <h3>「{{ category_label }}」提問率：依國籍</h3>
+    <p class="ins-muted">每 100 名學生的提問數（以人數校正，人數多的國籍不會自動排前面）。</p>
+    {% include "insights/_rate_table.html" with rows=rate_by_nationality first_col="國籍" %}
+  </div>
+  <div class="ins-card">
+    <h3>「{{ category_label }}」提問率：依身份別</h3>
+    {% include "insights/_rate_table.html" with rows=rate_by_identity first_col="身份別" %}
+  </div>
+</section>
+{% endblock %}

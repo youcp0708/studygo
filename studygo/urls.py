@@ -22,6 +22,7 @@ urlpatterns = [
     path('api/', include('flows.api_urls')),        # Flows app API
 
     path('chatbot/', include('chatbot.urls')),      # AI 聊天機器人
+    path('insights/', include('insights.urls')),    # Student Insights 校方數據分析
     path('i18n/', include('django.conf.urls.i18n')),    # 多語系
 ]
 

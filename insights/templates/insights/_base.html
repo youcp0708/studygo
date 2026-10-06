@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Student Insights · ReadyTo Taiwan{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'insights/insights.css' %}?v=2" />
+{% endblock %}
+
+{% block site_nav %}
+<div class="site-nav">
+  <a href="{% url 'insights:dashboard' %}{% if query_string %}?{{ query_string }}{% endif %}" class="site-nav-link{% if active == 'dashboard' %} active{% endif %}">總覽</a>
+  <span class="site-nav-dot">◈</span>
+  <a href="{% url 'insights:tasks' %}{% if query_string %}?{{ query_string }}{% endif %}" class="site-nav-link{% if active == 'tasks' %} active{% endif %}">任務分析</a>
+  <span class="site-nav-dot">◈</span>
+  <a href="{% url 'insights:alerts' %}{% if query_string %}?{{ query_string }}{% endif %}" class="site-nav-link{% if active == 'alerts' %} active{% endif %}">風險預警</a>
+  <span class="site-nav-dot">◈</span>
+  <a href="{% url 'insights:questions' %}{% if query_string %}?{{ query_string }}{% endif %}" class="site-nav-link{% if active == 'questions' %} active{% endif %}">學生需求</a>
+  <span class="site-nav-dot">◈</span>
+  <a href="{% url 'insights:ask' %}{% if query_string %}?{{ query_string }}{% endif %}" class="site-nav-link{% if active == 'ask' %} active{% endif %}">AI 資料助理</a>
+</div>
+{% endblock %}
+
+{% block nav_cta %}
+<span class="nav-user-btn">
+  <span class="nav-user-avatar">{% if user.name %}{{ user.name|first|upper }}{% else %}U{% endif %}</span>
+  {% if user.name %}{{ user.name }}{% else %}{{ user.email }}{% endif %}
+</span>
+<a href="{% url 'logout_page' %}" class="btn-danger-sm" style="text-decoration:none;"
+  onclick="return confirm('確定要登出嗎？')">登出</a>
+{% endblock %}
+
+{% block chatbot_fab %}{% endblock %}
+
+{% block content %}
+<main class="ins-page">
+  <header class="ins-header">
+    <div>
+      <p class="ins-eyebrow">Student Insights</p>
+      <h2 class="ins-title">{% block page_title %}{% endblock %}</h2>
+      <p class="ins-sub">
+        {{ school_label }}
+        · 資料更新：{% if snapshot_date %}{{ snapshot_date|date:"Y-m-d" }}{% else %}尚未產生（請執行 build_insights）{% endif %}
+      </p>
+    </div>
+  </header>
+
+  {% if is_demo %}
+  <div class="ins-demo-banner">⚠ 目前顯示的是<strong>示範資料</strong>（seed_insights_demo 產生），不代表真實學生狀況。</div>
+  {% endif %}
+
+  <form class="ins-filters" method="get">
+    {% if category %}<input type="hidden" name="category" value="{{ category }}">{% endif %}
+    {% if is_all_schools %}
+    <label>學校
+      <select name="school">
+        <option value="">全部學校</option>
+        {% for code, label in filter_options.school %}
+        <option value="{{ code }}"{% if filters.school == code %} selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    {% endif %}
+    <label>身份別
+      <select name="identity_type">
+        <option value="">全部</option>
+        {% for code, label in filter_options.identity_type %}
+        <option value="{{ code }}"{% if filters.identity_type == code %} selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>國籍
+      <select name="nationality">
+        <option value="">全部</option>
+        {% for code, label in filter_options.nationality %}
+        <option value="{{ code }}"{% if filters.nationality == code %} selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>抵台梯次
+      <select name="arrival_cohort">
+        <option value="">全部</option>
+        {% for code, label in filter_options.arrival_cohort %}
+        <option value="{{ code }}"{% if filters.arrival_cohort == code %} selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <button type="submit" class="ins-btn">套用</button>
+    {% if filters %}<a class="ins-link" href="?{% if category %}category={{ category }}{% endif %}">清除篩選</a>{% endif %}
+  </form>
+
+  {% block insights_content %}{% endblock %}
+
+  <p class="ins-footnote">
+    所有比率皆以 n 表示分母；分母小於 {{ min_display_n }} 時不顯示數字。
+    資料已去識別化，僅呈現族群層級結果。完成狀態為學生自行回報。
+  </p>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="{% static 'insights/insights.js' %}?v=1"></script>
+{% endblock %}

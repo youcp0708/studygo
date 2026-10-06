@@ -1,0 +1,19 @@
+{% extends "insights/_base.html" %}
+
+{% block page_title %}風險預警{% endblock %}
+
+{% block insights_content %}
+<a class="ins-export" href="{% url 'insights:export' 'alerts' %}{% if query_string %}?{{ query_string }}{% endif %}">⬇ 匯出 預警清單 CSV</a>
+<section class="ins-card">
+  <p class="ins-muted">
+    觸發條件：分母 ≥ 30，且逾期率比比較基準高出至少 3 個百分點、相對增幅至少 30%。
+    比較基準依資料量自動選擇：前一學年度 → 上一個抵台梯次 → 整體平均。
+    預警依學校範圍計算，不受上方身份別／國籍／梯次篩選影響。
+  </p>
+  {% for alert in alerts %}
+    {% include "insights/_alert.html" %}
+  {% empty %}
+    <p class="ins-muted">目前沒有符合預警條件的項目。</p>
+  {% endfor %}
+</section>
+{% endblock %}

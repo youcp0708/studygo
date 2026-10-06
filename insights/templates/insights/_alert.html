@@ -1,0 +1,37 @@
+{% load insights_tags %}
+<article class="ins-alert">
+  <header class="ins-alert-head">
+    <span class="ins-alert-icon">⚠</span>
+    <h4>{{ alert.get_task_category_display }}逾期率
+      {% if alert.baseline_type == 'group' %}在特定族群偏高{% else %}上升{% endif %}</h4>
+    <span class="ins-alert-delta">+{{ alert.delta_pp }} 個百分點</span>
+  </header>
+
+  <div class="ins-alert-body">
+    <div>
+      <p class="ins-alert-section">資料結論</p>
+      <table class="ins-table compact">
+        <tr><td>{{ alert.current_label }}</td><td class="num">{{ alert.current_rate }}%<span class="ins-n">（n={{ alert.current_n }}）</span></td></tr>
+        <tr><td>{{ alert.baseline_label }}（{{ alert.get_baseline_type_display }}）</td><td class="num">{{ alert.baseline_rate }}%<span class="ins-n">（n={{ alert.baseline_n }}）</span></td></tr>
+      </table>
+      {% if alert.concentrated_groups %}
+      <p class="ins-alert-section">逾期集中族群</p>
+      <ol class="ins-alert-groups">
+        {% for g in alert.concentrated_groups %}
+        <li>{{ g.label }} <span class="ins-muted">（{{ g.dimension_label }}）</span> {{ g.rate }}%<span class="ins-n">（n={{ g.n }}）</span></li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </div>
+    <div>
+      <p class="ins-alert-section">提醒成效參考 <small class="ins-muted">（Reminder 紀錄，相關性觀察）</small></p>
+      <table class="ins-table compact">
+        <tr><td>到期前收到提醒</td><td class="num">{{ alert.reminder_effect.reminded|rate }}</td></tr>
+        <tr><td>未收到提醒</td><td class="num">{{ alert.reminder_effect.not_reminded|rate }}</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <p class="ins-alert-section">行動建議 <small class="ins-muted">（系統依規則產生，需人工判斷）</small></p>
+  <p class="ins-alert-reco">{{ alert.recommendation }}</p>
+</article>
