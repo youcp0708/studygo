@@ -27,6 +27,15 @@
 
     var type = canvas.dataset.chart;
     var unit = canvas.dataset.unit || '';
+    // 橫向長條圖依筆數長高（例如國籍全部列出時），避免長條擠在固定高度裡
+    var tall = canvas.dataset.horizontal && rows.length > 8;
+    if (tall) {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'ins-chart-tall';
+      wrapper.style.height = (rows.length * 24 + 40) + 'px';
+      canvas.parentNode.insertBefore(wrapper, canvas);
+      wrapper.appendChild(canvas);
+    }
     var labels = rows.map(function (r) { return pick(r, canvas.dataset.label); });
     var datasets = [{
       label: canvas.dataset.valueName || '',
@@ -51,6 +60,7 @@
       options: {
         indexAxis: canvas.dataset.horizontal ? 'y' : 'x',
         responsive: true,
+        maintainAspectRatio: !tall,
         plugins: {
           legend: { display: type === 'doughnut' || datasets.length > 1 },
           tooltip: {

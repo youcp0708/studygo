@@ -200,16 +200,17 @@ def compare_periods(fact_qs, task_category=None):
 # ══════════════════════════════════════════
 # 學生分布（Overview）
 # ══════════════════════════════════════════
-def distribution(dim_qs, field, top=None):
+def distribution(dim_qs, field, top=None, merge_small=True):
     """
-    人數分布。人數 < MIN_DISPLAY_N 的組別併入「其他（樣本不足）」，避免小族群被識別。
+    人數分布。
+    merge_small=True：人數 < MIN_DISPLAY_N 的組別併入「其他（樣本不足）」，避免小族群被識別。
     top：只列前幾名，其餘併入「其他」。
     """
     total = dim_qs.count()
     rows = list(dim_qs.values(field).annotate(count=Count('id')).order_by('-count', field))
     shown, other = [], 0
     for r in rows:
-        if r['count'] < conf.MIN_DISPLAY_N or (top and len(shown) >= top):
+        if (merge_small and r['count'] < conf.MIN_DISPLAY_N) or (top and len(shown) >= top):
             other += r['count']
         else:
             shown.append({
@@ -235,8 +236,9 @@ def student_overview(dim_qs, today=None):
         'academic_year': ay,
         'new_students': dim_qs.filter(academic_year=ay).count(),
         'missing_arrival': dim_qs.filter(arrival_cohort='').count(),
-        'by_identity': distribution(dim_qs, 'identity_type'),
-        'by_nationality': distribution(dim_qs, 'nationality', top=6),
+        # 總覽的身份別、國籍分布：依產品決定列出所有組別，不合併小族群（規格 §7.6 例外）
+        'by_identity': distribution(dim_qs, 'identity_type', merge_small=False),
+        'by_nationality': distribution(dim_qs, 'nationality', merge_small=False),
         'by_admission_status': distribution(dim_qs, 'admission_status'),
         'by_university': distribution(dim_qs, 'university', top=10),
     }

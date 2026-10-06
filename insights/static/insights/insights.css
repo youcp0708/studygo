@@ -51,6 +51,8 @@
 .ins-card h3 { margin: 0 0 12px; font-size: 16px; color: var(--text-dark); }
 .ins-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
 .ins-card canvas { max-height: 320px; margin-bottom: 12px; }
+.ins-chart-tall { position: relative; margin-bottom: 12px; }
+.ins-chart-tall canvas { max-height: none; margin-bottom: 0; }
 
 .ins-table-wrap { overflow-x: auto; }
 .ins-table { width: 100%; border-collapse: collapse; font-size: 14px; }

@@ -136,6 +136,23 @@ class MetricsTest(TestCase):
         self.assertEqual(dist[-1]['value'], '_other')
         self.assertEqual(dist[-1]['count'], 3)
 
+    def test_overview_lists_every_nationality_and_identity(self):
+        rows = [DimStudent(snapshot_date=SNAPSHOT, student_key=f'v{i}', university='NTU', nationality='Vietnam',
+                           identity_type='foreign_student', admission_status='arrived') for i in range(12)]
+        rows += [DimStudent(snapshot_date=SNAPSHOT, student_key=f'm{i}', university='NTU', nationality='Mongolia',
+                            identity_type='hong_kong_macau', admission_status='arrived') for i in range(3)]
+        rows += [DimStudent(snapshot_date=SNAPSHOT, student_key=f'n{i}', university='NTU', nationality=nat,
+                            identity_type='foreign_student', admission_status='arrived')
+                 for i, nat in enumerate(['Japan', 'Korea', 'Thailand', 'India', 'USA', 'France', 'Brazil'])]
+        DimStudent.objects.bulk_create(rows)
+        overview = metrics.student_overview(DimStudent.objects.all(), SNAPSHOT)
+        nationalities = {r['label']: r['count'] for r in overview['by_nationality']}
+        self.assertEqual(nationalities['蒙古'], 3)
+        self.assertEqual(len(nationalities), 9)          # 不再只取前 6 名
+        self.assertNotIn('_other', [r['value'] for r in overview['by_nationality']])
+        identities = {r['value']: r['count'] for r in overview['by_identity']}
+        self.assertEqual(identities['hong_kong_macau'], 3)
+
 
 class AlertTest(TestCase):
     def _facts(self, academic_year, cohort, n, overdue, **kwargs):
