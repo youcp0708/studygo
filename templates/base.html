@@ -1,4 +1,4 @@
-{% load static i18n %}
+{% load static i18n insights_tags %}
 {% get_current_language as CURRENT_LANGUAGE %}
 
 {# templates/base.html — 所有頁面的基底模板 #}
@@ -82,6 +82,19 @@
     {% endblock site_nav %}
 
     <div class="nav-right">
+
+      {# ── Student Insights 入口：只有系統管理員、superuser、校方人員看得到（與 /insights/ 權限相同）── #}
+      {% if user.is_authenticated %}
+      {% can_view_insights user as show_insights_btn %}
+      {% if show_insights_btn %}
+      <a href="{% url 'insights:dashboard' %}" id="navInsightsBtn"
+        class="lang-btn{% if '/insights/' in request.path %} active{% endif %}"
+        style="text-decoration:none;" title="Student Insights 校方數據分析" aria-label="Student Insights">
+        <span class="material-symbols-outlined" style="font-size:18px;">insights</span>
+        <span class="lang-label">Insights</span>
+      </a>
+      {% endif %}
+      {% endif %}
 
       {% if user.is_authenticated and user.student_profile %}
       <div class="search-wrap" id="searchWrap">

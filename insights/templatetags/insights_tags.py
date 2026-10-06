@@ -4,6 +4,8 @@ from django import template
 from django.http import QueryDict
 from django.utils.html import format_html
 
+from insights.permissions import get_scope
+
 register = template.Library()
 
 
@@ -29,3 +31,12 @@ def query_with(query_string, key, value):
 def pretty_json(value):
     """把工具結果排版成易讀的 JSON（資料依據用）。"""
     return json.dumps(value, ensure_ascii=False, indent=2)
+
+
+@register.simple_tag
+def can_view_insights(user):
+    """
+    navbar 的 Insights 按鈕是否顯示。與 /insights/ 的存取權限使用同一個判斷（permissions.get_scope），
+    確保看得到按鈕的人一定進得去、進不去的人（學生、未登入者）一定看不到。
+    """
+    return get_scope(user) is not None

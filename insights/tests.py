@@ -671,3 +671,48 @@ class ExportTest(RealDataMixin, TestCase):
         student = make_student('s@uni.edu')
         self.client.force_login(student.user)
         self.assertEqual(self.get('tasks').status_code, 403)
+
+
+class NavInsightsButtonTest(TestCase):
+    """navbar 的 Insights 按鈕：只有能進 /insights/ 的人看得到。"""
+    BUTTON = 'id="navInsightsBtn"'
+
+    def page(self, user=None):
+        if user:
+            self.client.force_login(user)
+        return self.client.get(reverse('faq_page'))
+
+    def test_hidden_for_anonymous(self):
+        self.assertNotContains(self.page(), self.BUTTON)
+
+    def test_hidden_for_student(self):
+        self.assertNotContains(self.page(make_student('s@uni.edu').user), self.BUTTON)
+
+    def test_hidden_for_user_without_profile(self):
+        user = CustomUser.objects.create_user(email='new@uni.edu', password='pw', name='New')
+        self.assertNotContains(self.page(user), self.BUTTON)
+
+    def test_hidden_for_django_staff_flag_only(self):
+        # is_staff 只代表能進 Django Admin，不等於能看 insights
+        user = CustomUser.objects.create_user(email='ops@readyto.tw', password='pw', name='Ops', is_staff=True)
+        self.assertNotContains(self.page(user), self.BUTTON)
+
+    def test_hidden_for_inactive_school_staff(self):
+        user = CustomUser.objects.create_user(email='old@ntu.edu.tw', password='pw', name='Old')
+        StaffProfile.objects.create(user=user, university='NTU', is_active=False)
+        self.assertNotContains(self.page(user), self.BUTTON)
+
+    def test_shown_for_admin_role(self):
+        user = CustomUser.objects.create_user(email='admin@readyto.tw', password='pw', name='A', role='admin')
+        self.assertContains(self.page(user), self.BUTTON)
+
+    def test_shown_for_superuser(self):
+        user = CustomUser.objects.create_superuser(email='root@readyto.tw', password='pw', name='Root')
+        self.assertContains(self.page(user), self.BUTTON)
+
+    def test_shown_for_active_school_staff(self):
+        user = CustomUser.objects.create_user(email='staff@ntu.edu.tw', password='pw', name='Staff')
+        StaffProfile.objects.create(user=user, university='NTU')
+        response = self.page(user)
+        self.assertContains(response, self.BUTTON)
+        self.assertContains(response, reverse('insights:dashboard'))
