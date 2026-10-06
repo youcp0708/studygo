@@ -27,13 +27,17 @@
 
     var type = canvas.dataset.chart;
     var unit = canvas.dataset.unit || '';
-    // 橫向長條圖依筆數長高（例如國籍全部列出時），避免長條擠在固定高度裡
-    var tall = canvas.dataset.horizontal && rows.length > 8;
+    // 橫向長條圖一律依筆數決定高度（每列 32px），每個標籤才有足夠空間顯示；
+    // 外層 ins-chart-scroll 限制最大高度，筆數多時在框內捲動
+    var tall = !!canvas.dataset.horizontal;
     if (tall) {
+      var scroller = document.createElement('div');
+      scroller.className = 'ins-chart-scroll';
       var wrapper = document.createElement('div');
       wrapper.className = 'ins-chart-tall';
-      wrapper.style.height = (rows.length * 24 + 40) + 'px';
-      canvas.parentNode.insertBefore(wrapper, canvas);
+      wrapper.style.height = Math.max(rows.length * 32 + 50, 160) + 'px';
+      canvas.parentNode.insertBefore(scroller, canvas);
+      scroller.appendChild(wrapper);
       wrapper.appendChild(canvas);
     }
     var labels = rows.map(function (r) { return pick(r, canvas.dataset.label); });
@@ -74,8 +78,9 @@
           },
         },
         scales: type === 'doughnut' ? {} : {
-          x: { beginAtZero: true },
-          y: { beginAtZero: true },
+          // autoSkip: false：標籤再多也全部顯示，不讓 Chart.js 自動略過
+          x: { beginAtZero: true, ticks: { autoSkip: false } },
+          y: { beginAtZero: true, ticks: { autoSkip: false, font: { size: 13 } } },
         },
       },
     });
