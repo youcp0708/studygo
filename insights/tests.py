@@ -12,7 +12,7 @@ from chatbot.models import ChatMessage, ChatSession
 from flows.models import FlowStage, Reminder, StudentTask, Task
 from users.models import CustomUser, StudentProfile
 
-from . import ask, metrics, services
+from . import ask, metrics, presenters, services
 from .alerts import compute_alerts, high_risk_groups
 from .build import build_snapshot, student_key
 from .classify import classify_pending
@@ -469,6 +469,15 @@ class ComparePeriodsTest(TestCase):
         self.assertEqual(row['period_type'], 'arrival_cohort')
         self.assertEqual(row['delta_pp'], 20.0)
 
+    def test_delta_uses_unrounded_rates_like_alerts(self):
+        # 本期 18/158 = 11.39%（顯示 11.4）、前期 9/254 = 3.54%（顯示 3.5）→ 原始差 7.85，四捨五入為 7.8 或 7.9
+        FactStudentTask.objects.bulk_create(
+            overdue_facts(254, 9, academic_year=114) + overdue_facts(158, 18, academic_year=115)
+        )
+        row = metrics.compare_periods(FactStudentTask.objects.all(), 'residence_permit')[0]
+        self.assertEqual((row['baseline']['rate'], row['current']['rate']), (3.5, 11.4))
+        self.assertEqual(row['delta_pp'], round(18 * 100 / 158 - 9 * 100 / 254, 1))
+
     def test_small_periods_are_not_compared(self):
         FactStudentTask.objects.bulk_create(
             overdue_facts(9, 1, academic_year=114) + overdue_facts(20, 3, academic_year=115)
@@ -635,8 +644,13 @@ class AskViewTest(RealDataMixin, TestCase):
         self.client.force_login(self.admin)
         with mock.patch('insights.ask.llm_client', return_value=client):
             response = self.client.post(self.url, {'question': '哪個流程逾期最多？'})
-        self.assertContains(response, '居留證件逾期率為 20.0%（n=40）。')
+        self.assertContains(response, '<span class="ins-num">20.0%<small>n=40</small></span>', html=False)
         self.assertNotContains(response, '無法對應到資料的數字')
+        # 資料依據以表格呈現，並標出回答引用的那一列
+        self.assertContains(response, '全部任務・依任務分類的完成率與逾期率')
+        self.assertContains(response, 'ins-ev-cited')
+        self.assertContains(response, '✓ 回答中的數字都已和資料核對')
+        self.assertContains(response, 'class="ins-followup"')
 
     @override_settings(OPENAI_API_KEY='test-key')
     def test_quota_exceeded_does_not_call_openai(self):
@@ -744,3 +758,86 @@ class FilterOptionsTest(RealDataMixin, TestCase):
                          [c for c, _ in StudentProfile.NATIONALITY_CHOICES])
         # 沒有任何學生的國籍也能選（例如蒙古）
         self.assertIn('Mongolia', [c for c, _ in options['nationality']])
+
+
+class PresenterTest(TestCase):
+    def call(self, name, arguments, result):
+        return {'name': name, 'arguments': arguments, 'result': result}
+
+    def test_task_metrics_title_rows_and_citation(self):
+        call = self.call('task_metrics', {'group_by': 'nationality', 'task_category': 'residence_permit'}, {
+            'group_by': 'nationality', 'task_category': '居留證件',
+            'rows': [
+                {'value': 'Vietnam', 'label': '越南', 'completion_rate': 90.0, 'overdue_rate': 16.1, 'n': 62, 'note': ''},
+                {'value': 'Japan', 'label': '日本', 'completion_rate': 99.0, 'overdue_rate': 2.0, 'n': 50, 'note': ''},
+                {'value': 'France', 'label': '法國', 'completion_rate': None, 'overdue_rate': None, 'n': 4, 'note': '樣本不足'},
+                {'value': 'Korea', 'label': '韓國', 'completion_rate': None, 'overdue_rate': None, 'n': 0, 'note': '樣本不足'},
+            ],
+        })
+        item = presenters.present_calls([call], '越南籍逾期率最高：16.1%（n=62）。')[0]
+        self.assertEqual(item['title'], '居留證件・依國籍的完成率與逾期率')
+        self.assertEqual([r['label'] for r in item['rows']], ['越南', '日本', '法國'])   # 依逾期率排序、n=0 不顯示
+        self.assertEqual([r['cited'] for r in item['rows']], [True, False, False])
+        self.assertTrue(item['rows'][2]['suppressed'])
+        self.assertEqual(item['rows'][0]['bar'], 16)
+
+    def test_compare_periods_direction(self):
+        call = self.call('compare_periods', {'task_category': None}, {
+            'rows': [
+                {'label': '全民健保', 'period_type': '學年度', 'baseline_label': '113 學年度', 'baseline_rate': 10.4,
+                 'baseline_n': 77, 'current_label': '114 學年度', 'current_rate': 7.1, 'current_n': 254, 'delta_pp': -3.3},
+                {'label': '居留證件', 'period_type': '學年度', 'baseline_label': '114 學年度', 'baseline_rate': 3.5,
+                 'baseline_n': 254, 'current_label': '115 學年度', 'current_rate': 11.4, 'current_n': 158, 'delta_pp': 7.9},
+            ],
+            'not_comparable': ['選課'],
+        })
+        item = presenters.present_calls([call], '健保下降 3.3 個百分點。')[0]
+        self.assertEqual(item['title'], '各流程最近兩期的逾期率變化')
+        self.assertEqual([r['direction'] for r in item['rows']], ['down', 'up'])
+        self.assertEqual([r['cited'] for r in item['rows']], [True, False])
+
+    def test_error_result(self):
+        call = self.call('task_metrics', {'group_by': 'email'}, {'error': 'group_by 不合法：email'})
+        item = presenters.present_calls([call], '')[0]
+        self.assertEqual(item['kind'], 'error')
+        self.assertIn('不合法', item['message'])
+
+    def test_follow_ups_suggest_unused_angles(self):
+        calls = [self.call('task_metrics', {'group_by': 'identity_type', 'task_category': 'residence_permit'}, {})]
+        suggestions = presenters.follow_ups(calls)
+        self.assertEqual(len(suggestions), 3)
+        self.assertIn('改看依國籍，居留證件的逾期率有什麼差異？', suggestions)
+        self.assertIn('和上一期相比，哪些流程的逾期率變差了？', suggestions)
+
+
+class HighlightNumbersTest(TestCase):
+    def test_chips_and_escaping(self):
+        from .templatetags.insights_tags import highlight_numbers
+        html = highlight_numbers('逾期率 19.4%（n=67），去年 3.5%，上升 +7.8 個百分點。\n<script>x</script>')
+        self.assertIn('<span class="ins-num">19.4%<small>n=67</small></span>', html)
+        self.assertIn('<span class="ins-num">3.5%</span>', html)
+        self.assertIn('<span class="ins-num ins-num-pp">+7.8 個百分點</span>', html)
+        self.assertIn('&lt;script&gt;', html)
+        self.assertNotIn('<script>', html)
+        self.assertIn('<br>', html)
+        self.assertEqual(html.count('ins-num"'), 2)   # 19.4% 不會被包兩層
+
+
+class AskEvidenceRenderTest(TestCase):
+    """每種工具的資料依據版型都能正常渲染（用示範資料跑 5 題預設問題）。"""
+
+    def test_all_presets_render(self):
+        call_command('seed_insights_demo', students=600, stdout=StringIO())
+        admin = CustomUser.objects.create_user(email='admin@readyto.tw', password='pw', name='A', role='admin')
+        self.client.force_login(admin)
+        with mock.patch.dict('os.environ', {'INSIGHTS_USE_DEMO_DATA': 'True'}):
+            for preset in ask.PRESETS:
+                response = self.client.get(reverse('insights:ask'), {'preset': preset['id']})
+                self.assertEqual(response.status_code, 200, preset['question'])
+                self.assertContains(response, 'class="ins-ev"')
+                self.assertContains(response, '顯示原始資料（JSON）')
+            response = self.client.get(reverse('insights:ask'), {'preset': 4})
+            self.assertContains(response, '各流程最近兩期的逾期率變化')
+            response = self.client.get(reverse('insights:ask'), {'preset': 5})
+            self.assertContains(response, '全部任務・逾期率偏高的族群')
+            self.assertContains(response, '目前的風險預警')

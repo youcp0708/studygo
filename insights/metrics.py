@@ -189,7 +189,8 @@ def compare_periods(fact_qs, task_category=None):
                     'current': current,
                     'baseline_label': label_for(field, base_v),
                     'baseline': baseline,
-                    'delta_pp': round(current['rate'] - baseline['rate'], 1),
+                    # 用原始比率相減再四捨五入（與 alerts.py 一致），避免同一頁出現 7.8 與 7.9 兩種數字
+                    'delta_pp': round(cur_od * 100.0 / cur_n - base_od * 100.0 / base_n, 1),
                 })
                 break
         result.append(row)

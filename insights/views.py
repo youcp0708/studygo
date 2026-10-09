@@ -9,7 +9,7 @@ from django.utils import timezone
 from django.views.decorators.http import require_http_methods
 
 from . import ask as ask_service
-from . import conf, export, metrics, services
+from . import conf, export, metrics, presenters, services
 from .permissions import ALL_SCHOOLS, insights_access_required
 from .question_categories import QUESTION_CATEGORY_CHOICES
 from .task_categories import TASK_CATEGORY_CHOICES, TASK_CATEGORY_LABELS
@@ -124,6 +124,12 @@ def ask(request):
             preset_id = None
         if preset_id in ask_service.PRESETS_BY_ID:
             result = ask_service.answer_preset(request.user, scope, data, preset_id)
+
+    if result:
+        result['evidence'] = presenters.present_calls(result['calls'], result['answer'])
+        # 延伸提問點了會直接送出 AI 提問，次數用完或沒有 API 金鑰時不顯示
+        can_ask = ask_service.ai_available() and ask_service.remaining_quota(request.user) > 0
+        result['follow_ups'] = presenters.follow_ups(result['calls']) if can_ask else []
 
     ctx.update({
         'presets': ask_service.PRESETS,

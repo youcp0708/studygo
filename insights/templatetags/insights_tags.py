@@ -1,8 +1,10 @@
 import json
+import re
 
 from django import template
 from django.http import QueryDict
-from django.utils.html import format_html
+from django.utils.html import escape, format_html
+from django.utils.safestring import mark_safe
 
 from insights.permissions import get_scope
 
@@ -40,3 +42,30 @@ def can_view_insights(user):
     確保看得到按鈕的人一定進得去、進不去的人（學生、未登入者）一定看不到。
     """
     return get_scope(user) is not None
+
+
+# 回答中的「19.4%（n=67）」「19.4%」「+7.8 個百分點」：單次比對，避免同一個數字被包兩層
+_NUMBER_CHIP_RE = re.compile(
+    r'(?P<rate>\d+(?:\.\d+)?)\s*[%％](?:\s*[（(]\s*n\s*[=＝]\s*(?P<n>\d+)\s*[）)])?'
+    r'|(?P<pp>[+＋−-]?\s*\d+(?:\.\d+)?)\s*個百分點'
+)
+
+
+def _number_chip(match):
+    if match.group('pp'):
+        return f'<span class="ins-num ins-num-pp">{match.group("pp")} 個百分點</span>'
+    if match.group('n'):
+        return f'<span class="ins-num">{match.group("rate")}%<small>n={match.group("n")}</small></span>'
+    return f'<span class="ins-num">{match.group("rate")}%</span>'
+
+
+@register.filter
+def highlight_numbers(text):
+    """
+    AI 資料助理回答的排版：先跳脫 HTML（回答來自 LLM，視為不可信），
+    再把比率、百分點標成醒目標籤，最後把換行轉成 <br>。
+    """
+    html = _NUMBER_CHIP_RE.sub(_number_chip, escape(text or ''))
+    return mark_safe(html.replace('\n', '<br>'))
+
+

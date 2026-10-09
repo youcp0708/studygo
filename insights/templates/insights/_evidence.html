@@ -1,0 +1,148 @@
+{% load insights_tags %}
+{# AI 資料助理的資料依據：每種分析工具一種版型（資料由 insights/presenters.py 準備） #}
+<div class="ins-ev">
+  <p class="ins-ev-title"><span class="ins-ev-index">{{ index }}</span>{{ item.title }}</p>
+
+  {% if item.kind == 'task_metrics' %}
+  <div class="ins-table-wrap">
+    <table class="ins-table ins-ev-table">
+      <thead><tr><th>{{ item.group_label }}</th><th class="num">完成率</th><th>逾期率</th><th class="num">n</th></tr></thead>
+      <tbody>
+        {% for r in item.rows %}
+        <tr class="{% if r.cited %}ins-ev-cited{% endif %}{% if r.suppressed %} ins-ev-muted{% endif %}">
+          <td>{{ r.label }}{% if r.cited %}<span class="ins-ev-cite">回答引用</span>{% endif %}</td>
+          {% if r.suppressed %}
+          <td class="num" colspan="2">樣本不足</td>
+          {% else %}
+          <td class="num">{{ r.completion_rate }}%</td>
+          <td><div class="ins-ev-bar"><span style="width:{{ r.bar }}%"></span><b>{{ r.overdue_rate }}%</b></div></td>
+          {% endif %}
+          <td class="num">{{ r.n }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" class="ins-muted">沒有符合條件的資料</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% elif item.kind == 'question_rates' %}
+  <div class="ins-table-wrap">
+    <table class="ins-table ins-ev-table">
+      <thead><tr><th>{{ item.group_label }}</th><th class="num">學生數</th><th class="num">提問數</th><th>每 100 人提問數</th></tr></thead>
+      <tbody>
+        {% for r in item.rows %}
+        <tr class="{% if r.cited %}ins-ev-cited{% endif %}{% if r.suppressed %} ins-ev-muted{% endif %}">
+          <td>{{ r.label }}{% if r.cited %}<span class="ins-ev-cite">回答引用</span>{% endif %}</td>
+          <td class="num">{{ r.students }}</td>
+          <td class="num">{{ r.questions }}</td>
+          <td>{% if r.suppressed %}樣本不足{% else %}<div class="ins-ev-bar ins-ev-bar-blue"><span style="width:{{ r.bar }}%"></span><b>{{ r.per_100 }}</b></div>{% endif %}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" class="ins-muted">沒有符合條件的資料</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% elif item.kind == 'compare_periods' %}
+  <div class="ins-table-wrap">
+    <table class="ins-table ins-ev-table">
+      <thead><tr><th>流程</th><th>前一期</th><th>本期</th><th class="num">變化</th></tr></thead>
+      <tbody>
+        {% for r in item.rows %}
+        <tr class="{% if r.cited %}ins-ev-cited{% endif %}">
+          <td>{{ r.label }}{% if r.cited %}<span class="ins-ev-cite">回答引用</span>{% endif %}</td>
+          <td><small class="ins-muted">{{ r.baseline_label }}</small><br>{{ r.baseline_rate }}% <span class="ins-n">n={{ r.baseline_n }}</span></td>
+          <td><small class="ins-muted">{{ r.current_label }}</small><br>{{ r.current_rate }}% <span class="ins-n">n={{ r.current_n }}</span></td>
+          <td class="num ins-ev-delta ins-ev-{{ r.direction }}">
+            {% if r.direction == 'up' %}▲ +{{ r.delta_abs }}{% elif r.direction == 'down' %}▼ −{{ r.delta_abs }}{% else %}0{% endif %}
+            <small>個百分點</small>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" class="ins-muted">沒有可以比較的資料</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% if item.not_comparable %}<p class="ins-muted ins-ev-note">資料不足、無法比較：{{ item.not_comparable|join:"、" }}</p>{% endif %}
+  <p class="ins-muted ins-ev-note">▲ 紅色代表逾期率上升（變差），▼ 綠色代表下降（改善）。</p>
+
+  {% elif item.kind == 'high_risk_groups' %}
+  <div class="ins-ev-overall">
+    整體逾期率
+    {% if item.overall_rate is not None %}
+    <div class="ins-ev-bar ins-ev-bar-grey"><span style="width:{{ item.overall_bar }}%"></span><b>{{ item.overall_rate }}%</b></div>
+    <span class="ins-n">n={{ item.overall_n }}</span>
+    {% else %}<span class="ins-muted">樣本不足</span>{% endif %}
+  </div>
+  <div class="ins-table-wrap">
+    <table class="ins-table ins-ev-table">
+      <thead><tr><th>族群</th><th>類別</th><th>逾期率</th><th class="num">比整體高</th><th class="num">n</th></tr></thead>
+      <tbody>
+        {% for g in item.groups %}
+        <tr class="{% if g.cited %}ins-ev-cited{% endif %}">
+          <td>{{ g.label }}{% if g.cited %}<span class="ins-ev-cite">回答引用</span>{% endif %}</td>
+          <td class="ins-muted">{{ g.dimension }}</td>
+          <td><div class="ins-ev-bar ins-ev-bar-red"><span style="width:{{ g.bar }}%"></span><b>{{ g.rate }}%</b></div></td>
+          <td class="num ins-ev-up">{% if g.diff is not None %}+{{ g.diff }}{% endif %}</td>
+          <td class="num">{{ g.n }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="5" class="ins-muted">目前沒有逾期率高於整體、且樣本足夠（n ≥ 30）的族群</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% elif item.kind == 'list_alerts' %}
+  {% for a in item.alerts %}
+  <div class="ins-ev-alert">
+    <p><strong>⚠ {{ a.task_category }}</strong>
+      <span class="ins-ev-delta ins-ev-up">▲ +{{ a.delta_pp }} 個百分點</span>
+      <span class="ins-muted">（比較基準：{{ a.baseline_type }}）</span></p>
+    <p>{{ a.baseline_label }} {{ a.baseline_rate }}% <span class="ins-n">n={{ a.baseline_n }}</span>
+      → {{ a.current_label }} {{ a.current_rate }}% <span class="ins-n">n={{ a.current_n }}</span></p>
+    {% if a.groups %}
+    <p class="ins-muted">集中族群：{% for g in a.groups %}{{ g.label }} {{ g.rate }}%（n={{ g.n }}）{% if not forloop.last %}、{% endif %}{% endfor %}</p>
+    {% endif %}
+  </div>
+  {% empty %}
+  <p class="ins-muted">目前沒有風險預警。</p>
+  {% endfor %}
+
+  {% elif item.kind == 'student_overview' %}
+  <div class="ins-ev-kpis">
+    <div><span class="ins-muted">學生總數</span><strong>{{ item.total }}</strong></div>
+    <div><span class="ins-muted">{{ item.academic_year }} 學年度新生</span><strong>{{ item.new_students }}</strong></div>
+  </div>
+  <div class="ins-grid ins-ev-grid">
+    <div>
+      <p class="ins-muted">身份別</p>
+      <table class="ins-table ins-ev-table">
+        {% for r in item.by_identity %}
+        <tr><td>{{ r.label }}</td><td><div class="ins-ev-bar"><span style="width:{{ r.bar }}%"></span><b>{{ r.count }} 人</b></div></td><td class="num">{{ r.pct }}%</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div>
+      <p class="ins-muted">國籍</p>
+      <table class="ins-table ins-ev-table">
+        {% for r in item.by_nationality %}
+        <tr><td>{{ r.label }}</td><td><div class="ins-ev-bar"><span style="width:{{ r.bar }}%"></span><b>{{ r.count }} 人</b></div></td><td class="num">{{ r.pct }}%</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+
+  {% else %}
+  <p class="ins-error">{{ item.message }}</p>
+  {% endif %}
+
+  <details class="ins-ev-raw">
+    <summary>顯示原始資料（JSON）</summary>
+    <p><code>{{ item.raw.name }} {{ item.raw.arguments }}</code></p>
+    <pre>{{ item.raw.result|pretty_json }}</pre>
+  </details>
+</div>
