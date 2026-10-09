@@ -733,3 +733,14 @@ class NavInsightsButtonTest(TestCase):
         response = self.page(user)
         self.assertContains(response, self.BUTTON)
         self.assertContains(response, reverse('insights:dashboard'))
+
+
+class FilterOptionsTest(RealDataMixin, TestCase):
+    def test_nationality_filter_lists_every_profile_choice(self):
+        DimStudent.objects.create(snapshot_date=SNAPSHOT, student_key='k', university='NTU', nationality='Myanmar',
+                                  identity_type='foreign_student', admission_status='arrived')
+        options = services.filter_options('ALL', {})
+        self.assertEqual([c for c, _ in options['nationality']],
+                         [c for c, _ in StudentProfile.NATIONALITY_CHOICES])
+        # 沒有任何學生的國籍也能選（例如蒙古）
+        self.assertIn('Mongolia', [c for c, _ in options['nationality']])

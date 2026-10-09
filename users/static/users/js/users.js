@@ -324,7 +324,7 @@ async function handleLogin(e) {
 
   showToast(`歡迎回來，${data.data.user.name}！`, 'success');
 
-  window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
+  window.location.href = data.data.redirect_url || (data.data.has_profile ? '/dashboard/' : '/profile/setup/');
 }
 
 /* ════════════════════════════════════════
@@ -1174,7 +1174,7 @@ async function handleGoogleLogin(response) {
   const isNew = data.data.is_new_user;
   showToast(isNew ? `帳號已建立，歡迎 ${data.data.user.name}！` : `歡迎回來，${data.data.user.name}！`, 'success');
 
-  window.location.href = data.data.has_profile ? '/dashboard/' : '/profile/setup/';
+  window.location.href = data.data.redirect_url || (data.data.has_profile ? '/dashboard/' : '/profile/setup/');
 }
 
 // 啟動

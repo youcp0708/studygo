@@ -418,3 +418,56 @@ class CheckSchoolLinksCommandTest(TestCase):
         target.refresh_from_db()
         self.assertFalse(target.is_reachable)
         self.assertIsNotNone(target.last_checked_at)
+
+
+class PostLoginRedirectTest(TestCase):
+    """登入後的落地頁：superuser → Student Insights，其他人維持原本的 Dashboard／填寫個人資料。"""
+
+    def setUp(self):
+        # 登入 API 有頻率限制，測試間清掉快取避免互相影響
+        from django.core.cache import cache
+        cache.clear()
+
+    def login(self, email):
+        return self.client.post('/api/users/login/', {'email': email, 'password': 'Password1!'},
+                                 content_type='application/json')
+
+    def make_profile(self, user):
+        StudentProfile.objects.create(user=user, nationality='Japan', university='NTU',
+                                      identity_type='foreign_student', admission_status='pre_arrival')
+
+    def test_superuser_goes_to_insights(self):
+        CustomUser.objects.create_superuser(email='root@readyto.tw', password='Password1!', name='Root', email_verified=True)
+        response = self.login('root@readyto.tw')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()['data']['redirect_url'], '/insights/')
+
+    def test_superuser_with_student_profile_still_goes_to_insights(self):
+        user = CustomUser.objects.create_superuser(email='root@readyto.tw', password='Password1!', name='Root', email_verified=True)
+        self.make_profile(user)
+        self.assertEqual(self.login('root@readyto.tw').json()['data']['redirect_url'], '/insights/')
+
+    def test_student_with_profile_goes_to_dashboard(self):
+        user = CustomUser.objects.create_user(email='s@uni.edu', password='Password1!', name='S', email_verified=True)
+        self.make_profile(user)
+        self.assertEqual(self.login('s@uni.edu').json()['data']['redirect_url'], '/dashboard/')
+
+    def test_new_user_goes_to_profile_setup(self):
+        CustomUser.objects.create_user(email='new@uni.edu', password='Password1!', name='N', email_verified=True)
+        self.assertEqual(self.login('new@uni.edu').json()['data']['redirect_url'], '/profile/setup/')
+
+    def test_admin_role_is_not_affected(self):
+        CustomUser.objects.create_user(email='admin@readyto.tw', password='Password1!', name='A', role='admin', email_verified=True)
+        self.assertEqual(self.login('admin@readyto.tw').json()['data']['redirect_url'], '/profile/setup/')
+
+    def test_logged_in_superuser_visiting_home_or_login_goes_to_insights(self):
+        user = CustomUser.objects.create_superuser(email='root@readyto.tw', password='Password1!', name='Root', email_verified=True)
+        self.client.force_login(user)
+        self.assertRedirects(self.client.get('/'), '/insights/', fetch_redirect_response=False)
+        self.assertRedirects(self.client.get('/login/'), '/insights/', fetch_redirect_response=False)
+
+    def test_superuser_can_still_open_dashboard_directly(self):
+        user = CustomUser.objects.create_superuser(email='root@readyto.tw', password='Password1!', name='Root', email_verified=True)
+        self.make_profile(user)
+        self.client.force_login(user)
+        self.assertEqual(self.client.get('/dashboard/').status_code, 200)

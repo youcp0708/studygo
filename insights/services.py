@@ -65,17 +65,18 @@ def snapshot_date():
 
 
 def filter_options(scope, filters):
-    """篩選下拉選單。只列出人數 ≥ MIN_DISPLAY_N 的國籍與梯次，避免透露小族群的存在。"""
+    """
+    篩選下拉選單。身份別、國籍列出個人資料頁的全部選項（不論目前有沒有學生）；
+    抵台梯次只列出人數 ≥ MIN_DISPLAY_N 的，因為梯次選項是從資料推出來的。
+    """
     base = datasets(scope, {'school': filters['school']} if 'school' in filters else {})['dim']
-
-    def options(field):
-        rows = base.values(field).annotate(c=Count('id')).filter(c__gte=conf.MIN_DISPLAY_N).order_by(field)
-        return [(r[field], label_for(field, r[field])) for r in rows if r[field]]
+    cohorts = base.values('arrival_cohort').annotate(c=Count('id')).filter(c__gte=conf.MIN_DISPLAY_N).order_by('arrival_cohort')
 
     return {
         'identity_type': [(code, str(label)) for code, label in StudentProfile.IDENTITY_CHOICES],
-        'nationality': options('nationality'),
-        'arrival_cohort': options('arrival_cohort'),
+        'nationality': [(code, str(label)) for code, label in StudentProfile.NATIONALITY_CHOICES],
+        'arrival_cohort': [(r['arrival_cohort'], label_for('arrival_cohort', r['arrival_cohort']))
+                           for r in cohorts if r['arrival_cohort']],
         'school': (
             [(code, str(label)) for code, label in StudentProfile.UNIVERSITY_CHOICES]
             if scope == ALL_SCHOOLS else []

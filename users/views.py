@@ -12,6 +12,7 @@ from django.core.exceptions import ValidationError as DjangoValidationError
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.conf import settings
@@ -38,6 +39,17 @@ from .serializers import (
 # ══════════════════════════════════════════
 # HELPER
 # ══════════════════════════════════════════
+def post_login_url(user):
+    """
+    登入後的落地頁（帳密登入、Google 登入、已登入再進首頁／登入頁共用）。
+    superuser → Student Insights；其餘依是否已填個人資料 → Dashboard 或填寫個人資料。
+    """
+    if user.is_superuser:
+        return reverse('insights:dashboard')
+    has_profile = hasattr(user, 'student_profile') and user.student_profile is not None
+    return reverse('dashboard') if has_profile else reverse('profile_setup')
+
+
 def get_client_ip(request):
     """取得客戶端 IP。僅在 settings.TRUST_X_FORWARDED_FOR=True 時才讀取 Proxy header。"""
     if getattr(settings, 'TRUST_X_FORWARDED_FOR', False):
@@ -141,6 +153,7 @@ def login_view(request):
     return success_response({
         'user':  user_data,
         'has_profile': has_profile,
+        'redirect_url': post_login_url(user),
     }, '登入成功')
 
 
@@ -453,6 +466,7 @@ def google_login_view(request):
         'user':        UserDetailSerializer(user).data,
         'has_profile': has_profile,
         'is_new_user': created,
+        'redirect_url': post_login_url(user),
     }, '登入成功')
 
 

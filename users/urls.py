@@ -10,6 +10,8 @@ from django.contrib.auth import logout as auth_logout
 from django.conf import settings
 from django.utils.translation import gettext as _
 
+from .views import post_login_url
+
 
 def _login_context(extra=None):
     ctx = {'google_client_id': settings.GOOGLE_CLIENT_ID}
@@ -29,9 +31,7 @@ def _authenticated_redirect(request):
     if _email_verification_required() and not user.email_verified:
         # 未驗證信箱：顯示登入頁（JS 端會依 localStorage 決定是否顯示驗證等待面板）
         return render(request, 'users/login.html', _login_context())
-    if not hasattr(user, 'student_profile') or user.student_profile is None:
-        return redirect('profile_setup')
-    return redirect('dashboard')
+    return redirect(post_login_url(user))
 
 
 def index_view(request):
