@@ -96,7 +96,7 @@
       {% endif %}
       {% endif %}
 
-      {% if user.is_authenticated and user.student_profile %}
+      {% if user.is_authenticated and user.student_profile and '/insights/' not in request.path %}
       <div class="search-wrap" id="searchWrap">
         <div class="search-box" id="searchBox">
           <button type="button" class="search-btn" id="searchBtn" aria-label="{% trans '搜尋' %}">
@@ -236,20 +236,35 @@
           <a href="{% url 'index' %}#sec-flow" class="sf-link">{% trans "抵達後事項" %}</a>
         </div>
 
+        {% can_view_insights user as is_insights_user %}
         <div class="sf-col">
           <div class="sf-col-title">{% trans "資訊中心" %}</div>
+          {% if is_insights_user %}
+          <a href="{% url 'insights:dashboard' %}" class="sf-link">{% trans "簽證指南" %}</a>
+          <a href="{% url 'insights:dashboard' %}" class="sf-link">{% trans "住宿資訊" %}</a>
+          <a href="{% url 'insights:dashboard' %}" class="sf-link">{% trans "健保說明" %}</a>
+          <a href="{% url 'insights:dashboard' %}" class="sf-link">{% trans "生活指南" %}</a>
+          {% else %}
           <a href="{% url 'guide_arc_foreign' %}" class="sf-link">{% trans "簽證指南" %}</a>
           <a href="{% url 'guide_housing_ncu' %}" class="sf-link">{% trans "住宿資訊" %}</a>
           <a href="{% url 'guide_nhi' %}" class="sf-link">{% trans "健保說明" %}</a>
           <a href="{% url 'guide_index' %}" class="sf-link">{% trans "生活指南" %}</a>
+          {% endif %}
         </div>
 
         <div class="sf-col">
           <div class="sf-col-title">{% trans "支援服務" %}</div>
+          {% if is_insights_user %}
+          <a href="{% url 'insights:dashboard' %}" class="sf-link">{% trans "使用說明" %}</a>
+          <a href="{% url 'insights:dashboard' %}" class="sf-link">{% trans "常見問題" %}</a>
+          <a href="{% url 'insights:dashboard' %}" class="sf-link">{% trans "任務清單" %}</a>
+          <a href="{% url 'insights:dashboard' %}" class="sf-link">{% trans "AI 小幫手" %}</a>
+          {% else %}
           <a href="{% url 'faq_page' %}" class="sf-link">{% trans "使用說明" %}</a>
           <a href="{% url 'faq_page' %}" class="sf-link">{% trans "常見問題" %}</a>
           <a href="{% url 'my_flows' %}" class="sf-link">{% trans "任務清單" %}</a>
           <a href="{% url 'chatbot:page' %}" class="sf-link">{% trans "AI 小幫手" %}</a>
+          {% endif %}
         </div>
       </div>
 
